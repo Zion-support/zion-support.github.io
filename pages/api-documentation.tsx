@@ -115,6 +115,9 @@ export default function APIDocumentationPage() {
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
 export default function APIDocumentationPage() {
 	return (
 		<Layout>
@@ -149,6 +152,7 @@ export default function APIDocumentationPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -161,3 +165,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 ;
+
+
+    </Layout>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

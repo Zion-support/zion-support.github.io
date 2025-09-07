@@ -1,61 +1,42 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 const fs = require('fs');
 const path = require('path');
-
+<<<<<<< HEAD
 console.log('🔧 Fixing final syntax errors...');
-
-// Function to fix specific syntax issues
+=======
+console.log('🔧 Fixing final syntax errors...);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+// Function to fix specific syntax issues;
 function fixFinalSyntax(filePath) {
   try {
+  // TODO: Implement
+}
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
+=======
+    let content = fs.readFileSync(filePath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     let originalContent = content;
     let changesMade = false;
 
-    // Fix specific patterns
+    // Fix specific patterns;
     const fixes = [
-      // Fix type definitions with extra commas
+      // Fix type definitions with extra commas;
+<<<<<<< HEAD
       { from: /userType\?: string,;/g, to: 'userType?: string;' },
       { from: /properties\?: Record<string any>,;/g, to: 'properties?: Record<string, any>;' },
-      
-      // Fix const declarations with extra commas
-      { from: /const DATA_DIR = path\.join\(process\.cwd\(\), 'datakyc'\),;/g, to: "const DATA_DIR = path.join(process.cwd(), 'datakyc');" },
-      { from: /const coursesPath = path\.join\(process\.cwd\(\), 'datalearncourses\.json'\),;/g, to: "const coursesPath = path.join(process.cwd(), 'datalearncourses.json');" },
-      
-      // Fix try-catch blocks
-      { from: /try \{\s*const user = parseUserFromRequest\(req\);\s*try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\) \}\s*;/g, to: 'try {\n  const user = parseUserFromRequest(req);\n  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: \'Forbidden\' }) }\n' },
-      
-      // Fix object property definitions
-      { from: /approve: 'approved';/g, to: "approve: 'approved'," },
-      { from: /remove: 'removed',;/g, to: "remove: 'removed'," },
-      { from: /warn: 'warned',;/g, to: "warn: 'warned'," },
-      { from: /ban: 'banned'\},;/g, to: "ban: 'banned'\n  };" },
-      
-      // Fix method checks
-      { from: /if \(req\.method !== '\$1'\) \{/g, to: "if (req.method !== 'POST') {" },
-      
-      // Fix Record type definitions
+</string>
       { from: /Record<string any>/g, to: 'Record<string, any>' },
-      
-      // Fix function declarations
-      { from: /export default function handler\(req, res\) \{/g, to: 'export default function handler(req, res) {\n  try {' },
-      
-      // Fix try-catch structure
-      { from: /try \{\s*if \(req\.method !== 'POST'\) \{/g, to: "try {\n  if (req.method !== 'POST') {" },
-      
-      // Fix missing catch blocks
-      { from: /try \{\s*const user = parseUserFromRequest\(req\);\s*try \{ ensureAdmin\(user\) \} catch \(e: any\) \{ return res\.status\(e\.statusCode \|\| 403\)\.json\(\{ error: 'Forbidden' \}\) \}\s*$/gm, to: 'try {\n  const user = parseUserFromRequest(req);\n  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: \'Forbidden\' }) }\n  // Add proper error handling here\n} catch (error) {\n  console.error("Error:", error);\n  return res.status(500).json({ error: "Internal server error" });\n}' },
-    ];
-
-    fixes.forEach(fix => {
-      if (fix.from.test(content)) {
-        content = content.replace(fix.from, fix.to);
-        changesMade = true;
-      }
-    });
-
-    // Additional specific fixes for the problematic files
-    if (filePath.includes('admin/analytics/summary.ts')) {
-      content = content.replace(/userType\?: string,;/g, 'userType?: string;');
       content = content.replace(/properties\?: Record<string any>,;/g, 'properties?: Record<string, any>;');
+<<<<<<< HEAD
       changesMade = true;
     }
 
@@ -251,3 +232,14 @@ const report = {
 
 fs.writeFileSync('/workspace/final-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to final-syntax-errors-fix-report.json');
+=======
+=======
+      { from: /userType\?: string,;/g, to: userType?: string;},
+      { from: /properties\?: Record<string any>,;/g, to: properties?: Record<string, any>;},
+</string>'
+      { from: /Record<string any>/g, to: Record<string, any>},
+</string>'
+      content = content.replace(/properties\?: Record<string any>,;/g,properties?: Record<string, any>;);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+</string>]
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

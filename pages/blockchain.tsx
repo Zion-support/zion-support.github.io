@@ -371,21 +371,43 @@ function Blockchain() {
     <>;
       <Head>;
 ;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function Blockchain() {
+  return (
+    <Layout
+      title="Blockchain Solutions - Zion Tech Group"
+      description="Advanced blockchain technology solutions and services for your business."
+    >
+      <Head>
+        <title>Blockchain Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
+          content="Professional blockchain solutions including smart contracts, DeFi, and enterprise blockchain services."
         />
-        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+        <link rel="canonical" href="https://ziontechgroup.com/blockchain" />
       </Head>
-      <ErrorBoundary level="page">
-        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-          <div className="container mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-center mb-8">
-              Blockchain Services
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Blockchain Solutions
             </h1>
-            <p className="text-xl text-slate-300 text-center">
-              Cutting-edge blockchain and Web3 solutions for the future.
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge blockchain technology. 
+              We provide comprehensive blockchain solutions including smart contracts, 
+              DeFi platforms, and enterprise blockchain services.
             </p>
+            <div className="mt-8">
+              <a 
+                href="/contact" 
+                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+              </a>
+            </div>
           </div>
         </main>
       </ErrorBoundary>
@@ -447,3 +469,8 @@ export default function Blockchain(req, res) {
 
 
 
+        </div>
+      </div>
+    </Layout>
+  );
+}

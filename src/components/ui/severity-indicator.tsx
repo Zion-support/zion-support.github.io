@@ -93,8 +93,11 @@ export function SeverityIndicator({;
 }
 ;
 
-import React from "react",
-import { cn } from "@/lib/utils",
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import React from "react";
+import { cn } from "@/lib/utils";
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
 interface SeverityIndicatorProps {
@@ -111,6 +114,17 @@ export function SeverityIndicator({
   showText = true, 
   size = "md",
   className 
+
+
+  size = "md",
+  className 
+export function SeverityIndicator({
+  severity,
+  showIcon = true,
+  showText = true,
+  size = 'md',
+  className,
+origin/cursor/automate-test-improve-and-merge-code-2533
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
@@ -129,15 +143,46 @@ export function SeverityIndicator({
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-green-500"
         )} />
+          "text-green-500"
+        )} />
     }
   },
 
+        
+          />
+        );
+      case 'suspicious':
+        
+          />
+        );
+      default:
+        
+          />
+        );
+    }
+  };
+
+  return (
+    <div className={cn('flex items-center gap-1', className)}>
+      {showIcon && getSeverityIcon()}
+      {showText && <span className='capitalize text-sm'>{severity}</span>}
+    </div>
+  );
+
+};
+return (</div>) ;
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className={cn("flex items-center gap-1", className)}>
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+      {showIcon && getSeverityIcon()}
+      {showText && <span className="capitalize text-sm">{severity}</span>}
+    </div>
+  );
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
@@ -183,3 +228,15 @@ export function SeverityIndicator({;
   );
 }
 ;
+
+    <div className={cn ("flex items - center gap - 1", class_name)}>;
+      {show_icon && getSeverityIcon ()}
+      {show_text && <span className="capitalize text - sm">{severity}</span>}
+    </div>);
+}
+  );
+
+}
+;
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

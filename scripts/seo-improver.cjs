@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 const fs = require("child_process")
 const path = require("path")
@@ -37,3 +38,19 @@ Allow: /contact"
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
 
+=======
+    console.log("� Generating sitemap...")
+    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
+<urlset xmlns=http": //www.sitemaps.org/schemas/sitemap/0.9"
+    <loc>"https
+</urlset>"
+<<<<<<< HEAD
+</loc>"
+</loc>"`;
+=======
+    <loc>"https
+</loc>"
+    <loc>"https
+</loc>"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

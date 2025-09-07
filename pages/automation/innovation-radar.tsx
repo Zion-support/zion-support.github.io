@@ -42,6 +42,8 @@ export default function InnovationRadarPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
 
+                {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
+  const items: any[] = (data?.items || []).slice(0, 50);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -57,6 +59,7 @@ export default function InnovationRadarPage() {
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
             </li>
@@ -86,3 +89,6 @@ export default function InnovationRadarPage() {
   }
 }
 }
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

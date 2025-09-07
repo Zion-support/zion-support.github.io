@@ -1,3 +1,7 @@
+import React from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 return <OnboardingTracker steps={steps} />
 import React from 'react';
 import { use_auth } from '@/hooks / use_auth';
@@ -89,6 +93,8 @@ export function TalentOnboardingSteps() {
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
       action: "Set"},
+      action: "Set",
+    },
     {
       id: "match",
       label: "Receive your first job match",
@@ -133,3 +139,19 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />;
 }
 ;
+      action: "View Matches",
+    },
+  ];
+      action: "Set"},
+    {
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+  const { user } = useAuth();
+  const onboardingStatus = null;
+  return <OnboardingTracker steps={steps} />
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+return <OnboardingTracker steps={steps} />
+pr-12325

@@ -1,4 +1,6 @@
 
+    setIsSubmitting(true),
+main
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
@@ -6,8 +8,19 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
 
+pr-12243
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -37,6 +50,21 @@ export function EnhancedNewsletterForm() {,
   const { toast } = useToast();
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;,
 
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+pr-12325
   const lastSubmit = useRef(0);
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault();
@@ -44,11 +72,22 @@ export function EnhancedNewsletterForm() {,
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
 const trimmed = email.trim();
+
+    const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast({
         title: 'Invalid email',
         description: 'Please enter a valid email address.',
         variant: 'destructive'
+    
+    lastSubmit.current = now;
+
+    if (!email.trim()) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address.",
+        variant: "destructive",
+pr-12325
       });
 
     const trimmed = email.trim();
@@ -104,6 +143,8 @@ export function EnhancedNewsletterForm() {
 
       const data = await res.json().catch(() => ({})),
 
+
+
       if (res.ok) {
         // Handle different success statuses
         if (data.status === "already_subscribed") {"
@@ -149,6 +190,9 @@ toast.success(data.message || "Thanks for subscribing!")"
     }
   },
 
+  const EMAIL_REGEX = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
       <div className="flex items-center mb-4">"
@@ -169,6 +213,16 @@ toast.success(data.message || "Thanks for subscribing!")"
           <p className="text-zion-slate-light mt-1">"
             We&apos;ll keep you updated with the latest from Zion.
           </p>
+
+      {isSubmitted ? (
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+          <p className="text-white font-medium">Thank you for subscribing!</p>
+          <p className="text-zion-slate-light mt-1">
+            We&apos;ll keep you updated with the latest from Zion.
+          </p>
+      
+
+
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
         <div className='flex -space-x-1 mr-2'>;,
           {[...Array(3)].map((_, i) => (;
@@ -183,6 +237,13 @@ toast.success(data.message || "Thanks for subscribing!")"
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">"
           <p className="text-white font-medium">Thank you for subscribing!</p>"
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>'
+
+      
+
+      {isSubmitted ? (
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+          <p className="text-white font-medium">Thank you for subscribing!</p>
+          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
         <form
@@ -276,6 +337,8 @@ type="email""
             Email address for newsletter subscription
           </label>
           <Input
+
+
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -373,6 +436,8 @@ type="email""
   );
 }
 
+
+
       {is_submitted ? (
         <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;
           <p className='text - white font - medium'>Thank you for subscribing!</p>;
@@ -420,6 +485,10 @@ type="email""
       </div>;
     </div>);
 const res = await fetch('/api/newsletter', {
+
+
+}
+      const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmed })
@@ -461,6 +530,28 @@ const res = await fetch('/api/newsletter', {
     } finally {
       setIsSubmitting(false);
     }
+    if (!EMAIL_REGEX.test(email)) {
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setIsSubmitted(true);
+        title: "Success!",
+        description: "You've been subscribed to our newsletter.",
+      
+      setEmail("");
+    } catch (error) {
+      logErrorToProduction('Newsletter subscription failed', error);
+        title: "Subscription failed",
+        description: "Something went wrong. Please try again.",
+    } finally {
+      setIsSubmitting(false);
+pr-12325
   };
 
   if (isSubmitted) {
@@ -542,3 +633,54 @@ const res = await fetch('/api/newsletter', {
 )
 
 }
+main
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+      <div className="text-center p-6 bg-green-50 dark:bg-green-900/20 rounded-lg">
+        <div className="text-green-600 dark:text-green-400 mb-2">
+          <Mail className="h-8 w-8 mx-auto" />
+        </div>
+        <h3 className="text-lg font-semibold text-green-800 dark:text-green-200 mb-1">
+          Thank you for subscribing!
+        </h3>
+        <p className="text-green-600 dark:text-green-400">
+          You'll receive our latest updates and insights.
+        </p>
+    );
+
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+        <p className="text-blue-100">
+          Get the latest insights, tips, and updates delivered to your inbox.
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-2">
+          <Input
+            type="email"
+            placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="flex-1 text-gray-900"
+            disabled={isSubmitting}
+            required
+          />
+          <Button
+            type="submit"
+            className="bg-white text-blue-600 hover:bg-gray-100 disabled:opacity-50"
+          >
+            {isSubmitting ? (
+              <div className="flex items-center space-x-2">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                <span>Subscribing...</span>
+            ) : (
+                <Mail className="h-4 w-4" />
+                <span>Subscribe</span>
+            )}
+          
+        
+        <p className="text-xs text-blue-100 text-center">
+          We respect your privacy. Unsubscribe at any time.
+      </form>
+pr-12325

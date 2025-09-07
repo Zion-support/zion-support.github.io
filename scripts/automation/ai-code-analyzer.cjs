@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * AI Code Analyzer Automation;
  * Analyzes code quality, patterns, and provides intelligent suggestions;
@@ -7,118 +7,171 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class AICodeAnalyzer {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
         this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-analyzer.log');
         this.reportFile = path.join(this.projectRoot, 'ai-code-analysis-report.json');
         this.ensureLogsDirectory()};
     ensureLogsDirectory() {}
         const logsDir = path.join(this.projectRoot, 'logs';);
+=======
+        this.logFile = path.join(this.projectRoot,logs,ai-code-analyzer.log');
+        this.reportFile = path.join(this.projectRoot,ai-code-analysis-report.json');
+        this.ensureLogsDirectory()};
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot,logs';);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-    analyzeCodeQuality() {}
+    analyzeCodeQuality() {}"
+<<<<<<< HEAD
         this.log('Starting code quality analysis...');
-        
         try {}
             // Run ESLint analysis;
             const eslintResult = execSync('npm run lint', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,""
                 "encoding": 'utf8',
-                "stdio": 'pipe'
+                "stdio": 'pipe
             };);
             
             this.log('ESLint analysis completed successfully');
-            return { "eslint": 'passed', "output": eslintResult }} catch (error) {}
-            this.log(`ESLint analysis "failed": ${error.message}`);
-            return { "eslint": 'failed', "output": error.stdout || error.message }};
-    };
-    analyzeTypeScript() {}
+            return { "eslint": 'passed', "output": eslintResult }} catch (error) {}""`;
+            this.log(`ESLint analysis "failed": ${error.message}`);""
+            return { "eslint": 'failed', "output": error.stdout || error.message }};"
+    analyzeTypeScript() {}"
         this.log('Starting TypeScript analysis...');
-        
-        try {}
             const typeCheckResult = execSync('npm run type-check', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
             
             this.log('TypeScript analysis completed successfully');
-            return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {}
-            this.log(`TypeScript analysis "failed": ${error.message}`);
-            return { "typescript": 'failed', "output": error.stdout || error.message }};
-    };
-    analyzeDependencies() {}
+            return { "typescript": 'passed', "output": typeCheckResult }} catch (error) {}""`;
+            this.log(`TypeScript analysis "failed": ${error.message}`);""
+            return { "typescript": 'failed', "output": error.stdout || error.message }};"
+    analyzeDependencies() {}"
         this.log('Analyzing dependencies...');
-        
-        try {}
             const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
+=======
+        this.log('Starting code quality analysis...);
+        try {}
+            // Run ESLint analysis;
+            const eslintResult = execSync('npm run lint, { })
+                "cwd": this.projectRoot,
+                "encoding": utf8,
+                "stdio": pipe
             };);
+            '
+            this.log('ESLint analysis completed successfully');
+            return { "eslint": passed, "output": eslintResult }} catch (error) {}
+            this.log(`ESLint analysis "failed": ${error.message});
+            return { "eslint": failed, "output": error.stdout || error.message }};"
+    };
+    analyzeTypeScript() {}"
+        this.log('Starting TypeScript analysis...);
+        try {}
+            const typeCheckResult = execSync('npm run type-check, { })
+                "cwd": this.projectRoot,
+                "encoding": utf8,
+                "stdio": pipe
+            };);
+            '
+            this.log('TypeScript analysis completed successfully');
+            return { "typescript": passed, "output": typeCheckResult }} catch (error) {}
+            this.log(`TypeScript analysis "failed": ${error.message});
+            return { "typescript": failed, "output": error.stdout || error.message }};"
+    };
+    analyzeDependencies() {}"
+        this.log('Analyzing dependencies...);
+        try {}
+            const auditResult = execSync('npm audit --json, { })
+                "cwd": this.projectRoot,
+                "encoding": utf8,
+                "stdio": pipe
+            };);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             
-            const auditData = JSON.parse(auditResult;);
+            const auditData = JSON.parse(auditResult;);`;
             this.log(`Found ${auditData.vulnerabilities?.total || 0} vulnerabilities`);
             
             return {;}
+<<<<<<< HEAD
+                "vulnerabilities": auditData.vulnerabilities?.total || 0,""
+                "dependencies": auditData.metadata?.dependencies || 0,""
+                "devDependencies": auditData.metadata?.devDependencies || 0;"
+            }} catch (error) {}"`;
+            this.log(`Dependency analysis "failed": ${error.message}`);""
+=======
                 "vulnerabilities": auditData.vulnerabilities?.total || 0,
                 "dependencies": auditData.metadata?.dependencies || 0,
-                "devDependencies": auditData.metadata?.devDependencies || 0;
-            }} catch (error) {}
-            this.log(`Dependency analysis "failed": ${error.message}`);
-            return { "error": error.message }};
-    };
-    generateReport() {}
+                "devDependencies": auditData.metadata?.devDependencies || 0;"
+            }} catch (error) {}"
+            this.log(`Dependency analysis "failed": ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+            return { "error": error.message }};"
+    generateReport() {}"
+<<<<<<< HEAD
         this.log('Generating comprehensive analysis report...');
-        
+        const report = {}
+            "timestamp": new Date().toISOString(),""
+            "project": this.projectRoot,""
+=======
+        this.log('Generating comprehensive analysis report...);
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
-            "analysis": {}
-                codeQuality: this.analyzeCodeQuality(),
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+            "analysis": {}"
+                codeQuality: this.analyzeCodeQuality(),"
                 "typeScript": this.analyzeTypeScript(),
-                "dependencies": this.analyzeDependencies();
-            },
-            "recommendations": this.generateRecommendations();
-       };
+                "dependencies": this.analyzeDependencies();"
+            },"
+            "recommendations": this.generateRecommendations();"
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
         this.log(`Analysis report saved to ${this.reportFile}`);
+=======
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Analysis report saved to ${this.reportFile});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         
         return report};
     generateRecommendations() {}
-        return [;]
+        return [;]"
+<<<<<<< HEAD
             'Consider implementing automated testing for better code coverage',
             'Review and update dependencies regularly for security patches',
             'Implement code formatting with Prettier for consistent style',
             'Add performance monitoring for production builds',
-            'Consider implementing automated code review processes'
+            'Consider implementing automated code review processes
         ]};
     async run() {}
         this.log('AI Code Analyzer started');
-        
+            const report = this.generateReport(;);
+            this.log('AI Code Analyzer completed successfully');
+            return report} catch (error) {}`;
+            this.log(`AI Code Analyzer "failed": ${error.message}`);"
+=======
+            'Consider implementing automated testing for better code coverage,Review and update dependencies regularly for security patches,Implement code formatting with Prettier for consistent style,Add performance monitoring for production builds,Consider implementing automated code review processes
+        ]};
+    async run() {}
+        this.log('AI Code Analyzer started');
         try {}
             const report = this.generateReport(;);
             this.log('AI Code Analyzer completed successfully');
             return report} catch (error) {}
-            this.log(`AI Code Analyzer "failed": ${error.message}`);
+            this.log(`AI Code Analyzer "failed": ${error.message});"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             throw error};
-    };
-};
 // Run the analyzer if this script is executed directly;
 if ( {})
     const analyzer = new AICodeAnalyzer) {}
@@ -126,6 +179,10 @@ if ( {})
     const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)};
 
+<<<<<<< HEAD
 
 module.exports = AICodeAnalyzer;
 
+=======
+"`;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

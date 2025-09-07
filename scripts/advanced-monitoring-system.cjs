@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/advanced-monitoring-system.cjs
 =======
 <<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitoring-system.cjs
@@ -16,43 +17,81 @@
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-monitoring-system.cjs
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/advanced-monitoring-system.cjs
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting Advanced Monitoring System...')
+    "status"""
+        "type"""
+  const output = execSync('df -h /', { "encoding"})""
+  return { usage, "status"}""
+  const output = execSync('free -m', { "encoding"})""
+  return { usage, total, used, "status"}""
+  const output = execSync('uptime', { "encoding"})""
+  return { load, "status"}""
+    execSync('npm run build', { "stdio"})""
+    return { "status": 'success', "message"}""
+    throw new Error('Build "failed")""
+    execSync('npx tsc --noEmit --skipLibCheck', { "stdio"})""
+    throw new Error('TypeScript check "failed")""
+    const output = execSync('npm test', { "encoding"})""
+    return { "status"}""
+    throw new Error('Test suite "failed")""
+    execSync('npm run lint', { "stdio"})""
+    return { "status": 'warning', "message"}""
+    const output = execSync('npm audit --audit-level=moderate', { "encoding"})""
+    return { "status": 'success', vulnerabilities, "message"}""
+    throw new Error('Vulnerability scan "failed")""
+    const output = execSync('npm outdated', { "encoding"})""
+    throw new Error('Dependency check "failed")""
+    throw new Error("Performance "issues")""
+    console.log("⚠  Performance "issues")""
+  return { "status": 'success', "metrics": mockPerformance, "message"}""
+=======
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log(' Starting Advanced Monitoring System...)
     "status"
         "type"
         "type"
-  const output = execSync('df -h /', { "encoding"})
+  const output = execSync('df -h /, { "encoding"})
   return { usage, "status"}
-  const output = execSync('free -m', { "encoding"})
+  const output = execSync('free -m, { "encoding"})
   return { usage, total, used, "status"}
-  const output = execSync('uptime', { "encoding"})
+  const output = execSync('uptime, { "encoding"})
   return { load, "status"}
-    execSync('npm run build', { "stdio"})
-    return { "status": 'success', "message"}
+    execSync('npm run build, { "stdio"})
+    return { "status": success, "message"}
     throw new Error('Build "failed")
-    execSync('npx tsc --noEmit --skipLibCheck', { "stdio"})
-    return { "status": 'success', "message"}
+    execSync('npx tsc --noEmit --skipLibCheck, { "stdio"})
+    return { "status": success, "message"}
     throw new Error('TypeScript check "failed")
-    const output = execSync('npm test', { "encoding"})
+    const output = execSync('npm test, { "encoding"})
     return { "status"}
     return { "status"}
     throw new Error('Test suite "failed")
-    execSync('npm run lint', { "stdio"})
-    return { "status": 'success', "message"}
-    return { "status": 'warning', "message"}
-    const output = execSync('npm audit --audit-level=moderate', { "encoding"})
-    return { "status": 'success', vulnerabilities, "message"}
-    return { "status": 'success', vulnerabilities, "message"}
+    execSync('npm run lint, { "stdio"})
+    return { "status": success, "message"}
+    return { "status": warning, "message"}
+    const output = execSync('npm audit --audit-level=moderate, { "encoding"})
+    return { "status": success, vulnerabilities, "message"}
+    return { "status": success, vulnerabilities, "message"}
     throw new Error('Vulnerability scan "failed")
-    const output = execSync('npm outdated', { "encoding"})
+    const output = execSync('npm outdated, { "encoding"})
     return { "status"}
     throw new Error('Dependency check "failed")
     return { "status"}
-    return { "status": 'warning', "message"}
+    return { "status": warning, "message"}
     throw new Error("Performance "issues")
     throw new Error("Performance "issues")
     console.log("⚠  Performance "issues")
-  return { "status": 'success', "metrics": mockPerformance, "message"}
+  return { "status": success, "metrics": mockPerformance, "message"}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

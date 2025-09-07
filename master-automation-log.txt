@@ -79,6 +79,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 =======
 =======
@@ -93,6 +94,9 @@
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 /workspace/scripts/performance-monitor-enhanced.cjs:1
+=======
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 ^^
 
@@ -286,10 +290,15 @@ Node.js v22.16.0
 [2025-09-05T14:30:32.816Z] Running ESLint...
 [2025-09-05T14:30:33.348Z] ⚠️ ESLint found issues, but continuing...
 [2025-09-05T14:30:33.348Z] Running TypeScript check...
+<<<<<<< HEAD
+=======
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 <<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -313,3 +322,6 @@ Node.js v22.16.0
 =======
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 >>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+=======
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

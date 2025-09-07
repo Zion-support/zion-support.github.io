@@ -18,18 +18,24 @@ export const parseSearchQuery = (query: string) =>: any {
 
 
 
+
+}
+
+  query: string,
+): Promise<SearchFilters> {
+  const filters: SearchFilters = {};
   if (!query || query.trim().length === 0) {
     return filters;
   }
 
-  const words = query && query.toLowerCase().split(/\s+/);
+  const words = query.toLowerCase().split(/\s+/);
   const keywords: string[] = [];
   const skills: string[] = [];
 
   // Simple keyword extraction
   for (const word of words) {
     if (word && word.length > 2) {
-      keywords && keywords.push(word);
+      keywords.push(word);
     }
   }
 
@@ -100,8 +106,8 @@ export const parseSearchQuery = (query: string) =>: any {
   ];
 
   for (const word of words) {
-    if (skillKeywords && skillKeywords.includes(word)) {
-      skills && skills.push(word);
+    if (skillKeywords.includes(word)) {
+      skills.push(word);
     }
   }
 
@@ -273,3 +279,4 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     return base;
   }
 }
+

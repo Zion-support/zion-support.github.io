@@ -114,3 +114,11 @@ case 'suggest-talent': {
 }
 });
 // Mock startup with safer environment access export default app;
+interface SlackAck {;
+  ():Promise<void>,;}
+</void>
+  (text:string):Promise<void>;
+  private commandHandlers:Record<string Function> = {},;
+</string>
+  async start(port?:number):Promise<void> {;
+async function askZionGPT(prompt:string):Promise<string> {;

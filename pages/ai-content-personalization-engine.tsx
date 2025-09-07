@@ -65,9 +65,13 @@ export default function AIContentPersonalizationEngine() {
 				"Journey orchestration across channels"
 				"Privacy-safe profiling and consent management"
 
+import React from 'react';
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+
 
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
@@ -112,4 +116,5 @@ export default function AIContentPersonalizationEngine() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

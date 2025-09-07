@@ -33,3 +33,15 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+;
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible""
+
+
+export { Collapsible, CollapsibleTrigger, CollapsibleContent };
+
+
+
+"
+pr-12325

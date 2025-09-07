@@ -35,6 +35,30 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+import useSWR from 'swr',;
+import React, { useMemo, useState } from 'react',;
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',;
+import Link from 'next/link';
+import type { GetServerSideProps } from 'next';
+const fetcher = null;
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie |'').split(';').reduce(
+    (acc: any, part: string) => {
+      const [k, v] = part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v |'');
+      return acc;
+    }
+    {} as Record<string, string>
+  );
+  let role = 'guest';
+  try {
+    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
+    role = user?.role || 'guest';
+origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch {}
+  if (role !== 'admin') {
+    return { redirect: { destination: '/', permanent: false } };
+  }
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
@@ -48,6 +72,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     return acc;
   }, {} as Record<string, string>),;
 
+
+
   let role = 'guest';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
@@ -57,6 +83,13 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
 export default function AdminDisputesDashboard() {;
   const { data } = useSWR('/api/disputes', fetcher);
   const [statusFilter, setStatusFilter] = useState<
+  return { props: {} };
+};
+
+export default function AdminDisputesDashboard() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const { data } = useSWR('/api/disputes', fetcher);
+const [statusFilter, setStatusFilter] = useState<
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
 }
@@ -78,6 +111,8 @@ export default function AdminDisputesDashboard() {;
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   const disputes = useMemo(() => {
     const list = data?.disputes |[];
   } catch {}
@@ -91,6 +126,13 @@ export default function AdminDisputesDashboard() {
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 
+return list.filter((d: any) => d.status === statusFilter);
+  }, [data, statusFilter]);
+
+  return (
+    <EnhancedLayout>
+<div className='max-w-6xl mx-auto'>
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>;
       <div className='max-w-6xl mx-auto'>;
@@ -278,6 +320,14 @@ export default function AdminDisputesDashboard() {
                 <th className="text-left px-3 py-2">Created At</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
+                <th className='text-left px-3 py-2'>Case ID</th>
+                <th className='text-left px-3 py-2'>Talent</th>
+                <th className='text-left px-3 py-2'>Client</th>
+                <th className='text-left px-3 py-2'>Project</th>
+                <th className='text-left px-3 py-2'>Created At</th>
+                <th className='text-left px-3 py-2'>Status</th>
+                <th className='text-left px-3 py-2'>Actions</th>
+origin/cursor/automate-test-improve-and-merge-code-2533
               </tr>
             </thead>
             <tbody>
@@ -300,6 +350,10 @@ export default function AdminDisputesDashboard() {
                   </td>
                 </tr>
 
+                  </td>
+                </tr>
+
+
 }
 
 import useSWR from 'swr';
@@ -319,6 +373,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     },
     {} as Record < string, string>);
   let role = 'guest';
+
 
 }
 
@@ -426,3 +481,42 @@ if (return list) {
   }
 }
 
+<tr key={d.id} className='border-t'>
+                  <td className='px-3 py-2 font-medium'>{d.id}</td>
+                  <td className='px-3 py-2'>{d.talentUserId}</td>
+                  <td className='px-3 py-2'>{d.clientUserId}</td>
+                  <td className='px-3 py-2'>{d.projectId}</td>
+                  <td className='px-3 py-2'>
+                    {new Date(d.createdAt).toLocaleString()}
+                  </td>
+                  <td className='px-3 py-2'>{d.status}</td>
+                  <td className='px-3 py-2 flex gap-2'>
+                    <Link
+                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}
+                    >
+                      <a className='text-green-700 hover:underline'>Resolve</a>
+                    </Link>
+                    <Link
+                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}
+                    >
+                      <a className='text-blue-700 hover:underline'>
+                        Message Parties
+                      </a>
+                    </Link>
+                    <Link
+                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}
+                    >
+                      <a className='text-gray-700 hover:underline'>
+                        Download Evidence
+                      </a>
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -4,6 +4,7 @@ import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolograp
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 
+
 import React from 'react',;
 import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
@@ -14,6 +15,9 @@ import React from 'react'
 import Head from 'next/head'
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+
+
 
 export default function AIEvalsPage() {
 	const contactInfo = {
@@ -36,6 +40,15 @@ export default function AIEvalsPage() {_const _contactInfo = {
 
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 
+import React from 'react',;
+import Head from 'next/head',;
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+export default function AIEvalsPage() {
+	const contactInfo = null;
+	return (
+		<QuantumHolographicMatrixBackground intensity={1.5}>
+origin/cursor/automate-test-improve-and-merge-code-2533
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -102,6 +115,10 @@ export default function AIEvalsPage() {_const _contactInfo = {
 
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
+
+						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
+
+
 					</div>
 				</div>
 			</div>
@@ -119,6 +136,10 @@ import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',;
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 export default /**
  * AIEvalsPage - Function description
@@ -283,3 +304,6 @@ export default function AIEvalsPage() {_const _contactInfo = {
   }
 }
 
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

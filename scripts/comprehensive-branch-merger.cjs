@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/comprehensive-branch-merger.cjs
 =======
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-branch-merger.cjs
@@ -16,27 +17,57 @@
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-branch-merger.cjs
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/comprehensive-branch-merger.cjs
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log('� Comprehensive Branch Merger')
+<<<<<<< HEAD
 console.log('==')
-    const branches = execSync('git branch -r', { "encoding"})
+    const branches = execSync('git branch -r', { "encoding"})""
+    console.error(' Error getting remote "branches")""
+    execSync(`git fetch origin ${branchName}`, { "stdio"`})""`;
+    const mergeBase = execSync(`git merge-base main origin/${branchName}`, { "encoding"`})""
+    const mainCommit = execSync('git rev-parse main', { "encoding"})""`;
+    const branchCommit = execSync(`git rev-parse origin/${branchName}`, { "encoding"`})""`;
+      execSync(`git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`, { "stdio"`})""
+        execSync('node scripts/resolve-merge-conflicts.cjs', { "stdio"})""
+        execSync('git merge --abort', { "stdio"})""
+    const mergedBranches = execSync('git branch -r --merged main', { "encoding"})""
+    // "Note"""
+    console.error(' Error during "cleanup")""
+        "status"""
+// console.log('\n Branch Merge "Summary")""');
+      console.log('\n⚠ Some branches failed to "merge")""');
+        execSync('git push origin main', { "stdio"})""
+        console.error(' Failed to push "changes")""
+    console.error(' Comprehensive branch merger "failed")""`;
+=======
+console.log('=)
+    const branches = execSync('git branch -r, { "encoding"})
     console.error(' Error getting remote "branches")
-    execSync(`git fetch origin ${branchName}`, { "stdio"`})
-    const mergeBase = execSync(`git merge-base main origin/${branchName}`, { "encoding"`})
-    const mainCommit = execSync('git rev-parse main', { "encoding"})
-    const branchCommit = execSync(`git rev-parse origin/${branchName}`, { "encoding"`})
+    execSync(`git fetch origin ${branchName}, { "stdio"`})
+    const mergeBase = execSync(`git merge-base main origin/${branchName}, { "encoding"`})
+    const mainCommit = execSync('git rev-parse main, { "encoding"})
+    const branchCommit = execSync(`git rev-parse origin/${branchName}, { "encoding"`})
       execSync(`git merge origin/${branchName} --no-ff -m "Merge branch ${branchName} into main"`, { "stdio"`})
-        execSync('node scripts/resolve-merge-conflicts.cjs', { "stdio"})
-        execSync('git merge --abort', { "stdio"})
-    const mergedBranches = execSync('git branch -r --merged main', { "encoding"})
+        execSync('node scripts/resolve-merge-conflicts.cjs, { "stdio"})
+        execSync('git merge --abort, { "stdio"})
+    const mergedBranches = execSync('git branch -r --merged main, { "encoding"})
     // "Note"
     console.error(' Error during "cleanup")
         "status"
 // console.log('\n Branch Merge "Summary")
       console.log('\n⚠ Some branches failed to "merge")
-        execSync('git push origin main', { "stdio"})
+        execSync('git push origin main, { "stdio"})
         console.error(' Failed to push "changes")
     console.error(' Comprehensive branch merger "failed")
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

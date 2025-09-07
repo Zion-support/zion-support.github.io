@@ -3,6 +3,9 @@ interface ResultsHeaderProps {;
   isLoading: boolean;,
   resultCount: number;
 }
+
+
+
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
@@ -35,6 +38,22 @@ interface ResultsHeaderProps {;
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (`
           {resultCount === 0 ? (
 export function ResultsHeader({ isLoading, resultCount }:,  ResultsHeaderProps) {
+
+
+
+interface ResultsHeaderProps {
+  isLoading: boolean
+  resultCount: number
+export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+  return (
+    <div className='flex items-center mb-6 text-zion-slate-light'>
+      {isLoading ? (
+        <div className='flex items-center'>
+  isLoading: boolean;
+  resultCount: number
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">"
       {isLoading ? (
@@ -127,3 +146,13 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   );
 }
 ;
+;
+{resultCount === 0
+            ? 'No talents found. Try adjusting your filters.'
+            : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}
+        </span>
+      )}
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

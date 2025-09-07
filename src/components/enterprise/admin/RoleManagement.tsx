@@ -4,7 +4,17 @@ export function RoleManagement() {
 import React from 'react';
 
 import React from "react",
+import React from 'react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
+export function RoleManagement() {
+  // Mock team members data;
+  const teamMembers = [
+import React from 'react';
+import {
+  // TODO: Implement
+}
+pr-12325
   Table,
   TableBody,
   TableCell,
@@ -15,6 +25,12 @@ import {
 import { Badge } from '@/components / ui / badge';
 import { Switch } from '@/components / ui / switch';
 import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-react';
+  TableRow,
+} from '@/components/ui/ table';
+import { Badge } from '@/components/ui/ badge';
+import { Switch } from '@/components/ui/ switch';
+import { toast, InfoIcon } from 'lucide-react';
+pr-12325
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -22,6 +38,10 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
 } from '@/components / ui / tooltip';
 export /**
  * RoleManagement - Function description
+} from '@/components/ui/ tooltip';
+export /**
+ * RoleManagement - Function description;
+pr-12325
  */
 function RoleManagement() {
   // Mock team members data;
@@ -35,6 +55,14 @@ function RoleManagement() {
         manage_billing: true,
       },
     },
+
+
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
     {
       id: 2,
       name: 'Jamie Smith'',
@@ -87,6 +115,38 @@ function RoleManagement() {
       description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,`
     });
   }
+
+      id: 2;,
+  name: 'Jamie Smith
+      email: 'jamie@example.com,
+  role: 'Recruiter
+      permissions: {,
+        manage_team: false,
+        view_billing: false,
+        manage_billing: false,
+
+      id: 3;,
+  name: 'Sam Williams
+      email: 'sam@example.com,
+  role: 'Manager
+        edit_candidates: false,
+
+      id: 4;,
+  name: 'Taylor Brown
+      email: 'taylor@example.com,
+  role: 'Viewer
+        create_jobs: false,
+    },]
+  ];
+  const handlePermissionChange = (
+    _memberId: number,
+    permission: string,)
+    value: boolean) =>: any {    // In a real app, this would make an API call to update permissions;
+    toast ({
+      title: 'Permission updated',
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,')
+    });
+pr-12325
   const role_descriptions: Record < string, string> = {
     Admin: 'Full access to all features and settings','
     Recruiter: 'Can manage candidates and job postings','
@@ -99,11 +159,155 @@ import { Badge } from "@/components/ui/badge",
 import { Switch } from "@/components/ui/switch",
 import { toast } from "@/hooks/use-toast",
 import { InfoIcon } from 'lucide-react'
+pr-12325
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { Switch } from '@/components/ui/switch';
+import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
+import {;
+pr-12325
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+
+pr-12325
+export function RoleManagement() {;
+  // Mock team members data;
+  const teamMembers = [;
+    {;
+      id: 1,;
+      name: 'Alex Johnson',;
+      email: 'alex@example && example.com',;
+      role: 'Admin',;
+      permissions: {;
+        viewCandidates: true,;
+      permissions: {;,
+  viewCandidates: true,;
+pr-12325
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: true,;
+        viewBilling: true,;
+        manageBilling: true,;
+      },;
+    },;
+    {;
+pr-12325
+      id: 2,;
+      name: 'Jamie Smith',;
+      email: 'jamie@example && example.com',;
+      role: 'Recruiter',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: true,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false,;
+      },;
+    },;
+    {;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false,;
+pr-12325
+      id: 3,;
+      name: 'Sam Williams',;
+      email: 'sam@example && example.com',;
+      role: 'Manager',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: true,;
+        manageTeam: false,;
+        viewBilling: true,;
+        manageBilling: false,;
+      },;
+    },;
+    {;
+        editCandidates: false,;
+pr-12325
+      id: 4,;
+      name: 'Taylor Brown',;
+      email: 'taylor@example && example.com',;
+      role: 'Viewer',;
+      permissions: {;
+        viewCandidates: true,;
+        editCandidates: false,;
+        createJobs: false,;
+        manageTeam: false,;
+        viewBilling: false,;
+        manageBilling: false,;
+      },;
+    },;
+  ];
+        createJobs: false,;
+    },;]
+pr-12325
+
+  const handlePermissionChange = (;
+    _memberId: number,;
+    permission: string,;
+    value: boolean;
+  ) => {    // In a real app, this would make an API call to update permissions;
+    toast({;
+      title: 'Permission updated',;
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,;
+    });
+  };
+
+  const roleDescriptions: Record<string, string> = {;
+    Admin: 'Full access to all features and settings',;
+    Recruiter: 'Can manage candidates and job postings',;
+    Manager: 'Can view candidates and create jobs',;
+    Viewer: 'Read-only access to candidates',;
+  };
+
+import { toast } from '@/hooks/use-toast';
+import { InfoIcon } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+
+import React from "react";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
 
 export function RoleManagement() {
   // Mock team members data
@@ -173,6 +377,19 @@ export function RoleManagement() {
   return (
     <div className="space-y-6">
       <div>
+        <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
+          {Object.entries(roleDescriptions).map(([role, description]) => (
+            <div
+              key={role}
+              className='bg-card rounded-lg p-4 border border-border'
+            >
+              <div className='flex items-center gap-2 mb-2'>
+                <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
+                  {role}
+                </Badge>              </div>
+              <p className='text-sm text-muted-foreground'>{description}</p>
+
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -181,6 +398,52 @@ export function RoleManagement() {
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+
+
+import React from "react",;
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { toast } from "@/hooks/use-toast",;
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+    {
+        manageBilling: false}}],
+
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
+    // In a real app, this would make an API call to update permissions
+    toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+
+  return (
+    <div className="space-y-6">
+      <div>
+            </div>
+          ))}
+        </div>
+      </div>
             </div>
           ))}
         </div>
@@ -857,6 +1120,220 @@ export function RoleManagement() {;
         <h3 className='text - xl font - medium mb - 4'>Role Permissions</h3>;
         <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4 mb - 6'>;,
           {Object.entries (role_descriptions).map (([role, description]) => (
+    value: boolean;)
+  ) => {    // In a real app, this would make an API call to update permissions;
+    toast({;
+      title: 'Permission updated',;`;
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,;')
+  };
+
+  const roleDescriptions: Record<string, string> = {;
+</string>
+    <div className="space-y-6">"
+</div>
+      <div>
+"
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>""
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">"
+</div>"
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">"
+              <div className="flex items-center gap-2 mb-2">"
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}"
+              <p className="text-sm text-muted-foreground">{description}</p>"
+      <div className="rounded-md border">"
+        <Table>
+
+          <TableHeader>
+
+            <TableRow>
+
+              <TableHead>Team Member
+              <TableHead>Role"
+              <TableHead className='text-center'>
+
+                <div className='flex items-center justify-center gap-1'>
+                  <TooltipProvider>
+
+                    <Tooltip>
+
+                      <TooltipTrigger>
+
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
+
+                      
+                      <TooltipContent>
+
+                      
+                    
+                  
+              
+
+
+
+
+
+                      
+
+                      
+                    
+                  
+              
+
+
+
+
+
+                      
+
+                      
+                    
+                  
+              
+
+
+
+
+
+                      
+
+                      
+                    
+                  
+              
+
+
+
+
+
+                      
+
+                      
+                    
+                  
+              
+            
+          
+          <TableBody>
+
+              <TableRow key={member.id}>
+
+
+
+                <TableCell>
+
+                  <div className='font-medium'>{member.name}</div>
+                  <div className='text-sm text-muted-foreground'>
+                
+
+
+
+                  <select;
+                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring""
+                    defaultValue={member.role}
+                  >
+</select>"
+                    <option value="Admin">Admin</option>""
+                    <option value="Recruiter">Recruiter</option>""
+                    <option value="Manager">Manager</option>""
+                    <option value="Viewer">Viewer</option>"
+                  </select>
+                <TableCell className="text-center">"
+
+                  <Switch;"
+                    aria-label="View candidates""
+                    checked={member.permissions.viewCandidates}
+                    onCheckedChange={(checked) =>
+
+
+                    aria-label="Edit candidates""
+                    checked={member.permissions.editCandidates}
+
+
+                    aria-label="Create jobs""
+                    checked={member.permissions.createJobs}
+
+
+                    aria-label="Manage team""
+                    checked={member.permissions.manageTeam}
+
+
+                    aria-label="View billing""
+                    checked={member.permissions.viewBilling}
+
+  const roleDescriptions: Record<string string> = {;
+</string>"
+    <div className="space-y-6">;"
+      <div>;
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;""
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;"
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">;"
+              <div className="flex items-center gap-2 mb-2">;"
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role};"
+              </div>;"
+              <p className="text-sm text-muted-foreground">{description}</p>;"
+            </div>;
+      <div className='rounded-md border'>;
+        <Table>;
+
+          <TableHeader>;
+
+            <TableRow>;
+
+              <TableHead>Team Member;
+              <TableHead>Role;
+              <TableHead className='text-center'>;
+
+                <div className='flex items-center justify-center gap-1'>;
+                  <TooltipProvider>;
+
+                    <Tooltip>;
+
+                      <TooltipTrigger>;
+
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
+
+                      ;
+                      <TooltipContent>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <TableBody>;
+
+            {teamMembers && teamMembers.map(member => (              <TableRow key={member && member.id}>;
+
+                <TableCell>;
+
+                  <div className='font-medium'>{member && member.name}</div>;
+                  <div className='text-sm text-muted-foreground'>;
+
+                    className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring
+                    defaultValue={member && member.role}>;
+    <div className='space - y-6'>;
+        <h3 className='text - xl font - medium mb - 4'>Role Permissions</h3>;
+        <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4 mb - 6'>;
+pr-12325
             <div;
               key={role}
               className='bg - card rounded - lg p - 4 border border - border';
@@ -968,6 +1445,57 @@ export function RoleManagement() {;
                 <TableCell>;
                   <select;
                     className='w - full h - 9 rounded - md border border - input bg - background px - 3 py - 1 text - sm shadow - sm transition - colors focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring';',
+
+              <p className='text - sm text - muted - foreground'>{description}</p>;')
+            </div>))}
+      <div className='rounded - md border'>;
+
+
+
+              <TableHead > Team Member;
+              <TableHead > Role;
+              <TableHead className='text - center'>;
+
+                <div className='flex items - center justify - center gap - 1'>;
+
+
+
+                        <InfoIcon className='h - 4 w - 4 text - muted - foreground' />;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {team_members.map (member => (              <TableRow key={member.id}>;
+
+
+                  <div className='font - medium'>{member.name}</div>;
+                  <div className='text - sm text - muted - foreground'>;
+
+pr-12325
+                    className='w - full h - 9 rounded - md border border - input bg - background px - 3 py - 1 text - sm shadow - sm transition - colors focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring';
                     default_value={member.role}                  >;
                     <option value='Admin'>Admin</option>;
                     <option value='Recruiter'>Recruiter</option>;
@@ -1007,6 +1535,25 @@ export function RoleManagement() {;
                     }                  />
                 </TableCell>
                 <TableCell className='text-center'>'
+                <TableCell className='text-center'>
+                  <Switch
+                    aria-label='Create jobs'
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'createJobs', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
+                  <Switch
+                    aria-label='Manage team'
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'manageTeam', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
+                  <Switch
+                    aria-label='View billing'
                     checked={member && member.permissions.viewCandidates}
                     onCheckedChange={checked =>;
                       handlePermissionChange(;
@@ -1087,6 +1634,7 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View billing";
+
                     checked={member.permissions.viewBilling}
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
@@ -1156,3 +1704,63 @@ export function RoleManagement() {;
 ;
 }}))]
 ;
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <TableCell className="text-center">;"
+
+                    aria-label="View candidates";"
+                    onCheckedChange={checked =>
+
+                <TableCell className='text-center'>
+
+                  <Switch;
+                    aria-label='Edit candidates
+
+                
+
+                <TableCell className='text-center'>;
+
+                    checked={member && member.permissions.editCandidates}
+                    onCheckedChange={checked =>;
+
+
+                    aria-label='Create jobs
+                    checked={member && member.permissions.createJobs}
+
+
+                    aria-label='Manage team
+                    checked={member && member.permissions.manageTeam}
+
+
+                    aria-label='View billing
+
+
+                <TableCell className='text - center'>;
+
+                    aria - label='View candidates';
+                    checked={member.permissions.view_candidates}
+
+
+                    aria - label='Edit candidates';
+                    checked={member.permissions.edit_candidates}
+
+
+                    aria - label='Create jobs';
+                    checked={member.permissions.create_jobs}
+
+
+                    aria - label='Manage team';
+                    checked={member.permissions.manage_team}
+
+
+                    aria - label='View billing';
+                    checked={member.permissions.view_billing}
+
+                ;)
+              ))}
+    </div>);`;
+pr-12325

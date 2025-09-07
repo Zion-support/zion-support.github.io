@@ -1,7 +1,15 @@
 
+
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+
           analyzerMode: 'static',
           openAnalyzer: false,
-          reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',
+          reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',')
         })
       );
     }
@@ -17,8 +25,10 @@
 
 
 // Next.config.analyzer utility
+};
+// Next.config.analyzer utility;
 export const Next.config.analyzer = () => {
-  // Implementation here
+  // Implementation here;
   return null;
 
 
@@ -34,20 +44,42 @@ export const Next.config.analyzer = () => {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;}
-}
 
 }
 ;}
 }
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+
+
 module && module.exports = {
-  "webpack": (config, { isServer }) => {
+  "webpack": (config, { isServer }) => {"
     if ( {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
+        new BundleAnalyzerPlugin({"
           "analyzerMode": 'static',
-          "openAnalyzer": 'false',
+          "openAnalyzer": 'false',')
           "reportFilename": isServer ? '../analyze/server && server.html' : './analyze/client && client.html'})
 
           "analyzerMode": 'static',
@@ -89,16 +121,28 @@ module && module.exports = {
     if ( {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
-
-          "analyzerMode": 'static',
-          "openAnalyzer": 'false',
-          "reportFilename": isServer ? '../analyze/server && server.html' : './analyze/client && client.html'})
-
       )}
     return config) {
      {
-      config && config.plugins.push(
-        new BundleAnalyzerPlugin({
+          "openAnalyzer": false,")"
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
+    return config}},
+    return config}}};
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
           "analyzerMode": 'static',
           "openAnalyzer": false,
@@ -106,10 +150,6 @@ module && module.exports = {
       )}
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
 
-    return config}},
-};
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
-    return config}}};
 
 
 
@@ -175,9 +215,21 @@ module.exports = {
       config.plugins.push(
         new BundleAnalyzerPlugin({
 };
+"
+
+
+,
+ursor/integrate-build-improve-and-re-verify-8f7d;
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/automation-improvements-final;
+
+)"
+
+          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
+
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
-    return config}}};
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
 
 
@@ -209,6 +261,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
     return config}}};
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};    return config}},
 
 
 
@@ -227,6 +280,29 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 
 
 
+
+
+
+
+};
+,
+
+
+
+
+
+
+
+
+
+};
+,
+
+};
+,
+
+};
+,
 };
 ,
 
@@ -236,30 +312,11 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 
 
 
-
-
-};
-,
-
-};
-,
-
-};
-,
-};
-,
-
-
-
-
-
-
-
+ursor/fix-lint-push-and-merge-to-main-ae4e;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},}
     return config}}
-}
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},}
     return config}}}
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},}
 
@@ -288,29 +345,18 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && m
 ;
 }
 ,
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module && module.exports = { webpack: (config,{ isServer }) => { if ( { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config) { { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server && server.html' : './analyze/client && client.html',}) )} return config}},};
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
-module.exports = {
-  "webpack": (config, { is_server }) => {
-    if (
-      )}
+  "webpack": (config, { is_server }) => {"
+    if ()
     return config) {) {
-  $2
-}
-    {
+  $2;
       config.plugins.push (
-        new BundleAnalyzerPlugin ({
+        new BundleAnalyzerPlugin ({"
           "analyzer_mode": 'static',
-          "open_analyzer": false,
+          "open_analyzer": false,")"
           "report_filename": is_server ? '../analyze / server.html' : './analyze / client.html'}))}
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module.exports = { webpack: (config, { is_server }) => { if ()} return config) { { config.plugins.push ( new BundleAnalyzerPlugin ({ analyzer_mode: 'static', open_analyzer: 'false', report_filename: is_server ? '../analyze / server.html' : './analyze / client.html', }) )} return config}}, }) {
-  $2
-}
-    return config}},
-}
-const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module.exports = { webpack: (config, { is_server }) => { if ()} return config) { { config.plugins.push ( new BundleAnalyzerPlugin ({ analyzer_mode: 'static', open_analyzer: 'false', report_filename: is_server ? '../analyze / server.html' : './analyze / client.html', }) )} return config}}, }) {
-  $2
-}
-    return config}}}
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module.exports = { webpack: (config, { is_server }) => { if ()} return config) { { config.plugins.push ( new BundleAnalyzerPlugin ({ analyzer_mode: 'static', open_analyzer: false, report_filename: is_server ? '../analyze / server.html' : './analyze / client.html', }) )} return config}}, }) {
   $2
 }
@@ -344,3 +390,8 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 ,;
 
 
+
+},;
+
+
+origin/main;

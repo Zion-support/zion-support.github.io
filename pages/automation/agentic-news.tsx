@@ -42,10 +42,15 @@ import data from '../../data/agentic-news.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/agentic-news.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore;
+import data from '../../data/agentic-news.json',;
 export default function AgenticNewsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
 
+  const items: any[] = (data?.items || []).slice(0, 60);
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -93,3 +98,7 @@ export default function AgenticNewsPage() {
 
 }
 
+    </EnhancedLayout>
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,6 @@
 title="Retail Technology Solutions"
+
+			title="Retail Technology Solutions"
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
@@ -20,6 +22,16 @@ title="Retail Technology Solutions"
 }
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function RetailTechnologySolutions() {
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: POS, eCom, WMS, ESP, CDP"
+			]}
+			industries={["Retail", "CPG", "E‑commerce"]}
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * RetailTechnologySolutions - Function description
  */
@@ -69,6 +81,7 @@ export default function RetailTechnologySolutions() {
 				"Integrations: POS, eCom, WMS, ESP, CDP"
 			]}
 			industries={["Retail", "CPG", "E‑commerce"]}
+
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,3 +125,7 @@ export default function RetailTechnologySolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

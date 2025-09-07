@@ -4,21 +4,40 @@ export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'd
 ;
 
 export interface Dispute {
+export interface Dispute {
+export interface DisputeMessage {;
 
+export interface DisputeMessage {export interface DisputeMessage {
+  id: string;
+  dispute_id: string;
+  user_id: string;
+  message: string;
+  created_at: string;
+export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';''
+export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;'
+;
+
+export interface Dispute {
+
+  // TODO: Implement
+}
 export interface Dispute {;
 
 export interface Dispute {
   id: string;
+  // TODO: Implement
+}
+  id: string;,
   project_id: string;
   milestone_id?: string;
-  raised_by: string;
+  raised_by: string;,
   reason_code: string;
-  description: string;
+  description: string;,
   created_at: string;
   updated_at: string;
   resolved_at?: string;
   resolution_summary?: string;
-  status: DisputeStatus;
+  status: DisputeStatus;,
   resolution_type: ResolutionType;
   project?: {
 
@@ -49,22 +68,29 @@ title?: string
     display_name: string
     avatar_url?: string
   }
-}
+
+
+export interface DisputeMessage {;
+
+
 export interface DisputeMessage {
+  // TODO: Implement
+}
+  id: string;,
 
 export interface DisputeMessage {;
 export interface DisputeMessage {
   id: string;
   dispute_id: string;
-  user_id: string;
+  user_id: string;,
   message: string;
-  created_at: string;
+  created_at: string;,
   is_admin_note: boolean;
   user_profile?: {
 
     display_name: string,
-    avatar_url?: string;
-
+    avatar_url?: string;}
+}
   }
 }
 
@@ -78,6 +104,7 @@ export interface DisputeAttachment {
 
 export interface DisputeAttachment {;
 export interface DisputeAttachment {
+export interface DisputeAttachment {export interface DisputeAttachment {
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -122,6 +149,7 @@ export type DisputeReason =
 export const disputeReasonLabels: Record<DisputeReason, string> = {
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
+export const disputeReasonLabels: Record<DisputeReason, string> = {;
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
@@ -148,7 +176,7 @@ export interface Dispute {;
   project_id: string,;
   milestone_id?: string,;
   raised_by: string,;
-  reason_code: string,;
+  reason_code: string,,
   description: string,;
   created_at: string,;
   updated_at: string,;
@@ -195,6 +223,68 @@ export interface DisputeAttachment {;
   url?: string;
 }
 ;
+  // TODO: Implement
+}
+export interface Dispute {;
+
+  // TODO: Implement
+  id: string;,
+  project_id: string;
+  milestone_id?: string;
+  raised_by: string;,
+  reason_code: string;
+  description: string;,
+  created_at: string;
+  updated_at: string;
+  resolved_at?: string;
+  resolution_summary?: string;
+  status: DisputeStatus;,
+  resolution_type: ResolutionType;
+  project?: {
+
+    title?: string,
+    scope_summary?: string;
+  client_profile?: {
+    display_name: string,
+    avatar_url?: string;
+  talent_profile?: {
+
+
+
+
+export interface DisputeMessage {;
+
+
+export interface DisputeMessage {
+  // TODO: Implement
+  dispute_id: string;
+  user_id: string;,
+  message: string;
+  created_at: string;,
+  is_admin_note: boolean;
+  user_profile?: {
+
+
+
+
+
+export interface DisputeAttachment {;
+
+
+export interface DisputeAttachment {
+  // TODO: Implement
+}
+  id: string;,
+
+  dispute_id: string;
+  uploaded_by: string;,
+  file_name: string;
+  file_path: string;,
+  file_type: string;
+  file_size: number;,
+  created_at: string,
+  url?: string;
+pr-12325
 export type DisputeReason =;
   | 'milestone_quality';
   | 'delayed_delivery';
@@ -211,3 +301,34 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   payment: 'Payment Dispute',;
   contract_terms: 'Contract Terms Disagreement',;
 other: 'Other Issue'};
+  other: 'Other Issue'};
+  | 'other';
+
+  file_size: number;,
+  created_at: string,
+  url?: string;
+}
+export type DisputeReason =;'
+  | 'milestone_quality';''
+  | 'delayed_delivery';''
+  | 'scope_change';''
+  | 'communication';''
+  | 'payment';''
+  | 'contract_terms';''
+  | 'other';'
+;
+export const disputeReasonLabels: Record < DisputeReason, string> = {
+
+
+
+
+export const disputeReasonLabels: Record<DisputeReason, string> = {;
+
+export const disputeReasonLabels: Record<DisputeReason, string> = {
+
+
+
+export const disputeReasonLabels: Record<DisputeReason string> = {;
+pr-12325
+</DisputeReason>'
+

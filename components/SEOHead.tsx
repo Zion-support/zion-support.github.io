@@ -128,6 +128,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default SEOHead;
+
+pr-12243
   title?: string;
   description?: string;
   keywords?: string;
@@ -164,3 +166,5 @@ export default SEOHead;
     </Head>);
 }
 ;
+
+pr-12243

@@ -1,22 +1,46 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+function fixMergeConflicts(filePath) {
+  try {
+  // TODO: Implement
+}
+<<<<<<< HEAD
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Check if file has merge conflicts;
+    if (content.includes() || content.includes('>>>>>>>')) {
+      console.log(`Fixing merge conflicts in: ${filePath}`);
+=======
+    let content = fs.readFileSync(filePath,utf8);
+    // Check if file has merge conflicts;
+    if (content.includes() || content.includes('>>>>>>>')) {
+      console.log(`Fixing merge conflicts in: ${filePath});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
-class ConflictResolver {
-  constructor() {
-    this.fixedFiles = [];
-    this.errors = [];
-  }
+      // Simple merge conflict resolution - take the HEAD version;
+      const lines = content.split('\n');
+      const resolvedLines = [];
+      let inConflict = false;
+      let takeHead = true;
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+<<<<<<< HEAD
 
-  fixMergeConflicts(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
+        if (line.includes()) {
+          takeHead = false;
+=======
+'
+        if (line.includes()) {
+          takeHead = false;
+          continue;
+        } else if (line.includes('>>>>>>>')) {
+          inConflict = false;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+          continue;
+        } else if (line.includes('>>>>>>>')) {
+          inConflict = false;
 
+<<<<<<< HEAD
       // Remove merge conflict markers
       content = content.replace(/[\s\S]*?[\s\S]*?      content = content.replace(/[\s\S]*?      
       // Fix common syntax issues
@@ -99,52 +123,53 @@ class ConflictResolver {
           }
         } catch (error) {
           // Skip files that can't be read
+=======
+        if (!inConflict || (inConflict && takeHead)) {
+          resolvedLines.push(line);
+<<<<<<< HEAD
+      fs.writeFileSync(filePath, resolvedLines.join('\n'), 'utf8');`;
+      console.log(`Resolved conflicts in: ${filePath}`);
+  } catch (error) {`;
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
         }
       }
+      fs.writeFileSync(filePath, resolvedLines.join('\n'),utf8);
+      console.log(`Resolved conflicts in: ${filePath});
     }
-    
-    return files;
-  }
+  } catch (error) {
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    console.error(`Error processing ${filePath}:`, error);
 
-  async run() {
-    this.log('Starting conflict resolution...');
-    
-    const filesToFix = this.findFilesWithConflicts('/workspace');
-    this.log(`Found ${filesToFix.length} files with conflicts`);
-    
-    for (const file of filesToFix) {
-      this.fixMergeConflicts(file);
-    }
-    
-    this.log(`Fixed ${this.fixedFiles.length} files`);
-    this.log(`Encountered ${this.errors.length} errors`);
-    
-    if (this.errors.length > 0) {
-      this.log('Errors:');
-      this.errors.forEach(err => this.log(`  ${err.file}: ${err.error}`));
-    }
-    
-    return {
-      fixedFiles: this.fixedFiles,
-      errors: this.errors
-    };
-  }
-}
-
-// Run the conflict resolver
-if (require.main === module) {
-  const resolver = new ConflictResolver();
-  resolver.run()
-    .then(result => {
-      console.log('Conflict resolution completed');
-      console.log('Fixed files:', result.fixedFiles.length);
-      console.log('Errors:', result.errors.length);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Conflict resolution failed:', error);
-      process.exit(1);
+function traverseDirectory(dir) {
+  // TODO: Implement
+    fs.readdirSync(dir).forEach(file => {)
+      const fullPath = path.join(dir, file);
+  // TODO: Implement
+        const stats = fs.statSync(fullPath);
+        if (stats.isDirectory()) {
+          traverseDirectory(fullPath);
+        } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts') || fullPath.endsWith('.jsx') || fullPath.endsWith('.js') || fullPath.endsWith('.json') || fullPath.endsWith('.toml') || fullPath.endsWith('.css') || fullPath.endsWith('.html')) {
+          fixMergeConflicts(fullPath);
+      } catch (error) {
+<<<<<<< HEAD
+        // Skip broken symlinks or inaccessible files;`;
+        console.log(`Skipping ${fullPath}: ${error.message}`);
     });
+    console.log(`Skipping directory ${dir}: ${error.message}`);
+
+traverseDirectory(path.join(__dirname));
+console.log('All merge conflicts resolved.');`;
+=======
+        // Skip broken symlinks or inaccessible files;
+        console.log(`Skipping ${fullPath}: ${error.message});
+      }
+    });
+  } catch (error) {
+    console.log(`Skipping directory ${dir}: ${error.message});
+  }
 }
 
-module.exports = ConflictResolver;
+traverseDirectory(path.join(__dirname));
+console.log('All merge conflicts resolved.);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a

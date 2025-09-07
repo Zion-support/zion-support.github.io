@@ -43,3 +43,11 @@ export function verifyVotesAgainstMerkleRoot(;
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
 }
+import crypto from 'crypto';
+export interface MerkleNode {
+  // TODO: Implement
+}
+  hash: string;
+  left?: MerkleNode;
+  right?: MerkleNode;
+  data?: any;

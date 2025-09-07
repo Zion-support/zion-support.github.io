@@ -99,6 +99,14 @@ export function QuickActions() {
     }
   ],
 
+
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Search, Calendar } from 'lucide-react'
+export function QuickActions() {
+  const actions = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card>
       <CardHeader>
@@ -121,6 +129,8 @@ export function QuickActions() {
             <Button
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>"
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
           {actions.map(action => (
             <Button 
               key={action.id}
@@ -218,6 +228,9 @@ export function QuickActions() {;
                 <span className='mt-1 text-xs text-muted-foreground'>'
                   {action.description}
                 </span>              </div>
+
+                </span>
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </Button>
               variant="outline";
@@ -261,3 +274,11 @@ export function QuickActions() {;
 }
 ;)))))))))
 ;
+
+;
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

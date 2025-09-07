@@ -26,6 +26,14 @@ export default function TestingDocRedirect() {
     <>
       <Head>
         <meta httpEquiv="refresh" content="0, url=/TESTING.md" />
+
+;
+;
+
+
+
+import Head from 'next/head';
+
       </Head>
       <main style={{ padding: 24 }}>
         <p>Redirecting to Testing documentation…</p>
@@ -58,3 +66,5 @@ export default function TestingDocRedirect(req, res) {
 
 ;
 ;
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

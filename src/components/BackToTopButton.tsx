@@ -63,12 +63,23 @@ export function BackToTopButton() {;
   const [visible, setVisible] = useState(false),;
   useEffect(() => {;
     const updateVisibility = () => {;
+
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+origin/cursor/automate-test-improve-and-merge-code-2533
       setVisible(window.scrollY > 400);
     };
     updateVisibility();
     window.addEventListener('scroll', updateVisibility);
     return () => window.removeEventListener('scroll', updateVisibility);
   }, []);,
+  }, []);
+  
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   const scrollToTop = () => {
     const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
@@ -107,3 +118,19 @@ export function BackToTopButton() {;
 }
 ;
 ;
+    >
+      <ArrowUp className="h-4 w-4" />
+    </button>
+  );
+}
+;
+
+  
+    >
+      <ArrowUp className='h-5 w-5' />
+    </button>
+  );
+
+}"
+origin/cursor/automate-test-improve-and-merge-code-2533
+}

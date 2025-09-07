@@ -1,4 +1,5 @@
-import { Notification, as, BaseNotification } from "@/types/notifications";
+
+import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | "message"
   | "quote_request"
@@ -14,6 +15,25 @@ export interface Notification extends BaseNotification {;
 export interface Notification extends BaseNotification {
 
 export interface Notification extends BaseNotification {;
+  | 'message'
+  | 'quote_request'
+  | 'booking_confirmation'
+  | 'hire_request'
+
+export interface Notification extends BaseNotification {;
+
+import { Notification, as, BaseNotification } from "@/types/notifications";"
+export type NotificationType ="
+  | "message"""
+  | "quote_request"""
+  | "booking_confirmation"""
+  | "hire_request"""
+  | "onboarding"""
+  | "system";"
+export interface Notification extends BaseNotification {;
+
+
+pr-12325
   type: NotificationType;
   action_url?: string;
   action_text?: string;
@@ -36,6 +56,13 @@ export interface NotificationContextType {
 
 export interface NotificationContextType {;
 export interface NotificationContextType {
+  | 'all'
+  | 'unread'
+  | 'messages'
+
+export interface NotificationContextType {;
+
+export interface NotificationContextType {export interface NotificationContextType {
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -47,3 +74,36 @@ export interface NotificationContextType {
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
 }
+  | 'system',;
+export interface NotificationContextType {;
+  notifications: Notification[],;
+  filteredNotifications: Notification[],;
+  unreadCount: number,;
+  loading: boolean,;
+  filter: FilterType,;
+  markAsRead: (id: string) => Promise<void>,;
+  markAllAsRead: () => Promise<void>,;  dismissNotification: (id: string) => Promise<void>;
+  setFilter: (filter: FilterType) => void;
+  fetchNotifications: () => Promise<void>;
+}
+export type FilterType ="
+  | "all"""
+  | "unread"""
+  | "messages"""
+  | "system";""
+import {Notification, as, BaseNotification} from '@/types / notifications';
+export interface NotificationContextType {;
+
+export interface NotificationContextType {
+  // TODO: Implement
+  notifications: Notification[];,
+  filtered_notifications: Notification[];
+  unread_count: number;,
+  loading: boolean;
+  filter: FilterType;,
+  markAsRead: (id: string) => Promise<void>;
+</void>
+  markAllAsRead: () => Promise<void>;
+  dismissNotification: (id: string) => Promise<void>;
+  fetchNotifications: () => Promise<void>;
+pr-12325

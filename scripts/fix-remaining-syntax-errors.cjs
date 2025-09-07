@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
 
@@ -11,19 +12,33 @@ const fs = require("fs");"const path = require("path");"console.log(" Fixing rem
 const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
 
 #!/usr/bin/env node
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
+
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-// Function to fix hover syntax errors
+// Function to fix hover syntax errors;
 function fixHoverSyntax(filePath) {
   try {
+  // TODO: Implement
+}
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
+=======
+    let content = fs.readFileSync(filePath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     let modified = false;
     
-    // Fix various hover syntax patterns
+    // Fix various hover syntax patterns;
     const patterns = [
+<<<<<<< HEAD
       { from: /"hover":\s*/g, to: 'hover:' },
       { from: /"focus":\s*/g, to: 'focus:' },
       { from: /"group-hover":\s*/g, to: 'group-hover:' },
@@ -31,20 +46,29 @@ function fixHoverSyntax(filePath) {
       { from: /"md":\s*/g, to: 'md:' },
       { from: /"lg":\s*/g, to: 'lg:' },
       { from: /"xl":\s*/g, to: 'xl:' },
-      { from: /"2xl":\s*/g, to: '2xl:' },
+      { from: /"2xl":\s*/g, to: '2xl:' },']
+=======
+      { from: /"hover":\s*/g, to: hover:},
+      { from: /"focus":\s*/g, to: focus:},
+      { from: /"group-hover":\s*/g, to: group-hover:},
+      { from: /"sm":\s*/g, to: sm:},
+      { from: /"md":\s*/g, to: md:},
+      { from: /"lg":\s*/g, to: lg:},
+      { from: /"xl":\s*/g, to: xl:},
+      { from: /"2xl":\s*/g, to: 2xl:},]
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     ];
     
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {)
       if (pattern.from.test(content)) {
         content = content.replace(pattern.from, pattern.to);
         modified = true;
-      }
-    }
 });
     
     if (modified) {
       fs.writeFileSync(filePath, content);
 
+<<<<<<< HEAD
       }`);
       totalFixes++;
       modified = true;
@@ -61,19 +85,27 @@ function fixHoverSyntax(filePath) {
       modified = true;
 
       console.log(`✅ Fixed syntax errors in ${filePath}`);
+=======
+      console.log(`✅ Fixed syntax errors in ${filePath});
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
       return true;
-    }
     
     return false;
-  } catch (error) {
+<<<<<<< HEAD
+  } catch (error) {`;
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+=======
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message});
     return false;
   }
 }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
-// Function to find and fix all TypeScript/JSX files
+// Function to find and fix all TypeScript/JSX files;
 function fixAllFiles() {
   const filesToCheck = [
+<<<<<<< HEAD
     'components/Footer.tsx',
     'components/Header.tsx',
     'components/layout/MainLayout.tsx',
@@ -85,22 +117,22 @@ function fixAllFiles() {
     'pages/privacy.tsx',
     'pages/terms.tsx',
     'pages/services.tsx',
-    'pages/pricing.tsx'
+    'pages/pricing.tsx]
+=======
+    'components/Footer.tsx,components/Header.tsx,components/layout/MainLayout.tsx,pages/about.tsx,pages/ai-services.tsx,pages/blog.tsx,pages/contact.tsx,pages/index.tsx,pages/privacy.tsx,pages/terms.tsx,pages/services.tsx,pages/pricing.tsx]
   ];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   
   let totalFixed = 0;
   
-  filesToCheck.forEach(file => {
+  filesToCheck.forEach(file => {)
     const filePath = path.join(process.cwd(), file);
     if (fs.existsSync(filePath)) {
       if (fixHoverSyntax(filePath)) {
         totalFixed++;
-      }
-    }
-  }
-});
   
   return totalFixed;
+<<<<<<< HEAD
 }
 
 
@@ -116,28 +148,57 @@ function fixAllFiles() {
 
 // Main execution
 try {
+=======
+
+// Main execution;
+  // TODO: Implement
+<<<<<<< HEAD
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
   console.log('🔍 Scanning for syntax errors...');
+=======
+}
+  console.log('🔍 Scanning for syntax errors...);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   const fixedCount = fixAllFiles();
   
-  if (fixedCount > 0) {
+  if (fixedCount > 0) {`;
     console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
     
-    // Try to build after fixes
+    // Try to build after fixes;
+<<<<<<< HEAD
     console.log('🔨 Attempting build after fixes...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' }
-});
+  // TODO: Implement
+      execSync('npm run build', { stdio: 'inherit' }')
       console.log('✅ Build successful!');
+    } catch (error) {
+      console.log('⚠️ Build still has issues, but syntax errors were fixed');
+  } else {
+  // TODO: Implement
+    console.log('✨ No syntax errors found to fix');
+  
+  console.error('❌ Error:', error.message);
+=======
+    console.log('🔨 Attempting build after fixes...);
+    try {
+  // TODO: Implement
+}
+      execSync('npm run build, { stdio: inherit})
+});
+      console.log('✅ Build successful!);
     } catch (error) {
       console.log('⚠️ Build still has issues, but syntax errors were fixed');
     }
   } else {
+  // TODO: Implement
+}
     console.log('✨ No syntax errors found to fix');
   }
   
 } catch (error) {
-  console.error('❌ Error:', error.message);
+  console.error('❌ Error: , error.message);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   process.exit(1);
+<<<<<<< HEAD
 }}
 
 }}
@@ -151,3 +212,7 @@ try {
 
 
 
+=======
+
+`;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

@@ -4,6 +4,14 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
 
       const paintEntries = window && window.performance.getEntriesByType("paint");
       const fcp = paintEntries && paintEntries.find(
+import { useEffect, useState } from 'react';
+import { PerformanceMetrics } from '../types';
+export function usePerformanceMetrics() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isSupported, setIsSupported] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return      const fcp = paintEntries && paintEntries.find(
         (entry) => entry && entry.name === "first-contentful-paint",
       );
       const lcpEntries = window && window.performance.getEntriesByType(
@@ -18,6 +26,8 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
 const fid = fidEntries[0] as PerformanceEventTiming;
       setMetrics({
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
+      const fid = fidEntries[0] as PerformanceEventTiming;
+      setMetrics({        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
         cumulativeLayoutShift: cls,
@@ -51,3 +61,5 @@ const fid = fidEntries[0] as PerformanceEventTiming;
   }, []);
   return { metrics, isSupported }
 }
+}
+pr-12325

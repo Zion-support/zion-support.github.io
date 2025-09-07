@@ -57,6 +57,15 @@ function CountryServiceCard() {
     const emoji_map: Record < string, string> = {
 
 const emojiMap: Record<string, string> = {;
+
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
     const emojiMap: Record<string, string> = {;
 
     const emojiMap: Record<string, string> = {
@@ -70,6 +79,10 @@ const emojiMap: Record<string, string> = {;
 
 "Germany": "🇩🇪",
       "Germany": "🇩🇪", ;
+      "United Kingdom": "🇬🇧";
+      "Canada": "🇨🇦";
+      "Australia": "🇦🇺";
+      "Germany": "🇩🇪",      "Germany": "🇩🇪", ;
 
       "Germany": "🇩🇪", ;
       "Germany": "🇩🇪",
@@ -121,6 +134,7 @@ const emojiMap: Record<string, string> = {;
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
 
     if (tier1.includes(countryName)) {
+  const getResponseTime = (countryName: string): string => {    if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
       return "6 hours"
@@ -179,6 +193,10 @@ const emojiMap: Record<string, string> = {;
             isPopular
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+    }  return (
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
           }`}
         >
           Select Service
@@ -195,6 +213,38 @@ import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
+
+
+
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
+import {Button} from "@/components/ui/button";""
+import {Badge} from "@/components/ui/badge";""
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";""
+import {CountryPricing} from "@/data/onsiteServicePricing";""
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",""
+import { Button } from "@/components/ui/button",""
+import { Badge } from "@/components/ui/badge",""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";""
+import { CountryPricing } from "@/data/onsiteServicePricing";""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",""
+import { CountryPricing } from "@/data/onsiteServicePricing","
+interface CountryServiceCardProps {
+  // TODO: Implement
+}
+  country: CountryPricing;,
+  onSelect: (country: CountryPricing) => void;
+  isPopular?: boolean;
+}
+export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+  // Get region flag based on country name (for demo purposes)
+
+  const getRegionEmoji = (countryName: string): string => {
+"
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
+import {Button} from "@/components/ui/button";""
+import {Badge} from "@/components/ui/badge";""
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";""
+import {CountryPricing} from "@/data/onsiteServicePricing";"
 interface CountryServiceCardProps {;
   country: CountryPricing,;
   onSelect: (country: CountryPricing) => void,;
@@ -438,13 +488,123 @@ ${country.pricePerIncident.toFixed(2)}
         </div>;
       </CardContent>;
       <CardFooter>;
+        : "bg-zion-blue-dark border-zion-blue-light"        : "bg-zion-blue-dark border-zion-blue-light"
+    }`}>;
+      <CardHeader className="pb-2">;
+        <div className="flex items-center justify-between">;
+          <div className="flex items-center space-x-2">;          </div>;
+        </div>;
+      </CardContent>;
+      <CardFooter>;
+
+
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";""
+import {Button} from "@/components/ui/button";""
+import {Badge} from "@/components/ui/badge";""
+import {Globe, Server, Clock, MapPin, Check} from "lucide-react";""
+import {CountryPricing} from "@/data/onsiteServicePricing";""
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",""
+import { Button } from "@/components/ui/button",""
+import { Badge } from "@/components/ui/badge",""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";""
+import { CountryPricing } from "@/data/onsiteServicePricing";""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",""
+import { CountryPricing } from "@/data/onsiteServicePricing","
+interface CountryServiceCardProps {
+  // TODO: Implement
+}
+  country: CountryPricing;,
+  onSelect: (country: CountryPricing) => void;
+  isPopular?: boolean;
+export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
+  // Get region flag based on country name (for demo purposes)
+
+  const getRegionEmoji = (countryName: string): string => {
+"
+import {CountryPricing} from "@/data/onsiteServicePricing";"
+interface CountryServiceCardProps {;
+  country: CountryPricing,;
+  onSelect: (country: CountryPricing) => void,;
+
+export function CountryServiceCard(): any ({ country, onSelect, isPopular }: CountryServiceCardProps) {;
+  // Get region flag based on country name (for demo purposes);
+  const getRegionEmoji = (countryName: string): string => {;
+    const emojiMap: Record<string, string> = {;
+</string>
+    const emoji_map: Record < string, string> = {
+
+
+
+
+    const emojiMap: Record<string, string> = {
+    const emojiMap: Record<string string> = {
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
+      isPopular;"
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple""`;
+          }`}
+        >
+
+        
+      
+    
+    const emojiMap: Record<string string> = {;
+</string>`;
+    <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"""
+        : "bg-zion-blue-dark border-zion-blue-light"""
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;""
+import { Button } from "@/components/ui/button",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",;""
+import { CountryPricing } from "@/data/onsiteServicePricing",;"
+;
+  country:CountryPricing,;
+  onSelect:(country:CountryPricing) => void,;
+
+    const emojiMap:Record<string string> = {;
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
+      isPopular ;"
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" ;""
+        :"bg-zion-blue-dark border-zion-blue-light";"
+  return (;`;
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple";""
+        : "bg-zion-blue-dark border-zion-blue-light";""
+        : "bg-zion-blue-dark border-zion-blue-light""`;
+    }`}>;
+      <CardHeader className="pb-2">;"
+        <div className="flex items-center justify-between">;"
+</div>"
+          <div className="flex items-center space-x-2">;"
+</div>)"
+            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country && country.country)}</span>;""
+            <h3 className="text-lg font-semibold text-white truncate">{country && country.country}</h3>;"
+          </div>;"
+            <Badge className="bg-zion-purple text-white border-none">Popular;"
+        </div>;
+      ;"
+      <CardContent className="pb-4">;"
+        <p className="text-3xl font-bold text-zion-cyan mb-4">;"
+</p>
+        </p>;"
+        <div className="space-y-2 text-zion-slate-light">;"
+          <div className="flex items-start">;"
+            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />;"
+
+            <span>Typical response time: {getResponseTime(country && country.country)}</span>;
+            <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />;"
+
+            <span>Service available in major cities</span>;
+            <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />;"
+
+            <span>Hardware & network support</span>;
+            <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />;"
+
+            <span>First hour included</span>;
+      <CardFooter>;
+
 
         <Button;
           on_click={() => on_select (country)}
-          className={`w - full ${
-            is_popular;
-              ? "bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-              : "bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light";
 
 <Button ;
           onClick={() => onSelect(country)} ;
@@ -496,3 +656,16 @@ isPopular?: boolean
 }
 ;
 ;
+    );
+//Get response time estimate based on country return (<Card className= {`;
+  `h-full transition-all duration-300 hover:shadow-lg $ {"
+  isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div>  <CardFooter> <Button onClick= {"
+)
+  isPopular > Select Service   ) 
+    ;"`;
+pr-12325
+  isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div> </CardContent> <CardFooter> <Button onClick= {"
+</Card>)
+  isPopular > Select Service </Button> </CardFooter> </Card>) 
+    </Card>;"
+

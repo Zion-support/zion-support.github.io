@@ -30,9 +30,15 @@ export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data En
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
 
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export interface MilestoneSuggestionInput {
+  scopeOfWork: string,
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
   project_type: ProjectType;
+}  suggestedDueDateIso: string;
+  estimatedEffortHours: number, // estimated hours;
+  tags?: string[], // e.g., ["AI Suggested"];
 }
 
 
@@ -44,7 +50,36 @@ export interface MilestoneSuggestionInput {
 
 
 
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+}
+
+
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other","
+export interface MilestoneSuggestionInput {
+  // TODO: Implement
+}
+  scopeOfWork: string,
+
+"
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;"
+export interface MilestoneSuggestionInput {;
+  scopeOfWork: string,;
+  // TODO: Implement
+  startDateIso: string, // ISO 8601;
+  endDateIso: string,   // ISO 8601;
+  project_type: ProjectType;
+
+
 export interface SuggestedMilestoneItem {
+  // TODO: Implement
   title: string,
   description: string,
 
@@ -91,10 +126,15 @@ export interface SuggestedMilestoneItem {;
 
 
 
+  // TODO: Implement
+
+  suggestedDueDateIso: string;,
+  estimatedEffortHours: number, // estimated hours;"
+  tags?: string[], // e.g., ["AI Suggested"];"
 
 export interface MilestoneSuggestionResponse {
+  // TODO: Implement
   milestones: SuggestedMilestoneItem[];
-}
 
 
 
@@ -105,8 +145,10 @@ export interface MilestoneSuggestionResponse {
 }
 
 ;
+  // TODO: Implement
+
+
 export interface MilestoneSuggestionResponse {;
-  milestones: SuggestedMilestoneItem[];
 
 }
 ;
@@ -114,13 +156,9 @@ export interface SuggestedMilestoneItem {;
   title:string,;
   description:string,;
   suggestedDueDateIso:string,;
-  estimatedEffortHours:number, // estimated hours;
-  tags?:string[], // e.g., ["AI Suggested"];
-}
-;
-export interface MilestoneSuggestionResponse {;
+  estimatedEffortHours:number, // estimated hours;"
+  tags?:string[], // e.g., ["AI Suggested"];"
   milestones:SuggestedMilestoneItem[];
-}
 export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
 ;
 export interface MilestoneSuggestionResponse {;
@@ -144,3 +182,4 @@ export interface MilestoneSuggestionResponse {;
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 }
+pr-12325

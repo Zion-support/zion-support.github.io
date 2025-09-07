@@ -65,9 +65,13 @@ export default function AIAutonomousResearchAssistant() {
 				"RFP/RFI opportunity discovery and alerts"
 				"Export to Slides/Docs/Notion"
 
+import React from 'react';
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Compliance-friendly data handling, audit logs"
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
+
 
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
@@ -112,4 +116,5 @@ export default function AIAutonomousResearchAssistant() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

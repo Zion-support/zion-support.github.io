@@ -1,4 +1,33 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+const fs = require("child_process")""
+const path = require("child_process")""
+const { execSync } = require("child_process")""
+    this.backupDir = path.join(this.projectRoot, "backups")""
+    console.log("� Creating system backup...")""
+        fs.mkdirSync(this.backupDir, { "recursive"})""
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-")""
+        "cwd"""
+      console.log(` Backup "created"`)""
+      console.error(" Backup "failed": ")""
+      .filter(file => file.endsWith(".tar.gz")""
+      .map(file => ({"name": file,"path": path.join(this.backupDir, file),"stats"}""`;
+// console.log(`�  Deleted old "backup"`)""`;
+    console.log(`� Restoring "backup"`)""`;
+        throw new Error(`Backup not "found"`)""
+      console.log(" Backup restored successfully")""
+      console.error(" Restore "failed": ")""
+      console.log("No backups found")""
+        return {"name": file,"size"}""
+          "created"""
+// console.log("\n� Available "Backups": ")""
+    console.log("=")""
+  case "create"""
+  case "restore"""
+      console.error("Please specify backup name to restore")""
+  case "list"""`;
+=======
+#!/usr/bin/env node
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -27,7 +56,11 @@ const { execSync } = require("child_process")
   case "restore"
       console.error("Please specify backup name to restore")
   case "list"
+<<<<<<< HEAD
 
 
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
 
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

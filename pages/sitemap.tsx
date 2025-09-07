@@ -1,3 +1,18 @@
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+export default function SitemapPage() {
+  return (
+    <MainLayout title="Sitemap - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the sitemap page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
@@ -98,42 +113,28 @@ import {
 } from 'lucide-react';
 ;
 const sitemap_data = [;
+import { GetServerSideProps } from 'next';
+
+const sitemap_data = [
   {
     category: 'Main Pages',
-    pages: [;
-      { name: 'Home', url: '/', icon: Home },
-      { name: 'About', url: '/about', icon: Users },
-      { name: 'Contact', url: '/contact', icon: Globe },
-      { name: 'Services', url: '/services', icon: Settings }
-    ];
+    pages: [
+      { name: 'Home', url: '/', icon: 'Home' },
+      { name: 'About', url: '/about', icon: 'Users' },
+      { name: 'Contact', url: '/contact', icon: 'Globe' },
+      { name: 'Services', url: '/services', icon: 'Settings' }
+    ]
   },
   {
     category: 'Services',
-    pages: [;
-      { name: 'AI Services', url: '/ai - services', icon: Brain },
-      { name: 'IT Services', url: '/it - services', icon: Network },
-      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },
-      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },
-      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },
-      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
-    ];
-  },
-  {
-    category: 'Solutions',
-    pages: [;
-      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },
-      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },
-      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
-    ];
-  },
-  {
-    category: 'Resources',
-    pages: [;
-      { name: 'Documentation', url: '/docs', icon: Globe },
-      { name: 'API Documentation', url: '/api - docs', icon: Settings },
-      { name: 'Guides', url: '/guides', icon: Globe },
-      { name: 'FAQ', url: '/faq', icon: Users }
-    ];
+    pages: [
+      { name: 'AI Services', url: '/ai-services', icon: 'Brain' },
+      { name: 'IT Services', url: '/it-services', icon: 'Network' },
+      { name: 'Micro SaaS', url: '/micro-saas', icon: 'Target' },
+      { name: 'Cloud Services', url: '/services/cloud', icon: 'Cloud' },
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: 'Shield' },
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: 'BarChart3' }
+    ]
   }
 ];
 
@@ -300,6 +301,28 @@ import {
       </div>;
 
 </>);
+function generateSiteMap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     ${sitemap_data
+       .flatMap(category => category.pages)
+       .map(page => {
+         return `
+       <url>
+           <loc>https://ziontechgroup.com${page.url}</loc>
+           <lastmod>${new Date().toISOString()}</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
+   </urlset>
+ `;
+}
+
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
 }
 
 }
@@ -505,6 +528,19 @@ href: 'https://status.ziontechgroup.com',
       value: 'kleber@ziontechgroup.com'
       action: 'mailto:kleber@ziontechgroup.com'
     }
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, Rocket, FileText, Users, Mail, Map;
+  ArrowRight, ExternalLink, ChevronRight, Globe, Building
+ } from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SitemapPage() {
+  const mainPages = null;
+              resources, and information available at Zion Tech Group.
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
 import {;
   Home,;
@@ -758,11 +794,14 @@ const contactInfo = [;
           property='og:description'
           content='Complete website sitemap and navigation guide.'
         />
-        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
+        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />
+      </Head>
+
       <SmartHeader />
       {/* Hero Section */}
-      <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
+<section className='pt-32 pb-20 px-6'>
+        <div className='max-w-7xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -810,6 +849,16 @@ const contactInfo = [;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
+<h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <a
                 href='#main-pages'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
@@ -819,6 +868,20 @@ const contactInfo = [;
               <a
                 href='/search'
 
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Search Site
+                <Search className='w-5 h-5 ml-2' />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Main Pages */}
+<section id='main-pages' className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
@@ -852,6 +915,8 @@ const contactInfo = [;
   }
 }
             className="mb-16"
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Main Pages
@@ -861,7 +926,9 @@ const contactInfo = [;
               and services
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
 
@@ -911,6 +978,8 @@ const contactInfo = [;
   }
 }
                 className="group"
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={page.href}
@@ -924,7 +993,8 @@ const contactInfo = [;
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {page.description}
-                  </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -941,6 +1011,8 @@ const contactInfo = [;
       {/* Service Categories */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1000,6 +1072,8 @@ const contactInfo = [;
             viewport={{ once: true }}
 
 
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -1009,7 +1083,9 @@ const contactInfo = [;
               by category
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1032,6 +1108,8 @@ const contactInfo = [;
             {serviceCategories.map((category, index) => (
 
               <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={category.href}
@@ -1045,7 +1123,8 @@ const contactInfo = [;
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {category.description}
-                  </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1082,6 +1161,8 @@ key={category.href}
       {/* Featured Services */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1154,14 +1235,19 @@ key={category.href}
             viewport={{ once: true }}
 
 
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
             </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Our most popular and innovative technology solutions
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1184,6 +1270,8 @@ key={category.href}
             {featuredServices.map((service, index) => (
 
               <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={service.href}
@@ -1195,7 +1283,8 @@ key={category.href}
                     </h3>
                     <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
                   </div>
-                  <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
+                  <p className='text-white/60 text-xs'>{service.category}</p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1230,6 +1319,8 @@ key={service.href}
       {/* Resources & Tools */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1306,14 +1397,19 @@ key={service.href}
             viewport={{ once: true }}
 
 
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
             </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1336,6 +1432,8 @@ key={service.href}
             {resources.map((resource, index) => (
 
               <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <Link
                   href={resource.href}
@@ -1349,7 +1447,8 @@ key={service.href}
                   </div>
                   <p className='text-white/60 text-xs leading-relaxed'>
                     {resource.description}
-                  </p>                </Link>
+                  </p>
+                </Link>
               </motion.div>
 
             ))}
@@ -1384,6 +1483,8 @@ key={resource.href}
       {/* External Resources */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
+<section className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1460,14 +1561,19 @@ key={resource.href}
             viewport={{ once: true }}
 
 
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
             </h2>
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>
+              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
+
+<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
                 initial={{ opacity: 0, y: 20 }}
@@ -1490,6 +1596,8 @@ key={resource.href}
             {externalLinks.map((link, index) => (
 
               <motion.div
+className='group'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <a
                   href={link.href}
@@ -1505,7 +1613,8 @@ key={resource.href}
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {link.description}
-                  </p>                </a>
+                  </p>
+                </a>
               </motion.div>
 
             ))}
@@ -1540,6 +1649,8 @@ key={link.href}
       {/* Contact Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto">
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-4xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1615,6 +1726,8 @@ key={link.href}
             viewport={{ once: true }}
 
 
+className='mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -1624,7 +1737,9 @@ key={link.href}
               project
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
                 initial={{ opacity: 0, y: 20 }}
@@ -1647,6 +1762,8 @@ key={link.href}
             {contactInfo.map((contact, index) => (
 
               <motion.div
+className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
@@ -1696,6 +1813,8 @@ key={contact.type}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
 className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   {contact.value}
                 </a>
@@ -1732,8 +1851,9 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 
 
       {/* Quick Navigation */}
-      <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
+<section className='py-20 px-6'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1777,7 +1897,7 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 }
 
           >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+<h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
             </h2>
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
@@ -1800,6 +1920,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   )
 
   )
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Contact Support
+                <Mail className='w-5 h-5 ml-2' />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <SmartFooter />
+    </div>
+);
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 }animate= {
   {
   opacity: 1, y: 0
@@ -2570,3 +2704,26 @@ export default function SitemapPage() {
     </MainLayout>
   );
 }
+  duration: 0.8
+}viewport= {
+  {
+  once: true 
+
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
+origin/cursor/automate-test-improve-and-merge-code-2533
+// eslint-disable-next-line react-refresh/only-export-components
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // We generate the XML sitemap with the posts data
+  const sitemap = generateSiteMap();
+
+  res.setHeader('Content-Type', 'text/xml');
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
+  };
+};
+
+export default SiteMap;

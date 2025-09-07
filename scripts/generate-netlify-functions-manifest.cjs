@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/generate-netlify-functions-manifest.cjs
 =======
 <<<<<<< HEAD:backup-problematic-files/scripts/generate-netlify-functions-manifest.cjs
@@ -12,27 +13,38 @@
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/generate-netlify-functions-manifest.cjs
 #!/usr/bin/env node/usr/bin/env node;/ No-op Netlify functions manifest generator placeholder;/ Writes a minimal manifest file if functions dir exists;const fs = require("$1");"const path = require("$1");"const outDir = path.resolve(process.cwd(), "automation");"const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {;" fs.mkdirSync(outDir, { recursive: true }),} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() }try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify: manifest] wrote", manifestPath),} catch (e) {;" console.log("[netlify: manifest] skipped (write failed)"),}process.exit(0);"const fs = require("$1");"const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try { fs.mkdirSync(outDir, { recursive: true }),"} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() };";try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify:manifest] wrote", manifestPath)} catch (e) { console.log("[netlify:manifest] skipped (write failed)")}";process.exit(0)""
 #!/usr/bin/env node;
+=======
+
+
+#!/usr/bin/env node
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 // No-op Netlify functions manifest generator placeholder;
 // Writes a minimal manifest file if functions dir exists;
 const fs = require("$1");
 const path = require("$1");
 const outDir = path.resolve(process.cwd(), "automation");
-const manifestPath = path.join(outDir, "netlify-functions-manifest.json");
+const manifestPath = path.join(outDir, "netlify-functions-manifest.json");"
+try {;}"
+  fs.mkdirSync(outDir, { "recursive": true })} catch {};"
+;"
+const manifest = { "functions": [], "generatedAt": new Date().toISOString() };"
 try {;}
-  fs.mkdirSync(outDir, { "recursive": true }),} catch {};
-;
-const manifest = { "functions": [], "generatedAt": new Date().toISOString() };
-try {;}
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log("["netlify": manifest] wrote", manifestPath),} catch (e) {;}
-  console.log("["netlify": manifest] skipped (write failed)"),};
-process.exit(0);
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));"
+  console.log("["netlify": manifest] wrote", manifestPath)} catch (e) {;}
+  console.log("["netlify": manifest] skipped (write failed)")};"
+process.exit(0);"
+<<<<<<< HEAD
+=======
 const fs = require("$1");
-const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {  fs.mkdirSync(outDir, { "recursive": true }),"} catch {};
-;
-const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {  fs.mkdirSync(outDir, { "recursive": true }),"} catch {};"
+const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}"
+<<<<<<< HEAD
+  console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);""
+=======
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));"
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
+<<<<<<< HEAD
 #!/usr/bin/env node
 <<<<<<< HEAD:scripts/generate-netlify-functions-manifest.cjs
 =======
@@ -61,3 +73,6 @@ console.log('[netlify:manifest] wrote', outFile);
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/generate-netlify-functions-manifest.cjs
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/scripts/generate-netlify-functions-manifest.cjs
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

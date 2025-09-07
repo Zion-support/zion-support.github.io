@@ -2,6 +2,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Optimize
 
 
 
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -26,6 +27,9 @@ describe("OptimizedImagedynamic", () => {
 
 
 import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
+
+
+
 
 
 
@@ -55,8 +59,8 @@ describe('OptimizedImagedynamic'
 
 
 import React from 'react';
+    expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import OptimizedImage from '../components/OptimizedImage.dynamic';
 
 describe('OptimizedImage', () => {
@@ -100,3 +104,21 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Optimize
 
 
 
+main
+
+  test('displays correct content', () => {
+    render(<OptimizedImagedynamic />);
+    // Add specific content tests based on component
+  });
+
+  test('handles user interactions', () => {
+    render(<OptimizedImagedynamic />);
+    // Add interaction tests based on component functionality
+  });
+
+  test('applies correct styling', () => {
+    render(<OptimizedImagedynamic />);
+    // Add styling tests if needed
+  });
+});
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

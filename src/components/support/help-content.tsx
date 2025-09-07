@@ -35,7 +35,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,
+
     articles: [
       {
         id: "create-account",
@@ -162,7 +162,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         id: "talent-profile",
         title: "Setting up a talent profile",
-        content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",
+        content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",;
         lastUpdated: "2023-10-15",
         tags: ["profile", "talent"]
       },
@@ -351,6 +351,35 @@ export const HELP_CATEGORIES: HelpCategory[] = [;,
 import React from "react",;
 import { HelpCategory } from "./types",;
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react';
+
+      }
+      {
+        id: 'complete-profile'
+        title: 'Completing your profile'
+        content:
+          'A complete profile helps you get the most out of Zion AI Marketplace. Follow these steps to set up your profile:\n\n1. Navigate to the Profile section from your dashboard\n2. Upload a professional profile picture\n3. Add your basic information including location and contact details\n4. Write a compelling bio that highlights your expertise or requirements\n5. For talent users: Add your skills, experience, and portfolio items\n6. For client users: Add information about your company or projects\n\nA complete profile increases your visibility on the platform and helps our AI matching system connect you with the right opportunities or talent.'
+        lastUpdated: '2023-11-18'
+        tags: ['profile', 'setup']
+      }
+      {
+        id: 'platform-navigation'
+        title: 'Navigating the platform'
+        content:
+          "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options."
+        lastUpdated: '2023-12-01'
+        tags: ['navigation', 'interface']
+      }
+
+import React from 'react';
+import { HelpCategory } from './types';
+import {;
+  HelpCircle,;
+  CreditCard,;
+  Users,;
+  Calendar,;
+  Briefcase,;
+} from 'lucide-react';
+
 export const HELP_CATEGORIES: HelpCategory[] = [;
   {;
     id: "getting-started",;
@@ -475,6 +504,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: "2023-12-05";",
         lastUpdated: "2023-11-15",;
         tags: ["escrow", "payment", "security"];
+
       },;
       {;
         id: "invoice-management",;
@@ -515,6 +545,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ];
   }
 ];
+
+];
+
 import React from 'react';
 import { HelpCategory } from './types';
 import {
@@ -610,6 +643,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [;,
           'Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\n_completeness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.','
         last_updated: '2023 - 10 - 15',',
         tags: ['profile', 'talent'],'
+          'Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\n_completeness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.',;
+        last_updated: '2023 - 10 - 15',
+        tags: ['profile', 'talent'],
       },
       {
         id: 'client - profile','
@@ -695,3 +731,22 @@ id: 'dispute - prevention','
   },
 ];]
 ];
+          "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\n_by following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;
+        last_updated: '2023 - 12 - 05',
+        tags: ['prevention', 'best practices', 'communication'],
+      },
+    ],
+  },
+];
+
+import React from "react";
+import { HelpCategory } from "./types";
+import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
+
+export const HELP_CATEGORIES: HelpCategory[] = [
+  {
+    id: "getting-started";
+    name: "Getting Started";
+    description: "Learn the basics of using the Zion AI Marketplace";
+    icon: <HelpCircle className;
+origin/cursor/automate-test-improve-and-merge-code-2533

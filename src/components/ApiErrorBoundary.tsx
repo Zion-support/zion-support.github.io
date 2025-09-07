@@ -1,3 +1,6 @@
+      }
+
+      return (
 }
       return (
       // Reset error state after a brief delay;
@@ -266,6 +269,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 <span>Offline</span>
               </div>
             )}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <AlertDescription className='mt - 2'>;
                 {isNetworkError;
                   ? !this.state.is_online;
@@ -410,3 +414,27 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError }
 };
+
+
+};
+import React, { Component, ReactNode } from 'react';
+import { QueryClient  } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { RefreshCw, WifiOff } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ApiErrorBoundaryProps {
+  children: ReactNode;
+  queryClient?: QueryClient;
+  fallback?: ReactNode
+}
+      scope.setTag('source', 'useApiErrorHandler');
+      scope.setLevel('error');
+      Sentry.captureException(error);
+    });
+  };
+
+  return { handleApiError };
+};
+origin/cursor/automate-test-improve-and-merge-code-2533

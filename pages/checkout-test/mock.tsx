@@ -26,6 +26,18 @@ import { Button } from '@/components/ui/button';
 
 export default function MockCheckoutPage(req, res) {
   try {
+import React from 'react';
+import { useRouter  } from 'next/router';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, ArrowRight } from 'lucide-react'
+
+export default function MockCheckoutPage() {
+  const router = null;
+    return <div>Redirecting...</div>
+import { CheckCircle, ArrowRight } from 'lucide-react';
+export default function MockCheckoutPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const router = useRouter();
 
   const { mock } = router && router.query;
@@ -43,6 +55,8 @@ export default function MockCheckoutPage(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+return <div>Redirecting...</div>;
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
     router.push('/checkout');
     return <div>Redirecting...</div>;
@@ -105,6 +119,13 @@ export default function MockCheckoutPage(req, res) {
             </p>
           </div>
 
+              <li>• Checkout request received successfully</li>
+              <li>
+                • Mock session ID generated: cs_test_mock_session_id_
+                {Date.now()}
+              </li>
+              <li>• Cart items would be processed</li>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
             </ul>
@@ -113,14 +134,21 @@ export default function MockCheckoutPage(req, res) {
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
 
+
+<div className='space-y-4'>
+            <div className='text-zion-slate-light text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <p>To test with real Stripe: </p>
               <ol className='list-decimal list-inside space-y-1 mt-2'>
                 <li>
                   Configure real Stripe test keys in environment variables
                 </li>                <li>Set STRIPE_TEST_MODE=true for test environment</li>
+                </li>
+                <li>Set STRIPE_TEST_MODE=true for test environment</li>
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
+
 
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
@@ -147,6 +175,22 @@ export default function MockCheckoutPage(req, res) {
 
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
+<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Button
+                asChild
+                variant='outline'
+                className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
+              >
+                <Link href='/cart'>← Back to Cart</Link>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              </Button>
+
+
+
+                  Continue Shopping
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <ArrowRight className='h-4 w-4 ml-2' />
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </Button>
             </div>
@@ -161,6 +205,10 @@ export default function MockCheckoutPage(req, res) {
           <CheckCircle className='h-16 w-16 text-green-400 mx-auto mb-4' />;
 
           <h1 className='text-3xl font-bold text-white mb-4'>;
+
+
+          <h1 className='text-3xl font-bold text-white mb-4'>;
+
 
 }
 
@@ -255,6 +303,7 @@ if ( {) {
             </ul>;
           </div>;
 
+
               </Button>;
             </div>;
           </div>;
@@ -265,3 +314,5 @@ if ( {) {
 ;
 } ;
 
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

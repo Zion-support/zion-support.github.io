@@ -6,22 +6,37 @@ export type ProjectParticipants = {;
   talentUserId: string;
 }
 export type Project = {  id: string;
+pr-12325
+export type ProjectParticipants = {
+
+  clientUserId: string;
+  talentUserId: string;
+}
+
+export type MilestoneStatus = 'pending' | 'completed' | 'cancelled';
+
+export interface Milestone {
+  id: string;
   title: string;
   description?: string;
   title: string;
   description?: string;
   due_date: string;
-  amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
-
-  updatedAt: string
-
+  clientUserId: string;,
+  talentUserId: string;
 }
-export function isMilestoneStatus(value: string): value is MilestoneStatus {
-  return (
+export type Project = {  id: string;,
+  title: string;
+  description?: string;
+  due_date: string;,
+pr-12325
+  amount_usd: number;
+  status: MilestoneStatus;
+  attachments?: MilestoneAttachment[];
+  created_at: string;
+  updated_at: string;
+}
 
-  );export interface MilestoneAttachment {
 
     value === 'Pending' ||
     value === 'In Progress' ||
@@ -53,12 +68,23 @@ export interface UpdateMilestoneRequest {
 export interface UpdateMilestoneRequest {;
 
 export interface UpdateMilestoneRequest {
+
+}
+
+export interface UpdateMilestoneRequest {
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   title?: string;
   description?: string;
   due_date?: string;
   amount_usd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
+  status?: MilestoneStatus;
   attachments?: MilestoneAttachment[];
+
+
+
+
+
 
 export function isOverdue(milestone: Milestone): boolean {
   if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
@@ -67,13 +93,20 @@ export function isOverdue(milestone: Milestone): boolean {
   return new Date(milestone.dueDate) < new Date();
 }
 
-export function getDaysUntilDue(milestone: Milestone): number | null {
-  if (!milestone.dueDate) return null;
-  const dueDate = new Date(milestone.dueDate);
-  const now = new Date();
-  const diffTime = dueDate.getTime() - now.getTime();
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  updatedAt: string;
+
 }
+
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'pending' ||
+    value === 'completed' ||
+    value === 'cancelled'
+  );
+}
+
+export function getDaysUntilDue(milestone: Milestone): number | null {
 
 }
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Enhanced Security Automation;
  * Comprehensive security scanning and monitoring;
@@ -7,98 +7,149 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
         this.logFile = path.join(this.projectRoot, 'logs', 'enhanced-security-automation.log');
         this.reportFile = path.join(this.projectRoot, 'security-automation-report.json');
         this.ensureLogsDirectory()};
     ensureLogsDirectory() {}
         const logsDir = path.join(this.projectRoot, 'logs';);
+=======
+        this.logFile = path.join(this.projectRoot,logs,enhanced-security-automation.log');
+        this.reportFile = path.join(this.projectRoot,security-automation-report.json');
+        this.ensureLogsDirectory()};
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot,logs';);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
-    runSecurityAudit() {}
+    runSecurityAudit() {}"
+<<<<<<< HEAD
         this.log('Running security audit...');
-        
         try {}
             const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,""
                 "encoding": 'utf8',
-                "stdio": 'pipe'
+                "stdio": 'pipe
+=======
+        this.log('Running security audit...);
+        try {}
+            const auditResult = execSync('npm audit --json, { })
+                "cwd": this.projectRoot,
+                "encoding": utf8,
+                "stdio": pipe
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             };);
             
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            
+            `;
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
+<<<<<<< HEAD
                 "status": 'success',
+                "vulnerabilities": vulnerabilities,""
+                "details": auditData.vulnerabilities,""
+                "metadata": auditData.metadata;"
+            }} catch (error) {}"`;
+            this.log(`Security audit "failed": ${error.message}`);""
+            return { "status": 'failed', "error": error.message }};"
+    checkForSecrets() {}"
+        this.log('Checking for exposed secrets...');
+        const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,""
+            /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,""
+            /secret\s*=\s*['"][^'"]+['"]/gi,""
+            /token\s*=\s*['"][^'"]+['"]/gi,""
+            /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;"
+=======
+                "status": success,
                 "vulnerabilities": vulnerabilities,
                 "details": auditData.vulnerabilities,
-                "metadata": auditData.metadata;
-            }} catch (error) {}
-            this.log(`Security audit "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
+                "metadata": auditData.metadata;"
+            }} catch (error) {}"
+            this.log(`Security audit "failed": ${error.message});
+            return { "status": failed, "error": error.message }};"
     };
-    checkForSecrets() {}
-        this.log('Checking for exposed secrets...');
-        
-        const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
-            /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
-            /secret\s*=\s*['"][^'"]+['"]/gi,
-            /token\s*=\s*['"][^'"]+['"]/gi,
-            /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;
+    checkForSecrets() {}"
+        this.log('Checking for exposed secrets...);
+        const secretPatterns = [/password\s*=\s*["][^'"]+["]/gi,
+            /api[_-]?key\s*=\s*["][^'"]+["]/gi,
+            /secret\s*=\s*["][^'"]+["]/gi,
+            /token\s*=\s*["][^'"]+["]/gi,
+            /private[_-]?key\s*=\s*["][^'"]+["]/gi;"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
        ];
         
         const filesToCheck = this.findSourceFiles(;);
         const foundSecrets = [];
         
         for (const file of filesToCheck) {}
-            try {}
+            try {}"
+<<<<<<< HEAD
                 const content = fs.readFileSync(file, 'utf8';);
-                
+=======
+                const content = fs.readFileSync(file,utf8;);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
                 for (const pattern of secretPatterns) {}
                     const matches = content.match(pattern;);
                     if ( {})
                         foundSecrets.push({})
+<<<<<<< HEAD
+                            "file": file,""
+                            "matches": matches;"
+                        })};
+            } catch (error) {}`;
+                this.log(`Error reading file ${file}: ${error.message}`)};
+        };`;
+        this.log(`Found potential secrets in ${foundSecrets.length} files`)) {`}
+     {}
+                        foundSecrets.push({})"
+        this.log(`Found potential secrets in ${foundSecrets.length} files`)};
+        return {;}"
+            "status": foundSecrets.length === 0 ? 'success' : 'warning',
+            "foundSecrets": foundSecrets.length,""
+            "details": foundSecrets;"
+        }};
+    findSourceFiles() {}"
+        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js'];
+=======
                             "file": file,
-                            "matches": matches;
+                            "matches": matches;"
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
+                this.log(`Error reading file ${file}: ${error.message})};
         };
         this.log(`Found potential secrets in ${foundSecrets.length} files`)) {`}
      {}
-                        foundSecrets.push({})
+                        foundSecrets.push({})"
                             "file": file,
-                            "matches": matches;
+                            "matches": matches;"
                         })};
                 };
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
+                this.log(`Error reading file ${file}: ${error.message})};
         };
         this.log(`Found potential secrets in ${foundSecrets.length} files`)};
-        return {;}
-            "status": foundSecrets.length === 0 ? 'success' : 'warning',
+        return {;}"
+            "status": foundSecrets.length === 0 ? 'success: warning,
             "foundSecrets": foundSecrets.length,
-            "details": foundSecrets;
+            "details": foundSecrets;"
         }};
-    findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js'];
+    findSourceFiles() {}"
+        const extensions = [.js,.jsx,.ts,.tsx,.json,.env,.config.js];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         const files = [];
         
         const scanDirectory = (dir) => {}
@@ -109,13 +160,27 @@ class EnhancedSecurityAutomation {}
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
                 
                 if (&& !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
-            };
         }) {}
     && !item.startsWith('.') && item !== 'node_modules') {}
+        scanDirectory(this.projectRoot);
+        return files};
+    checkDependencies() {}
+        this.log('Checking dependency security...');
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+=======
+                '
+                if (&& !item.startsWith('.) && item !==node_modules') {}
+                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
+                    files.push(fullPath)};
+            };
+        }) {}
+    && !item.startsWith('.) && item !==node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
@@ -123,95 +188,117 @@ class EnhancedSecurityAutomation {}
         scanDirectory(this.projectRoot);
         return files};
     checkDependencies() {}
-        this.log('Checking dependency security...');
-        
+        this.log('Checking dependency security...);
         try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
+            const packageJsonPath = path.join(this.projectRoot,package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8;););
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             const dependencies = {}
                 ...packageJson.dependencies || {},
                 ...packageJson.devDependencies || {};
-           };
             
-            const totalDeps = Object.keys(dependencies).lengt;h;
+            const totalDeps = Object.keys(dependencies).lengt;h;`;
             this.log(`Analyzing ${totalDeps} dependencies`);
             
-            return {;}
-                "status": 'success',
-                "totalDependencies": totalDeps,
-                "dependencies": Object.keys(dependencies);
-            }} catch (error) {}
-            this.log(`Dependency check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    checkFilePermissions() {}
+<<<<<<< HEAD
+                "totalDependencies": totalDeps,""
+                "dependencies": Object.keys(dependencies);"
+            this.log(`Dependency check "failed": ${error.message}`);""
+    checkFilePermissions() {}"
         this.log('Checking file permissions...');
-        
         const criticalFiles = ['package.json',]
             'package-lock.json',
             '.env',
             '.env.local',
-            '.env.production'
+            '.env.production
+=======
+            return {;}
+                "status": success,
+                "totalDependencies": totalDeps,
+                "dependencies": Object.keys(dependencies);"
+            }} catch (error) {}"
+            this.log(`Dependency check "failed": ${error.message});
+            return { "status": failed, "error": error.message }};"
+    };
+    checkFilePermissions() {}"
+        this.log('Checking file permissions...);
+        const criticalFiles = [package.json]
+            'package-lock.json,.env,.env.local,.env.production
         ];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         
         const permissionIssues = [];
         
         for (const file of criticalFiles) {}
             const filePath = path.join(this.projectRoot, file;);
-            if () {}
                 const stats = fs.statSync(filePath) {}
     ) {}
-                const stats = fs.statSync(filePath}
-});
+                const stats = fs.statSync(filePath})
                 const mode = stats.mod;e;
                 const isReadableByOthers = (mode & 0o004) !==;0;
                 const isWritableByOthers = (mode & 0o002) !==;0;
                 
+<<<<<<< HEAD
+                    permissionIssues.push({})
+                        "readableByOthers": isReadableByOthers,""
+=======
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
                         "readableByOthers": isReadableByOthers,
-                        "writableByOthers": isWritableByOthers;
-                    })};
-            };
-        };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+                        "writableByOthers": isWritableByOthers;"
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
-     {}
-                    permissionIssues.push({})
+                    permissionIssues.push({})"
+<<<<<<< HEAD
+        this.log(`Found ${permissionIssues.length} permission issues`)};
+            "status": permissionIssues.length === 0 ? 'success' : 'warning',
+            "issues": permissionIssues.length,""
+=======
                         "file": file,
                         "readableByOthers": isReadableByOthers,
-                        "writableByOthers": isWritableByOthers;
+                        "writableByOthers": isWritableByOthers;"
                     })};
             };
         };
         this.log(`Found ${permissionIssues.length} permission issues`)};
-        return {;}
-            "status": permissionIssues.length === 0 ? 'success' : 'warning',
+        return {;}"
+            "status": permissionIssues.length === 0 ? 'success: warning,
             "issues": permissionIssues.length,
-            "details": permissionIssues;
-        }};
-    generateSecurityReport() {}
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+            "details": permissionIssues;"
+    generateSecurityReport() {}"
+<<<<<<< HEAD
         this.log('Generating security automation report...');
-        
+        const report = {}
+            "timestamp": new Date().toISOString(),""
+            "project": this.projectRoot,""
+=======
+        this.log('Generating security automation report...);
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
-            "security": {}
-                audit: this.runSecurityAudit(),
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+            "security": {}"
+                audit: this.runSecurityAudit(),"
                 "secrets": this.checkForSecrets(),
                 "dependencies": this.checkDependencies(),
-                "permissions": this.checkFilePermissions();
-            },
-            "recommendations": this.generateSecurityRecommendations();
-       };
+                "permissions": this.checkFilePermissions();"
+            },"
+            "recommendations": this.generateSecurityRecommendations();"
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
         this.log(`Security report saved to ${this.reportFile}`);
+=======
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Security report saved to ${this.reportFile});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
         
         return report};
     generateSecurityRecommendations() {}
-        return [;]
+        return [;]"
+<<<<<<< HEAD
             'Regularly update dependencies to patch security vulnerabilities',
             'Use environment variables for sensitive configuration',
             'Implement proper file permissions for sensitive files',
@@ -221,26 +308,35 @@ class EnhancedSecurityAutomation {}
             'Use security headers like HSTS, X-Frame-Options',
             'Implement proper authentication and authorization',
             'Use secure session management',
-            'Regularly backup and encrypt sensitive data'
+            'Regularly backup and encrypt sensitive data
         ]};
     async run() {}
         this.log('Enhanced Security Automation started');
-        
+            const report = this.generateSecurityReport(;);
+            this.log('Enhanced Security Automation completed successfully');
+            return report} catch (error) {}`;
+            this.log(`Enhanced Security Automation "failed": ${error.message}`);"
+=======
+            'Regularly update dependencies to patch security vulnerabilities,Use environment variables for sensitive configuration,Implement proper file permissions for sensitive files,Use HTTPS in production environments,Implement Content Security Policy (CSP) headers,Regularly scan for exposed secrets in code,Use security headers like HSTS, X-Frame-Options,Implement proper authentication and authorization,Use secure session management,Regularly backup and encrypt sensitive data
+        ]};
+    async run() {}
+        this.log('Enhanced Security Automation started');
         try {}
             const report = this.generateSecurityReport(;);
             this.log('Enhanced Security Automation completed successfully');
             return report} catch (error) {}
-            this.log(`Enhanced Security Automation "failed": ${error.message}`);
+            this.log(`Enhanced Security Automation "failed": ${error.message});"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             throw error};
-    };
-};
 // Run the automation if this script is executed directly;
-if ( {})
     const automation = new EnhancedSecurityAutomation) {}
-     {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
 
+<<<<<<< HEAD
 
 module.exports = EnhancedSecurityAutomation;
 
+=======
+"`;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

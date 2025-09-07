@@ -5,6 +5,11 @@ const STEPS = [
   { key: 'job', label: 'Job posted' }
   { key: 'invite', label: 'First invite sent' }
   { key: 'response', label: 'First response received' }
+import EnhancedCard from '../../components/ui/EnhancedCard',;
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { useEffect, useState } from 'react';
+const STEPS = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -24,6 +29,7 @@ export default function ClientDashboard() {
   }, []);
   useEffect(() => {
 
+
 export default function ClientDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     job: false,;
@@ -42,6 +48,15 @@ export default function ClientDashboard() {;
       window && window.localStorage.setItem(;
         'onboarding && onboarding.client',;
         JSON && JSON.stringify(completed);
+      if (raw) setCompleted(JSON.parse(raw));
+    } catch {}
+  }, []);
+  useEffect(() => {
+try {
+      window.localStorage.setItem(
+        'onboarding.client'
+        JSON.stringify(completed)
+origin/cursor/automate-test-improve-and-merge-code-2533
       );
     } catch {}
   }, [completed]);
@@ -81,6 +96,7 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -176,6 +192,22 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
               <div className="flex items-center gap-2">
                 <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>{completed[s.key] ? '✓' : ''}</span>
                 <span className="text-sm">{s.label}</span>
+          />
+        </div>
+      </EnhancedCard>
+      <EnhancedCard>
+<h2 className='font-semibold mb-2'>Checklist</h2>
+        <ul className='space-y-2'>
+          {STEPS.map(s => (
+            <li key={s.key} className='flex items-center justify-between'>
+              <div className='flex items-center gap-2'>
+                <span
+                  className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}
+                >
+                  {completed[s.key] ? '✓' : ''}
+                </span>
+                <span className='text-sm'>{s.label}</span>
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
@@ -184,6 +216,10 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
 }
 
 }
+
+
+}
+
 
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
@@ -201,6 +237,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
       </EnhancedCard>;
     </div>;
   );
+
 
   )
 }
@@ -302,3 +339,12 @@ function ClientDashboard() {
   }
 }
 
+                </EnhancedButton>
+              )}
+            </li>
+          ))}
+        </ul>
+      </EnhancedCard>
+    </div>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

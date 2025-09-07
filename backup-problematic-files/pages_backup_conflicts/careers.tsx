@@ -14,3 +14,4 @@ export default function Careers({ }: CareersProps) {
 }
 }
 }
+import React from 'react';

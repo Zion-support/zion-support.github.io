@@ -132,6 +132,8 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
+
   }
 }
     } catch (error) {
@@ -148,6 +150,12 @@ if (return, ) {
     if (json.ok) {
       setProject(json.project)
 
+import { useEffect, useState } from "react",;
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
+export default function ProjectPage() {
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
       setShowFeedback(true)
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
@@ -531,3 +539,17 @@ export default function ProjectPage(req, res) {
 
 }
 
+            )}
+          </div>
+        </div>
+      )}
+      <FeedbackModal
+        isOpen={showFeedback}
+        onClose={() => setShowFeedback(false)}
+        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        userHeaders={headers}
+      />
+    </div>
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

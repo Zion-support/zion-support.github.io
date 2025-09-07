@@ -13,17 +13,31 @@ export function addEducationSection(;
   education: Education[];
   colors: PdfThemeColors;
   startY: number
+): number {  });
+  for (const edu of sortedEducation) {
+    // Check if we need to add a new page
+    if (yPos > 260) {
+      doc && doc.addPage();
+      yPos = 20
+    }
+  doc: jsPDF;,
+  education: Education[];
+  colors: PdfThemeColors;,
+  startY: number;)
 ): number {
   if (education && education.length === 0) return startY;
 
+  // TODO: Implement
+}
+  if (education && education.length === 0) return startY;
+  
 
   let yPos = startY;
-  // Check if we need to add a new page
+  // Check if we need to add a new page;
   if (yPos > 250) {
 
     doc && doc.addPage(),
-    yPos = 20
-  }
+    yPos = 20;
   
 if (education && education.length === 0) return startY;
   let yPos = startY;
@@ -40,7 +54,6 @@ if (education && education.length === 0) return startY;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 60, yPos);
 
-  yPos += 8;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
 
@@ -82,24 +95,28 @@ if (education.length === 0) return startY;
   yPos += 8;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
+  // Sort education by date (newest first)
   });
   for (const edu of sortedEducation) {
-    // Check if we need to add a new page
+    // Check if we need to add a new page;
     if (yPos > 260) {
       doc && doc.addPage();
-      yPos = 20
-    }
+pr-12325
 
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(edu && edu.institution, 20, yPos);
     
     const degreeText = `${edu && edu.degree}${edu && edu.field_of_study ?  + edu && edu.field_of_study : ''}`;
+    const degreeText = `${edu && edu.degree}${edu && edu.field_of_study ?  + edu && edu.field_of_study : }`;
+pr-12325
     doc && doc.setFontSize(12);
     doc && doc.text(degreeText, 20, yPos + 5);
     
     const startDate = formatDate(edu && edu.start_date);
     const endDate = edu && edu.is_current ? 'Present' : formatDate(edu && edu.end_date);
+    const endDate = edu && edu.is_current ? 'Present' : formatDate(edu && edu.end_date);`;
+pr-12325
     const dateText = `${startDate} - ${endDate}`;
     
     doc && doc.setFontSize(10);
@@ -126,6 +143,7 @@ doc && doc.setFontSize(14);
       doc && doc.text(edu && edu.location, 70, yPos + 10)
     }
     if (edu && edu.description) {
+        if (edu && edu.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
@@ -162,23 +180,32 @@ yPos += (descriptionLines && descriptionLines.length * 5) + 20
       yPos += (descriptionLines.length * 5) + 20
     } else {
       yPos += 20
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
+  }
+  return yPos + 5
+import {jsPDF} from 'jspdf';
+    
+    if (edu && edu.description) {
+      const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
+      doc && doc.text(descriptionLines, 20, yPos + 16);
+      
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20;
+    } else {
+  // TODO: Implement
+      yPos += 20;
 import { jsPDF } from 'jspdf',;
 import { Education } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
 import { formatDate } from '../formatters',;
-export function addEducationSection(;
   doc: jsPDF,;
   education: Education[],;
   colors: PdfThemeColors,;
-  startY: number;
 ): number {;
   if (education.length === 0) return startY,;
   let yPos = startY,;
   // Check if we need to add a new page;
   if (yPos > 250) {;
     doc.addPage(),;
-    yPos = 20;
-  }
 ;
   doc.setFontSize(16),;
   doc.setTextColor(colors.heading),;
@@ -186,7 +213,6 @@ export function addEducationSection(;
   yPos += 8,;
   doc.setDrawColor(colors.accent),;
   doc.line(20, yPos, 60, yPos),;
-  yPos += 8,;
   // Sort education by date (newest first);
   const sortedEducation = [...education].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1,;
@@ -198,28 +224,21 @@ export function addEducationSection(;
   for (const edu of sortedEducation) {;
     // Check if we need to add a new page;
     if (yPos > 260) {;
-      doc.addPage(),;
-      yPos = 20;
-    }
-;
     doc.setFontSize(14),;
     doc.setTextColor(colors.subheading),;
-    doc.text(edu.institution, 20, yPos),;
-    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study : ''}`,;
+    doc.text(edu.institution, 20, yPos),;`;
+    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study : }`,;
     doc.setFontSize(12),;
     doc.text(degreeText, 20, yPos + 5),;
     const startDate = formatDate(edu.start_date),;
-    const endDate = edu.is_current ? 'Present' : formatDate(edu.end_date),;
+    const endDate = edu.is_current ? 'Present' : formatDate(edu.end_date),;`;
     const dateText = `${startDate} - ${endDate}`,;
     doc.setFontSize(10),;
     doc.setTextColor(colors.text),;
     doc.text(dateText, 20, yPos + 10),;
     if (edu.location) {;
       doc.text(edu.location, 70, yPos + 10);
-    }
-;
     if (edu.description) {;
-      doc.setFontSize(10),;
       const descriptionLines = doc.splitTextToSize(edu.description, 170);
       doc.text(descriptionLines, 20, yPos + 16);
       yPos += (descriptionLines.length * 5) + 20;
@@ -236,6 +255,10 @@ export function addEducationSection(;
   }
   return yPos + 5
 import {jsPDF} from 'jspdf';
+
+
+  return yPos + 5;
+pr-12325
 import {Education} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 import {format_date} from '../formatters';
@@ -246,183 +269,89 @@ export function addEducationSection (
   start_y: number): number {
   // Check condition
 if (return start_y) {
-  $2
-}
+  $2}}
+  colors: PdfThemeColors;,)
+  start_y: number): number {
+  // TODO: Implement
+  // Check condition;
+if (return start_y) {
+  $2;
   let y_pos = start_y;
-;
   // Check if we need to add a new page;
-  // Check condition
+  // Check condition;
 if ( {) {
-  $2
-}
     doc.add_page (),
     y_pos = 20;
-  }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
   doc.text ('Education', 20, y_pos);
   y_pos += 8;
-;
   doc.setDrawColor (colors.accent);
   doc.line (20, y_pos, 60, y_pos);
-  y_pos += 8;
-;
   // Sort education by date (newest first);
   const sorted_education = [...education].sort ((a, b) => {
-    // Check condition
+    // Check condition;
 if (return -1) {
-  $2
-}
-    // Check condition
+    // Check condition;
 if (return 1) {
-  $2
-}
     const date_a = a.start_date instanceof Date ? a.start_date : new Date (a.start_date);
     const date_b = b.start_date instanceof Date ? b.start_date : new Date (b.start_date);
     return date_b.get_time () - date_a.get_time ();
-  });
-;
   for (const edu of sorted_education) {
     // Check if we need to add a new page;
-    // Check condition
-if ( {) {
-  $2
-}
+    // Check condition;
       doc.add_page ();
-      y_pos = 20;
-    }
     doc.setFontSize (14);
     doc.setTextColor (colors.subheading);
     doc.text (edu.institution, 20, y_pos);
-;
-    const degree_text = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study : ''}`;
+;`;
+    const degree_text = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study : }`;
     doc.setFontSize (12);
     doc.text (degree_text, 20, y_pos + 5);
-;
     const start_date = format_date (edu.start_date);
-    const end_date = edu.is_current ? 'Present' : format_date (edu.end_date);
+    const end_date = edu.is_current ? 'Present' : format_date (edu.end_date);`;
     const date_text = `${start_date} - ${end_date}`;
-;
     doc.setFontSize (10);
     doc.setTextColor (colors.text);
     doc.text (date_text, 20, y_pos + 10);
-;
-    // Check condition
-if ( {) {
-  $2
-}
+    // Check condition;
       doc.text (edu.location, 70, y_pos + 10);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      doc.setFontSize (10);
+    // Check condition;
       const description_lines = doc.splitTextToSize (edu.description, 170);
       doc.text (description_lines, 20, y_pos + 16);
-;
       y_pos += (description_lines.length * 5) + 20;
-    } else {
+  // TODO: Implement
       y_pos += 20;
-    }
-  }
   return y_pos + 5;
 }
 }
 
-import { jsPDF } from 'jspdf',;
-import { Education } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-import { formatDate } from '../formatters',;
-;
-export function addEducationSection(;
   doc:jsPDF,;
   education:Education[],;
   colors:PdfThemeColors,;
-  startY:number;
+  startY:number;)
 ):number {;
-  if (education.length === 0) return startY,;
-  ;
-  let yPos = startY,;
-  ;
   // Check if we need to add a new page;
-  if (yPos > 250) {;
-    doc.addPage(),;
-    yPos = 20;
-  }
-  ;
-  doc.setFontSize(16),;
-  doc.setTextColor(colors.heading),;
-  doc.text('Education', 20, yPos),;
-  yPos += 8,;
-  ;
-  doc.setDrawColor(colors.accent),;
-  doc.line(20, yPos, 60, yPos),;
-  yPos += 8,;
-  ;
   // Sort education by date (newest first);
-  const sortedEducation = [...education].sort((a, b) => {;
-    if (a.is_current && !b.is_current) return -1,;
-    if (!a.is_current && b.is_current) return 1,;
-    ;
     const dateA = a.start_date instanceof Date ? a.start_date :new Date(a.start_date),;
     const dateB = b.start_date instanceof Date ? b.start_date :new Date(b.start_date),;
     return dateB.getTime() - dateA.getTime(),;
-  }),;
-  ;
-  for (const edu of sortedEducation) {;
     // Check if we need to add a new page;
-    if (yPos > 260) {;
-      doc.addPage(),;
       yPos = 20,;
-    }
-    ;
-    doc.setFontSize(14),;
-    doc.setTextColor(colors.subheading),;
     doc.text(edu.institution, 20, yPos),;
-    ;
-    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study :''}`,;
-    doc.setFontSize(12),;
-    doc.text(degreeText, 20, yPos + 5),;
-    ;
-    const startDate = formatDate(edu.start_date),;
-    const endDate = edu.is_current ? 'Present' :formatDate(edu.end_date),;
-    const dateText = `${startDate} - ${endDate}`,;
-    ;
-    doc.setFontSize(10),;
-    doc.setTextColor(colors.text),;
-    doc.text(dateText, 20, yPos + 10),;
-    ;
-    if (edu.location) {;
+    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study :}`,;
+    const endDate = edu.is_current ? 'Present' :formatDate(edu.end_date),;`;
       doc.text(edu.location, 70, yPos + 10),;
-    }
-    ;
-    if (edu.description) {;
-      doc.setFontSize(10),;
       const descriptionLines = doc.splitTextToSize(edu.description, 170),;
       doc.text(descriptionLines, 20, yPos + 16),;
-      ;
       yPos += (descriptionLines.length * 5) + 20,;
-    } else {;
       yPos += 20,;
-    }
-  }
-  ;
   return yPos + 5,;}
- doc.setFontSize (16);
-doc.setTextColor (colors.heading);
 doc.text ('Education', 20, yPos);
-yPos += 8;
-doc.setDrawColor (colors.accent);
 doc.line (20, yPos, 60, yPos);
-yPos += 8;
 // Sort education by date (newest first) for (const edu of sortedEducation) {
   // Check if we need to add a new page if (yPos > 260) {
-  doc.setFontSize (14);
-doc.setTextColor (colors.subheading);
 doc.text (edu.institution, 20, yPos);
-doc.setFontSize (10);
-doc.setTextColor (colors.text);
 doc.text (dateText, 20, yPos + 10);
 }return yPos + 5 
 }
@@ -431,3 +360,6 @@ doc.text (dateText, 20, yPos + 10);
   return yPos + 5
 }
 }
+}return yPos + 5;
+`;
+pr-12325

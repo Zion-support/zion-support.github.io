@@ -4,6 +4,7 @@ import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMat
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 
+
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
@@ -14,6 +15,9 @@ import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+
+
 
 export default function AgenticRAGPage() {
 	const contactInfo = {
@@ -36,6 +40,15 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 
 	return (_<UltraFuturisticMatrixBackground>
 
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+export default function AgenticRAGPage() {
+	const contactInfo = null;
+	return (
+		<UltraFuturisticMatrixBackground>
+origin/cursor/automate-test-improve-and-merge-code-2533
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -102,6 +115,10 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
+
+						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
+
+
 					</div>
 				</div>
 			</div>
@@ -119,6 +136,10 @@ import React from 'react',
 import Head from 'next / head',
 import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import React from 'react',;
+import Head from 'next / head',;
+import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 export default /**
  * AgenticRAGPage - Function description
@@ -283,3 +304,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
   }
 }
 
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

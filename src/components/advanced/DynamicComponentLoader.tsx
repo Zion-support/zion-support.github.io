@@ -54,6 +54,15 @@ const EnhancedLoading: React.FC<{;,
 }> = ({
   progress = 0,
   message = 'Loading component...','
+  message = 'Loading component...', 
+  showProgress = true 
+}) => (
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-primary"
+              style={{
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+
+  message = 'Loading component...',
   show_progress = true,
 }) => (
   <Card className="w-full max-w-md mx-auto">"
@@ -82,6 +91,20 @@ const EnhancedError: React.FC<{,
     <CardContent className="p-6">"
       <div className="flex flex-col items-center space-y-4">"
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">"
+
+
+          ) : (
+            <WifiOff className="h-6 w-6 text-red-600" />
+          )}
+        </div>
+        <div className="text-center">
+          <h3 className="font-semibold text-red-900 dark:text-red-100">
+            {isOnline ? 'Loading Failed' : 'Offline'}
+          </h3>
+  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />"
           ) : (
@@ -139,6 +162,15 @@ const EnhancedError: React.FC<{;,
             className="border-red-300 text-red-700 hover:bg-red-100""
           >
             <RefreshCw className="h-4 w-4 mr-2" />"
+            <RefreshCw className="h-4 w-4 mr-2" />
+            Try Again
+          </Button>
+        )}
+      </div>
+    </CardContent>
+  </Card>
+
+
             Try Again
           </Button>
         )}
@@ -470,6 +502,13 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
       importFn = {importFn,}
       {...(options |{})}
       {...(props as,  any)}
+      {...(props as any)}
+
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+// export const DynamicChartComponent = createDynamicComponent(
+//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
+//   () => import('recharts').then(module => ({ default: module.LineChart })),;
     />
   );
 }
@@ -477,6 +516,9 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
 //   () => import('recharts').then(module => ({ default: module.LineChart })),'
+
+//   () => import('recharts').then(module => ({ default: module.LineChart })),;
+
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">"
@@ -490,6 +532,59 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({,
   import_fn,
+'use client';
+
+import React, {
+  Suspense
+  lazy
+  useState
+  useEffect
+  ComponentType
+} from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface LoadingState {
+  isLoading: boolean
+  error: Error | null
+  retryCount: number
+  isOnline: boolean
+interface DynamicLoaderProps {
+  importFn: () => Promise<{ default: ComponentType<any> }>
+  fallback?: React.ReactNode
+  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  loadingComponent?: React.ComponentType
+  enableRetry?: boolean
+  maxRetries?: number
+  prefetch?: boolean
+  className?: string
+  children?: React.ReactNode
+  [key: string]: any
+// Enhanced Loading Component
+const EnhancedLoading: React.FC<{
+  progress?: number
+  message?: string
+  showProgress?: boolean
+}> = ({ 
+  progress;
+origin/cursor/automate-test-improve-and-merge-code-2533
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
+//   }
+// )
+export default DynamicComponentLoader; export default DynamicComponentLoader
+// );
+
+// Advanced Dynamic Component Loader;
+export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
+  import_fn,;
   fallback,
   error_fallback,
   loading_component,
@@ -653,6 +748,8 @@ if ( {) {
 export const createDynamicComponent = <T extends ComponentType < any>>(
   import_fn: (, ) => Promise<{ default: T }>,
   options?: Omit < DynamicLoaderProps, 'import_fn' | 'children'>) => {'
+  import_fn: (, ) => Promise<{ default: T }>,;
+  options?: Omit < DynamicLoaderProps, 'import_fn' | 'children'>) => {
   return (props: React.ComponentProps < T> & { children?: React.ReactNode }, ) => (
     <DynamicComponentLoader;
       import_fn = {import_fn, }
@@ -665,6 +762,11 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // export const DynamicChartComponent = createDynamicComponent (
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),'
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),'
+//   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),;
+
+//   () => import('three').then(module => ({ default: module.WebGLRenderer })),;
+
+
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -676,6 +778,7 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),'
+//   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),;
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -1033,3 +1136,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   }
 // );
 export default DynamicComponentLoader;
+export default DynamicComponentLoader;
+
+export default DynamicComponentLoader;
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 console.log(' Starting intelligent TypeScript error fixer...')
+      console.error(' Intelligent TypeScript error fixer "failed")""
+        content = content.replace(/"logout": \s*any\(\)\s*=>\s*Promise<any>;/g, '"logout""
+=======
+#!/usr/bin/env node
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+console.log(' Starting intelligent TypeScript error fixer...)
       console.error(' Intelligent TypeScript error fixer "failed")
+<<<<<<< HEAD
         content = content.replace(/"logout": \s*any\(\)\s*=>\s*Promise<any>;/g, '"logout"
         content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{/g, 'function $1(..."args"})
         content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1 = (..."args"})
@@ -27,3 +37,8 @@ console.log(' Starting intelligent TypeScript error fixer...')
 
   console.error(' Intelligent TypeScript error fixer failed to "start")
 
+=======
+        content = content.replace(/"logout": \s*any\(\)\s*=>\s*Promise<any>;/g,"logout
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+</any>"
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

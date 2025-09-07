@@ -1,4 +1,6 @@
 
+
+pr-12325
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
@@ -13,6 +15,7 @@ import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
 
   const { user } = useAuth();
+export function useSkills() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -88,6 +91,10 @@ resume_id: resumeId;
     setIsLoading(true);
     setError(null);
 ;
+      return false    try {
+      const { error } = await supabase
+        .from('resume_skills')
+        .insert({;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -204,6 +211,11 @@ export function useSkills() {;
       setIsLoading(false)
 
 import {useState} from 'react';
+          return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete skill')
+    } finally {
+      setIsLoading(false)import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -221,9 +233,36 @@ function use_skills() {
 if ( {) {
   $2
 }
+export function useSkills() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Skill} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useSkills() {;
+
+
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+</string>
+  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
+</boolean>
+  const [error, setError] = useState<string | null>(null),;
+  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {;
+  const deleteSkill = async (skillId: string): Promise<boolean> => {;
+  const addSkill = async (resumeId:string, skill:Skill):Promise<boolean> => {;
+  const deleteSkill = async (skillId:string):Promise<boolean> => {;
+  const [error, set_error] = useState < string | null>(null);
+;
+  const add_skill = async (resume_id: string, skill: Skill): Promise < boolean> => {
+    // Check condition;
+if ( {) {
+  $2;
+}
       set_error ('You must be logged in to add skills'),
       return false;
-    }
 
 }
   }
@@ -257,64 +296,42 @@ if ( {) {
     addSkill;
     deleteSkill;
 
-  }
-}
-;
+
+
     try {
+  // TODO: Implement
       const { error } = await supabase;
         .from ('resume_skills');
         .insert ({
-          resume_id: resume_id;
-          name: skill.name;
-          proficiency: skill.proficiency;
-          category: skill.category,
-          years_experience: skill.years_experience;
+          resume_id: resume_id;,
+  name: skill.name;
+          proficiency: skill.proficiency;,
+  category: skill.category,
+          years_experience: skill.years_experience;)
         });
-;
-      // Check condition
+      // Check condition;
 if (throw error) {
-  $2
-}
-      return showSuccessToast ("Skill added", "Your skill has been added to your resume");
-    } catch (e: any) {
+      return showSuccessToast ("Skill added", "Your skill has been added to your resume");"
+    } catch (e: any) {"
       return handleResumeError (e, 'Could not add skill');
     } finally {
+  // TODO: Implement
       setIsLoading (false);
-    }
-  }
-;
   const delete_skill = async (skill_id: string): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
+    // Check condition;
       set_error ('You must be logged in to delete skills'),
-      return false;
-    }
     setIsLoading (true);
     set_error (null);
-;
-    try {
-      const { error } = await supabase;
-        .from ('resume_skills');
+  // TODO: Implement
         .delete ();
         .eq ('id', skill_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Skill deleted", "Your skill has been removed from your resume");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Skill deleted", "Your skill has been removed from your resume");"
       return handleResumeError (e, 'Could not delete skill');
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
+  // TODO: Implement
   return {
+  // TODO: Implement
     is_loading;
-    error;
     add_skill;
     delete_skill;
 }
@@ -372,3 +389,4 @@ deleteSkill
     setIsLoading (true);
     set_error (null);
 ;
+pr-12325

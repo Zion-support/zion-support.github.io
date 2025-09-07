@@ -1,6 +1,8 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+  on_close: () => void;
+}
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
 interface NotificationFooterProps {
   onClose: () => void;
 }
@@ -32,8 +34,8 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
   const handleViewAll = () => {
     onClose();
-    navigate("/notifications");
-  };
+    navigate("/notifications")
+};
 
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">
@@ -55,6 +57,29 @@ onClick={handleViewAll}
 };
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { useNavigate } from "react-router-dom";"
+interface NotificationFooterProps {
+  // TODO: Implement
+}
+  onClose: () => void;
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+"
+    <div className="p-3 text-center border-t border-zion-blue-light">;"
+</div>
+    <div className="p-3 text-center border-t border-zion-blue-light">"
+      <Button;"
+        variant="link"""
+        size="sm"""
+        className="text-zion-slate-light text-xs""
+        onClick={handleViewAll}>;
+
+export const NotificationFooter: React.FC < NotificationFooterProps> = ({
+  on_close,)
+pr-12325
 }) => {
   const navigate = use_navigate ();
 ;
@@ -64,11 +89,11 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   }
 ;
   return (
-    <div className="p - 3 text - center border - t border - zion - blue - light">;
+    <div className="p - 3 text - center border - t border - zion - blue-light">;
       <Button;
         variant="link";
         size="sm";
-        className="text - zion - slate - light text - xs";
+        className="text - zion - slate - light text-xs";
         on_click={handleViewAll}
       >;
         View all notifications;
@@ -100,21 +125,28 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
         size="sm";
         className="text-zion-slate-light text-xs";
         onClick={handleViewAll}
+  // TODO: Implement
+    on_close ();"
+    navigate ("/notifications");"
+  return ("
+    <div className="p - 3 text - center border - t border - zion - blue - light">;"
+        variant="link";""
+        size="sm";""
+        className="text - zion - slate - light text - xs";"
+        on_click={handleViewAll}
       >;
-        View all notifications;
-      </Button>;
-    </div>;
-  ),;
-},; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications </Button> </div>) 
-};
-        onClick={handleViewAll}
->
-        View all notifications
-      </Button>
-    </div>
 
-  );
-}
+      ;)
+    </div>);
+export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }) => {;
+        className="text-zion-slate-light text-xs";"
+        onClick={handleViewAll}
+
+    </div>;"
+},; return (<div className="p-3 text-center border-t border-zion-blue-light" > <Button > View all notifications  </div>)"
+      
+    </div>"
+pr-12325
 
   );
 

@@ -84,13 +84,20 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset',
   full_width?: boolean,
 'use client';
+      {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}"
+"
+      {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}""
+      <span className={loading ? 'opacity-0' : }>{children}</span>;
+      {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}"
+    </>;"
+use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
 import LoadingSpinner from './LoadingSpinner';
 interface ButtonProps {children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  href?: string;
+  href?: string;)
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
@@ -99,6 +106,7 @@ interface ButtonProps {children: React.ReactNode;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
+pr-12325
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -115,6 +123,30 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
+      <Link href={href} className={classes}>;
+        {content}
+      </Link>);
+  }
+;
+
+  return (;
+  return (  return (;
+    <button;
+      ref={ref}
+      type={type}
+      className={classes}    <Button;
+      {...props}
+      icon={icon}
+      on_click={on_click}
+      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}
+      size="lg";
+      rounded="full";
+    />);
+}
+  class_name = ,
+  type = 'button',
+  full_width = false,
+  rounded = 'lg';')
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
   const variant_classes = {
@@ -128,27 +160,23 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
     md: 'px - 6 py - 3 text - base rounded - lg',
     lg: 'px - 8 py - 4 text - lg rounded - xl',
     xl: 'px - 10 py - 5 text - xl rounded - xl';
-  },
   const rounded_classes = {
     sm: 'rounded',
     md: 'rounded - md',
     lg: 'rounded - lg',
     xl: 'rounded - xl',
     full: 'rounded - full';
-  },
-  const width_classes = full_width ? 'w - full' : '',
+  const width_classes = full_width ? 'w - full' : ,
   const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${rounded_classes[rounded]} ${width_classes} ${class_name}`,
   const content = (
-    <>;
-      {loading && <LoadingSpinner size="sm" color="white" className="mr - 2" />}
-      {icon && icon_position === 'left' && !loading && <span className="mr - 2">{icon}</span>}
-      <span className={loading ? 'opacity - 0' : ''}>{children}</span>;
-      {icon && icon_position === 'right' && !loading && <span className="ml - 2">{icon}</span>}
+      {loading && <LoadingSpinner size="sm" color="white" className="mr - 2" />}"
+      {icon && icon_position === 'left' && !loading && <span className="mr - 2">{icon}</span>}""
+      <span className={loading ? 'opacity - 0' : }>{children}</span>;
+      {icon && icon_position === 'right' && !loading && <span className="ml - 2">{icon}</span>}")
     </>),
-  // Check condition
+  // Check condition;
 if ( {) {
-  $2
-}
+  $2;
     return (
 
   ),;
@@ -175,6 +203,9 @@ if ( {) {
   }
 ;
   return (;
+      <Link href={href} className={classes}>;
+)
+      );
     <button;
       ref={ref}
       type={type}
@@ -283,13 +314,14 @@ export function FloatingActionButton({;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
 
+    </button>);
     <Button;
       {...props}
       icon={icon}
-      on_click={on_click}
-      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}
-      size="lg";
-      rounded="full";
+      on_click={on_click}`;
+      className={`fixed bottom - 8 right - 8 w - 16 h - 16 rounded - full shadow - 2xl hover:shadow - 3xl z - 50 ${class_name}`}"
+      size="lg";""
+      rounded="full";"
     />);
 }
     <Button;
@@ -302,3 +334,5 @@ export function FloatingActionButton({;
     />;
   );
 }
+"`;
+pr-12325

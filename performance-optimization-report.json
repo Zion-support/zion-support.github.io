@@ -8842,9 +8842,28 @@
     "Use production builds for deployment",
     "Implement service worker for caching",
     "Use CDN for static assets",
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  "timestamp": "2025-09-06T10:56:47.356Z",
+  "totalDuration": 7910,
+  "timestamp": "2025-09-07T05:55:56.624Z",
+pr-12325
+
+  "timestamp": "2025-09-07T05:55:56.624Z",
+  "optimizations": [
+    "Next.js configuration optimized",
+    "Performance middleware created",
+    "Package.json performance scripts added"
+  ],
+  "recommendations": [
     "Enable gzip compression",
-    "Implement HTTP/2",
-    "Use resource hints (preload, prefetch)"
+    "Optimize images with WebP/AVIF formats",
+    "Implement code splitting",
+    "Add performance monitoring",
+    "Use CDN for static assets",
+    "Implement service worker for caching",
+    "Optimize bundle size",
+    "Add performance budgets"
   ],
   "categories": {
     "images": [
@@ -8884,4 +8903,16 @@
   }
 }
 }
+main
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  "nextSteps": [
+    "Run lighthouse audit",
+    "Monitor Core Web Vitals",
+    "Set up performance monitoring",
+    "Implement lazy loading",
+    "Optimize critical rendering path"
+  ]
+}
+pr-12325
+
 }

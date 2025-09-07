@@ -1,39 +1,8 @@
 
 
-}
-
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type = 'website',
-  noindex = false,
-  nofollow = false,
-  canonical,
-}) => {
-  return (
-    <>
-      <Head>
-        <title>{title || 'Zion Tech Group'}</title>
-        <meta name="description" content={description || 'Leading technology solutions provider'} />
-        {keywords && <meta name="keywords" content={keywords} />}
-import Layout from './Layout';
 
 ;
 interface MainLayoutProps {
-interface MainLayoutProps {;
-  children: ReactNode, title?: string,  description?: string;
-  keywords?: string;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  type?: string;
-  image?: string;
-  url?: string;}
-const MainLayout: React.FC<MainLayoutProps> = ({
 
   children
   title = 'Zion Tech Group - Technology Solutions'
@@ -67,17 +36,39 @@ export default function MainLayout({
 
 
 
+  children: ReactNode;
+import React from 'react';
+import Head from 'next/head';
+
+interface MainLayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+}
+
+
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = 'Zion Tech Group - Leading Technology Solutions',
+  description = 'Zion Tech Group provides cutting-edge AI, blockchain, and cloud solutions for modern businesses.',
+  keywords = 'AI, blockchain, cloud, technology, solutions, Zion Tech Group',
+  image = '/images/og-image.jpg',
+  url = 'https://ziontechgroup.com'
+}) => {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-        <meta property="og:type" content={type} />
+        
+        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
   children,
@@ -201,6 +192,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
     <>
       <SEOHead title={title} description={description} />
 
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+      </Head>
+
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -214,6 +216,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {children}
         <Footer />
       </div>
+      
+      <main className="min-h-screen bg-gray-50">
+        {children}
+      </main>
     </>
   );
 };
@@ -223,5 +229,7 @@ export default MainLayout;
 
 
 
+
+export default MainLayout;
 
 export default MainLayout;

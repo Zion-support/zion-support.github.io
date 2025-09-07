@@ -3,6 +3,15 @@ export function ProjectReviewSection({ project }:,  ProjectReviewSectionProps) {
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
   const isCompleted = project.status === "completed","
+pr-12325
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth(),
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
+  
+  const isCompleted = project.status === "completed",
+  const isCompleted = project.status === "completed","
+pr-12325
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   const clientProfile = project?.talent_profile,
@@ -47,6 +56,12 @@ import { useAuth } from "@/hooks/useAuth",
 interface ProjectReviewSectionProps {
   project: Project
 }
+  const revieweeName = isClient 
+    ? talentProfile?.full_name || "Talent" 
+    : clientProfile?.full_name || "Client",
+
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
@@ -69,15 +84,62 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReviewsList } from "@/components/reviews/ReviewsList",;
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
+import { useReviews } from "@/hooks/useReviews";
+import { useAuth } from "@/hooks/useAuth";
+interface ProjectReviewSectionProps {
+  project: Project
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth();
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  const isCompleted = null;
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { ReviewsList } from '@/components/reviews/ReviewsList'
+import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal'
+import { useReviews } from '@/hooks/useReviews'
+import { useAuth } from '@/hooks/useAuth'
+interface ProjectReviewSectionProps {
+  project: Project
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth()
+  const { reviews, userReview, isLoading, reportReview } = useReviews(
+    project.id
+  )
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
+  const isCompleted = project.status === 'completed'
+  const isClient = user?.id === project.client_id
+  const isTalent = user?.id === project.talent_id
+  const clientProfile = project?.talent_profile
+  const talentProfile = project.talent_profile
+  // Determine who the current user needs to review
+  const revieweeId = isClient ? project.talent_id : project.client_id
+  const revieweeName = isClient
+    ? talentProfile?.full_name |'Talent'
+    : clientProfile?.full_name |'Client'
+  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
+  const hasLeftReview = userReview != null
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <Card className="mt-6">
+    <Card className='mt-6'>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Star className="h-5 w-5 text-yellow-400" />
+        <CardTitle className='flex items-center gap-2'>
+          <Star className='h-5 w-5 text-yellow-400' />
           Reviews
         </CardTitle>
         <CardDescription>
-          Reviews are visible once the project is completed and both parties submit feedback
+          Reviews are visible once the project is completed and both parties
+          submit feedback
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -90,18 +152,19 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <h3 className="font-medium mb-2">Share your experience</h3>"
                     <p className="text-sm text-muted-foreground mb-3">"
       
+
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
                 {canLeaveReview ? (
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Share your experience</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
+                  <div className='bg-muted/20 rounded-lg p-4 text-center'>
+                    <h3 className='font-medium mb-2'>Share your experience</h3>
+                    <p className='text-sm text-muted-foreground mb-3'>
                       Your review will help build a trustworthy community
                     </p>
-                    <Button onClick={() => setIsReviewModalOpen(true)}>
+                    <Button onClick={(,) => setIsReviewModalOpen(true)}>
                       Leave Review
                     </Button>
                   </div>
@@ -180,6 +243,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       Your review will help build a trustworthy community;
                     </p>;
                     <Button onClick={() => setIsReviewModalOpen(true)}>;
+
                       Leave Review;
                     </Button>;
                   </div>;
@@ -202,12 +266,91 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
+
                     )}
                   </div>
                 ) : null}
               </div>
             )}
+
             <ReviewsList
+  // Determine who the current user needs to review;
+  const revieweeId = isClient ? project.talent_id : project.client_id,
+  const revieweeName = isClient;"
+    ? talentProfile?.full_name || "Talent"""
+    : clientProfile?.full_name || "Client","
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
+  
+
+
+  "
+  
+
+  // Determine who the current user needs to review;
+  
+  return ("
+    <Card className="mt-6">"
+
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">"
+          <Star className="h-5 w-5 text-yellow-400" />"
+
+        
+        <CardDescription>
+
+        
+      
+
+
+
+      
+
+      <CardContent>
+          <div className="space-y-6">"
+</div>"
+              <div className="border-b pb-4 mb-4">"
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">"
+                    <h3 className="font-medium mb-2">Share your experience</h3>""
+                    <p className="text-sm text-muted-foreground mb-3">"
+</p>
+                    </p>)
+                    <Button onClick={() => setIsReviewModalOpen(true)}>
+
+                    
+                    <h3 className="font-medium mb-2">Thank you for your review!</h3>""
+                    </p>"
+                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>"
+
+    <Card className="mt-6">;"
+
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;"
+          <Star className="h-5 w-5 text-yellow-400" />;"
+
+        ;
+        <CardDescription>;
+
+      <CardContent>;
+          <div className="space-y-6">;"
+              <div className="border-b pb-4 mb-4">;"
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">;"
+                    <h3 className="font-medium mb-2">Share your experience</h3>;""
+                    <p className="text-sm text-muted-foreground mb-3">;"
+                    </p>;
+                    <Button onClick={() => setIsReviewModalOpen(true)}>;
+
+                  </div>;"
+                  <div className='bg-muted/20 rounded-lg p-4 text-center'>;
+</div>
+                    <h3 className='font-medium mb-2'>;
+</h3>
+                    </h3>;
+                    <p className='text-sm text-muted-foreground mb-3'>;
+                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;"
+
+            <ReviewsList;
+pr-12325
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
@@ -215,12 +358,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
       {/* Review Modal */}
       {(isClient ||,  isTalent) && (;
         <LeaveReviewModal
+
+
+        <LeaveReviewModal;
           projectId = {project.id,}
+pr-12325
           revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}
           isOpen = {isReviewModalOpen,}
           onClose = {(,) => setIsReviewModalOpen(false),}
-        />
+
       )}
     </Card>;
   );
@@ -232,9 +379,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             )}
 ;
             <ReviewsList;
+pr-12325
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
+
             />
           </div>
         ) : (
@@ -336,6 +485,40 @@ function ProjectReviewSection() {
                   </div>) : null}
               </div>)}
             <ReviewsList;
+
+
+            />
+
+          <div className="bg-muted/20 rounded-lg p-6 text-center">"
+            <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>""
+            <p className="text-sm text-muted-foreground">"
+    ;"
+    <Card className='mt - 6'>;
+
+
+        <CardTitle className='flex items - center gap - 2'>;
+
+          <Star className='h - 5 w - 5 text - yellow - 400' />;
+
+
+
+          <div className='space - y-6'>;
+              <div className='border - b pb - 4 mb - 4'>;
+                  <div className='bg - muted / 20 rounded - lg p - 4 text - center'>;
+                    <h3 className='font - medium mb - 2'>Share your experience</h3>;
+                    <p className='text - sm text - muted - foreground mb - 3'>;
+                    <Button on_click={(, ) => setIsReviewModalOpen (true)}>;
+
+                  </div>) : hasLeftReview ? (
+                    <h3 className='font - medium mb - 2'>;
+                      <Button;
+                        variant='outline';')
+                        on_click={() => setIsReviewModalOpen (true)}
+
+                      )}
+                  </div>) : null}
+              </div>)}
+pr-12325
               reviews = {reviews, }
               is_loading = {is_loading, }
               onReportReview = {report_review, }
@@ -357,6 +540,12 @@ function ProjectReviewSection() {
       {/* Review Modal */}
       {(isClient || isTalent) && (;
         <LeaveReviewModal;
+
+          </div>) : (
+          <div className='bg - muted / 20 rounded - lg p - 6 text - center'>;
+            <p className='text - sm text - muted - foreground'>;
+            </p>;)
+pr-12325
           projectId={project.id}
           revieweeId={revieweeId}
           revieweeName={revieweeName}
@@ -370,3 +559,9 @@ function ProjectReviewSection() {
 ;
 }}}))))
 ;
+
+;
+    </Card>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12325

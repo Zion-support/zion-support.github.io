@@ -81,6 +81,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
 
+
   ],
   const categories = [;
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
@@ -109,6 +110,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     { number: "24 / 7", label: "AI Support Available", icon: Brain },
     { number: "200+", label: "Countries Served", icon: Globe }
   ],
+
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -732,6 +734,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                         <Link;
                           href={`/services/${service.id}`}
 
+
+
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -803,6 +807,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
 
+
+
+
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -847,6 +854,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12">
+
+
+
 
                 and how they can revolutionize your operations.
               </p>
@@ -953,6 +963,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
+
 
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
@@ -1130,3 +1141,14 @@ export default Innovative2025ServicesShowcase,
 
 },
 
+import { Brain, Shield, Rocket, Globe, Cpu, Database;
+  TrendingUp, Users, Star, Zap, Lock, Target;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+// Import our new innovative services
+import { innovativeMicroSaasExpansionV32025  } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+const Innovative2025ServicesShowcase: React.FC;
+export default Innovative2025ServicesShowcase;
+origin/cursor/automate-test-improve-and-merge-code-2533

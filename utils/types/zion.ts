@@ -16,8 +16,8 @@ export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
+  secondaryColor?: string;}
+  subdomain?: string;}
 }
 export interface DeployModules {marketplace: boolean;
 export interface Branding {;
@@ -151,6 +151,7 @@ export interface DeployResult {success: boolean;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  // Bonus;}
 ;
 export interface DeployInput {;
   instanceName: string;
@@ -310,13 +311,90 @@ export interface GeneratedAsset {
   description?: string;
 }
 export interface DeployResult {
+
+
+  logoUrl?: string,;
+  primaryColor?: string,;
+
+  secondaryColor?: string,;
+  } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+
+
+;
+export interface DeployModules {;
+  marketplace: boolean;,
+  gpt: boolean;
+  academy: boolean;,
+  token: boolean;
+  dao: boolean;,
+  nationBuilder: boolean;
+  launchKit: boolean;,
+  bookBuilder: boolean;
+  roadmapWhitepaper: boolean;,
+  apiDocsWiki: boolean;
+  zionBrain: boolean;
+  // Bonus;
+
+
+
+
+  globalMap?: boolean,;
+  franchiseOnboarding?: boolean,;
+  referralAmbassadors?: boolean,;
+  grantPortal?: boolean,;
+
+  trailer?: boolean,;
+  bookStore?: boolean;
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+
+export interface DeployInput {instanceName: string;,
+  defaultLanguage: string;
+  deploymentRegion: string;,
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;,
+  branding: Branding;
+  modules: DeployModules;
+  requestedRoutes?: string[];
+  modules: DeployModules;}
+  requestedRoutes?: string[];}
+}
+
+export interface DeployLogEntry {timestamp: string;,"
+  level: "info" | "warn" | "error";"
+  action: string;
+  details?: Record<string unknown> | string;
+</string>
+  details?: Record<string, unknown> | string;
+  details?: Record < string unknown> | string;
+export interface GeneratedAsset {
+  // TODO: Implement
+}"
+  kind: "file" | "page" | "config" | "job" | "event","
+  path: string,
+  description?: string;
+export interface DeployResult {
+  // TODO: Implement
+pr-12325
+
+}
+export interface DeployResult {
+  // TODO: Implement
+}
   success: boolean,
   instance_slug: string,
   config_path: string,
   assets: GeneratedAsset[],
   logs: DeployLogEntry[],
-  summary: string,
-  version: string;
+  summary: string,}
+  version: string;}
 }
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
@@ -324,10 +402,18 @@ export interface AccessControlConfig {
 
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+export interface AccessControlConfig {
+
+  // TODO: Implement
+  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];",
   adminKeyConfigured: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];",
+  adminKeyConfigured: boolean;
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 
 
@@ -351,10 +437,23 @@ export interface AccessControlConfig {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
 
-
+  }
+}
 }
 
 
 
+
+
+
 }
+
+"
+pr-12325
+  adminKeyConfigured: boolean;
+}
+"

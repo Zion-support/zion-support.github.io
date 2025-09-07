@@ -39,62 +39,131 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
     {
 
+
+import { useState } from "react",;
+import { Briefcase, Star, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Briefcase, Star, User } from "lucide-react",;
+import { Button } from "@/components/ui/button",    {
+
       id: "talent"
       name: "Talent"
       description: "I want to showcase my skills and find opportunities"
 
       icon: Star
+      icon: Star          const Icon = type.icon;
+          const is_selected = selected_type === type.id,
 
-    },
+          const Icon = type.icon,
+          const isSelected = selectedType === type.id,
+          
+
+          return (
+            <Button;
+              key={type.id}          return (
+            <Button;
+              key={type.id}
+
+          return (
 
 },
 
     }
     },
+
+
+import {useState} from "react";""
+import {Briefcase, Star, User} from "lucide-react";""
+import {Button} from "@/components/ui/button";""
+import { useState } from "react",""
+import { Briefcase, Star, User } from "lucide-react";""
+import { Button } from "@/components/ui/button";""
+import { Briefcase, Star, User } from "lucide-react",""
+import { Button } from "@/components/ui/button","
+interface UserTypeOption {
+  // TODO: Implement
+}"
+  id: "serviceProvider" | "talent" | "client"",
+  name: string;
+  description: string;,
+  icon: React.ElementType;
+}
+interface UserTypeSelectionProps {
+  // TODO: Implement
+}"
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;",
+  selectedType: string | null;
+}
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+  const userTypes: UserTypeOption[] = [
     {
 
-      id: "client"
-      name: "Client"
-      description: "I want to discover and hire talent or services"
+"
+      id: "serviceProvider",""
+      name: "Service Provider",""
+      description: "I want to offer services on the platform","
+      icon: Briefcase;
+    };
+      icon: Briefcase;
+    }
+    },
 
       icon: User
+"
+      id: "serviceProvider",""
+      name: "Service Provider",""
+      description: "I want to offer services on the platform","
+    {
+"
+      id: "talent"","
+  name: "Talent"""
+      description: "I want to showcase my skills and find opportunities"",
+  icon: Star;
+    },
 
-import {useState} from "react";
-import {Briefcase, Star, User} from "lucide-react";
-import {Button} from "@/components/ui/button";
-interface UserTypeOption {;
-  id: "serviceProvider" | "talent" | "client",;
+
+    {
+"
+      id: "client"","
+  name: "Client"""
+      description: "I want to discover and hire talent or services"",
+  icon: User;"
+import {useState} from "react";""
+import {Briefcase, Star, User} from "lucide-react";""
+import {Button} from "@/components/ui/button";"
+interface UserTypeOption {;"
+  id: "serviceProvider" | "talent" | "client",;"
   name: string,;
   description: string,;
   icon: React && React.ElementType;
 }
 
-interface UserTypeSelectionProps {;
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;
+interface UserTypeSelectionProps {;"
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;"
   selectedType: string | null;
 }
 
-export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSelectionProps) {;
+export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSelectionProps) {;]
   const userTypes: UserTypeOption[] = [;
-    {;
-      id: "serviceProvider",;
-      name: "Service Provider",;
-      description: "I want to offer services on the platform",;
+    {;"
+      id: "serviceProvider",;""
+      name: "Service Provider",;""
+      description: "I want to offer services on the platform",;"
       icon: Briefcase;
     };
-    {;
-      id: "talent",;
-      name: "Talent",;
-      description: "I want to showcase my skills and find opportunities",;
+    {;"
+      id: "talent",;""
+      name: "Talent",;""
+      description: "I want to showcase my skills and find opportunities",;"
       icon: Star;
     };
-    {;
-      id: "client",;
-      name: "Client",;
-      description: "I want to discover and hire talent or services",;
+    {;"
+      id: "client",;""
+      name: "Client",;""
+      description: "I want to discover and hire talent or services",;"
       icon: User;
 
-    }
+    }]
   ];
 }
   ];
@@ -124,53 +193,61 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
 import { useState } from './react';
 import { Briefcase, Star, User } from './lucide-react';
 import { Button } from '@/components / ui / button';
+"
+import { useState } from './react';''
+import { Briefcase, Star, User } from './lucide-react';''
+import { Button } from '@/components / ui / button';'
 interface UserTypeOption {
-  id: "service_provider" | "talent" | "client",
+  // TODO: Implement
+}'
+  id: "service_provider" | "talent" | "client","
   name: string,
   description: string,
   icon: React.ElementType;
 }
 interface UserTypeSelectionProps {
-  on_select: (user_type: "service_provider" | "talent" | "client") => void,
+  // TODO: Implement
+})"
+  on_select: (user_type: "service_provider" | "talent" | "client") => void,"
   selected_type: string | null;
 }
 export /**
- * UserTypeSelection - Function description
+ * UserTypeSelection - Function description;
  */
 function UserTypeSelection() {
   const user_types: UserTypeOption[] = [;
-    {
-      id: "service_provider",
-      name: "Service Provider",
-      description: "I want to offer services on the platform",
+    {"
+      id: "service_provider",""
+      name: "Service Provider",""
+      description: "I want to offer services on the platform","
       icon: Briefcase;
     }
-    {
-      id: "talent",
-      name: "Talent",
-      description: "I want to showcase my skills and find opportunities",
+    {"
+      id: "talent",""
+      name: "Talent",""
+      description: "I want to showcase my skills and find opportunities","
       icon: Star;
     }
-    {
-      id: "client",
-      name: "Client",
-      description: "I want to discover and hire talent or services",
+    {"
+      id: "client",""
+      name: "Client",""
+      description: "I want to discover and hire talent or services","
       icon: User;
-    }
+    }]
   ];
 ;
-  return (
-    <div className="space - y-6">;
-      <div className="text - center mb - 6">;
-        <h3 className="text - 2xl font - bold text - white">Choose your role</h3>;
-        <p className="text - zion - slate - light mt - 2">;
-          This helps us personalize your experience;
+  return ("
+    <div className="space - y-6">;"
+</div>"
+      <div className="text - center mb - 6">;"
+</div>"
+        <h3 className="text - 2xl font - bold text - white">Choose your role</h3>;""
+        <p className="text - zion - slate - light mt - 2">;"
+</p>
         </p>;
-      </div>;
-      <div className="grid gap - 4 md: grid - cols - 3">;
-        {user_types.map ((type) => {
-          const Icon = type.icon;
-          const is_selected = selected_type === type.id,
+      </div>;"
+      <div className="grid gap - 4 md: grid - cols - 3">;"
+</div>
 
           const Icon = type.icon;
           const is_selected = selected_type === type.id,
@@ -200,7 +277,10 @@ const Icon = type.icon;
           return (
             <Button;
               key={type.id}
+            <Button;
+              key={type.id}
               }`}
+
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
@@ -348,6 +428,7 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
             <Button;
               key={type.id}
               }`}
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;              }`}
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
@@ -363,6 +444,8 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
         })}
 
       </div>;
+
+}      </div>;
     </div>;
   );
 
@@ -408,6 +491,170 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
     </div>;
   );
 }
+
+
+import {useState} from "react";""
+import {Briefcase, Star, User} from "lucide-react";""
+import {Button} from "@/components/ui/button";""
+import { useState } from "react",""
+import { Briefcase, Star, User } from "lucide-react";""
+import { Button } from "@/components/ui/button";""
+import { Briefcase, Star, User } from "lucide-react",""
+import { Button } from "@/components/ui/button","
+interface UserTypeOption {
+  // TODO: Implement
+}"
+  id: "serviceProvider" | "talent" | "client"",
+  name: string;
+  description: string;,
+  icon: React.ElementType;
+}
+interface UserTypeSelectionProps {
+  // TODO: Implement
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;",
+  selectedType: string | null;
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+  const userTypes: UserTypeOption[] = [
+    {
+
+"
+      id: "serviceProvider",""
+      name: "Service Provider",""
+      description: "I want to offer services on the platform","
+      icon: Briefcase;
+    };
+    },
+
+      id: "talent"","
+  name: "Talent"""
+      description: "I want to showcase my skills and find opportunities"",
+  icon: Star;
+
+
+      id: "client"","
+  name: "Client"""
+      description: "I want to discover and hire talent or services"",
+  icon: User;"
+import {Button} from "@/components/ui/button";"
+interface UserTypeOption {;"
+  id: "serviceProvider" | "talent" | "client",;"
+  name: string,;
+  description: string,;
+  icon: React && React.ElementType;
+
+interface UserTypeSelectionProps {;"
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;"
+
+export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSelectionProps) {;]
+  const userTypes: UserTypeOption[] = [;
+    {;"
+      id: "serviceProvider",;""
+      name: "Service Provider",;""
+      description: "I want to offer services on the platform",;"
+      id: "talent",;""
+      name: "Talent",;""
+      description: "I want to showcase my skills and find opportunities",;"
+      id: "client",;""
+      name: "Client",;""
+      description: "I want to discover and hire talent or services",;"
+      icon: User;
+
+    }]
+  ];
+
+  ],
+
+
+  return (
+import { useState } from './react';
+import { Briefcase, Star, User } from './lucide-react';
+import { Button } from '@/components / ui / button';
+  // TODO: Implement
+  id: "service_provider" | "talent" | "client","
+  name: string,
+  description: string,
+  // TODO: Implement
+})"
+  on_select: (user_type: "service_provider" | "talent" | "client") => void,"
+  selected_type: string | null;
+export /**
+ * UserTypeSelection - Function description;
+ */
+function UserTypeSelection() {
+  const user_types: UserTypeOption[] = [;
+    {"
+      id: "service_provider",""
+      id: "talent",""
+      name: "Talent",""
+      description: "I want to showcase my skills and find opportunities","
+      id: "client",""
+      name: "Client",""
+      description: "I want to discover and hire talent or services","
 ;
 
 }
+  return ("
+    <div className="space - y-6">;"
+</div>"
+      <div className="text - center mb - 6">;"
+        <h3 className="text - 2xl font - bold text - white">Choose your role</h3>;""
+        <p className="text - zion - slate - light mt - 2">;"
+</p>
+        </p>;
+      </div>;"
+      <div className="grid gap - 4 md: grid - cols - 3">;"
+</div>
+            <Button;
+              key={type.id}
+
+              }`}
+            >
+"`;
+</Button>"
+              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>"
+</div>"`;
+                <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />"
+
+              <div className="text-center">"
+                <h4 className="font-medium">{type.name}</h4>""
+                <p className="text-sm text-zion-slate-light mt-1">"
+</p>"
+    <div className="space-y-6">;"
+      <div className="text-center mb-6">;"
+        <h3 className="text-2xl font-bold text-white">Choose your role</h3>;""
+        <p className="text-zion-slate-light mt-2">;"
+      <div className="grid gap-4 md: grid-cols-3">;"
+              key={type && type.id})
+              onClick={() => onSelect(type && type.id)}
+
+              key={type.id}`;
+            >;
+              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;"
+                <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;"
+
+              <div className="text-center">;"
+                <h4 className="font-medium">{type && type.name}</h4>;""
+                <p className="text-sm text-zion-slate-light mt-1">;"
+              </div>;
+    </div>;"`;
+              <div className={`p - 3 rounded - full ${is_selected ? "bg - zion - purple" : "bg - zion - blue"}`}>;"
+                <Icon className={`h - 6 w - 6 ${is_selected ? "text - white" : "text - zion - slate - light"}`} />;"
+
+              <div className="text - center">;"
+                <h4 className="font - medium">{type.name}</h4>;""
+                <p className="text - sm text - zion - slate - light mt - 1">;"
+            );
+    </div>);"`;
+              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" :"bg-zion-blue"}`}>;"
+                <Icon className={`h-6 w-6 ${isSelected ? "text-white" :"text-zion-slate-light"}`} />;"
+
+                <h4 className="font-medium">{type.name}</h4>;""
+pr-12325
+                <p className="text-sm text-zion-slate-light mt-1">;"
+</p>
+                </p>;
+              </div>;
+            </Button>;
+      </div>;
+    </div>;"
+

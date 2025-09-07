@@ -1,8 +1,10 @@
 { key: 'private_portal', label: 'Private hiring portal' },
+  { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
+
 
   {
     id: 'teams',
@@ -64,6 +66,9 @@ const tiers = [
     blurb: 'Unlimited users, custom contracts and SLAs'
     highlights: ['Unlimited seatsCustom SLADedicated CSM']
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
+import Link from 'next/link';
+const features = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -74,6 +79,28 @@ export default function EnterprisePlans() {
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
         {tiers.map(t => (
           <div key={t.id} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: '1.25rem' }}>
+<p>
+          Team-based access with admin controls, branded environments, and usage
+          limits.
+        </p>
+      </header>
+
+      <section
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '1rem',
+        }}
+      >
+        {tiers.map(t => (
+          <div
+            key={t.id}
+            style={{
+              border: '1px solid #e5e7eb',
+              borderRadius: 12,
+              padding: '1.25rem',
+            }}
+          >
             <h3 style={{ marginBottom: 4 }}>{t.name}</h3>
             <div style={{ fontSize: 28, fontWeight: 700 }}>{t.price}</div>
             <p style={{ color: '#4b5563' }}>{t.blurb}</p>
@@ -87,6 +114,28 @@ export default function EnterprisePlans() {
                 <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>
               </Link>
               <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
+<Link href='/enterprise' passHref legacyBehavior>
+                <a
+                  style={{
+                    padding: '0.5rem 0.75rem',
+                    background: '#111827',
+                    color: 'white',
+                    borderRadius: 8,
+                  }}
+                >
+                  Request Quote
+                </a>
+              </Link>
+              <a
+                href='mailto:sales@zion.ai'
+                style={{
+                  padding: '0.5rem 0.75rem',
+                  border: '1px solid #111827',
+                  borderRadius: 8,
+                }}
+              >
+                Schedule a Demo
+              </a>
             </div>
           </div>
         ))}
@@ -100,6 +149,26 @@ export default function EnterprisePlans() {
                 <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>
                 {tiers.map(t => (
                   <th key={t.id} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>{t.name}</th>
+<th
+                  style={{
+                    textAlign: 'left',
+                    padding: 8,
+                    borderBottom: '1px solid #e5e7eb',
+                  }}
+                >
+                  Feature
+                </th>
+                {tiers.map(t => (
+                  <th
+                    key={t.id}
+                    style={{
+                      textAlign: 'center',
+                      padding: 8,
+                      borderBottom: '1px solid #e5e7eb',
+                    }}
+                  >
+                    {t.name}
+                  </th>
                 ))}
               </tr>
             </thead>
@@ -109,6 +178,21 @@ export default function EnterprisePlans() {
                   <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
                   {tiers.map(t => (
                     <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+<td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                    {f.label}
+                  </td>
+                  {tiers.map(t => (
+                    <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                    <td
+                      key={t.id + f.key}
+                      style={{
+                        textAlign: 'center',
+                        padding: 8,
+                        borderBottom: '1px solid #f3f4f6',
+                      }}
+                    >
+                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </td>
                   ))}
                 </tr>
@@ -245,6 +329,45 @@ export default function EnterprisePlans(req, res) {
 };
   )
 
+<section
+        style={{
+          marginTop: '2rem',
+          display: 'flex',
+          gap: 16,
+          alignItems: 'center',
+        }}
+      >
+        <div style={{ display: 'flex', gap: 8 }}>
+          <span
+            style={{
+              border: '1px solid #e5e7eb',
+              borderRadius: 6,
+              padding: '0.25rem 0.5rem',
+            }}
+          >
+            SSL
+          </span>
+          <span
+            style={{
+              border: '1px solid #e5e7eb',
+              borderRadius: 6,
+              padding: '0.25rem 0.5rem',
+            }}
+          >
+            ISO 27001
+          </span>
+          <span
+            style={{
+              border: '1px solid #e5e7eb',
+              borderRadius: 6,
+              padding: '0.25rem 0.5rem',
+            }}
+          >
+            SOC 2
+          </span>
+        </div>
+        <div style={{ marginLeft: 'auto' }}>
+          <Link href="/enterprise/admin">Admin Dashboard</Link>
   )
   } catch (error) {
     console.error("Error:", error);
@@ -256,6 +379,9 @@ export default function EnterprisePlans(req, res) {
     </main>
 
 }
+
+}
+
 export default /**
  * EnterprisePlans - Function description
  */
@@ -327,3 +453,10 @@ function EnterprisePlans() {
   }
 }
 }
+
+          <Link href='/enterprise/admin'>Admin Dashboard</Link>
+        </div>
+      </section>
+    </main>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

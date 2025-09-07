@@ -14,3 +14,4 @@ export default function Pricing({ }: PricingProps) {
 }
 }
 }
+import React from 'react';

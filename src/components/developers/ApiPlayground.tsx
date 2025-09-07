@@ -41,11 +41,103 @@ if ( {) {
         error_message =;
           'Network error - check CORS configuration or API endpoint';
       } else {
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
+
+  name: string
+type: string
+required?: boolean
+}interface ApiPlaygroundProps {
+  method: string
+  path: string
+  params?: Param[]
+export function ApiPlayground({
+  method
+  path
+  params = []
+}: ApiPlaygroundProps) {
+  const [apiKey, setApiKey] = useState('demo_key_123')
+  const [paramValues, setParamValues] = useState<Record<string, string>>({})
+  const [body, setBody] = useState('{}')
+  const [response, setResponse] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
+  const handleParamChange = (name: string, value: string) => {
+    setParamValues(prev => ({ ...prev, [name]: value }))
+  }
+  const sendRequest = async () => {
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
+      (typeof window !== 'undefined' ? window.location.origin : '')
+    let url = `${baseUrl}${path}`
+    const searchParams = new URLSearchParams()
+    if (method === 'GET' |method === 'DELETE') {
+      params.forEach(p => {
+        const val = paramValues[p.name]
+        if (val) searchParams.append(p.name, val)
+      })
+      const query = searchParams.toString()
+      if (query) url += `?${query}` }
+import { Button } from "@/components/ui/button",;
+import CodeBlock from "./CodeBlock",;
+interface Param {
+  name: string,
+  type: string,
+  required?: boolean
+import { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import CodeBlock from "./CodeBlock",;
+interface Param {;
+  name: string,;
+  type: string,;
+  required?: boolean;
+}
+;
+interface ApiPlaygroundProps {;
+  method: string,;
+  path: string,;
+  params?: Param[];
+}
+
+export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
+  const [apiKey, setApiKey] = useState("demo_key_123"),
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),
+  const [body, setBody] = useState("{}"),
+  const [response, setResponse] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false),
+
+  const handleParamChange = (name: string, value: string) => {
+    setParamValues((prev) => ({ ...prev, [name]: value }))
+  },
+
+  const sendRequest = async () => {
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
+    let url = `${baseUrl}${path}`,
+
+    const searchParams = new URLSearchParams(),
+    if (method === "GET" || method === "DELETE") {
+      params.forEach((p) => {
+        const val = paramValues[p.name],
+        if (val) searchParams.append(p.name, val)
+      }),
+      const query = searchParams.toString(),
+      if (query) url += `?${query}`
+    }
+
+    const options: RequestInit = {
+      method
+      headers: {
+      try {
+        options.body = JSON.stringify(JSON.parse(body))
+      } catch {
+        options.body = body
 interface Param {;
   name: string;,
 type: string;,
@@ -445,3 +537,5 @@ if (contentType?.includes ('application/json') ) {;
 ;
 export default ApiPlayground;
 export default ApiPlayground;
+interface Param {
+origin/cursor/automate-test-improve-and-merge-code-2533

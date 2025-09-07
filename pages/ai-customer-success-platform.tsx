@@ -2,6 +2,10 @@
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+
 
 export default function AICustomerSuccessPlatform() {
 	return (
@@ -19,6 +23,10 @@ export default function AICustomerSuccessPlatform() {
 }
 
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+
+}
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export default /**
  * AICustomerSuccessPlatform - Function description
@@ -97,6 +105,7 @@ export default function AICustomerSuccessPlatform() {_return (
 	)
 
 }
+
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -119,6 +128,9 @@ export default function AICustomerSuccessPlatform() {_return (
 		/>
 	)
 };
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -140,3 +152,7 @@ export default function AICustomerSuccessPlatform() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

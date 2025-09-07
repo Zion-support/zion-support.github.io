@@ -1,5 +1,11 @@
 export interface ProjectBrief {
 talentFilters?: { 
+  projectName: string;
+  goals: string;
+  timeline: string;
+  budget: string;
+  techStack?: string[];
+  talentFilters?: { 
     verifiedOnly?: boolean; 
     regions?: string[] 
   };
@@ -73,6 +79,21 @@ export interface ProjectRequirements {
   projectName: string, goals: string,
   timeline: string, budget: string,;,
   techStack?: string[];,
+  timeline: string, budget: string,;
+  techStack?: string[];
+export interface ProjectBrief {
+  // TODO: Implement
+}
+  projectName: string;,
+  goals: string;
+  timeline: string;,
+  budget: string;
+  techStack?: string[];
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+
+  projectName: string, goals: string,
+  timeline: string, budget: string,;
+pr-12325
   talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
 export interface ProjectBrief {;
   projectNam: e: string,;
@@ -83,3 +104,10 @@ export interface ProjectBrief {;
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] },
 }
 
+  talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
+
+pr-12243
+  talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
+
+
+pr-12325

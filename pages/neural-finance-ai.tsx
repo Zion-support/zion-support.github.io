@@ -265,6 +265,12 @@ const features = [
     color: 'from-cyan-500 to-blue-600',
   },];
 
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+const contactInfo = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 const pricingPlans = [
   {
     name: 'Starter',
@@ -273,6 +279,8 @@ const pricingPlans = [
     description: 'Perfect for individual traders and small investment firms',
     features: [
       'Basic market analysis and insights',
+'Basic market analysis and insights',
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Portfolio tracking and monitoring',
       'Risk assessment and management',
       'Email support',
@@ -290,6 +298,23 @@ const pricingPlans = [
 
     features: [;
       'Advanced AI models and algorithms',
+    name: 'Enterprise',
+    price: 1499,
+    period: 'month',
+    description: 'For large investment firms and institutional investors',
+    benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting'],
+  }, ];
+;
+const integrations = [;
+    color: 'from-gray-500 to-gray-600',
+  },
+  {
+    name: 'Professional',
+    price: 499,
+    period: 'month',
+    description: 'Ideal for professional traders and growing investment firms',
+    features: [
+'Advanced AI models and algorithms',
       'Automated trading with backtesting',
       'Custom strategy development',
       'Priority support and API access',
@@ -302,6 +327,8 @@ const pricingPlans = [
     color: 'from-cyan-500 to-purple-600',
   },  {
 
+  },
+  {
     name: 'Enterprise',
     price: 1499,
     period: 'month',
@@ -328,6 +355,28 @@ const use_cases = [;
       'Develop, backtest, and deploy sophisticated trading algorithms using our AI - powered platform.',
     icon: BarChart,
     benefits: [;
+    features: [
+'Custom AI model training and development',
+      'White-label solution with branding',
+      'Dedicated account manager and support',
+      'Advanced compliance automation',
+      '24/7 monitoring and support',
+      'Custom integrations and APIs',
+      'Advanced security and audit trails',
+      'Multi-user access and permissions',
+    ],
+    popular: false,
+    color: 'from-purple-500 to-pink-600',
+  },
+];
+
+const useCases = [
+  {
+    title: 'Algorithmic Trading Strategy Development',
+description:
+      'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.',
+    icon: BarChart,
+    benefits: [
       'Increased trading efficiency',
       'Reduced emotional bias',
       '24/7 market monitoring',
@@ -365,6 +414,11 @@ const use_cases = [;
 ;
 const integrations = [;
 
+  },
+];
+
+const integrations = [
+origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
   { name: 'TradingView', logo: '📊', category: 'Charting' },
@@ -383,6 +437,10 @@ import Layout from '../components/layout/Layout';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+
+{ name: 'TD Ameritrade', logo: '💼', category: 'Broker' },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 const NeuralFinanceAI: React.FC = () => {
   return (
@@ -552,6 +610,19 @@ const NeuralFinanceAI: React.FC = () => {;
           Zion Tech Group;
         </title>;
 
+
+
+            >
+
+
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+
+
+<title>
+          Neural Finance AI - Advanced AI-Powered Financial Analysis Platform |
+          Zion Tech Group
+        </title>
         <meta
           name='description'
           content='Transform your financial trading with Neural Finance AI. Advanced AI-powered market prediction, risk assessment, and automated portfolio optimization using neural networks.'
@@ -574,6 +645,27 @@ const NeuralFinanceAI: React.FC = () => {;
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 
+          href='https://ziontechgroup.com/neural-finance-ai'
+        />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+<div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6'>
+                <Brain className='w-4 h-4' />
+                <span>AI-Powered Financial Intelligence</span>
+              </div>
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
+                <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Neural Finance AI
                 </span>
                 <br />
@@ -640,17 +732,23 @@ const NeuralFinanceAI: React.FC = () => {;
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
+                <div className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-green-400' />
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Multi-Asset Support</span>
                 </div>
               </div>
             </motion.div>
             
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
               className="relative"
+className='relative'
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl"></div>
@@ -681,6 +779,13 @@ const NeuralFinanceAI: React.FC = () => {;
                       <span className="text-gray-300">Trading Automation</span>
                       <span className="text-pink-400 font-semibold">Enabled</span>
                     </div>
+                    <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
+                      <span className='text-gray-300'>Trading Automation</span>
+                      <span className='text-pink-400 font-semibold'>
+                        Enabled
+                      </span>
+                    </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
@@ -900,11 +1005,18 @@ const NeuralFinanceAI: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+      {/* Features Section */}
+<section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
@@ -930,12 +1042,18 @@ const NeuralFinanceAI: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
 
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {features.map((feature, index) => (
+              <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -965,16 +1083,36 @@ const NeuralFinanceAI: React.FC = () => {
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
+
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-400 leading-relaxed'>
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Use Cases Section */}
+<section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1000,12 +1138,18 @@ const NeuralFinanceAI: React.FC = () => {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
 
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {useCases.map((useCase, index) => (
+              <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1037,6 +1181,14 @@ const NeuralFinanceAI: React.FC = () => {
                           <span>{benefit}</span>
                         </div>
 
+                        <div
+                          key={benefitIndex}
+                          className='flex items-center space-x-2 text-sm text-gray-300'
+                        >
+                          <CheckCircle className='w-4 h-4 text-violet-400 flex-shrink-0' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                          <span>{benefit}</span>
+                        </div>
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1062,11 +1214,22 @@ const NeuralFinanceAI: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+          </div>
+        </div>
+      </section>
+      {/* Pricing Section */}
+<section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -1092,6 +1255,10 @@ const NeuralFinanceAI: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (;
               <motion&& motion.div
 
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1123,6 +1290,36 @@ const NeuralFinanceAI: React.FC = () => {
                   </div>
                 </div>
 
+
+
+plan.popular
+                    ? 'border-violet-500/50 bg-gradient-to-br from-violet-500/10 to-purple-500/10'
+                    : 'border-gray-700/50'
+                }`}
+              >
+                {plan.popular && (
+<div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <div className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold'>
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+<div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <p className='text-gray-400 text-sm mb-6'>
+                    {plan.description}
+                  </p>
+                  <div className='text-4xl font-bold text-white mb-2'>
+                    ${plan.price}
+                    <span className='text-lg text-gray-400 font-normal'>
+                      /{plan.period}
+                    </span>
+                  </div>
+                </div>
+                <ul className='space-y-4 mb-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
@@ -1139,6 +1336,8 @@ const NeuralFinanceAI: React.FC = () => {
                 
                 <Link
                   href="/contact"
+                  href='/contact'
+origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
@@ -1169,16 +1368,24 @@ const NeuralFinanceAI: React.FC = () => {
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
+
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+<section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -1238,17 +1445,31 @@ const NeuralFinanceAI: React.FC = () => {
           <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6'>            {integrations.map ((integration, index) => (
               <motion.div;
 
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
+            {integrations.map((integration, index) => (
+              <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105'
+              >
+                <div className='text-4xl mb-3'>{integration.logo}</div>
+                <h3 className='text-sm font-semibold text-white mb-1'>
+                  {integration.name}
+                </h3>
+                <p className='text-xs text-gray-400'>{integration.category}</p>
+              </motion.div>
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
         </div>
       </section>
       {/* Contact CTA */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>
+<section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1354,12 +1575,17 @@ const NeuralFinanceAI: React.FC = () => {
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Start Free Trial
               </Link>
               <Link
                 href="/contact"
                 className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"
+href='/contact'
+                className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Schedule Demo
               </Link>
@@ -1370,12 +1596,28 @@ const NeuralFinanceAI: React.FC = () => {
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
             </div>
 
+            <div className="text-sm text-gray-400">
+              <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
+              <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
+<div className='text-sm text-gray-400'>
+              <p>
+                ✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant
+                Setup
+              </p>
+              <p className='mt-2'>
+                ✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure
+              </p>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            </div>
           </div>
         </div>
       </section>
     </Layout>
   )
 }
+);
+};
+
 export default NeuralFinanceAI;
 
 },
@@ -1401,6 +1643,7 @@ export default NeuralFinanceAI,
                 href="/contact";
                 className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200";
               >;
+
 
                 className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'>;
                 Schedule Demo;
@@ -1468,3 +1711,6 @@ export default NeuralFinanceAI;
 ;
 export default NeuralFinanceAI;
 ;
+
+export default NeuralFinanceAI;
+origin/cursor/automate-test-improve-and-merge-code-2533

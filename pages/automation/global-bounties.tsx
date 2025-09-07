@@ -42,6 +42,8 @@ export default function GlobalBountiesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 100)
 
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+  const items: any[] = (data?.items || []).slice(0, 100);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -59,6 +61,7 @@ export default function GlobalBountiesPage() {
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
             </li>
           ))}
         </ul>
@@ -86,3 +89,6 @@ export default function GlobalBountiesPage() {
   }
 }
 }
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

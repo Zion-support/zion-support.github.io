@@ -7,6 +7,11 @@ import Head from 'next/head';
 import {GetStaticPaths, GetStaticProps} from 'next';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
@@ -40,12 +45,67 @@ const service = useMemo(() => {
         augmentedServicesBatch3 as any
         real2025Q3Additions as any
         realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+        enhancedRealMicroSaasServices as any,
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
+        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any,
+        enhancedRealMicroSaasServices as any
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
+        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+origin/cursor/automate-test-improve-and-merge-code-2533
       );
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
+
+return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+      } catch {
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -154,9 +214,11 @@ function getAllServices(): Service[] {
 		.concat(realMarketServicesExtended as unknown as Service[]);
 		.concat(real2026Q1Additions as unknown as Service[]);
 
+
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	 })),;
+
 
 		fallback: false;
 	}
@@ -414,11 +476,18 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 	return {props: { service }
 	}
 
+
+;
+export default function RootServiceDetailPage({ service }: { service: Service }) {;
+	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
+	return (
+origin/cursor/automate-test-improve-and-merge-code-2533
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline |service.description} />
 				<link rel="canonical" href={canonical} />
+
 
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return (
@@ -443,6 +512,21 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								offers: {
 									"@type": "Offer"
 									price: (service.price |'').replace(/[^0-9.]/g, ''),									priceCurrency: "USD"
+"@context": "https://schema.org",
+								"@type": "Service",
+								name: service.name,
+								description: service.tagline || service.description,
+								url: canonical,
+								provider: {
+"@type": "Organization",
+									name: "Zion Tech Group",
+									url: "https://ziontechgroup.com"
+origin/cursor/automate-test-improve-and-merge-code-2533
+								}
+								offers: {
+									"@type": "Offer",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
 							}
@@ -450,6 +534,28 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							2;
 							);}
 				/>;			</Head>
+2;
+							);}
+				/>;			</Head>
+				/>;
+			</Head>
+
+			<div className="container mx-auto px-4 py-16">
+				<div className="text-center mb-10">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+						{service.name}
+					</h1>
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+				</div>
+
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+					<div className="lg:col-span-2 space-y-6">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+						</Card>
+
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -602,6 +708,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
+</Link>
+								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
+								</Link>
+origin/cursor/automate-test-improve-and-merge-code-2533
 								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
@@ -616,6 +727,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 
+							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
+origin/cursor/automate-test-improve-and-merge-code-2533
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -820,3 +933,6 @@ if ( {) {
 
 }
 
+	);
+;
+origin/cursor/automate-test-improve-and-merge-code-2533

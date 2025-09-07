@@ -77,6 +77,9 @@ export default AutomationsIndex,;
 
 import type { NextPage } from 'next',
 import Link from 'next / link',
+
+import type { NextPage } from 'next',;
+import Link from 'next / link',;
 const AutomationsIndex: NextPage = () => {
   const items = [;
     { href: '/automations / top - talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
@@ -98,4 +101,19 @@ const AutomationsIndex: NextPage = () => {
     </main>;
   );
 },;
+    </main>;
+  );
+},;
+import type { NextPage } from 'next';
+import Link from 'next/link';
+const AutomationsIndex: NextPage;
+            </div>
+          </Link>
+        ))}
+      </div>
+    </main>
+);
+};
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default AutomationsIndex;

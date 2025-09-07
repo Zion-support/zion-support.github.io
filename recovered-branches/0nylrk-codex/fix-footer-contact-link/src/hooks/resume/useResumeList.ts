@@ -1,4 +1,6 @@
 
+
+pr-12325
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
@@ -11,6 +13,7 @@ import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
 
   const { user } = useAuth();
+export function useResumeList() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -132,6 +135,11 @@ const transformedResumes: Resume[] = resumeData.map(resume => ({
         certifications: []
         is_active: resume.is_active
       }));
+        setResumes([]);
+        return []
+      }
+      // Transform data to match Resume type  }
+}      }));
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {
@@ -242,3 +250,34 @@ is active: resume.is active
 }
   }
 }
+export function useResumeList() {
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+
+
+import { useState, useEffect  } from 'react';''
+import { supabase  } from '@/integrations/supabase/client';''
+import { Resume  } from '@/types/resume';''
+import { useAuth } from '@/hooks/useAuth';'
+export function useResumeList() {'
+import {useState, useEffect} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {Resume} from '@/types/resume';''
+import {useAuth} from '@/hooks/useAuth';'
+export function useResumeList() {;
+
+
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+</string>
+  const [resumes, setResumes] = useState<Resume[]>([]);
+
+  const [error, setError] = useState<string | null>(null),;
+  const [resumes, setResumes] = useState<Resume[]>([]),;
+pr-12325
+</Resume>'
+

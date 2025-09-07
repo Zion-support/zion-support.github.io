@@ -1,4 +1,6 @@
 
+
+pr-12325
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
@@ -13,6 +15,7 @@ import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeU
 export function useEducation() {;
 
   const { user } = useAuth();
+export function useEducation() {  const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -123,6 +126,10 @@ resume_id: resumeId,
     setIsLoading(true);
     setError(null);
 ;
+      return false    try {
+      const { error } = await supabase
+        .from('education')
+        .insert({;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -135,8 +142,8 @@ resume_id: resumeId,
           field_of_study: education.field_of_study,;
           start_date: formatDateForDB(education.start_date),;
           end_date: education.is_current ? null : formatDateForDB(education.end_date),;
-          is_current: education.is_current,;
-          description: education.description,;
+          is_current: education.is_current,,
+  description: education.description,;
           institution_logo_url: education.institution_logo_url,;
           location: education.location;
         }),;
@@ -379,6 +386,14 @@ institution: education.institution;
       setIsLoading(false)
 
 import {useState} from 'react';
+          return showSuccessToast("Education updated", "Your education has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update education')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('education')
+        .delete()import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -399,6 +414,12 @@ if ( {) {
       set_error ('You must be logged in to add education'),
       return false;
     }
+export function useEducation() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Education} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 
 }
   }
@@ -408,9 +429,39 @@ if ( {) {
     addEducation;
     updateEducation;
 
-    deleteEducation
-  }
+import { useState  } from 'react';''
+import { supabase  } from '@/integrations/supabase/client';''
+import { Education  } from '@/types/resume';''
+import { useAuth  } from '@/hooks/useAuth';''
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';'
+export function useEducation() {'
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {Education} from '@/types/resume';''
+import {useAuth} from '@/hooks/useAuth';''
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
+
+export function useEducation() {;
 }
+}
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+
+  const [error, setError] = useState<string | null>(null);
+</string>
+  const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
+</boolean>
+  const [error, setError] = useState<string | null>(null),;
+  const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {;
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {;
+  const addEducation = async (resumeId:string, education:Education):Promise<boolean> => {;
+  const updateEducation = async (eduId:string, education:Education):Promise<boolean> => {;
+  const deleteEducation = async (eduId:string):Promise<boolean> => {;
+  const deleteEducation = async (eduId: string): Promise<boolean> => {;
+</boolean>
+
+  const [error, set_error] = useState < string | null>(null);
 ;
     setIsLoading(true),;
     setError(null),;
@@ -426,6 +477,19 @@ if ( {) {
     } finally {;
       setIsLoading(false);
     }
+  const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
+    // Check condition;
+
+if ( {) {
+  $2;
+}
+      set_error ('You must be logged in to add education'),
+}'
+      set_error ('You must be logged in to add education'),'
+
+      return false;
+
+pr-12325
   },;
   return {;
     isLoading,;
@@ -433,107 +497,117 @@ if ( {) {
     addEducation;
     updateEducation;
     deleteEducation;
+  }
+}  }
 
+}
+}
   }
 }
+    setIsLoading (true);
+    set_error (null);
 ;
+
+
+
     try {
+  // TODO: Implement
       const { error } = await supabase;
         .from ('education');
         .insert ({
-          resume_id: resume_id;
-          institution: education.institution;
-          degree: education.degree;
-          field_of_study: education.field_of_study;
-          start_date: formatDateForDB (education.start_date);
-          end_date: education.is_current ? null : formatDateForDB (education.end_date);
-          is_current: education.is_current;
-          description: education.description;
-          institution_logo_url: education.institution_logo_url,
+          resume_id: resume_id;,
+  institution: education.institution;
+          degree: education.degree;,
+  field_of_study: education.field_of_study;)
+          start_date: formatDateForDB (education.start_date);,
+  end_date: education.is_current ? null: formatDateForDB (education.end_date);,
+  is_current: education.is_current;
+          description: education.description;,
+  institution_logo_url: education.institution_logo_url,
           location: education.location;
         });
-;
-      // Check condition
+      // Check condition;
 if (throw error) {
-  $2
-}
-      return showSuccessToast ("Education added", "Your education has been added to your resume");
-    } catch (e: any) {
+      return showSuccessToast ("Education added", "Your education has been added to your resume");"
+    } catch (e: any) {"
       return handleResumeError (e, 'Could not add education');
     } finally {
+  // TODO: Implement
       setIsLoading (false);
+  const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to update education'),
+    setIsLoading (true);
+    set_error (null);
+
     }
   }
 ;
   const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
-    // Check condition
+    // Check condition;
+
 if ( {) {
-  $2
-}
-      set_error ('You must be logged in to update education'),
+  $2;
+}'
+      set_error ('You must be logged in to update education'),'
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
-      const { error } = await supabase;
-        .from ('education');
+  // TODO: Implement
         .update ({
-          institution: education.institution;
-          degree: education.degree;
-          field_of_study: education.field_of_study;
-          start_date: formatDateForDB (education.start_date);
-          end_date: education.is_current ? null : formatDateForDB (education.end_date);
-          is_current: education.is_current;
-          description: education.description;
-          institution_logo_url: education.institution_logo_url,
-          location: education.location;
-        });
+          institution: education.institution;,
+  degree: education.degree;
+          field_of_study: education.field_of_study;,)
+  start_date: formatDateForDB (education.start_date);
+          end_date: education.is_current ? null : formatDateForDB (education.end_date);,
         .eq ('id', edu_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Education updated", "Your education has been updated");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Education updated", "Your education has been updated");"
       return handleResumeError (e, 'Could not update education');
-    } finally {
+  // TODO: Implement
+  const delete_education = async (edu_id: string): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to delete education'),
+}
       setIsLoading (false);
+
     }
   }
 ;
   const delete_education = async (edu_id: string): Promise < boolean> => {
-    // Check condition
+    // Check condition;
+
 if ( {) {
-  $2
-}
-      set_error ('You must be logged in to delete education'),
+  $2;
+}'
+      set_error ('You must be logged in to delete education'),'
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
-      const { error } = await supabase;
-        .from ('education');
+  // TODO: Implement
         .delete ();
-        .eq ('id', edu_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Education deleted", "Your education has been removed from your resume");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Education deleted", "Your education has been removed from your resume");"
       return handleResumeError (e, 'Could not delete education');
-    } finally {
+  // TODO: Implement
+}
       setIsLoading (false);
+
     }
   }
 ;
   return {
+  // TODO: Implement
     is_loading;
     error;
     add_education;
@@ -606,8 +680,14 @@ deleteEducation
   }
 }
 ;
+pr-12325
+    update_education;}
+    delete_education;}
+  }
+}
   }
 }
     setIsLoading (true);
     set_error (null);
 ;
+'

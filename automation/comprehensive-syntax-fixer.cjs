@@ -1,26 +1,18 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 fixer.run().catch(console.error);
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+=======
+fixer.run().catch(console.error);
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'syntax-fixer.log');
-    this.fixedFiles = [];
-    this.errors = [];
-    this.ensureLogDirectory();
-  }
-
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
     }
-  }
 
+<<<<<<< HEAD
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -210,12 +202,14 @@ fixer.run().catch(console.error);    }
 }
 
 // Main execution
+=======
+// Main execution;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
-  fixer.run().catch(console.error);
-}
 
 module.exports = ComprehensiveSyntaxFixer;
+<<<<<<< HEAD
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
@@ -224,4 +218,6 @@ const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 
 
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 

@@ -6,6 +6,16 @@ interface ResumeStepsProps {
   onChange: (value: string) => void;
 }
 
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { StepProps } from "./types";"
+interface ResumeStepsProps {
+  // TODO: Implement
+}
+  steps: StepProps[];,
+  activeTab: string;
+  onChange: (value: string) => void;
+pr-12325
+
 export const ResumeSteps = ({
   steps,
   activeTab,
@@ -49,11 +59,14 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
 };
 
   steps,
+  )
+};
+
   active_tab,
   on_change,
 }: ResumeStepsProps) =>: any {
   return (
-    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;
+    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb-8">;
       {steps.map ((step) => (
         <TabsTrigger key={step.id} value={step.id}>;
           {step.label}
@@ -88,8 +101,46 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
   );
 }
 
-  );
+  )
 };
 
-  );
+  )
 };
+  onChange,)
+}: ResumeStepsProps) => {
+  return ("
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">"
+
+        <TabsTrigger key={step.id} value={step.id}>
+
+        
+    "
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;"
+
+        <TabsTrigger key={step && step.id} value={step && step.id}>;
+
+        ;
+    
+    ;"
+    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;"
+
+        <TabsTrigger key={step.id} value={step.id}>;
+)
+        ))}
+    );"
+
+
+        
+pr-12325
+</TabsTrigger>)
+        </TabsTrigger>))}
+    </TabsList>);"
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;"
+</TabsList>
+        <TabsTrigger key={step.id} value={step.id}>;
+</TabsTrigger>
+        </TabsTrigger>;
+    </TabsList>;
+        </TabsTrigger>
+    </TabsList>"
+

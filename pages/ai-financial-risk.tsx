@@ -61,6 +61,11 @@ import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
 import { innovativeAIServices } from '../data/innovative-ai-services',
+import NextHead from 'next/head',;
+import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import Button from '../components/ui/Button',;
+import { innovativeAIServices } from '../data/innovative-ai-services',;
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),
   const contactInfo = {
@@ -68,6 +73,8 @@ export default function AIFinancialRiskPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
+  const service = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>
@@ -191,11 +198,36 @@ export default function AIFinancialRiskPage() {
                 </div>;
               </div>;
 
+
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+                className='w-full'
+              >
+                Discuss Controls
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{contactInfo.address}</span>
+                </div>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+
 
                 className='w-full'>;
                 Discuss Controls;
@@ -238,6 +270,7 @@ export default function AIFinancialRiskPage() {
                   <span className='text - xs'>{contact_info.address}</span>;
                 </div>              </div>;
 );
+
 
 }
 }
@@ -322,3 +355,5 @@ export default function AIFinancialRiskPage(req, res) {
 }
 ;
 
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

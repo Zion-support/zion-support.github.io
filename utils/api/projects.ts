@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export interface Project {
   id: string;
   title: string;
@@ -54,6 +56,7 @@ export interface Project {
     authorId: string;
     createdAtIso: string;
   }>;
+
   createdAt: string;
   updatedAt: string;
 }
@@ -67,6 +70,24 @@ export interface CreateProjectPayload {
 }
 
 export interface UpdateProjectPayload {
+  documents: Array<{,
+  id: string;
+    name: string;,
+  url: string;
+    uploadedAtIso: string;
+  notes: Array<{,
+    content: string;,
+  authorId: string;
+    createdAtIso: string;
+  createdAt: string;,
+  updatedAt: string;
+
+  // TODO: Implement
+  title: string;,
+  description: string;
+
+  // TODO: Implement
+pr-12325
   title?: string;
   description?: string;
   status?: Project['status'];
@@ -74,19 +95,6 @@ export interface UpdateProjectPayload {
   deadline?: string;
 }
 
-export async function createProject(payload: CreateProjectPayload): Promise<Project> {
-  const res = await fetch('/api/projects', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    credentials: 'include',
-    body: JSON.stringify(payload)
-  });
-  
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-}
 
 export async function getProjects(): Promise<Project[]> {
   const res = await fetch('/api/projects', {
@@ -151,6 +159,7 @@ export function getAllProjects(): Project[] {;
 
   return projects;
 }
+
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
 
@@ -168,7 +177,7 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString();
+    updatedAt: new Date().toISOString()
   };
   projects.push(newProject);
   return newProject;
@@ -184,13 +193,19 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
   if (!project) return null,
   
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
+
+  const project = projects.find(p => p.id === id);
+  if (!project) return null;
+  
+
   return project;
 }
+
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
 
     ...milestone,
-    id: `milestone_${Date && Date.now()}`,
+    id: `milestone_${Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
   project.milestones.push(newMilestone);
@@ -568,3 +583,40 @@ export function updateMilestone(;
   saveProject(project);
   return next;
 }
+    updatedAt: new Date().toISOString()
+  };
+  
+  project.milestones = project.milestones || [];
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+
+  
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return newMilestone;
+}
+
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
+  if (!project.milestones) return null;
+  
+  const milestone = project.milestones.find(m => m.id === milestoneId);
+  if (!milestone) return null;
+  
+  Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
+  project.updatedAt = new Date().toISOString();
+
+  
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return milestone;
+}
+
+export function deleteMilestone(project: Project, milestoneId: string): boolean {
+  if (!project.milestones) return false;
+  
+  const index = project.milestones.findIndex(m => m.id === milestoneId);
+  if (index === -1) return false;
+  
+  project.milestones.splice(index, 1);
+  project.updatedAt = new Date().toISOString();
+

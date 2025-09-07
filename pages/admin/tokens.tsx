@@ -182,6 +182,11 @@ import React, { useEffect, useState } from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import React, { useEffect, useState } from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useEffect, useState } from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([]),
   const [userId, setUserId] = useState(""),
@@ -219,9 +224,13 @@ export default function AdminTokens() {
     setTransactions(txRes.transactions || []);
     setConfig(cfgRes)
 
+
+
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
 
   }
 }
@@ -277,6 +286,9 @@ const res = await fetch("/api/admin/tokens/config", {
     const data = await res.json(),
     setConfig(data)
 
+    const res = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+    setConfig(data)
   }
 
     } catch (error) {
@@ -285,6 +297,8 @@ const res = await fetch("/api/admin/tokens/config", {
   }
 }
 method: "POST",
+
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
@@ -343,6 +357,7 @@ method: "POST",
                 </div>
 
 ))}
+            ))}
             {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
           </div>
         </div>
@@ -367,6 +382,8 @@ method: "POST",
 }
 import React, { useEffect, useState } from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
+import React, { useEffect, useState } from './react';,;
+import EnhancedLayout from "../../components / layout / EnhancedLayout",;
 export default /**
  * AdminTokens - Function description
  */
@@ -572,3 +589,7 @@ function save_config() {
   }
 }
 }
+
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

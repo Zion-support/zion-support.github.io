@@ -1,43 +1,32 @@
 import React from "react";
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useAuth } from "@/hooks/useAuth";
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function ServiceOnboarding() {;
+  const { user, isLoading } = useAuth();
+import React from "react",;
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth();
 
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth(),
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" replace />
   }
   return (
-    <>
-      <Header />
-      <div className="bg-zion-blue min-h-screen py-8 md: py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Join Our Service Provider Network
-            </h1>
-            <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Showcase your services to potential clients. Create a professional
-              profile to get discovered on the Zion Marketplace.
-            </p>
-          </div>
-
-          <ServiceProviderRegistrationForm />
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-}
-    return <Navigate to="/login" replace />;
   }
   return (
     <>;
@@ -59,6 +48,62 @@ export default function ServiceOnboarding() {
         </div>;
       </div>;
       <Footer />;
+  return (          <ServiceProviderRegistrationForm />;
+        </div>;
+      </div>;
+      <Footer />;
+
+    </>);
+}
+ursor/fix-website-loading-errors-and-merge-6662
+import React from "react";""
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Navigate } from "react-router-dom";"
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth();
+
+  // If not authenticated, redirect to login;
+  if (!isLoading && !user) {;"
+    return <Navigate to="/login" replace />;"
+"
+
+    <>
+      <Header />
+      <div className="bg-zion-blue min-h-screen py-8 md: py-12">"
+</div>"
+        <div className="container mx-auto px-4">"
+          <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">"
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">"
+</h1>
+            </h1>"
+            <p className="text-zion-slate-light max-w-2xl mx-auto">"
+</p>
+          </div>
+
+          <ServiceProviderRegistrationForm />
+
+      <Footer />
+
+    </>
+  );
+}"
+
+    <>;
+      <Header />;
+      <div className="bg - zion - blue min - h-screen py - 8 md: py - 12">;"
+        <div className="container mx - auto px - 4">;"
+          <div className="max - w-4xl mx - auto text - center mb - 8 md:mb - 12">;"
+            <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">Join Our Service Provider Network</h1>;""
+            <p className="text - zion - slate - light max - w-2xl mx - auto">;"
+            </p>;
+          </div>;
+          <ServiceProviderRegistrationForm />;
+
+      <Footer />;
+
 
     </>);
 }
@@ -67,11 +112,11 @@ export default function ServiceOnboarding() {
     </>;
   ); export default function ServiceOnboarding () {
   const {
-  user, isLoading 
+  // TODO: Implement
+  user, isLoading;
 }= useAuth ();
 // If not authenticated, redirect to login if (!isLoading && !user) {
   
-}
 ;
 
 }
@@ -79,3 +124,4 @@ export default function ServiceOnboarding() {
   );
 }
 ;
+pr-12325

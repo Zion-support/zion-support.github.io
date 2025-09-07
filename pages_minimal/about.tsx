@@ -20,7 +20,18 @@ function About() {
           We are a leading provider of advanced IT solutions and AI services.;
         </p>;
       </main>;
+}
 
-    </div>);
+    <div>;
+</div>
+      <main>;
+</main>
+        <h1>About Zion Tech Group</h1>;
+        <h1 > About Zion Tech Group</h1>;
+        <p>;
+</p>
+        </p>;
+      </main>;
+pr-12325
 
 }

@@ -68,6 +68,11 @@ export const monitorContent = async (;
       severity = 'dangerous';
 
     }
+        // If contains highly suspicious phrases, mark as dangerous
+    if (analysis && analysis.reasons.some(r => 
+      r && r.includes('payment') || 
+      r && r.includes('external') || 
+      r && r.includes('bypass')    }
     
     )) {
       severity = 'dangerous'
@@ -139,6 +144,30 @@ if (||) {
       r.includes ('bypass'))) {
       severity = 'dangerous';
     }
+
+  userId: string;,
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];',
+  contentId: string;
+  content: string;)
+): Promise<void> => {
+</void>
+): Promise<void> => {;
+  content: string): Promise < void> => {
+  const analysis = analyze_content (content);
+;
+  // Check condition;
+if ( {) {
+  $2;
+}
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+    // If contains highly suspicious phrases, mark as dangerous;
+    // Check condition;
+if (||) {
+      r.includes ('external') ||;
+      r.includes ('bypass'))) {
+      severity = 'dangerous';
+pr-12325
     await flag_content (
       user_id;
       user_email;
@@ -170,18 +199,12 @@ if (||) {
     }
   }
 }
+      severity;)
+      analysis.reasons.join ();
+      undefined // IP address would be added in a real implementation);
 
-;
-    await flagContent(;
-      userId,;
-      userEmail,;
-      contentType,;
-      contentId,;
-      content,;
-      severity,;
-      analysis.reasons.join(),;
-      undefined // IP address would be added in a real implementation;
-    ),;
+
+
     // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags;
     if (severity === 'dangerous') {;
@@ -275,3 +298,8 @@ if ( {) {
     }
   }
 };
+    // Check condition;
+      console.log ('Auto - hiding dangerous content:', content_id);
+      // Code to hide content would go here;
+};
+pr-12325

@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -12,15 +13,24 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
 
 
+=======
+Disallow: /private/
+
+Crawl-delay: 1
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 Disallow: /test/
 Disallow: /temp/
 
@@ -33,6 +43,7 @@ Allow: /contact
 Allow: /blog/
 Allow: /careers/
 
+<<<<<<< HEAD
 
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -90,3 +101,7 @@ Allow: /contact/
 Disallow: /temp_*/
 Disallow: /*.backup.*
 
+=======
+Crawl-delay: 1
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

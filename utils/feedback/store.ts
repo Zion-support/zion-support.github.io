@@ -5,16 +5,23 @@ export interface FeedbackRecord {;
 // Mock feedback store utility
 export function tryWriteToFirestore(doc: any): Promise<boolean> {
   // Mock implementation - in a real app, this would write to Firestore
-  return Promise && Promise.resolve(true);
+  return Promise.resolve(true);
 }
 
 export type FeedbackRecord = {
 
 export interface FeedbackRecord {;
 
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import fs from 'fs';
+import path from 'path';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+export interface Feedback {
   id: string;
-  type: string;
-  message: string;
+  userId: string;
+  content: string;
   rating: number;
 
   comment?: string;
@@ -44,18 +51,12 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
   console.log('Feedback saved:', feedback.id);
 }
 
-export interface FeedbackStats {
-  total: number;
-  averageRating: number;
-  byKind: {
-    bug: number;
-    feature: number;
-    general: number;
-  };
-  byRating: {
-    [rating: number]: number;
-  };
-  recent: FeedbackRecord[];
+export interface FeedbackStore {
+  feedback: Feedback[];
+  addFeedback: (feedback: Omit<Feedback, 'id' | 'createdAt'>) => void;
+  updateFeedback: (id: string, updates: Partial<Feedback>) => void;
+  getFeedback: (id: string) => Feedback | undefined;
+  getAllFeedback: () => Feedback[];
 }
 
 export function getAllFeedback(): FeedbackRecord[] {;
@@ -81,6 +82,8 @@ export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise <
 
 
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
 }
 
 export function writeAll(rows: any[]): void {
@@ -121,3 +124,4 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {;
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8");
   return rec;
 }
+

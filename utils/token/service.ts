@@ -1,3 +1,110 @@
+import { randomUUID } from 'crypto';
+import { tokenStore } from './storage';
+import { TokenTransaction, WalletSummary } from './types';
+
+export function getWalletSummary(userId: string): WalletSummary {
+  const wallet = tokenStore.getWallet(userId);
+  const transactions = tokenStore.getTransactions(userId);
+  const config = tokenStore.getConfig();
+  return { wallet, transactions, config };
+
+export function earnTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  if (amount <= 0) throw new Error('Amount must be positive');
+  const wallet = tokenStore.getWallet(userId);
+  const newBalance = wallet.balance + amount;
+  tokenStore.setWalletBalance(userId, newBalance);
+  const tx: TokenTransaction = {
+    id: randomUUID(),
+    userId,
+    type: 'earn',
+    amount,
+    reason,
+    metadata,
+    createdAt: new Date().toISOString(),
+  };
+  tokenStore.addTransaction(tx);
+  return tx;
+
+export function burnTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  if (amount <= 0) throw new Error('Amount must be positive');
+  const wallet = tokenStore.getWallet(userId);
+  if (wallet.balance < amount) throw new Error('Insufficient balance');
+  const newBalance = wallet.balance - amount;
+  tokenStore.setWalletBalance(userId, newBalance);
+  const tx: TokenTransaction = {
+    id: randomUUID(),
+    userId,
+    type: 'burn',
+    amount,
+    reason,
+    metadata,
+    createdAt: new Date().toISOString(),
+  };
+  tokenStore.addTransaction(tx);
+  return tx;
+
+export function issueTokens(
+  userId: string,
+  amount: number,
+  reason: string
+): TokenTransaction {
+  const tx = earnTokens(userId, amount, reason);
+  tx.type = 'issue';
+  return tx;
+
+export function revokeTokens(
+  userId: string,
+  amount: number,
+  reason: string
+): TokenTransaction {
+  const tx = burnTokens(userId, amount, reason);
+  tx.type = 'revoke';
+  return tx;
+
+export function handleAction(
+  userId: string,
+  action: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  const { earnRules } = tokenStore.getConfig();
+  const amount = earnRules[action];
+  if (!amount) throw new Error('Unknown action');
+  return earnTokens(userId, amount, action, metadata);
+
+export function burnForFeature(
+  userId: string,
+  feature: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  const { burnRules } = tokenStore.getConfig();
+  const amount = burnRules[feature];
+  if (!amount) throw new Error('Unknown feature');
+  return burnTokens(userId, amount, feature, metadata);
+
+export function redeemToCredits(
+  userId: string,
+  amount: number
+): { tx: TokenTransaction; usd: number } {
+  const { usdPerToken } = tokenStore.getConfig();
+  const tx = burnTokens(userId, amount, 'redeem_credits');
+  tx.type = 'redeem';
+  const usd = parseFloat((amount * usdPerToken).toFixed(2));
+  return { tx, usd };
+
+export function getAllTransactions() {
+  return tokenStore.getTransactions();
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -7,6 +114,8 @@ export function getConfig() {
   };
 export interface TokenTransaction {;
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   userId: string;
 
@@ -18,12 +127,54 @@ export interface TokenTransaction {
   amount: number;
   type: "issue" | "redeem" | "transfer";
   reason: string;
+export function getConfig() {
+  return {
+export function getConfig() {
+  return {
+
+  // TODO: Implement
+}
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000;
+
+  };
+export interface TokenTransaction {;
+  id: string;,
+  userId: string;
+
+
+  user_id: string;
+export interface TokenTransaction {
+  // TODO: Implement
+  amount: number;,
+  type: "issue" | "redeem" | "transfer";"
+  reason: string;,
+pr-12325
+}
+  id: string;,
+  user_id: string;
+
+  amount: number;,'
+  type: "issue" | "redeem" | "transfer";"
+  reason: string;,
+
   timestamp: number;
 
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
 
+}
+}
+}
+// Mock data storage - replace with actual database;
+let transactions: TokenTransaction[] = [];
+main
+// Mock data storage - replace with actual database;
+let transactions: TokenTransaction[] = [];
+pr-12325
 
 export function issueTokens(
   userId: string,
@@ -34,10 +185,39 @@ export function issueTokens(
 
 
 
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId
+    amount
+    type: 'issue'
+    reason
+    timestamp: Date.now()
+  }
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     type: "issue",
+
+  reason: string,)
+): TokenTransaction {
+  // TODO: Implement
+}
+  const transaction: TokenTransaction = {,
+  id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId;
+    amount;"
+    type: 'issue''
+    reason;
+    timestamp: Date.now()
+  }
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,'
+    type: "issue","
+
     reason,
     timestamp: Date.now(),
   };
@@ -45,6 +225,13 @@ export function issueTokens(
 
 
 
+
+
+  
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
   transactions.push(transaction);
   return transaction;
 }
@@ -58,6 +245,12 @@ export function redeemTokens(
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+    type: "redeem",
+    reason,
+    timestamp: Date.now(),
+  };
+
+    type: "redeem",
 
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
@@ -88,6 +281,25 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 
     type: 'redeem',
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    type: 'redeem',
+
+  reason: string,)
+): TokenTransaction {
+  // TODO: Implement
+}
+  const transaction: TokenTransaction = {,
+  id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId;
+    amount: -amount, // Negative for redemption;"
+    type: "redeem","
+    reason,
+    timestamp: Date.now(),
+  };
+"
+    type: "redeem",""
+    type: 'redeem','
+
     reason,
     timestamp: Date.now(),
   };
@@ -103,6 +315,15 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 
   transactions.push(transaction);
   return transaction;
+  
+main
+  transactions.push(transaction);
+  return transaction;
+
+  transactions.push(transaction);
+ursor/fix-website-loading-errors-and-merge-6662
+  return transaction;
+origin/cursor/expand-services-advertise-and-build-project-c28b
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -125,6 +346,7 @@ export interface TokenConfig {
 }
 
 
+main
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 ): void {
@@ -216,6 +438,8 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 }
 
   };
+  };
+  
   transactions.push(transaction);
   return transaction;
 }
@@ -226,6 +450,7 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 
 
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
@@ -349,3 +574,81 @@ export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void 
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
+main
+}
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+  const current = tokenStore.getConfig();
+  tokenStore.setConfig({ ...current, ...partial });
+origin/cursor/automate-test-improve-and-merge-code-2533
+  reason: string,)
+): TokenTransaction {
+  // TODO: Implement
+  const transaction: TokenTransaction = {,
+  id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId;
+    amount;"
+    type: 'issue
+    reason;
+    timestamp: Date.now()
+  }`;
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: "issue","
+    reason,
+    timestamp: Date.now(),
+
+
+  transactions.push(transaction);
+  return transaction;
+
+export function redeemTokens(
+  // TODO: Implement
+  const transaction: TokenTransaction = {,`;
+    amount: -amount, // Negative for redemption;"
+    type: "redeem","
+"
+    type: "redeem",""
+    type: 'redeem',
+
+
+  return transaction;`;
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    timestamp: Date && Date.now(),
+  timestamp: Date.now();
+// Token service utilities;
+export interface TokenConfig {
+  // TODO: Implement
+  name: string;
+  symbol: string;,
+  decimals: number;
+  totalSupply: string;
+  contractAddress?: string;
+  network: string;,
+  isActive: boolean;
+
+  createdAt: Date;,
+  updatedAt: Date;
+
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>,
+)
+</ReturnType>)
+
+  partial: Partial < ReturnType < typeof get_config>>): void {
+  // TODO: Implement
+  const current = get_config ();
+  // Update the configuration;
+  Object.assign (current, partial);
+
+`;
+pr-12325
+  // Update the configuration;}
+  Object.assign (current, partial);}
+}
+
+'

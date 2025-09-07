@@ -23,3 +23,16 @@ import React from \'react\'; \"export\": const Form = ({ children,...props }) =>
 const React from "react"; export: const Form = ({ children,.props }) => { return <div {.props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = "" }) => {"; return: <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = "" }) => {"; return: <label className={className}>{children}</label> } export const FormMessage = ({ className = "" }) => {"; return: <div className={className}></div> } "'"'"
 import _React from 'react'; "export": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = '' }) => {'; "return": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = '' }) => {'; "return": <label className={className}>{children}</label> } export const FormMessage = ({ className = '' }) => {'; "return": <div className={className}></div> } '
 import _React from 'react'; "export": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = '' }) => {'; "return": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = '' }) => {'; "return": <label className={className}>{children}</label> } export const FormMessage = ({ className = '' }) => {'; "return": <div className={className}></div> } '
+import React from 'react';'
+const Form = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Form</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+    </div>)'
+pr-12325

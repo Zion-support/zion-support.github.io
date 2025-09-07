@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -10,10 +11,35 @@ const { execSync } = require('child_process')
         const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx')]
           let content = fs.readFileSync(file, 'utf8')
           if (content.includes('console.log(') && !content.includes('// eslint-disable-next-line')
+              '// console.log(')');
+            '$1;\n
+              if (!body.includes('return') && !body.includes('console.log')
+                return match.replace('{', '{ return '})
+              "type"""
+              "action"""
+              "status"""
+    console.error('Error caught by "boundary")""
+          <details style={{ "whiteSpace"}""
+        "file"""
+            /<img([^>]*?)(?:\s+alt\s*=\s*["'][^"']*[')]
+</details>
+=======
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportFile = path.join(this.projectRoot,code-quality-improvement-report.json')
+    this.log(' Starting Code Quality Improvements')
+      this.log(' Code quality improvements completed')
+    this.log(' Fixing common code issues')
+    const srcDir = path.join(this.projectRoot,src')
+        const files = this.getAllFiles(srcDir, [.js,.jsx,.ts,.tsx')]
+          let content = fs.readFileSync(file,utf8)
+          if (content.includes('console.log(') && !content.includes('// eslint-disable-next-line')
               '// console.log(')
             '$1;\n'
               if (!body.includes('return') && !body.includes('console.log')
-                return match.replace('{', '{ return '})
+                return match.replace('{,{ return })
               "type"
               "action"
               "status"
@@ -33,6 +59,7 @@ const { execSync } = require('child_process')
         "file"
         "action"
         "status"
+<<<<<<< HEAD
             /<img([^>]*?)(?:\s+alt\s*=\s*["'][^"']*[')]
               "type"
               "action"
@@ -56,3 +83,8 @@ const { execSync } = require('child_process')
 
         "failed"
 
+=======
+            /<img([^>]*?)(?:\s+alt\s*=\s*["][^"]*[)]
+</details>'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

@@ -1,6 +1,9 @@
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",;
+import {Resend} from "npm: resend@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Resend} from "npm: resend@2.0.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -15,6 +18,7 @@ import { Resend } from "npm: resend@2.0.0",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
@@ -129,6 +133,7 @@ serve(async (req) => {;
 });
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+  try {import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -165,6 +170,8 @@ return new Response (JSON.stringify (emailResponse), {
 }
 });
 
+  }
+});
     const { to, subject, html } = await req.json(),
 
     const emailResponse = await resend.emails.send({
@@ -186,7 +193,43 @@ return new Response (JSON.stringify (emailResponse), {
 ;
   }
 });
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {Resend} from "npm: resend@2 ;""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
+import {Resend} from "npm: resend@2.0.0";"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { Resend } from "npm: resend@2.0.0",""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import {Resend} from "npm: resend@2.0.0";""
+import { Resend } from "npm: resend@2.0.0","
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};""
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));"
+serve(async (req) => {"
+  if (req && req.method === "OPTIONS") {"
+    return new Response(null, { headers: corsHeaders })
   }
+  try {
+  // TODO: Implement
+      to: [to];
+      subject;
+      html});
+      status: 500})
 });
   }
 });
+
+    const { to, subject, html } = await req.json(),
+
+    const emailResponse = await resend.emails.send({"
+      from: "Lovable <onboarding@resend.dev>","
+</onboarding>"
+      from: "Lovable <onboarding@resend.dev>",;"
+      from: "Lovable <onboarding@resend && resend.dev>";"
+      from: "Lovable <onboarding@resend.dev>";"
+</onboarding>)"
+pr-12325

@@ -37,24 +37,14 @@ interface HTMLElement {;
 
 interface HTMLAnchorElement extends HTMLElement {
   tagName: "A";
+import React from 'react';
+import Link from 'next/link';
+
+interface NextLinkShimProps {
   href: string;
-  target: string;
-}
-type Href = string | { pathname?: string; href?: string }
-type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: Href;
+  className?: string;
   children: React.ReactNode;
-}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-};
-};
-  return (;
-    <a href={resolved} className={className} {...rest}>;
-      {children};
-};
-};
-ursor/integrate-build-improve-and-re-verify-8f7d
-};
+  [key: string]: any;
 }
 function resolveHref(href: Href): string {
   if (typeof href === "string") return href;
@@ -94,5 +84,25 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     <a href={resolved} className={class_name} {...rest}>;
       {children}
     </a>
+  );
+}
+
+export function NextLinkShim({ href, className, children, ...rest }: NextLinkShimProps) {
+  // Check if it's an external link
+  const isExternal = href.startsWith('http') || href.startsWith('//');
+  
+  if (isExternal) {
+    return (
+      <a href={href} className={className} {...rest}>
+        {children}
+      </a>
+    );
+  }
+  
+  // Internal link - use Next.js Link
+  return (
+    <Link href={href} className={className} {...rest}>
+      {children}
+    </Link>
   );
 }

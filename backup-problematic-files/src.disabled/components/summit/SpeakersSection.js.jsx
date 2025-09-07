@@ -17,3 +17,16 @@ const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
 const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+import React from 'react';'
+const SpeakersSection.js = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>SpeakersSection.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+    </div>)'
+pr-12325

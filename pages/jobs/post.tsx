@@ -9,6 +9,24 @@ import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 
+      <Head>
+        <title>Post a Job - Zion</title>
+      </Head>
+      <h1 className='text-2xl font-semibold'>Post a Job</h1>
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useState } from 'react';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+const PostJob: NextPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+      <div className='grid md:grid-cols-2 gap-6'>
+        <form className='space-y-4'>
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import { useState } from 'react',;
+import EnhancedButton from '../../components/ui/EnhancedButton',;
+
+
       <Head>;
         <title>Post a Job - Zion</title>;
       </Head>;
@@ -162,6 +180,14 @@ const PostJob: NextPage = () => {
     </div>
   );
 }
+            </p>
+          )}
+        </aside>
+      </div>
+    </div>
+);
+};
+
 export default PostJob;
 
                 <div className="text-sm opacity-70">Description</div>
@@ -369,3 +395,5 @@ export default PostJob;
 },;
 export default PostJob;
 export default PostJob;
+export default PostJob;
+origin/cursor/automate-test-improve-and-merge-code-2533

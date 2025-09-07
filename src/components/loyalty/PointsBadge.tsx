@@ -1,3 +1,9 @@
+    }
+  }
+    } catch (error) {
+      logErrorToProduction ('Failed to refresh points:', { data: error });
+    } finally {
+import React, { useState } from 'react',;
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -65,6 +71,30 @@ export function PointsBadge() {;
       setIsRefreshing(false);
     }
   },
+    }
+  },
+
+
+    }
+  },
+
+import React, { useState } from 'react';
+import { Gift, RefreshCw } from 'lucide-react'
+import { usePoints  } from '@/hooks/usePoints';
+import { useAuth  } from '@/hooks/useAuth';
+import Link from 'next/link';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { Button  } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function PointsBadge() {
+
+  const { isAuthenticated } = useAuth();
+  const { ledger, balance, loading, fetchLedger } = usePoints();
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const points = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <TooltipProvider>;
       <div className='flex items - center gap - 1'>;
@@ -133,6 +163,7 @@ export function PointsBadge() {;
               <>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
                 <p className='text-xs mt-1 text-muted-foreground'>;
+                   Sign up: 50 pts;
             {is_authenticated ? (
               <>;
                 <p className='text - sm font - medium'>Point Breakdown</p>;
@@ -159,6 +190,36 @@ export function PointsBadge() {;
                   • Community posts: 25 pts each;
                   <br />• Refer friends: 200 pts each;
                 </p>;
+
+
+                <ul className="text-xs mt-1 space-y-0.5">
+                  <li>Purchases: {breakdown.purchase}</li>
+                  <li>Posts: {breakdown.post}</li>
+                  <li>Referrals: {breakdown.referral}</li>
+                </ul>
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                  Click to view full rewards program
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-sm font-medium">Zion Rewards Program</p>
+                <p className="text-xs mt-1 text-muted-foreground">
+                  • Sign up: 50 pts<br/>
+                  • First purchase: 100 pts<br/>
+                  • Community posts: 25 pts each<br/>
+                  • Refer friends: 200 pts each
+                </p>
+                <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
+                  Click to learn more and join!
+                </p>
+              </>
+            )}
+          </TooltipContent>
+        </Tooltip>
+        
+
+
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
@@ -279,3 +340,7 @@ export function PointsBadge() {;
 }
 ;)
 ;
+;
+    </TooltipProvider>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

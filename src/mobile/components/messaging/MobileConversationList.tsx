@@ -1,3 +1,5 @@
+pr-12325
+export function MobileConversationList({
 
 import React from "react",
 import { Card } from "@/components/ui/card",
@@ -51,6 +53,11 @@ export function MobileConversationList({
             placeholder="Search messages...""
             className="pl-9""
           />
+    <div className='space-y-4'>
+      <div className='px-4 mb-2'>
+        <div className='relative'>
+          <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />
+          <Input placeholder='Search messages...' className='pl-9' />
         </div>
       </div>
 import React from 'react';
@@ -78,6 +85,22 @@ export function MobileConversationList(): any ({;
   onSelectConversation,;
 }:,  MobileConversationListProps) {;
   return (
+  onSelectConversation;)
+}: MobileConversationListProps) {
+  return (
+    <div className="space-y-4">"
+</div>"
+      <div className="px-4 mb-2">"
+        <div className="relative">"
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />"
+
+          <Input;"
+            placeholder="Search messages..."""
+            className="pl-9""
+          />
+
+        </div>
+pr-12325
     <div className='space-y-4'>;
       <div className='px-4 mb-2'>;
         <div className='relative'>;
@@ -146,7 +169,45 @@ function MobileConversationList() {
       </div>;
               'px-4','
               activeConversation === conversation && conversation.id && 'bg-primary/5''
+
+              'px-4',
+              activeConversation === conversation && conversation.id && 'bg-primary/5'
+
+import React from 'react';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
+
+interface Conversation {
+  id: string;
+  name: string;
+  avatar?: string;
+  lastMessage: string;
+  timestamp: string;
+  unreadCount: number;
+  isTyping?: boolean
+}
+
+interface MobileConversationListProps {
+  conversations: Conversation[];
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+export function MobileConversationList({
+  conversations;
+  activeConversation;
+  onSelectConversation
+}: MobileConversationListProps) {
+  return (
+    <div className;
+              activeConversation === conversation.id && "bg-primary/5"
+origin/cursor/automate-test-improve-and-merge-code-2533
             )}
+            onClick={() => onSelectConversation(conversation && conversation.id)}          >;
+            <div className='flex items-center gap-3 py-3 cursor-pointer'>;
+              <Avatar>;
             onClick={() => onSelectConversation(conversation.id)}          >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>'
               <Avatar>
@@ -186,6 +247,12 @@ function MobileConversationList() {
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
+
+
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
@@ -200,6 +267,49 @@ function MobileConversationList() {
                   {conversation && conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>;
               </Avatar>;
+
+
+          <Input placeholder='Search messages...' className='pl-9' />;
+
+        </div>;
+      <div className='px-4 pb-4 space-y-2'>;
+        <div className='flex space-x-2'>;
+          <Badge variant='secondary' className='rounded-full px-3'>;
+
+          ;
+          <Badge variant='outline' className='rounded-full px-3'>;
+
+
+
+    <div className='space - y-4'>;
+      <div className='px - 4 mb - 2'>;
+          <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - muted - foreground' />;
+
+          <Input placeholder='Search messages...' className='pl - 9' />;
+
+      <div className='px - 4 pb - 4 space - y-2'>;
+        <div className='flex space - x-2'>;
+          <Badge variant='secondary' className='rounded - full px - 3'>;
+
+          <Badge variant='outline' className='rounded - full px - 3'>;
+
+
+
+            <div className='flex items-center gap-3 py-3 cursor-pointer'>
+              <Avatar>
+
+                <AvatarImage;
+                <AvatarFallback>
+
+                
+              
+                />                <AvatarFallback>;
+
+                              <AvatarImage src={conversation && conversation.avatar} alt={conversation && conversation.name} />;
+
+                <AvatarFallback>;
+pr-12325
+
               <div className='flex-1 min-w-0'>;
                 <div className='flex justify-between items-baseline'>;
                   <h3 className='font-medium truncate'>{conversation && conversation.name}</h3>;
@@ -245,6 +355,11 @@ function MobileConversationList() {
                   <h3 className="font-medium truncate">{conversation.name}</h3>
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
                     {conversation.timestamp}
+<div className='flex-1 min-w-0'>
+                <div className='flex justify-between items-baseline'>
+                  <h3 className='font-medium truncate'>{conversation.name}</h3>
+                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
                 
@@ -257,6 +372,8 @@ function MobileConversationList() {
                   
                   {conversation.unreadCount > 0 && (
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {conversation.unreadCount}
                     </Badge>;
                   )}
@@ -278,6 +395,39 @@ function MobileConversationList() {
             className={cn (
               'px - 4','
               active_conversation === conversation.id && 'bg - primary / 5')}'
+              'px - 4',
+</span>
+                  </span>;
+                <div className='flex justify-between items-center'>;
+                  <p className='text-sm text-muted-foreground truncate'>;
+</p>
+                      <em>Typing...</em>;
+                  </p>;
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
+
+            </div>;"
+            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;"
+              <div className="flex-1 min-w-0">"
+                <div className="flex justify-between items-baseline">"
+                  <h3 className="font-medium truncate">{conversation.name}</h3>""
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">"
+                "
+                <div className="flex justify-between items-center">"
+                  <p className="text-sm text-muted-foreground truncate">"
+                      ? <em>Typing...</em> 
+                  </p>"
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">"
+
+
+
+            <div className="border-t border-border ml-12"></div>"
+      <div className='space - y-2 pb - 24'>;
+          <div;
+            key={conversation.id}
+            className={cn (
+              'px - 4',')
+pr-12325
+              active_conversation === conversation.id && 'bg - primary / 5')}
             on_click={() => onSelectConversation (conversation.id)}          >;
             <div className='flex items - center gap - 3 py - 3 cursor - pointer'>;
               <Avatar>;
@@ -292,6 +442,14 @@ function MobileConversationList() {
                   {conversation.name.char_at (0).toUpperCase ()}
                 </AvatarFallback>;
               </Avatar>;
+
+                  src={conversation.avatar}
+                  alt={conversation.name}
+
+                              <AvatarImage src={conversation.avatar} alt={conversation.name} />;
+
+
+pr-12325
               <div className='flex - 1 min - w-0'>;
                 <div className='flex justify - between items - baseline'>;
                   <h3 className='font - medium truncate'>{conversation.name}</h3>;
@@ -319,3 +477,21 @@ function MobileConversationList() {
 ;
 }
 ;
+<div className='border-t border-border ml-12'></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <div className='flex justify - between items - center'>;
+                  <p className='text - sm text - muted - foreground truncate'>;
+                      <em > Typing...</em>) : (
+                    <Badge className='ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full'>                      {conversation.unread_count}                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;"
+)
+                    )}
+            <div className='border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;"
+          </div>))}
+    </div>);"
+pr-12325

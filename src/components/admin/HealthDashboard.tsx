@@ -9,6 +9,20 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+pr-12325
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -16,6 +30,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -30,6 +45,23 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  AlertTriangle
+  CheckCircle
+  XCircle
+  Clock
+  TrendingUp
+  Activity
+} from 'lucide-react'
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -43,6 +75,7 @@ import {
   TrendingUp,
   Activity,
 } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';',
   timestamp: string;,
@@ -145,6 +178,22 @@ const HealthDashboard: React.FC = () => {;,
   const [healthData, setHealthData] = useState<HealthData | null>(null),;,
   const [loading, setLoading] = useState(true),;,
   const [error, setError] = useState<string | null>(null),;,
+    topErrors: Array<{;,
+  patternId: string;
+      description: string;,
+  occurrences: number;
+      severity: string;
+      solution?: string;
+    }>
+    byCategory: { [category: string]: number }
+      low: number;
+    top_errors: Array<{,
+  pattern_id: string;
+    }>;
+    by_category: { [category: string]: number }
+pr-12325
+
+
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -159,6 +208,9 @@ interface HealthData {;
   environment: string,;
   metrics: {;
     errorRate: number,;
+  metrics: {;,
+  errorRate: number,;
+pr-12325
     criticalErrors: number,;
     responseTime: number,;
     memoryUsage: number;
@@ -171,6 +223,14 @@ interface HealthData {;
   },;
   errors: {;
     summary: {;
+  health: {;,
+  status: string,;
+    score: number,;
+    issues: string[],;
+    recommendations: string[];
+  errors: {;,
+  summary: {;
+pr-12325
       total: number,;
       critical: number,;
       high: number,;
@@ -361,6 +421,11 @@ const HealthDashboard: React.FC = () => {;,
   }
 
   if (!healthData) return null,
+
+
+  if (!healthData) return null
+  if (!healthData) return null,
+
 
   return (
     <div className="space-y-6">
@@ -668,6 +733,21 @@ const HealthDashboard: React.FC = () => {;,
           <Button
             variant='outline''
             size='sm''
+            variant='outline'
+            size='sm'
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-green-600 text-sm">No issues detected</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='errors' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+
             onClick={() => setAutoRefresh(!autoRefresh)}          >;
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
           </Button>;
@@ -1114,6 +1194,64 @@ const HealthDashboard: React.FC = () => {;,
               <CardContent>
                 <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
                 <p className="text-xs text-gray-600">JavaScript heap</p>
+                <p className='text-2xl font-bold'>
+                  {healthData.metrics.responseTime.toFixed(0)}ms
+                </p>
+                <p className='text-xs text-gray-600'>API response time</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className='pb-2'>
+                <CardTitle className='text-sm'>Memory Usage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className='text-2xl font-bold'>
+                  {formatBytes(healthData.metrics.memoryUsage)}
+                </p>
+                <p className='text-xs text-gray-600'>JavaScript heap</p>
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Error Rate</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(2)}%</p>
+                <p className="text-xs text-gray-600">Errors per request</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Critical Errors</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold text-red-600">{healthData.metrics.criticalErrors}</p>
+                <p className="text-xs text-gray-600">In last hour</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Avg Response</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>
+                <p className="text-xs text-gray-600">API response time</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Memory Usage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
+                <p className="text-xs text-gray-600">JavaScript heap</p>
               </CardContent>
             </Card>
           </div>
@@ -1422,6 +1560,438 @@ if (return,  null) {
                     {health_data.health.issues.map ((issue, index) => (
                       <li;
                         key={index}
+  patternId: string,;
+      description: string,;
+      occurrences: number,;
+      severity: string,;
+    }>,;
+;
+const HealthDashboard: React.FC = () => {;
+  const [healthData, setHealthData] = useState<HealthData | null>(null),;
+
+  const [error, setError] = useState<string | null>(null),;
+</string>
+        return <CheckCircle className="w-5 h-5 text-green-500" />,"
+"
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />,"
+        return <XCircle className="w-5 h-5 text-red-500" />,"
+        return <Activity className="w-5 h-5 text-gray-500" />"
+      <Badge variant={variant} className="ml-2">"
+
+      <div className='flex items-center justify-center p-8'>
+</div>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
+      <Card className='border-red-200 bg-red-50'>
+
+        <CardContent className='p-6'>
+
+          <div className='flex items-center text-red-600'>
+            <XCircle className='w-5 h-5 mr-2' />
+
+            <span>Failed to load health data: {error}</span>
+          <Button onClick={fetchHealthData} className='mt-4'>
+
+          
+        
+      
+  const [healthData, setHealthData] = useState<HealthData | null>(null);
+
+  const [error, setError] = useState<string | null>(null);
+    <div className="space-y-6">"
+</div>"
+      <div className="flex items-center justify-between">"
+        <div className="flex items-center">"
+          <h1 className="text-3xl font-bold">Health Dashboard</h1>"
+        <div className="flex items-center space-x-2">"
+          <Button;"
+            variant="outline"""
+            size="sm""
+            onClick={() => setAutoRefresh(!autoRefresh)}
+
+          <Button onClick={fetchHealthData} size="sm">"
+
+          
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">"
+        <Card>
+          <CardContent className="p-6">"
+              <div className="ml-2">"
+                <p className="text-sm font-medium text-gray-600">Overall Health</p>""
+                <p className="text-2xl font-bold">{healthData.health.score}/100</p>"
+          
+        
+              <Clock className="w-5 h-5 text-blue-500" />"
+                <p className="text-sm font-medium text-gray-600">Uptime</p>""
+                <p className="text-2xl font-bold">{formatUptime(healthData.uptime)}</p>"
+          
+        
+              <TrendingUp className="w-5 h-5 text-orange-500" />"
+                <p className="text-sm font-medium text-gray-600">Error Rate</p>""
+                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(1)}%</p>"
+          
+        
+              <Activity className="w-5 h-5 text-purple-500" />"
+                <p className="text-sm font-medium text-gray-600">Response Time</p>""
+                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>"
+          
+        
+      <Tabs defaultValue="overview" className="space-y-4">"
+
+        <TabsList>
+          <TabsTrigger value="overview">Overview""
+          <TabsTrigger value="errors">Error Analysis""
+          <TabsTrigger value="metrics">Metrics""
+          <TabsTrigger value="recommendations">Recommendations"
+        
+
+        <TabsContent value="overview" className="space-y-4">"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">"
+
+              <CardHeader>
+
+                <CardTitle>System Information
+              
+              <CardContent>
+                <div className="space-y-2">"
+                  <div className="flex justify-between">"
+                    <span className="text-sm text-gray-600">Environment:</span>""
+                    <Badge variant="outline">{healthData.environment}"
+                    <span className="text-sm text-gray-600">Version:</span>""
+                    <span className="text-sm font-mono">{healthData.version}</span>"
+                    <span className="text-sm text-gray-600">Memory Usage:</span>""
+                    <span className="text-sm">{formatBytes(healthData.metrics.memoryUsage)}</span>"
+                    <span className="text-sm text-gray-600">Last Updated:</span>""
+                    <span className="text-sm">{new Date(healthData.timestamp).toLocaleTimeString()}</span>"
+              
+            
+
+                <CardTitle className="flex items-center">"
+                  <AlertTriangle className="w-4 h-4 mr-2" />"
+
+                
+              
+                  <ul className="space-y-2">"
+</ul>"
+                      <li key={index} className="text-sm text-red-600 flex items-start">"
+</li>"
+                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>""
+        return <CheckCircle className='w-5 h-5 text-green-500' />;
+
+        return <AlertTriangle className='w-5 h-5 text-yellow-500' />;
+
+        return <XCircle className='w-5 h-5 text-red-500' />;
+
+        return <Activity className='w-5 h-5 text-gray-500' />;
+
+      <Badge variant={variant} className='ml-2'>;
+
+      <div className='flex items-center justify-center p-8'>;
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>;
+      </div>;
+      <Card className='border-red-200 bg-red-50'>;
+
+        <CardContent className='p-6'>;
+
+          <div className='flex items-center text-red-600'>;
+            <XCircle className='w-5 h-5 mr-2' />;
+
+            <span>Failed to load health data: {error}</span>;
+          <Button onClick={fetchHealthData} className='mt-4'>;
+
+    <div className='space-y-6'>;
+      <div className='flex items-center justify-between'>;
+        <div className='flex items-center'>;
+          <h1 className='text-3xl font-bold'>Health Dashboard</h1>;
+        <div className='flex items-center space-x-2'>;
+          <Button;
+            variant='outline
+            size='sm
+            onClick={() => setAutoRefresh(!autoRefresh)}          >;
+
+          <Button onClick={fetchHealthData} size='sm'>;
+
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>;
+        <Card>;
+
+
+              <div className='ml-2'>;
+                <p className='text-sm font-medium text-gray-600'>;
+</p>
+                </p>;
+                <p className='text-2xl font-bold'>;
+
+
+              <Clock className='w-5 h-5 text-blue-500' />;
+
+                <p className='text-sm font-medium text-gray-600'>Uptime</p>;
+
+
+              <TrendingUp className='w-5 h-5 text-orange-500' />;
+
+                <p className='text-sm font-medium text-gray-600'>Error Rate</p>;
+
+
+              <Activity className='w-5 h-5 text-purple-500' />;
+
+      <Tabs defaultValue='overview' className='space-y-4'>;
+
+        <TabsList>;
+
+          <TabsTrigger value='overview'>Overview;
+          <TabsTrigger value='errors'>Error Analysis;
+          <TabsTrigger value='metrics'>Metrics;
+          <TabsTrigger value='recommendations'>Recommendations;
+        <TabsContent value='overview' className='space-y-4'>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>;
+
+              <CardHeader>;
+
+                <CardTitle>System Information;
+              <CardContent>;
+
+                <div className='space-y-2'>;
+                  <div className='flex justify-between'>;
+                    <span className='text-sm text-gray-600'>Environment:</span>;
+                    <Badge variant='outline'>{healthData && healthData.environment};
+                    <span className='text-sm text-gray-600'>Version:</span>;
+                    <span className='text-sm font-mono'>;
+</span>
+                    </span>;
+                    <span className='text-sm text-gray-600'>Memory Usage:</span>;
+                    <span className='text-sm'>;
+                    <span className='text-sm text-gray-600'>Last Updated:</span>;
+
+
+                <CardTitle className='flex items-center'>;
+
+                  <AlertTriangle className='w-4 h-4 mr-2' />;
+
+
+
+                      </li>
+                  </ul>;
+                  <p className='text-green-600 text-sm'>No issues detected</p>;
+        <TabsContent value="errors" className="space-y-4">"
+
+
+                <CardTitle>Error Summary
+              
+                <div className='grid grid-cols-2 gap-4'>
+                  <div className='text-center'>
+                    <p className='text-2xl font-bold text-red-600'>
+                    <p className='text-sm text-gray-600'>Critical</p>
+                    <p className='text-2xl font-bold text-orange-600'>
+                    <p className='text-sm text-gray-600'>High</p>
+                    <p className='text-2xl font-bold text-yellow-600'>
+                    <p className='text-sm text-gray-600'>Medium</p>
+                    <p className='text-2xl font-bold text-gray-600'>
+                    <p className='text-sm text-gray-600'>Low</p>
+              
+            
+
+
+                <CardTitle>Top Errors
+              
+
+        <TabsContent value='errors' className='space-y-4'>;
+
+
+
+                <CardTitle>Error Summary;
+
+                <div className='grid grid-cols-2 gap-4'>;
+                  <div className='text-center'>;
+                    <p className='text-2xl font-bold text-red-600'>;
+                    <p className='text-sm text-gray-600'>Critical</p>;
+                    <p className='text-2xl font-bold text-orange-600'>;
+                    <p className='text-sm text-gray-600'>High</p>;
+                    <p className='text-2xl font-bold text-yellow-600'>;
+                    <p className='text-sm text-gray-600'>Medium</p>;
+                    <p className='text-2xl font-bold text-gray-600'>;
+                    <p className='text-sm text-gray-600'>Low</p>;
+
+
+                <CardTitle>Top Errors;
+
+                        <div;
+                          key={index}
+                          className='border-l-4 border-red-400 pl-3 py-1'>;
+                          <p className='text-sm font-medium'>;
+                          <p className='text-xs text-gray-600'>;
+                      ))}                  </div>;
+                  <p className='text-gray-600 text-sm'>No recurring errors</p>;
+                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">"
+                        <p className="text-sm font-medium">{error.description}</p>""
+                        <p className="text-xs text-gray-600">"
+                  <p className="text-gray-600 text-sm">No recurring errors</p>""
+        <TabsContent value="metrics" className="space-y-4">"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"
+              <CardHeader className='pb-2'>
+
+                <CardTitle className='text-sm'>Error Rate
+              
+
+                <p className='text-2xl font-bold'>
+                <p className='text-xs text-gray-600'>Errors per request</p>
+              
+            
+
+
+                <CardTitle className='text-sm'>Critical Errors
+              
+
+                <p className='text-xs text-gray-600'>In last hour</p>
+              
+            
+
+
+                <CardTitle className='text-sm'>Avg Response
+              
+
+                <p className='text-xs text-gray-600'>API response time</p>
+              
+            
+
+
+                <CardTitle className='text-sm'>Memory Usage
+              
+
+                <p className='text-xs text-gray-600'>JavaScript heap</p>
+              
+            
+        
+
+
+
+        <TabsContent value="recommendations" className="space-y-4">"
+
+
+
+              <CardTitle>Improvement Recommendations
+            
+
+        ;"
+        <TabsContent value='metrics' className='space-y-4'>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>;
+
+              <CardHeader className='pb-2'>;
+
+                <CardTitle className='text-sm'>Error Rate;
+
+                <p className='text-xs text-gray-600'>Errors per request</p>;
+
+
+                <CardTitle className='text-sm'>Critical Errors;
+
+                <p className='text-xs text-gray-600'>In last hour</p>;
+
+
+                <CardTitle className='text-sm'>Avg Response;
+
+                <p className='text-xs text-gray-600'>API response time</p>;
+
+
+                <CardTitle className='text-sm'>Memory Usage;
+
+                <p className='text-xs text-gray-600'>JavaScript heap</p>;
+        <TabsContent value='recommendations' className='space-y-4'>;
+
+
+
+              <CardTitle>Improvement Recommendations;
+
+                <ul className='space-y-3'>;
+</ul>
+                    <li key={index} className='flex items-start'>;
+                      <CheckCircle className='w-4 h-4 text-green-500 mt-0 && 0.5 mr-2 flex-shrink-0' />;
+
+                      <span className='text-sm'>{rec}</span>                    </li>;
+                <p className='text-gray-600'>;
+        return <CheckCircle className='w - 5 h - 5 text - green - 500' />;
+
+        return <AlertTriangle className='w - 5 h - 5 text - yellow - 500' />;
+
+        return <XCircle className='w - 5 h - 5 text - red - 500' />;
+
+        return <Activity className='w - 5 h - 5 text - gray - 500' />;
+
+      <Badge variant={variant} className='ml - 2'>;
+
+      );
+      <div className='flex items - center justify - center p - 8'>;
+        <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - gray - 900'></div>;
+      </div>);
+      <Card className='border - red - 200 bg - red - 50'>;
+
+        <CardContent className='p - 6'>;
+
+          <div className='flex items - center text - red - 600'>;
+            <XCircle className='w - 5 h - 5 mr - 2' />;
+
+            <span > Failed to load health data: {error}</span>;
+          <Button on_click={fetchHealthData} className='mt - 4'>;
+
+    <div className='space - y-6'>;
+      <div className='flex items - center justify - between'>;
+        <div className='flex items - center'>;
+          <h1 className='text - 3xl font - bold'>Health Dashboard</h1>;
+        <div className='flex items - center space - x-2'>;
+            variant='outline';
+            size='sm';
+            on_click={() => setAutoRefresh (!auto_refresh)}          >;
+
+          <Button on_click={fetchHealthData} size='sm'>;
+
+      <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4'>;
+
+
+              <div className='ml - 2'>;
+                <p className='text - sm font - medium text - gray - 600'>;
+                <p className='text - 2xl font - bold'>;
+
+
+              <Clock className='w - 5 h - 5 text - blue - 500' />;
+
+                <p className='text - sm font - medium text - gray - 600'>Uptime</p>;
+
+
+              <TrendingUp className='w - 5 h - 5 text - orange - 500' />;
+
+                <p className='text - sm font - medium text - gray - 600'>Error Rate</p>;
+
+
+              <Activity className='w - 5 h - 5 text - purple - 500' />;
+
+      <Tabs default_value='overview' className='space - y-4'>;
+
+
+        <TabsContent value='overview' className='space - y-4'>;
+
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 4'>;
+
+
+                <CardTitle > System Information;
+
+                <div className='space - y-2'>;
+                  <div className='flex justify - between'>;
+                    <span className='text - sm text - gray - 600'>Environment:</span>;
+                    <Badge variant='outline'>{health_data.environment};
+                    <span className='text - sm text - gray - 600'>Version:</span>;
+                    <span className='text - sm font - mono'>;
+                    <span className='text - sm text - gray - 600'>Memory Usage:</span>;
+                    <span className='text - sm'>;
+                    <span className='text - sm text - gray - 600'>Last Updated:</span>;
+
+
+                <CardTitle className='flex items - center'>;
+
+                  <AlertTriangle className='w - 4 h - 4 mr - 2' />;
+
+
+                  <ul className='space - y-2'>;
+                      <li;
+pr-12325
                         className='text - sm text - red - 600 flex items - start';
                       >;
                         <span className='w - 2 h - 2 bg - red - 400 rounded - full mt - 1.5 mr - 2 flex - shrink - 0'></span>                        {issue}'
@@ -1572,6 +2142,9 @@ if (return,  null) {
           </Card>;
         </TabsContent>;
       </Tabs>;
+export default HealthDashboard;
+
+
     </div>);
 }
 export default HealthDashboard;
@@ -1582,3 +2155,76 @@ export default HealthDashboard,
   );
 },;
 export default HealthDashboard;
+  }
+  );
+};
+
+export default HealthDashboard;
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  </ul>) : ()
+                  <p className='text - green - 600 text - sm'>No issues detected</p>)}
+        <TabsContent value='errors' className='space - y-4'>;
+
+
+
+                <CardTitle > Error Summary;
+
+                <div className='grid grid - cols - 2 gap - 4'>;
+                  <div className='text - center'>;
+                    <p className='text - 2xl font - bold text - red - 600'>;
+                    <p className='text - sm text - gray - 600'>Critical</p>;
+                    <p className='text - 2xl font - bold text - orange - 600'>;
+                    <p className='text - sm text - gray - 600'>High</p>;
+                    <p className='text - 2xl font - bold text - yellow - 600'>;
+                    <p className='text - sm text - gray - 600'>Medium</p>;
+                    <p className='text - 2xl font - bold text - gray - 600'>;
+                    <p className='text - sm text - gray - 600'>Low</p>;
+
+
+                <CardTitle > Top Errors;
+
+                          className='border - l-4 border - red - 400 pl - 3 py - 1';
+                          <p className='text - sm font - medium'>;
+                          <p className='text - xs text - gray - 600'>;
+                        </div>))}                  </div>) : ()
+                  <p className='text - gray - 600 text - sm'>No recurring errors</p>)}
+        <TabsContent value='metrics' className='space - y-4'>;
+
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
+
+              <CardHeader className='pb - 2'>;
+
+                <CardTitle className='text - sm'>Error Rate;
+
+                <p className='text - xs text - gray - 600'>Errors per request</p>;
+
+
+                <CardTitle className='text - sm'>Critical Errors;
+
+                <p className='text - xs text - gray - 600'>In last hour</p>;
+
+
+                <CardTitle className='text - sm'>Avg Response;
+
+                <p className='text - xs text - gray - 600'>API response time</p>;
+
+
+                <CardTitle className='text - sm'>Memory Usage;
+
+                <p className='text - xs text - gray - 600'>JavaScript heap</p>;
+        <TabsContent value='recommendations' className='space - y-4'>;
+
+
+
+              <CardTitle > Improvement Recommendations;
+
+                <ul className='space - y-3'>;
+                    <li key={index} className='flex items - start'>;
+                      <CheckCircle className='w - 4 h - 4 text - green - 500 mt - 0.5 mr - 2 flex - shrink - 0' />;
+
+                      <span className='text - sm'>{rec}</span>                    </li>))}
+                </ul>) : (
+                <p className='text - gray - 600'>;
+</p>)
+                </p>)}
+pr-12325

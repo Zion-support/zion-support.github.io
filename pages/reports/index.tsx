@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
+
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -79,6 +80,10 @@ export default function Reports() {
   useEffect(() => {
     Promise.all([
 
+  }, []),
+
+  const lastUptime = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -102,6 +107,9 @@ export default function Reports() {
 
   return (
     <div className='space-y-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+<div className='space-y-6'>
       <div>
         <h1 className='text-2xl font-semibold'>Automation Reports</h1>
         <div className='text-sm text-gray-500'>
@@ -125,6 +133,7 @@ export default function Reports() {
             <div className='text-sm text-gray-500'>No data</div>;
           )}
 
+
 }
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo),
@@ -136,6 +145,11 @@ export default function Reports() {
         </div>;
 
 }
+
+
+
+}
+
 
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
@@ -183,6 +197,7 @@ export default function Reports() {
             Commits: {changelog?.totalCommits || 0}
           </div>;
         </div>;
+
 
 import {useEffect, useState} from 'react';
 export default /**
@@ -359,3 +374,39 @@ function Reports() {
     </div>);
 ;
 
+
+
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>SEO (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Pages: {seo?.results?.length |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Broken Links (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Broken: {links?.broken?.length |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Dependencies (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Checked: {deps?.entries?.length |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>Changelog (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Commits: {changelog?.totalCommits |0}
+          </div>
+        </div>
+        <div className='border rounded p-4'>
+          <div className='font-medium mb-1'>PageSpeed (weekly)</div>
+          <div className='text-sm text-gray-600'>
+            Pages: {pagespeed?.results?.length |0}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -3,6 +3,8 @@
 import React from 'react';
 
 import React from 'react';
+import React from 'react',;
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function MarketPricingPage() {
@@ -391,3 +393,8 @@ export default function MarketPricingPage(req, res) {
     </Layout>);
 }
 
+
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

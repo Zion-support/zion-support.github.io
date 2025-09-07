@@ -61,6 +61,33 @@ import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-s
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 
+import { motion  } from 'framer-motion';
+import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
+import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+import { Search, Filter, Star, Users, TrendingUp;
+  Clock, Zap, Shield, Cloud, Brain;
+  Database, Globe, Robot, Cube, Sparkles
+ } from 'lucide-react';
+import {
+  Search
+  Filter
+  Star
+  Users
+  TrendingUp
+  Clock
+  Zap
+  Shield
+  Cloud
+  Brain
+  Database
+  Globe
+  Robot
+  Cube
+  Sparkles;
+} from 'lucide-react';
+interface Service {
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -164,12 +191,68 @@ interface Service {
 }
 const ComprehensiveServicesShowcase2026: React.FC = () => {
 
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+
+const ComprehensiveServicesShowcase2026: React.FC;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  reviews: number;
+const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
   const allServices = [
 
+...innovativeMicroSaasServices2026,
+    ...specializedITSolutions2026,
+    ...emergingTechServices2026,
+  ];
+
+  const categories = [
+    'all',
+    'Business Intelligence & Analytics',
+    'Content Creation & Marketing',
+    'Customer Service & Support',
+    'E-commerce & Retail',
+    'HR & Recruitment',
+    'Financial Management',
+    'Project Management',
+    'Education & Training',
+    'Healthcare & Medical',
+    'Cloud Infrastructure & DevOps',
+    'Cybersecurity & Threat Intelligence',
+    'Data Engineering & Analytics',
+    'API Management & Integration',
+    'Network Monitoring & Management',
+    'Database Management & Optimization',
+    'IT Service Management',
+    'Backup & Disaster Recovery',
+    'Quantum Computing & AI',
+    'Blockchain & Web3',
+    'Internet of Things (IoT)',
+    'Edge Computing & 5G',
+    'AR/VR & Immersive Technology',
+    'Robotics & Automation',
+    'Digital Twin & Simulation',
+  ];
+
+  const priceRanges = [
+    { value: 'all', label: 'All Prices' },
+    { value: '0-100', label: '$0 - $100' },
+    { value: '100-200', label: '$100 - $200' },
+    { value: '200-400', label: '$200 - $400' },
+    { value: '400-600', label: '$400 - $600' },
+{ value: '600+', label: '$600+' },
+  ];
+origin/cursor/automate-test-improve-and-merge-code-2533
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -196,12 +279,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         }
       })();
     return matchesSearch && matchesCategory && matchesPrice;  });
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
         return b.popular ? 1 : -1;
       case 'price-low':
         return (
+return (
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
         );
@@ -215,6 +303,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         return b.customers - a.customers;
       default:
         return 0;    }
+        );
+      case 'rating':
+        return b.rating - a.rating;
+      case 'customers':
+        return b.customers - a.customers;
+default:
+        return 0;
+    }
   });
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -482,6 +578,35 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     },
     return iconMap[category] || <Sparkles className="w-5 h-5" />
   },
+'Business Intelligence & Analytics': <Database className='w-5 h-5' />,
+      'Content Creation & Marketing': <Sparkles className='w-5 h-5' />,
+      'Customer Service & Support': <Users className='w-5 h-5' />,
+      'E-commerce & Retail': <Globe className='w-5 h-5' />,
+      'HR & Recruitment': <Users className='w-5 h-5' />,
+      'Financial Management': <TrendingUp className='w-5 h-5' />,
+      'Project Management': <Clock className='w-5 h-5' />,
+      'Education & Training': <Brain className='w-5 h-5' />,
+      'Healthcare & Medical': <Shield className='w-5 h-5' />,
+      'Cloud Infrastructure & DevOps': <Cloud className='w-5 h-5' />,
+      'Cybersecurity & Threat Intelligence': <Shield className='w-5 h-5' />,
+      'Data Engineering & Analytics': <Database className='w-5 h-5' />,
+      'API Management & Integration': <Zap className='w-5 h-5' />,
+      'Network Monitoring & Management': <Globe className='w-5 h-5' />,
+      'Database Management & Optimization': <Database className='w-5 h-5' />,
+      'IT Service Management': <Users className='w-5 h-5' />,
+      'Backup & Disaster Recovery': <Cloud className='w-5 h-5' />,
+      'Quantum Computing & AI': <Brain className='w-5 h-5' />,
+      'Blockchain & Web3': <Cube className='w-5 h-5' />,
+      'Internet of Things (IoT)': <Zap className='w-5 h-5' />,
+      'Edge Computing & 5G': <Globe className='w-5 h-5' />,
+      'AR/VR & Immersive Technology': <Cube className='w-5 h-5' />,
+      'Robotics & Automation': <Robot className='w-5 h-5' />,
+      'Digital Twin & Simulation': <Cube className='w-5 h-5' />,
+    };
+    return iconMap[category] || <Sparkles className='w-5 h-5' />;
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */  } catch (error) {
@@ -1093,6 +1218,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               />;
             </div>;
 
+
             {/* Category Filter */}
             <div>;
               <select
@@ -1112,6 +1238,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               </select>;
             </div>;
 
+
             {/* Price Range Filter */}
             <div>;
               <select
@@ -1130,6 +1257,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
               </select>;
             </div>;
+
 
             {/* Sort By */}
             <div>;
@@ -1620,3 +1748,40 @@ export default ComprehensiveServicesShowcase2026;
 }
 export default ComprehensiveServicesShowcase2026;
 ;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <a
+                href='mailto:kleber@ziontechgroup.com'
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
+              >
+                Email Us
+              </a>
+              <a
+                href='tel:+13024640950'
+                className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'
+              >
+                Call Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  );
+};
+
+  /* Category Filter */ 
+}<div> <select </option>) ) 
+}</select> </div> {
+  /* Price Range Filter */ 
+}<div> <select </option>) ) 
+}</select> </div> {
+  /* Sort By */ 
+}<div> <select > <option value="popularity" className="bg-gray-800 text-white" >Sort by Popularity</option> <option value="price-low" className="bg-gray-800 text-white" >Price: Low to High</option> <option value="price-high" className="bg-gray-800 text-white" >Price: High to Low</option> <option value="rating" className="bg-gray-800 text-white" >Sort by Rating</option> <option value="customers" className="bg-gray-800 text-white" >Sort by Customers</option> </select> </div> </div> </div> </div> </h2> <p className="text-gray-300" > Discover innovative solutions tailored to your business needs </p> </div> Popular </div>) 
+}</div> </li>) ) 
+}</ul> </div> </div> {
+  /* CTA Button */ 
+}<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
+}</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>) 
+};
+export default ComprehensiveServicesShowcase2026;
+origin/cursor/automate-test-improve-and-merge-code-2533

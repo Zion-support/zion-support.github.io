@@ -3,6 +3,10 @@ return (
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>);
   }
+
+
+  const logoToUse = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center" />"
@@ -112,3 +116,8 @@ export function Logo({ customLogo }: LogoProps) {
   )
 }
 ;
+}
+      />
+    </Link>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

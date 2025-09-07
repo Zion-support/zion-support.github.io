@@ -9,6 +9,9 @@
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+
 
 
   reactStrictMode: true,
@@ -21,8 +24,8 @@ const next_config = {
 
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   // Image optimization;
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+  images: {,
+  domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],""
     formats: ['image / webp', 'image / avif'],
   },
   // Output configuration;
@@ -54,15 +57,25 @@ const next_config = {
 // Output configuration
 
 
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  // Image optimization;
+  domains: [
+      "localhost",""
+      "ziontechgroup.com",""
+      "images.unsplash.com",""
+      "via.placeholder.com","]
+    ],"
+    formats: ["image/webp", "image/avif"],"
+  // Output configuration;
+  // Output configuration;"
   output: 'standalone',
-
-  // Trailing slash
+  // Trailing slash;
   trailingSlash: false,
-  // Base path
-  basePath: '',
-  // Asset prefix
-  assetPrefix: '',
-  // Generate ETags
+  // Base path;
+  basePath: ,
+  // Asset prefix;
+  assetPrefix: ,
+  // Generate ETags;
   generateEtags: true,
 
 
@@ -75,12 +88,20 @@ const next_config = {
 
 
 
+  // Dist directory;
+  distDir: '.next',
+};
 
-  // Output configuration
-  output: "standalone",
 
-  // Trailing slash
-  trailingSlash: false,
+  // Output configuration;
+  output: "standalone","
+  // Trailing slash;
+
+  // Base path;"
+  basePath: "","
+  // Asset prefix;"
+  assetPrefix: "","
+  // Generate ETags;
 
   // Base path
   basePath: "",
@@ -103,6 +124,9 @@ const next_config = {
 };
 
 module.exports = nextConfig;
+  // Dist directory;"
+  distDir: ".next","
+
 
 module.exports = nextConfig;
 
@@ -111,3 +135,5 @@ module.exports = nextConfig;
 
 
 
+
+"

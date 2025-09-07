@@ -68,6 +68,10 @@ import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
 import {
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu,
   Lock, Cloud, Settings, Eye, Award, Clock, Heart,
@@ -76,6 +80,9 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
+
+
+
 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
@@ -146,6 +153,7 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
   ],
   const spaceCapabilities = [
@@ -444,6 +452,13 @@ icon: <Atom className="w - 6 h - 6" />;
 
                 <a
                   href="/contact"
+
+
+
+                <a
+                  href="/contact"
+
+
 
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -892,6 +907,7 @@ icon: <Atom className="w - 6 h - 6" />;
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
 
+
                   </ul>
                   <a 
                     href="/contact" 
@@ -1014,6 +1030,13 @@ icon: <Atom className="w - 6 h - 6" />;
                 <a
                   href="/contact"
 
+
+
+                <a
+                  href="/contact"
+
+
+
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -1027,6 +1050,7 @@ icon: <Atom className="w - 6 h - 6" />;
   )
 }
 export default SpaceTechnologyPage;
+
 
 export default SpaceTechnologyPage,;
 ;
@@ -1067,3 +1091,21 @@ export default SpaceTechnologyPage,
 
 },
 
+
+},
+
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Shield, Zap, Target, Atom, Cpu;
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart;
+  Lightbulb, Search, Grid, List, TrendingUp;
+  User, ShoppingCart, Bell, HelpCircle, FileText;
+  Video, Headphones, Code, Database, Network, Server;
+  Monitor, Smartphone, Camera, Gamepad2, Palette;
+  Music, Film, BookOpenCheck, Building, MessageCircle;
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
+ } from 'lucide-react';
+const SpaceTechnologyPage: React.FC;
+origin/cursor/automate-test-improve-and-merge-code-2533

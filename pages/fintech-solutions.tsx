@@ -1,4 +1,6 @@
 title="Fintech AI Solutions"
+
+			title="Fintech AI Solutions"
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
 			subtitle="Smarter finance with lower risk and faster time to yes."
@@ -20,6 +22,16 @@ title="Fintech AI Solutions"
 }
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function FintechSolutions() {
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: Core banking, KYC, payments, CRMs"
+			]}
+			industries={["Fintech", "Banking", "Lending", "Payments"]}
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * FintechSolutions - Function description
  */
@@ -69,6 +81,7 @@ export default function FintechSolutions() {
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}
+
 			pricePerMonthUSD={2799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,3 +125,7 @@ export default function FintechSolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

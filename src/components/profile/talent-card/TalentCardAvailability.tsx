@@ -73,6 +73,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'full-time':;
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
+        return 'bg-yellow-500/20 text-yellow-400';
         return 'bg-yellow-500/20 text-yellow-400',;
       case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
@@ -98,6 +99,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project';
       default:;,
         return status;
+  };
     }
   },
   const getAvailabilityLabel = (status: string, ) =>: any {
@@ -127,9 +129,17 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
+
+
+  const getAvailabilityColor = null;
+  return (
+    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
+      <Clock className="h-3 w-3" />
+origin/cursor/automate-test-improve-and-merge-code-2533
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
 ;
 ;
+origin/cursor/automate-test-improve-and-merge-code-2533

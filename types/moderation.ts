@@ -58,6 +58,11 @@ export interface ModerationFlag {
 
 export interface ModerationResult {
   id: string;
+
+export interface ModerationResult {
+  // TODO: Implement
+}
+  id: string;,
   content: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;
@@ -66,14 +71,58 @@ export interface ModerationResult {
 
 }
 
+
+
+;
+export interface ModerationAction {
+  // TODO: Implement
+  type: "approve" | "remove" | "warn" | "ban";"
+  targetId: string;,"
+  targetType: "post" | "comment" | "user";"
+  adminId: string;
+  createdAt: string;
+}
+
+
+
+
+export interface ModerationFlag {
+  // TODO: Implement
+export interface ModerationFlag {;
+  id: string;,"
+  type: "spam" | "inappropriate" | "harassment" | "other";"
+  content: string;,
+  id: string;
+type: \"spam\" | \"inappropriate\" | \"harassment\" | \"other\";
+  content: string;
+  reporterId: string;
+  status: ModerationStatus;,
+  updatedAt: string;
+  adminNotes?: string;
+
+  // TODO: Implement
+
+export interface ModerationRule {
+  // TODO: Implement
+  name: string;
+  pattern: string;,"
+  action: 'approve' | 'reject' | 'flag';
+  severity: 'low' | 'medium' | 'high';
+
+  createdAt: string;
+  updatedAt: string;}
+  adminNotes?: string;}
+}}
+
 export interface ModerationRule {
   id: string;
 }
 
   name: string;
+name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';
-  severity: 'low' | 'medium' | 'high';
+  severity: 'low' | 'medium' | 'high';}
 }
 
 export type AiScores = {;
@@ -96,3 +145,4 @@ export type FlaggedContent = {;
   updatedAt: string;
   adminNotes?: string;
 };
+export type ModerationStatus = 'pending' | 'approved' | 'rejected';

@@ -43,6 +43,13 @@ import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 const steps = ['AccountProfilePreferencesPreview'],
 
+
+
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import { useState } from 'react',;
+import EnhancedButton from '../../components/ui/EnhancedButton',;
+const steps = ['AccountProfilePreferencesPreview'],
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
@@ -51,6 +58,18 @@ const Onboarding: NextPage = () => {
 
 return (
     <div className="space-y-6">
+    <div className="space-y-6">
+const steps = ['Account', 'Profile', 'Preferences', 'Preview'];
+
+const Onboarding: NextPage = () => {
+  const [step, setStep] = useState(0);
+
+const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
+  const prev = () => setStep(s => Math.max(s - 1, 0));
+
+  return (
+    <div className='space-y-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
@@ -84,6 +103,9 @@ const Onboarding: NextPage = () => {
       <h1 className="text-2xl font-semibold">Get Started</h1>
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
+<h1 className='text-2xl font-semibold'>Get Started</h1>
+
+      <div className='flex items-center gap-2 text-sm flex-wrap'>
         {steps.map((label, i) => (
           <div
             key={label}
@@ -95,6 +117,8 @@ const Onboarding: NextPage = () => {
         ))}
       </div>
       <div className="border rounded-md p-4 min-h-[200px]">
+
+<div className='border rounded-md p-4 min-h-[200px]'>
         {step === 0 && <div>Account setup fields…</div>}
         {step === 1 && <div>Profile details fields…</div>}
         {step === 2 && <div>Preferences selection…</div>}
@@ -139,6 +163,7 @@ const Onboarding: NextPage = () => {
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
+origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
       <div className="flex gap-2">
@@ -205,3 +230,5 @@ export default Onboarding;
   )
 },
 export default Onboarding,
+
+origin/cursor/automate-test-improve-and-merge-code-2533

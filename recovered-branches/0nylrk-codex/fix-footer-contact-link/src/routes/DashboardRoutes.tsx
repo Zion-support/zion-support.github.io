@@ -23,6 +23,7 @@ import ContractBuilder from "@/pages/ContractBuilder";
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
 import {Fragment} from "react";
+const DashboardRoutes = () => {import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -64,11 +65,31 @@ import HiringTracker from "@/pages/HiringTracker",
 import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Dashboard from "@/pages/Dashboard",;
+import ClientDashboard from "@/pages/ClientDashboard",;
+import TalentDashboard from "@/pages/TalentDashboard",;
+import CreatorDashboard from "@/pages/CreatorDashboard",;
+import Analytics from "@/pages/Analytics",;
+import ProjectMilestones from "@/pages/ProjectMilestones",;
+import ProjectDetails from "@/pages/ProjectDetails",;
+import ProjectRoom from "@/pages/ProjectRoom",;
+import MessagingInbox from "@/pages/MessagingInbox",;
+import Payments from "@/pages/Payments",;
+import Interviews from "@/pages/Interviews",;
+import Notifications from "@/pages/Notifications",;
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",;
+import HiringTracker from "@/pages/HiringTracker",;
+import PortfolioBuilder from "@/pages/PortfolioBuilder",;
+import Referrals from "@/pages/Referrals",;
+import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 
-import WalletPage from "@/pages/Wallet",
-import ContractBuilder from "@/pages/ContractBuilder",
+import WalletPage from "@/pages/Wallet",;
+import ContractBuilder from "@/pages/ContractBuilder",;
 const DashboardRoutes = () => {
   return (
     <Routes>
@@ -413,6 +434,7 @@ const DashboardRoutes = () => {;
         path="/developers"
         element={
           <ProtectedRoute>;
+        element={          <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -473,6 +495,7 @@ const DashboardRoutes = () => {;
 
 export default DashboardRoutes;
         }
+        path="/contract-builder"        }
       />;
     </Routes>);
 }
@@ -482,29 +505,372 @@ export default DashboardRoutes;
       />
       <Route
         path="/wallet"
+
+import { Fragment } from "react";""
+import { Route, Routes } from "react-router-dom";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";""
+import Dashboard from "@/pages/Dashboard";""
+import ClientDashboard from "@/pages/ClientDashboard";""
+import TalentDashboard from "@/pages/TalentDashboard";""
+import CreatorDashboard from "@/pages/CreatorDashboard";""
+import Analytics from "@/pages/Analytics";""
+import ProjectMilestones from "@/pages/ProjectMilestones";""
+import ProjectDetails from "@/pages/ProjectDetails";""
+import ProjectRoom from "@/pages/ProjectRoom";""
+import MessagingInbox from "@/pages/MessagingInbox";""
+import Payments from "@/pages/Payments";""
+import Interviews from "@/pages/Interviews";""
+import Notifications from "@/pages/Notifications";""
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";""
+import HiringTracker from "@/pages/HiringTracker";""
+import PortfolioBuilder from "@/pages/PortfolioBuilder";""
+import Referrals from "@/pages/Referrals";""
+import DeveloperPortal from "@/pages/DeveloperPortal";""
+import WalletPage from "@/pages/Wallet";""
+import ContractBuilder from "@/pages/ContractBuilder";"
+const DashboardRoutes = () => {
+const DashboardRoutes = () => {;"
+import {Fragment} from "react";""
+import {Route, Routes} from "react-router-dom";""
+import {ProtectedRoute} from "@/components/ProtectedRoute";""
+import ContractBuilder from "@/pages/ContractBuilder";""
+import { Fragment } from "react",""
+import { Route, Routes } from "react-router-dom",""
+import { ProtectedRoute } from "@/components/ProtectedRoute",""
+import Dashboard from "@/pages/Dashboard",""
+import ClientDashboard from "@/pages/ClientDashboard",""
+import TalentDashboard from "@/pages/TalentDashboard",""
+import CreatorDashboard from "@/pages/CreatorDashboard",""
+import Analytics from "@/pages/Analytics",""
+import ProjectMilestones from "@/pages/ProjectMilestones",""
+import ProjectDetails from "@/pages/ProjectDetails",""
+import ProjectRoom from "@/pages/ProjectRoom",""
+import MessagingInbox from "@/pages/MessagingInbox",""
+import Payments from "@/pages/Payments",""
+import Interviews from "@/pages/Interviews",""
+import Notifications from "@/pages/Notifications",""
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",""
+import HiringTracker from "@/pages/HiringTracker",""
+import PortfolioBuilder from "@/pages/PortfolioBuilder",""
+import Referrals from "@/pages/Referrals",""
+import DeveloperPortal from "@/pages/DeveloperPortal",""
+import WalletPage from "@/pages/Wallet",""
+import ContractBuilder from "@/pages/ContractBuilder","
+  return (
+    <Routes>
+
+      <Route;"
+        path="/dashboard""
         element={
           <ProtectedRoute>
+
+            <Dashboard />
+
+          
+        path="/client-dashboard""
+
+            <ClientDashboard />
+
+          
+        path="/talent-dashboard""
+
+            <TalentDashboard />
+
+          
+        path="/creator-dashboard""
+
+            <CreatorDashboard />
+
+          
+        path="/analytics""
+
+            <Analytics />
+
+          
+        path="/project/:id/milestones""
+
+            <ProjectMilestones />
+
+          
+        path="/project/:id""
+
+            <ProjectDetails />
+
+          
+        path="/project/:id/room""
+
+            <ProjectRoom />
+
+          
+        path="/messages""
+
+            <MessagingInbox />
+
+          
+        path="/inbox""
+
+
+          
+        path="/payments""
+
+            <Payments />
+
+          
+        path="/interviews""
+
+            <Interviews />
+
+          
+        path="/notifications""
+
+            <Notifications />
+
+          
+        path="/applications/track""
+
+            <ApplicationStatusTracker />
+
+          
+        path="/hiring-tracker""
+
+            <HiringTracker />
+
+          
+        path="/portfolio-builder""
+
+            <PortfolioBuilder />
+
+          
+        path="/referrals""
+
+            <Referrals />
+
+          
+        path="/developers""
+
+            <DeveloperPortal />
+
+          
+        path="/wallet""
+
             <WalletPage />
-          </ProtectedRoute>
-        }
-      />;
-      <Route;
-        path="/dashboard/api-access";
-        element={;
+
+          
+        path="/dashboard/api-access""
+
+
+          
+        path="/contract-builder""
+
+            <ContractBuilder />
+
+          
+    
+    <Routes>;
+
+
+
+          
+
+
+          
           <ProtectedRoute>;
+
+            <TalentDashboard />;
+
+          ;
+
+
+          
+
+
+          
+
+
+          
+
+            <ProjectDetails />;
+
+
+            <ProjectRoom />;
+
+
+
+          
+
+
+          
+
+
+          
+
+
+          
+
+
+          
+
+
+          
+
+
+          
+
+
+          
+
+
+          
+
             <DeveloperPortal />;
+
+
+            <WalletPage />;
+
+
+
+          
+</ProjectDetails>
           </ProtectedRoute>;
-        } ;
-      />;
-      <Route;
-        path="/contract-builder";
-        element={;
           <ProtectedRoute>;
-            <ContractBuilder />;
+</ProtectedRoute>
+
+            <ProjectRoom />;
+</ProjectRoom>
           </ProtectedRoute>;
-        } ;
+
+      <Route;"
+        path="/messages""
+        element={
+          <ProtectedRoute>
+</Route>
+            <MessagingInbox />
+</MessagingInbox>
+          </ProtectedRoute>
+      <Route;"
+        path="/inbox""
+        element={
+          <ProtectedRoute>
+</Route>
+            <MessagingInbox />
+</MessagingInbox>
+          </ProtectedRoute>
+      <Route;"
+        path="/payments""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Payments />
+</Payments>
+          </ProtectedRoute>
+      <Route;"
+        path="/interviews""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Interviews />
+</Interviews>
+          </ProtectedRoute>
+      <Route;"
+        path="/notifications""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Notifications />
+</Notifications>
+          </ProtectedRoute>
+      <Route;"
+        path="/applications/track""
+        element={
+          <ProtectedRoute>
+</Route>
+            <ApplicationStatusTracker />
+</ApplicationStatusTracker>
+          </ProtectedRoute>
+      <Route;"
+        path="/hiring-tracker""
+        element={
+          <ProtectedRoute>
+</Route>
+            <HiringTracker />
+</HiringTracker>
+          </ProtectedRoute>
+      <Route;"
+        path="/portfolio-builder""
+        element={
+          <ProtectedRoute>
+</Route>
+            <PortfolioBuilder />
+</PortfolioBuilder>
+          </ProtectedRoute>
+      <Route;"
+        path="/referrals""
+        element={
+          <ProtectedRoute>
+</Route>
+            <Referrals />
+</Referrals>
+          </ProtectedRoute>
+      <Route;"
+        path="/developers""
+        element={
+          <ProtectedRoute>;
+</Route>
+            <DeveloperPortal />;
+</DeveloperPortal>
+          </ProtectedRoute>;
+          <ProtectedRoute>;
+</ProtectedRoute>
+
+            <WalletPage />;
+</WalletPage>
+          </ProtectedRoute>;
+
+      <Route;"
+        path="/dashboard/api-access""
+        element={
+          <ProtectedRoute>
+</Route>
+            <DeveloperPortal />
+</DeveloperPortal>
+          </ProtectedRoute>
+      <Route;"
+        path="/contract-builder""
+        }
+
       />;
     </Routes>;
   );
 },;
 export default DashboardRoutes;
+)
+    );
+
+
+          
+</Route>)
+    </Routes>);
+
+      <Route;"
+        path="/wallet""
+        element={
+          <ProtectedRoute>
+</Route>
+            <WalletPage />
+</WalletPage>
+          </ProtectedRoute>
+      <Route;"
+        path="/dashboard/api-access";"
+        element={;
+
+
+        path="/contract-builder";"
+
+            <ContractBuilder />;
+
+    ;"
+pr-12325
+</ContractBuilder>
+          </ProtectedRoute>;
+    </Routes>;"
+

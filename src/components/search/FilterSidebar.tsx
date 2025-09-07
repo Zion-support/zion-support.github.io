@@ -1,4 +1,5 @@
 }
+
 import React from 'react';
 interface FilterSidebarProps {
   class_name?: string;
@@ -32,7 +33,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;,
     <div className={`filter-sidebar ${className || ''}`}>;`
       {children}
     </div>;
-  );
+  )
 };
 export default FilterSidebar;
         <div
@@ -63,6 +64,9 @@ export default FilterSidebar;
           ))}
         </div>,
   filters: FilterGroup[];,
+        </div>
+
+  filters: FilterGroup[];
   selected_filters: Record < string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;,
   onClearFilters: : unknown void;,
@@ -78,6 +82,7 @@ function FilterSidebar() {
       {is_open && (
         <div;
           className="fixed inset - 0 bg - black / 50 z - 40 lg: hidden";",
+          className="fixed inset - 0 bg - black / 50 z-40 lg: hidden";
           on_click={on_close}
         />)}
       {/* Sidebar */}
@@ -85,13 +90,13 @@ function FilterSidebar() {
         fixed lg:static inset - y-0 left - 0 z - 50 w - 80 bg - zion - blue - dark / 95 backdrop - blur - xl border - r border - zion - blue - light / 20 transform transition - transform duration - 300 lg:transform - none';,
         ${is_open ? 'translate - x-0' : '-translate - x-full lg:translate - x-0'}`;`
       `}>";
-        <div className="flex items - center justify - between p - 4 border - b border - zion - blue - light / 20">";
-          <h3 className="text - lg font - semibold text - white flex items - center gap - 2">";
-            <Filter className="w - 5 h - 5"  />;
-            Filters                      <span className="text - sm text - zion - slate - light">;
+        <div className="flex items - center justify - between p - 4 border - b border - zion - blue-light / 20">";
+          <h3 className="text - lg font - semibold text - white flex items - center gap-2">";
+            <Filter className="w - 5 h-5"  />;
+            Filters                      <span className="text - sm text - zion - slate-light">;
                         {option.label}
                         {option.count && (";
-                          <span className="ml - 2 text - zion - slate - light / 60">;
+                          <span className="ml - 2 text - zion - slate-light / 60">;
                             ({option.count});
                           </span>)}
                       </span>;
@@ -103,6 +108,9 @@ function FilterSidebar() {
     </>;
   )};
 '"`;`
+    </>)}
+'"`;
+
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
@@ -119,7 +127,16 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
     <div className={`filter-sidebar ${className || ''}`}>;
       {children}
     </div>;
-  );
+  )
 };
 export default FilterSidebar;
 export default FilterSidebar;
+  className?: string;
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
+  className;
+  children 
+}) => {
+  return (
+    <div className;
+origin/cursor/automate-test-improve-and-merge-code-2533

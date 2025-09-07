@@ -6,6 +6,8 @@ export default function ToolResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
 
+
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -13,6 +15,40 @@ import { useRouter } from 'next/router';
 
       type: 'Interactive Tool',
 
+      estimatedTime: '15 minutes',
+      fullContent: `
+        <h2>About This Tool</h2>
+        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
+        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment
+        covers technology infrastructure, organizational culture, and business processes.</p>
+        <h2>What You'll Learn</h2>
+        <p>This assessment will help you understand:</p>
+        <ul>
+          <li>Your current automation maturity level</li>
+          <li>Areas where automation can provide the most value</li>
+          <li>Potential challenges and how to address them</li>
+          <li>Recommended next steps for your automation journey</li>
+        </ul>
+        <h2>Assessment Categories</h2>
+        <p>The assessment covers several key areas:</p>
+        <ul>
+          <li><strong>Technology Infrastructure:</strong> Current systems, data quality, and technical capabilities</li>
+          <li><strong>Organizational Culture:</strong> Change readiness, innovation mindset, and learning culture</li>
+          <li><strong>Business Processes:</strong> Process maturity, standardization, and optimization opportunities</li>
+          <li><strong>Data & Analytics:</strong> Data availability, quality, and analytical capabilities</li>
+          <li><strong>Leadership & Strategy:</strong> Executive support, strategic alignment, and resource allocation</li>
+        </ul>
+        <h2>How to Use This Tool</h2>
+        <p>To get the most accurate results:</p>
+        <ol>
+          <li>Set aside 15-20 minutes for the assessment</li>
+          <li>Answer questions honestly based on your current situation</li>
+          <li>Consider involving key stakeholders for broader perspective</li>
+          <li>Review results with your team to develop action plans</li>
+        </ol>
+        <h2>Next Steps After Assessment</h2>
+<p>Once you complete the assessment, you'll receive:</p>
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
@@ -32,6 +68,24 @@ import { useRouter } from 'next/router';
       type: 'Framework',
       estimatedTime: '30 minutes',
 
+`,
+origin/cursor/automate-test-improve-and-merge-code-2533
+      features: [
+        'Comprehensive evaluation framework',
+        'Industry benchmarking',
+        'Actionable recommendations',
+        'Progress tracking',
+        'Resource library access',
+      ],
+    },
+    {
+      id: 'ai-maturity-model',
+      title: 'AI Maturity Model',
+      description:
+        'Assess your current AI capabilities and plan your transformation journey.',
+      type: 'Framework',
+      estimatedTime: '30 minutes',
+origin/cursor/automate-test-improve-and-merge-code-2533
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -59,6 +113,8 @@ import { useRouter } from 'next/router';
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
 
+<p>To effectively use this framework:</p>
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -89,6 +145,24 @@ import { useRouter } from 'next/router';
       type: 'Analytics Tool',
       estimatedTime: '20 minutes',
 
+`,
+origin/cursor/automate-test-improve-and-merge-code-2533
+      features: [
+        '5-level maturity framework',
+        'Multi-dimensional assessment',
+        'Gap analysis tools',
+        'Transformation roadmap',
+        'Progress tracking',
+      ],
+    },
+    {
+      id: 'performance-benchmark',
+      title: 'Performance Benchmarking Tool',
+      description:
+        'Compare your automation performance against industry standards.',
+      type: 'Analytics Tool',
+      estimatedTime: '20 minutes',
+origin/cursor/automate-test-improve-and-merge-code-2533
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -134,6 +208,8 @@ import { useRouter } from 'next/router';
         <h2>Action Planning</h2>
         <p>Based on benchmark results, develop action plans that include: </p>
 
+<p>Based on benchmark results, develop action plans that include:</p>
+origin/cursor/automate-test-improve-and-merge-code-2533
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -328,6 +404,20 @@ export default function ToolResourcePage(req, res) {
 
   ],
   const tool = tools.find(t => t.id === id),
+`,
+      features: [
+        'Industry benchmark database',
+        'Performance gap analysis',
+        'Trend analysis tools',
+        'Action planning framework',
+        'Progress tracking',
+      ],
+    },
+  ];
+
+  const tool = tools.find(t => t.id === id);
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!tool) {
     return (
       <>
@@ -344,6 +434,25 @@ export default function ToolResourcePage(req, res) {
 
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+<div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+          <main className='container mx-auto px-6 py-12'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <h1 className='text-4xl font-bold mb-6 text-white'>
+                Tool Resource Not Found
+              </h1>
+              <p className='text-xl text-white/80 mb-8'>
+                The tool resource you're looking for doesn't exist.
+              </p>
+
+
+
+
+                href="/resources"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+              <Link
+                href='/resources'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 ← Back to Resources
               </Link>
@@ -356,6 +465,8 @@ export default function ToolResourcePage(req, res) {
 
 }
 
+);
+  }
   return (
     <>
       <Head>
@@ -363,6 +474,9 @@ export default function ToolResourcePage(req, res) {
         <meta name="description" content={tool.description} />
         <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
         <meta property="og:description" content={tool.description} />
+<meta name='description' content={tool.description} />
+        <meta property='og:title' content={`${tool.title} | Zion Tech Group`} />
+        <meta property='og:description' content={tool.description} />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -394,6 +508,39 @@ export default function ToolResourcePage(req, res) {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                   <div
                     className="prose prose-invert max-w-none"
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <div className='max-w-4xl mx-auto'>
+            <nav className='mb-8'>
+              <Link
+                href='/resources'
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'
+              >
+                ← Back to Resources
+              </Link>
+            </nav>
+
+            <header className='mb-12'>
+              <div className='mb-6'>
+                <span className='px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30'>
+                  {tool.type}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                </span>
+              </div>
+              <h1 className='text-4xl font-bold mb-4 text-white'>
+                {tool.title}
+              </h1>
+              <p className='text-xl text-white/80 mb-4'>{tool.description}</p>
+              <div className='flex items-center gap-4 text-white/60'>
+                <span>Estimated time: {tool.estimatedTime}</span>
+              </div>
+            </header>
+
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12'>
+              <div className='lg:col-span-2'>
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>
+                  <div
+                    className='prose prose-invert max-w-none'
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
     console.error("Error:", error);
@@ -401,9 +548,13 @@ export default function ToolResourcePage(req, res) {
   }
 }
 
+
+
+
                   />
                 </div>
               </div>
+
 
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -522,6 +673,47 @@ export default function ToolResourcePage(req, res) {
                     <div>
                       <span className="text-white/60 text-sm">Time Required:</span>
                       <p className="text-white font-medium">{tool.estimatedTime}</p>
+                  </ul>
+                </div>
+
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
+                  <div className="space-y-3">
+<div className='space-y-6'>
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
+                  <h3 className='font-semibold text-green-400 text-lg mb-4'>
+                    Key Features
+                  </h3>
+                  <ul className='space-y-3'>
+                    {tool.features.map((feature, index) => (
+                      <li
+                        key={index}
+                        className='text-white/80 flex items-center gap-3'
+                      >
+                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+<div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20'>
+                  <h3 className='font-semibold text-blue-400 text-lg mb-4'>
+                    Tool Details
+                  </h3>
+                  <div className='space-y-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    <div>
+                      <span className='text-white/60 text-sm'>Type:</span>
+                      <p className='text-white font-medium'>{tool.type}</p>
+                    </div>
+                    <div>
+                      <span className='text-white/60 text-sm'>
+                        Time Required:
+                      </span>
+                      <p className='text-white font-medium'>
+                        {tool.estimatedTime}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -530,6 +722,16 @@ export default function ToolResourcePage(req, res) {
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+
+
+
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+<div className='text-center'>
+              <Link
+                href='/contact'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Started with Your Project
               </Link>
@@ -822,3 +1024,6 @@ if ( {) {
     </>);
 }
 
+
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

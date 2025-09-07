@@ -1,4 +1,24 @@
 
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Team - Zion Tech Group"
+      description="Meet our team"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
 
 import React from "react";
 import Head from "next/head";
@@ -23,6 +43,8 @@ import {
   Code,
 } from "lucide-react";
 import Layout from "../components/Layout";
+import SEO from '../components/SEO';
+origin/cursor/automate-test-improve-and-merge-code-2533
 const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -315,7 +337,6 @@ import {;
   Code,;
   Shield,;
 } from "lucide-react";
-import Layout from "../components/Layout";
 
 const teamMembers = [;
   {;
@@ -402,6 +423,9 @@ const teamMembers = [;
   },;
 ];
 
+export default function TeamPage() {
+  return (
+origin/cursor/automate-test-improve-and-merge-code-2533
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -959,3 +983,4 @@ const Page = () => {
 };
 
 export default Page;
+

@@ -49,6 +49,8 @@ export default function AiHrAnalyticsPlatform() {
 				"Headcount planning and skills inventory",
 				"Integrations: Workday, BambooHR, Greenhouse, Lever",
 				"Compensation benchmarking and ranges",
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Engagement drivers and action suggestions"
 			]  } catch (error) {
     console.error("Error:", error);
@@ -71,4 +73,5 @@ export default function AiHrAnalyticsPlatform() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

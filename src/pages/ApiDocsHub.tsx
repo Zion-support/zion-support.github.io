@@ -4,6 +4,46 @@ return (
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>"
         <p className="text-zinc-400 text-lg mb-12">"
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.'
+export function ApiDocsHub() {
+  const sections = [
+    {
+      title: "Getting Started",
+      description: "Learn how to authenticate and make your first API request",
+      icon: BookOpen,
+      path: "/developers/docs/getting-started",
+      color: "from-blue-500 to-cyan-500"},
+    {
+      title: "API Reference",
+      description: "Detailed documentation for all available endpoints",
+      icon: Code,
+      path: "/developers/docs/reference",
+      color: "from-purple-500 to-pink-500"},
+    {
+      title: "Webhooks",
+      description: "Subscribe to events and receive real-time updates",
+      icon: Webhook,
+      path: "/developers/docs/webhooks",
+      color: "from-green-500 to-emerald-500"},
+    {
+      title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+      icon: Zap,
+      path: "/docs/sample-code",
+      color: "from-yellow-500 to-orange-500"},
+    {
+      title: "Error Codes & Rate Limits",
+      description: "Understanding API errors and rate limiting",
+      icon: AlertCircle,
+  return (
+    <ApiDocsLayout>
+      <div className='max-w-4xl'>
+        <h1 className='text-4xl font-bold text-white mb-6'>
+          Zion AI Marketplace API
+        </h1>
+        <p className='text-zinc-400 text-lg mb-12'>
+          Welcome to the Zion AI Marketplace API documentation. Here you'll find
+          comprehensive guides and documentation to help you start working with
+          our API as quickly as possible.
         </p>
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -16,10 +56,20 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -36,6 +86,7 @@ import {;
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
 export function ApiDocsHub() {;
   const sections = [;,
+  const sections = [;
     {;
       title: 'Getting Started',;
       description: 'Learn how to authenticate and make your first API request',;
@@ -72,6 +123,7 @@ export function ApiDocsHub() {;
       color: 'from-red-500 to-rose-500',;
     },;
   ];
+
   return (
     <ApiDocsLayout>;
       <div className='max-w-4xl'>;
@@ -160,6 +212,70 @@ import React from "react",
 import Link from "next/link",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+
+import React from "react",;
+import Link from "next/link";
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+export function ApiDocsHub() {
+  const sections = null;
+import React from 'react'
+import Link from 'next/link'
+origin/cursor/automate-test-improve-and-merge-code-2533
+import {
+  ArrowRight
+  BookOpen
+  Code
+  Webhook
+  AlertCircle
+  Zap
+} from 'lucide-react'
+import ApiDocsLayout from '@/components/developers/ApiDocsLayout'
+export function ApiDocsHub() {
+  const sections = [
+    {
+      title: 'Getting Started'
+      description: 'Learn how to authenticate and make your first API request'
+      icon: BookOpen
+      path: '/developers/docs/getting-started'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      title: 'API Reference'
+      description: 'Detailed documentation for all available endpoints'
+      icon: Code
+      path: '/developers/docs/reference'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      title: 'Webhooks'
+      description: 'Subscribe to events and receive real-time updates'
+      icon: Webhook
+      path: '/developers/docs/webhooks'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      title: 'Sample Code'
+      description: 'Examples in JavaScript, Python, and Node.js'
+      icon: Zap
+      path: '/docs/sample-code'
+      color: 'from-yellow-500 to-orange-500'
+    }
+    {
+      title: 'Error Codes & Rate Limits'
+      description: 'Understanding API errors and rate limiting'
+      icon: AlertCircle
+      path: '/developers/docs/errors'
+      color: 'from-red-500 to-rose-500'
+    }
+  ]
+
+
+import React from "react",;
+import Link from "next/link",;
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+xport function ApiDocsHub() {
 export function ApiDocsHub() {
   const sections = [
     {
@@ -210,6 +326,27 @@ export function ApiDocsHub() {
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
                 <section.icon className="h-6 w-6 text-white" />
+      path: '/developers/docs/errors',
+      color: 'from-red-500 to-rose-500',
+    },
+  ]
+      path: "/developers/docs/errors",
+      color: "from-red-500 to-rose-500"}],
+
+  return (
+      path: "/developers/docs/errors",
+      color: "from-red-500 to-rose-500"}],
+    <ApiDocsLayout>;
+      <div className='max - w-4xl'>;
+        <h1 className='text - 4xl font - bold text - white mb - 6'>;
+          Zion AI Marketplace API;
+        </h1>;
+        <p className='text - zinc - 400 text - lg mb - 12'>;
+          Welcome to the Zion AI Marketplace API documentation. Here you'll find;
+          comprehensive guides and documentation to help you start working with;
+          our API as quickly as possible.;
+        </p>;
+
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
               <p className="text-zinc-400 mb-4">{section.description}</p>
@@ -250,6 +387,19 @@ export function ApiDocsHub() {
       </div>
     </ApiDocsLayout>
   )
+
+          </p>
+          <Link
+            href='/developers/portal'
+            className='inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors'
+          >
+            Go to Developer Portal
+            <ArrowRight className='ml-2 h-4 w-4' />
+          </Link>
+        </div>
+      </div>
+        </div>;
+
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
@@ -381,4 +531,8 @@ export default ApiDocsHub;
 }}})
 }
 ;
+    </ApiDocsLayout>
+  );
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default ApiDocsHub;

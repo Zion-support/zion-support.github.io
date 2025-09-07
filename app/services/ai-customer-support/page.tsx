@@ -4,8 +4,12 @@ export const metadata = {
   title: 'AI Customer Support | Zion Tech Group',
   description: 'Intelligent customer support automation with AI chatbots, sentiment analysis, and 24/7 multilingual support. Reduce support costs by 70% while improving satisfaction.',
 };
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-export default function AICustomerSupportPage() {
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = {
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Hero Section */}
@@ -391,6 +395,15 @@ function TestimonialCard({ name, role, company, content, avatar }: {
         </div>
       </div>
       <p className="text-gray-600 italic">"{content}"</p>
+    </div>
+  );
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

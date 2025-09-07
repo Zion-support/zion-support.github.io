@@ -78,6 +78,7 @@ import { format } from 'date-fns',;
 import { Skeleton } from '@/components/ui/skeleton',;
     title: string;
   }
+  milestone: {  }
   created_by_profile: {
     display_name: string,
     avatar_url: string | null;
@@ -87,6 +88,37 @@ export /**
  * MilestoneActivities - Function description
  */
 function MilestoneActivities() {
+
+import {supabase} from '@/integrations / supabase / client';''
+import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';''
+import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';''
+import {format} from 'date - fns';''
+import {Skeleton} from '@/components / ui / skeleton';'
+interface MilestoneActivitiesProps {
+  // TODO: Implement
+}
+  project_id: string;
+interface Activity {
+  // TODO: Implement
+  id: string;,
+  milestone_id: string;
+  user_id: string;,
+  action: string;
+  previous_status: string | null;,
+  new_status: string;
+  comment: string | null;,
+  created_at: string;
+  milestone: {
+
+
+
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
+
+pr-12325
+</Activity>
+
   const [activities, set_activities] = useState < Activity[]>([]);
   const [is_loading, setIsLoading] = useState (true);
 ;
@@ -111,6 +143,25 @@ function fetch_activities() {
 if (throw error) {
   $2
 }
+ * fetch_activities - Function description;
+ */
+function fetch_activities() {
+      try {
+  // TODO: Implement
+        setIsLoading (true);
+        const { data, error } = await supabase;
+          .from ('milestone_activities');
+          .select (`;
+            *;)
+            milestone: milestone_id (title),
+            created_by_profile:profiles ! user_id (display_name, avatar_url);`;
+          `);
+          .eq ('project_id', project_id);
+          .order ('created_at', { ascending: false }),
+        // Check condition;
+if (throw error) {
+  $2;
+pr-12325
         set_activities (data || []);
       } catch (err) {
         console.error ('Error fetching milestone activities:', err);
@@ -118,6 +169,34 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+  // TODO: Implement
+
+  // TODO: Implement
+}
+        setIsLoading (true);
+;
+        const { data, error } = await supabase;'
+          .from ('milestone_activities');'
+
+          .select (`;
+            *;)
+            milestone: milestone_id (title),
+            created_by_profile:profiles ! user_id (display_name, avatar_url);
+
+          `);'
+          .eq ('project_id', project_id);''
+          .order ('created_at', { ascending: false }),'
+        // Check condition;
+if (throw error) {
+  $2;
+}
+        set_activities (data || []);
+      } catch (err) {'
+        console.error ('Error fetching milestone activities:', err);'
+      } finally {
+  // TODO: Implement
+}
+        setIsLoading (false);
 
 import {supabase} from '@/integrations/supabase/client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -132,6 +211,9 @@ interface MilestoneActivitiesProps {;
   projectId: string;
 }
 ;
+
+pr-12325
+
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -146,12 +228,22 @@ interface Activity {;
   };
 },;
   created_by_profile: {;
+    title: string
+};  created_by_profile: {;
     display_name: string,;
+
+  milestone: {;,
+  title: string;
+  };
+  created_by_profile: {;,
+  display_name: string,;
     avatar_url: string | null;
+
   }
 }
 
 export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
+
   const [activities, setActivities] = useState<Activity[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -217,6 +309,7 @@ if (projectId) {;
         console.error('Error fetching milestone activities:', err)
       } finally {
       }
+        setIsLoading(false);      }
     }
     if (projectId) {
       fetchActivities()
@@ -277,6 +370,7 @@ return activity.action.replace(/_/g, ' ');
 
         return activity.action.replace(/_/g, ' ');
     }
+          </Card>    }
   }
 
   if (isLoading) {
@@ -290,6 +384,43 @@ return activity.action.replace(/_/g, ' ');
                 <div className="space-y-2">
                   <Skeleton className="h-4 w-40" />
                   <Skeleton className="h-4 w-60" />
+</Activity>'
+      <div className="space-y-4">"
+</div>
+          <Card key={i}>
+</Card>"
+            <CardContent className="p-6">"
+</CardContent>"
+              <div className="flex items-center space-x-4">"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />"
+</Skeleton>"
+                <div className="space-y-2">"
+</div>"
+                  <Skeleton className="h-4 w-40" />"
+</Skeleton>"
+                  <Skeleton className="h-4 w-60" />"
+</Skeleton>
+                </div>
+              </div>
+            </CardContent>
+          </Card>"
+      <div className="space-y-4">"
+</div>
+          <Card key={i}>
+</Card>"
+            <CardContent className="p-6">"
+</CardContent>"
+              <div className="flex items-center space-x-4">"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />"
+</Skeleton>"
+                <div className="space-y-2">"
+</div>"
+                  <Skeleton className="h-4 w-40" />"
+</Skeleton>"
+                  <Skeleton className="h-4 w-60" />"
+</Skeleton>
                 </div>
               </div>
             </CardContent>
@@ -395,6 +526,26 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                 <div className="space-y-2">;
                   <Skeleton className="h-4 w-40" />;
                   <Skeleton className="h-4 w-60" />;
+      </div>
+  const [activities, setActivities] = useState<Activity[]>([]),;
+</Activity>"
+      <div className="space-y-4">;"
+</div>
+          <Card key={i}>;
+</Card>"
+            <CardContent className="p-6">;"
+</CardContent>"
+              <div className="flex items-center space-x-4">;"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />;"
+</Skeleton>"
+                <div className="space-y-2">;"
+</div>"
+                  <Skeleton className="h-4 w-40" />;"
+</Skeleton>"
+                  <Skeleton className="h-4 w-60" />;"
+</Skeleton>
+
                 </div>;
               </div>;
             </CardContent>;
@@ -551,6 +702,7 @@ if (activities.length === 0) {
 }
           </div>;
         </CardContent>;
+      </Card>;        </CardContent>;
       </Card>;
     </div>;
   );
@@ -585,63 +737,107 @@ if ( {) {
     return (
       <div className="space - y-4">;
         {[1, 2, 3].map ((i) => (
+  milestone: {;,
+  title: string;
+  };
+  created_by_profile: {;,
+  display_name: string,;
+    avatar_url: string | null;
+
+export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
+
+      <div className="space-y-4">"
+
+      </div>;"
+      <div className="space-y-4">;"
+</div>
           <Card key={i}>;
-            <CardContent className="p - 6">;
-              <div className="flex items - center space - x-4">;
-                <Skeleton className="h - 10 w - 10 rounded - full" />;
-                <div className="space - y-2">;
-                  <Skeleton className="h - 4 w - 40" />;
-                  <Skeleton className="h - 4 w - 60" />;
+</Card>"
+            <CardContent className="p-6">;"
+</CardContent>"
+              <div className="flex items-center space-x-4">;"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />;"
+</Skeleton>"
+                <div className="space-y-2">;"
+</div>"
+                  <Skeleton className="h-4 w-40" />;"
+</Skeleton>"
+                  <Skeleton className="h-4 w-60" />;"
+</Skeleton>
                 </div>;
               </div>;
             </CardContent>;
-          </Card>))}
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
+          </Card>;
+      </div>;
       <Card>;
-        <CardContent className="p - 6 text - center">;
-          <p className="text - muted - foreground py - 8">No activity found for this project</p>;
+</Card>"
+        <CardContent className="p-6 text-center">;"
+</CardContent>"
+          <p className="text-muted-foreground py-8">No activity found for this project</p>;"
         </CardContent>;
-      </Card>);
-  }
-  return (
-    <div className="space - y-4">;
-      <Card>;
-        <CardHeader>;
-          <CardTitle > Project Activity</CardTitle>;
-        </CardHeader>;
-        <CardContent className="p - 6">;
-          <div className="space - y-6">;
-            {activities.map ((activity) => (
-              <div key={activity.id} className="flex items - start space - x-4">;
-                <Avatar className="h - 10 w - 10">;
-                  <AvatarImage src={activity.created_by_profile?.avatar_url || ''} alt="User" />;
-                  <AvatarFallback>;
-                    {activity.created_by_profile?.display_name?.char_at (0) || '?'}
-                  </AvatarFallback>;
-                </Avatar>;
-                <div className="space - y-1">;
-                  <div className="flex items - center space - x-2">;
-                    <span className="font - medium">{activity.created_by_profile?.display_name}</span>;
-                    <span className="text - muted - foreground text - sm">;
-                      {getActivityDescription (activity)}
-                    </span>;
-                    <span className="text - muted - foreground text - xs">;
-                      {format (new Date (activity.created_at), 'MMM d, yyyy h:mm a')}
-                    </span>;
-                  </div>;
-                  <p className="text - sm">;
-                    <span className="font - medium">{activity.milestone?.title}</span>;
-                    {activity.comment && (
-                      <span className="ml - 2 text - muted - foreground">"{activity.comment}"</span>)}
-                  </p>;
+      </Card>;"
+    <div className="space-y-4">;"
+</div>
+          <Card key={i}>
+"
+            <CardContent className="p-6">"
+              <div className="flex items-center space-x-4">"
+</div>"
+                <Skeleton className="h-10 w-10 rounded-full" />"
+                <div className="space-y-2">"
+                  <Skeleton className="h-4 w-40" />"
+                  <Skeleton className="h-4 w-60" />"
+
+            
+
+            
+          
+  const [activities, setActivities] = useState<Activity[]>([]),;
+      <div className="space-y-4">;"
+          <Card key={i}>;
+            <CardContent className="p-6">;"
+              <div className="flex items-center space-x-4">;"
+                <Skeleton className="h-10 w-10 rounded-full" />;"
+                <div className="space-y-2">;"
+                  <Skeleton className="h-4 w-40" />;"
+                  <Skeleton className="h-4 w-60" />;"
+
                 </div>;
-              </div>))}
+      </div>;"
+
+      <Card>;
+        <CardContent className="p-6 text-center">;"
+          <p className="text-muted-foreground py-8">No activity found for this project</p>;"
+      ;"
+
+        <CardHeader>;
+
+          <CardTitle>Project Activity;
+          <div className="space-y-6">;"
+              <div key={activity && activity.id} className="flex items-start space-x-4">;"
+                <Avatar className="h-10 w-10">;"
+                  <AvatarImage src={activity && activity.created_by_profile?.avatar_url || } alt="User" />;"
+
+                  <AvatarFallback>;
+
+                <div className="space-y-1">;"
+                  <div className="flex items-center space-x-2">;"
+                    <span className="font-medium">{activity && activity.created_by_profile?.display_name}</span>;""
+                    <span className="text-muted-foreground text-sm">;"
+</span>
+                    </span>;"
+                    <span className="text-muted-foreground text-xs">;"
+                    </span>;
+                  <p className="text-sm">;"
+</p>"
+                    <span className="font-medium">{activity && activity.milestone?.title}</span>;""
+                      <span className="ml-2 text-muted-foreground">"{activity && activity.comment}"</span>;"
+                  </p>;
+    </div>;"`;
+pr-12325
+                </div>;
+              </div>;
           </div>;
         </CardContent>;
       </Card>;
@@ -676,3 +872,5 @@ default: return activity.action.replace (/ /g, ' ')
   );
 }
 ;
+    </div>;"
+

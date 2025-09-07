@@ -59,14 +59,39 @@ interface SmartContractBuilderProps {
 
   onDeploy?: (contractContent: string) => void
 }
+  // TODO: Implement
+}
+  isOpen: boolean;,
+  onClose: () => void;
+  talent: TalentProfile;,
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void;
+  onDeploy?: (contractContent: string) => void;
+import {useState} from "react";""
+import {Dialog, DialogContent} from "@/components/ui/dialog";""
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";""
+import {Button} from "@/components/ui/button";""
+import {Save} from "lucide-react";""
+import {TalentProfile} from "@/types/talent";""
+import {ContractForm, ContractFormValues} from "./components/ContractForm";""
+import {ContractPreview} from "./components/ContractPreview";""
+import {TemplateManager} from "./templates/TemplateManager";""
+import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";""
+import {useSmartContracts} from "@/hooks/useSmartContracts";""
+import {toast} from "sonner";"
+pr-12325
+
 interface SmartContractBuilderProps {;
   isOpen: boolean,;
   onClose: () => void,;
   talent: TalentProfile,;
   clientName: string,;
-  onContractGenerated?: (contractContent: string) => void,;
-  onDeploy?: (contractContent: string) => void;
+  onContractGenerated?: (contractContent: string) => void,;}
+  onDeploy?: (contractContent: string) => void;}
 }
+export function SmartContractBuilder(): any ({;
+
+export function SmartContractBuilder({;export function SmartContractBuilder({;
 
 export function SmartContractBuilder(): any ({;
 
@@ -97,6 +122,9 @@ interface SmartContractBuilderProps {
 
 export function SmartContractBuilder({;
 export function SmartContractBuilder({;
+export function SmartContractBuilder({;
+pr-12325
+export function SmartContractBuilder({;export function SmartContractBuilder({;
   isOpen;
   onClose;
   talent;
@@ -136,6 +164,7 @@ const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
+  onContractGenerated;  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
 
     network: 'ethereum'
     useEscrow: true
@@ -189,6 +218,7 @@ const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
     try {;
 
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
+    try {      const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
       if (onContractGenerated) {;
@@ -228,12 +258,58 @@ function SmartContractBuilder() {
     deployToChain: false;
   });
   const [deploy_status, setDeployStatus] = useState < string>('');
+
+  onContractGenerated;
+  onDeploy;)
+}: SmartContractBuilderProps) {;"
+  const [activeTab, setActiveTab] = useState<string>("form");"
+</string>
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+</string>"
+  const [activeTab, setActiveTab] = useState<string>("form"),"
+</string>
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
+</string>
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+</ContractFormValues>
+  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
+</DeploymentOptions>)"
+  const [deployStatus, setDeployStatus] = useState<string>(''),'
+</string>
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
+</SmartContractInfo>
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+</ContractFormValues>
+  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({;
+</DeploymentOptions>)'
+  const [deployStatus, setDeployStatus] = useState<string>('');'
+</string>
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
+</SmartContractInfo>'
+  const [active_tab, setActiveTab] = useState < string>("form");"
+
+  const [generated_contract, setGeneratedContract] = useState < string | null>(null);
+  const [form_values, setFormValues] = useState < ContractFormValues | undefined>()
+    undefined);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
+
+  const [deploy_options, setDeployOptions] = useState < DeploymentOptions>({"
+    network: 'ethereum','
+    use_escrow: true,
+    deployToChain: false;)
+  });'
+  const [deploy_status, setDeployStatus] = useState < string>('');'
+
   const [deployment_info, setDeploymentInfo] = useState < SmartContractInfo | null>(null);
 ;
   const { generateSolidityContract, deploySmartContract, deployment_status } = useSmartContracts ();
 ;
+
   const handleLoadTemplate = (template_data: ContractFormValues) =>: any {
+  // TODO: Implement
+}
     setFormValues (template_data);
+
   }
 ;
   // Convert ContractFormValues to contract content string;
@@ -285,6 +361,11 @@ if ( {) {
         setDeployStatus('deployed'),
         toast.success("Smart contract deployed successfully!")
 ;
+      }      }
+    } catch (error) {
+      console.error("Error generating contract:", error),
+      toast.error("Failed to generate smart contract")
+    };
   const handleDeployContract = async () => {
     // Check condition
 if (return) {
@@ -336,6 +417,9 @@ if (contractInfo) {
     setActiveTab("preview")
   }
   };
+  }
+};
+
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -361,10 +445,155 @@ interface SmartContractBuilderProps {;
 }
 ;
 export function SmartContractBuilder({;
+  onContractGenerated;
+  onDeploy;)
+}: SmartContractBuilderProps) {;"
+  const [activeTab, setActiveTab] = useState<string>("form");"
+</string>
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+</string>"
+  const [activeTab, setActiveTab] = useState<string>("form"),"
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+
+  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
+)"
+  const [deployStatus, setDeployStatus] = useState<string>(),
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
+
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+
+  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({;
+)
+  const [deployStatus, setDeployStatus] = useState<string>();
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
+
+  const [active_tab, setActiveTab] = useState < string>("form");"
+  const [generated_contract, setGeneratedContract] = useState < string | null>(null);
+  const [form_values, setFormValues] = useState < ContractFormValues | undefined>()
+    undefined);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
+  const [deploy_options, setDeployOptions] = useState < DeploymentOptions>({"
+    network: 'ethereum',
+    use_escrow: true,
+    deployToChain: false;)
+  });
+  const [deploy_status, setDeployStatus] = useState < string>();
+  const [deployment_info, setDeploymentInfo] = useState < SmartContractInfo | null>(null);
+;
+  const { generateSolidityContract, deploySmartContract, deployment_status } = useSmartContracts ();
+  const handleLoadTemplate = (template_data: ContractFormValues) =>: any {
+  // TODO: Implement
+    setFormValues (template_data);
+  // Convert ContractFormValues to contract content string;
+  const handleContractGenerated = async (form_values: ContractFormValues) => {
+    // Check condition;
+
+if (return, ) {
+  $2;
+
+}
+    try {
+  // TODO: Implement
+      const generatedContractText = await generateSolidityContract (form_values, talent, client_name);
+      setGeneratedContract (generatedContractText);
+
+      setGeneratedContract (generatedContractText);'
+      setActiveTab ("preview");"
+      // Check condition;
+if ( {) {
+        onContractGenerated (generatedContractText);
+
+      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
+      setGeneratedContract(generatedContractText),"
+      setActiveTab("preview"),"
+      if (onContractGenerated) {
+        onContractGenerated(generatedContractText)
+    } catch (error) {"
+      console.error("Error generating contract:", error),""
+      toast.error("Failed to generate smart contract")"
+
+  },
+  
+  const handleDeployContract = async () => {
+    if (!generatedContract) return,
+    
+  // TODO: Implement
+}"
+      setDeployStatus('deploying'),
+      const contractInfo = await deploySmartContract(generatedContract, deployOptions),
+      
+
+
+      if (contractInfo) {
+        setDeploymentInfo(contractInfo),
+        setDeployStatus('deployed'),
+        toast.success("Smart contract deployed successfully!")"
+    // Check condition;
+if (return) {
+  $2;
+
+}
+    try {
+  // TODO: Implement
+      setDeployStatus ('deploying');
+      const contract_info = await deploySmartContract (generated_contract, deploy_options);
+      // Check condition;
+        setDeploymentInfo (contract_info);
+        setDeployStatus ('deployed');
+
+if ( {) {
+  $2;
+}
+        setDeploymentInfo (contract_info);'
+        setDeployStatus ('deployed');''
+        toast.success ("Smart contract deployed successfully!");"
+      } else {
+  // TODO: Implement
+        setDeployStatus ('error');
+        toast.error ("Failed to deploy smart contract");"
+    } catch (error) {
+
+      }
+    } catch (error) {}
+  }
+
+  };
+
+
+"
+      console.error("Error deploying contract:", error),""
+      setDeployStatus('error'),
+      toast.error("Failed to deploy smart contract")""
+import { useState } from "react",;""
+import { Dialog, DialogContent } from "@/components/ui/dialog",;""
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;""
+import { Button } from "@/components/ui/button",;""
+import { Save } from "lucide-react",;""
+import { TalentProfile } from "@/types/talent",;""
+import { ContractForm, ContractFormValues } from "./components/ContractForm",;""
+import { ContractPreview } from "./components/ContractPreview",;""
+import { TemplateManager } from "./templates/TemplateManager",;""
+import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",;""
+import { useSmartContracts } from "@/hooks/useSmartContracts",;""
+import { toast } from "sonner",;"
+pr-12325
+
+interface SmartContractBuilderProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  talent: TalentProfile,;
+  clientName: string,;
+  onContractGenerated?: (contractContent: string) => void,;}
+  onDeploy?: (contractContent: string) => void;}
+}
+;
+export function SmartContractBuilder({;
   isOpen,;
   onClose,;
   talent,;
   clientName,;
+
   onContractGenerated,;
   onDeploy;
 }: SmartContractBuilderProps) {;
@@ -440,6 +669,7 @@ console.error ("Error deploying contract:", error);
     }
   }
     } catch (error) {;
+    setActiveTab("preview")    } catch (error) {;
       console && console.error("Error generating contract:", error);
       toast && toast.error("Failed to generate smart contract");
     }
@@ -587,6 +817,10 @@ export function SmartContractBuilder({;
   };
   return (;
   return (
+    setActiveTab("preview")
+};
+
+  return (  return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -649,13 +883,57 @@ if ( {) {
   }
                 Templates;
               </Button>;
+            </TabsList>;                  generatedContract={generatedContract}
+                  talent={talent}
+  onDeploy;)
+}: SmartContractBuilderProps) {;"
+  const [activeTab, setActiveTab] = useState<string>("form"),;"
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
+
+  const [deployStatus, setDeployStatus] = useState<string>(),;
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),;
+
+    <Dialog open={isOpen} onOpenChange={onClose}>
+
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">"
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">"
+          <div className="flex justify-between items-center">"
+</div>"
+            <TabsList className="grid grid-cols-2">"
+              <TabsTrigger value="form">Contract Details""
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview"
+            <div className="flex gap-2">"
+</div>
+              <Button;"
+                variant="outline"""
+                size="sm""
+                onClick={() => setTemplateManagerOpen(true)}
+                <Save className="h-4 w-4" />"
+
+              
+          <TabsContent value="form" className="pt-4">"
+
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;"
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;"
+          <div className="flex justify-between items-center">;"
+            <TabsList className="grid grid-cols-2">;"
+              <TabsTrigger value="form">Contract Details;""
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview;"
+            ;"
+            <div className="flex gap-2">;"
+                <Save className="h-4 w-4" />;"
+
             </div>;
-          </div>;
+          </div>;"
+          <TabsContent value="form" className="pt - 4">;"
 
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
 
             <ContractForm 
+            <ContractForm;
+
 
               talent={talent}
               client_name={client_name}
@@ -673,15 +951,17 @@ if ( {) {
               onDeployOptionsChange={setDeployOptions}
 
             />;
-          </TabsContent>;
 
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
+          <TabsContent value="preview" className="pt-4">;"
+
               <div>;
 
                 <ContractPreview
 <ContractPreview
+                <ContractPreview;
                   generatedContract={generatedContract}
+pr-12325
+
                   talent={talent}
                   onClose={onClose}
                   deployStatus={deployStatus}
@@ -708,14 +988,11 @@ if ( {) {
               <div>
 
             />;
+                />;
+
+                {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
+                  <div className="mt-6 flex justify-center">;            />;
           </TabsContent>;
-                <ContractPreview
-
-                <ContractPreview 
-
-                  generatedContract={generatedContract}
-                  talent={talent}
-          ;
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
               <div>;
@@ -801,7 +1078,33 @@ if ( {) {
           <TabsContent value="preview" className="pt - 4">;
             {generated_contract && (
               <div>;
+</ContractPreview>"
+                  <div className="mt-6 flex justify-center">;"
+</div>
+                    <Button;
+                      onClick={handleDeployContract}"
+                      disabled={deployStatus === 'deploying'}''
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;"
+</Button>
+                    </Button>;
+                  </div>;
+              </div>;
+          </TabsContent>;
+        </Tabs>;
+              </div>;
+        <TemplateManager;
+          isOpen={templateManagerOpen}
+          onClose={() => setTemplateManagerOpen(false)}
+</TemplateManager>
+      </DialogContent>;
+    </Dialog>;
+          </TabsContent>;"
+          <TabsContent value="preview" className="pt - 4">;"
+</TabsContent>
+              <div>;
+</div>
                 <ContractPreview;
+
                   generated_contract={generated_contract}
                   talent={talent}
                   on_close={on_close}
@@ -809,13 +1112,24 @@ if ( {) {
                   deployment_info={deployment_info}
                 />;
                 {!deployment_info && deploy_options.deployToChain && (
-                  <div className="mt - 6 flex justify - center">;
+                  <div className="mt - 6 flex justify-center">;
                     <Button;
                       on_click={handleDeployContract}
                       disabled={deploy_status === 'deploying'}
-                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
+                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo-700";
                     >;
                       {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+
+</ContractPreview>"
+                  <div className="mt - 6 flex justify - center">;"
+</div>
+                    <Button;
+                      on_click={handleDeployContract}"
+                      disabled={deploy_status === 'deploying'}''
+                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";"
+                    >;
+</Button>
+
                     </Button>;
                   </div>)}
               </div>)}
@@ -833,6 +1147,7 @@ if ( {) {
 
 ;
   ),; interface SmartContractBuilderProps {
+}  ),; interface SmartContractBuilderProps {
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -883,7 +1198,7 @@ if (contractInfo) {
 };
 //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {
   setGeneratedContract (contract);
-setActiveTab ("preview");
+setActiveTab ("preview")
 };
   talent 
 }clientName= {
@@ -928,6 +1243,66 @@ setActiveTab ("preview");
   )
 }
         />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+                  <div className="mt-6 flex justify-center">;"
+                    <Button;
+                      onClick={handleDeployContract}"
+                      disabled={deployStatus === 'deploying'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;"
+
+        <TemplateManager;
+          isOpen={templateManagerOpen}
+          onClose={() => setTemplateManagerOpen(false)}
+
+          <TabsContent value="preview" className="pt - 4">;"
+
+                  generated_contract={generated_contract}
+                  on_close={on_close}
+                  deploy_status={deploy_status}
+                  deployment_info={deployment_info}
+                  <div className="mt - 6 flex justify - center">;"
+                      on_click={handleDeployContract}"
+                      disabled={deploy_status === 'deploying'}
+                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";"
+                    >;
+
+                  </div>)}
+          is_open={templateManagerOpen}
+          on_close={() => setTemplateManagerOpen (false)}
+
+    );
+
+          on_close={() => setTemplateManagerOpen (false)}
+</TemplateManager>
+      </DialogContent>;
+    </Dialog>);
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
+
+const [deployOptions, setDeployOptions] = useState<DeploymentOptions> ({
+const [deployStatus, setDeployStatus] = useState<string> ();
+const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null> (null);
+
+}/>  <div> <ContractPreview generatedContract= {
+} </div>) 
+}</div>) 
+}  <TemplateManager isOpen= {
+  templateManagerOpen;
+}onClose= {
+  () => setTemplateManagerOpen (false) 
+
+}/>  ) 
+      
+    
+pr-12325
+</TemplateManager>
+
+}/> </DialogContent> </Dialog>) 
+      </DialogContent>
+    </Dialog>
       </DialogContent>;
     </Dialog>;
   );

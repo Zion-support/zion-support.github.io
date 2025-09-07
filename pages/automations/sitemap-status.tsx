@@ -67,6 +67,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
 },
 
 export default SitemapStatus
+
+
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
     const raw = fs.readFileSync(p, 'utf8'),
@@ -99,3 +101,8 @@ urlCount = (raw.match(/<url>/g) || []).length
     urlCount = (raw.match(/<url>/g) || []).length
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+type Props = any;
+origin/cursor/automate-test-improve-and-merge-code-2533

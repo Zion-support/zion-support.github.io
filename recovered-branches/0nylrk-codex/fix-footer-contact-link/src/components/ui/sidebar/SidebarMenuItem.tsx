@@ -1,6 +1,21 @@
-import React from "react";
 import { cn } from "@/lib/utils";
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import {cn} from "@/lib/utils";
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import {cn} from "@/lib/utils";
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+
+import {cn} from "@/lib/utils";
+import React from "react",;
+import { cn } from "@/lib/utils",interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string;
   children?: React.ReactNode;
 }
@@ -14,6 +29,8 @@ export function SidebarMenuItem({
     <li className={cn("", className)} {...props}>
       {children}
 
+  className?: string;
+  children?: React && React.ReactNode;
 export function SidebarMenuItem(): any ({ className, children, ...props }: SidebarMenuItemProps) {;
   return (
     <li
@@ -53,3 +70,17 @@ export function SidebarMenuItem({
 ;
     </li>);
 }
+import React from "react";""
+import { cn } from "@/lib/utils";"
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+"
+    <li className={cn("", className)} {...props}>"
+</li>
+    <li;"
+      className={cn("", className)}"
+      {...props}>;
+    </li>;
+    </li>);
+    </li>"
+    </li>);"
+pr-12325

@@ -12,6 +12,15 @@ export default function WhitepaperPreview() {;
 
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
+
+import {useRouter} from 'next/router';
+import {useEffect, useState} from 'react';
+
+export default function WhitepaperPreview() {;
+
+
+import { useRouter } from 'next/router',;
+import { useEffect, useState } from 'react',;
 export default function WhitepaperPreview() {
   const router = useRouter(),
   const { id } = router.query,
@@ -46,6 +55,11 @@ export default function WhitepaperPreview() {
   }, [id]);
   if (notFound);
 
+.then(r => (r.ok ? r.json() : Promise.reject()))
+      .then(d => setMarkdown(d.markdown || ''))
+origin/cursor/automate-test-improve-and-merge-code-2533
+      .catch(() => setNotFound(true));
+  }, [id]);
     return (
       <div className='container mx-auto px-4 py-6'>;
         Preview not available or expired.;
@@ -175,6 +189,11 @@ export default function WhitepaperPreview(req, res) {
   if (!markdown)
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
 
+
+
+
+  if (!markdown)
+    return <div className='container mx-auto px-4 py-6'>Loading…</div>;
   return (
     <div className='container mx-auto px-4 py-6'>
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
@@ -198,3 +217,5 @@ export default function WhitepaperPreview(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

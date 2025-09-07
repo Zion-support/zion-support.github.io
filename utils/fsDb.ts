@@ -40,6 +40,7 @@ read: (path: string) => null,
 
 
 import { promises as fs } from 'fs';
+
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
@@ -114,7 +115,11 @@ export function writeJson<T>(relativePath: string, value: T): void {
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
+}
+
+
   read: (path: string) => null,
+
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
@@ -133,6 +138,7 @@ export const fs_db = {
 
 
 }
+
 
 
 

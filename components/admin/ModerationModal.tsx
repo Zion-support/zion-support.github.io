@@ -4,13 +4,13 @@ export type ModerationModalProps = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -21,7 +21,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
   onAction: (;
-    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    action: 'approve' | 'remove' | 'warn' | 'ban';,;
     adminNotes?: string;
   ) => Promise<void>;
 export default function ModerationModal(): any ({;
@@ -30,11 +30,14 @@ export default function ModerationModal(): any ({;
   onAction,;
 }: ModerationModalProps) {;
 
+
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
   flag,
   onClose,
   onAction,
@@ -43,15 +46,15 @@ export default function ModerationModal(): any ({;
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -62,10 +65,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
+pr-12243
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -77,6 +80,7 @@ export type ModerationModalProps = {;
           <button
             onClick={onClose}
 
+pr-12243
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -131,6 +135,7 @@ export type ModerationModalProps = {;
               Admin Notes;
             </label>;
 
+pr-12243
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -168,10 +173,12 @@ export type ModerationModalProps = {;
     </div>;
   );
 
+
+pr-12243
 export type ModerationModalProps = {
-  flag: any | null,
-  onClose: () => void,
-  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
+  flag: any | null;,
+  onClose: () => void;,
+  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban';, adminNotes?: string) => Promise<void>
 };
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState('');
@@ -204,7 +211,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
           <div>
             <div className="text-gray-500 mb-1">Preview</div>
-            <div className="border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet}</div>
+            <div className="border rounded p-3 bg-gray-50 dark: bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet;}</div>
           </div>
           <div className="grid grid-cols-3 gap-4">
             <div className="p-3 border rounded">
@@ -226,6 +233,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
+pr-12243
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
@@ -236,10 +244,11 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
     </div>
   );
 );
+pr-12243
 }
   on_close: () => void;
   on_action: (
-    action: 'approve' | 'remove' | 'warn' | 'ban',
+    action: 'approve' | 'remove' | 'warn' | 'ban';,
     admin_notes?: string) => Promise < void>;
 ;
 export default /**
@@ -355,15 +364,21 @@ if (return null) {
       </div>;
     </div>);
 }
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+
+  );
+
 
 );
   );
 
-import React, { useState } from 'react';
 export type ModerationModalProps = {;
 
 export type ModerationModalProps = {
   flag: any | null;
+export type ModerationModalProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -381,6 +396,7 @@ export default function ModerationModal({
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -474,7 +490,8 @@ export default function ModerationModal({
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
-          </button>        </div>
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -488,3 +505,7 @@ export default function ModerationModal({
 );
 }
 );
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

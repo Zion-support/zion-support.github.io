@@ -24,6 +24,16 @@ declare global {
   var __assign: any,
   var __rest: any,
   var __decorate: any,
+
+  var webpackChunk_N_E: any[]
+  var __webpack_require__: any
+  var __webpack_exports__: any
+  var __non_webpack_require__: any
+  var __extends: any
+  var __assign: any
+  var __rest: any
+  var __decorate: any
+
   var __awaiter: any
 }
 // CRITICAL: Self polyfill - must be first,
@@ -57,6 +67,7 @@ if ( {) {
     // Last resort - create minimal self object
     (globalThis as,  any).self = {}
   }
+
 // Ensure self is properly referenced
 const selfRef: any =,
   typeof self !== 'undefined''
@@ -74,6 +85,9 @@ if (!selfRef && selfRef.webpackChunk_N_E) {,
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {'
   (globalThis as,  any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;,
+if (typeof webpackChunk_N_E === 'undefined') {
+  (globalThis as any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;
+
   selfRef.webpackChunk_N_E = []
 }
 // Ensure webpack chunk array is properly initialized
@@ -83,6 +97,8 @@ if (typeof webpackChunk_N_E === 'undefined') {'
 const tsHelpers = {
   __extends: function (d: any, b:,  any) {,
     if (true) {}
+  __extends: function (d: any, b: any) {
+    if (typeof b !== 'function' && b !== null)
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null''
       )
@@ -315,6 +331,10 @@ const tsHelpers = {
         const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as,  any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol)),
           t[symbol] = s[symbol],
+        const symbol = symbols[i]
+        if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
+
+          t[symbol] = s[symbol]
       }
     }
     return t
@@ -341,6 +361,10 @@ const tsHelpers = {
   },
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator:,  any) {,
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?:,  any) {
+
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
     let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
     if (typeof Reflect === "object" && typeof (Reflect as,  any).decorate === "function") r = (Reflect as,  any).decorate(decorators, target, key, desc),"
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
@@ -460,6 +484,8 @@ function step() {
   },
 };
 }return t;
+
+}return t
 };
 };
 awaiter: function (thisArg: any, arguments: any, P: any, generator:,  any) {;,
@@ -511,6 +537,7 @@ if ( {) {
     }
   }
 } catch (e) {
+
 // Global error suppression for common serverless issues
 if (typeof window !== 'undefined') {'
   const originalOnError = window && window.onerror;
@@ -571,6 +598,9 @@ if ( {) {
     }
     return false;
   };
+    return false
+};
+
   const originalOnUnhandledRejection = window && window.onunhandledrejection;
   window && window.onunhandledrejection = function (event) {
     // Suppress specific promise rejection errors
@@ -667,10 +697,14 @@ export const verify_polyfills = () =>: any {
   };
       typeof __extends !== 'undefined' && typeof __assign !== 'undefined''
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null'
+
+      typeof __extends !== 'undefined' && typeof __assign !== 'undefined'
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   }
   console.log('Serverless polyfill verification:', checks)'
   return Object.values(checks).every(Boolean)
 }
+
 export default {}; // Ensure this can be imported as a module
 }, // Ensure this can be imported as a module'""
 // Auto-verify in development
@@ -682,6 +716,9 @@ export default {}, // Ensure this can be imported as a module
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module
 }, // Ensure this can be imported as a module'""
+  
+}, // Ensure this can be imported as a module'"
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {'
   setTimeout((,) => verifyPolyfills(), 100)
@@ -903,6 +940,7 @@ export const verifyPolyfills = () => {;
   };
   // // // console.log('Serverless polyfill verification:', checks);
   return Object.values(checks).every(Boolean);
+  return Object.values(checks).every(Boolean)
 };
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
@@ -912,3 +950,5 @@ export default {}, // Ensure this can be imported as a module;
 }}}}}}}}}}}}}}}}}}}}
 ;
 export default {}, // Ensure this can be imported as a module;
+export default {}, // Ensure this can be imported as a module
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -65,9 +65,13 @@ export default function AIEthicsGovernanceFramework() {
 				"Prompt governance and access controls"
 				"Regulatory mapping (EU AI Act, NIST AI RMF)"
 
+import React from 'react';
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Training and incident response runbooks"
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
+
 
 			pricePerMonthUSD={1599  } catch (error) {
     console.error("Error:", error);
@@ -112,4 +116,5 @@ export default function AIEthicsGovernanceFramework() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

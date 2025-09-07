@@ -51,6 +51,15 @@ if ( {) {
 }
 
 export default function InstagramRedirect() {
+  }
+}
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+export default function InstagramRedirect() {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('https: //instagram.com/ziontechgroup')
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //instagram.com/ziontechgroup')
@@ -109,6 +118,7 @@ export default function InstagramRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //instagram.com/ziontechgroup')
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
       window.location.replace('https: //instagram.com/ziontechgroup'),
     };
@@ -121,12 +131,17 @@ export default function InstagramRedirect() {
         <meta
           httpEquiv='refresh'
           content='0,url=https://instagram.com/ziontechgroup'
+        <link rel='canonical' href='https://instagram.com/ziontechgroup' />
+        <meta
+          httpEquiv='refresh'
+          content='0;url=https://instagram.com/ziontechgroup'
         />
         <meta name='robots' content='noindex, nofollow' />
       </Head>
       <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
         <a
           href='https: //instagram.com/ziontechgroup'
+          href='https://instagram.com/ziontechgroup'
           className='text-cyan-400 underline'
         >
           Continue to Instagram
@@ -168,6 +183,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
+
 import Head from 'next / head';
 export default /**
  * InstagramRedirect - Function description
@@ -189,6 +205,11 @@ if ( {) {
       <Head>;
 
 }
+
+
+
+}
+
 
 export default function InstagramRedirect() {
 	useEffect(() => {
@@ -212,3 +233,7 @@ export default function InstagramRedirect() {
 		</>
 	)
 }
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533

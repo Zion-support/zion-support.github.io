@@ -1,15 +1,15 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   
   render() {
@@ -20,6 +20,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+pr-12243
+
+
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
@@ -35,13 +38,12 @@ function ApiPerformanceTestingPage() {
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
+
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+
 export default function ApiPerformanceTestingPage() {;
   const features = [;
     "k6/Gatling-compatible test runner",;
@@ -50,12 +52,14 @@ export default function ApiPerformanceTestingPage() {;
     "CI checks and PR annotations",;
     "Synthetic traffic for staging",;
   ];
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+
+
 
 export default function ApiPerformanceTestingPage() {
 
@@ -72,6 +76,7 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
+pr-12243
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -137,6 +142,7 @@ export default function ApiPerformanceTestingPage() {
       </main>;
 
     </>);
+pr-12243
   return (
     <>;
       <SEO;
@@ -156,6 +162,8 @@ export default function ApiPerformanceTestingPage() {
             {features.map ((f) => (
               <div;
 return (
+  return (
+  return (
   return (
   return (
   return (
@@ -221,12 +229,20 @@ return (
 
 </>);
 }
+
+pr-12243
+    </>);
+}
+
+
     </>);
 }
 
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
+	const features = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
@@ -295,30 +311,31 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Start from $129/mo
             </a>
             <a
-              href="/market-pricing"
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+              href='/market-pricing'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
             >
               Market Pricing
             </a>
             <a
-              href="https://grafana.com/docs/k6/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://grafana.com/docs/k6/'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> k6 Docs
+              <ExternalLink className='w-4 h-4' /> k6 Docs
             </a>
             <a
-              href="https://gatling.io/open-source/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://gatling.io/open-source/'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> Gatling OSS
+              <ExternalLink className='w-4 h-4' /> Gatling OSS
             </a>
           </div>
         </section>
@@ -391,3 +408,10 @@ return (
           </div>;
         </section>;
 </main>;
+pr-12243
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

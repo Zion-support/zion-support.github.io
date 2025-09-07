@@ -3,6 +3,14 @@ const AIAssistant: React.FC = () => {
 import React from 'react',
 import Head from 'next/head';
 
+import React from 'react',;
+import Head from 'next/head';
+
+import Button from '../components/ui/Button';
+export default function AIAssistantPage() {
+import Layout from '../components/layout/Layout';
+const AIAssistant: React.FC = () => {
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>;
       <Head>;
@@ -82,6 +90,9 @@ import Head from 'next/head';
         </div>;
       </main>;
 
+
+
+
   return (
     <>
       <Head>
@@ -128,6 +139,10 @@ const AIAssistant: React.FC = () => {
 
 import Head from 'next/head',
 import Button from '../components/ui/Button',
+import Button from '../components/ui/Button';
+
+}
+
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
@@ -200,3 +215,25 @@ export default function AIAssistantPage() {
     </>
   )
 }
+
+
+
+
+        <div className="bg-blue-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Experience the power of AI assistance for your business operations.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
+              Request a Demo
+            </a>
+            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

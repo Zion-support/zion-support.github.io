@@ -1,3 +1,15 @@
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { CheckIcon } from 'lucide-react';
+
+interface StepProps {
+  status: "incomplete" | "current" | "complete";
+  label: string;
+  description?: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  className?: string
+}
+export function Step({
 status;
   label;
   description;
@@ -8,8 +20,8 @@ import { CheckIcon } from 'lucide-react''
 interface StepProps {
   status: "incomplete" | "current" | "complete","
 
-import React from "react",
-import { cn } from "@/lib/utils",
+import React from "react",;
+import { cn } from "@/lib/utils",;
 import { CheckIcon } from 'lucide-react'
 
 interface StepProps {
@@ -56,6 +68,13 @@ export function Step({
               status === "current","
             "bg-zion-purple border-zion-purple text-white":"
               status === "complete",}"
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
+              status === "incomplete",
+            "bg-zion-blue border-zion-cyan text-white":
+              status === "current",
+            "bg-zion-purple border-zion-purple text-white":
+
+              status === "complete",}
         )}>;
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium","
           {
@@ -126,6 +145,7 @@ export function Step({;
         ) : (;
           <span>;
             {/* Step number would go here */}
+          </span>
           </span>;
         )}
             "text-zion-slate-light": status === "incomplete","
@@ -205,6 +225,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+      className;
+origin/cursor/automate-test-improve-and-merge-code-2533
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -267,6 +289,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
       </div>;
     </div>;
   );
+}
+;
+
+
+
           // Check condition
 if (status = "complete") {"
   $2
@@ -369,3 +396,12 @@ if (status = "current") {"
 ;
 }
 ;
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+}/> </div> </div> </div>) ;
+}"
+origin/cursor/automate-test-improve-and-merge-code-2533

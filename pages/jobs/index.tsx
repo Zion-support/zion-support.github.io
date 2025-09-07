@@ -16,6 +16,8 @@ function JobsListPage() {
   }, []);
 import Link from 'next/link',
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+import Link from 'next/link',;
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',;
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
@@ -60,6 +62,13 @@ export default function JobsListPage() {
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
 import InteractiveSearch from '../../components/ui/InteractiveSearch',
+  useEffect(() => { const t = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+import EnhancedLoading from '../../components/ui/EnhancedLoading',;
+import { useEffect, useState } from 'react',;
+import InteractiveSearch from '../../components/ui/InteractiveSearch',;
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true),
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []),
@@ -105,6 +114,7 @@ export default function JobsListPage() {
     </div>);
 ;
 
+
 }
 
           ))  } catch (error) {
@@ -126,3 +136,13 @@ export default function JobsListPage() {
   }
 }
 
+                  footer={<span className='text-blue-600'>View Job →</span>}
+                />
+              </a>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

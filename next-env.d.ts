@@ -16,3 +16,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+/// <reference types="next/navigation-types/compat/navigation" />
+/// <reference path="./dist/types/routes.d.ts" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.

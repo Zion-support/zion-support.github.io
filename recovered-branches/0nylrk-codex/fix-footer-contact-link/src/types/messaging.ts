@@ -1,4 +1,6 @@
 attachment_url?: string,
+
+  attachment_url?: string,
   attachment_name?: string;
 }
 // Define the shape of a conversation;
@@ -13,19 +15,27 @@ export interface Message {;
   created_at: string;
   read: boolean;
   sender_name?: string;
+  sender_avatar?: string;  }
+  name: string;
+  // TODO: Implement
+  id: string;,
+  sender_id: string;
+  recipient_id: string;,
+  content: string;
+  created_at: string;,
+  read: boolean;
+  sender_name?: string;
   sender_avatar?: string;
 
-  attachment_url?: string
-
-  attachment_name?: string
-}
-// Define the shape of a conversation
+  attachment_url?: string;
+// Define the shape of a conversation;
 export interface Conversation {;
 export interface Conversation {
   id: string;
+  // TODO: Implement
   user_id: string;
-  other_user: {
-    id: string;
+  other_user: {,
+  id: string;
     name: string;
 
     avatar_url?: string,
@@ -35,10 +45,12 @@ avatar_url?: string
     user_type?: string
   }
   name: string;
+pr-12325
   avatar_url?: string;
   last_message?: {
 
     content: string,
+    created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
     created_at: string;
 
 content: string
@@ -48,16 +60,18 @@ content: string
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
 
+  updated_at: string;,
+  unread_count: number;
+  context_type?: 'job' | 'talent' | 'general';
   context_id?: string,
   context_data?: ConversationContextData;
-}
 // Context data for creating a conversation;
 
 export interface ConversationContextData {
+  // TODO: Implement
   title?: string;
   description?: string;
   image_url?: string;
-}
 
 context_id?: string
 
@@ -109,32 +123,18 @@ export interface Message {;
   sender_name?: string,;
   sender_avatar?: string,;
   attachment_url?: string,;
-  attachment_name?: string;
-}
 ;
 // Define the shape of a conversation;
-export interface Conversation {;
-  id: string,;
   user_id: string,;
-  other_user: {;
-    id: string,;
+  other_user: {;,
     name: string,;
     avatar_url?: string,;
-    user_type?: string;
   },;
-  name: string,;
-  avatar_url?: string,;
   last_message?: {;
-    content: string,;
-    created_at: string;
-  },;
   updated_at: string,;
   unread_count: number,;
   context_type?: 'job' | 'talent' | 'general',;
   context_id?: string,;
-  context_data?: ConversationContextData;
-}
-;
 // Context data for creating a conversation;
 export interface ConversationContextData {;
   title?: string,;
@@ -145,18 +145,18 @@ export interface ConversationContextData {;
 
 // Define the shape of the messaging context;
 export interface MessagingContextType {
-  messages: Message[];
+  // TODO: Implement
+  messages: Message[];,
   conversations: Conversation[];
-  unread_count: number;
+  unread_count: number;,
   active_conversation: Conversation | null;
-  active_messages: Message[];
+  active_messages: Message[];,
   is_loading: boolean,
   send_message: (conversation_id: string, content: string) => Promise < void>,
-  create_conversation: (
-    recipient_id: string,
+  create_conversation: (,
+  recipient_id: string,
     initial_message: string,
-    context_type?: 'job' | 'talent' | 'general';
-    context_id?: string;
+    context_id?: string;)
     context_data?: ConversationContextData) => Promise < void>;
   markAsRead: (conversation_id: string) => Promise < void>;
   /**;
@@ -180,6 +180,7 @@ export interface MessagingContextType {;
   markAsRead: (conversationId: string) => Promise<void>,;
   /**;
    * Set the currently active conversation. Passing `null` will clear the;
+pr-12325
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
@@ -189,3 +190,8 @@ export interface MessagingContextType {;
 ;
 
 }
+}
+</void>
+  loadMessages: (conversationId: string) => Promise<void>;
+</void>`;
+pr-12325

@@ -94,6 +94,7 @@ export async function trackEvent(payload: TrackEventPayload) {
 
 
     await fetch('/api/analytics/events/track', {;
+
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
@@ -142,4 +143,12 @@ export async function trackEvent(payload: TrackEventPayload) {;
 
 
   }
+}
+export interface TrackEventPayload {
+  // TODO: Implement
+}
+  event: string;
+  properties?: Record<string, any>;
+</string>
+pr-12325
 }

@@ -13,6 +13,14 @@ import type { HelpArticle } from '../../utils/support';
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
 ;
+
+
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+
+
+
+import type { HelpArticle } from '../../utils/support';
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   return {
@@ -31,6 +39,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   return { props: { article } }
 };
 
+export const getStaticPaths: GetStaticPaths;
+    setVoted(helpful)
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
@@ -53,6 +64,7 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
+
 
             className='enhanced-button enhanced-button-secondary';
     paths: articles.map (array => ({ params: { slug: a.slug } })),
@@ -110,6 +122,7 @@ function vote() {
           </button>;
         </div>;
       </div>;
+
 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -209,6 +222,12 @@ export const getStaticPaths: GetStaticPaths = async () => {;
     fallback: false  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ articleId: article.id, helpful }),
+    });
+    setVoted(helpful);
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 },;
@@ -238,6 +257,10 @@ export default function HelpArticlePage(req, res) {
 }
 
 }
+
+}
+
+
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -260,9 +283,36 @@ export default function HelpArticlePage(req, res) {
 
 }
 
+
+
+}
+
+
   )
 }
 
     </article>);
 ;
 
+
+
+        <div className='flex gap-2'>
+          <button
+            onClick={() => vote(true)}
+            disabled={voted !== null}
+            className='enhanced-button enhanced-button-primary'
+          >
+            Yes
+          </button>
+          <button
+            onClick={() => vote(false)}
+            disabled={voted !== null}
+            className='enhanced-button enhanced-button-secondary'
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

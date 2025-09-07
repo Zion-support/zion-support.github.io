@@ -21,6 +21,55 @@ interface QuickAction {;
   icon: React.ReactNode;,
   action: () => void;,
   category: 'performance' | 'development' | 'maintenance';
+  id: string;
+  label: string;
+  description: string;
+  icon: React && React.ReactNode;
+  action: () => void;
+  category: 'performance' | 'development' | 'maintenance';
+
+    setIsProcessing(actionId);    try {
+      await action()
+    } catch (error) {
+      logErrorToProduction(`Failed to execute action ${actionId}:`, {
+        data: error
+      })
+origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import {
+  Zap
+  Download
+  Trash2
+  RefreshCw
+  Settings
+  Activity
+  Package
+  Monitor
+} from 'lucide-react'
+
+interface QuickAction {
+  id: string;
+  label: string;
+  description: string;
+  icon: React.ReactNode;
+  action: () => void;
+  category: 'performance' | 'development' | 'maintenance';
+  dangerous?: boolean
+export function QuickActions() {
+
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
+  }
+
+
 ;
   const [isVisible, setIsVisible] = useState(false);,
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
@@ -47,6 +96,7 @@ import {
   Package,
   Monitor,
 } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface QuickAction {
   id: string;,
   label: string;,
@@ -98,6 +148,36 @@ interface QuickAction {;
   category: 'performance' | 'development' | 'maintenance',;
   dangerous?: boolean;
 }
+
+      id: 'enable - performance - monitor',
+
+
+  id: string;,
+  label: string;
+  description: string;,
+  icon: React.ReactNode;
+  action: () => void;,
+  category: 'performance' | 'development' | 'maintenance';
+;
+  const [isVisible, setIsVisible] = useState(false);
+  const [isProcessing, setIsProcessing] = useState<string | null>(null);
+</string>
+  const [is_processing, setIsProcessing] = useState < string | null>(null);
+  const execute_action = async (action_id: string, action: () => void) => {
+    setIsProcessing (action_id);    try {
+  // TODO: Implement
+}
+      await action ();
+    } catch (error) {
+      logErrorToProduction (`Failed to execute action ${action_id}:`, {
+        data: error,)
+      });
+    } finally {
+  // TODO: Implement
+      setIsProcessing(null)
+
+      id: 'enable - performance - monitor',
+pr-12325
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -106,6 +186,7 @@ import { Badge } from '@/components/ui/badge',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react';
 interface QuickAction {;
+pr-12325
   id: string,;
   label: string,;
   description: string,;
@@ -115,6 +196,7 @@ interface QuickAction {;
   dangerous?: boolean;
 }
 ;
+pr-12325
 export function QuickActions() {;
   const { user } = useAuth(),;
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
@@ -461,6 +543,110 @@ export function QuickActions() {;
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
+        const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
+          type: 'application/json',;
+        });
+
+        const url = URL && URL.createObjectURL(blob);
+        const a = document && document.createElement('a');
+        a && a.href = url;
+        a && a.download = `performance-report-${Date && Date.now()}.json`;
+        document && document.body.appendChild(a);
+        a && a.click();
+        document && document.body.removeChild(a);
+        URL && URL.revokeObjectURL(url);
+      },;
+    },;
+    {;
+      id: 'test-error-boundary',;
+      label: 'Test Error Boundary',;
+      description: 'Trigger an error to test Sentry integration',;
+      icon: <Monitor className='w-4 h-4' />,;
+      category: 'development',;
+      dangerous: true,;
+      action: () => {;
+        throw new Error(;
+          'Test error for Sentry integration - this is intentional!';
+        );
+      },;
+    },;
+    {;
+      id: 'refresh-app',;
+      label: 'Hard Refresh',;
+      description: 'Force reload with cache bypass',;
+      icon: <RefreshCw className='w-4 h-4' />,;
+      category: 'maintenance',;
+      action: () => {;
+        window && window.location.reload();
+      },;
+    },;
+  ];
+
+  const categorizedActions = {;
+    performance: actions && actions.filter(a => a && a.category === 'performance'),;
+    development: actions && actions.filter(a => a && a.category === 'development'),;
+    maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),;
+  };
+
+  const categoryColors = {;
+    performance:;
+      'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',;
+    development:;
+      'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',;
+    maintenance:;
+      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
+  };
+
+
+  if (!isVisible) {;
+
+
+    {
+      id: 'download-performance-report',
+      label: 'Download Performance Report',
+      description: 'Export current performance metrics',
+      icon: <Download className="w-4 h-4" />,
+      category: 'development',
+      action: () => {
+        const metrics = {
+          timestamp: new Date().toISOString(),
+          performance: window.window.window.performance.getEntriesByType('navigation')[0],
+          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
+          memory: (performance as any).memory || {},
+          userAgent: navigator.userAgent,
+          screen: {
+            width: screen.width,
+            height: screen.height,
+
+
+    {
+      id: 'test-error-boundary',
+      label: 'Test Error Boundary',
+      description: 'Trigger an error to test Sentry integration',
+      icon: <Monitor className="w-4 h-4" />,
+      category: 'development',
+      dangerous: true,
+      action: () => {
+
+
+    {
+      id: 'refresh-app',
+      label: 'Hard Refresh',
+      description: 'Force reload with cache bypass',
+      icon: <RefreshCw className="w-4 h-4" />,
+      category: 'maintenance',
+      action: () => {
+        window.location.reload()
+
+
+
+
+
+  dangerous?: boolean
+export function QuickActions() {
+  const { user } = useAuth();
+  const isAdmin = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -696,6 +882,76 @@ if ( {) {
   $2
 }
     return (
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isProcessing, setIsProcessing] = useState<string | null>(null),;
+      icon: <Activity className="w-4 h-4" />,"
+"
+      icon: <Package className="w-4 h-4" />,"
+      icon: <Trash2 className="w-4 h-4" />,"
+</Trash2>"
+      icon: <Zap className='w-4 h-4' />
+
+      icon: <Download className="w-4 h-4" />,"
+      icon: <Monitor className="w-4 h-4" />,"
+      icon: <RefreshCw className="w-4 h-4" />,"
+      icon: <Monitor className='w-4 h-4' />,;
+
+      icon: <RefreshCw className='w-4 h-4' />,;
+
+      <div className="fixed bottom-4 left-4 z-50">"
+</div>
+        <Button;"
+          variant="outline"""
+          size="sm""
+          onClick={() => setIsVisible(true)}
+          <Settings className="w-4 h-4 mr-2" />"
+
+        
+      </div>"
+          <Settings className='w-4 h-4 mr-2' />;
+
+      </div>;
+    <div className="fixed bottom-4 left-4 z-50 w-80">"
+      <Card className="bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto">"
+        <CardHeader className="pb-2">"
+          <div className="flex items-center justify-between">"
+            <CardTitle className="text-sm flex items-center">"
+
+            
+              variant="ghost"""
+              onClick={() => setIsVisible(false)}
+
+            
+        
+
+        <CardContent className="pt-0 space-y-4">"
+
+            <div key={category}>
+              <div className="flex items-center gap-2 mb-2">"
+                <Badge className={categoryColors[category as keyof typeof categoryColors]} variant="outline">"
+
+                
+              <div className="space-y-2">"
+                  <div key={action.id} className="space-y-1">"
+                      variant={action.dangerous ? "destructive" : "outline"}""
+                      onClick={() => executeAction(action.id, action.action)}
+                      <div className="flex items-start gap-3 w-full">"
+                        <div className="mt-0.5">"
+                            <RefreshCw className="w-4 h-4 animate-spin" />"
+
+                        <div className="flex-1 text-left">"
+                          <div className="font-medium text-sm">{action.label}</div>""
+                          <div className="text-xs opacity-70 mt-1">"
+    </div>;"
+      icon: <Zap className='w - 4 h - 4' />,
+
+      icon: <Download className='w - 4 h - 4' />,
+
+      icon: <Monitor className='w - 4 h - 4' />,
+
+      icon: <RefreshCw className='w - 4 h - 4' />,
+
+pr-12325
       <div className='fixed bottom - 4 left - 4 z - 50'>;
         <Button;
           variant='outline';
@@ -728,6 +984,25 @@ if ( {) {
         <CardContent className='pt - 0 space - y-4'>;
           {Object.entries (categorized_actions).map (
             ([category, category_actions]) => (
+
+          <Settings className='w - 4 h - 4 mr - 2' />;
+
+      </div>);
+    <div className='fixed bottom - 4 left - 4 z - 50 w - 80'>;
+      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg max - h-96 overflow - y-auto'>;
+
+        <CardHeader className='pb - 2'>;
+
+          <div className='flex items - center justify - between'>;
+            <CardTitle className='text - sm flex items - center'>;
+
+
+              variant='ghost';
+              on_click={() => setIsVisible (false)}
+
+        <CardContent className='pt - 0 space - y-4'>;
+
+pr-12325
               <div key={category}>;
                 <div className='flex items - center gap - 2 mb - 2'>;
                   <Badge;
@@ -775,3 +1050,29 @@ if ( {) {
 }
 }}}}}}}}}
 } ;
+            )
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  >;
+
+                <div className='space - y-2'>;
+                    <div key={action.id} className='space - y-1'>;
+                        variant={action.dangerous ? 'destructive' : 'outline'}
+                        on_click={() => execute_action (action.id, action.action)}
+
+                        <div className='flex items - start gap - 3 w - full'>;
+                          <div className='mt - 0.5'>;
+                              <RefreshCw className='w - 4 h - 4 animate - spin' />) : (
+
+                          <div className='flex - 1 text - left'>;
+                            <div className='font - medium text - sm'>;
+                            <div className='text - xs opacity - 70 mt - 1'>;
+                            </div>                          </div>;
+                      ;)
+                    </div>))}
+    </div>);`;
+pr-12325

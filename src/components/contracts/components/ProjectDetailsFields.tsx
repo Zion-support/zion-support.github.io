@@ -1,5 +1,6 @@
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
 import { ;
   FormField,;
@@ -53,9 +54,9 @@ import { ContractFormValues } from "./ContractForm","
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>,
 
-import { format } from "date-fns",
+import { format } from "date-fns",;
 import { CalendarIcon } from 'lucide-react'
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form",;
 import { 
   FormField,
   FormItem, 
@@ -70,6 +71,61 @@ import { Button } from "@/components/ui/button",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Calendar } from "@/components/ui/calendar",
 import { ContractFormValues } from "./ContractForm",
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Calendar } from "@/components/ui/calendar"
+interface ProjectDetailsFieldsProps {
+origin/cursor/automate-test-improve-and-merge-code-2533
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+}
+export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
+  return (
+    <>
+      <FormField
+        control={form.control}
+name='projectName'
+        render={({
+          field
+        }: {
+          field: ControllerRenderProps<ContractFormValues, 'projectName'>
+        }) => (
+          <FormItem>
+            <FormLabel>Project Name</FormLabel>
+            <FormControl>
+              <Input placeholder='AI Website Development' {...field} />            </FormControl>        name="projectName"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (
+
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {;
+
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+}
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+  return (
+    <>;
+      <FormField
+
+
+        render={({
+          field
+        }: {
+
+        control={form.control}
+
+        name="projectName"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
+
+
+
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm",;
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
 import { format } from "date-fns",;
@@ -106,6 +162,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />"
             </FormControl>
+
+              <Input placeholder='AI Website Development' {...field} />
+            </FormControl>
+origin/cursor/automate-test-improve-and-merge-code-2533
             <FormMessage />
           </FormItem>
         )}
@@ -156,6 +216,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           </FormItem>)}
       />;
       <FormField;
+<FormField
+origin/cursor/automate-test-improve-and-merge-code-2533
         control={form.control}
         name='scope_summary';
         render={({
@@ -175,10 +237,18 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
+          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
+        }) => (
+          <FormItem>
+            <FormLabel>Scope Summary</FormLabel>
+            <FormControl>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Textarea
                 placeholder='Describe the project scope, deliverables, and expectations...'',
                 className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."",
                 className="min-h-[120px]""
+placeholder='Describe the project scope, deliverables, and expectations...'
+                className='min-h-[120px]'
                 {...field}
               />;
             </FormControl>;
@@ -190,6 +260,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         )}
       />;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
+
+      />
+<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
         <FormField
           control={form && form.control}
           name='startDate''
@@ -250,6 +324,18 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
+        name="scopeSummary";
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (;
+          <FormItem>;
+            <FormLabel>Scope Summary</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                placeholder="Describe the project scope, deliverables, and expectations...";
+                className="min-h-[120px]";
+
+
           field: ControllerRenderProps < ContractFormValues, 'scope_summary'>;
         }) => (          <FormItem>;
             <FormLabel > Scope Summary</FormLabel>;
@@ -299,6 +385,13 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
+
+
+            field: ControllerRenderProps<ContractFormValues, 'startDate'>
+          }) => (
+            <FormItem className='flex flex-col'>
+              <FormLabel>Start Date</FormLabel>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -398,11 +491,27 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />'
+variant={'outline'}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
+                      {field.value ? (
+                        format(field.value, 'PPP')
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>'
                   <Calendar
+
+
+                    mode='single'
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={date => date < new Date()}
+origin/cursor/automate-test-improve-and-merge-code-2533
                     initialFocus
                   />
                 </PopoverContent>
@@ -430,10 +539,31 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         />;
         <FormField;
           control={form.control}
+        />
+<FormField
+          control={form.control}
+origin/cursor/automate-test-improve-and-merge-code-2533
+          name='endDate'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<ContractFormValues, 'endDate'>
+          }) => (
+            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
+        <FormField
+          control = {form.control,}
+          name="endDate"
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
+            <FormItem className="flex flex-col">
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
+
+
+            <FormItem className='flex flex-col'>
+              <FormLabel>End Date (Optional)</FormLabel>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -474,6 +604,24 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     selected={field.value || undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
+variant={'outline'}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
+                      {field.value ? (
+                        format(field.value, 'PPP')
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className='w-auto p-0' align='start'>
+                  <Calendar
+                    mode='single'
+                    selected={field.value |undefined}
+                    onSelect={field.onChange}
+                    disabled={date => date < form.getValues('startDate')}
+origin/cursor/automate-test-improve-and-merge-code-2533
                     initialFocus
                   />
                 </PopoverContent>
@@ -581,3 +729,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
   );
 }
 ;
+
+
+;
+      </div>
+    </>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

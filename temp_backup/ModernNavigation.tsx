@@ -19,3 +19,15 @@ export default function ModernNavigation({ }: ModernNavigationProps) {
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/PortfolioBuilder.jsx
 }
 }
+}}
+  // TODO: Implement
+}
+  // Add props here as needed;
+export default function ModernNavigation({ }: ModernNavigationProps) {
+  return (
+    <div>
+</div>
+      <h1>ModernNavigation</h1>
+      <p>This component is currently under development.</p>
+    </div>)
+pr-12325

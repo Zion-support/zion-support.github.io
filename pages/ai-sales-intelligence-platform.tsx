@@ -61,6 +61,7 @@ export default function AISalesIntelligencePlatform() {
     </Layout>
   );
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
@@ -103,6 +104,15 @@ export default function AISalesIntelligencePlatform() {_return (
 }
 
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
+				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
+			]}
+			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
+
+}
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export default /**
  * AISalesIntelligencePlatform - Function description
@@ -128,6 +138,8 @@ return (
     industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
     canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
   />);
+
+
 			pricePerMonthUSD={1499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -203,3 +215,7 @@ return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

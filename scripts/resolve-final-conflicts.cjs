@@ -1,19 +1,20 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
 #!/usr/bin/env node
-
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
 <<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
 
 
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 console.log('🔧 Resolving Final Conflicts');
-console.log('============================');
-
-// Function to resolve merge conflicts by keeping the first version
-function resolveMergeConflicts(content) {
-  return content
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
+console.log(
 }
 <<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
 
@@ -23,10 +24,11 @@ console.log('====');
 
 
 
-// Function to fix all remaining syntax errors
+// Function to fix all remaining syntax errors;)
 function fixAllSyntax(content) {
-  return content
-    // Fix malformed JSX tags
+  return content;
+    // Fix malformed JSX tags;
+<<<<<<< HEAD
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -34,10 +36,11 @@ function fixAllSyntax(content) {
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
-    
-    // Fix malformed meta tags
+</motion>
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
+</meta>
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
+<<<<<<< HEAD
     
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
@@ -163,3 +166,19 @@ console.log('\n🎉 Final build fix completed!');
 
     // Check for merge conflict markers
 
+=======
+=======
+    .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm,<h3$1>$2</h3>')
+    .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm,<h2$1>$2</h2>')
+    .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm,<h1$1>$2</h1>')
+    .replace(/<p([^>]*)>([^<]+)><\/p>/gm,<p$1>$2</p>')
+    .replace(/<span([^>]*)>([^<]+)><\/span>/gm,<span$1>$2</span>')
+    .replace(/<div([^>]*)>([^<]+)><\/div>/gm,<div$1>$2</div>')
+    .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm,<motion.div$1>$2</motion.div>')
+</motion>'
+    .replace(/<meta([^>]+) \/ \/>/gm,<meta$1 />')
+</meta>'
+    .replace(/<meta([^>]+) \/>/gm,<meta$1 />')
+</meta>'
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

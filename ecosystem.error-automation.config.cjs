@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:ecosystem.error-automation.config.cjs
 =======
 <<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
@@ -8,59 +9,69 @@
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/ecosystem.error-automation.config.cjs
+=======
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 module.exports = {
-  "apps": [    // Main Error Detection and Fixing Service
-    {
+  "apps": [    // Main Error Detection and Fixing Service;"
+    {"
+<<<<<<< HEAD
       name: 'error-detection-service',
       "script": 'scripts/pm2/error-detection-service.js',
-    // Main application
+    // Main application;
     {
       "name": 'zion-app',
       "script": 'npm',
       "args": 'start',
       "cwd": './',
-      "instances": 1,
-      "autorestart": true,
-      "watch": false,
+      "instances": 1,""
+      "autorestart": true,""
+      "watch": false,""
       "max_memory_restart": '1G',
-      "env": {
+      "env": {""
         NODE_ENV: 'development',
         "PM2_PROCESS_NAME": 'error-detection-service',
-        "SCAN_INTERVAL": '300000', // 5 minutes
+        "SCAN_INTERVAL": '300000', // 5 minutes;
         "AUTO_FIX": 'true',
         "LOG_LEVEL": 'info',
         "MAX_RETRIES": '3',
-        "BACKUP_BEFORE_FIX": 'true'
+        "BACKUP_BEFORE_FIX": 'true
       },
-      "cron_restart": '0 */2 * * *', // Restart every 2 hours
+      "cron_restart": '0 */2 * * *', // Restart every 2 hours;
       "log_file": 'logs/pm2/error-detection-service.log',
       "error_file": 'logs/pm2/error-detection-service-error.log',
       "out_file": 'logs/pm2/error-detection-service-out.log'},
-    // Syntax Error Fixer
-    {
+    // Syntax Error Fixer;
       "name": 'syntax-error-fixer',
       "script": 'scripts/pm2/syntax-error-fixer.js',
         "NODE_ENV": 'production',
-        "PORT": 3000
-      },
-      "env_production": {
+        "PORT": 3000;"
+      },"
+      "env_production": {""
         NODE_ENV: 'production',
-        "PORT": 3000
-      }
-    },
-    // Error Detection and Monitoring System
+=======
+      name: error-detection-service,
+      "script": scripts/pm2/error-detection-service.js,
+    // Main application;
     {
-      "name": 'error-detection-monitor',
-      "script": './scripts/automation/error-detection-monitor.cjs',
+      "name": zion-app,
+      "script": npm,
+      "args": start,
+      "cwd": ./,
       "instances": 1,
       "autorestart": true,
       "watch": false,
-      "max_memory_restart": '512M',
+      "max_memory_restart": 1G,
       "env": {
-        NODE_ENV: 'production',
-        "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
-        "ERROR_THRESHOLD": '10'
+        NODE_ENV: development,
+        "PM2_PROCESS_NAME": error-detection-service,
+        "SCAN_INTERVAL": 300000, // 5 minutes;
+        "AUTO_FIX": true,
+        "LOG_LEVEL": info,
+        "MAX_RETRIES": 3,
+        "BACKUP_BEFORE_FIX": true
       },
+<<<<<<< HEAD
 
 <<<<<<< HEAD:ecosystem.error-automation.config.cjs
 =======
@@ -72,51 +83,61 @@ module.exports = {
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
-      nam: e: 'error-detection-service',
-      "script": 'scripts/pm2/error-detection-service.js',
-    // Main application
+=======
+      "cron_restart": 0 */2 * * *, // Restart every 2 hours;
+      "log_file": logs/pm2/error-detection-service.log,
+      "error_file": logs/pm2/error-detection-service-error.log,
+      "out_file": logs/pm2/error-detection-service-out.log},
+    // Syntax Error Fixer;
     {
+      "name": syntax-error-fixer,
+      "script": scripts/pm2/syntax-error-fixer.js,
+        "NODE_ENV": production,
+        "PORT": 3000;"
+      },"
+      "env_production": {
+        NODE_ENV: production,
+        "PORT": 3000;"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      }
+    // Error Detection and Monitoring System;
+<<<<<<< HEAD
+      "name": 'error-detection-monitor',
+      "script": './scripts/automation/error-detection-monitor.cjs',
+      "max_memory_restart": '512M',
+        "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes;
+        "ERROR_THRESHOLD": '10
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
+      nam: e: 'error-detection-service',
+    // Main application;
       "name": 'zion-app';
       "script": 'npm';
       "args": 'start';
       "cwd": './';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
+      "instances": 1;""
+      "autorestart": true;""
+      "watch": false;""
       "max_memory_restart": '1G';
-      "env": {
         NODE_EN: V: 'development',
-        "PM2_PROCESS_NAME": 'error-detection-service',
-        "SCAN_INTERVAL": '300000', // 5 minutes
         "AUTO_FIX": 'true';
         "LOG_LEVEL": 'info';
         "MAX_RETRIES": '3';
-        "BACKUP_BEFORE_FIX": 'true'
       };
-      "cron_restart": '0 */2 * * *', // Restart every 2 hours
       "log_file": 'logs/pm2/error-detection-service.log';
       "error_file": 'logs/pm2/error-detection-service-error.log';
       "out_file": 'logs/pm2/error-detection-service-out.log'};
-    // Syntax Error Fixer
-    {
+    // Syntax Error Fixer;
       "name": 'syntax-error-fixer';
       "script": 'scripts/pm2/syntax-error-fixer.js';
         "NODE_ENV": 'production';
-        "PORT": 3000
-      };
-      "env_production": {
+      };"
         NODE_EN: V: 'production',
-        "PORT": 3000
-      }
-    };
-    // Error Detection and Monitoring System
-    {
+    // Error Detection and Monitoring System;
       "name": 'error-detection-monitor';
       "script": './scripts/automation/error-detection-monitor.cjs';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
       "max_memory_restart": '512M';
+<<<<<<< HEAD
       "env": {
         NODE_EN: V: 'production',
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
@@ -751,10 +772,161 @@ module.exports = {
       "host": 'localhost',
       "ref": 'origin/main',
       "repo": 'git@github.co: m:your-username/zion-tech-group.git',
+=======
+
+      "cron_restart": '0 */10 * * *', // Restart every 10 minutes;
+      "log_file": './automation/logs/error-detection-monitor.log',
+      "error_file": './automation/logs/error-detection-monitor-error.log',
+      "out_file": './automation/logs/error-detection-monitor-out.log',
+      "merge_logs": true,""
+      "cron_restart": '0 */15 * * *', // Restart every 15 minutes;
+      "log_file": './automation/logs/typescript-error-auto-fixer.log',
+      "error_file": './automation/logs/typescript-error-auto-fixer-error.log',
+      "out_file": './automation/logs/typescript-error-auto-fixer-out.log',
+      "log_file": './automation/logs/eslint-error-auto-fixer.log',
+      "error_file": './automation/logs/eslint-error-auto-fixer-error.log',
+      "out_file": './automation/logs/eslint-error-auto-fixer-out.log',
+      "cron_restart": '0 */30 * * *', // Restart every 30 minutes;
+      "log_file": './automation/logs/dependency-error-resolver.log',
+      "error_file": './automation/logs/dependency-error-resolver-error.log',
+      "out_file": './automation/logs/dependency-error-resolver-out.log',
+      "cron_restart": '0 */20 * * *', // Restart every 20 minutes;
+      "log_file": './automation/logs/build-error-auto-fixer.log',
+      "error_file": './automation/logs/build-error-auto-fixer-error.log',
+      "out_file": './automation/logs/build-error-auto-fixer-out.log',
+      "cron_restart": '0 */60 * * *', // Restart every hour;
+      "log_file": './automation/logs/code-quality-auto-enhancer.log',
+      "error_file": './automation/logs/code-quality-auto-enhancer-error.log',
+      "out_file": './automation/logs/code-quality-auto-enhancer-out.log',
+      "log_file": './automation/logs/error-prevention-monitor.log',
+      "error_file": './automation/logs/error-prevention-monitor-error.log',
+      "out_file": './automation/logs/error-prevention-monitor-out.log',
+      "log_file": './automation/logs/error-analytics-dashboard.log',
+      "error_file": './automation/logs/error-analytics-dashboard-error.log',
+      "out_file": './automation/logs/error-analytics-dashboard-out.log',
+      "log_file": './automation/logs/intelligent-error-orchestrator.log',
+      "error_file": './automation/logs/intelligent-error-orchestrator-error.log',
+      "out_file": './automation/logs/intelligent-error-orchestrator-out.log',
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
       "path": '/var/www/zion-tech-group',
-      'pre-deploy-local': '',
+      'pre-deploy-local': ,
       'post-deploy': 'npm install --legacy-peer-deps && pm2 reload ecosystem.error-automation.config.cjs --env production',
-      'pre-setup': ''
-    }
+      'pre-setup': 
+=======
+    {"
+      "name": error-detection-monitor,
+      "script": ./scripts/automation/error-detection-monitor.cjs,
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": 512M,
+      "env": {
+        NODE_ENV: production,
+        "ERROR_DETECTION_INTERVAL": 300000, // 5 minutes;
+        "ERROR_THRESHOLD": 10
+      },
+
+module.exports = {
+  "apps": [    // Main Error Detection and Fixing Service;"
+    {"
+      nam: e: error-detection-service,
+      "script": scripts/pm2/error-detection-service.js,
+    // Main application;
+    {
+      "name": zion-app';
+      "script": npm';
+      "args": start';
+      "cwd": ./;
+      "instances": 1;
+      "autorestart": true;
+      "watch": false;
+      "max_memory_restart": 1G';
+      "env": {
+        NODE_EN: V: development,
+        "PM2_PROCESS_NAME": error-detection-service,
+        "SCAN_INTERVAL": 300000, // 5 minutes;
+        "AUTO_FIX": true;
+        "LOG_LEVEL": info';
+        "MAX_RETRIES": 3;
+        "BACKUP_BEFORE_FIX": true
+      };
+      "cron_restart": 0 */2 * * *, // Restart every 2 hours;
+      "log_file": logs/pm2/error-detection-service.log';
+      "error_file": logs/pm2/error-detection-service-error.log';
+      "out_file": logs/pm2/error-detection-service-out.log};
+    // Syntax Error Fixer;
+    {
+      "name": syntax-error-fixer';
+      "script": scripts/pm2/syntax-error-fixer.js';
+        "NODE_ENV": production';
+        "PORT": 3000;"
+      };"
+      "env_production": {
+        NODE_EN: V: production,
+        "PORT": 3000;"
+      }
+    };
+    // Error Detection and Monitoring System;
+    {"
+      "name": error-detection-monitor';
+      "script": ./scripts/automation/error-detection-monitor.cjs';
+      "instances": 1;
+      "autorestart": true;
+      "watch": false;
+      "max_memory_restart": 512M';
+      "env": {
+        NODE_EN: V: production,
+        "ERROR_DETECTION_INTERVAL": 300000, // 5 minutes;
+        "ERROR_THRESHOLD": 10
+      };
+'
+      "cron_restart": 0 */10 * * *, // Restart every 10 minutes;
+      "log_file": ./automation/logs/error-detection-monitor.log,
+      "error_file": ./automation/logs/error-detection-monitor-error.log,
+      "out_file": ./automation/logs/error-detection-monitor-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */15 * * *, // Restart every 15 minutes;
+      "log_file": ./automation/logs/typescript-error-auto-fixer.log,
+      "error_file": ./automation/logs/typescript-error-auto-fixer-error.log,
+      "out_file": ./automation/logs/typescript-error-auto-fixer-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */10 * * *, // Restart every 10 minutes;
+      "log_file": ./automation/logs/eslint-error-auto-fixer.log,
+      "error_file": ./automation/logs/eslint-error-auto-fixer-error.log,
+      "out_file": ./automation/logs/eslint-error-auto-fixer-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */30 * * *, // Restart every 30 minutes;
+      "log_file": ./automation/logs/dependency-error-resolver.log,
+      "error_file": ./automation/logs/dependency-error-resolver-error.log,
+      "out_file": ./automation/logs/dependency-error-resolver-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */20 * * *, // Restart every 20 minutes;
+      "log_file": ./automation/logs/build-error-auto-fixer.log,
+      "error_file": ./automation/logs/build-error-auto-fixer-error.log,
+      "out_file": ./automation/logs/build-error-auto-fixer-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */60 * * *, // Restart every hour;
+      "log_file": ./automation/logs/code-quality-auto-enhancer.log,
+      "error_file": ./automation/logs/code-quality-auto-enhancer-error.log,
+      "out_file": ./automation/logs/code-quality-auto-enhancer-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */15 * * *, // Restart every 15 minutes;
+      "log_file": ./automation/logs/error-prevention-monitor.log,
+      "error_file": ./automation/logs/error-prevention-monitor-error.log,
+      "out_file": ./automation/logs/error-prevention-monitor-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */10 * * *, // Restart every 10 minutes;
+      "log_file": ./automation/logs/error-analytics-dashboard.log,
+      "error_file": ./automation/logs/error-analytics-dashboard-error.log,
+      "out_file": ./automation/logs/error-analytics-dashboard-out.log,
+      "merge_logs": true,
+      "cron_restart": 0 */10 * * *, // Restart every 10 minutes;
+      "log_file": ./automation/logs/intelligent-error-orchestrator.log,
+      "error_file": ./automation/logs/intelligent-error-orchestrator-error.log,
+      "out_file": ./automation/logs/intelligent-error-orchestrator-out.log,
+      "merge_logs": true,
+      "path": /var/www/zion-tech-group,pre-deploy-local: ,post-deploy: npm install --legacy-peer-deps && pm2 reload ecosystem.error-automation.config.cjs --env production,pre-setup: }
   }
 };
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+]

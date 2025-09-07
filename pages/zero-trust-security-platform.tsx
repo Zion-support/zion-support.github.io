@@ -1,4 +1,5 @@
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -67,6 +68,8 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
+import Head from 'next/head',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
 
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
@@ -292,3 +295,6 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+export default function ZeroTrustSecurityPlatformPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,14 +1,18 @@
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentsPage from "../pages/TalentsPage";
-import TalentProfilePage from "../pages/TalentProfilePage";
-import SavedTalentsPage from "../pages/SavedTalentsPage";
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "../components/ProtectedRoute",;
+import TalentDirectory from "../pages/TalentDirectory",;
+import TalentsPage from "../pages/TalentsPage",;
+import TalentProfilePage from "../pages/TalentProfilePage",;
+import SavedTalentsPage from "../pages/SavedTalentsPage",;
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
+
+import CreateTalentProfile from "../pages/CreateTalentProfile",;
+import ProfilePage from "../pages/ProfilePage",;
 const TalentRoutes = () => {
 const TalentRoutes = () => {;
   return (
+    <Routes>  return (
     <Routes>;
       {/* Talent Routes */}
       <Route path="/talent" element={<TalentDirectory />} />
@@ -32,10 +36,24 @@ const TalentRoutes = () => {;
       />
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
-  );
+  )
 };
 
 };
+import { Route, Routes } from "react-router-dom";""
+import { ProtectedRoute } from "../components/ProtectedRoute";""
+import TalentDirectory from "../pages/TalentDirectory";""
+import TalentsPage from "../pages/TalentsPage";""
+import TalentProfilePage from "../pages/TalentProfilePage";""
+import SavedTalentsPage from "../pages/SavedTalentsPage";""
+import CreateTalentProfile from "../pages/CreateTalentProfile";""
+import ProfilePage from "../pages/ProfilePage";"
+pr-12325
+const TalentRoutes = () => {
+const TalentRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Talent Routes */}
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -77,13 +95,49 @@ export default TalentRoutes;
 },;
 ;export default TalentRoutes,
  const TalentRoutes = () => {
+"
+      <Route path="/talent" element={<TalentDirectory />} />"
+      <Route path="/talents" element={<TalentsPage />} />"
+      <Route path="/talent/:id" element={<TalentProfilePage />} />"
+
+      <Route;"
+        path="/saved-talents""
+        element={
+          <ProtectedRoute>
+
+            <SavedTalentsPage />
+
+          
+        path="/create-talent-profile""
+
+            <CreateTalentProfile />
+
+      <Route path="/profile/:id" element={<ProfilePage />} />"
+
+    
+      <Route path="/talent" element={<TalentDirectory />} />;"
+      <Route path="/talents" element={<TalentsPage />} />;"
+      <Route path="/talent/:id" element={<TalentProfilePage />} />;"
+
+        path="/saved - talents";"
+          <ProtectedRoute>;
+
+            <SavedTalentsPage />;
+
+          ;
+
+            <CreateTalentProfile />;
+
+          ;"
+      <Route path="/profile/:id" element={<ProfilePage />} />;"
+)
+    );
   return (<Routes> {
-  /* Talent Routes */ 
-}<Route path="/talent" element= {
+}<Route path="/talent" element= {"
   <TalentDirectory /> 
-}/> <Route path="/talents" element= {
+}/> <Route path="/talents" element= {"
   <TalentsPage /> 
-}/> <Route path="/talent/:id" element= {
+}/> <Route path="/talent/:id" element= {"
   <TalentProfilePage /> 
 }/> <Route path="/saved-talents" element= {
   <ProtectedRoute> 
@@ -94,3 +148,8 @@ export default TalentRoutes;
   );
 },;
 export default TalentRoutes;
+}/> <Route path="/saved-talents" element= {"
+
+}/> <Route <CreateTalentProfile />  
+}/> ) "
+pr-12325

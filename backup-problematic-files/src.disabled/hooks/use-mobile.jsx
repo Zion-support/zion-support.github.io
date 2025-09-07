@@ -18,3 +18,16 @@ import { useState,useEffect } from';react' "export": function useIsMobile() { co
 const { useState,useEffect } from";react" export: function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("";resize",checkIsMobile) return: () => window.removeEventListener("";resize",checkIsMobile)},[]) return: "isMobile"}"";'"'"
 import { useState,useEffect } from';react' "export": function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener('';resize',checkIsMobile) "return": () => window.removeEventListener('';resize',checkIsMobile)},[]) "return": 'isMobile'}'';''
 import { useState,useEffect } from';react' "export": function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window && window.innerWidth < 768)} checkIsMobile() window && window.addEventListener('';resize',checkIsMobile) "return": () => window && window.removeEventListener('';resize',checkIsMobile)},[]) "return": 'isMobile'}'';''
+import React from 'react';'
+const Use-mobile = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>Use-mobile</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+};
+
+    </div>)'
+pr-12325

@@ -1,3 +1,4 @@
+pr-12325
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -11,12 +12,25 @@ import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;,
 ;export function ITServiceRequestHero(): any (...args[]):  {;,
   const [location, setLocation] = useState("");,
+import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
+;export function ITServiceRequestHero(): any (...args[]):  {;
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function ITServiceRequestHero() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+  const [location, setLocation] = useState("");
+
+  const [location, setLocation] = useState("");"
+pr-12325
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async e: React && React.FormEvent {;    e && e.preventDefault();,
     if(location && location.trim()) {;
       setIsSubmitting(true);
       // Simulate API call;
       setTimeout(: unknown {;
+      setTimeout(: unknown {;)
+pr-12325
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};`
   const containerVariants = {;
@@ -101,6 +115,22 @@ function ITServiceRequestHero() { export function ITServiceRequestHero (...args[
   const handle_submit = async e: React.FormEvent {e.prevent_default ();,
     if () {) {
   $2
+  const handleSubmit = null;
+import { useTranslation } from 'react-i18next'
+import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
+  const [location, setLocation] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const handleSubmit = async e: React.FormEvent {e.preventDefault()
+    if(location.trim()) {
+      setIsSubmitting(true)
+      // Simulate API call
+      setTimeout(: unknown {
+        setIsSubmitting(false)
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}
+  const containerVariants = {
+  hidden: { opacity: 0
+  y: 20
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
       setIsSubmitting (true);
       // Simulate API call;
@@ -199,6 +229,12 @@ if ( {) {
       setIsSubmitting (false);
     }
   }
+
+
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]""
@@ -329,6 +365,117 @@ if ( {) {
             Worldwide coverage and rapid dispatch of certified technicians.;
           </p>;
         </div>;
+    visible: {;,
+  opacity: 1,;
+      y: 0,;
+      transition: {;,
+  duration: 0 && 0.6,;
+        staggerChildren: 0 && 0.2;
+};
+  const itemVariants = {;
+      transition: { duration: 0 && 0.5 };
+};"
+  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },;""
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },;""
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;""
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };"]
+  ];"
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';";""
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";""
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },";""
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };"
+  ];
+export function ITServiceRequestHero() {;"
+  return (";""
+    <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">;"
+</section>"
+      <div className="absolute inset-0">";"
+</div>"
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";""
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;"
+      </div>;"
+    <section className="py - 20 bg - gradient - to - br from - blue - 900 via - slate - 900 to - purple - 900 relative overflow - hidden">;"
+      <div className="absolute inset - 0">";"
+        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - blue - 500 / 10 rounded - full blur - 3xl"></div>";""
+        <div className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - purple - 500 / 10 rounded - full blur - 3xl"></div>;"
+      </div>;
+    <section;)"
+      className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]""
+    >
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">"
+        <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center">"
+          <GradientHeading className="mb-6 text-4xl md:text-5xl text-center">"
+
+          "
+          <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center">"
+</p>
+        <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto">"
+          <div className="flex flex-col md:flex-row items-center gap-4">"
+</div>
+            <Image;"
+              src="/logos/zion-logo.png"""
+              alt="Zion logo""
+              width={200}
+              height={200}"
+              className="w-full h-auto md:w-40""
+            />
+            <form onSubmit={handleSubmit} className="space-y-4 flex-1">"
+</form>
+              <Input;
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              <p className='text-xs text-zion-slate-light'>
+              <p className='text-xs text-zion-slate-light'>;
+              </p>;
+                type='email
+                value={email}
+
+                )}
+
+
+                value={phone}
+
+                onChange={e => setPhone(e && e.target.value)}
+
+                value={company}
+                onChange={e => setCompany(e && e.target.value)}
+
+                value={location}
+
+                onChange={e => setLocation(e && e.target.value)}
+
+              <Textarea;
+                value={details}
+
+                onChange={e => setDetails(e && e.target.value)}
+
+              <Button;
+                type='submit
+                disabled={isSubmitting}
+                className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'>;
+
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+</Loader2>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
+
+
+                {isSubmitting && (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+
+              
+
+          <p className="text-xs text-center text-zion-slate-light mt-3">"
+    </section>)"
+    <section className='py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, _#020617)]'>;
+</section>
+      <div className='container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center'>;
+        <div className='md:h - full md:flex md:flex - col md:items - center md:justify - center'>;
+          <GradientHeading className='mb - 6 text - 4xl md:text - 5xl text - center'>;
+
+          ;
+          <p className='text - lg text - zion - slate - light mb - 8 max - w-md text - center'>;
+pr-12325
         <div className='bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto'>;
           <div className='flex flex - col md:flex - row items - center gap - 4'>;
             <Image;
@@ -958,3 +1105,154 @@ export function ITServiceRequestHero() {;
   );
 }
 ;
+}
+
+
+
+  setIsSubmitting (false);
+}";
+py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4" > <Image <Input type="email" value= {
+  email;
+}on_change= {
+  (e) => set_email (e.target.value) ";
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <p className="text - xs text - zion - slate - light" > {";
+  t ('onsite form.email helper', "We'll confirm your request here.");
+}</p> <Input value= {
+  phone;
+}on_change= {
+  (e) => set_phone (e.target.value) ";
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
+  company;
+}on_change= {
+  (e) => set_company (e.target.value) ";
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
+  location;
+}on_change= {
+  (e) => set_location (e.target.value) ";
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <Textarea value= {
+  details;
+}on_change= {
+  (e) => set_details (e.target.value) ";
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white min - h-[80px]" /> <Button type="submit" disabled= {
+  is_submitting ";
+}className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale - 105" > {";
+  is_submitting && (<Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+}Request Service </Button> </form> </div>;
+}'";
+}
+}
+;
+origin/cursor/automate-test-improve-and-merge-code-2533
+              height={200}
+              className='w - full h - auto md:w - 40'            />;
+
+            <form on_submit={handle_submit} className='space - y-4 flex - 1'>;
+                on_change={e => set_name (e.target.value)}
+
+              <p className='text - xs text - zion - slate - light'>;
+                type='email';
+                on_change={e => set_email (e.target.value)}
+
+                on_change={e => set_phone (e.target.value)}
+
+                on_change={e => set_company (e.target.value)}
+
+                on_change={e => set_location (e.target.value)}
+
+                on_change={e => set_details (e.target.value)}
+
+                type='submit';
+                disabled={is_submitting}
+                className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale - 105'              >;
+
+                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+            </form>;
+          <p className='text - xs text - center text - zion - slate - light mt - 3'>;
+    </section>);
+py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services  <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {"
+  email;
+}onChange= {"
+  (e) => setEmail (e.target.value) """
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <p className="text-xs text-zion-slate-light" > {""
+}</p> <Input value= {
+  phone;
+  (e) => setPhone (e.target.value) ""
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {"
+  company;
+  (e) => setCompany (e.target.value) ""
+  location;
+  (e) => setLocation (e.target.value) ""
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textarea value= {"
+  details;
+  (e) => setDetails (e.target.value) ""
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Button type="submit" disabled= {""
+  isSubmitting """
+}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105" > {""
+  isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+}Request Service  </form> </div>
+      className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]";"
+    >;
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">;"
+        <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center">;"
+          <GradientHeading className="mb-6 text-4xl md:text-5xl text-center">;"
+
+          ;"
+          <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center">;"
+        <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto">;"
+          <div className="flex flex-col md:flex-row items-center gap-4">;"
+              src="/logos/zion-logo.png";""
+              alt="Zion logo";"
+              className="w-full h-auto md:w-40";"
+            />;
+            <form onSubmit={handleSubmit} className="space-y-4 flex-1">;"
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helperEnter the main contact for this request.')}</p>;
+                type="email";"
+                onChange={(e) => setEmail(e.target.value)}
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.email_helper', "We'll confirm your request here.")}</p>;"
+                onChange={(e) => setPhone(e.target.value)}
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.phone_helperInclude a direct line for urgent updates.')}</p>;
+                onChange={(e) => setCompany(e.target.value)}
+
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.company_helperWho do you represent?')}</p>;
+                onChange={(e) => setLocation(e.target.value)}
+
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>;
+                onChange={(e) => setDetails(e.target.value)}
+
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.details_helperShare any important context for our technicians.')}</p>;
+                type="submit";"
+                disabled={isSubmitting}"
+                className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105";"
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;"
+          <p className='text-xs text-center text-zion-slate-light mt-3'>;
+    </section>;
+py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services  <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image<Input type="email" value= {"
+  (e) => setEmail (e && e.target.value) ";""
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <p className="text-xs text-zion-slate-light" > {";"
+}</p> <Inputvalue= {
+  (e) => setPhone (e && e.target.value) ";"
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Inputvalue= {"
+  (e) => setCompany (e && e.target.value) ";"
+  (e) => setLocation (e && e.target.value) ";"
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textareavalue= {"
+  (e) => setDetails (e && e.target.value) ";"
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Buttontype="submit" disabled= {""
+}className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"> {";"
+  isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" /> ;"
+}Request Service  </form> </div> ;)"
+py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services  <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4" > <Image <Input type="email" value= {"
+}on_change= {"
+  (e) => set_email (e.target.value) ";""
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <p className="text - xs text - zion - slate - light" > {";"
+  (e) => set_phone (e.target.value) ";"
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {"
+  (e) => set_company (e.target.value) ";"
+  (e) => set_location (e.target.value) ";"
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <Textarea value= {"
+  (e) => set_details (e.target.value) ";"
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white min - h-[80px]" /> <Button type="submit" disabled= {""
+  is_submitting ";""
+}className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale - 105" > {";"
+  is_submitting && (<Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;"
+}Request Service  </form> </div>;)"`;
+pr-12325

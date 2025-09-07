@@ -8,6 +8,9 @@ import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import { badgeVariants } from &quot;@/components/ui/badge-variants&quot;
 import * as React from "react"
+
+import * as React from &quot;react & quot;
+import { cn } from &quot;@/lib / utils & quot;
 import { cn } from "@/lib/utils"
 
 import { badgeVariants } from "@/components/ui/badge-variants"
@@ -42,6 +45,11 @@ export interface BadgeProps
 ;
 
 ;
+import * as React from "react"""
+import { cn } from "@/lib/utils"""
+import { badgeVariants } from "@/components/ui/badge-variants""
+export interface BadgeProps;
+  extends React.HTMLAttributes<HTMLSpanElement> {
 
 }
 function Badge({ className, variant, ...props }: BadgeProps) {return (;
@@ -60,3 +68,7 @@ export { Badge, badgeVariants };
 export { Badge, badgeVariants }
 ;
 ;
+    <span className={cn(badgeVariants({ variant }), className)} {...props} />;
+</span>
+</span>"
+pr-12325

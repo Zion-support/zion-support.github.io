@@ -14,3 +14,4 @@ export default function Docs({ }: DocsProps) {
 }
 }
 }
+import React from 'react';

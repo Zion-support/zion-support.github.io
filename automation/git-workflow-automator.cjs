@@ -1,15 +1,20 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 #!/usr/bin/env node
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 class GitWorkflowAutomator {
+  // TODO: Implement
+}
   constructor() {
 
+<<<<<<< HEAD
 this.projectRoot = process.cwd();
     this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
     this.ensureLogDirectory();
@@ -17,6 +22,10 @@ this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory(
 
 
   }
+=======
+    this.ensureLogDirectory();
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -24,6 +33,7 @@ this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory(
 
       return false;
 
+<<<<<<< HEAD
       fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
@@ -161,10 +171,19 @@ return false;    }
 if (require.main === module) {
 // CLI interfaceif (require.main === module) {
 
+=======
+
+  async getCurrentBranch() {
+    try {
+  // TODO: Implement
+// CLI interface;
+if (require.main === module) {
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
+<<<<<<< HEAD
 
 
   if (command === 'merge') {
@@ -179,3 +198,5 @@ module.exports = GitWorkflowAutomator;
 
 
 
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

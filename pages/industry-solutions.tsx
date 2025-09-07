@@ -66,6 +66,10 @@ export default function IndustrySolutions() {
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/energy-utilities-solutions">Energy & Utilities</Link>
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/biotech-ai">Biotech & Healthcare AI</Link>
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/space-technology">Space Technology</Link>
+import React from 'react',;
+import Head from 'next/head';
+import Link from 'next/link';
+
           </div>
         </section>
       </div>
@@ -108,3 +112,5 @@ export default function IndustrySolutions(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+);
+origin/cursor/automate-test-improve-and-merge-code-2533

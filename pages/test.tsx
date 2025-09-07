@@ -144,6 +144,7 @@ function TestPage() {
 }
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 export default function TestPage() {
   return (
@@ -202,6 +203,8 @@ export default function TestPage() {;
 }
 import React from 'react'
 import Head from 'next/head'
+import Head from 'next/head';
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function TestPage() {
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -235,3 +238,5 @@ origin/main
 
   );
 }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

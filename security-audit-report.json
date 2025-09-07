@@ -154,6 +154,7 @@
     "totalRecommendations": 2,
     "securityScore": 90,
     "status": "good"
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 }
   ],
@@ -333,3 +334,26 @@
 }
 
 }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  "auditReportVersion": 2,
+  "vulnerabilities": {},
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 253,
+      "dev": 751,
+      "optional": 112,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1090
+    }
+  }
+}
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

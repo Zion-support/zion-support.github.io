@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node;
@@ -34,23 +35,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
   }
 }
-`
-  },
-  {
-    path: 'pages/api/admin/partners/update.ts',
-    content: `import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
-    if (req.method === 'POST') {
-      const { code, status, commission_rate } = req.body;
-      if (!code) return res.status(400).json({ error: 'Code required' });
 
+<<<<<<< HEAD
       const updates: any = {};
       if (status) updates.status = status;
       if (typeof commission_rate === 'number') updates.commission_rate = commission_rate;
@@ -585,3 +578,5 @@ fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
 
 console.log('🎉 All remaining syntax errors fixed!');
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

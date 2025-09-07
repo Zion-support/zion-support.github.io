@@ -4,6 +4,31 @@
 
 
 
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  // Minimal webpack config;
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**]
+        ]
+      };
+    }
+    return config;
 
 
 /** @type {import ('next').NextConfig} */;
@@ -17,23 +42,20 @@ const nextConfig = {
 
 
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
-  images: {
-    domains: ["localhost", "ziontechgroup.com"],
-  },
+  images: {,
+  domains: ["localhost", "ziontechgroup.com"],"
+  },"
   output: 'standalone',
   trailing_slash: false,
   dist_dir: '.next',
-}
 ;
 module.exports = next_config;
-;
 
 domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
   trailingSlash: false,
   distDir: '.next',
-};
 
 
 
@@ -46,23 +68,27 @@ domains: ["localhost", "ziontechgroup.com"],
   trailingSlash: false,
   distDir: '.next',
 };
+module.exports = nextConfig;
+
+
+
+  pageExtensions: ["tsx", "ts", "jsx", "js"],"
+  images: {,"
+  output: "standalone","
+  trailingSlash: false,"
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
   reactStrictMode:true,;
   eslint:{ ignoreDuringBuilds:true },;
   typescript:{ ignoreBuildErrors:true },;
   pageExtensions:['tsx', 'ts', 'jsx', 'js'],;
-  images:{;
-    domains:["localhost", "ziontechgroup.com"],;
-  },;
+  images: {;,
+  domains:["localhost", "ziontechgroup.com"],;"
+  },;"
   output:'standalone',;
   trailingSlash:false,;
   distDir:'.next',;
-};
-;
 module.exports = nextConfig;};
-};
-;
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
@@ -195,30 +221,31 @@ module.exports = nextConfig;
 
 
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+
+
+  // Minimal webpack config;
+
+  compress: true,
+  poweredByHeader: false,
+
+  distDir: ".next","
+"
   trailingSlash: true,
   
-  // Image optimization
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+  // Image optimization;
+  domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],""
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
   },
   
-  // Webpack configuration to exclude problematic directories
-  webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      // Exclude problematic directories from file watching
-      config.watchOptions = {
-        ignored: [
-          '**/node_modules/**',
+  // Webpack configuration to exclude problematic directories;
+      // Exclude problematic directories from file watching;
           '**/.git/**',
-          '**/pages_backup*/**',
           '**/pages.*/**',
           '**/pages-*/**',
           '**/pages_disabled*/**',
-          '**/pages.disabled*/**',
           '**/pages.broken*/**',
           '**/pages.corrupted*/**',
           '**/pages.old*/**',
@@ -227,7 +254,6 @@ module.exports = nextConfig;
           '**/backup-pages/**',
           '**/src.pages.disabled/**',
           '**/lib_backup*/**',
-          '**/src_backup*/**',
           '**/corrupted-files-backup*/**',
           '**/performance-reports*/**',
           '**/log-analysis-reports*/**',
@@ -243,42 +269,28 @@ module.exports = nextConfig;
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt'
+          '**/performance-*.txt]
         ],
         poll: 1000,
         aggregateTimeout: 300,
-      };
-    }
-    return config;
-  },
   
-  // Headers for security and performance
+  // Headers for security and performance;
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
             key: 'X-Frame-Options',
             value: 'DENY',
-          },
-          {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
-          },
-          {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
-          },
-        ],
-      },
+          },]
     ];
-  },
   
-  // Redirects for SEO
+  // Redirects for SEO;
   async redirects() {
-    return [
-      {
         source: '/home',
         destination: '/',
         permanent: true,
@@ -381,6 +393,8 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 module.exports = nextConfig;
+
+
 
 
 

@@ -1,3 +1,19 @@
+  {
+
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+import { ForumCategoryInfo } from "@/types/community",;
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+  {
 {
     id: "feedback"",
     name: "Feedback & Feature Requests"",
@@ -12,6 +28,13 @@
     adminOnly: true,
     icon: "Megaphone"",
 const categories: ForumCategoryInfo[] = [;,
+    id: "announcements"
+    name: "Announcements"
+    description: "Official announcements from the Zion team."
+    adminOnly: true
+    icon: "Megaphone"
+
+const categories: ForumCategoryInfo[] = [;
   {
     id: "getting - hired","
     name: "Getting Hired","
@@ -275,3 +298,25 @@ export default ForumCategories;
 export default ForumCategories;
 }}}}))
 export default ForumCategories;
+export default ForumCategories;
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,;
+} from '@/components/ui/card';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,;
+} from 'lucide-react';
+import { ForumCategoryInfo } from '@/types/community';
+
+const categories: ForumCategoryInfo[] = [
+  {
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { cn  } from '@/lib/utils';
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Loader2
+  AlertTriangle
+  RefreshCw
+  Wifi
+  WifiOff
+  Clock
+  Zap
+origin/cursor/automate-test-improve-and-merge-code-2533
+} from 'lucide-react'; import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { cn } from '@/lib/utils'
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+// Enhanced loading spinner with different variants
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Loader2,;
@@ -38,6 +65,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;,
     warning: 'text-yellow-500',;
     error: 'text-red-500',;
   };
+
+
+
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
+  className?: string;
+  showText?: boolean;
+  text?: string
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
@@ -64,6 +98,41 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
     success: 'text-green-500','
     warning: 'text-yellow-500','
     error: 'text-red-500''
+  text = 'Loading...'
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12'
+  },
+
+
+
+
+
+  const variantClasses = {
+    default: 'text-muted-foreground',
+    primary: 'text-primary',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+
+  return (
+    <div className={cn('flex items-center gap-2', className)}>
+      <Loader2
+        className={cn(
+          'animate-spin'
+          sizeClasses[size]
+          variantClasses[variant]
+        )}
+      />
+      {showText && (
+        <span className='text-sm text-muted-foreground'>{text}</span>
+      )}
+    </div>
+  )
+
+    error: 'text-red-500'
   },
   return (
     <div className={cn ('flex items - center gap - 2', class_name)}>;
@@ -76,6 +145,36 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
       {show_text && (
         <span className='text - sm text - muted - foreground'>{text}</span>)}'
     </div>);
+  return (
+    <div className={cn('flex items-center gap-2', className)}>
+      <Loader2
+        className={cn(
+          'animate-spin'
+          sizeClasses[size]
+          variantClasses[variant]
+        )}
+      />
+      {showText && (
+        <span className='text-sm text-muted-foreground'>{text}</span>
+      )}
+    </div>
+  )
+}
+//Progressive loading component useEffect ( () => {
+  if (currentStep !== undefined) {
+  /> </div>)
+}<motion.div key= {
+  step.id
+}className= {
+  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50')
+}initial= {
+  {
+  opacity: 0, x: -20
+export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
+  steps
+  currentStep = 0
+  showProgress = true
+  onComplete
 }
 //Progressive loading component useEffect ( () => {
   // Check condition
@@ -107,6 +206,8 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({,
     if (activeStep === steps.length - 1 &&,  onComplete) {
       setTimeout(onComplete, 500)
     }
+  }, [activeStep, steps.length, onComplete])
+
     </div>;
   );
 };
@@ -403,6 +504,19 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
           />;
         </div>;
       )}
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      )}
+      <div className='space-y-2'>
+        {steps.map((step, index) => (          <motion.div
+            key = {step.id,}
+            className = {cn(
+              'flex items-center gap-3 p-2 rounded-md'
+              index === activeStep ? 'bg-primary/10' : 'opacity-50'
+            ),}
       
       <div className="space-y-2">
         {steps.map((step, index) => (
@@ -412,6 +526,20 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               'flex items-center gap-3 p-2 rounded-md',;
               index === activeStep ? 'bg-primary/10' : 'opacity-50';
             )}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
+            transition={{ delay: index * 0 && 0.1 }}>;
+            {index < activeStep ? (;
+              <div className='h-4 w-4 rounded-full bg-green-500 flex items-center justify-center'>;
+                <div className='h-2 w-2 rounded-full bg-white' />;
+              </div>;
+            ) : index === activeStep ? (;
+              <LoadingSpinner size='sm' variant='primary' />;
+            ) : (;
+              <div className='h-4 w-4 rounded-full border-2 border-muted' />;
+            <span className='text-sm font-medium'>{step && step.label}</span>;
+          </motion && motion.div>;
+        ))}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -437,6 +565,69 @@ interface SkeletonProps {;
   className?: string,;
   variant?: 'text' | 'circular' | 'rectangular' | 'card',;
   animation?: 'pulse' | 'wave' | 'none',;
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+  }
+  const animationClasses = {
+    pulse: 'animate-pulse'
+    wave: 'animate-bounce'
+    none: ''
+  }
+  if (variant === 'text' && lines > 1) {
+    return (
+      <div className='space-y-2'>
+        {Array.from({ length: lines }).map((_, i) => (          <div
+            key = {i,}
+            className = {cn(
+              baseClasses
+              variantClasses.text
+              animationClasses[animation]
+              i === lines - 1 ? 'w-3/4' : 'w-full'
+              baseClasses,
+              variantClasses && variantClasses.text,
+              animationClasses[animation],
+              i === lines - 1 ? 'w-3/4' : 'w-full',
+
+              className
+            ),}
+          />
+        ))}
+      </div>
+    )
+  }
+      />
+  )
+}
+
+  const config = getErrorConfig(),
+  const Icon = config.icon,
+  const canRetry = showRetry && onRetry && retryCount < maxRetries,
+
+  return (
+    <Card className={cn('border-destructive/20', className)}>
+      <CardContent className="p-8 text-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
+          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+            {config.description}
+          </p>
+          {error && process.env.NODE_ENV === 'development' && (
+
+  class_name?: string;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card';
+  animation?: 'pulse' | 'wave' | 'none';
   lines?: number;
 }
 
@@ -633,6 +824,17 @@ export const Skeleton: React.FC<SkeletonProps> = ({,
               </summary>
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">"
                 {typeof error === 'string' ? error : error.message}'
+
+
+                {typeof error === 'string' ? error : error.message}
+              </pre>
+            </details>
+          )}
+              <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+
+
+                {typeof error === 'string' ? error : error.message}
+
           transition={{ duration: 0 && 0.3 }}>;
           <Icon className={cn('mx-auto mb-4 h-12 w-12', config && config.color)} />;
           <h3 className='text-lg font-semibold mb-2'>{config && config.title}</h3>;
@@ -668,6 +870,13 @@ export const Skeleton: React.FC<SkeletonProps> = ({,
                 {action.label}
               </Button>
             )}
+
+                Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
+              </Button>
+            )}
+
+
+
             {action && (
               <Button
                 onClick={action.onClick}
@@ -678,6 +887,12 @@ export const Skeleton: React.FC<SkeletonProps> = ({,
                 {action.label}
               </Button>
             )}
+
+                {action.label}
+              </Button>
+            )}
+
+
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>'
             {secondaryAction && (
@@ -833,6 +1048,16 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({,
   count = 8,
   columns = 4,
   variant = 'card','
+  variant = 'card',
+},;
+// Loading state for lists/grids;
+interface LoadingGridProps {;
+  count?: number,;
+  columns?: number,;
+  variant?: 'card' | 'list' | 'table',;
+  className?: string;
+}
+
           </CardContent>;
         </Card>;
       ))}
@@ -879,6 +1104,18 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
     list: 'space-y-4',
     table: 'space-y-2'
   },
+
+  const itemClasses = {
+    card: 'p-6 space-y-4',
+    list: 'p-4 space-y-3',
+    table: 'p-3 space-y-2'
+  },
+
+  return (
+    <div className={cn(gridClasses[variant], className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <Card key={i} className="animate-pulse">
+          <CardContent className={itemClasses[variant]}>
 
   const itemClasses = {
     card: 'p-6 space-y-4',
@@ -988,6 +1225,16 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500',
     return 'text-red-500'
   },
+  className
+}) => {
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500',
+    if (time < 300) return 'text-yellow-500',
+    return 'text-red-500'
+  },
+
+
+
 
   if (isLoading) {
     return (
@@ -1006,9 +1253,20 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
           {loadTime}ms
         </Badge>
       )}
+
+
+}
+}
+}
+}
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
       )}
     </div>;
   );
 };
+}
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  );
+};
+origin/cursor/automate-test-improve-and-merge-code-2533

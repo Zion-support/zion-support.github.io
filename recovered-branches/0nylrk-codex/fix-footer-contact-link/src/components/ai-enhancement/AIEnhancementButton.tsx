@@ -6,6 +6,9 @@ import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIConten
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
 
+  // TODO: Implement
+}
+pr-12325
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
@@ -38,6 +41,7 @@ interface AIEnhancementButtonProps {;
 }
 export function AIEnhancementButton(): any ({;
   options;
+  size?: "default" | "sm" | "lg" | "icon";  options;
   onEnhanced;
 
   buttonText = "Enhance with AI";
@@ -45,6 +49,37 @@ export function AIEnhancementButton(): any ({;
   variant = "ghost";
   size = "sm";
   contentLength = 10;
+
+import { useState  } from 'react';''
+import { Button  } from '@/components/ui/button';''
+import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';''
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';''
+import { toast } from '@/hooks/use-toast';'
+interface AIEnhancementButtonProps {
+  // TODO: Implement
+}'
+import {useState} from 'react';''
+import {Button} from '@/components/ui/button';''
+import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';''
+import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';''
+import {toast} from '@/hooks/use-toast';'
+  options: AIEnhancementOptions;,
+  onEnhanced: (enhancedContent: string) => void;
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";""
+  size?: "default" | "sm" | "lg" | "icon";""
+export function AIEnhancementButton(): any ({;
+
+  options;
+  onEnhanced;
+
+  buttonText = "Enhance with AI";"
+  className;"
+  variant = "ghost";""
+  size = "sm";"
+  contentLength = 10;)
+pr-12325
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
@@ -97,6 +132,14 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+        return;
+    }
+      setGeneratedContent(enhancedContent);
+      setShowActions(true);
+    }
+
+  },
+
   
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
@@ -122,8 +165,21 @@ export function AIEnhancementButton({
   };
 
   };
+
+</string>
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+</string>
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+    if ((!options.content |options.content.trim().length < contentLength) &&
+        (!options.context |options.context.trim().length < contentLength)) {
+      toast({"
+        title: "Not enough content"",
+  description: `Please enter at least ${contentLength} characters before enhancing.`"
+        variant: "destructive""
+  };
+)
       }),
-      return
+      return;"
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',;
@@ -134,20 +190,17 @@ interface AIEnhancementButtonProps {;
   onEnhanced: (enhancedContent: string) => void,;
   buttonText?: string,;
   className?: string,;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;
-  size?: "default" | "sm" | "lg" | "icon",;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;""
+  size?: "default" | "sm" | "lg" | "icon",;"
   contentLength?: number;
-}
 ;
 export function AIEnhancementButton({;
   options,;
-  onEnhanced,;
-  buttonText = "Enhance with AI",;
-  className,;
-  variant = "ghost",;
-  size = "sm",;
-  contentLength = 10;
-}: AIEnhancementButtonProps) {;
+  onEnhanced,;"
+  buttonText = "Enhance with AI",;"
+  className,;"
+  variant = "ghost",;""
+  size = "sm",;"
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
   const [showActions, setShowActions] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
@@ -165,9 +218,14 @@ const handleEnhance = async () => {;
         title: "Not enough content",;
         description: `Please enter at least ${contentLength} characters before enhancing.`,;
         variant: "destructive";
+    if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
+        (!options && options.context || options && options.context.trim().length < contentLength)) {;
+      toast({;"
+        title: "Not enough content",;"`;
+        description: `Please enter at least ${contentLength} characters before enhancing.`,;"
+        variant: "destructive";")
       });
       return;
-    }
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
@@ -175,23 +233,45 @@ const handleEnhance = async () => {;
   },
 
 
+
+  
+
+
+pr-12325
+  
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
       setShowActions(false);
       setGeneratedContent(null);
 }),;
+
+    }
+      setGeneratedContent(enhancedContent);
+      setShowActions(true);
+    }
+  },
+  const handleAccept = (
+    if (generatedContent) {
+      onEnhanced(generatedContent);
+      setShowActions(false);
+      setGeneratedContent(null);) => {
+  return $3;}
+}
+      }),;
       return;
     }
 ;
     const enhancedContent = await enhanceContent(options),;
     if (enhancedContent) {;
-      setGeneratedContent(enhancedContent),;
-      setShowActions(true);
+      setGeneratedContent(enhancedContent),;}
+      setShowActions(true);}
     }
   },
   
   const handleAccept = () => {
+  },  const handleAccept = () => {
+  },  const handleAccept = (
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
@@ -206,13 +286,29 @@ const handleEnhance = async () => {;
     await handleEnhance()
   }
   },
+        title: "Content applied"
+        description: "AI-enhanced content has been applied."})
+    }
+    return (  },
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
 
+  
 
   const handleCancel = () => {
+
+      toast({"
+        title: "Content applied"",)"
+  description: "AI-enhanced content has been applied."})"
+
+    }
+    return (  },
+  const handleRegenerate = async () => {}
+    await handleEnhance()}
+  },
+  const handleCancel = (
     setShowActions(false);
     setGeneratedContent(null)
 
@@ -274,66 +370,29 @@ const handleCancel = () => {
   },;
 
 },;
+
+  },;
   const handleAccept = () => {;
     if (generatedContent) {;
-      onEnhanced(generatedContent),;
-      setShowActions(false),;
-      setGeneratedContent(null),;
+      onEnhanced(generatedContent);
+      setShowActions(false);
+      setGeneratedContent(null);
       toast({;
-        title: "Content applied",;
-        description: "AI-enhanced content has been applied."});
+        title: "Content applied",,
+  description: "AI-enhanced content has been applied."});
     }
-  },;
+  };
+
   const handleRegenerate = async () => {;
-    await handleEnhance();
-  },;
+    await handleEnhance()
+};
+
   const handleCancel = () => {;
     setShowActions(false);
-    setGeneratedContent(null);
-  };
+    setGeneratedContent(null)
+};
+
   if (showActions) {;
-    return (;
-      <div className="flex gap-2 items-center">;
-        <Button;
-          type="button";
-          variant="ghost";
-          size="sm";
-          onClick={handleAccept}
-          className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
-        >
-          <Check className="h-4 w-4 mr-1" />
-          Apply
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          onClick={handleRegenerate}
-          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-          disabled={isEnhancing}
-        >;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
-          ) : (;
-            <RefreshCw className="h-4 w-4 mr-1" />;
-          )}
-          Regenerate
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          onClick={handleCancel}
-          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20";
-        >;
-          <X className="h-4 w-4 mr-1" />;
-          Cancel;
-        </Button>;
-      </div>;
-    );
-  }
-;
-  return (;
     <Button;
       type="button";
       variant={variant}
@@ -473,68 +532,95 @@ interface AIEnhancementButtonProps {;
   size?:"default" | "sm" | "lg" | "icon",;
   contentLength?:number;
 }
+}
 ;
-export function AIEnhancementButton({;
-  options,;
-  onEnhanced,;
-  buttonText = "Enhance with AI",;
-  className,;
-  variant = "ghost",;
-  size = "sm",;
-  contentLength = 10;
-} AIEnhancementButtonProps) {;
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-  const [showActions, setShowActions] = useState(false),;
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
-  ;
-  const handleEnhance = async () => {;
+      variant={variant}
+      size={size}
+  
+      onEnhanced(generatedContent),
+      setShowActions(false),
+      setGeneratedContent(null),
+        title: "Content applied"",)"
+  description: "AI-enhanced content has been applied."})"
+
+
+  
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  
+
+
+  const handleCancel = () => {
+    setGeneratedContent(null)
+
+
+
+  
+
+  if (showActions) {
+    return ("
+      <div className="flex gap-2 items-center">"
+</div>
+        <Button;"
+          type="button"""
+          variant="ghost"""
+          size="sm""
+          onClick={handleAccept}"
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20""
+        >
+"
+          <Check className="h-4 w-4 mr-1" />"
+
+        
+          onClick={handleRegenerate}"
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20""
+          disabled={isEnhancing}
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />"
+</Loader2>"
+            <RefreshCw className="h-4 w-4 mr-1" />"
+
+        
+          onClick={handleCancel}"
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20""
+          <X className="h-4 w-4 mr-1" />"
+
+        
+      type="button""
+  },;
+  const handleAccept = () => {;
+      <div className="flex gap-2 items-center">;"
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;"
+          <Check className="h-4 w-4 mr-1" />;"
+
+          disabled={isEnhancing}>;
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;"
+</Loader2>
     if ((!options.content || options.content.trim().length < contentLength) && ;
         (!options.context || options.context.trim().length < contentLength)) {;
-      toast({;
-        title:"Not enough content",;
-        description:`Please enter at least ${contentLength} characters before enhancing.`,;
-        variant:"destructive";
+        title:"Not enough content",;"`;
+        description:`Please enter at least ${contentLength} characters before enhancing.`,;"
+        variant:"destructive";")
       }),;
       return,;
-    }
-    ;
     const enhancedContent = await enhanceContent(options),;
-    ;
     if (enhancedContent) {;
       setGeneratedContent(enhancedContent),;
       setShowActions(true),;
-    }
-  },;
-  ;
-  const handleAccept = () => {;
     if (generatedContent) {;
       onEnhanced(generatedContent),;
       setShowActions(false),;
       setGeneratedContent(null),;
-      toast({;
-        title:"Content applied",;
-        description:"AI-enhanced content has been applied."}),;
-    }
-  },;
-  ;
+        title:"Content applied",;")"
+        description:"AI-enhanced content has been applied."}),;"
   const handleRegenerate = async () => {;
     await handleEnhance(),;
-  },;
-  ;
   const handleCancel = () => {;
-    setShowActions(false),;
-    setGeneratedContent(null),;
-  },;
-  ;
   if (showActions) {;
-    return (;
-      <div className="flex gap-2 items-center">;
-        <Button;
-          type="button";
-          variant="ghost";
-          size="sm";
-          onClick={handleAccept}
-          className="text-green-500 hover:text-green-700 hover:bg-green-100/20";
+    return (;"
+          type="button";""
+          variant="ghost";""
+          size="sm";"
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20";"
         >;
           <Check className="h-4 w-4 mr-1" />;
           Apply;
@@ -757,16 +843,43 @@ contentLength = 10
   enhanceContent, isEnhancing 
 }= useAIContentEnhancer ();
 const [showActions, setShowActions] = useState (false);
+
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";"
+            <RefreshCw className="h-4 w-4 mr-1" />;"
+
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;"
+
+          className="text-gray-500 hover:text-gray-700 hover:bg-gray-100/20";"
+          <X className="h-4 w-4 mr-1" />;"
+
+      </div>;"
+
+      type="button";"
+      variant={variant}
+      size={size}
+      <span className="text-xs">{buttonText}</span>;"
+
+    ;"
+        <Loader2 className="h-4 w-4 animate-spin" />"
+        <Sparkles className="h-4 w-4" />"
+      <span className="text-xs">{buttonText}</span>"
+    )"
+        <Loader2 className="h - 4 w - 4 animate - spin" />) : ("
+</Loader2>)"
+        <Sparkles className="h - 4 w - 4" />)}"
+      <span className="text - xs">{button_text}</span>;"
+    );
+      type="button";      variant={variant}"
+      size={size}`;
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+        <Loader2 className="h-4 w-4 animate-spin" />;"
+        <Sparkles className="h-4 w-4" />;"
 const [generatedContent, setGeneratedContent] = useState<string | null> (null);
 if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {
-  toast ({
-  variant: "destructive" 
-});
-return 
-}
+  toast ({"
+  variant: "destructive"")
 
-}
-;
 
 }
 };
@@ -781,3 +894,15 @@ return
 }
 ;
 }
+};"
+<Button type="button" variant="ghost" size="sm" onClick= {"
+  handleAccept;"
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply  <Button) : (<RefreshCw className="h-4 w-4 mr-1" />)""
+}Regenerate  <Button h-4 w-4 mr-1"/> Cancel  </div>)""
+}return (<Button) : (<Sparkles className=" h-4 w-4" />)"
+
+}) "`;
+pr-12325
+</Button>
+}</Button>) "
+

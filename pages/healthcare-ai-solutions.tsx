@@ -1,4 +1,6 @@
 title="Healthcare AI Solutions"
+
+			title="Healthcare AI Solutions"
 			slug="healthcare-ai-solutions"
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
@@ -20,6 +22,16 @@ title="Healthcare AI Solutions"
 }
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function HealthcareAISolutions() {
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
+				"EHR integrations: HL7/FHIR, Epic, Cerner"
+			]}
+			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
+import React from 'react',;
+import ServiceLanding from '../components / sections / ServiceLanding',;
 export default /**
  * HealthcareAISolutions - Function description
  */
@@ -69,6 +81,7 @@ export default function HealthcareAISolutions() {
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
+
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,3 +125,7 @@ export default function HealthcareAISolutions() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,5 +1,12 @@
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+
+import React from "react";
+origin/cursor/automate-test-improve-and-merge-code-2533
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+import React from 'react';
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 interface FraudTabContentProps {
   tab_value: string;,
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({,
@@ -14,6 +21,11 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({,
         </div>);
     case 'dangerous':;
   switch (tabValue) {    case 'pending':'
+
+  switch (tabValue) {    case 'pending':
+
+
+  switch (tabValue) {    case 'pending':
 interface FraudTabContentProps {
   tabValue: string;,
 import React from "react","
@@ -39,7 +51,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>"
           <p className="text-muted-foreground">"
 
-import React from "react",
+import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
 interface FraudTabContentProps {
@@ -81,6 +93,17 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>);
     case 'actioned':;
       return (
+
+
+    case 'actioned':
+      return (
+        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
+          <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />
+          <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>
+          <p className="text-muted-foreground">
+            This tab shows flags where action has already been taken.
+          </p>
+        </div>
       return null;
   };
 };
@@ -191,3 +214,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return null;
   }
 };
+      );
+
+    default:
+      return null;
+  }
+};
+origin/cursor/automate-test-improve-and-merge-code-2533

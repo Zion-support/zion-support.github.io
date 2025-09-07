@@ -44,6 +44,11 @@ export const getTypeIcon = (type: NotificationType) => {
     default:
       return <span className="text-gray-500">📣</span>
 
+// Use the centralized icon wrapper to avoid missing icons;
+  switch (type) {
+    case 'message':;
+      return <span className="text-blue-500">💬</span>;
+
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -52,6 +57,7 @@ export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
       return <span className="text-blue-500">💬</span>;
+    case 'message':;      return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
     case 'booking_confirmation':;
@@ -128,6 +134,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       onMarkAsRead(notification.id)
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
+interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
   onMarkAsRead,;
   onDismiss;
@@ -145,6 +152,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 
 }
     }
+      onMarkAsRead(notification.id);    }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
@@ -224,6 +232,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
             </p>
             {notification.action_url && notification.action_text && (
+  return (
+    <div
+      className={cn(
   return (
     <div
       className={cn(
@@ -345,6 +356,13 @@ onClick={handleClick}
         </TooltipProvider>;
       </div>;
 
+            </TooltipContent>;
+          </Tooltip>;
+        </TooltipProvider>;
+      </div>
+};
+    </div>);
+}
 
 };
     </div>);
@@ -355,5 +373,105 @@ onClick={handleClick}
 }
 ;
     </div>;
-  );
+  )
 };
+
+import {Check, Trash2, ChevronRight} from '@/components/icons';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {formatDistanceToNow} from 'date-fns';
+import {cn} from '@/lib/utils';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
+import {useNavigate} from 'react-router-dom';
+import {Notification, NotificationType} from '@/context/notifications';
+export const getTypeIcon = (type: NotificationType) => {
+  switch (type) {
+    case 'message':;
+      return <span className="text-blue-500">💬</span>;""
+      return <span className="text-blue-500">💬</span>,""
+      return <span className="text-purple-500">📝</span>,""
+      return <span className="text-green-500">✅</span>,""
+      return <span className="text-zion-purple">🤝</span>,""
+      return <span className="text-zion-cyan">🚀</span>,""
+      return <span className="text-yellow-500">⚠️</span>""
+      return <span className="text-gray-500">📣</span>""
+      return <span className="text-purple-500">📝</span>;""
+      return <span className="text-green-500">✅</span>;""
+      return <span className="text-zion-purple">🤝</span>;""
+      return <span className="text-zion-cyan">🚀</span>;"
+  onMarkAsRead: (id: string) => Promise<void>,
+</void>
+  onDismiss: (id: string) => Promise<void>
+export const NotificationItem: React.FC<NotificationItemProps> = ({ 
+"
+      return <span className="text-blue-500">💬</span>,;""
+      return <span className="text-purple-500">📝</span>,;""
+      return <span className="text-green-500">✅</span>,;""
+      return <span className="text-zion-purple">🤝</span>,;""
+      return <span className="text-zion-cyan">🚀</span>,;""
+      return <span className="text-yellow-500">⚠️</span>,;""
+      return <span className="text-gray-500">📣</span>;")
+  onMarkAsRead: (id: string) => Promise<void>
+
+export const NotificationItem: React.FC<NotificationItemProps> = ({;
+)
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>;
+export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
+
+    <div;
+      className={cn(
+        "p-3 border-b border-zion-blue-light relative group"""
+        !notification && notification.read ? "bg-zion-blue-dark/30" : """)
+      )}>;
+</div>"
+      <div className="flex items-start gap-2">;"
+        <div className="text-xl">{getTypeIcon(notification && notification.type)}</div>;""
+        <div className="flex-1">;"
+          <div className="flex justify-between items-center mb-1">;"
+            <h4 className="font-medium text-white">{notification && notification.title || "Notification"}</h4>;""
+              <Badge className="bg-zion-cyan text-xs">New;"
+          </div>;"
+          <p className="text-sm text-zion-slate-light">{notification && notification.message || "You have a new notification"}</p>;""
+          <div className="flex justify-between items-center mt-1">;"
+            <p className="text-xs text-zion-slate">;"
+</p>
+            </p>;
+      className={cn("
+        "p-3 border-b border-zion-blue-light relative group",""
+        !notification.read ? "bg-zion-blue-dark/30" : """)
+      )}
+    >
+      <div className="flex items-start gap-2">"
+        <div className="text-xl">{getTypeIcon(notification.type)}</div>""
+        <div className="flex-1">"
+          <div className="flex justify-between items-center mb-1">"
+            <h4 className="font-medium text-white">{notification.title |"Notification"}</h4>""
+              <Badge className="bg-zion-cyan text-xs">New"
+          <p className="text-sm text-zion-slate-light">{notification.message |"You have a new notification"}</p>""
+          <div className="flex justify-between items-center mt-1">"
+            <p className="text-xs text-zion-slate">"
+              <Button;"
+                variant="link"""
+                size="sm"""
+                className="text-zion-cyan p-0 h-auto""
+                onClick={handleClick}>;
+                <ChevronRight className="h-3 w-3 ml-1" />;"
+
+              ;
+          </div>;
+      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;"
+</div>
+        <TooltipProvider>;
+
+          <Tooltip>;
+
+            <TooltipTrigger asChild>;
+
+                variant="ghost"""
+                size="icon"""
+                className="h-6 w-6""
+
+      </div>;)
+    </div>);
+pr-12325

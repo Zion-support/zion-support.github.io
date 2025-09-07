@@ -1,8 +1,26 @@
 
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+export default function ResourcesPage() {
+  return (
+    <MainLayout title="Resources - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Resources</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the resources page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
 
 import React from 'react';
 import SEO from '../components/SEO';
 
+import React from 'react',;
+import SEO from '../components/SEO',;
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function ResourcesPage() {
@@ -807,6 +825,8 @@ Can't find what you're looking for? Our team is here to help with custom researc
 
               Can't find what you're looking for? Our team is here to help with custom research, 
               Can't find what you're looking for? Our team is here to help with custom research,
+    <UltraFuturisticBackground intensity;
+origin/cursor/automate-test-improve-and-merge-code-2533
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -916,3 +936,5 @@ export default function ResourcesPage() {
   );
 }
 }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

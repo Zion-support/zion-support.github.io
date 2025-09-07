@@ -1,4 +1,8 @@
+export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
+
+export type UserRole = "admin" | "user" | "guest";""
 export type UserRole = 'admin' | 'user' | 'guest';
+pr-12325
 
 
 
@@ -72,3 +76,8 @@ export interface NewMessageInput {;
   attachmentName?: string, // optional filename;
   context?: ConversationContext;
 }
+export type UserRole = "admin" | "user" | "guest";""
+export type UserRole = "admin" | "user" | "guest";""
+export type UserRole = 'admin' | 'user' | 'guest';''
+export type UserRole = 'admin' | 'user' | 'guest';''
+

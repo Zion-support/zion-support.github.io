@@ -19,6 +19,11 @@ export default function ServicesAdvertisingPage() {
   ],
   ],
 
+
+  ],
+  ],
+
+
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
@@ -68,6 +73,8 @@ export default function ServicesAdvertisingPage() {
                 { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map'] }
               {[ 
               {[
+
+
 
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
@@ -235,6 +242,8 @@ export default function ServicesAdvertisingPage() {
               {[ 
               {[
 
+
+
                 { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' }
                   { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
@@ -393,6 +402,8 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
+const ext = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
     console.error("Error:", error);
@@ -417,6 +428,13 @@ export default function ServicesAdvertisingPage() {
 }
 import React from 'react',
 import SEO from '../components / SEO',
+
+};
+
+
+}
+import React from 'react',;
+import SEO from '../components / SEO',;
 const ext = (url: string) =>: any (
 <a className="text - cyan - 400 underline" href={`/out?u=${encodeURIComponent (url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace ('https://', '')}</a>),
 export default /**
@@ -1671,6 +1689,10 @@ export default function ServicesAdvertisingPage(req, res) {
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
+
+
+;
+
                 </a>
               ))}
             </div>
@@ -2089,3 +2111,4 @@ return (
 }
 
 ;
+origin/cursor/automate-test-improve-and-merge-code-2533

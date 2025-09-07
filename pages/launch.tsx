@@ -37,3 +37,9 @@ export default function LaunchRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+import type { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps;
+export default function LaunchRedirect() { return null }
+origin/cursor/automate-test-improve-and-merge-code-2533

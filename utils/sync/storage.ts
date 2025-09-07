@@ -132,6 +132,7 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -161,6 +162,27 @@ export interface SyncLog {
 }
 
 class SyncStorage {
+}
+
+
+export function readState(): SyncState {;
+  return { ...state };
+
+export function updateState(updates: Partial<SyncState>): void {;
+
+    filters?: Record<string, any>;
+</string>
+    mappings?: Record<string, string>;
+  metadata?: Record<string, any>;
+    credentials?: Record<string, string>;
+    options?: Record<string, any>;
+  fieldMappings: Record<string, string>;
+  transformations?: Array<{
+    field: string;,
+  type: 'format' | 'convert' | 'calculate' | 'filter';
+    config: Record<string, any>;
+  details?: Record<string, any>;
+pr-12325
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
   private mappings: Map<string, SyncMapping> = new Map();
@@ -221,6 +243,7 @@ class SyncStorage {
     );
   }
 }
+
 // Singleton instance
 export const syncStorage = new SyncStorage();
 
@@ -237,48 +260,20 @@ export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<
   return syncStorage.updateJob(id, updates);
 }
 
-export async function startJob(id: string): Promise<boolean> {
-  return syncStorage.startJob(id);
+export async function deleteJob(id: string): Promise<boolean> {
+  return syncStorage.deleteJob(id);
 }
 
-export async function completeJob(id: string, error?: string): Promise<boolean> {
-  return syncStorage.completeJob(id, error);
+export async function getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+  return syncStorage.getJobsByStatus(status);
 }
 
-export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
-  return syncStorage.updateJobProgress(id, progress);
+export async function getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
+  return syncStorage.getJobsByType(type);
 }
 
-export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
-  return syncStorage.createConnection(connection);
-}
-
-export async function getConnection(id: string): Promise<SyncConnection | null> {
-  return syncStorage.getConnection(id);
-}
-
-export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
-  return syncStorage.updateConnection(id, updates);
-}
-
-export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
-  return syncStorage.createMapping(mapping);
-}
-
-export async function getMapping(id: string): Promise<SyncMapping | null> {
-  return syncStorage.getMapping(id);
-}
-
-export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
-  return syncStorage.updateMapping(id, updates);
-}
-
-export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
-  return syncStorage.createLog(log);
-}
-
-export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
-  return syncStorage.getLogsByJob(jobId, limit);
+export async function getAllJobs(): Promise<SyncJob[]> {
+  return syncStorage.getAllJobs();
 }
 
 // Utility functions
@@ -297,44 +292,8 @@ export function createSyncJob(
   };
 }
 
-export function createSyncConnection(
-  name: string,
-  type: SyncConnection['type'],
-  config: SyncConnection['config']
-): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    name,
-    type,
-    config,
-    isActive: true
-  };
-}
-
-export function createSyncMapping(
-  name: string,
-  sourceConnectionId: string,
-  destinationConnectionId: string,
-  fieldMappings: Record<string, string>
-): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    name,
-    sourceConnectionId,
-    destinationConnectionId,
-    fieldMappings,
-    isActive: true
-  };
-}
-
 export function generateJobId(): string {
   return `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateConnectionId(): string {
-  return `conn_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateMappingId(): string {
-  return `mapping_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
 export function calculateProgress(processed: number, total: number): number {
@@ -551,3 +510,4 @@ export function filterEventsByScope(;
   }
   return events;
 }
+

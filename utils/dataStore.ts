@@ -47,12 +47,16 @@ getData: () => []
 
 
 interface Project {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
-  description: string;
+  description: string;,
   status: string;
-  createdAt: Date;
+
+  createdAt: Date;,
   updatedAt: Date;
+
 }
 
 interface Review {
@@ -68,8 +72,26 @@ interface Review {
   anonymous: boolean;
   approved: boolean;
   removed: boolean;
+  // TODO: Implement
+}
+  id: string;,
+  projectId: string;
+
+  fromRole: "client" | "talent";",
+  fromId: string;"
+  toRole: "client" | "talent";",
+
+  toId: string;
+  rating: number;,
+  text: string;
+  categories?: any;
+  anonymous: boolean;,
+  approved: boolean;
+
+  removed: boolean;,
   createdAt: Date;
   updatedAt: Date;
+
 }
 
 class DataStore {
@@ -121,38 +143,12 @@ class DataStore {
 
     if (existingIndex !== -1) {
       // Update existing review
-      this.reviews[existingIndex] = {
-        ...this.reviews[existingIndex],
-        ...data,
-        updatedAt: new Date(),
-      };
-      return this.reviews[existingIndex];
-    } else {
-      // Create new review
-      const review: Review = {
-        id: Math.random().toString(36).substr(2, 9),
-        projectId: data.projectId || "",
-        fromRole: data.fromRole || "client",
-        fromId: data.fromId || "",
-        toRole: data.toRole || "talent",
-        toId: data.toId || "",
-        rating: data.rating || 0,
-        text: data.text || "",
-        categories: data.categories,
-        anonymous: data.anonymous || false,
-        approved: data.approved || false,
-        removed: data.removed || false,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-      this.reviews.push(review);
+
       return review;
     }
   }
 
   getReviewsByProject(projectId: string): Review[] {
-    return this.reviews.filter((review) => review.projectId === projectId);
-  }
 
   getAllReviews(): Review[] {
     return [...this.reviews];
@@ -318,6 +314,7 @@ export const counterpartRole = (role: 'client' | 'talent') => store.counterpartR
 
 
   store.counterpartRole(role);
+
 
 
 

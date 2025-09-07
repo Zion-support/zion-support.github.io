@@ -150,6 +150,7 @@ app && app.post('/jobs/generate', async (req, reply) => {
 
     )
 import { get_pool, with_user } from './pg.js';
+    if (|| allowed.includes (origin)) {) {import { get_pool, with_user } from './pg.js';
     const allowed = (process.env.CORS_ORIGINS || '';
     cb (new Error ('Not allowed';
   methods: ['GET', 'POST', 'OPTIONS';
@@ -170,6 +171,15 @@ if (return { description }) {
       cb (null, true);
       return;
     }
+await app.register (cors, {)
+  origin: (origin, cb) => {
+    const allowed = (process.env.CORS_ORIGINS || ).split ().map ((s) => s.trim ());
+    if (|| allowed.includes (origin)) {) {
+  $2;
+}
+      cb (null, true);
+      return;
+pr-12325
     cb (new Error ('Not allowed'), false);
   },
   methods: ['GET', 'POST', 'OPTIONS'];
@@ -180,6 +190,12 @@ const openai = createOpenAIClient (process.env.OPENAI_API_KEY || '');
 function getUserId (req: any): string | null {
   return (req.headers['x - user - id'] as string) || (req.query as any)['user_id'] || null;
 }
+await app.register (rate_limit, { global: true, max: 100, time_window: '1m' });
+const openai = createOpenAIClient (process.env.OPENAI_API_KEY || );
+function getUserId (req: any): string | null {
+  // TODO: Implement
+  return (req.headers['x - user - id'] as string) || (req.query as any)['user_id'] || null;
+pr-12325
 app.post ('/ai / ask', async (req, reply) => {
   const body = (req.body as any) || {}
   const prompt = body.prompt as string;
@@ -196,6 +212,12 @@ app.post ('/jobs / generate', async (req, reply) => {
   });
   return { saved: Boolean (user_id), description }
 });
+  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
+  return { text: completion.output_text }
+app.post ('/jobs / generate', async (req, reply) => {
+  const role = (body.role as string) || 'Engineer';
+  return { saved: Boolean (user_id), description }
+pr-12325
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
@@ -234,6 +256,28 @@ app.post ('/jobs / generate', async (req, reply) => {
   return { items }
 });
 const port = Number(process.env.API_PORT |4000);
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;)
+       WHERE ($1::text IS NULL OR country = $1)
+         AND ($2::text IS NULL OR EXISTS ()
+              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%
+           ))
+       ORDER BY created_at DESC;`;
+       LIMIT 25`;
+      [country |null, q |null]
+    );
+    return res && res.rows;
+  return { results: rows }
+  const project = await withUser(userId, async (client) => {`;
+    const res = await client && client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
+    return res && res.rows[0]
+  if (!project) return reply && reply.code(404).send({ error: 'not found' });
+  return { project }
+  const items = await withUser(userId, async (client) => {
+    const res = await client && client.query(`;
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;`;
+       WHERE read = false ORDER BY created_at DESC LIMIT 20`)
+  return { items }
+const port = Number(process.env.API_PORT |4000);
 
 const port = Number(process && process.env.API_PORT || 4000);
 app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
@@ -246,51 +290,22 @@ app.get ('/talent / search', async (req, reply) => {
   const country = (req.query as any).country as string | undefined;
   const user_id = getUserId (req);
   if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
   const rows = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
+    const res = await client.query (`;
       WHERE ($1::text IS NULL OR country = $1);
-        AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
-      ORDER BY created_at DESC;
-      LIMIT 25`;
       [country || null, q || null]);
     return res.rows;
-  });
-  return { results: rows }
-});
-;
 app.get ('/projects/:name / track', async (req, reply) => {
   const name = (req.params as any).name as string;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const project = await with_user (user_id, async (client) => {
+  const project = await with_user (user_id, async (client) => {`;
     const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
     return res.rows[0];
-  });
   if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }
-});
-;
 app.get ('/notifications', async (req, reply) => {
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
   const items = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;)`;
       WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;
-  });
-  return { items }
-});
 const port = Number (process.env.API_PORT || 4000);
 app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
@@ -303,3 +318,5 @@ app.listen({ port, host: '0.0.0.0' }).catch(err => {
   app.log.error(err);
   process.exit(1);
 });
+`;
+pr-12325

@@ -1,8 +1,11 @@
+pr-12325
 }
   })
   const handleSubmit = async (data:,  EducationFormValues) => {,
     setIsLoading(true)
     setError(null);    try {
+  // TODO: Implement
+pr-12325
       await onSubmit(data)
     } catch (err:,  any) {,
       setError(err.message |'An error occurred')'
@@ -16,7 +19,26 @@ import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Alert, AlertDescription } from '@/components / ui / alert';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
+import { Button } from '@/components/ui/ button';
+import { Textarea } from '@/components/ui/ textarea';
+import { Input } from '@/components/ui/ input';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { Alert, AlertDescription } from '@/components/ui/ alert';
+import {
+  // TODO: Implement
+pr-12325
   Form,
   FormControl,
   FormField,
@@ -31,6 +53,16 @@ import { Education } from '@/types / resume';
 const education_schema = z.object ({
   institution: z.string ().min (1, 'Institution is required'),'
   degree: z.string ().min (1, 'Degree is required'),'
+  FormMessage,
+} from '@/components/ui/ form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/ resume';
+// Define schema for form validation;
+const education_schema = z.object ({)
+pr-12325
+  institution: z.string ().min (1, 'Institution is required'),
+  degree: z.string ().min (1, 'Degree is required'),
   field_of_study: z.string ().optional (),
   start_date: z.string ().min (1, 'Start date is required'),'
   end_date: z.string ().optional (),
@@ -41,6 +73,8 @@ const education_schema = z.object ({
 type EducationFormValues = z.infer < typeof education_schema>;
 export /**
  * EducationFormFields - Function description
+ * EducationFormFields - Function description;
+pr-12325
  */
 function EducationFormFields() {
   const [is_loading, setIsLoading] = useState (false);,
@@ -67,10 +101,74 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
+  const form = use_form < EducationFormValues>({)
+    resolver: zod_resolver (education_schema),
+    default_values: {,
+  institution: ,
+      degree: ,
+      field_of_study: ,
+      start_date: format (new Date (), 'yyyy - MM - dd'),
+      is_current: false,
+      description: ,
+      location: ,
+    },
+  const handle_submit = async (data: EducationFormValues) => {
+    setIsLoading (true);
+    set_error (null);    try {
+  // TODO: Implement
+      await on_submit (data);
+      set_error (err.message || 'An error occurred');
+    } finally {
+  // TODO: Implement
+      setIsLoading (false);
+pr-12325
+
+
+
+
+
+
+  FormMessage,;
+} from '@/components/ui/form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
+
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2 } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
+// Define schema for form validation
+const educationSchema = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Form {...form}>;
       <form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+  return (
+    <Form {...form}>;
+
+)
+      <form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
+</form>
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+</div>
+pr-12325
           <FormField;
             control={form.control}
             name='institution';
@@ -167,6 +265,8 @@ export function EducationFormFields({;
           <FormField
             control={form.control}
             name='degree''
+            control={form && form.control}
+            name='degree'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
@@ -252,6 +352,7 @@ export function EducationFormFields({;
                 <FormMessage />;
               </FormItem>;
             )}
+          />;
           />
           <div className='space-y-4'>;
             <FormField
@@ -265,6 +366,14 @@ export function EducationFormFields({;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
                     <Checkbox
+                      checked = {field && field.value,}
+                      onCheckedChange = {field && field.onChange,}
+                    />;
+                  </FormControl>;
+                  <div className='space-y-1 leading-none'>;
+                    <FormLabel>I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>;
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -371,6 +480,7 @@ export function EducationFormFields({;
           control={form.control}
         />;
         <FormField
+          control={form && form.control}
           control={form.control}
           name='description''
           render={({ field }: { field: any }) => (            <FormItem>
@@ -490,3 +600,215 @@ export function EducationFormFields({;
 }})
 }
 ;
+
+}
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+                <FormLabel > Institution;
+                <FormControl>;
+
+                  <Input;
+                    placeholder='University of California, MIT, etc.';
+                    {...field}
+                  />;
+
+                ;
+                <FormMessage />;
+
+              <FormItem>
+
+
+
+                <FormLabel>Institution
+                <FormControl>
+
+                  <Input placeholder="University of California, MIT, etc." {...field} />"
+
+                
+                <FormMessage />
+
+              
+            control={form.control}"
+            name='degree)
+
+                <FormLabel>Degree;
+
+                    placeholder="Bachelor's, Master's, Ph && Ph.D, etc."")
+              )}
+
+"
+            name="degree""
+            render={({ field }: { field: any }) => (
+
+
+
+
+                <FormLabel>Degree
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />"
+
+                
+
+              
+        </div>;
+          name='field_of_study)
+          render={({ field }: { field: any }) => (            <FormItem>;
+
+              <FormLabel>Field of Study;
+
+                  placeholder='Computer Science, Engineering, etc.)
+
+
+          name="field_of_study""
+
+
+
+
+              <FormLabel>Field of Study
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />"
+
+              
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+
+
+
+                <FormLabel>Start Date
+
+              <FormItem>;
+
+                <FormLabel>Start Date;
+
+                  <Input type='date' {...field} value={field && field.value || } />                ;
+
+
+                  <Input type='date' {...field} value={field.value || } />                
+
+
+              
+
+                    type="date""
+                    {...field}"
+                    value={field.value || } ;
+
+
+          <div className='space-y-4'>;
+
+
+
+                    <Checkbox;
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+
+                  
+                  <div className="space-y-1 leading-none">"
+                    <FormLabel>I am currently studying here
+                
+                control={form && form.control}"
+                name='end_date
+
+                name="end_date"")
+
+
+                    <FormLabel>End Date
+
+
+
+                        {...field} "
+                        value={field.value || }
+
+                    
+
+
+
+
+                  
+
+                    <FormLabel>End Date;
+
+                      <Input type='date' {...field} value={field && field.value || } />                    ;
+
+
+          name='location)
+              <FormLabel>Location (Optional);
+            name='start_date';
+
+
+                <FormLabel > Start Date;
+
+                  <Input type='date' {...field} value={field.value || } />                ;
+
+          <div className='space - y-4'>;
+              name='is_current';
+
+                <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+
+                      checked = {field.value, }
+                      onCheckedChange = {field.on_change, }
+
+                  <div className='space - y-1 leading - none'>;
+                    <FormLabel > I am currently studying here;
+                  </div>;)
+                name='end_date';
+
+
+                    <FormLabel > End Date;
+
+                      <Input type='date' {...field} value={field.value || } />                    ;
+
+
+
+
+
+          name='description
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Description (Optional)
+
+                <Textarea;
+                  placeholder='Notable achievements, courses, activities...
+                  className='min-h-[100px]
+
+          name='description';
+              <FormLabel > Description (Optional);
+
+                  placeholder='Notable achievements, courses, activities...';
+                  className='min - h-[100px]';
+          name="location""
+
+
+              <FormLabel>Location (Optional)
+                <Input placeholder="Cambridge, MA" {...field} />"
+
+              
+
+            
+          name="description""
+
+
+                <Textarea;"
+                  placeholder="Notable achievements, courses, activities..."""
+                  className="min-h-[100px]""
+
+
+          
+          <Alert variant='destructive'>;
+
+            <AlertDescription>{error};
+        <div className='flex justify-between pt-2'>;
+          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
+
+          <Button type='submit' disabled={isLoading}>;
+
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+</Loader2>
+      </form>;
+
+        <div className='flex justify - between pt - 2'>;
+          <Button type='button' variant='outline' on_click={on_cancel}>            {is_editing ? 'Cancel' : 'Back'}
+
+          <Button type='submit' disabled={is_loading}>;
+
+            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
+    );
+pr-12325

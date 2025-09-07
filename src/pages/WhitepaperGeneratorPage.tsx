@@ -369,6 +369,18 @@ if (
     }
   }
   const handleTogglePublicStatus = async () => {
+const slugify = (text: string): string => {
+  return text;
+    .to_string ();
+    .toLowerCase ();
+    .replace (/\s+/g, '-') // Replace spaces with -;
+    .replace (/[^\w-]+/g, '') // Remove all non - word chars;
+    .replace (/--+/g, '-') // Replace multiple - with single -;
+    .replace (/^-+/, '') // Trim - from start of text;
+    .replace (/-+$/, ''); // Trim - from end of text;
+}
+const WhitepaperGeneratorPage: React.FC = () => {
+    }
     // Check condition
 if ( {) {
   $2
@@ -534,6 +546,71 @@ import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel;
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+      set_error (
+        `Warning: Total distribution is ${total_percentage}%. Consider adjusting to sum to 100%.`);
+    } else // Check condition
+if (
+    ) {) {
+  $2
+}
+      set_error ('Distribution percentages are all zero or invalid.');
+      setIsLoading (false);
+      return;
+    }
+    try {
+      if (!data |!(data as any).whitepaperDraft) {
+        throw new Error('No whitepaper draft received from the function.')
+      }
+      setRawDraft ((data as any).whitepaper_draft);
+      set_sections (parseWhitepaperDraft ((data as any).whitepaper_draft));
+    } catch (e: any) {
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  const handleSectionContentChange = (id: string, new_content: string, ) =>: any {
+    set_sections (prev_sections =>;
+      prev_sections.map (section =>;
+        section.id === id ? { ...section, content: new_content } : section));
+  }
+  const assembleMarkdownContent = (): string => {
+    let md_content = `# ${token_name} - Whitepaper\n\n`;
+    md_content += `**Total Supply:** ${token_supply}\n\n`;
+    sections.for_each (section => {
+      md_content += `## ${section.title}\n\n${section.content}\n\n`;
+      if (.includes ('token distribution')) {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          md_content += `### Distribution Details\n\n`;
+          distributionChartData.for_each (item => {
+            md_content += `- **${item.name}:** ${item.value}%\n`;
+          });
+          md_content += `\n${distribution_breakdown ? `**Additional Notes:** ${distribution_breakdown}\n\n` : ''}`;
+        } else // Check condition
+if ( {) {
+  $2
+}
+          md_content += `**Distribution Notes:** ${distribution_breakdown}\n\n`;
+        }
+      }
+    });
+    return md_content;
+  }
+  const handleDownloadMarkdown = () =>: any {
+    setIsDownloading (true);
+    try {
+        { message: 'Error downloading Markdown' }
+      );
+      set_error ('Failed to download Markdown file. ' + e.message);
+    } finally {
+      setIsDownloading (false);
+    }
+  }
+  const handleDownloadPdf = async () => {
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
@@ -581,6 +658,23 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
   id: string,
   title: string,
+
+import React, { useState, useEffect, useCallback } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Trash2, Download, Share2 } from 'lucide-react'
+import { Send } from 'lucide-react', // Added Send icon
+import { toast } from "sonner",;
+import { logErrorToProduction } from '@/utils/productionLogger',;
+interface WhitepaperSection {
+  id: string,
+  title: string,
+  id: string;
+  title: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
   content: string
 import React, { useState, useEffect, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -1537,6 +1631,124 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     } catch (e: any) {
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),
       setError("Failed to download PDF file. " + e.message)
+interface DistributionItem {
+  id: string;
+  name: string;
+  percentage: string
+}
+{'
+  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
+}
+{'
+  id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
+}
+{'
+  id: crypto.randomUUID (),  name: 'Community Rewards & Airdrops', percentage: '20'
+}
+{'
+  id: crypto.randomUUID (),  name: 'Public Sale Allocation', percentage: '10'
+}])
+const [isDownloading, setIsDownloading] = useState (false)
+const [isSharing, setIsSharing] = useState (false)
+const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false)
+const [error, setError] = useState<string | null> (null)
+const [shareableLink, setShareableLink] = useState<string | null> (null)
+const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft, setRawDraft] = useState<string | null> (null)
+const [sections, setSections] = useState<WhitepaperSection[]> ([])
+const [showRawDraft, setShowRawDraft] = useState (false)
+}return parsed
+}, [])
+const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
+  return distributionData .map (item => ({
+}if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
+  setError (`Warning: Total distribution is $ {
+  totalPercentage
+}%. Consider adjusting to sum to 100%.`)
+}else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some (d => d.name && d.percentage) ) {
+}try {
+  const apiPayload: any = {
+  tokenName
+tokenSupply: tokenSupply.toString ()
+useCases
+rewardsLogic
+governanceLogic
+legalDisclaimers
+distributionBreakdown
+}
+if (processedDistData.length > 0) {
+  apiPayload.distributionData = processedDistData
+}const {
+  data, error: funcError '
+}= await supabase.functions.invoke ('generate-whitepaper', {
+  body: apiPayload
+})
+if (funcError) {
+  throw new Error (`Supabase function error: $ {
+  funcError.message
+}`)
+}if (data && (data as any) .error) {
+  throw new Error (`Generation error: $ {
+  (data as any) .error
+}`)
+}if (!data |! (data as any) .whitepaperDraft) {'
+  throw new Error ('No whitepaper draft received from the function.')
+}setRawDraft ( (data as any) .whitepaperDraft)
+setSections (parseWhitepaperDraft ( (data as any) .whitepaperDraft) )
+}catch (e: any) {
+  logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined, {'
+  message: 'Error generating whitepaper'
+});'
+setError (e.message |'An unexpected error occurred.')
+setSections ([])
+}finally {
+  setIsLoading (false)
+interface DistributionChartItem {
+    );
+  };
+
+  const assembleMarkdownContent = (): string => {
+    let mdContent = `# ${tokenName} - Whitepaper\n\n`
+    mdContent += `**Total Supply:** ${tokenSupply}\n\n`
+    sections.forEach(section => {
+      mdContent += `## ${section.title}\n\n${section.content}\n\n`;
+if (section.title.toLowerCase().includes('token distribution')) {
+        if (distributionChartData.length > 0) {
+          mdContent += `### Distribution Details\n\n`
+          distributionChartData.forEach(item => {
+            mdContent += `- **${item.name}:** ${item.value}%\n`
+          })
+          mdContent += `\n${distributionBreakdown ? `**Additional Notes:** ${distributionBreakdown}\n\n` : ''}`
+        } else if (distributionBreakdown) {
+          mdContent += `**Distribution Notes:** ${distributionBreakdown}\n\n`
+        }
+      }
+    })
+    return mdContent
+  }
+  const handleDownloadMarkdown = () => {
+    setIsDownloading(true)
+    try {
+      const markdown = assembleMarkdownContent()
+      const blob = new Blob([markdown], {
+        type: 'text/markdown;charset=utf-8'
+      })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = `${slugify(tokenName |'whitepaper')}_whitepaper.md`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      URL.revokeObjectURL(url)
+      setError(null)
+    } catch (e: any) {
+      logErrorToProduction(
+        e instanceof Error ? e.message : String(e)
+        e instanceof Error ? e : undefined
+        { message: 'Error downloading Markdown' }
+      )
+      setError('Failed to download Markdown file. ' + e.message)
+origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {
       setIsDownloading(false)
     }
@@ -1855,6 +2067,118 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
           }
 
+    <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>;
+      {/* Left Column: Inputs and Editors */}
+            <Button
+              onClick={handleDownloadMarkdown}
+              disabled={
+                isDownloading |
+                sections.length === 0 |
+                isLoading |
+                isSharing |
+                isSubmittingToCounsel
+              }
+              variant='outline'
+              size='sm'
+                isSubmittingToCounsel
+              }
+              variant='outline'
+              size='sm'
+        <form onSubmit={e => e.preventDefault()} className='space-y-6'>
+          {/* ... (Input fields remain the same) ... */}
+          <div>;
+            <label htmlFor='tokenName' className='block text-sm font-medium'>;
+              Token Name:;
+            </label>;
+            <Input
+              id='tokenName'
+              value={tokenName}
+              onChange={e => setTokenName(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor='tokenSupply' className='block text-sm font-medium'>
+              Token Supply:
+            </label>
+            <Input
+              id='tokenSupply'
+              value={tokenSupply}
+              onChange={e => setTokenSupply(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor='useCases' className='block text-sm font-medium'>
+              Use Cases:
+            </label>
+            <textarea
+              id='useCases'
+              value={useCases}
+              onChange={e => setUseCases(e.target.value)}
+              required
+              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+              rows={3}
+            />
+          </div>
+          <div>
+            <label htmlFor='rewardsLogic' className='block text-sm font-medium'>
+              Rewards Logic:
+            </label>
+            <textarea
+              id='rewardsLogic'
+              value={rewardsLogic}
+              onChange={e => setRewardsLogic(e.target.value)}
+              required
+              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+              rows={3}
+            />
+          </div>
+          {/* Token Distribution Inputs */}
+          <div className='space-y-3 p-3 border rounded-md'>;
+            <h2 className='text-lg font-semibold'>Token Distribution</h2>;
+            {distributionData && distributionData.map(item => (;
+              <div key={item && item.id} className='flex items-center space-x-2'>;
+                <Input
+                  type='text'
+                  placeholder='Category'
+                  value={item && item.name}
+                  onChange={e =>;
+                    handleDistributionChange(item && item.id, 'name', e && e.target.value);
+                  }
+                  className='flex-grow';
+                />;
+                <Input
+                  type='number'
+                  placeholder='%'
+                  value={item.percentage}
+                  onChange={e =>
+                    handleDistributionChange(
+                      item.id
+                      'percentage'
+                      e.target.value
+                    )
+                  }
+                  className='w-24';
+                  min='0';
+                  max='100';
+                />;
+                <Button
+                  variant='ghost'
+                  size='icon'
+            ))}
+            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
+            <div>
+              rows={3}
+            />;
+          </div>;
+          <div>;
+          </div>
+          <div>
+          </div>
+          <div>
+            <label
+              htmlFor='legalDisclaimers'
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
@@ -2002,6 +2326,106 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
+              )}
+            </div>
+          )}
+
+              type='button'
+              onClick={handleSubmitToCounsel}
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
+                type="button"
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant="default"
+                size="lg"
+                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+            >
+                <Send className="mr-2 h-4 w-4" />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+
+
+
+
+        </form>
+        </form>;
+
+        {/* Section Editors */}
+        {sections && sections.length > 0 && (;
+          <div className='mt-8 pt-6 border-t'>;
+            <h2 className='text-xl font-bold mb-4 text-center'>;
+              Edit Generated Sections;
+            </h2>;
+            {sections && sections.map(section => (;
+              <WhitepaperSectionEditor
+                key={section && section.id}
+                title={section && section.title}
+                content={section && section.content}
+                onContentChange={newContent =>;
+                  handleSectionContentChange(section && section.id, newContent);
+                }              />;
+            ))}
+          </div>;
+        )}
+        {rawDraft && (;
+          <div className='mt-6 p-3 border rounded-md'>;
+            <Button
+              onClick={() => setShowRawDraft(!showRawDraft)}
+              variant='outline';
+              size='sm';
+              className='w-full';
+            >;
+              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>;
+            {showRawDraft && (;
+              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>;
+                {rawDraft}
+              </pre>;
+            )}
+          </div>;
+        )}
+      </div>
+                </p>)}
+            </div>)}
+          {is_sharing && (
+            <p className='text - center text - sm text - blue - 600'>;
+              Generating shareable link...;
+            </p>)}
+          {/* Submit to Counsel Button */}
+          {sections.length > 0 && (
+            <Button
+              type='button'
+              onClick={handleSubmitToCounsel}
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -2022,6 +2446,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
+        {/* Section Editors */}
+        {sections.length > 0 && (
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
@@ -2030,6 +2456,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               />;
             ))}
           </div>;
+
+            ))}
+          </div>
         )}
         {rawDraft && (
             <div className="mt-6 p-3 border rounded-md">
@@ -2044,6 +2473,18 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             </div>;
         )}
       </div>;
+
+        )}
+      </div>
+      {/* Right Column: Preview Panel - Pass ref here */}
+
+'";
+;
+}
+}
+
+        )}
+      </div>
       {/* Right Column: Preview Panel - Pass ref here */}
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel
@@ -2057,6 +2498,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   );
 },;
 export default WhitepaperGeneratorPage;
+
+
+
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
       >;
         <WhitepaperPreviewPanel;
@@ -2070,3 +2514,6 @@ export default WhitepaperGeneratorPage;
 export default WhitepaperGeneratorPage;
 '";
 export default WhitepaperGeneratorPage;
+export default WhitepaperGeneratorPage
+'"
+origin/cursor/automate-test-improve-and-merge-code-2533

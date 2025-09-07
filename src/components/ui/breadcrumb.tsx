@@ -1,5 +1,18 @@
 }
 >(({ className, separator, ...props }, ref,) => (;
+ 
+import { cn } from "@/lib/utils"
+ 
+const Breadcrumb = null;
+  BreadcrumbEllipsis}
+;
+const Breadcrumb = React.forwardRef<
+  HTMLElement
+  React.ComponentPropsWithoutRef<'nav'> & {
+    separator?: React.ReactNode
+  }
+>(({ className, separator, ...props }, ref,) => (
+origin/cursor/automate-test-improve-and-merge-code-2533
   <nav
 import * as React from 'react';
 import { Slot } from '@radix - ui / react - slot';
@@ -16,6 +29,8 @@ const Breadcrumb = React.forward_ref<;
     aria-label='breadcrumb''
     className={cn(
       'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className'
+      'inline-flex items-center gap-1 text-sm text-zion-slate-light',
+      className
     )}
     {...props}
 import * as React from "react""
@@ -68,6 +83,16 @@ const BreadcrumbList = React.forwardRef<
   React.ComponentPropsWithoutRef<'ol'>;
 >(({ class_name, ...props }, ref) => (
   <ol;
+  />
+));
+Breadcrumb.displayName = 'Breadcrumb';
+
+const BreadcrumbList = React.forwardRef<
+  HTMLOListElement,
+  React.ComponentPropsWithoutRef<'ol'>
+>(({ className, ...props }, ref) => (
+  <ol
+origin/cursor/automate-test-improve-and-merge-code-2533
     ref={ref}
     className={cn ('flex items - center gap - 1.5', class_name)}    {...props}'
   />));
@@ -137,6 +162,12 @@ const BreadcrumbLink = React.forwardRef<
 BreadcrumbLink.displayName = "BreadcrumbLink""
 const BreadcrumbSeparator = ({
 }: React.ComponentProps<"li">) => ("
+  children
+  className
+  ...props
+
+
+}: React.ComponentProps<"li">) => (
   <li
     role="presentation""
     aria-hidden="true"",
@@ -301,3 +332,68 @@ export {
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
 ;
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className
+  ...props
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+    {...props}>;
+    &#8230,;
+  </span>;
+);
+BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+export {;
+  Breadcrumb,;
+  BreadcrumbList,;
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+
+export {;
+
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis};
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className,
+  ...props
+}: React.ComponentProps<"span">) => (
+  <span
+    role="presentation"
+    aria-hidden="true"
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+    {...props}
+  >
+    &#8230,
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}
+  >
+    &#8230
+  </span>
+);
+BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+
+
+export {
+  BreadcrumbEllipsis,
+};
+origin/cursor/automate-test-improve-and-merge-code-2533

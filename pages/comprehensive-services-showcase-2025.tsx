@@ -74,11 +74,32 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
+  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
+ } from 'lucide-react';
+import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+const contactInfo = null;
+export default function ComprehensiveServicesShowcase2025() {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+const [sortBy, setSortBy] = useState<
+    'name' | 'price' | 'rating' | 'popularity'
+  >('popularity');
+  // Filter services based on selections
+  const filteredServices = comprehensiveRealServices2025.filter(service => {
+    const categoryMatch =
+      selectedCategory === 'All Services' |
+      service.category.includes(selectedCategory);
+origin/cursor/automate-test-improve-and-merge-code-2533
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
       const price = parseInt(service && service.price.replace('$', ''));
@@ -94,6 +115,36 @@ import React, { useState } from 'react';
           break;
         case '$800+':;
           priceMatch = price > 800;
+break;
+      }
+    }
+    const searchMatch =
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return categoryMatch && priceMatch && searchMatch;
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+return (
+          parseInt(a.price.replace('$', '')) -
+          parseInt(b.price.replace('$', ''))
+        );
+      case 'rating':
+        return b.rating - a.rating;
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+default:
+        return 0;
+    }
+  });
+origin/cursor/automate-test-improve-and-merge-code-2533
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
     if (numPrice < 300) return 'Under $300';
@@ -101,6 +152,9 @@ import React, { useState } from 'react';
     if (numPrice <= 800) return '$500 - $800';
     return '$800+';
   }
+return '$800+';
+  };
+
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
@@ -113,11 +167,14 @@ import React, { useState } from 'react';
     );
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
 
+
+
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/comprehensive-services-showcase-2025'
         />;
       </Head>;
+
 
       {/* Hero Section */}
       <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>;
@@ -156,6 +213,7 @@ import React, { useState } from 'react';
                 proven technology;
               </span>{' '}
 
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -164,6 +222,8 @@ import Link from 'next/link';
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+
 
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
@@ -238,6 +298,10 @@ import Link from 'next/link';
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
@@ -249,6 +313,32 @@ import Link from 'next/link';
         <meta property="og:url" content="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
+<meta
+          name='description'
+          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.'
+        />
+        <meta
+          name='keywords'
+          content='AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence'
+        />
+        <meta
+          property='og:title'
+          content='Comprehensive Services Showcase 2025 | Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms.'
+        />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/comprehensive-services-showcase-2025'
+        />
+        <meta property='og:type' content='website' />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
+        />
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -1499,6 +1589,62 @@ if (return '$500 - $800') {
 }
                         className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
+                          </span>
+                          <span className='text-gray-400'>
+                            ({service.reviews})
+                          </span>
+                        </div>
+                        <span className='text-sm text-gray-400'>
+                          {getPriceRange(service.price)}
+                        </span>
+                      </div>
+                    </div>
+                    {/* Features and Benefits */}
+                    <div className='mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6'>
+                      <div>
+                        <h4 className='text-white font-semibold mb-3'>
+                          Key Features:
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.features.slice(0, 4).map((feature, idx) => (
+                            <div key={idx} className='flex items-center'>
+                              <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
+                              <span className='text-gray-300 text-sm'>
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+<div>
+                        <h4 className='text-white font-semibold mb-3'>
+                          Key Benefits:
+                        </h4>
+                        <div className='space-y-2'>
+                          {service.keyBenefits
+                            .slice(0, 4)
+                            .map((benefit, idx) => (
+                              <div key={idx} className='flex items-center'>
+                                <div className='w-2 h-2 bg-cyan-400 rounded-full mr-3'></div>
+                                <span className='text-gray-300 text-sm'>
+                                  {benefit}
+                                </span>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    </div>
+                    {/* CTA and Additional Info */}
+                    <div className='mt-6 flex flex-col lg:flex-row items-center justify-between gap-4'>
+                      <div className='flex items-center gap-4 text-sm text-gray-400'>
+                        <span>Market: {service.marketSize}</span>
+                        <span>Growth: {service.growthRate}</span>
+                        <span>ROI: {service.roi}</span>
+                      </div>
+                      <Link
+                        href={service.link}
+                        className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -2221,3 +2367,8 @@ export default ComprehensiveServicesShowcase2025,
                 Visit us at:{' '}
                 <a
 
+
+  );
+
+export default ComprehensiveServicesShowcase2025;
+origin/cursor/automate-test-improve-and-merge-code-2533

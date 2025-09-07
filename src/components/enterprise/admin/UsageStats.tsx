@@ -1,3 +1,52 @@
+import {
+
+export function UsageStats() {
+
+
+  const handleSaveChanges = () => {
+    toast({
+
+import React from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { toast } from '@/hooks/use-toast';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Sparkles } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+import {
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle} from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { Progress } from "@/components/ui/progress";
+export function UsageStats() {
+  const handleSaveChanges = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className="space-y-8">
+      <div>
+        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
+        <p className="text-muted-foreground mb-6">
+          Configure usage limits for your team to manage your subscription resources.
+        </p>
+      </div>
 return (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
 
@@ -534,6 +583,11 @@ export function UsageStats() {;
           </CardFooter>;
         </Card>;
       </div>;
+    </div>;
+  );
+}
+;
+
       <div className='bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
         <div className='flex items - center gap - 4'>;
           <div className='h - 10 w - 10 rounded - full bg - primary / 20 flex items - center justify - center'>;
@@ -575,3 +629,7 @@ export function UsageStats() {;
   );
 }
 ;
+  );
+
+}"
+origin/cursor/automate-test-improve-and-merge-code-2533

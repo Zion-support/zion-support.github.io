@@ -19,7 +19,6 @@ const next_config = {
 
 
 /** @type {import('next').NextConfig} */;
-
 const nextConfig = {;
 
 
@@ -63,6 +62,8 @@ const nextConfig = {;
 
 
 
+  reactStrictMode: true,;
+  reactStrictMode: true;,
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -75,8 +76,8 @@ const nextConfig = {;
 
 
   // Image optimization;
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+  images: {,
+  domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],""
     formats: ['image / webpimage / avif'];
   },
   // Output configuration;
@@ -84,9 +85,9 @@ const nextConfig = {;
   // Trailing slash;
   trailing_slash: false,
   // Base path;
-  base_path: '',
+  base_path: ,
   // Asset prefix;
-  asset_prefix: '',
+  asset_prefix: ,
   // Generate ETags;
   generate_etags: true,
   // Dist directory;
@@ -100,3 +101,4 @@ module.exports = next_config,
 
 
 
+module.exports = next_config,

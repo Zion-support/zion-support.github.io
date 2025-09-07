@@ -6,6 +6,11 @@ export default function CertificatePage() {
   const { courseId } = router.query as { courseId: string }
   if (!courseId) return null
 
+import { useRouter  } from 'next/router';
+import CertificatePreview from '../../../components/learn/CertificatePreview';
+export default function CertificatePage() {
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Certificate</h1>
@@ -13,6 +18,7 @@ export default function CertificatePage() {
     </div>
 
 )
+  )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -22,6 +28,11 @@ export default function CertificatePage() {
 
 import { use_router } from 'next / router',
 import CertificatePreview from '../../../components / learn / CertificatePreview',
+
+}
+
+import { use_router } from 'next / router',;
+import CertificatePreview from '../../../components / learn / CertificatePreview',;
 export default /**
  * CertificatePage - Function description
  */
@@ -46,3 +57,6 @@ if (return null, ) {
   }
 }
 }
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

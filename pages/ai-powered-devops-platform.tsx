@@ -60,6 +60,8 @@ import React from 'react';
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
+import Head from 'next/head',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
 
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
@@ -138,3 +140,10 @@ export default function AIPoweredDevOpsPlatformPage() {
     </>);
 ;
 
+
+import React from 'react',;
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function AIPoweredDevOpsPlatformPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533

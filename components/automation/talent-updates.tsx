@@ -5,17 +5,14 @@ import fs from 'fs';
 import path from 'path';
  </div>) ) ;
 }</div> </div>) import fs from 'fs';
-import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 </div>) ) 
  </div>) ) 
 }</div> </div>) import fs from 'fs';
-import path from 'path';
-import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string },
+type TalentSummary = { slug: string;, summary: string ;},
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datatalent_ai.json');
-type TalentSummary = { slug: string, summary: string },;
+type TalentSummary = { slug: string;, summary: string ;},;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
   let generatedAt = '';
@@ -25,37 +22,42 @@ export async function getServerSideProps() {;
     generatedAt = json && json.generatedAt || '';
     summaries = json && json.summaries || [];
   } catch {}
-  return { props: { generatedAt, summaries } }
+  return { props: { generatedAt;, summaries } }
 }
 
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
   } catch {}
-  return { props: { generatedAt, summaries } }
+  return { props: { generatedAt;, summaries } }
 }
 
-export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
-export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
-
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string;, summaries: TalentSummary[] ;}) {
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string;, summaries: TalentSummary[] ;}) {;
 
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
+import fs from 'fs';;
+import { TALENT_PROFILES } from '../../data/talent';
+
+type TalentSummary = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
-      <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      <div className="grid grid-cols-1 gap-4">
-        {TALENT_PROFILES.map(t => (
-          <div key={t.slug} className="border rounded p-4 space-y-1">
-            <div className="font-medium">{t.name} — {t.title}</div>
-            <div className="text-sm text-gray-700">{map.get(t.slug) |'No AI summary yet.'}</div>
+    <div className=\"space-y-6\" />"
+      <h1 className=\"text-2xl font-semibold\" />AI Automation: Talent Summaries</h1>"
+      <p className=\"text-gray-600\" />Profiles are periodically enriched with AI-generated summaries.</p>"
+      <div className=\"text-xs text-gray-500\" />Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—';}</div>"
+      <div className=\"grid grid-cols-1 gap-4\" />
+        {TALENT_PROFILES.map(t => (}"
+          <div key={t.slug} className=\"border rounded p-4 space-y-1\" />"
+            <div className=\"font-medium\" />{t.name} — {t.title}</div>"
+            <div className=\"text-sm text-gray-700\" />{map.get(t.slug) |'No AI summary yet.'}</div>
           </div>
-        ))}
+        )
+}
       </div>
     </div>
 import {TALENT_PROFILES} from '../../data / talent';
-type TalentSummary = { slug: string, summary: string },
+type TalentSummary = { slug: string;, summary: string ;},
 export async /**
  * getServerSideProps - Function description
  */
@@ -68,7 +70,7 @@ function getServerSideProps() {
     generated_at = json.generated_at || '';
     summaries = json.summaries || [];
   } catch {}
-  return { props: { generated_at, summaries } }
+  return { props: { generated_at;, summaries } }
 }
 export default /**
  * TalentUpdatesPage - Function description
@@ -76,15 +78,23 @@ export default /**
 function TalentUpdatesPage() {
   const map = new Map (summaries.map (string => [s.slug, s.summary]));
   return (
-    <div className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">AI Automation: Talent Summaries</h1>;
-      <p className="text - gray - 600">Profiles are periodically enriched with AI - generated summaries.</p>;
-      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
-      <div className="grid grid - cols - 1 gap - 4">;
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>;
+      <p className="text-gray-600">Profiles are periodically enriched with AI - generated summaries.</p>;
+      <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—';}</div>;
+      <div className="grid grid - cols-1 gap-4">;
         {TALENT_PROFILES.map (t => (
-          <div key={t.slug} className="border rounded p - 4 space - y-1">;
-            <div className="font - medium">{t.name} — {t.title}</div>;
-            <div className="text - sm text - gray - 700">{map.get (t.slug) || 'No AI summary yet.'}</div>;
+          <div key={t.slug} className="border rounded p-4 space-y-1">;
+            <div className="font-medium">{t.name} — {t.title}</div>;
+            <div className="text - sm text-gray-700">{map.get (t.slug) || 'No AI summary yet.'}</div>;
           </div>))}
       </div>;
     </div>);
+);
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+);
+}
+
+"

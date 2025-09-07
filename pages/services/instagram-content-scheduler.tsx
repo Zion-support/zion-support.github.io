@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
+
 const InstagramContentScheduler: NextPage = () => {
   return (
     <div>
@@ -74,3 +75,12 @@ export default InstagramContentScheduler,
 
 export default InstagramContentScheduler,;
 export default InstagramContentScheduler,
+export default InstagramContentScheduler,;
+export default InstagramContentScheduler,
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import UseTokensButton from '../../components/tokens/UseTokensButton';
+const InstagramContentScheduler: NextPage;
+origin/cursor/automate-test-improve-and-merge-code-2533

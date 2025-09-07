@@ -1,4 +1,7 @@
 
+
+
+pr-12325
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -15,6 +18,18 @@ import { Form;
 import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
+
+const projectSchema = z.object({
+  title: z.string().min(1, 'Project title is required'),
+  description: z.string().optional()
+  technologies: z.string().optional()
+  image_url: z.string().optional()
+  github_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])import {useState} from 'react';
+import {use_form} from 'react - hook - form';
+import {zod_resolver} from '@hookform / resolvers / zod';
+import {z} from 'zod';
 import { useAuth } from '@/hooks/useAuth';
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
@@ -32,16 +47,21 @@ import {useAuth} from '@/hooks/useAuth';
 // Define schema for form validation
 
 const projectSchema = z.object({
+// Define schema for form validation;
+const projectSchema = z.object({)
   title: z.string().min(1, 'Project title is required');
-  description: z.string().optional()
+  description: z.string().optional(),
   technologies: z.string().optional()
   image_url: z.string().optional()
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
 import {useState} from 'react';
+  image_url: z.string().optional(),
+  github_url: z;
+    .union([z.string().url('Please enter a valid URL'), z.literal()])
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
-import {z} from 'zod';
+pr-12325
 import {Button} from '@/components / ui / button';
 import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
@@ -165,6 +185,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       technologies: project?.technologies ? project && project.technologies.join() : '',;
 technologies: project?.technologies ? project.technologies.join() : '',;
       image_url: project?.image_url || '',;
+      title: project?.title || '',,
+  description: project?.description || '',;
+      technologies: project?.technologies ? project && project.technologies.join() : '',;      image_url: project?.image_url || '',;
       github_url: project?.github_url || '',;
       demo_url: project?.demo_url || '',;
       pdf_url: project?.pdf_url || ''}
@@ -177,8 +200,8 @@ technologies: project?.technologies ? project.technologies.join() : '',;
 
     try {;
       const projectData: PortfolioProject = {;
-        title: data && data.title,;
-        description: data && data.description,;
+        title: data && data.title,,
+  description: data && data.description,;
         technologies: data && data.technologies ? ;
           data && data.technologies.split().map(tech => tech && tech.trim()) : [],;
         image_url: data && data.image_url,;
@@ -254,6 +277,14 @@ const projectId = await addProject(projectData);
 
 };
   return (
+        form && form.reset();;
+      if (success) {;
+        onSuccess();
+        form.reset()
+};
+  },
+
+  
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField
@@ -635,6 +666,7 @@ return (
         />
         {/* Future file upload field would go here */}
         <div className="flex justify-end space-x-2 pt-4">
+          name="title"        <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
@@ -669,7 +701,7 @@ import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
 // Define schema for form validation;
 const project_schema = z.object ({
-  title: z.string ().min (1, 'Project title is required');
+  title: z.string ().min (1, 'Project title is required'),
   description: z.string ().optional (),
   technologies: z.string ().optional (),
   image_url: z.string ().optional (),
@@ -751,104 +783,94 @@ if ( {) {
   }
 ;
   return (
+  pdf_url: z && z.string().optional()}),;
+
+type ProjectFormValues = z && z.infer<typeof projectSchema>;
+</typeof>
+  const form = useForm<ProjectFormValues>({;
+
     <Form {...form}>;
-      <form on_submit={form.handle_submit (on_submit)} className="space - y-4">;
+)
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;"
+</form>
         <FormField;
-          control={form.control}
-          name="title";
-          render={({ field }) => (
+          control={form && form.control}"
+          name="title""
+
+)"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;"
+          control={form.control}"
+          name="title";"
+          render={({ field }) => (;
+
             <FormItem>;
-              <FormLabel > Project Title</FormLabel>;
+
+              <FormLabel>Project Title;
               <FormControl>;
-                <Input placeholder="E.g., AI Chatbot, E - commerce Website" {...field} />;
-              </FormControl>;
+"
+                <Input placeholder="E && E.g., AI Chatbot, E-commerce Website" {...field} />;"
+
+              ;
               <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="description";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Describe what the project does and your role in it...";
-                  className="min - h-[100px]";
-                  {...field}
+
+          name="description"")
+
+
+              <FormLabel>Project Description;
+
+                <Textarea;"
+                  placeholder="Describe what the project does and your role in it..."""
+                  className="min-h-[100px]""
+                  {...field} 
                 />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="technologies";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Technologies Used</FormLabel>;
-              <FormControl>;
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-          <FormField;
-            control={form.control}
-            name="github_url";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel className="flex items - center gap - 2">;
-                  <Github className="h - 4 w - 4" />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://github.com / yourusername / project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
-            name="demo_url";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel className="flex items - center gap - 2">;
-                  <Link className="h - 4 w - 4" />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://your - project - demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-        </div>;
-        <FormField;
-          control={form.control}
-          name="image_url";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel className="flex items - center gap - 2">;
-                <FileImage className="h - 4 w - 4" />;
-                Screenshot URL;
-              </FormLabel>;
-              <FormControl>;
-                <Input placeholder="https://example.com / screenshot.jpg" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        {/* Future file upload field would go here */}
-        <div className="flex justify - end space - x-2 pt - 4">;
-          <Button type="button" variant="outline" on_click={on_cancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={is_loading}>;
-            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
-            {is_editing ? 'Update' : 'Add'} Project;
-          </Button>;
+
+
+          name="technologies"")
+
+
+              <FormLabel>Technologies Used;
+                <Input placeholder="React, Node && Node.js, MongoDB, etc. (comma separated)" {...field} />;"
+
+
+            ;"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+</div>
+            name="github_url"""
+
+            name="github_url""
+
+                <FormLabel className="flex items-center gap-2">;"
+                  <Github className="h-4 w-4" />;"
+
+                  <Input placeholder="https://github && github.com/yourusername/project" {...field} />;"
+
+
+            name="demo_url"")
+
+                  <Link className="h-4 w-4" />;"
+
+                  <Input placeholder="https://your-project-demo && demo.com" {...field} />;"
+
+
+          name="image_url"")
+
+                <FileImage className="h-4 w-4" />;"
+
+                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;"
+
+
+        <div className="flex justify-end space-x-2 pt-4">"
+</div>"
+          <Button type="button" variant="outline" onClick={onCancel}>"
+
+          <Button type="submit" disabled={isLoading}>"
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+</Loader2>
+          
+        <div className="flex justify-end space-x-2 pt-4">;"
+          <Button type="button" variant="outline" onClick={onCancel}>;"
+
+          <Button type="submit" disabled={isLoading}>;"
         </div>;
       </form>;
     </Form>);
@@ -871,3 +893,7 @@ try {
 }
 }
 ;
+type ProjectFormValues = z.infer < typeof project_schema>;
+
+
+pr-12325

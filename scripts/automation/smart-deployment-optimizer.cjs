@@ -1,8 +1,100 @@
-#!/""usr/bin/env""
+<<<<<<< HEAD
+#!/""usr/bin/env""""
+const { execSync } = require("child_process")""
+const fs = require("fs")""
+const path = require("path")""
+console.log("" Starting Smart Deployment Optimizer...")""
+// Get automation interval from environment variable ("default")""
+      "bundleSizes"""
+      "deploymentFrequency"""
+      "successRate"""
+      "optimizationSuggestions"""
+    this.reportDir = path.join(process.cwd(), "deployment-reports"""
+  fs.mkdirSync(this.reportDir, { "recursive"})""
+        this.reportDir,deployment-history.json"""
+  const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")""
+  console.log(""No historical deployment data found, starting fresh")""
+// console.log(""No historical deployment data found, starting fresh")""
+  console.log(" Running smart deployment optimization at ${new Date().toISOString()}"""
+// console.log("No historical deployment data found, starting fresh")""
+      console.log(" Smart deployment optimization completed successfully")""
+  console.error(" Smart deployment optimization "failed": ")""
+  console.log(" Analyzing build configuration...")""
+    const viteConfigPath = path.join(process.cwd(), "vite.config.ts"""
+  const viteConfig = fs.readFileSync(viteConfigPath, "utf8")""
+  "hasOptimization": viteConfig.includes("optimizeDeps")""
+        "hasCompression": viteConfig.includes("compression")""
+        "hasTreeShaking": viteConfig.includes("treeshake")""
+        "hasCodeSplitting": viteConfig.includes("rollupOptions")""
+        "hasSourceMaps": viteConfig.includes("sourcemap")""
+      console.log(" Vite configuration "analysis": ")""
+  "type": "vite_optimization"""
+          "priority": "high"""
+          "description": "Enable dependency optimization in Vite config"""
+          "action": "Add optimizeDeps configuration to vite.config.ts"""
+  "type": "compression"""
+          "priority": "medium"""
+          "description": "Enable build compression for smaller bundle sizes"""
+          "action": "Add compression plugin to vite.config.ts"""
+    const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")""
+        (["name", "version")]""
+          const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""]""
+  "type": "dependency_optimization"""
+          "priority": """
+          "description": Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(", "})""
+          "action": `Use tree-shaking or replace with lighter alternatives;""
+// console.log("� Optimizing bundle size...")""
+  console.log("� Optimizing bundle size...")""
+      execSync("npm run build", { "stdio": "pipe"})""
+  "timestamp"""
+        "duration"""
+      const distPath = path.join(process.cwd(), """
+          "size"""
+          "files"""`;
+        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB;""
+          "files"""
+        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB"""
+  "type": "bundle_size"""
+            "description": "Bundle size exceeds 2MB, optimization needed"""
+            "action": "Implement code splitting and lazy loading"""
+// console.log(""⚠ Build analysis "failed": ")""
+  console.log(" Analyzing deployment patterns...")"
+        new Date(build.timestamp) >}"
+});"""
+"""
+// console.log(""⚠ Build analysis "failed": ")""
+  console.log(" Analyzing deployment patterns...")""
+    console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"""
+      totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;"""
+    console.log(  Success "rate")""
+  "type": "build_time"""
+          "description": "Average build time exceeds 1 minute"""
+          "action": "Optimize build process and enable caching"""
+  console.log(" Generating optimization recommendations...")""
+  "type": "code_splitting"""
+        "description": "Implement code splitting for better performance"""
+        "action": Use React.lazy() and dynamic imports for route-based splitting"""
+  "type": "ci_cd_optimization"""
+        "description": "High deployment frequency detected"""
+        "action": "Implement automated testing and staging environments"""
+  "type": "quality_gates"""
+        "description": "Low deployment success rate"""
+        "action": "Implement pre-deployment quality gates and automated testing"""
+  console.log("🧪 Testing optimized build..."")""
+      execSync("npm run type-check", { "stdio": "pipe"})""
+// console.log("" Type checking passed")""
+      console.log(" Type checking passed")""
+      execSync("npm run lint", { "stdio": "pipe"})""
+      console.log(" Linting passed")""
+      const distPath = path.join(process.cwd(), "dist"""
+  const indexHtml = path.join(distPath, "index.html")""
+  const htmlContent = fs.readFileSync(indexHtml, "utf8")""
+=======
+#!/usr/bin/env
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
-console.log("" Starting Smart Deployment Optimizer...")
+console.log( Starting Smart Deployment Optimizer...")
 // Get automation interval from environment variable ("default")
       "bundleSizes"
       "deploymentFrequency"
@@ -12,9 +104,9 @@ console.log("" Starting Smart Deployment Optimizer...")
   fs.mkdirSync(this.reportDir, { "recursive"})
         this.reportDir,deployment-history.json"
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
-  console.log(""No historical deployment data found, starting fresh")
+  console.log(No historical deployment data found, starting fresh")
   const data = JSON.parse(fs.readFileSync(historicalFile, "utf8")
-// console.log(""No historical deployment data found, starting fresh")
+// console.log(No historical deployment data found, starting fresh")
   console.log(" Running smart deployment optimization at ${new Date().toISOString()}"
 // console.log("No historical deployment data found, starting fresh")
       console.log(" Smart deployment optimization completed successfully")
@@ -44,11 +136,11 @@ console.log("" Starting Smart Deployment Optimizer...")
           "action": "Add compression plugin to vite.config.ts"
     const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")
         (["name", "version")]
-          const largePackages = ["lodash"", "moment", "date-fns"", "framer-motion", ""]
+          const largePackages = ["lodash, "moment", "date-fns, "framer-motion", ]
   "type": "dependency_optimization"
           "priority": "
           "description": Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(", "})
-          "action": `Use tree-shaking or replace with lighter alternatives
+          "action": `Use tree-shaking or replace with lighter alternatives;
 // console.log("� Optimizing bundle size...")
   console.log("� Optimizing bundle size...")
       execSync("npm run build", { "stdio": "pipe"})
@@ -58,7 +150,7 @@ console.log("" Starting Smart Deployment Optimizer...")
   "timestamp"
           "size"
           "files"
-        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB
+        console.log( Current bundle "size": ${(bundleSize / 1024 / 1024`).toFixed(2)} MB;
   "timestamp"
           "size"
           "files"
@@ -67,9 +159,9 @@ console.log("" Starting Smart Deployment Optimizer...")
             "priority": "high"
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
-// console.log(""⚠ Build analysis "failed": ")
-  console.log(" Analyzing deployment patterns...")
-        new Date(build.timestamp) >}
+// console.log(⚠ Build analysis "failed": ")
+  console.log(" Analyzing deployment patterns...")"
+        new Date(build.timestamp) >}"
 });"
 "
         console.log( Current bundle "size": ${(bundleSize / 1024 / 1024").toFixed(2)} MB"
@@ -77,7 +169,7 @@ console.log("" Starting Smart Deployment Optimizer...")
             "priority": "high"
             "description": "Bundle size exceeds 2MB, optimization needed"
             "action": "Implement code splitting and lazy loading"
-// console.log(""⚠ Build analysis "failed": ")
+// console.log(⚠ Build analysis "failed": ")
   console.log(" Analyzing deployment patterns...")
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
     console.log( Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}"
@@ -112,9 +204,9 @@ console.log("" Starting Smart Deployment Optimizer...")
         "priority": "high"
         "description": "Low deployment success rate"
         "action": "Implement pre-deployment quality gates and automated testing"
-  console.log("🧪 Testing optimized build..."")
+  console.log("🧪 Testing optimized build...)
       execSync("npm run type-check", { "stdio": "pipe"})
-// console.log("" Type checking passed")
+// console.log( Type checking passed")
       console.log(" Type checking passed")
       execSync("npm run lint", { "stdio": "pipe"})
       console.log(" Linting passed")
@@ -123,6 +215,7 @@ console.log("" Starting Smart Deployment Optimizer...")
       const distPath = path.join(process.cwd(), "dist"
   const indexHtml = path.join(distPath, "index.html")
   const htmlContent = fs.readFileSync(indexHtml, "utf8")
+<<<<<<< HEAD
           if (!htmlContent.includes("<title>")
   issues.push("Missing title tag")
           if (!htmlContent.includes("meta name="viewport"")
@@ -174,3 +267,8 @@ process.on("SIGTERM")
 
   console.error(" Failed to start smart deployment "optimizer": ")
 
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+          if (!htmlContent.includes("<title>")"
+</title>"`;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

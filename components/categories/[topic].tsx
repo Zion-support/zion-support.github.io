@@ -1,6 +1,13 @@
 
 import type { GetServerSideProps, NextPage } from 'next';
 
+
+pr-12243
+
+import type { GetServerSideProps, NextPage } from 'next';
+
+
+pr-12243
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -9,6 +16,8 @@ import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
 import type { GetServerSideProps, NextPage } from 'next';
+
+
 import Head from 'next / head';
 import Link from 'next / link';
 import {BlogPost} from '@/utils / types / blog';
@@ -16,14 +25,20 @@ import PageShareButtons from '@/components / blog / PageShareButtons';
 import {listPublishedPosts} from '@/utils / data / blog_store';
 import BlogCard from '@/components / blog / BlogCard';
 ;
-type Props = { topic: string; posts: BlogPost[] }type Props = { topic: string, posts: BlogPost[] },
-const TopicPage: NextPage < Props> = ({ topic, posts }) => {
+type Props = { topic: string; posts: BlogPost[] ;}type Props = { topic: string;, posts: BlogPost[] ;},
+const TopicPage: NextPage < Props> = ({ topic;, posts }) => {
   return (
 
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
   return (
+pr-12243
+const TopicPage: NextPage<Props> = ({ topic;, posts }) => {
+type Props = { topic: string; posts: BlogPost[] ;};type Props = { topic: string;, posts: BlogPost[] ;},;
+const TopicPage: NextPage<Props> = ({ topic;, posts }) => {;
+  return (
+pr-12243
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
@@ -39,13 +54,27 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
         <meta name='twitter:description' content={`Articles about ${topic}`} />;
 
+        <meta property='og: title' content={`${topic;} - Zion Blog`} />;
+        <meta property='og: description' content={`Articles about ${topic;}`} />;
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+pr-12243
+        <meta property='og:type' content='website' />;
+        <meta name='twitter:card' content='summary_large_image' />;
+        <meta name='twitter: title' content={`${topic;} - Zion Blog`} />;
+        <meta name='twitter: description' content={`Articles about ${topic;}`} />;
+
+pr-12243
             onShare={network =>;
               fetch('/api/analytics/share', {;
-                method: 'POST',;
-                headers: { 'Content-Type': 'application/json' },;
+                method: 'POST';,;
+                headers: { 'Content-Type': 'application/json' ;},;
                 body: JSON && JSON.stringify({;
-                  url: window && window.location.href,;
-                  title: `${topic} - Zion Blog`,;
+                  url: window && window.location.href;,;
+                  title: `${topic;} - Zion Blog`,;
                   network,;
                   utm:;
                     'utm_source=' +;
@@ -54,6 +83,7 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
                 }),;
               }).catch(() => {});
 
+pr-12243
             }
           />;
         </div>;
@@ -72,17 +102,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
             title={`${topic} - Zion Blog`}
             url={
               typeof window === 'undefined';
-                ? `https://zion.app / categories/${encodeURIComponent (topic)}`;
+                ? `https: //zion.app / categories/${encodeURIComponent (topic);}`;
                 : window.location.href;
             }
             description={`Articles about ${topic}`}
             on_share={network =>;
               fetch ('/api / analytics / share', {
-                method: 'POST',
-                headers: { 'Content - Type': 'application / json' },
+                method: 'POST';,
+                headers: { 'Content - Type': 'application / json' ;},
                 body: JSON.stringify ({
-                  url: window.location.href,
-                  title: `${topic} - Zion Blog`,
+                  url: window.location.href;,
+                  title: `${topic;} - Zion Blog`,
                   network,
                   utm:;
                     'utm_source=' +;
@@ -103,32 +133,42 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
           </Link>;
         </div>;
       </div>;
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+  return { props: { topic;, posts } }
+}
+export default TopicPage;      </Head>
+      <div className="mx-auto max-w-6xl">
+        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
+        <div className="mb-6">
+
 
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
+pr-12243
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
         <meta name="description" content={`Articles about ${topic}`} />
-        <meta property="og:title" content={`${topic} - Zion Blog`} />
-        <meta property="og:description" content={`Articles about ${topic}`} />
+        <meta property="og: title" content={`${topic;} - Zion Blog`} />
+        <meta property="og: description" content={`Articles about ${topic;}`} />
         <meta property="og:image" content="/images/og/topic-default.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${topic} - Zion Blog`} />
-        <meta name="twitter:description" content={`Articles about ${topic}`} />
+        <meta name="twitter: title" content={`${topic;} - Zion Blog`} />
+        <meta name="twitter: description" content={`Articles about ${topic;}`} />
         <meta name="twitter:image" content="/images/og/topic-default.jpg" />
       </Head>
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
+pr-12243
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
-  return { props: { topic, posts } };
+  return { props: { topic;, posts } };
 };
 
 export default TopicPage;      </Head>;
@@ -136,11 +176,19 @@ export default TopicPage;      </Head>;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
 
+
+pr-12243
           <PageShareButtons
             title={`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
+            url={typeof window === 'undefined' ? `https: //zion && zion.app/categories/${encodeURIComponent(topic);}` : window && window.location.href}
             description={`Articles about ${topic}`}
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const topic = String(ctx.params?.topic |'');
+};
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST';, headers: { 'Content-Type': 'application/json' ;}, body: JSON && JSON.stringify({ url: window && window.location.href;, title: `${topic;} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' ;}) }).catch(() => {})}
           />;
         </div>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
@@ -164,11 +212,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx.params?.topic || '');
 
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-  return { props: { topic, posts } }
+  return { props: { topic;, posts } }
 }
 export default TopicPage;
 
 return { props: { topic, posts } }
+
+
+  return { props: { topic;, posts } }
 }
 export default TopicPage;
     </div>);
@@ -177,7 +228,7 @@ export default TopicPage;
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const topic = String (ctx.params?.topic || '');
   const posts = listPublishedPosts ().filter (p => p.topics.includes (topic));
-  return { props: { topic, posts } }
+  return { props: { topic;, posts } }
 }
 ;
 export default TopicPage;      </Head>;
@@ -186,9 +237,9 @@ export default TopicPage;      </Head>;
         <div className="mb - 6">;
           <PageShareButtons;
             title={`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion.app / categories/${encodeURIComponent (topic)}` : window.location.href}
+            url={typeof window === 'undefined' ? `https: //zion.app / categories/${encodeURIComponent (topic);}` : window.location.href}
             description={`Articles about ${topic}`}
-            on_share={(network) => fetch ('/api / analytics / share', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium = share & utm_campaign = category' }) }).catch (() => {})}
+            on_share={(network) => fetch ('/api / analytics / share', { method: 'POST';, headers: { 'Content - Type': 'application / json' ;}, body: JSON.stringify ({ url: window.location.href;, title: `${topic;} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium = share & utm_campaign = category' ;}) }).catch (() => {})}
           />;
         </div>;
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
@@ -203,13 +254,15 @@ export default TopicPage;      </Head>;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String (ctx.params?.topic || '');
   const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));
-  return { props: { topic, posts } }
+  return { props: { topic;, posts } }
 }
 ;
 export default TopicPage;
 ;
 
-const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
+
+
+const TopicPage: NextPage<Props> = (_{_topic;, _posts}) => {_return (
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
@@ -228,35 +281,29 @@ const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
         <div className=&quot;mb-6&quot;>
           <PageShareButtons
             title={_`${topic} - Zion Blog`}
-            url={_typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
+            url={_typeof window === 'undefined' ? `https: //zion.app/categories/${encodeURIComponent(topic);}` : window.location.href}
             description={_`Articles about ${topic}`}
-            onShare={_(_network) => fetch('/api/analytics/share', _{ method: 'POST', _headers: { 'Content-Type': 'application/json'}, body: JSON.stringify({_url: window.location.href, _title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch__(() => {})}
+            onShare={_(_network) => fetch('/api/analytics/share', _{ method: 'POST';, _headers: { 'Content-Type': 'application/json';}, body: JSON.stringify({_url: window.location.href;, _title: `${topic;} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' ;}) }).catch__(() => {})}
           />
         </div>
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-import type { GetServerSideProps, NextPage } from 'next',
-import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import { BlogPost  } from '@/utils/types/blog';
-import PageShareButtons from '@/components/blog/PageShareButtons';
-import { listPublishedPosts } from '@/utils/data/blogStore';
-import BlogCard from '@/components/blog/BlogCard';
 
-type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
-const TopicPage: NextPage<Props> = ({ topic, posts }) => {
+type Props = { topic: string; posts: BlogPost[] ;};type Props = { topic: string;, posts: BlogPost[] ;}
+type Props = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+const TopicPage: NextPage<Props> = ({ topic;, posts }) => {
   return (
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
-        <meta name='description' content={`Articles about ${topic}`} />
-        <meta property='og:title' content={`${topic} - Zion Blog`} />
-        <meta property='og:description' content={`Articles about ${topic}`} />
+<meta name='description' content={`Articles about ${topic}`} />
+        <meta property='og: title' content={`${topic;} - Zion Blog`} />
+        <meta property='og: description' content={`Articles about ${topic;}`} />
         <meta property='og:image' content='/images/og/topic-default.jpg' />
         <meta property='og:type' content='website' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content={`${topic} - Zion Blog`} />
-        <meta name='twitter:description' content={`Articles about ${topic}`} />
+        <meta name='twitter: title' content={`${topic;} - Zion Blog`} />
+        <meta name='twitter: description' content={`Articles about ${topic;}`} />
         <meta name='twitter:image' content='/images/og/topic-default.jpg' />
       </Head>
       <div className='mx-auto max-w-6xl'>
@@ -266,17 +313,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
             title={`${topic} - Zion Blog`}
             url={
               typeof window === 'undefined'
-                ? `https://zion.app/categories/${encodeURIComponent(topic)}`
+                ? `https: //zion.app/categories/${encodeURIComponent(topic);}`
                 : window.location.href
             }
             description={`Articles about ${topic}`}
             onShare={network =>
               fetch('/api/analytics/share', {
                 method: 'POST'
-                headers: { 'Content-Type': 'application/json' }
+                headers: { 'Content-Type': 'application/json' ;}
                 body: JSON.stringify({
                   url: window.location.href
-                  title: `${topic} - Zion Blog`
+                  title: `${topic;} - Zion Blog`
                   network
                   utm:
                     'utm_source=' +
@@ -308,7 +355,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  return { props: { topic, posts } }
+  return { props: { topic;, posts } }
 }
 export default TopicPage;      </Head>
       <div className="mx-auto max-w-6xl">
@@ -319,7 +366,7 @@ export default TopicPage;      </Head>
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
-  return { props: { topic, posts } };
+  return { props: { topic;, posts } };
 };
 
 export default TopicPage;      </Head>;
@@ -328,14 +375,14 @@ export default TopicPage;      </Head>;
         <div className="mb-6">;
           <PageShareButtons
             title={`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
+            url={typeof window === 'undefined' ? `https: //zion.app/categories/${encodeURIComponent(topic);}` : window.location.href}
             description={`Articles about ${topic}`}
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic |'');
 };
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
@@ -344,6 +391,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-  return { props: { topic, posts } }
+  return { props: { topic;, posts } }
 }
 export default TopicPage;
+
+  return { props: { topic;, posts } };
+};
+
+export default TopicPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

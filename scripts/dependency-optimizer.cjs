@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -8,8 +9,24 @@ const { execSync } = require('child_process')
       const unused = execSync('npx depcheck --json', { encoding: 'utf8'})
       console.log(' Dependency optimization completed!')
       console.error(' Dependency optimization failed:')
+<<<<<<< HEAD
       recommendations.push('Update outdated packages for security and performance')
 
 
       recommendations.push('Remove unused dependencies to reduce bundle size')
 
+=======
+=======
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportFile = path.join(__dirname,../logs/dependency-optimization-report.json')
+    console.log('� Optimizing dependencies...)
+      const outdated = execSync('npm outdated --json, { encoding: utf8})
+      const unused = execSync('npx depcheck --json, { encoding: utf8})
+      console.log(' Dependency optimization completed!)
+      console.error(' Dependency optimization failed: )
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      recommendations.push('Update outdated packages for security and performance')
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

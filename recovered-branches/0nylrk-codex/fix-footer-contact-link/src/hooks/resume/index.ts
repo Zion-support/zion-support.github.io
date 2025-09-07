@@ -1,4 +1,6 @@
 
+
+pr-12325
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -21,6 +23,7 @@ import {useResumeList} from './useResumeList';
 export function useResume() {;
 
   const [resume, setResume] = useState<Resume | null>(null);
+export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
@@ -77,6 +80,11 @@ const isLoading =
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations.fetchResume(resumeId);
   // Override the fetch resume function to update local state
+  const fetchResume = async (resumeId?: string) => {
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
+  // Determine overall loading state  // Override the fetch resume function to update local state
+  const fetchResume = async (resumeId?: string) => {
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
     if (result) {
@@ -301,6 +309,7 @@ export * from './useResumeUtils',; // Determine overall loading state const isLo
 // Override the fetch resume function to update local state 
 }// Export all hooks export * from './useFetchResume';
 export * from './useResumeActions';
+  }export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './use_education';
 export * from './use_skills';
@@ -431,3 +440,43 @@ export * from './useResumeList';
 export * from './useResumeUtils';
 
 ;
+export function useResume() {
+import {useState} from 'react';
+import {Resume} from '@/types/resume';
+import {useFetchResume} from './useFetchResume';
+import {useResumeActions} from './useResumeActions';
+import {useWorkExperience} from './useWorkExperience';
+import {useEducation} from './useEducation';
+import {useSkills} from './useSkills';
+import {useCertifications} from './useCertifications';
+import {useResumeList} from './useResumeList';
+
+
+import { useState  } from 'react';''
+import { Resume  } from '@/types/resume';''
+import { useFetchResume  } from './useFetchResume';''
+import { useResumeActions  } from './useResumeActions';''
+import { useWorkExperience  } from './useWorkExperience';''
+import { useEducation  } from './useEducation';''
+import { useSkills  } from './useSkills';''
+import { useCertifications  } from './useCertifications';''
+import { useResumeList  } from './useResumeList';'
+export function useResume() {'
+import {useState} from 'react';''
+import {Resume} from '@/types/resume';''
+import {useFetchResume} from './useFetchResume';''
+import {useResumeActions} from './useResumeActions';''
+import {useWorkExperience} from './useWorkExperience';''
+import {useEducation} from './useEducation';''
+import {useSkills} from './useSkills';''
+import {useCertifications} from './useCertifications';''
+import {useResumeList} from './useResumeList';'
+export function useResume() {;
+
+
+  const [resume, setResume] = useState<Resume | null>(null);
+
+  const [resume, setResume] = useState<Resume | null>(null),;
+pr-12325
+</Resume>'
+

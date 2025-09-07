@@ -63,6 +63,9 @@ export default function AiFinancialPlanningPlatform() {
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
 				"Executive dashboards and board-ready reports"
 
+import React from 'react';
+			title;
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
@@ -115,4 +118,5 @@ export default function AiFinancialPlanningPlatform() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

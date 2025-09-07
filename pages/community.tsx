@@ -397,6 +397,7 @@ export default function CommunityPage() {
   );
 }
 return (
+  return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
         <title>Community | Zion Tech Group</title>;
@@ -441,8 +442,8 @@ return (
       </div>
 
 }
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
                 href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
                 kleber@ziontechgroup && ziontechgroup.com;
 import Head from 'next / head';
@@ -578,3 +579,6 @@ export default function CommunityPage() {
 ;
 
 
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

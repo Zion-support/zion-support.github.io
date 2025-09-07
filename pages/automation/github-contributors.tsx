@@ -42,10 +42,15 @@ import data from '../../data/github-contributors.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/github-contributors.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore;
+import data from '../../data/github-contributors.json',;
 export default function GithubContributorsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
 
+  const items: any[] = (data?.items || []).slice(0, 60);
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -93,3 +98,7 @@ export default function GithubContributorsPage() {
 
 }
 
+    </EnhancedLayout>
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

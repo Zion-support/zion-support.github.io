@@ -19,6 +19,9 @@ export interface AdminAction {;
   case_id: string;
   type: AdminActionType;
 
+export interface AdminAction {  id: string;
+  case_id: string;
+  type: AdminActionType;
   adminId: string;
   reason: string;
   details: Record<string, any>;
@@ -40,6 +43,7 @@ admin_id: string;
 
 }
 
+}
 
 export interface FraudDetectionResult {;
   isFraud: boolean;
@@ -49,6 +53,7 @@ export interface FraudDetectionResult {;
 
   isFraud: boolean;
   confidence: number;
+  reasons: string[];  confidence: number;
   reasons: string[];
 
   suggested_actions: AdminActionType[],
@@ -86,18 +91,22 @@ export interface FraudDetectionConfig {;
 
       threshold: number;
     };
+export interface FraudDetectionConfig {}
+
+export interface FraudDetectionConfig {
+};
     fakeProfile: {
       enabled: boolean;
-      threshold: number;
-    };
+      threshold: number
+};
     paymentFraud: {
       enabled: boolean;
-      threshold: number;
-    };
+      threshold: number
+};
     spam: {
       enabled: boolean;
-      threshold: number;
-    };
+      threshold: number
+};
   };
   autoActions: {
     enabled: boolean;
@@ -200,3 +209,65 @@ export interface MonthlyReport {;
   falsePositives: number, // count of IGNORED actions;
   topReasons: Array<{ reason: string, count: number }>;
 }
+    confidenceThreshold: number
+};
+    confidenceThreshold: number,
+  };
+
+}}
+}
+// Fraud detection types;
+export type AdminActionType =
+  | "ban_user"""
+  | "suspend_user"""
+  | "flag_content"""
+  | "remove_content"""
+  | "investigate"""
+  | "dismiss"""
+  | "escalate";"
+export interface AdminAction {
+  // TODO: Implement
+}
+export interface AdminAction {;
+  // TODO: Implement
+
+  id: string;,
+  case_id: string;
+  type: AdminActionType;,
+  adminId: string;
+  reason: string;,
+  details: Record<string, any>;
+</string>
+  metadata: Record<string, any>;
+  metadata: Record < string, any>;
+
+export interface FraudDetectionConfig {
+  // TODO: Implement
+
+
+export interface FraudDetectionConfig {;
+
+  enabled: boolean;,
+  rules: {
+    suspiciousActivity: {,
+  enabled: boolean;
+
+
+      threshold: number,
+    fake_profile: {,
+      threshold: number;
+    };
+    fakeProfile: {,
+    paymentFraud: {,
+    spam: {,
+  autoActions: {,
+    actions: AdminActionType[];,
+  confidenceThreshold: number;
+    confidenceThreshold: number,
+
+"
+pr-12325
+export type MonitoredSource = 'signup' | 'job post' | 'message' | 'quote' | 'review';
+export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
+export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
+export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';

@@ -1,3 +1,29 @@
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+import { Button } from "@/components/ui/button";
+origin/cursor/automate-test-improve-and-merge-code-2533
+import { Send } from 'lucide-react'
+interface ChatInputProps {
+  onSend: (message: string) => void
+disabled?: boolean
+}export function ChatInput ({
+  onSend, disabled = false
+}: ChatInputProps) {'
+  const [message, setMessage] = useState ('')
+const inputRef = useRef<HTMLTextAreaElement> (null)
+//Focus input when component mounts
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [ message, setMessage ] = useState('')
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {    // Focus input when component mounts
+    inputRef.current?.focus() }, [])
+    inputRef.current?.focus()
+interface ChatInputProps {
+
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from 'lucide-react';
 import React, {;
   useState,;
   useRef,;
@@ -15,6 +41,11 @@ interface ChatInputProps {
   onSend: (message:,  string) => void,
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react'
 
 interface ChatInputProps {
@@ -25,6 +56,8 @@ import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react';
 interface ChatInputProps {;
   onSend: (message:,  string) => void;,
+origin/cursor/automate-test-improve-and-merge-code-2533
+  onSend: (message: string) => void;
 disabled?: boolean ;
 }export function ChatInput(): any ({;
   onSend, disabled = false ;
@@ -69,6 +102,26 @@ export function ChatInput({ onSend, disabled = false }:,  ChatInputProps) {,
       }
     }
   };
+
+
+export function ChatInput({ onSend, disabled;
+    }
+  }
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      if (message.trim() && !disabled) {
+        onSend(message);
+setMessage('');
+origin/cursor/automate-test-improve-and-merge-code-2533
+      }
+    }
+  };
+
+
+
+return (
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <form on_submit={handle_submit} className='flex items - end gap - 2'>;
       <textarea;
@@ -175,6 +228,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+        onChange={e => setMessage(e.target.value)}
+origin/cursor/automate-test-improve-and-merge-code-2533
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -189,3 +244,28 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
     </form>
   )
 }
+
+
+      <Button;
+        type='submit';
+        className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center';
+        disabled={!message.trim () || disabled}      >;
+        <Send className='h - 5 w - 5' />;
+      </Button>;
+    </form>);
+}
+        disabled={!message.trim () || disabled}
+      >;
+        <Send className="h - 5 w - 5" />;
+      </Button>;
+    </form>);
+}
+<Button
+        type='submit'
+        className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'
+        disabled={!message.trim() |disabled}      >
+        <Send className='h-5 w-5' />
+      </Button>
+    </form>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -68,6 +68,8 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
+import Head from 'next/head',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
 
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
@@ -152,3 +154,6 @@ export default function QuantumCloudInfrastructurePlatformPage() {
     </>);
 ;
 
+
+export default function QuantumCloudInfrastructurePlatformPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533

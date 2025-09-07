@@ -132,6 +132,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
+
+pr-12243
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -143,15 +145,16 @@ interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
+import React from 'react';
+import { Star, Heart, ShoppingCart } from 'lucide-react';
+pr-12243
 
 interface MarketplaceCardProps {
+interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
-  price: number;
-  rating: number;
-  image: string;
-  onAddToCart?: () => void;
-  onFavorite?: () => void;
+  price?: string;
+  image?: string;
 }
 
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
@@ -200,3 +203,21 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
+export default EnhancedMarketplaceCard;
+pr-12243
+export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
+  return (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden">
+      {image && (
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+      )}
+      <div className="p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        {price && (
+          <div className="text-xl font-bold text-blue-600">{price}</div>
+        )}
+      </div>
+    </div>
+  );
+}

@@ -226,3 +226,4 @@ export interface MultiverseState {;
   proposalMerkleById: Record<string, string>;
   events: SyncEvent[];
 }
+

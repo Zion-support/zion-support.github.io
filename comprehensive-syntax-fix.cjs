@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,10 +13,16 @@ const path = require('path')
 
 
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 #!/usr/bin/env node
-
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 const { execSync } = require('child_process');
 
@@ -125,250 +132,203 @@ const fixer = new ComprehensiveSyntaxFixer();
 
 
 
+=======
+          content = content.replace(/
+)
+<<<<<<< HEAD
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 console.log('🔧 Running comprehensive syntax fix...');
-
-// Fix specific files with known issues
+// Fix specific files with known issues;
 const fixes = [
   {
     file: '/workspace/lib/analytics.ts',
-    content: `// Analytics utilities
+    content: `// Analytics utilities;
 export const trackEvent = (event: string, data?: any) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', event, data);
+=======
+console.log('🔧 Running comprehensive syntax fix...);
+// Fix specific files with known issues;
+const fixes = [
+  {
+    file: /workspace/lib/analytics.ts,
+    content: `// Analytics utilities;
+export const trackEvent = (event: string, data?: any) => {
+  if (typeof window !==undefined && window.gtag) {
+    window.gtag('event, event, data);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
   }
 };
 
 export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+<<<<<<< HEAD
     window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_path: url,
+      page_path: url,)
+=======
+  if (typeof window !==undefined && window.gtag) {
+    window.gtag('config,GA_MEASUREMENT_ID, {
+      page_path: url)
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     });
-  }
+  }`;
 };`,
   },
+<<<<<<< HEAD
+    file: '/workspace/pages/404.tsx',`;
+=======
   {
-    file: '/workspace/pages/404.tsx',
+    file: /workspace/pages/404.tsx,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
     content: `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function Custom404() {
   return (
     <>
       <Head>
+
         <title>404 - Page Not Found</title>
-        <meta name="description" content="The page you are looking for does not exist." />
-      </Head>
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
+        <meta name="description" content="The page you are looking for does not exist." />"
+</meta>
+      "
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">"
+</div>"
+        <div className="text-center">"
+<<<<<<< HEAD
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>""
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>""
+=======
+</div>"
           <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
           <p className="text-xl text-gray-600 mb-8">Page not found</p>
-          <Link href="/" className="text-blue-600 hover:text-blue-800">
-            Go back home
-          </Link>
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+          <Link href="/" className="text-blue-600 hover:text-blue-800">"
+
+          
         </div>
-      </div>
-    </>
-  );
+    </>)
+  );`;
 }`,
-  },
-  {
-    file: '/workspace/src/App.tsx',
+  {"
+<<<<<<< HEAD
+    file: '/workspace/src/App.tsx',`;
+=======
+    file: /workspace/src/App.tsx,
     content: `import React from 'react';
-
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 export default function App() {
-  return (
-    <div className="App">
+    <div className="App">"
       <h1>App Component</h1>
-    </div>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/ErrorBoundary.tsx',
-    content: `import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-}
-
 export default class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
 
-  public static getDerivedStateFromError(_: Error): State {
-    return { hasError: true };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo);
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return <h1>Sorry, something went wrong.</h1>;
-    }
-
-    return this.props.children;
-  }
-}`,
-  },
-  {
-    file: '/workspace/src/components/FuturisticFooter.tsx',
-    content: `import React from 'react';
-
-export default function FuturisticFooter() {
-  return (
-    <footer className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto text-center">
+      return <h1>Sorry, something went wrong.</h1>;"
+    <footer className="bg-gray-900 text-white p-4">"
+</footer>"
+      <div className="container mx-auto text-center">"
         <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/Header.tsx',
-    content: `import React from 'react';
-
-export default function Header() {
-  return (
-    <header className="bg-blue-600 text-white p-4">
+    <header className="bg-blue-600 text-white p-4">"
+</header>
       <h1>Header Component</h1>
-    </header>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/PerformanceMonitor.tsx',
-    content: `import React from 'react';
-
-export default function PerformanceMonitor() {
-  return (
-    <div className="performance-monitor">
+    </header>"
+    <div className="performance-monitor">"
       <p>Performance Monitor</p>
-    </div>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/PerformanceOptimized.tsx',
-    content: `import React from 'react';
-
-export default function PerformanceOptimized() {
-  return (
-    <div className="performance-optimized">
+    <div className="performance-optimized">"
       <p>Performance Optimized Component</p>
-    </div>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/layout/Header.tsx',
-    content: `import React from 'react';
-
-export default function LayoutHeader() {
-  return (
-    <header className="layout-header">
+    <header className="layout-header">"
       <h1>Layout Header</h1>
-    </header>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/layout/MainLayout.tsx',
-    content: `import React from 'react';
-
-export default function MainLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="main-layout">
-      {children}
-    </div>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/components/layout/Sidebar.tsx',
-    content: `import React from 'react';
-
-export default function Sidebar() {
-  return (
-    <aside className="sidebar">
+    <div className="main-layout">"
+    <aside className="sidebar">"
+</aside>
       <p>Sidebar</p>
-    </aside>
-  );
-}`,
-  },
-  {
-    file: '/workspace/src/main.tsx',
-    content: `import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
   <React.StrictMode>
+
     <App />
-  </React.StrictMode>
+
+  </React.StrictMode>)`;
 );`,
-  },
-  {
-    file: '/workspace/src/utils/accessibility-checker.ts',
-    content: `// Accessibility checker utilities
+<<<<<<< HEAD
+    file: '/workspace/src/utils/accessibility-checker.ts',`;
+    content: `// Accessibility checker utilities;
 export const checkAccessibility = () => {
   console.log('Checking accessibility...');
+
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...');`;
+    file: '/workspace/src/utils/monitoring.ts',`;
+    content: `// Monitoring utilities;
+export const logEvent = (event: string) => {
+  console.log('Event logged:', event);
+
+export const trackPerformance = () => {
+  console.log('Tracking performance...');`;
+    file: '/workspace/src/utils/performance-optimizer.ts',`;
+    content: `// Performance optimizer utilities;
+export const optimizeImages = () => {
+  console.log('Optimizing images...');
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');`;
+    file: '/workspace/src/utils/seo-optimizer.ts',`;
+    content: `// SEO optimizer utilities;
+export const generateMetaTags = () => {
+  console.log('Generating meta tags...');
+
+export const optimizeHeadings = () => {
+  console.log('Optimizing headings...');`;
+  },]
+=======
+  },
+  {"
+    file: /workspace/src/utils/accessibility-checker.ts,
+    content: `// Accessibility checker utilities;
+export const checkAccessibility = () => {
+  console.log('Checking accessibility...);
 };
 
 export const validateAriaLabels = () => {
-  console.log('Validating ARIA labels...');
+  console.log('Validating ARIA labels...);
 };`,
   },
   {
-    file: '/workspace/src/utils/monitoring.ts',
-    content: `// Monitoring utilities
+    file: /workspace/src/utils/monitoring.ts,
+    content: `// Monitoring utilities;
 export const logEvent = (event: string) => {
-  console.log('Event logged:', event);
+  console.log('Event logged: , event);
 };
 
 export const trackPerformance = () => {
-  console.log('Tracking performance...');
+  console.log('Tracking performance...);
 };`,
   },
   {
-    file: '/workspace/src/utils/performance-optimizer.ts',
-    content: `// Performance optimizer utilities
+    file: /workspace/src/utils/performance-optimizer.ts,
+    content: `// Performance optimizer utilities;
 export const optimizeImages = () => {
-  console.log('Optimizing images...');
+  console.log('Optimizing images...);
 };
 
 export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
+  console.log('Lazy loading components...);
 };`,
   },
   {
-    file: '/workspace/src/utils/seo-optimizer.ts',
-    content: `// SEO optimizer utilities
+    file: /workspace/src/utils/seo-optimizer.ts,
+    content: `// SEO optimizer utilities;
 export const generateMetaTags = () => {
-  console.log('Generating meta tags...');
+  console.log('Generating meta tags...);
 };
 
 export const optimizeHeadings = () => {
-  console.log('Optimizing headings...');
+  console.log('Optimizing headings...);
 };`,
-  },
+  }]
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 ];
 
 let fixedCount = 0;
 for (const fix of fixes) {
   try {
+<<<<<<< HEAD
     fs.writeFileSync(fix.file, fix.content);
     console.log(`Fixed: ${fix.file}`);
     fixedCount++;
@@ -480,8 +440,24 @@ class ComprehensiveSyntaxFixer {
       process.exit(1);
     }
   }
+=======
+  // TODO: Implement
+<<<<<<< HEAD
+    fs.writeFileSync(fix.file, fix.content);`;
+    console.log(`Fixed: ${fix.file}`);
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 }
+    fs.writeFileSync(fix.file, fix.content);
+    console.log(`Fixed: ${fix.file});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    fixedCount++;
+  } catch (error) {`;
+    console.error(`Error fixing ${fix.file}:`, error.message);
+`;
+console.log(`✅ Fixed ${fixedCount} files`);
 
+<<<<<<< HEAD
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
@@ -494,3 +470,11 @@ fixer.run().catch(console.error);
 
 
 
+=======
+
+<<<<<<< HEAD
+)`;
+=======
+)
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

@@ -5,16 +5,19 @@ export default function handler(req, res) {
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+
+
+
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}""
   res.status(200).json({ message: 'Checkout session created' });
 }
-export default function handler(req, res) {
+(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 import Stripe from 'stripe';
-
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16',
+  apiVersion: '2023-10-16',')
 });
 
 async function handler(req, res) {
@@ -23,16 +26,14 @@ async function handler(req, res) {
     res.setHeader('Allow', 'POST');
     res.end('Method Not Allowed');
     return;
-  }
 
   try {
+  // TODO: Implement
     const { priceId, quantity = 1 } = req.body || {};
     
     if (!priceId) {
       res.statusCode = 400;
       res.json({ error: 'Price ID is required' });
-      return;
-    }
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
@@ -41,7 +42,7 @@ async function handler(req, res) {
         {
           price: priceId,
           quantity: quantity,
-        },
+        },]
       ],
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`,
@@ -50,12 +51,14 @@ async function handler(req, res) {
 
 
 
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,`;
+      cancel_url: `${req.headers.origin}/cancel`,)
+
     res.statusCode = 200;
     res.json({ 
       success: true, 
       sessionId: session.id,
-      url: session.url 
-    });
+      url: session.url;)
   } catch (err) {
     // console.error('Checkout session API error:', err);
     res.statusCode = 500;
@@ -87,13 +90,21 @@ export default function handler(req, res) {
 
       url: session.url
 export default withErrorLogging(handler);      url: session.url
+
+export default withErrorLogging(handler);
+
+
+
+
+
+
+      url: session.url;
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),
     res.statusCode = 500,
     res.json({ error: err.message || 'Checkout session creation failed' })
   };
-};
 export default withErrorLogging(handler),
 
 ,
@@ -109,4 +120,10 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 
 
 
+
+
+
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}`;
+'
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}''
 

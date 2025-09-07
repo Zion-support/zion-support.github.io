@@ -1,10 +1,30 @@
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight;
+  TrendingUp;
+  Brain;
+  Shield;
+  Rocket;
+  Atom;
+  Sparkles;
+  Building;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowUpRight
+ } from 'lucide-react';
+import Head from 'next/head';
+// Import our enhanced components
+import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Import service data window && window.addEventListener ('mousemove', handleMouseMove);
 //Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
@@ -14,7 +34,6 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
 
-
   opacity: 0 
 
 import React from 'react';
@@ -23,25 +42,23 @@ interface EnhancedHomepageProps {
   className?: string;
 }
 
-const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className ;}) => {
   return (
     <div className={className || ''}>
       <h1>EnhancedHomepage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 visible: {
-  opacity: 1, transition: {
-  duration: 0.8, staggerChildren: 0.1
+  opacity: 1;, transition: {
+  duration: 0.8;, staggerChildren: 0.1;
 }
 }
 }
 }
 }
-import PerformanceMonitor from './PerformanceMonitor';
 
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
       clearInterval(interval);
       clearTimeout(performanceTimer);
       window && window.removeEventListener('mousemove', handleMouseMove);
@@ -52,8 +69,8 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
   opacity: 0;
 }
 visible: {
-  opacity: 1, transition: {
-  duration: 0.8, stagger_children: 0.1;
+  opacity: 1;, transition: {
+  duration: 0.8;, stagger_children: 0.1;
 }
 ;
 }
@@ -64,8 +81,6 @@ visible: {
 ;
 }
 export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 // Import service data;
 import { revolutionary2044AdvancedMicroSaas } from '../data / revolutionary - 2044 - advanced - micro - saas';
 import { revolutionary2044ITServices } from '../data / revolutionary - 2044 - it - services';
@@ -78,7 +93,7 @@ import { innovative2025AIAutonomousServices } from '../data / 2025 - innovative 
 const EnhancedHomepage: React.FC = () => {
   const [is_visible, setIsVisible] = useState (false);
   const [selected_category, setSelectedCategory] = useState ('all');
-  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),
+  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0;, coordinate_y: 0 ;}),
   const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
   const [color_scheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState (false);
@@ -93,7 +108,7 @@ const EnhancedHomepage: React.FC = () => {
 ;
     // Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) =>: any {
-      setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y });
+      setMousePosition ({ coordinate_x: e.client_x;, coordinate_y: e.client_y ;});
     }
 ;
     // Show performance monitor after 5 seconds;
@@ -181,9 +196,6 @@ const EnhancedHomepage: React.FC = () => {
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
 
-
-
-
             {/* CTA Buttons */}
             <motion&& motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
@@ -206,10 +218,10 @@ const EnhancedHomepage: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-600';
                   }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                 >
                   <category.icon className="inline-block w-5 h-5 mr-2" />
                   {category.name}
@@ -220,7 +232,6 @@ const EnhancedHomepage: React.FC = () => {
             </motion && motion.h2>;
 
             <motion&& motion.div 
-
 
             
             <motion.div 
@@ -234,10 +245,10 @@ const EnhancedHomepage: React.FC = () => {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-600';
                   }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 ;}}
+                  whileTap={{ scale: 0.95 ;}}
                 >
                   <category.icon className="inline-block w-5 h-5 mr-2" />
                   {category.name}
@@ -270,7 +281,6 @@ const EnhancedHomepage: React.FC = () => {
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div 
 
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
@@ -296,8 +306,8 @@ const EnhancedHomepage: React.FC = () => {
                 <Link href="/services">
                   <motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05 ;}}
+                    whileTap={{ scale: 0.95 ;}}
                   >
                     View All Services
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -337,24 +347,22 @@ const EnhancedHomepage: React.FC = () => {
             </motion && motion.h2>;
             <motion&& motion.div 
 
-
             <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
                 <motion&& motion.div
                   key={currentServiceIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0;, x: 20 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
+                  exit={{ opacity: 0;, x: -20 ;}}
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
-
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 ;}}
+                        whileTap={{ scale: 0.95 ;}}
                       >
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
@@ -382,9 +390,7 @@ const EnhancedHomepage: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
 
-
             <motion.p 
-
 
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
@@ -397,8 +403,8 @@ const EnhancedHomepage: React.FC = () => {
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
                       <motion&& motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1 && 1.05 }}
-                        whileTap={{ scale: 0 && 0.95 }}>;
+                        whileHover={{ scale: 1 && 1.05 ;}}
+                        whileTap={{ scale: 0 && 0.95 ;}}>;
                         Learn More;
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />;
                       </motion && motion.button>;
@@ -422,8 +428,8 @@ const EnhancedHomepage: React.FC = () => {
                     </div>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 ;}}
+                        whileTap={{ scale: 0.95 ;}}
                       >
                         Learn More
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />
@@ -462,10 +468,32 @@ const EnhancedHomepage: React.FC = () => {
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
-
-
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
+  duration: 0.8;, staggerChildren: 0.1 ;
+
+
+};
+
+};
+
+};
+
+};
+
+};
+export default EnhancedHomepage;
+// Import service data
+import { revolutionary2044AdvancedMicroSaas  } from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices  } from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices  } from '../data/revolutionary-2044-ai-services';
+import { realEnterpriseMicroSaas2025  } from '../data/2025-real-enterprise-micro-saas';
+import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3  } from '../data/2025-innovative-ai-services-expansion-v3';
+import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative-it-infrastructure-services';
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+const EnhancedHomepage: React.FC;
+origin/cursor/automate-test-improve-and-merge-code-2533

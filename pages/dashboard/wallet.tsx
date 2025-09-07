@@ -1,4 +1,5 @@
 export default function WalletPage() {_return (
+
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
@@ -16,6 +17,17 @@ const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"),
 
 export default function WalletPage() {
   return (
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),;
+
+import React from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+import dynamic from "next/dynamic",;
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),;
+import React from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -56,6 +68,7 @@ function WalletPage() {
     </EnhancedLayout>);
 }
 
+  )
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
@@ -82,6 +95,13 @@ import React from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
 import dynamic from './next / dynamic';,
 const WalletPanel = dynamic (() => import ("../../components / wallet / WalletPanel"), { ssr: false }),
+
+}
+
+import React from './react';,;
+import EnhancedLayout from "../../components / layout / EnhancedLayout",;
+import dynamic from './next / dynamic';,;
+const WalletPanel = dynamic (() => import ("../../components / wallet / WalletPanel"), { ssr: false }),;
 export default /**
  * WalletPage - Function description
  */
@@ -93,3 +113,7 @@ function WalletPage() {
       </div>;
     </EnhancedLayout>);
 }
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

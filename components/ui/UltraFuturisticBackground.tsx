@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
@@ -115,3 +116,4 @@ const getIntensityClasses = () => {
 };
 
 export default UltraFuturisticBackground;
+

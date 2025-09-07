@@ -58,6 +58,7 @@ export function MilestoneCreator({;
 <AddMilestoneForm
     <AddMilestoneForm
 import React from 'react',;
+export function MilestoneCreator({;import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
   onSubmit: (data: any) => Promise<void>,;
@@ -109,11 +110,51 @@ export function MilestoneCreator({;
   return (;
     <AddMilestoneForm ;
   return (;
+    <AddMilestoneForm;  on_submit: (data: any) => Promise < void>,
+</void>
+  onSubmit: (data: any) => Promise<void>
     <AddMilestoneForm;
 projectType;
 }: MilestoneCreatorProps) {;
   return (
     <AddMilestoneForm
+import React from 'react',;
+import { AddMilestoneForm } from '../AddMilestoneForm',;
+
+
+
+
+
+
+  return (
+
+import {AddMilestoneForm} from '../AddMilestoneForm';'
+interface MilestoneCreatorProps {;
+  onSubmit: (data: any) => Promise<void>,;
+</void>
+  onSubmit: (data: any) => Promise<void>
+</void>
+    <AddMilestoneForm;'
+import React from 'react',;''
+import { AddMilestoneForm } from '../AddMilestoneForm',;'
+interface MilestoneCreatorProps {;
+  onSubmit: (data: any) => Promise<void>,;
+</AddMilestoneForm>
+
+    <AddMilestoneForm;
+  return (
+
+    <AddMilestoneForm;'
+import React from 'react',;''
+import { AddMilestoneForm } from '../AddMilestoneForm',;'
+;
+interface MilestoneCreatorProps {;)
+  onSubmit:(data:any) => Promise<void>,;
+
+    <AddMilestoneForm ;
+  return (;
+  projectType;)
+}: MilestoneCreatorProps) {;
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -127,13 +168,16 @@ projectType;
 }
 
 />;
+)
   on_submit: (data: any) => Promise < void>,
+pr-12325
+
   is_submitting: boolean,
   on_cancel: () => void,
   project_scope?: string;
   projectStartDate?: string;
-  projectEndDate?: string | null;
-  project_type?: string;
+  projectEndDate?: string | null;}
+  project_type?: string;}
 }
 export /**
  * MilestoneCreator - Function description
@@ -141,6 +185,15 @@ export /**
 function MilestoneCreator() {
   return (
     <AddMilestoneForm;
+ * MilestoneCreator - Function description;
+ */
+function MilestoneCreator() {
+pr-12325
+ * MilestoneCreator - Function description;
+ */
+function MilestoneCreator() {
+  return (}
+    <AddMilestoneForm;}
       on_submit={on_submit}
       is_submitting={is_submitting}
       on_cancel={on_cancel}
@@ -154,22 +207,31 @@ function MilestoneCreator() {
  export function MilestoneCreator ({
   onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
 }: MilestoneCreatorProps) {
+      project_type={project_type})
+    />);
+
+      project_type={project_type})
+    />);
+
+</AddMilestoneForm>
   return (<AddMilestoneForm onSubmit= {
-  onSubmit 
+  onSubmit;
 }isSubmitting= {
-  isSubmitting 
+  isSubmitting;
 }onCancel= {
-  onCancel 
+  onCancel;
 }projectScope= {
-  projectScope 
+  projectScope;
 }projectStartDate= {
-  projectStartDate 
+  projectStartDate;
 }projectEndDate= {
-  projectEndDate 
+  projectEndDate;
 }projectType= {
-  projectType 
 }/>) 
 }
     />
   )
 }
+pr-12325
+</AddMilestoneForm>'
+

@@ -2,6 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import type { NextPage } from 'next',
 import Head from 'next/head',
+
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
 const ResetPassword: NextPage = () => {
   return (
     <div>
@@ -10,6 +13,10 @@ const ResetPassword: NextPage = () => {
         <meta name="description" content="ResetPassword page" />
       </Head>
 
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const ResetPassword: NextPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
       <main>
         <h1>ResetPassword</h1>
         <p>This page is under construction.</p>
@@ -20,10 +27,14 @@ const ResetPassword: NextPage = () => {
 }
   )
 }
+);
+};
+
 export default ResetPassword;
 
 },
 export default ResetPassword,
+
 
       <main>;
         <h1>ResetPassword</h1>;
@@ -33,6 +44,7 @@ export default ResetPassword,
   ),;
 };
 export default ResetPassword;
+
 
 import Head from 'next / head';
       <main>;
@@ -57,3 +69,5 @@ export default ResetPassword;
 
 },
 export default ResetPassword,
+
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -13,6 +13,10 @@ import {useRouter} from 'next/router';
 export default function ContractBuilderRedirect() {;
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
+
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+
 export default function ContractBuilderRedirect() {;
   const router = useRouter();
   useEffect(() => {;
@@ -21,6 +25,10 @@ export default function ContractBuilderRedirect() {;
   return null;
 
 }
+
+
+}
+
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -61,3 +69,10 @@ export default function ContractBuilderRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function ContractBuilderRedirect() {
+  const router = null;
+  return null
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

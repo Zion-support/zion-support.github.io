@@ -1,5 +1,32 @@
 const showTagline = router.pathname === '/'',
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+const showTagline = router.pathname === '/'
+import React, { useState } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import Link from 'next/link';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { useTranslation  } from 'react-i18next';
+import { Menu, X } from 'lucide-react'
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { useAuth  } from '@/hooks/useAuth';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { useSelector  } from 'react-redux';
+import type { RootState } from '@/store';
+import { cn } from '@/lib/utils', // Import cn utility
+import { useRouter } from 'next/router';
+export function AppHeader() {
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = null;
+  const showTagline = router.pathname === '/'
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
   const { t } = useTranslation()
@@ -127,6 +154,7 @@ export function AppHeader() {
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
+
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -145,10 +173,22 @@ export function AppHeader() {
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
+
+          <div className="ml-6 flex-1 hidden md:block">;
+            <nav role="navigation" aria-label="Main navigation">;
+              <ResponsiveNavigation openLoginModal={openLoginModal} />;
+            </nav>;
+          </div>;
+
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">
+            <button
+
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
+
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -168,11 +208,19 @@ export function AppHeader() {
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
+
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })'
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+
+origin/cursor/automate-test-improve-and-merge-code-2533
                   openLoginModal(router.asPath)
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
@@ -206,6 +254,9 @@ export function AppHeader() {
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
                 aria-label={t('auth.signup')}
+
+                aria-label={t('auth.signup')}
+
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -943,6 +994,7 @@ export function AppHeader() {
               </h1>;
             </Link>;
           </div>;
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml - 8 space - x-8">;
             {navigation.map ((item) => (
@@ -1216,6 +1268,9 @@ export function AppHeader() {
                 </div>
                 {services.map((service) => (
                   <Link key={service.name}
+
+                  <Link
+                    key={service.name}
                     to={service.href}
                     onClick={closeMobileMenu}
                     className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors" />"
@@ -1425,6 +1480,7 @@ export function AppHeader() {
       </AnimatePresence>;
     </header>  );
 }
+
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -1443,3 +1499,38 @@ export function AppHeader() {
   );
 }
 ;
+
+;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  );
+
+}';
+}> {';';
+  t ('auth.login') ;';
+}</Link> <Link > {';';
+  t ('auth.signup') ;
+}</Link> </div>) ;";
+}<UserMenu /> </div>) ";";
+}</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;";
+  () => setMobileMenuOpen (false) ";";
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+  unreadCount ;
+}onClose= {;
+  () => setMobileMenuOpen (false) ;
+}openLoginModal= {;
+  openLoginModal ;
+}/> </div> </div>) ;
+}{;
+  /* Mobile Bottom Navigation */ ;
+}{;
+  isMobile && <MobileBottomNav unreadCount= {;
+  unreadCount ;
+}/> ;
+}<LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+origin/cursor/automate-test-improve-and-merge-code-2533

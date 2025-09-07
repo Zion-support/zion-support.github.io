@@ -14,6 +14,10 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
     }
   } catch (error) {
 
+    const dir = path && path.dirname(filePath),
+    if (!fs && fs.existsSync(dir)) {
+      fs && fs.mkdirSync(dir, { recursive: true });
+main
     console.error("Error reading file:", error);
   }
   return defaultValue;
@@ -30,6 +34,11 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
 
 
 
+
+  await writeAllDisputes(all);
+  } catch (error) {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
 
 export function writeJson<T>(filePath: string, data: T): void {
   try {
@@ -420,3 +429,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   await mkdir(dir, { recursive: true });
   return dir;
 }
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+

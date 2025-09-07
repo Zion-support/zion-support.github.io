@@ -2,6 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import type { NextPage } from 'next',
 import Head from 'next/head',
+
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
 const Callback: NextPage = () => {
   return (
     <div>
@@ -10,6 +13,10 @@ const Callback: NextPage = () => {
         <meta name="description" content="Callback page" />
       </Head>
 
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const Callback: NextPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
       <main>
         <h1>Callback</h1>
         <p>This page is under construction.</p>
@@ -20,10 +27,14 @@ const Callback: NextPage = () => {
 }
   )
 }
+);
+};
+
 export default Callback;
 
 },
 export default Callback,
+
 
       <main>;
         <h1>Callback</h1>;
@@ -33,6 +44,7 @@ export default Callback,
   ),;
 };
 export default Callback;
+
 
 import Head from 'next / head';
       <main>;
@@ -57,3 +69,5 @@ export default Callback;
 
 },
 export default Callback,
+
+origin/cursor/automate-test-improve-and-merge-code-2533

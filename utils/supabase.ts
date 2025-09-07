@@ -7,8 +7,8 @@ export const supabase = {
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>;
-  };
+    signOut: () => Promise<any>
+};
 }
 
 
@@ -123,4 +123,23 @@ export const supabase = createSupabaseClient(supabaseConfig);
 
 
 
+        single: () => null;
+      });
+    });
+  });
+}
+  })
+};
+}
+  })
+};
+
+
+  auth: {,
+  getUser: () => Promise<any>;
+</any>
+    signIn: (credentials: any) => Promise<any>;
+    signOut: () => Promise<any>;
+pr-12325
+</any>
 

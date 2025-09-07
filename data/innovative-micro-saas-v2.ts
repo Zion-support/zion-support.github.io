@@ -10,23 +10,23 @@
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
-  contact_info: {
+
     mobile: string;
     email: string;
     address: string;
@@ -502,7 +502,6 @@ export interface InnovativeMicroSaasV2 {
 }
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
-  // Innovative Business Solutions
   {
 
 ;

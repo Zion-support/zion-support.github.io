@@ -1,7 +1,9 @@
 
 import React, { Suspense, lazy } from 'react',
+pr-12243
+import React, { Suspense, lazy } from 'react';
 interface LazyComponentProps {
-  component: () => Promise<{ default: React.ComponentType < any> }>,
+  component: () => Promise<{ default: React.ComponentType < any> ;}>,
   fallback?: React.ReactNode,
   [key: string]: any;
 }
@@ -19,3 +21,6 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
 
 export default LazyComponent;
 export default LazyComponent;
+export default LazyComponent;
+
+pr-12243

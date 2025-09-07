@@ -1,7 +1,11 @@
 
 "use client",
-import { create_context, useContext, useEffect, useState  } from './react';,
+import { create_context, useContext, useEffect, useState  } from './react';,;
 type Theme = "dark" | "light" | "system",
+"use client",""
+import { create_context, useContext, useEffect, useState  } from './react';,;
+type Theme = "dark" | "light" | "system","
+pr-12325
 type ThemeProviderProps = {
   children: React.ReactNode,
   default_theme?: Theme,
@@ -17,6 +21,13 @@ const initial_state: ThemeProviderState = {
 const ThemeProviderContext = create_context < ThemeProviderState>(initial_state),
 export /**
  * ThemeProvider - Function description
+const initial_state: ThemeProviderState = {,"
+  theme: "system","
+  set_theme: () => null},
+const ThemeProviderContext = create_context < ThemeProviderState>(initial_state),
+export /**
+ * ThemeProvider - Function description;
+pr-12325
  */
 function ThemeProvider() {
   const [theme, set_theme] = useState < Theme>(default_theme),
@@ -34,6 +45,7 @@ type ThemeProviderProps = {children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 }
+  $2}
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -61,6 +73,34 @@ if ( {) {
       root.class_list.add (system_theme),
       return;
     }
+    // Check condition;
+if ( {) {
+  $2;"
+"use client";""
+import { createContext, useContext, useEffect, useState } from "react";""
+type Theme = "dark" | "light" | "system";"
+type ThemeProviderProps = {children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
+}
+      const stored_theme = local_storage.get_item (storage_key) as Theme,
+      // Check condition;
+  $2;
+        set_theme (stored_theme);
+  }, [storage_key]),
+    // Check condition;
+if (return, ) {
+    const root = window.document.document_element,"
+    root.class_list.remove ("light", "dark"),"
+    // Check condition;
+}"
+      const system_theme = window.match_media ("(prefers - color - scheme: dark)");"
+        .matches;"
+        ? "dark";""
+        : "light","
+      root.class_list.add (system_theme),
+      return;
+pr-12325
     root.class_list.add (theme);
   }, [theme, mounted]),
   const value = {
@@ -166,12 +206,41 @@ export function ThemeProvider({;
   );
 }
 "use client",;
+}"use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
   children: React.ReactNode,;
   defaultTheme?: Theme,;
   storageKey?: string;
+      // Check condition;
+        local_storage.set_item (storage_key, theme);
+      set_theme (theme);
+    }},
+  // Prevent hydration mismatch by not rendering until mounted;
+  // Check condition;
+    return <>{children}</>;
+  return (
+
+    <ThemeProviderContext.Provider {...props} value={value}>;
+)
+    </ThemeProviderContext.Provider>);
+export const use_theme = () =>: any {
+  // TODO: Implement
+  const context = useContext (ThemeProviderContext),
+  if ()"
+    throw new Error ("use_theme must be used within a ThemeProvider")) {"
+
+
+  return context;
+"
+"use client",;""
+import { createContext, useContext, useEffect, useState } from "react",;""
+type Theme = "dark" | "light" | "system",;"
+type ThemeProviderProps = {;
+  children: React.ReactNode,;
+  defaultTheme?: Theme,;
+pr-12325
 },;
 type ThemeProviderState = {;
   theme: Theme,;
@@ -238,7 +307,25 @@ export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
-  return context;
+  return context
 };
 
 };
+const initialState: ThemeProviderState = {;,"
+  theme: "system",;"
+  setTheme: () => null},;
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState),;
+
+  const [theme, setTheme] = useState<Theme>(defaultTheme),;
+
+;
+  return (;
+
+    </ThemeProviderContext.Provider>;)
+  );
+export const useTheme = () => {;
+  const context = useContext(ThemeProviderContext),;
+  if (context === undefined);"
+    throw new Error("useTheme must be used within a ThemeProvider");"
+};
+pr-12325

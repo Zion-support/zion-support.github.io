@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
 
+
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -335,6 +336,13 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+import React, { useEffect, useMemo, useState } from 'react',;
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/router';
+type PaymentType = any;
+    URL.revokeObjectURL(url)
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -444,6 +452,10 @@ export default function ContractBuilderPage(req, res) {
 }
 
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+
+
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+
 
         </div>
       </form>
@@ -609,3 +621,11 @@ if (return, ) {
 
 }
 
+            {contract}
+          </article>
+        </div>
+      )}
+    </div>
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

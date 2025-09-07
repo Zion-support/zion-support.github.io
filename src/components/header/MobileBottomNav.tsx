@@ -1,3 +1,13 @@
+import React from "react",;
+import { useRouter } from "next/router",;
+import Link from "next/link",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart  } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface MobileBottomNavProps {
   unread_count?: number;
 export /**
@@ -16,6 +26,42 @@ if ( {) {
   $2
 },
   const nav_items = [;
+
+export function MobileBottomNav({ unreadCount;
+import React from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useWishlist } from '@/hooks/useWishlist'
+import { useCart } from '@/context/CartContext'
+import { logWarn } from '@/utils/productionLogger'
+import {
+  Home
+  Search
+  MessageCircle
+  Heart
+  MessageSquare
+  ShoppingCart
+  User
+} from 'lucide-react'
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+interface MobileBottomNavProps {
+  unreadCount?: number
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+  const router = useRouter()
+  const { user } = useAuth()
+  const isAuthenticated = !!user
+  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length
+  const cartContextValue = useCart(); // Call hook at top level
+  let cartCount = 0
+  if (cartContextValue && cartContextValue.items) {
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
+  }
+  const navItems = [
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Home'',
       href: '/'',
@@ -187,6 +233,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             aria-label={item.name}
             className={cn(
               "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+origin/cursor/automate-test-improve-and-merge-code-2533
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"
@@ -475,3 +523,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
 ;
 }}}}}}}}}}))))]
 ;
+      </div>
+    </nav>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

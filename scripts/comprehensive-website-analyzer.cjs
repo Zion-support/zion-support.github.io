@@ -1,8 +1,36 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+const axios = require("child_process")""
+const fs = require("fs")""
+const path = require("path")""
+  constructor(baseUrl = ""https": //ziontechgroup.com")""
+  log(message, level = "info")""
+    this.log(` "Checking"`)""
+      const response = await axios.get(url, {"timeout": 10000,"maxRedirects"})""
+        this.workingLinks.push({url,"status"})""
+          "responseTime": response.headers["x-response-time"] || "unknown"""`;
+        this.log(` "Working"`)""
+          "status"""`;
+        this.log(` "Broken": ${url} (${response.status})`, "error"""
+      this.brokenLinks.push({url,"status": "error"})""
+        "error"""`;
+      this.log(` "Error": ${url} - ${error.message}`, "error"`)""`;
+    this.log(`⚡ Analyzing "performance"`)""
+      const response = await axios.get(url, { "timeout"})""
+      const performanceData = {url,responseTime,"status"}""
+        contentLength: response.headers["content-length"] || "unknown"","
+  contentType: response.headers["content-type"] || "unknown"""
+          "type": "performance"""
+          "data"""
+        "type": "performance"""`;
+    this.log(` Checking "SEO"`)""
+      if (!html.includes("<title>") || html.includes("<title></title>")""
+=======
+#!/usr/bin/env node
 const axios = require("child_process")
 const fs = require("fs")
 const path = require("path")
-  constructor(baseUrl = ""https": //ziontechgroup.com")
+  constructor(baseUrl = https": //ziontechgroup.com")
   log(message, level = "info")
     this.log(` "Checking"`)
       const response = await axios.get(url, {"timeout": 10000,"maxRedirects"})
@@ -13,18 +41,19 @@ const path = require("path")
         this.log(` "Broken": ${url} (${response.status})`, "error"
       this.brokenLinks.push({url,"status": "error"})
         "error"
-      this.log(` "Error": ${url} - ${error.message}`, "error"`)
+      this.log(` "Error": ${url} - ${error.message}, "error"`)
     this.log(`⚡ Analyzing "performance"`)
       const response = await axios.get(url, { "timeout"})
       const performanceData = {url,responseTime,"status"}
-        contentLength: response.headers["content-length"] || "unknown"
-        contentType: response.headers["content-type"] || "unknown"
+        contentLength: response.headers["content-length"] || "unknown,"
+  contentType: response.headers["content-type"] || "unknown"
           "type": "performance"
           "data"
         "type": "performance"
     this.log(` Checking "SEO"`)
       const response = await axios.get(url, { "timeout"})
       if (!html.includes("<title>") || html.includes("<title></title>")
+<<<<<<< HEAD
         seoIssues.push("Missing or empty title tag")
       if (!html.includes("name="description"")
         seoIssues.push("Missing meta description")
@@ -66,3 +95,8 @@ const path = require("path")
 
       return { "success": false, "error"}
 
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      if (!html.includes("<h1>")"
+</h1>"`;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

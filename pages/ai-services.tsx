@@ -1086,6 +1086,7 @@ export default function AIServices() {
   ];
   */
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -1130,6 +1131,7 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 import Link from 'next/link',
+import Link from 'next/link',;
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';

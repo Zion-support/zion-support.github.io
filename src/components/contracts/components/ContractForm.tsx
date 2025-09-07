@@ -21,6 +21,16 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
         values, ;
         talent, ;
         clientName, ;
+
+export type ContractFormValues = z.infer<typeof formSchema" > interface ContractFormProps {"
+  talent: TalentProfile;
+   clientName: string;
+   initialValues?: ContractFormValues;
+   onFormValuesChange?: (values: ContractFormValues) => void;
+   onContractGenerated: (contractContent: string) => void;
+   deployOptions?: DeploymentOptions
+   onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
   );
 }
@@ -50,6 +60,29 @@ const form_schema = z.object ({
   payment_terms: z.enum (["hourly", "fixed", "milestone"]);
   payment_amount: z.string ().min (1, "Payment amount is required");
   additional_clauses: z.array (z.string ()).optional ()}),
+import { Form } from "@/components/ui/form";""
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";""
+import { useToast } from "@/hooks/use-toast";""
+import { TalentProfile } from "@/types/talent";""
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";""
+import { generateContract } from "../utils/contractUtils";""
+import { ProjectDetailsFields } from "./ProjectDetailsFields";""
+import { PaymentTermsFields } from "./PaymentTermsFields";""
+import { AdditionalClausesFields } from "./AdditionalClausesFields";""
+import {logErrorToProduction} from '@/utils/productionLogger';
+const formSchema = z && z.object({;)
+  projectName: z && z.string().min(1, "Project name is required");""
+  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");"
+  startDate: z && z.date({;,)"
+  required_error: "Start date is required"}),;"
+  endDate: z && z.date().optional(),;"
+  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);""
+  paymentAmount: z && z.string().min(1, "Payment amount is required");"
+  additionalClauses: z && z.array(z && z.string()).optional()}),;
+
+export type ContractFormValues = z && z.infer<typeof formSchema>;
+</typeof>
+pr-12325
 export type ContractFormValues = z.infer < typeof form_schema>;
         values,
         talent,
@@ -122,11 +155,13 @@ export function ContractForm({
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
+;
 import { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
 import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",;
 import { Form } from "@/components/ui/form",;
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
@@ -264,6 +299,14 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
+import { AdditionalClausesFields } from "./AdditionalClausesFields";
+import {logErrorToProduction} from '@/utils/productionLogger';
+const formSchema = null;
+  return (
+    <>
+      <DialogHeader>
+        <DialogTitle className="text-xl">Contract Builder</DialogTitle>
+        <DialogDescription>
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -279,6 +322,9 @@ export function ContractForm({;
             handleMilestonesGenerated={handleMilestonesGenerated}
           />;
           <AdditionalClausesFields;
+          />
+          
+          <AdditionalClausesFields 
             form={form}
           />
           
@@ -312,3 +358,34 @@ export function ContractForm({;
   );
 }
 ;
+        >
+          Reset Form
+        </Button>
+      </DialogFooter>
+    </>
+  );
+}finally {;
+  setIsGenerating (false) ;
+
+};
+talent.full name ;
+}</DialogDescription> </DialogHeader> <ProjectDetailsFields form= {;
+  form ;
+}/> <PaymentTermsFields form= {;
+  form ;
+}handleMilestonesGenerated= {;
+  handleMilestonesGenerated ;
+}/> <AdditionalClausesFields form= {;
+  form ";
+}/> <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark" disabled= {;
+  isGenerating ;
+}> {";
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") ";
+}</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) ;
+}"
+  )
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+;"
+pr-12325

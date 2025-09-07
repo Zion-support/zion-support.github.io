@@ -3,10 +3,6 @@
   width
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
 
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
-  threshold = 0.1,
-  width,
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
 
   src;
   alt;
@@ -45,6 +41,25 @@ import React from 'react';
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+
+interface LazyImageProps {
+  src: string;
+
+  alt: string;
+  className?: string;
+  placeholder?: string;
+  threshold?: number;
+  width?: number;
+  height?: number;}
+}
+}
+
+export const LazyImage: React.FC<LazyImageProps /> = ({src;
+  alt;
+  className;
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -59,14 +74,25 @@ import React from 'react';
     );
   };
 
-  return (
-    <div className={`relative overflow-hidden ${className}`}>;
-;
-    // Check condition
-if ( {) {
-  $2
+  className;
+
+const [isLoaded, setIsLoaded] = useState(false);
+
+const [isInView, setIsInView] = useState(false);
+
+const imgRef = useRef<HTMLImageElement />(null);
+          setIsInView(true);
 }
       observer.observe (img_ref.current);
+observer.disconnect();
+observer.disconnect();}
+        }
+      },
+      { threshold }
+    );
+    if (imgRef.current) {
+observer.observe(imgRef.current);
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return () => observer.disconnect ();
   }, [threshold]);
@@ -79,11 +105,39 @@ if ( {) {
   const handle_load = () =>: any {
     setIsLoaded (true);
   }
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+    if (imgRef.current) {}
+observer.observe(imgRef.current);}
+    }
+    return () => observer.disconnect ();
+  }, [threshold]);
+
+const handleLoad = (
+    setIsLoaded(true)) => {
+  return $3;}
+}
+};
+
   return (
-    <div className={`relative overflow - hidden ${class_name}`}>;
+    <div className={`relative overflow - hidden ${class_name}`} />
+
       {/* Placeholder */}
+      <img
+        src={placeholder}
+alt=''
+origin/cursor/automate-test-improve-and-merge-code-2533
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
+
+      <img;
+src={placeholder}
+alt=''
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${}
+          isLoaded ? 'opacity-0' : 'opacity-100'}
         }`}
         style={{ width, height }}
       />
@@ -92,9 +146,9 @@ if ( {) {
 
       />
       
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Actual Image */}
-      {isInView && (;
-        <motion&& motion.img
+      {isInView && (<motion&& motion.img;}
           ref={imgRef}
           src={src}
           alt={alt}
@@ -103,6 +157,18 @@ if ( {) {
 
 export default LazyImage;          className="w-full h-full object-cover";
           loading="lazy";
+          initial={{ opacity: 0, scale: 1.1 }}
+
+          onLoad={handleLoad}
+
+          initial={{ opacity: 0, scale: 1.1 ,}
+}
+          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
+          transition={{ duration: 0.5 ,}
+}
+className='w-full h-full object-cover'
+          loading='lazy'
+origin/cursor/automate-test-improve-and-merge-code-2533
           style={{ width, height }}
         />;
       )}
@@ -127,3 +193,14 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;
+          style={{ width, height }}
+        />;
+      )}
+
+    </div>
+)
+};
+
+export default LazyImage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+

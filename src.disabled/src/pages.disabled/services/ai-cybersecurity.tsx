@@ -10,7 +10,7 @@ const Ai-cybersecurity: React.FC<Ai-cybersecurityProps> = ({ className }) => {
       <h1>Ai-cybersecurity</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
 export default Ai-cybersecurity;

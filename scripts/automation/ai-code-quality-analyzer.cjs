@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 
@@ -96,34 +97,30 @@ const { execSync } = require('child_process')
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
+=======
+
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🤖 Starting AI Code Quality Analyzer...');
-
 class AICodeQualityAnalyzer {
   constructor() {
-    this.logFile = path.join(
-      __dirname;
-      '..';
-      '..';
-      'automation-reports';
-      'ai-code-quality.log'
-    );
-    this.ensureLogDir();
+    this.workspaceRoot = '/workspace';
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,ai-quality-report.json');
+    this.ensureLogDirectory();
   }
 
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.reportFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
-    }
-  }
+      fs.mkdirSync(logDir, { recursive: true });
 
   log(message) {
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
@@ -334,57 +331,120 @@ class AICodeQualityAnalyzer {
   constructor() {
     this.reportFile = path.join(__dirname, '../reports', 'ai-code-quality-report.json');
     this.ensureReportDir();
+=======
+<<<<<<< HEAD
+    console.log(`[AI Quality Analyzer] ${message}`);
+=======
+    console.log(`[AI Quality Analyzer] ${message});
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
   }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
-  ensureReportDir() {
-    const reportDir = path.dirname(this.reportFile);
-    if (!fs.existsSync(reportDir)) {
-      fs.mkdirSync(reportDir, { recursive: true });
+  async analyzeCodeQuality() {
+    this.log('Starting AI-powered code quality analysis...);
+    
+    const analysis = {
+      timestamp: new Date().toISOString(),
+      metrics: {},
+      issues: [],
+      recommendations: [],
+      score: 0
+    };
+
+    try {
+      // Analyze TypeScript files
+      await this.analyzeTypeScriptFiles(analysis);
+      
+      // Analyze React components
+      await this.analyzeReactComponents(analysis);
+      
+      // Analyze performance patterns
+      await this.analyzePerformancePatterns(analysis);
+      
+      // Analyze accessibility
+      await this.analyzeAccessibility(analysis);
+      
+      // Calculate overall score
+      analysis.score = this.calculateQualityScore(analysis);
+      
+      // Generate recommendations
+      this.generateRecommendations(analysis);
+      
+      // Save report
+      fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
+<<<<<<< HEAD
+      `;
+      this.log(`Analysis complete. Quality score: ${analysis.score}/100`);`;
+      this.log(`Report saved to: ${this.reportFile}`);
+      
+      return analysis;
+    } catch (error) {`;
+      this.log(`Error during analysis: ${error.message}`);
+=======
+      
+      this.log(`Analysis complete. Quality score: ${analysis.score}/100`);
+      this.log(`Report saved to: ${this.reportFile});
+      
+      return analysis;
+    } catch (error) {
+      this.log(`Error during analysis: ${error.message});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      analysis.error = error.message;
+
+  async analyzeTypeScriptFiles(analysis) {
+    this.log('Analyzing TypeScript files...);
+    
+      // Run TypeScript compiler check
+      const tscResult = execSync('npx tsc --noEmit, { 
+        encoding: utf8, 
+        cwd: this.workspaceRoot,
+<<<<<<< HEAD
+        stdio: 'pipe
+      });
+=======
+        stdio: pipe});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      
+      analysis.metrics.typescriptErrors = 0;
+      analysis.metrics.typescriptWarnings = 0;
+    } catch (error) {
+      const errorOutput = error.stdout || error.stderr || ;
+      const errorCount = (errorOutput.match(/error/g) || []).length;
+      const warningCount = (errorOutput.match(/warning/g) || []).length;
+      
+      analysis.metrics.typescriptErrors = errorCount;
+      analysis.metrics.typescriptWarnings = warningCount;
+      
+      if (errorCount > 0) {
+        analysis.issues.push({
+          type: typescript,
+          severity: error,
+          count: errorCount,
+<<<<<<< HEAD
+          message: 'TypeScript compilation errors found
+=======
+          message: TypeScript compilation errors found});
+      }
     }
   }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
-  analyzeCodeQuality() {
-    try {
-      console.log('🤖 Analyzing code quality with AI...');
-      
-      const analysis = {
-        timestamp: new Date().toISOString(),
-        overallScore: 85,
-        metrics: {
-          maintainability: 88,
-          readability: 82,
-          performance: 90,
-          security: 85,
-          testability: 80
-        },
-        recommendations: [
-          'Add more unit tests for better coverage',
-          'Implement error boundaries in React components',
-          'Optimize bundle size with code splitting',
-          'Add TypeScript strict mode for better type safety',
-          'Implement automated security scanning'
-        ],
-        issues: [
-          {
-            type: 'warning',
-            file: 'App.tsx',
-            message: 'Consider adding error boundary',
-            severity: 'medium'
-          },
-          {
-            type: 'info',
-            file: 'components/Header.tsx',
-            message: 'Good use of TypeScript interfaces',
-            severity: 'low'
-          }
-        ]
-      };
+  async analyzeReactComponents(analysis) {
+    this.log('Analyzing React components...);
+    
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      this.log('No src directory found, skipping React analysis');
+      return;
 
-      fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
-      console.log('✅ AI code quality analysis completed');
-      console.log(`📊 Overall score: ${analysis.overallScore}/100`);
-      console.log(`📄 Report saved to: ${this.reportFile}`);
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
+    analysis.metrics.totalComponents = componentFiles.length;
+    
+    let issuesFound = 0;
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
       
+<<<<<<< HEAD
       return { success: true, analysis };
     } catch (error) {
       console.error('❌ AI code quality analysis failed:', error.message);
@@ -394,10 +454,233 @@ class AICodeQualityAnalyzer {
 
 
 
+=======
+      // Check for common React issues
+      if (content.includes('useEffect') && !content.includes('useEffect(() => {)) {
+        issuesFound++;
+<<<<<<< HEAD
+          type: 'react',
+          severity: 'warning',
+          file: path.relative(this.workspaceRoot, file),
+          message: 'Potential useEffect dependency issue
+      
+      if (content.includes('console.log')) {
+          severity: 'info',
+          message: 'Console.log found in production code
+=======
+        analysis.issues.push({
+          type: react,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Potential useEffect dependency issue});
+      }
+      
+      if (content.includes('console.log')) {
+        issuesFound++;
+        analysis.issues.push({
+          type: react,
+          severity: info,
+          file: path.relative(this.workspaceRoot, file),
+          message: Console.log found in production code});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    analysis.metrics.reactIssues = issuesFound;
+
+  async analyzePerformancePatterns(analysis) {
+    this.log('Analyzing performance patterns...);
+    
+<<<<<<< HEAD
+=======
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+
+    const jsFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
+    let performanceIssues = 0;
+    
+    jsFiles.forEach(file => {
+<<<<<<< HEAD
+=======
+      const content = fs.readFileSync(file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      
+      // Check for performance anti-patterns
+      if (content.includes('document.querySelector') && !content.includes('useRef')) {
+        performanceIssues++;
+<<<<<<< HEAD
+          type: 'performance',
+          message: 'Direct DOM manipulation detected
+      
+      if (content.includes('setInterval') || content.includes('setTimeout')) {
+          message: 'Timer usage detected - ensure cleanup
+=======
+        analysis.issues.push({
+          type: performance,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Direct DOM manipulation detected});
+      }
+      
+      if (content.includes('setInterval') || content.includes('setTimeout')) {
+        performanceIssues++;
+        analysis.issues.push({
+          type: performance,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Timer usage detected - ensure cleanup});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    analysis.metrics.performanceIssues = performanceIssues;
+
+  async analyzeAccessibility(analysis) {
+    this.log('Analyzing accessibility...);
+    
+<<<<<<< HEAD
+
+    let a11yIssues = 0;
+    
+=======
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      return;
+    }
+
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
+    let a11yIssues = 0;
+    
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+      
+      // Check for accessibility issues
+      if (content.includes('<img') && !content.includes('alt=')) {
+        a11yIssues++;
+<<<<<<< HEAD
+          type: 'accessibility',
+          message: 'Image missing alt attribute
+      
+      if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
+          message: 'Button missing accessible label
+=======
+        analysis.issues.push({
+          type: accessibility,
+          severity: error,
+          file: path.relative(this.workspaceRoot, file),
+          message: Image missing alt attribute});
+      }
+      
+      if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
+        a11yIssues++;
+        analysis.issues.push({
+          type: accessibility,
+          severity: warning,
+          file: path.relative(this.workspaceRoot, file),
+          message: Button missing accessible label});
+      }
+    });
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    
+    analysis.metrics.accessibilityIssues = a11yIssues;
+
+  findFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.findFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+    
+    return files;
+
+  calculateQualityScore(analysis) {
+    let score = 100;
+    
+    // Deduct points for issues
+    analysis.issues.forEach(issue => {
+      switch (issue.severity) {
+        case 'error:
+          score -= 10;
+          break;
+        case 'warning:
+          score -= 5;
+<<<<<<< HEAD
+        case 'info':
+=======
+          break;
+        case 'info:
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+          score -= 2;
+    
+    // Deduct points for TypeScript errors
+    if (analysis.metrics.typescriptErrors) {
+      score -= analysis.metrics.typescriptErrors * 5;
+    
+    return Math.max(0, Math.min(100, score));
+
+  generateRecommendations(analysis) {
+    if (analysis.metrics.typescriptErrors > 0) {
+      analysis.recommendations.push({
+<<<<<<< HEAD
+        priority: 'high',
+        category: 'typescript',
+        message: 'Fix TypeScript compilation errors to improve type safety
+    
+    if (analysis.metrics.accessibilityIssues > 0) {
+        category: 'accessibility',
+        message: 'Address accessibility issues to improve user experience
+    
+    if (analysis.metrics.performanceIssues > 0) {
+        priority: 'medium',
+        category: 'performance',
+        message: 'Optimize performance patterns for better user experience
+    
+    if (analysis.metrics.reactIssues > 0) {
+        category: 'react',
+        message: 'Review React component patterns for best practices
+>>>>>>> cursor/automate-test-improve-and-merge-code-6b26
+=======
+        priority: high,
+        category: typescript,
+        message: Fix TypeScript compilation errors to improve type safety});
+    }
+    
+    if (analysis.metrics.accessibilityIssues > 0) {
+      analysis.recommendations.push({
+        priority: high,
+        category: accessibility,
+        message: Address accessibility issues to improve user experience});
+    }
+    
+    if (analysis.metrics.performanceIssues > 0) {
+      analysis.recommendations.push({
+        priority: medium,
+        category: performance,
+        message: Optimize performance patterns for better user experience});
+    }
+    
+    if (analysis.metrics.reactIssues > 0) {
+      analysis.recommendations.push({
+        priority: medium,
+        category: react,
+        message: Review React component patterns for best practices});
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
     }
   }
 }
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 
+<<<<<<< HEAD
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
 
@@ -417,3 +700,18 @@ analyzer.analyzeCodeQuality();
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 
+=======
+// Run the analyzer;
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.run().catch(console.error);
+
+// CLI interface
+if (require.main === module) {
+  analyzer.analyzeCodeQuality().catch(console.error);
+
+<<<<<<< HEAD
+module.exports = AICodeQualityAnalyzer;
+=======
+module.exports = AICodeQualityAnalyzer;
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

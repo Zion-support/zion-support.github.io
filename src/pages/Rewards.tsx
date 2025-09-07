@@ -36,6 +36,20 @@ const REWARDS = [
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
 
 export default function RewardsPage() {
+
+const REWARDS = null;
+export default function RewardsPage() {
+const REWARDS = [
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
+  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
+]
+const REWARDS = [
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
+  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
+]
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="container max-w-xl py-10">
       <h1 className="text-3xl font-bold mb-6">Rewards</h1>
@@ -47,6 +61,8 @@ export default function RewardsPage() {
               <p className="text-sm text-muted-foreground">{r.cost} pts</p>
             </div>
             <Gift className="h-5 w-5" />
+            <Gift className='h-5 w-5' />
+origin/cursor/automate-test-improve-and-merge-code-2533
           </li>
         ))}
       </ul>;
@@ -85,3 +101,9 @@ const REWARDS = [;
 }
 import { Gift } from 'lucide-react';))
 ;
+import { Gift } from 'lucide-react'
+      </ul>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

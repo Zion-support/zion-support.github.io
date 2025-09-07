@@ -5,12 +5,13 @@ import Unauthorized from "@/pages/Unauthorized";
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
+const ErrorRoutes = () => {  return (
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  );
+  )
 };
 
 import {Fragment} from "react";
@@ -19,11 +20,13 @@ import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
 import NotFound from "@/pages/NotFound";
 import Unauthorized from "@/pages/Unauthorized";
 
-import NotFound from "@/pages/NotFound",
-import Unauthorized from "@/pages/Unauthorized",
+import NotFound from "@/pages/NotFound",;
+import Unauthorized from "@/pages/Unauthorized",;
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
@@ -33,13 +36,19 @@ import { Route, Routes } from "react-router-dom",;
 import NotFound from "@/pages/NotFound",;
 import Unauthorized from "@/pages/Unauthorized",;
 
+
+import { Fragment } from "react";""
+import { Route, Routes } from "react-router-dom";""
+import NotFound from "@/pages/NotFound";""
+import Unauthorized from "@/pages/Unauthorized";"
+pr-12325
 const ErrorRoutes = () => {
 const ErrorRoutes = () => {;
   return (
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />;
-      <Route path="*" element={<NotFound />} />;
+      <Route path="*" element={<NotFound />} />
 };
 
 },
@@ -51,6 +60,8 @@ import { Route, Routes } from './react-router-dom';
 import NotFound from "@/pages / NotFound";
 import Unauthorized from "@/pages / Unauthorized";
 const ErrorRoutes = () =>: any {
+},
+
   return (
     <Routes>;
       {/* Error Routes */}
@@ -60,17 +71,26 @@ export default ErrorRoutes;
 },;
 ;
 export default ErrorRoutes,; const ErrorRoutes = () => {
+"
+</Routes>"
+      <Route path="/unauthorized" element={<Unauthorized />} />"
+      <Route path="*" element={<NotFound />} />"
+
+    
+      <Route path="/unauthorized" element={<Unauthorized />} />;"
+      <Route path="*" element={<NotFound />} />;"
+
+
   return (<Routes> {
-  /* Error Routes */ 
-}<Route path="/unauthorized" element= {
+}<Route path="/unauthorized" element= {"
   <Unauthorized /> 
-}/> <Route path="*" element= {
+}/> <Route path="*" element= {"
   <NotFound /> 
-}/> 
-};
-export default ErrorRoutes;
-const ErrorRoutes = () => {;
-  return (;
+
+
+    ;)"
+pr-12325
+</Route>
     <Routes>;
       {/* Error Routes */}
       <Route path="/unauthorized" element={<Unauthorized />} />;
@@ -79,3 +99,10 @@ const ErrorRoutes = () => {;
   );
 },;
 export default ErrorRoutes;
+</Routes>"
+      <Route path="/unauthorized" element={<Unauthorized />} />;"
+</Route>"
+      <Route path="*" element={<NotFound />} />;"
+</Route>
+    </Routes>;)"
+

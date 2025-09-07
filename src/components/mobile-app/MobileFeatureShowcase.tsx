@@ -1,7 +1,28 @@
+    {
 {
       icon: <Star className="h-8 w-8 text-zion-purple" />",
       title: "AI-Match Instantly"",
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm.""
+
+import React from "react";
+import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+
+export const MobileFeatureShowcase: React.FC;
+}
+export const MobileFeatureShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: <Users className="h-8 w-8 text-zion-cyan" />
+      title: "Hire from Anywhere"
+      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
+    }
+    {
+origin/cursor/automate-test-improve-and-merge-code-2533
+      icon: <Star className="h-8 w-8 text-zion-purple" />
+      title: "AI-Match Instantly"
+      description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
+
+
     },
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />",
@@ -70,6 +91,19 @@ export const MobileFeatureShowcase: React.FC = () => {;,
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
+
+  return (
+    <section id="features" className="py-16 bg-zion-blue">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+            Everything You Need On The Go
+          </h2>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+            The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
+          </p>
+        </div>
+        
     }
   ],
   return (
@@ -226,3 +260,16 @@ export const MobileFeatureShowcase: React.FC = () => {;
 '"},"
 })))))
 };
+
+
+
+'"},
+}
+}
+        </div>
+      </div>
+    </section>
+  );
+};
+'"
+origin/cursor/automate-test-improve-and-merge-code-2533

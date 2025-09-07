@@ -17,6 +17,15 @@ DialogTitle,;
 DialogTitle,;
   DialogTitle,
 } from "@/components/ui/dialog";
+
+
+import React from "react";
+import {
+
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,} from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal({
@@ -68,6 +77,13 @@ export function ApplyToJobModal(): any ({;
 
 import React from './react';
 import {
+
+
+import React from "react";"
+import {
+  // TODO: Implement
+}
+pr-12325
   Dialog,
   DialogContent,
   DialogDescription,
@@ -95,11 +111,58 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
+      <DialogContent className="sm:max-w-[600px]">;
+        <DialogHeader>;
+          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
 
+        <ApplyForm;
+DialogTitle,;
+
+
+DialogTitle,;"
+} from "@/components/ui/dialog";""
+import { ApplyForm } from "./ApplyForm";""
+import { ApplyToJobModalProps } from "./types";"
+export function ApplyToJobModal({
+  job;
+  isOpen;
+  onClose;
+  onApplySuccess;)
+}: ApplyToJobModalProps) {
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+"
+      <DialogContent className="sm:max-w-[600px]">"
+
+        <DialogHeader>
+
+          <DialogTitle>Apply to Job: {job.title}
+          <DialogDescription>
+
+          
+        
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-[600px]">;"
+
+        <DialogHeader>;
+
+          <DialogTitle>Apply to Job: {job && job.title};
+    <Dialog open={is_open} onOpenChange={on_close}>;
+      <DialogContent className="sm:max - w-[600px]">;"
+
+
+          <DialogTitle > Apply to Job: {job.title};
+
+
+          <DialogTitle>Apply to Job:{job.title};
+          <DialogDescription>;
+
+          ;
         <ApplyForm;
 
 ;
@@ -121,24 +184,33 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
 }
     </Dialog>;
   ),;}
+
+    ;)
+    );
  <DialogHeader> <DialogTitle>Apply to Job: {
-  job.title 
-}</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
-  job 
+
+} <DialogDescription> Complete your application for this position   <ApplyForm job= {
 }onClose= {
-  onClose 
 }onApplySuccess= {
-  onApplySuccess 
+  onApplySuccess;
+}/>  ) 
 }/> </DialogContent> </Dialog>) 
-}
-<ApplyForm
+<ApplyForm;
           job={job}
+
           onClose={onClose}
-          onApplySuccess={onApplySuccess}
         />
+
+      
+
+    );"
+pr-12325
+</ApplyForm>
       </DialogContent>
+
 </Dialog>
     </Dialog>;
+    </Dialog>);"
 
   );
 }

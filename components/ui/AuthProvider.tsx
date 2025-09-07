@@ -5,19 +5,40 @@
 
 
       if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);      }        setRoleState(stored)
+
         setRoleState(stored);      }
 
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+type UserRole = any;
+  setRole: (role: UserRole) => void;
+}
+
+const AuthContext = createContext<AuthContextType />({
+  role: 'talent',}
+  setRole: () => ,}
+},
+});
+
+export function AuthProvider({ children }: { children: React.ReactNode,}
+}) {
+  const [role, setRoleState] = useState<UserRole />('talent');
+  useEffect(() => {
+
+    try {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
       if (stored === 'talent' || stored === 'client') {
-
-        setRoleState(stored);      }
-
+setRoleState(stored);
+origin/cursor/automate-test-improve-and-merge-code-2533
+      if (stored === 'talent' || stored === 'client') {}
+setRoleState(stored);}
       }
     } catch {}
   }, []);
-  const setRole = (r: UserRole) => {
+
+const setRole = (
     setRoleState(r);
-    try {
+try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
   }
@@ -47,8 +68,6 @@ export function useAuth() {;
     </AuthContext.Provider>
   );
 
-
-
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
@@ -58,3 +77,21 @@ export function useAuth() {;
 return useContext(AuthContext);
 }
   return (
+) => {
+  return $3;}
+}
+      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
+
+    } catch {}
+  }
+  return (<AuthContext.Provider value={{ role, setRole }} />;
+      {children}
+
+    </AuthContext.Provider>
+  );
+
+export function useAuth() {
+  return useContext(AuthContext);
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+}

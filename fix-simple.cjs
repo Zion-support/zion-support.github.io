@@ -1,64 +1,83 @@
 const fs = require('fs');
 const path = require('path');
-
 function fixSimple(filePath) {
   try {
+  // TODO: Implement
+}
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix semicolons in object properties
+    // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
     content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2');
-
-    // Fix semicolons in array elements
+    // Fix semicolons in array elements;
     content = content.replace(/"([^"]*)";/g, '"$1",');
     content = content.replace(/"([^"]*)";/g, '"$1"');
-
-    // Fix semicolons in object literals
+    // Fix semicolons in object literals;
     content = content.replace(/\{\s*([^}]+)\s*\};/g, '{$1}');
-
-    // Fix semicolons in array literals
+    // Fix semicolons in array literals;
     content = content.replace(/\[\s*([^\]]+)\s*\];/g, '[$1]');
-
-    // Fix semicolons in function calls
+    // Fix semicolons in function calls;
     content = content.replace(/(\w+)\s*\(\s*([^)]+)\s*\);?/g, '$1($2)');
-
-    // Fix semicolons in object destructuring
-    content = content.replace(/\{\s*([^}]+)\s*\};/g, '{$1}');
-
-    // Fix semicolons in array destructuring
-    content = content.replace(/\[\s*([^\]]+)\s*\];/g, '[$1]');
-
-    // Fix semicolons in template literals
+    // Fix semicolons in object destructuring;
+    // Fix semicolons in array destructuring;
+    // Fix semicolons in template literals;
     content = content.replace(/`([^`]+)`;/g, '`$1`');
-
-    // Fix semicolons in string literals
-    content = content.replace(/"([^"]*)";/g, '"$1"');
-    content = content.replace(/'([^']*)';/g, "'$1'");
-
-    // Fix spaces in prices
+    // Fix semicolons in string literals;
+    content = content.replace(/'([^']*)';/g, "'$1'");"
+    // Fix spaces in prices;"
     content = content.replace(/\$(\d+),\s*(\d+)/g, '$$1,$2');
-
-    // Fix semicolons in object closing
+    // Fix semicolons in object closing;
     content = content.replace(/\}\s*;/g, '}');
-
-    // Fix semicolons in array closing
+    // Fix semicolons in array closing;
     content = content.replace(/\]\s*;/g, ']');
-
-    // Fix semicolons in function closing
+    // Fix semicolons in function closing;
     content = content.replace(/\)\s*;/g, ')');
-
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content, 'utf8');
+=======
+    let content = fs.readFileSync(filePath,utf8);
+    let modified = false;
+
+    // Fix semicolons in object properties;
+    content = content.replace(/(\w+):\s*([^}]+);/g,$1: $2,);
+    content = content.replace(/(\w+):\s*([^}]+);/g,$1: $2);
+    // Fix semicolons in array elements;
+    content = content.replace(/"([^"]*)";/g,"$1",);
+    content = content.replace(/"([^"]*)";/g,"$1");
+    // Fix semicolons in object literals;
+    content = content.replace(/\{\s*([^}]+)\s*\};/g,{$1});
+    // Fix semicolons in array literals;
+    content = content.replace(/\[\s*([^\]]+)\s*\];/g,[$1]);
+    // Fix semicolons in function calls;
+    content = content.replace(/(\w+)\s*\(\s*([^)]+)\s*\);?/g,$1($2));
+    // Fix semicolons in object destructuring;
+    content = content.replace(/\{\s*([^}]+)\s*\};/g,{$1});
+    // Fix semicolons in array destructuring;
+    content = content.replace(/\[\s*([^\]]+)\s*\];/g,[$1]);
+    // Fix semicolons in template literals;
+    content = content.replace(/`([^`]+)`;/g,`$1`);
+    // Fix semicolons in string literals;
+    content = content.replace(/"([^"]*)";/g,"$1");
+    content = content.replace(/([^]*);/g, "$1");"
+    // Fix spaces in prices;"
+    content = content.replace(/\$(\d+),\s*(\d+)/g,$$1,$2);
+    // Fix semicolons in object closing;
+    content = content.replace(/\}\s*;/g, });
+    // Fix semicolons in array closing;
+    content = content.replace(/\]\s*;/g, ]);
+    // Fix semicolons in function closing;
+    content = content.replace(/\)\s*;/g,));
+    if (content !== fs.readFileSync(filePath,utf8)) {
+      fs.writeFileSync(filePath, content,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       modified = true;
-    }
 
     return modified;
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
@@ -70,19 +89,24 @@ function processDirectory(dirPath) {
 
     if (stat.isDirectory()) {
       fixedCount += processDirectory(filePath);
-    } else if (
+    } else if ()
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
     ) {
       if (fixSimple(filePath)) fixedCount++;
-    }
-  }
 
   return fixedCount;
-}
+<<<<<<< HEAD
 
 console.log('Starting simple fixes...');
+const fixedCount = processDirectory('./pages');`;
+=======
+}
+'
+console.log('Starting simple fixes...);
 const fixedCount = processDirectory('./pages');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 console.log(`Fixed ${fixedCount} files`);
+`;

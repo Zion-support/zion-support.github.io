@@ -77,6 +77,15 @@ const features = [;
   },;
 ];
 export function EnterpriseFeatures() {;
+import React from 'react';
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
+
+import React from "react";
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+
+const features = null;
+export function EnterpriseFeatures() {
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>;
       <div className='container mx-auto max-w-6xl'>;
@@ -213,7 +222,7 @@ const features = [;
     icon: Shield},;
   {;
 
-import React from "react",
+import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = [
@@ -266,6 +275,8 @@ export function EnterpriseFeatures() {
               </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
+              <p className='text-muted-foreground'>{feature.description}</p>
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
@@ -320,6 +331,11 @@ export function EnterpriseFeatures() {;
               <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
                 <feature.icon className='h - 6 w - 6 text - primary' />;
               </div>;
+          ))}
+        </div>
+      </div>;
+    </section>;
+  );
               <h3 className='font - bold text - xl mb - 3'>{feature.title}</h3>;
               <p className='text - muted - foreground'>{feature.description}</p>            </div>;
               <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
@@ -362,3 +378,8 @@ export function EnterpriseFeatures() {;
   );
 }
 ;
+      </div>
+    </section>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

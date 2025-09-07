@@ -25,10 +25,12 @@ export type ProposalMeta = {;
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
-export type ProposalMeta = {id: string;
+
 export type ProposalMeta = {
 export type ProposalMeta = {;
+interface ProposalMeta {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -40,31 +42,44 @@ export type ProposalMeta = {;
   supportingMultiverses: string[];
   languages: string[];
   status: ProposalStatus;
-  artifacts: {;
+
     markdownPath?: string;
     jsonPath?: string;
     pdfPath?: string;
     ipfsCid?: string;
     ensRecordHash?: string;
     signature?: string;
-  }
-}
-export type ProposalPayload = {title: string;
+  };
+};
+
+export type ProposalPayload = {
+  title: string;
   targetInstitution: string;
   type: string;
   regionalScope: string;
   budgetOrResolution: string;
+export type ProposalPayload = {title: string;,
+  targetInstitution: string;
+  type: string;,
+  regionalScope: string;
+  budgetOrResolution: string;,
+pr-12325
   supportingMultiverses: string[];
   contentMarkdown: string;
   language?: string;
   metadata?: Record<string, any>;
-}
-const dataDir = path.join(process.cwd(), 'dataproposals');
-const publicDir = path.join(process.cwd(), 'publicproposals');
-function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+};
+
+const dataDir = path.join(process.cwd(), 'data/proposals');
+const publicDir = path.join(process.cwd(), 'public/proposals');
+
+function ensureDirs() {
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 }
-export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDirs();
+
+export function createProposal(payload: ProposalPayload): ProposalMeta {
+  ensureDirs();
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -74,27 +89,30 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
   const jsonPath = path.join(proposalDir, 'proposal.json');
-  const meta: ProposalMeta = {id;
-    createdAt;
-    updatedAt;
-    title: payload.title;
-    targetInstitution: payload.targetInstitution;
-    type: payload.type;
-    regionalScope: payload.regionalScope;
-    budgetOrResolution: payload.budgetOrResolution;
-    supportingMultiverses: payload.supportingMultiverses |[];
-    languages: payload.language ? [payload.language] : ['en'];
-    status: 'Draft';
-    artifacts: {;
-      markdownPath: `/proposals/${id}/proposal.md`;
-      jsonPath: path.relative(process.cwd(), jsonPath)}}
+  const meta: ProposalMeta = {
+    id,
+    createdAt,
+    updatedAt,
+    title: payload.title,
+    targetInstitution: payload.targetInstitution,
+    type: payload.type,
+    regionalScope: payload.regionalScope,
+    budgetOrResolution: payload.budgetOrResolution,
+    supportingMultiverses: payload.supportingMultiverses || [],
+    languages: payload.language ? [payload.language] : ['en'],
+    status: 'Draft',
+    artifacts: {
+      markdownPath: `/proposals/${id}/proposal.md`,
+      jsonPath: path.relative(process.cwd(), jsonPath)
+    }
+  };
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
   const metaPath = path.join(proposalDir, 'meta.json');
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
   return meta;
 }
-export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
+
 export function updateProposalMeta(
   id: string,
   updater: (meta: ProposalMeta) => ProposalMeta
@@ -266,6 +284,10 @@ export function listProposals(): ProposalMeta[] {;
   ensureDirs();
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
   const metas: ProposalMeta[] = entries.map((id) => {;
+export function listProposals(): ProposalMeta[] {
+  ensureDirs();
+  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map((id) => {
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
@@ -565,6 +587,11 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+</string>
+  return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+pr-12325
+
+
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
@@ -584,9 +611,9 @@ export function updateArtifacts(
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
 }
-import fs from 'fs',
-import path from 'path',
-import { v4 as uuidv4 } from 'uuid',
+import fs from 'fs',;
+import path from 'path',;
+import { v4 as uuidv4 } from 'uuid',;
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',
 export type ProposalMeta = {
   id: string,
@@ -717,3 +744,10 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
 }
+    } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+},;
+export type ProposalPayload = {
+  title: string;,
+

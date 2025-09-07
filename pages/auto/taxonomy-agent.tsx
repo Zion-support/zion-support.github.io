@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -29,6 +30,8 @@ const TaxonomyAgent: NextPage = () => {
 }
 export default TaxonomyAgent;
 
+
+
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
       </main>
     </div>
@@ -37,3 +40,10 @@ export default TaxonomyAgent;
 
 export default TaxonomyAgent,;
 export default TaxonomyAgent,
+
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const TaxonomyAgent: NextPage;
+origin/cursor/automate-test-improve-and-merge-code-2533

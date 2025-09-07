@@ -13,6 +13,8 @@ import {
 } from "lucide-react",
 
 export const HELP_CATEGORIES: HelpCategory[] = [
+
+
   {
     id: "getting-started"
     name: "Getting Started"
@@ -68,6 +70,7 @@ id: "create-account",
   },
 
   {
+    ]  {
     id: "hiring"
     name: "Hiring Process"
     description: "How to find and hire talent on the platform"
@@ -105,6 +108,7 @@ id: "post-job"
     ]
   }
         id: "post-job",
+      {        id: "post-job",
         title: "Posting a job",
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",
         lastUpdated: "2023-10-25",
@@ -150,7 +154,7 @@ id: "talent-profile"
       }
         id: "talent-profile",
         title: "Setting up a talent profile",
-        content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",
+        content: "Your profile is your professional identity on the Zion AI Marketplace. Follow these steps to create a profile that stands out:\n\n1. Upload a professional headshot\n2. Create a compelling headline that summarizes your expertise\n3. Write a detailed bio highlighting your experience and specialties\n4. Add your skills, rating your proficiency level for each\n5. Showcase your portfolio with examples of past work\n6. List your education and certifications\n7. Set your availability and preferred working hours\n8. Specify your rate range\n\nCompleteness is important - profiles with all sections filled out receive up to 30% more views and engagement from potential clients.",;
         lastUpdated: "2023-10-15",
         tags: ["profile", "talent"]
       },
@@ -575,6 +579,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
   }
 ];
 
+      }
+    ];
         id: "file-dispute",
         title: "How to file a dispute",
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.",
@@ -1238,3 +1244,41 @@ tags: ["prevention", "best practices", "communication" ]
 ];
   }
 ];
+
+
+import React from "react",""
+import { HelpCategory } from "./types","
+import {
+  // TODO: Implement
+}
+  HelpCircle,
+  CreditCard, 
+  Users, 
+  Calendar, 
+  Briefcase;"
+} from "lucide-react","
+export const HELP_CATEGORIES: HelpCategory[] = [
+  {"
+    id: "getting-started"","
+  name: "Getting Started"""
+    description: "Learn the basics of using the Zion AI Marketplace"","
+  icon: <HelpCircle className="h-6 w-6 text-zion-purple" />"
+"
+    icon: <Briefcase className="h-6 w-6 text-zion-cyan" />"
+    icon: <Users className="h-6 w-6 text-zion-purple" />"
+    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />"
+    icon: <Calendar className="h-6 w-6 text-zion-purple" />"
+    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,;"
+    icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,;"
+    icon: <Users className="h-6 w-6 text-zion-purple" />,;"
+    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;"
+    icon: <Calendar className="h-6 w-6 text-zion-purple" />,;"
+    icon: <HelpCircle className="h - 6 w - 6 text - zion - purple" />,"
+    icon: <Briefcase className="h - 6 w - 6 text - zion - cyan" />,"
+    icon: <Users className="h - 6 w - 6 text - zion - purple" />,"
+    icon: <CreditCard className="h - 6 w - 6 text - zion - cyan" />,"
+    icon: <Calendar className="h - 6 w - 6 text - zion - purple" />,"
+]"
+pr-12325
+</Calendar>]"
+

@@ -24,11 +24,50 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",;
+
+
+import { Job } from "@/types/jobs",;
+import { toast } from "sonner",;
+
+
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
 }
 export function ApplyToJobForm({ job, onSuccess }:,  ApplyToJobFormProps) {
+import { useJobApplications } from "@/hooks/useJobApplications",""
+import { useResume } from "@/hooks/useResume",""
+import { useAuth } from "@/hooks/useAuth",""
+import { Button } from "@/components/ui/button",""
+import { Textarea } from "@/components/ui/textarea",""
+import { Label } from "@/components/ui/label",""
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
+import { Alert, AlertDescription } from "@/components/ui/alert",""
+import { AlertCircle, FileText, Loader2 } from 'lucide-react
+import { formatDistanceToNow } from "date-fns",""
+import { Job } from "@/types/jobs",""
+import { toast } from "sonner","
+interface ApplyToJobFormProps {
+  // TODO: Implement
+}
+  job: Job;
+  onSuccess?: () => void;
+pr-12325
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+
+
+
+
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -158,6 +197,25 @@ function ApplyToJobForm() {
   const [selectedResumeId, setSelectedResumeId] = useState < string>("");,
   const [resume_file, setResumeFile] = useState < File | null>(null);,
   const [is_submitting, setIsSubmitting] = useState (false);,
+  const router = use_router ();
+  const [cover_letter, setCoverLetter] = useState (`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState < string>("");
+  const router = useRouter()"
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`)""
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("")"
+</string>
+  const [resumeFile, setResumeFile] = useState<File | null>(null)
+
+  const [error, setError] = useState<string | null>(null)
+</string>"
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),"
+  const [resumeFile, setResumeFile] = useState<File | null>(null),
+
+  const [error, setError] = useState<string | null>(null),
+  const [selectedResumeId, setSelectedResumeId] = useState < string>("");"
+pr-12325
+  const [resume_file, setResumeFile] = useState < File | null>(null);
+  const [is_submitting, setIsSubmitting] = useState (false);
   const [error, set_error] = useState < string | null>(null);
   const handle_submit = async (e: React.FormEvent) => {,
     e.prevent_default ();
@@ -201,8 +259,72 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
+    // Check condition;
+if ( {) {
+  $2;
+}"
+      toast.error ("You must be logged in to apply"),"`;
+      router.push (`/login?return_to=${encodeURIComponent (`/jobs/${job.id}`)}`);
+      return;
+    if () {) {
+      set_error ("Please provide a cover letter");"
+    setIsSubmitting (true);
+    set_error (null);
+    try {
+  // TODO: Implement
+      const success = await applyToJob (
+        job.id;
+        cover_letter;
+        selectedResumeId || undefined;)
+        resume_file || undefined);
+      // Check condition;
+        toast.success ("Your application has been submitted!");"
+        // Check condition;
+          on_success ();
+    } catch (err: any) {"
+      set_error (err.message || "Failed to submit application"),""
+      toast.error ("Failed to submit application");"
+    } finally {
+  // TODO: Implement
+      setIsSubmitting (false);
+pr-12325
+
+
   },
   },
+  
+
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useResume } from '@/hooks/useResume';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,;
+} from '@/components/ui/select';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertCircle, FileText, Loader2 } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns';
+import { Job } from '@/types/jobs';
+import { toast } from 'sonner';
+
+interface ApplyToJobFormProps {
+  job: Job;
+  onSuccess?: () => void
+}
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+  const { user } = useAuth();
+  const { applyToJob } = useJobApplications();
+  const { resumes, isLoading: isResumesLoading } = useResume();
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
       {error && (
         <Alert variant="destructive">"
@@ -758,3 +880,220 @@ handle_submit;
 ;
 }
 ;
+        </Button>
+      </div>
+    </form>
+  );
+  ;
+}setError (null);
+if (success) {;
+  if (onSuccess) {;
+  ;
+}finally {;
+  setIsSubmitting (false) ;
+
+};
+handleSubmit ;
+}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ";
+}<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {;
+  selectedResumeId ;
+}onValueChange= {;
+  setSelectedResumeId ";
+}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>) ;
+}return null;
+}) ;
+}</SelectContent> </Select> > Create Resume </Button> </div>) ";
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
+}</Button> </div> </form>) ;
+}"
+origin/cursor/automate-test-improve-and-merge-code-2533
+  
+
+  return (
+
+
+      
+
+
+      {error && ("
+        <Alert variant="destructive">"
+"
+          <AlertCircle className="h-4 w-4" />"
+
+          <AlertDescription>{error}
+      <div className="space-y-4">"
+</div>
+        <div>
+</div>"
+          <Label htmlFor="coverLetter">Cover Letter")"
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("");"
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+
+  const [error, setError] = useState<string | null>(null);
+    <form onSubmit={handleSubmit} className="space-y-6">;"
+</form>
+      <div>;
+        <h3 className="text-lg font-medium mb-1">Apply to: {job && job.title}</h3>;""
+        <p className="text-sm text-muted-foreground mb-4">;"
+</p>
+        </p>;
+      </div>;"
+        <Alert variant="destructive">;"
+          <AlertCircle className="h-4 w-4" />;"
+
+          <AlertDescription>{error};
+        ;"
+      <div className="space-y-4">;"
+          <Label htmlFor="coverLetter">Cover Letter;"
+          <Textarea;"
+            id="coverLetter""
+            value = {coverLetter,}
+            onChange = {(e,) => setCoverLetter(e && e.target.value),}
+
+          <Label htmlFor="resume">Select Resume (Optional)""
+            <div className="flex items-center gap-2 mt-2">"
+              <Loader2 className="h-4 w-4 animate-spin" />"
+</Loader2>
+              <span>Loading your resumes...</span>
+            <Select;
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
+            >
+              <SelectTrigger className="mt-1">"
+                <SelectValue placeholder="Select a resume" />"
+
+              
+              <SelectContent>
+                <SelectItem value="">No resume"
+                      <SelectItem key={resume.id} value={resume.id}>
+
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),;"
+  const [resumeFile, setResumeFile] = useState<File | null>(null),;
+
+  const [error, setError] = useState<string | null>(null),;
+        <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>;""
+
+            id="coverLetter";"
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+          <p className="text-xs text-muted-foreground mt-1">;"
+        </div>;
+          <Label htmlFor="resume">Select Resume (Optional);""
+            <div className="flex items-center gap-2 mt-2">;"
+              <Loader2 className="h-4 w-4 animate-spin" />;"
+              <span>Loading your resumes...</span>;
+              value = {selectedResumeId,}
+              onValueChange = {setSelectedResumeId,}>;
+              <SelectTrigger className="mt-1">;"
+    <form on_submit={handle_submit} className="space - y-6">;"
+        <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;""
+        <p className="text - sm text - muted - foreground mb - 4">;"
+          <AlertCircle className="h - 4 w - 4" />;"
+
+        )}"
+      <div className="space - y-4">;"
+          <Label html_for="cover_letter">Cover Letter;"
+            id="cover_letter";"
+            value = {cover_letter, }
+            on_change = {(e, ) => setCoverLetter (e.target.value), }
+          <p className="text - xs text - muted - foreground mt - 1">;"
+          <Label html_for="resume">Select Resume (Optional);""
+            <div className="flex items - center gap - 2 mt - 2">;"
+              <Loader2 className="h - 4 w - 4 animate - spin" />;"
+              <span > Loading your resumes...</span>;
+            </div>) : resumes && resumes.length > 0 ? (
+              value = {selectedResumeId, }
+              onValueChange = {setSelectedResumeId, }
+            >;
+              <SelectTrigger className="mt - 1">;"
+                <SelectValue placeholder="Select a resume" />;"
+
+              ;
+              <SelectContent>;
+                <SelectItem value="">No resume;"
+                      <SelectItem key={resume && resume.id} value={resume && resume.id}>;
+
+            <div className="flex items-center justify-between mt-2 p-3 border rounded-md">;"
+              <div className="flex items-center gap-2">;"
+                <FileText className="h-5 w-5 text-muted-foreground" />;"
+
+                <span>No resumes found</span>;
+              <Button;"
+                variant="outline"""
+                size="sm"""
+                type="button"")"
+                onClick = {(,) => router && router.push("/dashboard/talent/portfolio"),}"
+
+          <Label htmlFor="cvUpload">Or Upload CV (PDF);"
+          <input;"
+            id="cvUpload"""
+            type="file"""
+            accept=".pdf"""
+            className="mt-1""
+            onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+</input>
+
+      <div className="flex justify-end gap-2">"
+      <div className="flex justify-end gap-2">;"
+          type="button"""
+          variant="outline""
+          onClick={() => {;
+
+        <Button type="submit" disabled={isSubmitting}>;"
+
+            <>;"
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />;"
+            </>;
+          ) : (;"
+            "Submit Application";")
+          )}
+
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF)  <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;"
+} </div> </form>) ;
+    </form>;
+                      <SelectItem key={resume.id} value={resume.id}>;
+
+                      );
+            ) : ("
+            <div className="flex items - center justify - between mt - 2 p - 3 border rounded - md">;"
+              <div className="flex items - center gap - 2">;"
+                <FileText className="h - 5 w - 5 text - muted - foreground" />;"
+
+                <span > No resumes found</span>;
+                variant="outline";""
+                size="sm";""
+                type="button";")"
+                on_click = {(, ) => router.push ("/dashboard / talent / portfolio"), }"
+
+            </div>)}
+          <Label html_for="cv_upload">Or Upload CV (PDF);"
+            id="cv_upload";""
+            type="file";""
+            accept=".pdf";""
+            className="mt - 1";"
+            on_change = {(e, ) => setResumeFile (e.target.files?.[0] || null), }
+      <div className="flex justify - end gap - 2">;"
+          type="button";""
+          variant="outline";"
+          disabled = {is_submitting, }
+          on_click={() => {
+
+        <Button type="submit" disabled={is_submitting}>;"
+
+              <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;"
+            </>) : ()"
+            "Submit Application")}"
+    </form>);"
+}className="space - y-6"> <div> <AlertCircle className="h - 4 w - 4" /> <AlertDescription> {"
+} ) ";""
+}<div className="space - y-4" > <div> <Label html_for="cover_letter" >Cover Letter <Textarea className="mt - 1" /> <p className="text - xs text - muted - foreground mt - 1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items - center gap - 2 mt - 2"> <Loader2 className="h - 4 w - 4 animate - spin" /> <span > Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {"
+  selectedResumeId;
+}onValueChange= {"
+  setSelectedResumeId ";")"
+}> <SelectTrigger className="mt - 1" > <SelectValue placeholder="Select a resume" />  <SelectContent> );""
+}  > Create Resume  </div>) ";""
+}</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF)  <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");"
+} </div> </form>);"`;
+pr-12325

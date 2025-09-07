@@ -1,40 +1,99 @@
 
 
 }},
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 #!/usr/bin/env node
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-// Security checks
+// Security checks;
 const securityChecks = [{
+<<<<<<< HEAD
     "name": 'Dependency Vulnerability Scan',
-    "action": () => {
+=======
+    "name": Dependency Vulnerability Scan,
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    "action": () => {"
       try {
+  // TODO: Implement
+}"
+<<<<<<< HEAD
         execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
+=======
+        execSync('npm audit --audit-level=moderate, { "stdio": pipe});
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       } catch (error) {
       }
     },
+<<<<<<< HEAD
   },
 
 
 
 
     }},
+=======
+
+<<<<<<< HEAD
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
   {
     "name": 'Environment Variables Check',
-    "action": () => {
-      
+    "action": () => {"]"
       const envFiles = ['.env', '.env.local', '.env.production'];
+=======
+    }},
+  {
+    "name": Environment Variables Check,
+    "action": () => {"]"
+      const envFiles = [.env,.env.local,.env.production];
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       let foundEnvFiles = 0;
 
-      envFiles.forEach(envFile => {
+      envFiles.forEach(envFile => {)
         if (fs.existsSync(envFile)) {
           foundEnvFiles++;
           
-        }
       });
 
 
+<<<<<<< HEAD
+
+      
+
+
+=======
+      
+
+
+
+
 
       
 
@@ -43,31 +102,86 @@ const securityChecks = [{
 
 
 
+      
 
+      
+
+
+
+
+      
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
+
+
+
+
+
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+<<<<<<< HEAD
+    "name": 'API Security Check',
+    "action": () => {""
+      const apiDir = path.join(process.cwd(), 'pages', 'api');
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
     }},
   {
-    "name": 'API Security Check',
+    "name": API Security Check,
     "action": () => {
-      
-      const apiDir = path.join(process.cwd(), 'pages', 'api');
+      const apiDir = path.join(process.cwd(),pages,api');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (fs.existsSync(apiDir)) {
-        const apiFiles = fs
+        const apiFiles = fs;
           .readdirSync(apiDir)
           .filter(file => file.endsWith('.ts') || file.endsWith('.js'));
         let securityIssues = 0;
 
-        apiFiles.forEach(file => {
+        apiFiles.forEach(file => {)
+<<<<<<< HEAD
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
-          if (
+          if ()
             content.includes('process.env') &&
             !content.includes('// Security: ')
+<<<<<<< HEAD
             !content.includes('// Security: ')
             !content.includes('// Security: ')
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
             !content.includes('// "Security": ')
+=======
+          const content = fs.readFileSync(path.join(apiDir, file),utf8);
+          if ()
+            content.includes('process.env') &&
+            !content.includes('// Security: )
+            !content.includes('// Security: )
+            !content.includes('// Security: )
+            !content.includes('// "Security": )
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
           ) {
             securityIssues++;
+<<<<<<< HEAD
           }
         });
+=======
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
 
 
@@ -80,35 +194,71 @@ const securityChecks = [{
 
 
         console.log(
-          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
+          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`)
         );
+<<<<<<< HEAD
       }
     },
   },
 
 
+=======
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+<<<<<<< HEAD
+    "name": 'Content Security Policy Check',
+      const pagesDir = path.join(process.cwd(), 'pages');
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
       }
     }},
   {
-    "name": 'Content Security Policy Check',
+    "name": Content Security Policy Check,
     "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
+      const pagesDir = path.join(process.cwd(),pages');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
       if (fs.existsSync(pagesDir)) {
-        const pages = fs
+        const pages = fs;
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let cspFound = 0;
 
-        pages.forEach(page => {
+        pages.forEach(page => {)
+<<<<<<< HEAD
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          if (
+            content.includes('Content-Security-Policy') ||
+            content.includes('CSP')
+=======
+          const content = fs.readFileSync(path.join(pagesDir, page),utf8);
+          if ()
             content.includes('Content-Security-Policy') ||
             content.includes('CSP')
           ) {
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
             cspFound++;
+<<<<<<< HEAD
           }
         });
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
 
 
@@ -120,6 +270,7 @@ const securityChecks = [{
 
 
 
+<<<<<<< HEAD
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
@@ -129,62 +280,191 @@ const securityChecks = [{
       }
     }},
   {
+=======
+
+
+
+
+
+
+
+
+
+
+`;
+        console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
     "name": 'HTTPS Enforcement Check',
-    "action": () => {
-      
       const nextConfigPath = path.join(process.cwd(), 'next.config.js');
       if (fs.existsSync(nextConfigPath)) {
         const content = fs.readFileSync(nextConfigPath, 'utf8');
-        if (content.includes('https') || content.includes('secure')) {
-          
-        } else {
-          
-        }
-      } else {
-        
+=======
       }
+<<<<<<< HEAD
     },
   },
     },
   },
     },
   },
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
     }},
+  {
+    "name": HTTPS Enforcement Check,
+    "action": () => {
+      const nextConfigPath = path.join(process.cwd(),next.config.js');
+      if (fs.existsSync(nextConfigPath)) {
+        const content = fs.readFileSync(nextConfigPath,utf8);
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+        if (content.includes('https') || content.includes('secure')) {
+        } else {
+  // TODO: Implement
+  // TODO: Implement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
-// Run security checks
+// Run security checks;
 let successCount = 0;
 let totalCount = securityChecks.length;
 
 for (const check of securityChecks) {
-  try {
-    
+  // TODO: Implement
     check.action();
     
     successCount++;
-  } catch (error) {
     
-  }
-}
 
+<<<<<<< HEAD
 // Generate security report
+=======
+// Generate security report;
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 const report = {
+<<<<<<< HEAD
+  "timestamp": new Date().toISOString(),""
+=======
   "timestamp": new Date().toISOString(),
-  "checks": securityChecks.map(check => ({
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+  "checks": securityChecks.map(check => ({"
     name: check.name,
+<<<<<<< HEAD
     status: 'completed',
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+    status: completed,)
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
   })),
-  summary: {
-    total: totalCount,
+  summary: {,
+  total: totalCount,
     successful: successCount,
     failed: totalCount - successCount,
-  },
 };
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
     "status": 'completed'})),
-  "summary": {
-    total: totalCount,
+  "summary": {"
+    total: totalCount,"
+    "successful": successCount,""
+    "failed": totalCount - successCount}};""
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+=======
+'
+    "status": completed})),
+  "summary": {"
+    total: totalCount,"
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
 
 
 
@@ -205,14 +485,19 @@ const report = {
 
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
+=======
+const reportsDir = path.join(process.cwd(),automation-reports');
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });
-}
-
+  fs.mkdirSync(reportsDir, { "recursive": true });"
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 <<<<<<< HEAD:automation/security-audit.cjs
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
 
 
@@ -231,6 +516,7 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/security-audit.cjs
 =======
@@ -249,18 +535,54 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/security-audit.cjs
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/temp_broken_files/automation/security-audit.cjs
 #!/usr/bin/env node;
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+#!/usr/bin/env node;"
+=======
+#!/usr/bin/env node"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 console.log('� Security Audit Starting...\n')
+<<<<<<< HEAD
+    "name"""
+        execSync('npm audit --audit-level=moderate', { "stdio"})""
+            !content.includes('// "Security")""
+    "status"""
+    "status"""`;
+=======
     "name"
-        execSync('npm audit --audit-level=moderate', { "stdio"})
+        execSync('npm audit --audit-level=moderate, { "stdio"})
     "name"
     "name"
             !content.includes('// "Security")
     "name"
     "name"
     "status"
+<<<<<<< HEAD
 
 
 
@@ -280,3 +602,15 @@ console.log('� Security Audit Starting...\n')
 
     "status"
 
+=======
+    "status"
+    "status"
+    "status"
+    "status"
+    "status"
+    "status"
+    "status"
+    "status"
+    "status"
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

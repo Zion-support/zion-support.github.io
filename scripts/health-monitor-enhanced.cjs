@@ -1,13 +1,13 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 
-class HealthMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-  }
 
+<<<<<<< HEAD
   async run() {
     console.log('🏥 Running health monitoring...');
     console.log('✅ Health monitoring completed');
@@ -20,9 +20,16 @@ monitor.run().catch(console.error);
 module.exports = HealthMonitor;
 
 
+=======
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
         console.log(' Checking system health...')
+            "status"""
+            "message"""
+=======
+        console.log(' Checking system health...)
             "status"
             "status"
             "message"
@@ -32,6 +39,7 @@ const path = require('path')
             "message"
             "status"
             "message"
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -318,3 +326,6 @@ module.exports = HealthMonitor;
 
 
 
+=======
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+>>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4

@@ -1,10 +1,22 @@
-import { supabase } from "@/integrations/supabase/client";
-/**
+import {supabase} from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client",/**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
+import { supabase } from "@/integrations/supabase/client";"
+/**"
+ * Checks if the profiles table exists and creates it if it doesn't;
+ * This is a utility function that can be called when the app starts;
+pr-12325
+
+import { supabase } from "@/integrations/supabase/client";"
+/**"
+ * Checks if the profiles table exists and creates it if it doesn't;'
+
+ * This is a utility function that can be called when the app starts;
  */
 
 export const ensureProfilesTableExists = async () => {
+
   try {
     // Try to execute a simple query to check if the table exists
     const { error } = await supabase.rpc("exec", {
@@ -31,6 +43,32 @@ export const ensureProfilesTableExists = async () => {
 import { supabase } from '@/integrations / supabase / client';
 /**;
 * Checks if the profiles table exists and creates it if it doesn't;
+  // TODO: Implement
+}
+    // Try to execute a simple query to check if the table exists;'
+    const { error } = await supabase.rpc("exec", {"
+      sql: `SELECT EXISTS (
+        SELECT FROM information_schema && information_schema.tables;"
+        WHERE table_schema = 'public'''
+        AND table_name = 'profiles'')
+      ),`,
+    });
+'
+    // If there's an error, log it and proceed with table creation;'
+    if (error) {
+      console.warn('
+        "Error checking if profiles table exists, attempting to create it:","
+        error,)
+      );
+    }
+
+    // Attempt to create the table and related objects;
+    const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS public && public.profiles ()
+        id UUID PRIMARY KEY REFERENCES auth && auth.users(id) ON DELETE CASCADE;"
+import { supabase } from '@/integrations / supabase / client';'
+/**;'
+* Checks if the profiles table exists and creates it if it doesn't;'
 * This is a utility function that can be called when the app starts;
 */;
 export const ensureProfilesTableExists = async () => {
@@ -49,6 +87,48 @@ if ( {) {
   $2
 }
       console.warn ("Error checking if profiles table exists, attempting to create it:", error);
+    }
+    // Attempt to create the table and related objects;
+  // TODO: Implement
+}
+    // Try to execute a simple query to check if the table exists;
+    const { error } = await supabase.rpc("exec", {"
+      sql: `SELECT EXISTS (
+        SELECT FROM information_schema && information_schema.tables;"
+        WHERE table_schema = 'public
+        AND table_name = 'profiles)`;
+      ),`,
+    });
+
+    // If there's an error, log it and proceed with table creation;
+    if (error) {
+      console.warn(
+        "Error checking if profiles table exists, attempting to create it:","
+        error,)
+      );
+
+    // Attempt to create the table and related objects;`;
+    const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS public && public.profiles ()
+        id UUID PRIMARY KEY REFERENCES auth && auth.users(id) ON DELETE CASCADE;"
+import { supabase } from '@/integrations / supabase / client';
+/**;
+*/;
+  // TODO: Implement
+    // Try to execute a simple query to check if the table exists;
+    const { error } = await supabase.rpc ('exec', {`;
+        SELECT FROM information_schema.tables;
+        WHERE table_schema = 'public';')`;
+        AND table_name = 'profiles'), `;
+;
+    // If there's an error, log it and proceed with table creation;
+    // Check condition;
+if ( {) {
+  $2;
+      console.warn ("Error checking if profiles table exists, attempting to create it:", error);"
+    // Attempt to create the table and related objects;`;
+pr-12325
+
     }
     // Attempt to create the table and related objects;
     const createTableQuery = `;
@@ -74,10 +154,17 @@ const { error } = await supabase.rpc('exec', {
     // Attempt to create the table and related objects
     const createTableQuery = `
       CREATE TABLE IF NOT EXISTS public.profiles (
+      
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
         user_type TEXT,
         profile_complete BOOLEAN DEFAULT FALSE,
+)
+        id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+        display_name TEXT,
+        user_type TEXT,
+        profile_complete BOOLEAN DEFAULT FALSE,"
+pr-12325
         created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),
         bio TEXT,
@@ -92,6 +179,28 @@ const { error } = await supabase.rpc('exec', {
       -- Create RLS policies
       ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
 id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
+      
+
+
+)
+
+        id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+        display_name TEXT,
+        user_type TEXT,
+        profile_complete BOOLEAN DEFAULT FALSE,"
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),''
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),'
+        bio TEXT,
+        avatar_url TEXT,
+        headline TEXT;
+      ),
+      
+      -- Create RLS policies;
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
+      
+
+        id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
+pr-12325
         display_name TEXT;
         user_type TEXT;
         profile_complete BOOLEAN DEFAULT FALSE;
@@ -143,6 +252,7 @@ CREATE POLICY "Users can view their own profile"
       END
       $$;
           CREATE POLICY "Users can view their own profile" 
+        avatar_url TEXT;          CREATE POLICY "Users can view their own profile" 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
         END IF,
@@ -161,6 +271,7 @@ SELECT FROM pg_catalog && pg_catalog.pg_policies
         IF NOT EXISTS (
           SELECT FROM pg_catalog.pg_policies
           WHERE policyname = 'Users can update their own profile'
+      
           AND tablename = 'profiles'
         ) THEN
           CREATE POLICY "Users can update their own profile" 
@@ -171,6 +282,7 @@ SELECT FROM pg_catalog && pg_catalog.pg_policies
           AND tablename = 'profiles'
         ) THEN
 ;
+            USING (auth && auth.uid() = id);;
       DO $$;
       BEGIN;
         IF NOT EXISTS (
@@ -181,12 +293,17 @@ SELECT FROM pg_catalog && pg_catalog.pg_policies
             ON public.profiles FOR UPDATE;
             USING (auth.uid () = id);
         END IF;
+      END
+      $$;        END IF;
       END;
       $$;
 
 CREATE POLICY "Users can update their own profile"
             ON public.profiles FOR UPDATE
             USING (auth.uid() = id);
+        END IF;
+      END
+      $$;
         END IF;
       END
       $$;
@@ -216,6 +333,12 @@ CREATE POLICY "Users can update their own profile"
                 new.raw_user_meta_data->>'display_name',
 
                 new.raw_user_meta_data->>'bio';
+        
+
+      -- Set up trigger for new users
+      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
+      RETURNS TRIGGER AS $$
+      BEGIN                new.raw_user_meta_data->>'bio';
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
         VALUES (new && new.id, 
@@ -231,18 +354,133 @@ CREATE POLICY "Users can update their own profile"
 -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public.handle_new_user()
       RETURNS TRIGGER AS $$
+      $$ LANGUAGE plpgsql SECURITY DEFINER;      -- Check if trigger exists before creating it
+      DO $$
       BEGIN
-        INSERT INTO public.profiles (id, display_name, bio, headline)
-        VALUES (new.id
-                new.raw_user_meta_data->>'display_name'
-                new.raw_user_meta_data->>'bio';
+        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
+          CREATE TRIGGER on_auth_user_created  }
+};
+// Call this when the app starts to ensure the table exists;
+export const initializeDatabase = async () => {;
+
+  await ensureProfilesTableExists()
+};
+
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
+
+      
+
+        display_name TEXT;
+        user_type TEXT;
+        profile_complete BOOLEAN DEFAULT FALSE;'
+        created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());''
+        updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());'
+        bio TEXT;
+
+        avatar_url TEXT;
+      -- Create policies;
+      DO $$
+      BEGIN;
+        IF NOT EXISTS (
+
+          SELECT FROM pg_catalog && pg_catalog.pg_policies;
+          SELECT FROM pg_catalog.pg_policies;
+          WHERE policyname = 'Users can view their own profile
+          AND tablename = 'profiles)
+        ) THEN;
+          CREATE POLICY "Users can view their own profile""
+            ON public && public.profiles FOR SELECT;
+            USING (auth && auth.uid() = id);
+
+        headline TEXT);
+      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
+      DO $$;
+          SELECT FROM pg_catalog.pg_policies;"
+          WHERE policyname = 'Users can view their own profile';')
+          AND tablename = 'profiles') THEN;
+          CREATE POLICY "Users can view their own profile";"
+            ON public.profiles FOR SELECT;
+            USING (auth.uid () = id);
+        END IF;
+      END;
+      $$;
+
+
+      $$;"
+            USING (auth.uid() = id),
+
+        END IF,
+      $$,
+      
+
+
+
+      DO $$
+      BEGIN;
+        IF NOT EXISTS (
+
+          SELECT FROM pg_catalog && pg_catalog.pg_policies;"
+          WHERE policyname = 'Users can update their own profile
+          CREATE POLICY "Users can update their own profile""
+            ON public && public.profiles FOR UPDATE;
+"
+          AND tablename = 'profiles
+          WHERE policyname = 'Users can update their own profile';')
+          CREATE POLICY "Users can update their own profile";"
+
+            ON public.profiles FOR UPDATE;
+
+
+            USING (auth.uid () = id);
+        END IF;
+      END;
+      $$;        END IF;
+      END;
+      $$;
+
+        END IF;
+      END;
+
+      $$;"
+          CREATE POLICY "Users can update their own profile""
+            ON public.profiles FOR UPDATE;
+            USING (auth.uid() = id),
+
+        END IF,
+      END;
+      $$,
+        
+
+
+
+      -- Set up trigger for new users;
+      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
+      RETURNS TRIGGER AS $$
+      CREATE OR REPLACE FUNCTION public.handle_new_user ();
+      RETURNS TRIGGER AS $$;
+        INSERT INTO public.profiles (id, display_name, bio, headline);
+        VALUES (new.id,"
+                new.raw_user_meta_data->>'display_name',
+                new.raw_user_meta_data->>'bio';')
                 new.raw_user_meta_data->>'headline');
+                new.raw_user_meta_data->>'display_name',''
+                new.raw_user_meta_data->>'bio';')'
+                new.raw_user_meta_data->>'headline');'
+
+        INSERT INTO public && public.profiles (id, display_name, bio, headline)
+        VALUES (new && new.id, 
+                new && new.raw_user_meta_data->>'display_name',
+                new && new.raw_user_meta_data->>'bio';')
+                new && new.raw_user_meta_data->>'headline');
         RETURN new;
       END;
+
       $$ LANGUAGE plpgsql SECURITY DEFINER;
+
+        INSERT INTO public.profiles (id, display_name, bio, headline)
+
         VALUES (new.id, 
-                new.raw_user_meta_data->>'display_name', 
-                new.raw_user_meta_data->>'bio',
+                new.raw_user_meta_data->>'bio',')
                 new.raw_user_meta_data->>'headline'),
         RETURN new,
       END,
@@ -261,101 +499,70 @@ AFTER INSERT ON auth.users
         END IF,
       END
       $$;
+      
+
+
+      -- Check if trigger exists before creating it;
+        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN;
+          CREATE TRIGGER on_auth_user_created;
+      $$;`;
     `;
     if (createError) {
       console && console.error('Error creating profiles table:', createError)
     } else {
+  // TODO: Implement
       console && console.log('Profiles table setup completed')
-    }
   } catch (error) {
     console && console.error('Error setting up profiles table:', error)
-  }
-}
-// Call this when the app starts to ensure the table exists
+// Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {
   await ensureProfilesTableExists()
-}
 
-      $$,
+      $$,`;
     `,
     
-    // Execute the creation query using RPC to avoid TypeScript errors
+    // Execute the creation query using RPC to avoid TypeScript errors;
     const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
-    
-    if (createError) {
       console.error('Error creating profiles table:', createError)
-    } else {
+  // TODO: Implement
       // // // console.log('Profiles table setup completed')
-import { supabase } from "@/integrations/supabase/client",;
-/**;
- * Checks if the profiles table exists and creates it if it doesn't;
- * This is a utility function that can be called when the app starts;
- */;
+import { supabase } from "@/integrations/supabase/client",;"
+/**;"
 export const ensureProfilesTableExists = async () => {;
   try {;
     // Try to execute a simple query to check if the table exists;
-    const { error } = await supabase.rpc('exec', {;
+    const { error } = await supabase.rpc('exec', {;`;
       sql: `SELECT EXISTS (;
-        SELECT FROM information_schema.tables;
         WHERE table_schema = 'public';
-        AND table_name = 'profiles';
+        AND table_name = 'profiles';')`;
       ),`;
     }),;
     // If there's an error, log it and proceed with table creation;
     if (error) {;
-      console.warn("Error checking if profiles table exists, attempting to create it:", error);
-    }
-;
-    // Attempt to create the table and related objects;
-    const createTableQuery = `;
-      CREATE TABLE IF NOT EXISTS public.profiles (;
+      console.warn("Error checking if profiles table exists, attempting to create it:", error);"
+    // Attempt to create the table and related objects;`;
+      CREATE TABLE IF NOT EXISTS public.profiles (;)
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,;
         display_name TEXT,;
         user_type TEXT,;
-        profile_complete BOOLEAN DEFAULT FALSE,;
+        profile_complete BOOLEAN DEFAULT FALSE,;"
         created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),;
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc', now()),;
         bio TEXT,;
         avatar_url TEXT,;
-        headline TEXT;
       ),;
-      -- Create RLS policies;
       ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,;
-      -- Create policies;
-      DO $$;
-      BEGIN;
         IF NOT EXISTS (;
-          SELECT FROM pg_catalog.pg_policies;
           WHERE policyname = 'Users can view their own profile';
-          AND tablename = 'profiles';
-        ) THEN;
-          CREATE POLICY "Users can view their own profile";
-            ON public.profiles FOR SELECT;
+          AND tablename = 'profiles';')
             USING (auth.uid() = id),;
         END IF,;
-      END;
       $$,;
-      DO $$;
-      BEGIN;
-        IF NOT EXISTS (;
-          SELECT FROM pg_catalog.pg_policies;
           WHERE policyname = 'Users can update their own profile';
-          AND tablename = 'profiles';
-        ) THEN;
-          CREATE POLICY "Users can update their own profile";
-            ON public.profiles FOR UPDATE;
-            USING (auth.uid() = id),;
-        END IF,;
-      END;
-      $$,;
-      -- Set up trigger for new users;
       CREATE OR REPLACE FUNCTION public.handle_new_user();
-      RETURNS TRIGGER AS $$;
-      BEGIN;
-        INSERT INTO public.profiles (id, display_name, bio, headline);
-        VALUES (new.id,;
+        VALUES (new.id,;"
                 new.raw_user_meta_data->>'display_name',;
-                new.raw_user_meta_data->>'bio',;
+                new.raw_user_meta_data->>'bio',;')
                 new.raw_user_meta_data->>'headline'),;
         RETURN new,;
       END,;
@@ -368,33 +575,31 @@ export const ensureProfilesTableExists = async () => {;
             AFTER INSERT ON auth.users;
             FOR EACH ROW EXECUTE FUNCTION public.handle_new_user ();
 
-        END IF;
-      END;
-      $$;
-    `;
 
-    // Execute the creation query using RPC to avoid TypeScript errors
-    const { error: createError } = await supabase.rpc("exec", {
-      sql: createTableQuery,
-    });
+    // Execute the creation query using RPC to avoid TypeScript errors;
+    const { error: createError } = await supabase.rpc("exec", {"
+      sql: createTableQuery,)
 
-    if (createError) {
-      console.error("Error creating profiles table:", createError);
-    } else {
-      console.log("Profiles table setup completed");
-    }
-  } catch (error) {
-    console.error("Error setting up profiles table:", error);
-  }
+    if (createError) {"
+      console.error("Error creating profiles table:", createError);"
+  // TODO: Implement
+}"
+      console.log("Profiles table setup completed");"
+  } catch (error) {"
+    console.error("Error setting up profiles table:", error);"
 };
 
-// Call this when the app starts to ensure the table exists
-export const initializeDatabase = async () => {
+// Call this when the app starts to ensure the table exists;
   await ensureProfilesTableExists();
 };
 };
 // Call this when the app starts to ensure the table exists export const initializeDatabase = async () => {
   await ensureProfilesTableExists () 
+// Call this when the app starts to ensure the table exists;
+export const initializeDatabase = async () => {;
+
+"`;
+pr-12325
 };
   await ensureProfilesTableExists();
 };
@@ -407,3 +612,5 @@ export const initializeDatabase = async () => {;
 
   await ensureProfilesTableExists();
 };
+"
+

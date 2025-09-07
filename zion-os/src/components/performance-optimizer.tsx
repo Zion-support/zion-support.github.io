@@ -77,6 +77,11 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode;
 }
 export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {
+
+    <Component {...props} />;
+
+export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {)
+pr-12325
   constructor (props: ErrorBoundaryProps) {
     super (props),
     this.state = { has_error: false }
@@ -206,6 +211,8 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
   );
 }
 // Skeleton loading component;
+  }}
+// Skeleton loading component;
 export /**
  * Skeleton - Function description
  */
@@ -224,10 +231,11 @@ export function Skeleton({ className = "", lines = 1 }: {;
 }) {;
   return (;
     <div className={`animate-pulse ${className}`}>;
+      {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
         <div;
           key={i}
-          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb-0";
           style={{ width: `${Math.random () * 40 + 60}%` }}
         />))}
     </div>);
@@ -313,6 +321,7 @@ export function usePerformanceMonitor(componentName: string) {;
       const duration = endTime - startTime,;
 
       // Log performance metrics in development;
+}      // Log performance metrics in development;
       // Check condition
 if ( {) {
   $2
@@ -342,6 +351,7 @@ if ( {) {
       if (process.env.NODE_ENV === "production" && duration > 100) {;
         // Could send to analytics service here;
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
     }
   }
@@ -413,3 +423,35 @@ export { LazyComponent };
 }
 ;
 export { LazyComponent };
+  // TODO: Implement
+    return { has_error: true, error }
+  componentDidCatch (error: Error, error_info: React.ErrorInfo) {
+    console.error ("Error caught by boundary:", error, error_info);"
+  render () {
+    // Check condition;
+if ( {) {
+  $2;
+      return this.props.fallback || ("
+        <div className="p - 6 text - center">;"
+</div>)"
+          <div className="text-[var (--error)] text - lg mb - 2">Something went wrong</div>;""
+        <div className="p-6 text-center">;"
+</div>"
+          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;"
+          <button;
+            on_click={() => this.set_state ({ has_error: false })}
+</button>
+          </button>;
+        </div>);
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
+</div>`;
+    <div className={`animate - pulse ${class_name}`}>;
+    <div className={`animate-pulse ${className}`}>;
+</div>
+        <div;
+          key={i}"
+          className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";"`;
+          style={{ width: `${Math.random () * 40 + 60}%` }}
+        />))}
+    </div>);"`;
+pr-12325
