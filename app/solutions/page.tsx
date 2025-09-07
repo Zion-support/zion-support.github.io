@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
-export const metadata = {
-  title: 'Solutions - Zion Tech Group',
-  description: 'Comprehensive technology solutions for businesses of all sizes.',
-};
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function SolutionsPage() {
   const solutions = [
@@ -54,7 +50,7 @@ export default function SolutionsPage() {
             Our Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to address your business challenges 
+            Comprehensive technology solutions designed to address your business challenges
             and drive growth across all industries.
           </p>
         </div>
@@ -149,7 +145,7 @@ export default function SolutionsPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your specific needs and create a custom solution 
+              Let's discuss your specific needs and create a custom solution
               that drives real business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -158,9 +154,7 @@ export default function SolutionsPage() {
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 Get Started
-                <svg className="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
               </Link>
               <Link
                 href="/services"

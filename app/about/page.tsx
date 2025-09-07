@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
-export const metadata = {
-  title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
-};
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function AboutPage() {
   return (
@@ -15,7 +11,7 @@ export default function AboutPage() {
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI solutions, 
+            We are a leading technology company specializing in AI solutions,
             micro SaaS development, and comprehensive enterprise IT services.
           </p>
         </div>
@@ -26,13 +22,13 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                To empower businesses with cutting-edge technology solutions that drive growth, 
-                efficiency, and innovation. We believe in the transformative power of AI and 
+                To empower businesses with cutting-edge technology solutions that drive growth,
+                efficiency, and innovation. We believe in the transformative power of AI and
                 modern software development to solve complex business challenges.
               </p>
               <p className="text-lg text-gray-600">
-                Since our founding, we have delivered over 1000 successful projects across 
-                various industries, helping companies of all sizes achieve their digital 
+                Since our founding, we have delivered over 1000 successful projects across
+                various industries, helping companies of all sizes achieve their digital
                 transformation goals.
               </p>
             </div>
@@ -135,7 +131,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help transform your business 
+              Let's discuss your project and see how we can help transform your business
               with innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -144,9 +140,7 @@ export default function AboutPage() {
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 Get In Touch
-                <svg className="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
               </Link>
               <Link
                 href="/services"
