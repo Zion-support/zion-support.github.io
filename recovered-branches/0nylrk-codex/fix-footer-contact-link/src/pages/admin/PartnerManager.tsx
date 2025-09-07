@@ -1,46 +1,46 @@
-import {useState, useEffect} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {useNavigate} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
-import {toast} from "@/hooks/use-toast";
-import {Check, Flag, Search, Settings, X} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import {useState, useEffect} from \"react\";
+import {useAuth} from \"@/hooks/useAuth\";
+import {useNavigate} from \"react-router-dom\";
+import {Button} from \"@/components/ui/button\";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from \"@/components/ui/card\";
+import {Input} from \"@/components/ui/input\";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from \"@/components/ui/table\";
+import {Badge} from \"@/components/ui/badge\";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from \"@/components/ui/dialog\";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from \"@/components/ui/tabs\";
+import {Alert, AlertDescription, AlertTitle} from \"@/components/ui/alert\";
+import {toast} from \"@/hooks/use-toast\";
+import {Check, Flag, Search, Settings, X} from \"lucide-react\";
+import {supabase} from \"@/integrations/supabase/client\";
+import { useState, useEffect } from \"react\",;
+import { useAuth } from \"@/hooks/useAuth\",;
+import { useNavigate } from \"react-router-dom\",;
+import { Button } from \"@/components/ui/button\",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\",;
+import { Input } from \"@/components/ui/input\",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"@/components/ui/table\",;
+import { Badge } from \"@/components/ui/badge\",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from \"@/components/ui/dialog\",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\",;
+import { Alert, AlertDescription, AlertTitle } from \"@/components/ui/alert\",;
+import { toast } from \"@/hooks/use-toast\",;
+import { Check, Flag, Search, Settings, X } from \"lucide-react\";
+import { supabase } from \"@/integrations/supabase/client\";
 interface PartnerProfile {
   id: string;
-    user_id: string
-  name: string
-  status: 'pending' | 'approved' | 'rejected'
-  created_at: string
-  niche: string
-  audience_size: string
-  social_media?: Record<string, string>;
+    user_id: string;
+name: string;
+status: 'pending' | 'approved' | 'rejected'
+  created_at: string;
+niche: string;
+audience_size: string;
+social_media?: Record<string, string />;
   website?: string;
   bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-import { Check, Flag, Search, Settings, X } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
+  payout_method?: string;}
+  fraud_flags?: number;}
+import { Check, Flag, Search, Settings, X } from \"lucide-react\",;
+import { supabase } from \"@/integrations/supabase/client\",;
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -49,12 +49,12 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
-  social_media?: Record<string string>,
+  social_media?: Record<string string />,
   website?: string,
   bio?: string,
   payout_method?: string,
-  fraud_flags?: number,
-  commission_rate?: number
+  fraud_flags?: number,}
+  commission_rate?: number}
 }
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -65,97 +65,101 @@ interface PartnerProfile {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate("/login");
-      return;
+      navigate(\"/login\");}
+      return;}
     }
     fetchPartners()
   }, [isAuthenticated, navigate]);
   const fetchPartners = async () => {
     try {
-      setIsLoading(true);
-      // In a real application, check admin permissions here
-      const { data, error } = await supabase
+      setIsLoading(true);}
+      // In a real application, check admin permissions here;}
+const { data, error } = await supabase;
         .from('partner_profiles')
         .select('*')
         .order('created_at', { ascending: false })
       if (error) throw error;
-      // If no data is returned, use mock data
-      if (!data |data.length === 0) {
+      // If no data is returned, use mock data;
+if (!data |data.length === 0) {
         const mockData: PartnerProfile[] = [
           {
-            id: "id",
-    user_id: 'user1'
-            name: 'AI Bytes'
-            status: 'pending'
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'AI Tutorials'
-            audience_size: '10k-50k'
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' }
-            website: 'aibytes.com'
-            bio: 'We create AI tutorials and insights for developers.'
-            payout_method: 'paypal'
-            fraud_flags: 0
-            commission_rate: 25
+            id: \"id\",
+    user_id: 'user1',
+  name: 'AI Bytes'
+            status: 'pending',
+  created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
+            niche: 'AI Tutorials',}
+  audience_size: '10k-50k'}
+            social_media: { twitter: '@aibytes',}
+  youtube: 'AI Bytes' }
+            website: 'aibytes.com',
+  bio: 'We create AI tutorials and insights for developers.'
+            payout_method: 'paypal',
+  fraud_flags: 0;
+commission_rate: 25;
           }
           {
-            id: '2'
-            user_id: 'user2'
-            name: 'ML Academy'
-            status: 'approved'
+            id: '2',
+  user_id: 'user2'
+            name: 'ML Academy',
+  status: 'approved'
             created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Machine Learning Education'
-            audience_size: 'over100k'
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' }
-            website: 'mlacademy.edu'
-            bio: 'Premiere online academy for machine learning enthusiasts.'
-            payout_method: 'bank'
-            fraud_flags: 0
-            commission_rate: 30
+            niche: 'Machine Learning Education',}
+  audience_size: 'over100k'}
+            social_media: { twitter: '@mlacademy',}
+  youtube: 'ML Academy' }
+            website: 'mlacademy.edu',
+  bio: 'Premiere online academy for machine learning enthusiasts.'
+            payout_method: 'bank',
+  fraud_flags: 0;
+commission_rate: 30;
           }
           {
-            id: '3'
-            user_id: 'user3'
-            name: 'Tech Insights'
-            status: 'rejected'
+            id: '3',
+  user_id: 'user3'
+            name: 'Tech Insights',
+  status: 'rejected'
             created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Technology News'
-            audience_size: '1k-10k'
+            niche: 'Technology News',}
+  audience_size: '1k-10k'}
             social_media: { twitter: '@techinsights' }
-            website: 'techinsights.io'
-            bio: 'We share insights about the latest in tech.'
-            payout_method: 'crypto'
-            fraud_flags: 2
-            commission_rate: 20
+            website: 'techinsights.io',
+  bio: 'We share insights about the latest in tech.'
+            payout_method: 'crypto',
+  fraud_flags: 2;
+commission_rate: 20;
           }
           {
-            id: '4'
-            user_id: 'user4'
-            name: 'CodeMaster'
-            status: 'approved'
+            id: '4',
+  user_id: 'user4'
+            name: 'CodeMaster',
+  status: 'approved'
             created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Coding Tutorials'
-            audience_size: '50k-100k'
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' }
-            website: 'codemaster.dev'
-            bio: 'Learn to code with our expert tutorials.'
-            payout_method: 'paypal'
-            fraud_flags: 0
-            commission_rate: 25
+            niche: 'Coding Tutorials',}
+  audience_size: '50k-100k'}
+            social_media: { youtube: 'CodeMaster',}
+  linkedin: 'codemaster' }
+            website: 'codemaster.dev',
+  bio: 'Learn to code with our expert tutorials.'
+            payout_method: 'paypal',
+  fraud_flags: 0;
+commission_rate: 25;
           }
           {
-            id: '5'
-            user_id: 'user5'
-            name: 'AI Daily'
-            status: 'pending'
+            id: '5',
+  user_id: 'user5'
+            name: 'AI Daily',
+  status: 'pending'
             created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'AI News'
-            audience_size: '10k-50k'
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' }
-            website: 'aidaily.news'
-            bio: 'Daily updates on the world of artificial intelligence.'
-            payout_method: 'platform_credit'
-            fraud_flags: 1
-            commission_rate: 20
+            niche: 'AI News',}
+  audience_size: '10k-50k'}
+            social_media: { twitter: '@aidaily',}
+  instagram: '@aidailynews' }
+            website: 'aidaily.news',
+  bio: 'Daily updates on the world of artificial intelligence.'
+            payout_method: 'platform_credit',
+  fraud_flags: 1;
+commission_rate: 20;
           }
         ];
         setPartners(mockData);
@@ -163,22 +167,22 @@ interface PartnerProfile {
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-      navigate("/login"),
-      return
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
-import { toast } from "@/hooks/use-toast",;
-import { Check, Flag, Search, Settings, X } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
+      navigate(\"/login\"),}
+      return;}
+import { useState, useEffect } from \"react\";
+import { useAuth } from \"@/hooks/useAuth\";
+import { useNavigate } from \"react-router-dom\",;
+import { Button } from \"@/components/ui/button\",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\",;
+import { Input } from \"@/components/ui/input\",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"@/components/ui/table\",;
+import { Badge } from \"@/components/ui/badge\",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from \"@/components/ui/dialog\",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\",;
+import { Alert, AlertDescription, AlertTitle } from \"@/components/ui/alert\",;
+import { toast } from \"@/hooks/use-toast\",;
+import { Check, Flag, Search, Settings, X } from \"lucide-react\",;
+import { supabase } from \"@/integrations/supabase/client\",;
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -186,8 +190,8 @@ interface PartnerProfile {;
   status: 'pending' | 'approved' | 'rejected',;
   created_at: string,;
   niche: string,;
-  audience_size: string,;
-  social_media?: Record<string, string>;
+  audience_size: string,;}
+  social_media?: Record<string, string />;}
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_navigate } from './react-router-dom';
@@ -214,13 +218,13 @@ interface PartnerProfile {
   website?: string;
   bio?: string;
   payout_method?: string;
-  fraud_flags?: number;
-  commission_rate?: number;
+  fraud_flags?: number;}
+  commission_rate?: number;}
 }
   const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [searchQuery, setSearchQuery] = useState(\"\");
+  const [activeTab, setActiveTab] = useState(\"pending\");
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null />(null),
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
@@ -231,27 +235,27 @@ interface PartnerProfile {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
 export default /**
- * PartnerManager - Function description
+ * PartnerManager - Function description;
  */
 function PartnerManager() {
   const [partners, set_partners] = useState < PartnerProfile[]>([]);
   const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
   const [is_loading, setIsLoading] = useState (true);
-  const [search_query, setSearchQuery] = useState ("");
-  const [active_tab, setActiveTab] = useState ("pending");
+  const [search_query, setSearchQuery] = useState (\"\");
+  const [active_tab, setActiveTab] = useState (\"pending\");
   const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState (false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
-  const [commission_rate, setCommissionRate] = useState (25);
+  const [isSettingsOpen, setIsSettingsOpen] = useState (false);}
+  const [commission_rate, setCommissionRate] = useState (25);}
   const { user, is_authenticated } = use_auth ();
   const navigate = use_navigate ();
 ;
   useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+    // Check condition;
+if ( {) {}
+  $2}
 }
-      navigate ("/login");
+      navigate (\"/login\");
       return;
     }
     fetch_partners ();
@@ -259,95 +263,99 @@ if ( {) {
 ;
   const fetch_partners = async () => {
     try {
-      setIsLoading (true);
-      // In a real application, check admin permissions here;
+      setIsLoading (true);}
+      // In a real application, check admin permissions here;}
       const { data, error } = await supabase;
         .from ('partner_profiles');
         .select ('*');
         .order ('created_at', { ascending: false }),
-      // Check condition
-if (throw error) {
-  $2
+      // Check condition;
+if (throw error) {}
+  $2}
 }
       // If no data is returned, use mock data;
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2}
 }
         const mock_data: PartnerProfile[] = [;
           {
             id: '1',
-            user_id: 'user1',
+  user_id: 'user1',
             name: 'AI Bytes',
-            status: 'pending',
+  status: 'pending',
             created_at: new Date (Date.now () - 2 * 24 * 60 * 60 * 1000).toISOString (),
-            niche: 'AI Tutorials',
-            audience_size: '10k - 50k',
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },
+            niche: 'AI Tutorials',}
+  audience_size: '10k - 50k',}
+            social_media: { twitter: '@aibytes',}
+  youtube: 'AI Bytes' },
             website: 'aibytes.com',
-            bio: 'We create AI tutorials and insights for developers.',
+  bio: 'We create AI tutorials and insights for developers.',
             payout_method: 'paypal',
-            fraud_flags: 0,
+  fraud_flags: 0,
             commission_rate: 25;
           }
           {
             id: '2',
-            user_id: 'user2',
+  user_id: 'user2',
             name: 'ML Academy',
-            status: 'approved',
+  status: 'approved',
             created_at: new Date (Date.now () - 15 * 24 * 60 * 60 * 1000).toISOString (),
-            niche: 'Machine Learning Education',
-            audience_size: 'over100k',
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },
+            niche: 'Machine Learning Education',}
+  audience_size: 'over100k',}
+            social_media: { twitter: '@mlacademy',}
+  youtube: 'ML Academy' },
             website: 'mlacademy.edu',
-            bio: 'Premiere online academy for machine learning enthusiasts.',
+  bio: 'Premiere online academy for machine learning enthusiasts.',
             payout_method: 'bank',
-            fraud_flags: 0,
+  fraud_flags: 0,
             commission_rate: 30;
           }
           {
             id: '3',
-            user_id: 'user3',
+  user_id: 'user3',
             name: 'Tech Insights',
-            status: 'rejected',
+  status: 'rejected',
             created_at: new Date (Date.now () - 5 * 24 * 60 * 60 * 1000).toISOString (),
-            niche: 'Technology News',
-            audience_size: '1k - 10k',
+            niche: 'Technology News',}
+  audience_size: '1k - 10k',}
             social_media: { twitter: '@techinsights' },
             website: 'techinsights.io',
-            bio: 'We share insights about the latest in tech.',
+  bio: 'We share insights about the latest in tech.',
             payout_method: 'crypto',
-            fraud_flags: 2,
+  fraud_flags: 2,
             commission_rate: 20;
           }
           {
             id: '4',
-            user_id: 'user4',
+  user_id: 'user4',
             name: 'CodeMaster',
-            status: 'approved',
+  status: 'approved',
             created_at: new Date (Date.now () - 30 * 24 * 60 * 60 * 1000).toISOString (),
-            niche: 'Coding Tutorials',
-            audience_size: '50k - 100k',
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },
+            niche: 'Coding Tutorials',}
+  audience_size: '50k - 100k',}
+            social_media: { youtube: 'CodeMaster',}
+  linkedin: 'codemaster' },
             website: 'codemaster.dev',
-            bio: 'Learn to code with our expert tutorials.',
+  bio: 'Learn to code with our expert tutorials.',
             payout_method: 'paypal',
-            fraud_flags: 0,
+  fraud_flags: 0,
             commission_rate: 25;
           }
           {
             id: '5',
-            user_id: 'user5',
+  user_id: 'user5',
             name: 'AI Daily',
-            status: 'pending',
+  status: 'pending',
             created_at: new Date (Date.now () - 1 * 24 * 60 * 60 * 1000).toISOString (),
-            niche: 'AI News',
-            audience_size: '10k - 50k',
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },
+            niche: 'AI News',}
+  audience_size: '10k - 50k',}
+            social_media: { twitter: '@aidaily',}
+  instagram: '@aidailynews' },
             website: 'aidaily.news',
-            bio: 'Daily updates on the world of artificial intelligence.',
+  bio: 'Daily updates on the world of artificial intelligence.',
             payout_method: 'platform_credit',
-            fraud_flags: 1,
+  fraud_flags: 1,
             commission_rate: 20;
           }
         ];
@@ -355,33 +363,37 @@ if ( {) {
         set_partners (mock_data);
         filter_partners (mock_data, active_tab, search_query);
       } else {
-        set_partners (data as PartnerProfile[]);
-        filter_partners (data as PartnerProfile[], active_tab, search_query);
+        set_partners (data as PartnerProfile[]);}
+        filter_partners (data as PartnerProfile[], active_tab, search_query);}
       }
-    } finally {
-      setIsLoading (false);
+    } finally {}
+      setIsLoading (false);}
     }
   }
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
-    let filtered = partners
-    // Filter by status
-    if (status !== "all") {
-      filtered = filtered.filter(p => p.status === status)
+  const filterPartners = (
+    let filtered = partners;
+    // Filter by status;
+if (status !== \"all\") {
+      filtered = filtered.filter(p => p.status === status)) => {
+  return $3;}
+}
     } catch (error) {;
-      console.error("Error fetching partners:", error),;
+      console.error(\"Error fetching partners:\", error),;
       toast({;
-        title: "Error",,
-  description: "Failed to load partner data",;
-        variant: "destructive"});
-    } finally {;
-      setIsLoading(false);
+        title: \"Error\",,}
+  description: \"Failed to load partner data\",;}
+        variant: \"destructive\"});
+    } finally {;}
+      setIsLoading(false);}
     }
   };
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
+  const filterPartners = (;
     let filtered = partners,;
     // Filter by status;
-    if (status !== "all") {;
-      filtered = filtered && filtered.filter(p => p && p.status === status);
+    if (status !== \"all\") {;
+      filtered = filtered && filtered.filter(p => p && p.status === status);) => {
+  return $3;}
+}
     }
     // Filter by search query;
     if (query) {;
@@ -390,88 +402,104 @@ if ( {) {
         p && p.name.toLowerCase().includes(lowerQuery) ||;
         p && p.niche.toLowerCase().includes(lowerQuery) ||;
         p && p.bio?.toLowerCase().includes(lowerQuery) ||;
-        p && p.website?.toLowerCase().includes(lowerQuery);
-      );
+        p && p.website?.toLowerCase().includes(lowerQuery);}
+      );}
     }
     setFilteredPartners(filtered)
   },
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (
     setSearchQuery(e.target.value)
-    filterPartners(partners, activeTab, e.target.value)
+    filterPartners(partners, activeTab, e.target.value)) => {
+  return $3;}
+}
   },
-  const handleTabChange = (value: string) => {
+  const handleTabChange = (
     setActiveTab(value)
-    filterPartners(partners, value, searchQuery)
+    filterPartners(partners, value, searchQuery)) => {
+  return $3;}
+}
   }
   },
-  const handleViewDetails = (partner: PartnerProfile) => {
+  const handleViewDetails = (
     setSelectedPartner(partner)
-    setIsDetailsOpen(true)
+    setIsDetailsOpen(true)) => {
+  return $3;}
+}
   }
-  const handleOpenSettings = (partner: PartnerProfile) => {
+  const handleOpenSettings = (
     setSelectedPartner(partner);
     setCommissionRate(partner.commission_rate |25)
     setIsSettingsOpen(true)
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
-      // In a real app, this would update the database
-      setPartners(partners.map(p =>
-        p.id === partnerId ? { ...p, status } : p
-      toast({
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
+      // In a real app, this would update the database;
+setPartners(partners.map(p =>) => {
+  return $3;}
+}
+        p.id === partnerId ? { ...p, status } : p;
+toast({}
+        title: status === 'approved' ? \"Partner Approved\" : \"Partner Rejected\"}
         description: `The partner has been ${status}.`
-        variant: status === 'approved' ? "default" : "destructive"})
-      // Close the dialog if open
-      if (isDetailsOpen && selectedPartner?.id === partnerId) {
-        setIsDetailsOpen(false)
+        variant: status === 'approved' ? \"default\" : \"destructive\"})
+      // Close the dialog if open;
+if (isDetailsOpen && selectedPartner?.id === partnerId) {}
+        setIsDetailsOpen(false)}
       }
     } catch (error) {
-      console.error("Error updating partner status:", error),
+      console.error(\"Error updating partner status:\", error),
       toast({
-        title: "Error"
-        description: "Failed to update partner status"
-        variant: "destructive"})
+        title: \"Error\"}
+        description: \"Failed to update partner status\"}
+        variant: \"destructive\"})
     }
     try {
-      // Update commission rate
-      setPartners(partners.map(p =>
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-      toast({
-        title: "Settings Updated"
-        description: "Partner settings have been updated successfully."
-        variant: "default"})
+      // Update commission rate;}
+setPartners(partners.map(p =>}
+        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p;
+toast({
+        title: \"Settings Updated\"}
+        description: \"Partner settings have been updated successfully.\"}
+        variant: \"default\"})
       setIsSettingsOpen(false)
     } catch (error) {
-      console.error("Error updating partner settings:", error),
+      console.error(\"Error updating partner settings:\", error),
       toast({
-        title: "Error"
-        description: "Failed to update partner settings"
-        variant: "destructive"})
+        title: \"Error\"}
+        description: \"Failed to update partner settings\"}
+        variant: \"destructive\"})
   };
 ;
     setFilteredPartners(filtered);
   },;
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {;
+  const handleSearch = (;
     setSearchQuery(e.target.value),;
-    filterPartners(partners, activeTab, e.target.value);
+    filterPartners(partners, activeTab, e.target.value);) => {
+  return $3;}
+}
   },;
-  const handleTabChange = (value: string) => {;
+  const handleTabChange = (;
     setActiveTab(value),;
-    filterPartners(partners, value, searchQuery);
+    filterPartners(partners, value, searchQuery);) => {
+  return $3;}
+}
   },;
-  const handleViewDetails = (partner: PartnerProfile) => {;
+  const handleViewDetails = (;
     setSelectedPartner(partner),;
-    setIsDetailsOpen(true);
+    setIsDetailsOpen(true);) => {
+  return $3;}
+}
   },;
-  const handleOpenSettings = (partner: PartnerProfile) => {;
+  const handleOpenSettings = (;
     setSelectedPartner(partner),;
     setCommissionRate(partner.commission_rate || 25),;
-    setIsSettingsOpen(true);
+    setIsSettingsOpen(true);) => {
+  return $3;}
+}
   },;
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {;
     try {;
-      // In a real app, this would update the database;
-      setPartners(partners.map(p =>;
+      // In a real app, this would update the database;}
+      setPartners(partners.map(p =>;}
         p.id === partnerId ? { ...p, status } : p;
       )),;
       filterPartners(;
@@ -488,111 +516,119 @@ if ( {) {
       case 'over100k': return 'Over 100,000';
       default: return size;
     }
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (
     switch (status) {
       case 'pending':
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
+        return <Badge variant=\"outline\" className=\"bg-yellow-900/30 text-yellow-500 border-yellow-600\" />Pending</Badge>,
       case 'approved':
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,
+        return <Badge variant=\"outline\" className=\"bg-green-900/30 text-green-500 border-green-600\" />Approved</Badge>,
       case 'rejected':
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
-      default:
-        return <Badge variant="outline">{status}</Badge>
+        return <Badge variant=\"outline\" className=\"bg-red-900/30 text-red-500 border-red-600\" />Rejected</Badge>
+      default:) => {
+  return $3;}
+}
+        return <Badge variant=\"outline\" />{status}</Badge>
     }
   }
   },
-  const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null
-      case 'rejected':;
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
+  const getFraudFlagBadge = (
+    if (flags === 0) return null;
+case 'rejected':;
+        return <Badge variant=\"outline\" className=\"bg-red-900/30 text-red-500 border-red-600\" />Rejected</Badge>,;
+      default:;) => {
+  return $3;}
+}
+        return <Badge variant=\"outline\" />{status}</Badge>;
     }
     return (
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
-        <Flag className="h-3 w-3" />
+      <Badge variant=\"outline\" className=\"bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1\" />
+        <Flag className=\"h-3 w-3\" />
   },;
-  const getStatusBadge = (status: string) => {;
+  const getStatusBadge = (;
     switch (status) {;
       case 'pending':;
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,;
+        return <Badge variant=\"outline\" className=\"bg-yellow-900/30 text-yellow-500 border-yellow-600\" />Pending</Badge>,;
       case 'approved':;
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,;
+        return <Badge variant=\"outline\" className=\"bg-green-900/30 text-green-500 border-green-600\" />Approved</Badge>,;
       case 'rejected':;
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
+        return <Badge variant=\"outline\" className=\"bg-red-900/30 text-red-500 border-red-600\" />Rejected</Badge>,;
+      default:;) => {
+  return $3;}
+}
+        return <Badge variant=\"outline\" />{status}</Badge>;
     }
   },;
-  const getFraudFlagBadge = (flags: number = 0) => {;
+  const getFraudFlagBadge = (;
     if (flags === 0) return null,;
     return (;
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">;
-        <Flag className="h-3 w-3" />;
+      <Badge variant=\"outline\" className=\"bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1\" />;
+        <Flag className=\"h-3 w-3\" />;) => {
+  return $3;}
+}
         {flags}
       </Badge>;
     );
   },;
   return (;
-    <div className="container max-w-7xl py-10">;
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
-        <div>;
-          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Management</h1>;
-          <p className="text-zion-slate-light">Approve and manage affiliate partners</p>;
+    <div className=\"container max-w-7xl py-10\" />;
+      <div className=\"flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8\" />;
+        <div />;
+          <h1 className=\"text-3xl font-bold tracking-tight text-white\" />Partner Management</h1>;
+          <p className=\"text-zion-slate-light\" />Approve and manage affiliate partners</p>;
         </div>;
       </div>;
-      <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">;
-        <CardHeader className="pb-3">;
-          <CardTitle>Overview</CardTitle>;
+      <Card className=\"bg-zion-blue-dark border-zion-blue-light mb-8\" />;
+        <CardHeader className=\"pb-3\" />;
+          <CardTitle />Overview</CardTitle>;
         </CardHeader>;
-        <CardContent>;
-          <div className="grid gap-4 md:grid-cols-3">;
-            <Card className="bg-zion-blue border-zion-blue-light">;
-              <CardHeader className="pb-2">;
-                <CardTitle className="text-sm font-medium text-zion-slate-light">;
+        <CardContent />;
+          <div className=\"grid gap-4 md:grid-cols-3\" />;
+            <Card className=\"bg-zion-blue border-zion-blue-light\" />;
+              <CardHeader className=\"pb-2\" />;
+                <CardTitle className=\"text-sm font-medium text-zion-slate-light\" />;
                   Pending Applications;
                 </CardTitle>;
-                <div className="text-2xl font-bold text-white">;
+                <div className=\"text-2xl font-bold text-white\" />;
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
-                  Partners waiting for review and approval
+              <CardContent className=\"pt-0\" />
+                <p className=\"text-xs text-zion-slate-light\" />
+                  Partners waiting for review and approval;
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Active Partners
+            <Card className=\"bg-zion-blue border-zion-blue-light\" />
+              <CardHeader className=\"pb-2\" />
+                <CardTitle className=\"text-sm font-medium text-zion-slate-light\" />
+                  Active Partners;
                 </CardTitle>
-                <div className="text-2xl font-bold text-white">
+                <div className=\"text-2xl font-bold text-white\" />
                   {partners.filter(p => p.status === 'approved').length}
                 </div>
               </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
+              <CardContent className=\"pt-0\" />
+                <p className=\"text-xs text-zion-slate-light\" />
                   Currently approved and active partners;
                 </p>;
               </CardContent>;
             </Card>;
-                  Total potential fraud flags detected
+                  Total potential fraud flags detected;
                 </p>
               </CardContent>
             </Card>
           </div>
         </CardContent>
       </Card>
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">
-          <div>
-            <CardTitle>Partners</CardTitle>
-            <CardDescription>Manage partnership applications and settings</CardDescription>
+      <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />
+        <CardHeader className=\"pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4\" />
+          <div />
+            <CardTitle />Partners</CardTitle>
+            <CardDescription />Manage partnership applications and settings</CardDescription>
           </div>
-          <div className="w-full md:w-80">
-            <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
+          <div className=\"w-full md:w-80\" />
+            <div className=\"relative\" />
+              <Search className=\"absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light\" />
                   Total potential fraud flags detected;
                 </p>;
               </CardContent>;
@@ -600,23 +636,23 @@ if ( {) {
           </div>;
         </CardContent>;
       </Card>;
-              <Input
-                placeholder="Search partners..."
-                className="pl-8"
+              <Input;
+placeholder=\"Search partners...\"
+                className=\"pl-8\"
                 value={searchQuery}
                 onChange={handleSearch}
               />;
             </div>;
           </div>;
         </CardHeader>;
-        <CardContent>;
-              <TabsTrigger value="pending">Pending</TabsTrigger>;
-              <TabsTrigger value="approved">Approved</TabsTrigger>;
-              <TabsTrigger value="rejected">Rejected</TabsTrigger>;
-              <TabsTrigger value="all">All</TabsTrigger>;
+        <CardContent />;
+              <TabsTrigger value=\"pending\" />Pending</TabsTrigger>;
+              <TabsTrigger value=\"approved\" />Approved</TabsTrigger>;
+              <TabsTrigger value=\"rejected\" />Rejected</TabsTrigger>;
+              <TabsTrigger value=\"all\" />All</TabsTrigger>;
             </TabsList>;
                 isLoading={isLoading}
-            <TabsContent value="pending" className="space-y-4">;
+            <TabsContent value=\"pending\" className=\"space-y-4\" />;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -628,7 +664,7 @@ if ( {) {
                 isLoading={isLoading}
               />;
             </TabsContent>;
-            <TabsContent value="approved" className="space-y-4">;
+            <TabsContent value=\"approved\" className=\"space-y-4\" />;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -640,7 +676,7 @@ if ( {) {
                 isLoading={isLoading}
               />;
             </TabsContent>;
-            <TabsContent value="rejected" className="space-y-4">;
+            <TabsContent value=\"rejected\" className=\"space-y-4\" />;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -649,7 +685,7 @@ if ( {) {
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-            <TabsContent value="all" className="space-y-4">;
+            <TabsContent value=\"all\" className=\"space-y-4\" />;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
@@ -658,105 +694,105 @@ if ( {) {
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <p className="text-xs text-zion-slate-light">Payout Method</p>
-                  <p className="text-white capitalize">{selectedPartner.payout_method |"Not specified"}</p>
+              <div className=\"grid grid-cols-2 gap-2\" />
+                <div />
+                  <p className=\"text-xs text-zion-slate-light\" />Payout Method</p>
+                  <p className=\"text-white capitalize\" />{selectedPartner.payout_method |\"Not specified\"}</p>
                 </div>
-                <div>
-                  <p className="text-xs text-zion-slate-light">Commission Rate</p>
-                  <p className="text-white">{selectedPartner.commission_rate |25}%</p>
+                <div />
+                  <p className=\"text-xs text-zion-slate-light\" />Commission Rate</p>
+                  <p className=\"text-white\" />{selectedPartner.commission_rate |25}%</p>
                 </div>
               </div>
               {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">
-                  <AlertTitle className="flex items-center gap-2">
-                    <Flag className="h-4 w-4" />
+                <Alert className=\"bg-red-900/20 border-red-900/50 text-red-500\" />
+                  <AlertTitle className=\"flex items-center gap-2\" />}
+                    <Flag className=\"h-4 w-4\" />}
                     Potential Fraud Detected ({selectedPartner.fraud_flags})
                   </AlertTitle>
-                  <AlertDescription>
+                  <AlertDescription />
                     This application has triggered our fraud detection system. Review carefully before approving.
                   </AlertDescription>
                 </Alert>
               )}
               {selectedPartner.status === 'pending' && (
-                <div className="flex justify-end gap-2 mt-4">
+                <div className=\"flex justify-end gap-2 mt-4\" />
                   >
-                    <X className="h-4 w-4 mr-1" />
-                    Reject
+                    <X className=\"h-4 w-4 mr-1\" />
+                    Reject;
                   </Button>
-                  <Button
-                    className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                  <Button;}
+className=\"bg-green-600 hover:bg-green-700\"}
+                    onClick={() = /> handleUpdateStatus(selectedPartner.id, 'approved')}
                   >
-                    <Check className="h-4 w-4 mr-1" />
-                    Approve
+                    <Check className=\"h-4 w-4 mr-1\" />
+                    Approve;
                   </Button>
                 </div>
               )}
             </div>
-                  <Button 
-                    variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
-                  <p className="text-white capitalize">{selectedPartner && selectedPartner.payout_method || "Not specified"}</p>;
+                  <Button;
+variant=\"destructive\" 
+                    onClick={() = /> handleUpdateStatus(selectedPartner.id, 'rejected')}
+              <div className=\"grid grid-cols-2 gap-2\" />;
+                <div />;
+                  <p className=\"text-xs text-zion-slate-light\" />Payout Method</p>;
+                  <p className=\"text-white capitalize\" />{selectedPartner && selectedPartner.payout_method || \"Not specified\"}</p>;
                 </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
-                  <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
+                <div />;
+                  <p className=\"text-xs text-zion-slate-light\" />Commission Rate</p>;
+                  <p className=\"text-white\" />{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
                 </div>;
               </div>;
               {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
-                  <AlertTitle className="flex items-center gap-2">;
-                    <Flag className="h-4 w-4" />;
+                <Alert className=\"bg-red-900/20 border-red-900/50 text-red-500\" />;
+                  <AlertTitle className=\"flex items-center gap-2\" />;}
+                    <Flag className=\"h-4 w-4\" />;}
                     Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
           {selected_partner && (
-            <div className="space-y-4">;
-              <div className="grid grid - cols - 2 gap-2">;
-                <div>;
-                  <p className="text - xs text - zion - slate-light">Name</p>;
-                  <p className="font - medium text-white">{selected_partner.name}</p>;
+            <div className=\"space-y-4\" />;
+              <div className=\"grid grid - cols - 2 gap-2\" />;
+                <div />;}
+                  <p className=\"text - xs text - zion - slate-light\" />Name</p>;}
+                  <p className=\"font - medium text-white\" />{selected_partner.name}</p>;
                 </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate-light">Status</p>;
-                  <div>{getStatusBadge (selected_partner.status)}</div>;
+                <div />;
+                  <p className=\"text - xs text - zion - slate-light\" />Status</p>;
+                  <div />{getStatusBadge (selected_partner.status)}</div>;
                 </div>;
               </div>;
-              <div>;
-                <p className="text - xs text - zion - slate-light">Bio</p>;
-                <p className="text-white">{selected_partner.bio || "No bio provided"}</p>;
+              <div />;
+                <p className=\"text - xs text - zion - slate-light\" />Bio</p>;
+                <p className=\"text-white\" />{selected_partner.bio || \"No bio provided\"}</p>;
               </div>;
-              <div className="grid grid - cols - 2 gap-2">;
-                <div>;
-                  <p className="text - xs text - zion - slate-light">Niche</p>;
-                  <p className="text-white">{selected_partner.niche}</p>;
+              <div className=\"grid grid - cols - 2 gap-2\" />;
+                <div />;
+                  <p className=\"text - xs text - zion - slate-light\" />Niche</p>;
+                  <p className=\"text-white\" />{selected_partner.niche}</p>;
                 </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate-light">Audience Size</p>;
-                  <p className="text-white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
+                <div />;
+                  <p className=\"text - xs text - zion - slate-light\" />Audience Size</p>;
+                  <p className=\"text-white\" />{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
                 </div>;
               </div>;
               {selected_partner.website && (
-                <div>;
-                  <p className="text - xs text - zion - slate-light">Website</p>;
-                  <p className="text - zion-cyan">{selected_partner.website}</p>;
+                <div />;}
+                  <p className=\"text - xs text - zion - slate-light\" />Website</p>;}
+                  <p className=\"text - zion-cyan\" />{selected_partner.website}</p>;
                 </div>)}
               {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
-                <div>;
-                  <p className="text - xs text - zion - slate-light">Social Media</p>;
-                  <div className="grid grid - cols - 2 gap-2">;
-                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
-                      <p key={platform} className="text-white">;
-                        <span className="font-medium">{platform}: </span>;
+                <div />;
+                  <p className=\"text - xs text - zion - slate-light\" />Social Media</p>;
+                  <div className=\"grid grid - cols - 2 gap-2\" />;}
+                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (}
+                      <p key={platform} className=\"text-white\" />;
+                        <span className=\"font-medium\" />{platform}: </span>;
               />;
             </TabsContent>;
           </Tabs>;
         </CardContent>;
       </Card>;
-            <DialogDescription>;
+            <DialogDescription />;
               Review the details of the partner application;
             </DialogDescription>;
           </DialogHeader>;
@@ -766,21 +802,21 @@ if ( {) {
                   </div>;
                 </div>;
                   </AlertTitle>;
-                  <AlertDescription>;
+                  <AlertDescription />;
                     This application has triggered our fraud detection system. Review carefully before approving.;
                   </AlertDescription>;
-                  <Button
-                    className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner && selectedPartner.id, 'approved')}
+                  <Button;
+className=\"bg-green-600 hover:bg-green-700\"
+                    onClick={() = /> handleUpdateStatus(selectedPartner && selectedPartner.id, 'approved')}
                   >;
-                    <Check className="h-4 w-4 mr-1" />;
+                    <Check className=\"h-4 w-4 mr-1\" />;
                     Approve;
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
-            <DialogDescription>;
+            <DialogDescription />;
               Configure commission rates and other settings;
             </DialogDescription>;
           </DialogHeader>;
@@ -789,106 +825,106 @@ if ( {) {
       </Dialog>;
     </div>;
 function PartnerTable({
-  partners
-  isLoading
-  onViewDetails
+  partners;
+isLoading,
+onViewDetails;
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
   onUpdateStatus;
   onOpenSettings;
-  getStatusBadge;
-  getFraudFlagBadge
+  getStatusBadge;}
+  getFraudFlagBadge}
 }: PartnerTableProps) {
   if (isLoading) {
     return (
-      <div className="text-center py-8">;
-        <p className="text-zion-slate-light">Loading partner data...</p>;
-      </div>;
-    );
+      <div className=\"text-center py-8\" />;
+        <p className=\"text-zion-slate-light\" />Loading partner data...</p>;
+      </div>;}
+    );}
   }
     return (
-      <div className="text-center py-8">;
-        <p className="text-zion-slate-light">No partners found.</p>;
+      <div className=\"text-center py-8\" />;
+        <p className=\"text-zion-slate-light\" />No partners found.</p>;
       </div>;
     );
   }
   return (
-    <Table>;
-      <TableHeader>;
-        <TableRow className="hover:bg-transparent">;
-          <TableHead > Name</TableHead>;
-          <TableHead > Niche</TableHead>;
-          <TableHead > Audience</TableHead>;
-          <TableHead > Status</TableHead>;
-          <TableHead > Date</TableHead>;
-          <TableHead className="text-right">Actions</TableHead>;
+    <Table />;
+      <TableHeader />;
+        <TableRow className=\"hover:bg-transparent\" />;
+          <TableHead  /> Name</TableHead>;
+          <TableHead  /> Niche</TableHead>;
+          <TableHead  /> Audience</TableHead>;
+          <TableHead  /> Status</TableHead>;
+          <TableHead  /> Date</TableHead>;
+          <TableHead className=\"text-right\" />Actions</TableHead>;
         </TableRow>;
       </TableHeader>;
-      <TableBody>;
-        {partners.map ((partner) => (
-          <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue-light / 10">;
-            <TableCell className="font - medium text-white">;
-              <div className="flex items - center gap-2">;
+      <TableBody />;
+        {partners.map ((partner) => (}
+          <TableRow key={partner.id} className=\"border - zion - blue - light hover:bg - zion - blue-light / 10\" />;
+            <TableCell className=\"font - medium text-white\" />;
+              <div className=\"flex items - center gap-2\" />;
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
               </div>;
             </TableCell>;
-            <TableCell>{partner.niche}</TableCell>;
-            <TableCell>;
+            <TableCell />{partner.niche}</TableCell>;
+            <TableCell />;
               {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
             </TableCell>;
-            <TableCell>{getStatusBadge (partner.status)}</TableCell>;
-            <TableCell>;
+            <TableCell />{getStatusBadge (partner.status)}</TableCell>;
+            <TableCell />;
               {new Date (partner.created_at).toLocaleDateString ()}
             </TableCell>;
-                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
+                      className=\"text-green-500 hover:text-green-600 hover:bg-green-900/20\";
                     >;
-                      <Check className="h-4 w-4" />;
-                      <span className="sr-only">Approve</span>;
+                      <Check className=\"h-4 w-4\" />;
+                      <span className=\"sr-only\" />Approve</span>;
                     </Button>;
                   </>;
                 )}
-                <Button
-                  variant="outline"
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  onClick={() => onViewDetails(partner)}
+                <Button;
+variant=\"outline\"
+                <Button;
+variant=\"outline\" 
+                  size=\"sm\"
+                  onClick={() = /> onViewDetails(partner)}
                   <>;
                     <Button;
-                      variant="ghost";
-                      size="sm";
-                      on_click={() => onUpdateStatus (partner.id, 'rejected')}
-                      className="text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20";
+                      variant=\"ghost\";
+                      size=\"sm\";
+                      on_click={() = /> onUpdateStatus (partner.id, 'rejected')}
+                      className=\"text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20\";
                     >;
-                      <X className="h - 4 w-4" />;
-                      <span className="sr-only">Reject</span>;
+                      <X className=\"h - 4 w-4\" />;
+                      <span className=\"sr-only\" />Reject</span>;
                     </Button>;
                     <Button;
-                      variant="ghost";
-                      size="sm";
-                      on_click={() => onUpdateStatus (partner.id, 'approved')}
-                      className="text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20";
+                      variant=\"ghost\";
+                      size=\"sm\";
+                      on_click={() = /> onUpdateStatus (partner.id, 'approved')}
+                      className=\"text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20\";
                     >;
-                      <Check className="h - 4 w-4" />;
-                      <span className="sr-only">Approve</span>;
+                      <Check className=\"h - 4 w-4\" />;
+                      <span className=\"sr-only\" />Approve</span>;
                     </Button>;
                   </>)}
                 <Button;
-                  variant="ghost";
-                  size="sm";
-                  on_click={() => onOpenSettings (partner)}
-                  className="text - zion - slate - light hover:text-white";
+                  variant=\"ghost\";
+                  size=\"sm\";
+                  on_click={() = /> onOpenSettings (partner)}
+                  className=\"text - zion - slate - light hover:text-white\";
                 >;
-                  <Settings className="h - 4 w-4" />;
-                  <span className="sr-only">Settings</span>;
+                  <Settings className=\"h - 4 w-4\" />;
+                  <span className=\"sr-only\" />Settings</span>;
                 </Button>;
                 <Button;
-                  variant="outline";
-                  size="sm";
-                  on_click={() => onViewDetails (partner)}
+                  variant=\"outline\";
+                  size=\"sm\";
+                  on_click={() = /> onViewDetails (partner)}
                 >;
                   View;
                 </Button>;

@@ -1,8 +1,27 @@
+
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+
+import { useState } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+;
+
+export interface ApiKey {
+
+export interface ApiKey {;
+
+export interface ApiKey {
+
+export interface ApiKey {;
+export interface ApiKey {
+  id: string;
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
@@ -10,8 +29,78 @@ export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:
   last_used_at: string | null;
   ip_address?: string,
   response_time_ms?: number
+
+
+
+import {useState} from "react";""
+import {useAuth} from "@/hooks/useAuth";""
+import {supabase} from "@/integrations/supabase/client";""
+import {toast} from "@/hooks/use-toast";""
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';''
+import { useState } from './react';''
+import { use_auth } from '@/hooks / use_auth';''
+import { supabase } from '@/integrations / supabase / client';''
+import { toast } from '@/hooks / use - toast';''
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';'
+;
+
+export interface ApiKey {
+  // TODO: Implement
 }
+export interface ApiKey {;
+
+export interface ApiKey {
+  // TODO: Implement
+}
+export interface ApiKey {;
+
+export interface ApiKey {
+  // TODO: Implement
+}
+  id: string;,
+
+  name: string;
+  key_prefix: string;,
+  scopes: ApiKeyScope[];
+  created_at: string;,
+  last_used_at: string | null;
+
+
+  expires_at: string | null,
+  is_active: boolean;
+}
+
+export interface ApiLog {;
+
+expires_at: string | null
+  is_active: boolean
+
+}
+export interface ApiLog {
+  // TODO: Implement
+}
+
+export interface ApiLog {;
+}
+export interface ApiLog {
+  id: string;
+  id: string;,
+  endpoint: string;
+  method: string;,
+  status_code: number;
+  created_at: string;
+
+ip_address?: string
+  response_time_ms?: number
+}
+export function useApiKeys() {
+
+  ip_address?: string,
+  response_time_ms?: number;
+}
+
 export function useApiKeys() {;
+
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -19,10 +108,127 @@ export function useApiKeys() {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [newApiKey, setNewApiKey] = useState<string | null>(null);
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage',
+
+export interface ApiKey {
+  id: string,
+  name: string,
+  key_prefix: string,
+  scopes: ApiKeyScope[],
+  created_at: string,
+  last_used_at: string | null,
+  expires_at: string | null,
+  is_active: boolean
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage',;
+export interface ApiKey {;
+  id: string,;
+  name: string,;
+  key_prefix: string,;
+  scopes: ApiKeyScope[],;
+  created_at: string,;
+  last_used_at: string | null,;
+  expires_at: string | null,;
+  is_active: boolean;
+}
+;
+export interface ApiLog {;
+  id: string,;
+  endpoint: string,;
+  method: string,;
+  status_code: number,;
+  created_at: string,;
+  ip_address?: string,;
+  response_time_ms?: number;
+}
+
+export function useApiKeys() {
+  const { user } = useAuth(),
+  const [keys, setKeys] = useState<ApiKey[]>([]),
+  const [logs, setLogs] = useState<ApiLog[]>([]),
+  const [totalLogs, setTotalLogs] = useState(0),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),
   // Helper to get the base URL for API functions
   const getApiUrl = () => {
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
+    // such as tests or server side rendering.
+
+    const env = (import && import.meta as any)?.env ?? process ;
+    const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
+
+const env = (import && import.meta as any)?.env ?? process ;
+    const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
+
+  // Helper to get the base URL for API functions
+  const getApiUrl = () => {
+    // Using optional chaining ensures this function works both in the browser
+    // (where import.meta.env is injected by Vite) and in Node environments
+    // such as tests or server side rendering.
+    const env = (import.meta as any)?.env ?? process.env;
+    const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
+    return `${url}/functions/v1/api-key-manager`
+  }
+  // Fetch user's API keys
+  const fetchApiKeys = async () => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+
+    const env = (import.meta as any)?.env ?? process.env,
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
+    return `${url}/functions/v1/api-key-manager`
+  },
+
+  // Fetch user's API keys
+  const fetchApiKeys = async () => {
+    if (!user) return,
+    
+    setLoading(true),
+    setError(null),
+
+setKeys(result.keys |[])
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required");
+        return
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to fetch API keys')
+      }
+
+      setKeys(result && result.keys || [])
+
+try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/keys`, {
+        method: 'GET'
+        headers: {
+    } catch (err) {
+      console && console.error('Error fetching API keys:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+        variant: "destructive";
+
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+  ip_address?: string,
     // such as tests or server side rendering.  ip_address?: string,
   response_time_ms?: number;
 }
@@ -31,6 +237,66 @@ export /**
  */
 function useApiKeys() {
   const { user } = use_auth ();
+
+
+import {useState} from "react";""
+import {useAuth} from "@/hooks/useAuth";""
+import {supabase} from "@/integrations/supabase/client";""
+import {toast} from "@/hooks/use-toast";""
+export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+import { useState } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+;
+
+export interface ApiKey {
+  // TODO: Implement
+}
+export interface ApiKey {;
+
+  // TODO: Implement
+
+  // TODO: Implement
+  id: string;,
+  name: string;
+  key_prefix: string;,
+  scopes: ApiKeyScope[];
+  created_at: string;,
+  last_used_at: string | null;
+
+  expires_at: string | null,
+  is_active: boolean;
+
+
+export interface ApiLog {;
+
+
+export interface ApiLog {
+  // TODO: Implement
+  endpoint: string;
+  method: string;,
+  status_code: number;
+  created_at: string;
+
+
+  ip_address?: string,
+  response_time_ms?: number;
+
+export function useApiKeys() {;
+
+
+  const { user } = useAuth();
+  const [keys, setKeys] = useState<ApiKey[]>([]);
+
+  const [logs, setLogs] = useState<ApiLog[]>([]);
+
+  const [error, setError] = useState<string | null>(null);
+</string>
+  const [newApiKey, setNewApiKey] = useState<string | null>(null);
+pr-12325
+</string>
+
   const [keys, set_keys] = useState < ApiKey[]>([]);
   const [logs, set_logs] = useState < ApiLog[]>([]);
   const [total_logs, setTotalLogs] = useState (0);
@@ -40,11 +306,17 @@ function useApiKeys() {
 ;
   // Helper to get the base URL for API functions;
   const getApiUrl = () =>: any {
+  // Helper to get the base URL for API functions;
+  const getApiUrl = () =>: any {
+  // TODO: Implement
+pr-12325
+  // TODO: Implement
+}
     // Using optional chaining ensures this function works both in the browser;
     // (where import.meta.env is injected by Vite) and in Node environments;
     // such as tests or server side rendering.;
-    const env = (import.meta as any)?.env ?? process.env;
-    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
+    const env = (import.meta as any)?.env ?? process.env;}
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;}
     return `${url}/functions / v1 / api - key - manager`;
   }
 ;
@@ -53,10 +325,19 @@ function useApiKeys() {
     // Check condition
 if (return) {
   $2
+;'
+  // Fetch user's API keys;'
+  const fetchApiKeys = async () => {
+    // Check condition;
+
+if (return) {
+  $2;
+
 }
     set_loading (true);
     set_error (null);
 ;
+
     try {
       const { data: { session } } = await supabase.auth.get_session ();
       // Check condition
@@ -71,6 +352,22 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content - Type': 'application / json';
+  // TODO: Implement
+}
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition;
+if ( {) {
+  $2;
+}'
+        set_error ("Authentication required");"
+        return;
+      }
+      const response = await fetch (`${getApiUrl ()}/keys`, {"
+        method: 'GET','
+        headers: {'
+          'Authorization': `Bearer ${session.access_token}`;''
+          'Content - Type': 'application / json';'
+
         }
       });
 ;
@@ -80,6 +377,123 @@ if ( {) {
 if ( {) {
   $2
 }
+        throw new Error (result.error || 'Failed to fetch API keys');
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API keys')
+      }
+      setKeys(result.keys |[])
+
+;
+export function useApiKeys() {;
+  const { user } = useAuth(),;
+  const [keys, setKeys] = useState<ApiKey[]>([]),;
+  const [logs, setLogs] = useState<ApiLog[]>([]),;
+  const [totalLogs, setTotalLogs] = useState(0),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),;
+  // Helper to get the base URL for API functions;
+  const getApiUrl = () => {;
+    // Using optional chaining ensures this function works both in the browser;
+    // (where import.meta.env is injected by Vite) and in Node environments;
+    // such as tests or server side rendering.;
+    const env = (import.meta as any)?.env ?? process.env,;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/api-key-manager`;
+  },;
+  // Fetch user's API keys;
+  const fetchApiKeys = async () => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    try {;
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/keys`, {;
+        method: 'GET',;
+        headers: {;
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        }
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch API keys');
+      }
+
+      setKeys(result.keys || [])
+      setKeys(result.keys || [])
+    } catch (err) {
+      console.error('Error fetching API keys:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+
+        variant: "destructive",
+set_keys (result.keys || []);
+    } catch (err) {
+      console.error ('Error fetching API keys:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: "destructive";
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {
+      set_loading (false);
+    }
+
+variant: "destructive",
+        title: "Error fetching API keys",
+
+        variant: "destructive";
+        title: "Error fetching API keys"
+        variant: "destructive",
+        title: "Error fetching API keys",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+  }
+  // Create new API key
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+    setNewApiKey(null);
+  }
+  },
+
+  // Create new API key
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+    if (!user) return,
+    
+    setLoading(true),
+    setError(null),
+    setNewApiKey(null),
+
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required");
+        return
+
+description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {
+      set_loading (false);
+    }
+  }
+        };
+        body: JSON && JSON.stringify({
+          name;
         throw new Error (result.error || 'Failed to fetch API keys');      setKeys(result.keys || [])
     } catch (err) {
       console.error('Error fetching API keys:', err),
@@ -89,29 +503,70 @@ if ( {) {
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null
         })
       });
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to create API key')
+
+const result = await response && response.json();
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to create API key')
       }
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
+
+      setNewApiKey(result && result.key);
+
+setNewApiKey(result && result.key);
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/create`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({
+          name;
+          scopes
+          expiresAt: expiresAt ? expiresAt.toISOString() : null
+        })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to create API key')
+      }
+      // Add the new key to the list
+      setKeys(prev => [{ ...result, key: undefined }, ...prev]);
+      // Store the actual key value temporarily so it can be displayed once
+      setNewApiKey(result.key);
       toast({
-        title: "title",
-    description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
+        title: "API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+      // Check condition;
 ;
       setKeys(result.keys || []);
     } catch (err) {;
       console.error('Error fetching API keys:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
-        variant: "destructive",;
-        title: "Error fetching API keys",,
+        variant: \"destructive\",;}
+        title: \"Error fetching API keys\",,}
   description: err instanceof Error ? err.message : 'An unknown error occurred'});
-    } finally {;
-      setLoading(false);
+    } finally {;}
+      setLoading(false);}
     }
   },;
   // Create new API key;
@@ -119,74 +574,293 @@ if ( {) {
     if (!user) return,;
     setLoading(true),;
     setError(null),;
-    setNewApiKey(null),;
-    try {;
+    setNewApiKey(null),;}
+    try {;}
       const { data: { session } } = await supabase.auth.getSession(),;
       if (!session) {;
-        setError("Authentication required"),;
-        return;
+        setError(\"Authentication required\"),;}
+        return;}
       }
 ;
       const response = await fetch(`${getApiUrl()}/create`, {;
-        method: 'POST',;
-        headers: {;
+        method: 'POST',;}
+        headers: {;}
           'Authorization': `Bearer ${session.access_token}`,;
           'Content-Type': 'application/json';
         },;
         body: JSON.stringify({;
           name,;
-          scopes,;
-          expiresAt: expiresAt ? expiresAt.toISOString() : null;
+          scopes,;}
+          expiresAt: expiresAt ? expiresAt.toISOString() : null;}
         });
       }),;
       const result = await response.json(),;
-      if (!response.ok) {;
-        throw new Error(result.error || 'Failed to create API key');
+      if (!response.ok) {;}
+        throw new Error(result.error || 'Failed to create API key');}
       }
+
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
+      
       // Store the actual key value temporarily so it can be displayed once
       setNewApiKey(result.key),
+      
       toast({
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
-          } finally {
-      setLoading(false)
+      
+      return result
+    } catch (err) {
+      console && console.error('Error creating API key:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+try {
+      // Add the new key to the list;
+setKeys(prev => [{ ...result, key: undefined }, ...prev]),
+      // Store the actual key value temporarily so it can be displayed once;
+setNewApiKey(result.key),
+      toast({}
+        title: \"API Key Created\",}
+        description: \"Your new API key has been generated. Save it now, you won't be able to see it again.\"}),
+          } finally {}
+      setLoading(false)}
     }
   },
-  // Regenerate API key
-  const regenerateApiKey = async (keyId: string) => {
+  // Regenerate API key;
+const regenerateApiKey = async (keyId: string) => {
     if (!user) return,
     setLoading(true),
     setError(null),
-    setNewApiKey(null),
-    try {
+    setNewApiKey(null),}
+    try {}
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
-        return
+        setError(\"Authentication required\");}
+        return}
         };
         body: JSON && JSON.stringify({ keyId })
       });
+
       const result = await response && response.json();
+      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to regenerate API key')
+
+title: "Error creating API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+      }
+;
+      const result = await response && response.json();
+      if (!response && response.ok) {}
+        throw new Error(result && result.error || 'Failed to regenerate API key')}
       };
       // Add the new key to the list;
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
       // Store the actual key value temporarily so it can be displayed once;
       setNewApiKey(result.key),;
+      toast({;}
+        title: \"API Key Created\",,}
+  description: \"Your new API key has been generated. Save it now, you won't be able to see it again.\"}),;
+      return result;
+    } catch (err) {;
+      console.error('Error creating API key:', err),;
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
-        title: "API Key Created",,
-  description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),;
+        variant: \"destructive\",;}
+        title: \"Error creating API key\",,}
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;}
+      setLoading(false);}
+    }
+  },;
+  // Regenerate API key;
+  const regenerateApiKey = async (keyId: string) => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    setNewApiKey(null),;}
+    try {;}
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError(\"Authentication required\"),;}
+        return;}
+      }
+;
+      const response = await fetch(`${getApiUrl()}/regenerate`, {;
+        method: 'POST',;}
+        headers: {;}
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        },;
+        body: JSON.stringify({ keyId });
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to regenerate API key');
+      }
+
+      // Update the key in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...result, key: undefined } : key
+        variant: "destructive";
+        title: "Error creating API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+;
+  // Create new API key;
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expires_at?: Date | null) => {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true);
+    set_error (null);
+    setNewApiKey (null);
+;
+    try {
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition
+if ( {) {
+  $2
+}
+        set_error ("Authentication required");
+        return;
+      }
+      const response = await fetch (`${getApiUrl ()}/create`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content - Type': 'application / json';
+        }
+        body: JSON.stringify ({
+          name;
+          scopes,
+          expires_at: expires_at ? expires_at.toISOString () : null;
+        });
+      });
+;
+      const result = await response.json ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (result.error || 'Failed to create API key');
+      }
+      // Add the new key to the list;
+      set_keys (prev => [{ ...result, key: undefined }, ...prev]);
+;
+      // Store the actual key value temporarily so it can be displayed once;
+      setNewApiKey (result.key);
+;
+      toast ({
+        title: "API Key Created",
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+;
+      return result;
+    } catch (err) {
+      console.error ('Error creating API key:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: "destructive";
+        title: "Error creating API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {
+      set_loading (false);
+    }
+  }
+
+        variant: "destructive",
+        title: "Error creating API key",
+
+return result
+    } catch (err) {
+      console.error('Error creating API key:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error creating API key"
+        variant: "destructive",
+        title: "Error creating API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+
+}
+  // Regenerate API key
+  const regenerateApiKey = async (keyId: string) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+    setNewApiKey(null)
+  },
+
+  // Regenerate API key
+  const regenerateApiKey = async (keyId: string) => {
+    if (!user) return,
+    
+    setLoading(true),
+    setError(null),
+    setNewApiKey(null),
+
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required");
+        return
+
+        };
+        body: JSON && JSON.stringify({ keyId })
+      });
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to regenerate API key')
+
+      }
+};
+        body: JSON && JSON.stringify({ keyId })
+      });
+      const result = await response && response.json();
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to regenerate API key')
+
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/regenerate`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ keyId })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to regenerate API key')
+      }
+;
+      // Add the new key to the list;
+      setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
+      // Store the actual key value temporarily so it can be displayed once;
+      setNewApiKey(result.key),;
+      toast({;
+        title: "API Key Created",;
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),;
       return result;
     } catch (err) {;
       console.error('Error creating API key:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
-        title: "Error creating API key",,
-  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+        title: "Error creating API key",;
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {;
       setLoading(false);
     }
@@ -216,64 +890,155 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to regenerate API key');
       }
+
+      // Update the key in the list
+
+      setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...result, key: undefined } : key
+
+      ));
+      // Store the new key value
+
+      setNewApiKey(result && result.key);
+
+      toast({
+        title: "API Key Regenerated"
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+}
       // Update the key in the list
       setKeys(prev => prev && prev.map(key => 
         key && key.id === keyId ? { ...result, key: undefined } : key
       ));
       // Store the new key value
       setNewApiKey(result && result.key);
+      // Update the key in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...result, key: undefined } : key
+      ));
+      // Store the new key value
+      setNewApiKey(result.key);
       toast({
         title: "API Key Regenerated"
-        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      ));
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+      ));
       // Store the new key value
       toast({
         title: "API Key Regenerated"
-        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      return result
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
+      )),
+      
+      // Store the new key value
+      setNewApiKey(result.key),
+      
+      toast({
+        title: "API Key Regenerated",
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."}),
+
+
+      return result
     } catch (err) {
-      console && console.error('Error revoking API key:', err);
+      console && console.error('Error regenerating API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+
+        title: "Error regenerating API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+title: "Error regenerating API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+        variant: "destructive";
+        title: "Error regenerating API key"
         variant: "destructive",
         title: "Error regenerating API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
   },
-  // Fetch API usage logs
-  const fetchApiLogs = async (limit = 50, offset = 0) => {
+
+  // Revoke API key
+  const revokeApiKey = async (keyId: string) => {
     if (!user) return,
+    
     setLoading(true),
     setError(null),
+    
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
-      }
-      const response = await fetch (
-        `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,
-        {
-          method: 'GET'
-          headers: {
+      });
+
       const result = await response && response.json();
+      
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to revoke API key')
-      }        throw new Error(result && result.error || 'Failed to fetch API logs')
+
       }
-      setLogs(result && result.logs || []);
-      setTotalLogs(result && result.count || 0);
-      setLogs(result.logs || []);
-      setTotalLogs(result.count || 0);      
+
+;
+      // Update the key in the list;
+      setKeys(prev => prev.map(key =>;
+        key.id === keyId ? { ...result, key: undefined } : key;
+      )),;
+      // Store the new key value;
+      setNewApiKey(result.key),;
+      toast({;
+        title: "API Key Regenerated",;
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."}),;
+      return result;
+    } catch (err) {;
+      console.error('Error regenerating API key:', err),;
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
+      toast({;
+        variant: "destructive",;
+        title: "Error regenerating API key",;
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;
+      setLoading(false);
+    }
+  },;
+  // Revoke API key;
+  const revokeApiKey = async (keyId: string) => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    try {;
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/revoke`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${session.access_token}`,;
+          'Content-Type': 'application/json';
+        },;
+        body: JSON.stringify({ keyId });
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to revoke API key');
+      }
+
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...key, is_active: false } : key
         variant: "destructive";
 ;
-  // Revoke API key;
-  const revokeApiKey = async (key_id: string) => {
+  // Regenerate API key;
+  const regenerateApiKey = async (key_id: string) => {
     // Check condition
 if (return) {
   $2
 }
     set_loading (true);
-    set_error (null),
+    set_error (null);
+    setNewApiKey (null),
     try {
       const { data: { session } } = await supabase.auth.get_session ();
       // Check condition
@@ -283,7 +1048,7 @@ if ( {) {
         set_error ("Authentication required");
         return;
       }
-      const response = await fetch (`${getApiUrl ()}/revoke`, {
+      const response = await fetch (`${getApiUrl ()}/regenerate`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
@@ -298,67 +1063,158 @@ if ( {) {
 if ( {) {
   $2
 }
-        throw new Error (result.error || 'Failed to revoke API key');
+        throw new Error (result.error || 'Failed to regenerate API key');
       }
-      // Update the key's active status in the list;
+      // Update the key in the list;
       set_keys (prev => prev.map (key =>;
-        key.id === key_id ? { ...key, is_active: false } : key));
+        key.id === key_id ? { ...result, key: undefined } : key));
+;
+      // Store the new key value;
+      setNewApiKey (result.key);
 ;
       toast ({
-        title: "API Key Revoked",
-        description: "The API key has been revoked successfully."});
+        title: "API Key Regenerated",
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
 ;
       return result;
     } catch (err) {
-      console.error ('Error revoking API key:', err);
+      console.error ('Error regenerating API key:', err);
       set_error (err instanceof Error ? err.message : 'An unknown error occurred');
       toast ({
         variant: "destructive";
-        title: "Error revoking API key",
+        title: "Error regenerating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
       set_loading (false);
     }
   }
-        {
-          method: 'GET'
-          headers: {        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+
+        variant: "destructive",
+        title: "Error regenerating API key",
+
+}
+      // Update the key's active status in the list
+      ));
+      toast({
+        title: "API Key Revoked"
+        description: "The API key has been revoked successfully."});
+      return result
+      if (!response.ok) {;}
+        throw new Error(result.error || 'Failed to regenerate API key');}
+      }
+      // Update the key in the list;
+setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...result, key: undefined } : key;
+      ));
+      // Store the new key value;
+setNewApiKey(result && result.key);
+      toast({}
+        title: \"API Key Regenerated\"}
+        description: \"Your API key has been regenerated. Save it now, you won't be able to see it again.\"});      ));
+      // Store the new key value;
+toast({}
+        title: \"API Key Regenerated\"}
+        description: \"Your API key has been regenerated. Save it now, you won't be able to see it again.\"});      return result;
+    } catch (err) {
+      console && console.error('Error revoking API key:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+        variant: "destructive",
+        title: "Error regenerating API key",
+title: "Error revoking API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+
+}
+  // Revoke API key
+  const revokeApiKey = async (keyId: string) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null)
+        variant: \"destructive\",}
+        title: \"Error regenerating API key\",}
+    } finally {}
+      setLoading(false)}
+    }
   },
-  // Fetch API usage logs
-  const fetchApiLogs = async (limit = 50, offset = 0) => {
+  // Fetch API usage logs;
+const fetchApiLogs = async (limit = 50, offset = 0) => {
     if (!user) return,
     setLoading(true),
     setError(null),
+
+
     try {
+    setError(null),}
+    try {}
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
-        return
+        setError(\"Authentication required\");}
+        return}
+      }
+      const response = await fetch (
+        `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,
+        {
+          method: 'GET'
+          headers: {
+
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to revoke API key')
+
+      }
+};
+        body: JSON && JSON.stringify({ keyId })
+      });
       const result = await response && response.json();
       if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to revoke API key')
+
+    try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/revoke`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ keyId })
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to revoke API key')
+      }
         throw new Error(result && result.error || 'Failed to fetch API logs')
       }
+
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
-=======;
+
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);
+;
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
         key.id === keyId ? { ...key, is_active: false } : key;
       )),;
       toast({;
-        title: "API Key Revoked",,
-  description: "The API key has been revoked successfully."}),;
+        title: "API Key Revoked",;
+        description: "The API key has been revoked successfully."}),;
       return result;
     } catch (err) {;
       console.error('Error revoking API key:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
-        title: "Error revoking API key",,
-  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+        title: "Error revoking API key",;
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {;
       setLoading(false);
     }
@@ -384,16 +1240,369 @@ if ( {) {
             'Content-Type': 'application/json';
           }
         }
+      );
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API logs')
+      }
+
+      // Update the key's active status in the list
+
+      setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...key, is_active: false } : key
+
+}
+      // Update the key's active status in the list
+      setKeys(prev => prev && prev.map(key => 
+        key && key.id === keyId ? { ...key, is_active: false } : key
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...key, is_active: false } : key
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key =>
+        key.id === keyId ? { ...key, is_active: false } : key
+      ));
+      toast({
+        title: "API Key Revoked"
+        description: "The API key has been revoked successfully."});
+
+      )),
+      
+      toast({
+        title: "API Key Revoked",
+        description: "The API key has been revoked successfully."}),
+
+
+      return result
+    } catch (err) {
+      console && console.error('Error revoking API key:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+
+        title: "Error revoking API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+title: "Error revoking API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+        variant: "destructive";
+        title: "Error revoking API key",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+      
+        variant: "destructive";
+          method: 'GET',
+  headers: {
+      const result = await response && response.json();
+      if (!response && response.ok) {}
+        throw new Error(result && result.error || 'Failed to revoke API key')}
+      }        throw new Error(result && result.error || 'Failed to fetch API logs')
+      }
+      setLogs(result && result.logs || []);
+      setTotalLogs(result && result.count || 0);
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);      
+        variant: \"destructive\";
+;
+  // Revoke API key;
+  const revokeApiKey = async (key_id: string) => {
+    // Check condition;
+if (return) {}
+  $2}
+}
+    set_loading (true);
+    set_error (null),
+    try {}
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition;
+if ( {) {}
+  $2}
+}
+        set_error (\"Authentication required\");
+        return;
+      }
+      const response = await fetch (`${getApiUrl ()}/revoke`, {
+        method: 'POST',}
+  headers: {}
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content - Type': 'application / json';
+        }
+        body: JSON.stringify ({ key_id });
+      });
+;
+      const result = await response.json ();
+;
+      // Check condition;
+if ( {) {}
+  $2}
+}
+        throw new Error (result.error || 'Failed to revoke API key');
+      }
+      // Update the key's active status in the list;
+      set_keys (prev => prev.map (key =>;
+        key.id === key_id ? { ...key, is_active: false } : key));
+;
+      toast ({}
+        title: \"API Key Revoked\",}
+        description: \"The API key has been revoked successfully.\"});
+;
+      return result;
+    } catch (err) {
+      console.error ('Error revoking API key:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: \"destructive\";}
+        title: \"Error revoking API key\",}
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {}
+      set_loading (false);}
+    }
+  }
+
+        variant: "destructive",
+        title: "Error revoking API key",
+
+return result
+    } catch (err) {
+      console.error('Error revoking API key:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error revoking API key"
+        variant: "destructive",
+        title: "Error revoking API key",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+
+}
+  // Fetch API usage logs
+  const fetchApiLogs = async (limit = 50, offset = 0) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+        {}
+          method: 'GET'}
+          headers: {        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {}
+      setLoading(false)}
+    }
+  },
+  // Fetch API usage logs;
+const fetchApiLogs = async (limit = 50, offset = 0) => {
+    if (!user) return,
+    setLoading(true),
+    setError(null),
+
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required");
+        return
+
+;
+  // Fetch API usage logs;
+  const fetchApiLogs = async (limit = 50, offset = 0) => {
+    // Check condition
+if (return) {
+  $2
+}
+    set_loading (true);
+    set_error (null);
+;
+    try {
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition
+if ( {) {
+  $2
+}
+        set_error ("Authentication required");
+    setError(null),}
+    try {}
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError(\"Authentication required\");
+        return;
+const result = await response && response.json();
+      if (!response && response.ok) {}
+        throw new Error(result && result.error || 'Failed to fetch API logs')}
+      }
+      const response = await fetch (
+        `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,
+
+        {
+          method: 'GET'
+          headers: {
+
+{
+          method: 'GET'
+          headers: {
+      const result = await response && response.json();
+      
+      if (!response && response.ok) {
+        throw new Error(result && result.error || 'Failed to fetch API logs')
+      }
+
+      setLogs(result && result.logs || []);
+      setTotalLogs(result && result.count || 0);
+
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);
+
+try {
+      const { data: { session } } = await supabase.auth.getSession(),
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(
+        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`
+        {
+          method: 'GET'
+          headers: {
+            'Authorization': `Bearer ${session.access_token}`;
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API logs')
+      }
+      setLogs(result.logs |[]);
+      setTotalLogs(result.count |0);
+
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);
+      setLogs(result && result.logs || []);
+      setTotalLogs(result && result.count || 0);
+;
+      // Update the key's active status in the list;
+      setKeys(prev => prev.map(key =>;
+        key.id === keyId ? { ...key, is_active: false } : key;
+      )),;
+      toast({;}
+        title: \"API Key Revoked\",,}
+  description: \"The API key has been revoked successfully.\"}),;
+      return result;
+    } catch (err) {;
+      console.error('Error revoking API key:', err),;
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
+      toast({;
+        variant: \"destructive\",;}
+        title: \"Error revoking API key\",,}
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;}
+      setLoading(false);}
+    }
+  },;
+  // Fetch API usage logs;
+  const fetchApiLogs = async (limit = 50, offset = 0) => {;
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;}
+    try {;}
+      const { data: { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError(\"Authentication required\"),;}
+        return;}
+      }
+;
+      const response = await fetch(;
+        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`,;
+        {;
+          method: 'GET',;}
+          headers: {;}
+            'Authorization': `Bearer ${session.access_token}`,;
+            'Content-Type': 'application/json';
+          }
+        }
       ),;
       const result = await response.json(),;
-      if (!response.ok) {;
-        throw new Error(result.error || 'Failed to fetch API logs');
+      if (!response.ok) {;}
+        throw new Error(result.error || 'Failed to fetch API logs');}
       }
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
+
+
+        {
           method: 'GET'
           headers: {
       return result
+    } catch (err) {
+      console && console.error('Error fetching API logs:', err);
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+      toast({
+
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
+        variant: "destructive";
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+            'Authorization': `Bearer ${session.access_token}`;
+            'Content - Type': 'application / json';
+          }
+        }
+      );
+;
+      const result = await response.json ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (result.error || 'Failed to fetch API logs');
+      }
+      set_logs (result.logs || []);
+      setTotalLogs (result.count || 0);
+;
+      return result;
+    } catch (err) {
+      console.error ('Error fetching API logs:', err);
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');
+      toast ({
+        variant: "destructive";
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {
+      set_loading (false);
+    }
+  }
+
+;
+
+;
+  return {
+    keys;
+    logs;
+    total_logs;
+return result
+    } catch (err) {
+      console.error('Error fetching API logs:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({
+        variant: "destructive";
+        title: "Error fetching API logs"
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+    }
+  }
+  return {
+    keys;
+    logs;
+    totalLogs;
+total_logs;
+    loading;
+    error;
+          method: 'GET',
+  headers: {}
+      return result}
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -404,26 +1613,30 @@ if ( {) {
     regenerateApiKey;
     revokeApiKey;
     fetchApiLogs;
+
+clearNewApiKey: () => setNewApiKey(null)
+    revokeApiKey;}
+    fetchApiLogs;}
   }
 }
-        variant: "destructive",
-        title: "Error fetching API logs",
+        variant: \"destructive\",
+        title: \"Error fetching API logs\",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
 ;
       setLogs(result.logs || []),;
-      setTotalLogs(result.count || 0),;
-      return result;
+      setTotalLogs(result.count || 0),;}
+      return result;}
     } catch (err) {;
       console.error('Error fetching API logs:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
-        variant: "destructive",;
-        title: "Error fetching API logs",,
+        variant: \"destructive\",;}
+        title: \"Error fetching API logs\",,}
   description: err instanceof Error ? err.message : 'An unknown error occurred'});
-    } finally {;
-      setLoading(false);
+    } finally {;}
+      setLoading(false);}
     }
   },;
   return {;
@@ -439,8 +1652,485 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
+    clearNewApiKey: () => setNewApiKey (null);
+
+  }
+}
+
+  }
+}
+;
+}
+    fetchApiLogs;}
+    clearNewApiKey: () => setNewApiKey(null);}
   }
 }
 ;
   }
 }
+  // Fetch user's API keys;
+  const fetchApiKeys = async () => {
+    // Check condition;
+if (return) {
+  $2;
+    set_loading (true);
+    set_error (null);
+    try {
+  // TODO: Implement
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition;
+
+if ( {) {
+        set_error ("Authentication required");"
+        return;
+      }`;
+      const response = await fetch (`${getApiUrl ()}/keys`, {"
+        method: 'GET',
+        headers: {`;
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content - Type': 'application / json';
+      });
+      const result = await response.json ();
+      // Check condition;
+        throw new Error (result.error || 'Failed to fetch API keys');`;
+          'Content-Type': 'application/json
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API keys')
+      setKeys(result.keys |[])
+
+  const { user } = useAuth(),;
+  const [keys, setKeys] = useState<ApiKey[]>([]),;
+
+  const [logs, setLogs] = useState<ApiLog[]>([]),;
+
+  const [error, setError] = useState<string | null>(null),;
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),;
+;
+  // Helper to get the base URL for API functions;
+  const getApiUrl = () => {;
+    // Using optional chaining ensures this function works both in the browser;
+    // (where import.meta.env is injected by Vite) and in Node environments;
+    // such as tests or server side rendering.;
+    const env = (import.meta as any)?.env ?? process.env,;
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/api-key-manager`,;
+  },;
+;
+  // Fetch user's API keys;
+  const fetchApiKeys = async () => {;
+    if (!user) return,;
+    ;
+    setLoading(true),;
+    setError(null),;
+    ;
+    try {;
+      const { data:{ session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return,;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/keys`, {;
+        method:'GET',;
+        headers:{;
+          'Authorization':`Bearer ${session.access_token}`,;
+          'Content-Type':'application/json';
+        }
+      }),;
+;
+      const result = await response.json(),;
+      ;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch API keys'),;
+      }
+;
+      setKeys(result.keys || []),;
+    } catch (err) {;
+      console.error('Error fetching API keys:', err),;
+      setError(err instanceof Error ? err.message :'An unknown error occurred'),;
+      toast({;
+        variant:"destructive",;
+        title:"Error fetching API keys",;
+        description:err instanceof Error ? err.message :'An unknown error occurred'}),;
+    } finally {;
+      setLoading(false),;
+    }
+  },;
+;
+  // Create new API key;
+  const createApiKey = async (name:string, scopes:ApiKeyScope[], expiresAt?:Date | null) => {;
+    if (!user) return,;
+    ;
+    setLoading(true),;
+    setError(null),;
+    setNewApiKey(null),;
+    ;
+    try {;
+      const { data:{ session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return,;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/create`, {;
+        method:'POST',;
+        headers:{;
+          'Authorization':`Bearer ${session.access_token}`,;
+          'Content-Type':'application/json';
+        },;
+        body:JSON.stringify({;
+          name,;
+          scopes,;
+          expiresAt:expiresAt ? expiresAt.toISOString() :null;
+        });
+      }),;
+;
+      const result = await response.json(),;
+      ;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to create API key'),;
+      }
+;
+      // Add the new key to the list;
+      setKeys(prev => [{ ...result, key:undefined }, ...prev]),;
+      ;
+      // Store the actual key value temporarily so it can be displayed once;
+      setNewApiKey(result.key),;
+      ;
+      toast({;
+        title:"API Key Created",;
+        description:"Your new API key has been generated. Save it now, you won't be able to see it again."}),;
+      ;
+      return result,;
+    } catch (err) {;
+      console.error('Error creating API key:', err),;
+      setError(err instanceof Error ? err.message :'An unknown error occurred'),;
+      toast({;
+        variant:"destructive",;
+        title:"Error creating API key",;
+        description:err instanceof Error ? err.message :'An unknown error occurred'}),;
+    } finally {;
+      setLoading(false),;
+    }
+  },;
+;
+  // Regenerate API key;
+  const regenerateApiKey = async (keyId:string) => {;
+    if (!user) return,;
+    ;
+    setLoading(true),;
+    setError(null),;
+    setNewApiKey(null),;
+    ;
+    try {;
+      const { data:{ session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return,;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/regenerate`, {;
+        method:'POST',;
+        headers:{;
+          'Authorization':`Bearer ${session.access_token}`,;
+          'Content-Type':'application/json';
+        },;
+        body:JSON.stringify({ keyId });
+      }),;
+;
+      const result = await response.json(),;
+      ;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to regenerate API key'),;
+      }
+;
+      // Update the key in the list;
+      setKeys(prev => prev.map(key => ;
+        key.id === keyId ? { ...result, key:undefined } key;
+      )),;
+      ;
+      // Store the new key value;
+      setNewApiKey(result.key),;
+      ;
+      toast({;
+        title:"API Key Regenerated",;
+        description:"Your API key has been regenerated. Save it now, you won't be able to see it again."}),;
+      ;
+      return result,;
+    } catch (err) {;
+      console.error('Error regenerating API key:', err),;
+      setError(err instanceof Error ? err.message :'An unknown error occurred'),;
+      toast({;
+        variant:"destructive",;
+        title:"Error regenerating API key",;
+        description:err instanceof Error ? err.message :'An unknown error occurred'}),;
+    } finally {;
+      setLoading(false),;
+    }
+  },;
+;
+  // Revoke API key;
+  const revokeApiKey = async (keyId:string) => {;
+    if (!user) return,;
+    ;
+    setLoading(true),;
+    setError(null),;
+    ;
+    try {;
+      const { data:{ session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return,;
+      }
+;
+      const response = await fetch(`${getApiUrl()}/revoke`, {;
+        method:'POST',;
+        headers:{;
+          'Authorization':`Bearer ${session.access_token}`,;
+          'Content-Type':'application/json';
+        },;
+        body:JSON.stringify({ keyId });
+      }),;
+;
+      const result = await response.json(),;
+      ;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to revoke API key'),;
+      }
+;
+      // Update the key's active status in the list;
+      setKeys(prev => prev.map(key => ;
+        key.id === keyId ? { ...key, is_active:false } key;
+      )),;
+      ;
+      toast({;
+        title:"API Key Revoked",;
+        description:"The API key has been revoked successfully."}),;
+      ;
+      return result,;
+    } catch (err) {;
+      console.error('Error revoking API key:', err),;
+      setError(err instanceof Error ? err.message :'An unknown error occurred'),;
+      toast({;
+        variant:"destructive",;
+        title:"Error revoking API key",;
+        description:err instanceof Error ? err.message :'An unknown error occurred'}),;
+    } finally {;
+      setLoading(false),;
+    }
+  },;
+;
+  // Fetch API usage logs;
+  const fetchApiLogs = async (limit = 50, offset = 0) => {;
+    if (!user) return,;
+    ;
+    setLoading(true),;
+    setError(null),;
+    ;
+    try {;
+      const { data:{ session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        setError("Authentication required"),;
+        return,;
+      }
+;
+      const response = await fetch(;
+        `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`, ;
+        {;
+          method:'GET',;
+          headers:{;
+            'Authorization':`Bearer ${session.access_token}`,;
+            'Content-Type':'application/json';
+          }
+        }
+      ),;
+;
+      const result = await response.json(),;
+      ;
+      if (!response.ok) {;
+        throw new Error(result.error || 'Failed to fetch API logs'),;
+      }
+;
+      setLogs(result.logs || []),;
+      setTotalLogs(result.count || 0),;
+      ;
+      return result,;
+    } catch (err) {;
+      console.error('Error fetching API logs:', err),;
+      setError(err instanceof Error ? err.message :'An unknown error occurred'),;
+      toast({;
+        variant:"destructive",;
+        title:"Error fetching API logs",;
+        description:err instanceof Error ? err.message :'An unknown error occurred'}),;
+    } finally {;
+      setLoading(false),;
+    }
+  },;
+;
+  return {;
+    keys,;
+    logs,;
+    totalLogs,;
+    loading,;
+    error,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey,;
+    fetchApiLogs,;
+    clearNewApiKey:() => setNewApiKey(null);
+  },; export type ApiKeyScope = 'jobs:read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+  //Using optional chaining ensures this function works both in the browser // (where import.meta.env is injected by Vite) and in Node environments //such as tests or server side rendering. setLoading (true);
+setError (null);
+try {
+  
+}getApiUrl () 
+}/keys`, {
+  method: 'GET', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+}
+});
+}finally {
+  setLoading (false) 
+}
+};
+//Create new API key const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+  if (!user) return;
+setError (null);
+setNewApiKey (null);
+try {
+  
+}getApiUrl () 
+}/create`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+//Store the actual key value temporarily so it can be displayed once setNewApiKey (result.key);
+return result;
+}catch (err) {
+  console.error ('Error creating API key:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+}
+};
+//Regenerate API key const regenerateApiKey = async (keyId: string) => {
+  if (!user) return;
+setError (null);
+setNewApiKey (null);
+try {
+  
+}getApiUrl () 
+}/regenerate`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+//Store the new key value setNewApiKey (result.key);
+return result;
+}catch (err) {
+  console.error ('Error regenerating API key:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+}
+};
+//Revoke API key const revokeApiKey = async (keyId: string) => {
+  if (!user) return;
+setError (null);
+try {
+  
+}getApiUrl () 
+}/revoke`, {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+};
+return result;
+}catch (err) {
+  console.error ('Error revoking API key:', err);
+setError (err instanceof Error ? err.message : 'An unknown error occurred');
+toast ({
+  
+}finally {
+  setLoading (false) 
+}
+};
+//Fetch API usage logs const fetchApiLogs = async (limit = 50, offset = 0) => {
+  if (!user) return;
+setError (null);
+try {
+  
+}getApiUrl () 
+}/logs?limit=$ {
+  limit 
+}&offset=$ {
+  offset 
+}`;
+{
+  method: 'GET', headers: {
+  'Authorization': `Bearer $ {
+  session.access token 
+}`;
+'Content-Type': 'application/json' 
+}
+});
+setLogs (result.logs || []);
+setTotalLogs (result.count || 0);
+}finally {
+  setLoading (false) 
+}
+};
+return {
+  keys;
+logs;
+totalLogs;
+loading;
+error;
+newApiKey;
+fetchApiKeys;
+createApiKey;
+regenerateApiKey;
+revokeApiKey;
+fetchApiLogs;
+clearNewApiKey: () => setNewApiKey (null) 
+}
+}
+  }
+}
+;
+  }
+}
+;
+  }
+}
+
+
+</string>`;
+pr-12325
+</string>
+  const [keys, setKeys] = useState<ApiKey[]>([]),;
+</ApiKey>
+  const [logs, setLogs] = useState<ApiLog[]>([]),;
+</ApiLog>
+  const [error, setError] = useState<string | null>(null),;
+</string>
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),;
+</string>'
+

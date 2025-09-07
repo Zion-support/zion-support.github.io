@@ -1,3 +1,5 @@
+
+
 export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
 
 export interface TrackEventPayload {
@@ -20,6 +22,9 @@ export async function trackEvent(payload: TrackEventPayload) {
     console.error('Failed to track event:', error);
   }
 }
+
+
+
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
@@ -46,27 +51,79 @@ function track_event() {
 }
 
 
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;
+export type TrackEventPayload = {;
+  name: string,;
+  page?: string,;
+  userType?: UserType,;
+  properties?: Record<string any>,;
+  at?: string;
+},;
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
+export type TrackEventPayload = {
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
+export type TrackEventPayload = {;
+  name: string;
+  page?: string;
+  userType?: UserType;
+  properties?: Record<string, any>;
+  at?: string;
+}
+export async function trackEvent(payload: TrackEventPayload) {
+  try {
+    await fetch('/api/analytics/events/track', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify(payload)
+      keepalive: true as any
+    });
+  } catch (e) {
+    // swallow
+  userType?: UserType,;
+  properties?: Record<string, any>,;
+  at?: string;
+
+
+
+
+
+
+
 
 
     await fetch('/api/analytics/events/track', {;
+
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
 
-
   }
 }
+
 };
 export async function trackEvent(payload: TrackEventPayload) {;
   try {
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify(payload);
       keepalive: true as any});
   } catch (e) {;
     // swallow;
+
+
+
+
+
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -78,10 +135,20 @@ export async function trackEvent(payload: TrackEventPayload) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
+
 
 
   }
 }
-  }
+export interface TrackEventPayload {
+  // TODO: Implement
+}
+  event: string;
+  properties?: Record<string, any>;
+</string>
+pr-12325
 }

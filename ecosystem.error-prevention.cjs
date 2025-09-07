@@ -1,0 +1,116 @@
+module.exports = {}
+<<<<<<< HEAD
+  "apps": [{}]""
+      name: 'ziontechgroup-web',
+      "script": 'npm',
+      "args": 'start',
+      "cwd": '/workspace',
+      "instances": 1,""
+      "autorestart": true,""
+      "watch": false,""
+      "max_memory_restart": '1G',
+      "env": {}""
+        NODE_ENV: 'production',
+        "PORT": 3000;"
+      },"
+      "env_development": {}""
+        NODE_ENV: 'development',
+      "log_file": './automation/logs/web.log',
+      "out_file": './automation/logs/web-out.log',
+      "error_file": './automation/logs/web-error.log',
+      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z
+    },
+    {}
+      "name": 'error-prevention-monitor',
+      "script": 'node',
+      "args": 'automation/error-prevention-monitor.js',
+      "cron_restart": '*/10 * * * *', // Restart every 10 minutes;
+        NODE_ENV: 'production
+      "log_file": './automation/logs/error-prevention.log',
+      "out_file": './automation/logs/error-prevention-out.log',
+      "error_file": './automation/logs/error-prevention-error.log
+      "name": 'merge-conflict-detector',
+      "args": 'automation/merge-conflict-detector.js',
+      "cron_restart": '*/15 * * * *', // Restart every 15 minutes;
+      "log_file": './automation/logs/merge-conflict-detector.log',
+      "out_file": './automation/logs/merge-conflict-detector-out.log',
+      "error_file": './automation/logs/merge-conflict-detector-error.log
+      "name": 'build-error-monitor',
+      "args": 'automation/build-error-monitor.js',
+      "cron_restart": '*/30 * * * *', // Restart every 30 minutes;
+      "log_file": './automation/logs/build-error-monitor.log',
+      "out_file": './automation/logs/build-error-monitor-out.log',
+      "error_file": './automation/logs/build-error-monitor-error.log
+=======
+  "apps": [{}]
+      name: ziontechgroup-web,
+      "script": npm,
+      "args": start,
+      "cwd": /workspace,
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": 1G,
+      "env": {}
+        NODE_ENV: production,
+        "PORT": 3000;"
+      },"
+      "env_development": {}
+        NODE_ENV: development,
+        "PORT": 3000;"
+      },"
+      "log_file": ./automation/logs/web.log,
+      "out_file": ./automation/logs/web-out.log,
+      "error_file": ./automation/logs/web-error.log,
+      "log_date_format": YYYY-MM-DD HH:mm:ss Z
+    },
+    {}
+      "name": error-prevention-monitor,
+      "script": node,
+      "args": automation/error-prevention-monitor.js,
+      "cwd": /workspace,
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": */10 * * * *, // Restart every 10 minutes;
+      "env": {}
+        NODE_ENV: production
+      },
+      "log_file": ./automation/logs/error-prevention.log,
+      "out_file": ./automation/logs/error-prevention-out.log,
+      "error_file": ./automation/logs/error-prevention-error.log
+    },
+    {}
+      "name": merge-conflict-detector,
+      "script": node,
+      "args": automation/merge-conflict-detector.js,
+      "cwd": /workspace,
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": */15 * * * *, // Restart every 15 minutes;
+      "env": {}
+        NODE_ENV: production
+      },
+      "log_file": ./automation/logs/merge-conflict-detector.log,
+      "out_file": ./automation/logs/merge-conflict-detector-out.log,
+      "error_file": ./automation/logs/merge-conflict-detector-error.log
+    },
+    {}
+      "name": build-error-monitor,
+      "script": node,
+      "args": automation/build-error-monitor.js,
+      "cwd": /workspace,
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "cron_restart": */30 * * * *, // Restart every 30 minutes;
+      "env": {}
+        NODE_ENV: production
+      },
+      "log_file": ./automation/logs/build-error-monitor.log,
+      "out_file": ./automation/logs/build-error-monitor-out.log,
+      "error_file": ./automation/logs/build-error-monitor-error.log
+>>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
+    };
+  ];

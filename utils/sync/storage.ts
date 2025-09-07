@@ -1,5 +1,12 @@
-}
 
+
+    );
+  }
+
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+
+}
 
 export function readState(): SyncState {;
   return { ...state };
@@ -75,8 +82,6 @@ export function filterEventsByScope(
   scope: InstanceConfig['scope']
 }
 
-
-
 ): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
@@ -127,6 +132,7 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -156,6 +162,27 @@ export interface SyncLog {
 }
 
 class SyncStorage {
+}
+
+
+export function readState(): SyncState {;
+  return { ...state };
+
+export function updateState(updates: Partial<SyncState>): void {;
+
+    filters?: Record<string, any>;
+</string>
+    mappings?: Record<string, string>;
+  metadata?: Record<string, any>;
+    credentials?: Record<string, string>;
+    options?: Record<string, any>;
+  fieldMappings: Record<string, string>;
+  transformations?: Array<{
+    field: string;,
+  type: 'format' | 'convert' | 'calculate' | 'filter';
+    config: Record<string, any>;
+  details?: Record<string, any>;
+pr-12325
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
   private mappings: Map<string, SyncMapping> = new Map();
@@ -216,6 +243,7 @@ class SyncStorage {
     );
   }
 }
+
 // Singleton instance
 export const syncStorage = new SyncStorage();
 
@@ -232,48 +260,20 @@ export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<
   return syncStorage.updateJob(id, updates);
 }
 
-export async function startJob(id: string): Promise<boolean> {
-  return syncStorage.startJob(id);
+export async function deleteJob(id: string): Promise<boolean> {
+  return syncStorage.deleteJob(id);
 }
 
-export async function completeJob(id: string, error?: string): Promise<boolean> {
-  return syncStorage.completeJob(id, error);
+export async function getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
+  return syncStorage.getJobsByStatus(status);
 }
 
-export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
-  return syncStorage.updateJobProgress(id, progress);
+export async function getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
+  return syncStorage.getJobsByType(type);
 }
 
-export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
-  return syncStorage.createConnection(connection);
-}
-
-export async function getConnection(id: string): Promise<SyncConnection | null> {
-  return syncStorage.getConnection(id);
-}
-
-export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
-  return syncStorage.updateConnection(id, updates);
-}
-
-export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
-  return syncStorage.createMapping(mapping);
-}
-
-export async function getMapping(id: string): Promise<SyncMapping | null> {
-  return syncStorage.getMapping(id);
-}
-
-export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
-  return syncStorage.updateMapping(id, updates);
-}
-
-export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
-  return syncStorage.createLog(log);
-}
-
-export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
-  return syncStorage.getLogsByJob(jobId, limit);
+export async function getAllJobs(): Promise<SyncJob[]> {
+  return syncStorage.getAllJobs();
 }
 
 // Utility functions
@@ -292,44 +292,8 @@ export function createSyncJob(
   };
 }
 
-export function createSyncConnection(
-  name: string,
-  type: SyncConnection['type'],
-  config: SyncConnection['config']
-): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    name,
-    type,
-    config,
-    isActive: true
-  };
-}
-
-export function createSyncMapping(
-  name: string,
-  sourceConnectionId: string,
-  destinationConnectionId: string,
-  fieldMappings: Record<string, string>
-): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
-  return {
-    name,
-    sourceConnectionId,
-    destinationConnectionId,
-    fieldMappings,
-    isActive: true
-  };
-}
-
 export function generateJobId(): string {
   return `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateConnectionId(): string {
-  return `conn_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateMappingId(): string {
-  return `mapping_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
 export function calculateProgress(processed: number, total: number): number {
@@ -368,6 +332,18 @@ const default_state: SyncState = {
 }
 
 }
+
+}
+}
+}
+  const entity_id = getEntityId (event);
+  const current_version = state.latestVersionByEntityId[entity_id] || 0;
+  const is_newer = event.version > current_version;
+;
+  // Check condition
+if ( {) {
+  $2
+}
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
   // Check condition
@@ -405,3 +381,133 @@ export function filterEventsByScope (
 if (return events) {
   $2
 }
+  // Check condition
+if ( {) {
+  $2
+}
+    return events.filter (
+      e => e.type === 'proposal' || e.type === 'dao_endorsement');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return events.filter (
+      e =>;
+        e.type === 'token_transfer' ||;
+        e.type === 'talent_mobility' ||;
+        e.type === 'leaderboard_entry');
+  }
+  return events;export function reset_state (): void {
+  state = { ...default_state }
+}
+import fs from "fs";
+import path from "path";
+import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
+const DATA_DIR = path.join(process.cwd(), "data", "multiverse");
+const STATE_PATH = path.join(DATA_DIR, "state.json");
+function ensureDataDir(): void {;
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+;
+function defaultConfig(): InstanceConfig {;
+  const instanceId = process.env.ZION_INSTANCE_ID || "zion-local";
+  return {;
+    instanceId;
+    optIn: false;
+    paused: false;
+    scope: "full";
+    peers: [];
+    secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)}
+}
+;
+function defaultState(): MultiverseState {;
+  return {;
+    config: defaultConfig();
+    lastSyncedAt: 0;
+    seenEventIds: {};
+    latestVersionByEntityId: {};
+    proposalMerkleById: {};
+    events: []}
+}
+;
+export function readState(): MultiverseState {;
+  ensureDataDir();
+  if (!fs.existsSync(STATE_PATH)) {;
+    const initial = defaultState();
+    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
+    return initial;
+  }
+  const raw = fs.readFileSync(STATE_PATH, "utf8");
+  try {;
+    const parsed = JSON.parse(raw) as MultiverseState;
+    // Backfill missing fields on upgrade;
+    parsed.config.secretConfigured = Boolean(;
+      process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0;
+    );
+    parsed.seenEventIds = parsed.seenEventIds || {};
+    parsed.latestVersionByEntityId = parsed.latestVersionByEntityId || {};
+    parsed.proposalMerkleById = parsed.proposalMerkleById || {};
+    parsed.events = parsed.events || [];
+    return parsed;
+  } catch {;
+    const initial = defaultState();
+    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
+    return initial;
+  }
+}
+;
+export function writeState(state: MultiverseState): void {;
+  ensureDataDir();
+  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
+}
+;
+export function upsertEvent(state: MultiverseState, event: SyncEvent): MultiverseState {;
+  if (state.seenEventIds[event.eventId]) return state;
+  const entityId = getEntityId(event);
+  const currentVersion = state.latestVersionByEntityId[entityId] || 0;
+  const isNewer = event.version > currentVersion;
+  if (event.type === "proposal" && event.merkleRoot && isNewer) {;
+    state.proposalMerkleById[entityId] = event.merkleRoot;
+  }
+;
+  if (isNewer) {;
+    state.latestVersionByEntityId[entityId] = event.version;
+  }
+;
+  state.events.push(event);
+  state.seenEventIds[event.eventId] = true;
+  state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
+  return state;
+}
+;
+export function getEntityId(event: SyncEvent): string {;
+  switch (event.type) {;
+    case "proposal": return (event.payload as any).proposalId;
+    case "token_transfer":;
+      return (event.payload as any).txId;
+    case "talent_mobility":;
+      return (event.payload as any).personId + ":" + (event.payload as any).startDate;
+    case "dao_endorsement":;
+      return (event.payload as any).resolutionId;
+    case "leaderboard_entry":;
+      return (event.payload as any).subjectId + ":" + (event.payload as any).period;
+    default:;
+      return (event.payload as any).id || event.eventId;
+  }
+}
+;
+export function filterEventsByScope(;
+  events: SyncEvent[];
+  scope: InstanceConfig["scope"];
+): SyncEvent[] {;
+  if (scope === "full") return events;
+  if (scope === "dao") {;
+    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement");
+  }
+  if (scope === "marketplace") {;
+    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry");
+  }
+  return events;
+}
+

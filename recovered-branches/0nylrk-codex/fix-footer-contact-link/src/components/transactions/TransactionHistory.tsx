@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -8,7 +10,157 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import React, { useState } from "react",
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Skeleton } from "@/components/ui/skeleton",
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";
+import { formatDistanceToNow } from "date-fns";
 import {formatDistanceToNow} from "date-fns";interface Transaction {;
+
+
+
+
+import React, { useState } from "react";""
+import {useQuery} from "@tanstack/react-query";""
+import {supabase} from "@/integrations/supabase/client";""
+import {useAuth} from "@/hooks/useAuth";""
+import {useToast} from "@/hooks/use-toast";""
+import {Button} from "@/components/ui/button";""
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";""
+import {Badge} from "@/components/ui/badge";""
+import {Skeleton} from "@/components/ui/skeleton";""
+import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";""
+import {formatDistanceToNow} from "date-fns";""
+import React, { useState } from "react",""
+import { useQuery } from "@tanstack/react-query",""
+import { supabase } from "@/integrations/supabase/client",""
+import { useAuth } from "@/hooks/useAuth",""
+import { useToast } from "@/hooks/use-toast",""
+import { Button } from "@/components/ui/button",""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Badge } from "@/components/ui/badge",""
+import { Skeleton } from "@/components/ui/skeleton",""
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react";""
+import { formatDistanceToNow } from "date-fns";"
+interface Transaction {
+  // TODO: Implement
+}
+  id: string;,
+  user_id: string;
+  provider_id: string;,
+  service_id: string;
+  amount: number;,
+  currency: string;"
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled,
+  in_escrow: boolean;
+  created_at: string;
+  completed_at?: string;
+  refunded_at?: string;
+  cancelled_at?: string;
+  provider?: {
+    display_name?: string;
+  service?: {
+    title?: string;
+export function TransactionHistory() {
+  const { user } = useAuth();
+  const { toast } = useToast();
+
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
+
+  const { data: transactions, isLoading, error, refetch } = useQuery({
+    queryKey: ['transactions', user?.id, filter];')
+    queryFn: async () => {
+      if (!user) return [];
+      // Build the query based on filters;
+      let query = supabase;
+        .from('transactions')
+        .select(`
+          *;)
+          provider: profiles!provider_id(display_name),
+  service:services(title)`;
+        `)`;
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
+      if (filter === 'pending') {
+        query = query.eq('statuspending')
+      } else if (filter === 'completed') {
+        query = query.eq('statuscompleted')
+      } else if (filter === 'escrow') {
+        query = query.eq('in_escrow', true)
+      query = query.order('created_at', { ascending: false })
+      const { data, error } = await query;
+      if (error) throw error;
+      return data as Transaction[]
+    enabled: !!user})
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
+    try {
+  // TODO: Implement
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {
+        body: { transactionId, action })
+      });
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",""
+import { formatDistanceToNow } from "date-fns","
+  // TODO: Implement
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,"
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
+  completed_at?: string,
+  refunded_at?: string,
+  cancelled_at?: string,
+  },
+
+export function TransactionHistory() {;
+      
+      // Build the query based on filters;
+        .from('transactions')`;
+          provider:profiles!provider_id(display_name),
+      
+      
+      query = query.order('created_at', { ascending: false }),
+      
+    };
+    enabled: !!user}),
+
+  // TODO: Implement
+      
+      if (error) throw error;
+import React, { useState } from "react",;
+import { useQuery } from "@tanstack/react-query",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
+import { formatDistanceToNow } from "date-fns",;
+
+import React, { useState } from "react",;""
+import { useQuery } from "@tanstack/react-query",;""
+import { supabase } from "@/integrations/supabase/client",;""
+import { useAuth } from "@/hooks/useAuth",;""
+import { useToast } from "@/hooks/use-toast",;""
+import { Button } from "@/components/ui/button",;""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Skeleton } from "@/components/ui/skeleton",;""
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;""
+import { formatDistanceToNow } from "date-fns",;"
+interface Transaction {;
+pr-12325
   id: string,;
   user_id: string,;
   provider_id: string,;
@@ -22,15 +174,75 @@ import {formatDistanceToNow} from "date-fns";interface Transaction {;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {;
+    display_name?: string;
+  };
+completed_at?: string,;
+  refunded_at?: string,;
+  cancelled_at?: string,;
+  provider?: {;
+    display_name?: string;
+  },;
+  service?: {;
     display_name?: string
 };  service?: {;
+  service?: {
     title?: string;
   }
 }
+
 export function TransactionHistory() {;
+;
+export function TransactionHistory() {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
+  const { data: transactions, isLoading, error, refetch } = useQuery({;
+    queryKey: ['transactions', user?.id, filter],;
+    queryFn: async () => {;
+      if (!user) return [],;
+      // Build the query based on filters;
+      let query = supabase;
+        .from('transactions');
+        .select(`;
+          *,;
+          provider:profiles!provider_id(display_name),;
+          service:services(title);
+        `);
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),;
+      if (filter === 'pending') {;
+        query = query.eq('statuspending');
+      } else if (filter === 'completed') {;
+        query = query.eq('statuscompleted');
+      } else if (filter === 'escrow') {;
+        query = query.eq('in_escrow', true);
+      }
+;
+      query = query.order('created_at', { ascending: false }),;
+      const { data, error } = await query,;
+      if (error) throw error,;
+      return data as Transaction[];
+    },;
+    enabled: !!user}),;
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {;
+    try {;
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {;
+        body: { transactionId, action }
+      }),
+      
+      if (error) throw error,
+
   const { user } = useAuth();
   const { toast } = useToast();
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
+  currency: string,;"
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled',;
+  in_escrow: boolean,;
+  created_at: string,;
+  provider?: {;
+  service?: {;
+
+
+pr-12325
 import React, { useState } from './react';
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
@@ -42,7 +254,101 @@ import { Badge } from '@/components / ui / badge';
 import { Skeleton } from '@/components / ui / skeleton';
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';
 import { formatDistanceToNow } from './date - fns';
+
 interface Transaction {
+  const { toast } = useToast();'
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');'
+  const { data: transactions, isLoading, error, refetch } = useQuery({'
+    queryKey: ['transactions', user?.id, filter];')
+    queryFn: async () => {
+      if (!user) return [];
+      
+      // Build the query based on filters;
+      let query = supabase;'
+        .from('transactions')'
+        .select(`
+          *;)
+          provider:profiles!provider_id(display_name),
+          service:services(title)
+        `)
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
+      '
+      if (filter === 'pending') {''
+        query = query.eq('statuspending')''
+      } else if (filter === 'completed') {''
+        query = query.eq('statuscompleted')''
+      } else if (filter === 'escrow') {''
+        query = query.eq('in_escrow', true)'
+      }
+      '
+      query = query.order('created_at', { ascending: false }),'
+      const { data, error } = await query;
+      
+      if (error) throw error;
+      return data as Transaction[]
+    };
+    enabled: !!user}),
+'
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {'
+    try {
+  // TODO: Implement
+}'
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {'
+        body: { transactionId, action })
+      });
+      
+      if (error) throw error;'
+import React, { useState } from "react",;""
+import { useQuery } from "@tanstack/react-query",;""
+import { supabase } from "@/integrations/supabase/client",;""
+import { useAuth } from "@/hooks/useAuth",;""
+import { useToast } from "@/hooks/use-toast",;""
+import { Button } from "@/components/ui/button",;""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Skeleton } from "@/components/ui/skeleton",;""
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;""
+import { formatDistanceToNow } from "date-fns",;"
+interface Transaction {;
+
+  id: string,;
+  user_id: string,;
+  provider_id: string,;
+  service_id: string,;
+  amount: number,;
+  currency: string,;"
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled',;'
+  in_escrow: boolean,;
+  created_at: string,;
+  completed_at?: string;
+  refunded_at?: string;
+  cancelled_at?: string;
+  provider?: {;}
+    display_name?: string}
+};  service?: {;}
+    title?: string;}
+  }
+}
+export function TransactionHistory() {;}
+  const { user } = useAuth();
+
+  const { toast } = useToast();'
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');''
+import React, { useState } from './react';''
+import { use_query } from '@tanstack / react - query';''
+import { supabase } from '@/integrations / supabase / client';''
+import { use_auth } from '@/hooks / use_auth';''
+import { use_toast } from '@/hooks / use - toast';''
+import { Button } from '@/components / ui / button';''
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';''
+import { Badge } from '@/components / ui / badge';''
+import { Skeleton } from '@/components / ui / skeleton';''
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';''
+import { formatDistanceToNow } from './date - fns';'
+
+interface Transaction {
+  // TODO: Implement
+}
   id: string,
   user_id: string,
   provider_id: string,
@@ -52,8 +358,9 @@ interface Transaction {
   status: 'pending' | 'completed' | 'refunded' | 'cancelled',
   in_escrow: boolean,
   created_at: string,
-import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+
+import React, { useState } from "react",;
+import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
@@ -63,35 +370,67 @@ import { Badge } from "@/components/ui/badge",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
+
+  currency: string,'
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled','
+  in_escrow: boolean,
+  created_at: string,
+'
+import React, { useState } from "react",;""
+import { useQuery } from "@tanstack/react-query",;""
+import { supabase } from "@/integrations/supabase/client",;""
+import { useAuth } from "@/hooks/useAuth",;""
+import { useToast } from "@/hooks/use-toast",;""
+import { Button } from "@/components/ui/button",;""
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Skeleton } from "@/components/ui/skeleton",;""
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;""
+import { formatDistanceToNow } from "date-fns",;"
+
 ;
 interface Transaction {;
+  // TODO: Implement
+  currency: string,
+
+;
+pr-12325
   id:string,;
   user_id:string,;
   provider_id:string,;
   service_id:string,;
   amount:number,;
   currency:string,;
+  currency:string,;"
+pr-12325
   status:'pending' | 'completed' | 'refunded' | 'cancelled',;
+  currency:string,;"
+  status:'pending' | 'completed' | 'refunded' | 'cancelled',;'
   in_escrow:boolean,;
   created_at:string,;
   completed_at?:string,;
   refunded_at?:string,;
   cancelled_at?:string,;
-  provider?:{;
-    display_name?:string;
+  provider?:{;}
+    display_name?:string;}
   },;
-  service?:{;
-    title?:string,;
+  service?:{;}
+    title?:string,;}
   },;
 }
 ;
-export function TransactionHistory() {;
+export function TransactionHistory() {;}
   const { user } = useAuth(),;
   const { toast } = useToast(),;
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
   ;
   const { data:transactions, isLoading, error, refetch } = useQuery({;
     queryKey:['transactions', user?.id, filter],;
+  const { toast } = useToast(),;'
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;'
+  ;
+  const { data:transactions, isLoading, error, refetch } = useQuery({;'
+    queryKey:['transactions', user?.id, filter],;')
     queryFn:async () => {;
       if (!user) return [],;
       ;
@@ -100,11 +439,31 @@ export function TransactionHistory() {;
         .from('transactions');
         .select(`;
           *,;
+      let query = supabase;'
+        .from('transactions');'
+        .select(`;
+          *,;)
           provider:profiles!provider_id(display_name),;
-          service:services(title);
-        `);
+          service:services(title);}
+        `);}
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),;
       ;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),;
+  const { data:transactions, isLoading, error, refetch } = useQuery({;
+    queryKey:['transactions', user?.id, filter],;')
+    queryFn:async () => {;
+      if (!user) return [],;
+      // Build the query based on filters;
+        .from('transactions');`;
+        .select(`;
+          *,;)
+          provider:profiles!provider_id(display_name),;
+          service:services(title);`;
+        `);`;
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),;
+pr-12325
       if (filter === 'pending') {;
         query = query.eq('statuspending'),;
       } else if (filter === 'completed') {;
@@ -114,6 +473,18 @@ export function TransactionHistory() {;
       }
       ;
       query = query.order('created_at', { ascending:false }),;
+
+      ;'
+      if (filter === 'pending') {;''
+        query = query.eq('statuspending'),;''
+      } else if (filter === 'completed') {;''
+        query = query.eq('statuscompleted'),;''
+      } else if (filter === 'escrow') {;''
+        query = query.eq('in_escrow', true),;'
+
+      }
+      ;'
+      query = query.order('created_at', { ascending:false }),;'
       ;
       const { data, error } = await query,;
       ;
@@ -126,6 +497,13 @@ export function TransactionHistory() {;
     try {;
       const { data, error } = await supabase.functions.invoke('manage-transaction', {;
         body:{ transactionId, action }
+
+;'
+  const handleManageTransaction = async (transactionId:string, action:'release' | 'refund' | 'cancel') => {;'
+    try {;'
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {;'
+        body:{ transactionId, action })
+
       }),;
       ;
       if (error) throw error,;
@@ -141,6 +519,18 @@ export function TransactionHistory() {;
         title:"Error",,
   description:error.message || "Failed to update transaction",;
         variant:"destructive"}),;
+
+      toast({;'
+        title:"Success",;")"
+        description:data.message || "Transaction updated successfully"}),;"
+      ;
+      refetch(),;
+    } catch (error) {;"
+      console.error("Error managing transaction:", error),;"
+      toast({;"
+        title:"Error",;""
+        description:error.message || "Failed to update transaction",;")"
+        variant:"destructive"}),;"
     }
   },;
   ;
@@ -342,20 +732,191 @@ const {
   data: transactions, isLoading, error, refetch 
 }= useQuery ({
   queryKey: ['transactions', user?.id, filter];
+    switch(status) {;"
+      case 'pending':;'
+        return inEscrow ? (;'
+          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">;"
+</Badge>"
+            <Clock className="w-3 h-3 mr-1" /> In Escrow;"
+</Clock>
+          </Badge>;"
+          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">;"
+</Badge>"
+            <Clock className="w-3 h-3 mr-1" /> Pending;"
+</Clock>
+          </Badge>;"
+          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">;"
+</Badge>"
+            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed;"
+</CheckCircle2>
+          </Badge>;"
+          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">;"
+</Badge>"
+            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded;"
+</RefreshCcw>
+          </Badge>;"
+          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">;"
+</Badge>"
+            <XCircle className="w-3 h-3 mr-1" /> Cancelled;"
+</XCircle>
+          </Badge>;"
+          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">;"
+</Badge>"
+            <AlertCircle className="w-3 h-3 mr-1" /> Unknown;"
+</AlertCircle>
+          </Badge>;"
+      <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;"
+</div>"
+        <div className="text-center text-zion-slate-light">;"
+</div>"
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;"
+</AlertCircle>"
+          <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>;""
+          <p className="mb-4">{error.message}</p>;")"
+          <Button onClick={() => refetch()} variant="outline">;"
+</Button>"
+            <RefreshCcw className="mr-2 h-4 w-4" />;"
+</RefreshCcw>
+          </Button>;
+        </div>;
+      </div>;"
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">;"
+</div>"
+      <div className="p-6">;"
+</div>"
+        <div className="flex items-center justify-between mb-6">;"
+</div>"
+          <h2 className="text-2xl font-bold text-white">Transaction History</h2>;""
+          <div className="flex space-x-2">;"
+</div>
+            <Button ;"
+              size="sm" ;""
+              variant={filter === 'all' ? 'default' :'outline'} ;''
+              onClick={() => setFilter('all')}'
+</Button>
+            </Button>;
+            <Button ;'
+              size="sm" ;""
+              variant={filter === 'pending' ? 'default' :'outline'} ;''
+              onClick={() => setFilter('pending')}'
+</Button>
+            </Button>;
+            <Button ;'
+              size="sm" ;""
+              variant={filter === 'completed' ? 'default' :'outline'} ;''
+              onClick={() => setFilter('completed')}'
+</Button>
+            </Button>;
+            <Button ;'
+              size="sm" ;""
+              variant={filter === 'escrow' ? 'default' :'outline'} ;''
+              onClick={() => setFilter('escrow')}'
+</Button>
+            </Button>;
+          </div>;
+        </div>;'
+            <div key={i} className="mb-4">;"
+</div>"
+              <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+</Card>"
+                <CardHeader className="pb-2">;"
+</CardHeader>"
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />;"
+</Skeleton>"
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />;"
+</Skeleton>
+                </CardHeader>;
+                <CardContent>;
+</CardContent>"
+                  <div className="flex justify-between mb-2">;"
+</div>"
+                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />;"
+</Skeleton>"
+                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />;"
+</Skeleton>
+                  </div>;"
+                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />;"
+</Skeleton>
+                </CardContent>;
+                <CardFooter>;
+</CardFooter>"
+                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />;"
+</Skeleton>
+                </CardFooter>;
+              </Card>;
+            </div>;"
+          <div className="space-y-4">;"
+</div>"
+                <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
+</Card>"
+                  <CardHeader className="pb-3">;"
+</CardHeader>"
+                    <div className="flex justify-between items-start">;"
+</div>
+                      <div>;
+</div>"
+                        <CardTitle className="text-white text-lg">;"
+</CardTitle>
+                        </CardTitle>;"
+                        <CardDescription className="text-zion-slate-light">;"
+</CardDescription>"
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;""
+                            <span>Payment from <span className="text-zion-cyan">Client</span></span>;"
+
+                        </CardDescription>;
+                      </div>;
+                    </div>;
+
+                  </CardHeader>;"
+                  <CardContent className="pb-3">;"
+</CardContent>"
+                    <div className="flex justify-between items-center mb-1">;"
+</div>"
+                      <span className="text-zion-slate-light">Amount:</span>;""
+                      <span className="text-white font-medium text-lg">;"
+</span>
+                      </span>;
+                    </div>;"
+                    <div className="flex justify-between items-center text-sm">;"
+</div>"
+                      <span className="text-zion-slate-light">Date:</span>;""
+                      <span className="text-zion-slate-light">;"
+</span>
+                      </span>;
+                    </div>;"
+                      <div className="flex justify-between items-center text-sm mt-1">;"
+</div>"
+                        <span className="text-zion-slate-light">;"
+</span>
+                        </span>;"
+                        <span className="text-zion-slate-light">;"
+</span>"
+const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'> ('all');'
+const {
+  // TODO: Implement
+}
+  data: transactions, isLoading, error, refetch;
+}= useQuery ({'
+  queryKey: ['transactions', user?.id, filter];')
+
 queryFn: async () => {
-  if (!user) return [];
-return data as Transaction[] 
+  if (!user) return [];}
+return data as Transaction[] }
 };
 enabled: !!user 
+enabled: !!user;
 });
 if (error) throw error;
 refetch () 
+
 }catch (error) {
+  
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
     queryFn: async () => {
       if (!user) return [],
 import React, {_useState} from "react";
+
 interface Transaction {_id: string;
   user_id: string;
   provider_id: string;
@@ -363,22 +924,48 @@ interface Transaction {_id: string;
   amount: number;
   currency: string;
   status: 'pending' | 'completed' | 'refunded' | 'cancelled';
+  const { data: transactions, isLoading, error, refetch } = useQuery({'
+    queryKey: ['transactions', user?.id, filter],')
+    queryFn: async () => {
+      if (!user) return [],'
+import React, {_useState} from "react";"
+interface Transaction {_id: string;,
+
+  user_id: string;
+  provider_id: string;,
+  service_id: string;
+  amount: number;,
+  currency: string;"
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled';',
   in_escrow: boolean;
   created_at: string;
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {
+
+      
+
       toast({
-        title: "title",
-    description: data.message |"Transaction updated successfully"})
+        title: "Success"
+        description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
+      console.error("Error managing transaction:", error);
+      console.error("Error managing transaction:", error),
+console.error("Error managing transaction:", error),
       console.error("Error managing transaction:", error),      console.error("Error managing transaction:", error),
       toast({
         title: "Error"
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
+    }
+
+  },
+
+}
+  },
+  const getStatusBadge = (status: string, inEscrow: boolean) => {
     }  const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -390,18 +977,27 @@ interface Transaction {_id: string;
           <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">
             <Clock className="w-3 h-3 mr-1" /> Pending
           </Badge>
+        );
+        ),
+),
         ),        ),
       case 'completed':
         return (
           <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
             <CheckCircle2 className="w-3 h-3 mr-1" /> Completed
           </Badge>
+        );
+        ),
+),
         ),        ),
       case 'refunded':
         return (
           <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
             <RefreshCcw className="w-3 h-3 mr-1" /> Refunded
           </Badge>
+        );
+        ),
+),
         ),        ),
       case 'cancelled':
         return (
@@ -415,6 +1011,497 @@ interface Transaction {_id: string;
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown
           </Badge>
         )
+    }
+
+  },
+
+}
+  },
+  const formatCurrency = (amount: number, currency: string) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency'
+      currency: currency.toUpperCase()
+    }).format(amount)
+
+  },
+
+  if (error) {
+const { data: transactions, isLoading, error, refetch } = useQuery({;
+    queryKey: ['transactions', user?.id, filter];
+    queryFn: async () => {;
+      if (!user) return [];
+
+      // Build the query based on filters;
+      let query = supabase;
+        .from('transactions');
+        .select(`;
+          *;
+          provider:profiles!provider_id(display_name),;
+          service:services(title);
+        `);
+        .or(`user_id && user_id.eq.${user && user.id},provider_id && provider_id.eq.${user && user.id}`);
+
+      if (filter === 'pending') {;
+        query = query && query.eq('statuspending');
+      } else if (filter === 'completed') {;
+        query = query && query.eq('statuscompleted');
+      } else if (filter === 'escrow') {;
+        query = query && query.eq('in_escrow', true);
+      }
+
+      query = query && query.order('created_at', { ascending: false }),;
+
+      const { data, error } = await query;
+
+      if (error) throw error;
+      return data as Transaction[];
+    };
+    enabled: !!user}),;
+
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {;
+    try {;
+      const { data, error } = await supabase && supabase.functions.invoke('manage-transaction', {;
+        body: { transactionId, action }
+      });
+    return (
+      <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
+        <div className="text-center text-zion-slate-light">;
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
+          <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>;
+          <p className="mb-4">{error && error.message}</p>;
+          <Button onClick={() => refetch()} variant="outline">;
+            <RefreshCcw className="mr-2 h-4 w-4" />;
+            Try Again;
+          </Button>;
+        </div>;
+      </div>;
+    );
+  }
+  return (
+
+display_name?: string;};
+  service?: {_title?: string;};
+}
+
+export function TransactionHistory() {_const { user} = useAuth();
+  const {_toast} = useToast();
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
+  
+  const {_data: transactions, _isLoading, _error, _refetch} = useQuery(_{_queryKey: ['transactions', _user?.id, _filter], _queryFn: async () => {
+      if (!user) return [];
+      
+      // Build the query based on filters
+      let _query = supabase
+        .from('transactions')
+        .select(`
+          *, _provider:profiles!provider_id(display_name), _service:services(title)
+        `)
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
+      
+      if (filter === 'pending') {
+        query = query.eq('statuspending')
+      } else if (filter === 'completed') {
+        query = query.eq('statuscompleted')
+      } else if (filter === 'escrow') {
+        query = query.eq('in_escrow', true)
+      }
+      
+      query = query.order('created_at', { ascending: false }),
+      
+      const { data, error } = await query,      
+      if (error) throw error,
+      return data as Transaction[]
+    },
+    enabled: !!user}),
+
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
+    try {
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {
+        body: { transactionId, action }
+      }),      
+      if (error) throw error,
+      
+      toast({
+        title: "Success",
+        description: data.message || "Transaction updated successfully"}),      
+      refetch()
+    } catch (error) {
+      console.error("Error managing transaction:", error),
+      toast({
+        title: "Error",
+        description: error.message || "Failed to update transaction",
+        variant: "destructive"})      toast({_title: "Success", _description: data.message || "Transaction updated successfully"});
+      
+      refetch();
+    } catch (error) {_toast({
+        title: "Error", _description: error.message || "Failed to update transaction", _variant: "destructive"});
+    }
+  },
+  
+  const _getStatusBadge = (_status: string, _inEscrow: boolean) => {_switch(status) {
+      case 'pending':
+        return inEscrow ? (
+          <Badge variant=&quot;outline&quot; className=&quot;bg-yellow-500/20 text-yellow-500 border-yellow-500&quot;>
+            <Clock className=&quot;w-3 h-3 mr-1&quot; /> In Escrow
+          </Badge>
+        ) : (
+          <Badge variant=&quot;outline&quot; className=&quot;bg-blue-500/20 text-blue-500 border-blue-500&quot;>
+            <Clock className=&quot;w-3 h-3 mr-1&quot; /> Pending
+          </Badge>
+        ),
+      case 'completed':
+        return (
+          <Badge variant=&quot;outline&quot; className=&quot;bg-green-500/20 text-green-500 border-green-500&quot;>
+            <CheckCircle2 className=&quot;w-3 h-3 mr-1&quot; /> Completed
+          </Badge>
+        ),
+      case 'refunded':
+        return (
+          <Badge variant=&quot;outline&quot; className=&quot;bg-purple-500/20 text-purple-500 border-purple-500&quot;>
+            <RefreshCcw className=&quot;w-3 h-3 mr-1&quot; /> Refunded
+          </Badge>
+        ),
+      case 'cancelled':
+        return (
+          <Badge variant=&quot;outline&quot; className=&quot;bg-red-500/20 text-red-500 border-red-500&quot;>
+            <XCircle className=&quot;w-3 h-3 mr-1&quot; /> Cancelled
+          </Badge>
+        ),
+      default:
+        return (
+          <Badge variant=&quot;outline&quot; className=&quot;bg-gray-500/20 text-gray-500 border-gray-500&quot;>
+            <AlertCircle className=&quot;w-3 h-3 mr-1&quot; /> Unknown
+          </Badge>
+        )
+    }
+  },
+  
+  const formatCurrency = (amount: number, currency: string) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: currency.toUpperCase()
+    }).format(amount)
+  },
+
+  if (error) {
+    return (
+      <div className=&quot;bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light&quot;>
+        <div className=&quot;text-center text-zion-slate-light&quot;>
+          <AlertCircle className=&quot;mx-auto h-12 w-12 text-red-500 mb-4&quot; />
+          <h3 className=&quot;font-bold text-xl text-white mb-2&quot;>Failed to load transactions</h3>
+          <p className=&quot;mb-4&quot;>{error.message}</p>
+          <Button onClick={() => refetch()} variant=&quot;outline&quot;>
+            <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />            Try Again
+  }
+  },
+
+  if (error) {
+    return (
+      <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
+        <div className="text-center text-zion-slate-light">
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
+          <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>
+          <p className="mb-4">{error.message}</p>
+          <Button onClick={() => refetch()} variant="outline">
+            <RefreshCcw className="mr-2 h-4 w-4" />
+            Try Again
+          </Button>
+        </div>
+      </div>
+    )
+  }
+  return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-white">Transaction History</h2>
+          <div className="flex space-x-2">
+            <Button
+              size="sm"
+              variant={filter === 'all' ? 'default' : 'outline'}
+              onClick={() => setFilter('all')}
+              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              All
+            </Button>
+            <Button
+              size="sm"
+              variant={filter === 'pending' ? 'default' : 'outline'}
+              onClick={() => setFilter('pending')}
+              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              Pending
+            </Button>
+            <Button
+              size="sm"
+              variant={filter === 'completed' ? 'default' : 'outline'}
+              onClick={() => setFilter('completed')}
+              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              Completed
+            </Button>
+            <Button
+              size="sm"
+              variant={filter === 'escrow' ? 'default' : 'outline'}
+              onClick={() => setFilter('escrow')}
+              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >
+              Escrow
+            </Button>
+          </div>
+        </div>
+        {isLoading ? (
+          Array(3).fill(0).map((_, i) => (
+            <div key={i} className="mb-4">
+              <Card className="bg-zion-blue-dark border-zion-blue-light">
+                <CardHeader className="pb-2">
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />
+                </CardHeader>
+                <CardContent>
+                  <div className="flex justify-between mb-2">
+                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />
+                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />
+                  </div>
+                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />
+                </CardContent>
+                <CardFooter>
+                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />
+                </CardFooter>
+              </Card>
+            </div>
+          ))
+        ) : transactions && transactions.length > 0 ? (
+          <div className="space-y-4">
+            {transactions.map((transaction) => {
+
+              const isClient = user?.id === transaction.user_id;
+              const isPending = transaction.status === 'pending';
+              const isInEscrow = transaction.in_escrow;
+              const canRelease = !isClient && isPending && isInEscrow;
+              const canCancel = isClient && isPending;
+              const canRefund = isClient && transaction.status === 'completed';
+              const counterpartyName = isClient
+                ? transaction.provider?.display_name |'Service Provider'
+                : 'Client';
+              const isClient = user?.id === transaction.user_id,
+              const isPending = transaction.status === 'pending',
+              const isInEscrow = transaction.in_escrow,
+              const canRelease = !isClient && isPending && isInEscrow,
+              const canCancel = isClient && isPending,
+              const canRefund = isClient && transaction.status === 'completed',
+              
+              const counterpartyName = isClient 
+                ? transaction.provider?.display_name || 'Service Provider' 
+                : 'Client',
+
+              return (
+                <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <CardTitle className="text-white text-lg">
+                          {transaction.service?.title |'Service Payment'}
+                        </CardTitle>
+                        <CardDescription className="text-zion-slate-light">
+                          {isClient ? (
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
+                          ) : (
+                            <span>Payment from <span className="text-zion-cyan">Client</span></span>
+
+      }),;
+      if (error) throw error,;
+      toast({;
+        title: "Success",;
+        description: data.message || "Transaction updated successfully"}),;
+      refetch();
+    } catch (error) {;
+      console.error("Error managing transaction:", error),;
+      toast({;
+        title: "Error",;
+        description: error.message || "Failed to update transaction",;
+        variant: "destructive"});
+    }
+  },;
+  const getStatusBadge = (status: string, inEscrow: boolean) => {;
+    switch(status) {;
+      case 'pending':;
+        return inEscrow ? (;
+          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">;
+            <Clock className="w-3 h-3 mr-1" /> In Escrow;
+          </Badge>;
+        ) : (;
+          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">;
+            <Clock className="w-3 h-3 mr-1" /> Pending;
+          </Badge>;
+        ),;
+      case 'completed':;
+        return (;
+          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">;
+            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed;
+          </Badge>;
+        ),;
+      case 'refunded':;
+        return (;
+          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">;
+            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded;
+          </Badge>;
+        ),;
+      case 'cancelled':;
+        return (;
+          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">;
+            <XCircle className="w-3 h-3 mr-1" /> Cancelled;
+          </Badge>;
+        ),;
+      default:;
+        return (;
+          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">;
+            <AlertCircle className="w-3 h-3 mr-1" /> Unknown;
+          </Badge>;
+        );
+    }
+  },;
+  const formatCurrency = (amount: number, currency: string) => {;
+    return new Intl.NumberFormat('en-US', {;
+      style: 'currency',;
+      currency: currency.toUpperCase();
+    }).format(amount);
+  },;
+  if (error) {;
+    return (;
+      <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
+        <div className="text-center text-zion-slate-light">;
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
+          <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>;
+          <p className="mb-4">{error.message}</p>;
+          <Button onClick={() => refetch()} variant="outline">;
+            <RefreshCcw className="mr-2 h-4 w-4" />;
+            Try Again;
+          </Button>;
+        </div>;
+      </div>;
+    );
+  }
+;
+  return (;
+
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">;
+      <div className="p-6">;
+        <div className="flex items-center justify-between mb-6">;
+          <h2 className="text-2xl font-bold text-white">Transaction History</h2>;
+
+          <div className="flex space-x-2">;
+            <Button
+              size="sm" 
+              variant={filter === 'all' ? 'default' : 'outline'} 
+<div className="flex space-x-2">;
+            <Button;
+              size="sm";
+              variant={filter === 'all' ? 'default' : 'outline'} ;
+              onClick={() => setFilter('all')}
+              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >;
+              All;
+            </Button>;
+            <Button
+              size="sm" 
+              variant={filter === 'pending' ? 'default' : 'outline'} 
+<Button;
+              size="sm";
+              variant={filter === 'pending' ? 'default' : 'outline'} ;
+              onClick={() => setFilter('pending')}
+              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >;
+              Pending;
+            </Button>;
+            <Button
+              size="sm" 
+              variant={filter === 'completed' ? 'default' : 'outline'} 
+<Button;
+              size="sm";
+              variant={filter === 'completed' ? 'default' : 'outline'} ;
+              onClick={() => setFilter('completed')}
+              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >;
+              Completed;
+            </Button>;
+            <Button
+              size="sm" 
+              variant={filter === 'escrow' ? 'default' : 'outline'} 
+<Button;
+              size="sm";
+              variant={filter === 'escrow' ? 'default' : 'outline'} ;
+              onClick={() => setFilter('escrow')}
+              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
+            >;
+              Escrow;
+            </Button>;
+          </div>;
+        </div>;
+
+        {isLoading ? (;
+          Array(3).fill(0).map((_, i) => (;
+            <div key={i} className="mb-4">;
+              <Card className="bg-zion-blue-dark border-zion-blue-light">;
+                <CardHeader className="pb-2">;
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />;
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />;
+                </CardHeader>;
+                <CardContent>;
+                  <div className="flex justify-between mb-2">;
+                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />;
+                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />;
+                  </div>;
+                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />;
+                </CardContent>;
+                <CardFooter>;
+                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />;
+                </CardFooter>;
+              </Card>;
+            </div>;
+          ));
+        ) : transactions && transactions.length > 0 ? (;
+          <div className="space-y-4">;
+            {transactions && transactions.map((transaction) => {;
+              const isClient = user?.id === transaction && transaction.user_id;
+              const isPending = transaction && transaction.status === 'pending';
+              const isInEscrow = transaction && transaction.in_escrow;
+              const canRelease = !isClient && isPending && isInEscrow;
+              const canCancel = isClient && isPending;
+              const canRefund = isClient && transaction && transaction.status === 'completed';
+
+              const counterpartyName = isClient ;
+                ? transaction && transaction.provider?.display_name || 'Service Provider' ;
+                : 'Client';
+
+              return (
+                <Card key={transaction && transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+{transactions.map((transaction) => {;
+              const isClient = user?.id === transaction.user_id,;
+              const isPending = transaction.status === 'pending',;
+              const isInEscrow = transaction.in_escrow,;
+              const canRelease = !isClient && isPending && isInEscrow,;
+              const canCancel = isClient && isPending,;
+              const canRefund = isClient && transaction.status === 'completed';
+              const counterpartyName = isClient;
+                ? transaction.provider?.display_name || 'Service Provider';
+                : 'Client';
+              return (;
+                <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+                  <CardHeader className="pb-3">;
+                    <div className="flex justify-between items-start">;
+                      <div>;
+                        <CardTitle className="text-white text-lg">;
+                          {transaction && transaction.service?.title || 'Service Payment'}
+{transaction.service?.title || 'Service Payment'}
+                        </CardTitle>;
+                        <CardDescription className="text-zion-slate-light">;
+                          {isClient ? (;
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
+                          ) : (;
+                            <span>Payment from <span className="text-zion-cyan">Client</span></span>;
+
+                          )}
     }                          )}
                         </CardDescription>
                       </div>
@@ -434,6 +1521,15 @@ interface Transaction {_id: string;
                         {new Date(transaction.created_at).toLocaleDateString()}
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
+                    </div>
+
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+
+{(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+
+                    {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+                      <div className="flex justify-between items-center text-sm mt-1">
                     </div>                      <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -444,22 +1540,182 @@ interface Transaction {_id: string;
                             transaction.completed_at |
                             transaction.refunded_at |
                             transaction.cancelled_at!
+</CardDescription>;
+                      </div>;
+                      {getStatusBadge(transaction && transaction.status, transaction && transaction.in_escrow)}
+                    </div>;
+                  </CardHeader>;
+                  <CardContent className="pb-3">;
+                    <div className="flex justify-between items-center mb-1">;
+                      <span className="text-zion-slate-light">Amount:</span>;
+                      <span className="text-white font-medium text-lg">;
+                        {formatCurrency(transaction && transaction.amount, transaction && transaction.currency)}
+                      </span>;
+                    </div>;
+                    <div className="flex justify-between items-center text-sm">;
+                      <span className="text-zion-slate-light">Date:</span>;
+                      <span className="text-zion-slate-light">;
+                        {new Date(transaction && transaction.created_at).toLocaleDateString()} ;
+                        ({formatDistanceToNow(new Date(transaction && transaction.created_at), { addSuffix: true })});
+                      </span>;
+                    </div>;
+                    {(transaction && transaction.completed_at || transaction && transaction.refunded_at || transaction && transaction.cancelled_at) && (;
+                      <div className="flex justify-between items-center text-sm mt-1">;
+                        <span className="text-zion-slate-light">;
+                          {transaction && transaction.completed_at ? 'Completed:' : ;
+                           transaction && transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
+                        </span>;
+                        <span className="text-zion-slate-light">;
+                          {new Date(;
+                            transaction && transaction.completed_at || ;
+                            transaction && transaction.refunded_at || ;
+                            transaction && transaction.cancelled_at!;
+    <div className=&quot;bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden&quot;>
+      <div className=&quot;p-6&quot;>
+        <div className=&quot;flex items-center justify-between mb-6&quot;>
+          <h2 className=&quot;text-2xl font-bold text-white&quot;>Transaction History</h2>          
+          <div className=&quot;flex space-x-2&quot;>
+            <Button 
+              size=&quot;sm&quot; 
+              variant={filter === 'all' ? 'default' : 'outline'} 
+              onClick={() => setFilter('all')}
+              className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              All
+            </Button>
+            <Button 
+              size=&quot;sm&quot; 
+              variant={filter === 'pending' ? 'default' : 'outline'} 
+              onClick={() => setFilter('pending')}
+              className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              Pending
+            </Button>
+            <Button 
+              size=&quot;sm&quot; 
+              variant={filter === 'completed' ? 'default' : 'outline'} 
+              onClick={() => setFilter('completed')}
+              className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              Completed
+            </Button>
+            <Button 
+              size=&quot;sm&quot; 
+              variant={filter === 'escrow' ? 'default' : 'outline'} 
+              onClick={() => setFilter('escrow')}
+              className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}            >
+              Escrow
+            </Button>
+          </div>
+        </div>
+        
+        {isLoading ? (
+          Array(3).fill(0).map((_, i) => (
+            <div key={i} className=&quot;mb-4&quot;>
+              <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
+                <CardHeader className=&quot;pb-2&quot;>
+                  <Skeleton className=&quot;h-6 w-3/4 bg-zion-blue-light&quot; />
+                  <Skeleton className=&quot;h-4 w-1/4 bg-zion-blue-light mt-2&quot; />                </CardHeader>
+                <CardContent>
+                  <div className=&quot;flex justify-between mb-2&quot;>
+                    <Skeleton className=&quot;h-5 w-1/3 bg-zion-blue-light&quot; />
+                    <Skeleton className=&quot;h-5 w-1/4 bg-zion-blue-light&quot; />
+                  </div>
+                  <Skeleton className=&quot;h-4 w-2/3 bg-zion-blue-light&quot; />
+                </CardContent>
+                <CardFooter>
+                  <Skeleton className=&quot;h-9 w-28 bg-zion-blue-light rounded-md&quot; />
+                </CardFooter>
+              </Card>
+            </div>
+          ))
+        ) : transactions && transactions.length > 0 ? (
+          <div className=&quot;space-y-4&quot;>
+            {transactions.map((transaction) => {
+              const isClient = user?.id === transaction.user_id,
+              const isPending = transaction.status === 'pending',
+              const isInEscrow = transaction.in_escrow,
+              const canRelease = !isClient && isPending && isInEscrow,
+              const canCancel = isClient && isPending,
+              const canRefund = isClient && transaction.status === 'completed',              
+              const _counterpartyName = isClient 
+                ? transaction.provider?.display_name || 'Service Provider' 
+                : 'Client',
+
+              return (
+                <Card key={transaction.id} className=&quot;bg-zion-blue-dark border-zion-blue-light overflow-hidden&quot;>
+                  <CardHeader className=&quot;pb-3&quot;>
+                    <div className=&quot;flex justify-between items-start&quot;>
+                      <div>
+                        <CardTitle className=&quot;text-white text-lg&quot;>
+                          {transaction.service?.title || 'Service Payment'}
+                        </CardTitle>
+                        <CardDescription className=&quot;text-zion-slate-light&quot;>
+                          {isClient ? (
+                            <span>Payment to <span className=&quot;text-zion-purple&quot;>{counterpartyName}</span></span>                          ) : (
+                            <span>Payment from <span className=&quot;text-zion-cyan&quot;>Client</span></span>
+                          )}
+                        </CardDescription>
+                      </div>
+                      
+                      {_getStatusBadge(transaction.status, _transaction.in_escrow)}
+                    </div>
+                  </CardHeader>
+                  <CardContent className=&quot;pb-3&quot;>
+                    <div className=&quot;flex justify-between items-center mb-1&quot;>
+                      <span className=&quot;text-zion-slate-light&quot;>Amount:</span>
+                      <span className=&quot;text-white font-medium text-lg&quot;>
+                        {formatCurrency(transaction.amount, transaction.currency)}
+                      </span>
+                    </div>
+                    
+                    <div className=&quot;flex justify-between items-center text-sm&quot;>
+                      <span className=&quot;text-zion-slate-light&quot;>Date:</span>
+                      <span className=&quot;text-zion-slate-light&quot;>
+                        {new Date(transaction.created_at).toLocaleDateString()} 
+                        ({formatDistanceToNow(new Date(transaction.created_at) { addSuffix: true })})
+                      </span>
+                    </div>
+                    
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+                      <div className=&quot;flex justify-between items-center text-sm mt-1&quot;>
+                        <span className=&quot;text-zion-slate-light&quot;>
+                          {transaction.completed_at ? 'Completed:' : 
+                           transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
+                        </span>
+                        <span className=&quot;text-zion-slate-light&quot;>
+                          {new Date(                            transaction.completed_at || 
+                            transaction.refunded_at || 
+                            transaction.cancelled_at!
                           ).toLocaleDateString()}
                         </span>;
                       </div>;
                     )}
+
                   </CardContent>;
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;
                     {canRelease && (;
                       <Button
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'release')}
+</CardContent>;
+                  <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;
+                    {canRelease && (;
+                      <Button ;
+                        onClick={() => handleManageTransaction(transaction.id, 'release')}
+                        size="sm";
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'release')}                        size="sm";
                         className="bg-green-600 hover:bg-green-700 text-white";
                       >;
                         <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds;
                       </Button>;
                     )}
+
                     {canRefund && (;
                       <Button
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'refund')}
+</Button>;                    )}
+                    ;
+                    {canRefund && (;
+                      <Button ;
+                        onClick={() => handleManageTransaction(transaction.id, 'refund')}
+                        size="sm";
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'refund')}                        size="sm";
                         variant="outline";
                         className="text-zion-slate-light border-zion-blue-light";
@@ -467,20 +1723,41 @@ interface Transaction {_id: string;
                         <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund;
                       </Button>;
                     )}
+
                     {canCancel && (;
                       <Button
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'cancel')}
+</Button>;                    )}
+                    ;
+                    {canCancel && (;
+                      <Button ;
+                        onClick={() => handleManageTransaction(transaction.id, 'cancel')}
+                        size="sm";
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'cancel')}                        size="sm";
                         variant="outline";
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10";
                       >;
                         <XCircle className="mr-1 h-4 w-4" /> Cancel;
                       </Button>;
+
                     )}
                   </CardFooter>;
                 </Card>;
               );
             })}
+
           </div>;
+        ) : (;
+)}
+                  </CardFooter>;
+                </Card>;
+          </div>;
+        ) : (;
+              ),;
+            })}
+          </div>;
+        ) :(;
+          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;
         ) : (;          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;
             <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">;
               <ArrowRight className="h-8 w-8 text-zion-slate-light" />;
@@ -490,6 +1767,20 @@ interface Transaction {_id: string;
             <p className="text-zion-slate-light max-w-md mx-auto">;
               {filter !== 'all' ;
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
+
+                : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
+            </p>;
+          </div>;
+        )}
+
+:"You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
+            </p>;
+          </div>;
+        )}
+      </div>;
+    </div>;
+;
+;
       // Check condition
 if (throw error) {
   $2
@@ -727,7 +2018,527 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
+}
+                          ).toLocaleDateString()}
+                        </span>
+                      </div>
+                    )}
+                  </CardContent>
+                  <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">
+                    {canRelease && (
+                      <Button
+                        onClick={() => handleManageTransaction(transaction.id, 'release')}
+                        size="sm"
+                        className="bg-green-600 hover:bg-green-700 text-white"
+                      >
+                        <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds
+                      </Button>
+                    )}
+                    {canRefund && (
+                      <Button
+                        onClick={() => handleManageTransaction(transaction.id, 'refund')}
+                        size="sm"
+                        variant="outline"
+                        className="text-zion-slate-light border-zion-blue-light"
+                      >
+                        <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund
+                      </Button>
+                    )}
+                    {canCancel && (
+                      <Button
+                        onClick={() => handleManageTransaction(transaction.id, 'cancel')}
+                        size="sm"
+                        variant="outline"
+                        className="text-red-400 border-red-400/30 hover:bg-red-400/10"
+                      >
+                        <XCircle className="mr-1 h-4 w-4" /> Cancel
+                      </Button>
+                    )}
+                  </CardFooter>
+                </Card>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">
+            <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">
+              <ArrowRight className="h-8 w-8 text-zion-slate-light" />
+              <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" />
+            </div>
+            <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>
+            <p className="text-zion-slate-light max-w-md mx-auto">
+              {filter !== 'all'
+                ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`
+                : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+      </div>;
+    </div>;
+  );
+}
+;
+
+;
 }      </div>;
     </div>;
   );
 }
+      query = query.order('created_at', { ascending:false }),;
+      const { data, error } = await query,;
+      if (error) throw error,;
+      return data as Transaction[],;
+    enabled:!!user}),;
+  const handleManageTransaction = async (transactionId:string, action:'release' | 'refund' | 'cancel') => {;
+    try {;
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {;
+        body:{ transactionId, action })
+      }),;
+      toast({;
+        title:"Success",;")"
+        description:data.message || "Transaction updated successfully"}),;"
+      refetch(),;
+    } catch (error) {;"
+      console.error("Error managing transaction:", error),;"
+      toast({;"
+        title:"Error",;""
+        description:error.message || "Failed to update transaction",;")"
+        variant:"destructive"}),;"
+  const getStatusBadge = (status:string, inEscrow:boolean) => {;
+    switch(status) {;"
+      case 'pending':;
+        return inEscrow ? (;
+          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">;"
+"
+            <Clock className="w-3 h-3 mr-1" /> In Escrow;"
+
+          ;"
+          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">;"
+            <Clock className="w-3 h-3 mr-1" /> Pending;"
+
+          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">;"
+            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed;"
+</CheckCircle2>
+          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">;"
+            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded;"
+
+          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">;"
+            <XCircle className="w-3 h-3 mr-1" /> Cancelled;"
+
+          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">;"
+            <AlertCircle className="w-3 h-3 mr-1" /> Unknown;"
+
+      <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;"
+</div>"
+        <div className="text-center text-zion-slate-light">;"
+          <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;"
+          <h3 className="font-bold text-xl text-white mb-2">Failed to load transactions</h3>;""
+          <p className="mb-4">{error.message}</p>;")"
+          <Button onClick={() => refetch()} variant="outline">;"
+            <RefreshCcw className="mr-2 h-4 w-4" />;"
+
+        </div>;
+      </div>;"
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">;"
+      <div className="p-6">;"
+        <div className="flex items-center justify-between mb-6">;"
+          <h2 className="text-2xl font-bold text-white">Transaction History</h2>;""
+          <div className="flex space-x-2">;"
+</div>
+            <Button ;"
+              size="sm" ;""
+              variant={filter === 'all' ? 'default' :'outline'} ;
+              onClick={() => setFilter('all')}
+
+            <Button ;
+              variant={filter === 'pending' ? 'default' :'outline'} ;
+              onClick={() => setFilter('pending')}
+
+              variant={filter === 'completed' ? 'default' :'outline'} ;
+              onClick={() => setFilter('completed')}
+
+              variant={filter === 'escrow' ? 'default' :'outline'} ;
+              onClick={() => setFilter('escrow')}
+
+            <div key={i} className="mb-4">;"
+              <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+                <CardHeader className="pb-2">;"
+                  <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />;"
+                  <Skeleton className="h-4 w-1/4 bg-zion-blue-light mt-2" />;"
+
+                <CardContent>;
+                  <div className="flex justify-between mb-2">;"
+                    <Skeleton className="h-5 w-1/3 bg-zion-blue-light" />;"
+                    <Skeleton className="h-5 w-1/4 bg-zion-blue-light" />;"
+
+                  <Skeleton className="h-4 w-2/3 bg-zion-blue-light" />;"
+
+                <CardFooter>;
+                  <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" />;"
+
+          <div className="space-y-4">;"
+                <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
+                  <CardHeader className="pb-3">;"
+                    <div className="flex justify-between items-start">;"
+                      <div>;
+                        <CardTitle className="text-white text-lg">;"
+
+                        <CardDescription className="text-zion-slate-light">;"
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;""
+                            <span>Payment from <span className="text-zion-cyan">Client</span></span>;"
+                  <CardContent className="pb-3">;"
+                    <div className="flex justify-between items-center mb-1">;"
+                      <span className="text-zion-slate-light">Amount:</span>;""
+                      <span className="text-white font-medium text-lg">;"
+</span>
+                      </span>;
+                    <div className="flex justify-between items-center text-sm">;"
+                      <span className="text-zion-slate-light">Date:</span>;""
+                      <span className="text-zion-slate-light">;"
+                      <div className="flex justify-between items-center text-sm mt-1">;"
+                        </span>;"
+</span>"
+const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'> ('all');
+const {
+  // TODO: Implement
+  data: transactions, isLoading, error, refetch;
+}= useQuery ({
+enabled: !!user;
+refetch () 
+}catch (error) {
+  
+    queryKey: ['transactions', user?.id, filter],')
+      if (!user) return [],
+import React, {_useState} from "react";"
+interface Transaction {_id: string;,
+  status: 'pending' | 'completed' | 'refunded' | 'cancelled';',
+      
+
+      
+      toast({
+        title: "Success"",)"
+  description: data.message |"Transaction updated successfully"})"
+      refetch()
+    } catch (error) {"
+      console.error("Error managing transaction:", error);""
+      console.error("Error managing transaction:", error),"
+      toast({"
+        title: "Error"","
+  description: error.message |"Failed to update transaction"")"
+        variant: "destructive"})"
+
+
+  
+
+
+  const getStatusBadge = (status: string, inEscrow: boolean) => {
+    switch(status) {"
+      case 'pending':
+        return inEscrow ? (
+          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">"
+
+          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">"
+
+          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">"
+          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">"
+
+          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">"
+
+          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">"
+
+          <p className="mb-4">{error && error.message}</p>;")"
+
+                <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">"
+                  <CardHeader className="pb-3">"
+                    <div className="flex justify-between items-start">"
+                      <div>
+                        <CardTitle className="text-white text-lg">"
+
+                        <CardDescription className="text-zion-slate-light">"
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>""
+                            <span>Payment from <span className="text-zion-cyan">Client</span></span>""
+
+
+
+
+
+          <p className="mb-4">{error.message}</p>;""
+
+            <Button;"
+              size="sm"""
+              variant={filter === 'all' ? 'default' : 'outline'}
+
+            <Button;
+              variant={filter === 'pending' ? 'default' : 'outline'}
+
+              variant={filter === 'completed' ? 'default' : 'outline'}
+
+              variant={filter === 'escrow' ? 'default' : 'outline'}
+
+
+
+
+
+                <Card key={transaction && transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
+
+                        
+</Card>"
+                  <CardHeader className="pb-3">;"
+</CardHeader>"
+                    <div className="flex justify-between items-start">;"
+</div>
+                      <div>;
+</div>"
+                        <CardTitle className="text-white text-lg">;"
+</CardTitle>
+                        </CardTitle>;"
+                        <CardDescription className="text-zion-slate-light">;"
+</CardDescription>"
+                            <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;""
+                            <span>Payment from <span className="text-zion-cyan">Client</span></span>;"
+
+                        </CardDescription>
+                      </div>
+                    </div>
+
+                  </CardHeader>"
+                  <CardContent className="pb-3">"
+                    <div className="flex justify-between items-center mb-1">"
+                      <span className="text-zion-slate-light">Amount:</span>""
+                      <span className="text-white font-medium text-lg">"
+                    <div className="flex justify-between items-center text-sm">"
+                      <span className="text-zion-slate-light">Date:</span>""
+                      <span className="text-zion-slate-light">"
+                      <div className="flex justify-between items-center text-sm mt-1">"
+    <div className=&quot;bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden&quot;>
+      <div className=&quot;p-6&quot;>
+        <div className=&quot;flex items-center justify-between mb-6&quot;>
+          <h2 className=&quot;text-2xl font-bold text-white&quot;>Transaction History</h2>          
+          <div className=&quot;flex space-x-2&quot;>
+              size=&quot;sm&quot; "
+
+            
+              size=&quot;sm&quot; 
+
+            
+
+            
+
+            
+            <div key={i} className=&quot;mb-4&quot;>
+              <Card className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
+
+                <CardHeader className=&quot;pb-2&quot;>
+
+                  <Skeleton className=&quot;h-6 w-3/4 bg-zion-blue-light&quot; />
+
+                  <Skeleton className=&quot;h-4 w-1/4 bg-zion-blue-light mt-2&quot; />                
+
+                <CardContent>
+
+                  <div className=&quot;flex justify-between mb-2&quot;>
+                    <Skeleton className=&quot;h-5 w-1/3 bg-zion-blue-light&quot; />
+
+                    <Skeleton className=&quot;h-5 w-1/4 bg-zion-blue-light&quot; />
+
+                  <Skeleton className=&quot;h-4 w-2/3 bg-zion-blue-light&quot; />
+
+                
+                <CardFooter>
+
+                  <Skeleton className=&quot;h-9 w-28 bg-zion-blue-light rounded-md&quot; />
+
+                
+              
+          <div className=&quot;space-y-4&quot;>
+                <Card key={transaction.id} className=&quot;bg-zion-blue-dark border-zion-blue-light overflow-hidden&quot;>
+
+                  <CardHeader className=&quot;pb-3&quot;>
+
+                    <div className=&quot;flex justify-between items-start&quot;>
+                        <CardTitle className=&quot;text-white text-lg&quot;>
+
+                        
+                        <CardDescription className=&quot;text-zion-slate-light&quot;>
+
+                            <span>Payment to <span className=&quot;text-zion-purple&quot;>{counterpartyName}</span></span>                          ) : (
+                            <span>Payment from <span className=&quot;text-zion-cyan&quot;>Client</span></span>
+                        
+                  
+                  <CardContent className=&quot;pb-3&quot;>
+
+                    <div className=&quot;flex justify-between items-center mb-1&quot;>
+                      <span className=&quot;text-zion-slate-light&quot;>Amount:</span>
+                      <span className=&quot;text-white font-medium text-lg&quot;>
+                    
+                    <div className=&quot;flex justify-between items-center text-sm&quot;>
+                      <span className=&quot;text-zion-slate-light&quot;>Date:</span>
+                      <span className=&quot;text-zion-slate-light&quot;>
+                      <div className=&quot;flex justify-between items-center text-sm mt-1&quot;>
+                  <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;"
+
+                      <Button;)"
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'release')}
+
+                        <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds;"
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'refund')}
+
+                        <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund;"
+
+                        onClick={() => handleManageTransaction(transaction && transaction.id, 'cancel')}
+
+                        <XCircle className="mr-1 h-4 w-4" /> Cancel;"
+
+          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;"
+            <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">;"
+              <ArrowRight className="h-8 w-8 text-zion-slate-light" />;"
+              <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" />;"
+
+            <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>;""
+            <p className="text-zion-slate-light max-w-md mx-auto">;"
+</p>
+            </p>;
+          <Badge variant="outline" className="bg - yellow - 500 / 20 text - yellow - 500 border - yellow - 500">;"
+            <Clock className="w - 3 h - 3 mr - 1" /> In Escrow;"
+
+          ) : ("
+          <Badge variant="outline" className="bg - blue - 500 / 20 text - blue - 500 border - blue - 500">;"
+            <Clock className="w - 3 h - 3 mr - 1" /> Pending;"
+)
+          );"
+          <Badge variant="outline" className="bg - green - 500 / 20 text - green - 500 border - green - 500">;"
+            <CheckCircle2 className="w - 3 h - 3 mr - 1" /> Completed;"
+          <Badge variant="outline" className="bg - purple - 500 / 20 text - purple - 500 border - purple - 500">;"
+            <RefreshCcw className="w - 3 h - 3 mr - 1" /> Refunded;"
+
+          <Badge variant="outline" className="bg - red - 500 / 20 text - red - 500 border - red - 500">;"
+            <XCircle className="w - 3 h - 3 mr - 1" /> Cancelled;"
+
+          ),"
+          <Badge variant="outline" className="bg - gray - 500 / 20 text - gray - 500 border - gray - 500">;"
+            <AlertCircle className="w - 3 h - 3 mr - 1" /> Unknown;"
+
+      <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light">;"
+        <div className="text - center text - zion - slate - light">;"
+          <AlertCircle className="mx - auto h - 12 w - 12 text - red - 500 mb - 4" />;"
+          <h3 className="font - bold text - xl text - white mb - 2">Failed to load transactions</h3>;""
+          <p className="mb - 4">{error.message}</p>;""
+          <Button on_click={() => refetch ()} variant="outline">;"
+            <RefreshCcw className="mr - 2 h - 4 w - 4" />;"
+
+      </div>);"
+    <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light overflow - hidden">;"
+      <div className="p - 6">;"
+        <div className="flex items - center justify - between mb - 6">;"
+          <h2 className="text - 2xl font - bold text - white">Transaction History</h2>;""
+          <div className="flex space - x-2">;"
+              size="sm";""
+              on_click={() => set_filter ('all')}
+
+              on_click={() => set_filter ('pending')}
+
+              on_click={() => set_filter ('completed')}
+
+              on_click={() => set_filter ('escrow')}
+
+            <div key={i} className="mb - 4">;"
+              <Card className="bg - zion - blue - dark border - zion - blue - light">;"
+                <CardHeader className="pb - 2">;"
+                  <Skeleton className="h - 6 w - 3/4 bg - zion - blue - light" />;"
+                  <Skeleton className="h - 4 w - 1/4 bg - zion - blue - light mt - 2" />;"
+
+                  <div className="flex justify - between mb - 2">;"
+                    <Skeleton className="h - 5 w - 1/3 bg - zion - blue - light" />;"
+                    <Skeleton className="h - 5 w - 1/4 bg - zion - blue - light" />;"
+
+                  <Skeleton className="h - 4 w - 2/3 bg - zion - blue - light" />;"
+
+                  <Skeleton className="h - 9 w - 28 bg - zion - blue - light rounded - md" />;"
+
+            </div>))) : transactions && transactions.length > 0 ? ("
+          <div className="space - y-4">;"
+                <Card key={transaction.id} className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;"
+                  <CardHeader className="pb - 3">;"
+                    <div className="flex justify - between items - start">;"
+                        <CardTitle className="text - white text - lg">;"
+
+                        <CardDescription className="text - zion - slate - light">;"
+)"
+                            <span > Payment to <span className="text - zion - purple">{counterparty_name}</span></span>) : (")"
+                            <span > Payment from <span className="text - zion - cyan">Client</span></span>)}"
+
+                        </CardDescription>;
+                      </div>;
+                    </div>;
+
+                  </CardHeader>;"
+                  <CardContent className="pb - 3">;"
+                    <div className="flex justify - between items - center mb - 1">;"
+                      <span className="text - zion - slate - light">Amount:</span>;""
+                      <span className="text - white font - medium text - lg">;"
+                    <div className="flex justify - between items - center text - sm">;"
+                      <span className="text - zion - slate - light">Date:</span>;""
+                      <span className="text - zion - slate - light">;"
+                      <div className="flex justify - between items - center text - sm mt - 1">;"
+                      </div>)}
+                  <CardFooter className="flex justify - end gap - 2 bg - zion - blue / 20 pt - 3">;"
+
+                        on_click={() => handleManageTransaction (transaction.id, 'release')}
+
+                        <CheckCircle2 className="mr - 1 h - 4 w - 4" /> Release Funds;"
+                      )}
+                        on_click={() => handleManageTransaction (transaction.id, 'refund')}
+
+                        <RefreshCcw className="mr - 1 h - 4 w - 4" /> Request Refund;"
+
+                        on_click={() => handleManageTransaction (transaction.id, 'cancel')}
+
+                        <XCircle className="mr - 1 h - 4 w - 4" /> Cancel;"
+
+                );
+          </div>) : ("
+          <div className="text - center py - 12 border border - dashed border - zion - blue - light rounded - lg">;"
+            <div className="mx - auto w - 16 h - 16 bg - zion - blue - light / 30 rounded - full flex items - center justify - center mb - 4">;"
+              <ArrowRight className="h - 8 w - 8 text - zion - slate - light" />;"
+              <ArrowLeft className="h - 8 w - 8 text - zion - slate - light -ml - 4" />;"
+
+            <h3 className="text - xl font - medium text - white mb - 2">No transactions found</h3>;""
+            <p className="text - zion - slate - light max - w-md mx - auto">;"
+            </p>;)
+    </div>);
+                  <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">"
+
+                        onClick={() => handleManageTransaction(transaction.id, 'release')}
+
+                      
+                        onClick={() => handleManageTransaction(transaction.id, 'refund')}
+
+
+                      
+                        onClick={() => handleManageTransaction(transaction.id, 'cancel')}
+
+
+                      
+                  
+                
+          <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">"
+            <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">"
+              <ArrowRight className="h-8 w-8 text-zion-slate-light" />"
+              <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" />"
+
+            <h3 className="text-xl font-medium text-white mb-2">No transactions found</h3>""
+            <p className="text-zion-slate-light max-w-md mx-auto">"
+    </div>;"`;
+pr-12325
+</p>
+            </p>
+          </div>
+      </div>
+    </div>
+      </div>;
+    </div>;"
+

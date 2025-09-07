@@ -10,6 +10,16 @@ export interface Peer {;
   }
 }
 export interface InstanceConfig {instanceId: string;
+export type SyncScope = "full" | "dao" | "marketplace";
+export interface Peer {;
+  id: string;
+  baseUrl: string, // e.g., https: //zion-latam.example.org;
+  scope?: SyncScope;
+  paused?: boolean;
+}
+;
+export interface InstanceConfig {;
+  instanceId: string;
   optIn: boolean;
   paused: boolean;
   scope: SyncScope;
@@ -30,8 +40,6 @@ export interface InstanceConfig {
   scope: SyncScope,
   peers: Peer[],
   secret_configured: boolean;
-
-
 
 }
 }
@@ -55,6 +63,15 @@ export interface ProposalVoteEntry {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  | "leaderboard_entry";
+export interface BaseEventPayload {;
+  id: string;
+}
+;
+export interface ProposalVoteEntry {;
+  voterId: string;
+  weight: number;
+  choice: string;
 }
 ;
 export interface ProposalPayload extends BaseEventPayload {;
@@ -70,21 +87,40 @@ export interface ProposalPayload extends BaseEventPayload {;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 
+  | "leaderboard_entry",;
+export interface BaseEventPayload {;
+  id: string;
 
   token: string;
   amount: number;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface TalentMobilityPayload extends BaseEventPayload {;
+  personId: string;
+
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+
+  | "leaderboard_entry",
+export interface BaseEventPayload {
+  id: string;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
@@ -98,6 +134,9 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+  decision: "endorse" | "reject";
+  timestamp: number;
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
@@ -110,6 +149,9 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+  rank?: number;
+  period?: string, // e.g., 2025-Q3;
 }
 ;
 export type SyncEventPayload =;
@@ -117,10 +159,38 @@ export type SyncEventPayload =;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
+
+  | LeaderboardEntryPayload,;
+export interface SyncEvent {;
+
+  | LeaderboardEntryPayload;
+export interface SyncEvent {;
+  eventId: string;
+  type: SyncEventType;
+  payload: SyncEventPayload;
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
+
+  | LeaderboardEntryPayload,
+export interface SyncEvent {
+  event_id: string,
+  type: SyncEventType,
+  payload: SyncEventPayload,
+  originInstanceId: string,
+  version: number,
+  timestamp: number,
+  merkle_root?: string, // required for proposal events;
+}
+export interface MultiverseState {
+  config: InstanceConfig,
+  lastSyncedAt: number,
+  seenEventIds: Record < string true>,
+  latestVersionByEntityId: Record < string number>,
+  proposalMerkleById: Record < string string>;
+
+  events: SyncEvent[];
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -144,3 +214,16 @@ export interface MultiverseState {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+}
+}
+;
+export interface MultiverseState {;
+  config: InstanceConfig;
+  lastSyncedAt: number;
+  seenEventIds: Record<string true>;
+  latestVersionByEntityId: Record<string, number>;
+  proposalMerkleById: Record<string, string>;
+  events: SyncEvent[];
+}
+

@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+# Sitemaps
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://zion.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

@@ -1,30 +1,34 @@
-import "@testing-library/jest-dom";
-// Mock Next.js router
-jest.mock("next/router", () => ({
+import "@testing-library/jest-dom";"
+// Mock Next.js router;"
+jest.mock("next/router", () => ({")
   useRouter() {
     return {
-      route: "/",
-      pathname: "/",
-      query: {},
-      asPath: "/",
+  // TODO: Implement
+}"
+      route: "/",""
+      pathname: "/","
+      query: {},"
+      asPath: "/","
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
       back: jest.fn(),
       prefetch: jest.fn().mockResolvedValue(undefined),
       beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
+      events: {,
+  on: jest.fn(),
         off: jest.fn(),
     };
   },
 }));
-// Mock Next.js Image component
-jest.mock("next/image", () => {
+
+// Mock Next.js Image component;"
+jest.mock("next/image", () => {"
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />
 };
 });
+
 // Mock Next.js Link component
 jest.mock("next/link", () => {
   return function MockedLink({ children, href, ...props }) {
@@ -35,6 +39,7 @@ jest.mock("next/link", () => {
     )
 };
 });
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -42,13 +47,14 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated;
+    addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
 });
+
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -56,9 +62,16 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
+
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
+    return <img src={src} alt={alt} {...props} />;
+</img>
+      <a href={href} {...props}>
+</a>
+      </a>"
+pr-12325

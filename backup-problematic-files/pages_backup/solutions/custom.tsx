@@ -4,16 +4,17 @@ import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
-import Layout from "../../components/Layout";";
-
+import Layout from "../../components/Layout";";"
 const Custom: React.FC<CustomProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
+"
+    <div className={className || }>
+</div>
       <h1>Custom</h1>
       <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
+
+      <p>This component is under development.</p>
+pr-12325

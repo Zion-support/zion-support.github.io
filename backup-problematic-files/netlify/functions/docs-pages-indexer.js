@@ -1,16 +1,18 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
+
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
-    stdio: "stdio",
-    encoding: 'utf8'
+    stdio: 'pipe,
+  encoding: 'utf8)
   });
   return {
-    status: res.status |0;
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
+  // TODO: Implement
+}
+    status: res.status |0;,
+  stdout: res.stdout |
+    stderr: res.stderr |
 exports.config = { schedule: '0 */4 * * *' }
 exports.handler = async () => {
   const logs = [];
@@ -18,15 +20,15 @@ exports.handler = async () => {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
+    if (stderr) logs.push(stderr);`;
     logs.push(`exit=${status}`);
+
     return status;
-  }
   step('docs:index', () => runNode('automation/docs-pages-indexer.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return {
-    statusCode: 200
-    headers: { 'content-type': 'text/plain' }
+  // TODO: Implement
+    statusCode: 200;,
+  headers: { 'content-type': 'text/plain' }
     body: logs.join('\n')
-  }
 };function runNode(relPath, args = []) {
+`;

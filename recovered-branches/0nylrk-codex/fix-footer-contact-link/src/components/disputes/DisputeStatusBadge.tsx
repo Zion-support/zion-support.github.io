@@ -1,3 +1,51 @@
+import {Badge} from "@/components/ui/badge";
+import {ShieldAlert} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge",
+import { ShieldAlert } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { ShieldAlert } from "lucide-react",
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+}
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+import { Badge } from '@/components / ui / badge';
+import { ShieldAlert } from './lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
+
+import { Badge } from "@/components/ui/badge",
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
+}
+
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+
+  let message = "This item has an open dispute";
+  switch (status) {
+    case 'under_review':
+
+import {Badge} from "@/components/ui/badge";
+import {ShieldAlert} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+
+interface DisputeStatusBadgeProps {;
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+
+export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+
+  switch (status) {;
+    case 'under_review':;
+
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+export /**
+
+
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
@@ -19,6 +67,16 @@ function DisputeStatusBadge() {
       variant = "outline";
       message = "This dispute has been closed";
       break;
+
+let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
+  let message = "This item has an open dispute",
+  
+  switch (status) {
+    case 'under_review':
+      variant = "secondary",
       message = "This dispute is under review by our team",
       break,
     case 'resolved':
@@ -26,11 +84,41 @@ function DisputeStatusBadge() {
       message = "This dispute has been resolved",
       break,
     case 'closed':
+
       variant = "outline",
       message = "This dispute has been closed",
       break,
-import { Badge } from "@/components/ui/badge";
-import { ShieldAlert } from "lucide-react";
+
+variant = "outline";
+      message = "This dispute has been closed";
+      break;
+
+      variant = "outline",
+      message = "This dispute has been closed",
+      break,
+      variant = "outline",
+      message = "This dispute has been closed",
+      break,
+    default:
+      break
+  }
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Badge variant={variant} className="flex items-center gap-1">
+          <ShieldAlert className="h-3 w-3" />
+          <span>Under Dispute</span>
+        </Badge>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{message}</p>
+      </TooltipContent>
+    </Tooltip>
+  )
+
+}
+import { Badge } from "@/components/ui/badge",;
+import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
 interface DisputeStatusBadgeProps {;
   status: 'open' | 'under_review' | 'resolved' | 'closed';
@@ -52,8 +140,160 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       variant = "outline",;
       message = "This dispute has been closed";
       break;
+
+    default:;
+      break;
+  }
+
+  return (
+import { Badge } from "@/components/ui/badge",;
+import { ShieldAlert } from "lucide-react",;
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
+;
+interface DisputeStatusBadgeProps {;
+  status:'open' | 'under_review' | 'resolved' | 'closed';
+}
+;
+export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
+  let variant:"default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute",;
+  ;
+  switch (status) {;
+    case 'under_review':;
+      variant = "secondary",;
+      message = "This dispute is under review by our team",;
+      break,;
+    case 'resolved':;
+      variant = "outline",;
+      message = "This dispute has been resolved",;
+      break,;
+    case 'closed':;
+      variant = "outline",;
+      message = "This dispute has been closed",;
+      break,;
+    default:;
+      break;
+  }
+  ;
+  return (;
+    default:;
+      break;
+  }
+;
+  return (;
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
+default:;
+  // TODO: Implement
+}
+  status: 'open' | 'under_review' | 'resolved' | 'closed
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+import { Badge } from '@/components / ui / badge';
+import { ShieldAlert } from './lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
+import { Badge } from "@/components/ui/badge","
+  // TODO: Implement
+}"
+
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;""
+  let message = "This item has an open dispute";"
+  switch (status) {"
+    case 'under_review':
+import {Badge} from "@/components/ui/badge";""
+import {ShieldAlert} from "lucide-react";""
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";"
+interface DisputeStatusBadgeProps {;"
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+
+export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
+  switch (status) {;"
+    case 'under_review':;
+export /**
+ * DisputeStatusBadge - Function description;
+ */
+function DisputeStatusBadge() {"
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive","
+      variant = "secondary";""
+      message = "This dispute is under review by our team";"
+      break;"
+    case 'resolved':;
+      variant = "outline";""
+      message = "This dispute has been resolved";"
+    case 'closed':;
+      message = "This dispute has been closed";"
+      break;
+"
+      variant = "secondary",""
+      message = "This dispute is under review by our team","
+      break,"
+    case 'resolved':
+      variant = "outline",""
+      message = "This dispute has been resolved","
+    case 'closed':
+      message = "This dispute has been closed","
+      break,
+
+
+    default:
+  return (
+    <Tooltip>
+
+      <TooltipTrigger asChild>
+        <Badge variant={variant} className="flex items-center gap-1">"
+          <ShieldAlert className="h-3 w-3" />"
+
+          <span>Under Dispute</span>
+        
+      
+      <TooltipContent>
+
+        <p>{message}</p>
+      
+    
+    <Tooltip>;
+      <TooltipTrigger as_child>;
+        <Badge variant={variant} className="flex items - center gap - 1">;
+          <ShieldAlert className="h - 3 w - 3" />;
+          <span > Under Dispute</span>;
+        </Badge>;
+      </TooltipTrigger>;
+
+      <TooltipTrigger asChild>;
+        <Badge variant={variant} className="flex items-center gap-1">;"
+          <ShieldAlert className="h-3 w-3" />;"
+
+          <span>Under Dispute</span>;
+        ;
+      <TooltipContent>;
+
+        <p>{message}</p>;
+      </TooltipContent>;
+
+}
+</Tooltip>);
+}
+}
+      ;)
+    );
+}</p>  ) 
+    );"
+pr-12325
+      </TooltipContent>;)
+    </Tooltip>);
+    </Tooltip>);
+    </Tooltip>);
+    </Tooltip>;
+}</p> </TooltipContent> </Tooltip>) 
+    </Tooltip>;
+  );
+}
+;
+}
+;
+    </Tooltip>);
+}
+    </Tooltip>);"
+

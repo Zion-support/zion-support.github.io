@@ -1,11 +1,13 @@
-import React from 'react';
-
+import React from 'react';'
 const ForumCategories = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>ForumCategories</h1>
       <p>This component is under development.</p>
     </div>
   )
-}
-}
+};
+
+    </div>)'
+pr-12325

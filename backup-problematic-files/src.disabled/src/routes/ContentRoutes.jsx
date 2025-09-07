@@ -1,5 +1,26 @@
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+
+const React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };""
+
+import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+
+import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+
+import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+import React from \"react\"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+const React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };""
+import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+
+class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -10,7 +31,7 @@ class ErrorBoundary extends React.Component {
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   
   render() {
@@ -26,5 +47,6 @@ import React from \"react\"; )
 const React from "react"; )
 }; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };""
 import _React from "react"; )
-}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }
-}
+}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
+      return <div>Something went wrong.</div>;'
+pr-12325

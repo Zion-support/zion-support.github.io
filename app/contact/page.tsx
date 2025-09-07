@@ -1,85 +1,196 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+=======
+export const metadata = {
+  title: "Contact | Zion Tech Group",
+  description:
+    "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
+};
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 export default function ContactPage() {
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Get In Touch
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Contact Us
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business with our AI solutions and enterprise services?
-            Let's discuss your project and create something amazing together.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Let's
+            discuss how we can help you achieve your goals.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */
-}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+
             <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <span className="text-blue-600 mr-3">📧</span>
-                    <span className="text-gray-700">contact@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-blue-600 mr-3">📞</span>
-                    <span className="text-gray-700">+1 (302) 464-0950</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-blue-600 mr-3">🌐</span>
-                    <a href="https://ziontechgroup.com" className="text-gray-700 hover:text-blue-600">
-                      ziontechgroup.com
-                    </a>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📞</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Phone
+                    </h3>
+                    <p className="text-gray-300 text-lg">+1-302-464-0950</p>
+                    <p className="text-gray-400 text-sm">
+                      Available 9 AM - 6 PM EST
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• 1000+ successful projects delivered</li>
-                  <li>• 24/7 technical support</li>
-                  <li>• Enterprise-grade security</li>
-                  <li>• Custom AI solutions</li>
-                  <li>• Rapid development cycles</li>
-                </ul>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">✉️</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Email
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      <a
+                        href="mailto:kleber@ziontechgroup.com"
+                        className="hover:text-cyan-400 transition-colors"
+                      >
+                        kleber@ziontechgroup.com
+                      </a>
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      We respond within 24 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📍</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Office
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      364 E Main St STE 1008
+                      <br />
+                      Middletown, DE 19709
+                    </p>
+                    <p className="text-gray-400 text-sm">By appointment only</p>
+                  </div>
+                </div>
               </div>
             </div>
-            
+          </div>
 
-            {/* CTA Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>
-              <p className="text-gray-600 mb-8">
-                Contact us today for a free consultation and discover how our AI solutions
-                can transform your business.
-              </p>
-              <div className="space-y-4">
-                <a
-                  href="mailto:contact@ziontechgroup.com"
-                  className="block w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Send us a Message
+            </h2>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Your first name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Your last name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="service"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-services">AI Services</option>
+                    <option value="micro-saas">Micro SaaS Development</option>
+                    <option value="it-services">IT Services</option>
+                    <option value="consulting">General Consulting</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
+                    placeholder="Tell us about your project or requirements..."
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-cyan-400 text-gray-900 font-semibold py-3 px-6 rounded-lg hover:bg-cyan-300 transition-colors focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  Send us an Email
-                  <ArrowRightIcon className="h-5 w-5 ml-2 inline" />
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="block w-full border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-                >
-                  Call Now
-                </a>
-              </div>
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>

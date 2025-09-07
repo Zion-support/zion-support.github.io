@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -5,23 +7,144 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Search } from "lucide-react",
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-interface Conversation {
-  id: string;
-    name: string  avatar?: string;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string;
   lastMessage: string,;
   timestamp: string,;
   unreadCount: number,;
   isTyping?: boolean;
 }
+
 interface MobileConversationListProps {;
   conversations: Conversation[],;
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
+
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from "lucide-react",
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string
+  avatar?: string;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+}
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+interface Conversation {
+  id: string,
+  name: string,
+  avatar?: string,
+  lastMessage: string,
+  timestamp: string,
+  unreadCount: number,
+  isTyping?: boolean
+}
+  name: string  avatar?: string;
+
+
+
+
+import React from "react";""
+import {Card} from "@/components/ui/card";""
+import {Badge} from "@/components/ui/badge";""
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
+import {Search} from "lucide-react";""
+import {Input} from "@/components/ui/input";""
+import {cn} from "@/lib/utils";"
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string;
+pr-12325
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+
+export function MobileConversationList({
+export function MobileConversationList(): any ({;
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
+export function MobileConversationList(): any ({;
+  conversations;
+  activeConversation;
+  onSelectConversation;
+}: MobileConversationListProps) {;
+  return (
+
+export function MobileConversationList({
+  conversations,
+  activeConversation,
+  onSelectConversation
+}: MobileConversationListProps) {
+  onSelectConversation;
+}: MobileConversationListProps) {;
+  return (
+          <div
+            key={conversation && conversation.id}
+            className={cn(
+
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+;
+interface Conversation {;
+  id:string,;
+  name:string,;
+  avatar?:string,;
+  lastMessage:string,;
+  timestamp:string,;
+  unreadCount:number,;
+  isTyping?:boolean;}
+;
+interface MobileConversationListProps {;
+  conversations:Conversation[],;
+  activeConversation?:string,;
+  onSelectConversation:(id:string) => void;
+}
+;
+export function MobileConversationList({;
+  conversations,;
+  activeConversation,;
+  onSelectConversation;
+} MobileConversationListProps) {;
+  return (;
+    <div className="space-y-4">;
   activeConversation?: string;    <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
@@ -32,6 +155,14 @@ interface MobileConversationListProps {;
           />;
         </div>;
       </div>;
+
+<Input;
+            placeholder="Search messages...";
+            className="pl-9";
+          />;
+        </div>;
+      </div>;
+      ;
       <div className="px-4 pb-4 space-y-2">;
         <div className="flex space-x-2">;
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
@@ -40,12 +171,56 @@ interface MobileConversationListProps {;
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
+
       <div className="space-y-2 pb-24">;
         {conversations && conversations.map((conversation) => (;
+
           <div
             key={conversation && conversation.id}
             className={cn(
+
               "px-4",
+
+"px-4";
+
+              "px-4",
+              activeConversation === conversation.id && "bg-primary/5"
+            )}
+            onClick={() => onSelectConversation(conversation.id)}
+          >
+            <div className="flex items-center gap-3 py-3 cursor-pointer">
+              <Avatar>
+                <AvatarImage src={conversation.avatar} />
+                <AvatarFallback>
+                  {conversation.name.charAt(0).toUpperCase()}
+                </AvatarFallback>
+              </Avatar>
+              <div className="flex-1 min-w-0">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-medium truncate">{conversation.name}</h3>
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+                    {conversation.timestamp}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-sm text-muted-foreground truncate">
+
+                    {conversation.isTyping 
+
+{conversation.isTyping 
+
+                    {conversation.isTyping
+                    {conversation.isTyping
+                      ? <em>Typing...</em>
+                      : conversation.lastMessage}
+                  </p>
+                  {conversation.unreadCount > 0 && (
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                      {conversation.unreadCount}
+                    </Badge>
+<div
+            key={conversation && conversation.id}
+            className={cn(
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -71,9 +246,47 @@ interface MobileConversationListProps {;
                       ? <em>Typing...</em> ;
                       : conversation && conversation.lastMessage}
                   </p>;
+
                   {conversation && conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
+;
+      <div className="space-y-2 pb-24">;
+        {conversations.map((conversation) => (;
+          <div;
+            key={conversation.id}
+            className={cn(;
+              "px-4",;
+              activeConversation === conversation.id && "bg-primary/5";
+            )}
+            onClick={() => onSelectConversation(conversation.id)}
+          >;
+            <div className="flex items-center gap-3 py-3 cursor-pointer">;
+              <Avatar>;
+                <AvatarImage src={conversation.avatar} />;
+                <AvatarFallback>;
+                  {conversation.name.charAt(0).toUpperCase()}
+                </AvatarFallback>;
+              </Avatar>;
+              ;
+              <div className="flex-1 min-w-0">;
+                <div className="flex justify-between items-baseline">;
+                  <h3 className="font-medium truncate">{conversation.name}</h3>;
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;
+                    {conversation.timestamp}
+                  </span>;
+                </div>;
+                ;
+                <div className="flex justify-between items-center">;
+                  <p className="text-sm text-muted-foreground truncate">;
+                    {conversation.isTyping ;
+                      ? <em>Typing...</em> ;
+                      :conversation.lastMessage}
+                  </p>;
+                  ;
+                  {conversation.unreadCount > 0 && (;
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
+                      {conversation.unreadCount}
                     </Badge>;
                   )}
                 </div>;
@@ -82,7 +295,256 @@ interface MobileConversationListProps {;
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
+
       </div>;
     </div>;
   );
 }
+
+</div>;
+    </div>;
+import React from './react';
+import { Card } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Search } from './lucide-react';
+import { Input } from '@/components / ui / input';
+import { cn } from '@/lib / utils';
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+"
+import React from "react",""
+import { Card } from "@/components/ui/card",""
+import { Badge } from "@/components/ui/badge",""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
+import { Search } from "lucide-react",""
+import { Input } from "@/components/ui/input";""
+import { cn } from "@/lib/utils";"
+interface Conversation {
+  // TODO: Implement
+  id: string;,
+  name: string;
+
+
+  avatar?: string;
+
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;}
+  isTyping?: boolean;}
+}
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}"
+import { Input } from "@/components/ui/input",""
+import { cn } from "@/lib/utils","
+  // TODO: Implement
+  id: string,
+  name: string,
+  avatar?: string,
+  lastMessage: string,
+  timestamp: string,
+  unreadCount: number,
+export function MobileConversationList({
+)
+export function MobileConversationList(): any ({;
+  activeConversation?: string;)
+  conversations;
+  activeConversation;"
+import React from "react",;""
+import { Card } from "@/components/ui/card",;""
+import { Badge } from "@/components/ui/badge",;""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;""
+import { Search } from "lucide-react",;""
+import { Input } from "@/components/ui/input",;""
+import { cn } from "@/lib/utils",;"
+  avatar?: string,;
+;
+  activeConversation?: string,;
+
+
+
+
+
+  activeConversation;
+  onSelectConversation;)
+}: MobileConversationListProps) {;
+  return (
+
+  conversations,
+  activeConversation,
+}: MobileConversationListProps) {
+  onSelectConversation;
+          <div;
+            key={conversation && conversation.id}
+            className={cn(
+  id:string,;
+  name:string,;
+  avatar?:string,;
+  lastMessage:string,;
+  timestamp:string,;
+  unreadCount:number,;
+  isTyping?:boolean;}
+  conversations:Conversation[],;
+  activeConversation?:string,;)
+  onSelectConversation:(id:string) => void;
+</div>"
+    <div className="space-y-4">;"
+      <div className="px-4 mb-2">;"
+        <div className="relative">;"
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;"
+
+          <Input;"
+            placeholder="Search messages..."""
+            className="pl-9""
+
+          />;
+
+        </div>;
+
+      </div>;"
+      <div className="px-4 pb-4 space-y-2">;"
+        <div className="flex space-x-2">;"
+          <Badge variant="secondary" className="rounded-full px-3">All;""
+          <Badge variant="outline" className="rounded-full px-3">Unread;""
+          <Badge variant="outline" className="rounded-full px-3">Interviews;""
+          <Badge variant="outline" className="rounded-full px-3">Projects;"
+      <div className="space-y-2 pb-24">;"
+</div>
+
+              "px-4",""
+              activeConversation === conversation.id && "bg-primary/5"")
+            )}
+            onClick={() => onSelectConversation(conversation.id)}
+            <div className="flex items-center gap-3 py-3 cursor-pointer">"
+              <Avatar>
+
+                <AvatarImage src={conversation.avatar} />
+
+                <AvatarFallback>
+
+                
+              <div className="flex-1 min-w-0">"
+                <div className="flex justify-between items-baseline">"
+                  <h3 className="font-medium truncate">{conversation.name}</h3>""
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">"
+</span>
+                <div className="flex justify-between items-center">"
+                  <p className="text-sm text-muted-foreground truncate">"
+</p>
+                      ? <em>Typing...</em>
+                  </p>"
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">"
+
+            <div className="flex items-center gap-3 py-3 cursor-pointer">;"
+              <Avatar>;
+
+                <AvatarImage src={conversation && conversation.avatar} />;
+
+                <AvatarFallback>;
+
+              ;"
+              <div className="flex-1 min-w-0">;"
+                <div className="flex justify-between items-baseline">;"
+                  <h3 className="font-medium truncate">{conversation && conversation.name}</h3>;""
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;"
+                  </span>;
+                <div className="flex justify-between items-center">;"
+                  <p className="text-sm text-muted-foreground truncate">;"
+                      ? <em>Typing...</em> ;
+                  </p>;"
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
+
+</Badge>
+
+                    </Badge>;
+                </div>;
+              </div>;
+
+            </div>;"
+            <div className="border-t border-border ml-12"></div>;"
+    <div className="space - y-4">;"
+      <div className="px - 4 mb - 2">;"
+          <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - muted - foreground" />;"
+
+            placeholder="Search messages...";""
+            className="pl - 9";"
+
+      <div className="px - 4 pb - 4 space - y-2">;"
+        <div className="flex space - x-2">;"
+          <Badge variant="secondary" className="rounded - full px - 3">All;""
+          <Badge variant="outline" className="rounded - full px - 3">Unread;""
+          <Badge variant="outline" className="rounded - full px - 3">Interviews;""
+          <Badge variant="outline" className="rounded - full px - 3">Projects;"
+      <div className="space - y-2 pb - 24">;"
+            key={conversation.id}
+            className={cn ("
+              "px - 4";")"
+              active_conversation === conversation.id && "bg - primary / 5")}"
+            on_click={() => onSelectConversation (conversation.id)}
+            <div className="flex items - center gap - 3 py - 3 cursor - pointer">;"
+
+                <AvatarImage src={conversation.avatar} />;
+
+
+              <div className="flex - 1 min - w-0">;"
+                <div className="flex justify - between items - baseline">;"
+                  <h3 className="font - medium truncate">{conversation.name}</h3>;""
+                  <span className="text - xs text - muted - foreground whitespace - nowrap ml - 2">;"
+                <div className="flex justify - between items - center">;"
+                  <p className="text - sm text - muted - foreground truncate">;"
+                      ? <em > Typing...</em>;
+                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;"
+
+            <div className="border - t border - border ml - 12"></div>;"
+          </div>))}
+      </div>;
+    </div>);
+}
+  ),;}
+ interface Conversation {
+  id: string;
+name: string;
+avatar?: string;
+lastMessage: string;
+timestamp: string;
+unreadCount: number;
+isTyping?: boolean 
+}interface MobileConversationListProps {
+  conversations: Conversation[];
+activeConversation?: string;
+onSelectConversation: (id: string) => void 
+}export function MobileConversationList ({
+  conversations;
+activeConversation;
+onSelectConversation 
+}: MobileConversationListProps) {
+  return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All</Badge> <Badge variant=" outline"className=" rounded-full px-3">Unread</Badge> <Badge variant=" outline"className=" rounded-full px-3">Interviews</Badge> <Badge variant=" outline"className=" rounded-full px-3">Projects</Badge> </div> </div> <div className=" space-y-2 pb-24"> {
+    </div>);"
+  return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All <Badge variant=" outline"className=" rounded-full px-3">Unread <Badge variant=" outline"className=" rounded-full px-3">Interviews <Badge variant=" outline"className=" rounded-full px-3">Projects </div> </div> <div className=" space-y-2 pb-24"> {")
+  conversations.map ( (conversation) => (<div key= {
+  conversation.id;)
+}) 
+}onClick= {
+  () => onSelectConversation (conversation.id) 
+}> <div className=" flex items-center gap-3 py-3 cursor-pointer"> <Avatar> <AvatarImage src= {"
+}/> <AvatarFallback> {
+
+}  ? <em>Typing...</em> : conversation.lastMessage;
+}</p> {
+}) "
+}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) )"
+}</div> </div>) 
+            <div className="border-t border-border ml-12"></div>"
+pr-12325
+          </div>
+      </div>
+    </div>
+  )
+}
+    </div>"
+

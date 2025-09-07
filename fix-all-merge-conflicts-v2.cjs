@@ -4,7 +4,7 @@ const path = require('path');
 function resolveConflictsInFile(filePath) {
     try {
         let content = fs.readFileSync(filePath, 'utf8');
-        const conflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [a-f0-9]+.*/g;
+        const conflictPattern = /\n([\s\S]*?)\n
         let hasConflicts = false;
 
         // Attempt to resolve conflicts by preferring "HEAD" changes

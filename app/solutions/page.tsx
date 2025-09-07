@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
@@ -14,22 +15,32 @@ export const metadata = {
   description: "Professional solutions for your business needs.",
   keywords: "solutions, business, technology"
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = {
+  title: 'Solutions - Zion Tech Group',
+  description: 'Comprehensive technology solutions for modern businesses.',
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 };
 
 export default function SolutionsPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Our Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to address your business challenges
-            and drive growth across all industries.
+            Discover our comprehensive technology solutions designed to transform your business.
           </p>
         </div>
+<<<<<<< HEAD
 
         <div className="max-w-6xl mx-auto">
           {/* Solutions Grid */}
@@ -198,6 +209,8 @@ export default function SolutionsPage() {
           Get Started
         </Link>
 >>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </div>
     </div>
   );
