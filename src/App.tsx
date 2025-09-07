@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import { SidebarProvider } from './context/SidebarContext';
 
 // Lazy load essential pages
 const Home = React.lazy(() => import('./pages/Home'));

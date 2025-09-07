@@ -28,18 +28,23 @@ export function AppHeader() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to search results
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
+      <header 
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-zion-slate-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg shadow-zion-cyan/10' 
+            : 'bg-zion-slate-dark/80 backdrop-blur-sm border-b border-zion-cyan/10'
+        }`}
+      >
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Sidebar Toggle */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+            className="mr-4 p-2 text-zion-cyan/70 hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110"
             aria-label="Toggle sidebar"
           >
             <PanelLeft className="h-5 w-5" />
@@ -50,14 +55,14 @@ export function AppHeader() {
             <form onSubmit={handleSearch} className="relative w-full">
               <input
                 type="text"
-                placeholder="Search services, talent, equipment..."
+                placeholder="Search services, technologies, solutions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
               >
                 <Search className="h-4 w-4" />
               </button>
@@ -172,14 +177,14 @@ export function AppHeader() {
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
-                  placeholder="Search services, talent, equipment..."
+                  placeholder="Search services, technologies, solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
                 >
                   <Search className="h-4 w-4" />
                 </button>
