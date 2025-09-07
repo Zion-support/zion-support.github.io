@@ -114,7 +114,6 @@ meta: form,}
         }),
       });
 
-const data = await res.json();
       setExportLinks({
         pdfUrl: data.pdfUrl;
 jsonUrl: data.jsonUrl;
@@ -166,7 +165,6 @@ const data = await res && res.json();
       console && console.error(e);}
       setStatusMessage('Export failed');    }
 
-const data = await res && res.json();
       setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl,}
 }),;
       setStatusMessage('Exported. Files saved.');
@@ -190,7 +188,6 @@ const res = await fetch('/api/proposals/submit', {;
         }),;
       });
 
-const data = await res && res.json();
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A,}
 }`;

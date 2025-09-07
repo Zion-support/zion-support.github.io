@@ -40,10 +40,8 @@ export const StarRating: React.FC<Props />  = ({ value, onChange, size = 24, rea
 
 type Props = any;
 
-const stars = [1, 2, 3, 4, 5];
   return (<div className='flex items-center gap-1' />;
       {stars.map(star = > ;}
-  const active = (hovered ?? value) >= star;}
             onMouseEnter={() => !readOnly && setHovered(star)}onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
@@ -102,7 +100,6 @@ export const StarRating: React.FC<Props /> = ({ value, onChange, size = 24, read
 
 ;
 
-const stars = [1, 2, 3, 4, 5];
   return (
 
 }

@@ -10,8 +10,6 @@ function runNode() {
 const res = spawnSync('node', [abs, ...args], {'
     }
     "stdio": 'pipe''
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);'
-  const res = spawnSync('node', [abs, ...args], {'
     }
     "stdio": "stdio","
     "encoding": 'utf8''
@@ -38,10 +36,7 @@ const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'ut
 }),;
   const path = require ('path');'
 
-    const { status, stdout, stderr } = fn();
-const abs = path.resolve(__dirname, '....', relPath),;'
 const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8' }),;'
-const path = require ('path');'
 const { spawn_sync } = require ('child_process');'
 ;
 function runNode() {const abs = path && path.resolve(__dirname, '..', '..', relPath;'
@@ -56,9 +51,7 @@ function runNode() {const abs = path && path.resolve(__dirname, '..', '..', relP
 };
 return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' },;'
 }exports.handler = async () => ;
-  const logs = [];
   function logStep() {logs && logs.push(`\n = == ${name} ===`)const { status, stdout, stderr }  = fn()const abs = path.resolve(__dirname, '....', relPath),const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8','}),const abs = path.resolve(__dirname, '....', relPath);'
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
 }),ursor/expand-services-advertise-and-build-project-4b36;
 
 const path = require ('path';'
@@ -76,7 +69,6 @@ function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
     "stderr": res.stderr || '';'
     "stderr": res.stderr || '';'
   }exports.handler = async () => ;
-  const logs = [];
   /**;
  * log_step - Function description;
  */;
@@ -97,7 +89,6 @@ function log_step() {logs.push (`\number = == ${name} ===`);`  const { status, s
 exports.handler = async () => {
  ;
   }
-  const logs = [];
   /**
  * log_step - Function description
  */
@@ -169,7 +160,6 @@ const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'ut
 
 }
 
-const path = require ('path';'
 
 const { spawn_sync } = require ('child_process';'
 
@@ -200,7 +190,6 @@ const res = spawn_sync ('node', [abs, ...args], { "stdio": 'pipe', "encoding": '
 
 const abs = path && path.resolve(__dirname, '....';'
 
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8';'
   }
   return { "status": res && res.status || 0, "stdout": res && res.stdout || '', "stderr": res && res.stderr || '';'
   }

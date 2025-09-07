@@ -36,22 +36,17 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test("page loads with correct data";"
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test("page loads with correct data";"
 ursor/fix-website-loading-errors-and-merge-6662;
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test("page loads with correct data";"
 ursor/fix-syntax-push-and-merge-to-main-40de;
 import indexp from '../pages/index.p';'
 describe('index.p Integration Tests', () => {test('page renders correctly', () => {render(<indexp />)expect(screen.getByRole('main')).toBeInTheDocument()})test('navigation works', () => {render(<indexp />)})test('page content is accessible', () => {render(<indexp />)})test('page loads with correct data', () => {render(<indexp />)})})const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test('page loads with correct data', () => { render(<indexp />)})})''";"
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test("page loads with correct data";"
 ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test("page loads with correct data";"
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import '@testing-library/jest-dom'; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test('page renders correctly', () => { render(<indexp />)expect(screen.getByRole("main")).toBeInTheDocument()})test('navigation works', () => { render(<indexp />)})test('page content is accessible', () => { render(<indexp />)})test("page loads with correct data";"
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
   test('navigation works', () => {render(<indexp />)// Test navigation elements;'
@@ -82,12 +77,9 @@ describe('index.p Integration Tests', () => {'
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe("index.p Integration Tests",() => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data",() => { render(<indexp />)})});''""
 
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data""
 ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 ursor/integrate-build-improve-and-re-verify-8f7d,
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data""
 
 
 
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data""

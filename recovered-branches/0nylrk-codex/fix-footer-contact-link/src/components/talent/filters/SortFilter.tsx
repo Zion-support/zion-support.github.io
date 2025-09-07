@@ -46,7 +46,6 @@ import {;
   SelectItem,;
   SelectTrigger,;
   SelectValue} from "@/components/ui/select",;"
-import { SortFilterProps } from "@/types/filters";"
 export function SortFilter() {;
   }
   return (;

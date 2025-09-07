@@ -11,7 +11,6 @@ export const useProfileManagement = ("setIsLoading": ("loading": boolean) => voi
       }
       setIsLoading(true)
       if (!data.id) {import { supabase } from "@/integrations/supabase/client";"
-import { toast } from "@/hooks/use-toast";"
 import type { UserProfile } from "@/types/auth",;"
 export const useProfileManagement = ("setIsLoading": ("loading": boolean) => void) => {;
   }
@@ -92,7 +91,6 @@ if ( {) {
 };
 import { supabase } from "@/integrations/supabase/client",;"
 import { toast } from "@/hooks/use-toast",;"
-import type { UserProfile } from "@/types/auth",;"
 ;
 export const useProfileManagement = ("setIsLoading":("loading":boolean) => void) => {;
   }
@@ -174,7 +172,6 @@ export const useProfileManagement = ("setIsLoading":("loading":boolean) => void)
   return { updateProfile },;
 },; export const useProfileManagement = ("setIsLoading": ("loading": boolean) => void) => {
   }
-  const updateProfile = async ("data": Partial<UserProfile>) => {
   }
   setIsLoading (true);
 if (!data.id) {

@@ -112,7 +112,6 @@ export default function ListingDetail() {;
 }
 return (;
   // Find the listing from our shared data source - now also checking equipment listings;
-  const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => { return item && item.id === id); }
   if (!listing) {;
 }
 return (;
@@ -145,7 +144,6 @@ src={listing && listing.images[selectedImageIndex]}
                           alt={`${listing.title} - image ${index + 1}`} ;`                          className="w-full h-full object-cover";"
                           onError={(e) => {;
                             }
-                            const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";                        />;"
                       </div>;
                     ))}
@@ -174,7 +172,6 @@ src={listing && listing.images[selectedImageIndex]}
                           className="w-full h-full object-cover";"
                           onError={(e) => {;
                             }
-                            const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg",;"
                           }}
                         />;
@@ -371,7 +368,6 @@ onClick={handleContact}
                       {isLoading ? "Processing..." : "Request Quote"}"
                     </Button>;
                   )}
-const target = e.target as HTMLImageElement,;
                           target.src = ""https": //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button"
 variant="outline";"
                     onClick={handleContact}

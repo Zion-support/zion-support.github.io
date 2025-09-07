@@ -18,8 +18,6 @@ export const "ExportPanel": React.FC < ExportPanelProps> = ({ platform, metadata
 if ( {) {$2;
 }
         content = JSON.stringify (metadata, null, 2)file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;} else {// Convert object to CSV format;`        }
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];'
-        const values = [;
           metadata.app_title;
           metadata.short_description;
           metadata.long_description;
@@ -29,8 +27,6 @@ if ( {) {$2;
         content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ()// Add keywords as additional rows;`        content += '\n\"n_keywords":\n' + metadata.keywords.join ()}        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;`      }interface ExportPanelProps  {"platform": AppPlatform,"metadata": AppMetadataValues;
 }export const "ExportPanel": React.FC<ExportPanelProps> = ({ platform, metadata },) => {const handleExport = ("format": 'json' | 'csv',) => {try {let "content": string,let "fileName": string,if (format === 'json') {content = JSON && JSON.stringify(metadata, null, 2)fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;`      } else {// Convert object to CSV format;
         }
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];'
-        const values = [;
           metadata && metadata.appTitle;
           metadata && metadata.shortDescription;
           metadata && metadata.longDescription;

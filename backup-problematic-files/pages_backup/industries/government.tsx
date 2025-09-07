@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';'
 import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;'
 import React from 'react';'
 import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import {
   }
   Building,
@@ -22,7 +21,6 @@ import {
 import Layout from '../../components/Layout';';'
 const services = [;
   {}
-const services = [;
   {"title": 'Citizen Service Portals',"description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.',"icon": Globe,"features": [;'
       'Online service applications,','Digital document submission',','Status tracking systems',',"title": 'Citizen Service Portals,',,"description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',const services = [;'
   {"title": 'Citizen Service Portals',,"description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.',"icon": Globe,"features": [,'Online service applications,','Digital document submission',','Status tracking systems',','Multi-language support'';'
@@ -47,7 +45,6 @@ const benefits = [;
   {}
     "title": 'Enhanced Security,',,"description": 'Government-grade security measures protect sensitive citizen and government data.,',"icon": Shield;'
 ];
-const benefits = [;
   {"title": 'Enhanced Security',,"description": 'Government-grade security measures protect sensitive citizen and government data.',"icon": Shield;'
   },{}
     "title": 'Improved Efficiency,',,"description": 'Digital processes streamline government operations and reduce administrative burden.,',"icon": BarChart3},{}'
@@ -56,8 +53,6 @@ const benefits = [;
 export default function GovernmentPage() {return (<Layout)title="Government Technology Solutions - Zion Tech Group"";"
       }
       description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."";"
-import Layout from '../../components/Layout';'
-const services = [;
   {
     }
     "title": 'Citizen Service Portals','
@@ -69,8 +64,6 @@ const services = [;
       'Status tracking systems',','
     "title": 'Citizen Service Portals,',,'
   "description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',;'
-import Layout from '../../components/Layout';'
-const services = [;
   {;
     }
     "title": 'Citizen Service Portals',,'
@@ -139,13 +132,11 @@ const services = [;
     ];
   }
 ;];
-const benefits = [;
   {}
     "title": 'Enhanced Security,',,'
   "description": 'Government-grade security measures protect sensitive citizen and government data.,',;'
     "icon": Shield;
 ];
-const benefits = [;
   {;
     }
     "title": 'Enhanced Security',,'

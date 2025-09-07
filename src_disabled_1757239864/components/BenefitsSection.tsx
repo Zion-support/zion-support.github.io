@@ -20,7 +20,6 @@ interface BenefitsSectionProps {
   style?: React.CSSProperties
 }
 
-const getBenefits = (t: any) => [
   {,
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
@@ -213,7 +212,6 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
             <FeatureCard
               key={index}
 
-import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown } from 'lucide-react';
 
 interface Benefit {

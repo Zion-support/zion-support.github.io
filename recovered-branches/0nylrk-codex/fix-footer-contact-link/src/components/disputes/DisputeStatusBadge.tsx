@@ -43,7 +43,6 @@ interface DisputeStatusBadgeProps {;
 ;
 export function DisputeStatusBadge() {;
   }
-  let "variant": "default" | "destructive" | "secondary" | "outline" = "destructive",;"
   let message = "This item has an open dispute",;"
   switch (status) {;
     }

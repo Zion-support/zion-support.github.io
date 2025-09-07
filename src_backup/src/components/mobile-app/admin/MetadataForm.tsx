@@ -61,7 +61,6 @@ if ( {) {$2;
       }
     }
   }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;"
 }  const remove_keyword = ("keyword": string, ) =>: any {set_value ("keywords",keywords.filter ((k, ) => k !== keyword))},const maxDescriptionLength = platform === "ios" ? 4000 : 4000,const long_description = watch ("long_description"),return (<Card className="bg - zion - blue border - zion - purple / 30">;"
       <CardHeader>;
         <CardTitle > App Metadata</CardTitle>;

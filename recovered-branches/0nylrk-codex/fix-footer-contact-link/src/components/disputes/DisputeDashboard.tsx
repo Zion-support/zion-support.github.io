@@ -11,12 +11,8 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
-import { useDisputes } from "@/hooks/useDisputes";
-import { DisputesList } from "./DisputesList";
 import {} from "@/components/ui/card";
 
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
     refetch()
   }, [refetch]),
 
@@ -44,8 +40,6 @@ export function DisputeDashboard() {
 
         
 
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>

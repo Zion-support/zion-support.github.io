@@ -34,10 +34,8 @@ const features = [;
     "title": 'Fraud Detection,',,'
   "description": 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout';'
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';'
-import React from 'react';'
 import Head from 'next/head';'
 import Link from 'next/link';'
-const features = [;
   {
     }
     "icon": DollarSign,
@@ -73,7 +71,6 @@ const features = [;
     "icon": CheckCircle,
     "title": 'Audit Trail','
     "description": 'Complete transaction and activity audit trails''
-const features = [;
   {"icon": DollarSign,"title": 'Financial Analytics',"description": 'Advanced analytics and reporting for financial institutions';'
   },{"icon": Shield,"title": 'Security & Compliance',"description": 'Bank-grade security with regulatory compliance built-in';'
   },{"icon": TrendingUp,"title": 'Risk Management',"description": 'Comprehensive risk assessment and management tools';'
@@ -81,7 +78,6 @@ const features = [;
   },{"icon": FileText,"title": 'Regulatory Reporting',"description": 'Automated compliance and regulatory reporting';'
   },{"icon": CheckCircle,"title": 'Audit Trail',"description": 'Complete transaction and activity audit trails';'
 }
-const features = [;
   {"icon": DollarSign,"title": 'Financial Analytics',,"description": 'Advanced analytics and reporting for financial institutions';'
   },{"icon": Shield,"title": 'Security & Compliance',,"description": 'Bank-grade security with regulatory compliance built-in';'
   },{"icon": TrendingUp,"title": 'Risk Management',,"description": 'Comprehensive risk assessment and management tools';'
@@ -225,7 +221,6 @@ title="Finance Solutions - Zion Tech Group""
   "description": 'Complete transaction and activity audit trails';'
   }
 ;];
-const solutions = [;
   'Digital Banking Platforms',',;'
   'Payment Processing Systems',',;'
   'Risk Management Solutions',',;'
@@ -292,7 +287,6 @@ return (;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";"
                   <p className="text-gray-300">{feature && feature.description}</p>";"
                 </div>;
-const benefits = [;
   'Enhanced security and fraud prevention',;'
   'Improved regulatory compliance',;'
   'Streamlined financial operations',;'
@@ -316,7 +310,6 @@ const benefits = [;
     "description": 'Complete transaction and activity audit trails''
   }
 ;];
-const solutions = [;
   'Digital Banking Platforms',','
   'Payment Processing Systems',','
   'Risk Management Solutions',','
@@ -384,7 +377,6 @@ export default function FinanceSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
                 </div>;
-const benefits = [;
   'Enhanced security and fraud prevention','
   'Improved regulatory compliance','
   'Streamlined financial operations','

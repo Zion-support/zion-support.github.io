@@ -6,7 +6,6 @@ interface UploadSectionProps {
   "customFile": File | null,
   "onFileUpload": ("e": React.ChangeEvent<HTMLInputElement>) => void
 }
-import React from 'react','
 import { Button } from "@/components/ui/button";"
 import { Upload, FileText } from 'lucide-react';'
 interface UploadSectionProps {
@@ -17,16 +16,12 @@ interface UploadSectionProps {
 export function UploadSection() {
 }
 import React from "react";"
-import { Button } from "@/components/ui/button";"
 import { Upload, FileText } from "lucide-react";"
 interface UploadSectionProps {
   }
   "customFile": File | null,
   "onFileUpload": ("e": React.ChangeEvent<HTMLInputElement>) => void
 }
-import React from 'react','
-import { Button } from "@/components/ui/button","
-import { Upload, FileText } from 'lucide-react','
 interface UploadSectionProps {
   }
   "customFile": File | null,
@@ -63,7 +58,6 @@ return (;
               <span className="text-white">{customFile.name}</span>"
             </div>
 import React from 'react';'
-import { Button } from "@/components/ui/button";"
 import { Upload, FileText } from 'lucide-react',;'
 interface UploadSectionProps {;
   }

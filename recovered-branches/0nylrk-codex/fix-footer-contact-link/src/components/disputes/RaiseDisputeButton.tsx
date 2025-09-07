@@ -18,8 +18,6 @@ interface RaiseDisputeButtonProps {
   className?: string;
 }
 import { DisputeForm } from "./DisputeForm";
-import { useNavigate } from "react-router-dom";
-import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -51,7 +49,6 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
   },
   
 
-  const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
@@ -64,7 +61,6 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState($2);
   const navigate = useNavigate($2);
-  const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen($2);
     navigate(`/dashboard/disputes/${disputeId}`)
   },

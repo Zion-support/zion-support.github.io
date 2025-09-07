@@ -83,8 +83,6 @@ const AIPoweredITAssetManagement = () => {
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
 } from 'lucide-react',
-const AIPoweredITAssetManagement = () => {
-  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Asset Discovery',
@@ -115,7 +113,6 @@ const AIPoweredITAssetManagement = () => {
     },
   ];
 
-  const assetTypes = [
     'Hardware devices (servers, workstations, mobile devices)',
     'Software licenses and applications',
     'Network infrastructure and equipment',
@@ -124,7 +121,6 @@ const AIPoweredITAssetManagement = () => {
     'Peripheral devices and accessories',
   ];
 
-  const benefits = [
     {
       icon: DollarSign,
       title: 'Cost Optimization',
@@ -151,7 +147,6 @@ const AIPoweredITAssetManagement = () => {
     },
   ];
 
-  const capabilities = [
     'Automated asset discovery and inventory',
     'Real-time health monitoring and alerts',
     'Predictive maintenance scheduling',
@@ -176,7 +171,6 @@ const AIPoweredITAssetManagement = () => {
   }
 }
   ],
-  const assetTypes = [
     "Hardware devices (servers, workstations, mobile devices)",
     "Software licenses and applications",
     "Network infrastructure and equipment",
@@ -185,7 +179,6 @@ const AIPoweredITAssetManagement = () => {
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
-  const benefits = [
     {
       icon: DollarSign,
       title: "Cost Optimization",
@@ -223,7 +216,6 @@ const AIPoweredITAssetManagement = () => {
   }
 }
   ],
-  const capabilities = [
     "Automated asset discovery and inventory",
     "Real-time health monitoring and alerts",
     "Predictive maintenance scheduling",

@@ -43,7 +43,6 @@ const "ServicesIndex": NextPage = () => {const services = [;
     },{"name": "Automated Social Media Manager","description": "AI-powered social media scheduling, content creation, and engagement tracking","features": ["Content generation", "Optimal timing", "Engagement tracking", "Multi-platform support"],"pricing": "Starting at $149/month","link": "/services/automated-social-media-manager";"
     },{"name": "Intelligent Inventory Manager","description": "Smart inventory optimization with demand forecasting and automated reordering","features": ["Demand forecasting", "Automated reordering", "Cost optimization", "Multi-location support"],"pricing": "Starting at $249/month","link": "/services/intelligent-inventory-manager";"
 }
-const "ServicesIndex": NextPage = () => {const services = [;
     {"id": 'ai-development',"title": 'AI Development & Machine Learning',,"description": 'Custom AI solutions, machine learning models, and intelligent automation systems tailored to your business needs.',"features": [;'
         'Natural Language Processing (NLP)','Computer Vision & Image Recognition','Predictive Analytics & Forecasting','Chatbots & Virtual Assistants','Recommendation Systems','Fraud Detection & Risk Assessment';'
       ],"pricing": 'Starting at $2,500/month',"icon": '🧠',"link": '/services/ai-development';'
@@ -69,7 +68,6 @@ const "ServicesIndex": NextPage = () => {const services = [;
         'Data Warehousing & ETL','Business Intelligence Dashboards','Real-time Data Processing','Machine Learning Analytics','Data Visualization','Custom Reporting Solutions';'
       ],"pricing": 'Starting at $1,800/month',"icon": '📊',"link": '/services/data-analytics';'
   }
-  const microSaasServices = [;
     {"name": "AI-Powered Analytics Dashboard",,"description": "Real-time business intelligence with predictive analytics and automated reporting","features": ["Custom dashboards", "Predictive modeling", "Automated alerts", "Multi-platform integration"],"pricing": "Starting at $299/month","link": "/services/ai-analytics-dashboard";"
     },{"name": "Smart Document Processor",,"description": "Automated document processing with OCR, classification, and data extraction","features": ["OCR technology", "Document classification", "Data extraction", "API integration"],"pricing": "Starting at $199/month","link": "/services/smart-document-processor";"
     },{"name": "Customer Experience Optimizer",,"description": "AI-driven customer journey mapping and optimization platform","features": ["Journey mapping", "Sentiment analysis", "A/B testing", "ROI tracking"],"pricing": "Starting at $399/month","link": "/services/customer-experience-optimizer";"

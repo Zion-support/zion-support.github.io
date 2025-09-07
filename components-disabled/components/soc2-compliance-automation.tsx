@@ -32,9 +32,6 @@ export default function SOC2ComplianceAutomationPage() {return (<>;
           <p className='mt-6 text-lg text-gray-300 max-w-3xl'>;'
 
 
-import React from 'react';'
-import SEO from '../components/SEO';'
-import Link from 'next/link';'
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;

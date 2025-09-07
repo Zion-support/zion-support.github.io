@@ -105,17 +105,11 @@ address: '364 E Main St STE 1008 Middletown DE 19709'}
       isScrolled;
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
  ;
-  const [isOpen, setIsOpen] = useState(false);
 
-const [isScrolled, setIsScrolled] = useState(false);
 
-const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
 
-const [isOpen, setIsOpen] = useState(false);
 
-const [isScrolled, setIsScrolled] = useState(false);
 
-const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
 
         { name: 'View All Services'}
   href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600'}

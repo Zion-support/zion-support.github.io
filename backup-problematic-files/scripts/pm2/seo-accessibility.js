@@ -88,9 +88,6 @@ class SEOAccessibility {;
     this.startTime = Date.now()
 };
 ;
-const fs = require('fs'),;'
-const path = require('path'),;'
-const { execSync } = require('child_process'),;'
 ,
 class SEOAccessibility {
 }
@@ -104,7 +101,6 @@ constructor() {,;
 ,
   log(message) {
 }
-const timestamp = new Date().toISOString(),;
 const logMessage = `[${timestamp}] ${message}\n`,;`
 ,
     try {
@@ -122,17 +118,12 @@ const logMessage = `[${timestamp}] ${message}\n`,;`
       }
       this.log(' Checking SEO...'),'
 ,
-const seoIssues = [],;
-const pagesDir = path.join(this.projectRoot, 'pages'),;'
 ,
       if (fs.existsSync(pagesDir)) {
 }
-const pageFiles = this.getPageFiles(pagesDir),;
 ,
         pageFiles.forEach((file) => {
 }
-const content = fs.readFileSync(file, 'utf8'),;'
-const seoChecks = this.analyzeSEO(file, content),;
           seoIssues.push(...seoChecks)
         })
       }
@@ -141,15 +132,11 @@ const seoChecks = this.analyzeSEO(file, content),;
 ,
   getPageFiles(dir) {
 }
-const files = [],;
 ,
     const scanDirectory = (currentDir) => {
 }
-const items = fs.readdirSync(currentDir),;
       items.forEach((item) => {
 }
-const fullPath = path.join(currentDir, item),;
-const stat = fs.statSync(fullPath),;
 ,
         if (stat.isDirectory()) {
           }

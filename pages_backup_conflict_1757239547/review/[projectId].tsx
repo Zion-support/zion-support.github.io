@@ -106,7 +106,6 @@ export default ReviewSubmitPage;
   }
 }
 ;
-  const project = await findProjectById(projectId);
   if (!project) {;
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any;
     } catch (error) {
@@ -123,7 +122,6 @@ export default ReviewSubmitPage;
 }
 ;
   const expectedFromId = role === 'client' ? project.clientId : project.talentSlug;
-  const valid = expectedFromId === fromId;
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;

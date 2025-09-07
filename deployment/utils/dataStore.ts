@@ -142,7 +142,6 @@ export const data_store = {
   delete_data: (id: string) => null;}
 }
   createProject(data: Partial<Project />): Project {
-    const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
       title: data.title || '',
       description: data.description || '',
@@ -180,7 +179,6 @@ this && this.reviews[existingIndex] = {
       return this && this.reviews[existingIndex];
     } else {
       // Create new review;
-const review: Review = {
         id: Math && Math.random().toString(36).substr(2, 9),
         projectId: data && data.projectId || '',
         fromRole: data && data.fromRole || 'client',

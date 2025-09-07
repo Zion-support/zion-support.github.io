@@ -184,7 +184,6 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import Skeleton from "@/components/ui/skeleton",
-import { Sparkles, ArrowRight } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
 import {logErrorToProduction} from '@/utils/productionLogger',
@@ -204,7 +203,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import Skeleton from "@/components/ui/skeleton",;
 import { Sparkles, ArrowRight } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface GeneratedContent {;
@@ -557,7 +555,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }finally {;
 
 };
-const handleApply = () => {;
   if (generatedContent &&,  onApplyGenerated) {;
   onApplyGenerated (generatedContent);
 

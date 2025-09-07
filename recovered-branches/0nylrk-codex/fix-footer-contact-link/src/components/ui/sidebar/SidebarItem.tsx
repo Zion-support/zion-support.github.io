@@ -74,8 +74,6 @@ export function SidebarItem() {;
         }
         active ? "bg-primary/10 text-primary" : "text-muted-foreground "hover":bg-accent "hover":text-accent-foreground";"
         className;
-import React from "react","
-import { cn } from "@/lib/utils","
 import {cn} from "@/lib/utils";"
 interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   }
@@ -91,8 +89,6 @@ className={cn(
       )}
       {...props}>;
       {children}
-import React from './react';'
-import { cn } from '@/lib / utils';'
 interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
   }
   class_name?: string;

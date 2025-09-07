@@ -4,7 +4,6 @@ import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = null;
-import DatePicker from 'react-datepicker';
 
 import type {
   MediaBundle
@@ -110,7 +109,6 @@ const KitPage = () => {
     type: PressReleaseType;
     title: string;
   }) => {
-    const nowStr = new Date().toISOString().substring(0, 10);
     const text = buildPressRelease(type, {
       companyName
       date: nowStr

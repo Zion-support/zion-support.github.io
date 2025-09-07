@@ -31,7 +31,6 @@ import { mapProfileToUser } from "./profileMapper",export const AuthProvider = (
 const navigate = useNavigate(),;
 const location = useLocation(),;
 const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
-  const {
     }
     "login": loginImpl,
     "signup": signupImpl,
@@ -78,7 +77,6 @@ if (event === 'SIGNED_IN') {'
             }
             console.error("Error fetching user "profile":", error),"
             setUser(null)
-import React, { useEffect } from "react";"
 import { supabase, getFromProfiles } from "../../integrations/supabase/client";"
 import { useAuthOperations } from "../../hooks/useAuthOperations",;"
 import { AuthContext } from "./AuthContext",;"
@@ -95,10 +93,6 @@ export const AuthProvider = ({ children }: { "children": React.ReactNode }) => {
     isLoading, setIsLoading,;
     onboardingStep, setOnboardingStep;
   } = useAuthState(),;
-  const navigate = useNavigate(),;
-  const location = useLocation(),;
-  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
-  const {;
     }
     "login": loginImpl,;
     "signup": signupImpl,;

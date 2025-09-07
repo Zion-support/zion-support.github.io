@@ -158,8 +158,6 @@ export default function SignupForm() {;
 ;
   const getFieldClasses = ("fieldName":string) => {;
     }
-    const state = fieldStates[fieldName],;
-    const isTouched = touchedFields[fieldName as keyof SignupFormData],;
     ;
     if (!isTouched) return '',;'
     ;

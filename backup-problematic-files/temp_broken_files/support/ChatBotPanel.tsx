@@ -456,7 +456,6 @@ ursor/fix-lint-push-and-merge-to-main-"e10e":src/components/support/ChatBotPanel
   setMessages ( (prev) => [ ...prev, {"id": `user-$ {Date.now ()"}`;'";""content": "I'd like to email support",";""sender": "user","timestamp": new Date ()}"timestamp": new Date ()}])}</div>)}</div> </ScrollArea> key= {reply.id ;"}text= {reply.text ;
 }onClick={() => handleQuickReply (reply.text)}/>) )"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>)"}'";"
 };
-const suggestEscalation = () => {;
   }
   const "escalationMessage": Message = {;
   }
@@ -464,7 +463,6 @@ const suggestEscalation = () => {;
   Date.now () ;
 }`;`"content": //Log this interaction for the support team logSupportEscalation () 
 };
-const logSupportEscalation = async () => {;
   }
   try {;
   //Send the conversation to the backend for logging //This would be implemented in a real system "conversationHistory": messages.map (m => ({;
@@ -474,7 +472,6 @@ const logSupportEscalation = async () => {;
 "component": 'ChatBotPanel' ;'
 }
 };
-const handleEscalateToLiveAgent = () => {;
   }
   setMessages ( (prev) => [ ...prev, {;
   }

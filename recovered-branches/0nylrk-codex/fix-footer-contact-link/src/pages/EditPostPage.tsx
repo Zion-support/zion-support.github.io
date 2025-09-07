@@ -237,7 +237,6 @@ export default function EditPostPage() {;
     "categoryId": post.categoryId as ForumCategory,;
     "tags": post.tags.join(", ");"
   },;
-  const handleSubmit = async ("values": PostFormValues) => {;
     }
     try {;
       // Here we would normally update the post in the database;

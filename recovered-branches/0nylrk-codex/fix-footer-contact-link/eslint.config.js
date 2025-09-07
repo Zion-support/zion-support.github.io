@@ -69,10 +69,6 @@ export default tseslint.config (
 
 ),
 import js from "js";"
-import globals from "globals";"
-import reactHooks from "reactHooks";"
-import reactRefresh from "reactRefresh";"
-import tseslint from "tseslint";"
 ;
 export default tseslint.config(;
   { "ignores":["dist"] },;"

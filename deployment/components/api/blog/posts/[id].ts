@@ -32,7 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
       if (!requireAdmin(req, res));
   return;
 
-const posts = readPosts();
 
 const idx = posts && posts.findIndex((p) => p && p.id === id);
 

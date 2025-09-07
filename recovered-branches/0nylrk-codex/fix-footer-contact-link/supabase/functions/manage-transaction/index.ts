@@ -202,12 +202,10 @@ if ( {) {
     let result,;
     ;
 ;
-  const supabaseClient = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "",;"
     Deno.env.get("SUPABASE_ANON_KEY") ?? "";"
   ),;
   // Create service client for admin operations;
-  const supabaseAdmin = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "",;"
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;"
     { "auth": { "persistSession": false } }
@@ -231,7 +229,6 @@ if ( {) {
     }
 ;
     // Get transaction details;
-    const { "data": transaction, "error": fetchError } = await supabaseAdmin;
       .from("transactions");"
       .select("*");"
       .eq("id", transactionId);"
@@ -242,17 +239,14 @@ if ( {) {
     }
 ;
     // Verify user is authorized to manage this transaction;
-    const isProvider = transaction.provider_id === user.id,;
     // Clients can cancel or request refunds, providers can only release funds;
     if (!isClient && !isProvider) {;
       }
       throw new Error("You are not authorized to manage this transaction");"
     }
 ;
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;"
       }
       "apiVersion": "2023-10-16"}),;"
-    let result,;
     switch (action) {;
       }
       case 'release':;'

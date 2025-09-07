@@ -57,17 +57,14 @@ const __filename = fileURLToPath(import.meta.url)const __dirname = path.dirname(
       }
       const packageJsonPath = path.join(this.projectRoot, 'package.json');'
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));'
-      const issues = [];
       // Check for outdated dependencies,
 try {''
 }
-const outdated = execSync('npm outdated --json', {';'
           "encoding": 'utf8','
           "cwd": this.projectRoot;"
     }
     "stdio": 'pipe''
         });
-        const outdatedDeps = JSON.parse(outdated);
         if (Object.keys(outdatedDeps).length > 0) {
           }
           issues.push(''
@@ -141,7 +138,6 @@ const outdated = execSync('npm outdated --json', {';'
     "try": {const issues = [];"
       // "Check": bundle size;
       }
-      const buildDir = path.join(this.projectRoot, '.next')';'
       "if": (fs.existsSync(buildDir)) {const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { // 50MB;"
           }
           issues.push('Large bundle size detected')}'}'
@@ -206,7 +202,6 @@ const outdated = execSync('npm outdated --json', {';'
         "error": error."message":  }"
       const buildDir = path.join(this.projectRoot, '.next')const buildExists = fs.existsSync(buildDir)let buildAge = null;'
       if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}// Try to run a build check;
-      let buildSuccess = false;
       try {';'
         }
         execSync('npm run build', {"cwd": this.projectRoot;"

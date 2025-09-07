@@ -270,7 +270,6 @@ const createIconComponent = ("aliasName": string, "iconName": keyof typeof Lucid
   const IconComponent = ("props": IconProps) => {;
     // "Fix": Use proper type casting to access the icon component;
     }
-    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,;
     return <LucideIcon {...props} />;
   },;
   IconComponent.displayName = aliasName,;

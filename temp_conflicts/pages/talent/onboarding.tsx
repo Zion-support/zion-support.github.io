@@ -318,7 +318,6 @@ export default function TalentOnboardingPage() {
                 type="button"
                 className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover: shadow-lg transition-all disabled:opacity-50"
                 onClick={() => {
-                  const missing = requiredMissingForStep(),
                   if (missing) {
                     setErrorMessage(missing),
                     return

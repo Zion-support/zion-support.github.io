@@ -533,8 +533,6 @@ import { ArrowRight,, Award,, BarChart3,, Bot,, Brain,, CheckCircle,, Eye,, Mess
 const PageTransition = ({ children }: { "children": React && React.ReactNode }) => <div>{children}</div>;"
 export default function InnovativeServices() {const title = "Innovative Services — Zion Tech Group";"
   }
-  const description = "Cutting-edge micro SaaS, IT, and AI services that transform businesses with intelligent automation and innovative solutions.";"
-  const innovativeServices = [{"title": "AI-Powered Email Automation Suite","description": "Intelligent email marketing platform with AI-driven personalization and automated follow-up sequences","icon": Mai l,"features": [;"
         "AI-powered email content generation","Behavioral trigger automation","Advanced segmentation and personalization","A/B testing with machine learning optimization","Deliverability optimization and monitoring","ROI tracking and analytics dashboard";"
       ],"pricing": "$299 - $1,999/month","delivery": "2-3 weeks","category": "Email Marketing SaaS","benefits": "Increase email engagement by 40% and reduce manual work by 60%","marketPrice": "Average market "price": $500-2,500/month";"
     },{"title": "Smart Inventory Management System","description": "AI-driven inventory optimization with predictive analytics and automated reordering","icon": Databas e,"features": ["Predictive demand forecasting","Automated reorder point calculations","Multi-location inventory tracking","Supplier performance analytics","Cost optimization recommendations","Integration with major e-commerce platforms";"

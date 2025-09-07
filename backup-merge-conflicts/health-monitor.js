@@ -163,8 +163,6 @@ const healthMonitor = new HealthMonitor()healthMonitor.start().catch(console.err
 ,
       // Get PM2 process info,
       try {,
-        const pm2List = execSync($2);
-        const processes = JSON.parse($2);
         report.processes = $2;
           name: proc.name,
           status: proc.pm2_env?.status,

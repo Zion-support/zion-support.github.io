@@ -34,10 +34,8 @@ const features = [;
     "title": 'Health Analytics,',,'
   "description": 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout';'
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';'
-import React from 'react';'
 import Head from 'next/head';'
 import Link from 'next/link';'
-const features = [;
   {
     }
     "icon": Heart,
@@ -73,7 +71,6 @@ const features = [;
     "icon": CheckCircle,
     "title": 'Quality Assurance','
     "description": 'Built-in quality metrics and compliance monitoring''
-const features = [;
   {"icon": Heart,"title": 'Patient Management',"description": 'Comprehensive patient data management and care coordination';'
   },{"icon": Shield,"title": 'HIPAA Compliance',"description": 'Full compliance with healthcare data protection regulations';'
   },{"icon": Activity,"title": 'Health Analytics',"description": 'Advanced analytics for patient outcomes and operational efficiency';'
@@ -81,7 +78,6 @@ const features = [;
   },{"icon": FileText,"title": 'Electronic Records',"description": 'Secure electronic health records management system';'
   },{"icon": CheckCircle,"title": 'Quality Assurance',"description": 'Built-in quality metrics and compliance monitoring';'
 }
-const features = [;
   {"icon": Heart,"title": 'Patient Management',,"description": 'Comprehensive patient data management and care coordination';'
   },{"icon": Shield,"title": 'HIPAA Compliance',,"description": 'Full compliance with healthcare data protection regulations';'
   },{"icon": Activity,"title": 'Health Analytics',,"description": 'Advanced analytics for patient outcomes and operational efficiency';'
@@ -225,7 +221,6 @@ title="Healthcare Solutions - Zion Tech Group""
   "description": 'Built-in quality metrics and compliance monitoring';'
   }
 ;];
-const solutions = [;
   'HIPAA-Compliant Cloud Infrastructure',',;'
   'Electronic Health Record (EHR) Systems',',;'
   'Telemedicine & Remote Patient Monitoring',',;'
@@ -292,7 +287,6 @@ return (;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";"
                   <p className="text-gray-300">{feature && feature.description}</p>";"
                 </div>;
-const benefits = [;
   'Improved patient care and outcomes',;'
   'Reduced administrative burden',;'
   'Enhanced data security and compliance',;'
@@ -316,7 +310,6 @@ const benefits = [;
     "description": 'Built-in quality metrics and compliance monitoring''
   }
 ;];
-const solutions = [;
   'HIPAA-Compliant Cloud Infrastructure',','
   'Electronic Health Record (EHR) Systems',','
   'Telemedicine & Remote Patient Monitoring',','
@@ -384,7 +377,6 @@ export default function HealthcareSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
                 </div>;
-const benefits = [;
   'Improved patient care and outcomes','
   'Reduced administrative burden','
   'Enhanced data security and compliance','

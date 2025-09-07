@@ -159,7 +159,6 @@ interface AddMilestoneFormProps {;
 
     // If there's only one milestone, submit it directly;
     if (milestones && milestones.length === 1) {;
-      const milestone = milestones[0];
       if (milestone) {;
         onSubmit({;
           title: milestone.title,,

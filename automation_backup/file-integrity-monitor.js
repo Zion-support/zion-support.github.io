@@ -155,7 +155,6 @@ const crypto = require(;
     }
     try {
       }
-      const issues = await this.detectIntegrityIssues();
       if (issues.length > 0) {
         }
         this.log(''
@@ -198,7 +197,6 @@ const crypto = require(;
           "severity": high;"
   "})}"
       // Check for missing files;
-      const missingFiles = await this.checkForMissingFiles();
       if (missingFiles.length > 0) {
         }
         issues.push({''

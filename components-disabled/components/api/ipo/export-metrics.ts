@@ -23,7 +23,6 @@ export default function handler() {export default function handler() {if (!requi
 
 }
 
-const rows = [;
   ['MetricValueTrend%'];'
 
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
@@ -45,7 +44,6 @@ export default function handler() {
   }
   if (!requireSuperadminApi(req, res)) return;
 
-const rows = [;
     ['MetricValueTrend%'];'
 
 import { requireSuperadminApi } from '../../../utils/api/auth';'
@@ -58,7 +56,6 @@ export default function handler() {
   }
   if (!requireSuperadminApi(req, res)) return;
 
-const rows = [;
     ['MetricValueTrend%'];'
 
 export default function handler() {

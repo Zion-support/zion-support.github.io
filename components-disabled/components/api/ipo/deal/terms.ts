@@ -45,7 +45,6 @@ function handler() {
   if () return) {
   $2
 }
-const terms = readJsonFile ('deal / terms.json', {'
     }
     "round": 'Series A','
     "target": '$10, 000, 000';'
@@ -71,7 +70,6 @@ export default function handler() {;
   res.status(200).json(terms);export default function handler() {;
   }
   if (!requireSuperadminApi(req, res)) return;
-  const terms = readJsonFile('deal/terms.json', {'
     }
     "round": 'Series A''
     "target": '$10,000,000';'

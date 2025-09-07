@@ -1,13 +1,8 @@
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
-}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
   }
-  return <div>Something went wrong.</div>;
-    }return this.props.children;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  }
-<<<<<<< HEAD
-}
-import React from 'react';'
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+import React from react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
   return <NextSeo {...props} />;

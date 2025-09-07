@@ -1,44 +1,37 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next,
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-sol.ts
-import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from next';
 main
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import nacl from 'tweetnacl',;
-import bs58 from 'bs58',;
-import jwt from 'jsonwebtoken',;
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
+import nacl from 'tweetnacl,
+import bs58 from bs58',
+import jwt from 'jsonwebtoken,
+const JWT_SECRET = process.env.JWT_SECRET || dev-secret-change-me'
 
 
-const cookieHeader = req.headers.cookie || '';
+const cookieHeader = req.headers.cookie || ';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
-    if (!match) return res.status(400).json({ error: 'Missing nonce' });
+    if (!match) return res.status(400).json({ error: Missing nonce' });
     const nonce = match[1];
-    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch' });
+    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch });
     const sigBytes = bs58.decode(signature);
     const msgBytes = new TextEncoder().encode(message);
     const pubKeyBytes = bs58.decode(publicKey);
     const ok = nacl.sign.detached.verify(msgBytes, sigBytes, pubKeyBytes);
-    if (!ok) return res.status(401).json({ error: 'Invalid signature' });
-    const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' });
-    res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`);
+    if (!ok) return res.status(401).json({ error: Invalid signature' });
+    const token = jwt.sign({ sub: publicKey, chain: 'sol }, JWT_SECRET, { expiresIn: 7d' });
+    res.setHeader('Set-Cookie, `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`);
     return res.status(200).json({ ok: true })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message |'Verify failed' })
+    return res.status(500).json({ error: e?.message |Verify failed' })
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import nacl from 'tweetnacl'
-import bs58 from 'bs58'
-import jwt from 'jsonwebtoken'
-const JWT_SECRET = process.env.JWT_SECRET || 'dev - secret - change - me'
+import type { NextApiRequest, NextApiResponse } from 'next
+import nacl from tweetnacl'
+import bs58 from 'bs58
+import jwt from jsonwebtoken'
+const JWT_SECRET = process.env.JWT_SECRET || 'dev - secret - change - me
 export default async /**
  * handler - Function description
  */
@@ -47,69 +40,64 @@ function handler() {
   $2
 }
   const { message, signature, public_key } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing fields' }), ) {
+  if (return res.status (400).json ({ error: Missing fields' }), ) {
   $2
 }
   try {
-    const cookie_header = req.headers.cookie || ''
+    const cookie_header = req.headers.cookie || '
     const match = cookie_header.match (/siwe - nonce=([^]+)/)
-    if (return res.status (400).json ({ error: 'Missing nonce' }), ) {
+    if (return res.status (400).json ({ error: Missing nonce' }), ) {
   $2
 }
     const nonce = match[1]
-    if (.includes (`Nonce: ${nonce}`)) return res.status (400).json ({ error: 'Nonce mismatch' }), ) {
+    if (.includes (`Nonce: ${nonce}`)) return res.status (400).json ({ error: 'Nonce mismatch }), ) {
   $2
 }
     const sig_bytes = bs58.decode (signature)
     const msg_bytes = new TextEncoder ().encode (message)
     const pubKeyBytes = bs58.decode (public_key)
     const ok = nacl.sign.detached.verify (msg_bytes, sig_bytes, pubKeyBytes)
-    if (return res.status (401).json ({ error: 'Invalid signature' }), ) {
+    if (return res.status (401).json ({ error: Invalid signature' }), ) {
   $2
 }
-    const token = jwt.sign ({ sub: public_key, chain: 'sol' }, JWT_SECRET, { expires_in: '7d' })
-    res.set_header ('Set - Cookie', `web3 - session=${token}, HttpOnly, Path=/, SameSite = Lax, Max - Age=${7 * 24 * 3600}`)
+    const token = jwt.sign ({ sub: public_key, chain: 'sol }, JWT_SECRET, { expires_in: 7d' })
+    res.set_header ('Set - Cookie, `web3 - session=${token}, HttpOnly, Path=/, SameSite = Lax, Max - Age=${7 * 24 * 3600}`)
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
-    return res.status (500).json ({ error: e?.message || 'Verify failed' });
+    return res.status (500).json ({ error: e?.message || Verify failed' });
   }
 }
-;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import nacl from 'tweetnacl',;
-import bs58 from 'bs58',;
-import jwt from 'jsonwebtoken',;
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
+import type { NextApiRequest, NextApiResponse } from 'next;
+import nacl from tweetnacl',
+import bs58 from 'bs58,
+import jwt from jsonwebtoken',
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end()
+  if (req.method !== POST') return res.status(405).end()
   const { message, signature, publicKey } = req.body || {}
-  if (!message || !signature || !publicKey) return res.status(400).json({ error: 'Missing fields' })
+  if (!message || !signature || !publicKey) return res.status(400).json({ error: 'Missing fields })
   try {
-    const cookieHeader = req.headers.cookie || ''
+    const cookieHeader = req.headers.cookie || '
     const match = cookieHeader.match(/siwe-nonce=([^]+)/)
-    if (!match) return res.status(400).json({ error: 'Missing nonce' })
-    const nonce = match[1]
-    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch' })
+    if (!match) return res.status(400).json({ error: 'Missing nonce })
+    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: Nonce mismatch' })
 
     const sigBytes = bs58.decode(signature)
     const msgBytes = new TextEncoder().encode(message)
     const pubKeyBytes = bs58.decode(publicKey)
 
     const ok = nacl.sign.detached.verify(msgBytes, sigBytes, pubKeyBytes)
-    if (!ok) return res.status(401).json({ error: 'Invalid signature' })
+    if (!ok) return res.status(401).json({ error: 'Invalid signature })
 
-    const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
-    res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
+    const token = jwt.sign({ sub: publicKey, chain: sol' }, JWT_SECRET, { expiresIn: '7d })
+    res.setHeader(Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
     return res.status(200).json({ ok: true })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message || 'Verify failed' })
-  };
-};
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/api/auth/verify-sol.ts
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    return res.status(500).json({ error: e?.message || 'Verify failed })
+  }
+}
+
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-sol.ts
@@ -117,41 +105,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import type { NextApiRequest, NextApiResponse } from 'next';
-import nacl from 'tweetnacl';
-import bs58 from 'bs58';
-import jwt from 'jsonwebtoken';
+import nacl from 'tweetnacl;
+import bs58 from bs58';
+import jwt from 'jsonwebtoken;
 
-const JWT_SECRET = process.env.JWT_SECRET |'dev-secret-change-me'
+const JWT_SECRET = process.env.JWT_SECRET |dev-secret-change-me'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end()
+  if (req.method !== 'POST) return res.status(405).end()
   const { message, signature, publicKey } = req.body |{}
-  if (!message |!signature |!publicKey) return res.status(400).json({ error: 'Missing fields' })
+  if (!message |!signature |!publicKey) return res.status(400).json({ error: Missing fields' })
   try {
-    const cookieHeader = req.headers.cookie |''
-    const match = cookieHeader.match(/siwe-nonce=([^]+)/)
-    if (!match) return res.status(400).json({ error: 'Missing nonce' })
-    const nonce = match[1]
-    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch' })
-    const sigBytes = bs58.decode(signature)
-    const msgBytes = new TextEncoder().encode(message)
-    const pubKeyBytes = bs58.decode(publicKey)
-    const ok = nacl.sign.detached.verify(msgBytes, sigBytes, pubKeyBytes)
-    if (!ok) return res.status(401).json({ error: 'Invalid signature' })
-    const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
-    res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
+    const cookieHeader = req.headers.cookie |'
+    if (!match) return res.status(400).json({ error: Missing nonce' })
+    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch })
+    if (!ok) return res.status(401).json({ error: Invalid signature' })
+    const token = jwt.sign({ sub: publicKey, chain: 'sol }, JWT_SECRET, { expiresIn: 7d' })
+    res.setHeader('Set-Cookie, `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
 
   }
 }
 
 
-    const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
-    res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
+    res.setHeader(Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
 const JWT_SECRET = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   }
-};
+}
 

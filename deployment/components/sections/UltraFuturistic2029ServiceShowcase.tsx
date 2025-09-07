@@ -29,7 +29,6 @@ Sparkles;
 }
 }
 } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 
 type Service = CuttingEdgeInnovation2029 | any;
@@ -79,7 +78,6 @@ title = '2029 Ultra-Futuristic Innovations'
 
 
 ;}
-  const categoryColors: { [key: string]: string}
 } = {;
   'AI & Consciousness': 'from-purple-600 to-pink-600',;
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',;

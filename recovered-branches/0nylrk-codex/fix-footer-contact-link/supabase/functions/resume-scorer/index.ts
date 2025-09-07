@@ -103,17 +103,14 @@ if (!resumeContent) {
       `;`      resumeSkills = application.talent_profile?.skills || []    );
   }
 ;
-  const supabase = createClient(supabaseUrl, supabaseAnonKey),;
   try {;
     }
-    const { applicationId } = await req.json(),;
     if (!applicationId) {;
       }
       throw new Error("Application ID is required");"
     }
 ;
     // 1. Fetch the application with job details and resume content;
-    const { "data": application, "error": appError } = await supabase;
       .from("job_applications");"
       .select(`;`        id,;
         job_id,;
@@ -223,7 +220,6 @@ if (!matchResult && matchResult.score || !matchResult && matchResult.summary || 
     try {
       // Extract JSON from the response
 }
-const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
       // Validate required fields,
 if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
@@ -264,9 +260,6 @@ return new Response (;
     }
 ;
     // 4. Prepare job details;
-    const jobTitle = application.job?.title || "",;"
-    const jobDescription = application.job?.description || "",;"
-    const jobSkills = application.job?.skills || [],;
 ;
     // 5. Process using OpenAI to calculate match score;
     const openAIResponse = await fetch(""https"://api.openai.com/v1/chat/completions", {;"
@@ -329,13 +322,10 @@ return new Response (;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API "Error":${JSON.stringify(errorData)}`),;`    }
 ;
-    const aiResult = await openAIResponse.json(),;
-    let matchResult,;
     ;
     try {;
       // Extract JSON from the response;
       }
-      const content = aiResult.choices[0].message.content,;
       matchResult = JSON.parse(content),;
       ;
       // Validate required fields;

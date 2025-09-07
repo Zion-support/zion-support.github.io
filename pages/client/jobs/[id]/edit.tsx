@@ -1,0 +1,18 @@
+
+  return (
+    <Layout>
+      <Head>
+        <title>Edit Job - Zion Tech Group</title>
+        <meta name="description content=Edit Job solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50>
+        <div className=container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8>Edit Job</h1>
+          <p className=text-lg text-gray-600">
+            Professional edit job solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+
+}

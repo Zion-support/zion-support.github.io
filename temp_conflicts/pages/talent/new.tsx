@@ -72,7 +72,6 @@ export default function NewTalentPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)}),
-      const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Save failed'),
       window.location.href = `/talent/${data.slug}`
     } catch (err: any) {

@@ -62,7 +62,6 @@ export function FaqSection() {
   );
 }
 
-import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const FaqSection: React.FC = () => {
@@ -115,8 +114,6 @@ const FaqSection: React.FC = () => {
 
 
 
-import { GradientHeading } from "./GradientHeading";
-import {
   Accordion;
   AccordionContent;
   AccordionItem;
@@ -128,8 +125,6 @@ import { GradientHeading } from './GradientHeading'
   AccordionTrigger
 } from '@/components/ui/accordion'
 
-import { FileText } from 'lucide-react'
-const faqs = [
   {
     question: 'How do I publish my AI product or service?'
     answer:
@@ -229,14 +224,11 @@ export function FaqSection() {;
         <div className='text-center mb-12'>;
           <GradientHeading>Frequently Asked Questions</GradientHeading>;
           <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>;
-import { GradientHeading } from './GradientHeading';
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/ accordion';
-import { FileText } from 'lucide-react';
-const faqs = [;
   {
     question: 'How do I publish my AI product or service?',
     answer:;
@@ -294,7 +286,6 @@ function FaqSection() {
         </div>;
 
 
-import { GradientHeading } from "./GradientHeading";
 
         <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;
           <div className='flex items - center mb - 6'>;
@@ -312,13 +303,11 @@ import { GradientHeading } from "./GradientHeading";
                 </AccordionTrigger>;
                 <AccordionContent className='text - zion - slate - light'>                  {faq.answer}
                 <AccordionContent className="text - zion - slate - light">;
-import {
   Accordion;
   AccordionContent;
   AccordionItem;
   AccordionTrigger } from '@/components/ui/ accordion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/ accordion';
-const faqs = [;
   {
 
         <div className='max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6'>;
@@ -342,10 +331,8 @@ import {;
   AccordionContent;
   AccordionItem;
   AccordionTrigger} from "@/components/ui/accordion";
-import { FileText } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
-const faqs = [;
   {;
     question: "How do I publish my AI product or service?",;
     answer:;
@@ -383,7 +370,6 @@ const faqs = [;
 export function FaqSection() {;
 
 
-const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:

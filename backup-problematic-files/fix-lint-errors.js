@@ -201,7 +201,6 @@ return match,;
     }
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
 }
-const cleanImports = imports.trim().split(/\s+/).join(),;
       return match.replace(imports, cleanImports)};
   ),
   // Fix missing semicolons after variable declarations,
@@ -218,17 +217,12 @@ const cleanImports = imports.trim().split(/\s+/).join(),;
 async function $1() {,
   // Get all TypeScript/JavaScript files
 }
-const files = await glob("src/**/*.{ts,tsx,js,jsx}", {,;"
   "ignore": ["node_modules/**"]}),"
   console.log(""Found ${files.length} files to process...""),"
-let fixedCount = 0,;
-let errorCount = 0,;
   for (const file of files) {
   }
   try {
 }
-const content = fs.readFileSync(file, "utf8"),;"
-const fixed = fixLintErrors(content),;
       if (content !== fixed) {
   }
   fs.writeFileSync(file, fixed, "utf8"),"

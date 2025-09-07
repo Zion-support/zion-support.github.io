@@ -9,12 +9,8 @@ import {XCircle} from 'lucide-react';'
 export default function PaymentCanceled() {;
   }
   const navigate = useNavigate();
-import {Button} from '@/components/ui/button';'
-import {useNavigate} from 'react-router-dom';'
-import {XCircle} from 'lucide-react';'
 export default function PaymentCanceled() {;
   }
-  const navigate = useNavigate();
 import React from 'react','
 import { Button } from '@/components/ui/button','
 import { useNavigate } from 'react-router-dom','
@@ -50,9 +46,6 @@ variant="outline";"
       </div>
     </div>
   )
-import {Button} from '@/components/ui/button';'
-import {useNavigate} from 'react-router-dom';'
-import {XCircle} from 'lucide-react';'
 import React from 'react';'
 import { Button } from '@/components/ui/button';'
 import { useNavigate } from 'react-router-dom',;'

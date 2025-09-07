@@ -20,8 +20,6 @@ import { FormValues } from "./useHireRequestForm","
 interface ProjectDetailsFieldProps {
   }
   "form": UseFormReturn<FormValues>
-import React from "react";"
-import { UseFormReturn } from "react-hook-form";"
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;"
 import { Textarea } from "@/components/ui/textarea",;  "form": UseFormReturn<FormValues>;"
 }
@@ -88,7 +86,6 @@ control={form && form.control}
 }<FormItem> <FormLabel className="text-white" >Project Overview</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)"
 }/>)
 }
-import { FormValues } from "./useHireRequestForm";"
 interface ProjectDetailsFieldProps {
   }
   "form": UseFormReturn<FormValues>;

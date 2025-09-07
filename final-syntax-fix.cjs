@@ -58,8 +58,6 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`);
 
 
 
-const fs = require('fs');
-const path = require('path');
 
 function finalSyntaxFix(filePath) {
   try {

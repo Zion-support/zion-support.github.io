@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
-import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
 
   if (typeof window === 'undefined') return ''
@@ -32,7 +31,6 @@ export default function AffiliateDashboard() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })})
-      const json = await res.json()
       if (!res.ok) throw new Error(json.error |'Failed')
       setMsg('Payout requested')
     } catch (e: any) {
@@ -81,7 +79,6 @@ export default function AffiliateDashboard(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),;
-      const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
       setMsg('Payout requested');
     } catch (error) {

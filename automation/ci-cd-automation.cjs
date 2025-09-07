@@ -91,9 +91,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     );
-    const logMessage = `[${timestamp}] ${message}\n`;
     );
-    const logMessage = `[${timestamp}] ${message}\n`;
     );
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -257,7 +255,6 @@ async runLint() {}
 };
 // Start the automation if this file is run directly;
 if (require.main === module) {}
-  const automation = new CICDAutomation();
   automation.start().catch(console.error);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 module.exports = CICDAutomation;
 module.exports = CICDAutomation;

@@ -67,7 +67,6 @@ export const "ClientBudgetRecommender": React.FC<ClientBudgetRecommenderProps> =
   onSuggestionApplied}) => {;
   }
   const [isLoading, setIsLoading] = useState(false),;
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
   const { user } = useAuth(),;
   const generateSuggestion = async () => {;
     }
@@ -123,7 +122,6 @@ const result = await getClientBudgetSuggestion(params),;
       if (timeline) params.timeline = timeline,;
       if (scope) params.scope = scope,;
       if (experienceLevel) params.experienceLevel = experienceLevel,;
-      const result = await getClientBudgetSuggestion(params),;
       setSuggestion(result);
     } catch (error) {;
       }
@@ -221,7 +219,6 @@ if ( {) {
     setIsLoading (true);
     try {
       }
-      const "params": ClientBudgetParams = {
         }
         job_title,
         category}

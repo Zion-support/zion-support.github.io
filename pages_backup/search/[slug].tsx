@@ -67,26 +67,9 @@ type SearchResult =;
   slug: string;
   totalCount: number;
 
-import { GetServerSideProps } from 'next';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
 
-import { Search, Filter, Grid, List } from 'lucide-react';
 
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
-import ProductCard from '@/components/ProductCard';
-import { TalentCard  } from '@/components/talent/TalentCard';
-import { CategoryCard  } from '@/components/CategoryCard';
-import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
-import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
-import { TALENT_PROFILES  } from '@/data/talentData';
-import { BLOG_POSTS  } from '@/data/blog-posts';
-import { useDebounce  } from '@/hooks/useDebounce';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 interface BaseSearchResult {
   id: string,
@@ -147,7 +130,6 @@ type SearchResult =
   | CategorySearchResult;
 
 // Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult =>
   result.type === 'product' || result.type === 'equipment';
 
 const hasRating = (
@@ -330,8 +312,6 @@ function offlineSearch() { return null; }
         break;'
       case 'price_desc':;
         all.sort((a, b) => {;'
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;'
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return bPrice - aPrice;
         });
         break;'
@@ -348,8 +328,6 @@ function offlineSearch(
   limit = 12
   filters: OfflineFilters = {}
 ): { results: SearchResult[]; totalCount: number } {
-  const term = query.toLowerCase().trim();
-  const match = (text?: string) => text?.toLowerCase().includes(term);
   const productResults = MARKETPLACE_LISTINGS.filter(
 p =>
       match(p.title) ||
@@ -443,14 +421,11 @@ return (r.rating ?? 0) >= filters.minRating!;
       case 'price_asc':
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
 return aPrice - bPrice;
         });
         break;
       case 'price_desc':
         all.sort((a, b) => {
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
 return bPrice - aPrice;
         });
         break;
@@ -490,8 +465,6 @@ const aRating =
         break;'
       case 'price_desc':
         all.sort((a, b) => {'
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;'
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return bPrice - aPrice;
         });
         break;'
@@ -526,8 +499,6 @@ export default function SearchResultsPage(): any ({;
   } else {
     all.sort((a, b) => a.title.localeCompare(b.title));
   }
-  const start = (page - 1) * limit;
-  const paginated = all.slice(start, start + limit);
   return { results: paginated, totalCount: all.length };
 
 export default function SearchResultsPage({
@@ -537,7 +508,6 @@ export default function SearchResultsPage({
   totalCount,
 }: SearchResultsPageProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-  const router = useRouter();
 
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
@@ -761,8 +731,6 @@ if ( {) {}
         break;'
       case 'price_desc':;
         all.sort ((a, b) => {'
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;'
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
           return b_price - a_price;        });
         break;'
       case 'rating':;
@@ -780,7 +748,6 @@ if ( {) {}
   } else {}
     all.sort ((a, b) => a.title.locale_compare (b.title));
   }
-  const start = (page - 1) * limit;
   const paginated = all.slice (start, start + limit);
   return { results: paginated, total_count: all.length }
 ;
@@ -967,7 +934,6 @@ return false;
   });
 
   // Group results by type for better display
-  const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
@@ -1012,7 +978,6 @@ return false;
   }),
 
   // Group results by type for better display
-  const groupedResults = filteredResults.reduce(
     (acc, result) => {
 
 return acc;
@@ -1828,7 +1793,6 @@ export const getServerSideProps: GetServerSideProps<
     let results = [];
     let totalCount = 0;
 
-      const data = await response.json();
       results = data.results |[];
       totalCount = data.totalCount |results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
@@ -1877,7 +1841,6 @@ export const getServerSideProps: GetServerSideProps<
 export const getServerSideProps: GetServerSideProps<;
   SearchResultsPageProps;
 > = async (context: any) => {}
-  const params = context.params;
   const slug = params?.slug as string,
   // Convert slug back to query term;'
   const query = slug ? slug.replace (/-/g, ' ') : '';
@@ -1891,7 +1854,6 @@ export const getServerSideProps: GetServerSideProps<;
     const response = await fetch (`
       `${apiBaseUrl}/api / search?query=${encodeURIComponent (query)}&limit = 12`    );
 ;
-    let results = [];
     let total_count = 0;
 ;
     // Check condition;
@@ -1928,7 +1890,6 @@ if ( {) {}
         totalCount}}
   } catch (error) {'
     logErrorToProduction('Error fetching search results:', { data: error }),'
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
     return {}
       props: {}
         initialResults: offline.results,
@@ -1958,7 +1919,6 @@ query,
   } catch (error) {
     logErrorToProduction ('Error fetching search results:', { data: error });
 
-    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
 ;
     return {}
       props: {}
@@ -2072,22 +2032,17 @@ total_count: offline.total_count,
 export const getServerSideProps: GetServerSideProps<;
   SearchResultsPageProps;
 > = async (context: any) => {;
-  const params = context.params;
   const slug = params?.slug as string;
   // Convert slug back to query term;'
   const query = slug ? slug.replace(/-/g, ' ') : '',;
   try {}
     // In production, replace with your actual API base URL;
-    const apiBaseUrl =;'
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',;`
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
     const response = await fetch(;`
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`);
-    let results = [];
-    let totalCount = 0;
     if (response.ok) {;
 
-      const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;`
       logInfo(`Server-side fetch successful: ${results.length} results`);
@@ -2116,7 +2071,6 @@ export const getServerSideProps: GetServerSideProps<;
 }
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
 
     return {;
       props: {;

@@ -1,3 +1,2 @@
 
-import React from \'react\'; import Head from \'next/head\'; export default function CloudNativeAutomation() {}return null} }'
-import _React from 'react'; import Head from 'next/head'; export default function CloudNativeAutomation() {}return null} }
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

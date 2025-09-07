@@ -44,7 +44,6 @@ import {;
   TableRow;
 } from '@/components/ui/table',;
 import { Button } from '@/components/ui/button',;
-import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
@@ -105,7 +104,6 @@ export function TenantsList() {;
     try {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
-      const { error } = await supabase;
         .from('whitelabel_tenants');
         .update({ dns_verified: true });
         .eq('id', (tenant as any).id),;
@@ -258,10 +256,6 @@ export function TenantsList() {;
   );
 
 }
-import React, { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-import {;
   Table,;
   TableBody,;
   TableCell,;
@@ -269,27 +263,16 @@ import {;
   TableHeader,;
   TableRow;
 } from '@/components/ui/table',;
-import { Button } from '@/components/ui/button',;
-import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',;
-import { Badge } from '@/components/ui/badge',;
-import { toast } from '@/hooks/use-toast',;
-import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react';
-import { format } from 'date-fns',;
 export function TenantsList() {;
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
   useEffect(() => {;
     loadTenants();
   }, []),;
-  const loadTenants = async () => {;
     try {;
       setIsLoading(true),;
-      const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .select('*');
         .order('created_at', { ascending: false }),;
@@ -305,9 +288,7 @@ export function TenantsList() {;
       setIsLoading(false);
     }
   },;
-  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
     try {;
-      const { error } = await supabase;
         .from('whitelabel_tenants');
         .update({ is_active: !(tenant as any).is_active });
         .eq('id', (tenant as any).id),;
@@ -327,11 +308,9 @@ export function TenantsList() {;
   description: error.message});
     }
   },;
-  const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
-      const { error } = await supabase;
         .from('whitelabel_tenants');
         .update({ dns_verified: true });
         .eq('id', (tenant as any).id),;
@@ -354,29 +333,16 @@ export function TenantsList() {;
 
 }
 
-import React, { useState, useEffect } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
   TableRow 
  } from '@/components/ui/table';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Badge  } from '@/components/ui/badge';
-import { toast  } from '@/hooks/use-toast';
-import { WhitelabelTenant  } from '@/hooks/useWhitelabelTenant';
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react'
-import { format  } from 'date-fns';
 export function TenantsList() {
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     loadTenants()
   }, []),

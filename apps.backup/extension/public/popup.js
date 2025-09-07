@@ -64,13 +64,11 @@ const data = await res && res.json();
 
 document.getElementById('postJob').addEventListener('click', async () => {'
   }
-  const userId = await new Promise((r) => getUserId(r));
 
 const res = await fetch(`${API_BASE}/jobs/generate`, {`});
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {'
   }
-  const userId = await new Promise((r) => getUserId(r));
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {'
@@ -134,7 +132,6 @@ document.getElementById('postJob').addEventListener('click', async () => {;'
 
 }
 
-const userId = await new Promise((r) => getUserId(r)),;
 
 const res = await fetch(`${API_BASE}/jobs/generate`, {;`    }
     "method": 'POST',;'
@@ -143,14 +140,12 @@ const res = await fetch(`${API_BASE}/jobs/generate`, {;`    }
 });
   }),;
 
-const data = await res.json(),;
   document.getElementById('result').textContent = data.description || 'Draft saved.';'
 }),;
 document.getElementById('resumeSearch').addEventListener('click', async () => {;'
 
 }
 
-const userId = await new Promise((r) => getUserId(r)),;
   if (!userId) return (document.getElementById('result').textContent = 'Sign in first.'),;'
 
 const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {;`    }
@@ -158,14 +153,12 @@ const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Bra
  
 }),;
 
-const data = await res.json(),;
   document.getElementById('result').textContent = JSON.stringify(data.results || [], null, 2);'
 }),;
 document.getElementById('viewNotifications').addEventListener('click', async () => {;'
 
 }
 
-const userId = await new Promise((r) => getUserId(r)),;
   if (!userId) return (document.getElementById('result').textContent = 'Sign in first.'),;'
 
 const res = await fetch(`${API_BASE}/notifications`, {;`
@@ -174,7 +167,6 @@ const res = await fetch(`${API_BASE}/notifications`, {;`
  
 }),;
 
-const data = await res.json(),;
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2);'
 }),;
 document.getElementById('signIn').addEventListener('click', async () => {;'

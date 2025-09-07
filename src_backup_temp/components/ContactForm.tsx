@@ -72,9 +72,7 @@ export const "ContactForm": "React.FC = () => {';';';'
     }
     "timeline": ''}'
     );';';';'
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';'
     ';';';'
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');'
   const handleInputChange = ("props": any) => {
     }
     const { name, value } = e.target;

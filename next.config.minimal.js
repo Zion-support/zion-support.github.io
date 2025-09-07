@@ -72,7 +72,6 @@ module.exports = nextConfig;};
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
-const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
@@ -249,7 +248,6 @@ ursor/automate-test-improve-and-merge-code-646c;
       }
     ];
   }},export default nextConfig,/** @type {import('next').NextConfig} */;
-const nextConfig = {reactStrictMode: true;
   eslint: { ignoreDuringBuilds: true }
   typescript: { ignoreBuildErrors: true }
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'];

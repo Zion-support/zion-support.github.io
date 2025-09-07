@@ -27,7 +27,6 @@ export default function PartnerDashboard() {
     setLoading(true),
     const res = await fetch("/api/partners/usage", {
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json(),
     setUsage(data.summary || null),
     setLoading(false)
   }
@@ -36,7 +35,6 @@ export default function PartnerDashboard() {
     const res = await fetch("/api/partners/key", {
       method: "POST",
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
-    const data = await res.json(),
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     }

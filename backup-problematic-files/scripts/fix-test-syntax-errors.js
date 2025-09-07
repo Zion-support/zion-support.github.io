@@ -98,7 +98,6 @@ const fixer = new TestSyntaxErrorFixer()fixer.run().catch("error": => {console.e
     } catch (error) {console.error(` Error fixing ${filePath }:`, error.message)this.errors.push({"file": filePath,console.error(` Error fixing ${filePath}:`, error.message)this.errors.push({"file": filePath,"error": error.message})}"  }
   hasSyntaxErrors(content) {// Check for common syntax error patterns;
     }
-    const errorPatterns = [;
       /import.*from\s*;/g,  // Missing quotes in import;
       /from\s*;\s*[""]/g,   // Semicolon instead of quotes;"
       /['']\s*;\s*['']/g,   // Semicolon in string literal;'

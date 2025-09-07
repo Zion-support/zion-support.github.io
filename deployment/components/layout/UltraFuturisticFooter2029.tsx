@@ -340,7 +340,6 @@ key={social.name}
 
 ];
 
-const UltraFuturisticFooter2029 = (
  ;
   return (
 

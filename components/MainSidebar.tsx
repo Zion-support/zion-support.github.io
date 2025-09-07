@@ -63,9 +63,7 @@ interface SidebarProps extends React.PropsWithChildren<{}> {"isOpen": boolean;
       { "name": 'About Us', "href": '/about', "icon": Building, "description": 'Our story & mission' }, { "name": 'Team', "href": '/team', "icon": Users, "description": 'Meet our experts' }, { "name": 'Partners', "href": '/partners', "icon": Handshake, "description": 'Strategic partnerships' }, { "name": 'Careers', "href": '/careers', "icon": Briefcase, "description": 'Join our team' }, { "name": 'Blog', "href": '/blog', "icon": Newspaper, "description": 'Company updates' }];'
   }const quickActions = [;
     { "name": 'Contact Sales', "href": '/contact', "icon": Quote, "color": 'from-cyan-500 to-blue-600' }, { "name": 'Get Support', "href": '/contact', "icon": HelpCircle, "color": 'from-green-500 to-emerald-600' }, { "name": 'View Status', "href": '/status', "icon": CheckCircle, "color": 'from-yellow-500 to-orange-600' }, { "name": 'Documentation', "href": '/documentation', "icon": FileText, "color": 'from-purple-500 to-pink-600' }];'
-  const contactInfo = [;
     { "icon": Phone, "text": '+1 (302) 464-0950', "href": '"tel":+13024640950' }, { "icon": Mail, "text": 'kleber@ziontechgroup.com', "href": '"mailto":kleber@ziontechgroup.com' }, { "icon": MapPin, "text": 'Middletown, DE 19709', "href": '"https"://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }];'
-  const socialLinks = [;
     { "name": 'LinkedIn', "href": '"https"://www.linkedin.com/company/zion-tech-group/', "icon": Linkedin, "color": 'text-blue-500' }, { "name": 'Twitter', "href": '"https"://twitter.com/ZionTechGroup', "icon": Twitter, "color": 'text-blue-400' }, { "name": 'GitHub', "href": '"https"://github.com/ziontechgroup', "icon": Code, "color": 'text-gray-400' }];'
   const renderNavSection = ("title": string, "items": NavItem[], "sectionKey": string) => (<div key={sectionKey} className='mb-6'>;'
       <button;
@@ -92,7 +90,6 @@ const router = useRouter()const [expandedSections, setExpandedSections] =;
       prev.includes(section)? prev.filter(s => { return s !== section): [...prev, section]; }
     )}
 
-const isActive = ("path": string) => router.pathname === path;
 
 interface NavItem {
   }
@@ -158,20 +155,17 @@ const navigation = {"main": [;
 }  ];
   }
 
-const quickActions = [;
   { "name": 'Get Quote', "href": '/quote', "icon": DollarSign, "color": 'from-green-500 to-green-600','
 },{ "name": 'Schedule Call', "href": '/schedule', "icon": Calendar, "color": 'from-blue-500 to-blue-600','
 },{ "name": 'View Portfolio', "href": '/portfolio', "icon": Eye, "color": 'from-purple-500 to-purple-600','
 },{ "name": 'Support', "href": '/support', "icon": HelpCircle, "color": 'from-orange-500 to-orange-600','
 }];
 
-const contactInfo = [;
   { "icon": Phone, "text": '+1 (555) 123-4567', "href": '"tel":+15551234567','
 },{ "icon": Mail, "text": 'info@ziontechgroup.com', "href": '"mailto":info@ziontechgroup.com','
 }, { "icon": MapPin, "text": 'San Francisco, CA', "href": '#','
 }  ];
 
-const socialLinks = [;
   { "name": 'LinkedIn', "href": '"https"://linkedin.com/company/ziontechgroup', "icon": Linkedin, "color": '"hover":text-blue-400','
 },{ "name": 'Twitter', "href": '"https"://twitter.com/ziontechgroup', "icon": Twitter, "color": '"hover":text-blue-400','
 },{ "name": 'Website', "href": '"https"://ziontechgroup.com', "icon": Globe, "color": '"hover":text-green-400','
@@ -188,13 +182,11 @@ interface SidebarProps extends React.PropsWithChildren<{}> {"isOpen": anyanyanya
   "onClose": ()               => voi
 }
 
-const "MainSidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 
 
 }
 
 
-const router = useRouter()const [expandedSections, setExpandedSections] =;
   useState<any>([];
   const toggleSection = ("section": anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {setExpandedSections(prev =>;
       }
@@ -252,26 +244,22 @@ const "navigation": { "main": NavItem[] "services": NavItem[] "solutions": NavIt
 }];
   }
 
-const quickActions = [;
   { "name": 'Contact Sales', "href": '/contact', "icon": Quote, "color": 'from-cyan-500 to-blue-600','
 }, { "name": 'Get Support', "href": '/contact', "icon": HelpCircle, "color": 'from-green-500 to-emerald-600','
 }, { "name": 'View Status', "href": '/status', "icon": CheckCircle, "color": 'from-yellow-500 to-orange-600','
 }, { "name": 'Documentation', "href": '/documentation', "icon": FileText, "color": 'from-purple-500 to-pink-600','
 }];
 
-const contactInfo = [;
   { "icon": Phone, "text": '+1 (302) 464-0950', "href": '"tel":+13024640950','
 }, { "icon": Mail, "text": 'kleber@ziontechgroup.com', "href": '"mailto":kleber@ziontechgroup.com','
 }, { "icon": MapPin, "text": 'Middletown, DE 19709', "href": '"https"://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709','
 }];
 
-const socialLinks = [;
   { "name": 'LinkedIn', "href": '"https"://www.linkedin.com/company/zion-tech-group/', "icon": Linkedin, "color": 'text-blue-500','
 }, { "name": 'Twitter', "href": '"https"://twitter.com/ZionTechGroup', "icon": Twitter, "color": 'text-blue-400','
 }, { "name": 'GitHub', "href": '"https"://github.com/ziontechgroup', "icon": Code, "color": 'text-gray-400','
 }];
 
-const renderNavSection = ("title": string, "items": NavItem[], "sectionKey": string) => (<div key={sectionKe
 } className='mb-6'>;'
       <button;
         onClick={() => toggleSection(sectionKey)}

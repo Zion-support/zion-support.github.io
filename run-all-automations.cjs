@@ -69,14 +69,12 @@ class AllAutomationsRunner {;
   async runCustomScripts() {;
     this.log('🔧 Running custom automation scripts...');
 ;
-    const scripts = [;
       'enhanced-automation-suite.cjs',
       'app-optimizer.js',
       'complete-improvement-suite.cjs',
       'automation/master-orchestrator.cjs';
     ];
 ;
-    const results = [];
     for (const script of scripts) {;
       const scriptPath = path.join(__dirname, script);
       if (fs.existsSync(scriptPath)) {;

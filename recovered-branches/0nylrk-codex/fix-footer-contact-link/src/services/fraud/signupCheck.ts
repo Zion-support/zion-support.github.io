@@ -46,7 +46,6 @@ export const checkSignupPatterns = async (;
     }
     try {;
       }
-      const { "data": recentSignups, error } = await supabase;
         .from('profiles');'
         .select('created_at');'
         .eq('ip_address', ipAddress);'

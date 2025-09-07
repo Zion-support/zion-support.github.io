@@ -24,7 +24,6 @@ export function SignUpForm() {
 }
 const navigate = useNavigate(),;
 const { signup, login, loginWithGoogle } = useAuth(),;
-  const [formData, setFormData] = useState({
     }
     "email": "","
     "password": "","
@@ -49,9 +48,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert",;"
     "email": "",;"
     "password": "",;"
     "name": ""}),;"
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");"
   const handleInputChange = ("e": React && React.ChangeEvent<HTMLInputElement>) => {;
     }
     const { name, value } = e && e.target;

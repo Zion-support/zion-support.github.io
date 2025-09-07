@@ -23,7 +23,6 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
     console.log(message);
   };
   error(message) {}
-    const timestamp = new Date().toISOString();
 const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`;
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
@@ -211,8 +210,6 @@ if (require.main === module) {}
 
 // Run if called directly;
 if (require.main === module) {}
-  const linter = new ContinuousLinter();
-  const command = process.argv[2];
 
     linter.run();
   } else if (command === 'fix') {}
@@ -253,7 +250,6 @@ this.log('Starting continuous linting automation...')
 
 // Run if called directly
   if($2) {}
-  const linter = new ContinuousLinter()
   const command = process.argv[2]
     linter.run()
   } else if (command ===fix') {}

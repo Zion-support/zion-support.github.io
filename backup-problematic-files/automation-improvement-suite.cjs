@@ -6,8 +6,6 @@ const { execSync } = require('child_process');
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class AutomationImprovementSuite {}
   constructor() {}
@@ -30,8 +28,6 @@ class AutomationImprovementSuite {}
 
     // 1. Create a comprehensive error fixer
 const errorFixerScript = "#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 
 class ComprehensiveErrorFixer {
   constructor() {
@@ -106,8 +102,6 @@ fixer.fixFiles().catch(console.error);
 
     // 2. Create a performance monitor
     const performanceMonitorScript = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 
 // Function to run command and return result
@@ -130,8 +124,6 @@ function runCommand(command, description) {
 // Function to create performance monitoring script
 function createPerformanceMonitor() {
 const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
@@ -150,9 +142,7 @@ class PerformanceMonitor {
     this.log('🔍 Analyzing Performance Metrics');
     
     // Count files
-    const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
-      const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
       this.metrics.fileCount = files.length}
     
     // Check for common performance issues
@@ -275,9 +265,6 @@ auditor.auditSecurity().catch(console.error);
     this.log('✅ Created security-audit-enhanced.cjs');
     // 4. Create a comprehensive test runner
     const testRunnerScript = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 class ComprehensiveTestRunner {
   constructor() {
     this.projectRoot = process.cwd();
@@ -357,8 +344,6 @@ monitorFileChanges();
 function createSecurityScanner() {
   const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔒 Security Scanner Started...');
 
@@ -407,7 +392,6 @@ function scanSecurity() {
   });
   
   // Generate security report
-  const report = {
     timestamp: new Date().toISOString(),
     vulnerabilities,
     totalVulnerabilities: vulnerabilities.length,
@@ -427,7 +411,6 @@ console.log('📊 Performance Monitor Started...');
 function monitorBuildPerformance() {
   const startTime = Date.now();
   try {
-    const { execSync } = require('child_process');
     execSync('npm run build', { stdio: 'pipe', cwd: '/workspace' });
     const endTime = Date.now();
     const duration = endTime - startTime;
@@ -445,8 +428,6 @@ function monitorBuildPerformance() {
 }
 // Monitor file changes
 function monitorFileChanges() {
-  const chokidar = require('chokidar');
-  const watcher = chokidar.watch('/workspace/src', {
     ignored: /(^|[\/\\\\])\../, // ignore dotfiles;
     persistent: true
   });
@@ -465,13 +446,9 @@ monitorFileChanges();
 }
 // Function to create security scanner
 function createSecurityScanner() {
-const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 console.log('🔒 Security Scanner Started...');
 // Scan for security vulnerabilities
 function scanSecurity() {
-  const vulnerabilities = [];
   // Check for common security issues
 const filesToCheck = [;
     '/workspace/package.json',
@@ -480,7 +457,6 @@ const filesToCheck = [;
   ];
   filesToCheck.forEach(file => {
     if (fs.existsSync(file)) {
-      const content = fs.readFileSync(file, 'utf8');
       // Check for hardcoded secrets
       if (content.includes('password') || content.includes('secret') || content.includes('key')) {
         vulnerabilities.push({
@@ -500,7 +476,6 @@ const filesToCheck = [;
     }
   });
   // Generate security report
-  const report = {
     timestamp: new Date().toISOString(),
     vulnerabilities,
     totalVulnerabilities: vulnerabilities.length,
@@ -524,15 +499,11 @@ scanSecurity();
 
 // Function to create code quality analyzer
 function createCodeQualityAnalyzer() {
-const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔍 Code Quality Analyzer Started...');
 
 // Analyze code quality
 function analyzeCodeQuality() {
-  const issues = [];
   const stats = {
     totalFiles: 0,
     totalLines: 0,
@@ -603,7 +574,6 @@ function analyzeCodeQuality() {
   });
   
   // Generate quality report
-  const report = {
     timestamp: new Date().toISOString(),
     stats,
     issues,
@@ -632,9 +602,6 @@ analyzeCodeQuality();
 
 // Function to create automated testing script
 function createAutomatedTestingScript() {
-const script = `#!/usr/bin/env node;
-const fs = require('fs');
-const { execSync } = require('child_process');
 
 console.log('🧪 Automated Testing Script Started...');
 

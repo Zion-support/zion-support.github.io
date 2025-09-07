@@ -10,7 +10,6 @@ import {
   getDisputeById
   upsertDispute
 } from "../../../../utils/fsdb";
-import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";

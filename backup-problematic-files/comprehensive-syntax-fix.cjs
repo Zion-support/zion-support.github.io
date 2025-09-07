@@ -74,7 +74,6 @@ for (const file of filesToFix) {
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
 class ComprehensiveSyntaxFixer {
   constructor() {

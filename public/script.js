@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {// Mobile Navigation T
                 }, 3000)}, 2000)})}),// Lazy loading for images;
     if ('IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries, observer) => {entries.forEach(entry => {if (entry.isIntersecting) {const img = entry.target,img.src = img.dataset.src,img.classList.remove('lazy'),imageObserver.unobserve(img)lastScrollTop = scrollTop;
     }),// Form handling for contact forms;
-    const contactForms = document.querySelectorAll('form[data-contact]'),contactForms.forEach(form => {form.addEventListener('submit', function(e) {e.preventDefault(),const formData = new FormData(form),const submitBtn = form.querySelector('button[type="submit"]'),const originalText = submitBtn.textContent,// Show loading state;
             submitBtn.textContent = 'Sending...',submitBtn.disabled = true,// Simulate form submission (replace with actual API call)setTimeout(() => {submitBtn.textContent = 'Message Sent!',submitBtn.style.background = '#10b981',// Reset form;
                 form.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
@@ -76,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {// Mobile Navigation T
                 this.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
                 }, 3000)}, 1500)})// Newsletter subscription;
-    const newsletterForm = document.querySelector('.newsletter-form'),if (newsletterForm) {newsletterForm.addEventListener('submit', function(e) {e.preventDefault(),const email = this.querySelector('input[type="email"]').value,const submitBtn = this.querySelector('button[type="submit"]'),const originalText = submitBtn.textContent,// Show loading state;
             submitBtn.textContent = 'Subscribing...',submitBtn.disabled = true,// Simulate subscription (replace with actual API call)setTimeout(() => {submitBtn.textContent = 'Subscribed!',submitBtn.style.background = '#10b981',// Reset form;
                 this.reset(),// Reset button after delay;
                 setTimeout(() => {submitBtn.textContent = originalText,submitBtn.disabled = false,submitBtn.style.background = '';
@@ -84,9 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {// Mobile Navigation T
     const serviceCards = document.querySelectorAll('.service-card'),serviceCards.forEach(card => {card.addEventListener('mouseenter', function() {this.style.transform = 'translateY(-10px) scale(1.02)';
         }),card.addEventListener('mouseleave', function() {this.style.transform = 'translateY(0) scale(1)';
         })}),// Stats counter animation;
-    const statNumbers = document.querySelectorAll('.stat-number'),const statsObserver = new IntersectionObserver((entries) => {entries.forEach(entry => {if (entry.isIntersecting) {animateCounter(entry.target),statsObserver.unobserve(entry.target)}
         })}, { threshold: 0.5 }),statNumbers.forEach(stat => {statsObserver.observe(stat)}),// Back to top button;
-    const backToTopBtn = document.createElement('button'),backToTopBtn.innerHTML = '↑',backToTopBtn.className = 'back-to-top',backToTopBtn.setAttribute('aria-labelBack to top'),document.body.appendChild(backToTopBtn),backToTopBtn.addEventListener('click', function() {window.scrollTo({top: 0,behavior: 'smooth';
         })}),// Show/hide back to top button;
     window.addEventListener('scroll', function() {if (window.pageYOffset > 300) {backToTopBtn.classList.add('visible')} else {backToTopBtn.classList.remove('visible')}
     }),// Initialize tooltips;
@@ -220,7 +216,6 @@ function performSearch() {// This would typically make an API call to search you
             e.preventDefault($2);
             const email = $2;
             const submitBtn = this.querySelector($2);
-            const originalText = $2;
             // Show loading state
             submitBtn.textContent = $2;
             submitBtn.disabled = $2;
@@ -304,9 +299,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-    const searchResults = document.querySelector($2);
     if (searchResults) {
-        const results = [
 
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
@@ -400,7 +393,6 @@ pr-12325
             e.preventDefault(),
         lastScrollTop = scrollTop;
     // Form handling for contact forms;
-    const contactForms = document.querySelectorAll('form[data-contact]'),
     contactForms.forEach(form => {)
         form.addEventListener('submit', function(e) {
 pr-12325
@@ -429,7 +421,6 @@ pr-12325
     }),
     // Lazy loading for images
     if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                 // Reset form;
@@ -442,7 +433,6 @@ pr-12325
             }, 2000)
     // Lazy loading for images;
     if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
 pr-12325
                     const img = entry.target,
                     img.src = img.dataset.src,
@@ -455,7 +445,6 @@ pr-12325
     const contactForms = document.querySelectorAll('form[data-contact]'),;
     contactForms.forEach(form => {;
     // Form handling for contact forms;
-    const contactForms = document.querySelectorAll('form[data-contact]'),;
     contactForms.forEach(form => {;)
 pr-12325
         form.addEventListener('submit', function(e) {;
@@ -493,7 +482,6 @@ pr-12325
             }, 2000);
     // Lazy loading for images;
     if ('IntersectionObserver' in window) {;
-        const imageObserver = new IntersectionObserver((entries, observer) => {;
 pr-12325
                     const img = entry.target,;
                     img.src = img.dataset.src,;
@@ -533,7 +521,6 @@ pr-12325
             e.preventDefault(),
             const email = this.querySelector('input[type="email"]').value,
             const submitBtn = this.querySelector('button[type="submit"]'),
-            const originalText = submitBtn.textContent,
             // Show loading state
             submitBtn.textContent = 'Subscribing...',
             submitBtn.disabled = true,
@@ -554,11 +541,8 @@ pr-12325
                 if (searchResults) {;
                     searchResults.style.display = 'none';
     // Newsletter subscription;
-    const newsletterForm = document.querySelector('.newsletter-form'),
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
-            const email = this.querySelector('input[type="email"]').value,
-            const submitBtn = this.querySelector('button[type="submit"]'),
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',
             // Simulate subscription (replace with actual API call)
@@ -575,7 +559,6 @@ pr-12325
             e.preventDefault(),;
             const email = this.querySelector('input[type="email"]').value,;
             const submitBtn = this.querySelector('button[type="submit"]'),;
-            const originalText = submitBtn.textContent,;
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',;
             submitBtn.disabled = true,;
@@ -618,8 +601,6 @@ pr-12325
     statNumbers.forEach(stat => {;
         statsObserver.observe(stat);
     }),;
-            const email = this.querySelector('input[type="email"]').value,;
-            const submitBtn = this.querySelector('button[type="submit"]'),;
             // Show loading state;
             submitBtn.textContent = 'Subscribing...',;
             // Simulate subscription (replace with actual API call);
@@ -629,15 +610,12 @@ pr-12325
                 // Reset button after delay;
             }, 1500);
     // Service card hover effects;
-    const serviceCards = document.querySelectorAll('.service-card'),;
     serviceCards.forEach(card => {;)
         card.addEventListener('mouseenter', function() {;
             this.style.transform = 'translateY(-10px) scale(1.02)';
         card.addEventListener('mouseleave', function() {;
             this.style.transform = 'translateY(0) scale(1)';
     // Stats counter animation;
-    const statNumbers = document.querySelectorAll('.stat-number'),;
-    const statsObserver = new IntersectionObserver((entries) => {;
                 animateCounter(entry.target),;
                 statsObserver.unobserve(entry.target);
     }, { threshold: 0.5 }),;
@@ -681,7 +659,6 @@ pr-12325
 function performSearch(query) {;
     // This would typically make an API call to search your content;
     // For now, we'll simulate search results;
-    const searchResults = document.querySelector('.search-results'),;
     if (searchResults) {;
         const results = [;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
@@ -719,7 +696,6 @@ function performSearch(query) {
     // For now, we'll simulate search results
     const searchResults = document.querySelector('.search-results');
     if ({
-        const results = [
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' };
@@ -772,7 +748,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const duration = 2000
     const step = target / (duration / 16)
     let current = 0
-    const timer = setInterval(() => {
         current += step;
         if ({
             current = target);
@@ -1008,7 +983,6 @@ if ( {) {
 
 
 }
-        const results = [;
             { title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager' },{ title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform' },{ title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems' },{ title: 'Quantum Computing Services', url: '/services / quantum - computing' }
         ].filter (item =>;
             item.title.toLowerCase ().includes (query)),// Check condition;
@@ -1462,7 +1436,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 //Form handling for contact forms submitBtn && submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form && form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver ( (entries, observer) => {
 
   entries && entries.forEach (entry => {
   if (entry && entry.isIntersecting) {

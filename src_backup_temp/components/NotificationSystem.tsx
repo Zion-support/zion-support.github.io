@@ -95,9 +95,6 @@ export const "NotificationSystem": React.FC<NotificationSystemProps> = ({;
     defaultDuration
   }
     );
-  const [showSettings, setShowSettings] = useState<any>(false);
-  const [isOpen, setIsOpen] = useState<any>(false);
-  const [unreadCount, setUnreadCount] = useState<any>(0);
 // Initialize audio for notification sounds;
     "default":''
 // Initialize audio for notification sounds      "default":''

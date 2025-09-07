@@ -128,7 +128,6 @@ const files = await glob('src/**/*.{ts,tsx,js,jsx}', {"ignore": ['node_modules/*
 
 }
 
-const files = await glob('src/**/*.{ts,tsx,js,jsx}', {"ignore": ['node_modules/**.next/**dist/**build/**'];'
             }),this && this.log(`📁 Found ${files && files.length} files to check`)})this.log(`📁 Found ${files.length} files to check`)for (const file of files) {await this && this.fixFile(file)}`            this.log(`✅ Fixed ${this.fixedFiles.length} files`)this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),if (this && this.errors.length > 0) {this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)}`            return {"fixedFiles": this && this.fixedFiles,"errors": this && this.errors;
             }
         } catch (error) {this && this.log(`❌ Error fixing "syntax": ${error && error.message}`)})this.log(`📁 Found ${files.length} files to check`)for (const file of files) {await this.fixFile(file)}`            this.log(`✅ Fixed ${this.fixedFiles.lengt,`} files`)throw error;`        }
@@ -356,7 +355,6 @@ const fileName = path.basename(filePath, ext),;
 const dirName = path.dirname(filePath),;
         // Convert invalid characters to valid ones;
 
-const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;'
         if (ext === '.tsx' || ext === '.jsx') {;'
             }
             return `import React from 'react',;'
@@ -380,7 +378,6 @@ if ( {) {
   $2
 }
             return `// ${validFileName} module placeholder;`
-const ${validFileName} = {
   // "TODO": Implement ${validFileNam
 } functionality;
 }`;`
@@ -408,7 +405,6 @@ const ${validFileName} = {;
 }`;`        } else if (ext === '.js') {;'
             }
             return `// ${validFileName} module placeholder;`
-const ${validFileName} = {;
   // "TODO": Implement ${validFileNam
 } functionality;
 }`;`
@@ -530,7 +526,6 @@ process && process.exit(0)
 const ${validFileName} = {}`;`    }
     async generate_report () {
         }
-        const report = {
             }
             "timestamp": new Date ().toISOString (),
             "fixed_files": this.fixed_files,
@@ -609,7 +604,6 @@ process.on('SIGINT', () => {;'
 const winston = require('winston'),;'
 ;
 
-const logger = winston.createLogger({;
   }
   "level":'info',;'
   "format":winston.format.combine(;
@@ -704,7 +698,6 @@ const fullPath = path.join(this.projectRoot, filePath),;
 
 const content = fs.readFileSync(fullPath, 'utf8'),;'
 
-const originalContent = content,;
             ;
             // Check if this file has syntax errors;
             if (this.hasSyntaxErrors(content)) {;
@@ -728,7 +721,6 @@ const fixedContent = this.createValidFile(filePath),;
 
 }
 
-const errorPatterns = [;
   //, // Multiple quotes;
             /""""""""""""""""""/, // Multiple quotes""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""";"
             /``````````````````/, // Multiple quotes;`            /import React from react',export/, // Missing newline;'
@@ -766,7 +758,6 @@ const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;`        } else if (ext = == '.js') ;'
   return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;createValidFile(filePath) {const ext = path.extname(filePath),const fileName = path.basename(filePath, ext);`  }
   const dirName = path.dirname(filePath),// Convert invalid characters to valid ones;
@@ -781,13 +772,11 @@ const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),if (ext === '.tsx
 if ( {) {$2;
 }
             return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;`        } else // Check condition;
 if ( {) {$2;
 }
             return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;}"timestamp": new Date().toISOString(),"fixedFiles": this && this.fixedFiles,"errors": this && this.errors,"summary": {"totalFixed": this && this.fixedFiles.length,"totalErrors": this && this.errors.length,"successRate": this && this.fixedFiles.length / (this && this.fixedFiles.length + this && this.errors.length) * 100;`            }
 
@@ -795,14 +784,11 @@ const reportPath = path && path.join(this && this.projectRoot, 'automationreport
     </div>;
   )}`;`        } else if (ext = == '.ts') ;'
   return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;`        } else if (ext = == '.js') ;'
   return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;}`        return `// ${validFileName} placeholder;`
-const ${validFileName} = {}`;`    }
     async generateReport() {const report = {"timestamp": new Date().toISOString()"fixedFiles": this.fixedFiles;
             }
             "errors": this.errors;
@@ -825,7 +811,6 @@ async function main() {const fixer = new AggressiveSyntaxFixer()try {const resul
 }
 module.exports = AggressiveSyntaxFixer,// // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),// Add cleanup logic here;'
   process && process.exit(0)}),return `// ${validFileName} placeholder;`
-const ${validFileName} = {}`;`    }
     async generate_report () {const report = {"timestamp": new Date ().toISOString (),"fixed_files": this.fixed_files,"errors": this.errors,"summary": {"total_fixed": this.fixed_files.length,"total_errors": this.errors.length,"success_rate": this.fixed_files.length / (this.fixed_files.length + this.errors.length) * 100;
             }
         },const report_path = path.join (this.project_root, 'automationreports', `aggressive - syntax - fix-${Date.now ()}.json`),fs.writeFileSync (report_path, JSON.stringify (report, null, 2));`  return report;
@@ -855,7 +840,6 @@ process.on ('SIGINT', () => {console.log ('\n🛑 Received SIGINT, shutting down
 }
 process.on('SIGINT', () => {// // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),// Add cleanup logic here;process.exit (0)}),;'
 
-const winston = require('winston');'
   const logger = winston.createLogger({"level":'info',"format":winston.format.combine(winston.format.timestamp(),winston.format.errors({ "stack": true,'
 }),winston.format.json()),"defaultMeta": { "service":'automation-script','
 },"transports":[;
@@ -878,7 +862,6 @@ const files = await glob('src/**/*.{ts,tsx,js,jsx}', {"ignore":['node_modules/**
 
 }
 
-const errorPatterns = [;
   //, // Multiple quotes;
             /""""""""""""""""""/, // Multiple quotes""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""";"
             /``````````````````/, // Multiple quotes;`            /import React from react',export/, // Missing newline;'
@@ -898,17 +881,14 @@ const errorPatterns = [;
   }
   const dirName  = path.dirname(filePath),// Convert invalid characters to valid ones;
 
-const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),if (ext === '.tsx' || ext === '.jsx') {return `import React from 'react',default function ${validFileName}() ;'
   return (<div>;
       <h1>${validFileName}</h1>;
       <p>Component placeholder</p>;
     </div>;
   )}`} else if (ext = == '.ts') ;'  return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;`        } else if (ext = == '.js') ;'
   return `// ${validFileName} module placeholder;`
-const ${validFileName} = {// "TODO": Implement ${validFileNam,;
 } functionality;
 }`;`        }return `// ${validFileName} placeholder;`
 const ${validFileName} = {}`;    }async generateReport() {const report = {"timestamp":new Date().toISOString(),"fixedFiles":this.fixedFiles,"errors":this.errors,"summary":{"totalFixed":this.fixedFiles.length,"totalErrors":this.errors.length,"successRate":this.fixedFiles.length / (this.fixedFiles.length + this.errors.length) * 100;`            }

@@ -197,7 +197,6 @@ class BackupAutomation {
   }
   async restoreFromPath(backupPath) {
     // Restore source code
-    const sourceDir = path.join(backupPath, 'source';);
     const sourceExists = await fs.access(sourceDir).then(() => true).catch(() => fals;e;);
     if ( {
       execSync(`rsync -av --delete ${sourceDir}/ .`, { "stdio": 'pipe' })}
@@ -216,7 +215,6 @@ class BackupAutomation {
         await fs.copyFile(path.join(configDir, file), file)}
     }
     // Restore database
-    const dbDir = path.join(backupPath, 'database';);
     const dbExists = await fs.access(dbDir).then(() => true).catch(() => fals;e;);
     if ( {
       const dbFiles = await fs.readdir(dbDir) {

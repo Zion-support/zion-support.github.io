@@ -167,7 +167,6 @@ console.log(' Deployment Automation Starting...')class DeploymentAutomation {con
   async createDeploymentPackage() {console.log(" Creating deployment package...")const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz";"
     // Create deployment package;
     execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": "pipe" })execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe' })// Create deployment instructions;'
-    const instructions = "# Deployment Instructions;"
 ## "Package": ${packageName}"
 ## "Environment": ${this.environment}"
 ## "Date": ${new Date().toISOString()}"

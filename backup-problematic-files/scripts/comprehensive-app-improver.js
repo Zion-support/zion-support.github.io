@@ -32,7 +32,6 @@ import { useState  } from 'react';'
     }
     const publicDir = path.join(this.projectRoot, 'public')if (!fs.existsSync(publicDir)) return;'
     // Create optimized image component';'
-    const optimizedImageComponent = "import Image from 'next/image';'
 interface OptimizedImageProps  {"src": string;"
 }
 import { useState } from 'react';'
@@ -109,9 +108,7 @@ export function usePerformanceMonitoring() {useEffect(() => {const sendToAnalyti
       console.log('Performance "metric": ', metric)// "Example": Send to Google Analytics;"
       if (typeof gtag !== 'undefined') {gtag('event', metric.name, {"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true})}"
     }
-    const performanceOptimizations = ";"
 // Performance optimizations;
-const nextConfig = {// Enable compression;
   "compress": tru,e;"
   // "Optimize": images,"images": {"formats": ['image/webp, ', 'image/avif'], ';'
     "deviceSizes": [64,0, 750, 828, 1080, 1200, 1920, 2048, 3840];"
@@ -407,7 +404,6 @@ interface SEOProps  {title?: string;
     "s"://ziontechgroup.com/logo.png',"description": description,...(publishedTime && { "datePublished": publishedTime })...(modifiedTime && { "dateModified": modifiedTime })})}}" />;
     </Head>';'
   )}";"
-    const componentsDir = path.join(this.projectRoot, 'src', 'components')';'
     "if": (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir, { "recursive": true})}"
     fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), ';'
       "seoComponent": )this.fixes.push('"Created": comprehensive SEO component')}';'

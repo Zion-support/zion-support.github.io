@@ -61,7 +61,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
     const nowIso = new Date().toISOString();
     
-    const event = {
       name,
       page,
       userType,

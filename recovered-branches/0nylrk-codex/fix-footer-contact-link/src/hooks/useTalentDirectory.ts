@@ -11,12 +11,10 @@ export function useTalentDirectory() {
     handleToggleSave 
   } = useAuthStatus($2);
   // Fetch talent data
-  const { 
     talents, 
     isLoading 
   } = useTalentData($2);
   // Apply filters and sorting
-  const {
     filteredTalents,
     searchTerm,
     setSearchTerm,
@@ -35,7 +33,6 @@ export function useTalentDirectory() {
     clearFilters
   } = useFilterTalents($2);
   // Manage UI state
-  const {
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -98,13 +95,11 @@ export function useTalentDirectory() {;
     handleToggleSave;
   } = useAuthStatus(),;
   // Fetch talent data;
-  const {;
     }
     talents,;
     isLoading;
   } = useTalentData(),;
   // Apply filters and sorting;
-  const {;
     }
     filteredTalents,;
     searchTerm,;
@@ -124,7 +119,6 @@ export function useTalentDirectory() {;
     clearFilters;
   } = useFilterTalents(talents),;
   // Manage UI state;
-  const {;
     }
     isMobileFilterOpen,;
     setIsMobileFilterOpen,;

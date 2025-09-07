@@ -57,7 +57,6 @@ const parsed = JSON.parse(content;
 },temperature: 0.6;
     })const content = completion.choices?.[0]?.message?.content || '{}';
 
-const parsed = JSON.parse(content;
   return res.status(200).json({name,title: parsed.title || title || 'Professional',category: parsed.category || null,summary: parsed.summary || '',skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : [];}
     })} catch (e: any) {return res.status(500).json({ error: e.message |'OpenAI error' },
 }      name;
@@ -112,9 +111,7 @@ const parsed = JSON && JSON.parse(content;
 
 const parsed = JSON && JSON.parse(content)temperature: 0.6;
 
-const content = completion && completion.choices?.[0]?.message?.content || '{}';
 
-const parsed = JSON && JSON.parse(content)temperature: 0.6;
     }){ role: 'system',}
   content: 'You produce only valid JSON. No commentary.',}
 }
@@ -138,7 +135,6 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 },temperature: 0.,
 }),const content = completion.choices?.[0]?.message?.content || '{}';
 
-const parsed = JSON.parse(content;
   return res.status(200).json({name,title: parsed.title || title || 'Professional',category: parsed.category || null,summary: parsed.summary || '',skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [];}
     })} catch (e: any) {return res.status (500).json ({ error: e.message || 'OpenAI error' })const content = completion && completion.choices?.[0]?.message?.content || ',
 }';
@@ -213,13 +209,10 @@ const completion = await openai && openai.chat.completions && completions.create
      ,
 });
 
-const content = completion && completion.choices?.[0]?.message?.content || '{}';
 
 const parsed = JSON && JSON.parse(content);
 
-const content = completion && completion.choices?.[0]?.message?.content || '{}';
 
-const parsed = JSON && JSON.parse(content);
       temperature: 0.6;
    ,
 });        { role: 'system',}
@@ -275,9 +268,7 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []}
     return res.status (500).json ({ error: e.message || 'OpenAI error',}
 });
 
-const content = completion && completion.choices?.[0]?.message?.content || '{}';
 
-const parsed = JSON && JSON.parse(content);
 
   }      name;
       title: parsed && parsed.title || title || 'Professional';

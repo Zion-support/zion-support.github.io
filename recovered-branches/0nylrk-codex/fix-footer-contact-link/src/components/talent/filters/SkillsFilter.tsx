@@ -17,7 +17,6 @@ import { Button } from '@/components / ui / button';'
 import { Checkbox } from '@/components / ui / checkbox';'
 import { SkillsFilterProps } from '@/types / filters';'
 // Common skills in AI and tech;
-const POPULAR_SKILLS = [;
   "Machine Learning";"
   "Deep Learning";"
   "Python";"

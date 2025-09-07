@@ -105,7 +105,6 @@ export default function ServiceDescriptionGenerator() {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
   }
 ;
-  const handleDescriptionSave = (editedDescription: string) => {;
     setGeneratedDescription(editedDescription);
     // Here you could also save to database if needed;
   };

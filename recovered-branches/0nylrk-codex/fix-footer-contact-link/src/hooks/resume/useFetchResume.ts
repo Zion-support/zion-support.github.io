@@ -131,7 +131,6 @@ export function useFetchResume() {
   const [error, setError] = useState<string | null>(null),
   const [resume, setResume] = useState<Resume | null>(null),
   
-  const fetchResume = async (resumeId?: string) => {
     if (!user) {
       setError($2);
       return null

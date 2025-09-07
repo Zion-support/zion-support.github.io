@@ -17,7 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', [])
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() })
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '[^']*';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,10 +31,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return res.status(200).json({ ok: true, id });
 };
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 export default async function handler(req, res) {
   try {

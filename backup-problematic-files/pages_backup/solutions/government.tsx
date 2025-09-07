@@ -34,10 +34,8 @@ const features = [;
     "title": 'Data Analytics,',,'
   "description": 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout';'
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';'
-import React from 'react';'
 import Head from 'next/head';'
 import Link from 'next/link';'
-const features = [;
   {
     }
     "icon": Building2,
@@ -73,7 +71,6 @@ const features = [;
     "icon": ArrowRight,
     "title": 'Data Analytics','
     "description": 'Government data analysis and reporting tools''
-const features = [;
   {"icon": Building2,"title": 'Digital Government Services',"description": 'Citizen-facing digital services and online portals';'
   },{"icon": Shield,"title": 'Security & Compliance',"description": 'Government-grade security and regulatory compliance';'
   },{"icon": Users,"title": 'Citizen Engagement',"description": 'Platforms for citizen participation and feedback';'
@@ -81,7 +78,6 @@ const features = [;
   },{"icon": CheckCircle,"title": 'Workflow Automation',"description": 'Automated government processes and approvals';'
   },{"icon": ArrowRight,"title": 'Data Analytics',"description": 'Government data analysis and reporting tools';'
 }
-const features = [;
   {"icon": Building2,"title": 'Digital Government Services',,"description": 'Citizen-facing digital services and online portals';'
   },{"icon": Shield,"title": 'Security & Compliance',,"description": 'Government-grade security and regulatory compliance';'
   },{"icon": Users,"title": 'Citizen Engagement',,"description": 'Platforms for citizen participation and feedback';'
@@ -219,7 +215,6 @@ title="Government Solutions - Zion Tech Group""
   "description": 'Government data analysis and reporting tools';'
   }
 ;];
-const solutions = [;
   'Citizen Portal Development',',;'
   'Government Data Analytics',',;'
   'Cybersecurity Solutions',',;'
@@ -286,7 +281,6 @@ return (;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";"
                   <p className="text-gray-300">{feature && feature.description}</p>";"
                 </div>;
-const benefits = [;
   'Improved citizen services and satisfaction',;'
   'Enhanced government transparency',;'
   'Streamlined administrative processes',;'
@@ -305,7 +299,6 @@ const benefits = [;
     "description": 'Government data analysis and reporting tools''
   }
 ;];
-const solutions = [;
   'Citizen Portal Development',','
   'Government Data Analytics',','
   'Cybersecurity Solutions',','
@@ -373,7 +366,6 @@ export default function GovernmentSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
                 </div>;
-const benefits = [;
   'Improved citizen services and satisfaction','
   'Enhanced government transparency','
   'Streamlined administrative processes','

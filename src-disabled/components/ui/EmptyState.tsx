@@ -17,7 +17,6 @@ export function EmptyState({
   description,
   onRetry,
 
-import { Button } from './button';
 interface EmptyStateProps {}
   text?: string;
   description?: string;
@@ -46,7 +45,6 @@ export function EmptyState({
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
 
-import { Button } from './button';
 interface EmptyStateProps {}
   text?: string;
   description?: string;

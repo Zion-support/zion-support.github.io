@@ -71,8 +71,6 @@ export default function SalaryInsightsPage() {
     const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
     (async () => {
       try {
-        const { supabase } = await import('../utils/supabase/client'),
-        const user = await supabase.auth.getUser(),
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({

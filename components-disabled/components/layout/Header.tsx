@@ -327,7 +327,6 @@ onClick={() => setIsMenuOpen(!isMenuOpen)}
 
   ];
   const isActive = ("path": string) => location && location.pathname === path;
-  const resourceCategories = [;
 
     { "name": 'Blog', "href": '/blog' },;'
     { "name": 'Case Studies', "href": '/case-studies' },;'
@@ -347,9 +346,6 @@ return (;
 
   ];
   ];
-  const isActive = ("path": string) => location && location.pathname === path;
-  const resourceCategories = [;
-  const service_categories = [;
     { "name": 'AI Solutions', "href": '/services / ai - solutions' },'
     { "name": 'Cloud & DevOps', "href": '/services / cloud' },'
     { "name": 'Cybersecurity', "href": '/services / cybersecurity' },'
@@ -370,7 +366,6 @@ return (;
     { "name": 'Careers', "href": '/careers' },'
   ];
   const is_active = ("path": string) =>: any location.pathname === path;
-  const resource_categories = [;
     { "name": 'Blog', "href": '/blog' },'
     { "name": 'Case Studies', "href": '/case - studies' },'
     { "name": 'Webinars', "href": '/webinars' },'
@@ -552,13 +547,9 @@ import Button from '../ui/Button';'
 const "Header": React.FC = () => {
   }
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 import { Menu, X } from 'lucide-react';'
-const "Header": React.FC = () => {
   }
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     }
     const handleScroll = () => {
@@ -568,7 +559,6 @@ const "Header": React.FC = () => {
     window.addEventListener('scroll', handleScroll);'
     return () => window.removeEventListener('scroll', handleScroll);'
   }, []);
-const navigation = [;
     { "name": 'Home', "href": '/' }'
     { "name": 'Services', "href": '/services' }'
     { "name": 'About', "href": '/about' }'
@@ -610,7 +600,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
 
   }
 
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
   useEffect(() => {
@@ -623,7 +612,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
     return () => window.removeEventListener('scroll', handleScroll);'
 
 }, []);
-  const navigation = [;
     { "name": 'Home', "href": '/' }'
     { "name": 'Services', "href": '/services' }'
     { "name": 'Solutions', "href": '/solutions' }'
@@ -661,7 +649,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
     { "name": 'Team', "href": '/team', "icon": Award }'
     { "name": 'Contact', "href": '/contact', "icon": Phone }'
   ];
-  const serviceCategories = [;
     {"name": 'Micro SaaS''
       }
       "href": '/services/micro-saas''
@@ -681,7 +668,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
       "popular": ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];'
 
   ];
-  const serviceCategories = [;
     { "name": 'AI Solutions', "href": '/services/ai-solutions' }'
     { "name": 'Cloud & DevOps', "href": '/services/cloud' }'
     { "name": 'Cybersecurity', "href": '/services/cybersecurity' }'
@@ -689,12 +675,10 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
     { "name": 'Micro SaaS', "href": '/services/micro-saas' }'
     { "name": 'Digital Transformation', "href": '/services/transformation' }'
   ];
-  const solutionCategories = [;
     { "name": 'Enterprise', "href": '/solutions/enterprise' }'
     { "name": 'SMB', "href": '/solutions/smb' }'
     { "name": 'Startup', "href": '/solutions/startup' }'
   ];
-  const resourceCategories = [;
 
     { "name": 'Documentation', "href": '/docs' }'
     { "name": 'Blog', "href": '/blog' }'
@@ -703,7 +687,6 @@ const "Header": React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(f
     { "name": 'Careers', "href": '/careers' }'
   ];
   const isActive = ("path": string) => location.pathname === path;
-  const resourceCategories = [;
     { "name": 'Blog', "href": '/blog' }'
     { "name": 'Case Studies', "href": '/case-studies' }'
     { "name": 'Webinars', "href": '/webinars' }'
@@ -786,14 +769,8 @@ key={item.name}
   ChevronDown
 } from 'lucide-react';'
 
-const Header = () => {
   }
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const router = useRouter();
 
-const navigation = [;
     {
       }
       "name": 'Services','
@@ -840,7 +817,6 @@ const navigation = [;
     { "name": 'Contact', "href": '/contact' }'
   ];
 
-  const isActive = ("href": string) => router.pathname === href;
 
 return (;
     <header className="bg-white shadow-lg sticky top-0 z-50">"

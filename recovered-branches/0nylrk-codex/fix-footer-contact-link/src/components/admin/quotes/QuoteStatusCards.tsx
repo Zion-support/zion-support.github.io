@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {"
   "status_counts": {
 }
 import React from "react";"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge",;"
 ;
 interface QuoteStatusCardsProps {;
@@ -100,11 +99,8 @@ return (;
       <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
-import React from "react";"
 interface QuoteStatusCardsProps {"_statusCounts": {
 }
-import React from "react";"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge";"
   "status_counts": {
     }
@@ -177,7 +173,6 @@ return (  );
 },
 import React from "React";"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;"
-import { Badge } from "@/components/ui/badge",;"
 interface QuoteStatusCardsProps {;
   }
   "statusCounts": {;

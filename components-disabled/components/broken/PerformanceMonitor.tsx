@@ -2,7 +2,6 @@
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  }
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
   }
 
@@ -123,7 +122,6 @@ case 'tablet': return Tablet;'
 
 const getPerformanceScore = () =>: any {
   }
-  let score = 0;
 let total_metrics = 0;
 //FCP scoring (0 - 100) // Check condition,
 if ( {) {

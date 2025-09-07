@@ -184,7 +184,6 @@ const background_variants = {initial: { opacity: 0, scale: 0.8}
 },animate: {opacity: 1,scale: 1,transition: { duration: 1.5, ease: 'ease_out' as const}
 }}}
 ;
-  const categories = [
   { id: 'all'}
   name: 'All Services', icon: <Globe className='w - 5 h - 5' />}
 },{ id: 'ai'}

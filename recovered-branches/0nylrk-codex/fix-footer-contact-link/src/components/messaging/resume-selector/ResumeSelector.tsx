@@ -49,7 +49,6 @@ const { resume, fetchResume } = useResume(),;
   }, [fetchResume]);        setSelectedResume(options[0]);
         onResumeSelected(options[0]);
 import React, { useState, useEffect } from 'react';'
-import { Button } from "@/components/ui/button";"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;"
 import { Label } from "@/components/ui/label",;"
 import { Plus, Loader2 } from 'lucide-react',;'
@@ -63,13 +62,7 @@ import { ResumeOption, ResumeSelectorProps } from './types',;'
 ;
 export function ResumeSelector() {;
   }
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;'
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),;
-  const [customFile, setCustomFile] = useState<File | null>(null),;
-  const [isLoading, setIsLoading] = useState(false),;
   ;
-  const { resume, fetchResume } = useResume(),;
   ;
   // Fetch resume data when component mounts;
   useEffect(() => {;
@@ -198,11 +191,9 @@ const file = e.target.files[0];
       } finally {
   };
   // Handle custom file upload,
-const handleFileUpload = ("e": React.ChangeEvent<HTMLInputElement>) => {
     }
     if (e.target.files && e.target.files[0]) {
 }
-const file = e.target.files[0],;
       // Check if it's a PDF file'
       if (file.type !== "application/pdf") {"
         }
@@ -306,8 +297,6 @@ value={selectedOption}
           </Label>
         </div>
       </RadioGroup>      // Create download link;
-      const url = URL.createObjectURL(pdfBlob),;
-      const link = document.createElement('a'),;'
       link.href = url,;
       link.download = `${selectedResume.title || 'Resume'}.pdf`,;`
       document.body.appendChild(link),;

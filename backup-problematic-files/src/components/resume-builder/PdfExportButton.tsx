@@ -94,7 +94,6 @@ const mockUsers = [;
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     }
-    const mockUsers = [;
       { "id": 'user-2', "name": 'Alex Chen', "isVideoEnabled": true, "isMuted": false },;'
       { "id": 'user-3', "name": 'Taylor Kim', "isVideoEnabled": false, "isMuted": true },;'
       { "id": 'user-4', "name": 'Jordan Smith', "isVideoEnabled": true, "isMuted": false, "isScreenSharing": true }'

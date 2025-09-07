@@ -18,8 +18,6 @@ export function useResumeBasic() {;
     "updateBasicInfo": resumeActions && resumeActions.updateBasicInfo,
     "setActiveResume": resumeActions && resumeActions.setActiveResume}
 }
-import {useFetchResume} from './useFetchResume';'
-import {useResumeActions} from './useResumeActions';'
 export /**
  * useResumeBasic - Function description
  */
@@ -42,7 +40,6 @@ function useResumeBasic() {
     "setActiveResume": resume_actions.setActiveResume}
 }
 import { useFetchResume } from './useFetchResume';'
-import { useResumeActions } from './useResumeActions';'
 ;
 export function useResumeBasic() {;
   }

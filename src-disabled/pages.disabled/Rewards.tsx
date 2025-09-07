@@ -37,7 +37,6 @@ const REWARDS = [;'
   { id: 'premium - week', title: 'Premium Week', cost: 1000 },'
   { id: 'swag - pack', title: 'Swag Pack', cost: 2000 },
 ];
-const REWARDS = [;'
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },'
   { id: 'premium - week', title: 'Premium Week', cost: 1000 },'
   { id: 'swag - pack', title: 'Swag Pack', cost: 2000 },

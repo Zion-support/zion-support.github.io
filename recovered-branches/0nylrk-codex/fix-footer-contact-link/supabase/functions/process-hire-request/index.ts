@@ -269,7 +269,6 @@ if (talent && talent.email) {
         "title": `New hiring request for ${talent.full_name}`,`        "message": `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,`        "type": "hire_request","
         "related_id": requestRecord[0].id
       },
-      const { "error": notificationError } = await supabase
         .rpc('create_notification', {'
           }
           "_user_id": adminId,

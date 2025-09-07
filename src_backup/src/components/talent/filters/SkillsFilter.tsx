@@ -7,7 +7,6 @@ import { Button  } from '@/components/ui/button';'
 const POPULAR_SKILLS = [;
 import React from 'react';'
 // Common skills in AI and tech;
-const POPULAR_SKILLS = [;
   'Machine Learning','Deep Learning','Python','TensorFlow','PyTorch','Computer Vision','NLP','Data Science','AWS','Docker','Kubernetes','React','Node && Node.js','TypeScript','DevOps','Security'];export function SkillsFilter(): any ({selectedSkills,toggleSkill,expanded,toggleSection,isMobileFilterOpen}: SkillsFilterProps) {"Machine Learning","Deep Learning","Python","TensorFlow","PyTorch","Computer Vision","NLP","Data Science","AWS","Docker","Kubernetes","React","Node.js","TypeScript","DevOps","Security";"
 ],<div key={skill} className='flex items-center'>;'
 export function SkillsFilter() {return (<div className='mb-6 border-b border-zion-blue-light pb-6'>;'
@@ -26,7 +25,6 @@ export function SkillsFilter() {return (<div className='mb-6 border-b border-zio
 import { Checkbox  } from '@/components / ui / checkbox';'
 import { SkillsFilterProps  } from '@/types / filters';'
 // Common skills in AI and tech;
-const POPULAR_SKILLS = [;
   'Machine Learning','Deep Learning','Python','TensorFlow','PyTorch','Computer Vision','NLP','Data Science','AWS','Docker','Kubernetes','React','Node.js','TypeScript','DevOps','Security';'
 ];
 export /**;
@@ -49,7 +47,6 @@ import { Button   } from '@/components / ui / button';'
 import { Checkbox   } from '@/components / ui / checkbox';'
 import { SkillsFilterProps   } from '@/types / filters';'
 // Common skills in AI and tech;
-const POPULAR_SKILLS = [;
   "Machine Learning";"
   "Deep Learning";"
   "Python";"

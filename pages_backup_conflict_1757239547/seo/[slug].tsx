@@ -34,9 +34,7 @@ export default function SEOLandingPage() {
     });  }, [router.isReady, slug]);
   if (!payload) return null;
 
-  const router = useRouter();
   const { slug } = router.query as { slug?: string };
-  const [payload, setPayload] = React.useState<LandingPayload | null>(null);
   React.useEffect(() => {;
     if (!router.isReady || !slug) return,;
     const dataParam = (router.query?.data as string) || '';

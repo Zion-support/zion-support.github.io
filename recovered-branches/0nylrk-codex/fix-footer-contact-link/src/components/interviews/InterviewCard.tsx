@@ -60,8 +60,6 @@ interface InterviewCardProps {;
 export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
   }
   const { user } = useAuth();
-  const { respondToInterview, cancelInterview } = useInterviews();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);import React, { useState } from './react';'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';'
 import { Button } from '@/components / ui / button';'
@@ -100,8 +98,6 @@ function InterviewCard() {
   const end_time = new Date (interview_date);
   end_time.set_minutes (end_time.get_minutes () + interview.duration_minutes);
   const formattedEndTime = format (end_time, '"h": mm a'),'
-  const isInterviewPending = interview.status === 'requested';'
-  const isInterviewConfirmed = interview.status === 'confirmed';'
   const isInterviewPast = is_past (interview_date);
 ;
   const getRelativeTime = () =>: any {
@@ -201,7 +197,6 @@ return <Badge>{interview.status}</Badge>;
     setIsLoading (false);
   }
 ;
-  const handleCancelInterview = async () => {
     }
     setIsLoading (true);
     const success = await cancel_interview (interview.id);
@@ -220,7 +215,6 @@ if ( {) {
 
   },
 
-  const getStatusBadge = () => {
     }
     switch (interview.status) {
       }
@@ -243,10 +237,8 @@ return <Badge>{interview.status}</Badge>;
   };
 
   },;
-  const handleRespondToInterview = async ("status": 'confirmed' | 'declined' | 'rescheduled') => {;'
     }
     setIsLoading(true),;
-    const success = await respondToInterview(interview && interview.id, { ;
       }
       "interview_id": interview && interview.id, ;
       status ;
@@ -483,11 +475,9 @@ onClick={handleCancelInterview}            interview={interview}
   }
   user
 }= useAuth ();
-const {
   }
   respondToInterview, cancelInterview
 }= useInterviews ();
-const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
 const [isLoading, setIsLoading] = useState (false);
 const isTalent = user?.id === interview.talent id;
 //Format interview date and time const interviewDate = parseISO (interview.scheduled date);
@@ -496,10 +486,7 @@ const formattedTime = format (interviewDate, '"h": mm a');'
 //Calculate when interview ends const endTime = new Date (interviewDate);
 endTime.setMinutes (endTime.getMinutes () + interview.duration minutes);
 const formattedEndTime = format (endTime, '"h": mm a');'
-const isInterviewPending = interview.status === 'requested';'
-const isInterviewConfirmed = interview.status === 'confirmed';'
 const isInterviewLive = isInterviewConfirmed && !isPast (interviewDate) && isPast (new Date (interviewDate.getTime () - 5 * 60000) ), //5 minutes before const isInterviewPast = isPast (interviewDate);
-const getRelativeTime = () => {
   }
   if (isPast (interviewDate) ) {
   }
@@ -522,7 +509,6 @@ if (success) {
 };
 }setIsLoading (false)
 };
-const getStatusBadge = () => {
   }
   switch (interview.status) {
   }

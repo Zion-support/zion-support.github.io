@@ -288,7 +288,6 @@ const quickLinks = [
 
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
 const [activeCategory, setActiveCategory] = useState<string | null />(null);
 

@@ -7,7 +7,6 @@
   }
     const newValue = !isHighContrast;
 
-const newValue = !isHighContrast;
     setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (<>;
       {/* Accessibility Controls */}
@@ -80,7 +79,6 @@ export default AccessibilityEnhancer;
 
 export default AccessibilityEnhancer;}
 ursor/automate-test-improve-and-merge-code-646c;}
-import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -161,7 +159,6 @@ const toggleSetting = (setting: keyof AccessibilitySettings) => ;
   };
 
   const toggleHighContrast = (
-    const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);) => {
@@ -234,7 +231,6 @@ href=\"#main-content\"
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 ursor/automate-test-improve-and-merge-code-646c;
-import React, { useEffect, useState } from 'react';
 interface AccessibilitySettings  {highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -246,7 +242,6 @@ interface AccessibilitySettings  {highContrast: boolean;
   })useEffect(() => {// Check for reduced motion preference;}
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))// Check for high contrast preference;
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)')setSettings(prev => ({ ...prev, highContrast: highContrastQuery.matches }))// Detect screen reader usage;
-    const screenReaderDetected =;
       'speechSynthesis' in window ||;
       'speechRecognition' in window ||;
       navigator.userAgent.includes('NVDA') ||;
@@ -327,7 +322,6 @@ const savedSettings = localStorage.getItem('accessibility-settings')if (savedSet
   }, [])return null;
     } else {root.class_list.remove ('reduced - motion')}
   }
-    const newValue = !isHighContrast;
     setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (<>;
       {/* Accessibility Controls */}
@@ -374,7 +368,6 @@ const savedSettings = localStorage.getItem('accessibility-settings')if (savedSet
     } else {root.class_list.remove ('reduced - motion')}
   }
 
-const newValue = !isHighContrast;
     setIsHighContrast(newValue)localStorage && localStorage.setItem('highContrast', newValue && newValue.toString())applyAccessibilityStyles(newValue, fontSize, reducedMotion)setFontSize(newSize)localStorage && localStorage.setItem('fontSize', newSize)applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (<>;
       {/* Accessibility Controls */}

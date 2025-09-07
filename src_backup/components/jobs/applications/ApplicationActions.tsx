@@ -1,18 +1,18 @@
 
 ;
-return (<div className='flex items-center justify-end gap-2'>;import Link from 'next/link';
+return (<div className='flex items-center justify-end gap-2>;import Link from next/link';
 import {DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",import { Button  } from '@/components/ui/button';
+} from "@/components/ui/dropdown-menu,import { Button  } from '@/components/ui/button;
 import { DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger;
- } from '@/components/ui/dropdown-menu';
-import { Eye, ChevronDown, Loader2  } from 'lucide-react';
-import { JobApplication, ApplicationStatus  } from '@/types/jobs';
+ } from @/components/ui/dropdown-menu';
+import { Eye, ChevronDown, Loader2  } from 'lucide-react;
+import { JobApplication, ApplicationStatus  } from @/types/jobs';
 interface ApplicationActionsProps  {application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
@@ -27,71 +27,71 @@ export function ApplicationActions({
   onStatusChange
 }: ApplicationActionsProps) {
   return (
-    <div className='flex items-center justify-end gap-2'>
+    <div className='flex items-center justify-end gap-2>
 origin/cursor/automate-test-improve-and-merge-code-2533
       <Button
-        variant='outline'
-        size='sm'
+        variant=outline'
+        size='sm
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}export function ApplicationActions() {return (<div className='flex items-center justify-end gap-2'>;
+}export function ApplicationActions() {return (<div className=flex items-center justify-end gap-2'>;
       <Button;
-        variant='outline';
-        size='sm';
+        variant='outline;
+        size=sm';
         onClick={() => onViewApplication(application && application.id)}
-        disabled={!!application && application.viewed_at}    <div className="flex items-center justify-end gap-2">;
+        disabled={!!application && application.viewed_at}    <div className=flex items-center justify-end gap-2">;
       <Button;
-        variant="outline";
-        size="sm";
+        variant="outline;
+        size=sm";
         onClick = {(,) => onViewApplication(application && application.id)}
         disabled = {!!application && application.viewed_at}
       >;
-        <Eye className='h-4 w-4' />;
+        <Eye className='h-4 w-4 />;
       </Button>;<DropdownMenu>;
         <DropdownMenuTrigger asChild>;<Button;
-            variant='outline';
-            size='sm';
+            variant=outline';
+            size='sm;
             disabled={processingId === application.id}          >;
-            {processingId === application.id ? (<Loader2 className='h-4 w-4 animate-spin' />;
+            {processingId === application.id ? (<Loader2 className=h-4 w-4 animate-spin' />;
             ) : (<>;
-                Status <ChevronDown className='h-4 w-4 ml-1' />;
+                Status <ChevronDown className='h-4 w-4 ml-1 />;
               </>;
             )}
           </Button>;
         </DropdownMenuTrigger>;
-        <DropdownMenuContent align='end'>;
+        <DropdownMenuContent align=end'>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, 'shortlisted')}
+            onClick={() => onStatusChange(application.id, 'shortlisted)}
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
           >
             Shortlist
           </DropdownMenuItem>
           <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, 'interview')}
+            onClick={() => onStatusChange(application.id, interview')}
           >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem
 
-            onClick={() => onStatusChange(application.id, 'rejected')}
-            className='text-red-600'
+            onClick={() => onStatusChange(application.id, 'rejected)}
+            className=text-red-600'
 origin/cursor/automate-test-improve-and-merge-code-2533
           >
 return (
-    <div className='flex items-center justify-end gap-2'>;
+    <div className='flex items-center justify-end gap-2>;
 
-        size='sm'
+        size=sm'
 
-import Link from "next/link",
+import Link from "next/link,
 import {}
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger"
-} from "@/components/ui/dropdown-menu","
-import { Button } from "@/components/ui/button",'
-import { Eye, ChevronDown, Loader2 } from 'lucide-react'"
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu",
+import { Button } from @/components/ui/button",'
+import { Eye, ChevronDown, Loader2 } from lucide-react"
+import { JobApplication, ApplicationStatus } from @/types/jobs,
 
 interface ApplicationActionsProps {}
   application: JobApplication,
@@ -101,47 +101,47 @@ interface ApplicationActionsProps {}
 }
 
     <div className="flex items-center justify-end gap-2">
-      <Button "
-        variant="outline" "
-        size="sm" 
+      <Button 
+        variant=outline" "
+        size=sm 
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >"
-        <Eye className="h-4 w-4" />
+        <Eye className="h-4 w-4 />
       </Button>
       
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button "
-            variant="outline" "
-            size="sm"
+          <Button 
+            variant="outline" 
+            size=sm"
             disabled={processingId === application.id}
           >
             {processingId === application.id ? ("
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className=h-4 w-4 animate-spin />
             ) : ("
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+              <>Status <ChevronDown className="h-4 w-4 ml-1 /></>
             )}
           </Button>
-        </DropdownMenuTrigger>"
+        </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuItem "
-            onClick={() => onStatusChange(application.id, "shortlisted")}
+          <DropdownMenuItem 
+            onClick={() => onStatusChange(application.id, shortlisted")}
           >
             Shortlist;
           </DropdownMenuItem>
           <DropdownMenuItem "
-            onClick={() => onStatusChange(application.id, "interview")}
+            onClick={() => onStatusChange(application.id, interview)}
           >
             Schedule Interview;
           </DropdownMenuItem>
           <DropdownMenuItem "
-            onClick={() => onStatusChange(application.id, "hired")}
+            onClick={() => onStatusChange(application.id, "hired)}
           >
             Hire;
           </DropdownMenuItem>
 
-            className="text-red-600"
+            className=text-red-600"
 
             className='text-red-600'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -156,42 +156,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, 'interview')}
+            onClick={() => onStatusChange(application.id, interview)}
           >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, 'rejected')}className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}import Link from "next/link",DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",import { Button } from "@/components/ui/button",import { JobApplication, ApplicationStatus } from "@/types/jobs",interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
+            onClick={() => onStatusChange(application.id, 'rejected')}className=text-red-600          >            onClick={() => onStatusChange(application.id, "hired)}import Link from next/link",DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu,import { Button } from @/components/ui/button",import { JobApplication, ApplicationStatus } from "@/types/jobs,interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+}export function ApplicationActions() {return (<div className=flex items-center justify-end gap-2">;
       <Button;
-        variant="outline";
-        size="sm";
+        variant="outline;
+        size=sm";
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >;
-        <Eye className="h-4 w-4" />;
+        <Eye className="h-4 w-4 />;
       </Button>;
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
           <Button;
-            variant="outline";
-            size="sm";
+            variant=outline";
+            size="sm;
             disabled={processingId === application.id}
           >;
-            {processingId === application.id ? (<Loader2 className="h-4 w-4 animate-spin" />;
-            ) : (<>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            {processingId === application.id ? (<Loader2 className=h-4 w-4 animate-spin" />;
+            ) : (<>Status <ChevronDown className="h-4 w-4 ml-1 /></>;
             )}
           </Button>;
         </DropdownMenuTrigger>;
-        <DropdownMenuContent align="end">;
+        <DropdownMenuContent align=end">;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "shortlisted")}
+            onClick={() => onStatusChange(application.id, "shortlisted)}
           >;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "interview")}
+            onClick={() => onStatusChange(application.id, interview")}
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
 
 
@@ -199,12 +199,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "hired")}>;
+            onClick={() => onStatusChange(application.id, "hired)}>;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600";
+            onClick={() => onStatusChange(application.id, rejected")}
+            className="text-red-600;
             className='text-red-600';
           >;
             Reject;
@@ -212,77 +212,77 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </DropdownMenuContent>;
       </DropdownMenu>;
       <Button;
-        variant="default";
-        size="sm";
+        variant=default";
+        size="sm;
         asChild;
       >;
-            onClick={() => onStatusChange(application && application.id, 'hired')}          >;
+            onClick={() => onStatusChange(application && application.id, hired)}          >;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick = {() => onStatusChange(application && application.id, "interview")}          >;
+            onClick = {() => onStatusChange(application && application.id, interview")}          >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick = {() => onStatusChange(application && application.id, "hired")}
+            onClick = {() => onStatusChange(application && application.id, "hired)}
 
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
             onClick={() => onStatusChange(application && application.id, 'rejected')}
-            className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
+            className=text-red-600          >            onClick={() => onStatusChange(application && application.id, hired")}
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application && application.id, "rejected")}
-            className="text-red-600";import Link from 'next / link';
-import { DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components / ui / dropdown - menu';
+            onClick={() => onStatusChange(application && application.id, "rejected)}
+            className=text-red-600";import Link from 'next / link';
+import { DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from @/components / ui / dropdown - menu;
 import { Button  } from '@/components / ui / button';
 interface ApplicationActionsProps  {application: JobApplication,processingId: string | null,onViewApplication: (applicationId: string) => Promise<void>,onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2">;
+}export function ApplicationActions() {return (<div className="flex items-center justify-end gap-2>;
       <Button;
-        variant="outline";
-        size="sm";
+        variant=outline";
+        size="sm;
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >;
-        <Eye className="h-4 w-4" />;
+        <Eye className=h-4 w-4" />;
       </Button>;
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
           <Button;
-            variant="outline";
-            size="sm";
+            variant="outline;
+            size=sm";
             disabled={processingId === application.id}
           >;
-            {processingId === application.id ? (<Loader2 className="h-4 w-4 animate-spin" />;
-            ) : (<>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            {processingId === application.id ? (<Loader2 className="h-4 w-4 animate-spin />;
+            ) : (<>Status <ChevronDown className=h-4 w-4 ml-1" /></>;
             )}
           </Button>;
         </DropdownMenuTrigger>;
-        <DropdownMenuContent align="end">;
+        <DropdownMenuContent align="end>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "shortlisted")}
+            onClick={() => onStatusChange(application.id, shortlisted")}
           >;
             Shortlist;
           </DropdownMenuItem>;
-          <DropdownMenuItem;onClick={() => onStatusChange(application.id, "interview")}>;
+          <DropdownMenuItem;onClick={() => onStatusChange(application.id, "interview)}>;
             Schedule Interview;
           </DropdownMenuItem>;
-          <DropdownMenuItem;onClick={() => onStatusChange(application.id, "hired")}>;
+          <DropdownMenuItem;onClick={() => onStatusChange(application.id, hired")}>;
             Hire;
           </DropdownMenuItem>;
-          <DropdownMenuItem;on_click={() => onStatusChange (application.id, 'rejected')}
-            className='text - red - 600'          >            on_click={() => onStatusChange (application.id, "hired")}
+          <DropdownMenuItem;on_click={() => onStatusChange (application.id, rejected)}
+            className='text - red - 600'          >            on_click={() => onStatusChange (application.id, "hired)}
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            on_click={() => onStatusChange (application.id, "rejected")}
+            on_click={() => onStatusChange (application.id, rejected")}
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
-            className="text - red - 600";
+            className="text - red - 600;
 
 
           >;
@@ -292,16 +292,16 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
         </DropdownMenuContent>;
       </DropdownMenu>;
 
-            className="text - red - 600";>;
+            className=text - red - 600";>;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;)}
   );
 
-      <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
+      <Button variant=default size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;"
-        variant="default";"
+        variant=default;"
         size="sm";
         as_child;
       >;
@@ -311,14 +311,14 @@ interface ApplicationActionsProps  {application: JobApplication,processingId: st
 <<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationActions.tsx
     </div>);
 
-<Button variant='default' size='sm' asChild>
+<Button variant=default size='sm' asChild>
         <Link href={`/messages?talentId=${application.talent_id}`}>
           Contact
         </Link>
       </Button>
     </div>
   );
-    </div>)}<Button variant='default' size='sm' asChild>;
+    </div>)}<Button variant=default size='sm' asChild>;
         <Link href={`/messages?talentId=${application.talent_id}`}>;
           Contact;
         </Link>;

@@ -27,7 +27,6 @@ const { userId, message, contactEmail } = req.body || {}if (!userId || !message)
 export default async function handler() {if (req.method !== 'POST') {res.setHeader('AllowPOST')return res.status(405).json({ error: 'Method not allowed' },
 }
 
-const { userId, message, contactEmail } = req.body |{}
   if (!userId |!message) return res.status(400).json({ error: 'Missing userId or message',}
 })return res && res.status(200).json({ ok: true, appeal })if (req && req.method !== 'POST') {res && res.setHeader('AllowPOST')return res && res.status(405).json({ error: 'Method not allowed',}
 };
@@ -85,7 +84,6 @@ if ( {) {$2;}
     res.set_header ('AllowPOST')return res.status (405).json ({ error: 'Method not allowed' },
 }
 
-const { user_id, message, contact_email } = req.body || {}
   if (return res.status (400).json ({ error: 'Missing user_id or message',}
 })) {$2;}
 }

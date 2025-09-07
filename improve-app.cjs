@@ -166,8 +166,6 @@ module.exports = nextConfig;`;
 ;
   createPerformanceScript() {;
     const performanceScript = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 ;
 class PerformanceOptimizer {;
   constructor() {;
@@ -240,7 +238,6 @@ module.exports = PerformanceOptimizer;`;
   createSecurityScript() {;
     const securityScript = `#!/usr/bin/env node;
 const { execSync } = require('child_process');
-const fs = require('fs');
 ;
 class SecurityAuditor {;
   constructor() {;
@@ -285,7 +282,6 @@ class SecurityAuditor {;
   }
 ;
   generateReport() {;
-    const report = {;
       "timestamp": new Date().toISOString(),
       "issues": this.issues,
       "fixes": this.fixes,
@@ -314,7 +310,6 @@ module.exports = SecurityAuditor;`;
   }
 ;
   generateReport() {;
-    const report = {;
       "timestamp": new Date().toISOString(),
       "issues": this.issues,
       "improvements": this.improvements,

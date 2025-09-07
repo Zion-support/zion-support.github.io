@@ -93,8 +93,6 @@ const AutonomousBusinessOperationsPlatform = () => {
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
 } from 'lucide-react',
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
     {
       icon: Bot,
       title: 'AI Autonomous Management',
@@ -124,7 +122,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     },
   ];
 
-  const capabilities = [
     '24/7 autonomous operation',
     'Real-time decision making',
     'Predictive analytics',
@@ -135,7 +132,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     'Compliance automation',
   ];
 
-  const industries = [
     {
       title: 'Manufacturing',
       description:
@@ -158,7 +154,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     },
   ];
 
-  const benefits = [
     {
       icon: TrendingUp,
       title: 'Increased Efficiency',
@@ -191,7 +186,6 @@ const AutonomousBusinessOperationsPlatform = () => {
   }
 }
   ],
-  const capabilities = [
     "24/7 autonomous operation",
     "Real-time decision making",
     "Predictive analytics",
@@ -201,7 +195,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Risk assessment",
     "Compliance automation"
   ],
-  const industries = [
     {
       title: "Manufacturing",
       description: "Automated production lines, quality control, and supply chain management"
@@ -223,7 +216,6 @@ const AutonomousBusinessOperationsPlatform = () => {
   }
 }
   ],
-  const benefits = [
     {
       icon: TrendingUp,
       title: "Increased Efficiency",

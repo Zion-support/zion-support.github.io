@@ -156,10 +156,8 @@ export function Footer(...&quot;args&quot;: any[]): any {,const currentYear = ne
                     rel="noopener noreferrer";"
                     className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg transition-all duration-200 ${social.color} "hover": "scale-110`"}"                  >;
   ]&quot;
-  const solutions = [];
   const contactInfo = [{ &quot;icon&quot;: Mail, &quot;label&quot;: &quot;Email &quot;value&quot;: &quot;kleber@ziontechgroup.com &quot;href&quot;: &quot;"mailto":kleber@ziontechgroup.com&quot; },{ &quot;icon&quot;: Phone, &quot;label&quot;: &quot;Phone &quot;value&quot;: &quot;+1 302 464 0950 &quot;href&quot;: &quot;"tel":+13024640950&quot; },{ &quot;icon&quot;: MapPin, &quot;label&quot;: &quot;Address &quot;value&quot;: &quot;364 E Main St STE 1008, Middletown DE 19709 &quot;href&quot;: &quot;#&quot; },{ &quot;icon&quot;: Globe, &quot;label&quot;: &quot;Website &quot;value&quot;: &quot;ziontechgroup.com &quot;href&quot;: &quot;"https"://ziontechgroup.com&quot;
 }const [activeSection, setActiveSection] = useState<any>(null)";"
-  const footerSections = []}, {";"
       "title": "AI & Quantum Solutions;"
 "icon": Brain,";"
 "category": "Core Services";"
@@ -183,7 +181,6 @@ export function Footer(...&quot;args&quot;: any[]): any {,const currentYear = ne
 "links": [ { "name": "Documentation "href": "/docs" }, { "name": "White Papers "href": "/white-papers" }, { "name": "Support Center "href": "/help" }, { "name": "Training "href": "/training" }, { "name": "Blog "href": "/blog" }, { "name": "Research "href": "/research-development" }"
       ]}
   ]";"
-  const solutions = [];
   const contactInfo = [{ "icon": Mail, "label": "Email "value": "kleber@ziontechgroup.com "href": ""mailto":kleber@ziontechgroup.com" },{ "icon": Phone, "label": "Phone "value": "+1 302 464 0950 "href": ""tel":+13024640950" },{ "icon": MapPin, "label": "Address "value": "364 E Main St STE 1008, Middletown DE 19709 "href": "#" },{ "icon": Globe, "label": "Website "value": "ziontechgroup.com "href": ""https"://ziontechgroup.com" }];"
   const scrollToTop = ("props": any) => {window.scrollTo({ "top": 0, "behavior": 'smooth' }'
     )}const scrollToTop = ("props": any) => {window.scrollTo({ "top": 0, "behavior": 'smooth' }'
@@ -1167,8 +1164,6 @@ initial = "{false}"";"
       </button>;
     </footer>;
   )}}
-  const footerSections = []&apos;
-  const solutions = [;
     { &quot;name&quot;: &apos,Enterprise Solutions&apos, &quot;href&quot;: &apos,/solutions/enterprise&apos} { &quot;name&quot;: &apos,Healthcare Solutions&apos, &quot;href&quot;: &apos,/solutions/healthcare&apos} { &quot;name&quot;: &apos,Financial Solutions&apos, &quot;href&quot;: &apos,/solutions/financial&apos} { &quot;name&quot;: &apos,Government Solutions&apos, &quot;href&quot;: &apos,/solutions/government&apos} { &quot;name&quot;: &apos,Manufacturing Solutions&apos, &quot;href&quot;: &apos,/solutions/manufacturing&apos} { &quot;name&quot;: &apos,Retail Solutions&apos, &quot;href&quot;: &apos,/solutions/retail&apos} { &quot;name&quot;: &apos,Education Solutions&apos, &quot;href&quot;: &apos,/solutions/education&apos} { &quot;name&quot;: &apos,Startup Solutions&apos, &quot;href&quot;: &apos,/solutions/startup&apos}return(&apos;&quot;
     <footer className=&quot;&apos;bg-zion-blue-dark&quot; border-t border-zion-purple/30&apos;>;
       {/* comment */}&apos;&quot;

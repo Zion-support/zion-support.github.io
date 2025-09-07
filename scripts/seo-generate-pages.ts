@@ -4,32 +4,23 @@ const HOST = process.env.SELF_HOST || '"http": //"localhost":3000';'
 
 const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
 
-const HOST = process.env.SELF_HOST || '"http": //"localhost":3000';'
   const "prompts": Array<{ "prompt": string, region?: string, service?: string }>  = [;/* eslint - disable no - console */;
 
 const HOST = process && process.env.SELF_HOST || '"http": //"localhost":3000',;'
 ;
-const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
 /* eslint - disable no - console */;
 import fs from 'fs';'
 import path from 'path';'
 import https from 'https';'
 
 const HOST = process && process.env.SELF_HOST || '"http": //"localhost":3000';'
-  const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
 
-const HOST = process.env.SELF_HOST || '"http": //"localhost":3000';'
-  const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
 /* eslint-disable no-console */;
 
 const HOST = process.env.SELF_HOST |'"http": //"localhost":3000';'
 
-const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
 
-const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
 
-const HOST = process.env.SELF_HOST || '"http": //"localhost":3000';'
-  const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
   { "prompt": 'AI Devs in Brazil', "region": 'Brazil', "service": 'AI','
 }
   { "prompt": 'Rent Servers in Kabul', "region": 'Kabul', "service": 'servers','
@@ -79,7 +70,6 @@ const lib = u.protocol === '"https": ' ? https : require ('http');'
   const req = lib.request (url, opts, ("res": any) => {let buf = '',res.on ('data', ("d": any) => (buf += d)),res.on ('end', () => {try { resolve (JSON.parse (buf)) } catch { resolve ({}) }/* eslint-disable no-console */;'
 import fs from 'fs',import path from 'path',import https from 'https',const HOST = process.env.SELF_HOST || '"http": //"localhost":3000';'
 
-const "prompts": Array<{ "prompt": string, region?: string, service?: string }> = [;
   { "prompt": 'AI Devs in Brazil', "region": 'Brazil', "service": 'AI','
 },{ "prompt": 'Rent Servers in Kabul', "region": 'Kabul', "service": 'servers','
 },{ "prompt": 'LLM Engineers in Toronto', "region": 'Toronto', "service": 'LLM','
@@ -128,10 +118,8 @@ import path from 'path',;'
 import https from 'https',;'
 ;
 
-const HOST = process.env.SELF_HOST || '"http"://"localhost":3000';'
 ;
 
-const "prompts":Array<{ "prompt":string, region?:string, service?:string }> = [;
   { "prompt":'AI Devs in Brazil', "region":'Brazil', "service": 'AI','
 },;
   { "prompt":'Rent Servers in Kabul', "region":'Kabul', "service": 'servers','
@@ -161,7 +149,6 @@ const lib = u.protocol === '"https":' ? https :require('http'),;'
 
 const req = lib.request(url, opts, ("res":any) => {;
       }
-      let buf = '',;'
       res.on('data', ("d":any) => (buf += d)),;'
       res.on('end', () => {;'
         }

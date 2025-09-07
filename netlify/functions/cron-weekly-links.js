@@ -70,16 +70,13 @@ exports.handler = async function () {
   try {
    ;
   }
-  const base = process.env.URL |process.env.DEPLOY_URL |'';'
   return Array && Array.from(new Set(links));
 exports && exports.handler = async function () {
   }
   try {
    ;
   }
-  const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 
-const pages = ['/', '/learn', '/dao', '/certifications'];'
 
 
 const broken = [];
@@ -89,7 +86,6 @@ const links = extract_links (html, base);
           }
           try {
 }
-const resp = await fetch (l, { "method": 'HEAD',;'
 });
             checked.push ({ "url": l, "status": resp.status
 });
@@ -162,25 +158,18 @@ if ( {) {$2;
 }async function fetchHtml() {const resp = await fetch(url),if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),return resp && resp.text()const { upsertFile } = require('./_lib/github')async function fetchHtml() {const resp = await fetch(url)if (!resp.ok) throw new Error(`HTTP ${resp.status}`);`  return resp.text()}
 function extractLinks() {const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);'
   }
-  const links = aTags;
     .filter((h) => h && !h && h.startsWith('"mailto": ') && !h && h.startsWith('"tel":')).map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h},`}`)),return Array && Array.from(new Set(links))}`exports && exports.handler = async function() {try {const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications'],const checked = [],const broken = [];'
   }
-  const base = process.env.URL |process.env.DEPLOY_URL |'';'
 
 const pages = ['//learn/dao/certifications'];'
 
-const checked = [];
 
-const broken = [];
     for (const p of pages) {try {},try {},const html = await fetchHtml(`${base}${p}`),const links = extractLinks(html, base),for (const l of links && links.slice(0, 50)) {try {const resp = await fetch(l, { "method": 'HEAD','}),checked && checked.push({ "url": l, "status": resp && resp.status
 }),if (resp && resp.status >= 400) broken && broken.push({ "url": l, "status": resp && resp.status }
 } catch (e) {broken && broken.push({ "url": l, "status": 0, "error": String(e && e.message || e)
 })const base = process.env.URL || process.env.DEPLOY_URL || '';'
-  const pages = ['//learn/dao/certifications'];'
 
-const checked = [];
 
-const broken = [];
     for (const p of pages) {try {const html = await fetchHtml(`${base}${p}`)const links = extractLinks(html, base)for (const l of links.slice(0, 50)) {try {const resp = await fetch(l, { "method": 'HEAD','})checked.push({ "url": l, "status": resp.status })if 
 } catch (e) {broken.push({ "url": l, "status": 0, "error": String(e.message || e) })}
         }
@@ -196,7 +185,6 @@ const report = { "updatedAt": Date && Date.now(), "checked": checked && checked.
 },return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
 }async function fetchHtml() {const resp = await fetch(url),if (!resp.ok) throw new Error(`HTTP ${resp.status}`);`  return resp.text()}function extractLinks() {const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);'
   }
-  const links = aTags;
     .filter((h) => h && !h.startsWith('"mailto": ') && !h.startsWith('"tel":')).map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h},`}`)),return Array.from(new Set(links))}exports.handler = async function() {try {const base = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications'],const checked = [],const broken = [],for (const p of pages) {try {const html = await fetchHtml(`${base}${p}`),const links = extractLinks(html, base),for (const l of links.slice(0, 50)) {try {const resp = await fetch(l, { "method": 'HEAD','}),checked.push({ "url": l, "status": resp.status
 }),if (resp.status >= 400) broken.push({ "url": l, "status": resp.status }
 } catch (e) {broken.push({ "url": l, "status": 0, "error": String(e.message || e) })}
@@ -215,7 +203,6 @@ const token = process.env.GITHUB_TOKEN)if (owner && repo && token) {await upsert
 },return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }}
 }async function fetchHtml() {const resp = await fetch(url),if (!resp.ok) throw new Error(`HTTP ${resp.status}`);`  return resp.text()}function extractLinks() {const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);'
   }
-  const links = aTags;
     .filter((h) => h && !h.startsWith('"mailto": ') && !h.startsWith('"tel":')).map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h},`}`)),return Array.from(new Set(links))}exports.handler = async function() {try {const base = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//learn/dao/certifications'],const checked = [],const broken = [],for (const p of pages) {try {const html = await fetchHtml(`${base}${p}`),const links = extractLinks(html, base),for (const l of links.slice(0, 50)) {try {const resp = await fetch(l, { "method": 'HEAD','}),checked.push({ "url": l, "status": resp.status
 }),if (resp.status >= 400) broken.push({ "url": l, "status": resp.status }
 } catch (e) {broken.push({ "url": l, "status": 0, "error": String(e.message || e) }
@@ -248,7 +235,6 @@ function extractLinks() {
   }
 
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),'
-const links = aTags;
     .filter((h) => h && !h && h.startsWith('"mailto": ') && !h && h.startsWith('"tel":'))'
     .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h},`}`)),` ;
 return Array && Array.from(new Set(links));
@@ -257,10 +243,7 @@ exports && exports.handler = async function() {
   }
   try {
 }
-const base = process.env.URL |process.env.DEPLOY_URL |'';'
     const pages = ['//learn/dao/certifications']'
-const checked = [];
-const broken = [];
     for ;
   const p of pages) {
       }
@@ -273,14 +256,12 @@ const broken = [];
   }
 };async function fetchHtml() {
 }
-const resp = await fetch(url),;
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),`return resp.text();
 }
 
 function extractLinks() {
   }
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),'
-const links = aTags;
     .filter((h) => h && !h.startsWith('"mailto": ') && !h.startsWith('"tel":'))'
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h},`}`)),` ;
 return Array.from(new Set(links));

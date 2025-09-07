@@ -42,7 +42,6 @@ interface DiscussionPost  {"id": number;
 const "initialPosts": DiscussionPost[] = [;
   {"id": 1,  "time": string,"title": string,"body": string;
 }
-const "initialPosts": DiscussionPost[] = [;
   {"id": 1,"author": 'Anna Zhou',"time": '2h ago',"title": 'What AI trends are you most excited for in 2025?',"body": "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},"id": 2,"author": 'David Kim',"time": '50m ago',"title": 'Quick "tip": How to rank your Zion listing higher',"body": 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];export const "CommunityDiscussion": React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle]  = useState('')export const "CommunityDiscussion": React.FC = () => {const [posts, setPosts] = useState(initialPosts),const [showNew, setShowNew] = useState(false),const [newTitle, setNewTitle] = useState(""),const [newBody, setNewBody] = useState(""),const handleAddPost = () => {const [newBody, setNewBody] = useState('')const [newTitle, setNewTitle] = useState("")const [newBody, setNewBody]  = useState("")const handleAddPost = () => {if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;"
     }
     setPosts([;

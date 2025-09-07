@@ -76,7 +76,6 @@ const resources = [
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram  } from 'lucide-react';
 
 const Footer = () => ;
-  const services = [
     { name: 'AI Services'}
   href: '/ai-services'}
 },
@@ -94,7 +93,6 @@ const Footer = () => ;
 }
   ];
 
-const company = [
     { name: 'About Us'}
   href: '/about'}
 },
@@ -112,7 +110,6 @@ const company = [
 }
   ];
 
-const resources = [
     { name: 'Documentation'}
   href: '/docs'}
 },
@@ -132,7 +129,6 @@ const resources = [
  } from 'lucide-react';
 
 const Footer: React.FC = () => {const currentYear = new Date().getFullYear(;
-  const services = [
   import { 
   Phone, 
   Mail, 
@@ -153,7 +149,6 @@ const Footer: React.FC = () => {
 
   const currentYear = new Date().getFullYear()
  ;
-  const services = [
     { name: 'Web Development'}
   href: '/services/web-development'}
 }
@@ -171,7 +166,6 @@ const Footer: React.FC = () => {
 const solutions = [
   ];
 
-const company = [
     { name: 'Careers'}
   href: '/careers'}
 },
@@ -221,10 +215,8 @@ const socialLinks = [
                 <span className=\"text-gray-400\" />;
                   364 E Main St STE 1008<br />;
 
-const solutions = [
   ];
 
-const company = [
       { name: 'Careers'}
   href: '/careers'}
 },
@@ -242,7 +234,6 @@ const company = [
 }
   ];
 
-const socialLinks = [
   ];
   return (
 
@@ -426,7 +417,6 @@ export default Footer;
 export default Footer;import React from 'react'; import Link from 'next / link'; import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => { const current_year = new Date ().getFullYear (;
-  const services = [   { name: 'AI Development'}
   href: '/services / ai - development'}
 },
    { name: 'Cloud Solutions'}
@@ -451,7 +441,6 @@ const Footer: React.FC = () => { const current_year = new Date ().getFullYear (;
   href: '/services / cybersecurity'}
 } ];
 
-const company = [   { name: 'About Us'}
   href: '/about'}
 },
    { name: 'Our Team'}
@@ -470,7 +459,6 @@ const company = [   { name: 'About Us'}
   href: '/terms'}
 } ];
 
-const resources = [   { name: 'Blog'}
   href: '/blog'}
 },
    { name: 'Case Studies'}
@@ -499,7 +487,6 @@ export default Footer;import { motion  } from 'framer-motion';
   MapPin,Phone,Mail,Clock,Facebook,Twitter,Linkedin,Instagram,Github;
 } from 'lucide-react';
 
-const Footer = () => ;
   const footerSections = {services: [;
         { name: 'AI Services'}
   href: '/ai-services'}
@@ -592,7 +579,6 @@ const Footer = () => ;
     ];
   }ursor/automate-test-improve-and-merge-code-646c;
 
-const socialLinks = [
   { name: 'Facebook'}
   href: '#', icon: Facebook}
 },{ name: 'Twitter'}
@@ -826,7 +812,6 @@ export default Footer;import React from 'react'; import Link from 'next/link'; i
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
-const services = [   { name: 'AI Development'}
   href: '/services/ai-development'}
 },
   { name: 'Cloud Solutions'}
@@ -851,7 +836,6 @@ const services = [   { name: 'AI Development'}
   href: '/services/cybersecurity'}
 } ];
 
-const company = [   { name: 'About Us'}
   href: '/about'}
 },
   { name: 'Our Team'}
@@ -870,7 +854,6 @@ const company = [   { name: 'About Us'}
   href: '/terms'}
 } ];
 
-const resources = [   { name: 'Blog'}
   href: '/blog'}
 },
   { name: 'Case Studies'}
@@ -886,7 +869,6 @@ const resources = [   { name: 'Blog'}
   href: '/faq'}
 } ];
 
-const socialLinks = [ { name: 'LinkedIn',
   href: 'https: { name: 'Twitter',
   href: 'https: { name: 'GitHub',
   href: 'https: { name: 'Facebook'}"
@@ -900,10 +882,8 @@ export default Footer;
 
 export default Footer;import React from 'react'; import Link from 'next / link'; import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
-const Footer: React.FC = () => {;
   const current_year = new Date ().getFullYear ();
 
-const services = [   { name: 'AI Development'}
   href: '/services / ai - development'}
 },
    { name: 'Cloud Solutions'}
@@ -928,7 +908,6 @@ const services = [   { name: 'AI Development'}
   href: '/services / cybersecurity'}
 } ];
 
-const company = [   { name: 'About Us'}
   href: '/about'}
 },
    { name: 'Our Team'}
@@ -947,7 +926,6 @@ const company = [   { name: 'About Us'}
   href: '/terms'}
 } ];
 
-const resources = [   { name: 'Blog'}
   href: '/blog'}
 },
    { name: 'Case Studies'}
@@ -963,7 +941,6 @@ const resources = [   { name: 'Blog'}
   href: '/faq'}
 } ];
 
-const social_links = [ { name: 'LinkedIn',
   href: 'https: { name: 'Twitter',
   href: 'https: { name: 'GitHub',
   href: 'https: { name: 'Facebook'}"
@@ -986,7 +963,6 @@ import { motion } from 'framer-motion';
   Github;
 } from 'lucide-react';
 
-const Footer = (
  ;
   const footerSections = {
     services: [
@@ -1110,7 +1086,6 @@ const Footer = (
  
 };
 
-const socialLinks = [
     { name: 'Facebook'}
   href: '#', icon: Facebook}
 },
@@ -1230,7 +1205,6 @@ href={resource.href}"
                 </span>
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
 
-const Footer: React.FC = () => {
  ;
   return ("
     <footer className=\"bg-gray-900 text-white\" />"

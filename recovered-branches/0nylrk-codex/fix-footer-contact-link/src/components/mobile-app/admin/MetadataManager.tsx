@@ -27,7 +27,6 @@ const iosForm = useForm<AppMetadataValues>({ "defaultValues": { ...defaultValues
   const androidForm = useForm<AppMetadataValues>({ "defaultValues": { ...defaultValues, "platform": "android" } })"
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;"
 },
-const "defaultValues": AppMetadataValues = {
   }
   "appTitle": "Zion AI Marketplace","
   "shortDescription": "Hire top AI talent or find global IT jobs on the go.","
@@ -38,8 +37,6 @@ const "defaultValues": AppMetadataValues = {
 },
 export const "MetadataManager": React.FC = () => {;
   }
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");"
-  const [isSaving, setIsSaving] = useState(false);
 export const "MetadataManager": React.FC = () => {
   }
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),"
@@ -97,7 +94,6 @@ const iosForm = useForm<AppMetadataValues>({ "defaultValues": { ...defaultValues
   )
 
 },
-import React, { useState } from "react";"
 import { useForm } from "react-hook-form";"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 import { MetadataForm } from "./MetadataForm",;"

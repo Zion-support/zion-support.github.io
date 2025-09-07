@@ -99,7 +99,6 @@ class BuildMonitor {
   }
   parseLintIssues(output) {
     const issues = [];
-    const lines = output.split('\n');
     lines.forEach(line => {
       if (line.includes('error') || line.includes('warning')) {
         issues.push(line.trim());
@@ -108,8 +107,6 @@ class BuildMonitor {
     return issues;
   }
   parseTypeErrors(output) {
-    const errors = [];
-    const lines = output.split('\n');
     lines.forEach(line => {
       if (line.includes('error TS')) {
         errors.push(line.trim());
@@ -151,7 +148,6 @@ class BuildMonitor {
     this.maxBuildHistory = 10;
   }
   log(level, message) {
-    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
     if (level === 'error') {
       console.error(logMessage);
@@ -175,9 +171,9 @@ class BuildMonitor {
     }
 module.exports = BuildMonitor;
 ursor/automate-test-improve-and-merge-code-646c;
-const fs = require('fs)const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
+const fs = require('fs')const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
 
-const fs = require('fs);
+const fs = require('fs');
 const path = require('path'),
   const { execSync } = require(child_process');
 class BuildMonitor {
@@ -214,7 +210,7 @@ class BuildMonitor {
       }fs.writeFileSync(path.join(__dirname, alertsbuild-failure-alert.json'),JSON.stringify(alertData, null, 2))}
   }
   async generateReport(results) {// Read previous report for trends;
-    let previousReport = null,if (fs.existsSync(this.reportFile)) {try {previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {this.log('Could not read previous reportWARN')}
+    let previousReport = null,if (fs.existsSync(this.reportFile)) {try {previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))} catch (error) {this.log('Could not read previous reportWARN')}
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
     this.log(`Build health report updated: ${this.reportFile}`)
     return report
@@ -445,7 +441,6 @@ class BuildMonitor {
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
-  const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
   const command = process.argv[2];
   switch (command) {
@@ -475,9 +470,6 @@ if (require.main === module) {
 }
 module.exports = BuildMonitor;
 
-const fs = require('fs);
-const path = require('path'),
-  const { execSync } = require(child_process');
 class BuildMonitor {
   constructor() {
     this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
@@ -486,11 +478,9 @@ class BuildMonitor {
     this.consecutiveFailures = 0;
   log(message, level = INFO') {
     const timestamp = new Date().toISOString(),
-  const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage)}
   async checkBuildHealth() {
-    const results = {
       timestamp: new Date().toISOString(),
       build: { status: 'unknown, duration: 0, errors: [] },
       lint: { status: 'unknown', issues: [] },
@@ -544,28 +534,22 @@ class BuildMonitor {
         results.dependencies.status = 'warning,
   this.log('Dependencies check: Some packages may be outdatedWARN')}
   parseErrors(output) {
-    const errors = [];
     const lines = output.split('\n),
   lines.forEach(line => {
       if (line.includes('Error:') || line.includes(SyntaxError:')) {
         errors.push(line.trim())}
     });
   parseLintIssues(output) {
-    const issues = [];
-    const lines = output.split('\n),
   lines.forEach(line => {
       if (line.includes('error') || line.includes(warning')) {
         issues.push(line.trim())}
     });
   parseTypeErrors(output) {
-    const errors = [];
-    const lines = output.split('\n),
   lines.forEach(line => {
       if (line.includes('error TS')) {
         errors.push(line.trim())}
     });
       // Create alert file for other processes to pick up
-      const alertData = {
         type: 'build_failure,
         consecutiveFailures: this.consecutiveFailures,
         timestamp: new Date().toISOString(),
@@ -582,10 +566,9 @@ class BuildMonitor {
     let previousReport = null,
   if (fs.existsSync(this.reportFile)) {
       try {
-        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))} catch (error) {
         this.log('Could not read previous reportWARN')}
     }
-    const report = {
       ...results,
       trends: {
         consecutiveFailures: this.consecutiveFailures,

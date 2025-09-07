@@ -135,7 +135,6 @@ serve(async ("req":Request) => {;
     }
 ;
     // Process pending reminder jobs;
-    const { "data": pendingJobs, "error": jobsError } = await supabase;
       .from("scheduled_jobs");"
       .select("id, payload");"
       .eq("job_type", "onboarding_reminder");"
@@ -159,7 +158,6 @@ serve(async ("req":Request) => {;
       for (const job of pendingJobs) {;
         // Call the send-onboarding-reminder function for each job;
         }
-        const reminderResponse = await fetch(;
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`,;`          {;
             }
             "method": "POST",;"

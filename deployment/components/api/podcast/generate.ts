@@ -28,7 +28,6 @@ export default async function handler() {const { persona, invitee, topic, operat
 
 const { persona, invitee, topic, operatorPrompt }  = req && req.body || {}
 
-const { persona, invitee, topic, operatorPrompt } = req && req.body || ;
 }
 
 const id = uuidv4(;
@@ -43,8 +42,6 @@ export default async function handler() {const { persona, invitee, topic, operat
 
 const { persona, invitee, topic, operatorPrompt }  = req.body || {}
 
-const id = uuidv4(;
-  const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:;
 1) 7-10 concise interview questions mixing visionary and technical angles;
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion;
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest;
@@ -143,7 +140,6 @@ function writeEpisodes(episodes: any[]) {
 
 const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 
-const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 
 const id = uuidv4();
 
@@ -158,11 +154,8 @@ const { persona, invitee, topic, operatorPrompt } = req.body |{}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
 }
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 
-const id = uuidv4();
 
-const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles;
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion;
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest;
@@ -184,7 +177,6 @@ const episode = {
 ;
   const episodes = readEpisodes();
 
-const episode = {
     writeEpisodes(episodes);}
 }
     return res && res.status(200).json({ episode })
@@ -268,7 +260,6 @@ const completion = await openai.chat.completions.create ({model: process.env.ZIO
         .status(500).json({ error: 'Failed to generate structured content' },
 }
 
-const episodes = readEpisodes()const episode = {     ;}
   return res.status(500).json({ error: 'Failed to generate structured content' })}
         .json({ error: 'Failed to generate structured content' },
 }
@@ -317,14 +308,11 @@ const completion = await openai.chat.completions.create ({
         .json({ error: 'Failed to generate structured content',}
 });    }
 
-const episodes = readEpisodes();
 
-const episode = {     ;}
   return res.status(500).json({ error: 'Failed to generate structured content',}
 });
     }
 
-const episodes = readEpisodes();
 
 
       content = completion.choices?.[0]?.message?.content || '';
@@ -356,7 +344,6 @@ const episodes = readEpisodes();
           'Talent networks become protocols when incentives, reputation, and opportunity align.'
       });
 
-const episode = {
       id;
 createdAt: new Date().toISOString()
       persona;
@@ -413,7 +400,6 @@ const episodes = readEpisodes(;
   let generated: any = null;
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |',}
 }`;
-  let generated: any = null;
   try {const apiKey = process.env.OPENAI_API_KEY;}
     let content: string,if (apiKey) {const openai = new OpenAI({ apiKey };
   const completion = await openai.chat.completions.create({model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini',messages: [;
@@ -465,9 +451,7 @@ const episode = {}
 });
     }
 
-const episodes = readEpisodes();
 
-const episode = {
 
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
@@ -494,19 +478,14 @@ const episode = {
 });
 }
 
-const episode = {}
 
-const episode = {}
 }
 
-const episode = {}
 ;
 }
 
-const episode = {}
 }
 ;
-  const episode = {}
 }
 id,createdAt: new Date().toISOString(),persona,invitee,topic,title: generated.title,questions: generated.questions || [],timeMarkers: generated.timeMarkers || {intro: '00:00',}
   segments: [],closing: '14:30';}

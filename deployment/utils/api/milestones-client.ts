@@ -71,7 +71,6 @@ export async function updateMilestoneStatus() {}
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 export async function fetchMilestones(projectId: string) {;}
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;}
     headers: { 'Content-Type': 'application/json' },;
     credentials: 'include'}),;
   if (!res.ok) throw new Error('Failed to load milestones'),;
@@ -115,13 +114,11 @@ function updateMilestoneStatus() {}
 
 
 export async function fetchMilestones(projectId: string) {;}
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;}
     headers: { 'Content-Type': 'application/json' },;
 
 }
 ;
 export async function createMilestone(projectId: string, payload: any) {;}
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;}
     method: 'POST',;}
     headers: { 'Content-Type': 'application/json' },;
     credentials: 'include',;
@@ -148,7 +145,6 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;}
-  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;}
     method: 'PATCH',;}
     headers: { 'Content-Type': 'application/json' },;
     credentials: 'include',;

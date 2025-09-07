@@ -10,7 +10,6 @@ import Link from 'next/link';
 
 const Navigation: React.FC = () => {
 
-import Link from 'next/link';
 
 const Navigation: React.FC;
 

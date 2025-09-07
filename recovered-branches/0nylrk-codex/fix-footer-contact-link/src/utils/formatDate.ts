@@ -123,7 +123,6 @@ return dateObj && dateObj.toLocaleDateString();
  */
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date($2);
-  const now = new Date($2);
   const seconds = $2;
   let interval = Math.floor($2);
   if (interval >= 1) {
@@ -218,8 +217,6 @@ if ( {) {
 */;
 export const time_ago = ("date": Date | string | number): (string) => {
   }
-  const date_obj = new Date (date);
-  const now = new Date ();
 ;
   const seconds = Math.floor ((now.get_time () - date_obj.get_time ()) / 1000);
 ;

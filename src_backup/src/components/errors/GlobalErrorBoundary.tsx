@@ -356,7 +356,6 @@ if ( {) {$2;
     }if (message.includes('permission') || message.includes('unauthorized')) {return 'You may need to log in again or check your permissions.';'
     }return 'This appears to be a temporary issue. Please try again.';  }private retry = () => {if (this.state.retryCount >= (this.props.maxRetries || 3)) {}private retry = () => {if (this.state.retryCount >= (this.props.maxRetries || 3)) {return;'
     }const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff;
-    const timeout = setTimeout(() => {this.setState({"hasError": false,"error": null,"errorInfo": null,"errorId": null,"retryCount": this.state.retryCount + 1,"showDetails": false;
       })}, retryDelay)this.retryTimeouts.push(timeout)}private copyErrorDetails = async () => {const errorDetails = {"errorId": this.state.errorId,"message": this.state.error?.message,"stack": this.state.error?.stack,"componentStack": this.state.errorInfo?.componentStack,"timestamp": new Date().toISOString(),"url": typeof window !== 'undefined' ? window.location.href : 'unknown',"userAgent": typeof window !== 'undefined' ? navigator.userAgent : 'unknown';'
     }try {await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))// Could show a toast notification here;
     } catch (err) {logErrorToProduction('Failed to copy error "details":', { "data": err })}'

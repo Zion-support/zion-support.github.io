@@ -94,7 +94,6 @@ const servicesByCategory = filteredServices.reduce((acc, service) => ;
     }
   ];
 
-const categories = [
   'All';
     'Content & Marketing';
     'Development & DevOps';

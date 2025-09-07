@@ -235,7 +235,6 @@ Target;
 export default function ITServices() {
   }
   const title = 'IT Services — Zion Tech Group';'
-  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';'
   const itServices = [{
       "title": 'Cloud Infrastructure & Migration','
       "description": 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform','
@@ -1859,8 +1858,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import { Server,, Cloud,, Shield,, Database,, Network,, Monitor,, Smartphone,, Globe,, Lock,, Settings,, Zap,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Clock,, Award,, Star,, Cpu,, HardDrive,, Wifi,, Code,, Terminal,, FileText,, Mail,, Phone,, MapPin,, TrendingUp,, Brain,, Target } from 'lucide-react';'
 export default function ITServices() {const title = 'IT Services — Zion Tech Group';'
   }
-  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';'
-  const itServices = [{"title": 'Cloud Infrastructure & Migration',"description": 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',"icon": Clou d,"features": [;"
         'Multi-cloud architecture design and implementation','Legacy system migration and modernization','Serverless computing and containerization','Auto-scaling and load balancing','Cost optimization and FinOps practices','Disaster recovery and backup solutions';'
       ],"pricing": '$5,000 - $50,000/month',"delivery": '4-12 weeks',"category": 'Cloud Services';'
     },{"title": 'Cybersecurity & Compliance',"description": 'Enterprise-grade security solutions and compliance management',"icon": Shiel d,"features": ['Zero-trust security architecture','SOC 2, GDPR, HIPAA compliance automation','Penetration testing and vulnerability assessments','Security monitoring and incident response','Identity and access management (IAM)','Data encryption and privacy protection';'
@@ -2202,8 +2199,6 @@ class ErrorBoundary extends React.Component {
 import {Server,, Cloud,, Shield,, Database,, Network,, Monitor,, Smartphone,, Globe,, Lock,, Settings,, Zap,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Clock,, Award,, Star,, Cpu,, HardDrive,, Wifi,, Code,, Terminal,, FileText,, Mail,, Phone,, MapPin,, TrendingUp,, Brain,, Target} from 'lucide-react';'
 export default function ITServices() {;
   }
-  const title = 'IT Services — Zion Tech Group';'
-  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';'
   const itServices = [{;
       "title": 'Cloud Infrastructure & Migration',;'
       "description": 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',;'

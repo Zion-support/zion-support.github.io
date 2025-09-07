@@ -353,7 +353,6 @@ export default Sidebar;
         <div className = $2;
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes($2);
-            const IconComponent = $2;
 ,
             return (,
               <div key = $2;

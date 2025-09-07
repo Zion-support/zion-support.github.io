@@ -46,20 +46,16 @@ interface BeforeInstallPromptEvent extends Event {';
 }>;prompt(): Promise<void />;
 }
 
-const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null />(null)const [showInstallPrompt, setShowInstallPrompt] =;
   useState(false;
-  const [isInstalled, setIsInstalled] = useState(false)useEffect(() => {
 // Check if app is already installed;}
 ursor/automate-test-fix-improve-and-merge-code-48f3;}
     }
     // Listen for the beforeinstallprompt event;
 
-const handleBeforeInstallPrompt = (e.preventDefault()setDeferredPrompt(e as BeforeInstallPromptEvent)setShowInstallPrompt(true,) => {
   return $3;}
 }
 }// Listen for the appinstalled event;
 
-const handleAppInstalled = (setIsInstalled(true)setShowInstallPrompt(false)setDeferredPrompt(null)) => {
   return $3;}
 }window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener('appinstalled', handleAppInstalled)'    // Register service worker';
     if ('serviceWorker';

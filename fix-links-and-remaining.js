@@ -197,8 +197,6 @@ remainingCorruptedFiles.forEach(filePath => {
     if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })}
 remainingCorruptedFiles.forEach(filePath => {try {;
-  const serviceName = getServiceName(filePath);
-    const displayName = getDisplayName(serviceName);
     console && console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
     console && console.log(`Fixing ${filePath}...`);
@@ -216,8 +214,6 @@ remainingCorruptedFiles.forEach(filePath => {try {;
     console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
 remainingCorruptedFiles.forEach(filePath => {try {;
-  const serviceName = getServiceName(filePath);
-    const displayName = getDisplayName(serviceName);
     console && console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
 
@@ -230,7 +226,6 @@ remainingCorruptedFiles.forEach(filePath => {try {;
   fs && fs.mkdirSync(dir, { "recursive": true })};
 
     // Write the fixed content;
-    const content = servicePageTemplate(serviceName, displayName);
     fs && fs.writeFileSync(filePath, content, "utf8");
     console && console.log(`✓ Fixed ${filePath}`)} catch (error) {;,// Function to extract display name from service name,
 function getDisplayName(serviceName) {,
@@ -308,7 +303,6 @@ remainingCorruptedFiles.forEach($2);
   console.error(`✗ Error fixing ${filePath}:`, error.message)};
     if (!fs.existsSync(dir)) {fs.mkdirSync(dir, { "recursive":true })}
     // Write the fixed content;
-    const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
     .join("")};
 ,
@@ -407,7 +401,6 @@ origin/automation-improvements-final;
   fs.mkdir_sync (dir, { "recursive": true })}
     ,
     // Write the fixed content,
-    const content = servicePageTemplate (service_name, display_name),
     fs.writeFileSync (file_path, content, "utf8"),
     console.log (`✓ Fixed ${file_path}`)} catch (error) {
 } catch (error) {_;}
@@ -472,11 +465,8 @@ function getDisplayName(serviceName) {,
 // Fix remaining corrupted files,
 remainingCorruptedFiles.forEach(filePath => {,
   try {,
-  const serviceName = getServiceName(filePath),
-    const displayName = getDisplayName(serviceName),
     console.log(`Fixing ${filePath}...`),
     // Ensure directory exists,
-    const dir = path.dirname(filePath),
     if (!fs.existsSync(dir)) {,
   fs.mkdirSync(dir, { "recursive": true })};
     ,

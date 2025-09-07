@@ -46,7 +46,6 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {"
     }
     try {
       }
-      const { error } = await supabase.auth.signInWithOAuth({      const { error } = await supabase.auth.signInWithOAuth({
         }
         "provider": "twitter"});"
       if (error) {
@@ -61,11 +60,9 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {"
     }
   },
 
-  const loginWithTwitter = async () => {
     }
     try {
       }
-      const { error } = await supabase.auth.signInWithOAuth({
         }
         "provider": "twitter"}),"
 
@@ -94,7 +91,6 @@ import { toast } from "@/hooks/use-toast",export const useSocialAuth = () => {"
       toast({import { toast } from '@/hooks / use - toast';'
 export const useSocialAuth = () =>: any {
   }
-  const loginWithGoogle = async () => {
     }
     try {
       }
@@ -123,11 +119,9 @@ if ( {) {
     }
   }
 ;
-  const loginWithFacebook = async () => {
     }
     try {
       }
-      const { error } = await supabase.auth.signInWithOAuth ({
         }
         "provider": "facebook"});"
 ;
@@ -152,11 +146,9 @@ if ( {) {
     }
   }
 ;
-  const loginWithTwitter = async () => {
     }
     try {
       }
-      const { error } = await supabase.auth.signInWithOAuth ({
         }
         "provider": "twitter"});"
 ;

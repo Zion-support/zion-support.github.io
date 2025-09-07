@@ -55,7 +55,6 @@ export default async function handler(
       .json({ error: error?.message |"Failed to generate proposal" });
 
   try {
-    const {
       targetInstitution,
     type,
       regionalScope,
@@ -65,11 +64,8 @@ export default async function handler(
       promptAssist,
       language = "en",
     } = req.body || {};
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const userPrompt =
       promptAssist ||
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
-    const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
@@ -78,7 +74,6 @@ export default async function handler(
       temperature: 0.3,
     });
     const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
-    const meta = createProposal({
       title,
     targetInstitution,
       type,

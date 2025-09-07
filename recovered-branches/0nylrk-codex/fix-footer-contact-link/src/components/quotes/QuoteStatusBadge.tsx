@@ -23,7 +23,6 @@ return (;
   )
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   }
-  const config = statusConfig[status];
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
   }
   const config = status_config[status];

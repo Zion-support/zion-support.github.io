@@ -50,7 +50,6 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
-  const steps: OnboardingStep[] = [
 
     {
       id: "post-job",
@@ -86,13 +85,11 @@ export function ClientOnboardingSteps() {
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 import React from "react",;
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
-import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus(),;,
   const steps: OnboardingStep[] = [;,
   const onboardingStatus = useOnboardingStatus(),;
-  const steps: OnboardingStep[] = [;
     {;
       id: "post-job",;
       label: "Post your first job",;
@@ -137,7 +134,6 @@ export function ClientOnboardingSteps() {;
 :src/components/onboarding/ClientOnboardingSteps.tsx
 ;
 
-  const steps: OnboardingStep[] = [
 
     {
       id: "post-job",

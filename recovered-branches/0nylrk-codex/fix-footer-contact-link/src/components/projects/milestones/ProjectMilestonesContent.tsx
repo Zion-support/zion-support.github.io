@@ -36,7 +36,6 @@ export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
   const { user } = useAuth();
   const { getProjectById } = useProjects();
-  const {
     milestones
     activities;
     isLoading: milestonesLoading
@@ -69,7 +68,6 @@ import React, { useState, useEffect } from 'react';
         console.error("Error loading project:", error),;
       } finally {;
         setIsLoading(false),;      }
-        const projectData = await getProjectById(projectId);
         if (projectData) {
           setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
@@ -216,7 +214,6 @@ import {useJobDetails} from '@/hooks / useJobDetails';
 import {use_auth} from '@/hooks / use_auth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {useDisputeCheck} from '@/hooks / useDisputeCheck';
-import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 ;
 export /**
  * ProjectMilestonesContent - Function description
@@ -225,7 +222,6 @@ function ProjectMilestonesContent() {
   const { project_id } = use_params () as { project_id?: string }
   const { user } = use_auth ();
   const { getProjectById } = use_projects ();
-  const {
     milestones,
     activities;
     is_loading: milestones_loading,

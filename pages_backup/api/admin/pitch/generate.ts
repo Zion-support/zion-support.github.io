@@ -21,7 +21,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res: NextApiResponse,
 ) {;
 
-  const { allowed } = await ensureAdminFromApi(req);
 "
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
 
@@ -94,12 +93,10 @@ if ( {) {}
   return "";
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   try {}
 ';
-import type { NextApiRequest, NextApiResponse } from 'next';
 
     const isAdmin = req.headers['x-admin'] === 'true';
 

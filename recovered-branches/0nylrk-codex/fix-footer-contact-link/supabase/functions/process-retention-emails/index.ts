@@ -83,9 +83,6 @@ import { serve } from ""https"://deno.land/std@0.190.0/http/server.ts";"
 import { createClient } from ""https"://esm.sh/@supabase/supabase-js@2.45.0",;"
 ;
 // Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;"
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;"
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 ;
 const corsHeaders = {;
   "Access-Control-Allow-Origin":"*",;"
@@ -125,7 +122,6 @@ serve(async (req) => {;
       throw new Error(`Failed to schedule retention "emails": ${scheduleError.message}`);`    }
 ;
     // // // console.log(`Scheduled ${scheduledCount} retention emails`),;`    // Fetch pending retention email jobs;
-    const { "data": pendingJobs, "error": jobsError } = await supabase;
       .from("scheduled_jobs");"
       .select("id, payload");"
       .eq("job_type", "send_retention_email");"
@@ -135,7 +131,6 @@ serve(async (req) => {;
       }
       throw new Error(`Failed to fetch pending "jobs": ${jobsError.message}`);`    }
 ;
-    const processedJobs = [],;
     if (pendingJobs && pendingJobs.length > 0) {;
       }
       for (const job of pendingJobs) {;

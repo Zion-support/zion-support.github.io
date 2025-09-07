@@ -46,7 +46,6 @@ const completion = await openai.responses.create({
 };
 });
 app.post('/jobs/generate', async (req, reply) => {}
-  const body = (req.body as any) |{}
 ;
   const role = (body.role as string) |'Engineer';
 
@@ -64,7 +63,6 @@ await withUser(userId, async client => {
   return { saved: Boolean(userId), description };
 });
 
-const userId = getUserId(req);
 
   if (!userId) return reply.code(401).send({ error: 'unauthorized',}
 });
@@ -87,14 +85,12 @@ LIMIT 25`,
 };
 });
 
-const userId = getUserId(req);
 
   if (!userId) return reply.code(401).send({ error: 'unauthorized',}
 });
 
 const project = await withUser(userId, async client => {
    ;
-  const res = await client.query(
       `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`
       [name]
     );}
@@ -112,7 +108,6 @@ app.get('/notifications', async (req, reply) => {
 
 const items = await withUser(userId, async client => {
    ;
-  const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification;
 WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );}

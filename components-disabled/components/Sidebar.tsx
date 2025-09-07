@@ -126,7 +126,6 @@ import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';'
 import { useRouter } from 'next/router';'
-import {
   }
   X,
   ChevronDown,
@@ -284,7 +283,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
 
         <>
 
-const quickLinks = [;
     { "name": 'Free Consultation', "href": '/consultation','
 },
 
@@ -310,9 +308,7 @@ const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
 
 
 
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
-const navigation = {
     'Services': ['
         { "name": 'AI Services', "href": '/ai-services','
 },
@@ -345,7 +341,6 @@ const navigation = {
  
 };
 
-const quickLinks = [;
       { "name": 'About Us', "href": '/about','
 },
 
@@ -624,7 +619,6 @@ const [open_dropdowns, setOpenDropdowns]  = useState < string[]>([])const handle
       }
       prev.includes (title)? prev.filter (item = > item !== title): [...prev, title])}
 ;
-  const navigation = {'Services': [;'
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
 },{ "name": 'Mobile Development', "href": '/services / mobile - development', "icon": Smartphone,'
 },{ "name": 'Cloud Solutions', "href": '/services / cloud - solutions', "icon": Cloud,'
@@ -746,7 +740,6 @@ export default Sidebar;ursor/expand-services-advertise-and-build-project-c52f;
   X,ChevronDown,Home,Users,Briefcase,Phone,Mail,MapPin,Building2,User,LogOut,Search;
 } from 'lucide-react';'
 
-const navigation = {'Services': [;'
       { "name": 'AI Services', "href": '/ai-services','
 },
   { "name": 'IT Services', "href": '/it-services','
@@ -915,7 +908,6 @@ href = "/contact""
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg "hover":bg-blue-700 transition-colors";"
 }
 
-const "Sidebar": React.FC < SidebarProps> = ({ is_open, on_close    }) => {
 
 
 
@@ -932,7 +924,6 @@ const handleDropdownToggle = ("title": string) =>: any {
         : [...prev, title])
 };
 
-const navigation = {
     'Services': [;'
       { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
 },
@@ -970,7 +961,6 @@ const navigation = {
 }
 ;
 
-const quick_links = [;
     { "name": 'About Us', "href": '/about','
 },
 
@@ -1079,10 +1069,6 @@ return (;
 export default Sidebar;
 ;
   X, 
-import React, { useState, useEffect } from 'react';'
-import Link from 'next/link';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { 
   }
   X, 
   ChevronDown, 
@@ -1098,7 +1084,6 @@ import {
   Search
 } from 'lucide-react';'
 
-const navigation = {
   'Services': ['
       { "name": 'AI Services', "href": '/ai-services','
 },

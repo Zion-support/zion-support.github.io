@@ -99,21 +99,13 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
                 )}              />
-import { Heart } from 'lucide-react'
 
-import { cn } from '@/lib/utils'
-import { useWishlist } from '@/hooks/useWishlist'
-import { useAuth } from '@/hooks/useAuth'
-import { toast } from '@/hooks/use-toast'
-import { LoginModal } from '@/components/auth/LoginModal'
-import {
   Tooltip
   TooltipContent
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
 
-import { Heart } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { useWishlist  } from '@/hooks/useWishlist';
 import { useAuth  } from '@/hooks/useAuth';
@@ -124,13 +116,6 @@ import { Tooltip;
   TooltipProvider;
   TooltipTrigger } from '@/components/ui/tooltip';
 
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { useWishlist } from '@/hooks/useWishlist',;
-import { useAuth } from '@/hooks/useAuth',;
-import { toast } from '@/hooks/use-toast',;
-import { LoginModal } from '@/components/auth/LoginModal',;
-import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
@@ -141,10 +126,6 @@ interface FavoriteButtonProps {;
 }
 ;
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
-  const { isWishlisted, toggle } = useWishlist(),;
-  const { isAuthenticated } = useAuth(),;
-  const [loginOpen, setLoginOpen] = React.useState(false),;
-  const handleClick = (e: React.MouseEvent) => {;
     e.stopPropagation(),;
     if (!isAuthenticated) {;
       setLoginOpen(true),;
@@ -162,7 +143,6 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
         : "Item has been added to your wishlist"})
   },
 
-  const active = isWishlisted(itemId),
 
   return (
     <>

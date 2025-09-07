@@ -26,7 +26,6 @@ export default async function handler(
   }
   if (req.method === "POST") {
     const body = req.body |{}
-    const data = await fs.readJson(FILE_PATH);
     const comment = {
       id: Date.now().toString()
       proposalId: body.proposalId

@@ -40,7 +40,6 @@ export default function JSONFormatterPage() {
     if (!inputJson.trim()) return,
     
     try {
-      const parsed = JSON.parse(inputJson),
       const minified = JSON.stringify(parsed),
       setFormattedJson(minified),
       setIsValid(true),

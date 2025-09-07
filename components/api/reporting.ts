@@ -1,14 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
-
-import { authenticateRequest  } from '@/utils/auth';'
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb';'
-
-interface ReportingData {
-  }
-  "byTenant": Record<string, {
-    }
-    "funnel": { "stage": string, "count": number
 }[];
     "timeToHireDays": number;
     costPerHireUsd?: number;
@@ -16,14 +6,10 @@ interface ReportingData {
   }>
 }
 
-<<<<<<< HEAD
-const FILE = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    {
-      }
-      "funnel": { "stage": string; "count": number
-}[];
-      "timeToHireDays": number;
+
+      funnel: { stage: string; count: number }[];
+      timeToHireDays: number;
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
       costPerHireUsd?: number;
       "updated_at": string;
     }
@@ -35,51 +21,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     updatedAt: string
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }>
-<<<<<<< HEAD
-}
-  >;
 
-const FILE = 'reporting.json';'
 
-const "FALLBACK": ReportingData = { "byTenant": ,;
-};
-}
-
-export default function handler() {
-
- ;
-  }
-  const method = (req.method || 'GET').toUpperCase(),;'
-
-const method = (req.method |'GET').toUpperCase();'
- ;
-  const auth = authenticateRequest(req, method === 'GET');'
-  if (!auth.ok) return res.status(401).json({ "error": auth.error
-});
-
-const tenantId = auth.tenantId!;
-  if (method = == 'GET') {'
-   ;
-  }
-  const data = readJsonFile<ReportingData>(FILE, FALLBACK);
-
-const entry = data.byTenant[tenantId] || {
-      }
-      "funnel": [],
-      "timeToHireDays": 0,
-      "updatedAt": new Date().toISOString()
-    };
-    return res.status(200).json(entry);
-  }
-
-  if (method = == 'POST') {'
-   ;
-  }
-  const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-
-const updated = updateJsonFile<ReportingData>(;
-      FILE,
-      (curr) => {
         }
         next[tenantId] = {
           }
@@ -130,10 +73,10 @@ return res.status(405).json({ "error": 'Method not allowed',;'
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
 
-  return res.status(405).json({ error: 'Method not allowed',}
+  return res.status(405).json({ error: Method not allowed}
 });
     return res.status(200).json({ ok: true });
   }
-return res.status(405).json({ error: 'Method not allowed',}
+return res.status(405).json({ error: 'Method not allowed'}
 });
 }

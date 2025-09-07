@@ -67,7 +67,6 @@ const id = setTimeout(run, 150;
    ;
 }
 
-const id = setTimeout(run, 150;
   return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 }, body: JSON.stringify({ q: query }) }).catch(() => 
@@ -111,7 +110,6 @@ const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j =
 
 const id = setTimeout(run, 150)const router = useRouter()const [query, setQuery] =;
   useState('');
-  const [suggestions, setSuggestions] = useState<string[] />([])const [open, setOpen] = useState(false;
   const controller = useRef<AbortController | null />(null)setSuggestions([];
   return;      return;
       setSuggestions([])return;
@@ -175,8 +173,6 @@ const rec = new Speech()rec.lang = 'en-US';
 
 export default function GlobalSearchBar() {const router = useRouter()const [query, setQuery] =;
   useState('');
-  const [suggestions, setSuggestions] = useState<string[] />([])const [open, setOpen] = useState(false;
-  const controller = useRef<AbortController | null />(null;
   useEffect(() => {
 if (!query) {setSuggestions([])return;      return;
       setSuggestions([])return;}
@@ -185,26 +181,22 @@ const router  = null;}
     controller.current?.abort()controller.current = new AbortController()const run = async () => {try ;}
   const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller.current!.signal;}
 }
-const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {signal: controller.current!.signal;}
         })const j = await r.json()setSuggestions(j.suggestions |[])setOpen(true)} catch {}
     }
 
 const id = setTimeout(run, 150)return () => clearTimeout(id)}, [query])const j = await r.json()setSuggestions(j.suggestions |[])setOpen(true)} catch {}
     }
 
-const id = setTimeout(run, 150;
   return () => clearTimeout(id)const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal}
 }),const j = await r.json()setSuggestions(j.suggestions || [])setOpen(true)} catch {}
    ;
 }
 
-const id = setTimeout(run, 150;
   return () => clearTimeout(id)}, [query])fetch('/api/telemetry/search', { method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 }, body: JSON.stringify({ q: query }) }).catch(() => 
 }),router.push(`/search?q=${encodeURIComponent(query)}`)setOpen(false)}
 ;
-  const startVoice = (if (typeof window === 'undefined');
   return;
 
 const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;) => {
@@ -220,7 +212,6 @@ const Speech: any = (window as any).SpeechRecognition || (window as any).webkitS
       body: JSON.stringify({ q: query })}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
 }
 ;
-  const startVoice = (if (typeof window === 'undefined');
   return;
 
 const Speech: any =;
@@ -232,10 +223,8 @@ const Speech: any =;
 }, body: JSON.stringify({ q: query }) }).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
 }
 ;
-  const startVoice = (if (typeof window === 'undefined');
   return;
 
-const Speech: any =;
       (window as any).SpeechRecognition |;
       (window as any).webkitSpeechRecognition;
 
@@ -247,15 +236,12 @@ fetch('/api/telemetry/search', {method: 'POST',
 },body: JSON.stringify({ q: query })}).catch(() => {})router.push(`/search?q = ${encodeURIComponent(query)}`)setOpen(false
 }
 ;
-  const startVoice = (if (typeof window === 'undefined');
   return;
 
-const Speech: any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;
     if (!Speech) return;
 
-const rec = new Speech()rec.lang = 'en-US';
     rec.onresult = (e: any) => ;
   const transcript = e.results?.[0]?.[0]?.transcript || '';) => {
   return $3;}
@@ -315,13 +301,11 @@ const j = await r.json();
 const id = setTimeout(run, 150);
     return () => clearTimeout(id);  }, [query]);
 
-const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true)
       } catch {}
     }
 
-const id = setTimeout(run, 150);
     return () => clearTimeout(id);
   }, [query]);
 
@@ -355,15 +339,12 @@ const Speech: any =
     setOpen(false)
   }
 
-const startVoice = (
     if (typeof window === 'undefined');
   return;
 
-const Speech: any =
       (window as any).SpeechRecognition |
       (window as any).webkitSpeechRecognition;
 
-const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition;
 if (!Speech);
   return;
 
@@ -541,7 +522,6 @@ const id = set_timeout (run, 150;
    ;
 }
 
-const id = set_timeout (run, 150;
   return () => clear_timeout (id)}, [query];
   const on_submit = (e?: React.FormEvent) =>: any {e?.prevent_default ()if ();}
   return) {$2;}
@@ -555,7 +535,6 @@ const id = set_timeout (run, 150;
 if (return) {$2;}
 }
 
-const Speech: any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition;
 if (return) {$2;}
@@ -564,11 +543,9 @@ if (return) {$2;}
 }, body: JSON.stringify ({ q: query }) }).catch (() => 
 }),router.push (`/search?q = ${encodeURIComponent (query)}`)set_open (false)}
 ;
-  const start_voice = () =>: any {// Check condition;}
 if (return) {$2;}
 }
 
-const Speech: any =;
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;
 

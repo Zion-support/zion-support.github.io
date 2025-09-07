@@ -187,11 +187,8 @@ export default function UltraAdvancedNavigation2026V2() {;}
 } from 'lucide-react';
 
 export default function UltraAdvancedNavigation2026V2() {
-  const [isOpen, setIsOpen] = useState(false);
 
-const [isScrolled, setIsScrolled] = useState(false);
 
-const [activeDropdown, setActiveDropdown] = useState<string | null />(null);
   useEffect(() => {
 
     const handleScroll = (
@@ -205,7 +202,6 @@ setIsScrolled(window.scrollY > 20)) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-const navigationItems = [
     {
       name: 'Home',
   href: '/'}
@@ -320,7 +316,6 @@ icon: <Zap className='w-4 h-4' />}
     }
   ];
 
-const contactInfo = {
     mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com'}
 address: '364 E Main St STE 1008 Middletown DE 19709'}

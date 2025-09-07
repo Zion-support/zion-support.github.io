@@ -29,8 +29,6 @@ export default async function handler() {
 
   }
 
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
-  const id = uuidv4();
 const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. "Produce":;'
 1) 7-10 concise interview questions mixing visionary and technical angles,
 2) Time markers "for": Intro, segment transitions, Closing CTA for Zion,
@@ -79,7 +77,6 @@ fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (
  */
 function ensure_storage() {
   }
-  const dir = path.dirname (EPISODES_PATH);
   if () fs.mkdir_sync (dir, { "recursive": true })) {
   $2
 }
@@ -190,7 +187,6 @@ const episodes = readEpisodes();
         "best_quote":;
           'Talent networks become protocols when incentives, reputation, and opportunity align.','
       });
-    const episode = {
       }
       id,
 "createdAt": new Date().toISOString();
@@ -231,7 +227,6 @@ return res;
         .json ({ "error": 'Failed to generate structured content' });    '
 const episode = {      return res.status (500).json ({ "error": 'Failed to generate structured content' });'
     
-const episode = {
       }
       id,
       "created_at": new Date ().toISOString (),
@@ -251,7 +246,6 @@ const match = content.match(/\{[\s\S]*\}$/);
     if (!generated || !generated.title || !generated.transcript) {
       }
       return res.status(500).json({ "error": 'Failed to generate structured content' });'
-const episode = {
       }
       id,
       "createdAt": new Date().toISOString(),
@@ -307,13 +301,11 @@ let "content": string,;
     } catch {
       // Attempt to extract JSON block
 }
-const match = content.match(/\{[\s\S]*\}$/);
       if (match) generated = JSON.parse(match[0]);
     if (!generated || !generated.title || !generated.transcript) {
       }
       return res.status(500).json({ "error": 'Failed to generate structured content' });'
     
-const episode = {
 
       }
 
@@ -337,10 +329,8 @@ const episode = {
     console.error (error);
     return res.status (500).json ({ "error": error?.message || 'Unknown error' });'
 
-const episode = {
 
 }
 
-const episode = {
 
 `;

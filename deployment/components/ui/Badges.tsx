@@ -110,7 +110,6 @@ export function TrustBadge() {const colorMap = {Verified:;
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200';
     </figure>);
 
-const color_map = {
     Verified: 'bg - emerald - 100 text - emerald - 800 dark:bg - emerald - 900 / 40 dark:text - emerald - 200'}
   Pro: 'bg - indigo - 100 text - indigo - 800 dark:bg - indigo - 900 / 40 dark:text - indigo - 200Top Rated': 'bg - amber - 100 text - amber - 800 dark:bg - amber - 900 / 40 dark:text - amber - 200}
 } as const,
@@ -126,7 +125,6 @@ const color_map = {
     </figure>;
   );
 
-const colorMap = {
   Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;}
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
 } as const,;
@@ -178,7 +176,6 @@ export function TrustBadge({}
 }: {;}
   type: 'Verified' | 'Pro' | 'Top Rated';}
 }) {
-  const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
   Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'
     'Top Rated':}
@@ -291,7 +288,6 @@ function MicroTestimonial() {return (<figure className=\"border rounded - md p -
 })}
   );
 
-const colorMap = {
   Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;}
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200}
 } as const,;

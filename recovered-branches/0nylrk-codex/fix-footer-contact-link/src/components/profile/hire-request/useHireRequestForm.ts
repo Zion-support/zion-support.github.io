@@ -101,7 +101,6 @@ export interface FormValues {;
     }
   }),
 
-  const form = useForm<FormValues>({
     }
     "resolver": zodResolver(formSchema);
     "defaultValues": {          "full_name": talent.full_name

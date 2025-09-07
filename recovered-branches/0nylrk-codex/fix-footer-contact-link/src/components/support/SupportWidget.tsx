@@ -17,8 +17,6 @@ import { cn } from "@/lib/utils";"
 import { useTheme } from "@/hooks/useTheme";"
 export function SupportWidget() {
   }
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
 return (;
     <>  return (
     <>;
@@ -41,15 +39,8 @@ onClick={() => setIsOpen(true)}
           <MessageSquare className="h-6 w-6" />;"
         </Button>;
       )}
-import { Button } from "@/components/ui/button","
-import { ChatBotPanel } from "./ChatBotPanel","
-import { MessageSquare, Info, X } from "lucide-react","
-import { cn } from "@/lib/utils";"
-import { useTheme } from "@/hooks/useTheme";"
 export function SupportWidget() {
   }
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
 return (;
     <>
     <>;
@@ -69,7 +60,6 @@ const [isOpen, setIsOpen] = useState(false),;
 const { theme } = useTheme(),;
 return (;
     <>
-import React, { useState } from "react";"
 import { Button } from "@/components/ui/button";"
 import { ChatBotPanel } from "./ChatBotPanel",;"
 import { MessageSquare, Info, X } from "lucide-react",;"

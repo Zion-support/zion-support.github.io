@@ -126,7 +126,6 @@ export function RedeemTokensCard() {;
   }
   Gift,  ArrowRight, ExternalLink ;
  } from "lucide-react";"
-import {;
   }
   Dialog;
 DialogContent;

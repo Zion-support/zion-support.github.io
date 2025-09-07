@@ -107,13 +107,11 @@ setJobMatches(matches =>
     }
     try {
       }
-      const updates = {
         }
         status,
         ...(status === 'viewed' ? { "viewed_at": new Date ().toISOString () } : {});'
       }
 ;
-      const { error } = await supabase;
         .from ("job_talent_matches");"
         .update (updates);
         .eq ("id", match_id);"
@@ -188,8 +186,6 @@ import { JobMatch } from "@/types/jobs",;"
 ;
 export function useJobSuggestions() {;
   }
-  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
   ;
   useEffect(() => {;
     }
@@ -202,7 +198,6 @@ export function useJobSuggestions() {;
         setIsLoading(true),;
         ;
         // Get job matches with job details;
-        const { data, error } = await supabase;
           .from("job_talent_matches");"
           .select(`;`            *,;
             "job":job_id (*);
@@ -245,11 +240,9 @@ export function useJobSuggestions() {;
   }, [talentId]),;
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {;
     try {;
-      const updates = {;
         status,;
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {});
       },;
-      const { error } = await supabase;
         .from("job_talent_matches");"
         .update(updates);
         .eq("id", matchId),;"
@@ -336,7 +329,6 @@ export function useJobSuggestions() {;
 const [isLoading, setIsLoading] = useState (true);
 useEffect ( () => {
   }
-  const fetchSuggestedJobs = async () => {
   }
   if (!talentId) return;
 setIsLoading (true);

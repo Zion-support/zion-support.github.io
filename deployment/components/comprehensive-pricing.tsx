@@ -84,9 +84,7 @@ Diamond;}
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
-import {
   revolutionaryMicroSaasServices,}
   revolutionaryServiceCategories,;}
 } from '../data/revolutionary-micro-saas-services';

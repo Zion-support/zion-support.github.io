@@ -33,11 +33,8 @@ src={project.imageUrl}
             )}
 <CardContent className="p-4">"
               <h4 className="text-white font-medium mb-2">{project.title}</h4>"
-import { Card, CardContent } from "@/components/ui/card";"
-import { Badge } from "@/components/ui/badge";"
 import { ProfileProject } from "@/types/profile",;"
 import { AspectRatio } from "@/components/ui/aspect-ratio",;"
-import { FileText } from "lucide-react";"
 interface ProfileProjectsProps {;
   }
   "projects": ProfileProject[];

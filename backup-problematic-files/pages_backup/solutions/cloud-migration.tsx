@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';'
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';'
 import React from 'react';'
 import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import { Cloud 
   }
   Shield, 

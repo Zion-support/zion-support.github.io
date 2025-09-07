@@ -128,7 +128,6 @@ class ErrorRecovery {
           "stack": []
        ) {
     || line.includes('TypeError:') || line.includes('ReferenceError:')) {
-        const error = {
           message: line.trim(),
           "stack": []
        } };

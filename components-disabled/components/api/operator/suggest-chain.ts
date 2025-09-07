@@ -13,7 +13,6 @@ export default async function handler() {
   if (req.method !== 'POST') return res.status(405).json({ "error": 'Method not allowed' });'
   const { region, stakeUsd } = req.body |{
 }
-const stake = Number(stakeUsd || 0);
 
   // Simple heuristics
   // - Low "stake": prefer low fees (Polygon, BNB, Avalanche)
@@ -87,7 +86,6 @@ function handler() {
   if (return res.status (405).json ({ "error": 'Method not allowed' })) {'
   $2
 }
-const { region, stake_usd } = req.body || {
 }
 const stake = Number (stake_usd || 0);
   // Simple heuristics;
@@ -95,7 +93,6 @@ const stake = Number (stake_usd || 0);
   // - High "stake": prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
   // - Region hints (very rough):;
   //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
-  let candidates = ['polygon', 'bnb', 'avalanche'];'
   // Check condition,
 if (candidates = ['arbitrum', 'optimism', 'ethereum']) {'
   $2
@@ -131,7 +128,6 @@ const ranked = candidates.map (key => ({ "key": k, "chain": (CHAINS as any)[k] }
   res;
     .status (200);
     .json ({ "recommendation": ranked[0], "alternatives": ranked.slice (1) });
-  const region_lc = (region || '').to_string ().toLowerCase ();'
   if (|| region_lc.includes ('asia')) {) {'
   $2
 }

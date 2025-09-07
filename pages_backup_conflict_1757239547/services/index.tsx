@@ -25,8 +25,6 @@ import { realServicesQ22025  } from '../../data/real-services-q2-2025';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../../components/ui/Card';
-import Link from 'next/link';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { extraServices } from '../../data/extra-services';
@@ -503,7 +501,6 @@ export default function ServicesIndexPage() {
             </h2>
             <div className="space-y-12">
               {categories.map((category) => {
-                const categoryServices = servicesByCategory[category]
                 if (!categoryServices |categoryServices.length === 0) return null
 
                 return (

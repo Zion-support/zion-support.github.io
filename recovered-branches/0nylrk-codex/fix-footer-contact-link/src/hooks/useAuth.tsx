@@ -136,7 +136,6 @@ return context;
 // Custom hook to use the auth context,
 export function useAuth(): AuthContextType {;
   }
-  const context = useContext(AuthContext);
   if (context === undefined) {
 }
 throw new Error("useAuth must be used within an AuthProvider");"
@@ -168,13 +167,11 @@ export function AuthProvider() {;
     }),;
     return { "error": null }
   },;
-  const signOut = async () => {;
     // This would be replaced with actual Supabase auth;
     // // // console.log("Sign out attempted"),;"
     }
     setUser(null);
   },;
-  const signUp = async ("email": string, "password": string, userData?: Partial<UserDetails>) => {;
     // This would be replaced with actual Supabase auth;
     // // // console.log("Sign up attempted "with":", email, userData),;"
     // Mock successful sign-up;

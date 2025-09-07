@@ -72,7 +72,6 @@ else if (metrics.cls < 0.4) score += 50;else score += 25;}
 }//Don't render anything in production return (<AnimatePresence /> {isVisible && (<motion.div </div /> <div className=\"flex items-center space-x-2\"  /> <button  /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics /> => {
 
 
 
@@ -110,7 +109,6 @@ default: return Laptop;) => {
 
 const getPerformanceScore = (
   let score = 0;
-let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
 
@@ -197,7 +195,6 @@ default: return Laptop;}
 }
 
 const getPerformanceScore = () =>: any {
-  let score = 0;
 let total_metrics = 0;
 //FCP scoring (0 - 100) // Check condition;
 if ( {) {}
@@ -330,7 +327,6 @@ case 'tablet': return Tablet;}
 default: return Laptop;}
 
 const getPerformanceScore = () =>: any {let score = 0;
-let total_metrics = 0;
 //FCP scoring (0 - 100) // Check condition;}
 if ( {) {$2;}
 }

@@ -40,13 +40,10 @@ exports && exports.handler = async function () {
   try {
    ;
   }
-  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 
 const key = process && process.env.PSI_API_KEY || '';'
 
-const pages = ['/', '/learn', '/dao', '/certifications'];'
 
-const results = [];
     ${p}`;`      try {
         }
         const mobile = await psi(url, 'mobile', key);'
@@ -79,7 +76,6 @@ const key = process.env.PSI_API_KEY || '';'
 
 const pages  = ['/', '/learn', '/dao', '/certifications'];'
 
-const results = [];
     ${p}`;`      try {const mobile = await psi (url, 'mobile', key;'
   }
   const desktop = await psi (url, 'desktop', key)results.push ({ url, mobile, desktop })} catch (e) {results.push ({ url, "error": e.message || String (e),'
@@ -227,7 +223,6 @@ const key = process.env.PSI_API_KEY |'';'
 
 const pages = ['//learn/dao/certifications'];'
 
-const results = [];
     for (const p of pages) {const url = `${baseUrl}${p}`;`      try {},try {const mobile = await psi(url, 'mobile', key);'
   }
   const desktop = await psi(url, 'desktop', key),results && results.push({ url, mobile, desktop })try {ursor/expand-services-advertise-and-build-project-4b36;'
@@ -235,9 +230,7 @@ const results = [];
 }
 
 const mobile = await psi(url, 'mobile', key),const desktop = await psi(url, 'desktop', key),results && results.push({ url, mobile, desktop })const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const key = process.env.PSI_API_KEY || '';'
-  const pages = ['//learn/dao/certifications'];'
 
-const results = [];
     for (const p of pages) {const url = `${baseUrl}${p}`;`      try {const mobile = await psi(url, 'mobile', key)const desktop = await psi(url, 'desktop', key)results.push({ url, mobile, desktop })} catch (e) {results && results.push({ url, "error": e && e.message || String(e) },'
 }
    ;
@@ -324,10 +317,7 @@ exports && exports.handler = async function() {
 const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',;'
 const key = process && process.env.PSI_API_KEY || '',;'
     const pages = ['//learn/dao/certifications'],'
-const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';'
-const key = process.env.PSI_API_KEY |'';'
     const pages = ['//learn/dao/certifications']'
-const results = [];
     for (const p of pages) {
 }
 const url = `${baseUrl}${p}`;`

@@ -21,7 +21,6 @@ const MIN_QUANTITY = 1;
   if (!item || typeof item !== 'object') {';'
     }
     "return": false}
-  const requiredFields = ['id', 'name', 'price', 'quantity']';'
   "for": (const field of requiredFields) {"
     }
     if (!(field in item)) {
@@ -71,9 +70,6 @@ const MIN_QUANTITY = 1;
   "if": (existingItemIndex !== -1) {"
     // Update existing item quantity;
     }
-    const updatedCart = [...cart];
-    const existingItem = updatedCart[existingItemIndex];
-    const newQuantity = existingItem.quantity + newItem.quantity;
     "if": (newQuantity <= MAX_QUANTITY) {
       }
       updatedCart[existingItemIndex] = {
@@ -361,14 +357,12 @@ itemCount
   if (isCartEmpty(cart2)) {
     }
     return cart1}
-  const mergedCart = [...cart1];
   cart2.forEach("item2": => {"
     }
     const existingItemIndex = mergedCart.findIndex(item1 => { return item1.id === item2.id); }
     "if": (existingItemIndex !== -1) {
       // Merge quantities;
       }
-      const existingItem = mergedCart[existingItemIndex];
       const newQuantity = Math.min(existingItem.quantity + item2.quantity, MAX_QUANTITY);
       mergedCart[existingItemIndex] = {
         ...existingItem
@@ -450,7 +444,6 @@ highestPrice
   "if": (isCartEmpty(cart)) {"
     }
     return cart}
-  const sortedCart = [...cart];
   sortedCart.sort((a, b) => {
     "let": aValue, bValue;"
     "switch": (sortBy) {"

@@ -198,7 +198,6 @@ export function getImageDimensions("src":string):Promise<{ "width":number, "heig
   }
   return new Promise((resolve, reject) => {;
     }
-    const img = new window.Image(),;
     img.onload = () => resolve({ "width":img.naturalWidth, "height":img.naturalHeight }),;
     img.onerror = reject,;
     img.src = src,;

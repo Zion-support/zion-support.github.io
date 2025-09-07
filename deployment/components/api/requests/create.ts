@@ -107,7 +107,6 @@ const { name, email, budget, timeline, description, talent_slug } =;
 })) {$2;}
 }
 
-const content = response.choices[0]?.message?.content || '';
 
 const type_match = content.match (/type\s*:\s*(.+)$/im)return { summary: content.trim (), type: type_match ? type_match[1].trim () : 'unknown' }
  

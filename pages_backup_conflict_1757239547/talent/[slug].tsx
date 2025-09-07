@@ -16,7 +16,6 @@ const TalentProfile: NextPage = () => {
       { action, at: new Date().toISOString() }
     ]);
   }
-const TalentProfile: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query,
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),

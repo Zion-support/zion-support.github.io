@@ -86,12 +86,9 @@ const helpCategories = [
 ];
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
   };
 

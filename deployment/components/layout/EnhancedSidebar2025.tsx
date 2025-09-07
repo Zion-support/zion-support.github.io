@@ -1230,7 +1230,6 @@ const supportLinks = [
 }
 ];
 
-const toggleSection = (title: string) => ;
   const newExpanded = new Set(expandedSections)if (newExpanded.has(title)) {newExpanded.delete(title)} else {newExpanded.add(title)}
     setExpandedSections(newExpanded;
   return (<motion.aside;
@@ -1605,10 +1604,8 @@ child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
 }
   ),new_expanded.delete (item_name)} else {child.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;}
         child.description?.toLowerCase ().includes (search_query.toLowerCase ())) || [])new_expanded.delete (item_name)} else: {,new_expanded.delete (item_name)} else {const toggle_section = (section_title: string) =>: any {;}
-  const new_expanded = new Set (expanded_sections),if () {) {$2;}
 }
       new_expanded.delete (section_title)} else {const toggle_item = (item_name: string) =>: any {;}
-  const new_expanded = new Set (expanded_items),if () {) {$2;}
 }
   ),new_expanded.delete (item_name)} else {new_expanded.add (item_name)}
     setExpandedItems (new_expanded)}"

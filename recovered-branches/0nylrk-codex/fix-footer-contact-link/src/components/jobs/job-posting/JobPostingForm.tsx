@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 
-import React, { useState, useEffect, useCallback } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {toast} from "sonner";
 import {Input} from "@/components/ui/input";
@@ -17,16 +16,10 @@ import {JobSchemaType} from './validation';
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
-import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import React, { useState, useEffect, useCallback } from 'react',
-import { useNavigate } from 'react-router-dom',
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",  const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
@@ -73,7 +66,6 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const { createJob, updateJob, getJobById } = useJobs($2);
   const [isFormLoading, setIsFormLoading] = useState($2);
   const [editorContent, setEditorContent] = useState($2);
-  const {
     form,
     isLoading,
     startDate,
@@ -231,7 +223,6 @@ if ( {) {
     setValue('description', value)
   }, [setValue]),
 
-  const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading($2);
     try {
       const jobData = await submitJob($2);

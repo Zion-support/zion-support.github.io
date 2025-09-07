@@ -5,7 +5,6 @@ import {
   DialogHeader;
   DialogTitle;
   DialogDescription;import React, { useState } from 'react','
-import {
   }
   Dialog,
   DialogContent,
@@ -28,7 +27,6 @@ const navigate = useNavigate(),;
   const { createConversation } = useMessaging();
 
   const navigate = useNavigate();
-const { createConversation } = useMessaging(),;
   const navigate = useNavigate(),  const handleSendMessage = async () => {
     }
     if (!message.trim()) {
@@ -100,7 +98,6 @@ const contextData = {
   const navigate = useNavigate($2);
   const [message, setMessage] = useState($2);
   const [isSubmitting, setIsSubmitting] = useState($2);
-  const handleSendMessage = async () => {
     if (!message.trim()) {
       toast($2);
       return

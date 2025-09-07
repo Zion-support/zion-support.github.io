@@ -56,8 +56,6 @@ const ctx = canvas.getContext('2d');
     canvas.height = window.innerHeight;
 
 
-let animationFrameId: number;
-    let particles: Particle[] = [];
 
     let quantum_fields: QuantumField[] = [];
     let neural_networks: NeuralNetwork[]  = [];class Particle {coordinate_x: number;

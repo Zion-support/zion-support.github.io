@@ -25,7 +25,6 @@ export function DisputeDetail() {;
     }
     if (!disputeId) return;
 };
-import React, { useState, useEffect } from "react";"
 import { useParams, useNavigate } from "react-router-dom";"
 import { useDisputes } from "@/hooks/useDisputes",;"
 import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;"
@@ -100,7 +99,6 @@ export function DisputeDetail() {;
     }
   },
 
-  const handleResolveDispute = async () => {
     }
     if (!disputeId) return,
   const { disputeId } = useParams() as { disputeId?: string },
@@ -310,7 +308,6 @@ function DisputeDetail() {
 if (return) {
   $2
 }
-    const loadDisputeData = async () => {
       }
       setIsLoading (true);
       try {
@@ -356,7 +353,6 @@ if ( {) {
     }
   }
 ;
-  const handleResolveDispute = async () => {
     // Check condition
 }
 if (return) {
@@ -446,54 +442,27 @@ return (;
     }
 import React, { useState, useEffect } from "react",;"
 import { useParams, useNavigate } from "react-router-dom",;"
-import { useDisputes } from "@/hooks/useDisputes",;"
-import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;"
-import { Button } from "@/components/ui/button",;"
-import { Textarea } from "@/components/ui/textarea",;"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
-import { Badge } from "@/components/ui/badge",;"
-import { Separator } from "@/components/ui/separator",;"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
-import { format, formatDistanceToNow } from "date-fns",;"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;"
-import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;"
-import { useAuth } from "@/hooks/useAuth",;"
-import { toast } from "sonner",;"
 ;
 export function DisputeDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   }
   const { disputeId } = useParams() as { disputeId?:string },;
-  const navigate = useNavigate(),;
-  const { user } = useAuth(),;
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),;
   ;
-  const [dispute, setDispute] = useState<any>(null),;
-  const [messages, setMessages] = useState<DisputeMessage[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [message, setMessage] = useState(""),;"
-  const [isSending, setIsSending] = useState(false),;
-  const [resolution, setResolution] = useState({;
     }
     "summary":"",;"
     "resolution_type":"compromise"}),;"
-  const [activeTab, setActiveTab] = useState("overview"),;"
 ;
   // Check if user is admin (placeholder - implement proper admin check);
-  const isAdmin = user?.userType === "admin",;"
   ;
   useEffect(() => {;
     }
     if (!disputeId) return,;
 ;
-    const loadDisputeData = async () => {;
       }
       setIsLoading(true),;
       try {;
         }
-        const disputeData = await getDisputeById(disputeId),;
         if (!disputeData) {;
           }
           toast.error("Dispute not found"),;"
@@ -502,7 +471,6 @@ export function DisputeDetail() {;
         }
         setDispute(disputeData),;
         ;
-        const messagesData = await getDisputeMessages(disputeId),;
         setMessages(messagesData),;
       } catch (error) {;
         }
@@ -521,14 +489,12 @@ export function DisputeDetail() {;
     }
     if (!disputeId) return,;
     ;
-    const success = await updateDisputeStatus(disputeId, status),;
     if (success && dispute) {;
       }
       setDispute({ ...dispute, status }),;
     }
   },;
 ;
-  const handleResolveDispute = async () => {;
     }
     if (!disputeId) return,;
     ;
@@ -559,11 +525,9 @@ export function DisputeDetail() {;
     setIsSending(true),;
     try {;
       }
-      const success = await addDisputeMessage(disputeId, message, isAdmin),;
       if (success) {;
         // Refresh messages;
         }
-        const updatedMessages = await getDisputeMessages(disputeId),;
         setMessages(updatedMessages),;
         setMessage(""),;"
       }

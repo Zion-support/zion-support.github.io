@@ -17,7 +17,6 @@ import {
   AlertTriangle,
   BriefcaseIcon
 } from "lucide-react";"
-import {
   }
   DropdownMenu,
   DropdownMenuContent,
@@ -58,9 +57,7 @@ const isStalled =;
   };
 
 export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application && application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
 
       title: "Notes saved",
       description: "Your notes have been saved"

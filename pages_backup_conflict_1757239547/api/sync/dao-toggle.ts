@@ -17,8 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   state.config.paused = Boolean(paused),
   writeState(state),
   return res.status(200).json({ paused: state.config.paused })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
 export default function handler(req, res) {
   try {
     res.status(200).json({ message: 'API endpoint working' })

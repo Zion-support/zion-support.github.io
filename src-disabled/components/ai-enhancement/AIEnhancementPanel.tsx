@@ -11,7 +11,6 @@ import { Textarea } from '@/components/ui/textarea';'
 import { Button } from '@/components/ui/button';'
 import { Input } from '@/components/ui/input';'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
-import {;
 
   useAIContentEnhancer,;
   AIEnhancementOptions,;'
@@ -24,7 +23,6 @@ interface AIEnhancementPanelProps {  title: string;
   onClose?: () => void;
   showInstructions?: boolean;
 
-import React, { useState } from 'react';
 import {}
 
   Card,
@@ -90,7 +88,6 @@ if ( {) {}
 
             onChange={e => handleInputChange(e, 'context')}          />;
         </div>;
-  const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof,  AIEnhancementOptions
   ) => {
@@ -144,20 +141,16 @@ if ( {) {}
           className="w-full" "
   initialContent = '';
 }: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions,;
     content: initialContent || defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
-  const handleGenerate = async () => {;
-    const result = await enhanceContent(options),;
     if (result) {;
       setGeneratedContent(result);
     }
   },
 
-  const handleInputChange = (
 
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
@@ -169,7 +162,6 @@ if ( {) {}
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
 
-  const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
@@ -184,7 +176,6 @@ if ( {) {}
     if (onClose) onClose()
   },
 
-  const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
@@ -239,7 +230,6 @@ export function AIEnhancementPanel({
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
   initialContent = ,;')
 }: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
 )
   const [generatedContent, setGeneratedContent] = useState<string>();
 </string>

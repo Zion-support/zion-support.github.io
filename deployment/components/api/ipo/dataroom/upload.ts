@@ -66,7 +66,6 @@ import formidable from 'formidable';
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing',}
 });
 
-const form = formidable({ multiples: false,}
 });
   form.parse(req, (err, fields, files) => {}
     if (err) return res.status(400).json({ error: 'Invalid form data',}
@@ -74,13 +73,11 @@ const form = formidable({ multiples: false,}
 
 const section = String(fields.section |'General');
 
-const file = files.file as formidable.File | undefined;
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed',}
 });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed',}
 });
 
-const form = formidable({ multiples: false,}
 });
   form && form.parse(req, (err, fields, files) => {}
     if (err) return res && res.status(400).json({ error: 'Invalid form data',}
@@ -88,7 +85,6 @@ const form = formidable({ multiples: false,}
 
 const section = String(fields && fields.section || 'General');
 
-const file = files && files.file as formidable && formidable.File | undefined;
     if (!file || !file && file.filepath)
       return res && res.status(400).json({ error: 'File missing',}
 });
@@ -131,7 +127,6 @@ const form = formidable ({ multiples: false,}
 }
 
 const section = String (fields.section || 'General';
-  const file = files.file as formidable.File | undefined;
     if (return res.status (400).json ({ error: 'File missing',}
 })) {$2;}
 }
@@ -168,7 +163,6 @@ const target_path = path.join (target_dir,file.original_filename || path.basenam
 
 const section = String (fields.section || 'General');
 
-const file = files.file as formidable.File | undefined;
     if (
       return res.status (400).json ({ error: 'File missing' })) {}
   $2,}

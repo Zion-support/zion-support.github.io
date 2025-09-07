@@ -111,7 +111,6 @@ const handleInputChange = (
    ;) => {
   return $3;}
 }
-  const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,}
       [name]: value}

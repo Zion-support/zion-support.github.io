@@ -173,7 +173,6 @@ className='px-2 py-1 border rounded'
                       value={m.description || ''}
                       on_change={e = />;
                         set_milestones (ms = > ;
-  const copy = ms.length;
                             ? [...ms];}
                             : [...(selected.milestones || [])];}
                           copy[idx] = {...copy[idx],description: e.target.value,}
@@ -187,7 +186,6 @@ className='px-2 py-1 border rounded'
                         value={m.due_date || ''}
                         on_change={e = />;
                           set_milestones (ms = > ;
-  const copy = ms.length;
                               ? [...ms];}
                               : [...(selected.milestones || [])];}
                             copy[idx] = {...copy[idx],due_date: e.target.value,}
@@ -201,7 +199,6 @@ className='px-2 py-1 border rounded'
                         value={m.tranche_amount || 0}
                         on_change={e = />;
                           set_milestones (ms = > ;
-  const copy = ms.length;
                               ? [...ms];}
                               : [...(selected.milestones || [])];}
                             copy[idx] = {...copy[idx],tranche_amount: Number (e.target.value),}

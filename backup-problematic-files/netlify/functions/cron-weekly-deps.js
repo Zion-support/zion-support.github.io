@@ -85,7 +85,6 @@ repo
     }
     const resp = await fetch(`"https"://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)`
     if (!resp.ok) return null,
-const json = await resp.json();
 return json.version |null;
   } catch (_) {
 }

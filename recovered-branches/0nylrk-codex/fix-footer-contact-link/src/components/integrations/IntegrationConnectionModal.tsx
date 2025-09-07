@@ -15,8 +15,6 @@ DialogContent
 DialogFooter
   DialogHeader,
 DialogTitle
-import React, { useState } from "react";"
-import {;
   }
   Dialog,;
   DialogContent,;
@@ -78,7 +76,6 @@ interface Integration {
   logoUrl?: string,
   "status": "connected" | "warning" | "disconnected","
   lastSync?: string,
-import React, { useState } from "react";"
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";"
 import { Button } from "@/components/ui/button",;"
 import { Input } from "@/components/ui/input",;"
@@ -113,7 +110,6 @@ const [isConnecting, setIsConnecting] = useState(false),;
     "syncApplicantData": true
   }),
   
-  const handleConnectOAuth = () => {
     }
     setIsConnecting(true),
     // Simulate OAuth flow,
@@ -125,13 +121,11 @@ setTimeout(() => {
     
     // In a real application, this would open a popup for OAuth authentication
     // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')'  },
-  const handleDisconnect = () => {
     // In a real application, this would revoke the OAuth token
 }
 toast.info(`Disconnected from ${integration.name}`),`    onClose()
   },
   
-  const handleSaveSettings = () => {
     // In a real application, this would save the sync settings
 }
 toast.success("Integration settings saved"),"

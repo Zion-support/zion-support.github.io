@@ -23,8 +23,6 @@ const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;"
 const navigate = useNavigate(),;
 export function MobileOnboarding() {;
   }
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");"
-  const navigate = useNavigate();
 
   const goToNextStep = () => {
     }
@@ -53,8 +51,6 @@ import { SignUpForm } from "../components/onboarding/SignUpForm",;"
 type OnboardingStep = "language" | "role" | "signup",;"
 export function MobileOnboarding() {;
   }
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");"
-  const navigate = useNavigate();
   const goToNextStep = () => {;
     }
     if (currentStep === "language") {;"

@@ -27,7 +27,6 @@ interface Login.testProps {
   className?: string;
 }
 
-const Login."test": React.FC<Login.testProps> = ({ className }) => {
 }
 return (;
     <div className={className || ''}>'

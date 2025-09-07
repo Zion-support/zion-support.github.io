@@ -62,10 +62,6 @@ import Button from '../components/ui/Button','
 import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react','
 export default function EmailValidatorPage() {
 }
-const [emails, setEmails] = useState(''),;'
-const [validationResults, setValidationResults] = useState<any[]>([]),;
-const [isValidating, setIsValidating] = useState(false),;
-const [bulkMode, setBulkMode] = useState(false),;
   const validateEmails = async () => {
     }
     if (!emails.trim()) return,    
@@ -89,7 +85,6 @@ const result = validateSingleEmail(email),;
 }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
     // Check for common disposable email domains,
-const disposableDomains = [;
       'tempmail.orgguerrillamail.commailinator.com10minutemail.com','
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com''
     ],

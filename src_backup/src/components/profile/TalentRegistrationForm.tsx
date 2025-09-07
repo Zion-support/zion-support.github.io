@@ -38,7 +38,6 @@ if ( {) {$2;
   },// Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({"title": "More information needed","description": "Please provide at least a detailed bio before generating enhanced content."}),return;"
   },// Generate enhanced profile with AI;
-  const generateEnhancedProfile = async () => {const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({"title": "More information needed","description": "Please provide at least a detailed bio before generating enhanced content."}),return;"
     }try {setIsGenerating(true),// Call the Supabase Edge Function;
       }
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {"body": {"talentData": {"name": formData.name,"title": formData.title,"bio": formData.bio,"skills": skillTags,"location": formData.location;'
@@ -264,7 +263,6 @@ if ( {) {$2;
             'Your talent profile has been published and is now visible in the directory.'})// Send notification email if we have user email;'
         if (userEmail && values && values.enhancedProfile && user?.id) {sendEnhancementNotification(user && user.id, userEmail)}setIsSubmitting(false)}, 1500)// Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;
         .from('talent_profiles').insert({"user_id": user && user.id,"name": values && values.name,"title": values && values.title,"bio": values && values.bio,"summary": finalSummary,"location": values && values.location,"skills": finalSkills && finalSkills.map(name => ({ name, "level": 4 })), // Default skill level;'
           "hourly_rate": Number(values && values.hourlyRate),"availability_status": values && values.availability,// Other fields would be handled here;
         })if (error) throw error;
@@ -284,7 +282,6 @@ if ( {) {$2;
           sendEnhancementNotification (user.id, user_email)}
         setIsSubmitting (false)}, 1500)// Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;
         .from ('talent_profiles').insert ({"user_id": user.id,"name": values.name,"title": values.title,"bio": values.bio,"summary": final_summary,"location": values.location,"skills": final_skills.map (name => ({ name, "level": 4 })), // Default skill level;'
           "hourly_rate": Number (values.hourly_rate),"availability_status": values.availability,// Other fields would be handled here;
         })// Check condition;
@@ -352,12 +349,10 @@ const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 
                               <Input;
                                 className='pl - 10 bg - zion - blue border - zion - blue - light text - white';'
                                 placeholder='Your full name';logErrorToProduction('Error creating "profile":', { "data": error }),toast({"title": "Error Creating Profile","description": error.message || "There was an error creating your profile. Please try again.","variant": "destructive"}),setIsSubmitting(false)// Get user email for notification;"
-      const { "data": userData } = await supabase.auth.getUser(),const userEmail = (userData as any).user?.email,// Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {toast({"title": "Profile Created Successfully","description": "Your talent profile has been published and is now visible in the directory."}),// Send notification email if we have user email;"
         if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}setIsSubmitting(false)}, 1500),// Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;
         .from('talent_profiles').insert({"user_id": user.id,"name": values.name,"title": values.title,"bio": values.bio,"summary": finalSummary,"location": values.location,"skills": finalSkills.map(name => ({ name, "level": 4 })), // Default skill level;'
           "hourly_rate": Number(values.hourlyRate),"availability_status": values.availability,// Other fields would be handled here;
         }),if (error) throw error,*/;
@@ -480,12 +475,10 @@ const talentProfileSchema  = null;return (<div className='max-w-4xl mx-auto p-4 
                             className='w-full h-full object-cover';'
                             loading='lazy' />;'
       logErrorToProduction('Error creating "profile":', { "data": error }),toast({"title": "Error Creating Profile","description": error.message || "There was an error creating your profile. Please try again.","variant": "destructive"}),setIsSubmitting(false)// Get user email for notification;"
-      const { "data": userData } = await supabase.auth.getUser(),const userEmail = (userData as any).user?.email,// Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {toast({"title": "Profile Created Successfully","description": "Your talent profile has been published and is now visible in the directory."}),// Send notification email if we have user email;"
         if (userEmail && values.enhancedProfile && user?.id) {sendEnhancementNotification(user.id, userEmail)}setIsSubmitting(false)}, 1500),// Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;
         .from('talent_profiles').insert({"user_id": user.id,"name": values.name,"title": values.title,"bio": values.bio,"summary": finalSummary,"location": values.location,"skills": finalSkills.map(name => ({ name, "level": 4 })), // Default skill level;'
           "hourly_rate": Number(values.hourlyRate),"availability_status": values.availability,// Other fields would be handled here;
         }),if (error) throw error,*/;
@@ -1202,7 +1195,6 @@ if (Array.isArray (categorySkills) ) {categorySkills.forEach ((skill) => {';'
   }
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {})}new Date () .getFullYear ()}Zion Marketplace</p>;'
   //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generated_content.categorized_skills;
-const "new_skills": string[] = [];
 if () {) {$2;
 }
   category_skills.for_each ((skill) => {';'
@@ -1286,12 +1278,10 @@ return (<div className="max - w-4xl mx - auto p - 4 "md":p - 6"> <Card className
   logErrorToProduction ('Error generating enhanced "profile":', {"data": error ;'
 })toast ({;}finally {setIsGenerating (false)}//Apply generated content to form const applyGeneratedContent = () => {if (generatedContent) {//Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent && generatedContent.categorizedSkills;
 }
-const "newSkills": string[] = [];
 if (Array && Array.isArray (categorySkills) ) {categorySkills && categorySkills.forEach ((skill) => {';'
   }
   if (typeof skill === 'string' && skill && !skillTags && skillTags.includes (skill) ) {//Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills;'
 }
-const "newSkills": string[] = [];
 if (Array.isArray (categorySkills) ) {categorySkills.forEach ((skill) => {';'
   }
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {;'

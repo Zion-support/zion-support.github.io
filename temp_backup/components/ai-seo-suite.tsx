@@ -221,7 +221,6 @@ const successMetrics = [
     },
   ];
 
-const useCases = [
     {
       title: 'E-commerce Websites',
   description:

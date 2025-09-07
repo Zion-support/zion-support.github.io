@@ -117,7 +117,6 @@ return { "statusCode": 200, "body": logs && logs.join('\n') },;'
 exports.handler = async () => {
  ;
   }
-  const logs = [];
   /**
  * step - Function description
  */

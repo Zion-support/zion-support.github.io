@@ -58,7 +58,6 @@ interface Transaction {
   "status": 'pending' | 'completed' | 'refunded' | 'cancelled','
   "in_escrow": boolean,
   "created_at": string,
-import React, { useState } from "react";"
 import { useQuery } from "@tanstack/react-query";"
 import { supabase } from "@/integrations/supabase/client",;"
 import { useAuth } from "@/hooks/useAuth",;"
@@ -361,12 +360,10 @@ export function TransactionHistory() {;
   }
   user 
 }= useAuth ();
-const {
   }
   toast 
 }= useToast ();
 const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'> ('all');'
-const {
   }
   "data": transactions, isLoading, error, refetch 
 }= useQuery ({

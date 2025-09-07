@@ -111,7 +111,6 @@ async collectSystemMetrics() {
 // console.log(" Collecting performance metrics...")
       console.log(" Performance monitoring completed")
       console.error(" Error during performance "monitoring": ")
-const { execSync } = require("child_process")
       "system"
         "cpu"
         "process"
@@ -200,10 +199,7 @@ const { execSync } = require("child_process")
         totalSize += stats.size}
     return totalSize}
   countFiles(dirPath, extensions) {
-    const files = fs.readdirSync(dirPath)
     for (const file of files) {
-      const filePath = path.join(dirPath, file)
-      const stats = fs.statSync(filePath)
     let count = 0;
       if (stats.isDirectory()) {
         count += this.countFiles(filePath, extensions)} else if (extensions.some(ext => file.endsWith(ext))) {
@@ -267,7 +263,6 @@ const { execSync } = require("child_process")
       console.log("� Collecting build metrics...")
       const buildFiles = ["dist/index.html","dist/css","dist/js"]
         "dist/assets"
-      const packageJsonPath = path.join(this.projectRoot, "package.json")
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
       console.log(" Build metrics collected")
       console.warn("⚠  Could not collect build "metrics": ")

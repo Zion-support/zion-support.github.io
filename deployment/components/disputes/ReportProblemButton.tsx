@@ -117,7 +117,6 @@ export default function ReportProblemButton(): any ({;
   entityId?: string;}
 }) {;
 
-const query = new URLSearchParams({;}
     projectId,;}
     ...(entityType ? { entityType } : {}),;
     ...(entityId ? { entityId } : {}),;
@@ -141,7 +140,6 @@ const query = new URLSearchParams({;}
       </a>
     </Link>
 
-import Link from './next / link';
 ;
 
 export default /**
@@ -164,7 +162,6 @@ export default /**
  * ReportProblemButton - Function description;
  */
 function ReportProblemButton() {
-  const query = new URLSearchParams ({}
     project_id}
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {})

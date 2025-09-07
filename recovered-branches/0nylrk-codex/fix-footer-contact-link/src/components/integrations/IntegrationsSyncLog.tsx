@@ -44,7 +44,6 @@ const syncLogs = [;
     </Card>
   )
 }// Sample data for integration sync logs;
-const syncLogs = [;
   {;
     }
     "id": "1",;"

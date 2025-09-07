@@ -125,7 +125,6 @@ const existing = read_grant (id)if ;
 })) {$2;}
 }
 
-const ms = existing.milestones || [];
 
 const idx = ms.find_index (m => m.id === milestone_id)if ;
   return res.status (404).json ({ error: 'Milestone not found',}

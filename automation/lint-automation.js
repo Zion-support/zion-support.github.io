@@ -278,7 +278,6 @@ module.exports = LintAutomation;
 }
 // Run the automation
 if (require.main === module) {
-  const automation = new LintAutomation();
   automation.run().catch(error => {
     console.error('Fatal "error": ', error);
     process.exit(1);

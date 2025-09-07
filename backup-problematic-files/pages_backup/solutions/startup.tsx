@@ -10,7 +10,6 @@ import Layout from "../../components/Layout";";const "Startup": React.FC<Startup
       <p>This component is under development.</p>;
     </div>;
   )}
-import { motion } from 'framer-motion';'
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';'
 import Layout from "../../components/Layout";";"
 

@@ -47,7 +47,6 @@ import HelpCenterPage from "HelpCenterPage";"
 import AccountSettings from "AccountSettings";"
 import ProjectRoom from "ProjectRoom";"
 import VideoCall from "VideoCall";"
-const ContentRoutes = () => {;
 }
 return (;  return (;
     <Routes>;

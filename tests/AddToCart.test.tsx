@@ -28,7 +28,6 @@ describe('AddToCart Component', () => {
   it('calls onAddToCart when button is clicked', () => {
     render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
     
-    const button = screen.getByTestId('add-to-cart');
     fireEvent.click(button);
     
     expect(mockOnAddToCart).toHaveBeenCalledTimes(1);
@@ -37,7 +36,6 @@ describe('AddToCart Component', () => {
   it('handles multiple clicks correctly', async () => {
     render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
     
-    const button = screen.getByTestId('add-to-cart');
     
     fireEvent.click(button);
     fireEvent.click(button);

@@ -70,18 +70,15 @@ export default async function handler(
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status($1).json({$2});
-    const meta = getProposal(id);
     if (!meta) return res.status($1).json({$2});
     // Email submission
     if (channels.includes('email')) {
       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
       await submitByEmail(to, subject, text)
     }
 
     // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined;
     try {
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;

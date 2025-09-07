@@ -55,12 +55,10 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import { motion  } from 'framer-motion';
 import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import { Search, Filter, Star, Users, TrendingUp;
   Clock, Zap, Shield, Cloud, Brain;
   Database, Globe, Robot, Cube, Sparkles
  } from 'lucide-react';
-import {
   Search
   Filter
   Star

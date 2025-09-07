@@ -20,9 +20,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
   try {

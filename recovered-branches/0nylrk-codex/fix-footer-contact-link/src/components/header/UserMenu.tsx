@@ -7,7 +7,6 @@ import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar
 import { Button  } from '@/components / ui / button';import { Link } from "react-router-dom";"
 import { useAuth } from "@/hooks/useAuth";"
 import { useToast } from "@/hooks/use-toast";"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";"
 import { Button } from "@/components/ui/button";  if (!user) {;"
 }
 return (;
@@ -79,7 +78,6 @@ to="/signup""
     </DropdownMenu>
   }  )
 import { Link } from "react-router-dom";"
-import { useAuth } from "@/hooks/useAuth";"
 import { useToast } from "@/hooks/use-toast",;"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
 import { Button } from "@/components/ui/button",;"

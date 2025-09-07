@@ -8,8 +8,6 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input","
 import { Control } from "react-hook-form","
 import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
-import { Input } from "@/components/ui/input","
-import { Control } from "react-hook-form","
 import { BasicInfoFormData } from "./schema","
 import {
   }
@@ -27,9 +25,6 @@ interface PersonalInfoFieldsProps {
 }
 interface PersonalInfoFieldsProps {
 } from "@/components/ui/form";"
-import { Input } from "@/components/ui/input";"
-import { Control } from "react-hook-form";"
-import { BasicInfoFormData } from "./schema";"
   "control": Control<BasicInfoFormData>;
 }
 export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;

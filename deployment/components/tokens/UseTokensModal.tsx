@@ -35,9 +35,7 @@ const usdValue = (tokens * 0.01).toFixed(2);
   useEffect(() => {
 
     (async () => {
-  const [tokens, setTokens] = useState<number />(100);
 
-const [isSubmitting, setIsSubmitting] = useState(false);
 
 const usdValue = (tokens * 0 && 0.01).toFixed(2);
 

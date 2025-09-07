@@ -449,7 +449,6 @@ export function Footer() {const scrollToTop = ("props": any) => {window.scrollTo
   const legalLinks = [;
     { "name": "Privacy Policy", "href": "/privacy" },{ "name": "Terms of Service", "href": "/terms" },{ "name": "Cookie Policy", "href": "/cookies" },{ "name": "Data Protection", "href": "/data-protection" },{ "name": "Accessibility", "href": "/accessibility" }"
   ];
-  const socialLinks = [;
     { "name": "Facebook", "href": ""https"://facebook.com/ziontechgroup", "icon": Facebook },{ "name": "Twitter", "href": ""https"://twitter.com/ziontechgroup", "icon": Twitter },{ "name": "LinkedIn", "href": ""https"://linkedin.com/company/ziontechgroup", "icon": Linkedin },{ "name": "Instagram", "href": ""https"://instagram.com/ziontechgroup", "icon": Instagram },{ "name": "YouTube", "href": ""https"://youtube.com/ziontechgroup", "icon": Youtube },{ "name": "GitHub", "href": ""https"://github.com/ziontechgroup", "icon": Github }"
   ];
   const currentYear = new Date().getFullYear()return (<footer className="bg-gray-900 text-white">;"
@@ -623,7 +622,6 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
         { "name": 'Research', "href": '/research-development' }'
       ];
     }
-  const socialLinks = [;
     { "name": 'Facebook', "href": '#', "icon": Facebook },{ "name": 'Twitter', "href": '#', "icon": Twitter },{ "name": 'LinkedIn', "href": '#', "icon": Linkedin },{ "name": 'Instagram', "href": '#', "icon": Instagram },{ "name": 'YouTube', "href": '#', "icon": Youtube }];'
   const stats = [;
     { "icon": Users, "value": '500+', "label": 'Projects Completed' },{ "icon": Award, "value": '50+', "label": 'Expert Team Members' },{ "icon": Shield, "value": '99.9%', "label": 'Uptime Guarantee' },{ "icon": Clock, "value": '24/7', "label": 'Support Available' }];'
@@ -843,7 +841,6 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
       return newSet;
     }
     )}// Scroll to top function;
-  const scrollToTop = ("props": any) => {window.scrollTo({"top": 0,"behavior": 'smooth';'
     }
     )}// Handle link click;
   const handleLinkClick = ("props": any) => {if (link.external) {window.open(link.path, '_blank', 'noopener,noreferrer')} else {// Handle internal navigation;'
@@ -866,7 +863,6 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
       ];
     }
   ];
-  const contactInfo = [;
     { "icon": Mail, "text": 'info@ziontechgroup.com', "href": '"mailto":info@ziontechgroup.com' },{ "icon": Phone, "text": '+1 (555) 123-4567', "href": '"tel":+15551234567' },{ "icon": MapPin, "text": '123 Tech Street, Innovation City, IC 12345', "href": '#' }'
   ];
   return (<footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">;"
@@ -1123,7 +1119,6 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
       </div>;
     </footer>;
   )}
-  const footerSections = [;
     {"title": 'Company',"links": [;'
         { "name": 'About Us', "href": '/about' },{ "name": 'Our Mission', "href": '/about#mission' },{ "name": 'Leadership Team', "href": '/about#team' },{ "name": 'Careers', "href": '/careers' },{ "name": 'Press & News', "href": '/newsroom' },{ "name": 'Partners', "href": '/partners' }'
       ];
@@ -1141,10 +1136,8 @@ const Footer = () => {const currentYear = new Date().getFullYear()const scrollTo
       ];
     }
   ];
-  const contactInfo = [;
     { "icon": Mail, "label": "Email", "value": "kleber@ziontechgroup.com", "href": ""mailto":kleber@ziontechgroup.com" },{ "icon": Phone, "label": "Phone", "value": "+1 302 464 0950", "href": ""tel":+13024640950" },{ "icon": MapPin, "label": "Address", "value": "364 E Main St STE 1008, Middletown DE 19709", "href": "#" },{ "icon": Globe, "label": "Website", "value": "ziontechgroup.com", "href": ""https"://ziontechgroup.com" }"
   ];
-  const socialLinks = [;
     { "icon": <Linkedin className="w-5 h-5" />, "url": ""https"://linkedin.com/company/ziontechgroup", "color": ""hover":text-blue-400" },{ "icon": <Twitter className="w-5 h-5" />, "url": ""https"://twitter.com/ziontechgroup", "color": ""hover":text-blue-400" },{ "icon": <Facebook className="w-5 h-5" />, "url": ""https"://facebook.com/ziontechgroup", "color": ""hover":text-blue-400" },{ "icon": <Instagram className="w-5 h-5" />, "url": ""https"://instagram.com/ziontechgroup", "color": ""hover":text-blue-400" },{ "icon": <Github className="w-5 h-5" />, "url": ""https"://github.com/ziontechgroup", "color": ""hover":text-gray-400" }"
 export function Footer() {const scrollToTop = ("props": any) => {window.scrollTo({ "top": 0, "behavior": 'smooth' }'
     )}const footerSections = [;
@@ -1162,10 +1155,8 @@ export function Footer() {const scrollToTop = ("props": any) => {window.scrollTo
       ];
     }
   ];
-  const legalLinks = [;
     { "name": "Privacy Policy", "href": "/privacy" },{ "name": "Terms of Service", "href": "/terms" },{ "name": "Cookie Policy", "href": "/cookies" },{ "name": "Data Protection", "href": "/data-protection" },{ "name": "Accessibility", "href": "/accessibility" }"
   ];
-  const socialLinks = [;
     { "name": "Facebook", "href": ""https"://facebook.com/ziontechgroup", "icon": Facebook },{ "name": "Twitter", "href": ""https"://twitter.com/ziontechgroup", "icon": Twitter },{ "name": "LinkedIn", "href": ""https"://linkedin.com/company/ziontechgroup", "icon": Linkedin },{ "name": "Instagram", "href": ""https"://instagram.com/ziontechgroup", "icon": Instagram },{ "name": "YouTube", "href": ""https"://youtube.com/ziontechgroup", "icon": Youtube },{ "name": "GitHub", "href": ""https"://github.com/ziontechgroup", "icon": Github }"
   ];
   return (<footer className="bg-gray-900 text-white">;"

@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';'
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';'
 import React from 'react';'
 import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import {
   }
   ShoppingCart,
@@ -21,7 +20,6 @@ import {
 import Layout from '../../components/Layout';';'
 const services = [;
   {}
-const services = [;
   {"title": 'E-commerce Platforms',"description": 'Custom e-commerce solutions with advanced features and seamless user experience.',"icon": Globe,"features": [;'
       'Custom storefront development,','Payment gateway integration',','Inventory management',',"title": 'E-commerce Platforms,',,"description": 'Custom e-commerce solutions with advanced features and seamless user experience.,',const services = [;'
   {"title": 'E-commerce Platforms',,"description": 'Custom e-commerce solutions with advanced features and seamless user experience.',"icon": Globe,"features": [,'Custom storefront development,','Payment gateway integration',','Inventory management',','Order processing systems'';'
@@ -46,7 +44,6 @@ const benefits = [;
   {}
     "title": 'Increased Sales,',,"description": 'Personalized experiences and optimized inventory drive higher conversion rates.,',"icon": ShoppingCart;'
 ];
-const benefits = [;
   {"title": 'Increased Sales',,"description": 'Personalized experiences and optimized inventory drive higher conversion rates.',"icon": ShoppingCart;'
   },{}
     "title": 'Better Customer Experience,',,"description": 'Seamless omnichannel experiences keep customers engaged and satisfied.,',"icon": Users},{}'
@@ -55,8 +52,6 @@ const benefits = [;
 export default function RetailPage() {return (<Layout)title="Retail Technology Solutions - Zion Tech Group"";"
       }
       description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."";"
-import Layout from '../../components/Layout';'
-const services = [;
   {
     }
     "title": 'E-commerce Platforms','
@@ -68,8 +63,6 @@ const services = [;
       'Inventory management',','
     "title": 'E-commerce Platforms,',,'
   "description": 'Custom e-commerce solutions with advanced features and seamless user experience.,',;'
-import Layout from '../../components/Layout';'
-const services = [;
   {;
     }
     "title": 'E-commerce Platforms',,'
@@ -138,13 +131,11 @@ const services = [;
     ];
   }
 ;];
-const benefits = [;
   {}
     "title": 'Increased Sales,',,'
   "description": 'Personalized experiences and optimized inventory drive higher conversion rates.,',;'
     "icon": ShoppingCart;
 ];
-const benefits = [;
   {;
     }
     "title": 'Increased Sales',,'

@@ -211,10 +211,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   throw err;
 
 export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string, talentSlug: string}, talentSlugHeader?: string): DemoUser {
-  const u = getDemoUser($2);
   if (u.role = $2;
   if (u.role = $2;
-  const err = new Error($2);
   // @ts-ignore
   err.statusCode = $2;
   throw err

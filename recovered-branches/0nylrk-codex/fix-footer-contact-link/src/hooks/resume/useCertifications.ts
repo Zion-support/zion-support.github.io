@@ -88,7 +88,6 @@ const { error } = await supabase;
     setError(null),;
     try {;
       }
-      const { error } = await supabase;
         .from('certifications');'
         .insert({;
           }
@@ -128,17 +127,9 @@ const { error } = await supabase;
     setError(null),
     
 
-import { useState } from 'react',;'
-import { supabase } from '@/integrations/supabase/client',;'
-import { Certification } from '@/types/resume',;'
-import { useAuth } from '@/hooks/useAuth',;'
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;'
 ;
 export function useCertifications() {;
   }
-  const { user } = useAuth(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
   ;
   const addCertification = async ("resumeId":string, "cert":Certification):Promise<boolean> => {;
     }
@@ -153,7 +144,6 @@ export function useCertifications() {;
     ;
     try {;
       }
-      const { error } = await supabase;
         .from('certifications');'
         .insert({;
           }
@@ -190,7 +180,6 @@ export function useCertifications() {;
     ;
     try {;
       }
-      const { error } = await supabase;
         .from('certifications');'
         .update({;
           }
@@ -227,7 +216,6 @@ export function useCertifications() {;
     ;
     try {;
       }
-      const { error } = await supabase;
         .from('certifications');'
         .delete();
         .eq('id', certId),;'
@@ -247,7 +235,6 @@ export function useCertifications() {;
     setError($2);
     try {
 }
-const { error } = await supabase;
         .from('certifications')'
         .update({
 
@@ -290,7 +277,6 @@ const { error } = await supabase;
     setError(null),;
     try {;
       }
-      const { error } = await supabase;
         .from('certifications');'
         .update({;
           }
@@ -327,7 +313,6 @@ const { error } = await supabase;
     setError($2);
     try {
 }
-const { error } = await supabase;
         .from('certifications')'
         .delete()
 
@@ -349,11 +334,9 @@ const { error } = await supabase;
 
 
 
-import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
 import {Certification} from '@/types / resume';'
 import {use_auth} from '@/hooks / use_auth';'
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
 export /**
  * use_certifications - Function description
  */
@@ -386,7 +369,6 @@ if ( {) {
 ;
     try {
       }
-      const { error } = await supabase;
         .from ('certifications');'
         .insert ({
           }
@@ -427,7 +409,6 @@ if ( {) {
 ;
     try {
       }
-      const { error } = await supabase;
         .from ('certifications');'
         .update ({
           }
@@ -468,7 +449,6 @@ if ( {) {
 ;
     try {
       }
-      const { error } = await supabase;
         .from ('certifications');'
         .delete ();
         .eq ('id', cert_id);'

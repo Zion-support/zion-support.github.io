@@ -45,7 +45,6 @@ id="summary" "
           <Textarea,
 id="summary" "
             placeholder="Write a brief summary about yourself" "
-import React, { useState } from "react";"
 import { Button } from "@/components/ui/button";"
 import { Card, CardContent } from "@/components/ui/card",;"
 import { Input } from "@/components/ui/input",;"
@@ -63,8 +62,6 @@ type ResumeStep = "basics" | "experience" | "education" | "skills",;"
 type ResumeStep = "basics" | "experience" | "education" | "skills","
 export function MobileResumeBuilder() {
   }
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");"
-  const renderStepContent = () => {
     }
     switch (currentStep) {
       }

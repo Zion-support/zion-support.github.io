@@ -124,14 +124,11 @@ const {
       fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
     }
     log(message, level = 'INFO') {
-      const timestamp = new Date().toISOString();
-      const logMessage = `[${timestamp}] [${level}] ${message}\n`;
       console.log(logMessage.trim());
       fs.appendFileSync(this.logFile, logMessage);
     }
     async checkDependencies() {
       this.log('Checking dependency health...');
-      const results = {
         "timestamp": new Date().toISOString(),
         "outdated": [],
         "vulnerable": [],
@@ -139,7 +136,6 @@ const {
         "healthScore": 100};
       try {
         // Check for outdated packages
-        const outdatedResult = execSync('yarn outdated --json', {
           "stdio": 'pipe',
           "encoding": 'utf8',
           "cwd": process.cwd()});
@@ -152,11 +148,9 @@ const {
       }
       try {
         // Security audit
-        const auditResult = execSync('yarn audit --json', {
           "stdio": 'pipe',
           "encoding": 'utf8',
           "cwd": process.cwd()});
-        const auditLines = auditResult.split('\n').filter(line => line.trim());
         results.vulnerable = auditLines
           .map(line => {
             try {
@@ -178,7 +172,6 @@ const {
       return results;
     }
     calculateHealthScore(results) {
-      let score = 100;
       // Deduct points for outdated packages
       if (results.outdated.length > 0) {
         score -= Math.min(results.outdated.length * 2, 30);
@@ -192,7 +185,6 @@ const {
     async run() {
       this.log('Starting Dependency Health Checker...');
       try {
-        const results = await this.checkDependencies();
         this.log(
           `Dependency health check completed. Health "score": ${results.healthScore}/100`
         );

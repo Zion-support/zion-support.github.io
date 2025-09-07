@@ -52,7 +52,6 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
   isOpen;
   onClose;
   recipient;
@@ -68,7 +67,6 @@ import React, { useState, useEffect, useRef, ReactNode } from 'react';
     scrollToBottom()
   }, [messages]),
 
-  const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
   

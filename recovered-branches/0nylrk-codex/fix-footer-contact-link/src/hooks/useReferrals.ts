@@ -21,11 +21,7 @@ import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/r
 export function useReferrals() {
 }
 const { user } = useAuth(),;
-const [referralCode, setReferralCode] = useState<ReferralCode | null>(null),;
 const [isLoading, setIsLoading] = useState(true),;
-const [referrals, setReferrals] = useState<Referral[]>([]),;
-const [rewards, setRewards] = useState<ReferralReward[]>([]),;
-  const [stats, setStats] = useState<ReferralStats>({
     }
     "totalReferrals": 0,
     "pendingReferrals": 0,
@@ -101,7 +97,6 @@ const { data, error } = await supabase;
     try {
       }
       if (!user) return,
-const { data, error } = await supabase;
         .from('referral_rewards')'
         .select('*')'
         .eq('user_id', user.id)'
@@ -200,11 +195,6 @@ import { supabase } from "@/integrations/supabase/client",;"
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",;"
 export function useReferrals() {;
   }
-  const { user } = useAuth(),;
-  const [referralCode, setReferralCode] = useState<ReferralCode | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [referrals, setReferrals] = useState<Referral[]>([]),;
-  const [rewards, setRewards] = useState<ReferralReward[]>([]),;
   const [stats, setStats] = useState<ReferralStats>({;
     }
     "totalReferrals": 0,;
@@ -226,7 +216,6 @@ export function useReferrals() {;
     try {;
       }
       setIsLoading(true),;
-      const { data, error } = await supabase;
         .from('referral_codes');'
         .select('*');'
         .eq('user_id', user?.id);'

@@ -139,7 +139,6 @@ Eye,
 FlaskConical;
 Link as LinkIcon;
   Menu,X,ChevronDown,ChevronRight,Phone,Mail,MapPin,Globe,ArrowRight,Sparkles,Brain,Atom,Shield,DollarSign,FileText,BarChart3,MessageSquare,Truck,Users,Database,Cpu,Cloud,Play,Search,ShieldCheck,TrendingUp,Rocket,Zap,Check,Star,Clock,Target,Building,Award,ChartBar,Lock,Smartphone,Palette,Calendar,CreditCard,Settings,Code,BookOpen,Activity,Bot,ChevronRight as ChevronRightIcon,Eye,FlaskConical,Link as LinkIcon,export default function NeoFuturisticNavigation() {export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null />(null)const router = useRouter(;
   const serviceCategories = [
   {name: 'Quantum Computing';
@@ -457,7 +456,6 @@ const closeMobileMenu = (setIsOpen(false)setActiveDropdown(null)) => {
 ;
   const isActive  = (path: string) => router && router.pathname === path;
 
-const serviceCategories = [
   {name: 'Quantum Computing',,description: 'Revolutionary quantum computing solutions',
   icon: <Atom className='w-5 h-5' />,color: 'from-purple-500 to-pink-500'}
   services: [;}
@@ -520,14 +518,12 @@ const serviceCategories = [
   price: '$299/month'},{name: 'Genomic AI',,description: 'Advanced genetic analysis'}
   price: '$399/month'}]}];
 
-const companyInfo = [
   {name: 'About Zion Tech Group',,description: 'Leading the global micro SaaS revolution'}
   icon: <Rocket className='w-5 h-5' />,link: '/about'},{name: 'Careers',,description: 'Join our revolutionary team'}
   icon: <Star className='w-5 h-5' />,link: '/careers'},{name: 'News & Updates',,description: 'Latest announcements and releases'}
   icon: <TrendingUp className='w-5 h-5' />,link: '/news'},{name: 'Contact',,description: 'Talk to our team 24/7'}
   icon: <Phone className='w-5 h-5' />,link: '/contact'}];
 
-const resources = [
   {name: 'Documentation',,description: 'Comprehensive service guides'}
   icon: <BookOpen className='w-5 h-5' />,link: '/docs'},{name: 'Blog & Insights',,description: 'Latest technology trends'}
   icon: <FileText className='w-5 h-5' />,link: '/blog'},{name: 'Case Studies',,description: 'Real-world success stories'}
@@ -535,7 +531,6 @@ const resources = [
   icon: <CreditCard className='w-5 h-5' />,link: '/pricing'},{name: 'Reports',,description: 'Live performance and audits'}
   icon: <Activity className='w-5 h-5' />,link: '/reports'}];// Popular quick links to flagship services;
 
-const popularServiceLinks = [
     { name: 'AI Content Generator'}
   href: '/ai-content-generator'}
 },
@@ -565,7 +560,6 @@ const popularServiceLinks = [
 }
 ];// Newly added real services quick links;
 
-const newServiceLinks = [
   {name: 'Email Deliverability Monitor'}
   href: '/services/email-deliverability-monitor'},{name: 'Landing Page Experimentation'}
   href: '/services/landing-page-experimentation'},{name: 'Invoice Reconciliation Automation'}

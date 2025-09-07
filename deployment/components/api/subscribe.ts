@@ -16,7 +16,6 @@ const { data, error } = await supabase;
   return res && res.status(200).json({ ok: true, simulated: true },
 }
 ;
-  const { data, error } = await supabase;
       .from('email_signups')const { email } = req.body |{}
   if (!email |typeof email !== 'string')return res.status(400).send('Invalid email')export default async function handler() {const { email } = req.body || {}if (!email || typeof email !== 'string')return res.status(400).send('Invalid email')export default async function handler() {if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email')const { email } = req.body || {}if (!email || typeof email !== 'string')return res.status(400).send('Invalid email')try {// Basic validation;
@@ -28,12 +27,10 @@ const normalized = email && email.trim().toLowerCase()const isValid = /^[^\s@]+@
    ,
 }
 
-const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) ;
   return res && res.status(200).json({ ok: true, simulated: true },
 }
 ;
-  const { data, error } = await supabase;
       .from('email_signups').insert({email: normalized;
         source: 'mobile-launch';}
         created_at: new Date().toISOString(,}
@@ -47,7 +44,6 @@ const isPlaceholder =;
       (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')if (isPlaceholder) {return res.status(200).json({ ok: true, simulated: true },
 }
 
-const { data, error } = await supabase;
       .from('email_signups').insert({email: normalized,source: 'mobile-launch',}
   created_at: new Date().toISOString()}).select('*').single()if (error) {}
 import { supabase  ,}
@@ -76,14 +72,12 @@ const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
     if (!isValid) return res && res.status(400).send('Invalid email format');
 }
     // If placeholders are still used, just accept without DB write;}
-const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
     if (isPlaceholder) {}
       return res && res.status(200).json({ ok: true, simulated: true })
    ,
 }
 
-const { data, error } = await supabase;
       .from('email_signups')
 
 
@@ -100,14 +94,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');}
 }
-const { email } = req.body |{}
   if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
 
   try {
     // Basic validation;
-const normalized = email && email.trim().toLowerCase();
 
-const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized);
 
 const isPlaceholder =
       (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
@@ -117,14 +108,12 @@ const isPlaceholder =
 });    }
     }
 
-const { data, error } = await supabase;
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder');
     if (isPlaceholder) {}
       return res && res.status(200).json({ ok: true, simulated: true })
    ,
 }
 
-const { data, error } = await supabase;
       .from('email_signups')
       .insert({
         email: normalized;
@@ -159,7 +148,6 @@ export default async /**;
 function handler() {if (return res.status (405).send ('Method Not Allowed')) {$2;}
 }
 
-const { email } = req.body || {}
   if (return res.status (400).send ('Invalid email')) {$2;}
 }
   try {// Basic validation;
@@ -178,14 +166,12 @@ if ( {) {$2;}
       return res.status (200).json ({ ok: true, simulated: true },
 }
 
-const { data, error } = await supabase;
       .from ('email_signups')    const is_placeholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder')// Check condition;
 if ( {) {$2;}
 }
       return res.status (200).json ({ ok: true, simulated: true },
 }
 
-const { data, error } = await supabase;
       .from ('email_signups').insert ({email: normalized,source: 'mobile - launch',}
   created_at: new Date ().toISOString ()created_at: new Date ().toISOString (,}
 })      .select ('*')      .insert ({ email: normalized, source: 'mobile - launch',}

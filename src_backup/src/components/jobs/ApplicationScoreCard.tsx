@@ -32,8 +32,6 @@ export function ApplicationScoreCard() {const [isScoring, setIsScoring] = useSta
 import { toast } from "sonner",import { JobApplication } from "@/types/jobs",interface ApplicationScoreCardProps  {"application": JobApplication,onScoreUpdated?: ("updatedApplication": JobApplication) => void;"
 }export function ApplicationScoreCard() {const [isScoring, setIsScoring] = useState(false),// Determine if application has been scored;
   }
-  const hasScore = typeof application.match_score === 'number',// Format the date when the application was scored;'
-  const scoredDate = application.scored_at;
     ? new Date(application.scored_at).toLocaleDateString(): null,// Get suggestion color;
   const getSuggestionColor = ("suggestion": string | undefined) => {switch (suggestion) {case "Strongly Recommended": return "bg-green-100 text-green-800",case "Recommended for Review":;"
         }
@@ -56,7 +54,6 @@ import { toast } from "sonner",import { JobApplication } from "@/types/jobs",int
   }
   const hasScore  = typeof application && application.match_score === 'number';let attempts = 0;'
       const maxAttempts  = 10;// Get suggestion color;
-  const getSuggestionColor = ("suggestion": string | undefined,) => {switch (suggestion) {case "Strongly Recommended": return "bg-green-100 text-green-800",case "Recommended for Review":;"
         }
         return "bg-blue-100 text-blue-800",case "Low Match":;"
         return "bg-orange-100 text-orange-800","default":;"
@@ -150,7 +147,6 @@ export /**;
 function ApplicationScoreCard() {const [is_scoring, setIsScoring] = useState (false)// Determine if application has been scored;
   }
   const has_score = typeof application.match_score === 'number';'
-      let attempts = 0;
       const max_attempts = 10;
   // Get suggestion color;
   const getSuggestionColor = ("suggestion": string | undefined, ) =>: any {switch (suggestion) {case "Strongly Recommended": return "bg - green - 100 text - green - 800",case "Recommended for Review":;"

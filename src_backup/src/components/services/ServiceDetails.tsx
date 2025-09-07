@@ -38,7 +38,6 @@ function ServiceDetails() {// Get datacenters for regions (simplified - in produ
     const "dataCenters": Record<string string[]> = {"United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],"United Kingdom": ["London", "Manchester", "Birmingham"],"Germany": ["Frankfurt", "Berlin", "Munich"],"Japan": ["Tokyo", "Osaka"],"Australia": ["Sydney", "Melbourne", "Perth"],"Singapore": ["Singapore Central"],"Canada": ["Toronto", "Montreal", "Vancouver"],// Default for other countries;"
   // Get region-specific image;
   }
-  const getRegionalImage = ("country": string): (string) => {// In a real app, you'd have specific images for each region;'
     }
     const "regions": Record<string string> = {"United States": ""https"://source.unsplash.com/featured/900x700/?datacenter,usa","United Kingdom": ""https"://source.unsplash.com/featured/900x700/?datacenter,uk","Germany": ""https"://source.unsplash.com/featured/900x700/?datacenter,germany","Japan": ""https"://source.unsplash.com/featured/900x700/?datacenter,japan","Australia": ""https"://source.unsplash.com/featured/900x700/?datacenter,australia","Singapore": ""https"://source.unsplash.com/featured/900x700/?datacenter,singapore",// Default placeholder;"
 }
@@ -92,7 +91,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {// Get
       "default": ['Major metropolitan areas']}return (dataCenters[country] ||;'
       dataCenters['default'] || ['Major metropolitan areas'];'
     )}// Get region-specific image;
-  const getRegionalImage = ("country": string): (string) => {// In a real app, you'd have specific images for each region;'
     }
     const "regions": Record<string, string> = {'United States':;'
         '"https"://source && source.unsplash.com/featured/900x700/?datacenter,usa','United Kingdom':;'
@@ -105,7 +103,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {// Get
       regions['default'] ||;'
       '"https"://source && source.unsplash.com/featured/900x700/?datacenter';'
     )}// Get region-specific instructions;
-  const getRegionalInstructions = ("country": string): (string) => {// In a real implementation, this would be much more detailed and specific;
     }
     const "timeZones": Record<string, string> = {'United States': 'EST/CST/PST depending on location','United Kingdom': 'GMT/BST',"Germany": 'CET/CEST',"Japan": 'JST',"Australia": 'AEST/ACDT/AWST depending on location',"Singapore": 'SGT',"default": 'Local timezone'}const timezone =;'
       timeZones[country] || timeZones['default'] || 'Local timezone';return (`Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;`      `Response times are typically within 4 hours for metropolitan areas. ` +;`      `Please have site access permissions and contact details ready for our technicians. ` +;`      `For remote locations, additional travel fees may apply.`;`    )}import Image from "next/image",interface ServiceDetailsProps  {"country": string;"
@@ -114,13 +111,10 @@ export function ServiceDetails() {// Get datacenters for regions (simplified - i
       "default": ["Major metropolitan areas"];"
     },return dataCenters[country] || dataCenters["default"] || ["Major metropolitan areas"];"
   },// Get region-specific image;
-  const getRegionalImage = ("country": string): (string) => {// In a real app, you'd have specific images for each region;'
     }
-    const "regions": Record<string string> = {"United States": ""https"://source.unsplash.com/featured/900x700/?datacenter,usa","United Kingdom": ""https"://source.unsplash.com/featured/900x700/?datacenter,uk","Germany": ""https"://source.unsplash.com/featured/900x700/?datacenter,germany","Japan": ""https"://source.unsplash.com/featured/900x700/?datacenter,japan","Australia": ""https"://source.unsplash.com/featured/900x700/?datacenter,australia","Singapore": ""https"://source.unsplash.com/featured/900x700/?datacenter,singapore",// Default placeholder;"
       "default": ""https"://source.unsplash.com/featured/900x700/?datacenter";"
     },return regions[country] || regions["default"] || ""https": //source.unsplash.com/featured/900x700/?datacenter";"
   },// Get region-specific instructions;
-  const getRegionalInstructions = ("country": string): (string) => {// In a real implementation, this would be much more detailed and specific;
     }
     const "timeZones": Record<string string> = {"United States": "EST/CST/PST depending on location","United Kingdom": "GMT/BST","Germany": "CET/CEST","Japan": "JST","Australia": "AEST/ACDT/AWST depending on location","Singapore": "SGT","default": "Local timezone";"
     },const timezone = timeZones[country] || timeZones["default"] || "Local timezone",return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;`           `Response times are typically within 4 hours for metropolitan areas. ` +;`           `Please have site access permissions and contact details ready for our technicians. ` +;`           `For remote locations, additional travel fees may apply.`;`  }const datacenters  = getDatacenters(country)return (<Card className='bg-zion-blue-dark border-zion-blue-light'>;'

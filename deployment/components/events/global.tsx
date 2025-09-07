@@ -13,7 +13,6 @@ export default function GlobalEventRoute() {;
 export default function GlobalEventRoute() {;
   return <ExpoPage />;
 }
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false,}
 });
 
 export default function GlobalEventRoute() {;
@@ -23,24 +22,19 @@ import dynamic from 'next / dynamic';
   return <ExpoPage />;}
 }
 
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false,}
 }),export default function GlobalEventRoute() ;
   const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {ssr: fals,}
 })export default function GlobalEventRoute() ;
   return <ExpoPage />;
 
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false,}
 })export default function GlobalEventRoute() ;
   return <ExpoPage />;
 
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false,}
 })export default function GlobalEventRoute() ;
   return <ExpoPage />;
 
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false,}
 })export default function GlobalEventRoute() ;
   return <ExpoPage />;
-import dynamic from 'next / dynamic';
 
 const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), {ssr: false;
   ssr: false;}
@@ -61,7 +55,6 @@ const ExpoPage = null;
 
 export default function GlobalEventRoute() {return <ExpoPage />;
 }
-const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false,}
 })export default function GlobalEventRoute() ;
   return <ExpoPage />;
 }

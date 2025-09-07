@@ -183,11 +183,9 @@ export function CategoryListingPage() {;
   const [selectedSort, setSelectedSort] = useState(sortOptions[0].value),;
   const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value),;
   // Process listings based on filters and search;
-  const processedListings = initialListings;
     .filter((listing) => {;
       // Apply search filter;
       }
-      const matchesSearch =;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         (listing.tags && listing.tags.some(tag =>;

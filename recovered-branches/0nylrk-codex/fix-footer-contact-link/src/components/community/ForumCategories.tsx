@@ -28,7 +28,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { use_auth } from '@/hooks / use_auth';'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';'
 import { ForumCategory, ForumCategoryInfo } from '@/types / community';'
-const "categories": ForumCategoryInfo[] = [;
   {
     }
     "id": "getting - hired","

@@ -1,11 +1,28 @@
 
 
+
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
 import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
 }
 import {
-  }
+
+  mobile: '+1 302 464 0950
+  email: kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709
+  website: https://ziontechgroup.com'
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+}
+
+  Phone;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   Star,
 CheckCircle
   ArrowRight,
@@ -29,37 +46,19 @@ UserCheck
   FileText,
 Heart
   Eye,
-Search
-  Phone;
-} from 'lucide-react';'
-import { realMarketServices } from '../../data/2024-real-market-services';'
 
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';'
+}</div> </motion.div> {}
+  /* Search and Filter */"
+}<motion.div /> <Search className=absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 /> </div> {}
+  /* Category Filter */
+}<select </option>) )
+}</select> </div> </motion.div> {}
 
-const contactInfo = {
-  }
-  "mobile": '+1 302 464 0950','
-  "email": 'kleber@ziontechgroup.com','
-  "address": '364 E Main St STE 1008 Middletown DE 19709','
-"website": '"https"://ziontechgroup.com','
-};
-  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
-  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
-  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
- } from 'lucide-react';'
-import { realMarketServices  } from '../../data/2024-real-market-services';'
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';'
+=======
+  /* Service Categories */
 
-<<<<<<< HEAD
-const contactInfo = null;
-"visible": {
-  }
-  "opacity": 1, "transition": {
-  }
-  "staggerChildren": 0.1
-}
-}
-> <h2 className="text-4xl "md":text-5xl "lg":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )"
+> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className=text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 }</div> </motion.div> {
   /* Search and Filter */
 }<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {"
@@ -68,14 +67,7 @@ const contactInfo = null;
 }</select> </div> </motion.div> {
   /* Service Categories */
 }<motion.div key= {
-  }
-  category.id 
-}initial= {
-=======
-  category.id
-}initial= {  {}
-const serviceCategories = [
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   {
     }
@@ -172,222 +164,233 @@ const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-    return matchesCategory && matchesSearch;
-  });
 
-const containerVariants = {
-    }
-    "hidden": { "opacity": 0
-}
-    "visible": {
-      }
-      "opacity": 1,
-"transition": {
-}
-"staggerChildren": 0.1
-      }
-    }
-  };
+  {
+    id: 'ai-services,
 
-  const itemVariants = {
-
-    }
-
-    "hidden": { "opacity": 0, "y": 20
-},
-"visible": { "opacity": 1, "y": 0
-}
-  };
-
-return (;
-    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;'
-      {/* Animated Background */}
+    title: 🧠 Revolutionary AI Services',
+    description: 'Next-generation AI consciousness and creativity,
+    icon: Brain,
+    color: from-violet-500 to-purple-500'},
+  {
+    id: 'quantum-tech,
+    title: ⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing and beyond,
+    icon: Atom,
+    color: from-indigo-500 to-blue-500'},
+  {
+    id: 'enterprise-it,
+    title: 🏙️ Enterprise IT Solutions',
+    description: 'Autonomous operations and zero-trust security,
+    icon: Cpu,
+    color: from-blue-500 to-cyan-500'},
+  {
+    id: 'business-automation,
+    title: 🛒 Business Automation',
+    description: 'Streamline business operations,
+    icon: ShoppingCart,
+    color: from-teal-500 to-emerald-500'},
+  {
+    id: 'robotics-automation,
+    title: 🤖 Robotics & Automation',
+    description: 'Intelligent automation solutions,
+    icon: Rocket,
+    color: from-green-500 to-yellow-500'},
+  {
+    id: 'research-development,
+    title: 🔬 Research & Development',
+    description: 'Breakthrough technologies and innovations,
+    icon: Globe,
+    color: from-orange-500 to-red-500'];
 '
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+  const [selectedCategory, setSelectedCategory] = useState(all);'
+  const [searchTerm, setSearchTerm] = useState(');
 
-      <div className='absolute inset-0 overflow-hidden'>'
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>'
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>'
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>'
+      selectedCategory === all' |
+      serviceCategories.some(cat => cat.services.includes(service));
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,
+  Phone,'
+} from lucide-react;'
+import { realMarketServices } from '../../data/2024-real-market-services;
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users,
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
+  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
+} from lucide-react';'
+import { realMarketServices } from ../../data/2024-real-market-services;'
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services;
+
+const serviceCategories = []
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,
+  Phone,
+} from 'lucide-react';
+import { realMarketServices } from ../../data / 2024 - real - market - services';'
+import { aiEmergingTechServices } from ../../data / 2024 - ai - emerging - tech - services;import {}
+  Star, CheckCircle, ArrowRight, TrendingUp, Users,
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
+  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;'
+} from 'lucide-react;
+import { realMarketServices } from '../../data / 2024 - real - market - services';
+import { aiEmergingTechServices } from ../../data / 2024 - ai - emerging - tech - services';'
+  mobile: +1 302 464 0950,'
+  email: 'kleber@ziontechgroup.com,
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: https://ziontechgroup.com'}
+visible: {}
+  opacity: 1, transition: {}
+  stagger_children: 0.1;
+}
+}
+> <h2 className=text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed > Discover our comprehensive suite of cutting - edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) );
+}</div> </motion.div> {}
+  /* Search and Filter */;
+}<motion.div /> <Search className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" /> </div> {}
+  /* Category Filter */;
+}<select </option>) );
+}</select> </div> </motion.div> {}
+  /* Service Categories */;
+}<motion.div key= {}
+  category.id;
+}initial= {  {}
+const service_categories = [;
+  {'
+    id: ai - services,'
+    title: '🧠 Revolutionary AI Services,
+    description: 'Next - generation AI consciousness and creativity',
+    icon: Brain,
+    visible: {}
+      opacity: 1;
+      transition: {}
+      selectedCategory === all' ||;
+      serviceCategories && serviceCategories.some(cat => cat && cat.services.includes(service));
+      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0 && 0.1}}}
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
+      }
+    }
+  }
+  const itemVariants = {}
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 }
+  }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }}
+
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden>;
+      {/* Animated Background */}
+
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
+
+  return (
+    <section className=py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
+      {/* Animated Background */}
+      <div className=absolute inset-0 overflow-hidden>
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
+        <div className=absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000></div>
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8'>'
-        {/* Header *
-}
-
-    "hidden": { "opacity": 0, "y": 20
-},
-    "visible": { "opacity": 1, "y": 0
-}
-
-  };
-
-const itemVariants = {
-    }
-    "hidden": { "opacity": 0, "y": 20
-},
-
+      <div className=relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
 
-        <motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0 && 0.6 }}
-          viewport={{ "once": true 
-}>;
-          <h2 className='text-4xl "md":text-5xl "lg":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>;'
-            Revolutionary Technology Services;
-          </h2>;
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;'
-            Discover our comprehensive suite of cutting-edge AI, quantum;
-            computing, and emerging technology solutions. Each service is;
-            designed to transform your business and propel you into the future.;
-          </p>;
-        "stagger_children": 0.1}}  }
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
-const item_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
-},"visible": { "opacity": 1, "coordinate_y": 0
-},        "stagger_children": 0.1;
-      }
-    }
-  }
 
-const item_variants = {"hidden": { "opacity": 0, "coordinate_y": 20,;
-},"visible": { "opacity": 1, "coordinate_y": 0
-}}
-  }
-;
-const itemVariants = {"hidden": { "opacity": 0, "y": 20,;
-},"visible": { "opacity": 1, "y": 0
-},;
-  return (<section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;'
-      {/* Animated Background */}return (<section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;"
-      {/* Animated Background */}
-      <div className="absolute inset - 0 overflow - hidden">;"
-        <div className="absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse"></div>;"
-        <div className="absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000"></div>;"
-        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - gradient - to - r from - green - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500"></div>;"
-      </div>;
-      <div className="relative z - 10 max - w-7xl mx - auto px - 4 "sm":px - 6 "lg":px - 8">;"
-        {/* Header */}
-    "hidden": { "opacity": 0, "y": 20
-},"visible": { "opacity": 1, "y": 0
-}}
 
-const itemVariants = {"hidden": { "opacity": 0, "y": 20,;
-},{/* Header */}<motion.div;
-          initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0.6 }}
-
-          viewport={{ "once": true 
-}
-
-className='text-center mb-16''
-        >
-          <h2 className='text-4xl "md":text-5xl "lg":text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>'
-            Revolutionary Technology Services
-          </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>'
-            Discover our comprehensive suite of cutting-edge AI, quantum,
-computing, and emerging technology solutions. Each service is,
-designed to transform your business and propel you into the future.
-          </p>
-          {/* Stats */}
-          <div className='grid grid - cols - 2 "md":grid - cols - 4 gap - 6 mt - 12'>;'
-            {[;
-              {
-<<<<<<< HEAD
-          viewport={{ once: true }}className='text-center mb-16';
-        >;
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>;
             Revolutionary Technology Services;
           </h2>;
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          <p className=text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
             Discover our comprehensive suite of cutting-edge AI, quantum;
             computing, and emerging technology solutions. Each service is;
             designed to transform your business and propel you into the future.;
           </p>;
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true}}
-          className="text-center mb-16"
-        >
-=======
-                label: 'Total Services'
-                value: allServices.length.toString()
-                icon: Rocket
-              }
-              { label: 'Happy Customers', value: '50K+', icon: Users }
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+
+          <h2 className=text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6>
             Revolutionary Technology Services
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-              { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },;
-              { label: 'Happy Customers', value: '50K+', icon: Users },;
-              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
-=======
-            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions.
-            Each service is designed to transform your business and propel you into the future.
-          </p>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            {[
-              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket }
-              { label: 'Happy Customers', value: '50K+', icon: Users }
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
 
-                }
 
-                "label": 'Total Services','
-                "value": allServices.length.toString(),
-                "icon": Rocket
-              },
-              { "label": 'Happy Customers', "value": '50K+', "icon": Users,'
-},
-              { "label": 'Success Rate', "value": '99.9%', "icon": CheckCircle,'
-},
-              { "label": 'Global Reach', "value": '45+ Countries', "icon": Globe,'
-},
-              { "label": 'Global Reach', "value": '45+ Countries', "icon": Globe,'
-}
 
 
             ].map((stat, index) => (
-<<<<<<< HEAD
-              <motion.div
 
-            ].map((stat, index) => (;
-              <motion&& motion.div,
-key={stat && stat.label}
-                initial={{ "opacity": 0, "scale": 0 && 0.8 
-}
-                whileInView={{ "opacity": 1, "scale": 1 
-}
-                transition={{ "duration": 0 && 0.5, "delay": index * 0 && 0.1 }}
-                viewport={{ "once": true 
-}
-                className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover":bg-white/10 transition-all duration-300'>;'
-                <stat && stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;'
-                <div className='text-2xl font-bold text-white'>;'
-                  {stat && stat.value}
-                </div>;
-                <div className='text-sm text-gray-400'>{stat && stat.label}</div>              </motion && motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover":bg-white/10 transition-all duration-300">"
 
-                <stat && stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;"
-                <div className="text-2xl font-bold text-white">{stat && stat.value}</div>;"
-                <div className="text-sm text-gray-400">{stat && stat.label}</div>;"
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                 key={stat.label}
                 initial={{ "opacity": 0, "scale": 0.8 
 }
@@ -397,44 +400,7 @@ key={stat && stat.label}
 
                 viewport={{ "once": true }}
 
-className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover":bg-white/10 transition-all duration-300''
-              >
-                <stat.icon className='w-8 h-8 text-cyan-400 mx-auto mb-2' />'
-                <div className='text-2xl font-bold text-white'>'
-                  {stat.value}
-                </div>
-                <div className='text-sm text-gray-400'>{stat.label}</div>'
-              </motion.div>
-            )
-}
 
-          </div>;
-        </motion && motion.div>;
-
-            ))}
-        {/* Search and Filter */}
-<<<<<<< HEAD
-        <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 
-}
-          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.2 }}
-
-          viewport={{ "once": true }}
-
-className='mb-12''
-        >
-          <div className='flex flex-col "md":flex-row gap-4 items-center justify-center'>'
-            {/* Search */}
-            <div className='relative flex-1 max-w-md'>'
-              <input,
-type='text''
-                placeholder='Search services...''
-                value={searchTerm}
-            {/* Search */}"
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent''
@@ -447,9 +413,39 @@ type='text''
           whileInView={{ opacity: 1;, y: 0 ;}
 }
           transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
+=======
+className=text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300
+                viewport={{ once: true}}
+                className=text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+              >
+                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2 />
+                <div className=text-2xl font-bold text-white">{stat.value}</div>
+                <div className="text-sm text-gray-400>{stat.label}</div>
+              </motion.div>
 
-          viewport={{ once: true ;}}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+className='mb-12'
+origin/cursor/automate-test-improve-and-merge-code-2533
+        >
+=======
+        >
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          <div className=flex flex-col md:flex-row gap-4 items-center justify-center'>
+
+
+                viewport={{ once: true }}className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300;
+              >;
+                <stat.icon className=w-8 h-8 text-cyan-400 mx-auto mb-2' />;
+                <div className='text-2xl font-bold text-white>;
+                  {stat.value}
+                </div>;
+                <div className=text-sm text-gray-400'>{stat.label}</div>;
+              </motion.div>;
+            ))}</div>;
+        </motion && motion.div>;))}
+        {/* Search and Filter */}
+        <motion&& motion.div;
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
 
         {/* Search and Filter */}
         <motion.div
@@ -457,112 +453,80 @@ type='text''
           whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true}}
-          className="mb-12"
+          className=mb-12"
         >
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center>
             {/* Search */}
-            <div className="relative flex-1 max-w-md">
+            <div className=relative flex-1 max-w-md">
+              <input
+                type="text
+                placeholder=Search services..."
+                value={searchTerm}
+
+            <div className="relative flex-1 max-w-md>;
               <input
                 type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-<<<<<<< HEAD
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-            {/* Search */}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <div className="relative flex-1 max-w-md">;
-              <input"
-                type="text""
-                placeholder="Search services..."
+                placeholder=Search services..."
                 value={searchTerm}
             {/* Category Filter */}
             <select;
               value={selectedCategory}
               onChange={e => setSelectedCategory(e && e.target.value)}'
-              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+              className=px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
             >;'
-              <option value='all'>All Categories</option>              {serviceCategories && serviceCategories.map(category => (              onChange={(e) => setSelectedCategory(e && e.target.value)}"
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+              <option value='all>All Categories</option>              {serviceCategories && serviceCategories.map(category => (              onChange={(e) => setSelectedCategory(e && e.target.value)}"
+              className=px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
             >;"
-              <option value="all">All Categories</option>;
-                <option key={category && category.id} value={category && category.id}>;'
+              <option value="all>All Categories</option>;
+                <option key={category && category.id} value={category && category.id}>;
                   {category && category.title.split(' ')[0]}
                 </option>;
                 onChange={e => setSearchTerm(e.target.value)}
 
                 onChange={e = /> setSearchTerm(e.target.value)}
-                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                className=w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               />
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className=absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
           viewport={{ once: true }}className='mb-12';
         >;
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
+          <div className=flex flex-col md:flex-row gap-4 items-center justify-center>;
           viewport={{ once: true }}className='mb-12';
         >;
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
+          <div className=flex flex-col md:flex-row gap-4 items-center justify-center>;
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <input;
-                type='text';
+                type=text;
                 placeholder='Search services...';
                 value={searchTerm}{/* Search */}
-            <div className="relative flex-1 max-w-md">;
+            <div className="relative flex-1 max-w-md>;
               <input;
-                type="text";
-                placeholder="Search services...";
+                type=text";
+                placeholder="Search services...;
                 value={searchTerm}
             {/* Category Filter */}
             <select;
               value={selectedCategory}
               onChange={e => setSelectedCategory(e && e.target.value)}
-              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
+              className=px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
             >;
               <option value='all'>All Categories</option>              {serviceCategories && serviceCategories.map(category => (              onChange={(e) => setSelectedCategory(e && e.target.value)}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+              className=px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
             >;
-              <option value="all">All Categories</option>;
+              <option value="all>All Categories</option>;
                 <option key={category && category.id} value={category && category.id}>;
-                  {category && category.title.split(' ')[0]}
+                  {category && category.title.split( )[0]}
                 </option>;onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent';
               />;
-              <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />;
+              <Search className=absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 />;
             </div>;
             {/* Category Filter */}
             <select;
               value={selectedCategory}
-onChange={e => { return setSelectedCategory(e.target.value)}
-              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white "focus":outline-none "focus":ring-2 "focus":ring-cyan-500 "focus":border-transparent'>'
 
-              <option value='all'>All Categories</option>; }'
-              {serviceCategories.map(category => (<option key={category.id} value={category.id}>;
-                  {category.title.split(' ')[0]}'
-
-                </option>
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-              ))}
-        {/* Service Categories */}
-        <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 
-}
-          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.4 }}
-
-          viewport={{ "once": true 
-}
-
-className='mb-16''
-        >
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-6'>'
-            {serviceCategories.map((category, index) => (
-              <motion.div
-}
 key={category.id}
                 initial={{ "opacity": 0, "y": 20 
 }
@@ -573,27 +537,19 @@ key={category.id}
                 className={`p-6 rounded-xl border transition-all duration-300 "hover":scale-105 cursor-pointer ${`
 }
 
-selectedCategory === category.id
-                    ? 'border-cyan-500 bg-cyan-500/10''
-                    : 'border-white/20 bg-white/5 "hover":border-cyan-500/50 "hover":bg-cyan-500/5''
 
-                }
-}
-                onClick={() =>;
-                  }
-                  setSelectedCategory(category.id === selectedCategory ? 'all' : category.id;'
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                   )}
               >;
                 <div className='flex items-center space-x-3 mb-4'>;'
                   <div;
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>`
-                    <category.icon className='w-6 h-6 text-white' />;'
+
                   </div>;
                   <div>;
                     <h3 className='text-lg font-semibold text-white'>;'
                       {category.title}
                     </h3>;
-                    <p className='text-sm text-gray-400'>;'
+
                       {category.description}
                     </p>;
                   </div>;
@@ -612,21 +568,21 @@ selectedCategory === category.id
                 viewport={{ once: true}}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
                   selectedCategory === category.id 
-                    ? 'border-cyan-500 bg-cyan-500/10' 
+                    ? border-cyan-500 bg-cyan-500/10 
                     : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
                 }`}
-                onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
+                onClick={() => setSelectedCategory(category.id === selectedCategory ? all : category.id)}
               >
-                <div className="flex items-center space-x-3 mb-4">
+                <div className=flex items-center space-x-3 mb-4">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                    <category.icon className="w-6 h-6 text-white" />
+                    <category.icon className="w-6 h-6 text-white />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                    <p className="text-sm text-gray-400">{category.description}</p>
+                    <h3 className=text-lg font-semibold text-white">{category.title}</h3>
+                    <p className="text-sm text-gray-400>{category.description}</p>
                   </div>
                 </div>
-                <div className="text-sm text-gray-300">
+                <div className=text-sm text-gray-300">
                   {category.services.length} services available
                 </div>
               </motion.div>
@@ -638,55 +594,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
-initial='hidden';'
-          whileInView='visible';'
-          viewport={{ "once": true 
+
 }
           className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
 
           {filteredServices.map((service, index) => (<motion.div;
               }
               key={service.id}
-<<<<<<< HEAD
-              variants={itemVariants}
-className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover": border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>'
-
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>'
-                  }
-                  Popular
-                </div>
-              )}
 
 
-              {/* Service Icon *
-}
-<div className='flex items-center justify-between mb-4'>;'
-                <div;
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}`
 
-
-<<<<<<< HEAD
-=======
-                 />
-                  {service.icon}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              variants={itemVariants}'
-              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
-            >
-              {/* Popular Badge */}
-              {service.popular && ('"
-                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
-            >
-              {/* Popular Badge */}
-              {service.popular && ("
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                </div>
-              )}'
-                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
               )}
@@ -695,362 +612,100 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Services Grid */}
-        <motion&& motion.div,
-variants={containerVariants}
 
-=======
-        <motion&& motion.div;
-<<<<<<< HEAD
-          variants={containerVariants}
 
-              )}
-              {/* Service Icon */}
-'
-                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
-              >;'
-                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;'
-                <div className='text - 2xl font - bold text - white'>;
-                  {stat.value}
-                </div>;'"
-                <div className='text - sm text - gray - 400'>{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300";
-              >;"
-                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;"
-                <div className="text - 2xl font - bold text - white">{stat.value}</div>;"
-                <div className="text - sm text - gray - 400">{stat.label}</div>))}
-=======
-variants={containerVariants}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
               )}
               {/* Service Icon */}
 
-                className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 "hover":bg - white / 10 transition - all duration - 300'>'
 
-                <stat.icon className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;'
-                <div className='text - 2xl font - bold text - white'>;'
-                  {stat.value}
-<<<<<<< HEAD
-                </div>;
-                <div className='text - sm text - gray - 400'>{stat.label}</div>              </motion.div>                className="text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 "hover":bg - white / 10 transition - all duration - 300">"
-
-                <stat.icon className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;"
-                <div className="text - 2xl font - bold text - white">{stat.value}</div>;"
-                <div className="text - sm text - gray - 400">{stat.label}</div>))}"
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
           </div>;
         </motion.div>;
         {/* Search and Filter */}
         <motion.div;
-          initial={{ "opacity": 0, "coordinate_y": 20 
-}
-          whileInView={{ "opacity": 1, "coordinate_y": 0 
-}
-          transition={{ "duration": 0.6, "delay": 0.2 }}
-        {/* Services Grid *
-}
-          whileInView={{ opacity: 1;, coordinate_y: 0 ;}
-}
-          transition={{ duration: 0.6;, delay: 0.2 ;}}
-        {/* Services Grid *}
-}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-        <motion&& motion.div;
-          variants={containerVariants}
-          initial='hidden';'
-          whileInView='visible';'
-          viewport={{ "once": true 
-}
-          className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>          initial="hidden";"
-          whileInView="visible";"
-          viewport={{ "once": true 
-}
-          className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8";"
-          {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
-              }
-              key={service && service.id}
-              variants={itemVariants}
-              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover":border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>;'
+
               {/* Popular Badge */}
-              {service && service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover": border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105">"
-
-              {/* Popular Badge *
-}
-              {service && service.popular && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">;"
-                </div>;
-          }
-          initial="hidden";"
-          whileInView="visible";"
-          viewport={{ "once": true 
-}
-          className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
-
-          {filteredServices.map((service, index) => (<motion.div;
-              }
-              key={service.id}
-              variants={itemVariants}
-              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 "hover": border-cyan-500/50 "hover":bg-cyan-500/5 transition-all duration-300 "hover":scale-105'>'
-
-              {/* Popular Badge *
-}
-              {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;'
-                  }
+              {service.popular && (<div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular;
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                   Popular;
                 </div>;
               )}{/* Service Icon */}
                   {service.icon}
                 </div>;
-                <div className='text - right'>;'
-                  <div className='text - 2xl font - bold text - white'>;'
 
-                    {service.price}
 
-                  </div>
-                  <div className='text-sm text-gray-400'>{service.period}</div>'
-                </div>
-              </div>
-                    {service.price}<div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>;
-                  {service.icon}
-                </div>;
-                <div className="text-right">;
-                  <div className="text-2xl font-bold text-white">{service.price}</div>;
-                  <div className="text-sm text-gray-400">{service.period}</div>;
-                {service.name}
-              </h3>;
-              <p className='text - gray - 300 mb - 4 leading - relaxed'>              <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
-                {service.name}
-              </p>;
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
-                  {service && service.icon}
-                </div>;
-                <div className='text-right'>;
-                  <div className='text-2xl font-bold text-white'>;
-                    {service && service.price}
-                  </div>;
-                  <div className='text-sm text-gray-400'>{service && service.period}</div>                </div>;
-              </div>;
-              {/* Service Info */}
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
-                {service && service.name}
-              </h3>;
-              <p className='text-gray-300 mb-4 leading-relaxed'>                {service && service.description}
-              </p>;
-              {/* Features */}              <div className="flex items-center justify-between mb-4">;
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
-                  {service && service.icon}
-                </div>;
-                <div className="text-right">;
-                  <div className="text-2xl font-bold text-white">{service && service.price}</div>;
-                  <div className="text-sm text-gray-400">{service && service.period}</div>;
-              </div>;
-              {/* Service Info */}
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
-                {service && service.name}
-              </h3>;
-              <p className='text-gray-300 mb-4 leading-relaxed'>              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
-                {service && service.name}
-              </h3>;
-              <p className="text-gray-300 mb-4 leading-relaxed">;
-              </p>;</div>;
-                  <div className='text-sm text-gray-400'>{service.period}</div>;
-                </div>;
-              </div>;
-              {/* Service Info */}
-<h3 className='text-xl font-bold text-white mb-2 group-"hover":text-cyan-400 transition-colors'>;'
-                {service.name}
-              </h3>;
-              <p className='text-gray-300 mb-4 leading-relaxed'>;'
-                {service.description}
-              </p>;
-              {/* Features */}
-<div className='space-y-2 mb-4'>;'
-                {service.features.slice(0, 3).map((feature, idx) => (<div;
-                    }
-                    key={idx}
-
-                    className='flex items-center space-x-2 text-sm text-gray-400''
-                  >
-                    <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />'
-                    <span>{feature}</span>
-                  </div>
-                    className='flex items-center space-x-2 text-sm text-gray-400';
-                  >;
-                    <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />;
-                    <span>{feature}</span>;
-                  </div>;
-                ))}
-                {service.features.length > 3 && (<div className='text-sm text-cyan-400'>;'
-                    +{service.features.length - 3} more features;
-                  </div>;
-                )}
-              </div>;
-                )}
-              </div>;
-              {/* Service Meta */}
-<div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;'
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Clock className='w-4 h-4' />;'
-                  <span>{service.setupTime}</span>;
-                </div>                  <span>{service.setupTime}</span>;
-                {service.description}
-              </p>;
-              {/* Features */}<span>{feature}</span>;
-                  </div>;
-                ))}
-                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;"
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;"
-                    <span>{feature}</span>;
-                  </div>;
-                {service.features.length > 3 && (<div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">;"
-                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">;"
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;"
-                  </div>;
-                    +{service.features.length - 3} more features;
-                  </div>;
-                )}
-              </div>;
-              {/* Service Meta */}
-
-              {/* Service Icon */}
-              <div className="flex items-center justify-between mb-4">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
-                  {service.icon}
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-white">{service.price}</div>
-                  <div className="text-sm text-gray-400">{service.period}</div>
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
                   {service.icon}
                 </div>"
-                <div className="text-right">"
-                  <div className="text-2xl font-bold text-white">{service.price}</div>"
+                <div className=text-right>"
+                  <div className="text-2xl font-bold text-white>{service.price}</div>
                   <div className="text-sm text-gray-400">{service.period}</div>
                 {service.name}
-              </h3>;'"
-              <p className='text - gray - 300 mb - 4 leading - relaxed'>              <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+              </h3>;
+              <p className=text - gray - 300 mb - 4 leading - relaxed'>              <h3 className=text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
                 {service.name}
               </p>`
                   className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
                   {service && service.icon}
                 </div>;'
-                <div className='text-right'>;'
-                  <div className='text-2xl font-bold text-white'>;
+                <div className=text-right>;'
+                  <div className='text-2xl font-bold text-white>;
                     {service && service.price}
-                  </div>;'
+                  </div>;
                   <div className='text-sm text-gray-400'>{service && service.period}</div>                </div>;
               </div>;
-              {/* Service Info */}'
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+              {/* Service Info */}
+              <h3 className=text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
                 {service && service.name}
               </h3>;'
-              <p className='text-gray-300 mb-4 leading-relaxed'>                {service && service.description}
+              <p className=text-gray-300 mb-4 leading-relaxed>                {service && service.description}
               </p>;"
-              {/* Features */}              <div className="flex items-center justify-between mb-4">;`
+              {/* Features */}              <div className=flex items-center justify-between mb-4>;`
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service && service.color} flex items-center justify-center text-2xl`}>;
                   {service && service.icon}
                 </div>;"
-                <div className="text-right">;"
-                  <div className="text-2xl font-bold text-white">{service && service.price}</div>;"
-                  <div className="text-sm text-gray-400">{service && service.period}</div>;
+                <div className="text-right>;
+                  <div className="text-2xl font-bold text-white">{service && service.price}</div>;
+                  <div className=text-sm text-gray-400">{service && service.period}</div>;
               </div>;
               {/* Service Info */}'
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
-                {service && service.name}
-              </h3>;'"
-              <p className='text-gray-300 mb-4 leading-relaxed'>              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
+              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors>;
                 {service && service.name}
               </h3>;"
-              <p className="text-gray-300 mb-4 leading-relaxed">;
+              <p className='text-gray-300 mb-4 leading-relaxed'>              <h3 className=text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors>;
+                {service && service.name}
+              </h3>;"
+              <p className="text-gray-300 mb-4 leading-relaxed>;
               </p>;
-<<<<<<< HEAD
-                  </div>
-<<<<<<< HEAD
-                  <div className='text-sm text-gray-400'>{service.period}</div>
-=======
 
-                  </div>
-                  <div className='text-sm text-gray-400' />{service.period}</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 </div>
               </div>
 
               {/* Service Info */}
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+              <h3 className=text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                 {service.name}
               </h3>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-gray-300 mb-4 leading-relaxed>
                 {service.description}
               </p>
 
               {/* Features */}
-<<<<<<< HEAD
-              <div className="space-y-2 mb-4">
-                {service.features.slice(0, 3).map((feature, idx) => (
-                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    <span>{feature}</span>
-=======
-<div className='space-y-2 mb-4' />;
-                {service.features.slice(0, 3).map((feature, idx) => (<div;}
-                    key={idx}
 
-                    className='flex items-center space-x-2 text-sm text-gray-400'
-                   />
-                    <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
-                    <span>{feature}</span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    <span />{feature}</span>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   </div>
                 ))}
-<<<<<<< HEAD
-                {service.features.length > 3 && (
-                  <div className="text-sm text-cyan-400">
-                    +{service.features.length - 3} more features
-                  </div>
-                )}
-              </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                {service.features.length > 3 && (
-<div className='text-sm text-cyan-400'>
-                    +{service.features.length - 3} more features
-=======
-                ))}
-                {service.features.length > 3 && ('"
-                  <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
-                {service.features.slice(0, 3).map((feature, idx) => ("
-                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">"
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                  </div>
-                ))}
-                {service.features.length > 3 && ('"
-                  <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
-                    +{service.features.length - 3} more features;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
                   </div>
 =======
-                {service.features.length > 3 && (<div className='text-sm text-cyan-400' />;}
+                {service.features.length > 3 && (<div className=text-sm text-cyan-400 />;}
                     +{service.features.length - 3} more features;
                   </div>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 )}
               </div>;
                 )}
-<<<<<<< HEAD
-              </div>
 
-<<<<<<< HEAD
-              {/* Service Meta */}
-<div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
-                <div className='flex items-center space-x-2 text-gray-400'>
-=======
-              {/* Service Meta */}'
-              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>'
-                <div className='flex items-center space-x-2 text-gray-400'>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>                  <span>{service.setupTime}</span>
@@ -1063,15 +718,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>{feature}</span>
                   </div>
                 ))}
-                {service.features.slice(0, 3).map((feature, idx) => ("
-                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">"
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                {service.features.slice(0, 3).map((feature, idx) => (
+                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+                    <CheckCircle className=w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
                   </div>
-                {service.features.length > 3 && ('"
-                  <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
+                {service.features.length > 3 && ("
+                  <div className=text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className=space-y-2 mb-4>
                 {service.features.slice(0, 3).map((feature, idx) => ("
-                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">"
+                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400>
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                   </div>
                     +{service.features.length - 3} more features;
@@ -1079,23 +734,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
               </div>;
               {/* Service Meta */}
-<div className='grid grid-cols-2 gap-4 mb-6 text-sm' />;
-                <div className='flex items-center space-x-2 text-gray-400' />;
-                  <Clock className='w-4 h-4' />;
+<div className='grid grid-cols-2 gap-4 mb-6 text-sm />;
+                <div className=flex items-center space-x-2 text-gray-400' />;
+                  <Clock className='w-4 h-4 />;
                   <span />{service.setupTime}</span>;
                 </div>                  <span />{service.setupTime}</span>;
                 {service.description}
               </p>;
               {/* Features */}<span />{feature}</span>;
                   </div>;
-                ))}"
-                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
-                    <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />;
+                ))}
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\flex items-center space-x-2 text-sm text-gray-400\" />;"
+                    <CheckCircle className=\w-4 h-4 text-green-400 flex-shrink-0\ />;
                     <span />{feature}</span>;
                   </div>;"
-                {service.features.length > 3 && (<div className='text-sm text-cyan-400' />                    +{service.features.length - 3} more features              <div className=\"space-y-2 mb-4\" />;"
-                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;"
-                    <CheckCircle className=\"w-4 h-4 text-green-400 flex-shrink-0\" />;
+                {service.features.length > 3 && (<div className=text-sm text-cyan-400' />                    +{service.features.length - 3} more features              <div className=\"space-y-2 mb-4\ />;
+                {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=\"flex items-center space-x-2 text-sm text-gray-400\" />;
+                    <CheckCircle className=\w-4 h-4 text-green-400 flex-shrink-0\" />;
                   </div>;
                     +{service.features.length - 3} more features;
                   </div>;
@@ -1103,23 +758,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 )}
               </div>;
               {/* Service Meta */}
-<<<<<<< HEAD
-                </div>"
-                <div className="flex items-center space-x-2 text-gray-400">"
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
               {/* Service Meta */}
-              <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Clock className="w-4 h-4" />
+              <div className="grid grid-cols-2 gap-4 mb-6 text-sm>
+                <div className=flex items-center space-x-2 text-gray-400">
+                  <Clock className="w-4 h-4 />
                   <span>{service.setupTime}</span>
-<<<<<<< HEAD
-=======
-                </div>                  <span>{service.setupTime}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">"
                   <Users className="w-4 h-4" />"
@@ -1143,227 +791,120 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{service.growthRate}</span>
                 </div>
               </div>
-<<<<<<< HEAD
-              {/* Market Position */}"
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>"
-=======
-              {/* Market Position */}
 
-<div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>'
-                <div className='text-xs text-gray-400 mb-1'>'
+                  <Users className='w-4 h-4 />
+                  <span>{service.customers.toLocaleString()}</span>
+                </div>
+                <div className=flex items-center space-x-2 text-gray-400'>
+                  <Star className='w-4 h-4 text-yellow-400 />
+                  <span>{service.rating}/5</span>
+                </div>
+
+                <div className=text-sm text-gray-300 leading-relaxed">
+<div className=mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>
+                <div className='text-xs text-gray-400 mb-1>
                   Market Position
                 </div>
-                <div className='text-sm text-gray-300 leading-relaxed'>'
+                <div className=text-sm text-gray-300 leading-relaxed'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  <span />{service.growthRate}</span>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+                </div>
+              </div>
+              {/* Market Position */}
+                <div className="text-xs text-gray-400 mb-1>Market Position</div>
+                <div className=text-sm text-gray-300 leading-relaxed">
                   {service.marketPosition}
                 </div>
               </div>
-<<<<<<< HEAD
-              {/* ROI */}"
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>"
-=======
-              {/* ROI */}
 
-<div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>'
-                <div className='text-xs text-green-400 mb-1 font-semibold'>'
+                <div className="text-sm text-green-300 font-medium>
+<div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30>
+                <div className=text-xs text-green-400 mb-1 font-semibold'>
                   Expected ROI
                 </div>
-                <div className='text-sm text-green-300 font-medium'>'
+                <div className='text-sm text-green-300 font-medium>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
-<div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30' />
-                <div className='text-xs text-green-400 mb-1 font-semibold' />
+<div className=mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30' />
+                <div className='text-xs text-green-400 mb-1 font-semibold />
                   Expected ROI;
                 </div>
-<<<<<<< HEAD
-              </div>
-              {/* Service Meta */}'
-              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;'
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Clock className='w-4 h-4' />;
-                  <span>{service && service.setupTime}</span>;
-                </div>                  <span>{service && service.setupTime}</span>;
-                </div>;"
-                <div className="flex items-center space-x-2 text-gray-400">;"
-                  <Users className="w-4 h-4" />;
-                  <span>{service && service.customers.toLocaleString()}</span>;
-                </div>;"
-                <div className="flex items-center space-x-2 text-gray-400">;"
-                  <Star className="w-4 h-4 text-yellow-400" />;
-                  <span>{service && service.rating}/5</span>;
-                </div>;'
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Users className='w-4 h-4' />;
-                  <span>{service && service.customers.toLocaleString()}</span>;
-                </div>;'
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Star className='w-4 h-4 text-yellow-400' />;
-                  <span>{service && service.rating}/5</span>;
-                </div>;'
-                <div className='flex items-center space-x-2 text-gray-400'>;'"
-                  <TrendingUp className='w-4 h-4 text-green-400' />                  <span>{service && service.growthRate}</span>                <div className="flex items-center space-x-2 text-gray-400">;"
-                  <TrendingUp className="w-4 h-4 text-green-400" />;
-                  <span>{service && service.growthRate}</span>;
-                </div>;
-              </div>;
-              {/* Market Position */}'
-              <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>;'
-                <div className='text-xs text-gray-400 mb-1'>;
-                  Market Position;
-                </div>;'"
-                <div className='text-sm text-gray-300 leading-relaxed'>                  {service && service.marketPosition}              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">;"
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>;"
-                <div className="text-sm text-gray-300 leading-relaxed">;
-                  {service && service.marketPosition}
-                </div>;
-              </div>;
-              {/* ROI */}'
-              <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>;'
-                <div className='text-xs text-green-400 mb-1 font-semibold'>;
-                  Expected ROI;
-                </div>;'"
-                <div className='text-sm text-green-300 font-medium'>                  {service && service.roi}              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">;"
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>;"
-                <div className="text-sm text-green-300 font-medium">;
-=======
-                <div className='text-sm text-green-300 font-medium' />
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                   {service.roi}
                 </div>;
               </div>;
               {/* Service Meta */}
-              <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;'
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Clock className='w-4 h-4' />;'
-                  <span>{service && service.setupTime}</span>;
-                </div>                  <span>{service && service.setupTime}</span>;
-                </div>;
-                <div className="flex items-center space-x-2 text-gray-400">;"
-                  <Users className="w-4 h-4" />;"
-                  <span>{service && service.customers.toLocaleString()}</span>;
-                </div>;
-                <div className="flex items-center space-x-2 text-gray-400">;"
-                  <Star className="w-4 h-4 text-yellow-400" />;"
-                  <span>{service && service.rating}/5</span>;
-                </div>;
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Users className='w-4 h-4' />;'
-                  <span>{service && service.customers.toLocaleString()}</span>;
-                </div>;
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <Star className='w-4 h-4 text-yellow-400' />;'
-                  <span>{service && service.rating}/5</span>;
-                </div>;
-                <div className='flex items-center space-x-2 text-gray-400'>;'
-                  <TrendingUp className='w-4 h-4 text-green-400' />                  <span>{service && service.growthRate}</span>                <div className="flex items-center space-x-2 text-gray-400">;"
-                  <TrendingUp className="w-4 h-4 text-green-400" />;"
+
                   <span>{service && service.growthRate}</span>;
                 </div>;
               </div>;
               {/* Market Position */}
-              <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>;'
-                <div className='text-xs text-gray-400 mb-1'>;'
-                  Market Position;
-                </div>;
-                <div className='text-sm text-gray-300 leading-relaxed'>                  {service && service.marketPosition}              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">;"
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>;"
-                <div className="text-sm text-gray-300 leading-relaxed">;"
+
                   {service && service.marketPosition}
                 </div>;
               </div>;
               {/* ROI */}
-              <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>;'
-                <div className='text-xs text-green-400 mb-1 font-semibold'>;'
-                  Expected ROI;
-<<<<<<< HEAD
-                </div>;
-                <div className='text-sm text-green-300 font-medium'>                  {service && service.roi}              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">;"
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>;"
-                <div className="text-sm text-green-300 font-medium">;"
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                   {service && service.roi}
                 </div>;
-              <div className='flex space-x-3'>
+              <div className=flex space-x-3'>
 
-<<<<<<< HEAD
-                <a
-              </div>;{/* Action Buttons */}<div className='flex space-x-3'>;
-=======
-              </div>;
 
-              {/* Action Buttons */}
-              <div className='flex space-x-3'>
 
-<div className='flex space-x-3'>'
-                <a,
-href={service.link}
-                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200 text-center group'>'
-
-                  Get Started;
-                  <ArrowRight className='w-4 h-4 ml-2 inline group-"hover":translate-x-1 transition-transform' />;'
-                </a>;
-                <button className='px-4 py-3 border border-white/20 text-white rounded-lg "hover":border-cyan-500/50 "hover":bg-cyan-500/10 transition-all duration-200'>;'
-                  <Eye className='w-4 h-4' />;'
                 </button>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </motion && motion.div>;
-<div className='flex space-x-3'>
+<div className=flex space-x-3'>
                 <a
                   href={service.link}
-                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group'
+                  className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group
                 >
                   Get Started
-                  <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />
+                  <ArrowRight className=w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />
                 </a>
-                <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200'>
-                  <Eye className='w-4 h-4' />
+                <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200>
+                  <Eye className=w-4 h-4' />
                 </button>
               </div>
               {/* Trial Info */}
-<div className='mt-4 text-center'>;'
-                <div className='text-sm text-gray-400'>;'
-                  <span className='text-cyan-400 font-semibold'>;'
-                    {service.trialDays} days;
-                  </span>{' '}'
+
 
               {/* Market Position */}
-              <div className="mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>
-                <div className="text-sm text-gray-300 leading-relaxed">
+              <div className=mb-4 p-3 rounded-lg bg-white/5 border border-white/10">
+                <div className="text-xs text-gray-400 mb-1>Market Position</div>
+                <div className=text-sm text-gray-300 leading-relaxed">
                   {service.marketPosition}
                 </div>
               </div>
 
               {/* ROI */}
-              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
-                <div className="text-sm text-green-300 font-medium">
+              <div className="mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30>
+                <div className=text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
+                <div className="text-sm text-green-300 font-medium>
                   {service.roi}
                 </div>
               </div>
-<<<<<<< HEAD
 
-              {/* Action Buttons */}
-              <div className="flex space-x-3">
-=======
-              {/* Action Buttons */}
-              <div className='flex space-x-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 <a
                   href={service.link}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
+                  className=flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group"
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform />
                 </a>
-                <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200">
-                  <Eye className="w-4 h-4" />
+                <button className=px-4 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200">
+                  <Eye className="w-4 h-4 />
                 </button>
               </div>
 
               {/* Trial Info */}
-              <div className="mt-4 text-center">
-                <div className="text-sm text-gray-400">
-                  <span className="text-cyan-400 font-semibold">{service.trialDays} days</span> free trial
+              <div className=mt-4 text-center">
+                <div className="text-sm text-gray-400>
+                  <span className=text-cyan-400 font-semibold">{service.trialDays} days</span> free trial
                 </div>
               </div>
             </motion.div>
@@ -1373,244 +914,208 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Call to Action */}
-        <motion&& motion.div,
-initial={{ "opacity": 0, "y": 20 
-}
-          whileInView={{ "opacity": 1, "y": 0 
-}
-          transition={{ "duration": 0 && 0.6, "delay": 0 && 0.6 }}
-          viewport={{ "once": true }}
 
-className='text-center mt-20''
-        >
-          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>'
-            <h3 className='text-3xl font-bold text-white mb-4'>'
+            <h3 className='text-3xl font-bold text-white mb-4>
+         />
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm' />
+            <h3 className='text-3xl font-bold text-white mb-4 />
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+              Ready to Transform Your Business?
+
+            <h3 className="text-3xl font-bold text-white mb-4>
               Ready to Transform Your Business?
             </h3>
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'
-              Join thousands of businesses already leveraging our cutting-edge,
-technology solutions. Get started today and experience the future,
-of business automation.
-            </p>
-            <div className='flex flex-col "sm":flex-row gap-4 justify-center items-center'>'
-              <a,
-href='/contact''
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold "hover":from-cyan-600 "hover":to-blue-600 transition-all duration-200 text-lg''
-              >
-                Start Your Free Trial;
-              </a>
-              <a'
-                href='/pricing-2034'"
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">"
-=======
-            </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already leveraging our cutting-edge technology solutions. 
+              Join thousands of businesses already leveraging our cutting-edge technology solutions.
               Get started today and experience the future of business automation.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
-              >
-                Start Your Free Trial
-=======
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center' />
-              <a;
-href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg'
-               />
-                Start Your Free Trial;
-              </a>
-              <a,
-href='/pricing-2034''
-
-                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold "hover":bg-cyan-500 "hover":text-white transition-all duration-200 text-lg''
-              >
-                View Pricing
-              </a>
-            </div>
-            <div className='mt-6 text-sm text-gray-400'>'
-              <Phone className='w-4 h-4 inline mr-2' />'
-              Need help? Call us at {contactInfo.mobil
+            <div className=flex flex-col sm:flex-row gap-4 justify-center items-center">
+                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'>;
+                View Pricing;
+              </a>;
+            </div>;
+            <div className=mt-6 text-sm text-gray-400'>;'
+              <Phone className=w-4 h-4 inline mr-2 />              Need help? Call us at {contactInfo && contactInfo.mobile}        >;"
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm>;"
+            <h3 className="text-3xl font-bold text-white mb-4>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Join thousands of businesses already leveraging our cutting-edge technology solutions. ;
+              Get started today and experience the future of business automation.;
+            </p>;
+            <div className=flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <a"
+                href=/contact
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 }
 }
   );
 }
               </h3>;"
-              <p className="text - gray - 300 mb - 4 leading - relaxed">;
+              <p className="text - gray - 300 mb - 4 leading - relaxed>;
               </p>;
               {/* Features */}'
-              <div className='space - y-2 mb - 4'>;
+              <div className='space - y-2 mb - 4>;
                 {service.features.slice (0, 3).map ((feature, idx) => (
                   <div;
-                    key={idx}'
+                    key={idx}
                     className='flex items - center space - x-2 text - sm text - gray - 400';
-                  >;'
-                    <CheckCircle className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
+                  >;
+                    <CheckCircle className=w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
+                  </div>))}
+                {service.features.length > 3 && ('
+                  <div className=text - sm text - cyan - 400>                    +{service.features.length - 3} more features              <div className="space - y-2 mb - 4">;
+                {service.features.slice (0, 3).map ((feature, idx) => (
+                  <div key={idx} className=flex items - center space - x-2 text - sm text - gray - 400">;"
+                    <CheckCircle className=w - 4 h - 4 text - green - 400 flex - shrink - 0 />;
                   </div>))}
                 {service.features.length > 3 && ('"
-                  <div className='text - sm text - cyan - 400'>                    +{service.features.length - 3} more features              <div className="space - y-2 mb - 4">;
-                {service.features.slice (0, 3).map ((feature, idx) => ("
-                  <div key={idx} className="flex items - center space - x-2 text - sm text - gray - 400">;"
-                    <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                  </div>))}
-                {service.features.length > 3 && ('"
-                  <div className='text - sm text - cyan - 400'>                  <div className="text - sm text - cyan - 400">;
+                  <div className='text - sm text - cyan - 400>                  <div className="text - sm text - cyan - 400>;
                     +{service.features.length - 3} more features;
                   </div>)}
               </div>;
-              {/* Service Meta */}'
-              <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;'
-                <div className='flex items - center space - x-2 text - gray - 400'>;'
-                  <Clock className='w - 4 h - 4' />;
+              {/* Service Meta */}
+              <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;
+                <div className=flex items - center space - x-2 text - gray - 400'>;'
+                  <Clock className=w - 4 h - 4 />;
                   <span>{service.setup_time}</span>;
                 </div>                  <span>{service.setup_time}</span>;
-                </div>;"
-                <div className="flex items - center space - x-2 text - gray - 400">;"
-                  <Users className="w - 4 h - 4" />;
+                </div>;
+                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <Users className=w - 4 h - 4" />;
                   <span>{service.customers.toLocaleString ()}</span>;
                 </div>;"
-                <div className="flex items - center space - x-2 text - gray - 400">;"
-                  <Star className="w - 4 h - 4 text - yellow - 400" />;
+                <div className=flex items - center space - x-2 text - gray - 400>;"
+                  <Star className="w - 4 h - 4 text - yellow - 400 />;
                   <span>{service.rating}/5</span>;
                 </div>;'
-                <div className='flex items - center space - x-2 text - gray - 400'>;'
+                <div className='flex items - center space - x-2 text - gray - 400>;
                   <Users className='w - 4 h - 4' />;
                   <span>{service.customers.toLocaleString ()}</span>;
-                </div>;'
-                <div className='flex items - center space - x-2 text - gray - 400'>;'
-                  <Star className='w - 4 h - 4 text - yellow - 400' />;
+                </div>;
+                <div className=flex items - center space - x-2 text - gray - 400'>;'
+                  <Star className=w - 4 h - 4 text - yellow - 400 />;
                   <span>{service.rating}/5</span>;
                 </div>;'
-                <div className='flex items - center space - x-2 text - gray - 400'>;'"
-                  <TrendingUp className='w - 4 h - 4 text - green - 400' />                  <span>{service.growth_rate}</span>                <div className="flex items - center space - x-2 text - gray - 400">;"
-                  <TrendingUp className="w - 4 h - 4 text - green - 400" />;
+                <div className='flex items - center space - x-2 text - gray - 400>;
+                  <TrendingUp className='w - 4 h - 4 text - green - 400' />                  <span>{service.growth_rate}</span>                <div className="flex items - center space - x-2 text - gray - 400">;
+                  <TrendingUp className=w - 4 h - 4 text - green - 400" />;
                   <span>{service.growth_rate}</span>;
                 </div>;
               </div>;
-              {/* Market Position */}'
-              <div className='mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
-                <div className='text - xs text - gray - 400 mb - 1'>;
+              {/* Market Position */}
+              <div className=mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10'>;'
+                <div className=text - xs text - gray - 400 mb - 1>;
                   Market Position;
                 </div>;'"
-                <div className='text - sm text - gray - 300 leading - relaxed'>                  {service.market_position}              <div className="mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10">;"
-                <div className="text - xs text - gray - 400 mb - 1">Market Position</div>;"
+                <div className='text - sm text - gray - 300 leading - relaxed>                  {service.market_position}              <div className=mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10>;"
+                <div className="text - xs text - gray - 400 mb - 1>Market Position</div>;
                 <div className="text - sm text - gray - 300 leading - relaxed">;
                   {service.market_position}
                 </div>;
               </div>;
-              {/* ROI */}'
-              <div className='mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30'>;'
-                <div className='text - xs text - green - 400 mb - 1 font - semibold'>;
+              {/* ROI */}
+              <div className='mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30'>;
+                <div className=text - xs text - green - 400 mb - 1 font - semibold'>;
                   Expected ROI;
-                </div>;'"
-                <div className='text - sm text - green - 300 font - medium'>                  {service.roi}              <div className="mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30">;"
-                <div className="text - xs text - green - 400 mb - 1 font - semibold">Expected ROI</div>;"
-                <div className="text - sm text - green - 300 font - medium">;
+                </div>;'
+                <div className=text - sm text - green - 300 font - medium>                  {service.roi}              <div className=mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30">;"
+                <div className=text - xs text - green - 400 mb - 1 font - semibold>Expected ROI</div>;"
+                <div className="text - sm text - green - 300 font - medium>;
                   {service.roi}
                 </div>;
               </div>;
               {/* Action Buttons */}'
-              <div className='flex space - x-3'>;
+              <div className='flex space - x-3>;
                 <a;
-                  href={service.link}'
+                  href={service.link}
                   className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group';
                 >;
-                  Get Started;'
-                  <ArrowRight className='w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
+                  Get Started;
+                  <ArrowRight className=w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
                 </a>;'
-                <button className='px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200'>;'
-                  <Eye className='w - 4 h - 4' />                </button>;
+                <button className=px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200>;'
+                  <Eye className='w - 4 h - 4 />                </button>;
               </div>;
               {/* Trial Info */}                <a;
-                  href={service.link}"
+                  href={service.link}
                   className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group";
                 >;
-                  Get Started;"
-                  <ArrowRight className="w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform" />;
+                  Get Started;
+                  <ArrowRight className=w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform" />;
                 </a>;"
-                <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200">;"
-                  <Eye className="w - 4 h - 4" />;
+                <button className=px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200>;"
+                  <Eye className="w - 4 h - 4 />;
                 </button>;
               </div>;
-              {/* Trial Info */}'
-              <div className='mt - 4 text - center'>;'
-                <div className='text - sm text - gray - 400'>;'
-                  <span className='text - cyan - 400 font - semibold'>;
+              {/* Trial Info */}
+              <div className='mt - 4 text - center'>;
+                <div className=text - sm text - gray - 400'>;'
+                  <span className=text - cyan - 400 font - semibold>;
                     {service.trial_days} days;'
-                  </span>{' '}"
-                  free trial                </div>              <div className="mt - 4 text - center">;"
-                <div className="text - sm text - gray - 400">;"
-                  <span className="text - cyan - 400 font - semibold">{service.trial_days} days</span> free trial;
+                  </span>{' }
+                  free trial                </div>              <div className="mt - 4 text - center">;
+                <div className=text - sm text - gray - 400">;"
+                  <span className=text - cyan - 400 font - semibold>{service.trial_days} days</span> free trial;
                 </div>;
               </div>;
             </motion.div>))}
         </motion.div>;
         {/* Call to Action */}
         <motion.div;
-<<<<<<< HEAD
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}'
-=======
-          initial={{ opacity: 0;, coordinate_y: 20 ;}}
-          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-          transition={{ duration: 0.6;, delay: 0.6 ;}}
-          viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          className='text - center mt - 20';
+
+          className=text - center mt - 20';
         >;'
-          <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;'
-            <h3 className='text - 3xl font - bold text - white mb - 4'>;
+          <div className=bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm>;'
+            <h3 className='text - 3xl font - bold text - white mb - 4>;
               Ready to Transform Your Business?;
-            </h3>;'
+            </h3>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
               Join thousands of businesses already leveraging our cutting - edge;
               technology solutions. Get started today and experience the future;
               of business automation.;
-            </p>;'
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+            </p>;
+            <div className=flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <a;'
-                href='/contact';'
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg';
+                href=/contact;'
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg;
               >;
                 Start Your Free Trial;
               </a>;
-              <a;'
-                href='/pricing - 2034';'
-                className='px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg';
+              <a;
+                href='/pricing - 2034';
+                className=px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg';
               >;
                 View Pricing;
               </a>;
             </div>;'
-            <div className='mt - 6 text - sm text - gray - 400'>;'
-              <Phone className='w - 4 h - 4 inline mr - 2' />              Need help? Call us at {contact_info.mobile}        >;"
-          <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm">;"
+            <div className=mt - 6 text - sm text - gray - 400>;'
+              <Phone className='w - 4 h - 4 inline mr - 2 />              Need help? Call us at {contact_info.mobile}        >;"
+          <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm>;
             <h3 className="text - 3xl font - bold text - white mb - 4">;
               Ready to Transform Your Business?;
-            </h3>;"
-            <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+            </h3>;
+            <p className=text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
               Join thousands of businesses already leveraging our cutting - edge technology solutions.;
               Get started today and experience the future of business automation.;
             </p>;"
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+            <div className=flex flex - col sm:flex - row gap - 4 justify - center items - center>;
               <a;"
-                href="/contact";"
+                href="/contact;
                 className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg";
               >;
                 Start Your Free Trial;
               </a>;
-                            <a;"
-                href="/pricing - 2034";"
-                className="px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg";
+                            <a;
+                href=/pricing - 2034";"
+                className=px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg;
               >;
                 View Pricing;
               </a>;
             </div>;"
-            <div className="mt - 6 text - sm text - gray - 400">;"
+            <div className="mt - 6 text - sm text - gray - 400>;
               <Phone className="w - 4 h - 4 inline mr - 2" />;
               Need help? Call us at {contact_info.mobile}
             </div>;
@@ -1619,26 +1124,20 @@ href='/pricing-2034''
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <a;
-href='/pricing-2034'
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
+                className=px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
                />
                 View Pricing;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </a>
                              <a
-                 href="/pricing-2034"
+                 href=/pricing-2034
                  className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
                >
                  View Pricing
                </a>
             </div>
-            <div className="mt-6 text-sm text-gray-400">
+            <div className=mt-6 text-sm text-gray-400>
               <Phone className="w-4 h-4 inline mr-2" />
               Need help? Call us at {contactInfo.mobile}
             </div>
@@ -1655,61 +1154,61 @@ href='/pricing-2034'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-          viewport={{ once: true }}className='text-center mt-20';
+          viewport={{ once: true }}className='text-center mt-20;
         >;
-          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>;
-            <h3 className='text-3xl font-bold text-white mb-4'>;
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>;
+            <h3 className='text-3xl font-bold text-white mb-4>;
               Ready to Transform Your Business?;
             </h3>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+            <p className=text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
               Join thousands of businesses already leveraging our cutting-edge;
               technology solutions. Get started today and experience the future;
               of business automation.;
             </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center>;
               <a;
-                href='/contact';
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg';
+                href=/contact';
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg;
               >;
                 Start Your Free Trial;
               </a>;
               <a;
-                href='/pricing-2034';
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">;
+                href=/pricing-2034';
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm>;
             <h3 className="text-3xl font-bold text-white mb-4">;
               Ready to Transform Your Business?;
             </h3>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className=text-xl text-gray-300 mb-8 max-w-3xl mx-auto>;
               Join thousands of businesses already leveraging our cutting-edge technology solutions.;
               Get started today and experience the future of business automation.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm>
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className=text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
               Join thousands of businesses already leveraging our cutting-edge technology solutions.
               Get started today and experience the future of business automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'>;
+                className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg>;
                 View Pricing;
               </a>;
             </div>;
-            <div className='mt-6 text-sm text-gray-400'>;
-              <Phone className='w-4 h-4 inline mr-2' />              Need help? Call us at {contactInfo && contactInfo.mobile}        >;
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">;
+            <div className=mt-6 text-sm text-gray-400'>;
+              <Phone className='w-4 h-4 inline mr-2 />              Need help? Call us at {contactInfo && contactInfo.mobile}        >;
+          <div className=bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm>;
             <h3 className="text-3xl font-bold text-white mb-4">;
               Ready to Transform Your Business?;
             </h3>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className=text-xl text-gray-300 mb-8 max-w-3xl mx-auto>;
               Join thousands of businesses already leveraging our cutting-edge technology solutions. ;
               Get started today and experience the future of business automation.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a;
-                href="/contact";
+                href=/contact;
   )}
 }
   )}
@@ -1717,104 +1216,104 @@ href='/pricing-2034'
               <p className="text - gray - 300 mb - 4 leading - relaxed">;
               </p>;
               {/* Features */}
-              <div className='space - y-2 mb - 4'>;
+              <div className=space - y-2 mb - 4'>;
                 {service.features.slice (0, 3).map ((feature, idx) => (<div;
                     key={idx}
-                    className='flex items - center space - x-2 text - sm text - gray - 400';
+                    className='flex items - center space - x-2 text - sm text - gray - 400;
                   >;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
+                    <CheckCircle className=w - 4 h - 4 text - green - 400 flex - shrink - 0' />                    <span>{feature}</span>;
                   </div>))}
-                {service.features.length > 3 && (<div className='text - sm text - cyan - 400'>                    +{service.features.length - 3} more features              <div className="space - y-2 mb - 4">;
+                {service.features.length > 3 && (<div className='text - sm text - cyan - 400>                    +{service.features.length - 3} more features              <div className=space - y-2 mb - 4>;
                 {service.features.slice (0, 3).map ((feature, idx) => (<div key={idx} className="flex items - center space - x-2 text - sm text - gray - 400">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
+                    <CheckCircle className=w - 4 h - 4 text - green - 400 flex - shrink - 0 />;
                   </div>))}
-                {service.features.length > 3 && (<div className='text - sm text - cyan - 400'>                  <div className="text - sm text - cyan - 400">;
+                {service.features.length > 3 && (<div className=text - sm text - cyan - 400'>                  <div className="text - sm text - cyan - 400">;
                     +{service.features.length - 3} more features;
                   </div>)}
               </div>;
               {/* Service Meta */}
-              <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;
-                <div className='flex items - center space - x-2 text - gray - 400'>;
-                  <Clock className='w - 4 h - 4' />;
+              <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm>;
+                <div className=flex items - center space - x-2 text - gray - 400'>;
+                  <Clock className='w - 4 h - 4 />;
                   <span>{service.setup_time}</span>;
                 </div>                  <span>{service.setup_time}</span>;
                 </div>;
-                <div className="flex items - center space - x-2 text - gray - 400">;
+                <div className=flex items - center space - x-2 text - gray - 400>;
                   <Users className="w - 4 h - 4" />;
                   <span>{service.customers.toLocaleString ()}</span>;
                 </div>;
-                <div className="flex items - center space - x-2 text - gray - 400">;
+                <div className=flex items - center space - x-2 text - gray - 400>;
                   <Star className="w - 4 h - 4 text - yellow - 400" />;
                   <span>{service.rating}/5</span>;
                 </div>;
-                <div className='flex items - center space - x-2 text - gray - 400'>;
-                  <Users className='w - 4 h - 4' />;
+                <div className=flex items - center space - x-2 text - gray - 400'>;
+                  <Users className='w - 4 h - 4 />;
                   <span>{service.customers.toLocaleString ()}</span>;
                 </div>;
-                <div className='flex items - center space - x-2 text - gray - 400'>;
-                  <Star className='w - 4 h - 4 text - yellow - 400' />;
+                <div className=flex items - center space - x-2 text - gray - 400'>;
+                  <Star className='w - 4 h - 4 text - yellow - 400 />;
                   <span>{service.rating}/5</span>;
                 </div>;
-                <div className='flex items - center space - x-2 text - gray - 400'>;
-                  <TrendingUp className='w - 4 h - 4 text - green - 400' />                  <span>{service.growth_rate}</span>                <div className="flex items - center space - x-2 text - gray - 400">;
+                <div className=flex items - center space - x-2 text - gray - 400'>;
+                  <TrendingUp className='w - 4 h - 4 text - green - 400 />                  <span>{service.growth_rate}</span>                <div className=flex items - center space - x-2 text - gray - 400>;
                   <TrendingUp className="w - 4 h - 4 text - green - 400" />;
                   <span>{service.growth_rate}</span>;
                 </div>;
               </div>;
               {/* Market Position */}
-              <div className='mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-                <div className='text - xs text - gray - 400 mb - 1'>;
+              <div className=mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+                <div className='text - xs text - gray - 400 mb - 1>;
                   Market Position;
                 </div>;
-                <div className='text - sm text - gray - 300 leading - relaxed'>                  {service.market_position}              <div className="mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+                <div className=text - sm text - gray - 300 leading - relaxed'>                  {service.market_position}              <div className=mb - 4 p - 3 rounded - lg bg - white / 5 border border - white / 10>;
                 <div className="text - xs text - gray - 400 mb - 1">Market Position</div>;
-                <div className="text - sm text - gray - 300 leading - relaxed">;
+                <div className=text - sm text - gray - 300 leading - relaxed>;
                   {service.market_position}
                 </div>;
               </div>;
               {/* ROI */}
-              <div className='mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30'>;
-                <div className='text - xs text - green - 400 mb - 1 font - semibold'>;
+              <div className='mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30>;
+                <div className=text - xs text - green - 400 mb - 1 font - semibold'>;
                   Expected ROI;
                 </div>;
-                <div className='text - sm text - green - 300 font - medium'>                  {service.roi}              <div className="mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30">;
-                <div className="text - xs text - green - 400 mb - 1 font - semibold">Expected ROI</div>;
+                <div className='text - sm text - green - 300 font - medium>                  {service.roi}              <div className="mb - 6 p - 3 rounded - lg bg - gradient - to - r from - green - 500 / 20 to - emerald - 500 / 20 border border - green - 500 / 30">;
+                <div className=text - xs text - green - 400 mb - 1 font - semibold>Expected ROI</div>;
                 <div className="text - sm text - green - 300 font - medium">;
                   {service.roi}
                 </div>;
               </div>;
               {/* Action Buttons */}
-              <div className='flex space - x-3'>;
+              <div className=flex space - x-3'>;
                 <a;
                   href={service.link}
-                  className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group';
+                  className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group;
                 >;
                   Get Started;
-                  <ArrowRight className='w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
+                  <ArrowRight className=w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
                 </a>;
-                <button className='px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200'>;
-                  <Eye className='w - 4 h - 4' />                </button>;
+                <button className='px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200>;
+                  <Eye className=w - 4 h - 4' />                </button>;
               </div>;
               {/* Trial Info */}                <a;
                   href={service.link}
-                  className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group";
+                  className=flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 3 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - center group;
                 >;
                   Get Started;
                   <ArrowRight className="w - 4 h - 4 ml - 2 inline group - hover:translate - x-1 transition - transform" />;
                 </a>;
-                <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200">;
+                <button className=px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 10 transition - all duration - 200>;
                   <Eye className="w - 4 h - 4" />;
                 </button>;
               </div>;
               {/* Trial Info */}
-              <div className='mt - 4 text - center'>;
-                <div className='text - sm text - gray - 400'>;
-                  <span className='text - cyan - 400 font - semibold'>;
+              <div className='mt - 4 text - center>;
+                <div className=text - sm text - gray - 400'>;
+                  <span className='text - cyan - 400 font - semibold>;
                     {service.trial_days} days;
-                  </span>{' '}
-                  free trial                </div>              <div className="mt - 4 text - center">;
+                  </span>{ '}
+                  free trial                </div>              <div className=mt - 4 text - center>;
                 <div className="text - sm text - gray - 400">;
-                  <span className="text - cyan - 400 font - semibold">{service.trial_days} days</span> free trial;
+                  <span className=text - cyan - 400 font - semibold>{service.trial_days} days</span> free trial;
                 </div>;
               </div>;
             </motion.div>))}
@@ -1825,69 +1324,69 @@ href='/pricing-2034'
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className='text - center mt - 20';
+          className='text - center mt - 20;
         >;
-          <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;
-            <h3 className='text - 3xl font - bold text - white mb - 4'>;
+          <div className=bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm'>;
+            <h3 className='text - 3xl font - bold text - white mb - 4>;
               Ready to Transform Your Business?;
             </h3>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+            <p className=text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
               Join thousands of businesses already leveraging our cutting - edge;
               technology solutions. Get started today and experience the future;
               of business automation.;
             </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center>;
               <a;
-                href='/contact';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg';
+                href=/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg;
               >;
                 Start Your Free Trial;
               </a>;
               <a;
-                href='/pricing - 2034';
-                className='px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg';
+                href=/pricing - 2034';
+                className='px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg;
               >;
                 View Pricing;
               </a>;
             </div>;
-            <div className='mt - 6 text - sm text - gray - 400'>;
-              <Phone className='w - 4 h - 4 inline mr - 2' />              Need help? Call us at {contact_info.mobile}        >;
+            <div className=mt - 6 text - sm text - gray - 400'>;
+              <Phone className='w - 4 h - 4 inline mr - 2 />              Need help? Call us at {contact_info.mobile}        >;
           <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 rounded - 2xl p - 12 backdrop - blur - sm">;
-            <h3 className="text - 3xl font - bold text - white mb - 4">;
+            <h3 className=text - 3xl font - bold text - white mb - 4>;
               Ready to Transform Your Business?;
             </h3>;
             <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
               Join thousands of businesses already leveraging our cutting - edge technology solutions.;
               Get started today and experience the future of business automation.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+            <div className=flex flex - col sm:flex - row gap - 4 justify - center items - center>;
               <a;
                 href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg";
+                className=px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 text - lg;
               >;
                 Start Your Free Trial;
               </a>;
                             <a;
                 href="/pricing - 2034";
-                className="px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg";
+                className=px - 8 py - 4 border border - cyan - 500 text - cyan - 400 rounded - lg font - semibold hover:bg - cyan - 500 hover:text - white transition - all duration - 200 text - lg;
               >;
                 View Pricing;
               </a>;
             </div>;
             <div className="mt - 6 text - sm text - gray - 400">;
-              <Phone className="w - 4 h - 4 inline mr - 2" />;
+              <Phone className=w - 4 h - 4 inline mr - 2 />;
               Need help? Call us at {contact_info.mobile}
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </section>)}className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg';
+    </section>)}className=px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg';
               >;
                 View Pricing;
               </a>;
             </div>;
-            <div className='mt-6 text-sm text-gray-400'>;
-              <Phone className='w-4 h-4 inline mr-2' />;
+            <div className='mt-6 text-sm text-gray-400>;
+              <Phone className=w-4 h-4 inline mr-2' />;
               Need help? Call us at {contactInfo.mobile}
             </div>;
           </div>;
@@ -1899,13 +1398,7 @@ href='/pricing-2034'
   )}
   )
 }
-<<<<<<< HEAD
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 
 "

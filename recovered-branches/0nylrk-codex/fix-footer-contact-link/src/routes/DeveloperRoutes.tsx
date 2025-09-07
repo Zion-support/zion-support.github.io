@@ -50,14 +50,12 @@ import ApiErrorCodes from "../pages/ApiErrorCodes",  return ("
     </Routes>
   )
 import React from "react";"
-import { Navigate, Route, Routes } from "react-router-dom";"
 import DeveloperPortal from "DeveloperPortal";"
 import ApiDocsHub from "ApiDocsHub";"
 import ApiReference from "ApiReference";"
 import ApiGettingStarted from "ApiGettingStarted";"
 import ApiWebhooks from "ApiWebhooks";"
 import ApiSampleCode from "ApiSampleCode";"
-import ApiErrorCodes from "../pages/ApiErrorCodes";"
 export default function DeveloperRoutes() {;
 }
 return (;

@@ -23,8 +23,6 @@ export function LanguageThemeSelector() {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");"
 const { theme, setTheme } = useTheme(),;
 const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),;"
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");"
 return (;
                   : "border-border "hover":border-primary/40""
               }`}`              onClick={() => setSelectedLanguage(language.code)}
@@ -57,8 +55,6 @@ const "languages": Language[] = [;
   { "code": "zh", "name": "中文", "flag": "🇨🇳" }],;"
 export function LanguageThemeSelector() {;
   }
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");"
   return (;
     <div className="space-y-8 px-4">;"
       <div className="space-y-2">;"

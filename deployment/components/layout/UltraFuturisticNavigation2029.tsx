@@ -215,7 +215,6 @@ const mainNavItems = [
 }
 ];
 
-const mainNavItems = [
 
     services: [;
       {name: 'AI Personalized Medicine Platform',

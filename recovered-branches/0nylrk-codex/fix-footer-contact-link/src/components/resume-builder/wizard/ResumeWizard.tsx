@@ -27,12 +27,6 @@ import { RESUME_STEPS } from './constants';'
 export function ResumeWizard() {
 }
 import {useState, useEffect} from 'react';'
-import {use_auth} from '@/hooks / use_auth';'
-import {use_resume} from '@/hooks / use_resume';'
-import {Tabs} from '@/components / ui / tabs';'
-import {Card, CardContent} from '@/components / ui / card';'
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';'
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';'
 import {Button} from '@/components/ui/button';'
 import {Resume} from '@/types/resume';'
 // Import components,
@@ -170,7 +164,6 @@ if ( {) {
 ;
   const prev_step = () =>: any {
     }
-    const current_index = RESUME_STEPS.find_index (step => { return step.id === active_tab); }
     // Check condition,
 if ( {) {
   $2
@@ -261,7 +254,6 @@ return (;
       </Card>;
     </div>);
   ),; const [activeTab, setActiveTab] = useState ('basic-info');'
-const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 //Use the extracted hook for progress calculation <AlertTitle>Error</AlertTitle> <AlertDescription> {
   }
   error 

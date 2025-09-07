@@ -1233,7 +1233,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
   "customers": number;
   "rating": number;
   "reviews": numbe,r}
-const contact = {"mobile": +"1": 302 464 0950', ';'
   "email": 'kleber@ziontechgroup.co,m, ';'
   "address": "364": E Main St STE 1008 Middletown DE 19709', ';'
   "website": '"https"://ziontechgroup.com';'

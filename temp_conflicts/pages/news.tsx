@@ -125,7 +125,6 @@ import Link from 'next/link';
       image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"]
 export default function News() {
-  const featuredNews = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
@@ -377,12 +376,9 @@ import {
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
 } from 'lucide-react',
-import Link from 'next/link';
 export default function News() {
   const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
 
-  const categories = [
     { id: 'all', name: 'All News', count: 24 },
     { id: 'ai', name: 'AI & Consciousness', count: 8 },
     { id: 'quantum', name: 'Quantum Computing', count: 6 },
@@ -391,7 +387,6 @@ export default function News() {
     { id: 'industry', name: 'Industry Insights', count: 2 }
   ],
 
-  const featuredNews = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
@@ -605,7 +600,6 @@ export default function News() {
     'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT ServicesMetaverseIndustry Insights'
   ],
 
-  const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
       year: 'numeric',

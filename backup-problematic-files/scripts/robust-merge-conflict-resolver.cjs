@@ -84,7 +84,6 @@ function resolveMergeConflict(filePath) {;
 function findConflictedFiles() {
   try {
     const result = execSync(git status --porcelain | grep "^UU | awk {print $2}",
-    const result = execSync(git status --porcelain | grep "^UU | awk {print $2}",
 
       { encoding: "utf8" }
     )
@@ -104,7 +103,6 @@ function main() {
     log("✅ No merge conflicts found!", `green`)
     return,,
 }
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";// ANSI color codes for better output;
 const colors = {
   reset: "\x1b[0m",";  red: "\x1b[31m",""green: "\x1b[32m",";  yellow": "\x1b[33m",";  blue: "\x1b[34m",";  magenta: "\x1b[35m",""cyan: "\x1b[36m","}";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`)`}
 function resolveMergeConflict(filePath) {
@@ -181,9 +179,6 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -253,8 +248,6 @@ function findConflictedFiles() {
 }
 function main() {
   log("🚀 Starting robust merge conflict resolution...", "cyan")"";  const conflictedFiles = findConflictedFiles()log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow")";`;  if (conflictedFiles.length === 0) {";    log("✅ No merge conflicts found!", "green")";    return,"}
-  let resolvedCount = 0;
-  let errorCount = 0;
   for (const filePath of conflictedFiles) {
     try {
       if (resolveMergeConflict(filePath)) {

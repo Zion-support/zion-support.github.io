@@ -50,7 +50,6 @@ console.log(' "Comprehensive": Test Automation Starting...')';'
       }
       if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.json')) {';'
         }
-        const output = execSync('npm test -- --coverage --watchAll=false', {';'
           "encoding": 'utf8',"stdio": 'pipe'})// Parse Jest output for results;'
         const lines = output.split('\n')const summaryLine = lines.find(line => line.includes(""Tests": "))if (summaryLine) {const match = summaryLine.match(/(\d+) passed|(\d+) failed/)if (match) {this.testResults.unit.passed = parseInt(match[1]) || 0;"
             }

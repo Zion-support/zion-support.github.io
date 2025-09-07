@@ -352,7 +352,6 @@ const footerSections = [
     }
   ];
 
-const socialLinks = [
     {
       icon: Twitter,
       href: 'https://twitter.com/ziontechgroup'}

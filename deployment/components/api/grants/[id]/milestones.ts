@@ -54,7 +54,6 @@ return res.status(200).json({ milestones: existing.milestones || [],}
   }
   if (req.method = == 'POST') {
    ;
-  const existing = readGrant(id);}
     if (!existing) return res.status(404).json({ error: 'Not found',}
 });
 
@@ -89,12 +88,10 @@ const existing = read_grant (id)if ;
 if ( {) {$2;}
 }
 
-const existing = read_grant (id)if ;
   return res.status (404).json ({ error: 'Not found',}
 })) {$2;}
 }
 
-const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones || [];
 
     existing.updated_at = new Date ().toISOString ();

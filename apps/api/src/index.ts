@@ -7,7 +7,6 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
-import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
 import dotenv from 'dotenv';
@@ -154,12 +153,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 
-  const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
 
-  const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const rows = await withUser(userId, async client => {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -170,7 +167,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-    const res = await client.query(
 
 
 
@@ -203,13 +199,11 @@ LIMIT 25`,
 app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = (req && req.params as any).name as string;
 
-  const userId = getUserId(req);
 });
 });
 
 
 });
-  const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
@@ -218,7 +212,6 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
     return res && res.rows;
   });
   return { items };});  const items = await withUser(userId, async (client) => {
-    const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
@@ -241,10 +234,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 app.get('/notifications', async (req: any, reply: any) => {
-  const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async (client) => {
-    const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
@@ -256,7 +247,6 @@ app.get('/notifications', async (req: any, reply: any) => {
 }),
 
 app.post('/jobs/generate', async (req: any, reply: any) => {
-  const body = $2;
   const role = $2;
   const userId = getUserId($2);
   const description = await generateJobPost($2);
@@ -274,10 +264,8 @@ app.post('/jobs/generate', async (req: any, reply: any) => {
 app.get('/talent/search', async (req: any, reply: any) => {
   const q = $2;
   const country = $2;
-  const userId = getUserId($2);
   if (!userId) return reply.code(401).send($2);
   const rows = await withUser(userId, async (client) => {
-    const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $2;
       [country || null, q || null]
@@ -313,7 +301,6 @@ app.get ('/talent / search', async (req: any, reply: any) => {
   })return { results: rows }})[country || null, q || null])return res.rows;
   })return { results: rows }
 })app.get ('/projects/:name / track', async (req: any, reply: any) => {const name = (req.params as any).name as string;
-  const user_id = getUserId (req)if (return reply.code (401).send ({ error: 'unauthorized' })) {$2;
 }
   const project = await with_user (user_id, async client => {const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,[name])return res.rows[0];
   })if (return reply.code (404).send ({ error: 'not found' })) {$2;
@@ -371,7 +358,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const project = await withUser(userId, async client => {
-    const res = await client.query(
       `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`
       [name]
     );
@@ -382,10 +368,8 @@ const project = await withUser(userId, async client => {
 });
 
 app.get('/notifications', async (req: any, reply: any) => {
-  const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const items = await withUser(userId, async client => {
-    const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
@@ -402,7 +386,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = $2;
-  const userId = getUserId($2);
   if (!userId) return reply.code(401).send($2);
   const project = await withUser(userId, async (client) => {
     const res = await client.query($2);
@@ -413,10 +396,7 @@ app.get('/projects/:name/track', async (req: any, reply: any) => {
 }),
 
 app.get('/notifications', async (req: any, reply: any) => {
-  const userId = getUserId($2);
   if (!userId) return reply.code(401).send($2);
-  const items = await withUser(userId, async (client) => {
-    const res = await client.query($2);
     return res.rows
   }),
   return { items }

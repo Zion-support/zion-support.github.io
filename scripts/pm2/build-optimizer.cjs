@@ -130,7 +130,6 @@ return `${buildScript} --mode production`;`;
       return { "checked": false };"
 
       // This is a simplified check - in practice, you'd analyze the bundle;
-      const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": No dist directory found}
       }
@@ -172,7 +171,6 @@ return `${buildScript} --mode production`;`;
       
       
 
-      const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": No dist directory found};
       };

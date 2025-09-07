@@ -121,9 +121,7 @@ const resp = await provider.connect();
 
 const publicKey: string = resp.publicKey.toString();
 
-const nonceRes = await fetch('/api/auth/nonce');
 
-const { nonce } = await nonceRes.json();
 
 const statement =
         'Sign in to Zion with your Solana wallet. No gas required.';

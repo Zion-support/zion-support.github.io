@@ -2,9 +2,6 @@ import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
-import { jsPDF  } from 'jspdf';
-import { Skill  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(  doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;

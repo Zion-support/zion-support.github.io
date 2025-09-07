@@ -29,7 +29,6 @@ const current = null;
 };  ar: 'sa
 }
 
-const localeLabelKey: Record<string, string /> = {
   en: 'lang.english',
   pt: 'lang.portuguese'
   es: 'lang.spanish'}
@@ -40,7 +39,6 @@ export default function LanguageSwitcher() {}
   const { t}
 } = useTranslation();
 
-const [open, setOpen] = useState(false);
 
 const current = i18n.resolvedLanguage |i18n.language |'en';
 

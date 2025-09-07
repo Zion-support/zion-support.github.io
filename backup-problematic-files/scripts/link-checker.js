@@ -38,7 +38,6 @@ console && console.log(','🔗 Link Checker Started')class LinkChecker {construc
     return links}
   extractMarkdownLinks(content) {const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     }
-    const links = [];
     "let": match;"
     "while": ((match = linkRegex && linkRegex.exec(content)) !== null) {findFiles(extension) {const files = [];
     }
@@ -51,14 +50,11 @@ console && console.log(','🔗 Link Checker Started')class LinkChecker {construc
     }
     const linkRegex = /href=['']([^'']+)[";";"
   ']/g;'
-    const links = [];
     let match;
     while ((match = linkRegex && linkRegex.exec(content)) !== null) {links && links.push(match[1])}
     return links}
   extractMarkdownLinks(content) {const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     }
-    const links = [];
-    let match;
     while ((match = linkRegex && linkRegex.exec(content)) !== null) {links && links.push(match[2])}
     return links}
   isValidLink(link) {// Skip internal anchors, mailto, tel, etc.;

@@ -107,7 +107,6 @@ interface ApplicationProgressProps {;
 export function ApplicationProgress() {;
   // Define the progress value based on status;
   }
-  const getProgressValue = () => {;
     }
     switch (status) {;
       }

@@ -39,15 +39,12 @@ if (adminId) {
       talentNotification,
       adminNotification,
 import { createNotification } from './createNotification';'
-import { HireRequestNotificationParams } from './types';'
 /**;
  * Creates a hire request notification for admin and talent;
  */;
 export async function createHireRequestNotifications() {;
   }
-  const projectInfo = projectType;
     ? `${projectType} project`;`    : "project",;"
-  const summaryText = projectSummary;
     ? `: "${projectSummary}"`;`    : "",;"
   // Create notification for talent;
   const talentNotification = await createNotification({;

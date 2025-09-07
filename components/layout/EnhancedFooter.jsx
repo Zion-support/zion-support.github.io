@@ -1,151 +1,60 @@
 const EnhancedFooter = (
 
  ;
-  }
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   const currentYear = new Date().getFullYear();
               their digital presence with cutting-edge AI, cloud architecture,
               and innovative development services.
-return (;
-    <footer className="bg - gray - 900 text - white">;"
-      {/* Main Footer Content */}
-      <div className="container mx - auto px - 4 py - 16">;"
-        <div className="grid grid - cols - 1 "md":grid - cols - 2 "lg":grid - cols - 4 gap - 8">;"
-          {/* Company Info */}
+  return (
 
-          <div className=""lg":col-span-2">"
-            <div className="flex items-center space-x-2 mb-4">"
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">"
-                <span className="text-white font-bold text-xl">Z</span>"
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>"
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">"
-              Leading technology solutions provider helping businesses transform their digital presence,
-with cutting-edge AI, cloud architecture, and innovative development services.
+              <li><Link href="/services className=text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
+          <div className="lg:col-span-2>
+            <div className=flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center>
+                <span className=text-white font-bold text-xl">Z</span>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+              <li><Link href="/services className=text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+          <div className="lg:col-span-2>
+            <div className=flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center>
+                <span className=text-white font-bold text-xl">Z</span>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
             </p>
           </div>
 
           {/* Services */}
           <div>
-<h3 className='text-lg font-semibold mb-4'>Services</h3>'
-            <ul className='space-y-2'>'
-              <li>
-                <Link,
-href='/services''
-                  className='text-gray-300 "hover": text-white transition-colors''
-                >
-                  AI Development
-                </Link>
-              </li>
-              <li>
-                <Link,
-href='/services''
-                  className='text-gray-300 "hover":text-white transition-colors''
-                >
-                  Cloud Services
-                </Link>
-              </li>
-              <li>
-                <Link,
-href='/services''
-                  className='text-gray-300 "hover":text-white transition-colors''
-                >
-                  Blockchain Solutions
-                </Link>
-              </li>
-              <li>
-                <Link,
-href='/services''
-                  className='text-gray-300 "hover":text-white transition-colors''
-                >
-                  Data Analytics
-                </Link>
-              </li>
+
             </ul>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
           {/* Company */}
-<<<<<<< HEAD
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div>
-<h3 className='text-lg font-semibold mb-4'>Company</h3>'
-            <ul className='space-y-2'>'
-              <li>
-                <Link,
-href='/about''
-                  className='text-gray-300 "hover":text-white transition-colors''
+
                 >
                   About Us;
                 </Link>
               </li>
               <li>
-                <Link,
-href='/talent''
-                  className='text-gray-300 "hover":text-white transition-colors''
+
                 >
                   Careers;
                 </Link>
               </li>
               <li>
-                <Link,
-href='/contact''
-                  className='text-gray-300 "hover":text-white transition-colors''
+
                 >
                   Contact;
                 </Link>
               </li>
               <li>
-                <Link,
-href='/blog''
-                  className='text-gray-300 "hover":text-white transition-colors''
+
                 >
-<<<<<<< HEAD
-                  Blog
-=======
-          <div />
-<h3 className='text-lg font-semibold mb-4' />Company</h3>
-            <ul className='space-y-2' />
-              <li />
-                <Link;
-href='/about'
-                  className='text-gray-300 hover:text-white transition-colors'
-                 />
-                  About Us;
-                </Link>
-              </li>
-              <li />
-                <Link;
-href='/talent'
-                  className='text-gray-300 hover:text-white transition-colors'
-                 />
-                  Careers;
-                </Link>
-              </li>
-              <li />
-                <Link;
-href='/contact'
-                  className='text-gray-300 hover:text-white transition-colors'
-                 />
-                  Contact;
-                </Link>
-              </li>
-              <li />
-                <Link;
-href='/blog'
-                  className='text-gray-300 hover:text-white transition-colors'
-                 />
-                  Blog;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
                 </Link>
               </li>
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -153,400 +62,20 @@ href='/blog'
 =======
                   Blog;
                 </Link>"
-              </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Company</h3>"
-            <ul className="space-y-2">"
-              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>"
-              <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>"
-              <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>"
-              <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+              </li>            </ul>            <h3 className=text-lg font-semibold mb-4>Company</h3>"
+            <ul className="space-y-2>
+              <li><Link href="/about" className=text-gray-300 hover:text-white transition-colors>About Us</Link></li>"
+              <li><Link href="/talent className=text-gray-300 hover:text-white transition-colors">Careers</Link></li>"
+              <li><Link href=/contact className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href=/blog" className="text-gray-300 hover:text-white transition-colors>Blog</Link></li>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
-      {/* Bottom Footer */}
-const EnhancedFooter = () => {return (<footer className='bg - gray - 900 text - white'>;
-      {/* Main Footer Content */}
-      <div className='container mx - auto px - 4 py - 16'>;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-          {/* Company Info */}
-  const currentYear = new Date().getFullYear(),<div className='lg:col - span - 2'>;
-            <div className='flex items - center space - x-2 mb - 4'>;
-              <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
-                <span className='text - white font - bold text - xl'>Z</span>;
-              </div>;
-              <span className='text - xl font - bold'>Zion Tech Group</span>;
-            </div>;
-            <p className='text - gray - 300 mb - 6 max - w-md'>;
-              Leading technology solutions provider helping businesses transform;
-              their digital presence with cutting - edge AI, cloud architecture,and innovative development services.            </p > const EnhancedFooter = () =>: any {const current_year = new Date ().getFullYear (),const currentYear = new Date().getFullYear()their digital presence with cutting-edge AI, cloud architecture,and innovative development services.;
-  return (<footer className="bg - gray - 900 text - white">;
-      {/* Main Footer Content */}
-      <div className="container mx - auto px - 4 py - 16">;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-          {/* Company Info */}<ul className="space-y-2">;
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Development</Link></li>;
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>;
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>;
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>;
-          <div className="lg:col-span-2">;
-            <div className="flex items-center space-x-2 mb-4">;
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
-                <span className="text-white font-bold text-xl">Z</span>;
-              </div>;
-              <span className="text-xl font-bold">Zion Tech Group</span>;
-            </div>;
-            <p className="text-gray-300 mb-6 max-w-md">;
-              Leading technology solutions provider helping businesses transform their digital presence;
-              with cutting-edge AI, cloud architecture, and innovative development services.;
-            </p>;
-          </div>;
-          {/* Services */}
-          <div>;
-<h3 className='text-lg font-semibold mb-4'>Services</h3>;
-            <ul className='space-y-2'>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  AI Development;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  Cloud Services;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  Blockchain Solutions;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  Data Analytics;
-                </Link>;
-              </li>;
-            </ul>;
-          </div>;
-          {/* Company */}
-          <div>;
-<h3 className='text-lg font-semibold mb-4'>Company</h3>;
-            <ul className='space-y-2'>;
-              <li>;
-                <Link;
-                  href='/about';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  About Us;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/talent';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  Careers;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/contact';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  Contact;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/blog';
-                  className='text-gray-300 hover:text-white transition-colors';
-                >;
-                  Blog;
-                </Link>;
-              </li>;
-            </ul>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Bottom Footer */}<div className="lg:col - span - 2">;
-          <div className="lg:col - span - 2">;
-            <div className="flex items - center space - x-2 mb - 4">;
-              <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
-                <span className="text - white font - bold text - xl">Z</span>;
-              </div>;
-              <span className="text - xl font - bold">Zion Tech Group</span>;
-            </div>;
-            <p className="text - gray - 300 mb - 6 max - w-md">;
-              Leading technology solutions provider helping businesses transform their digital presence;
-              with cutting - edge AI, cloud architecture, and innovative development services.;
-            </p>;
-          </div>;
-          {/* Services */}
-          <div>;
-            <h3 className='text - lg font - semibold mb - 4'>Services</h3>;
-            <ul className='space - y-2'>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  AI Development;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Cloud Services;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Blockchain Solutions;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/services';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Data Analytics;
-                </Link>;
-              </li>            </ul>            <h3 className="text - lg font - semibold mb - 4">Services</h3>;
-            <ul className="space - y-2">;
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">AI Development</Link></li>;
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">Cloud Services</Link></li>;
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">Blockchain Solutions</Link></li>;
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">Data Analytics</Link></li>;
-          </div>;
-          {/* Company */}
-          <div>;
-            <h3 className='text - lg font - semibold mb - 4'>Company</h3>;
-            <ul className='space - y-2'>;
-              <li>;
-                <Link;
-                  href='/about';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  About Us;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/talent';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Careers;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/contact';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Contact;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;
-                  href='/blog';
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Blog;
-                </Link>;
-              </li>            </ul>            <h3 className="text - lg font - semibold mb - 4">Company</h3>;
-            <ul className="space - y-2">;
-              <li><Link href="/about" className="text - gray - 300 hover:text - white transition - colors">About Us</Link></li>;
-              <li><Link href="/talent" className="text - gray - 300 hover:text - white transition - colors">Careers</Link></li>;
-              <li><Link href="/contact" className="text - gray - 300 hover:text - white transition - colors">Contact</Link></li>;
-              <li><Link href="/blog" className="text - gray - 300 hover:text - white transition - colors">Blog</Link></li>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Bottom Footer */}
-      <div className='border - t border - gray - 700 py - 6'>;
-        <div className='container mx - auto px - 4'>;
-          <div className='text - center text - gray - 300 text - sm'>;
-            <p>&copy; {current_year} Zion Tech Group. All rights reserved.</p>          </div>      <div className="border - t border - gray - 700 py - 6">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center text - gray - 300 text - sm">;
-            <p>&copy, {current_year} Zion Tech Group. All rights reserved.</p>;
-        </div>;
-      </div>;
-    </footer>);
-}
-export default EnhancedFooter;}
-export default EnhancedFooter;
-<<<<<<< HEAD
-    </footer>)}
-export default EnhancedFooter;})}export default EnhancedFooter;
-      <div className="border-t border-gray-700 py-6">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-gray-300 text-sm">
-            <p>&copy, {currentYear} Zion Tech Group. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  )
-},
-
-export default EnhancedFooter,
-=======
-<<<<<<< HEAD
-
-=======
-return (<footer className="bg-gray-900 text-white" > {
-  /* Main Footer Content */ 
-}</div> <span className="text-xl font-bold" >Zion Tech Group</span> </div> <p className="text-gray-300 mb-6 max-w-md" > Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services. </p> </div> {
-  /* Services */ 
-}<div> <h3 className="text-lg font-semibold mb-4" >Services</h3> <ul className="space-y-2" > <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors" >AI Development</Link></li> <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors" >Cloud Services</Link></li> <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors" >Blockchain Solutions</Link></li> <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors" >Data Analytics</Link></li> </ul> </div> {
-  /* Company */ 
-}<div> <h3 className="text-lg font-semibold mb-4" >Company</h3> <ul className="space-y-2" > <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors" >About Us</Link></li> <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors" >Careers</Link></li> <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors" >Contact</Link></li> <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors" >Blog</Link></li> </ul> </div> </div> </div> 
-}
-export default EnhancedFooter
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
-<<<<<<< HEAD
-      {/* Bottom Footer */}"
-          <div className="lg:col - span - 2">;"
-            <div className="flex items - center space - x-2 mb - 4">;"
-              <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;"
-                <span className="text - white font - bold text - xl">Z</span>;
-              </div>;"
-              <span className="text - xl font - bold">Zion Tech Group</span>;
-            </div>;"
-            <p className="text - gray - 300 mb - 6 max - w-md">;
-              Leading technology solutions provider helping businesses transform their digital presence;
-              with cutting - edge AI, cloud architecture, and innovative development services.;
-            </p>;
-          </div>;
-          {/* Services */}
-          <div>;'
-            <h3 className='text - lg font - semibold mb - 4'>Services</h3>;'
-            <ul className='space - y-2'>;
-              <li>;
-                <Link;'
-                  href='/services';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  AI Development;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;'
-                  href='/services';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Cloud Services;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;'
-                  href='/services';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Blockchain Solutions;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;'
-                  href='/services';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Data Analytics;
-                </Link>;"
-              </li>            </ul>            <h3 className="text - lg font - semibold mb - 4">Services</h3>;"
-            <ul className="space - y-2">;"
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">AI Development</Link></li>;"
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">Cloud Services</Link></li>;"
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">Blockchain Solutions</Link></li>;"
-              <li><Link href="/services" className="text - gray - 300 hover:text - white transition - colors">Data Analytics</Link></li>;
-          </div>;
-          {/* Company */}
-          <div>;'
-            <h3 className='text - lg font - semibold mb - 4'>Company</h3>;'
-            <ul className='space - y-2'>;
-              <li>;
-                <Link;'
-                  href='/about';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  About Us;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;'
-                  href='/talent';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Careers;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;'
-                  href='/contact';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Contact;
-                </Link>;
-              </li>;
-              <li>;
-                <Link;'
-                  href='/blog';'
-                  className='text - gray - 300 hover:text - white transition - colors';
-                >;
-                  Blog;
-                </Link>;"
-              </li>            </ul>            <h3 className="text - lg font - semibold mb - 4">Company</h3>;"
-            <ul className="space - y-2">;"
-              <li><Link href="/about" className="text - gray - 300 hover:text - white transition - colors">About Us</Link></li>;"
-              <li><Link href="/talent" className="text - gray - 300 hover:text - white transition - colors">Careers</Link></li>;"
-              <li><Link href="/contact" className="text - gray - 300 hover:text - white transition - colors">Contact</Link></li>;"
-              <li><Link href="/blog" className="text - gray - 300 hover:text - white transition - colors">Blog</Link></li>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Bottom Footer */}'
-      <div className='border - t border - gray - 700 py - 6'>;'
-        <div className='container mx - auto px - 4'>;'
-          <div className='text - center text - gray - 300 text - sm'>;"
-            <p>&copy; {current_year} Zion Tech Group. All rights reserved.</p>          </div>      <div className="border - t border - gray - 700 py - 6">;"
-        <div className="container mx - auto px - 4">;"
-          <div className="text - center text - gray - 300 text - sm">;
-            <p>&copy, {current_year} Zion Tech Group. All rights reserved.</p>;
-        </div>;
-      </div>;
-    </footer>);
-}
-export default EnhancedFooter;}
-  )
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default EnhancedFooter;
-'"
-=======
-      {/* Bottom Footer */}
 
-  )
-};
 export default EnhancedFooter;

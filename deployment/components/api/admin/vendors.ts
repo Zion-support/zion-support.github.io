@@ -38,7 +38,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
-import {
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
@@ -59,7 +58,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed',}
 });
 
-const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}

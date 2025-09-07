@@ -50,7 +50,6 @@ export default function CodeSamples({ samples }: Props) {
 
 const sampleMap = null;
   return (
-  const [active, setActive] = useState<typeof tabs[number]['key'] />('curl');
 
 const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 

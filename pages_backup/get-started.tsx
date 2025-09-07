@@ -28,15 +28,10 @@ export default function GetStarted() {
 
   const onboardingSteps = [
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Rocket, CheckCircle, ArrowRight, Brain, Atom;
   Shield, Zap, Users, Clock, Target, Star;
   FileText, Video, Code, Globe, Building
  } from 'lucide-react';
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>(''),
-  const [currentStep, setCurrentStep] = useState(1);
       step: 1,
       title: 'Choose Your Path',
       description: 'Select the technology area that best fits your needs',
@@ -202,7 +197,6 @@ description:
   Video,
   Code,
 
-  const onboardingSteps = [
     {
       step: 1,
       title: 'Choose Your Path',
@@ -232,7 +226,6 @@ description:
   }
 }
   ],
-  const technologyPaths = [
     {
       id: 'ai-consciousness',
       name: 'AI Consciousness & Emotional Intelligence',
@@ -286,7 +279,6 @@ description:
   }
 }
   ],
-  const quickStartOptions = [
     {
       title: 'Free Consultation',
       description: '30-minute session to discuss your needs',
@@ -323,19 +315,15 @@ description:
 
 export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
-  const [currentStep, setCurrentStep] = useState(1);
 
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
-import {
   Rocket, CheckCircle, ArrowRight, Brain, Atom,
   Shield, Zap, Users, Clock, Target, Star,
   FileText, Video, Code, Globe, Building
 } from 'lucide-react',
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1),
-  const onboardingSteps = [
     {
       step: 1,
       title: 'Choose Your Path',
@@ -365,7 +353,6 @@ export default function GetStarted() {
   }
 }
   ],
-  const technologyPaths = [
     {
       id: 'ai-consciousness',
       name: 'AI Consciousness & Emotional Intelligence',
@@ -438,7 +425,6 @@ export default function GetStarted() {
     },
   ];
 
-  const quickStartOptions = [
     {
       title: 'Free Consultation',
       description: '30-minute session to discuss your needs',
@@ -488,7 +474,6 @@ export default function GetStarted() {
   Video,
   Code,
 
-  const onboardingSteps = [
 
     {
       step: 1,
@@ -496,8 +481,6 @@ export default function GetStarted() {
       description: 'Select the technology area that best fits your needs',
 
 export default function GetStarted() {;
-  const [selectedPath, setSelectedPath] = useState<string>('');
-  const [currentStep, setCurrentStep] = useState(1);
 
   const handlePathSelection = (pathId: string) => {;
     setSelectedPath(pathId);
@@ -524,7 +507,6 @@ export default function GetStarted() {;
 
   };
 
-  const handleNextStep = () => {
     if (currentStep < 4) {
 :pages/get-started.tsx
       setCurrentStep(currentStep + 1);
@@ -532,7 +514,6 @@ export default function GetStarted() {;
 
   };
 
-  const handlePreviousStep = () => {
     if (currentStep > 1) {
 :pages/get-started.tsx
       setCurrentStep(currentStep - 1);
@@ -556,7 +537,6 @@ export default function GetStarted() {;
   }
 }
   ],;
-  const handlePathSelection = (pathId: string) => {;
     setSelectedPath(pathId);
     setCurrentStep(2);
   };

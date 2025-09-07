@@ -66,7 +66,6 @@ export class MerkleTree {
     let level = [...this.leaves];
 
     while (level.length > 1) {
-      const nextLevel: MerkleNode[] = [];
       const currentIndex = level.indexOf(current);
 
       if (currentIndex % 2 === 0) {
@@ -84,8 +83,6 @@ export class MerkleTree {
         const left = level[i];
         const right = level[i + 1] || left;
 
-        const combinedHash = left.hash + right.hash;
-        const parent: MerkleNode = {
           hash: this.hashData(combinedHash),
           left,
           right

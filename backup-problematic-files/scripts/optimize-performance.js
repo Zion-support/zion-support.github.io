@@ -56,7 +56,6 @@ function createPerformanceComponents() {
     }
     fs && fs.mkdirSync(componentsDir, { "recursive": true })}"
   // Create optimized image component,
-const optimizedImageComponent = "import React from 'react';'
 import Image from 'next/image''
 interface OptimizedImageProps {
   "src": string;"

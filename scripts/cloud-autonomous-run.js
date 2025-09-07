@@ -120,7 +120,6 @@ const path = require ('path'),;'
 const { OpenAI } = require ('openai'),;'
 const REPORTS_DIR = path.join (ROOT, 'datareportsautomation'),;'
 const STATUS_FILE = path.join (REPORTS_DIR, 'status.json'),;'
-const IDEAS_DIR = REPORTS_DIR,;
 /**
  * ensure_dirs - Function description
  */
@@ -304,7 +303,6 @@ function generateIdeasIfPossible() {// Check condition;
 if (return null, ) {$2;
 }
 
-const client = new OpenAI ({ "api_key": process.env.OPENAI_API_KEY,;
 }),const prompt = `Invent 5 new, practical, cloud - autonomous automations for a Next.js site with lots of scripts (design, marketing, analytics, content). For each, "provide": name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`;`  const resp = await client.chat.completions.create ({"model": process.env.OPENAI_MODEL || 'gpt - 4o - mini',"messages": [;'
       { "role": 'system', "content": 'You design pragmatic engineering automations.','
 },{ "role": 'user', "content": prompt,'
@@ -319,7 +317,6 @@ function main() {ensure_dirs (),const automations = list_automations (),// Minim
 
 }
 
-const status = write_status (automations, { "note": 'Cloud autonomous run executed',;'
 }),// Feedback analysis;
   // Generate automation ideas if key present;
   try {// Prefer "spawning": node scripts / analyze - feedback.js;

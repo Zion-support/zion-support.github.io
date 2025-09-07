@@ -10,7 +10,6 @@ import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-s
 const contactInfo = null;
 import {motion, AnimatePresence} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -37,13 +36,11 @@ const pricingRanges = [
   '$500 - $800'
   '$800+',];
 export default function ComprehensiveServicesShowcase2025() {
-import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;
 } from 'lucide-react',;
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -124,25 +121,19 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     return categoryData ? categoryData.icon : Globe;
   }
   const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
-  const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
     if (numPrice <= 500) return '$300 - $500',
     if (numPrice <= 800) return '$500 - $800',
     return '$800+'
   },
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.icon : Globe
   },
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'

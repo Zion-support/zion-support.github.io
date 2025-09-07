@@ -58,7 +58,6 @@ return res.status(200).json({ ok: true,}
    ;
   const section = action.section;
     // @ts-expect-error Indexing into dynamic section;
-const arr: BasePerson[] = data[section] || [];
 
 const idx = arr.findIndex(p => p.id === action.id);
     if (idx = == -1);}
@@ -70,7 +69,6 @@ const idx = arr.findIndex(p => p.id === action.id);
    ;
   const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section;
-const arr: BasePerson[] = data[section] || [];
 
 const idx = arr && arr.findIndex(p => p && p.id === action && action.id)if (idx === -1);}
   return res && res.status(404).json({ error: 'Not found',}
@@ -87,11 +85,8 @@ return res.status(200).json({ ok: true,}
   }
   if (action.type = == 'deactivate') {
    ;
-  const section = action.section;
     // @ts-expect-error Indexing into dynamic section;
-const arr: BasePerson[] = data[section] || [];
 
-const idx = arr.findIndex(p => p.id === action.id);
     if (idx = == -1);}
   return res.status(404).json({ error: 'Not found',}
 });

@@ -53,7 +53,6 @@ export default function ClientHirePage() {
   async function sendOffer() {
     setLoading(true),
     setResult(null),
-    const paymentTerms =
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd   } catch (error) {
     console.error("Error:", error);
@@ -154,7 +153,6 @@ export default function ClientHirePage() {
       method: "POST",;
       headers: { "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" },;
       body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })}),;
-    const json = await res.json();
     setLoading(false);
     if (!json.ok) {;
       alert(json.error || "Failed to send offer");

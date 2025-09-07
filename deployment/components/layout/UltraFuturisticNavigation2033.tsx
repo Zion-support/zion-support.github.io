@@ -168,10 +168,8 @@ const quickLinks = [
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
 export default function UltraFuturisticNavigation2033() {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null />(null);
 
 const [searchQuery, setSearchQuery] = useState('');

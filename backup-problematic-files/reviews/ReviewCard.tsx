@@ -92,7 +92,6 @@ type Props = {
   }
   "review": PublicReview,
   on_report?: ("id": string) => void;
-const "ReviewCard": React.FC < Props> = ({ review, on_report }) => {
 }
 return (;
     <div className='enhanced - card "hover":shadow - lg transition - shadow'>;'

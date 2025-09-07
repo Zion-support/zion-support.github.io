@@ -163,7 +163,6 @@ import {GradientHeading} from "@/components/GradientHeading";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer";"
 import { SEO } from "@/components/SEO",;"
-import { GradientHeading } from "@/components/GradientHeading";"
       />;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;"

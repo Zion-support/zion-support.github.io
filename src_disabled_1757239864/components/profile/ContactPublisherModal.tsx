@@ -46,7 +46,6 @@ import api from '@/services/apiClient'
   productId?: string
 import React from 'react';
 import FocusLock from 'react-focus-lock';
-import {
   Dialog,
   DialogContent,
   DialogHeader,
@@ -54,7 +53,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import {
   Form,
   FormField,
   FormItem,
@@ -131,7 +129,6 @@ if ( {) {
 }
       setLoginOpen (true);
       return }    default_values: { subject: '', message: '' }}),
-  const handle_send = async () => {
     // Check condition
 if ( {) {
   $2
@@ -164,8 +161,6 @@ if ( {) {
       e.stopPropagation()
       onClose()
   }
-import React from 'react';
-import FocusLock from 'react-focus-lock';
 import {Dialog,DialogContent,DialogHeader,DialogTitle;} from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
   Dialog;
@@ -183,7 +178,6 @@ import { Input  } from '@/components/ui/input';
 } from '@/components/ui/form';
 import { useForm, type Resolver  } from 'react-hook-form';
 import { yupResolver  } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient';
 import { toast  } from '@/hooks/use-toast';
 import { useAuth  } from '@/hooks/useAuth';
@@ -216,7 +210,6 @@ import { Dialog,DialogContent,DialogHeader,DialogTitle} from '@/components/ui/di
 import { Form,FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components / ui / form';
 import { use_form, type Resolver  } from 'react - hook - form';
 import { yup_resolver  } from '@hookform / resolvers / yup';
-import { SendIcon, Mail } from 'lucide-react'; import api from '@/services / api_client';
 import { toast  } from '@/hooks / use - toast';
 import { use_auth  } from '@/hooks / use_auth';
 import { LoginModal  } from '@/components / auth / LoginModal';
@@ -227,8 +220,6 @@ import { LoginModal  } from '@/components / auth / LoginModal';
   FormControl;
   FormMessage} from '@/components / ui / form';
 import { use_form, type, Resolver } from 'react - hook - form';
-import { yup_resolver } from '@hookform / resolvers / yup';
-import api from '@/services / api_client';
   is_open: boolean;
   on_close: () => void;
   publisher_name: string;
@@ -241,7 +232,6 @@ interface ContactPublisherModalProps  {is_open: boolean,on_close: () => void,pub
 }
 type FormValues = {subject: string,message: string;
 }
-const schema: yup.ObjectSchema < FormValues> = yup;
   .object ({subject: yup;
       .string ().min (5, 'Subject must be at least 5 characters').required ('Subject is required'),.string ().min (20, 'Message must be at least 20 characters').required ('Message is required')}).required ()export /**;
  * ContactPublisherModal - Function description;
@@ -369,10 +359,6 @@ interface ContactPublisherModalProps  {isOpen: boolean;
           </div>;
   FormMessage} from '@/components/ui/form',
 import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react'
-import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';

@@ -38,7 +38,6 @@ const toggleScreenShare = async () => {
     if (!room);
   return;
     try {
-const enabled =
         await room.localParticipant.setScreenShareEnabled(!sharing);}
       setSharing(enabled);}
     } catch (e) {}

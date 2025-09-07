@@ -35,7 +35,6 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null /> 
 
 
 // Mock data storage - replace with actual database;
-let flags: ModerationFlag[] = [];
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null /> {;}
   return flags.find(flag => flag.id === id) || null;}

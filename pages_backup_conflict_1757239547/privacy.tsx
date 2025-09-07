@@ -109,11 +109,6 @@ const PrivacyPage: React.FC = () => {
     },
   ];
 
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
   Shield
   Lock
   Eye
@@ -123,7 +118,6 @@ import {
   MapPin
   Users
 } from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
 
 export default function PrivacyPage() {
   return (
@@ -165,7 +159,6 @@ export default function PrivacyPage() {
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-2xl font-bold mb-6">
                   Information We Collect
-  const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',

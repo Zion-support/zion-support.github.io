@@ -1,40 +1,32 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import React from 'react';
 
 =======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout;
 const About = ({ className }) => {return (<Layout;
-import React from 'react';
+import React from react';
 :backup-problematic-files/temp_broken_files/pages/about.jsx;
-const About = ({ className }) => {return (<Layout;
 ursor/automate-test-improve-and-merge-code-646c;
-const About = ({ className }) => {return (<Layout;
-      title="About Us - Zion Tech Group";
-      description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions.";
+      title="About Us - Zion Tech Group;
+      description=Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions.";
     >;
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
-        <main className="container mx-auto px-4 py-12">;
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100>;
+        <main className=container mx-auto px-4 py-12">;
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const About = ({ className }) => {
   return (
     <Layout 
-      title="About Us - Zion Tech Group"
-      description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
+      title="About Us - Zion Tech Group
+      description=Learn about Zion Tech Groups mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
     >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <main className="container mx-auto px-4 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100>
+        <main className=container mx-auto px-4 py-12">
           {/* Hero Section */}
-          <div className="text-center mb-16">;
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">;
+          <div className="text-center mb-16>;
+            <h1 className=text-4xl md:text-5xl font-bold text-gray-800 mb-6">;
               About Zion Tech Group;
             </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto>;
               We are a leading technology solutions provider dedicated to;
               transforming businesses through innovative AI, cloud architecture,and cutting-edge development services.;
               We are a leading technology solutions provider dedicated to transforming businesses;
@@ -45,54 +37,54 @@ ursor/automate-test-improve-and-merge-code-646c;
             </p>;
           </div>;
           {/* Mission & Vision */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16">;
-            <div className="bg-white rounded-lg shadow-lg p-8">;
-              <div className="text-4xl mb-4"></div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>;
+          <div className=grid md:grid-cols-2 gap-12 mb-16">;
+            <div className="bg-white rounded-lg shadow-lg p-8>;
+              <div className=text-4xl mb-4"></div>;
+              <h2 className="text-2xl font-bold text-gray-800 mb-4>Our Mission</h2>;
 :backup-problematic-files/temp_broken_files/pages/about.jsx;
-              <div className="text-4xl mb-4"></div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>;
+              <div className=text-4xl mb-4"></div>;
+              <h2 className="text-2xl font-bold text-gray-800 mb-4>Our Mission</h2>;
 ursor/automate-test-improve-and-merge-code-646c;
-              <div className="text-4xl mb-4">🎯</div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">;
+              <div className=text-4xl mb-4">🎯</div>;
+              <h2 className="text-2xl font-bold text-gray-800 mb-4>;
                 Our Mission;
               </h2>;
-              <p className="text-gray-600 text-lg">;
+              <p className=text-gray-600 text-lg">;
                 To empower businesses with cutting-edge technology solutions;
                 that drive growth, efficiency, and innovation. We believe in;
                 delivering exceptional value through personalized service and;
                 world-class expertise.;
               </p>;
             </div>;
-            <div className="bg-white rounded-lg shadow-lg p-8">;
-              <p className="text-gray-600 text-lg">;
-              <div className="text-4xl mb-4"></div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>              <p className="text-gray-600 text-lg">;
+            <div className="bg-white rounded-lg shadow-lg p-8>;
+              <p className=text-gray-600 text-lg">;
+              <div className="text-4xl mb-4></div>;
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>              <p className="text-gray-600 text-lg>;
                 To empower businesses with cutting-edge technology solutions that drive growth,efficiency, and innovation. We believe in delivering exceptional value through;
                 personalized service and world-class expertise.;
               </p>;
             </div>;
-            <div className="bg-white rounded-lg shadow-lg p-8">;
-              <div className="text-4xl mb-4"></div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>;
+            <div className=bg-white rounded-lg shadow-lg p-8">;
+              <div className="text-4xl mb-4></div>;
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>;
 :backup-problematic-files/temp_broken_files/pages/about.jsx;
-              <div className="text-4xl mb-4"></div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>;
+              <div className="text-4xl mb-4></div>;
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>;
 ursor/automate-test-improve-and-merge-code-646c;
-              <div className="text-4xl mb-4">🔮</div>;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">;
+              <div className="text-4xl mb-4>🔮</div>;
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">;
                 Our Vision;
               </h2>;
-              <p className="text-gray-600 text-lg">;
+              <p className="text-gray-600 text-lg>;
                 To be the global leader in technology transformation, helping;
                 businesses harness the power of AI, cloud computing, and digital;
                 innovation to create a more connected and efficient world.;
-              <p className="text-gray-600 text-lg">;
+              <p className=text-gray-600 text-lg">;
                 To be the global leader in technology transformation, helping businesses;
                 harness the power of AI, cloud computing, and digital innovation to create;
                 a more connected and efficient world.;
 ursor/automate-test-improve-and-merge-code-646c;
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>              <p className="text-gray-600 text-lg">;
+              <h2 className="text-2xl font-bold text-gray-800 mb-4>Our Vision</h2>              <p className=text-gray-600 text-lg">;
                 To be the global leader in technology transformation, helping businesses;
                 harness the power of AI, cloud computing, and digital innovation to create;
                 a more connected and efficient world.;
@@ -100,12 +92,12 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>;
           </div>;
           {/* Our Story */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">;
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">;
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-16>;
+            <h2 className=text-3xl font-bold text-gray-800 mb-6 text-center">;
               Our Story;
             </h2>;
-            <div className="max-w-4xl mx-auto">;
-              <p className="text-lg text-gray-600 mb-6">;
+            <div className="max-w-4xl mx-auto>;
+              <p className=text-lg text-gray-600 mb-6">;
                 Founded in 2020, Zion Tech Group emerged from a simple yet;
                 powerful vision: to bridge the gap between cutting-edge;
                 technology and real-world business needs. What started as a;
@@ -113,29 +105,29 @@ ursor/automate-test-improve-and-merge-code-646c;
                 comprehensive technology solutions provider serving clients;
                 across multiple industries.;
               </p>;
-              <p className="text-lg text-gray-600 mb-6">;
+              <p className="text-lg text-gray-600 mb-6>;
                 Our journey began when our founders recognized that many;
                 businesses were struggling to keep up with rapidly evolving;
                 technology. They saw an opportunity to create solutions that not;
                 only address current challenges but also prepare organizations;
                 for future growth and innovation.;
               </p>;
-              <p className="text-lg text-gray-600">;
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Story</h2>;
-            <div className="max-w-4xl mx-auto">;
-              <p className="text-lg text-gray-600 mb-6">;
+              <p className=text-lg text-gray-600">;
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center>Our Story</h2>;
+            <div className=max-w-4xl mx-auto">;
+              <p className="text-lg text-gray-600 mb-6>;
                 Founded in 2020, Zion Tech Group emerged from a simple yet powerful vision:;
                 to bridge the gap between cutting-edge technology and real-world business needs.;
                 What started as a small team of passionate developers has grown into a comprehensive;
                 technology solutions provider serving clients across multiple industries.;
               </p>;
-              <p className="text-lg text-gray-600 mb-6">;
+              <p className=text-lg text-gray-600 mb-6">;
                 Our journey began when our founders recognized that many businesses were struggling;
                 to keep up with rapidly evolving technology. They saw an opportunity to create;
                 solutions that not only address current challenges but also prepare organizations;
                 for future growth and innovation.;
               </p>;
-              <p className="text-lg text-gray-600">;
+              <p className="text-lg text-gray-600>;
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital;
                 presence, from small startups to enterprise-level organizations. Our commitment;
                 to excellence, innovation, and client success continues to drive everything we do.;
@@ -144,7 +136,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                 presence, from small startups to enterprise-level organizations. Our commitment;
                 to excellence, innovation, and client success continues to drive everything we do.;
 ursor/automate-test-improve-and-merge-code-646c;
-                Today, we're proud to have helped over 150+ businesses transform;
+                Today, were proud to have helped over 150+ businesses transform;
                 their digital presence, from small startups to enterprise-level;
                 organizations. Our commitment to excellence, innovation, and;
                 client success continues to drive everything we do.;
@@ -154,102 +146,96 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>;
           </div>;
           {/* Values */}
-          <div className="mb-16">;
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">;
+          <div className=mb-16">;
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center>;
               Our Core Values;
             </h2>;
-            <div className="grid md:grid-cols-3 gap-8">;
-              <div className="text-center">;
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>;
-            <div className="grid md:grid-cols-3 gap-8">;
-              <div className="text-center">;
+            <div className=grid md:grid-cols-3 gap-8">;
+              <div className="text-center>;
+            <h2 className=text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>;
+            <div className="grid md:grid-cols-3 gap-8>;
+              <div className=text-center">;
 :backup-problematic-files/temp_broken_files/pages/about.jsx;
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>;
-            <div className="grid md:grid-cols-3 gap-8">;
-              <div className="text-center">;
-                <div className="text-4xl mb-4"></div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>;
-                <p className="text-gray-600">;
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center>Our Core Values</h2>;
+            <div className=grid md:grid-cols-3 gap-8">;
+              <div className="text-center>;
+                <div className=text-4xl mb-4"></div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Innovation</h3>;
+                <p className=text-gray-600">;
                   We constantly push the boundaries of what&apos;s possible, embracing new technologies;
                   and methodologies to deliver cutting-edge solutions.;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <div className="text-4xl mb-4"></div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>;
+              <div className="text-center>;
+                <div className=text-4xl mb-4"></div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Partnership</h3>;
 ursor/automate-test-improve-and-merge-code-646c;
-                <div className="text-4xl mb-4">💡</div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">;
+                <div className=text-4xl mb-4">💡</div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>;
                   Innovation;
                 </h3>;
-                <p className="text-gray-600">;
+                <p className=text-gray-600">;
                   We constantly push the boundaries of what's possible,embracing new technologies and methodologies to deliver;
                   cutting-edge solutions.;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <p className="text-gray-600">;
+              <div className="text-center>;
+                <p className=text-gray-600">;
                   We believe in building long-term relationships with our clients, working as;
                   an extension of their team to achieve shared success.;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <div className="text-4xl mb-4"></div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>;
+              <div className="text-center>;
+                <div className=text-4xl mb-4"></div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>;
 ursor/automate-test-improve-and-merge-code-646c;
-                <div className="text-4xl mb-4">🤝</div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">;
+                <div className=text-4xl mb-4">🤝</div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>;
                   Partnership;
                 </h3>;
 ursor/automate-test-improve-and-merge-code-646c;
-                <p className="text-gray-600">;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>                <p className="text-gray-600">;
+                <p className=text-gray-600">;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>                <p className=text-gray-600">;
                   We believe in building long-term relationships with our;
                   clients, working as an extension of their team to achieve;
                   shared success.;
                 </p>;
               </div>;
-              <div className="text-center">;
+              <div className="text-center>;
 :backup-problematic-files/temp_broken_files/pages/about.jsx;
-                <div className="text-4xl mb-4"></div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>;
+                <div className=text-4xl mb-4"></div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>;
 ursor/automate-test-improve-and-merge-code-646c;
-                <div className="text-4xl mb-4"></div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>;
-                <div className="text-4xl mb-4">⭐</div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">;
+                <div className=text-4xl mb-4"></div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>;
+                <div className=text-4xl mb-4">⭐</div>;
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>;
                   Excellence;
                 </h3>;
-                <p className="text-gray-600">;
+                <p className=text-gray-600">;
                   We maintain the highest standards in everything we do, from;
                   project planning to final delivery, ensuring exceptional;
                   results every time.;
-                <p className="text-gray-600">;
+                <p className="text-gray-600>;
                   We maintain the highest standards in everything we do, from project planning;
                   to final delivery, ensuring exceptional results every time.;
 ursor/automate-test-improve-and-merge-code-646c;
-                <p className="text-gray-600">;
+                <p className=text-gray-600">;
                   We maintain the highest standards in everything we do, from project planning;
                   to final delivery, ensuring exceptional results every time.;
                 </p>;
               </div>;
             </div>;
           </div>;
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
-              <div className="text-4xl mb-4"></div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
-              <p className="text-gray-600 text-lg">
-<<<<<<< HEAD
-=======
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>              <p className="text-gray-600 text-lg">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+          <div className="grid md:grid-cols-2 gap-12 mb-16>
+            <div className=bg-white rounded-lg shadow-lg p-8">
+              <div className="text-4xl mb-4></div>
+
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+              <div className="text-4xl mb-4></div>
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+              <p className="text-gray-600 text-lg>
+
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 To empower businesses with cutting-edge technology solutions that drive growth, 
@@ -257,20 +243,14 @@ ursor/automate-test-improve-and-merge-code-646c;
                 personalized service and world-class expertise.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-4xl mb-4"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
-              <div className="text-4xl mb-4"></div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
-              <p className="text-gray-600 text-lg">
-<<<<<<< HEAD
-=======
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>              <p className="text-gray-600 text-lg">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+            <div className=bg-white rounded-lg shadow-lg p-8">
+              <div className="text-4xl mb-4></div>
+
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+              <div className="text-4xl mb-4></div>
+              <h2 className=text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+              <p className="text-gray-600 text-lg>
+
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 To be the global leader in technology transformation, helping businesses 
@@ -281,101 +261,78 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
 
           {/* Our Story */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Story</h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-600 mb-6">
+          <div className=bg-white rounded-lg shadow-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center>Our Story</h2>
+            <div className=max-w-4xl mx-auto">
+              <p className="text-lg text-gray-600 mb-6>
                 Founded in 2020, Zion Tech Group emerged from a simple yet powerful vision: 
                 to bridge the gap between cutting-edge technology and real-world business needs. 
                 What started as a small team of passionate developers has grown into a comprehensive 
                 technology solutions provider serving clients across multiple industries.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className=text-lg text-gray-600 mb-6">
                 Our journey began when our founders recognized that many businesses were struggling 
                 to keep up with rapidly evolving technology. They saw an opportunity to create 
                 solutions that not only address current challenges but also prepare organizations 
                 for future growth and innovation.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600>
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                 to excellence, innovation, and client success continues to drive everything we do.
                 Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
                 to excellence, innovation, and client success continues to drive everything we do.
               </p>
-<<<<<<< HEAD
-=======
-                to excellence, innovation, and client success continues to drive everything we do.              </p>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             </div>
           </div>
 
           {/* Values */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl mb-4"></div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
-                <p className="text-gray-600">
+          <div className=mb-16">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center>Our Core Values</h2>
+            <div className=grid md:grid-cols-3 gap-8">
+              <div className="text-center>
+                <div className=text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Innovation</h3>
+                <p className=text-gray-600">
                   We constantly push the boundaries of what&apos;s possible, embracing new technologies 
                   and methodologies to deliver cutting-edge solutions.
                 </p>
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4"></div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <p className="text-gray-600">
+              <div className="text-center>
+                <div className=text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Partnership</h3>
+
 =======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-                <p className="text-gray-600">
+                <p className=text-gray-600">
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   We believe in building long-term relationships with our clients, working as 
                   an extension of their team to achieve shared success.
                 </p>
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
-                <p className="text-gray-600">
+              <div className="text-center>
+                <div className=text-4xl mb-4"></div>
+
 =======
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>                <p className="text-gray-600">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>
+                <p className=text-gray-600">
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   We believe in building long-term relationships with our
                   clients, working as an extension of their team to achieve
                   shared success.
                 </p>
               </div>
-              <div className="text-center">
-                <div className="text-4xl mb-4"></div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <div className="text-4xl mb-4">⭐</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Excellence
-                </h3>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+              <div className="text-center>
+                <div className=text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3>Excellence</h3>
+
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-                <p className="text-gray-600">
+                <p className=text-gray-600">
                   We maintain the highest standards in everything we do, from project planning 
                   to final delivery, ensuring exceptional results every time.
                 </p>
@@ -384,67 +341,67 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
 
           {/* Team Section */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">;
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">;
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-16>;
+            <h2 className=text-3xl font-bold text-gray-800 mb-8 text-center">;
               Meet Our Team;
             </h2>;
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>;
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center>Meet Our Team</h2>;
 ursor/automate-test-improve-and-merge-code-646c;
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              <div className="text-center">;
-                <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">;
-                  <span className="text-2xl font-bold text-blue-600">K</span>;
+            <h2 className=text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>;
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8>;
+              <div className=text-center">;
+                <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center>;
+                  <span className=text-2xl font-bold text-blue-600">K</span>;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">;
+                <h3 className="text-xl font-semibold text-gray-800 mb-2>;
                   Kleber;
                 </h3>;
-                <p className="text-blue-600 font-medium mb-2">Founder & CEO</p>;
-                <p className="text-gray-600 text-sm">;
+                <p className=text-blue-600 font-medium mb-2">Founder & CEO</p>;
+                <p className="text-gray-600 text-sm>;
                   Technology visionary with 15+ years of experience in software;
                   development and business strategy.;
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Kleber</h3>;
-                <p className="text-blue-600 font-medium mb-2">Founder & CEO</p>;
-                <p className="text-gray-600 text-sm">;
+                <h3 className=text-xl font-semibold text-gray-800 mb-2">Kleber</h3>;
+                <p className="text-blue-600 font-medium mb-2>Founder & CEO</p>;
+                <p className=text-gray-600 text-sm">;
                   Technology visionary with 15+ years of experience in software development;
                   and business strategy.;
 ursor/automate-test-improve-and-merge-code-646c;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">;
-                  <span className="text-2xl font-bold text-green-600">A</span>;
+              <div className="text-center>;
+                <div className=w-24 h-24 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">;
+                  <span className="text-2xl font-bold text-green-600>A</span>;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">;
+                <h3 className=text-xl font-semibold text-gray-800 mb-2">;
                   Alex;
                 </h3>;
-                <p className="text-blue-600 font-medium mb-2">CTO</p>;
-                <p className="text-gray-600 text-sm">;
+                <p className="text-blue-600 font-medium mb-2>CTO</p>;
+                <p className=text-gray-600 text-sm">;
                   AI and machine learning expert with a passion for creating;
                   intelligent solutions that solve real-world problems.;
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Alex</h3>;
-                <p className="text-blue-600 font-medium mb-2">CTO</p>;
-                <p className="text-gray-600 text-sm">;
+                <h3 className="text-xl font-semibold text-gray-800 mb-2>Alex</h3>;
+                <p className=text-blue-600 font-medium mb-2">CTO</p>;
+                <p className="text-gray-600 text-sm>;
                   AI and machine learning expert with a passion for creating intelligent;
                   solutions that solve real-world problems.;
 ursor/automate-test-improve-and-merge-code-646c;
                 </p>;
               </div>;
-              <div className="text-center">;
-                <div className="w-24 h-24 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">;
-                  <span className="text-2xl font-bold text-purple-600">S</span>;
+              <div className=text-center">;
+                <div className="w-24 h-24 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center>;
+                  <span className=text-2xl font-bold text-purple-600">S</span>;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">;
+                <h3 className="text-xl font-semibold text-gray-800 mb-2>;
                   Sarah;
                 </h3>;
-                <p className="text-blue-600 font-medium mb-2">Head of Design</p>;
-                <p className="text-gray-600 text-sm">;
+                <p className=text-blue-600 font-medium mb-2">Head of Design</p>;
+                <p className="text-gray-600 text-sm>;
                   Creative director focused on user experience and interface;
                   design, ensuring our solutions are both powerful and;
                   intuitive.;
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Sarah</h3>;
-                <p className="text-blue-600 font-medium mb-2">Head of Design</p>;
-                <p className="text-gray-600 text-sm">;
+                <h3 className=text-xl font-semibold text-gray-800 mb-2">Sarah</h3>;
+                <p className="text-blue-600 font-medium mb-2>Head of Design</p>;
+                <p className=text-gray-600 text-sm">;
                   Creative director focused on user experience and interface design,ensuring our solutions are both powerful and intuitive.;
 ursor/automate-test-improve-and-merge-code-646c;
                 </p>;
@@ -452,13 +409,13 @@ ursor/automate-test-improve-and-merge-code-646c;
             </div>;
           </div>;
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">;
-            <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>;
-            <p className="text-xl mb-6">;
+          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white>;
+            <h2 className=text-3xl font-bold mb-4">Ready to Work With Us?</h2>;
+            <p className="text-xl mb-6>;
               Let's discuss how we can help transform your business with our;
               technology solutions.;
             </p>;
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
+            <div className=flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
               <a;
               Let&apos;s discuss how we can help transform your business with our technology solutions.;
 :backup-problematic-files/temp_broken_files/pages/about.jsx;
@@ -466,15 +423,15 @@ ursor/automate-test-improve-and-merge-code-646c;
               Let's discuss how we can help transform your business with our;
               technology solutions.;
             </p>;
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4>;
               <a;
 ursor/automate-test-improve-and-merge-code-646c;
             </p>;
               Let&apos;s discuss how we can help transform your business with our technology solutions.            </p>;
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
+            <div className=flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">;
               <a;
-                href="/contact";
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+                href="/contact;
+                className=bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
               >;
                 Get in Touch;
               </a>;
@@ -482,8 +439,8 @@ ursor/automate-test-improve-and-merge-code-646c;
               <a;
 ursor/automate-test-improve-and-merge-code-646c;
               <a;
-                href="/services";
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
+                href="/services;
+                className=bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
               >;
                 View Our Services;
               </a>;
@@ -497,32 +454,25 @@ export default About;
 ursor/automate-test-improve-and-merge-code-646c;
 export default About;
   )}export default About;
-          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
-            <p className="text-xl mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Let&apos;s discuss how we can help transform your business with our technology solutions.
-              Let&apos;s discuss how we can help transform your business with our technology solutions.
-            </p>
-=======
-              Let&apos;s discuss how we can help transform your business with our technology solutions.            </p>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white>
+            <h2 className=text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+            <p className="text-xl mb-6>
+
 =======
               Let&apos;s discuss how we can help transform your business with our technology solutions.
               Let&apos;s discuss how we can help transform your business with our technology solutions.
             </p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className=flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/contact
+                className=bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get in Touch
               </a>
               <a 
-                href="/services"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                href="/services
+                className=bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Our Services
               </a>
@@ -531,15 +481,10 @@ export default About;
         </main>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
-  )
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 =======
   );
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-};
+}
 
 export default About;

@@ -71,7 +71,6 @@ interface Listing  {id: string,title: string,description: string,category: strin
   ),const [selectedFilter, setSelectedFilter] = useState(() => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all';
   ),const [isLoading, setIsLoading] = useState(false),useEffect(() => {safeStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]),useEffect(() => {safeStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]),useEffect(() => {let mounted = true,setIsLoading(true),const timeout = setTimeout(() => {if (mounted) setIsLoading(false)}, 300),return () => {mounted = false,clearTimeout(timeout)}
   }, [searchQuery, selectedSort, selectedFilter]),// Process listings based on filters and search;
-  const processedListings = initialListings;
     .filter(listing => {// Apply search filter;
       const matchesSearch =;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;

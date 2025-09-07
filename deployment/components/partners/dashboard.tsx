@@ -10,9 +10,7 @@ const [usage, setUsage] = useState<any />(null);
 
 const [loading, setLoading] = useState(false);
 
-const [usage, setUsage] = useState<any />(null);
 
-const [loading, setLoading] = useState(false);
 
   useEffect(() => {
 
@@ -43,7 +41,6 @@ const res = await fetch('/api/partners/usage', {}
 }
     });
 
-const data = await res.json();
     setUsage(data.summary |null);
     setLoading(false);
   }

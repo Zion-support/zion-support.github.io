@@ -32,7 +32,6 @@ viewBox="0 0 24 24""
           <div className="text-xs">GET IT ON</div>"
           <div className="text-xl font-semibold">Google Play</div>"
         </div>},
-import React from "react";"
 import { Apple, GithubIcon } from "lucide-react";"
 import { cn } from "@/lib/utils",;"
 interface AppStoreButtonsProps {;

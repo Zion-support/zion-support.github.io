@@ -20,9 +20,6 @@ const formatTimestamp = ("timestamp": string) => {
   }
 export function ApiLogs() {;
   }
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
 import { useState, useEffect } from "react","
 import { format } from "date-fns","
 import { List, RefreshCw } from "lucide-react","
@@ -42,12 +39,10 @@ useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]);
 
-  const handleRefresh = () => {
     }
     fetchApiLogs(pageSize, currentPage * pageSize)
   }
   // Helper to format the timestamp,
-const formatTimestamp = ("timestamp": string) => {
     }
     return format(new Date(timestamp), 'yyyy-MM-dd "HH": "mm":ss')'
   },
@@ -76,9 +71,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge",;"
 export function ApiLogs() {;
   }
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),;
-  const [pageSize, setPageSize] = useState(25),;
-  const [currentPage, setCurrentPage] = useState(0),;
   // Load logs on mount and when pagination changes;
   useEffect(() => {;
     }
@@ -144,7 +136,6 @@ export function ApiLogs() {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
   
-  const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   },
   

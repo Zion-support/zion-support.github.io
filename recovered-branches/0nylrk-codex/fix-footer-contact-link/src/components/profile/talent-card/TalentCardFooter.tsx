@@ -71,15 +71,12 @@ if (onViewProfile) {
       onViewProfile(profile.id |'')'
     }
   }
-import { UserProfile } from "@/types/auth","
-import { useNavigate } from "react-router-dom","
 interface TalentCardFooterProps {
   }
   "profile": TalentProfile,
   "onViewProfile": ("id": string) => void,
   onRequestHire?: ("profile": TalentProfile) => void
   };
-import React, { useState } from "react";"
 import { Star } from "lucide-react";"
 import { Button } from "@/components/ui/button",;"
 import { ExternalLink } from "lucide-react",;"
@@ -96,8 +93,6 @@ interface TalentCardFooterProps {;
 }
 export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
   }
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
     } else {
       // Open hire modal directly if no handler provided;
   }

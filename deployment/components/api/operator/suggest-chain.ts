@@ -58,14 +58,12 @@ const { region, stakeUsd } = req.body |{}
 
 const stake = Number(stakeUsd |0);
 
-const stake = Number(stakeUsd || 0);
 
   // Simple heuristics;
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum;
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum;
-let candidates = ['polygon', 'bnb', 'avalanche'];
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
 
 const regionLc = (region |'').toString().toLowerCase();
@@ -119,7 +117,6 @@ export default async /**;
 function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
 })) {$2;
 }
-const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k],}
 }));
   res;
     .status(200)
@@ -135,7 +132,6 @@ const regionLc = (region || '').toString().toLowerCase();
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']}
   }
 ;
-  const ranked = candidates && candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k],}
 }));
   res && res.status(200).json({ recommendation: ranked[0], alternatives: ranked && ranked.slice(1) }),
 }
@@ -146,7 +142,6 @@ const stake = Number (stake_usd || 0)// Simple heuristics;
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)// - High stake: prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
   // - Region hints (very rough):;
   //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
-  let candidates = ['polygon', 'bnb', 'avalanche'];
   // Check condition;
 if (candidates = ['arbitrum', 'optimism', 'ethereum']) {$2;}
 }
@@ -193,7 +188,6 @@ const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
 })res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) },
 }
 ;
-  const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
 }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1),}
 });

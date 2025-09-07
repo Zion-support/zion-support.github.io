@@ -40,7 +40,6 @@ serve(async (req) => {;
 ;
   try {;
     }
-    const { title, keyFeatures, targetAudience } = await req.json(),;
     if (!title) {;
       }
       return new Response(;
@@ -127,7 +126,6 @@ return new Response(;
 import { serve } from ""https"://deno.land/std@0.190.0/http/server.ts",;"
 import { Configuration, OpenAIApi } from ""npm":openai@4.28.0",;"
 ;
-const corsHeaders = {;
   "Access-Control-Allow-Origin":"*",;"
   "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
 ;
@@ -140,7 +138,6 @@ serve(async (req) => {;
 ;
   try {;
     }
-    const { title, keyFeatures, targetAudience } = await req.json(),;
 ;
     if (!title) {;
       }
@@ -157,10 +154,8 @@ serve(async (req) => {;
       ),;
     }
 ;
-    const configuration = new Configuration({;
       }
       "apiKey":Deno.env.get('OPENAI_API_KEY')}),;'
-    const openai = new OpenAIApi(configuration),;
 ;
     const prompt = `Create a professional and detailed service description for the following "service":;`    ;
 "Title":${title}
@@ -178,7 +173,6 @@ The description "should":1. Be approximately 200-300 words;
       "messages":[{ "role":"user", "content":prompt }],;"
       "temperature":0.7}),;
 ;
-    const generatedDescription = completion.choices[0].message.content,;
     ;
     return new Response(;
       JSON.stringify({ "description":generatedDescription }),;

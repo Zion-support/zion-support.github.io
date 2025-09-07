@@ -4,34 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' next build",
-    "start": "next start",
-    "lint": "eslint . --max-warnings 1000",
-    "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit --skipLibCheck",
-    "test": "jest --config jest.config.cjs",
-    "clean": "rm -rf .next out dist node_modules/.cache"
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "@testing-library/jest-dom": "^6.4.5",
-    "@testing-library/react": "^16.0.1",
-    "@types/node": "^20.19.13",
+
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^15.5.2",
-    "jest": "^29.7.0",
-    "lucide-react": "^0.542.0",
-    "next": "^15.5.2",
-    "postcss": "^8.5.6",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.9.2"
+
   },
   "devDependencies": {
     "eslint-plugin-jsx-a11y": "^6.8.0",

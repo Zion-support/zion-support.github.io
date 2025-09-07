@@ -182,7 +182,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 ;
   private getErrorSuggestion("error":Error):string {;
     }
-    const message = error.message.toLowerCase();
 ;
     if (message.includes('network') || message.includes('fetch')) {;'
       }

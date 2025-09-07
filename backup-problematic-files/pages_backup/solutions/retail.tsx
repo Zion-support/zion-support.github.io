@@ -3,7 +3,6 @@ import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-rea
 import React from 'react';'
 import Layout from '../../components/Layout';';'
 import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';'
-import Layout from '../../components/Layout';'
 import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';'
 const features = [;
   {}
@@ -201,7 +200,6 @@ title="Retail Solutions - Zion Tech Group""
   "description": 'Seamless integration across all sales channels';'
   }
 ;];
-const solutions = [;
   'E-commerce Platform Development',',;'
   'Mobile Commerce Applications',',;'
   'Inventory Management Systems',',;'
@@ -268,7 +266,6 @@ return (;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";"
                   <p className="text-gray-300">{feature && feature.description}</p>";"
                 </div>;
-const benefits = [;
   'Increased online sales and revenue',;'
   'Improved customer experience',;'
   'Better inventory management',;'
@@ -281,7 +278,6 @@ const benefits = [;
     "description": 'Seamless integration across all sales channels''
   }
 ;];
-const solutions = [;
   'E-commerce Platform Development',','
   'Mobile Commerce Applications',','
   'Inventory Management Systems',','
@@ -349,7 +345,6 @@ export default function RetailSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
                 </div>;
-const benefits = [;
   'Increased online sales and revenue','
   'Improved customer experience','
   'Better inventory management','

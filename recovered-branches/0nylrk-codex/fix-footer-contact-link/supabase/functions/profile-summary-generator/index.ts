@@ -16,7 +16,6 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get($2);
-const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
 serve(async (req) => {
@@ -163,14 +162,11 @@ return new Response (;
           }
         ],
         "temperature": 0.7})}),
-    const openAIData = await openAIResponse && openAIResponse.json();
-    const responseContent = openAIData && openAIData.choices[0].message && message.content;
     if (!openAIData.choices || openAIData.choices.length === 0) {
 }
 throw new Error("Failed to generate profile content");"
     }
     // Extract the generated content from the response,
-const responseContent = openAIData.choices[0].message.content,;
     }
     // Extract the generated content from the response
     // Parse the JSON response,

@@ -52,7 +52,6 @@ export async function getFlagById("id": string): Promise<ModerationFlag | null> 
 
 
 // Mock data storage - replace with actual database,
-let "flags": ModerationFlag[] = [];
 
 export async function getFlagById("id": string): Promise<ModerationFlag | null> {;
   }
@@ -128,7 +127,6 @@ export async function updateFlagStatus(
   status: ModerationFlag['status'], 
   adminNotes?: string
 ): Promise<FlaggedContent | undefined> {;
-  const flag = await getFlagById(id);
   if (!flag) return undefined;
 
 
@@ -202,7 +200,6 @@ export async function getFlagById(id: string): Promise<FlaggedContent | undefine
 }
 
 export async function upsertFlag(flag: FlaggedContent): Promise<void> {
-  const all = await readAllFlags($2);
   const idx = all.findIndex($2);
   if (idx >= 0) all[idx] = flag, else all.push($2);
   await writeAllFlags(all)
@@ -217,7 +214,6 @@ export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' |
     status: init.status || 'pending',
     aiScores: init.aiScores || generateAiScores($2);
     ...init},
-  const all = await readAllFlags($2);
   all.push($2);
   await writeAllFlags($2);
   return flag

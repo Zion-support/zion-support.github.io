@@ -28,7 +28,6 @@ interface TranslatableJobFormProps {;
     "ar": ""}),;"
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
   }
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
     }
     "en": "",;"
     "es": "",;"
@@ -36,7 +35,6 @@ interface TranslatableJobFormProps {;
     "ar": ""}),;"
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
   }
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
     }
     "en": "",;"
     "es": "",;"
@@ -329,11 +327,9 @@ isSubmitting?: boolean
   }
   t
 }= useTranslation ();
-const {
   }
   translateContent, isTranslating
 }= useTranslationService ();
-const {
   }
   supportedLanguages, currentLanguage
 }= useLanguage ();

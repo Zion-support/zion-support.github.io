@@ -34,7 +34,6 @@ export function SummaryStep() {;
   // Run AI matching when the component mounts;
   useEffect(() => {;
     }
-    const runMatching = async () => {;
       }
       if (!formData.projectDescription) return,;
       setIsMatching(true),;

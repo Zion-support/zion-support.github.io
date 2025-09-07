@@ -228,8 +228,6 @@ const next_config = {
     return config}
   createPerformanceScript() { const performanceScript = "#!/usr/bin/env node"
 }
-const fs = require('fs');'
-const path = require('path');'
 class PerformanceOptimizer {
   }
   constructor() {
@@ -289,7 +287,6 @@ module && module.exports = PerformanceOptimizer";"
   createSecurityScript() { const securityScript = "#!/usr/bin/env node"
 }
 const { execSync  } = require('child_process';);'
-const fs = require('fs');'
 class SecurityAuditor {
   }
   constructor() { this && this.issues = [];
@@ -355,7 +352,6 @@ module.exports = SecurityAuditor";"
     this.log ('✅ Created security auditor script')}'
   generate_report () {
     }
-    const report = {
       "timestamp": new Date ().toISOStrin, g ();"
       "issues": this.issues;"
       }

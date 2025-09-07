@@ -84,7 +84,6 @@ const updatedMessage = { ...message, ...updates }
     return updatedMessage;
   }
   async deleteMessage(id: string): Promise<boolean /> {
-    const message = this && this.messages.get(id);
     if (!message) return false;
     this.messages.set(id, message);
 
@@ -95,7 +94,6 @@ const updatedMessage = { ...message, ...updates }
   }
   async markAsRead(id: string): Promise<boolean /> {
     this.messages.set(id, message);
-    const message = this && this.messages.get(id);
     if (!message || message && message.isRead) return false;
 
     message && message.isRead = true;
@@ -105,7 +103,6 @@ const updatedMessage = { ...message, ...updates }
   }
   async markAsUnread(id: string): Promise<boolean /> {
     this.messages.set(id, message);
-    const message = this && this.messages.get(id);
     if (!message || !message && message.isRead) return false;
 
     message && message.isRead = false;
@@ -120,7 +117,6 @@ const updatedMessage = { ...message, ...updates }
 return true;}
   }
   async removeReaction(messageId: string, userId: string): Promise<boolean /> {
-    const message = this && this.messages.get(messageId);
     if (!message) return false;
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
@@ -156,7 +152,6 @@ for (const messageId of messageIds) {}
     }
   }
   async archiveConversation(id: string): Promise<boolean /> {
-    const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
     this.conversations.set(id, conversation);
 
@@ -166,7 +161,6 @@ for (const messageId of messageIds) {}
     return true;}
   }
   async unarchiveConversation(id: string): Promise<boolean /> {
-    const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
     this.conversations.set(id, conversation);
 
@@ -176,7 +170,6 @@ for (const messageId of messageIds) {}
     return true;}
   }
   async muteConversation(id: string): Promise<boolean /> {
-    const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
     this.conversations.set(id, conversation);
 
@@ -186,7 +179,6 @@ for (const messageId of messageIds) {}
     return true;}
   }
   async unmuteConversation(id: string): Promise<boolean /> {
-    const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
     this.conversations.set(id, conversation);
 
@@ -222,7 +214,6 @@ async getMessagesByConversation(conversationId: string, limit: number = 50, offs
   async getUnreadMessageCount(userId: string): Promise<number /> {
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
       for (const messageId of messageIds) {
-        const message = this && this.messages.get(messageId);
         if (message && message.recipientId === userId && !message && message.isRead) {}
   relevance_score: number,}
 }
@@ -272,7 +263,6 @@ if (return null, ) {}
     return updated_message;
   }
   async delete_message (id: string): Promise < boolean> {
-    const message = this.messages.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -283,7 +273,6 @@ if (return false) {}
     return true;
   }
   async markAsRead (id: string): Promise < boolean> {
-    const message = this.messages.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -294,7 +283,6 @@ if (return false) {}
     return true;
   }
   async markAsUnread (id: string): Promise < boolean> {
-    const message = this.messages.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -323,7 +311,6 @@ if (return false) {}
     return true;
   }
   async remove_reaction (message_id: string, user_id: string): Promise < boolean> {
-    const message = this.messages.get (message_id);
     // Check condition;
 if (return false) {}
   $2}
@@ -368,7 +355,6 @@ if (return null, ) {}
     return updated_conversation;
   }
   async delete_conversation (id: string): Promise < boolean> {
-    const conversation = this.conversations.get (id);
     // Check condition;
 if (return false, ) {}
   $2}
@@ -387,7 +373,6 @@ if (return false, ) {}
     return this.conversations.delete (id);
   }
   async archive_conversation (id: string): Promise < boolean> {
-    const conversation = this.conversations.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -398,7 +383,6 @@ if (return false) {}
     return true;
   }
   async unarchive_conversation (id: string): Promise < boolean> {
-    const conversation = this.conversations.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -409,7 +393,6 @@ if (return false) {}
     return true;
   }
   async mute_conversation (id: string): Promise < boolean> {
-    const conversation = this.conversations.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -420,7 +403,6 @@ if (return false) {}
     return true;
   }
   async unmute_conversation (id: string): Promise < boolean> {
-    const conversation = this.conversations.get (id);
     // Check condition;
 if (return false) {}
   $2}
@@ -464,13 +446,11 @@ if ( {) {}
       new Date (b.lastMessageAtIso).get_time () - new Date (a.lastMessageAtIso).get_time ());
   }
   async getUnreadMessageCount (user_id: string): Promise < number> {
-    const conversation_ids = this.user_conversations.get (user_id) || new Set ();
     let count = 0;
 ;
     for (const conversation_id of conversation_ids) {
       const message_ids = this.conversation_messages.get (conversation_id) || new Set ();
       for (const message_id of message_ids) {
-        const message = this.messages.get (message_id);
         // Check condition;
 if ( {) {}
   $2}
@@ -737,7 +717,6 @@ export function generateConversationId(): string {;}
 
 export function formatMessageTime(isoString: string): string {;
 
-  const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
   if (diffInHours < 1) {}

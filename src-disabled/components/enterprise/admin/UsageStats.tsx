@@ -24,13 +24,8 @@ export function UsageStats() {
     });
   }
 
-import React from "react",
-import { Slider } from "@/components/ui/slider",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
-import {
   Card,
   CardContent,
   CardDescription,
@@ -40,7 +35,6 @@ import {
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
 export function UsageStats() {
-  const handleSaveChanges = () => {
     toast({
       title: "Limits updated",
       description: "The new usage limits have been saved successfully."})
@@ -51,7 +45,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
-import {
   Card,
   CardContent,
   CardDescription,
@@ -65,17 +58,12 @@ import { Progress } from '@/components/ui/progress';
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
   Card;
   CardContent;
   CardDescription;
   CardFooter;
   CardHeader;
   CardTitle} from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = null;
 
@@ -92,7 +80,6 @@ return (
 
 export function UsageStats() {
 
-  const handleSaveChanges = () => {
     toast({
 
         <Card>
@@ -218,9 +205,6 @@ export function UsageStats() {
 }
 ;
   )
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
 
@@ -231,7 +215,6 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle} from "@/components/ui/card",;
-import { Sparkles } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
 export function UsageStats() {;
   const handleSaveChanges = () => {;

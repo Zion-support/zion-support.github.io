@@ -52,10 +52,7 @@ import { motion } from 'framer-motion',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
-import { motion } from 'framer-motion';
 
-const ComprehensiveServicesShowcase2036: React.FC = () => {
-  const allServices = [
     ...real2036InnovativeServices,
     ...real2036ITServices,
 :pages/comprehensive-services-showcase-2036.tsx
@@ -87,12 +84,6 @@ className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
               transition={{ duration: 0.8, delay: 0.4 }}"
 className="flex flex-col sm:flex-row gap-4 justify-center"
 
-import Layout from '../components/layout/Layout';
-import { real2036InnovativeServices  } from '../data/real-2036-innovative-services';
-import { real2036ITServices  } from '../data/real-2036-it-services';
-import { real2036AIServices  } from '../data/real-2036-ai-services';
-import { motion } from 'framer-motion';
-const ComprehensiveServicesShowcase2036: React.FC;
         title='Comprehensive Services Showcase 2036 - Zion Tech Group'
         description='Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting-edge IT solutions. Transform your business with next-generation technology.'
         keywords='AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology'

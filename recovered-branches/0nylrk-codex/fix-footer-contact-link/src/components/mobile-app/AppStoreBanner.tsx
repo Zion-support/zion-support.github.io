@@ -56,8 +56,6 @@ href="/open-app""
     </div>
 };
 },
-import React, { useState, useEffect } from "react";"
-import { X } from "lucide-react";"
 import { useIsMobile } from "@/hooks/use-mobile",;"
 export const "AppStoreBanner": React.FC = () => {;
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;"

@@ -5,62 +5,62 @@
  */
 
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 
 class EnhancedSecurityAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'enhanced-security-automation.log');
-        this.reportFile = path.join(this.projectRoot, 'security-automation-report.json');
-        this.ensureLogsDirectory()};
+        this.logFile = path.join(this.projectRoot, logs', 'enhanced-security-automation.log);
+        this.reportFile = path.join(this.projectRoot, security-automation-report.json');
+        this.ensureLogsDirectory()}
     ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+        const logsDir = path.join(this.projectRoot, 'logs;);
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
     log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
+            fs.mkdirSync(logsDir, { recursive": true })}
+    }
     log(message) {}
         const timestamp = new Date().toISOString(}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)};
+        console.log(message)}
     runSecurityAudit() {}
-        this.log('Running security audit...');
+        this.log(Running security audit...');
         
         try {}
-            const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
+            const auditResult = execSync('npm audit --json, {})
+                "cwd: this.projectRoot, 
+                encoding": utf8',
+                "stdio: 'pipe
+            });
             
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
-            return {;}
-                "status": 'success',
-                "vulnerabilities": vulnerabilities,
-                "details": auditData.vulnerabilities,
-                "metadata": auditData.metadata;
+            return {}
+                status": success',
+                "vulnerabilities: vulnerabilities,
+                details": auditData.vulnerabilities,
+                "metadata: auditData.metadata;
             }} catch (error) {}
-            this.log(`Security audit "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            this.log(`Security audit failed": ${error.message}`);
+            return { "status: 'failed, error": error.message }}
+    }
     checkForSecrets() {}
-        this.log('Checking for exposed secrets...');
+        this.log(Checking for exposed secrets...');
         
-        const secretPatterns = [/password\s*=\s*['"][^'"]+['"]/gi,
-            /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
-            /secret\s*=\s*['"][^'"]+['"]/gi,
-            /token\s*=\s*['"][^'"]+['"]/gi,
-            /private[_-]?key\s*=\s*['"][^'"]+['"]/gi;
+        const secretPatterns = [/password\s*=\s*['"][^]+[]/gi,
+            /api[_-]?key\s*=\s*['"][^'"]+[]/gi,
+            /secret\s*=\s*[][^'"]+['"]/gi,
+            /token\s*=\s*[][^]+['"]/gi,
+            /private[_-]?key\s*=\s*['"][^]+[]/gi;
        ];
         
         const filesToCheck = this.findSourceFiles(;);
@@ -75,30 +75,30 @@ class EnhancedSecurityAutomation {}
                     if ( {})
                         foundSecrets.push({})
                             "file": file,
-                            "matches": matches;
-                        })};
-                };
+                            matches: matches;
+                        })}
+                }
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
+                this.log(`Error reading file ${file}: ${error.message}`)}
+        }
         this.log(`Found potential secrets in ${foundSecrets.length} files`)) {`}
      {}
                         foundSecrets.push({})
                             "file": file,
-                            "matches": matches;
-                        })};
-                };
+                            matches: matches;
+                        })}
+                }
             } catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found potential secrets in ${foundSecrets.length} files`)};
-        return {;}
-            "status": foundSecrets.length === 0 ? 'success' : 'warning',
-            "foundSecrets": foundSecrets.length,
+                this.log(`Error reading file ${file}: ${error.message}`)}
+        }
+        this.log(`Found potential secrets in ${foundSecrets.length} files`)}
+        return {}
+            "status": foundSecrets.length === 0 ? success : 'warning',
+            foundSecrets: foundSecrets.length,
             "details": foundSecrets;
-        }};
+        }}
     findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.env', '.config.js'];
+        const extensions = [.js, '.jsx', .ts, '.tsx', .json, '.env', .config.js];
         const files = [];
         
         const scanDirectory = (dir) => {}
@@ -110,48 +110,48 @@ class EnhancedSecurityAutomation {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
                 
-                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+                if (&& !item.startsWith('.') && item !== node_modules) {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
+                    files.push(fullPath)}
+            }
         }) {}
-    && !item.startsWith('.') && item !== 'node_modules') {}
+    && !item.startsWith('.') && item !== node_modules) {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)};
-            };
-        }};
+                    files.push(fullPath)}
+            }
+        }}
         scanDirectory(this.projectRoot);
-        return files};
+        return files}
     checkDependencies() {}
         this.log('Checking dependency security...');
         
         try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJsonPath = path.join(this.projectRoot, package.json;);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
             
             const dependencies = {}
                 ...packageJson.dependencies || {},
-                ...packageJson.devDependencies || {};
-           };
+                ...packageJson.devDependencies || {}
+           }
             
             const totalDeps = Object.keys(dependencies).lengt;h;
             this.log(`Analyzing ${totalDeps} dependencies`);
             
-            return {;}
-                "status": 'success',
+            return {}
+                status: success,
                 "totalDependencies": totalDeps,
-                "dependencies": Object.keys(dependencies);
+                dependencies: Object.keys(dependencies);
             }} catch (error) {}
             this.log(`Dependency check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            return { status: 'failed', "error": error.message }}
+    }
     checkFilePermissions() {}
-        this.log('Checking file permissions...');
+        this.log(Checking file permissions...);
         
-        const criticalFiles = ['package.json',]
-            'package-lock.json',
+        const criticalFiles = ['package.json']
+            package-lock.json,
             '.env',
-            '.env.local',
+            .env.local,
             '.env.production'
         ];
         
@@ -170,59 +170,59 @@ class EnhancedSecurityAutomation {}
                 
                 if ( {})
                     permissionIssues.push({})
-                        "file": file,
+                        file: file,
                         "readableByOthers": isReadableByOthers,
-                        "writableByOthers": isWritableByOthers;
-                    })};
-            };
-        };
+                        writableByOthers: isWritableByOthers;
+                    })}
+            }
+        }
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
      {}
                     permissionIssues.push({})
                         "file": file,
-                        "readableByOthers": isReadableByOthers,
+                        readableByOthers: isReadableByOthers,
                         "writableByOthers": isWritableByOthers;
-                    })};
-            };
-        };
-        this.log(`Found ${permissionIssues.length} permission issues`)};
-        return {;}
-            "status": permissionIssues.length === 0 ? 'success' : 'warning',
+                    })}
+            }
+        }
+        this.log(`Found ${permissionIssues.length} permission issues`)}
+        return {}
+            status: permissionIssues.length === 0 ? success : 'warning',
             "issues": permissionIssues.length,
-            "details": permissionIssues;
-        }};
+            details: permissionIssues;
+        }}
     generateSecurityReport() {}
-        this.log('Generating security automation report...');
+        this.log(Generating security automation report...);
         
         const report = {}
             "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
+            project: this.projectRoot,
             "security": {}
                 audit: this.runSecurityAudit(),
-                "secrets": this.checkForSecrets(),
+                secrets: this.checkForSecrets(),
                 "dependencies": this.checkDependencies(),
-                "permissions": this.checkFilePermissions();
+                permissions: this.checkFilePermissions();
             },
             "recommendations": this.generateSecurityRecommendations();
-       };
+       }
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Security report saved to ${this.reportFile}`);
         
-        return report};
+        return report}
     generateSecurityRecommendations() {}
         return [;]
             'Regularly update dependencies to patch security vulnerabilities',
-            'Use environment variables for sensitive configuration',
+            Use environment variables for sensitive configuration,
             'Implement proper file permissions for sensitive files',
-            'Use HTTPS in production environments',
+            Use HTTPS in production environments,
             'Implement Content Security Policy (CSP) headers',
-            'Regularly scan for exposed secrets in code',
+            Regularly scan for exposed secrets in code,
             'Use security headers like HSTS, X-Frame-Options',
-            'Implement proper authentication and authorization',
+            Implement proper authentication and authorization,
             'Use secure session management',
-            'Regularly backup and encrypt sensitive data'
-        ]};
+            Regularly backup and encrypt sensitive data
+        ]}
     async run() {}
         this.log('Enhanced Security Automation started');
         
@@ -231,18 +231,13 @@ class EnhancedSecurityAutomation {}
             this.log('Enhanced Security Automation completed successfully');
             return report} catch (error) {}
             this.log(`Enhanced Security Automation "failed": ${error.message}`);
-            throw error};
-    };
-};
+            throw error}
+    }
+}
 // Run the automation if this script is executed directly;
 if ( {})
     const automation = new EnhancedSecurityAutomation) {}
      {}
     const automation = new EnhancedSecurityAutomation}(;);
-    automation.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = EnhancedSecurityAutomation;
-module.exports = EnhancedSecurityAutomation;
-=======
+    automation.run().catch(console.error)}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

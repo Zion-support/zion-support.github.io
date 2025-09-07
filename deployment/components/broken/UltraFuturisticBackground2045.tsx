@@ -75,15 +75,12 @@ const canvasRef = useRef<HTMLCanvasElement />(null)interface UltraFuturisticBack
 }
 }
 
-const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props /> = ({ children   ,}
 }) => {
 
 
-const canvasRef = null;
 
 const animationRef = useRef<number | undefined />(undefined;
   useEffect(() => ;
-  const canvas = canvasRef.current;
     if (!canvas) return;
 
 const ctx = canvas.getContext('2d')if (!ctx);
@@ -98,7 +95,6 @@ const particles: Array<{x: number;y: number;}
 alpha: Math.random () * 0.8 + 0.2;
 life: Math.random () * 100 + 50;
 
-const UltraFuturisticBackground2045: React.FC<;
   UltraFuturisticBackground2045Props;
 > = ({ children    }) => {
 

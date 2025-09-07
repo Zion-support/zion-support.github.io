@@ -138,12 +138,6 @@ const logoColor = customColor || '#22D3EE';',;'
       </div>;
     </Link>;
     </Link>;
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import React from 'react';'
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import React from 'react';'
 export function Logo() {
   }
   const logoColor = customColor || '#22D3EE';'
@@ -166,28 +160,20 @@ ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d,
-import React from 'react';'
 origin/automation-improvements-final,
-import { Link } from 'react-router-dom';'
-import React from 'react';'
 origin/automation-improvements-final,
-import { Link } from 'react-router-dom';'
       <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-"hover":shadow-xl transition-all duration-300"import React from 'react''
 import { Link } from 'react-router-dom''
 export function Logo() {
 }
-const logoColor = customColor || '#22D3EE';'
 export function Logo() {
   }
-  const logoColor = customColor || '#22D3EE';'
 return (;
 export function Logo() {;
   }
-  const logoColor = customColor || '#22D3EE';'
       <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-"hover":shadow-xl transition-all duration-300"import React from 'react''
 export function Logo() {
 }
-const logoColor = customColor || '#22D3EE';'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d,
 origin/automation-improvements-final,

@@ -32,9 +32,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import { NextSeo  } from '@/components/NextSeo';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -204,21 +201,7 @@ interface EquipmentSpecification {
 import { useState, useEffect } from "react",;
 import { useRouter } from 'next/router',;
 import { NextSeo } from '@/components/NextSeo',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { getStripe } from "@/utils/getStripe",;
-import { useCart } from '@/context/CartContext',;
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
-import { equipmentListings } from '@/data/equipmentData',;
-import { ProductListing } from '@/types/listings',;
-import { motion } from 'framer-motion',;
-import { useCurrency } from '@/hooks/useCurrency',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
 interface EquipmentSpecification {;
   name: string,;
   value: string;
@@ -382,7 +365,6 @@ export default function EquipmentDetail() {;
         payload: {,
     load_equipment ();
   }, [id]);,
-  const handleAddToCart = async () => {
     // Check condition
 if ( {) {
   $2
@@ -589,7 +571,6 @@ if ( {) {
 ;
     loadEquipment();
   }, [id]),;
-  const handleAddToCart = async () => {;
     if (!equipment || !isAuthenticated) {;
       toast({;
         title: "Authentication Required",;
@@ -884,7 +865,6 @@ if ( {) {
     loadEquipment()
   }, [id]),
 
-  const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
       toast({
 
@@ -894,7 +874,6 @@ if ( {) {
 
 
 
-  const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
 :src/pages/EquipmentDetail.tsx
@@ -906,7 +885,6 @@ if ( {) {
         variant: 'destructive',
 
 
-  const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
       })
@@ -943,7 +921,6 @@ if ( {) {
 
     load_equipment ();
   }, [id]);
-  const handleAddToCart = async () => {
     // Check condition
 if ( {) {
   $2
@@ -970,7 +947,6 @@ if ( {) {
     }
 :src/pages/EquipmentDetail.tsx
   }
-  const inCart = items.some(item => item.id === equipment?.id)
           quantity}}),
 
       toast({
@@ -1119,7 +1095,6 @@ if ( {) {
           <div className="grid lg:grid-cols-2 gap-12">
 
 
-import {
   ShoppingCart
   Star
   Truck
@@ -1131,22 +1106,6 @@ import {
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
-import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { getStripe } from "@/utils/getStripe";
-import { useCart  } from '@/context/CartContext';
-import { ImageWithRetry  } from '@/components/ui/ImageWithRetry';
-import { equipmentListings  } from '@/data/equipmentData';
-import { ProductListing  } from '@/types/listings';
-import { motion  } from 'framer-motion';
-import { useCurrency  } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
 interface EquipmentSpecification {
   name: string;
   value: string

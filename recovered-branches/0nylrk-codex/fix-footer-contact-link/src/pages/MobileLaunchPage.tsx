@@ -29,7 +29,6 @@ title="Get the Zion App - AI Marketplace in Your Pocket""
 export default MobileLaunchPage;
 
 export default MobileLaunchPage,
-import React from "react";"
 import { SEO } from "@/components/SEO";"
 import { AppLayout } from "@/layout/AppLayout",;"
 import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero",;"

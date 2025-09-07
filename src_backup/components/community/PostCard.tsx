@@ -15,10 +15,6 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 
-import React from 'react',
-import { formatDistanceToNow } from "date-fns",
-import Link from "next/link",
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -90,7 +86,6 @@ export default PostCard;
 }variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {;
   tag ;
 
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', {
     data: post ? post.id : 'NO POST',
   });

@@ -1,8 +1,6 @@
 import {cn} from '@/lib/utils';'
 import * as React from "react""
 import { Drawer as DrawerPrimitive } from "vaul""
-import * as React from "react""
-import { Drawer as DrawerPrimitive } from "vaul""
 
 import { cn } from "@/lib/utils""
 
@@ -29,9 +27,7 @@ const DrawerOverlay = React.forwardRef<
 )
 Drawer.displayName = "Drawer""
 
-const DrawerPortal = DrawerPrimitive.Portal;
 
-const DrawerOverlay = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
@@ -89,7 +85,6 @@ const DrawerTitle = React.forwardRef<
   R</typeof>eact.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 DrawerFooter.displayName = "DrawerFooter""
 
-const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 
@@ -133,7 +128,6 @@ const DrawerContent = React.forward_ref<;
   </DrawerPortal>));
 DrawerContent.display_name = 'DrawerContent';'
 ;
-const DrawerHeader = ({
   }
   class_name,
   ...props;

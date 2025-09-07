@@ -4,8 +4,6 @@ const path = require('path')
 
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting CI/CD Pipeline...')
   "branch"
@@ -218,12 +216,9 @@ if (require.main === module) {
   console.log('� Application "URL")
 module.exports = { main, runCommand, checkGitStatus };
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 
 
 
-const { execSync } = require('child_process')
   console.log('� Application "URL")
   console.log('� Application "URL")
 

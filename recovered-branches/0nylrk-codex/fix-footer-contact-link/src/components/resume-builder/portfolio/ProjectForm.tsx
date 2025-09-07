@@ -93,7 +93,6 @@ import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
 
-const projectSchema = z.object({
   title: z.string().min($2);
   description: z.string().optional($2);
   technologies: z.string().optional($2);

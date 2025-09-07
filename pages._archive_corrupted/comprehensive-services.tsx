@@ -592,7 +592,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import { Brain,, Server,, Zap,, Shield,, ArrowRight,, CheckCircle,, Star,, Globe,, Lock,, Settings,, Palette,, Code,, Database,, Cloud,, Users } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "ComprehensiveServicesPage": React.FC = () => {const serviceCategories = [{"id": 1,"title": "AI & Machine Learning","description": "Cutting-edge artificial intelligence solutions to transform your business","icon": <Brain className="w-8 h-8" />,"services": [;"
         "Machine Learning Models","Natural Language Processing","Computer Vision","Predictive Analytics","AI Consulting";"
       ],"pricing": "Starting at $5,000","delivery": "2-8 weeks";"
     },{"id": 2,"title": "IT Infrastructure","description": "Robust and scalable IT infrastructure solutions for modern businesses","icon": <Server className="w-8 h-8" />,"services": ["Cloud Migration","Network Setup","System Integration","Data Management","24/7 Support";"
@@ -607,7 +606,6 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })cons
       ],"pricing": "Starting at $5,500","delivery": "3-10 weeks";"
     }
   ];
-  const benefits = [{"icon": <Star className="w-6 h-6" />,"title": "Expert Team","description": "Experienced professionals with deep expertise in cutting-edge technologies";"
     },{"icon": <Globe className="w-6 h-6" />,"title": "Global Reach","description": "Serving clients worldwide with remote and on-site support options";"
     },{"icon": <Settings className="w-6 h-6" />,"title": "Custom Solutions","description": "Tailored solutions designed to meet your specific business requirements";"
     },{"icon": <Users className="w-6 h-6" />,"title": "24/7 Support","description": "Round-the-clock support to ensure your systems run smoothly";"
@@ -806,7 +804,6 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
 export default ComprehensiveServicesPage;
     }
   ];
-  const benefits = [{"icon": <Star className="w-6 h-6" />,"title": "Expert Team","description": "Experienced professionals with deep expertise in cutting-edge technologies";"
     },{"icon": <Globe className="w-6 h-6" />,"title": "Global Reach","description": "Serving clients worldwide with remote and on-site support options";"
     },{"icon": <Settings className="w-6 h-6" />,"title": "Custom Solutions","description": "Tailored solutions designed to meet your specific business requirements";"
     },{"icon": <Users className="w-6 h-6" />,"title": "24/7 Support","description": "Round-the-clock support to ensure your systems run smoothly";"

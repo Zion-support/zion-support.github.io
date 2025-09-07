@@ -18,12 +18,8 @@ import React, { useState, useEffect, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
 import { Trash2, Download, Share2 } from 'lucide-react';
 import { Send } from 'lucide-react', // Added Send icon;
-import { toast } from "sonner",;
-import { logErrorToProduction } from '@/utils/productionLogger',;
 interface WhitepaperSection {;
   id: string,;
   title: string,;
@@ -675,7 +671,6 @@ interface DistributionChartItem {;
 }
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">"
 ;
-const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00'],;
 // Helper for slugifying filenames;
 const slugify = (text: string): string => {;
   return text.toString().toLowerCase();
@@ -709,20 +704,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null>(null), // For public/private toggle;
   const [rawDraft, setRawDraft] = useState<string | null>(null),;
   const [sections, setSections] = useState<WhitepaperSection[]>([]),;
-  const [showRawDraft, setShowRawDraft] = useState(false),;
-  const previewPanelRef = React.useRef<HTMLDivElement>(null),;
   useEffect(() => {;
     if(error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel) setError(null);
   }, [tokenName, tokenSupply, useCases, rewardsLogic, distributionData, governanceLogic, legalDisclaimers, sections]),;
   const parseWhitepaperDraft = useCallback((draft: string): WhitepaperSection[] => {;
     if (!draft) return [],;
     const sectionRegex = /(?:^|\n)(?:##\s*(.*?)\s*\n|^\*\*(.*?):\*\*\s*\n)([\s\S]*?)(?=\n(?:##\s|\*\*.+:\*\*)|$)/g,;
-    const parsed: WhitepaperSection[] = [],;
-    let match,;
-    let idCounter = 0,;
     while ((match = sectionRegex.exec(draft)) !== null) {;
       const title = (match[1] || match[2] || `Section ${idCounter + 1}`).trim(),;
-      const content = (match[3] || '').trim(),;
       parsed.push({ id: `section-${idCounter++}-${title.toLowerCase().replace(/\s+/g, '-')}`, title, content });
     }
     if (parsed.length === 0 && draft.trim().length > 0) {;
@@ -751,13 +740,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       .filter(item => item.value > 0)
   }, [distributionData]),
 
-  const handleGenerateWhitepaper = async () => {
     setIsLoading(true),
     setError(null),
     setRawDraft(null),
 
-    const processedDistData = distributionChartData.map(d => ({name: d.name, percentage: d.value})),
-    const totalPercentage = processedDistData.reduce((sum, item) => sum + item.percentage, 0),
     if (totalPercentage > 100) {
         setError("Total distribution percentage cannot exceed 100%."),
         setIsLoading(false),
@@ -774,7 +760,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   const handleDistributionChange = (id: string, field: 'name' | 'percentage', value: string) => {;
     setDistributionData(prev => prev.map(item => item.id === id ? { ...item, [field]: value } : item));
   },;
-  const addDistributionItem = () => {;
     setDistributionData(prev => [...prev, { id: crypto.randomUUID(), name: '', percentage: '' }]);
   },;
   const removeDistributionItem = (id: string) => {;
@@ -787,12 +772,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         value: parseFloat(item.percentage) || 0}));
       .filter(item => item.value > 0);
   }, [distributionData]),;
-  const handleGenerateWhitepaper = async () => {;
     setIsLoading(true),;
     setError(null),;
     setRawDraft(null),;
-    const processedDistData = distributionChartData.map(d => ({name: d.name, percentage: d.value})),;
-    const totalPercentage = processedDistData.reduce((sum, item) => sum + item.percentage, 0),;
     if (totalPercentage > 100) {;
         setError("Total distribution percentage cannot exceed 100%."),;
         setIsLoading(false),;
@@ -819,7 +801,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         apiPayload.distributionData = processedDistData;
       }
 ;
-      const { data, error: funcError } = await supabase.functions.invoke('generate-whitepaper', {;
         body: apiPayload}),;
       if (funcError) {;
         throw new Error(`Supabase function error: ${funcError.message}`);
@@ -847,7 +828,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       );
     );
   },;
-  const assembleMarkdownContent = (): string => {;
     let mdContent = `# ${tokenName} - Whitepaper\n\n`,;
     mdContent += `**Total Supply:** ${tokenSupply}\n\n`,;
     sections.forEach(section => {;
@@ -867,12 +847,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     return mdContent
   },
 
-  const handleDownloadMarkdown = () => {
     setIsDownloading(true),
     try {
-      const markdown = assembleMarkdownContent(),
       const blob = new Blob([markdown], { type: 'text/markdown,charset=utf-8' }),
-      const url = URL.createObjectURL(blob),
       const link = document.createElement('a'),
       link.href = url,
       link.download = `${slugify(tokenName || 'whitepaper')}_whitepaper.md`,
@@ -889,7 +866,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     }
   },
 
-  const handleDownloadPdf = async () => {
     setIsDownloading(true),
     setError(null),
     if (!previewPanelRef.current) {
@@ -899,13 +875,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     }),;
     return mdContent;
   },;
-  const handleDownloadMarkdown = () => {;
     setIsDownloading(true),;
     try {;
       const markdown = assembleMarkdownContent(),;
-      const blob = new Blob([markdown], { type: 'text/markdown,charset=utf-8' }),;
-      const url = URL.createObjectURL(blob),;
-      const link = document.createElement('a'),;
       link.href = url,;
       link.download = `${slugify(tokenName || 'whitepaper')}_whitepaper.md`,;
       document.body.appendChild(link),;
@@ -920,7 +892,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         setIsDownloading(false);
     }
   },;
-  const handleDownloadPdf = async () => {;
     setIsDownloading(true),;
     setError(null),;
     if (!previewPanelRef.current) {;
@@ -934,10 +905,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       // This might involve temporarily changing styles, which is complex and error-prone.;
       // A better approach for very long content is to paginate in jsPDF directly.;
       // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;
-      const html2canvasModule = await import('html2canvas'),;
-      const html2canvas = html2canvasModule.default,;
-      const { default: jsPDF } = await import('jspdf'),;
-      const canvas = await html2canvas(previewPanelRef.current, {;
         scale: 2, // Increase scale for better resolution;
         useCORS: true, // If there are any external images/fonts (though unlikely here);
         logging: true, // For debugging;
@@ -947,14 +914,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             // This is advanced usage of html2canvas.;
         }
       }),;
-      const imgData = canvas.toDataURL('image/png'),;
-      const pdf = new jsPDF('pmma4'),;
-      const pdfWidth = pdf.internal.pageSize.getWidth(),;
-      const pdfHeight = pdf.internal.pageSize.getHeight(),;
-      const imgProps = pdf.getImageProperties(imgData),;
       const imgHeight = (imgProps.height * pdfWidth) / imgProps.width,;
-      let heightLeft = imgHeight,;
-      let position = 0,;
       pdf.addImage(imgData, 'PNG', 0, position, pdfWidth, imgHeight),;
       heightLeft -= pdfHeight,;
       while (heightLeft > 0) {;

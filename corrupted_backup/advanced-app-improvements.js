@@ -194,7 +194,6 @@ export class HealthChecker {
     }
     const allResults = Array.from(this.results.values());
 
-const healthy = allResults.filter(r => { return r.status === 'healthy').length; }'
 
 const total = allResults.length;
     
@@ -230,7 +229,6 @@ const total = allResults.length;
       console.warn(\`Timer "\${name}" was not started\`);`      return;
     }
 
-const duration = performance.now() - metric.start;
     metric.duration = duration;
     metric.end = performance.now();
     
@@ -244,7 +242,6 @@ const duration = performance.now() - metric.start;
 
   getMetrics() {
     }
-    const results = {};
     for (const [name, metric] of this.metrics) {
       }
       const threshold = this.thresholds.get(name);
@@ -428,7 +425,6 @@ export class RedisCache {
     if (this.cache.size >= this.maxSize) {
      ;
   }
-  const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey);
     }
 
@@ -458,7 +454,6 @@ export class RedisCache {
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
     }
-    const fullPath = path.join('/workspace', filename);'
     fs.mkdirSync(path.dirname(fullPath), { "recursive": true
 });
     fs.writeFileSync(fullPath, content);
@@ -485,7 +480,6 @@ this.maxRequests = options.maxRequests || 100;
     }
     const now = Date.now();
 
-const windowStart = now - this.windowMs;
     
     if (!this.requests.has(identifier)) {
       }
@@ -509,13 +503,9 @@ const recentRequests = userRequests.filter(time => { return time > windowStart);
 
   getRemainingRequests(identifier) {
     }
-    const now = Date.now();
 
-const windowStart = now - this.windowMs;
 
-const userRequests = this.requests.get(identifier) || [];
 
-const recentRequests = userRequests.filter(time => { return time > windowStart); }
     
     return Math.max(0, this.maxRequests - recentRequests.length);
   }
@@ -534,7 +524,6 @@ const recentRequests = userRequests.filter(time => { return time > windowStart);
 
   get(key) {
     }
-    const item = this.cache.get(key);
     if (!item) return null;
 
     if (Date.now() > item.expiry) {
@@ -564,7 +553,6 @@ const recentRequests = userRequests.filter(time => { return time > windowStart);
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
     }
-    const fullPath = path.join('/workspace', filename);'
     fs.mkdirSync(path.dirname(fullPath), { "recursive": true
 });
     fs.writeFileSync(fullPath, content);

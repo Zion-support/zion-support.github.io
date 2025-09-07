@@ -26,7 +26,6 @@ const { upsertFile } = require('./_lib/github')exports.handler = async function 
         results.push({ "path": ep, "status": resp.status, ms });
       } catch (e) {
         }
-        const ms = Date.now() - t0;
         results.push({
           }
           "path": ep;

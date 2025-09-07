@@ -123,7 +123,6 @@ pr-12325
       }
       {
 )
-        const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observerRef.current?.disconnect()
       {
@@ -189,9 +188,7 @@ pr-12325
     return () => {
 
 
-            const fileSize = null;
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
-            const loadTime = null;
 
 
               resourceEntry.responseEnd - resourceEntry.requestStart;
@@ -235,7 +232,6 @@ if ( {) {
 }
     // Check condition;
       const observer = new PerformanceObserver (list => {)
-        const entries = list.get_entries ();
         entries.for_each (entry => {          // Check condition;)
 pr-12325
             const resource_entry = entry as PerformanceResourceTiming;
@@ -306,13 +302,10 @@ if ( {) {
 
     return () => {} // Return empty cleanup function for the else case;
   // Generate optimized URLs;
-  const optimized_src = isInView;
     ? image_optimization.optimize_url (current_src, width, quality);
     : ;
-  const src_set =;
     isInView && sizes ? image_optimization.generateSrcSet (current_src) : ;
   // Handle image load;
-  const handle_load = () =>: any {
   // TODO: Implement
 pr-12325
     setIsLoading (false);
@@ -344,7 +337,6 @@ if ( {) {
   // Simulate loading progress for demo purposes
   useEffect(() => {
   // Handle image error with retry logic;
-  const handleError = () => {
     if (retries < retryCount) {
       setRetries(prev => prev + 1)
       // Retry with a slight delay;
@@ -391,7 +383,6 @@ pr-12325
               />
       )
   loading?: 'lazy' | 'eager';
-    const interval = setInterval((,) => {
       setLoadProgress(prev => {)
         if (prev >= 90) {
           clearInterval(interval)
@@ -401,9 +392,7 @@ pr-12325
     return () => clearInterval(interval)
   }, [isLoading, showLoadingProgress])
   // Generate placeholder based on type;
-  const generatePlaceholder = () => {
     if (placeholder === 'none') return null;
-    const placeholderClassName = cn(
       'absolute inset-0 flex items-center justify-center
       placeholder === 'shimmer' &&
         'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse
@@ -422,9 +411,6 @@ import { cn } from '@/lib/utils',;
 import { imageOptimization } from '@/utils/performance',;
 import { logWarn } from '@/utils/productionLogger',;
 interface OptimizedImageProps {;
-import { cn } from '@/lib/utils',;
-import { imageOptimization } from '@/utils/performance',;
-import { logWarn } from '@/utils/productionLogger',;
 pr-12325
   src: string,;
   alt: string,;
@@ -793,13 +779,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({,
         className={`grid gap-4`}`
         style={{;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;`
-import React, { useState, useRef, useEffect } from 'react',;
-import Image from 'next/image',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { ImageIcon, AlertTriangle } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { imageOptimization } from '@/utils/performance',;
-import { logWarn } from '@/utils/productionLogger',;
 interface OptimizedImageProps {;
   src: string,;
   alt: string,;
@@ -868,17 +847,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const [currentSrc, setCurrentSrc] = useState(src),;
   const [retries, setRetries] = useState(0),;
-  const [loadProgress, setLoadProgress] = useState(0),;
-  const imgRef = useRef<HTMLImageElement>(null),;
   const observerRef = useRef<IntersectionObserver>(),;
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null),;
-  const loadStartTime = useRef<number>(0),;
   // Intersection Observer for lazy loading;
   useEffect(() => {;
     if (!lazy || priority || isInView) return,;
     observerRef.current = new IntersectionObserver(;
       (entries) => {;
-        const [entry] = entries,;
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observerRef.current?.disconnect();
@@ -904,13 +878,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   // Monitor image performance;
   useEffect(() => {;
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {;
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries(),;
         entries.forEach((entry) => {;
           if (entry.name === src && entry.entryType === 'resource') {;
-            const resourceEntry = entry as PerformanceResourceTiming,;
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0,;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart,;
             setMetrics({;
               loadTime,;
               fileSize,;
@@ -943,29 +912,21 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
     return () => {}, // Return empty cleanup function for the else case;
   }, [src]),;
   // Generate optimized URLs;
-  const optimizedSrc = isInView ? imageOptimization.optimizeUrl(currentSrc, width, quality) : '',;
-  const srcSet = isInView && sizes ? imageOptimization.generateSrcSet(currentSrc) : '',;
   // Handle image load;
-  const handleLoad = () => {;
     setIsLoading(false),;
     setHasError(false),;
     setLoadProgress(100),;
     onLoad?.();
   },;
   // Handle image error with retry logic;
-  const handleError = () => {;
     if (retries < retryCount) {;
       setRetries(prev => prev + 1),;
       // Retry with a slight delay;
       setTimeout(() => {;
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-  const imgRef = useRef<HTMLImageElement>(null),;
 
-  const observerRef = useRef<IntersectionObserver>(),;
 
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null),;
 
-  const loadStartTime = useRef<number>(0),;
 </number>
     if (retries < retryCount) {;
       setRetries(prev => prev + 1),;
@@ -986,7 +947,6 @@ pr-12325
   // Simulate loading progress for demo purposes;
   useEffect(() => {;
     if (!isLoading || !showLoadingProgress) return,;
-    const interval = setInterval(() => {;
       setLoadProgress(prev => {;
         if (prev >= 90) {;
           clearInterval(interval),;
@@ -997,7 +957,6 @@ pr-12325
   },;
   // Simulate loading progress for demo purposes;
     if (!isLoading || !showLoadingProgress) return,;
-    const interval = setInterval(() => {;
       setLoadProgress(prev => {;)
         if (prev >= 90) {;
           clearInterval(interval),;
@@ -1006,9 +965,7 @@ pr-12325
     return () => clearInterval(interval);
   }, [isLoading, showLoadingProgress]),;
   // Generate placeholder based on type;
-  const generatePlaceholder = () => {;
     if (placeholder === 'none') return null,;
-    const placeholderClassName = cn(;
       'absolute inset-0 flex items-center justify-center',;
       placeholder === 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse',;
       placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50',;
@@ -1220,7 +1177,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   },
 
 
-  const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   },
 
@@ -1607,7 +1563,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({,
     lg: 'h - 12 w - 12','
     xl: 'h - 16 w - 16','
   }
-  const initials =;
     fallback ||;
     alt;
       .split (' ');

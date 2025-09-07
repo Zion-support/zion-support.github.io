@@ -135,12 +135,10 @@ interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: boolean;}
   href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' }, { name: 'View Status',}
   href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' }, { name: 'Documentation',}
   href: '/documentation', icon: FileText, color: 'from-purple-500 to-pink-600' }];
-  const contactInfo = [;
     { icon: Phone, text: '+1 (302) 464-0950',}
   href: 'tel:+13024640950' }, { icon: Mail, text: 'kleber@ziontechgroup.com',}
   href: 'mailto:kleber@ziontechgroup.com' }, { icon: MapPin, text: 'Middletown, DE 19709',}
   href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }];
-  const socialLinks = [;
     { name: 'LinkedIn',}
   href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' }, { name: 'Twitter',}
   href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' }, { name: 'GitHub',}
@@ -167,7 +165,6 @@ const router = useRouter()const [expandedSections, setExpandedSections] =;
 }
     )}
 
-const isActive = (path: string) => router.pathname === path;
 
 interface NavItem {
   name: string;
@@ -301,12 +298,9 @@ interface SidebarProps extends React.PropsWithChildren<{} /> {isOpen: anyanyanya
   onClose: ()               => voi,}
 }
 
-const MainSidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
 
 
-const router = useRouter()const [expandedSections, setExpandedSections] =;
   useState<any />([];
-  const toggleSection = (setExpandedSections(prev =>;
       prev.includes(section)? prev.filter(s => s !== section): [...prev, section];) => {
   return $3;}
 }
@@ -393,7 +387,6 @@ const navigation: { main: NavItem[] services: NavItem[] solutions: NavItem[] res
 }];
   }
 
-const quickActions = [
   { name: 'Contact Sales',}
   href: '/contact', icon: Quote, color: 'from-cyan-500 to-blue-600',}
 }, { name: 'Get Support',}
@@ -404,7 +397,6 @@ const quickActions = [
   href: '/documentation', icon: FileText, color: 'from-purple-500 to-pink-600',}
 }];
 
-const contactInfo = [
   { icon: Phone, text: '+1 (302) 464-0950',}
   href: 'tel:+13024640950',}
 }, { icon: Mail, text: 'kleber@ziontechgroup.com',}
@@ -413,7 +405,6 @@ const contactInfo = [
   href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',}
 }];
 
-const socialLinks = [
   { name: 'LinkedIn',}
   href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500',}
 }, { name: 'Twitter',}
@@ -422,7 +413,6 @@ const socialLinks = [
   href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400',}
 }];
 
-const renderNavSection = (title: string, items: NavItem[], sectionKey: string) => (<div key={sectionKe,}
 } className='mb-6' />;
       <button;
         onClick={() = /> toggleSection(sectionKey)}

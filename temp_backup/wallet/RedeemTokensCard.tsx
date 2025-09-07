@@ -48,7 +48,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   CardHeader
   CardTitle
 } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
   Dialog
   DialogContent
   DialogDescription

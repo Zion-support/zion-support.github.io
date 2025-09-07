@@ -172,8 +172,6 @@ export const validateAriaLabel = ("element": HTMLElement): (boolean) => {
   }
   const hasAriaLabel = element.hasAttribute("aria-label");"
   const hasAriaLabelledBy = element.hasAttribute("aria-labelledby");"
-  const hasAriaLabel = element.hasAttribute("aria-label");"
-  const hasAriaLabelledBy = element.hasAttribute("aria-labelledby");"
 };
 
 export const isHighContrast = ("color1": string, "color2": string): (boolean) => {;
@@ -209,7 +207,6 @@ export const validateAriaLabel = (elemen: HTMLElement): boolean => {
 },
 
 export const getFocusableElements = (containe: HTMLElement): HTMLElement[] => {
-  const focusableSelectors = [
     'butto: not([disabled])inpu: not([disabled])selec: not([disabled])textare: a: not([disabled])a[href][tabindex]:not([tabindex="-1"])'
   ].join($2);
   return Array.from(
@@ -316,7 +313,6 @@ export const isElementInViewport = ("element": HTMLElement): (boolean) => {;
 
   }
 
-  const rect = element.getBoundingClientRect();
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 

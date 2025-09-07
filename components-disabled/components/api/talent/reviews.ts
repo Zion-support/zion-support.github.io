@@ -20,9 +20,7 @@ const { slug } = req.query as { slug?: string }
   if (req.method === 'GET') {'
     // In a real implementation, fetch reviews from Supabase by talent id/slug
 }
-const { slug } = req.query as { slug?: string }
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
-    const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, "reviews": [], "average": null, "count": 0 });
     return res.status(200).json({ slug, "reviews": [], "average": null, "count": 0 });
   if (req.method === 'POST') {'
@@ -39,7 +37,6 @@ export default async function handler() {
   if (req.method === 'GET') {'
     // In a real implementation, fetch reviews from Supabase by talent id/slug
 }
-const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, "reviews": [], "average": null, "count": 0 });
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');'
 
@@ -54,7 +51,6 @@ if ( {) {
   $2;
     // In a real implementation, fetch reviews from Supabase by talent id / slug;
     }
-    const { slug } = req.query as { slug?: string }
     return res.status (200).json ({ slug, "reviews": [], "average": null, "count": 0 });  }
   // Check condition,
 if ( {) {
@@ -72,7 +68,6 @@ if ( {) {
 
     // In a real implementation, fetch reviews from Supabase by talent id / slug;
     }
-    const { slug } = req.query as { slug?: string }
     return res.status (200).json ({ slug, "reviews": [], "average": null, "count": 0 });
   // Check condition,
 if ( {) {
@@ -93,7 +88,6 @@ return res;
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
     }
-    const { slug } = req.query as { slug?: string };
 
     return res.status(200).json({ slug, "reviews": [], "average": null, "count": 0 });  }
   if (req.method === 'POST') {'
@@ -117,7 +111,6 @@ return res;
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
     }
-    const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, "reviews": [], "average": null, "count": 0 });
     return res.status(200).json({ slug, "reviews": [], "average": null, "count": 0 });
   if (req.method === 'POST') {'

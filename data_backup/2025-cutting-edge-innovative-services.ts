@@ -140,12 +140,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -164,12 +162,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -188,12 +184,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5; }
@@ -214,12 +208,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}}
 ursor/fix-syntax-push-and-merge-to-main-40de; }
@@ -238,12 +230,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -336,13 +326,11 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 
 export const "serviceCategories2025": string[] = Array.from(new Set(cuttingEdgeInnovativeServices2025;
       .map((s) => s.category).filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category ===;
   'All') return cuttingEdgeInnovativeServices2025;'
 }
 return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () =>;
   cuttingEdgeInnovativeServices2025;
     .filter((s) => !!s.popular).sort((a, b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => ;"
   return cuttingEdgeInnovativeServices2025.filter((s) =>;
@@ -363,12 +351,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -387,12 +373,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -411,12 +395,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -510,13 +492,11 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 
 export const "serviceCategories2025": string[] = Array.from(new Set(cuttingEdgeInnovativeServices2025;
       .map((s) => s.category).filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category ===;
   'All') return cuttingEdgeInnovativeServices2025;'
 }
 return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () =>;
   cuttingEdgeInnovativeServices2025;
     .filter((s) => !!s.popular).sort((a, b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => ;"
   return cuttingEdgeInnovativeServices2025.filter((s) =>;
@@ -537,12 +517,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -561,12 +539,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}; }
 }
@@ -585,12 +561,10 @@ export const "cuttingEdgeInnovativeServices2025": CuttingEdgeInnovativeService[]
 },{ "id":,ai-powered-carbon-capture-optimizer',"name": 'AI-Powered Carbon Capture Optimizer,"tagline":,Intelligent carbon capture with maximum efficiency optimization',"price": $1,999,,"period": '/month,"description": 'Revolutionary carbon capture optimization platform that uses AI to maximize efficiency and reduce costs. Features autonomous operation,predictive maintenance,and real-time optimization.',features[ 'AI-powered optimization','Autonomous operation','Predictive maintenance','Real-time efficiency monitoring','Carbon credit management','Environmental reporting','Cost optimization','Performance analytics','Compliance management','Sustainability tracking' ],"popular": true,"icon":,🌱',"color": 'from-green-600 to-emerald-700,"textColor":,text-green-300',"link": '"https": "marketPosition":,Leading carbon capture optimization platform with 40% efficiency improvement',"targetAudience": Carbon capture facilities,power plants,industrial companies,environmental organizations',"trialDays": 21,"setupTime":,3-4 weeks',"category": 'Green Technology,"realService": true,technology[,AI/ML','Carbon Capture','IoT Sensors','Predictive Analytics','Automation'],integrations[ 'Carbon Capture Systems','Environmental Monitoring','Energy Management','Compliance Systems'],useCases[ 'Carbon capture optimization','Environmental compliance','Cost reduction','Sustainability reporting'],"roi": '300% ROI with 40% efficiency improvement,competitors[,Traditional carbon capture','Manual optimization'],"marketSize": '$2.5B carbon capture market,"growthRate":,180% annual growth',"contactInfo": { "mobile": '+1 302 464 0950,"email":,kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709,"website":,"https": },"realImplementation": true,"implementationDetails":,System integration,AI model deployment,and environmental monitoring setup',"launchDate": '2025-02-15,"customers": 18,"rating": 4.7,"reviews": 42 ];'
 
 export const "serviceCategories2025": string[] = Array.from( new Set( cuttingEdgeInnovativeServices2025 .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory2025 = ("category": string) => {if (!category || category === 'All');'
   }
   return cuttingEdgeInnovativeServices2025; return cuttingEdgeInnovativeServices2025.filter((s) => s.category = == category)}
 
 export;
-  const getPopularServices2025 = () => cuttingEdgeInnovativeServices2025; .filter((s) => !!s.popular).sort((a,b) => (b.rating || 0) - (a.rating || 0))export const getServicesByTechnology = ("technology": string) => {;
   }
   return cuttingEdgeInnovativeServices2025.filter((s) => s.technology.some(t => { return t.toLowerCase().includes(technology.toLowerCase())) )}}}
 ursor/add-new-services-and-deploy-updates-0462; }

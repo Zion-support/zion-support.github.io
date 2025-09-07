@@ -13,9 +13,6 @@ class SEOAccessibility {;
 };
 ;
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 ;
 #!/usr/bin/env node,;
@@ -61,11 +58,8 @@ const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)
 
 const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
 const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item;
   }
@@ -75,23 +69,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 
 const fs = require('fs')const path = require('path')const { execSync } = require('child_process')class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
 const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}}'
 }
       })},class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item;
   }
   const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}'
       })}}
@@ -181,10 +168,8 @@ const h1Count = (content.match(/<h1[^>]*>/g) || []).length;,if (h1Count === 0) {
 const a11yIssues = [];,const a11yScore = { "total": 0, "passed": 0, "failed": 0,;
 },// Check HTML files for accessibility issues;
 
-const htmlFiles = this.findHtmlFiles()for (const file of, htmlFiles) ;
 }
 
-const content = fs.readFileSync(file, 'utf8')';'
   const fileIssues = this.analyzeAccessibilityContent(content, file),a11yIssues.push(...fileIssues)}
       // Check for accessibility configuration files;
 
@@ -254,7 +239,6 @@ const perfIssues = [];,const perfScore = { "total": 0, "passed": 0, "failed": 0,
 const jsFiles = this.findJsFiles()for (const file of, jsFiles) ;
 }
 
-const content = fs.readFileSync(file, 'utf8')';'
   const fileIssues = this.analyzePerformanceContent(content, file),perfIssues.push(...fileIssues)}
       // Check for build optimization;
 
@@ -340,13 +324,10 @@ const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),if (sta
   }
   findJsFiles() {}
 
-const files = [];,function scanDirectory() {}
       try {}
 
-const items = fs.readdirSync(dir),for (const item of, items) ;
 }
 
-const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),if (stat.isDirectory()) {}
             if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}'
               scanDirectory(fullPath)}
           } else if (stat.isFile()) {}
@@ -406,9 +387,6 @@ if (require.main === module) {}
 }
 
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 ;
 class SEOAccessibility {;
   constructor() {;
@@ -423,8 +401,6 @@ class SEOAccessibility {;
   const stat = fs.statSync(fullPath),,if (stat.isDirectory()) {,scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,files.push(fullPath)}})}#!/usr/bin/env node;'
 #!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path';'
-  const { execSync }  = require('child_process')class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}#!/usr/bin/env node;'
 
 const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')#!/usr/bin/env node,const fs = require('fs'),const path = require('path'),const { execSync } = require('child_process'),,class SEOAccessibility {,constructor() {,this.projectRoot = process.cwd(),this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),this.startTime = Date.now()},,log(message) {,const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] ${message}\n`,,try {,fs.appendFileSync(this.logFile, logMessage)} catch (error) {,console.error('Error writing to "log": "file":', error.message)}'  },,async checkSEO() {,try {,this.log('🔍 Checking SEO...'),,const seoIssues = [],const pagesDir = path.join(this.projectRoot, 'pages'),,if (fs.existsSync(pagesDir)) {,const pageFiles = this.getPageFiles(pagesDir),,pageFiles.forEach((file) => {,const content = fs.readFileSync(file, 'utf8'),const seoChecks = this.analyzeSEO(file, content),seoIssues.push(...seoChecks)})}'
     }
@@ -439,37 +415,21 @@ ursor/add-new-services-and-deploy-updates-0462;
   const stat = fs.statSync(fullPath),,if (stat.isDirectory()) {,scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,files.push(fullPath)}})}ursor/fix-website-loading-errors-and-merge-6662;'
 class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item;
   }
   const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}})}})},ursor/fix-website-loading-errors-and-merge-6662;'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -478,28 +438,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 #!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path')const { execSync } = require('child_process')class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}}'
 }
       })},class SEOAccessibility {constructor() {this.projectRoot = process.cwd()this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log')this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json')this.startTime = Date.now()}log(message) {const timestamp = new Date().toISOString(;'
   }
-  const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log "file": ', error.message)}}async checkSEO() {try {this.log('🔍 Checking SEO...')const seoIssues = [];'
 
 }
 
-const pagesDir = path.join(this.projectRoot, 'pages')if (fs.existsSync(pagesDir)) {const pageFiles = this.getPageFiles(pagesDir)pageFiles.forEach(file = > {const content = fs.readFileSync(file, 'utf8')const seoChecks = this.analyzeSEO(file, content)seoIssues.push(...seoChecks)})}}}getPageFiles(dir) ;'
-  const files = [];
 
-const scanDirectory = (currentDir) = > {const items = fs.readdirSync(currentDir)items.forEach(item = > {const fullPath = path.join(currentDir, item;
   }
-  const stat = fs.statSync(fullPath)if (stat.isDirectory()) {scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}'
       })}}
 }
       })},ursor/automate-test-improve-and-merge-code-646c;

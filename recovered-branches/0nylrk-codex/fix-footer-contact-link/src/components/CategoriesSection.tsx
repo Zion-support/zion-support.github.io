@@ -5,7 +5,6 @@ const categories = [;
 import { GradientHeading } from './GradientHeading';'
 import { Link } from './react-router-dom';'
 import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';'
-const categories = [;
   {
     }
     "title": "Services","
@@ -16,7 +15,6 @@ const categories = [;
 import { GradientHeading } from "./GradientHeading","
 import { Link } from "react-router-dom","
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react","
-const categories = [;
   {
     }
     "title": "Services","
@@ -55,7 +53,6 @@ interface CategoriesSectionProps {
     }
     "title": "Equipment""
     "description": "Rent or buy specialized hardware, servers, and devices";"
-const categories = [;
   {;
     }
     "title": "Services",,"
@@ -65,7 +62,6 @@ const categories = [;
 import { GradientHeading } from "./GradientHeading";"
 import { Link } from "react-router-dom";"
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;"
-const categories = [;
   {;
     }
     "title": "Services",,"

@@ -133,7 +133,6 @@ class GitWorkflowAutomator {
       this.log('🔧 Attempting to resolve conflicts...');
       const conflictFiles = await this.checkMergeConflicts();
       let resolved = 0;
-      const errors = [];
       for (const file of conflictFiles) {
         try {
           // Try to resolve conflicts automatically
@@ -188,7 +187,6 @@ class GitWorkflowAutomator {
         return { merged: 0, errors: [] };
       }
       let merged = 0;
-      const errors = [];
       try {
         // Switch to main branch
         execSync('git checkout main', {
@@ -344,9 +342,6 @@ automator.run().catch(error => {
  * PM2 Git Workflow Service;
  * Manages git operations and branch cleanup;
  */
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 class GitWorkflow {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'git-workflow';
@@ -365,7 +360,6 @@ class GitWorkflow {}
     };
   };
   log(message) {}
-    const timestamp = new Date().toISOString();
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -514,7 +508,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     };
     try {}
       this.log('Attempting safe merge...');
-      const currentBranch = await this.getCurrentBranch();
       if (!currentBranch || currentBranch === 'main' || currentBranch === 'master') {}
         this.log('Cannot merge main/master branch');
         return { "merged": false, "reason": 'Cannot merge main branch' };
@@ -539,7 +532,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       } catch (mergeError) {}
         this.log(`Merge "failed": ${mergeError.message}`);
         // Try to resolve conflicts automatically;
-        const conflictResolution = await this.resolveConflicts();
         if (conflictResolution.resolved) {}
           try {}
             execSync('git commit -m "Auto-resolved merge conflicts"', { "stdio": 'pipe' }

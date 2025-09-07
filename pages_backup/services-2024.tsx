@@ -27,7 +27,6 @@ import {
   CheckCircle
   Zap
   Sparkles;} from 'lucide-react';
-import {
   Search,
   Filter,
   Star,
@@ -54,24 +53,13 @@ import {;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
 
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp;
   Brain, Atom, Cpu, Shield, Database, Cloud;
   ArrowRight, CheckCircle, Zap, Sparkles
  } from 'lucide-react';
-import { realMicroSaasServices2024  } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024  } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
-import Link from 'next/link';
-const Services2024Page: React.FC;
 
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 
-import Link from 'next/link';
 
   // Combine all services;
   const allServices = [;
@@ -135,7 +123,6 @@ import Link from 'next/link';
 
     // Sort services
     filtered.sort((a, b) => {
-let aValue: any, bValue: any;
       switch (sortBy) {
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
@@ -247,7 +234,6 @@ const Services2024Page: React.FC = () => {;
   // Combine all services;
   const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
     const filtered = allServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -315,7 +301,6 @@ const Services2024Page: React.FC = () => {;
 }
   ],
 
-  const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
     if (variant.includes('it')) return Cpu,
@@ -326,7 +311,6 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return CheckCircle,
     return Sparkles
   },
-  const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
     if (variant.includes('security')) return 'from-red-500 to-pink-500',
     if (variant.includes('it')) return 'from-green-500 to-emerald-500',
@@ -355,20 +339,10 @@ const Services2024Page: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-const Services2024Page: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   // Combine all services;
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
-    const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' ||;
                              (selectedCategory === 'ai' && service.variant.includes('ai')) ||;
                              (selectedCategory === 'quantum' && service.variant.includes('security')) ||;
                              (selectedCategory === 'it' && service.variant.includes('it')) ||;
@@ -381,7 +355,6 @@ const Services2024Page: React.FC = () => {;
     });
     // Sort services;
     filtered.sort((a, b) => {;
-      let aValue: any, bValue: any,;
       switch (sortBy) {;
         case 'price':;
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),;
@@ -415,7 +388,6 @@ const Services2024Page: React.FC = () => {;
     });
     return filtered;
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),;
-  const categories = [;
     { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },;
     { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },;
     { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },;
@@ -431,7 +403,6 @@ const Services2024Page: React.FC = () => {;
 }
   ],
 
-  const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
     if (variant.includes('it')) return Cpu,

@@ -58,7 +58,6 @@ import type { QuoteRequest } from "@/types/quotes","
 import { ProtectedRoute } from "@/components/ProtectedRoute","
 import { QuoteDetails } from "@/components/quotes/QuoteDetails","
 import { ExportToCSV } from "@/components/quotes/ExportToCSV","
-import {
   }
   QuoteStatusCards,
   QuotesFilter,
@@ -97,7 +96,6 @@ import type { QuoteRequest } from "@/types/quotes",;"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",;"
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",;"
-import {;
   }
   QuoteStatusCards,;
   QuotesFilter,;
@@ -111,11 +109,7 @@ export default function QuoteManager() {;
   const [showDetails, setShowDetails] = useState(false),;
 export default function QuoteManager() {;
   }
-  const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin',;'
   ;
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
-  const [showDetails, setShowDetails] = useState(false),;
 ;
   // Count quotes by status;
   const statusCounts = {;
@@ -176,7 +170,6 @@ function QuoteManager() {
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
 ;
-  const {
     }
     quotes;
     is_loading;
@@ -213,11 +206,9 @@ function QuoteManager() {
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
   }
-  const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
     setShowDetails(true)
   }
-  const handleResetFilters = () => {
     setStatusFilter('all'),
     setArchiveFilter('all'),
     setSearchQuery(''),
@@ -322,13 +313,11 @@ quote={selectedQuote}
       </div>;
     </ProtectedRoute>;
   ),;}
- import {
   }
   QuoteStatusCards;
 QuotesFilter;
 QuotesTable export default function QuoteManager() {
   }
-  const {
   }
   user
 }= useAuth ();

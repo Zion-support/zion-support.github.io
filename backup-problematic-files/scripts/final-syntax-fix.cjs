@@ -1,70 +1,66 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 
-console.log('🔧 Final Syntax Fix');
-<<<<<<< HEAD
-=======
-console.log('====');
+console.log('🔧 Final Syntax Fix);
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
     // Fix JSX closing tags
-    .replace(/<\$1>/g, '>')
-    .replace(/<\/\$1>/g, '>')
-    .replace(/<\$1/g, '<')
-    .replace(/<\/\$1/g, '</')
+    .replace(/<\$1>/g, >')
+    .replace(/<\/\$1>/g, '>)
+    .replace(/<\$1/g, <')
+    .replace(/<\/\$1/g, '</)
     
     // Fix object literal syntax
-    .replace(/\{\s*$/gm, '{')
-    .replace(/\[\s*$/gm, '[')
-    .replace(/\(\s*$/gm, '(')
+    .replace(/\{\s*$/gm, {')
+    .replace(/\[\s*$/gm, '[)
+    .replace(/\(\s*$/gm, (')
     
     // Fix semicolons in wrong places
-    .replace(/;\s*$/gm, '')
-    .replace(/;\s*}/g, '}')
-    .replace(/;\s*]/g, ']')
-    .replace(/;\s*\)/g, ')')
+    .replace(/;\s*$/gm, ')
+    .replace(/;\s*}/g, }')
+    .replace(/;\s*]/g, '])
+    .replace(/;\s*\)/g, )')
     
     // Fix array and object syntax
-    .replace(/\[\s*\{\s*$/gm, '[{')
-    .replace(/\{\s*\[\s*$/gm, '{[')
-    .replace(/\}\s*\]\s*$/gm, '}]')
-    .replace(/\]\s*\}\s*$/gm, ']}')
+    .replace(/\[\s*\{\s*$/gm, '[{)
+    .replace(/\{\s*\[\s*$/gm, {[')
+    .replace(/\}\s*\]\s*$/gm, '}])
+    .replace(/\]\s*\}\s*$/gm, ]}')
     
     // Fix empty objects and arrays
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
+    .replace(/\{\s*\}/g, '{})
+    .replace(/\[\s*\]/g, []')
     
     // Fix trailing commas
-    .replace(/,\s*}/g, '}')
-    .replace(/,\s*]/g, ']')
-    .replace(/,\s*\)/g, ')')
+    .replace(/,\s*}/g, '})
+    .replace(/,\s*]/g, ]')
+    .replace(/,\s*\)/g, '))
     
     // Clean up extra semicolons
-    .replace(/;;+/g, ';')
-    .replace(/;\s*;/g, ';')
+    .replace(/;+/g, ;')
+    .replace(/;\s*;/g, ';)
     
     // Clean up whitespace
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, '');
+    .replace(/\n\s*\n\s*\n/g, \n\n')
+    .replace(/\s+$/gm, ');
 }
 
 // Files to fix
 const filesToFix = [
-  'pages/about.tsx',
-  'pages/blog.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/accessibility.tsx',
-  'pages/careers.tsx',
-  'components/Header.tsx',
-  'components/Footer.tsx',
-  'components/Layout.tsx',
-  'components/layout/MainLayout.tsx'
+  pages/about.tsx',
+  'pages/blog.tsx,
+  pages/ai-services.tsx',
+  'pages/api.tsx,
+  pages/accessibility.tsx',
+  'pages/careers.tsx,
+  components/Header.tsx',
+  'components/Footer.tsx,
+  components/Layout.tsx',
+  'components/layout/MainLayout.tsx
 ];
 
 let totalFixed = 0;
@@ -76,7 +72,7 @@ for (const file of filesToFix) {
       continue;
     }
 
-    let content = fs.readFileSync(file, 'utf8');
+    let content = fs.readFileSync(file, utf8');
     const originalContent = content;
     
     content = fixSpecificErrors(content);

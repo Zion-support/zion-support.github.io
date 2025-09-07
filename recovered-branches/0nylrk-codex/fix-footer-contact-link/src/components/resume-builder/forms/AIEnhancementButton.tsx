@@ -47,7 +47,6 @@ export function AIEnhancementButton({;
       return;
     }
     setError(null);
-    const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
       context;
@@ -78,7 +77,6 @@ export function AIEnhancementButton({
     if (!currentContent || currentContent.trim().length < 10) {
 ;
     setError(null),;
-    const enhancedContent = await enhanceContent(;
       currentContent,;
       enhancementType,;
       context;

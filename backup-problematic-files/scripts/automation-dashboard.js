@@ -67,7 +67,6 @@ const __dirname = path.dirname(__filename)// // // // // // // console.log(',cla
   "N/A";"
     }
     const seconds = Math && Math.floor((Date && Date.now() - uptime) / 1000)const hours = Math && Math.floor(seconds / 3600);
-    const minutes = Math && Math.floor((seconds % 3600) / 60);
     return "${hours}h ${minutes}m"}"
   async displayDashboard() {;
 

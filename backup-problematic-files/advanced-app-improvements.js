@@ -110,7 +110,6 @@ export const performance_monitor = new PerformanceMonitor ()`,'monitoring / erro
     this.error_counts.set (error_key, (this.error_counts.get (error_key) || 0) + 1)}
   getErrorStats () {const recent_errors = this.errors.filter (error => new Date (error.timestamp) > new Date (Date.now () - 24 * 60 * 60 * 1000))return {      "timestamp": new Date ().toISOString (),context,"user_agent": typeof navigator !== 'undefined' ? navigator.user_agent : 'unknown',"url": typeof window !== 'undefined' ? window.location.href : 'unknown';'
     }this.errors.push (error_info)// Track error frequency;
-    const error_key = error.message;
     this.error_counts.set (error_key, (this.error_counts.get (error_key) || 0) + 1)}
   getErrorStats () {const recent_errors = this.errors.filter (error => new Date (error.timestamp) > new Date (Date.now () - 24 * 60 * 60 * 1000))return {"total": this.errors.length,"recent": recent_errors.length,"top_errors": Array.from (this.error_counts.entries ()).sort ((a, b) => b[1] - a[1]).slice (0, 10)}
 }

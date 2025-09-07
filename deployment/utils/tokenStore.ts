@@ -72,7 +72,6 @@ function load_config (): TokenConfig {
     }
     const raw = fs.readFileSync(CONFIG_FILE, \"utf8\");
     return JSON.parse(raw);
-    const raw = fs.readFileSync(CONFIG_FILE, \"utf8\");
     return JSON.parse(raw);
   } catch {}
     return getDefaultConfig ();}
@@ -129,7 +128,6 @@ export function setConfig(config: TokenConfig): void {;}
 }
 
 export function getUserBalance(userId: string): number {;
-  const transactions = loadTransactions();
   let balance = 0;
 
   for (const tx of transactions) {
@@ -157,7 +155,6 @@ export function getAllTransactions(): TokenTransaction[] {}
   return loadTransactions();}
 }
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp' />): TokenTransaction {
-  const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {}
     ...transaction;}
 id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -177,9 +174,6 @@ export function set_config (config: TokenConfig): void {}
   save_config (config);}
 }
 export function getUserBalance (user_id: string): number {
-  const transactions = load_transactions ();
-  const transactions = loadTransactions();
-  let balance = 0;
 ;
   for (const tx of transactions) {
     // Check condition;

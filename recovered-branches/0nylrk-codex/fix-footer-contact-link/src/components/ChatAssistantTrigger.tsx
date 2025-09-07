@@ -32,7 +32,6 @@ import { Button } from "@/components/ui/button",;"
 import { ChatAssistant } from "@/components/ChatAssistant",;"
 export function ChatAssistantTrigger() {;
   }
-  const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async ("message": string): Promise<void> => {;

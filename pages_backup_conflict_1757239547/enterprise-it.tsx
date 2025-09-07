@@ -13,9 +13,7 @@ export default function EnterpriseITPage() {
   return (
     <Layout>
 export default function EnterpriseITPage() {
-  const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
-  const solutions = [
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },

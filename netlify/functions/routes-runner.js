@@ -3,9 +3,7 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 function runNode(relPath, args = []) {
 
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
-const abs = path && path.resolve(__dirname, '..', '..', relPath);
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -48,7 +46,6 @@ function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
     }
     "stderr": res.stderr || '';'
   }exports.handler = async () => ;
-  const logs = [];
   /**;
  * log_step - Function description;
  */;
@@ -92,7 +89,6 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);'
 const res = spawnSync('node', [abs, ...args], {'
     }
     "stdio": 'pipe''
-const res = spawnSync('node', [abs, ...args], {'
     }
     "stdio": "stdio","
     "encoding": 'utf8''
@@ -108,7 +104,6 @@ const res = spawnSync('node', [abs, ...args], {'
 exports && exports.handler = async () => {
  ;
   }
-  const logs = [];
   function logStep() {
     }
     logs && logs.push(`\n=== ${name} ===`);`
@@ -154,7 +149,6 @@ const res = spawn_sync ('node', [abs, ...args], {'
 exports.handler = async () => {
  ;
   }
-  const logs = [];
   /**
  * log_step - Function description
  */
@@ -182,7 +176,6 @@ function run_node() {
 }
 const abs = path.resolve (__dirname, '....', rel_path),;'
  ;
-const res = spawn_sync ('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
 }),
  ;
 return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' },;'
@@ -193,7 +186,6 @@ return { "statusCode": 200, "body": logs && logs.join('\n') },;'
 function runNode() {
 }
 const abs = path && path.resolve(__dirname, '....', relPath),;'
-const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
 }),
 return { "status": res && res.status || 0, "stdout": res && res.stdout || '', "stderr": res && res.stderr || '' },;'
 }
@@ -222,7 +214,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 exports.handler = async () => {
 }
-const logs = [],;
   /**
  * log_step - Function description
  */

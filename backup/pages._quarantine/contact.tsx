@@ -127,7 +127,6 @@ export default function ContactPage() {
     "service": '',''
     "message": ''')
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);'
   const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {"
 </HTMLInputElement>"

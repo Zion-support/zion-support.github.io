@@ -36,7 +36,6 @@ if (req.method === 'POST') {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const p = path.join(process.cwd(), 'datareportsseoweekly-seo.json'),;

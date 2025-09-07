@@ -109,7 +109,6 @@ if ( {) {
   $2
 }
       // Direct subdomain lookup;
-      const { data, error } = await supabase;
         .from ('whitelabel_tenants');'
         .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
         .eq ('subdomain', subdomain_param);'
@@ -127,7 +126,6 @@ if ( {) {
     } else {
       // Try matching custom domain first;
       }
-      let { data, error } = await supabase;
         .from ('whitelabel_tenants');'
         .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
         .eq ('custom_domain', hostname);'

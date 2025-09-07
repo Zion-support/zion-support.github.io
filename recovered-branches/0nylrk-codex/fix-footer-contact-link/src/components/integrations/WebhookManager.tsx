@@ -78,7 +78,6 @@ setNewWebhook({
     await testWebhook(webhookId, eventType)
   }
   },
-  const handleTestWebhook = async ("webhookId": string, "eventType": WebhookEventType) => {
     }
     await testWebhook(webhookId, eventType)
   },

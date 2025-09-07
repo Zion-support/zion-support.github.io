@@ -152,13 +152,11 @@ const testimonials = [
     rating: 5
     avatar: '👨‍🔒'
   },];
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-const heroStats = [
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
@@ -168,7 +166,6 @@ const heroStats = [
   }
 }
 ],
-const serviceCategories = [
   {
     title: 'AI Development Tools',
     description: 'Advanced AI-powered development and testing automation',
@@ -214,7 +211,6 @@ const serviceCategories = [
   },
 ];
 
-const heroFeatures = [
   {
     title: 'AI-Powered Automation',
     description:
@@ -245,7 +241,6 @@ const heroFeatures = [
   },
 ];
 
-const testimonials = [
   {
     name: 'Dr. Michael Chen',
     role: 'CTO, TechFlow Solutions',
@@ -279,8 +274,6 @@ const testimonials = [
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
@@ -289,7 +282,6 @@ import {;
   Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';

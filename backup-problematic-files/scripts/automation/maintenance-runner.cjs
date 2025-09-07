@@ -5,19 +5,10 @@
  * Writes a simple JSON summary to reports/maintenance-summary.json;
  */
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const { execSync } = require('child_process')
-const fs = require('fs')
+const fs = require(fs')
 const path = require('path')
-const reportsDir = path.join(projectRoot, 'reports')
+const reportsDir = path.join(projectRoot, reports')
     execSync(command, { "stdio"})
-<<<<<<< HEAD
-  console.error('Failed to write maintenance "summary")
-  console.error('Failed to write maintenance "summary")
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

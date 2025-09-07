@@ -34,7 +34,6 @@ import { Star } from "lucide-react",;"
 export const "CommunityTrust":React.FC = () => {;
   // Stats display with social proof;
   }
-  const stats = [;
     { "value":"4.8", "label":"App Store Rating" },{ "value":"50K+", "label":"Downloads" },{ "value":"96%", "label":"User Satisfaction" },{ "value":"12M+", "label":"Matches Made" }"
   ],return (<section className="py-16 bg-zion-blue">;"
       <div className="container mx-auto px-4">;"

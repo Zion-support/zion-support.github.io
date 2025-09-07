@@ -42,7 +42,6 @@ import {
   FormLabel;
 import { Button } from "@/components/ui/button","
 import { Textarea } from "@/components/ui/textarea","
-import {
   }
   Form,
   FormControl,
@@ -50,7 +49,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form","
-import {
   }
   RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group","
@@ -70,7 +68,6 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;"
-import {;
   }
   RadioGroup,;
   RadioGroupItem} from "@/components/ui/radio-group",;"
@@ -125,10 +122,6 @@ control={form && form.control}
           rules={{ "required": "Rating is required" }}"
 import { useState } from "react",;"
 import { Star } from "lucide-react",;"
-import { useForm } from "react-hook-form",;"
-import { Button } from "@/components/ui/button",;"
-import { Textarea } from "@/components/ui/textarea",;"
-import {;
   }
   Form,;
   FormControl,;
@@ -136,12 +129,9 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from "@/components/ui/form",;"
-import {;
   }
   RadioGroup,;
   RadioGroupItem} from "@/components/ui/radio-group",;"
-import { Switch } from "@/components/ui/switch",;"
-import { Review } from "@/types/reviews",;"
 ;
 interface ReviewFormValues {;
   }
@@ -165,7 +155,6 @@ interface ReviewFormProps {;
 ;
 export function ReviewForm() {;
   }
-  const [hoveredStar, setHoveredStar] = useState<number>(0),;
   ;
   const form = useForm<ReviewFormValues>({;
     }
@@ -190,7 +179,6 @@ export function ReviewForm() {;
   ;
   const handleSubmit = async ("values":ReviewFormValues) => {;
     }
-    const formattedData = {;
       ...values,;
       }
       "project_id":projectId,;

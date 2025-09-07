@@ -77,7 +77,6 @@ import React from 'react''
 };
 
 export default LazyComponent;
-import React from 'react''
 }
 import React, { Suspense, lazy } from 'react';'
 interface LazyComponentProps {

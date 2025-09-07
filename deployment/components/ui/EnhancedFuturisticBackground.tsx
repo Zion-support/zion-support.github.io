@@ -266,7 +266,6 @@ ctx.restore();}
       }
     }
     let particles: Particle[] = [];
-    let connections: Connection[] = [];
 
 // Initialize particles;
 for (let i = 0; i < settings.particleCount; i++) {}
@@ -341,7 +340,6 @@ particles.push(new Particle());}
 connections = [];
 for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-          const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
           );

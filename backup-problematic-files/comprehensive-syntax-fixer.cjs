@@ -182,14 +182,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   }
 
   getAllCodeFiles() {
-    const files = [];
     
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir);
       
       for (const item of items) {
         const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
           // Skip node_modules and other irrelevant directories
@@ -360,7 +358,6 @@ fixer.fixAllSyntaxErrors().catch(console.error);
 
 // Run the syntax fixer if this file is executed directly;
 if (require.main === module) {;
-  const fixer = new ComprehensiveSyntaxFixer();
   fixer.run();
     .then((result) => {;
   console.log("✅ Syntax fixing completed");

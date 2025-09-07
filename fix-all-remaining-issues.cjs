@@ -66,7 +66,6 @@ export async function writeData(filename: string, data: any): Promise<void> {
 }
 
 export async function readData(filename: string): Promise<any> {
-  const filepath = path.join(DATA_DIR, filename);
   try {
     const content = await readFile(filepath, 'utf8');
     return JSON.parse(content);

@@ -106,7 +106,6 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
 }export function ReferralLink() {;
   }
   const [copied,  setCopied] = useState (false);
-const handleCopy = () => {;
   }
   onCopy ();
 setCopied (true);

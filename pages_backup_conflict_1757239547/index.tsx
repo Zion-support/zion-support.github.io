@@ -37,8 +37,6 @@ export default function Home() {
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
-import Link from 'next/link';
-import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
 import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -50,7 +48,6 @@ export default function Home() {
     isLoaded: false
     hasError: false
 export default function Home() {
-  const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
   });
@@ -311,7 +308,6 @@ export default function HomePage() {
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import {
   ArrowRight,
   Building2,
@@ -447,20 +443,13 @@ export default function HomePage() {
                 </motion.div>
               ))}
             </div>
-import Link from 'next/link';
-import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
-  const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
   });
   useEffect(() => {
-    const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
@@ -608,8 +597,6 @@ export default function Home() {
       </ErrorBoundary>;
     </>;
   );}
-import React from 'react';
-import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
   return (

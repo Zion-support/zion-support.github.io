@@ -60,7 +60,6 @@ export default async function handler(
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
     for (const ev of events) {
-      const { count, error } = await supabase
         .from('referral_events')
         .select('*', { count: 'exact', head: true })
         .eq('partner_code', code)

@@ -16,7 +16,6 @@ export default async function handler(
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
 import { readReviews, readProjects } from '../../../utils/dataStore';
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
 import { TALENT_PROFILES } from '../../../data/talent';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {

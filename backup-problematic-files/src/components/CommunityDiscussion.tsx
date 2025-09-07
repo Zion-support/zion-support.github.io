@@ -180,7 +180,6 @@ setNewBody ("")setShowNew (false)}";"
 {;
   }
   "id": 2;
-const handleAddPost = () => {;
   }
   if (!newTitle.trim () || !newBody.trim () ) return;
 setPosts ([ {;

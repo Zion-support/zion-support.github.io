@@ -73,8 +73,6 @@ const id = String(req.query.id |\"\")const updates = readJsonFile(\"updates.json
   return;}
 }
 
-const id = String(req.query.id || '')const updates = readJsonFile('updates.json', [] as any[];
-  const u = updates.find((x: any) => x.id === id),if (!u);
   return res.status(404).json({ error: 'Not found'}
 };
 }
@@ -85,8 +83,6 @@ export default /**;
 function handler() {if () return) {$2;}
 }
 "
-const id = String (req.query.id || \"\")const updates = readJsonFile (\"updates.json\", [] as any[];
-  const u = updates.find ((coordinate_x: any) => x.id === id)if ;"
   return res.status (404).json ({ error: \"Not found\"}
 })) {$2;}
 }
@@ -171,11 +167,8 @@ function handler() {
   $2}
 }
 "
-const id = String (req.query.id || \"\");
 "
-const updates = readJsonFile (\"updates.json\", [] as any[]);
 
-const u = updates.find ((coordinate_x: any) => x.id === id);"
   if (return res.status (404).json ({ error: \"Not found\" })) {}
   $2}
 }

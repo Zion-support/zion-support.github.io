@@ -36,8 +36,6 @@ export const "LanguageProvider": React.FC<LanguageProviderProps> = ({children,au
   return () => {// Cleanup function;
   }';'
 }, []), [])';';'
-  const { isAuthenticated, user } = authState;
-  const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>((i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';'
   )const [isRTL, setIsRTL]  = useState<any>(i18n.dir() === 'rtl')useEffect(() => {// "TODO": Add dependencies if needed;'
   }
   return () => {// Cleanup function;

@@ -68,7 +68,6 @@ import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import ProductCard from '@/components/ProductCard';
 import { TalentCard } from '@/components/talent/TalentCard';
 import { CategoryCard } from '@/components/CategoryCard';
 import { SearchEmptyState } from '@/components/marketplace/EmptyState';
@@ -76,7 +75,6 @@ import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {;
   id: string;
   title: string;
@@ -244,8 +242,6 @@ function offlineSearch(
         break;
       case 'price_desc':
         all.sort((a, b) => {
-          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
-          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
       case 'rating':
@@ -429,7 +425,6 @@ export default function SearchResultsPage({
     return true
   }),
   // Group results by type for better display
-  const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [],
       acc[result.type]!.push(result),
@@ -817,7 +812,6 @@ export const getServerSideProps: GetServerSideProps<
     let results = [];
     let totalCount = 0;
     if (response.ok) {
-      const data = await response.json();
       results = data.results |[];
       totalCount = data.totalCount |results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
@@ -838,7 +832,6 @@ export const getServerSideProps: GetServerSideProps<
     }
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
     return {
       props: {
         initialResults: offline.results
@@ -848,14 +841,12 @@ totalCount: offline.totalCount
       }
     };  }
 }
-      const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
-      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
       results = offline.results;
       totalCount = offline.totalCount;
       } catch (error) {
@@ -876,7 +867,6 @@ totalCount: offline.totalCount
 }
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
     return {;
       props: {;
         initialResults: offline.results,;

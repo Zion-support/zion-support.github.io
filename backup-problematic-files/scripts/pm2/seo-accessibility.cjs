@@ -145,7 +145,6 @@ class SEOAccessibilityMonitor {
     return issues;
   }
   analyzePackageJsonSEO(packageJson) {
-    const issues = [];
     if (!packageJson.description) {
       issues.push({
         file: 'package.json',
@@ -171,9 +170,7 @@ class SEOAccessibilityMonitor {
       this.log('♿ Checking accessibility...');
       const accessibilityIssues = [];
       // Check HTML files for accessibility issues
-      const htmlFiles = this.getHTMLFiles();
       for (const file of htmlFiles) {
-        const content = fs.readFileSync(file, 'utf8');
         const fileIssues = this.analyzeAccessibilityContent(file, content);
         accessibilityIssues.push(...fileIssues);
       }
@@ -189,10 +186,7 @@ class SEOAccessibilityMonitor {
     }
   }
   analyzeAccessibilityContent(filePath, content) {
-    const issues = [];
-    const lines = content.split('\n');
     lines.forEach((line, index) => {
-      const lineNum = index + 1;
       // Check for missing alt attributes
       if (line.includes('<img') && !line.includes('alt=')) {
         issues.push({
@@ -225,7 +219,6 @@ class SEOAccessibilityMonitor {
       if (line.match(/<h[2-6]/)) {
         const headingMatch = line.match(/<h([2-6])/);
         if (headingMatch) {
-          const level = parseInt(headingMatch[1]);
           // Check if there's a previous heading of level-1
           const hasH1 = lines.slice(0, index).some(prevLine => prevLine.includes('<h1'));
           if (level > 1 && !hasH1) {
@@ -280,9 +273,7 @@ class SEOAccessibilityMonitor {
         }
       }
       // Check for inline styles (performance impact)
-      const htmlFiles = this.getHTMLFiles();
       for (const file of htmlFiles) {
-        const content = fs.readFileSync(file, 'utf8');
         const inlineStyleCount = (content.match(/style="/g) || []).length;
         if (inlineStyleCount > 10) {
           performanceIssues.push({
@@ -303,14 +294,9 @@ class SEOAccessibilityMonitor {
     }
   }
   getImageFiles() {
-    const files = [];
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp'];
-    const walkDir = (dir) => {
       if (!fs.existsSync(dir)) return;
-      const items = fs.readdirSync(dir);
       for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
           if (!fullPath.includes('node_modules') && 
               !fullPath.includes('.git') && 
@@ -522,9 +508,6 @@ monitor.run().catch(error => {
  * Checks SEO and accessibility compliance;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 class SEOAccessibility {}
   constructor() {}
@@ -544,7 +527,6 @@ class SEOAccessibility {}
     };
   };
   log(message) {}
-    const timestamp = new Date().toISOString();
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -558,12 +540,10 @@ class SEOAccessibility {}
     try {}
       this.log('Checking SEO compliance...');
       
-      const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
       for (const file of htmlFiles) {}
         try {}
-          const content = fs.readFileSync(file, 'utf8');
           const issues = this.analyzeSEO(content, file);
           seoIssues.push(...issues);
         } catch (err) {}
@@ -618,7 +598,6 @@ class SEOAccessibility {}
     return htmlFiles;
   };
   analyzeSEO(content, filePath) {}
-    const issues = [];
     
     
     // Check for title tag;
@@ -695,11 +674,9 @@ class SEOAccessibility {}
       this.log('Checking accessibility compliance...');
       
       const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       
       for (const file of htmlFiles) {}
         try {}
-          const content = fs.readFileSync(file, 'utf8');
           const issues = this.analyzeAccessibility(content, file);
           a11yIssues.push(...issues);
         } catch (err) {}
@@ -721,7 +698,6 @@ class SEOAccessibility {}
     };
   };
   analyzeAccessibility(content, filePath) {}
-    const issues = [];
     
     
     // Check for proper heading hierarchy;
@@ -792,10 +768,8 @@ class SEOAccessibility {}
     try {}
       this.log('Checking performance...');
       
-      const performanceIssues = [];
       
       
-      const performanceIssues = [];
       
       // Check bundle size;
       const distDir = 'dist';
@@ -814,7 +788,6 @@ class SEOAccessibility {}
       const imageFiles = this.findImageFiles();
       for (const file of imageFiles) {}
         try {}
-          const stats = fs.statSync(file);
           if (stats.size > 500 * 1024) { // 500KB threshold;}
             performanceIssues.push({})
               type: 'large_image',
@@ -849,7 +822,6 @@ class SEOAccessibility {}
         const files = fs.readdirSync(currentDir);
         for (const file of files) {}
           const filePath = path.join(currentDir, file);
-          const stat = fs.statSync(filePath);
           
           
           if (stat.isDirectory()) {}
@@ -872,12 +844,8 @@ class SEOAccessibility {}
     const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
     
     
-    const scanDir = (dir) => {}
       try {}
-        const files = fs.readdirSync(dir);
         for (const file of files) {}
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
           
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}

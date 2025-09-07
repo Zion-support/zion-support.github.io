@@ -64,7 +64,6 @@ export function MarketplaceErrorBoundary({ children }:,  MarketplaceErrorBoundar
         </div>            variant="outline"
             className="w-full"
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -158,7 +157,6 @@ interface MarketplaceErrorBoundaryProps {
 export function MarketplaceErrorBoundary({
   children
 }: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
       componentStack: errorInfo.componentStack

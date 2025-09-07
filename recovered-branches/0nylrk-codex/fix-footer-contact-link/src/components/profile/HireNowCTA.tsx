@@ -115,7 +115,6 @@ function calculateProfileCompleteness(): any ("profile": any) {;
   }
   if (!profile) return 0;
 
-  const fields = [;
     'availability_type';'
   ];
 
@@ -140,7 +139,6 @@ function calculateProfileCompleteness() {
 if (return 0) {
   $2
 }
-  const fields = [;
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';'
     'availability_type';'
   ];

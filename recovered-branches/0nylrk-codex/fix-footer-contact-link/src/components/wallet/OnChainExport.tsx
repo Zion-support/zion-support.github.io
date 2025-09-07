@@ -128,7 +128,6 @@ return (;
           </div>
 };
 ;
-import React, { useState } from "react";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button",;"
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",;"
@@ -144,7 +143,6 @@ export function OnChainExport() {;
   }
   const [isConnected, setIsConnected] = useState(false),;
   const [isExporting, setIsExporting] = useState(false),;
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),;'
   const { toast } = useToast(),;
   const { user } = useAuth(),;
   const handleConnectWallet = async () => {;

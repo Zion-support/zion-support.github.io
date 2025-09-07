@@ -8,9 +8,6 @@ const JOBS_FILE = null;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
 
 export default async function handler(
   req: NextApiRequest;

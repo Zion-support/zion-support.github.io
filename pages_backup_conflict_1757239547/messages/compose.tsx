@@ -13,7 +13,6 @@ export default function ComposePage() {
     talentId
     talentName
   } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-  const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
   const [message, setMessage] = React.useState('');

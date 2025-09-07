@@ -118,7 +118,6 @@ const roomId = `mobile-audio-${contact.id}`,;`    toast.success("Starting audio 
       handleSend();
     }
   };
-  const startVideoCall = () => {;
     }
     const roomId = `mobile-${contact && contact.id}`;`    toast && toast.success("Starting video call", {,"
   }
@@ -136,11 +135,6 @@ return (  return (;
 import React, { useState } from "react",;"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;"
 import { Button } from "@/components/ui/button",;"
-import { Input } from "@/components/ui/input",;"
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;"
-import { cn } from "@/lib/utils",;"
-import { useNavigate } from "react-router-dom",;"
-import { toast } from "sonner",;"
 ;
 interface Message {;
   }
@@ -171,7 +165,6 @@ export function MobileChatView() {;
   const [newMessage, setNewMessage] = useState(""),;"
   const navigate = useNavigate(),;
   ;
-  const handleSend = () => {;
     }
     if (newMessage.trim() !== "") {;"
       }
@@ -188,7 +181,6 @@ export function MobileChatView() {;
     }
   },;
   ;
-  const startVideoCall = () => {;
     }
     const roomId = `mobile-${contact.id}`,;`    toast.success("Starting video call", {,"
   }
@@ -197,7 +189,6 @@ export function MobileChatView() {;
     // Navigate to video call page;
     navigate(`/call/${roomId}`),;`  },;
   ;
-  const startAudioCall = () => {;
     }
     const roomId = `mobile-audio-${contact.id}`,;`    toast.success("Starting audio call", {,"
   }
@@ -210,9 +201,7 @@ return (,;
   "description": `Connecting with ${contact.name}...`;`    }),;
     // Navigate to video call page;
     navigate(`/call/${roomId}`);`  },;
-  const startAudioCall = () => {;
     }
-    const roomId = `mobile-audio-${contact.id}`,;`    toast.success("Starting audio call", {,"
   }
   "description": `Connecting with ${contact.name}...`;`    }),;
     // Navigate to video call page with audio-only flag;

@@ -68,9 +68,6 @@ let "finalResponse": string = randomResponse,;
 ;
 const "AIChatbot": React.FC<AIChatbotProps> = ({ className = "" }) => {;"
   }
-  const [isOpen, setIsOpen] = useState(false),;
-  const [isMinimized, setIsMinimized] = useState(false),;
-  const [messages, setMessages] = useState<ChatMessage[]>([;
     {;
       }
       "id": '1',;'
@@ -79,10 +76,6 @@ const "AIChatbot": React.FC<AIChatbotProps> = ({ className = "" }) => {;"
       "timestamp": new Date();
     }
   ]),;
-  const [inputValue, setInputValue] = useState(''),;'
-  const [isTyping, setIsTyping] = useState(false),;
-  const messagesEndRef = useRef<HTMLDivElement>(null),;
-  const inputRef = useRef<HTMLInputElement>(null),;
   const scrollToBottom = () => {;
     }
     messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' });'
@@ -105,9 +98,7 @@ const "AIChatbot": React.FC<AIChatbotProps> = ({ className = "" }) => {;"
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",;"
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team.";"
     ],;
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],;
     // Add some context-aware responses;
-    let "finalResponse": string = randomResponse,;
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {;'
       }
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?";"
@@ -167,7 +158,6 @@ const quickReplies = [;
   },
 return (;
     <div className={`fixed bottom-4 right-4 z-50 ${className}`}>`  },;
-  const quickReplies = [;
     "Tell me about AI services",;"
     "Quantum computing pricing",;"
     "Business solutions",;"

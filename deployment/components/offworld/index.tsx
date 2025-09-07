@@ -135,7 +135,6 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
   headers: { 'content - type': 'application / json',}
 }, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim ()) } }),
 });
-  const data = await res.json ()set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed',
 }
   async /**;
  * broadcast - Function description;

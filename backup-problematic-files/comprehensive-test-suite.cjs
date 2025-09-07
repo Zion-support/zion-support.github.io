@@ -31,7 +31,6 @@ class ComprehensiveTestSuite {
       `);
       return true;
     } catch (error) {
-      const duration = Date.now() - startTime;
       this.testResults.tests.push({
         name,
         "status": 'failed',

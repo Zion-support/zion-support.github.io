@@ -33,7 +33,6 @@ export function SidebarProvider() {;  const [isOpen, setIsOpen] = useState(defau
 return (;
 
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>`
-import React, { createContext, useContext, useState } from "react";"
 
 interface SidebarContextType {;
   }
@@ -49,10 +48,6 @@ const SidebarContext = createContext<SidebarContextType>({;
   "open": () => {},;
   "close": () => {}}),;
 
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-  const toggle = () => setIsOpen(!isOpen);
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
 
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;

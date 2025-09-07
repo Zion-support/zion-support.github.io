@@ -7,13 +7,11 @@ const "WebDevelopmentChat": NextPage = () => ;
   return (<div>;
       <Head>;
 
-const "WebDevelopmentChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name = "description" content="WebDevelopmentChat blog post" />{" "}"
 ;
-  const "WebDevelopmentChat": NextPage = () => ;
   return (<div>;
       <Head></Head>;<meta name="description" content="WebDevelopmentChat blog post" />;"
       </Head>;
@@ -39,7 +37,6 @@ return (;
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
 
 
-const "WebDevelopmentChat": NextPage = () => {
 }
 return (;
     <div>
@@ -51,7 +48,6 @@ return (;
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
 
-const "WebDevelopmentChat": NextPage = () => {
       <main>
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -94,7 +90,6 @@ import type { NextPage } from './next';'
 import Head from './next / head';'
 import Link from './next / link';'
 
-const "WebDevelopmentChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title > WebDevelopmentChat - Zion Tech Solutions</title>;
@@ -122,7 +117,6 @@ export default WebDevelopmentChat;<div />;
     </div>;
   )},export default WebDevelopmentChat;
 
-const "WebDevelopmentChat": NextPage = () => ;
   return (<div>;
       <Head>;
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
@@ -142,7 +136,6 @@ export default WebDevelopmentChat;<title />WebDevelopmentChat - Zion Tech Soluti
 };
 
 export default WebDevelopmentChat;
-const "WebDevelopmentChat": NextPage = () => {
  ;
 }
 return (;
@@ -165,7 +158,6 @@ export default WebDevelopmentChat;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
 ;
-const "WebDevelopmentChat": NextPage = () => {
  ;
 }
 return (;

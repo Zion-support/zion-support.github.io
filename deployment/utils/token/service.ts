@@ -57,7 +57,6 @@ export function redeemTokens(
   amount: number,
   reason: string,
 ): TokenTransaction {}
-  const transaction: TokenTransaction = {}
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId;
 amount: -amount, // Negative for redemption;

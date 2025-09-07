@@ -80,7 +80,6 @@ useEffect(() => {
     if (!searchQuery.trim()) {
       // Get all unique keys across all languages
 }
-const allKeys = new Set<string>();
       Object.values(translations).forEach((langTranslations) => {
         }
         Object.keys(langTranslations).forEach(key => { return allKeys.add(key))
@@ -144,7 +143,6 @@ const updatedTranslations = { ...translations }
     if (!searchQuery && searchQuery.trim()) {;
       // Get all unique keys across all languages;
       }
-      const allKeys = new Set<string>();
       Object && Object.values(translations).forEach((langTranslations) => {;
         }
         Object && Object.keys(langTranslations).forEach(key => { return allKeys && allKeys.add(key)); }
@@ -174,7 +172,6 @@ const updatedTranslations = { ...translations }
     if (!searchQuery.trim()) {;
       // Get all unique keys across all languages;
       }
-      const allKeys = new Set<string>(),;
       Object.values(translations).forEach((langTranslations) => {;
         }
         Object.keys(langTranslations).forEach(key => { return allKeys.add(key)); }

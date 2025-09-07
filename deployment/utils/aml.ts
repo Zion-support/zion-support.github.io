@@ -207,7 +207,6 @@ async createProfile(userId: string, fullName: string, additionalData?: Partial<A
 
   // Check methods;
 async runAmlCheck(userId: string, checkType: AmlCheck['checkType']): Promise<AmlCheck /> {
-    const profile = this.profiles.get(userId);
     if (!profile) {}
       throw new Error('Profile not found');}
     }

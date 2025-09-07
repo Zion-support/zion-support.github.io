@@ -267,7 +267,6 @@ const features = [
   }
 ];
 
-const stats = [
   { number: '500+'}
   label: 'Active Clients', icon: Users}
 },{ number: '99.9%'}

@@ -39,16 +39,12 @@ export function DateDivider({ date }: DateDividerProps) {
         {format(date, "MMM d, yyyy")}
       </div>
       <div className="flex-1 border-t border-zion-purple/20"></div>
-import React from 'react';
-import { format } from 'date-fns';
 
 }
 interface DateDividerProps {;
   date: Date;
 }
 
-import React from './react';
-import { format  } from './date - fns';
 interface DateDividerProps {
   date: Date;
 }

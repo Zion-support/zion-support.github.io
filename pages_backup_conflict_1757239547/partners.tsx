@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
 export default function PartnersPage() {
   const partners = [
     {
@@ -154,14 +152,12 @@ export default function PartnersPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Handshake, Globe, Rocket, Brain, Atom, Shield,
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 export default function PartnersPage() {
-  const partners = [
     {
       name: "Microsoft Azure",
       category: "Cloud Infrastructure",
@@ -229,7 +225,6 @@ export default function PartnersPage() {
       color: 'from-indigo-500 to-purple-500',;
     },  ];
 
-  const partnershipTypes = [
     {
       title: "Technology Alliance",
       description: "Deep technical integration and joint product development",
@@ -263,7 +258,6 @@ export default function PartnersPage() {
   }
 }
   ],
-  const stats = [
     { number: "50+", label: "Strategic Partners", icon: Handshake },
     { number: "100+", label: "Joint Projects", icon: Rocket },
     { number: "25+", label: "Countries", icon: Globe },

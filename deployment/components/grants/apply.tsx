@@ -24,7 +24,6 @@ const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional 
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
 
-const categories: GrantCategory[] = [;
   'Ecosystem Tools';
   'Talent Development';
   'Regional Expansion';
@@ -34,7 +33,6 @@ const categories: GrantCategory[] = [;
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 
 export default function ApplyGrantPage() {const router  = null;
 
@@ -56,7 +54,6 @@ const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional 
 import { use_router } from 'next / router';
 import type { GrantCategory } from '../../types / grants';
 
-const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'
 ];
 
@@ -94,7 +91,6 @@ export default function ApplyGrantPage() {;}
 import { useState  } from 'react';
 import { useRouter  } from 'next/router';
 
-const categories: GrantCategory[] = [
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
@@ -103,7 +99,6 @@ const categories: GrantCategory[] = [
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 export default function ApplyGrantPage() {
-const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
   'Talent Development',;
   'Regional Expansion',;
@@ -121,11 +116,8 @@ const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
 
 const [projectName, setProjectName] = useState('');
 
-const [teamInfo, setTeamInfo] = useState('');
 
-const [proposalSummary, setProposalSummary] = useState('');
 
-const [timeline, setTimeline] = useState('');
 
 const [budgetAmount, setBudgetAmount] = useState<number />(0);
 
@@ -133,7 +125,6 @@ const [supportingLinks, setSupportingLinks] = useState<string />('');
 
 const [pitchDeckUrl, setPitchDeckUrl] = useState('');
 
-const [region, setRegion] = useState('');
 
 const [sector, setSector] = useState<string />('');
 
@@ -143,17 +134,14 @@ const [error, setError] = useState<string | null />(null);
 }
 import EnhancedLayout from '../../components / layout / EnhancedLayout';}
 import {use_router} from 'next / router';
-import type { GrantCategory } from '../../types / grants';
 ;
 
-const categories: GrantCategory[] = [;
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
   'Research Grants'
 ];
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default /**
  * ApplyGrantPage - Function description;
  */
@@ -179,7 +167,6 @@ const [supporting_links, setSupportingLinks] = useState < string>('');
 
 const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
 
-const [supporting_links, setSupportingLinks] = useState < string>('');
 
 const [pitchDeckUrl, setPitchDeckUrl] = useState ('');
 
@@ -292,7 +279,6 @@ const data = await resp && resp.json();
           sector: (sector as any) || undefined,;
           submit})});
 
-const data = await resp && resp.json();
       if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
       router && router.push(`/grants/${data && data.id}`);
     } catch (e: any) {;}
@@ -353,7 +339,6 @@ className='mt-1 w-full border rounded p-2'
             <select className=\"mt-1 w-full border rounded p-2\" value={program} onChange={(e) = /> setProgram(e.target.value as any)}>;
 
 const _save = async (_submit: boolean) => {try {setLoading(true),setError(null);
-  const resp = await fetch('/api/grants', {method: 'POST'}
   headers: { 'Content-Type': 'application/json'}
 },body: JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;}
             .split('\n').map((s) => s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})}),const data = await resp.json()if (!resp.ok) throw new Error(data?.error || 'Failed'),const save = async (submit: boolean) => {try {setLoading(true)setError(null;
@@ -408,7 +393,6 @@ const data = await resp.json();
 submit}
 });
 
-const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error |'Failed');
       router.push(`/grants/${data.id}`)
     } catch (e: any) {}

@@ -16,7 +16,6 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
-import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -29,7 +28,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
-import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
@@ -54,11 +52,8 @@ export function OnChainExport() {
 }
 ;
 
-import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
-import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
@@ -71,7 +66,6 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast(),
   const { user } = useAuth(),
-  const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
@@ -194,7 +188,6 @@ export function OnChainExport() {
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
 import {;
   Tooltip,;
   TooltipContent,;

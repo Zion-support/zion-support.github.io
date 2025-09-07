@@ -98,9 +98,6 @@ onClick={handleSave}
           <Button
             variant="outline" 
             size="sm" 
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
 
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
@@ -118,7 +115,6 @@ onClick={handleSave}
             )}
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
-import {
   Card,
   CardContent,
   CardHeader,

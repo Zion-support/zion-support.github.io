@@ -179,7 +179,6 @@ const dirs = ['logs/pm2'];
       const result = this.runESLintCheck();
       if (result.errors && result.errors.length > 0) {}
       // Run ESLint check;
-      const result = this.runESLintCheck();
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,""
           "type": 'eslint',
@@ -195,7 +194,6 @@ const dirs = ['logs/pm2'];
       const result = this.runBuildCheck();
       if (result.errors && result.errors.length > 0) {}
       // Try to build the project;
-      const result = this.runBuildCheck();
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
           "type": 'build',
@@ -210,7 +208,6 @@ const dirs = ['logs/pm2'];
       const result = this.runDependencyCheck();
       if (result.errors && result.errors.length > 0) {}
       // Check for dependency issues;
-      const result = this.runDependencyCheck();
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,""
           "type": 'dependency',
@@ -342,7 +339,6 @@ const result = execSync('npm run build', { });
 });
       return { "errors": [] }} catch (error) {}
       // Build failed, extract errors from stderr;
-      const stderr = error.stderr ? error.stderr.toString() : '';
       // Build failed, extract errors from stderr;"
       return this.parseBuildErrors(stderr)};
   runDependencyCheck() {}
@@ -376,9 +372,7 @@ const result = execSync('npm audit --json', { });
     return { errors }};
   parseESLintErrors(stderr) {}
     const errors = [];
-    const lines = stderr.split('\n');
     lines.forEach(line => {})
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/)
   if($2) {}
         errors.push({})
           "filePath": match[1].trim(),
@@ -393,8 +387,6 @@ const result = execSync('npm audit --json', { });
 });
     return { errors }};
   parseBuildErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
     lines.forEach(line => {})
           "file": match[1].trim(),""
           "line": parseInt(match[2]),""
@@ -419,7 +411,6 @@ const result = execSync('npm audit --json', { });
 });
     return { errors }};
   parseDependencyErrors(audit) {}
-    const errors = [];
     if (audit.vulnerabilities) {}
       Object.keys(audit.vulnerabilities).forEach(pkg => {})
         const vuln = audit.vulnerabilities[pkg]
@@ -445,7 +436,6 @@ const result = execSync('npm audit --json', { });
           return false; // Looks like valid config
       return false} catch (error) {}
   extractConfigurationIssues(content, filename) {}
-    const issues = [];
     try {}
       if (filename.endsWith('.json')) {}
         JSON.parse(content)};

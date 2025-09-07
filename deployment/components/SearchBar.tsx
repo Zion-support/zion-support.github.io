@@ -58,7 +58,6 @@ const [results, setResults] = useState<SearchResult[] />([]);
 
 const [isOpen, setIsOpen] = useState(false);
 
-const [isLoading, setIsLoading] = useState(false);
 
 const searchRef = useRef<HTMLDivElement />(null);
 
@@ -272,7 +271,6 @@ const SearchBar: React.FC<SearchBarProps /> = ({ onSearch,
 
 
  ;
-  const [query, setQuery] = useState('');
 
 const handleSubmit = (
     e.preventDefault();
@@ -327,7 +325,6 @@ type=\"text\"
               onClick={handleClear}
               className=\"absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600\";
 
-const [results, setResults] = useState<SearchResult[] />([])const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex]  = useState(-1);
   const filteredResults = useMemo(() => {if (query.length <= 2);
   return [];return searchData.filter(item =>;

@@ -45,7 +45,6 @@ const contactInfo = {
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone;
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 
 const contactInfo = null;
 visible: {
@@ -225,7 +224,6 @@ const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
     }
   }
 
-const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, coordinate_y: 0}
 }}
   }
@@ -247,7 +245,6 @@ const item_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, y: 0}
 }}
 
-const itemVariants = {hidden: { opacity: 0, y: 20}
 },{/* Header */}<motion.div;
           initial={{ opacity: 0, y: 20 }
 }

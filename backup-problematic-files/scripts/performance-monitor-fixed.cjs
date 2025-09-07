@@ -94,7 +94,6 @@ async collectSystemMetrics() {
 // console.log(" Collecting performance metrics...")
       console.log(" Performance monitoring completed")
       console.error(" Error during performance "monitoring": ")
-const { execSync } = require("child_process")
       "system"
         "cpu"
         "process"
@@ -192,7 +191,6 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
   async collectSystemMetrics() {
     try {
 const fs = require("fs")
-const path = require("path")
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
@@ -236,7 +234,6 @@ class PerformanceMonitor {
 } catch (error) {
       console.error("❌ Error during performance monitoring: ", error.message),,
 }
-const { execSync } = require("child_process")
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -262,7 +259,6 @@ class PerformanceMonitor {
     try {
       console.log("💻 Collecting system metrics...")
       // Memory usage;
-      const memoryInfo = process.memoryUsage()
       this.metrics.system.memory = {
         rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB;
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB;
@@ -270,9 +266,7 @@ class PerformanceMonitor {
         external: Math.round(memoryInfo.external / 1024 / 1024) // MB,,
 }
       // CPU usage;
-      const startUsage = process.cpuUsage()
       await this.sleep(100) // Wait 100ms;
-      const endUsage = process.cpuUsage(startUsage)
       this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms;
         system: Math.round(endUsage.system / 1000) // ms,,
@@ -293,19 +287,16 @@ class PerformanceMonitor {
     try {
       console.log("📱 Collecting application metrics...")
       // Check file sizes;
-      const distPath = path.join(this.projectRoot, "dist")
       if (fs.existsSync(distPath)) {
         const distSize = this.getDirectorySize(distPath)
         this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024) // MB,,
 }
       // Check node_modules size;
-      const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath)
         this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB,,
 }
       // Check source code size;
-      const srcPath = path.join(this.projectRoot, "src")
       if (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath)
         this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB,,
@@ -334,25 +325,19 @@ class PerformanceMonitor {
       this.metrics.build.hasBuildArtifacts = buildFiles.some(file => ;
         fs.existsSync(path.join(this.projectRoot, file)))
       // Check build configuration;
-      const packageJsonPath = path.join(this.projectRoot, "package.json")
       if (fs.existsSync(packageJsonPath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
         this.metrics.build.scripts = Object.keys(packageJson.scripts || {}),,
 }
       console.log("✅ Build metrics collected"),,
 } catch (error) {
       console.warn("⚠️  Could not collect build metrics: ", error.message)
       // Check if build directory exists;
-      const buildDir = path.join(process.cwd(), ".next")
       if (fs.existsSync(buildDir)) {
-        const buildSize = this.getDirectorySize(buildDir)
         this.metrics.application.buildSize = Math.round(
           buildSize / 1024 / 1024),,
 }
       // Check bundle size;
-      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"))
       const dependencies = Object.keys(packageJson.dependencies || {}).length;
-      const devDependencies = Object.keys(
         packageJson.devDependencies || {}
       ).length;
       this.metrics.application.bundleSize = dependencies + devDependencies,,
@@ -379,10 +364,7 @@ class PerformanceMonitor {
   getDirectorySize(dirPath) {
     let totalSize = 0;
     if (!fs.existsSync(dirPath)) return 0;
-    const files = fs.readdirSync(dirPath)
     for (const file of files) {
-      const filePath = path.join(dirPath, file)
-      const stats = fs.statSync(filePath)
       if (stats.isDirectory()) {
         count += this.countFiles(filePath, extensions)} else if (extensions.some(ext => file.endsWith(ext))) {
         count++}
@@ -399,10 +381,7 @@ class PerformanceMonitor {
     // Build metrics
     )
     try {
-      const files = fs.readdirSync(dirPath)
       for (const file of files) {
-        const filePath = path.join(dirPath, file)
-        const stats = fs.statSync(filePath)
         if (stats.isDirectory()) {
           totalSize += this.getDirectorySize(filePath)} else {
           totalSize += stats.size}
@@ -451,7 +430,6 @@ class PerformanceMonitor {
       console.log("� Collecting build metrics...")
       const buildFiles = ["dist/index.html","dist/css","dist/js"]
         "dist/assets"
-      const packageJsonPath = path.join(this.projectRoot, "package.json")
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
       console.log(" Build metrics collected")
       console.warn("⚠  Could not collect build "metrics": ")
@@ -467,7 +445,6 @@ class PerformanceMonitor {
       console.warn("⚠  Could not collect build "metrics": ")
         // Skip directories we can"
         if (file === "node_modules" || file === ".git")
-    const reportPath = path.join(this.projectRoot, "performance-report.json")
 // console.log("\n Performance "Summary": ")
     console.log("=")
 // console.log("� System Metrics:")

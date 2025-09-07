@@ -6,9 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
 import { Button } from "@/components/ui/button","
-import React from 'react';'
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Button} from "@/components/ui/button";"
 interface VideoCallRoomProps {;
   }
   room?: string;
@@ -30,8 +27,6 @@ interface VideoCallRoomProps {
 export function VideoCallRoom() {
 }
 return (;
-import React from 'react';'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button",;"
 interface VideoCallRoomProps {;
   }
@@ -60,7 +55,6 @@ export function VideoCallRoom() {;
     </Card>;
   );
 }
-import React from 'react';'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
 import { Button } from '@/components / ui / button';'
 interface VideoCallRoomProps {

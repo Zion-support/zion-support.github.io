@@ -46,7 +46,6 @@ import { toast } from "sonner";
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth($2);
   const [isLoading, setIsLoading] = useState($2);
-  const handleWeb3Login = async () => {
     try {
       setIsLoading($2);
       // Check if wallet is available

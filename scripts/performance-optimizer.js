@@ -95,17 +95,14 @@ const newRule = `${selector} {\n  ${uniqueProperties.join('\n  ')}\n}`;`        
   }#!/usr/bin/env node const fs = require('fs')const path = require('path')class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json')if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ "recursive": true },'
 } fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;#!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path')class PerformanceOptimizer {constructor() {this.metrics = {}}'
   async analyzeBundle() {const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) ;'
   }
-  const stats = this.getDirectorySize(buildDir)this.metrics.bundleSize = stats;
       console.log(`Bundle "size": ${(stats / 1024 / 1024).toFixed(2)} MB`)}` 
 }
   getDirectorySize(dirPath) {let totalSize = 0;
 
 }
 
-const files = fs.readdirSync(dirPath)files.forEach((file) => {const filePath = path.join(dirPath, file;
   }
   const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;
 #!/usr/bin/env node
@@ -171,10 +168,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 } fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node;
 
-const fs = require('fs')const path = require('path')class PerformanceOptimizer {constructor() {this.metrics = {}}'
   async analyzeBundle() {const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) ;'
   }
-  const stats = this.getDirectorySize(buildDir)this.metrics.bundleSize = stats;
       console.log(`Bundle "size": ${(stats / 1024 / 1024).toFixed(2)} MB`,`}
 if (require.main = == module) {
  ;
@@ -201,9 +196,7 @@ const report = { "timestamp": new Date().toISOString(),"optimizations": this.opt
 const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ "recursive": true },'
 } fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node,
-const fs = require('fs');'
 
-const path = require('path');'
 class PerformanceOptimizer {
   }
   constructor() {
@@ -214,9 +207,7 @@ class PerformanceOptimizer {
 
 }
 
-const files = fs.readdirSync(dirPath)files.forEach((file) => {const filePath = path.join(dirPath, file;
   }
-  const stats = fs.statSync(filePath)if (stats.isDirectory()) {totalSize += this.getDirectorySize(filePath)} else {totalSize += stats.size;
       }
     })return totalSize;
   }
@@ -250,7 +241,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 if (require.main = == module) {
  ;
   }
-  const optimizer = new PerformanceOptimizer();
   optimizer.analyzeBundle();
   optimizer.generateReport();
 }
@@ -564,9 +554,7 @@ this.log(`📊 Report "generated": ${reportPath}`);`    this.log(`✅ Performanc
     this.log('📊 Creating performance monitoring script');'
 
 const monitoringScript = "#!/usr/bin/env node;"
-  const fs = // // require('fs');'
 
-const path = // // require('path');'
 class PerformanceMonitor {
   }
   constructor() {
@@ -715,7 +703,6 @@ const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js';'
 
 export default PerformanceMonitor;";"
 
-const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js';'
   const utilsDir = path.dirname(scriptPath)if (!fs.existsSync(utilsDir)) {ursor/fix-syntax-push-and-merge-to-main-40de;
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
@@ -818,7 +805,6 @@ fs.mkdirSync(utilsDir, { "recursive": true })}"
 if (require.main = == module) {
  ;
   }
-  const optimizer = new PerformanceOptimizer();
   optimizer.optimizePerformance()
     .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
@@ -870,16 +856,13 @@ const path = require('path'); class PerformanceOptimizer { constructor() { this 
 module && module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs');'
 
-const path = require('path'); class PerformanceOptimizer { constructor() { this && this.optimizations = []} async optimizeImages() { console && console.log('🖼️ Optimizing images...'); this && this.optimizations.push('Images optimized')} async optimizeCode() { console && console.log('💻 Optimizing code...'); this && this.optimizations.push('Code optimized')} async generateReport() { const reportPath = path && path.join(process && process.cwd(),'performance-reports','optimization-report && report.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ "recursive": true },'
 } fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2))} } module && module.exports = PerformanceOptimizer;
 
 #!/usr/bin/env node const fs = require('fs');'
 
-const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ "recursive": true },'
 } fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs');'
 
-const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ "recursive": true },'
 } fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de

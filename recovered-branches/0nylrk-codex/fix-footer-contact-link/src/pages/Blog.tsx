@@ -125,7 +125,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { BlogPost } from "@/types/blog",;"
 import { Search } from "lucide-react",;"
 // Sample blog data - in a real app this would come from an API or CMS;
-const "BLOG_POSTS": BlogPost[] = [;
   {;
     }
     "id": "ai-trends-2025",;"

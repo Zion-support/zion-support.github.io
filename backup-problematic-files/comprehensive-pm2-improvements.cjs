@@ -275,8 +275,6 @@ class ComprehensivePM2Improvements {
  * Intelligent Error Recovery System
  * Automatically detects and recovers from various types of errors
  */
-const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 class IntelligentErrorRecovery {
     constructor() {
@@ -291,7 +289,6 @@ class IntelligentErrorRecovery {
         }
     }
     log(message) {
-        const timestamp = new Date().toISOString();
         const logMessage = \"[\${timestamp}] \${message}\\n\";
         fs.appendFileSync(this.logFile, logMessage);
     }
@@ -409,8 +406,6 @@ errorRecovery.run().catch(console.error);";
  */
 const express = require('express');
 const pm2 = require('pm2');
-const fs = require('fs');
-const path = require('path');
 class MonitoringDashboard {
     constructor() {
         this.app = express();

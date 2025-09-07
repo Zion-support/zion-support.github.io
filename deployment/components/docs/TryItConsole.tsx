@@ -30,7 +30,6 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 const [token, setToken] = useState('');
 
-const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
   const [body, setBody] = useState('');
 
 const [response, setResponse] = useState<string />(''),

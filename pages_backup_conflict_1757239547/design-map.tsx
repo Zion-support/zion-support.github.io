@@ -9,11 +9,6 @@ export default function DesignMapPage() {
   const [suggestion, setSuggestion] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const designMap = useMemo(() => getZionDesignMap(), []);
-  const [screenName, setScreenName] = useState("");
-  const [role, setRole] = useState("Talent");
-  const [suggestion, setSuggestion] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
   async function requestWireframe() {
     if (!screenName) return
     setIsLoading(true)

@@ -24,7 +24,6 @@ export default function AIMatcherPage() {
 }
 const navigate = useNavigate(),;
 const [selectedCategory, setSelectedCategory] = useState<string>("all"),;"
-  const handleMatchSelect = ("match": MatchResult) => {
     // Get the item type from the category
 }
 let itemType = "service",;"

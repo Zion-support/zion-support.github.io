@@ -74,7 +74,6 @@ const handleSynthesize = async () => {
 body: JSON.stringify({ episodeId: episode.id, persona }),
       });
 
-const data = await res.json();
       setEpisode(data.episode);
     } catch (e) {
       console.error(e);}

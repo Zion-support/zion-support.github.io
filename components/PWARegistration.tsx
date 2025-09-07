@@ -44,10 +44,8 @@ interface BeforeInstallPromptEvent extends Event {';'
 }>;prompt(): Promise<void>;
 }
 
-const "PWARegistration": React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)const [showInstallPrompt, setShowInstallPrompt] =;
   }
   useState(false;
-  const [isInstalled, setIsInstalled] = useState(false)useEffect(() => {
 // Check if app is already installed;
 }
 ursor/automate-test-fix-improve-and-merge-code-48f3;

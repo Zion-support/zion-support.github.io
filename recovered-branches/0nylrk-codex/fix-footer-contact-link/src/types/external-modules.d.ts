@@ -63,7 +63,6 @@ import {FC, SVGProps} from 'react';'
     from?: Date;
     to?: Datedeclare module 'lucide-react' {'
 }
-import {FC, SVGProps} from 'react';'
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
 ;}

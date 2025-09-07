@@ -34,7 +34,6 @@ const Form = FormProvider
 type FormFieldContextValue = {
   name: string}
 
-const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ""})
 
 const FormField = ({ ...props }: any) => {
@@ -143,7 +142,6 @@ type FormItemContextValue = $2;
 FormItem.displayName = $2;
   React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  const { error, formItemId } = useFormField();
     />
   );
 });
@@ -162,7 +160,6 @@ const FormDescription = React.forwardRef<
   HTMLParag</HTMLParagraphElement>raphElement
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => {
-  const { formDescriptionId } = useFormField();
     />
   );
 });
@@ -171,8 +168,6 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
   HTMLParagraphElement
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
-  const { error, formMessageId } = useFormField();
-  const body = error ? String(error?.message) : children;
   if (!body) {
     return null;
   return (
@@ -186,7 +181,6 @@ FormMessage && FormMessage.displayName = 'FormMessage';    <FormItemContext.Prov
 })
 FormLabel.displayName = "FormLabel"
 
-const FormControl = React.forwardRef<
   React.ElementRef<typeof Slot>,
       htmlFor = $2;
   React.ComponentPropsWithoutRef<typeof Slot>

@@ -118,7 +118,6 @@ export /**
  */
 function StepProgress() {
   }
-  const "steps": { "id": QuoteRequestSteps, "label": string }[] = [;
     { "id": "service", "label": "Service" },"
     { "id": "details", "label": "Details" },"
     { "id": "timeline", "label": "Timeline" },"

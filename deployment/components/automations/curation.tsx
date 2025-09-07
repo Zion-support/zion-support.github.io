@@ -196,7 +196,6 @@ const parsed = JSON.parse(raw);
 
 const raw = fs.readFileSync(filePath, 'utf8');
 
-const parsed = JSON.parse(raw);
     return {
       props: {
 

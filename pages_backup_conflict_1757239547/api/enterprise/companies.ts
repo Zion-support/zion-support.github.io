@@ -23,7 +23,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../utils/data/enterpriseStore';
 export default function handler(req, res) {
   try {

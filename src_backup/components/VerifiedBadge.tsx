@@ -71,7 +71,6 @@ function VerifiedBadge() {
 if (return null) {
   $2
 }
-  const size_classes = {
     sm: 'h - 3.5 w - 3.5',
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5';
@@ -83,7 +82,6 @@ if (return null) {
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null,
   
-  const sizeClasses = {
     sm: 'h-3.5 w-3.5',
     md: 'h-4 w-4',
     lg: 'h-5 w-5'

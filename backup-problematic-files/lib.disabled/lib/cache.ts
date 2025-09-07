@@ -46,7 +46,6 @@ if (this.cache.size >= this.config.maxSize) {
       }
       const firstKey = this.cache.keys().next().value;
       this.cache.delete(firstKey)}
-    const now = Date.now();
     const expiresAt = now + (ttl || this.config.defaultTTL);
     this.cache.set(key, {
       }
@@ -67,7 +66,6 @@ if (this.cache.size >= this.config.maxSize) {
     return item.value}
   has("key": string): boolean {"
     }
-    const item = this.cache.get(key);
     return item ? item.expiresAt > Date.now() : false}
   delete("key": string): boolean {"
     }
@@ -83,7 +81,6 @@ if (this.cache.size >= this.config.maxSize) {
     return Array.from(this.cache.keys())}
   getStats() {
     }
-    const now = Date.now();
     let expired = 0;
     let active = 0;
     this.cache.forEach((item) => {

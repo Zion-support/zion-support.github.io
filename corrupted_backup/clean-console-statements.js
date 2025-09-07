@@ -140,7 +140,6 @@ class ConsoleCleaner {;
     "for": (const item of items) {
         }
         await this.cleanFile(itemPath)}
-    const items = fs && fs.readdirSync(dirPath);
     for (const item of items) {;
       }
       const itemPath = path && path.join(dirPath, item);

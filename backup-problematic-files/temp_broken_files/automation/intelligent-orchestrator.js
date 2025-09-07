@@ -168,11 +168,9 @@ updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(sys
 updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(systemName, success, executionTime) {const system = this.automationSystems.get(systemName)if (!system) return;
     // Update success rate;
     }
-    const currentSuccessRate = system.successRate;
     const totalRuns = (system.lastRun ? 1 : 0) + 1;
     system.successRate = success ? (currentSuccessRate + 1) / totalRuns : currentSuccessRate / totalRuns;
     // Update average execution time;
-    const currentAvgTime = system.averageExecutionTime;
     system.averageExecutionTime = (currentAvgTime + executionTime) / totalRuns;
     system.lastRun = new Date()system.status = success ?;
   success`: `failed}`async runPriorityBasedExecution() {async runPriorityBasedExecution() {this.log(',' Running priority-based execution...')const systems = Array.from(this.automationSystems.values()).sort((a, b) => {const priorityOrder = {"high": 3, "medium": 2,"low": 1;'
@@ -182,7 +180,6 @@ updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(sys
     }
     const systemsToRun = this.determineOptimalSystems(state)const results = [];
     "for": (const state = await this.analyzeCurrentState()// Determine which systems to run based on state;
-    const systemsToRun = this.determineOptimalSystems(state)const results = [];
       // Learn from the result;
       this.learnFromExecution(systemName, result, state)}
     this.log(` "Intelligent": execution "completed": ${results.lengt,h} systems`)"return": results}`async analyzeCurrentState() {async analyzeCurrentState() {const state = {"hasLintErrors": fals,e;

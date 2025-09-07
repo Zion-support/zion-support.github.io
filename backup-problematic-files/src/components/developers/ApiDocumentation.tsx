@@ -146,7 +146,6 @@ const response = await fetch(\`"https"://api.ziontechgroup.com/v1/jobs/\${jobId}
   }
 }),;
 ;
-const data = await response.json(),;
 logInfo(data),`,;`                "python":`import requests;`;
 headers = {;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';'
@@ -241,7 +240,6 @@ print(data)`;`              }}
   });
 }),;
 ;
-const data = await response.json(),;
 logInfo(data),`,;`                "python":`import requests;`import json;
 ;
 headers = {;
@@ -311,7 +309,6 @@ print(data)`;`              }}
   }
 }),;
 ;
-const data = await response.json(),;
 logInfo(data),`,;`                "python":`import requests;`;
 headers = {;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';'
@@ -366,7 +363,6 @@ const response = await fetch(\`"https"://api.ziontechgroup.com/v1/talent/\${tale
   }
 }),;
 ;
-const data = await response.json(),;
 logInfo(data),`,;`                "python":`import requests;`;
 headers = {;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';'
@@ -480,7 +476,6 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
   }
 }),
-const data = await response.json(),;
 logInfo(data),`,`                "python": `import requests,`headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
 }
@@ -533,7 +528,6 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
   }
 }),
-const data = await response.json(),;
 logInfo(data),`,`                "python": `import requests,`headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
 }
@@ -628,7 +622,6 @@ method=&quot;POST&quot;
     },    "deadline": '2025-06-"30T23":"59":59Z''
   })
 }),
-const data = await response.json(),;
 logInfo(data),`,`                "python": `import requests,`import json,
 headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
@@ -689,7 +682,6 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
   }
 }),
-const data = await response.json(),;
 logInfo(data),`,`                "python": `import requests,`headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
 }
@@ -736,7 +728,6 @@ method=&quot;GET&quot;
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
   }
 }),
-const data = await response.json(),;
 logInfo(data),`,`                "python": `import requests,`headers = {
     'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json''
 }
@@ -753,7 +744,6 @@ logInfo(data),`,`                "python": `import requests,`headers = {
   -H ""Authorization": Bearer YOURAPI_KEY" \\"
   -H "Content-"Type": application/json"`, "javascript": `const talentId = 'talentabc123';'const response = await fetch(\`"https"://api.ziontechgroup.com/v1/talent/\${talentId}\`, {"method": 'GET', "headers": {'    'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}'
 });
-const data = await response.json();
 logInfo(data);`,`                "python": `import requests,`headers = {_'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}'
 talentid = 'talentabc123''
 response = requests.get(
@@ -844,7 +834,6 @@ print(data)``              }}
   });
 }),;
 ;
-const data = await response.json(),;
 logInfo(data),`,;`                "python":`import requests;`import json;
 ;
 headers = {;
@@ -907,7 +896,6 @@ print(data)`;`              }}
   }
 }),;
 ;
-const data = await response.json(),;
 logInfo(data),`,;`                "python":`import requests;`;
 headers = {;
     'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';'
@@ -1299,7 +1287,6 @@ data=json.dumps (payload) ) data = response.json () print (data) ` ;`}
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' ;'
 }
 });
-const data = await response.json ();
 logInfo (data), `;`"python": `import requests headers = {';'
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' ;'
 }talent id ';'

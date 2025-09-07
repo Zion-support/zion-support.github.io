@@ -43,8 +43,6 @@ export default function ApiMockContractTestingPage() {
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage(req, res) {
   try {
   const contactInfo = {;

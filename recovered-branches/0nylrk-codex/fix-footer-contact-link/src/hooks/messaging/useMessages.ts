@@ -126,7 +126,6 @@ export function useMessages(
 throw new Error('Conversation not found');'
       }
       // Send the message,
-const { data, error } = await supabase;
         .from('messages')'
         .insert({
           }
@@ -161,7 +160,6 @@ if (activeConversation && activeConversation.id === conversationId) {
       }
 ;
       // Send the message;
-      const { data, error } = await supabase;
         .from('messages');'
         .insert({;
           }

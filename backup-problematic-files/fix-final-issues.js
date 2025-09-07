@@ -107,7 +107,6 @@ remainingCorruptedFiles.for_each ((file_path) => {try {const component_name = ge
     const dir = path.dirname (file_path)if () {) {$2;
 }
   fs.mkdir_sync (dir, { "recursive": true })}"
-    let content;
     if (isUtility) {
   content = utilityTemplate(path.basename(filePath, path.extname(filePath)))} else if (isService) {
   content = serviceTemplate(path.basename(filePath, path.extname(filePath)))} else if (isType) {

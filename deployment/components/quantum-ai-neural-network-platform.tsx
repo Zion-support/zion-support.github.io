@@ -129,10 +129,8 @@ initial={{ opacity: 0, y: 20 ,}
   Atom,Brain,Zap,Shield,Users,Target,ArrowRight,Check,Star,Globe,Cpu,Network,} from 'lucide-react';
 
 const QuantumAINeuralNetworkPlatform: React.FC = () = /> ;
-  const features = [
   'Quantum - enhanced neural network architecture','Superposition - based learning algorithms','Quantum entanglement optimization','Quantum - classical hybrid training','Quantum error correction protocols','Multi - dimensional quantum states','Quantum memory management','Quantum coherence preservation','Quantum measurement optimization','Cross - platform quantum synchronization',];
 
-const benefits = [
   'Exponential computational power','Quantum advantage in AI training','Enhanced pattern recognition','Faster convergence rates','Quantum - secure AI operations',];
 
 const pricing = {starter: '$999 / month',

@@ -367,7 +367,6 @@ const coordinate_y  = Math.sin (time + i * 0.5) * 50 + height / 2;ctx.move_to (x
       drawNeuralGrid (ctx, canvas.width, canvas.height)animation_ref.current = requestAnimationFrame (animate)}// Quantum field lines;
 
 const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: number) =>: any ;
-  const time = Date.now () * 0.001;
       ctx.stroke_style = 'rgba (0, 255, 255, 0.1)';
       ctx.line_width = 1;for (let index = 0, i < 20, i++) {ctx.begin_path (;
   const coordinate_x = (i / 20) * width;

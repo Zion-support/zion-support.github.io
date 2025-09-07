@@ -23,7 +23,6 @@ class FinalAutomationSuite {
         encoding: "utf8",
         timeout: 300000, // 5 minutes timeout
         stdio: "pipe"
-      const result = execSync(command, { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe'
@@ -82,7 +81,6 @@ const path = require("path")
     const scripts = [{
         "name": "auto-deployment.cjs",
         "content": "#!/usr/bin/env node
-const { execSync } = require("child_process");
 
 class AutoDeployment {
   constructor() {
@@ -117,8 +115,6 @@ deployment.deploy();"
       {
         "name": "code-quality-checker.cjs",
         "content": "#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
 
 class CodeQualityChecker {
   constructor() {
@@ -169,7 +165,6 @@ class CodeQualityChecker {
     this.log(" Creating additional automation scripts...")
         "name": "auto-deployment.cjs"
         "content": "
-const { execSync } = require("child_process")
       console.log("� Building project...")
       execSync("npm run build", { "stdio": "inherit"})
       console.log("🧪 Running tests...")
@@ -181,8 +176,6 @@ const { execSync } = require("child_process")
 deployment.deploy();"
         "name": "code-quality-checker.cjs"
         "content": "
-const fs = require("fs")
-const path = require("path")
     console.log(" Checking code quality...")
     const files = this.getAllFiles(this.projectRoot, [".js", ".jsx", ".ts", ".tsx")]
       if (file.includes("node_modules")
@@ -240,7 +233,6 @@ checker.checkCodeQuality();"
       {
         "name": "dependency-updater.cjs",
         "content": "#!/usr/bin/env node
-const { execSync } = require("child_process");
 
 class DependencyUpdater {
   constructor() {
@@ -279,8 +271,6 @@ updater.updateDependencies();"
       {
         "name": "performance-monitor.cjs",
         "content": "#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
 
 class PerformanceMonitor {
   constructor() {
@@ -335,11 +325,7 @@ class PerformanceMonitor {
     if (!fs.existsSync(dir)) {
       return size;
     }
-        const items = fs.readdirSync(dir);
-    const items = fs.readdirSync(dir);
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         size += this.getDirectorySize(fullPath)} else {
@@ -447,7 +433,6 @@ monitor.monitorPerformance();"
     this.log("📝 Committing changes...");
     try {
       const commitMessage = `feat: comprehensive automation improvements
-      const commitMessage = `feat: comprehensive automation improvements
 
 - Resolved merge conflicts in automation files
 - Fixed syntax issues in JSX and TypeScript files
@@ -535,7 +520,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 }
 
   log(message) {;
-  const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
 
@@ -578,15 +562,12 @@ Enhancements: Performance, Security, SEO, Accessibility`;
   }
 }
 
-const deployment = new AutoDeployment();
 deployment.deploy();
 `;,
 },
       {;
   name: "code-quality-checker.cjs",
         content: `;
-const fs = require("fs");
-const path = require("path");
 class CodeQualityChecker {;
   constructor() {;
   this.projectRoot = process.cwd();,
@@ -594,13 +575,10 @@ class CodeQualityChecker {;
 
   async checkCodeQuality() {;
   console.log("🔍 Checking code quality...");
-    const issues = [];
     // Check for console.log statements;
-    const files = this.getAllFiles(this.projectRoot, [".js", ".jsx", ".ts", ".tsx"]);
     for (const file of files) {;
   if (file.includes("node_modules")) continue;
       try {;
-  const content = fs.readFileSync(file, "utf8");
         // Check for console.log;
         if (content.includes("console.log")) {;
   issues.push({;
@@ -644,7 +622,6 @@ class CodeQualityChecker {;
       if (stat.isDirectory()) {;
   files.push(...this.getAllFiles(fullPath, extensions));,
 } else if (stat.isFile()) {;
-  const ext = path.extname(item);
         if (extensions.includes(ext)) {;
   files.push(fullPath);,
 }
@@ -655,15 +632,12 @@ class CodeQualityChecker {;
 }
 }
 
-const checker = new CodeQualityChecker();
 checker.checkCodeQuality();
 `;,
 },
       {;
   name: "dependency-updater.cjs",
         content: `;
-const { execSync } = require("child_process");
-const fs = require("fs");
 class DependencyUpdater {;
   constructor() {;
   this.projectRoot = process.cwd();,
@@ -691,15 +665,12 @@ class DependencyUpdater {;
   }
 }
 
-const updater = new DependencyUpdater();
 updater.updateDependencies();
 `;,
 },
       {;
   name: "performance-monitor.cjs",
         content: `;
-const fs = require("fs");
-const path = require("path");
 class PerformanceMonitor {;
   constructor() {;
   this.projectRoot = process.cwd();,
@@ -714,36 +685,27 @@ class PerformanceMonitor {;
       cpu: process.cpuUsage();,
 }
     // Check bundle size;
-    const buildDir = path.join(this.projectRoot, ".next");
     if (fs.existsSync(buildDir)) {;
-  const buildSize = this.getDirectorySize(buildDir);
       metrics.buildSize = buildSize;,
 }
 
     // Check node_modules size;
-    const nodeModulesDir = path.join(this.projectRoot, "node_modules");
     if (fs.existsSync(nodeModulesDir)) {;
-  const nodeModulesSize = this.getDirectorySize(nodeModulesDir);
       metrics.nodeModulesSize = nodeModulesSize;,
 }
 
     console.log("📊 Performance metrics: ", JSON.stringify(metrics, null, 2));
     // Save metrics to file;
-    const metricsFile = path.join(this.projectRoot, "performance-metrics.json");
     fs.writeFileSync(metricsFile, JSON.stringify(metrics, null, 2));
     return metrics;,
 }
 
   getDirectorySize(dir) {;
-  let size = 0;
     if (!fs.existsSync(dir)) {;
   return size;,
 }
 
-    const items = fs.readdirSync(dir);
     for (const item of items) {;
-  const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
   size += this.getDirectorySize(fullPath);
       if (status.trim()) {;
@@ -763,12 +725,10 @@ class PerformanceMonitor {;
 }
 }
 
-const monitor = new PerformanceMonitor();
 monitor.monitorPerformance();
 `;,
 }
     ];
-    const scriptsDir = path.join(this.projectRoot, "scripts", "additional");
     if (!fs.existsSync(scriptsDir)) {;
   fs.mkdirSync(scriptsDir, { recursive: true });,
 }
@@ -842,7 +802,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 }).trim();
       if (currentBranch === "main" || currentBranch === "master") {;
   this.log("⚠️ Currently on main branch, creating feature branch...");
-        const featureBranch = `automation-improvements-${Date.now()}`;
         execSync(`git checkout -b ${featureBranch}`, { cwd: this.projectRoot });
         execSync(`git push -u origin ${featureBranch}`, { cwd: this.projectRoot });
         this.log(`✅ Created feature branch: ${featureBranch}`);,
@@ -932,7 +891,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         "Regular security audits";
       ];,
 }
-    const reportPath = path.join(this.projectRoot, "automation-reports", "final-automation-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📋 Final report generated: ${reportPath}`);
     return report;,
@@ -1040,7 +998,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 }
 
     // Generate final report;
-    const report = await this.generateFinalReport();
     this.log("🎉 Final Automation Suite Completed Successfully");
     this.log(`📊 Summary: ${report.summary.totalScripts} scripts processed`);
     this.log(`✅ Enhancements: ${report.summary.enhancements.join(", ")}`);
@@ -1057,9 +1014,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 const finalSuite = new FinalAutomationSuite();
 finalSuite.run().catch(console.error);
 #!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
     this.log(` "Starting"`)
         "cwd"
         "encoding": "utf8"
@@ -1068,7 +1022,6 @@ const path = require("path")
       this.log(` "Completed"`)
       this.log(` "Failed"`)
     this.log(" Checking git status...")
-      const status = execSync("git status --porcelain")
         "cwd"
         "encoding": "utf8"
         this.log("� Changes "detected": ")
@@ -1077,7 +1030,6 @@ const path = require("path")
     this.log(" Creating additional automation scripts...")
         "name": "auto-deployment.cjs"
         "content": "
-const { execSync } = require("child_process")
       console.log("� Building project...")
       execSync("npm run build", { "stdio": "inherit"})
       console.log("🧪 Running tests...")
@@ -1089,12 +1041,8 @@ const { execSync } = require("child_process")
 deployment.deploy();"
         "name": "code-quality-checker.cjs"
         "content": "
-const fs = require("fs")
-const path = require("path")
     console.log(" Checking code quality...")
-    const files = this.getAllFiles(this.projectRoot, [".js", ".jsx", ".ts", ".tsx")]
       if (file.includes("node_modules")
-        const content = fs.readFileSync(file, "utf8")
         if (content.includes("console.log")
             "type": "console.log"
             "message": "Console.log statement found in production code"

@@ -146,7 +146,6 @@ const integrations = [
 },
   ];
 
-const integrations = [
     {name: 'WordPress'}
   icon: '🔌', description: 'Direct plugin integration',}
 }

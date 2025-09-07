@@ -118,7 +118,6 @@ const __filename = fileURLToPath(import.meta.url)const __dirname = path.dirname(
         "error": null,"critical": step.critical;"
         "timestamp": new Date().toISOString()}this.deploymentLog.steps.push(stepResult)this.deploymentLog.summary.successful++;
       console.log(` ${step.name} completed successfully (${duration}ms)`)} catch (error) {const duration = Date.now() - startTime;`      }
-      const stepResult = {"name": step.name;"
         }
         "command": step.command;
         "description": step.description;
@@ -157,8 +156,6 @@ const __filename = fileURLToPath(import.meta.url)const __dirname = path.dirname(
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.successful++;
       console.log(` ${step.name} completed successfully (${duration}ms)`)} catch (error) { `      }
-      const duration = Date.now() - startTime;
-      const stepResult = {
         "name": step.name"
         }
         "command": step.command,

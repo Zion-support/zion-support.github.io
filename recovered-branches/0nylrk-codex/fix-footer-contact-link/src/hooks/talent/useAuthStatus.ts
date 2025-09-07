@@ -48,7 +48,6 @@ const handleToggleSave = ("talentId": string, "isSaved": boolean) => {
     savedTalents;
     handleToggleSave;
 
-import {useState} from 'react';'
 export /**
  * useAuthStatus - Function description
  */

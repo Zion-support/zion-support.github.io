@@ -30,7 +30,6 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'';
 import { fireEvent  } from '@/lib/analytics';"
 import { useAuth } from "@/context/auth/AuthProvider",
 
-import {
 
   Form,
   FormControl,
@@ -102,8 +101,6 @@ import {}
   FormItem,
   FormLabel,
 
-import { Input } from "@/components/ui/input",
-import {}
   Form,
   FormControl,
   FormField,
@@ -226,7 +223,6 @@ import {;
   FormItem,;
   FormLabel,;
 
-import Link from 'next/link';
 '
 import { Checkbox } from '@/components/ui/checkbox';// Form validation schema;
 const loginSchema = z && z.object({;
@@ -281,7 +277,6 @@ type LoginFormValues = z && z.infer<typeof loginSchema>;
     }
 
   const handleCheckStatus = () => {;
-    const email = form.getValues('email'),;
     if (!email) {;
       form.setError('root', { message: 'Please enter your email address.' }),;
       return;
@@ -339,7 +334,6 @@ if ( {) {}
         className="space-y-6"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
   Form;
   FormControl;
   FormField;
@@ -766,19 +760,16 @@ if (!email) {''
   setIsSubmitting (false);
 }'
 const handleResendEmail = async () => {';'
-  const email = form.get_values ('email');
 
   email;
 });
 });
-const data = await response.json ();
 
   setVerificationMessage ('Failed to resend verification email.');
 }finally {}
   setIsResending (false);
 }'
 const handleCheckStatus = () =>: any {';'
-  const email = form.get_values ('email');
 
 }
 }> {"
@@ -815,7 +806,6 @@ body: JSON.stringify ({;
   email ;
 });
 });
-const data = await response.json ();
 if (response.ok) {';
   setVerificationMessage ('Verification email sent. Please check your inbox.') ;
 }else {';
@@ -828,7 +818,6 @@ if (response.ok) {';
 
 };
 const handleCheckStatus = () => {';
-  const email = form.getValues ('email');
 if (!email) {';
   form.setError ('root', {';
   message: 'Please enter your email address.' ;

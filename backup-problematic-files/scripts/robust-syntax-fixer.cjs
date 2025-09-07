@@ -42,7 +42,6 @@ class RobustSyntaxFixer {
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, "utf8")
-      let originalContent = content;
       // Fix merge conflicts;
       content = content.replace(/\n/g, "")
       content = content.replace(/\n/g, "")

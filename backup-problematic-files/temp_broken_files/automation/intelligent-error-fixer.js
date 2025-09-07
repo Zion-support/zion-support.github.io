@@ -219,15 +219,11 @@ const fs = require('fs')const path = require('path')const {execSync} = // // req
     async generateReport(errors, fixes) {const report = {"timestamp": new Date().toISOString(),"totalErrors": errors.length,"fixesApplied": fixes.length,"errors": errors,"fixes": fixes,"summary": {"buildStatus": 'checking',"criticalErrors": errors.filter(e => e.critical).length,"warningsResolved": fixes.filter(f => f.type === 'warning').length,"syntaxErrorsFixed": fixes.filter(f => f.type === 'syntax').length}}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report "generated": ${this.reportFile}`)return report;`    }
     async run() {this.log('Starting Intelligent Error Fixer...')const errors = [];'
       }
-      const fixes = [];
       try {// 1. Clean up duplicate files;
         }
         await this.cleanupDuplicateFiles()// 2. Install missing dependencies;
         await this.installMissingDependencies()// 3. Run initial build check;
-        const buildResult = await this.runBuildCheck()if (!buildResult.success) {// Extract error information;
           }
-          const buildErrors = this.extractErrorInfo(buildResult.output)errors.push(...buildErrors)// Attempt to fix files;
-          const uniqueFiles = [...new Set(buildErrors.map(e => { return e.file))]; }
           for (const file of uniqueFiles) {const filePath = path.join(process.cwd(), file)const fixed = await this.fixFile(filePath)if (fixed) {fixes.push({"type": 'syntax',"file": file,"timestamp": new Date().toISOString()})}"
           }
           // Run build again after fixes;

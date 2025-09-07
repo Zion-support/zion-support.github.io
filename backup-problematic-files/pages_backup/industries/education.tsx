@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';'
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;'
 import React from 'react';'
 import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import {
   }
   BookOpen,
@@ -21,7 +20,6 @@ import {
 import Layout from '../../components/Layout';';'
 const services = [;
   {}
-const services = [;
   {"title": 'Learning Management Systems',"description": 'Comprehensive LMS platforms for educational institutions and corporate training.',"icon": BookOpen,"features": [;'
       'Course management,','Student tracking',','Assessment tools',',"title": 'Learning Management Systems,',,"description": 'Comprehensive LMS platforms for educational institutions and corporate training.,',const services = [;'
   {"title": 'Learning Management Systems',,"description": 'Comprehensive LMS platforms for educational institutions and corporate training.',"icon": BookOpen,"features": [,'Course management,','Student tracking',','Assessment tools',','Progress analytics'';'
@@ -46,7 +44,6 @@ const benefits = [;
   {}
     "title": 'Improved Learning Outcomes,',,"description": 'Personalized learning experiences lead to better student performance.,',"icon": GraduationCap;'
 ];
-const benefits = [;
   {"title": 'Improved Learning Outcomes',,"description": 'Personalized learning experiences lead to better student performance.',"icon": GraduationCap;'
   },{}
     "title": 'Enhanced Engagement,',,"description": 'Interactive tools and gamification increase student participation.,',"icon": Users},{}'
@@ -55,8 +52,6 @@ const benefits = [;
 export default function EducationPage() {return (<Layout)title="Education Technology Solutions - Zion Tech Group"";"
       }
       description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."";"
-import Layout from '../../components/Layout';'
-const services = [;
   {
     }
     "title": 'Learning Management Systems','
@@ -68,8 +63,6 @@ const services = [;
       'Assessment tools',','
     "title": 'Learning Management Systems,',,'
   "description": 'Comprehensive LMS platforms for educational institutions and corporate training.,',;'
-import Layout from '../../components/Layout';'
-const services = [;
   {;
     }
     "title": 'Learning Management Systems',,'
@@ -138,13 +131,11 @@ const services = [;
     ];
   }
 ;];
-const benefits = [;
   {}
     "title": 'Improved Learning Outcomes,',,'
   "description": 'Personalized learning experiences lead to better student performance.,',;'
     "icon": GraduationCap;
 ];
-const benefits = [;
   {;
     }
     "title": 'Improved Learning Outcomes',,'

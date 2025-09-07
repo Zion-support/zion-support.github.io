@@ -14,7 +14,6 @@ if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env "vars": SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')'
   process.exit(1)
 import { createClient } from '@supabase/supabase-js';'
-import fs from 'fs/promises';'
 import { createReadStream } from 'fs',;'
 import path from "path";"
 import FormData from "FormData";"
@@ -46,7 +45,6 @@ return result;
 }
 
 }
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 async function fetchData() {
 }
 const jobPosts = await supabase.from('job_posts').select('title, description');'

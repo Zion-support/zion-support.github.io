@@ -398,7 +398,6 @@ export function TalentRegistrationForm() {;
 ;
       // Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;
         .from('talent_profiles');'
         .insert({;
           }

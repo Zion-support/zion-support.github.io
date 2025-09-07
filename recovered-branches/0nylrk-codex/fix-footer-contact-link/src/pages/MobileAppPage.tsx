@@ -26,7 +26,6 @@ title="Zion AI Marketplace App""
 export default MobileAppPage;
 
 export default MobileAppPage,
-import React from "react";"
 import { AppLayout } from "@/layout/AppLayout";"
 import { SEO } from "@/components/SEO",;"
 import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",;"

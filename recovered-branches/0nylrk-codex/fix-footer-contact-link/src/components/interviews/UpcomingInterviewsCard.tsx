@@ -28,10 +28,7 @@ import { Avatar } from "@/components/ui/avatar","
 export function UpcomingInterviewsCard() {
 }
 const { fetchInterviews } = useInterviews(),;
-const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
 const [isLoading, setIsLoading] = useState(true),;
-  const { fetchInterviews } = useInterviews();
-const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
   const [isLoading, setIsLoading] = useState(true);      setIsLoading(true);
       try {;
         }
@@ -69,7 +66,6 @@ const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
 
     loadInterviews()
   }, []),
-import React, { useEffect, useState } from "react";"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button",;"
 import { useInterviews } from "@/hooks/useInterviews",;"
@@ -80,9 +76,6 @@ import { Calendar, Clock, Video } from "lucide-react",;"
 import { Avatar } from "@/components/ui/avatar",;"
 export function UpcomingInterviewsCard() {;
   }
-  const { fetchInterviews } = useInterviews(),;
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
   useEffect(() => {;
     }
     const loadInterviews = async () => {;

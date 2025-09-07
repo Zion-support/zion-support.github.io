@@ -189,7 +189,6 @@ const resources = [
 ];
 ;
 
-const resources = [
   { name: 'Documentation'}
   href: '/docs', icon: BookOpen}
 },

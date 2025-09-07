@@ -129,7 +129,6 @@ const data = [
   value: '2.4%', trend: -0.3,}
 }
 
-const data = [
   { label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220,450', trend: 8.2,}
 }{ label: 'GMV',}
@@ -188,7 +187,6 @@ const data = [
   value: '2.4%', trend: -0.3,}
 }
 
-const data = [
     { label: 'Monthly Recurring Revenue (MRR)',}
   value: '$220,450', trend: 8.2,}
 };

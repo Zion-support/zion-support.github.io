@@ -27,7 +27,6 @@ interface TalentDetail.testProps {
   className?: string;
 }
 
-const TalentDetail."test": React.FC<TalentDetail.testProps> = ({ className }) => {
 }
 return (;
     <div className={className || ''}>'

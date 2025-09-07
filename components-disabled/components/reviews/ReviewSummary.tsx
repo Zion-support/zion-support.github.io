@@ -163,7 +163,6 @@ export default ReviewSummary;
 
   "summary": ReviewsSummary;
 
-const "ReviewSummary": React.FC < Props> = ({ summary   ,;
 }) => {
 
 

@@ -135,7 +135,6 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 function TalentDashboardContent() {;
   }
   const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("job-matches");"
   return (;
     <>;
       <SEO;

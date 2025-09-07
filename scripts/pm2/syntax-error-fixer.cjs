@@ -165,7 +165,6 @@ const dirs = [];
   detectSyntaxIssues(content) {
     // Check for unterminated strings
     for (const dir of sourceDirs) {}
-      const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
         const files = this.walkDirectory(fullPath, extensions)
   for($2) {}
@@ -180,7 +179,6 @@ const dirs = [];
 const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath);      const items = fs.readdirSync(dir)
       items.forEach(item => {})
-        const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
           files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {}
           const ext = path.extname(item)
@@ -191,7 +189,6 @@ const fullPath = path.join(dir, item)
     return files}
   async hasSyntaxIssues(filePath) {}
     try {}
-      const content = fs.readFileSync(filePath, 'utf8');
       // Skip large files if configured;
       if (this.skipLargeFiles && content.length > this.largeFileThreshold) {}
         return false};
@@ -234,7 +231,6 @@ const fullPath = path.join(dir, item)
       if (this.backupFiles) {}
         await this.createBackup(filePath)};
       // Read file content;
-      const content = fs.readFileSync(filePath, 'utf8');
       // Apply fixes;
       const fixedContent = await this.applySyntaxFixes(content, filePath);
       if (fixedContent !== content) {}
@@ -304,7 +300,6 @@ const fullPath = path.join(dir, item)
     const doubleQuoteMatches = fixed.match(/"[^"]*$/gm);
     if (doubleQuoteMatches) {
       doubleQuoteMatches.forEach(match => {
-        const original = match;
         const fixed = match + '"';
         fixed = fixed.replace(original, fixed);
         fixes.push({ type: 'unterminated_string', original, fixed });
@@ -314,11 +309,9 @@ const fullPath = path.join(dir, item)
     const backtickMatches = fixed.match(/`[^`]*$/gm);
     if (backtickMatches) {
       backtickMatches.forEach(match => {
-        const original = match;
         const fixed = match + '`';
     return fixed};
   fixUnterminatedComments(content, fixes) {}
-    const fixed = content;
     // Find lines with unterminated block comments;
     const lines = fixed.split('\n');
     let inComment = false;
@@ -335,9 +328,7 @@ const fullPath = path.join(dir, item)
 });
     return lines.join('\n')};
   fixMissingSemicolons(content, fixes) {}
-    const fixed = content;
     // Fix missing semicolons after statements;
-    const lines = fixed.split('\n');
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
       if (line && )
@@ -387,7 +378,6 @@ const fullPath = path.join(dir, item)
 });
     return fixed};
   fixUnclosedBrackets(content, fixes) {}
-    let fixed = content;
     // Count brackets and add missing ones;
     const openBraces = (fixed.match(/\{/g) || []).length;}
     const closeBraces = (fixed.match(/\}/g) || []).length;
@@ -412,7 +402,6 @@ const fullPath = path.join(dir, item)
       fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })};
     return fixed};
   fixJSXIssues(content, fixes) {}
-    let fixed = content;
     // Fix JSX self-closing tags;
     fixed = fixed.replace(/(<[^>]+)(?=\n|$)/g, (match, tagStart) => {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
@@ -429,7 +418,6 @@ const fullPath = path.join(dir, item)
 });
     return fixed};
   fixTypeScriptIssues(content, fixes) {}
-    let fixed = content;
     // Fix type annotations;
     fixed = fixed.replace(/(\w+):\s*([^,\n]+?)(?=\s*[,\n])/g, (match, varName, typeName) => {}
       if (typeName.includes('any') && typeName !== 'any') {}
@@ -450,7 +438,6 @@ const fullPath = path.join(dir, item)
   async verifyFix(filePath) {}
     try {}
       // Try to parse the file to verify syntax is correct;
-      const content = fs.readFileSync(filePath, 'utf8');
       // Basic syntax validation;
       if (this.detectSyntaxIssues(content)) {}
         return false};

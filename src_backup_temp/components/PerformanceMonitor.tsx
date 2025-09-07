@@ -6,7 +6,6 @@ interface PerformanceMetrics  {"loadTime": number;
 const "PerformanceMonitor": React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({"loadTime": 0,"memoryUsage": 0,"renderTime": 0;
   })"renderTime": number;
 }
-const "PerformanceMonitor": React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>({"loadTime": 0,"memoryUsage": 0,"renderTime": 0;
   })useEffect(() => {interface PerformanceMetrics  {"loadTime": "number;"
   "memoryUsage": number;"
   "renderTime": number;"

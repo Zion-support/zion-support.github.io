@@ -13,9 +13,6 @@ import { innovative2040FuturisticServices } from '../data/innovative-2040-futuri
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component;
@@ -115,7 +112,6 @@ return (
               animate = {{rotate: [360, 0],scale: [1, 1.2, 1],opacity: [0.3, 0.7, 0.3],staggerChildren: 0.1,delayChildren: 0.2}}  }
 }
 ;
-  const backgroundVariants = {initial: { opacity: 0, scale: 0.8}
 },animate: { opacity: 1, scale: 1}
 };
   return (}}

@@ -52,7 +52,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     transition: { duration: 0.6, ease: "easeOut" }
   }
   ],
-  const filteredServices = allInnovativeServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
       service.category.toLowerCase().includes(selectedCategory) ||
       (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
@@ -65,7 +64,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch
   }),
-  const stats = [
     { number: "15+", label: "Innovative Services", icon: Star },
     { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },
     { number: "24/7", label: "AI Support Available", icon: Brain },
@@ -75,7 +73,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
   }
 }
   ],
-  const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut"   } catch (error) {

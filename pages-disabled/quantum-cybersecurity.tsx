@@ -109,7 +109,6 @@ export default function QuantumCybersecurityPage() {;
       "color": "from-indigo-500 to-purple-500";"
     }
   ];
-  const benefits = [;
     "Protect against quantum computing attacks with future-proof encryption";"
     "Reduce security incidents by 90% with AI-powered threat detection";"
 import Head from 'next / head';'
@@ -122,7 +121,6 @@ export default /**
  */
 function QuantumCybersecurityPage() {
   }
-  const features = [;
     {
       }
       "icon": Shield,
@@ -166,7 +164,6 @@ function QuantumCybersecurityPage() {
     }
   ];
 ;
-  const benefits = [;
     "Protect against quantum computing attacks with future - proof encryption";"
     "Reduce security incidents by 90% with AI - powered threat detection";"
     "Achieve compliance with SOC 2, GDPR, and industry standards";"

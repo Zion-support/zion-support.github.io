@@ -16,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router
 import { SEO } from "@/components/SEO";"
 export default function PublishProduct() {
   }
-  const { isAuthenticated, isLoading } = useAuth();
 import { Navigate } from "react-router-dom","
 import { SEO } from "@/components/SEO","
 export default function PublishProduct() {
@@ -37,7 +36,6 @@ return (;
       </div>
     )
   }
-import React from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer",;"
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;"
@@ -46,7 +44,6 @@ import { Navigate } from "react-router-dom",;"
 import { SEO } from "@/components/SEO",;"
 export default function PublishProduct() {;
   }
-  const { isAuthenticated, isLoading } = useAuth();
   // Show loading while checking authentication;
   if (isLoading) {;
     }

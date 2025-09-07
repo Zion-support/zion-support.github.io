@@ -70,7 +70,6 @@ ursor/fix-lint-push-and-merge-to-main-"e10e":src/components/resume-builder/wizar
 }: CreateResumeFormProps) => {;
   }
   const [newResumeTitle, setNewResumeTitle] = useState ('');'
-const handleSubmit = async () => {;
   }
   if (!newResumeTitle.trim () ) return;
 await onCreateResume (newResumeTitle) ;

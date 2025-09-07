@@ -67,8 +67,6 @@
   generateCIReport() {
     const reportPath = path.join(this.logDir, `ci-pipeline-report-${this.timestamp}.json`);
     
-    const successCount = this.ciResults.stages.filter(s => s.status === 'success').length;
-    const totalCount = this.ciResults.stages.length;
     const averageDuration = this.ciResults.stages.length > 0 ?
       this.ciResults.stages.reduce((sum, stage) => sum + stage.duration, 0) / this.ciResults.stages.length : 0;
 

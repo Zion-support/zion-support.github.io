@@ -29,7 +29,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv'}
   const { search, sort, order, page, pageSize, format, ...rest } =
     req.query as Record<string, string />;
 
-const filters: Record<string, any /> = {};
   Object.keys(rest).forEach(k => {}
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];}
   });

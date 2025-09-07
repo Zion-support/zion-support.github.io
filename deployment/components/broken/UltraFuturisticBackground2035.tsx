@@ -36,7 +36,6 @@ export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
 function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}
@@ -121,7 +120,6 @@ if (return) {$2;}
 
 const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;
 
-const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;
   const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;}
 }

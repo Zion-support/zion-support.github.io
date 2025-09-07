@@ -45,11 +45,8 @@ class AdvancedAppImprovementSuite {
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
 
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
@@ -58,7 +55,6 @@ class AdvancedAppImprovementSuite {
   async runCommand(command, description) {
     this.log(`Starting: ${description}`);
   log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
     const prefix = {
       'INFO': 'ℹ️',
       'SUCCESS': '✅',
@@ -115,8 +111,6 @@ class AdvancedAppImprovementSuite {
     
     const performanceScript = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
@@ -136,7 +130,6 @@ main
 
 
     for (const optimization of optimizations) {
-      const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
     }
@@ -147,7 +140,6 @@ main
     this.log("Improving performance...");
     const performanceTasks = [
     this.log("Improving performance...");
-    const performanceTasks = [
 
 
 main
@@ -155,7 +147,6 @@ main
     const tasks = [
 
     this.log("Improving performance...");
-    const performanceTasks = [
 
 
 
@@ -165,20 +156,16 @@ main
       { command: "npm run type-check", description: "TypeScript Type Check" }
     ];
     
-    const results = [];
 
 main
 
     for (const task of tasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
     for (const task of performanceTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 
     for (const task of performanceTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
     }
@@ -189,15 +176,12 @@ main
     this.log("Enhancing security...");
     const securityTasks = [
     this.log("Enhancing security...");
-    const securityTasks = [
 
 
 main
     this.log("🔒 Enhancing security...");
-    const tasks = [
 
     this.log("Enhancing security...");
-    const securityTasks = [
 
 
 
@@ -207,20 +191,16 @@ main
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
     ];
     
-    const results = [];
 
 main
 
     for (const task of tasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
     for (const task of securityTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 
     for (const task of securityTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
     }
@@ -231,15 +211,12 @@ main
     this.log("Running tests...");
     const testTasks = [
     this.log("Running tests...");
-    const testTasks = [
 
 
 main
     this.log("🧪 Running tests...");
-    const tasks = [
 
     this.log("Running tests...");
-    const testTasks = [
 
 
 
@@ -249,20 +226,16 @@ main
       { command: "npm run test:coverage", description: "Generate Test Coverage" }
     ];
     
-    const results = [];
 
 main
 
     for (const task of tasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, ...result });
     for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 
     for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
     }
@@ -275,12 +248,10 @@ main
       timestamp: new Date().toISOString(),
   async generateReports() {
     this.log("Generating improvement reports...");
-    const report = {
       timestamp: new Date().toISOString(),
 
   async generateReport(results) {
     this.log("📊 Generating improvement reports...");
-    const report = {
       timestamp: new Date().toISOString(),
       bundleOptimization: results.bundleOptimization,
       performanceImprovements: results.performanceImprovements,
@@ -324,7 +295,6 @@ main
   }
 
   async generateReport() {
-    const report = {
       timestamp: this.metrics.timestamp,
       bundleSize: this.metrics.bundleSize,
       memoryUsage: this.metrics.memoryUsage,
@@ -379,9 +349,6 @@ module.exports = PerformanceOptimizer;`;
     
     const securityScript = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class SecurityAuditor {
   constructor() {
@@ -405,7 +372,6 @@ class SecurityAuditor {
   }
 
   async generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: this.recommendations
@@ -488,7 +454,6 @@ module.exports = SecurityAuditor;`;
 
   async generateReport() {
     const duration = Date.now() - this.startTime;
-    const report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       improvements: this.improvements.length,
@@ -557,7 +522,6 @@ if (require.main === module) {
 
 // Run the advanced app improvement suite
 if (require.main === module) {
-  const suite = new AdvancedAppImprovementSuite();
   suite.run().catch(console.error);
 }
 
@@ -574,7 +538,6 @@ main
 
 module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite
-const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
     this.ensureDirectories();,
 }

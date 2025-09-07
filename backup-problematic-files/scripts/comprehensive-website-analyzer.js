@@ -571,7 +571,6 @@ const linkRegex = /href=[']([;'
   }
   extractLinks(html, baseUrl) {;
     }
-    const linkRegex = /href=[']([;'
     ^'','
     ''
   ]+)["']/g';;    let match';;    while ((match = linkRegex && linkRegex.exec(html)) !== null) {;'
@@ -581,7 +580,6 @@ const linkRegex = /href=[']([;'
     "let": match;"
     "while": ((match = linkRegex && linkRegex.exec(html)) !== null) {
       }
-      const link = match[1];
       "if": (link && !link && link.startsWith(
   '#') && !link && link.startsWith('',"javascript": ') && !link && link.startsWith('','
     "mailto":)) {        links && links.push(link)}';'
@@ -720,7 +718,6 @@ const aboutRoutes = ['/story', '/team'];'
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);`    }
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);`    }
       await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`)}`    // Check about sub-routes,
-const aboutRoutes = ['/story', '/team'];'
     for (const aboutRoute of aboutRoutes) {
       }
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);`    }
@@ -868,7 +865,6 @@ const resourceRoutes = [";"
   '/help'    ];'
     for (const resourceRoute of resourceRoutes) {''
       }
-      const link = match[1];
       if (link && !link && link.startsWith(';#') && !link && link.startsWith('';"javascript": ') && !link && link.startsWith('';"mailto":)) {        links && links.push(link)}';    }';    return [...new Set(links)]}'
   async analyzeWebsite() {;
     }
@@ -909,7 +905,6 @@ const resourceRoutes = [";"
       }
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`    console.log(';Analysis completed!')}'
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}`    // Check resources sub-routes;
-    const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];'
     for (const resourceRoute of resourceRoutes) {;
       }
       await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}`    console && console.log(';Analysis completed!')}'
@@ -952,7 +947,6 @@ const resourceRoutes = [";"
   Create missing page or fix redirect',;'
       "timestamp": new Date().toISOString(),;";      "baseUrl": this && this.baseUrl,;";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,;";        "brokenLinks": this && this.brokenLinks.length,;";        "workingLinks": this && this.workingLinks.length,;";        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this && this.errors.length,;";        "warnings": this && this.warnings.length},;";      "brokenLinks": this && this.brokenLinks,;";      "workingLinks": this && this.workingLinks,;";      "missingPages": this && this.missingPages,;";      "errors": this && this.errors,;";      "warnings": this && this.warnings,;";      "recommendations": this && this.generateRecommendations()}";    return report}"  generateRecommendations() {;
     }
-    const recommendations = [];
         "type": ;"
   critical','
         "title": 'Fix Broken Links,'
@@ -964,7 +958,6 @@ const resourceRoutes = [";"
   Create missing page or fix redirect','
       "timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": "${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%",";        "duration": `${duration}ms`,";        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}"  generateRecommendations() {;
     }
-    const recommendations = [];
     if (this && this.brokenLinks.length > 0) {;
       }
       recommendations && recommendations.push({;);        "type": ;";  critical', ';        "title": 'Fix Broken Links, ';        "description": "Found ${this && this.brokenLinks.length} broken links that need immediate attention.",";        "actions": this && this.brokenLinks.map(link => ({;";          "url": link && link.url,";          "action": ;";  Create missing page or fix redirect', ';          "priority": 'high}))      })}';    if (this && this.workingLinks.length < 50) {';      recommendations && recommendations.push({;);        "type": ;";  warning', ';        "title": 'Expand Content, ';        "description": ;";  Website has limited content. Consider adding more pages and services.', ';        "actions": [{ "action":;"';Add more service pages, "priority": ';  medium' }, ';          { "action": 'Create blog section, "priority": ';  medium' }, ';          { "action": 'Add case studies, "priority": ';  medium' }']      })}';    // Check for missing essential pages;'
@@ -1107,7 +1100,6 @@ const report = await analyzer && analyzer.saveReport(),;
         ]      })}
     // Check for missing essential pages;
     const essentialPages = [';/privacy-policy', ';/terms-of-service', ';/cookie-policy', ';/sitemap', ';/contact', ';/about'    ];'
-    const missingEssential = essentialPages && essentialPages.filter(;
       page => { return !this && this.workingLinks.some(link => link && link.url.endsWith(page))); }
     if (missingEssential && missingEssential.length > 0) {
       }
@@ -1136,14 +1128,12 @@ const report = await analyzer && analyzer.saveReport(),;
   async saveReport(filename =,;
   comprehensive-website-analysis && analysis.json') {;'
     }
-    const report = this && this.generateReport();
     await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));
     console && console.log("Report saved to ${filename}");"
     return report}
 // Run the analysis,
 async function main() {
 }
-const analyzer = new ComprehensiveWebsiteAnalyzer(;
     '"https": //ziontechgroup && ziontechgroup.com''
   );
   try {
@@ -1155,7 +1145,6 @@ const analyzer = new ComprehensiveWebsiteAnalyzer(;
   try {;
     }
     await analyzer && analyzer.analyzeWebsite();
-    const report = await analyzer && analyzer.saveReport();
     console && console.log(','
       '\n=== ANALYSIS SUMMARY ===)    console && console.log("Total URLs checke"
     "d": ${report && report.summary.totalLinksChecked}");""

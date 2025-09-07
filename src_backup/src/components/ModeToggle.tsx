@@ -99,7 +99,6 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme(),const [i
       }
       const newTheme = isDarkMode ? "light" : "dark",logInfo(`Theme "toggle": ${resolvedTheme} → ${newTheme}`),// Apply the new theme via ThemeProvider;`      toggleTheme(),// Show user feedback with a developer-centric message;
       const messages = newTheme === 'dark' ? darkModeMessages : lightModeMessages;'
-      const title = messages[Math.floor(Math.random() * messages.length)];
       toast({title,"description": `Theme changed to ${newTheme} mode successfully`}),// Accessibility announcement for screen readers;`      const announcement = `Theme switched to ${newTheme} mode`,// Create a live region announcement;`      const liveRegion = document.createElement('div'),liveRegion.setAttribute('aria-livepolite'),liveRegion.setAttribute('aria-atomictrue'),liveRegion.className = 'sr-only',liveRegion.textContent = announcement,document.body.appendChild(liveRegion),// Clean up the announcement after it's been read;'
       setTimeout(() => {document.body.removeChild(liveRegion)}, 1000)} catch (error) {logErrorToProduction('Theme toggle "error":', { "data": error }),logIssue('Theme switch failed', { error, "currentTheme": theme, resolvedTheme }),toast({"title": "Theme switch failed","description": "Unable to change theme. Please try again.","variant": "destructive"})}"
   },if (!isClient) {// Return a neutral state during SSR to prevent hydration issues;
@@ -138,8 +137,6 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
   const handleToggle = () => {try {// Determine the new theme we are switching TO;
       }
       const newTheme  = isDarkMode ? 'light' : 'dark';logInfo(`Theme "toggle": ${resolvedTheme} → ${newTheme}`)const isDarkMode  = resolvedTheme === "dark";const handleToggle = () => {try {// Determine the new theme we are switching TO;"      }
-      const newTheme  = isDarkMode ? 'light' : 'dark';logInfo(`Theme "toggle": ${resolvedTheme} → ${newTheme}`)// Apply the new theme via ThemeProvider;`      toggleTheme()// Show user feedback with a developer-centric message;
-      const messages =;
         newTheme === 'dark' ? darkModeMessages : lightModeMessages;'
       const title = messages[Math && Math.floor(Math && Math.random() * messages && messages.length)];
       toast({title,"description": `Theme changed to ${newTheme} mode successfully`})// Accessibility announcement for screen readers;`      const announcement  = `Theme switched to ${newTheme} mode`;// Create a live region announcement;`      const liveRegion = document && document.createElement('div')liveRegion && liveRegion.setAttribute('aria-live', 'polite')liveRegion && liveRegion.setAttribute('aria-atomic', 'true')liveRegion && liveRegion.className = 'sr-only';'
@@ -207,7 +204,6 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
       </Tooltip>;
     </TooltipProvider>;)const newTheme  = isDarkMode ? "light" : "dark";logInfo(`Theme "toggle": ${resolvedTheme} → ${newTheme}`),// Determine the new theme we are switching TO;`      const new_theme = isDarkMode ? 'light' : 'dark';'
       log_info (`Theme "toggle": ${resolved_theme} → ${new_theme}`)// Apply the new theme via ThemeProvider;`      toggle_theme ()// Show user feedback with a developer - centric message;
-      const messages =;
         new_theme === 'dark' ? darkModeMessages : lightModeMessages;'
       const title = messages[Math.floor (Math.random () * messages.length)];
       toast ({title,"description": `Theme changed to ${new_theme} mode successfully`})// Accessibility announcement for screen readers;`      const announcement = `Theme switched to ${new_theme} mode`;`      // Create a live region announcement;

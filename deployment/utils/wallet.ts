@@ -53,7 +53,6 @@ export async function getAccounts(): Promise<string[] /> {
   }
   try {
 
-    const accounts = await window && window.ethereum.request({
 export async function get_accounts (): Promise < string[]> {
   // Check condition;
 if ( {) {}
@@ -68,7 +67,6 @@ if ( {) {}
     return [];}
   }
   try {
-    const accounts = await window.ethereum.request({
       method: \"eth_accounts\",}
       method: \"eth_accounts\",}
     });
@@ -103,7 +101,6 @@ export async function getBalance(address: string): Promise<string /> {
     throw new Error('MetaMask is not installed');}
   }
   try {
-    const balance = await window.ethereum.request({
       method: 'eth_getBalance',
   params: [address, 'latest']
 
@@ -153,7 +150,6 @@ export async function signMessage(
     throw new Error('MetaMask is not installed');}
   }
   try {
-    const signature = await window.ethereum.request({
       method: 'personal_sign',
   params: [message, address]
 

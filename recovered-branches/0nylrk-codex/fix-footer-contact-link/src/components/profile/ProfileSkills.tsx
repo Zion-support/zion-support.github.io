@@ -2,8 +2,6 @@ import { Badge } from "@/components/ui/badge","
 import { ProfileSkill } from "@/types/profile","
 import {Badge} from "@/components/ui/badge";"
 import {ProfileSkill} from "@/types/profile";"
-import { Badge } from "@/components/ui/badge","
-import { ProfileSkill } from "@/types/profile","
 interface ProfileSkillsProps {
   }
   "skills": ProfileSkill[];
@@ -35,8 +33,6 @@ className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
   )
 import { Badge } from "@/components/ui/badge";"
 import { ProfileSkill } from "@/types/profile";"
-import {Badge} from "@/components/ui/badge";"
-import {ProfileSkill} from "@/types/profile";"
 interface ProfileSkillsProps {;
   }
   "skills": ProfileSkill[];
@@ -66,7 +62,6 @@ className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
         ))}
       </div>;
     </div>;
-import { Badge } from "@/components/ui/badge";"
 import { ProfileSkill } from "@/types/profile",;"
 ;
 interface ProfileSkillsProps {;
@@ -84,7 +79,6 @@ export function ProfileSkills() {;
 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
   )
 import { Badge } from "@/components/ui/badge",;"
-import { ProfileSkill } from "@/types/profile";"
 interface ProfileSkillsProps {;
   }
   "skills": ProfileSkill[];

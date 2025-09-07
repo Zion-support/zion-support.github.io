@@ -409,7 +409,6 @@ export default function ModerationModal() {
 
 }
 
-const [adminNotes, setAdminNotes] = useState('');'
   if (!flag) return null;
 
 return (;

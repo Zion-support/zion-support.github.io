@@ -40,7 +40,6 @@ export /**;
  */;
 function HelpArticleView() {const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null)// Find the article in all categories;"
   }
-  let article;
   for (const category of HELP_CATEGORIES) {}const found = null;
     "day": "numeric";"
   })}

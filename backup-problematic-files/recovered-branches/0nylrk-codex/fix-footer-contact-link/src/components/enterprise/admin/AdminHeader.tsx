@@ -70,7 +70,6 @@ export function AdminHeader() {;
   }
   user 
 }= useAuth ();
-const {
   }
   company 
 }= useCompanyWorkspace ();

@@ -54,14 +54,12 @@ export default function Signup() {const [formData, setFormData] = useState({"fir
     'Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other';'
   ];
   const useCases = ['AI & Machine Learning';'
-  const useCases = ['AI & Machine Learning';'
     'Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other';'
   ];
       // // // // // // // ;
     } catch (error) {// // // // // // // console && console.error('Signup "error": ', error)// // // // ;'
     } catch (error) {// // // // console && console.error('Signup "error": ', error)} finally {setIsSubmitting(false)const title = 'Sign Up — Zion Tech Group';'
   }
-  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.';'
   return (<>;
 import Head from 'next/head.ts''
 import { motion  } from 'framer-motion''
@@ -130,7 +128,6 @@ const useCases = ['AI & Machine Learning',;'
       }
       setIsSubmitting(false)
 const title = 'Sign Up — Zion Tech Group';'
-const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.';'
 return (;
     <>
       <Helmet>
@@ -175,11 +172,6 @@ export default function Signup() {;
     "industry": '',;'
     "useCase": '';'
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<Record<string, any>>({});
-  const industries = ['Technology';'
     'Healthcare',;'
     'Finance',;'
     'Manufacturing',;'
@@ -189,7 +181,6 @@ export default function Signup() {;
     'Non-profit',;'
     'Other';'
   ];
-  const useCases = ['AI & Machine Learning',;'
     'Cloud Infrastructure',;'
     'Cybersecurity',;'
     'Digital Transformation',;'
@@ -208,8 +199,6 @@ export default function Signup() {;
     } finally {;
       }
       setIsSubmitting(false);
-  const title = 'Sign Up — Zion Tech Group';'
-  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.';'
 return (;
     <>;
       <Helmet>;

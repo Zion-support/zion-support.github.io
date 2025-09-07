@@ -42,8 +42,6 @@ if (!fs.existsSync(config.outputDir)) {
 
 
 
-const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 
 
@@ -55,9 +53,6 @@ class AccessibilityChecker {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 
 origin/main
@@ -169,7 +164,6 @@ if (require.main === module) {
   async generateReport() {
     this.log('📊 Generating accessibility report...');
 
-    const report = {
       timestam: p: new Date().toISOString(),
       accessibilit: y: await this.checkAccessibility(),
       summar: y: {
@@ -189,7 +183,6 @@ if (require.main === module) {
     });
 
     // Save report
-    const reportFile = path.join(
       this.logsDir;
       `accessibility-report-${Date.now()}.json`
     );
@@ -201,7 +194,6 @@ if (require.main === module) {
 
   async start() {
     this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
     this.log('🏁 Accessibility Checker completed');
     return report;
   }
@@ -209,7 +201,6 @@ if (require.main === module) {
 
 // CLI interface
 if (require.main === module) {
-  const checker = new AccessibilityChecker();
   checker
     .start()
     .then(report => {
@@ -258,15 +249,12 @@ if (require.main === module) {
     "name": 'ARIA Labels Check',
     "action": () => {
       
-      const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
-        const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let ariaElements = 0;
 
         pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
         });
 
@@ -277,15 +265,12 @@ if (require.main === module) {
     "name": 'Focus Management Check',
     "action": () => {
       
-      const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
-        const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let focusElements = 0;
 
         pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
             .length;
         });
@@ -297,15 +282,12 @@ if (require.main === module) {
     "name": 'Screen Reader Support Check',
     "action": () => {
       
-      const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
-        const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let srElements = 0;
 
         pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           srElements += (
             content.match(/role=|aria-label=|aria-describedby=/g) || []
           ).length;
@@ -335,7 +317,6 @@ for (const check of a11yChecks) {
 
 
 // Generate accessibility report
-const report = {
   "timestamp": new Date().toISOString(),
   "checks": a11yChecks.map(check => ({
     name: check.name,
@@ -359,9 +340,6 @@ main
 
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class AccessibilityChecker {
   constructor() {
@@ -376,18 +354,14 @@ class AccessibilityChecker {
   }
 
   log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
 
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
 
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
-      const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
         stdio: 'pipe',
@@ -420,11 +394,8 @@ function checkAriaLabels(dir) {
 
 // Check for alt text on images
 function checkAltText(dir) {
-  const issues = [];
-  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
   
   files.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');
     
     // Check for images without alt text
     const images = content.match(/<img[^>]*>/gi);
@@ -448,11 +419,8 @@ function checkAltText(dir) {
 origin/main
 // Check for semantic HTML
 function checkSemanticHTML(dir) {
-  const issues = [];
-  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
   
   files.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');
     
     // Check for proper heading hierarchy
     const headings = content.match(/<h[1-6][^>]*>/gi);
@@ -562,7 +530,6 @@ function saveAuditResults(audit) {
 
 
 
-const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
 );
@@ -606,8 +573,6 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 console.log('♿ Running accessibility check...');
 console.log('✅ Accessibility check completed');

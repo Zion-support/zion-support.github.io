@@ -92,7 +92,6 @@
     const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g    const matches = [...content.matchAll(radixPattern)];"
     if (matches.length > 1) {const groupedImports = new Map()matches.forEach((match) => {const components = match[1].split(', ').map(comp => comp.trim())optimizedImports += "import { ${Array.from(components).join(',';\n"})";"
       return content.replace(radixPattern, '').replace(/^/, optimizedImports)}'
-        const packageName = match[2];
         if (!groupedImports.has(packageName)) {groupedImports.set(packageName, new Set())}
         components.forEach(comp => { return groupedImports.get(packageName).add(comp))})let optimizedImports = ''; }      groupedImports.forEach((components, packageName) => {';\n`})return content.replace(radixPattern, ').replace(/^/, optimizedImports)}'
     return content}

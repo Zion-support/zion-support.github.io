@@ -84,16 +84,10 @@ value={{
         lastEvent;
         events;
         clearEvents,
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
 );
 export function AnalyticsProvider(): any ({ children }: { "children": ReactNode }) {;
   }
-  const [pageViews, setPageViews] = useState(0);
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
-  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
-  const location = useLocation();
-  const { user } = useAuth();
   "timestamp": number,
   user_id?: string | null;
   metadata?: Record < string, any>;
@@ -189,7 +183,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode}) {
   },
   
   // Clear events (for development or testing)
-  const clearEvents = () => {
     setEvents($2);
     setLastEvent(null)
   },
@@ -203,16 +196,10 @@ export function AnalyticsProvider({ children }: { children: ReactNode}) {
         events,
         clearEvents
 ;
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
 ),;
 export function AnalyticsProvider() {;
   }
-  const [pageViews, setPageViews] = useState(0),;
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]),;
-  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null),;
-  const location = useLocation(),;
-  const { user } = useAuth(),;
   // Track page views when location changes;
   useEffect(() => {;
     }

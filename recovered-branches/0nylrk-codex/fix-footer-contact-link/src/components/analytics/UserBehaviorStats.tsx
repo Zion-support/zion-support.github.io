@@ -20,7 +20,6 @@ export function UserBehaviorStats() {
 const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;'
 export function UserBehaviorStats() {;
   }
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');'
   const { "data": behaviorData, isLoading } = useQuery({
     }
     "queryKey": ['user-behavior-data', timeRange];'

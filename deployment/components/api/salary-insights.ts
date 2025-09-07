@@ -151,7 +151,6 @@ const sample = scored && scored.length > 0 ? scored && scored.map((s) => s && s.
 
 const rates = sample && sample.map((p) => p && p.hourlyRateUsd);
 
-const baseMedian = median(rates);
 
 const min = Math && Math.min(...rates);
 

@@ -19,7 +19,6 @@ export interface Milestone {;
 }
   isMilestoneStatus,;}
 } from '../types/milestones';
-import { CurrentUser } from './auth';
 
 // Project management utilities;
 import { v4 as uuidv4 } from 'uuid';
@@ -86,7 +85,6 @@ export async function createProject(payload: CreateProjectPayload): Promise<Proj
 }
 
 export async function getProjects(): Promise<Project[] /> {
-  const res = await fetch('/api/projects', {
     method: 'GET',}
   credentials: 'include'}
   });
@@ -110,7 +108,6 @@ export async function updateProject(projectId: string, payload: UpdateProjectPay
 }
 
 export async function deleteProject(projectId: string): Promise<void /> {}
-  const res = await fetch(`/api/projects/${projectId}`, {
     method: 'DELETE',}
   credentials: 'include'}
   });

@@ -58,7 +58,6 @@ MapPin;
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 
 export default function UltraAdvancedHero2026() {
   const totalServices =
@@ -77,7 +76,6 @@ const containerVariants = {}
 import {motio}
 } from 'framer-motion';
 import Link from 'next / link';
-import {
   ArrowRight,
   Star,
   TrendingUp,
@@ -107,8 +105,6 @@ const contact_info = {
     phone: '+1 302 464 0950'}
   email: 'kleber@ziontechgroup.com'}
     address: '364 E Main St STE 1008 Middletown DE 19709'  }import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
-import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
-import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services';
 
 export default /**
  * UltraAdvancedHero2026 - Function description;
@@ -117,7 +113,6 @@ function UltraAdvancedHero2026() {
   const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
 ;
 
-const contact_info = {
     phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com'}
     address: '364 E Main St STE 1008 Middletown DE 19709'}

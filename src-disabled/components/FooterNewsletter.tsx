@@ -284,7 +284,6 @@ import React, { useState, useRef } from 'react';'
 import { Input } from '@/components / ui / input';'
 import { Button } from '@/components / ui / button';'
 import { use_toast } from '@/hooks / use - toast';'
-import { Loader2 } from 'lucide-react';'
 import { logErrorToProduction } from '@/utils / production_logger';
 export function FooterNewsletter (): React.ReactElement {';
   const [email, set_email] = useState ('');'
@@ -296,7 +295,6 @@ export function FooterNewsletter (): React.ReactElement {';
 } finally {}
       setIsSubmitting (false);'
       // console.error ('Newsletter subscription failed:', error)} finally {}
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const last_submit = useRef (0);
   const handle_submit = async (e: React.FormEvent) => {}
     e.prevent_default ();

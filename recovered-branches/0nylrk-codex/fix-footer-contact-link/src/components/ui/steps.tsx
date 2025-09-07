@@ -98,7 +98,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
           if (!React.isValidElement(child)) return null,
           
-          let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = $2;
           if (index = $2;
           return React.cloneElement(child as React.ReactElement<StepProps>, {
@@ -138,7 +137,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           if () return null) {
   $2
 }
-          let status: "incomplete" | "current" | "complete" = "incomplete",
           // Check condition
 if (status = "complete") {
   $2

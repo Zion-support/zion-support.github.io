@@ -1,6 +1,4 @@
 const originalLog = console.log;
-const originalLog = console.log;
-const originalLog = console.log;
         let fixCount = 0;
             if (match) {fixCount = parseInt(match[1])}
           }

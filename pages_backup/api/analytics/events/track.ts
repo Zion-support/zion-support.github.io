@@ -65,8 +65,6 @@ const LOG_FILE = path.join(LOG_DIR, 'events.log');
   if (!name || typeof name !== 'string')
     return res.status(400).json({ error: 'Invalid event name' });
 
-  const nowIso = new Date().toISOString();
-  const event = {
     name,
     page,
     userType,

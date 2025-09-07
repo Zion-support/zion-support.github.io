@@ -115,12 +115,7 @@ export function ApiKeysManager() {;
     revokeApiKey,;
     clearNewApiKey;
   } = useApiKeys(),;
-  const [showCreateDialog, setShowCreateDialog] = useState(false),;
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
   // Create key form state;
-  const [keyName, setKeyName] = useState(""),;"
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
   // Load keys on mount;
   useState(() => {;
     }

@@ -65,10 +65,8 @@ export default function GrantsPage() {const [items, setItems] = useState<GrantAp
             setFilters(f => ({ ...f, status: e && e.target.value || undefined}
 }))GrantApplication,GrantCategory,GrantStatus} from '../../types/grants';
 
-const categories: GrantCategory[] = [;
   'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];
 
-const statuses: GrantStatus[] = [;
   'Draft','Submitted','Under Review','Approved','Rejected',import { useEffect, useState   } from 'react';
 import Link from 'next/link';,import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useEffect, useState } from 'react';
@@ -83,7 +81,6 @@ const statuses: GrantStatus[]  = ['DraftSubmittedUnder ReviewApprovedRejected'];
   GrantStatus;
 } from '../../types/grants';
 
-const categories: GrantCategory[] = [;
   'Ecosystem Tools';
   'Talent Development';
   'Regional Expansion';
@@ -91,7 +88,6 @@ const categories: GrantCategory[] = [;
 ];
 
 
-const statuses: GrantStatus[] = [;
   'Draft';
   'Submitted';
   'Under Review';
@@ -148,7 +144,6 @@ const [filters, setFilters] = useState<{ sector?: string, status?: string, regio
   useEffect(() => {
 ;
 
-const params = new URLSearchParams();
     if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
     if (filters && filters.status) params && params.set('status', filters && filters.status);
     if (filters && filters.region) params && params.set('region', filters && filters.region);}

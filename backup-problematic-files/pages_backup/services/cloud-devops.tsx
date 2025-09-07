@@ -9,11 +9,9 @@ const features = [;
 import Head from 'next/head';'
 import Link from 'next/link';'
 import { motion  } from 'framer-motion';'
-const features = [;
   {"icon": Cloud,"title": 'Cloud Migration',"description": 'Seamless migration to cloud platforms with zero downtime';'
   },import { motion } from 'framer-motion';'
 import { Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle } from 'lucide-react';'
-const features = [;
   {"icon": Cloud,"title": 'Cloud Migration',,"description": 'Seamless migration to cloud platforms with zero downtime';'
   },{}
     "icon": Server,"title": 'Infrastructure as Code,',,"description": 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.'},{}'

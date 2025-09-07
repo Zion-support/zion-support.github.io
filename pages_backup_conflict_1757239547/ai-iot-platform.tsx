@@ -14,8 +14,6 @@ import {
   Star
   Cpu;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-iot-platform');

@@ -23,8 +23,6 @@ import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 
 import { Link } from "react-router-dom";"
 export default function ZionHireAI() {
   }
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
 import { useAuth } from "@/hooks/useAuth","
 import { Link } from "react-router-dom","
 export default function ZionHireAI() {
@@ -62,8 +60,6 @@ import { Link } from "react-router-dom",;"
 ;
 export default function ZionHireAI() {;
   }
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),;
-  const { isAuthenticated } = useAuth(),;
   ;
   return (;
     <>;
@@ -211,7 +207,6 @@ size="lg""
   }
   isWhitelabel, brandName, primaryColor 
 }= useWhitelabel ();
-const {
   }
   isAuthenticated 
 }= useAuth ();

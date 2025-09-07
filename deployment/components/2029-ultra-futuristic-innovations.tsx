@@ -50,9 +50,6 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
   value: (all2029Services.reduce((sum, s) = /> sum + s.rating, 0) / all2029Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
             initial={{ opacity: 0, y: 30 ,}
 }import React from 'react';,import Head from 'next/head';
-import { motion   } from 'framer-motion';
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer   } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';,import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';,import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';,const contactInfo = null;
                 { label: 'Average Rating',}
   value: (all2029Services.reduce((sum, s) => sum + s.rating, 0) / all2029Services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500',}
 }

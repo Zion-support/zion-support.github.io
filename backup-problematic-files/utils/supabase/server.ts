@@ -5,7 +5,6 @@ const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT
 
 let cachedClient: SupabaseClient | null = null
 
-let cachedClient: SupabaseClient | null = null
 
 export function getServerSupabase(): SupabaseClient {
   if (cachedClient) return cachedClient,

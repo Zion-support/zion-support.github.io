@@ -273,19 +273,16 @@ import {;
   }
   LanguageSelector ';';'
 }from '@/components/header/LanguageSelector';'
-import {;
   {;
   {;';'
   }
   HoverCard,   HoverCardTrigger, HoverCardContent ';';'
 }from '@/components/ui/hover-card';'
-import {;
   {;
   {;';'
   }
   MiniCartPreview ';';'
 }from '@/components/cart/MiniCartPreview';'
-import {;
   {;
   {;';'
   }
@@ -342,7 +339,6 @@ const { ;
   }
   count ;
  } = useFavorites ();
-const { ;
   }
   items ;
  } = useCart ();
@@ -360,7 +356,6 @@ setLoginOpen (true);
 return ;
 }setIsMobileMenuOpen (false) 
 };';'
-const baseLinks = [ {';';'
   }
   "key": 'home';';';'
 "href": '/';';';'

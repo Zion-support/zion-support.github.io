@@ -13,7 +13,6 @@ import {X} from 'lucide-react';
 import {cn} from '@/lib/utils';
 const ToastProvider = ToastPrimitives.Provider;
 
-import { cn } from "@/lib/utils"
 
 const ToastProvider = $2;
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -113,10 +112,8 @@ const ToastAction = React && React.forwardRef<;
 
   <ToastPrimitives.Action;
 
-import * as React from 'react';
 import * as ToastPrimitives from '@radix - ui / react - toast';
 import {cva, type, VariantProps} from 'class - variance - authority';
-import {X} from 'lucide-react';
     ref={ref}
     className={cn(
       'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]'

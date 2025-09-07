@@ -22,7 +22,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -83,21 +82,18 @@ export function TeamManagement() {
   ]
 
 import React, { useState } from "react",
-import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 import React, { useState } from "react";
-import {
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
   TableRow} from "@/components/ui/table",
-import {
   Dialog;
   DialogContent;
   DialogDescription;
@@ -109,7 +105,6 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
 import { Badge } from "@/components/ui/badge";
-import { Trash, Mail, UserPlus } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
@@ -118,7 +113,6 @@ export function TeamManagement() {
   const teamMembers = null;
 
   // Mock team members data
-  const teamMembers = [
     {
       id: 1,
       name: "Alex Johnson",
@@ -199,7 +193,6 @@ export function TeamManagement() {
   TableHead,
   TableHeader,
 
-import {
 
   Dialog,
   DialogContent,
@@ -582,7 +575,6 @@ import {;
   TableHead,;
   TableHeader,;
 
-import {;
   TableRow,;"
 } from '@/components/ui/table';
 pr-12325
@@ -633,9 +625,6 @@ pr-12325
     },;
   ];
   DialogTrigger} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
 import { Badge } from "@/components/ui/badge",;
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from "@/hooks/use-toast",;
@@ -672,7 +661,6 @@ export function TeamManagement() {;
       role: "Viewer",;
       status: "active",;
       lastActive: "3 days ago"}],;
-  const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
       toast({;'

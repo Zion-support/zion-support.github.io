@@ -59,7 +59,6 @@ export default function StudioHostPage() {;
         "method":'POST',;'
         "headers":{ 'Content-Type':'application/json' },;'
         "body":JSON.stringify({ "episodeId":episode.id, persona })}),;
-      const data = await res.json(),;
       setEpisode(data.episode),;
     } catch (e) {;
       }

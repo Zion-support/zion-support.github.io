@@ -1,582 +1,286 @@
 
 
-import React from 'react';'
-import { motion  } from 'framer-motion';'
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';'
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';'
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';'
-import Link from 'next/link';'
-import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';'
-import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';'
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';'
-
-  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
-  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
-
-<<<<<<< HEAD
-const containerVariants = {}
-    hidden: { opacity: 0}
-=======
-const containerVariants = {
-    }
-    "hidden": { "opacity": 0
-}
-    "visible": {
-      }
-      "opacity": 1,
-"transition": {
-
-}
-
-"staggerChildren": 0.1
-      }
-    }
-  };
-
-const itemVariants = {
-    }
-    "hidden": { "opacity": 0, "y": 20
-}
-    "visible": {
-      }
-      "opacity": 1,
-"y": 0,
-"transition": {
-
-}
-
-"duration": 0.6
-      }
-    }
-  };
-
-return (;
-    <section className='py-24 px-4 "sm":px-6 "lg":px-8 relative overflow-hidden'>;'
-      {/* Enhanced Background Effects */}
-  };
-
-      <div className = 'absolute inset-0'>'
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>'
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20'></div>'
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>'
-        <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>'
-      </div>
-
-      <div className='max-w-7xl mx-auto relative z-10'>'
- ;
-return (;
-    <section className="py-24 px-4 "sm": px-6 "lg":px-8 relative overflow-hidden">"
-      {/* Enhanced Background Effects */}
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}'
-
-        {/* Enhanced Header *
-}
-
         {/* Enhanced Header */}
 
-<<<<<<< HEAD
-        <motion.div
-        <motion&& motion.div,
-initial={{ "opacity": 0, "y": 30 
-}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0 && 0.8 }}
-          viewport={{ "once": true 
+
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          viewport={{ once: true }}
+
+className=text-center mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+        >
+          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6>
+          viewport={{ once: true ;}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 }
 
 className='text-center mb-20''
         >
-          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>'
-            <Sparkles className='w-5 h-5 text-purple-400' />'
-            <span className='text-purple-300 text-sm font-medium'>'
-              2026 Revolutionary Innovations
-=======
-<<<<<<< HEAD
-=======
-        >'
-          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>'
-            <Sparkles className='w-5 h-5 text-purple-400' />'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
             <span className='text-purple-300 text-sm font-medium'>
+=======
+          <div className=inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
+            <Sparkles className='w-5 h-5 text-purple-400 />
+
+            <span className=text-purple-300 text-sm font-medium'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
               2026 Revolutionary Innovations;
             </span>
           </div>'
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8 leading-tight'>'
-            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
+          <h2 className=text-5xl md:text-6xl font-bold text-white mb-8 leading-tight>'
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent>
               The Future is Now;
             </span>
-          </h2>'
+          </h2>
           <p className='text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed'>
             Experience the most advanced AI, quantum computing, and metaverse;
-            technologies ever created.'
-            <span className='text-purple-400 font-semibold'>'
-          className='text-center mb-20'>;'
-          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>;'
-            <Sparkles className='w-5 h-5 text-purple-400' />;'
-            <span className='text-purple-300 text-sm font-medium'>;
+            technologies ever created.
+            <span className=text-purple-400 font-semibold'>'
+          className=text-center mb-20>;'
+          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6>;
+            <Sparkles className='w-5 h-5 text-purple-400' />;
+            <span className=text-purple-300 text-sm font-medium'>;
               2026 Revolutionary Innovations;
             </span>;
           </div>;'
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8 leading-tight'>;'
-            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
+          <h2 className=text-5xl md:text-6xl font-bold text-white mb-8 leading-tight>;'
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent>;
               The Future is Now;
             </span>;
-          </h2>;'
+          </h2>;
           <p className='text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed'>;
             Experience the most advanced AI, quantum computing, and metaverse;
-            technologies ever created.;'
-            <span className='text-purple-400 font-semibold'>;'
+            technologies ever created.;
+            <span className=text-purple-400 font-semibold'>;'
 =======
-            <span className='text-purple-300 text-sm font-medium' />
+            <span className=text-purple-300 text-sm font-medium />
               2026 Revolutionary Innovations;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
             </span>
           </div>
-          <h2 className='text-5xl "md":text-6xl font-bold text-white mb-8 leading-tight'>'
-            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>'
-              The Future is Now
-            </span>
-          </h2>
-          <p className='text-gray-300 text-xl "md":text-2xl max-w-4xl mx-auto leading-relaxed'>'
-            Experience the most advanced AI, quantum computing, and metaverse,
-technologies ever created.
-            <span className='text-purple-400 font-semibold'>'
 
-          className='text-center mb-20'>;'
-          <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>;'
-            <Sparkles className='w-5 h-5 text-purple-400' />;'
-            <span className='text-purple-300 text-sm font-medium'>;'
-              2026 Revolutionary Innovations;
-            </span>;
-          </div>;
-          <h2 className='text-5xl "md":text-6xl font-bold text-white mb-8 leading-tight'>;'
-            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;'
               The Future is Now;
             </span>;
           </h2>;
           <p className='text-gray-300 text-xl "md":text-2xl max-w-4xl mx-auto leading-relaxed'>;'
             Experience the most advanced AI, quantum computing, and metaverse;
             technologies ever created.;
-            <span className='text-purple-400 font-semibold'>;'
-              {' '}'
-              1000% ROI guaranteed;
-            </span>{' '}'
-          {/* Service Statistics */}
-          <div className='grid grid - cols - 2 "md":grid - cols - 4 gap - 6 mt - 12'>;'
-            <div className='text - center'>;'
-              <div className='text - 3xl font - bold text - purple - 400'>;'
-                {aiAutonomousServices2026.length}
-              </div>;
-              <div className='text - gray - 400 text - sm'>;'
-                AI Autonomous Services;
-              </div>;
-            </div>;
-            <div className='text - center'>;'
-              <div className='text - 3xl font - bold text - cyan - 400'>;'
-                {quantumSpaceTechServices2026.length}
-              </div>;
-              <div className='text - gray - 400 text - sm'>Quantum Space Tech</div>;'
-            </div>;
-            <div className='text - center'>;'
-              <div className='text - 3xl font - bold text - pink - 400'>;'
 
-                {metaverseDigitalRealityServices2026.length}
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    }
-  },
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20},
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+              { }
+              1000% ROI guaranteed;'
+            </span>{' }
+
         duration: 0.6
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       }
     }
-<<<<<<< HEAD
-  },
-=======
-  }
-  return (
-    <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
-      {/* Enhanced Background Effects */}
 
-      <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>
-        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20'></div>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
-
-      </div>
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className=py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30"></div>
-        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute inset-0>
+        <div className=absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20></div>
+        <div className=absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className=max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header */}
         <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-=======
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
           transition={{ duration: 0.8 }}
           viewport={{ once: true}}
-          className="text-center mb-20"
+          className="text-center mb-20
         >
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
-            <Sparkles className="w-5 h-5 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>
+          <div className=inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
+            <Sparkles className="w-5 h-5 text-purple-400 />
+            <span className=text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>
 =======
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
-            <Sparkles className="w-5 h-5 text-purple-400" />
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6>
+            <Sparkles className=w-5 h-5 text-purple-400" />
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>
-          </div>"
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">"
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="text-purple-300 text-sm font-medium>2026 Revolutionary Innovations</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+            <span className=bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               The Future is Now;
             </span>
           </h2>"
-          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+          <p className=text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed>
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created."
-            <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
+            <span className="text-purple-400 font-semibold> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </p>
-          {/* Service Statistics */}"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length}</div>"
-              <div className="text-gray-400 text-sm">AI Autonomous Services</div>
-            </div>"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026.length}</div>"
-              <div className="text-gray-400 text-sm">Quantum Space Tech</div>
-            </div>"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026.length}</div>"
-              <div className="text-gray-400 text-sm">Metaverse Services</div>
-            </div>"
-            <div className="text-center">"
-              <div className="text-gray-400 text-sm">Possibilities</div>
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
               <div className='text-gray-400 text-sm'>Metaverse Services</div>'
             </div>
             <div className='text-center'>'
               <div className='text-3xl font-bold text-green-400'>∞</div>'
               <div className='text-gray-400 text-sm'>Possibilities</div>'
+=======
+          {/* Service Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            <div className=text-center">"
+              <div className=text-3xl font-bold text-purple-400>{aiAutonomousServices2026.length}</div>"
+              <div className="text-gray-400 text-sm>AI Autonomous Services</div>
+            </div>
+            <div className="text-center">
+              <div className=text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026.length}</div>"
+              <div className=text-gray-400 text-sm>Quantum Space Tech</div>
+            </div>"
+            <div className="text-center>
+              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026.length}</div>
+              <div className=text-gray-400 text-sm">Metaverse Services</div>
+            </div>"
+            <div className=text-center>"
+              <div className="text-gray-400 text-sm>Possibilities</div>
+
+              </div>
+              <div className=text-gray-400 text-sm' />Metaverse Services</div>
+            </div>
+            <div className='text-center>
+              <div className=text-3xl font-bold text-green-400'>∞</div>
+              <div className='text-gray-400 text-sm>Possibilities</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+            <div className=text-center' />
+              <div className='text-3xl font-bold text-green-400 />∞</div>
+              <div className=text-gray-400 text-sm' />Possibilities</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
             </div>
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className=text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent>
               The Future is Now
             </span>
           </h2>
           
-          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+          <p className=text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created. 
-            <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
+            <span className="text-purple-400 font-semibold> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </p>
 
-<<<<<<< HEAD
-          {/* Service Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length}</div>
-              <div className="text-gray-400 text-sm">AI Autonomous Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026.length}</div>
-              <div className="text-gray-400 text-sm">Quantum Space Tech</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026.length}</div>
-              <div className="text-gray-400 text-sm">Metaverse Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">∞</div>
-              <div className="text-gray-400 text-sm">Possibilities</div>
-<<<<<<< HEAD
-                {metaverseDigitalRealityServices2026.length}<div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">;
-            <Sparkles className="w-5 h-5 text-purple-400" />;
-            <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>;
-          </div>;
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">;
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;
-              The Future is Now;
-            </span>;
-          </h2>;
-          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">;
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created.;
-            <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.;
-=======
-<<<<<<< HEAD
-          {/* Service Statistics */}'
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>;'
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-purple-400'>;
-                {aiAutonomousServices2026 && aiAutonomousServices2026.length}
-              </div>;'
-              <div className='text-gray-400 text-sm'>;
-                AI Autonomous Services;
-              </div>;
-            </div>;'
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-cyan-400'>;
-                {quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}
-              </div>;'
-              <div className='text-gray-400 text-sm'>Quantum Space Tech</div>;
-            </div>;'
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-pink-400'>;
-                {metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}
-              </div>;'
-              <div className='text-gray-400 text-sm'>Metaverse Services</div>;
-            </div>;'
-            <div className='text-center'>;'
-              <div className='text-gray-400 text-sm'>Possibilities</div>            </div>        >;"
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">;"
-            <Sparkles className="w-5 h-5 text-purple-400" />;"
-            <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>;
-          </div>;"
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">;"
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;
-              The Future is Now;
-            </span>;
-          </h2>;"
-          <p className="text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">;
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. ;"
-            <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.;
-          </p>;
-          {/* Service Statistics */}"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">;"
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026 && aiAutonomousServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">AI Autonomous Services</div>;
-            </div>;"
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">Quantum Space Tech</div>;
-            </div>;"
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">Metaverse Services</div>;
-            </div>;"
-            <div className="text-center">;"
-              <div className="text-gray-400 text-sm">Possibilities</div>;
-            </div>;
-          </div>;
-        </motion && motion.div>;
 
-
-
-        {/* AI Autonomous Services Section */}
-<<<<<<< HEAD
-        <motion&& motion.div
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           </p>;
           {/* Service Statistics */}
-          <div className="grid grid-cols-2 "md":grid-cols-4 gap-6 mt-12">;"
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">AI Autonomous Services</div>;"
-            </div>;
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">Quantum Space Tech</div>;"
-            </div>;
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">Metaverse Services</div>;"
-            </div>;
-            <div className="text-center">;"
-              <div className="text-gray-400 text-sm">Possibilities</div>;"
-              </div>;
-              <div className='text-gray-400 text-sm'>Metaverse Services</div>;'
-            </div>;
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-green-400'>∞</div>;'
-              <div className='text-gray-400 text-sm'>Possibilities</div>;'
+
             </div>;
           </div>;
         </motion.div>;
             with our revolutionary solutions.;
           </p>;{/* Service Statistics */}
-          <div className='grid grid-cols-2 "md":grid-cols-4 gap-6 mt-12'>;'
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-purple-400'>;'
-                {aiAutonomousServices2026 && aiAutonomousServices2026.length}
-              </div>;
-              <div className='text-gray-400 text-sm'>;'
-                AI Autonomous Services;
-              </div>;
-            </div>;
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-cyan-400'>;'
-                {quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}
-              </div>;
-              <div className='text-gray-400 text-sm'>Quantum Space Tech</div>;'
-            </div>;
-            <div className='text-center'>;'
-              <div className='text-3xl font-bold text-pink-400'>;'
-                {metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}
-              </div>;
-              <div className='text-gray-400 text-sm'>Metaverse Services</div>;'
-            </div>;
-            <div className='text-center'>;'
-              <div className='text-gray-400 text-sm'>Possibilities</div>            </div>        >;'
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">;"
-            <Sparkles className="w-5 h-5 text-purple-400" />;"
-            <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>;"
-          </div>;
-          <h2 className="text-5xl "md":text-6xl font-bold text-white mb-8 leading-tight">;"
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;"
-              The Future is Now;
-            </span>;
-          </h2>;
-          <p className="text-gray-300 text-xl "md":text-2xl max-w-4xl mx-auto leading-relaxed">;"
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. ;
-            <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.;"
-          </p>;
-          {/* Service Statistics */}
-          <div className="grid grid-cols-2 "md":grid-cols-4 gap-6 mt-12">;"
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026 && aiAutonomousServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">AI Autonomous Services</div>;"
-            </div>;
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-cyan-400">{quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">Quantum Space Tech</div>;"
-            </div>;
-            <div className="text-center">;"
-              <div className="text-3xl font-bold text-pink-400">{metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length}</div>;"
-              <div className="text-gray-400 text-sm">Metaverse Services</div>;"
-            </div>;
-            <div className="text-center">;"
-              <div className="text-gray-400 text-sm">Possibilities</div>;"
+
             </div>;
           </div>;
         </motion && motion.div>;{/* AI Autonomous Services Section */}
         <motion&& motion.div;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           variants={containerVariants}
-<<<<<<< HEAD
-                key={service.id}
-                variants={item_variants}
-                className='group relative'          viewport={{ once: true }}
+
+
+            </div>
+          </div>
+        </motion.div>
+
 =======
 
-initial='hidden''
-          whileInView='visible''
-
-          viewport={{ "once": true 
-}
-
-          className='mb-20''
+              </div>
+              <div className=text-gray-400 text-sm'    />Metaverse Services</div>
+            </div>
+            <div className='text-center    />
+              <div className=text-3xl font-bold text-green-400'    />∞</div>
+              <div className='text-gray-400 text-sm    />Possibilities</div>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+        {/* AI Autonomous Services Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden
+          whileInView=visible"
+          viewport={{ once: true}}
+          className="mb-20
         >
-          <div className='flex items-center space-x-3 mb-12'>'
-            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>'
-              <Brain className='w-6 h-6 text-white' />'
+          <div className=flex items-center space-x-3 mb-12">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center>
+              <Brain className=w-6 h-6 text-white" />
             </div>
             <div>
-              <h3 className='text-3xl font-bold text-white'>'
-                AI Autonomous Services
-              </h3>
-              <p className='text-blue-300'>'
-                Fully autonomous AI systems that run your business
-              </p>
+              <h3 className="text-3xl font-bold text-white>AI Autonomous Services</h3>
+              <p className=text-blue-300">Fully autonomous AI systems that run your business</p>
             </div>
           </div>
 
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
-            {featuredAIServices.map((service, index) => (
-              <motion.div
-}
-key={service.id}
-                variants={itemVariants}
 
-className='group relative''
-              >
-                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-"hover": blur-2xl transition-all duration-500'></div>'
-                <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 "hover":border-blue-500/40 transition-all duration-300 h-full'>'
-                  <div className='flex items-center space-x-3 mb-4'>'
-                    <div className='text-3xl'>{service.icon}</div>'
-                    <div>
-                      <h4 className='text-xl font-bold text-white'>'
-                        {service.name}
-                      </h4>
-                      <p className='text-blue-300 text-sm'>{service.tagline}</p>'
-                    </div>
-                  </div>
-                  <p className='text-gray-300 mb-4 text-sm leading-relaxed'>'
-                    {service.descriptio
-}
-                  </p>
-                  <div className='space-y-3 mb-6'>'
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className='flex items-center space-x-2'>'
-                        <div className='w-2 h-2 bg-blue-400 rounded-full'></div>'
-                        <span className='text-gray-400 text-sm'>{feature}</span>'
+                        <span className="text-gray-400 text-sm>{feature}</span>
                       </div>
                     ))}
                   </div>
 
-<div className='flex items-center justify-between mb-4'>'
-                    <div>
-                      <span className='text-2xl font-bold text-blue-400'>'
+className=group relative'
+               />
+                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500 /></div>
+                <div className=relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full' />
+                  <div className='flex items-center space-x-3 mb-4 />
+                    <div className=text-3xl' />{service.icon}</div>
+                    <div />
+                      <h4 className='text-xl font-bold text-white />
+                        {service.name}
+                      </h4>
+                      <p className=text-blue-300 text-sm' />{service.tagline}</p>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+                    </div>
+                  </div>
+                  
+                  <p className=text-gray-300 mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
 
-                        {service.price}
-<<<<<<< HEAD
-                      </span>;'
-                      <span className='text - gray - 400'>{service.period}</span>;
-                    </div>;'
-                    <div className='flex items - center space - x-1'>;'
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
-                      <span className='text - yellow - 400 text - sm'>;
-                        {service.rating}"
-                      <span className="text-2xl font-bold text-blue-400">{service.price}</span>"
-=======
-                      </span>;
-                      <span className='text - gray - 400' />{service.period}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-1' />;
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                      <span className='text - yellow - 400 text - sm' />;
+initial='hidden;
+          whileInView=visible';
+          viewport={{ once: true }}key={service.id}
+                variants={item_variants}
+                className='group relative          viewport={{ once: true }}
+          className="mb-20;
+        >;
+          <div className=flex items-center space-x-3 mb-12">;
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center>;
+              <Brain className=w-6 h-6 text-white" />;
+            </div>;
+            <div>;
+              <h3 className="text-3xl font-bold text-white>AI Autonomous Services</h3>;
+              <p className=text-blue-300">Fully autonomous AI systems that run your business</p>;
+            </div>;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>;
+          className=mb-20';
+        >;
+                  <div className=space-y-3 mb-6">
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2>
+                        <div className=w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <span className="text-gray-400 text-sm>{feature}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+                      </div>
+                    ))}
+                  </div>
 
-                        {service.rating}
-                      <span className="text-2xl font-bold text-blue-400">{service.price}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      <span className="text-gray-400">{service.period}</span>
+
+
+                      <span className=text-gray-400">{service.period}</span>
                     </div>"
-                    <div className="flex items-center space-x-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>"
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                    <div className=flex items-center space-x-1>"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current />
+                      <span className="text-yellow-400 text-sm">{service.rating}</span>
+                      <span className=text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
 
@@ -585,15 +289,12 @@ className='group relative''
                     href={service.link} 
 
 "
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                    className=inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium
                   >"
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-=======
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </span>
-                      <span className='text-gray-400 text-sm' />
+                      <span className='text-gray-400 text-sm />
                         ({service.reviews})
                       </span>
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -602,361 +303,154 @@ className='group relative''
 
                   <Link 
                     href={service.link} 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                    className=inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 />
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
-          <div className='flex items-center space-x-3 mb-12'>;
-            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
-              <Brain className='w-6 h-6 text-white' />;
+          <div className=flex items-center space-x-3 mb-12'>;
+            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center>;
+              <Brain className=w-6 h-6 text-white' />;
             </div>;
             <div>;
-              <h3 className='text-3xl font-bold text-white'>;
+              <h3 className='text-3xl font-bold text-white>;
                 AI Autonomous Services;
               </h3>;
-              <p className='text-blue-300'>;
+              <p className=text-blue-300'>;
                 Fully autonomous AI systems that run your business;
               </p>;
             </div>;
           </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>;
             {featuredAIServices.map((service, index) => (<motion.div;
                 key={service.id}
-                variants={itemVariants}{service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2">;
-                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>;
-                        <span className="text-gray-400 text-sm">{feature}</span>;
+                variants={itemVariants}{service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=flex items-center space-x-2">;
+                        <div className="w-2 h-2 bg-blue-400 rounded-full></div>;
+                        <span className=text-gray-400 text-sm">{feature}</span>;
                       </div>;
                     ))}
                   </div>;
-className='group relative';
+className=group relative';
               >;
-                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
-                <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full'>;
-                  <div className='flex items-center space-x-3 mb-4'>;
-                    <div className='text-3xl'>{service.icon}</div>;
+                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500></div>;
+                <div className=relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full'>;
+                  <div className='flex items-center space-x-3 mb-4>;
+                    <div className=text-3xl'>{service.icon}</div>;
                     <div>;
-                      <h4 className='text-xl font-bold text-white'>;
+                      <h4 className='text-xl font-bold text-white>;
                         {service.name}
                       </h4>;
-                      <p className='text-blue-300 text-sm'>{service.tagline}</p>;
+                      <p className=text-blue-300 text-sm'>{service.tagline}</p>;
                     </div>;
                   </div>;
-                  <p className='text-gray-300 mb-4 text-sm leading-relaxed'>;
+                  <p className='text-gray-300 mb-4 text-sm leading-relaxed>;
                     {service.description}
                   </p>;
-                  <div className='space-y-3 mb-6'>;
-                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2'>;
-                        <div className='w-2 h-2 bg-blue-400 rounded-full'></div>;
-                        <span className='text-gray-400 text-sm'>{feature}</span>;
+                  <div className=space-y-3 mb-6'>;
+                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2>;
+                        <div className=w-2 h-2 bg-blue-400 rounded-full'></div>;
+                        <span className='text-gray-400 text-sm>{feature}</span>;
                       </div>;
                     ))}
                   </div>;
-<div className='flex items-center justify-between mb-4'>;
+<div className=flex items-center justify-between mb-4'>;
                     <div>;
-                      <span className='text-2xl font-bold text-blue-400'>;
+                      <span className='text-2xl font-bold text-blue-400>;
                         {service.price}
                       </span>;
-                      <span className='text - gray - 400'>{service.period}</span>;'
-                    </div>;
-                    <div className='flex items - center space - x-1'>;'
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
-                      <span className='text - yellow - 400 text - sm'>;'
 
-                        {service.rating}
-
-                      </span>
-                      <span className='text-gray-400 text-sm'>'
-                        ({service.reviews})
-                      </span>
-                    </div>
-                  </div>
-                  <Link,
-href={service.link}
-                    className='inline-flex items-center text-blue-400 "hover": text-blue-300 transition-colors text-sm font-medium''
-                  >
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />'
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-
-<div className='text-center mt-8'>'
-            <Link,
-href='/services?category=ai-autonomous''
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl "hover":from-blue-700 "hover":to-cyan-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30''
-            >
-              View All AI Autonomous Services{' '}'
-              <ArrowRight className='w-5 h-5 ml-2' />'
-            </Link>
-          </div>
-        </motion.div>
-        {/* Quantum Space Tech Services Section */}
-        <motion.div,
-variants={containerVariants}
-initial='hidden''
-          whileInView='visible''
-          viewport={{ "once": true 
-}
-          className='mb-20''
-        >
-          <div className='flex items-center space-x-3 mb-12'>'
-            <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>'
-              <Rocket className='w-6 h-6 text-white' />'
-            </div>
-            <div>
-              <h3 className='text-3xl font-bold text-white'>'
-                Quantum Space Technology
-              </h3>
-              <p className='text-indigo-300'>'
                 Revolutionary quantum-powered space exploration and technology
               </p>
             </div>
           </div>
 
-
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
-            {featuredQuantumServices.map((service, index) => (
               <motion.div
 }
 key={service.id}
                 variants={itemVariants}
 
-className='group relative''
-              >
-                <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-"hover": blur-2xl transition-all duration-500'></div>'
-                <div className='relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 "hover":border-indigo-500/40 transition-all duration-300 h-full'>'
-                  <div className='flex items-center space-x-3 mb-4'>'
-                    <div className='text-3xl'>{service.icon}</div>'
-                    <div>
-                      <h4 className='text-xl font-bold text-white'>'
-                        {service.nam
-}
-                      </h4>;
-                      <p className='text - indigo - 300 text - sm'>;'
                         {service.tagline}
                       </p>
                     </div>
                   </div>
-                  <p className='text-gray-300 mb-4 text-sm leading-relaxed'>'
 
-                    {service.description}
-                  </p>;
-                  <div className='space-y-3 mb-6'>;'
-                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2'>;'
-                        <div className='w-2 h-2 bg-indigo-400 rounded-full'></div>;'
-                        <span className='text-gray-400 text-sm'>{feature}</span>;'
-                      </div>;
-                    ))}
-                  </div>;
-<div className='flex items-center justify-between mb-4'>;
-                    <div>;
-                      <span className='text-2xl font-bold text-indigo-400'>;
 
-<div className='text-center mt-8' />
-            <Link;
-href='/services?category=ai-autonomous'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-             />
-              View All AI Autonomous Services{' '}
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Link>
-          </div>
-        </motion.div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        {/* Quantum Space Tech Services Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <motion.div
+initial='hidden
+=======
+        <motion.div;
           variants={containerVariants}
-=======
-        <motion.div;
-variants={containerVariants}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-initial='hidden'
-=======
-        <motion.div;
-          variants={containerVariants}'
-          initial='hidden''
+          initial='hidden'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          whileInView='visible'
-<<<<<<< HEAD
-          viewport={{ once: true }}'
-          className='mb-20'
-        >'
-          <div className='flex items-center space-x-3 mb-12'>'
-            <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>'
-              <Rocket className='w-6 h-6 text-white' />
-            </div>
-            <div>'
-              <h3 className='text-3xl font-bold text-white'>
-                Quantum Space Technology;
-              </h3>'
-              <p className='text-indigo-300'>
-                Revolutionary quantum-powered space exploration and technology;
-              </p>
-            </div>
-          </div>'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
-              <motion.div;
-                key={service.id}
-'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (;
-              <motion&& motion.div;
-                key={service && service.id}
-                variants={itemVariants}'
-                className='group relative'          viewport={{ once: true }}"
-          className="mb-20">;"
-          <div className="flex items-center space-x-3 mb-12">;"
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">;"
-              <Brain className="w-6 h-6 text-white" />;
-            </div>;
-            <div>;"
-              <h3 className="text-3xl font-bold text-white">AI Autonomous Services</h3>;"
-              <p className="text-blue-300">Fully autonomous AI systems that run your business</p>;
-            </div>;
-          </div>;
-=======
-          viewport={{ once: true ;}
-}
-          className='mb-20'
-         />
-          <div className='flex items-center space-x-3 mb-12' />
-            <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center' />
-              <Rocket className='w-6 h-6 text-white' />
-            </div>
-            <div />
-              <h3 className='text-3xl font-bold text-white' />
-                Quantum Space Technology;
-              </h3>
-              <p className='text-indigo-300' />
-                Revolutionary quantum-powered space exploration and technology;
-              </p>
-            </div>
-          </div>
+          whileInView=visible'
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
-            {featuredQuantumServices.map((service, index) => (}
-              <motion.div;}
-key={service.id}
-                variants={itemVariants}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div;
           variants={containerVariants}
                 key={service.id}
-<<<<<<< HEAD
-                variants={item_variants}'
-                className='group relative'          viewport={{ once: true }}"
-=======
-                variants={item_variants}
-                className='group relative'          viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          className="mb-20"
-        >"
-          <div className="flex items-center space-x-3 mb-12">"
-            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">"
-              <Rocket className="w-6 h-6 text-white" />
+
+          className="mb-20
+        >
+          <div className="flex items-center space-x-3 mb-12">
+            <div className=w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">"
+              <Rocket className=w-6 h-6 text-white />
             </div>
             <div>"
-              <h3 className="text-3xl font-bold text-white">Quantum Space Technology</h3>"
+              <h3 className="text-3xl font-bold text-white>Quantum Space Technology</h3>
               <p className="text-indigo-300">Revolutionary quantum-powered space exploration and technology</p>
             </div>
-          </div>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+          <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
 origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredQuantumServices.map((service, index) => (
               <motion.div;
                 key={service.id}
                 variants={itemVariants}
-className='group relative'
+className=group relative'
               >
-                <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
-                <div className='relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full'>
-                  <div className='flex items-center space-x-3 mb-4'>
-                    <div className='text-3xl'>{service.icon}</div>
+                <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500></div>
+                <div className=relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full'>
+                  <div className='flex items-center space-x-3 mb-4>
+                    <div className=text-3xl'>{service.icon}</div>
                     <div>
-                      <h4 className='text-xl font-bold text-white'>
+                      <h4 className='text-xl font-bold text-white>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.name}
-<<<<<<< HEAD
-                      </h4>;'
-                      <p className='text - indigo - 300 text - sm'>;
-                        {service.tagline}
-                    {service.features.slice(0, 3).map((feature, idx) => ("
-                      <div key={idx} className="flex items-center space-x-2">"
-                        <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>"
-=======
-className='group relative'
-               />
-                <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500' /></div>
-                <div className='relative bg-black/40 backdrop-blur-xl border border-indigo-500/20 rounded-2xl p-6 hover:border-indigo-500/40 transition-all duration-300 h-full' />
-                  <div className='flex items-center space-x-3 mb-4' />
-                    <div className='text-3xl' />{service.icon}</div>
-                    <div />
-                      <h4 className='text-xl font-bold text-white' />
-                        {service.nam}
-}
-                      </h4>;
-                      <p className='text - indigo - 300 text - sm' />;
-                        {service.tagline}
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        <span className="text-gray-400 text-sm">{feature}</span>
+
+                        <span className="text-gray-400 text-sm>{feature}</span>
                       </div>
                     ))}
                   </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </p>
                     </div>
                   </div>
-                  <p className='text-gray-300 mb-4 text-sm leading-relaxed' />
+                  <p className=text-gray-300 mb-4 text-sm leading-relaxed' />
 
                     {service.description}
                   </p>;
-                  <div className='space-y-3 mb-6' />;
-                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2' />;
-                        <div className='w-2 h-2 bg-indigo-400 rounded-full' /></div>;
-                        <span className='text-gray-400 text-sm' />{feature}</span>;
+                  <div className='space-y-3 mb-6 />;
+                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=flex items-center space-x-2' />;
+                        <div className='w-2 h-2 bg-indigo-400 rounded-full /></div>;
+                        <span className=text-gray-400 text-sm' />{feature}</span>;
                       </div>;
                     ))}
 
                   </div>
 
-<div className='flex items-center justify-between mb-4'>'
-                    <div>
-                      <span className='text-2xl font-bold text-indigo-400'>'
 
-                        {service.price}
-                      </span>;
-                      <span className='text - gray - 400'>{service.period}</span>;'
-                    </div>;
-                    <div className='flex items - center space - x-1'>;'
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
-                      <span className='text - yellow - 400 text - sm'>;'
 
-                        {service.rating}
-                      <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className=text-gray-400">{service.period}</span>
                     </div>"
-                    <div className="flex items-center space-x-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>"
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                    <div className=flex items-center space-x-1>"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current />
+                      <span className="text-yellow-400 text-sm">{service.rating}</span>
+                      <span className=text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
 
@@ -965,98 +459,123 @@ className='group relative'
                     href={service.link} 
 
 "
-                    className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
+                    className=inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium
                   >"
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-=======
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </span>
-                      <span className='text-gray-400 text-sm'>'
+
                         ({service.reviews})
                       </span>
                     </div>
                   </div>
                   <Link,
 href={service.link}
-                    className='inline-flex items-center text-indigo-400 "hover": text-indigo-300 transition-colors text-sm font-medium''
-                  >
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />'
+
                   </Link>
                 </div>
               </motion.div>
             )
 }
           </div>
-<<<<<<< HEAD
 
 
-<div className='text-center mt-8'>'
-            <Link,
-href='/services?category=quantum-space''
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl "hover":from-indigo-700 "hover":to-purple-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30'>;'
-              View All Quantum Space Services{' '}'
+          whileInView='visible
 
-              <ArrowRight className='w-5 h-5 ml-2' />'
-            </Link>
-          </div>
-        </motion.div>
+
+
+                      </span>;
+                      <span className='text - gray - 400 text - sm'>;
+                        ({service.reviews});
+                      </span>;
+                    </div>;
+                  </div>;
+                  <Link;
+                    href={service.link}
+                    className=inline - flex items - center text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm font - medium';
+                  >;'
+                    Learn More <ArrowRight className=w - 4 h - 4 ml - 2 />                  </Link>                    <div>;
+                      <span className="text - 2xl font - bold text - indigo - 400">{service.price}</span>;
+                      <span className=text - gray - 400">{service.period}</span>;
+                    </div>;"
+                    <div className=flex items - center space - x-1>;"
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current />;
+                      <span className="text - yellow - 400 text - sm">{service.rating}</span>;
+                      <span className=text - gray - 400 text - sm">({service.reviews})</span>;
+                    </div>;
+                  </div>;
+                  <Link;
+                    href={service.link}"
+                    className=inline - flex items - center text - indigo - 400 hover:text - indigo - 300 transition - colors text - sm font - medium;
+                  >;"
+                    Learn More <ArrowRight className="w - 4 h - 4 ml - 2 />;
+                  </Link>;
+                </div>;
+              </motion.div>))}
+          </div>;'
+          <div className='text - center mt - 8>;
+            <Link;
+              href='/services?category = quantum - space';
+              className=inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white font - semibold rounded - xl hover:from - indigo - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
+            >;'
+              View All Quantum Space Services{ }'
+              <ArrowRight className='w - 5 h - 5 ml - 2 />            </Link>          <div className="text - center mt - 8">;
+            <Link;
+              href=/services?category = quantum - space";"
+              className=inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white font - semibold rounded - xl hover:from - indigo - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30;
+            >;"
+              View All Quantum Space Services <ArrowRight className="w - 5 h - 5 ml - 2 />;
+          </div>;
+        </motion.div>;
+        {/* Metaverse & Digital Reality Services Section */}
+        <motion.div;
+          variants={container_variants}
+          initial='hidden';
+          whileInView=visible';
+
+          className='mb - 20;
+        >;
+          <div className='flex items - center space - x-3 mb - 12'>;
+            <div className=w - 12 h - 12 bg - gradient - to - br from - pink - 500 to - rose - 500 rounded - xl flex items - center justify - center'>;'
+              <Globe className=w - 6 h - 6 text - white />;
+            </div>;
+            <div>;'
+              <h3 className='text - 3xl font - bold text - white>;
+                Metaverse & Digital Reality;
+              </h3>;
+              <p className='text - pink - 300'>;
+                Immersive virtual worlds and consciousness interfaces;
+              </p>;
+            </div>;
+
+              <motion.div;
 
         {/* Metaverse & Digital Reality Services Section */}
-        <motion&& motion.div;
+        <motion.div
           variants={containerVariants}
 
-initial='hidden''
-          whileInView='visible''
-
-          viewport={{ "once": true 
-}
-
-          className='mb-20''
-        >
-          <div className='flex items-center space-x-3 mb-12'>'
-            <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center'>'
-              <Globe className='w-6 h-6 text-white' />'
+          className=mb-20"
+        >"
+          <div className=flex items-center space-x-3 mb-12>"
+            <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center>
+              <Globe className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h3 className='text-3xl font-bold text-white'>'
-                Metaverse & Digital Reality
-              </h3>
-              <p className='text-pink-300'>'
-                Immersive virtual worlds and consciousness interfaces
-              </p>
+              <h3 className=text-3xl font-bold text-white">Metaverse & Digital Reality</h3>"
+              <p className=text-pink-300>Immersive virtual worlds and consciousness interfaces</p>
             </div>
-          </div>
+          </div>"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
-          <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
-            {featuredMetaverseServices.map((service, index) => (
-              <motion.div
-}
-key={service.id}
-                variants={itemVariants}
-
-className='group relative''
-              >
-                <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-"hover": blur-2xl transition-all duration-500'></div>'
-                <div className='relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 "hover":border-pink-500/40 transition-all duration-300 h-full'>'
-                  <div className='flex items-center space-x-3 mb-4'>'
-                    <div className='text-3xl'>{service.icon}</div>'
-                    <div>
-                      <h4 className='text-xl font-bold text-white'>'
-
-                        {service.nam
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          className='mb-20'
+          className=mb-20
          />
           <div className='flex items-center space-x-3 mb-12' />
-            <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center' />
+            <div className=w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center />
               <Globe className='w-6 h-6 text-white' />
             </div>
             <div />
-              <h3 className='text-3xl font-bold text-white' />
+              <h3 className=text-3xl font-bold text-white />
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                 Metaverse & Digital Reality;
               </h3>;
@@ -1065,134 +584,66 @@ className='group relative''
               </p>;
             </div>;
           </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>;
             {featuredMetaverseServices.map((service, index) => (<motion.div;
                 key={service.id}
-                variants={itemVariants}{service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2">;
-                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>;
-                        <span className="text-gray-400 text-sm">{feature}</span>;
+                variants={itemVariants}{service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=flex items-center space-x-2">;
+                        <div className="w-2 h-2 bg-pink-400 rounded-full></div>;
+                        <span className=text-gray-400 text-sm">{feature}</span>;
                       </div>;
                     ))}
                   </div>;
 className='group relative';
               >;
-                <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
+                <div className=absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500></div>;
                 <div className='relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 h-full'>;
-                  <div className='flex items-center space-x-3 mb-4'>;
+                  <div className=flex items-center space-x-3 mb-4>;
                     <div className='text-3xl'>{service.icon}</div>;
                     <div>;
-                      <h4 className='text-xl font-bold text-white'>;
+                      <h4 className=text-xl font-bold text-white>;
                         {service.name}
                       </h4>;
                       <p className='text-pink-300 text-sm'>{service.tagline}</p>;'
                     </div>;
                   </div>;
-                  <p className='text-gray-300 mb-4 text-sm leading-relaxed'>;'
-                    {service.description}
-                  </p>;
-                  <div className='space-y-3 mb-6'>;'
-                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2'>;'
-                        <div className='w-2 h-2 bg-pink-400 rounded-full'></div>;'
-                        <span className='text-gray-400 text-sm'>{feature}</span>;'
+
                       </div>;
                     ))}
                   </div>;
 <div className='flex items-center justify-between mb-4'>;
                     <div>;
-                      <span className='text-2xl font-bold text-pink-400'>;
-          initial="hidden"
-          whileInView="visible"
+                      <span className=text-2xl font-bold text-pink-400>;
+          initial="hidden
+          whileInView=visible"
           viewport={{ once: true}}
-          className="mb-20"
+          className="mb-20
         >
-          <div className="flex items-center space-x-3 mb-12">
-            <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center">
-              <Globe className="w-6 h-6 text-white" />
+          <div className=flex items-center space-x-3 mb-12">
+            <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center>
+              <Globe className=w-6 h-6 text-white" />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-white">Metaverse & Digital Reality</h3>
-              <p className="text-pink-300">Immersive virtual worlds and consciousness interfaces</p>
+              <h3 className="text-3xl font-bold text-white>Metaverse & Digital Reality</h3>
+              <p className=text-pink-300">Immersive virtual worlds and consciousness interfaces</p>
             </div>
           </div>
 
-                  </div>
 
-<div className='flex items-center justify-between mb-4'>'
-                    <div>
-                      <span className='text-2xl font-bold text-pink-400'>'
 
-                  <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                        <span className="text-gray-400 text-sm">{feature}</span>
+                        <span className="text-gray-400 text-sm>{feature}</span>
                       </div>
                     ))}
                   </div>
-                        {service.price}
-                      </span>;
-                      <span className='text - gray - 400'>{service.period}</span>;'
-                    </div>;
-                    <div className='flex items - center space - x-1'>;'
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
-                      <span className='text - yellow - 400 text - sm'>;'
 
-                        {service.rating}
 
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-pink-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
-                    </div>
-                  </div>
-
-                  <Link 
-                    href={service.link} 
-                    className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-=======
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {featuredMetaverseServices.map((service, index) => (
-              <motion.div;
-                key={service.id}
-                variants={itemVariants}
-<<<<<<< HEAD
-                    {service.features.slice(0, 3).map((feature, idx) => ("
-                      <div key={idx} className="flex items-center space-x-2">"
-                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>"
-=======
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        <span className="text-gray-400 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-<<<<<<< HEAD
-=======
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />
-            {featuredMetaverseServices.map((service, index) => (}
-              <motion.div;}
-key={service.id}
-                variants={itemVariants}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='group relative'
                />
-                <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500' /></div>
+                <div className=absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500 /></div>
                 <div className='relative bg-black/40 backdrop-blur-xl border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 h-full' />
-                  <div className='flex items-center space-x-3 mb-4' />
+                  <div className=flex items-center space-x-3 mb-4 />
                     <div className='text-3xl' />{service.icon}</div>
                     <div />
-                      <h4 className='text-xl font-bold text-white' />
+                      <h4 className=text-xl font-bold text-white />
 
                         {service.nam}
 }
@@ -1200,13 +651,13 @@ className='group relative'
                       <p className='text-pink-300 text-sm' />{service.tagline}</p>;
                     </div>;
                   </div>;
-                  <p className='text-gray-300 mb-4 text-sm leading-relaxed' />;
+                  <p className=text-gray-300 mb-4 text-sm leading-relaxed />;
                     {service.description}
                   </p>;
                   <div className='space-y-3 mb-6' />;
-                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className='flex items-center space-x-2' />;
+                    {service.features.slice(0, 3).map((feature, idx) => (<div key={idx} className=flex items-center space-x-2 />;
                         <div className='w-2 h-2 bg-pink-400 rounded-full' /></div>;
-                        <span className='text-gray-400 text-sm' />{feature}</span>;
+                        <span className=text-gray-400 text-sm />{feature}</span>;
                       </div>;
                     ))}
 
@@ -1214,39 +665,20 @@ className='group relative'
 
 <div className='flex items-center justify-between mb-4'>
                     <div>
-                      <span className='text-2xl font-bold text-pink-400'>
+                      <span className=text-2xl font-bold text-pink-400>
 origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex items-center justify-between mb-4' />
                     <div />
-                      <span className='text-2xl font-bold text-pink-400' />
+                      <span className=text-2xl font-bold text-pink-400 />
 
                         {service.price}
-<<<<<<< HEAD
-                      </span>;'
-                      <span className='text - gray - 400'>{service.period}</span>;
-                    </div>;'
-                    <div className='flex items - center space - x-1'>;'
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;'
-                      <span className='text - yellow - 400 text - sm'>;
-                        {service.rating}"
-                      <span className="text-2xl font-bold text-pink-400">{service.price}</span>"
-=======
-                      </span>;
-                      <span className='text - gray - 400' />{service.period}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-1' />;
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                      <span className='text - yellow - 400 text - sm' />;
 
-                        {service.rating}
-                      <span className="text-2xl font-bold text-pink-400">{service.price}</span>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className=text-gray-400">{service.period}</span>
                     </div>"
-                    <div className="flex items-center space-x-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                      <span className="text-yellow-400 text-sm">{service.rating}</span>"
-                      <span className="text-gray-400 text-sm">({service.reviews})</span>
+                    <div className=flex items-center space-x-1>"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current />
+                      <span className="text-yellow-400 text-sm">{service.rating}</span>
+                      <span className=text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
 
@@ -1255,13 +687,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={service.link} 
 
 "
-                    className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
+                    className=inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium
                   >"
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-=======
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 />
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </span>
                       <span className='text-gray-400 text-sm'>'
                         ({service.reviews})
@@ -1270,79 +699,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <Link,
 href={service.link}
-                    className='inline-flex items-center text-pink-400 "hover": text-pink-300 transition-colors text-sm font-medium''
-                  >
-                    Learn More <ArrowRight className='w-4 h-4 ml-2' />'
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                   </Link>
                 </div>
               </motion.div>
             )
 }
           </div>
-<<<<<<< HEAD
 
-<div className='text-center mt-8' />
-            <Link;
-href='/services?category=metaverse'
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30' />;
-              View All Metaverse Services{' '}
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
-<div className='text-center mt-8'>'
-            <Link,
-href='/services?category=metaverse''
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl "hover":from-pink-700 "hover":to-rose-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30'>;'
-              View All Metaverse Services{' '}'
-
-              <ArrowRight className='w-5 h-5 ml-2' />'
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Call to Action Section */}
-        <motion&& motion.div;
-          initial={{ "opacity": 0, "y": 30 
-}
-          whileInView={{ "opacity": 1, "y": 0 }}
-          transition={{ "duration": 0 && 0.8 }}
-
-          viewport={{ "once": true 
-}
-
-className='text-center''
-        >
-          <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>'
-            <h3 className='text-4xl font-bold text-white mb-6'>'
-              Ready to Experience the Future?
-<<<<<<< HEAD
-            </h3>
-            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">"
-              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
-              <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation."
-            </p>
-            
-            <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link 
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-              >
-                <Zap className="w-5 h-5 mr-2" />
-=======
-            </h3>"
-=======
-        <motion&& motion.div;
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          viewport={{ once: true }}
-=======
-          initial={{ opacity: 0;, y: 30 ;}
-}
-          whileInView={{ opacity: 1;, y: 0 ;}}
-          transition={{ duration: 0 && 0.8 ;}}
-          viewport={{ once: true ;}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center'
         >
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
@@ -1360,19 +726,54 @@ href='/contact''
               <Link,
 href='/services''
                 className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl "hover":bg-purple-500/10 transition-all duration-300''
+=======
+className=text-center
+        >
+          <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
+            <h3 className=text-4xl font-bold text-white mb-6>
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+          viewport={{ once: true ;}
+}
+
+className='text-center'
+         />
+          <div className=bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12 />
+            <h3 className='text-4xl font-bold text-white mb-6' />
+              Ready to Experience the Future?
+            </h3>
+
+                <span className="text-purple-300">🌐 ziontechgroup.com</span>
+            <div className=flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6>
+              <Link
+                href='/contact'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+                <span className=text-purple-300>🌐 ziontechgroup.com</span>
+            <div className=flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6>
+              <Link
+                href='/contact'
+
+            <div className=flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6    />
+              <Link
+href='/contact'
+                className=inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30
+                  />
+                <Zap className='w-5 h-5 mr-2'    />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+                Get Started Today
+              </Link>
+              
+              <Link 
+                href="/services"
+                className=inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
               >
                 Explore All Services
                 <ArrowRight className='w-5 h-5 ml-2' />'
               </Link>
             </div>
-            <div className='mt-8 text-center'>'
-              <p className='text-gray-400 text-sm mb-2'>Contact Information</p>'
-              <div className='flex flex-col "sm":flex-row items-center justify-center space-y-2 "sm":space-y-0 "sm":space-x-6 text-sm'>'
-                <span className='text-purple-300'>📱 +1 302 464 0950</span>'
-                <span className='text-purple-300'>'
-                  ✉️ kleber@ziontechgroup.com
-                </span>
-                <span className='text-purple-300'>🌐 ziontechgroup.com</span>'
+
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
@@ -1380,128 +781,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-          viewport={{ once: true }}className='text-center';
-        >;
-          <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
-            <h3 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Experience the Future?;
-            </h3>;
-            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">;
-              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies.;
-              <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.;
-            </p>;
-              <p className="text-gray-400 text-sm mb-2">Contact Information</p>;
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">;
-                <span className="text-purple-300">📱 +1 302 464 0950</span>;
-                <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>;
-                <span className="text-purple-300">🌐 ziontechgroup.com</span>;
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
-              <Link;
-                href='/contact';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30';
-              >;
-                <Zap className='w-5 h-5 mr-2' />;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/services';
-                className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300';
-              >;
-                Explore All Services;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Link>;
-            </div>;
-            <div className='mt-8 text-center'>;
-              <p className='text-gray-400 text-sm mb-2'>Contact Information</p>;
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm'>;
-                <span className='text-purple-300'>📱 +1 302 464 0950</span>;
-                <span className='text-purple-300'>;
-                  ✉️ kleber@ziontechgroup.com;
-                </span>;
-                <span className='text-purple-300'>🌐 ziontechgroup.com</span>;
-              </div>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
 
-              to start your transformation.;
-<<<<<<< HEAD
-            </p>;
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
-              <Link;
-                href='/contact';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-                <Zap className='w-5 h-5 mr-2' />;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/services';
-                className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300'>;
-                Explore All Services;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Link>;
-            </div>;
-            <div className='mt-8 text-center'>;
-              <p className='text-gray-400 text-sm mb-2'>Contact Information</p>;
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm'>;
-                <span className='text-purple-300'>📱 +1 302 464 0950</span>;
-                <span className='text-purple-300'>;
-                  ✉️ kleber@ziontechgroup && ziontechgroup.com;
-                </span>;
-                <span className='text-purple-300'>🌐 ziontechgroup && ziontechgroup.com</span>              </div>            <div className="mt-8 text-center">;
-              <p className="text-gray-400 text-sm mb-2">Contact Information</p>;
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">;
-                <span className="text-purple-300">📱 +1 302 464 0950</span>;
-                <span className="text-purple-300">✉️ kleber@ziontechgroup && ziontechgroup.com</span>;
-=======
-            </p>;'
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
-              <Link'
-                href='/contact''
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;'
-                <Zap className='w-5 h-5 mr-2' />;
-                Get Started Today;
-              </Link>;
-              <Link'
-                href='/services''
-                className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300'>;
-                Explore All Services;'
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Link>;
-            </div>;'
-            <div className='mt-8 text-center'>;'
-              <p className='text-gray-400 text-sm mb-2'>Contact Information</p>;'
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm'>;'
-                <span className='text-purple-300'>📱 +1 302 464 0950</span>;'
-                <span className='text-purple-300'>;
-                  ✉️ kleber@ziontechgroup && ziontechgroup.com;
-                </span>;'"
-                <span className='text-purple-300'>🌐 ziontechgroup && ziontechgroup.com</span>              </div>            <div className="mt-8 text-center">;"
-              <p className="text-gray-400 text-sm mb-2">Contact Information</p>;"
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">;"
-                <span className="text-purple-300">📱 +1 302 464 0950</span>;"
-                <span className="text-purple-300">✉️ kleber@ziontechgroup && ziontechgroup.com</span>;"
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-                <span className="text-purple-300">🌐 ziontechgroup && ziontechgroup.com</span>;
+                <span className=text-purple-300>🌐 ziontechgroup && ziontechgroup.com</span>;
             </div>;
           </div>;
         </motion && motion.div>;
       </div>;
     </section>;
-<<<<<<< HEAD
-  ))}
-=======
-  );
 
-  );
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 }
   )}
                       </span>;
-                      <span className='text - gray - 400 text - sm'>;
+                      <span className=text - gray - 400 text - sm>;
                         ({service.reviews})</span>;
                     </div>;
                   </div>;
@@ -1509,37 +800,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={service.link}
                     className='inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium';
                   >;
-                    Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                  </Link>                    <div>;
+                    Learn More <ArrowRight className=w - 4 h - 4 ml - 2 />                  </Link>                    <div>;
                       <span className="text - 2xl font - bold text - pink - 400">{service.price}</span>;
-                      <span className="text - gray - 400">{service.period}</span>;
+                      <span className=text - gray - 400>{service.period}</span>;
                     </div>;
                     <div className="flex items - center space - x-1">;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                      <Star className=w - 4 h - 4 text - yellow - 400 fill - current />;
                       <span className="text - yellow - 400 text - sm">{service.rating}</span>;
-                      <span className="text - gray - 400 text - sm">({service.reviews})</span>;
+                      <span className=text - gray - 400 text - sm>({service.reviews})</span>;
                     </div>;
                   </div>;
                   <Link;
                     href={service.link}
                     className="inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium";
                   >;
-                    Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                    Learn More <ArrowRight className=w - 4 h - 4 ml - 2 />;
                   </Link>;
                 </div>;
               </motion.div>))}
           </div>;
           <div className='text - center mt - 8'>;
             <Link;
-              href='/services?category = metaverse';
+              href=/services?category = metaverse;
               className='inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
             >;
-              View All Metaverse Services{' '}
+              View All Metaverse Services{ }
               <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text - center mt - 8">;
             <Link;
-              href="/services?category = metaverse";
+              href=/services?category = metaverse;
               className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
             >;
-              View All Metaverse Services <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              View All Metaverse Services <ArrowRight className=w - 5 h - 5 ml - 2 />;
           </div>;
         </motion.div>;
         {/* Call to Action Section */}
@@ -1548,49 +839,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className='text - center';
+          className=text - center;
           <div className='bg - gradient - to - r from - purple - 900 / 40 via - pink - 900 / 40 to - cyan - 900 / 40 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
-            <h3 className='text - 4xl font - bold text - white mb - 6'>;
+            <h3 className=text - 4xl font - bold text - white mb - 6>;
               Ready to Experience the Future?;
             </h3>;
             <p className='text - gray - 300 text - xl mb - 8 max - w-3xl mx - auto'>;
               Join thousands of companies already achieving unprecedented;
               success with our revolutionary 2026 technologies.;
-              <span className='text - purple - 400 font - semibold'>;
+              <span className=text - purple - 400 font - semibold>;
                 {' '}
                 Contact us today;
-              </span>{' '}
+              </span>{ }
               to start your transformation.;
             </p>;
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
               <Link;
-                href='/contact';
+                href=/contact;
                 className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
               >;
-                <Zap className='w - 5 h - 5 mr - 2' />;
+                <Zap className=w - 5 h - 5 mr - 2 />;
                 Get Started Today;
               </Link>;
               <Link;
                 href='/services';
-                className='inline - flex items - center px - 8 py - 4 border border - purple - 500 / 50 text - purple - 300 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 300';
+                className=inline - flex items - center px - 8 py - 4 border border - purple - 500 / 50 text - purple - 300 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 300;
               >;
                 Explore All Services;
                 <ArrowRight className='w - 5 h - 5 ml - 2' />;
               </Link>;
             </div>;
-            <div className='mt - 8 text - center'>;
+            <div className=mt - 8 text - center>;
               <p className='text - gray - 400 text - sm mb - 2'>Contact Information</p>;
-              <div className='flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm'>;
+              <div className=flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm>;
                 <span className='text - purple - 300'>📱 +1 302 464 0950</span>;
-                <span className='text - purple - 300'>;
+                <span className=text - purple - 300>;
                   ✉️ kleber@ziontechgroup.com;
                 </span>;
                 <span className='text - purple - 300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt - 8 text - center">;
-              <p className="text - gray - 400 text - sm mb - 2">Contact Information</p>;
+              <p className=text - gray - 400 text - sm mb - 2>Contact Information</p>;
               <div className="flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm">;
-                <span className="text - purple - 300">📱 +1 302 464 0950</span>;
+                <span className=text - purple - 300>📱 +1 302 464 0950</span>;
                 <span className="text - purple - 300">✉️ kleber@ziontechgroup.com</span>;
-                <span className="text - purple - 300">🌐 ziontechgroup.com</span>;
+                <span className=text - purple - 300>🌐 ziontechgroup.com</span>;
             </div>;
           </div>;
         </motion.div>;
@@ -1604,29 +895,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-"
-=======
-}
-> <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6" > <Sparkles className="w-5 h-5 text-purple-400" /> <span className="text-purple-300 text-sm font-medium" >2026 Revolutionary Innovations</span> </div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight" > <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" > The Future is Now </span> </h2> </div> <div className="text-center" > <div className="text-3xl font-bold text-green-400" >∞</div> <div className="text-gray-400 text-sm" >Possibilities</div> </div> </div> </motion.div> {
-  /* AI Autonomous Services Section */ 
-}<motion.div > <div className="flex items-center space-x-3 mb-12" > <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-3xl font-bold text-white" >AI Autonomous Services</h3> <p className="text-blue-300" >Fully autonomous AI systems that run your business</p> </div> </div> </div>) ) 
-}</div> <div className="flex items-center justify-between mb-4" > <div> </div> </div> <Link > Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </motion.div>) ) 
-}</div> <div className="text-center mt-8" > <Link href="/services?category=ai-autonomous" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </motion.div> {
-  /* Quantum Space Tech Services Section */ 
-}<motion.div > <div className="flex items-center space-x-3 mb-12" > <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center" > <Rocket className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-3xl font-bold text-white" >Quantum Space Technology</h3> <p className="text-indigo-300" >Revolutionary quantum-powered space exploration and technology</p> </div> </div> </div>) ) 
-}</div> <div className="flex items-center justify-between mb-4" > <div> </div> </div> <Link > Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </motion.div>) ) 
-}</div> <div className="text-center mt-8" > <Link href="/services?category=quantum-space" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </motion.div> {
-  /* Metaverse & Digital Reality Services Section */ 
-}<motion.div > <div className="flex items-center space-x-3 mb-12" > <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center" > <Globe className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-3xl font-bold text-white" >Metaverse & Digital Reality</h3> <p className="text-pink-300" >Immersive virtual worlds and consciousness interfaces</p> </div> </div> </div>) ) 
-}</div> <div className="flex items-center justify-between mb-4" > <div> </div> </div> <Link > Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </motion.div>) ) 
-}</div> <div className="text-center mt-8" > <Link href="/services?category=metaverse" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </motion.div> {
-  /* Call to Action Section */ 
-}<motion.div > <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12" > <h3 className="text-4xl font-bold text-white mb-6" > Ready to Experience the Future? </h3> <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto" > Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. <span className="text-purple-400 font-semibold" > Contact us today</span> to start your transformation. </p> <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > <Zap className="w-5 h-5 mr-2" /> Get Started Today </a> <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300" > Explore All Services <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> <div className="mt-8 text-center" > <p className="text-gray-400 text-sm mb-2" >Contact Information</p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm" > <span className="text-purple-300" >📱 +1 302 464 0950</span> <span className="text-purple-300" >✉️ kleber@ziontechgroup.com</span> <span className="text-purple-300" >🌐 ziontechgroup.com</span> </div> </div> </div> </motion.div> </div> </section>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -1635,106 +904,92 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   );
 }
-                      </span>;'
-                      <span className='text - gray - 400 text - sm'>;
+                      </span>;
+                      <span className=text - gray - 400 text - sm'>;
                         ({service.reviews});
                       </span>;
                     </div>;
                   </div>;
                   <Link;
                     href={service.link}'
-                    className='inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium';
+                    className=inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium;
                   >;'
-                    Learn More <ArrowRight className='w - 4 h - 4 ml - 2' />                  </Link>                    <div>;"
-                      <span className="text - 2xl font - bold text - pink - 400">{service.price}</span>;"
+                    Learn More <ArrowRight className='w - 4 h - 4 ml - 2 />                  </Link>                    <div>;"
+                      <span className="text - 2xl font - bold text - pink - 400>{service.price}</span>;
                       <span className="text - gray - 400">{service.period}</span>;
-                    </div>;"
-                    <div className="flex items - center space - x-1">;"
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;"
-                      <span className="text - yellow - 400 text - sm">{service.rating}</span>;"
+                    </div>;
+                    <div className=flex items - center space - x-1">;"
+                      <Star className=w - 4 h - 4 text - yellow - 400 fill - current />;"
+                      <span className="text - yellow - 400 text - sm>{service.rating}</span>;
                       <span className="text - gray - 400 text - sm">({service.reviews})</span>;
                     </div>;
                   </div>;
                   <Link;
-                    href={service.link}"
-                    className="inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium";
+                    href={service.link}
+                    className=inline - flex items - center text - pink - 400 hover:text - pink - 300 transition - colors text - sm font - medium";
                   >;"
-                    Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                    Learn More <ArrowRight className=w - 4 h - 4 ml - 2 />;
                   </Link>;
                 </div>;
               </motion.div>))}
-          </div>;'
+          </div>;
           <div className='text - center mt - 8'>;
-            <Link;'
-              href='/services?category = metaverse';'
-              className='inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
+            <Link;
+              href=/services?category = metaverse';'
+              className=inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30;
             >;'
-              View All Metaverse Services{' '}'"
-              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text - center mt - 8">;
-            <Link;"
-              href="/services?category = metaverse";"
-              className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+              View All Metaverse Services{' }"
+              <ArrowRight className='w - 5 h - 5 ml - 2' />            </Link>          <div className="text - center mt - 8>;
+            <Link;
+              href="/services?category = metaverse";
+              className=inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - pink - 600 to - rose - 600 text - white font - semibold rounded - xl hover:from - pink - 700 hover:to - rose - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
             >;"
-              View All Metaverse Services <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              View All Metaverse Services <ArrowRight className=w - 5 h - 5 ml - 2 />;
           </div>;
         </motion.div>;
         {/* Call to Action Section */}
         <motion.div;
-<<<<<<< HEAD
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}'
-          className='text - center';'
-          <div className='bg - gradient - to - r from - purple - 900 / 40 via - pink - 900 / 40 to - cyan - 900 / 40 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;'
-=======
-          initial={{ opacity: 0;, coordinate_y: 30 ;}}
-          whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
-          transition={{ duration: 0.8 ;}}
-          viewport={{ once: true ;}}
-          className='text - center';
-          <div className='bg - gradient - to - r from - purple - 900 / 40 via - pink - 900 / 40 to - cyan - 900 / 40 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <h3 className='text - 4xl font - bold text - white mb - 6'>;
+
+            <h3 className=text - 4xl font - bold text - white mb - 6>;
               Ready to Experience the Future?;
             </h3>;'
-            <p className='text - gray - 300 text - xl mb - 8 max - w-3xl mx - auto'>;
+            <p className='text - gray - 300 text - xl mb - 8 max - w-3xl mx - auto>;
               Join thousands of companies already achieving unprecedented;
-              success with our revolutionary 2026 technologies.;'
-              <span className='text - purple - 400 font - semibold'>;'
-                {' '}
+              success with our revolutionary 2026 technologies.;
+              <span className='text - purple - 400 font - semibold'>;
+                { '}
                 Contact us today;'
-              </span>{' '}
+              </span>{ }
               to start your transformation.;
             </p>;'
-            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
-              <Link;'
-                href='/contact';'
-                className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6>;
+              <Link;
+                href='/contact';
+                className=inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
               >;'
-                <Zap className='w - 5 h - 5 mr - 2' />;
+                <Zap className=w - 5 h - 5 mr - 2 />;
                 Get Started Today;
               </Link>;
               <Link;'
-                href='/services';'
+                href='/services;
                 className='inline - flex items - center px - 8 py - 4 border border - purple - 500 / 50 text - purple - 300 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 300';
               >;
-                Explore All Services;'
-                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+                Explore All Services;
+                <ArrowRight className=w - 5 h - 5 ml - 2' />;
               </Link>;
             </div>;'
-            <div className='mt - 8 text - center'>;'
-              <p className='text - gray - 400 text - sm mb - 2'>Contact Information</p>;'
-              <div className='flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm'>;'
-                <span className='text - purple - 300'>📱 +1 302 464 0950</span>;'
-                <span className='text - purple - 300'>;
+            <div className=mt - 8 text - center>;'
+              <p className='text - gray - 400 text - sm mb - 2>Contact Information</p>;
+              <div className='flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm'>;
+                <span className=text - purple - 300'>📱 +1 302 464 0950</span>;'
+                <span className=text - purple - 300>;
                   ✉️ kleber@ziontechgroup.com;
                 </span>;'"
-                <span className='text - purple - 300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt - 8 text - center">;"
-              <p className="text - gray - 400 text - sm mb - 2">Contact Information</p>;"
-              <div className="flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm">;"
-                <span className="text - purple - 300">📱 +1 302 464 0950</span>;"
-                <span className="text - purple - 300">✉️ kleber@ziontechgroup.com</span>;"
+                <span className='text - purple - 300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt - 8 text - center>;
+              <p className="text - gray - 400 text - sm mb - 2">Contact Information</p>;
+              <div className=flex flex - col sm:flex - row items - center justify - center space - y-2 sm:space - y-0 sm:space - x-6 text - sm">;"
+                <span className=text - purple - 300>📱 +1 302 464 0950</span>;"
+                <span className="text - purple - 300>✉️ kleber@ziontechgroup.com</span>;
                 <span className="text - purple - 300">🌐 ziontechgroup.com</span>;
             </div>;
           </div>;
@@ -1742,14 +997,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
 "
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

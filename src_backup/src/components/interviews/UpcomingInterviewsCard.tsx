@@ -37,7 +37,6 @@ export /**;
  */;
 function UpcomingInterviewsCard() {const { fetch_interviews } = use_interviews ()const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([])const [is_loading, setIsLoading] = useState (true)useEffect ((, ) => {const load_interviews = async () => {      setIsLoading (true)try {const interviews = await fetch_interviews ()// Filter for confirmed interviews in the future;
         }
-        const upcoming = interviews;
           .filter (interview =>;
               interview.status === 'confirmed' &&;'
               !is_past (parseISO (interview.scheduled_date))).sort ((a, b) =>;
@@ -55,7 +54,6 @@ import { Avatar  } from '@/components/ui/avatar';'
 import { logErrorToProduction  } from '@/utils/productionLogger';'
 export function UpcomingInterviewsCard() {const { fetchInterviews } = useInterviews()const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([])const [isLoading, setIsLoading]  = useState(true)useEffect((,) => {const loadInterviews = async () => {      setIsLoading(true)try {const interviews  = await fetchInterviews()// Filter for confirmed interviews in the future;
         }
-        const upcoming = interviews;
           .filter(interview =>;
               interview && interview.status === 'confirmed' &&;'
               !isPast(parseISO(interview && interview.scheduled_date))).sort((a, b) =>;

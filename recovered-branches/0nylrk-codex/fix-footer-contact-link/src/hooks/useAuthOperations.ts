@@ -48,7 +48,6 @@ function useAuthOperations() {
     checkUrlForReferralCode ();
   }, []);
 ;
-  const login = async ({ email, password }: { "email": string, "password": string }) => {
     }
     setIsLoading (true);
     try {
@@ -61,7 +60,6 @@ function useAuthOperations() {
       // Clean up any stale auth state before login
 }
 cleanupAuthState();
-      const { data, error } = await supabase.auth.signInWithPassword({
         }
         email;
         password});
@@ -352,7 +350,6 @@ if ( {) {
     setIsLoading (true);
     try {
       }
-      const { data, error } = await supabase.auth.signInWithOAuth({
         }
         "provider": "facebook"});"
       if (error) {
@@ -376,7 +373,6 @@ if ( {) {
     setIsLoading(true),;
     try {;
       }
-      const { data, error } = await supabase.auth.signInWithOAuth({;
         }
         "provider": "facebook"}),;"
       if (error) {;
@@ -387,7 +383,6 @@ if ( {) {
           "title": "Oh no! Something went wrong.",,"
   "description": error.message});
   }
-  const loginWithGoogle = async () => {
     }
     setIsLoading (true);
     try {
@@ -421,7 +416,6 @@ if ( {) {
     setIsLoading (true);
     try {
       }
-      const { data, error } = await supabase.auth.signInWithOAuth ({
         }
         "provider": "twitter"});"
 ;
@@ -436,12 +430,10 @@ if ( {) {
           "description": error.message})
 };
   },
-  const loginWithTwitter = async () => {
     }
     setIsLoading(true),
     try {
       }
-      const { data, error } = await supabase.auth.signInWithOAuth({
       }
       if (error) {
         }
@@ -507,7 +499,6 @@ setUser({
     setIsLoading(true),;
     try {;
       }
-      const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
         }
         throw new Error("Web3 wallet not found");"

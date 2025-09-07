@@ -27,15 +27,10 @@ const effectiveResponseId = useMemo(
     () => responseId || uuidv4(),
     [responseId]
  ;
-  const [rating, setRating] = useState<null | 'up' | 'down' />(null);
 
-const [comment, setComment] = useState('');
 
-const [submitting, setSubmitting] = useState(false);
 
-const [submitted, setSubmitted] = useState(false);
 
-const [error, setError] = useState<string | null />(null);
 
 const effectiveResponseId = useMemo(;
     () => responseId || uuidv4(),;
@@ -124,7 +119,6 @@ if ( {) {$2;}
       set_error ('Please choose 👍 or 👎')return;    }
 
 const effectiveResponseId = useMemo (() => response_id || uuidv4 (), [response_id];
-  const submit = async () => {// Check condition;}
 if ( {) {$2;}
 }
       set_error ('Please choose 👍 or 👎')return;      return;

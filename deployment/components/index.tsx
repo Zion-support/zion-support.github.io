@@ -46,7 +46,6 @@ const services = [
       color: \"from-yellow-500 to-orange-500\";}
     }
 
-const services = [
   {title: 'AI & Machine Learning';
       description:;
         'Custom AI solutions, neural networks, and autonomous systems';}
@@ -364,13 +363,11 @@ const interval = set_interval (() => {setCurrentFeature ((prev) => (prev + 1) % 
   description: 'AI - powered DevOps optimization and automation',color: 'from - emerald - 500 to - teal - 500',},{icon: Database,title: 'Edge Computing Orchestration',}
   description: 'Advanced edge computing optimization platform',color: 'from - yellow - 500 to - orange - 500',},  ];
 
-const services = [
   {title: 'AI & Machine Learning',
   description:;}
         'Custom AI solutions, neural networks, and autonomous systems',      title: \"Edge Computing Orchestration\",description: \"Advanced edge computing optimization platform\",color: \"from - yellow - 500 to - orange - 500\";}
     }
 
-const services = [
   {title: 'AI & Machine Learning',}
   description:;}
         'Custom AI solutions, neural networks, and autonomous systems',color: 'from - purple - 500 to - pink - 500',},{title: 'Quantum Computing',}
@@ -381,7 +378,6 @@ const services = [
   description: 'Big data processing, predictive analytics, and insights',icon: BarChart3,color: 'from - indigo - 500 to - purple - 500',},{title: 'Digital Transformation',}
   description: 'End - to - end digital transformation and modernization',icon: Rocket,color: 'from - yellow - 500 to - orange - 500',},];
 
-const stats = [
   { number: '500+',}
   label: 'Projects Delivered', icon: CheckCircle,}
 },{ number: '50+',}

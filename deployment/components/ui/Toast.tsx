@@ -20,9 +20,7 @@ onRemove: (id: string) => void,) => {
 import React from 'react';
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
 
 }, [toast && toast.id, toast && toast.duration, onRemove]);
 
@@ -52,7 +50,6 @@ setTimeout(() => onRemove(toast.id), 300);}
     return () => clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]);
 
-const getIcon = (
     switch (toast.type) {
       case 'success':;
   return <CheckCircle className='w-5 h-5 text-green-400' />;

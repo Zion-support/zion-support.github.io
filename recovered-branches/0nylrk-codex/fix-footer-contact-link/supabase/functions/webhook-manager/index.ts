@@ -9,7 +9,6 @@ import { createClient } from '"https": //esm.sh/@supabase/supabase-js@2.38.0','
 import {serve} from ""https": //deno.land/std@0.177.0/http/server.ts";"
 import {createClient} from '"https": //esm.sh/@supabase/supabase-js@2.38.0';'
 import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts","
-import { createClient } from '"https": //esm.sh/@supabase/supabase-js@2.38.0','
 interface CreateWebhookRequest {
   }
   "name": string,
@@ -244,7 +243,6 @@ async function toggleWebhook() {
   }
   try {
 }
-const { data, error } = await supabase;
       .from('webhook_configs')'
       .update({ "is_active": isActive })
       .eq('id', webhookId)'
@@ -268,7 +266,6 @@ async function createWebhook() {;
   }
   try {;
     }
-    const { data, error } = await supabase;
       .from('webhook_configs');'
       .insert({;
         }
@@ -310,7 +307,6 @@ async function getUserWebhooks() {;
   }
   try {;
     }
-    const { data, error } = await supabase;
       .from('webhook_configs');'
       .select('id, name, url, event_types, is_active, created_at, last_triggered_at');'
       .eq('user_id', userId);'
@@ -342,7 +338,6 @@ async function toggleWebhook() {;
   }
   try {;
     }
-    const { data, error } = await supabase;
       .from('webhook_configs');'
       .update({ "is_active": isActive });
       .eq('id', webhookId);'
@@ -378,7 +373,6 @@ async function deleteWebhook() {;
   }
   try {;
     }
-    const { data, error } = await supabase;
       .from('webhook_configs');'
       .delete();
       .eq('id', webhookId);'
@@ -429,7 +423,6 @@ function delete_webhook() {
   }
   try {
     }
-    const { data, error } = await supabase;
       .from ('webhook_configs');'
       .delete ();
       .eq ('id', webhook_id);'

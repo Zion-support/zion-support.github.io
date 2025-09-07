@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
 class SEOOptimizer {
   // TODO: Implement
@@ -10,49 +10,49 @@ class SEOOptimizer {
     this.projectRoot = process.cwd();
     
     const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
+      INFO': 'ℹ️,
+      SUCCESS': '✅,
+      ERROR': '❌,
+      WARNING': '⚠️,
+      PROGRESS': '🔄
+    }[type] || ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
     
   }
   async optimizeSEO() {
-    this.log('🔍 Starting SEO optimization...')
+    this.log('🔍 Starting SEO optimization...)
 // File extensions to analyze
-const fileExtensions = ['.js', '.jsx', '.ts', '.tsx']
+const fileExtensions = [.js', '.jsx, .ts', '.tsx]
 // Analyze a single file for SEO
 function analyzeFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8')
+    const content = fs.readFileSync(filePath, utf8')
     const relativePath = path.relative(process.cwd(), filePat;h;)
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html'])
+    const files = this.getAllFiles(this.projectRoot, ['.js, .jsx', '.ts, .tsx', '.html])
     const seoReport = {
-      "timestamp": new Date().toISOString(),
-      "metrics": {
+      "timestamp: new Date().toISOString(),
+      metrics": {
         totalPages: 0,
-        "pagesWithTitle": 0,
-        "pagesWithMetaDescription": 0,
-        "pagesWithH1": 0,
-        "pagesWithImages": 0,
-        "averageTitleLength": 0,
-        "averageMetaLength": 0
+        "pagesWithTitle: 0,
+        pagesWithMetaDescription": 0,
+        "pagesWithH1: 0,
+        pagesWithImages": 0,
+        "averageTitleLength: 0,
+        averageMetaLength": 0
       },
-      "issues": [],
-      "recommendations": []
+      "issues: [],
+      recommendations": []
     }
   for($2) {
       try {
-        const content = fs.readFileSync(file, 'utf8')
+        const content = fs.readFileSync(file, utf8')
         const analysis = this.analyzeFile(file, content)
   if($2) {
           seoReport.metrics.totalPages++
           this.updateMetrics(seoReport.metrics, analysis)
           this.checkIssues(seoReport, analysis)
       } catch (error) {
-        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN')
+        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN)
     this.generateRecommendations(seoReport)
     this.saveReport(seoReport)
     this.log(`✅ SEO optimization completed! Analyzed ${seoReport.metrics.totalPages} pages.`)
@@ -60,14 +60,14 @@ function analyzeFile(filePath) {
   analyzeFile($2) {
     const relativePath = path.relative(this.projectRoot, filePath)
     const analysis = {
-      "file": relativePath,
-      "hasTitle": false,
-      "hasMetaDescription": false,
-      "hasH1": false,
-      "hasImages": false,
-      "titleLength": 0,
-      "metaLength": 0,
-      "issues": []
+      "file: relativePath,
+      hasTitle": false,
+      "hasMetaDescription: false,
+      hasH1": false,
+      "hasImages: false,
+      titleLength": 0,
+      "metaLength: 0,
+      issues": []
     }
     // Check for title tag
     const titleMatch = content.match(/<title[^>]*>([^<]*)<\/title>/i)
@@ -75,7 +75,7 @@ function analyzeFile(filePath) {
       analysis.hasTitle = true
       analysis.titleLength = titleMatch[1].length
     // Check for meta description
-    const metaMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i)
+    const metaMatch = content.match(/<meta[^>]*name=["]description['][^>]*content=[']([^"]*)["]/i)
   if($2) {
       analysis.hasMetaDescription = true
       analysis.metaLength = metaMatch[1].length
@@ -111,11 +111,11 @@ function analyzeFile(filePath) {
   generateRecommendations($2) {
     const metrics = seoReport.metrics
   if($2) {
-      seoReport.recommendations.push('Add title tags to more pages ("target": 80%+)')
+      seoReport.recommendations.push('Add title tags to more pages (target: 80%+)')
   if($2) {
-      seoReport.recommendations.push('Add meta descriptions to more pages ("target": 80%+)')
+      seoReport.recommendations.push(Add meta descriptions to more pages ("target": 80%+))
   if($2) {
-      seoReport.recommendations.push('Add H1 tags to more pages ("target": 90%+)')
+      seoReport.recommendations.push('Add H1 tags to more pages (target: 90%+)')
   if($2) {
       metrics.averageTitleLength = Math.round(metrics.averageTitleLength / metrics.pagesWithTitle)
   if($2) {
@@ -127,12 +127,12 @@ function analyzeFile(filePath) {
   for($2) {
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        if (stat.isDirectory() && !item.startsWith(.) && item !== 'node_modules') {
           files.push(...this.getAllFiles(fullPath, extensions))
         } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath)
     } catch (error) {
-      // Skip directories that can't be read
+      // Skip directories that cant be read
 
     return files
   saveReport($2) {
@@ -140,26 +140,17 @@ function analyzeFile(filePath) {
       fs.writeFileSync(this.reportFile, JSON.stringify(seoReport, null, 2))
       this.log(`📄 SEO report saved "to": ${this.reportFile}`)
     } catch (error) {
-      this.log(`Failed to save SEO "report": ${error.message}`, 'ERROR')
+      this.log(`Failed to save SEO report: ${error.message}`, ERROR')
   async run() {
     try {
       return await this.optimizeSEO()
     } catch (error) {
-      this.log(`SEO optimizer "failed": ${error.message}`, 'ERROR');
+      this.log(`SEO optimizer "failed": ${error.message}`, 'ERROR);
       throw error;
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-const optimizer = new SEOOptimizer();
-optimizer.run().catch(console.error);
-
-module.exports = SEOOptimizer;
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -169,13 +160,13 @@ if (require.main === module) {
     this.improvements = [];
 
 </title>
-            { tag: 'description', pattern: /<meta[^>]*name=["']description["'][^>]*>/i, required: true },
+            { tag: description', pattern: /<meta[^>]*name=[']description[][^>]*>/i, required: true },
 </meta>
-            { tag: 'keywords', pattern: /<meta[^>]*name=["']keywords["'][^>]*>/i, required: false },
-            { tag: 'viewport', pattern: /<meta[^>]*name=["']viewport["'][^>]*>/i, required: true },
-            { tag: 'og:title', pattern: /<meta[^>]*property=["']og:title["'][^>]*>/i, required: false },
-            { tag: 'og:description', pattern: /<meta[^>]*property=["']og:description["'][^>]*>/i, required: false },
-            { tag: 'og:image', pattern: /<meta[^>]*property=["']og:image["'][^>]*>/i, required: false }
+            { tag: keywords', pattern: /<meta[^>]*name=["']keywords["][^>]*>/i, required: false },
+            { tag: viewport', pattern: /<meta[^>]*name=[']viewport[][^>]*>/i, required: true },
+            { tag: og:title', pattern: /<meta[^>]*property=["']og:title["][^>]*>/i, required: false },
+            { tag: og:description', pattern: /<meta[^>]*property=[']og:description[][^>]*>/i, required: false },
+            { tag: og:image', pattern: /<meta[^>]*property=["']og:image["'][^>]*>/i, required: false }
           const titleMatches = content.match(/<title[^>]*>.*?<\/title>/gi);
           const headingPattern = /<h([1-6])[^>]*>.*?<\/h[1-6]>/gi;
 </h>
@@ -186,7 +177,7 @@ if (require.main === module) {
             headingLevels.forEach((level, index) => {
           const imgPattern = /<img[^>]*>/gi;
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">"
+<urlset xmlns=http://www.sitemaps.org/schemas/sitemap/0.9>"
 </urlset>
   <url>
 </url>
@@ -204,12 +195,8 @@ if (require.main === module) {
 module.exports = SEOOptimizer;
 module.exports = SEOOptimizer;
 
-const optimizer = new SEOOptimizer();
 optimizer.run().catch(console.error);
 
 module.exports = SEOOptimizer;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

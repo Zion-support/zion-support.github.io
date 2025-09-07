@@ -131,7 +131,6 @@ const filePath = path.join(uploadsDir, filename;
 }
 const filename = `${id}-cv${ext}`;
 
-const filePath = path.join(uploadsDir, filename;
   const base64Data = cvFile.base64.split(',')[1];
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;
       }

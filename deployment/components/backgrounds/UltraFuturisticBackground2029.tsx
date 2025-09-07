@@ -189,7 +189,6 @@ if (index % 15 = == 0) {
               );
               connections.forEach(connection = > {
                ;
-  const distance = Math.sqrt(
                   Math.pow(particle.x - connection.x, 2) +
                     Math.pow(particle.y - connection.y, 2)}
                 );}

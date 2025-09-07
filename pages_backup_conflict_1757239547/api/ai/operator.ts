@@ -38,7 +38,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
   }
 }
-    const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       temperature: typeof temperature === 'number' ? temperature : 0.7,
       messages: [

@@ -1,15 +1,13 @@
 
-
-import type { NextApiRequest, NextApiResponse } from "next";"
-import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";"
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import {
-  }
+  calculateUsageSummary;
   authenticateRequest,
-calculateUsageSummary;
-  authenticateRequest,;
-  calculateUsageSummary,;
-} from '../../../utils/api/partnerAuth';'
+  calculateUsageSummary} from ../../../utils/api/partnerAuth';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  if (req && req.method !== \GET\") {}"
+    res && res.setHeader(\Allow\, \"GET\");}
+    return res && res.status(405).json({ error: \Method Not Allowed\" })
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 export default async function handler() {
   }
@@ -23,12 +21,8 @@ return res && res.status(405).json({ "error": "Method Not Allowed" });"
 }
 
 const auth = await authenticateRequest(req);
-  if (!auth) {
+
 }
-return res && res.status(401).json({ "error": "Unauthorized" });"
- 
-}
-  const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
  
@@ -36,9 +30,9 @@ return res && res.status(401).json({ "error": "Unauthorized" });"
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {"
-  if (req.method !== \"GET\") {}"
-    res.setHeader(\"Allow\", \"GET\");}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
+  if (req.method !== \"GET\) {}
+    res.setHeader(\"Allow\", \GET\);}"
+    return res.status(405).json({ error: \"Method Not Allowed\ })
 
 export default async function handler() {
   }
@@ -54,7 +48,7 @@ return res.status(200).json({ summary });
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
-'"
+'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 

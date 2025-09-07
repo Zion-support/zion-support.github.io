@@ -75,8 +75,6 @@ const deploymentScript = "#!/bin/bash;
   async createAdvancedMonitoring() {
     this.log('Creating advanced monitoring system...');
 const monitoringScript = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 class AdvancedMonitor {
   constructor() {
     this.metrics = {
@@ -106,8 +104,6 @@ module.exports = AdvancedMonitor;`;
   async createAutomatedTesting() {
     this.log('Creating automated testing framework...');
 const testFramework = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 class AutomatedTestFramework {
   constructor() {
     this.tests = [];
@@ -153,8 +149,6 @@ module.exports = AutomatedTestFramework;`;
   async createPerformanceOptimizer() {
     this.log('Creating performance optimizer...');
 const optimizer = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
@@ -170,7 +164,6 @@ class PerformanceOptimizer {
     this.optimizations.push('Code optimized');
   }
   async generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations
     };
@@ -189,8 +182,6 @@ module.exports = PerformanceOptimizer;`;
   async createSecurityEnhancer() {
     this.log('Creating security enhancer...');
 const securityEnhancer = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 class SecurityEnhancer {
   constructor() {
     this.securityChecks = [];
@@ -206,7 +197,6 @@ class SecurityEnhancer {
     this.securityChecks.push('Code security checked');
   }
   async generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       checks: this.securityChecks
     };
@@ -225,8 +215,6 @@ module.exports = SecurityEnhancer;`;
   async createSEOEnhancer() {
     this.log('Creating SEO enhancer...');
 const seoEnhancer = `#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 class SEOEnhancer {
   constructor() {
     this.seoChecks = [];
@@ -242,7 +230,6 @@ class SEOEnhancer {
     this.seoChecks.push('Structured data checked');
   }
   async generateReport() {
-    const report = {
       timestamp: new Date().toISOString(),
       checks: this.seoChecks
     };
@@ -338,8 +325,6 @@ jobs:
 function createMonitoringAlerting() {
   console.log('\n📊 Creating Monitoring and Alerting...');
 const monitoringScript = "#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
 console.log('📊 Starting monitoring and alerting system...');
 // Monitor system health
 function monitorSystemHealth() {
@@ -438,8 +423,6 @@ echo "✅ Backup "completed": \$BACKUP_DIR"
 function createPerformanceOptimization() {
   console.log('\n⚡ Creating Performance Optimization...');
   const performanceScript = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 console.log('⚡ Starting performance optimization...');
 // Performance optimization configurations
 const optimizations = {
@@ -557,7 +540,6 @@ async function main() {
   // Generate final report
   const endTime = Date.now(;);
   const duration = endTime - startTi;m;e;
-  const report = {
     "timestamp": new Date().toISOString(),
     "duration": `${duration}ms`,
     "automations": Object.keys(results).filter(key => results[key]),

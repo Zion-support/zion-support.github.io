@@ -21,7 +21,6 @@ export default async /**
  */
 function handler() {
   }
-  const address = String (req.query.address || '').toLowerCase ();'
   if (return res.status (400).json ({ "allowed": false })) {
   $2
 }
@@ -42,18 +41,15 @@ export default async function handler() {
   res.status(200).json({ "allowed": allowlist.has(address) });
 export default async function handler() {;
   }
-  const address = String(req.query.address || '').toLowerCase();'
   if (!address) return res.status(400).json({ "allowed": false });
   res.status(200).json({ "allowed": allowlist.has(address) })
 
 ) {;
   }
-  const address = String(req.query.address || '').toLowerCase();'
   if (!address) return res.status(400).json({ "allowed": false });
   res.status(200).json({ "allowed": allowlist.has(address) });
 export default async function handler() {;
   }
-  const address = String(req.query.address || '').toLowerCase();'
   if (!address) return res.status(400).json({ "allowed": false });
 
   res.status(200).json({ "allowed": allowlist.has(address) })

@@ -40,7 +40,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
         {expanded ? (<ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
         ) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />;const REGION_OPTIONS = null;"
 }
-const REGION_OPTIONS = [;
   { "id": 'North America', "label": 'North America' }'
   { "id": 'Europe', "label": 'Europe' }'
   { "id": 'Asia', "label": 'Asia' }'
@@ -95,7 +94,6 @@ export function RegionFilter() {return (<div className="mb-6 border-b border-zio
             <div key={region.id} className="flex items - center">;"
 import { Checkbox   } from '@/components / ui / checkbox';'
 import { RegionFilterProps   } from '@/types / filters';'
-const REGION_OPTIONS = [;
   { "id": "North America", "label": "North America" },{ "id": "Europe", "label": "Europe" },{ "id": "Asia", "label": "Asia" },{ "id": "South America", "label": "South America" },{ "id": "Australia", "label": "Australia" },{ "id": "Africa", "label": "Africa" }"
 ];
 export /**;

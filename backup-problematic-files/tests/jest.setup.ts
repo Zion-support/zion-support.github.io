@@ -150,7 +150,6 @@ if (global.vi) {// @ts-ignore;
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest),// @ts-ignore;
   if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest)}
 //Polyfill fetch and enable fetch mocks import 'whatwg-fetch';'
-import fetchMock from 'jest-fetch-mock';'
 fetchMock.enableMocks ()//Reset fetch mocks before each test to ensure isolation //Polyfill TextEncoder and TextDecoder for JSDOM environment global.TextEncoder = TextEncoder;
 //@ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests global.TextDecoder = TextDecoder;'
 //Set up a mock for Vite environment variables accessed via import.meta.env //This assumes that Babel (via babel-plugin-transform-import-meta or similar) //will transform import.meta.env.VITE SOME VAR to something like process.env.VITE SOME VAR //or that import.meta itself is transformed into an object where 'env'can be populated.process.env.VITE REOWN PROJECT ID = 'test project id from jest setup';'

@@ -16,8 +16,6 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
 } from '@/components / ui / card';'
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';  CardTitle,;'
 } from "@/components/ui/card";"
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
 interface ConversionAnalysisProps {
   }
   "data": Array<Record<string, any>>;
@@ -38,11 +36,9 @@ export function ConversionAnalysisChart(): any ({;
   onTimeRangeChange,;
 }: ConversionAnalysisProps) {;
   }
-  const dataKeys =;
     data && data.length > 0;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");"
 import React from './react';'
-import {
   }
   Card,
   CardContent,
@@ -68,7 +64,6 @@ title="""
           type="bar""
 export function ConversionAnalysisChart() {
 }
-const dataKeys = data && data.length > 0;
     ? Object.keys(data[0]).filter(key => { return key !== 'date')'
     : [],
 return (; }
@@ -81,7 +76,6 @@ return (; }
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-import React from "react";"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;"
 interface ConversionAnalysisProps {;
@@ -93,7 +87,6 @@ interface ConversionAnalysisProps {;
 ;
 export function ConversionAnalysisChart() {;
   }
-  const dataKeys = data && data.length > 0;
     ? Object.keys(data[0]).filter(key => { return key !== 'date'); }'
     : [];
   return (;

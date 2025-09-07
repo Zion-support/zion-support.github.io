@@ -76,7 +76,6 @@ class SecurityScanner {
     return files;
   }
   analyzeFileForSecurityIssues(filePath, content) {
-    const issues = [];
     const lines = content.split('\n');
     lines.forEach((line, index) => {
       const lineNum = index + 1;
@@ -156,7 +155,6 @@ class SecurityScanner {
         '.env.local',
         '.env.production'
       ];
-      const issues = [];
       for (const configFile of configFiles) {
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {
@@ -172,10 +170,7 @@ class SecurityScanner {
     }
   }
   analyzeConfigFile(filePath, content) {
-    const issues = [];
-    const lines = content.split('\n');
     lines.forEach((line, index) => {
-      const lineNum = index + 1;
       // Check for exposed ports
       if (line.match(/port\s*[:=]\s*(\d+)/)) {
         const port = parseInt(line.match(/port\s*[:=]\s*(\d+)/)[1]);
@@ -354,9 +349,6 @@ scanner.run().catch(error => {
  * Scans for security vulnerabilities and issues;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 class SecurityScanner {}
   constructor() {}
@@ -376,7 +368,6 @@ class SecurityScanner {}
     };
   };
   log(message) {}
-    const timestamp = new Date().toISOString();
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -451,7 +442,6 @@ class SecurityScanner {}
       const sourceFiles = this.getSourceFiles();
       for (const file of sourceFiles) {}
         try {}
-          const content = fs.readFileSync(file, 'utf8');
           for (const pattern of secretPatterns) {}
             const matches = content.match(pattern);
             if (matches) {}
@@ -502,7 +492,6 @@ class SecurityScanner {}
 
       for (const file of configFiles) {}
         try {}
-          const content = fs.readFileSync(file, 'utf8');
           
           // Check for unsafe configurations;
           if (content.includes('eval(') || content.includes('Function(')) {}

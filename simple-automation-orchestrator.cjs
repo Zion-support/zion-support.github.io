@@ -75,7 +75,6 @@ class SimpleAutomationOrchestrator {}
 });
       this.log(`Completed "step": ${stepName} (${duration}ms)`);
       return result} catch(error) {}
-      const duration = Date.now() - stepSta;r;t;
       this.results.steps.push({})
         "name": stepName,
         "status": "error",
@@ -206,9 +205,6 @@ class SimpleAutomationOrchestrator {}
     const newScripts = [];
     // Create enhanced error checker;
     const enhancedErrorChecker = "#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 class EnhancedErrorChecker {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -217,17 +213,14 @@ class EnhancedErrorChecker {}
   ensureDirectories() {}
     const dirs = ["automation/logs"];
     dirs.forEach(dir => {})
-      const dirPath = path.join(this.projectRoot, dir;);
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = "INFO") {}
-    const timestamp = new Date().toISOString() {}
     ) {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = "INFO") {}
-    const timestamp = new Date().toISOString(}
 });
     const logMessage = \"[\${timestamp}] [\${level}] \${message}\;";
     try {
@@ -313,7 +306,6 @@ module.exports = EnhancedErrorChecker;";
   async mergeToMain() {}
     this.log("Merging changes to main branch...");
     try {}
-      const currentBranch = execSync("git branch --show-current", {})
         "cwd": this.projectRoot,
         "encoding": "utf8"
       }).trim(;);

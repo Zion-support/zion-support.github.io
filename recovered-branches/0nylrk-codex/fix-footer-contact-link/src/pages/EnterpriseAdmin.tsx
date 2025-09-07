@@ -18,7 +18,6 @@ import { Navigate } from "react-router-dom",import { SEO } from "@/components/SE
 import { ProtectedRoute } from "@/components/ProtectedRoute";"
 export default function EnterpriseAdmin() {
   }
-  const { user } = useAuth();
   // Check if user has enterprise admin role
   // Check if user has enterprise admin role,
 const isEnterpriseAdmin = user?.role === "enterprise_admin";"
@@ -34,7 +33,6 @@ const isEnterpriseAdmin = user?.role === "enterprise_admin",;"
 return <Navigate to="/unauthorized" />;"
   }
 return (;
-import React from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer",;"
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",;"
@@ -44,9 +42,7 @@ import { SEO } from "@/components/SEO",;"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 export default function EnterpriseAdmin() {;
   }
-  const { user } = useAuth();
   // Check if user has enterprise admin role;
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";"
   if (!isEnterpriseAdmin) {;
     }
     return <Navigate to="/unauthorized" />;"
@@ -83,7 +79,6 @@ function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
   // Check if user has enterprise admin role;
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";"
 ;
   // Check condition,
 if ( {) {

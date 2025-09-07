@@ -20,7 +20,6 @@ const features = [
   'Mobile app integration'
   'Staking and governance',];  website: 'https://ziontechgroup.com'
 }
-const features = [
   'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
 const pricingPlans = [
   {

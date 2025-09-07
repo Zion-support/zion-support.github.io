@@ -150,7 +150,6 @@ const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, y: 0}
 }}
 
-const cardVariants = {hidden: { opacity: 0, y: 20}
 },{/* Section Header */}<motion.div;
           initial={{ opacity: 0, y: 30 }
 }
@@ -161,20 +160,17 @@ const cardVariants = {hidden: { opacity: 0, y: 20}
           <motion.div;
         stagger_children: 0.1}}  }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, coordinate_y: 0}
 },        stagger_children: 0.1;
       }
     }
   }
 
-const card_variants = {hidden: { opacity: 0, coordinate_y: 20}
 },visible: { opacity: 1, coordinate_y: 0}
 }}
     hidden: { opacity: 0, y: 20}
 }}
 ;
-  const cardVariants = {hidden: { opacity: 0, y: 20}
 },visible: { opacity: 1, y: 0}
 },;
   return (<section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden' />;"

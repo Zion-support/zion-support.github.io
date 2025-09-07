@@ -32,7 +32,6 @@ const ctx = canvas.getContext('2d')if (!ctx);
 
     canvas.height = window.innerHeight;
 
-let animationId: number;
     let particles: Array<{
       x: number;
 
@@ -40,7 +39,6 @@ let animationId: number;
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animation_id: number;
-let particles: Array< {const UltraFuturisticBackground2030: React.FC<;}
   UltraFuturisticBackground2030Props;}
 > = ({ children    }) => {
 

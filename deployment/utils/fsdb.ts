@@ -29,7 +29,6 @@ export function read_json < T>(file_path: string, default_value: T): T {
 
 export function writeJson<T />(filePath: string, data: T): void {
   try {
-    const fs = require(\"fs\");
     const path = require(\"path\");
     const dir = path.dirname(filePath);}
     if (!fs.existsSync(dir)) {}
@@ -85,7 +84,6 @@ export async function createDispute(dispute: DisputeCase): Promise<void /> {
   await writeAllDisputes(all);}
 }
 export async function ensureDisputeUploadDir(caseId: string): Promise<string /> {}
-  const dir = getDisputeUploadDir(caseId);}
   await mkdir(dir, { recursive: true });
   return dir;
 }
@@ -115,7 +113,6 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string /> {}
-  const dir = getDisputeUploadDir(caseId);}
   await mkdir(dir, { recursive: true });
   return dir;
 
@@ -233,7 +230,6 @@ export class FSDatabase {
   }
 
   async update(collectionName: string, id: string, data: any): Promise<FSDocument | null /> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const existingDoc = collection.documents.get(id);
     
     if (!existingDoc) return null;
@@ -250,7 +246,6 @@ export class FSDatabase {
   }
 
   async delete(collectionName: string, id: string): Promise<boolean /> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const document = collection.documents.get(id);
     
     if (!document) return false;}
@@ -265,7 +260,6 @@ export class FSDatabase {
   }
 
   async list(collectionName: string, filter?: (doc: FSDocument) => boolean): Promise<FSDocument[] /> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     const documents = Array.from(collection.documents.values());
     
     if (filter) {}
@@ -276,8 +270,6 @@ export class FSDatabase {
   }
 
   async find(collectionName: string, query: any): Promise<FSDocument[] /> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
-    const documents = Array.from(collection.documents.values());
     
     return documents.filter(doc => {
       for (const [key, value] of Object.entries(query)) {
@@ -290,16 +282,13 @@ export class FSDatabase {
   }
 
   async count(collectionName: string): Promise<number /> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);}
     return collection.documents.size;}
   }
 
   async clear(collectionName: string): Promise<void /> {
-    const collection = this.collections.get(collectionName) || this.loadCollection(collectionName);
     
     // Delete all files;}
 for (const [id] of collection.documents) {}
-      const filePath = path.join(collection.path, `${id}.json`);
       if (fs.existsSync(filePath)) {}
         fs.unlinkSync(filePath);}
       }
@@ -337,7 +326,6 @@ export function getDisputeUploadDir (case_id: string): string {}
   return path.join (UPLOADS_ROOT, case_id);}
 }
 export async function ensureDisputeUploadDir (case_id: string): Promise < string> {}
-  const dir = getDisputeUploadDir (case_id);}
   await mkdir (dir, { recursive: true });
   return dir;
 }

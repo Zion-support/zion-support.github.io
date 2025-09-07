@@ -43,7 +43,6 @@ return (
 
             <span className='font-medium'>HIPAA Compliant</span>          </div>
 
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 export function EnterpriseTrustBadges() {
   return (
@@ -80,7 +79,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 }
-import React from "react";
 
     </section>
 

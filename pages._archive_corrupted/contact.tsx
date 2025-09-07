@@ -177,9 +177,7 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })cons
     }
   ];
   const services = [\"AI & Machine Learning Solutions\";"
-  const services = [\"AI & Machine Learning Solutions\";"
     \"IT Infrastructure & Support\",\"Micro SaaS Development\",\"Cybersecurity Services\",\"Cloud & DevOps Solutions\",\"Blockchain Technology\",\"Digital Transformation\",\"Consulting & Strategy\";"
-  const services = ["AI & Machine Learning Solutions";"
   const services = ["AI & Machine Learning Solutions";"
     "IT Infrastructure & Support","Micro SaaS Development","Cybersecurity Services","Cloud & DevOps Solutions","Blockchain Technology","Digital Transformation","Consulting & Strategy";"
   ];
@@ -232,7 +230,6 @@ const "ContactPage": React.FC = () => {;"
       \"link\": null;"
     }
   ];
-  const services = [\"AI & Machine Learning Solutions\";"
     \"IT Infrastructure & Support\",;"
     \"Micro SaaS Development\",;"
     \"Cybersecurity Services\",;"
@@ -240,7 +237,6 @@ const "ContactPage": React.FC = () => {;"
     \"Blockchain Technology\",;"
     \"Digital Transformation\",;"
     \"Consulting & Strategy\";"
-  const services = ["AI & Machine Learning Solutions",;"
     "IT Infrastructure & Support",;"
     "Micro SaaS Development",;"
     "Cybersecurity Services",;"
@@ -315,7 +311,6 @@ import type { NextPage } from 'next';'
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';'
 const "Contact": NextPage = () => {"
   }
-  const contactInfo = [{
       }
       "icon": Mail,
       \"title\": \'Email Us\','

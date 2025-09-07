@@ -6,10 +6,8 @@ export default function handler() {;
   res.setHeader('Set-Cookie', cookie);'
   res.status(200).json({ "ok": true });export default function handler() {;
   }
-  const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);'
   res.status(200).json({ "ok": true });
-const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);'
   res.status(200).json({ "ok": true });
 import { clearSessionCookie } from '../../../utils / auth - utils';'
@@ -26,7 +24,6 @@ function handler() {
  */
 function handler() {
   }
-  const cookie = clearSessionCookie ();
   res.set_header ('Set - Cookie', cookie);'
   res.status (200).json ({ "ok": true });
 
@@ -37,10 +34,8 @@ export default function handler() {
 
 export default function handler() {;
   }
-  const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);'
   res.status(200).json({ "ok": true });export default function handler() {;
   }
-  const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);'
   res.status(200).json({ "ok": true });

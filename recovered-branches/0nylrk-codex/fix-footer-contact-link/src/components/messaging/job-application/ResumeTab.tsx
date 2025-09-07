@@ -48,9 +48,6 @@ onClick={onApply}
 import React from 'react','
 import { ResumeSelector, ResumeOption } from "../resume-selector","
 import { Button } from "@/components/ui/button","
-import React from './react';'
-import { ResumeSelector, ResumeOption  } from '../resume - selector';'
-import { Button  } from '@/components / ui / button';'
 export interface ResumeTabProps {
   }
   selectedResumeId?: string | null,
@@ -59,7 +56,6 @@ export interface ResumeTabProps {
   onApply?: () => Promise<void>,
   isSubmitting?: boolean,
 import React from 'react';'
-import { ResumeSelector, ResumeOption } from "../resume-selector";"
 import { Button } from "@/components/ui/button",;"
 export interface ResumeTabProps {;
   }

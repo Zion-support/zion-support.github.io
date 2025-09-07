@@ -21,7 +21,6 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
     console.log(message);
   };
   error(message) {}
-    const timestamp = new Date().toISOString();
 const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`;
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);

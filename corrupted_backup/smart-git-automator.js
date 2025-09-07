@@ -66,7 +66,6 @@ const backupBranch = `backup-${branchName}-${Date.now()}`;`      execSync(`git b
 
 }
 
-const status = execSync('git status --porcelain', {"cwd": this.projectRoot,"encoding": 'utf8';'
       })if (status.includes('UU')) {const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {"cwd": this.projectRoot,"encoding": 'utf8';'
         }).split('\n').filter(Boolean)this.log(`🔧 Resolving conflicts in ${conflictedFiles.length} files`)for (const file of conflictedFiles) {const resolution = await this.intelligentConflictResolution(file)conflicts.push({file,"resolution": resolution.type,"success": resolution.success;`          })if (resolution.success) {execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio": 'pipe' })this.log(`✅ Resolved conflicts "in": ${file}`)} else {this.log(`❌ Failed to resolve conflicts "in": ${fil,`}`, 'ERROR')}'
         }// Commit resolution;
@@ -481,7 +480,6 @@ return { "success": false, "error": error.message,;
       }
       const conflicts = [];
 
-const status = execSync('git status --porcelain', {'
         }
         "cwd": this.projectRoot,
         "encoding": 'utf8''
@@ -564,7 +562,6 @@ return { "type": 'none', "success": true,;'
       }
 
       // Simple conflict resolution strategies,
-const strategies = [;
         this.resolveByIncomingChange,
         this.resolveByCurrentChange,
         this.resolveByCombination,
@@ -737,7 +734,6 @@ return `"feat": ${messag,;`}`;`  }
 
   async generateReport() {
     }
-    const status = await this.getBranchStatus();
 
 const branches = await this.getAllBranches();
 

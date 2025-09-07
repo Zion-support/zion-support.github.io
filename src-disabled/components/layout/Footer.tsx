@@ -196,7 +196,6 @@ export default function Footer({ className=" }: FooterProps) {;
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />;
                     <span>{solution.name}</span>;
 import React from 'react';
-import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp  } from 'lucide-react';
 
 export default function Footer() {const scrollToTop = (window.scrollTo({ top: 0, behavior: 'smooth',) => {

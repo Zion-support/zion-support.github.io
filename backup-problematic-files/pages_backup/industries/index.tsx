@@ -3,11 +3,7 @@ import Link from 'next/link';'
 import Layout from '../../components/Layout';'
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';'
 import React from 'react';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
-import React from 'react';'
 import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import { Heart 
   }
   DollarSign, 
@@ -73,10 +69,8 @@ import Layout from '../../components/Layout';';'
     "color": 'from-gray-500 to-slate-500''
   Brain;
 } from 'lucide-react';'
-import SimpleLayout from '../../components/SimpleLayout';'
   Brain;
 } from 'lucide-react';'
-import Layout from '../../components/Layout';';'
 const industries = [;
   {"name": 'Healthcare',,"description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',"icon": Heart,"href": '/industries/healthcare',"features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],"color": 'from-red-500 to-pink-500';'
     }
@@ -205,7 +199,6 @@ const stats = [;
     "color": 'from-gray-500 to-slate-500'',;'
   }
 ;];
-const stats = [;
   { "number": '500+, "label": 'Industry Projects' },',;'
   { "number": '50+, "label": 'Fortune 500 Clients' },',;'
   { "number": '99 && 99.9%, "label": 'Uptime Guarantee' },',;'
@@ -224,7 +217,6 @@ return (;
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."""
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"">;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";"
-import Layout from '../../components/Layout';'
 return (;
     <Layout,
 title="Industry Solutions - Zion Tech Group""

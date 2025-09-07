@@ -1,6 +1,5 @@
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
 ;
@@ -23,7 +22,6 @@ return status;
   // Generate sitemap for crawling;
   const path = require('path');'
 
-const { spawnSync } = require('child_process');'
 function runNode() {
 }
 const abs = path && path.resolve(__dirname, '....', relPath),;'
@@ -83,7 +81,6 @@ exports.config = {
 },
 exports.handler = async () => {
 }
-const logs = [],;
   /**
  * log_step - Function description
  */

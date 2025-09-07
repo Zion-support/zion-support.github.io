@@ -163,10 +163,8 @@ export default function ServicesIndex() {const services = [{"name": 'AI & Machin
     }
   ];
   const benefits = ['Reduce operational costs by 50%';'
-  const benefits = ['Reduce operational costs by 50%';'
     'Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features';'
   ];
-  const useCases = ['E-commerce & Retail';'
   const useCases = ['E-commerce & Retail';'
     'SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations';'
   ];
@@ -397,7 +395,6 @@ export default function ServicesIndex() {;
       "features": ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'];'
     }
   ];
-  const benefits = ['Reduce operational costs by 50%';'
     'Increase productivity by 70%',;'
     'Improve business efficiency by 60%',;'
     'Scale operations without proportional cost increase',;'
@@ -429,7 +426,6 @@ return (;
 
       <div className=\"min-h-screen bg-white\">"
       <div className="min-h-screen bg-white">"
-const useCases = ['E-commerce & Retail',;'
     'SaaS & Technology','
     'Financial Services','
     'Healthcare & Medical','
@@ -444,9 +440,6 @@ return (;
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology solutions including AI, micro SaaS, cloud services, and cybersecurity. Transform your business with our innovative services." />"
       </Head>
-import type { NextPage } from 'next';'
-import Link from 'next/link';'
-import EnhancedLayout from '../../components/layout/EnhancedLayout';'
 return (;
     <EnhancedLayout>
       <h1 className=\"text-3xl font-bold mb-4\">Our Services</h1>"
@@ -580,9 +573,6 @@ return (;
 const \"Services\": NextPage = () => {"
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <Check className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />"
-import type { NextPage } from 'next';'
-import MainLayout from '../../components/layout/MainLayout';'
-import Link from 'next/link';'
 import { ArrowRight, Brain, Cloud, Globe, Smartphone, Shield, Database, Cpu, Zap } from 'lucide-react';'
 const "Services": NextPage = () => {"
 
@@ -590,7 +580,6 @@ const "Services": NextPage = () => {"
   }
 
 
-  const services = [{
 }
 const "Services": NextPage = () => {  const services = [{"
       }
@@ -867,7 +856,6 @@ return (;
                   <ul className=\"space-y-2 mb-6\">;"
                     {service && service.features.map((feature, featureIndex) => (<li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">;"
                         <Check className=\"w-3 h-3 text-green-500 mr-2 flex-shrink-0\" />;"
-const \"Services\": NextPage = () => {<li key={featureIndex} className="flex items-center text-sm text-gray-600">;"
                         <Check className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;"
 import { ArrowRight,, Brain,, Cloud,, Globe,, Smartphone,, Shield,, Database,, Cpu,, Zap } from 'lucide-react';'
 const "Services": NextPage = () => {const services = [{"title": \'AI Development\',\"description\": \'Custom artificial intelligence solutions and machine learning models tailored to your business needs.\',\"icon\": Brain,\"features\": [;"
@@ -907,7 +895,6 @@ const \"Services\": NextPage = () => {;"
 import {ArrowRight,, Brain,, Cloud,, Globe,, Smartphone,, Shield,, Database,, Cpu,, Zap} from 'lucide-react';'
 const "Services": NextPage = () => {;"
   }
-  const services = [{;
       }
       "title": \'AI Development\',;'
       \"description\": \'Custom artificial intelligence solutions and machine learning models tailored to your business needs.\',;'

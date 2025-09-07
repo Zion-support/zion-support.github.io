@@ -46,13 +46,11 @@ class TestAutomation {
   async runSmokeTests() {
     try {
       this.log('💨 Running smoke tests...');
-      const startTime = Date.now();
       const testResult = execSync('npm run test:smoke', {
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8'
       });
-      const testTime = Date.now() - startTime;
       return {
         success: true,
         output: testResult,
@@ -206,9 +204,6 @@ testAutomation.run().catch(error => {
  * Runs automated tests and reports results;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 class TestAutomation {}
   constructor() {}
@@ -227,7 +222,6 @@ class TestAutomation {}
     };
   };
   log(message) {}
-    const timestamp = new Date().toISOString();
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -356,7 +350,6 @@ class TestAutomation {}
 };
 // Start the service;
 if (require.main === module) {}
-  const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
 

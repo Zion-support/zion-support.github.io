@@ -68,7 +68,6 @@ variant="ghost";"
 }
 
 }
-import React from "react";"
 import { useNavigate } from "react-router-dom";"
 import { ChevronLeft, Bell, Settings } from "lucide-react",;"
 import { cn } from "@/lib/utils",;"
@@ -93,7 +92,6 @@ interface MobileHeaderProps {;
   onSettingsClick?:() => void;
   onSettingsClick} MobileHeaderProps) {;
   }
-  const navigate = useNavigate(),;
 ;
   return (;
     <header className={cn(;

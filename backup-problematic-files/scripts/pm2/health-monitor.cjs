@@ -344,11 +344,8 @@ monitor.run().catch(error => {
  * Runs every 5 minutes to monitor system health;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
 const log = (message) => {}
-  const timestamp = new Date().toISOString();
   
 };
 
@@ -424,7 +421,6 @@ const main = async () => {}
 
   
   
-  const report = generateHealthReport(results);
   
   if (report.overall.status === 'HEALTHY') {}
     log('System health check passed: All systems operational');

@@ -4,8 +4,6 @@ import {Education} from '@/types/resume';'
 import {format} from 'date-fns';'
 import { Education  } from '@/types/resume';'
 import { format } from 'date-fns';'
-import {Education} from '@/types/resume';'
-import {format} from 'date-fns';'
 interface EducationSectionProps {
   }
   "education": Education[]
@@ -29,7 +27,6 @@ return dateB.getTime() - dateA.getTime();
     if (typeof date === 'string') {'
       }
       return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume';'
-import { format } from 'date-fns';'
 interface EducationSectionProps {;
   }
   "education": Education[];
@@ -38,7 +35,6 @@ interface EducationSectionProps {;
 export function EducationSection() {;
   // Sort education by date (newest first);
   }
-  const sortedEducation = [...education].sort((a, b) => {;
     }
     if (a.is_current && !b.is_current) return -1,;
     if (!a.is_current && b.is_current) return 1,;

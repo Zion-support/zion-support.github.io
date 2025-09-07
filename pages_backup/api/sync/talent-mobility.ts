@@ -88,10 +88,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-import { signPayload } from "../../../utils/sync/signature";
-import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
-import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -140,8 +136,6 @@ export default async function handler(req, res) {
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false },;
-  const headers: Record<string, string> = {};
-  const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
   await Promise.all(;
     state.config.peers;

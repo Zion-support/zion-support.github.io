@@ -51,7 +51,6 @@ export function LanguageDetectionPopup() {;
   }
 import { useState, useEffect } from 'react';'
 import { useTranslation } from 'react-i18next';'
-import {;
   }
   AlertDialog,;
   AlertDialogAction,;
@@ -103,14 +102,11 @@ import {
   AlertDialogHeader
   AlertDialogTitle
 } from "../components/ui/alert-dialog";
-import {
   useLanguage
   SupportedLanguage
   LanguageContextType
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {;
-  const [open, setOpen] = useState(false);
-  const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } =
     useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] =
@@ -148,7 +144,6 @@ export function LanguageDetectionPopup() {;
     await changeLanguage(detectedLanguage);
     setOpen(false);
   const languageName = $2;
-  const handleAccept = async () => {
     await changeLanguage($2);
     setOpen(false)
   },
@@ -168,9 +163,6 @@ export function LanguageDetectionPopup() {;
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
   }export function LanguageDetectionPopup() {;
   }
-  const [open, setOpen] = useState(false),;
-  const { t } = useTranslation(),;
-  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}'
           </AlertDialogCancel>;
           <AlertDialogAction;

@@ -123,10 +123,8 @@ class BuildOptimizer {
   async checkMinification() {
     try {
       this.log('🗜️  Checking minification...');
-      const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
       let minificationEnabled = true;
       if (fs.existsSync(nextConfigPath)) {
-        const configContent = fs.readFileSync(nextConfigPath, 'utf8');
         minificationEnabled = !configContent.includes('swcMinify: false');
       }
       return {
@@ -306,9 +304,6 @@ optimizer.run().catch(error => {
  * Optimizes build process and bundle size;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 class BuildOptimizer {}
   constructor() {}
@@ -328,7 +323,6 @@ class BuildOptimizer {}
     };
   };
   log(message) {}
-    const timestamp = new Date().toISOString();
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -372,7 +366,6 @@ class BuildOptimizer {}
     };
   };
   getBundleFiles(dir) {}
-    const files = [];
 
     
     
@@ -465,12 +458,10 @@ class BuildOptimizer {}
       
       
       // This is a simplified check - in practice, you'd analyze the bundle;
-      const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": 'No dist directory found' };
       };
       // Look for unused code patterns;
-      const bundleFiles = this.getBundleFiles(distDir);
       let unusedCodeFound = 0;
 
 
@@ -509,11 +500,9 @@ class BuildOptimizer {}
 
       
       
-      const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": 'No dist directory found' };
       };
-      const bundleFiles = this.getBundleFiles(distDir);
       const chunkFiles = bundleFiles.filter(f => f.name.includes('chunk') || f.name.includes('vendor'));
       
       this.log(`Found ${chunkFiles.length} chunk files`);

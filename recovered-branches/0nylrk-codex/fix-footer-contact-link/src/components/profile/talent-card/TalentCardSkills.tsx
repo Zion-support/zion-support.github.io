@@ -1,11 +1,9 @@
 import React from "react","
 import { Badge } from "@/components/ui/badge","
 import {Badge} from "@/components/ui/badge";"
-import React from "react","
 import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);"
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
-  const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4)
   const topSkills = skills.slice(0, 4) || [],;
 return (;

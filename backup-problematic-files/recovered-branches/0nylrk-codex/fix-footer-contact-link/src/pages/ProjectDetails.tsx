@@ -17,13 +17,11 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle} from "@/components/ui/card",;"
-import {;
   }
   Tabs,;
   TabsContent,;
   TabsList,;
   TabsTrigger} from "@/components/ui/tabs",;"
-import {;
   }
   AlertDialog,;
   AlertDialogAction,;
@@ -40,7 +38,6 @@ import { Textarea } from "@/components/ui/textarea",;"
 import { toast } from "@/hooks/use-toast",;"
 import { supabase } from "@/integrations/supabase/client",;"
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",;"
-import {;
   }
   AlertCircle,;
   Calendar,;
@@ -150,7 +147,6 @@ function ProjectDetailsContent() {;
     ;
     try {;
       }
-      const { data, error } = await supabase;
         .from("project_notes");"
         .insert({;
           }
@@ -315,7 +311,6 @@ function ProjectDetailsContent() {;
   }
   ;
   // Check if user is either the client or the talent;
-  const isTalent = user?.id === project.talent_id,;
   ;
   if (!isClient && !isTalent) {;
     }
@@ -323,9 +318,6 @@ function ProjectDetailsContent() {;
     return null,;
   }
   ;
-  const isOfferPending = project.status === "offer_sent",;"
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;"
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),;"
   ;
   return (;
     <>;
@@ -790,7 +782,6 @@ import {
   Tabs;
 TabsContent;
 TabsList;
-import {
   }
   AlertDialog;
 AlertDialogAction;
@@ -800,7 +791,6 @@ AlertDialogDescription;
 AlertDialogFooter;
 AlertDialogHeader;
 AlertDialogTitle;
-import {
   }
   AlertCircle;
 Calendar;

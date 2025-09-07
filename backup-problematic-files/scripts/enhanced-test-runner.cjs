@@ -62,15 +62,12 @@ async function runPlaywrightTests() {}
   log('info', 'Running Playwright tests');
   
   try {}
-    const startTime = Date.now();
     const output = execSync('npx playwright test --reporter=json', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
 });
-    const endTime = Date.now();
     
-    const result = JSON.parse(output);
     
     testReport.tests.push({})
       "framework": 'playwright',
@@ -91,15 +88,12 @@ async function runCypressTests() {}
   log('info', 'Running Cypress tests');
   
   try {}
-    const startTime = Date.now();
     const output = execSync('npx cypress run --reporter json', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
 });
-    const endTime = Date.now();
     
-    const result = JSON.parse(output);
     
     testReport.tests.push({})
       "framework": 'cypress',
@@ -120,13 +114,11 @@ async function runLintTests() {}
   log('info', 'Running linting tests');
   
   try {}
-    const startTime = Date.now();
     const output = execSync('npm run lint', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
 });
-    const endTime = Date.now();
     
     testReport.tests.push({})
       "framework": 'eslint',
@@ -153,13 +145,11 @@ async function runTypeTests() {}
   log('info', 'Running TypeScript type tests');
   
   try {}
-    const startTime = Date.now();
     const output = execSync('npx tsc --noEmit', { })
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
 });
-    const endTime = Date.now();
     
     testReport.tests.push({})
       "framework": 'typescript',

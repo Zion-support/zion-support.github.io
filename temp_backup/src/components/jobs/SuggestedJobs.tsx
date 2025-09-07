@@ -8,7 +8,6 @@
   user ;
 }= useAuth ();
 const currentTalentId = talentId || user?.id;
-const {;
   isLoading;
 updateJobMatchStatus;
 categorizedMatches: {;

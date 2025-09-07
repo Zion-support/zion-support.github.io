@@ -15,7 +15,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           "id";"
           "id";"
           "id";"
-import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { "product": { "findMany": jest.fn(),"aggregate": jest.fn(),'
 },"productReview": { "aggregate": jest.fn()
 },$"queryRawUnsafe": jest.fn(),$"disconnect": jest.fn() }return { "PrismaClient": jest.fn(() => mPrismaClient) }})let "prisma": PrismaClient interface ProductLike { "id": string "name": string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[]
 } describe('/api/products API Endpoint',() => { let "req": ReturnType<typeof createRequest> let "res": ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient()(prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ "_avg": { "rating": null,'
@@ -62,7 +61,6 @@ interface ProductLike  {"id": string;
 
 
 
-import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { "product": { "findMany": jest.fn(),"aggregate": jest.fn(),'
 },"productReview": { "aggregate": jest.fn()
 },$"queryRawUnsafe": jest.fn(),$"disconnect": jest.fn()
 }; return { "PrismaClient": jest.fn(() => mPrismaClient) 
@@ -75,7 +73,6 @@ import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,creat
           "id""
           "id""
 
-import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { "product": { "findMany": jest.fn(),"aggregate": jest.fn(),'
 },"productReview": { "aggregate": jest.fn()
 },$"queryRawUnsafe": jest.fn(),$"disconnect": jest.fn()
 }; return { "PrismaClient": jest.fn(() => mPrismaClient) 
@@ -91,7 +88,6 @@ const "mockProductsData": ProductLike[] = [ { "id": 'product-gpt-high-score',"na
 },{ "id": 'product-gpt-medium-score',"name": 'Advanced GPT Assistant',"description": 'Your personal AI helper powered by GPT',"images": [] "price": null,"currency": 'USD',"tags": [],'
 } ];
 
-const filteredMockRawResults = mockRawResults .filter(p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3) .sort((a,b) => Math.max(b.name_similarity,b.description_similarity) - Math.max(a.name_similarity,a.description_similarity) ) (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults) const expectedProductIds = filteredMockRawResults.map(p => p.id) (prisma.product.findMany as jest.Mock).mockImplementation( async ({ where }: { "where": { "id": { "in": string[] } }
 }) => {;
   }
   return mockProductsData.filter(p => { return where.id.in.includes(p.id)) } ); }
@@ -277,7 +273,6 @@ const mockRawResults = [{
       // The actual API logic filters by similarity >= 0.3 in $queryRawUnsafe
       // and then orders. Let's refine mockRawResults to reflect what $queryRawUnsafe would return;'
       // based on 'WHERE similarity(name, $1) >= 0.3 OR similarity(description, $1) >= 0.3''
-const filteredMockRawResults = mockRawResults;
         .filter(p => { return p.name_similarity >= 0.3 || p.description_similarity >= 0.3)
         .sort((a, b) =>
           Math.max(b.name_similarity, b.description_similarity) -

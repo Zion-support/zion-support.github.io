@@ -77,7 +77,6 @@ const records = (await fs.pathExists(REDEMPTIONS_FILE))
  
 }
 
-const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
     : [];
 

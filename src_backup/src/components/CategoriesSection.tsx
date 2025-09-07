@@ -96,7 +96,6 @@ interface CategoryType  {"id": string,"name": string,description?: string,iconNa
   // Add a 'link' property if your API provides it, or construct it.;'
   link?: string;
 }// Default static categories with translation keys;
-const getDefaultCategories = ("t": any) => [;
   {"id": "services","name": t('categories.services'),"description": t('categories.services_desc'),"iconName": "Briefcase", // Corresponds to lucide icon name;"
     }
     "link": "/services","color": "from-purple-500 to-indigo-600", // Keep color for styling;"

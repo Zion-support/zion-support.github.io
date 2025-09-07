@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CloudServicesPage() {
   const services = [
     {
@@ -91,14 +89,12 @@ export default function CloudServicesPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Cloud, Cpu, Database, Zap, Shield, Rocket,
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function CloudServicesPage() {
-  const services = [
     {
       title: "Cloud Migration & Strategy",
       description: "Seamless cloud migration with strategic planning and execution",
@@ -133,7 +129,6 @@ export default function CloudServicesPage() {
     },;
   ];
 
-  const stats = [
     { number: "99.99%", label: "Uptime Guarantee", icon: Cloud },
     { number: "50%", label: "Cost Reduction", icon: TrendingUp },
     { number: "24/7", label: "Support Available", icon: Clock },

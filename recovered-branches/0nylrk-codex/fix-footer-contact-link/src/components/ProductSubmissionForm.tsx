@@ -77,7 +77,6 @@ navigate(`/marketplace/listing/${productRecord.id}`)`    } catch (error) {
           "name": user && user.displayName || "Anonymous Creator",;"
           "id": user && user.id},;
         "createdAt": new Date().toISOString()},;
-      const { "data": productRecord, "error": productError } = await supabase;
         .from('product_listings');'
         .insert([productData]);
         .select('id');'

@@ -165,7 +165,6 @@ const mainNavigation = [
 export default function UltraFuturisticNavigation2031() {const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null />(null)const [scrolled, setScrolled] = useState(false)useEffect(() => {
 const handleScroll = () => ;
-  const mainNavigation = [
   { name: 'Home'}
   href: '/', icon: Home}
 },{ name: 'Services'}
@@ -196,7 +195,6 @@ const handleScroll = () => ;
 }
 ];
 
-const mainNavigation = [
   { name: 'Home'}
   href: '/', icon: Home}
 },

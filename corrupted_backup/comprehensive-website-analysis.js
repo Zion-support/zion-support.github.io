@@ -165,7 +165,6 @@ const servicePages = [,"}),"});"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})"
     ],"}),"})"
 ,"}),"})"
-const fullUrl = `${BASE_URL}${link}`,"}),"});"      await this && this.checkPage(fullUrl),"}),"})"
     }"}),"})"
   }"}),"})"
 ,"}),"})"
@@ -174,7 +173,6 @@ const additionalPages = [,"}),"});"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})"
     ],"}),"})"
 ,"}),"})"
-const fullUrl = `${BASE_URL}${link}`,"}),"});"      await this && this.checkPage(fullUrl),"}),"})"
     }"}),"})"
   }"}),"})"
 ,"}),"})"
@@ -235,8 +233,6 @@ import { fileURLToPath } from "urlurl';'
 const __dirname = path.dirname(__filename);
 const BASE_URL =';"https": //ziontechgroup.com;"
 analyzer && analyzer.analyzeWebsite().catch(console ;
-import fs from "fsfs';'
-import path from "pathpath';'
 import {fileURLToPath} from "urlurl';'
 const __dirname = path && path.dirname(__filename);
 const BASE_URL =';"https": //ziontechgroup && ziontechgroup.com;"

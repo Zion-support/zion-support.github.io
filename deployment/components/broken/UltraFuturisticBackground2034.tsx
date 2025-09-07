@@ -177,7 +177,6 @@ const animate = (ctx.clearRect(0, 0, canvas.width, canvas.height)// Update and d
         if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Draw particle;
 
-const alpha = particle.life / particle.maxLife;
         ctx.save()ctx.globalAlpha = alpha;) => {
   return $3;}
 }
@@ -279,13 +278,9 @@ type: ['quantum', 'neural', 'holographic'][
       }
       // Add new entanglement lines;
 if (entanglementLines.length < 15 * intensity) {
-        const x1 = Math.random() * canvas.width;
 
-const y1 = Math.random() * canvas.height;
 
-const x2 = x1 + (Math.random() - 0.5) * 200;
 
-const y2 = y1 + (Math.random() - 0.5) * 200;
 
 entanglementLines.push({
           x1,

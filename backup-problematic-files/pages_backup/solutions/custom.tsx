@@ -10,7 +10,6 @@ import Layout from "../../components/Layout";";const "Custom": React.FC<CustomPr
       <p>This component is under development.</p>;
     </div>;
   )}
-import { motion } from 'framer-motion';'
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';'
 import Layout from "../../components/Layout";";"
 

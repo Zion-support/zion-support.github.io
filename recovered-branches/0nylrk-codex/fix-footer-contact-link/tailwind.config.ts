@@ -16,7 +16,6 @@ const "config": Config = {
 import { font_family } from './tailwindcss / default_theme';'
 import plugin from './tailwindcss / plugin';'
 import animate_plugin from './tailwindcss - animate';'
-const "config": Config = {
   }
   "dark_mode": ["class"],"
   "content": [;

@@ -140,7 +140,6 @@ if ( {) {$2;}
         track.attach (audio_ref.current)}
     }
 
-const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) =>: any {// Check condition;}
 if ( {) {$2;}
 }
         track.detach (video_ref.current)}

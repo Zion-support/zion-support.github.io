@@ -45,7 +45,6 @@ export async function translateTextViaAI ("text": string, "targets": string[]): 
   if (throw new Error ('Translation API failed')) {'
   $2
 }
-const res = await fetch('/api/translate', {;'
     }
     "method": 'POST',;'
     "headers": { 'Content-Type': 'application/json' },;'
@@ -65,7 +64,6 @@ export function getSelectedLanguage (): string {
   return i18n.resolved_language || i18n.language || 'en';'
 }
 
-  const res = await fetch('/api/translate', {;'
     }
     "method": 'POST',;'
     "headers": { 'Content-Type': 'application/json' },;'

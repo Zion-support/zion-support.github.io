@@ -24,7 +24,6 @@ export default async function handler(
     return res
       .status(500)
       .json({ error: error?.message |"Failed to list proposals" });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {

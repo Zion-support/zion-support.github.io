@@ -213,19 +213,15 @@ const bigrams = Array.from(bigramCounts.entries())
 
 const trigrams = Array.from(trigramCounts.entries())
     for (let i = 0; i < wordsArray && wordsArray.length - 1; i++) {}
-      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1);
     }
     for (let i = 0; i < wordsArray && wordsArray.length - 2; i++) {}
-      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1);    }
 
-const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts && bigramCounts.set(bigram, (bigramCounts && bigramCounts.get(bigram) || 0) + 1)
     }
     for (let i = 0, i < wordsArray && wordsArray.length - 2, i++) {}
      ;}
-  const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts && trigramCounts.set(trigram, (trigramCounts && trigramCounts.get(trigram) || 0) + 1)
     }
 

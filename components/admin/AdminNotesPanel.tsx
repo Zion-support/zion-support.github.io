@@ -1,26 +1,32 @@
 ;
 
-export type AdminNotesPanelProps = {"targetType": string; // e && e.g., 'user' | 'listing';'
-  }
-  "targetId": string; // unique identifier for the target;
+export type AdminNotesPanelProps = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  targetType: string; // e.g., user' | 'listing
+  targetId: string; // unique identifier for the target
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 }
-
-type Note = {"target_type": string; // e.g., 'user' | 'listing';'
-  }
-  "target_id": string; // unique identifier for the target;
-import React, { useEffect, useMemo, useState } from 'react';'
-
-export type AdminNotesPanelProps = any;
-  "targetId": string; // unique identifier for the target
-}
-;
 type Note = {
   }
   "id": string;
 
-  "target_type": string;
-  "target_id": string;
-  "text": string;targetType,targetId}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}
+
+  id: string;
+  targetType: string; // e.g., 'user' | listing;
+export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
+}type Note = {id: string;
+  targetType: string; // e.g., 'user' | listing;
+export type AdminNotesPanelProps = any;targetId: string; // unique identifier for the target;
+}type Note = {id: string;
+  target_type: string;
+  target_id: string;
+  text: string;targetType,targetId}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)}type Note = {id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  targetType,
+  targetId}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 type Note = {"id": string;
   }
@@ -34,137 +40,59 @@ type Note = {"id": string;
   "createdAt": number;
 }}
 
-export default function AdminNotesPanel() {"authorId": string;
-  }
-  "createdAt": number;
-}
-
-export default function AdminNotesPanel() {
-  }
-  const [isAdmin, setIsAdmin] = useState(true);
-
-const [adminId, setAdminId] = useState('admin-demo');'
-
-const [notes, setNotes] = useState<Note[]>([]);
-
-const [loading, setLoading] = useState(false);
-
-const [adding, setAdding] = useState(false);
-
-const [text, setText] = useState('');'
-
-  async function fetchNotes() {
-    }
-    try {
-      }
-      setLoading(true);
-
-const res = await fetch(;
-        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,`
-        {
-          }
-          "headers": { 'X-Admin': isAdmin ? 'true' : 'false' }'
-
-       
-}
-        "body": JSON.stringify({ targetType, targetId, text })} finally {setAdding(false)}      if (!res.ok) {"method": 'POST',"headers": {'Content-Type': 'application/json','X-Admin': isAdmin ? 'true' : 'false','X-Admin-User': adminId},"body": JSON.stringify({ targetType, targetId, text })})if (!res.ok) {alert('Failed to add note';'
-  }
-  return;
-      }
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-  const [isAdmin, setIsAdmin] = useState($2);
-  const [adminId, setAdminId] = useState($2);
-  const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState($2);
-  const [adding, setAdding] = useState($2);
-  const [text, setText] = useState($2);
-  async function fetchNotes() {
-    try {
-      setLoading($2);
-      const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
-        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
-      if (!res.ok) {
-        setNotes($2);
-        return
-      }
-      const data = await res.json($2);
-      setNotes(data.notes || [])
 =======
+export default function AdminNotesPanel() {authorId: string;}
+  createdAt: number;}
+}
+export default function AdminNotesPanel({
+  targetType,
+  targetId}: AdminNotesPanelProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-export default function AdminNotesPanel() { return null; }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [adminId, setAdminId] = useState('admin-demo');
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState();
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+  async function fetchNotes() {
+    try {
+      setLoading(true);
+const res = await fetch(
+        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
+        {
+          headers: { 'X-Admin': isAdmin ? true : 'false' }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
         }
       );
-      if (!res && res.ok) {;
+      if (!res && res.ok) {
         setNotes([]);
         return;
       }
-'
-        method: 'POST','
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
-        body: JSON.stringify({ targetType, targetId, text })});
-<<<<<<< HEAD
-      const data = await res.json();
-      setNotes(data.notes |[]);
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-    } finally {
-      }
-      setLoading(false);
-    }
-  }
-<<<<<<< HEAD
 
 
-        method: 'POST',
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
+        method: POST','
+        headers: { Content-Type: 'application/jsonX-Admin': isAdmin ? true : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
 
-  useEffect(() => {
-    if (isAdmin) fetchNotes()
-  }, [isAdmin, targetType, targetId]),
 
-}
-
-if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
   async function addNote() {
     }
     if (!text.trim()) return;
     setAdding(true);
     try {
-      }
-      const res = await fetch('/api/admin/notes', {'
 
-        }
-
-        "method": 'POST','
-"headers": {
-          'Content-Type': 'application/json','
-          'X-Admin': isAdmin ? 'true' : 'false','
-          'X-Admin-User': adminId,'
-        },
-        "body": JSON.stringify({ targetType, targetId, text })
-      });
-      if (!res.ok) {
-        }
-        alert('Failed to add note');'
+        alert(Failed to add note');
         return;
-      }
-      setText('');'
+      }'
+      setText();
+      setAdding(false);    }
 
 
-<<<<<<< HEAD
-=======
-      await fetchNotes();
-    } finally {
-      }
-      setAdding(false);
-=======
-  target_id: string; // unique identifier for the target;
-import React, { useEffect, useMemo, useState } from 'react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await fetchNotes()
     } finally {
       }
@@ -177,306 +105,72 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
-<<<<<<< HEAD
-  if (!isAdmin) {
-}
-return (;
-<div className='rounded border p-3'>'
-        <div className='flex items-center gap-2 text-sm'>'
-          <input,
-id='isAdminToggle''
-            type='checkbox''
 
-            checked={isAdmin}
-            onChange={e => { return setIsAdmin(e.target.checked)}
-          />; }
-          <label htmlFor='isAdminToggle'>Admin</label>;'
-        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>;'
-      </div>;
-    )}
-  return (<div className='rounded border p-4 space-y-3'>;'
-      <div className='flex items-center justify-between'>;'
-        <h3 className='font-medium'>Admin Notes</h3>;'
-        <div className='flex items-center gap-3 text-sm'>;'
-          <label className='inline-flex items-center gap-2'>;'
-            <input;
-              type='checkbox';'
-              checked={isAdmin}
-              onChange={e => { return setIsAdmin(e.target.checked)}
-            />; }
-            <span>Admin</span>;
-          </label>;
-          <input;
-            className='border rounded px-2 py-1';'
-            value={adminId}
-        <textarea;
-          className='w-full border rounded-md px-3 py-2';'
-          rows={3}
-          placeholder='Write a private note (abuse, spam, special support)';'
-          value={text}</div>;
-    </div>;
-  ))}}
-  )}
-  useEffect (() => {if (fetch_notes ()) {$2;
-}    if (fetch_notes ()) {$2;
-}
-}
-    set_adding (true)try {const res = await fetch ('/api / admin / notes', {"method": 'POST',"headers": {'Content - Type': 'application / json','X - Admin': is_admin ? 'true' : 'false','X - Admin - User': admin_id},"body": JSON.stringify ({ target_type, target_id, text })})// Check condition;'
-if ( {) {$2;
-}
-        alert ('Failed to add note')return;'
-      }
-      set_text ('')await fetch_notes ()} finally {set_adding (false)}      // Check condition;'
-if ( {) {$2;
-}
-        alert ('Failed to add note')return;'
-      }
-      set_text ('')await fetch_notes ()} finally {set_adding (false)}'
-  }
-  // Check condition;
-if ( {) {$2;
-}
-    return (<div className='rounded border p - 3'>;'
-        <div className='flex items - center gap - 2 text - sm'>;'
-          <input;
-            id='isAdminToggle';'
-            type='checkbox';'
-            checked={is_admin}
-            on_change={e => { return setIsAdmin (e.target.checked)}
-          />; }
-          <label html_for='isAdminToggle'>Admin</label>;'
-        <div className='text - xs opacity - 60 mt - 2'>Admin - only notes hidden.</div>'
-    </div>
-  );
-}
-  return (<div className='rounded border p - 4 space - y-3'>;'
-      <div className='flex items - center justify - between'>;'
-        <h3 className='font - medium'>Admin Notes</h3>;'
-        <div className='flex items - center gap - 3 text - sm'>;'
-          <label className='inline - flex items - center gap - 2'>;'
-            <input;
-              type='checkbox';'
-              checked={is_admin}
-              on_change={e => { return setIsAdmin (e.target.checked)}
-            />; }
-            <span > Admin</span>;
-          </label>;
-          <input;
-            className='border rounded px - 2 py - 1';'
-            value={admin_id}
-            on_change={e => { return setAdminId (e.target.value)}
-            placeholder='Admin ID'; }'
-          />;
-        </div>;
-      </div>;
-      <div className='space - y-2'>;'
-        <textarea;
-          className='w - full border rounded - md px - 3 py - 2';'
-          rows={3}
-          placeholder='Write a private note (abuse, spam, special support)';'
-          value={text}
-          on_change={e => { return set_text (e.target.value)}
-        />; }
-        <button;
-          disabled={!text.trim () || adding}
-          on_click={add_note}
-          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white "disabled": opacity - 50'>'
-
-          {adding ? 'Adding…' : 'Add Note,'
-}
-        </button>;
-      </div>;
-      <div className='border - t pt - 3'>;'
-        <div className='text - sm opacity - 70 mb - 2'>;'
-          Notes are private, time - stamped, and include author ID.;
-        </div>;
-        {loading ? (<div className='text - sm'>Loading…</div>) : notes.length === 0 ? (<div className='text - sm opacity - 70'>No notes yet.</div>) : (<ul className='space - y-2'>;'
-            {notes.map (number => (<li key={n.id} className='rounded border p - 2 text - sm'>;'
-                <div className='opacity - 60 text - xs mb - 1'>;'
-                  {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;"
-            {notes.map ((n) => (<li key={n.id} className="rounded border p - 2 text - sm">;"
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;"
-              </li>))}
-          </ul>)}
-      </div>;
-    </div>);
-}
-    </div>)})}
-      </div>
-    </div>
-  )
-}
-=======
-  if (!isAdmin) {
-    return (
-      <div className='rounded border p-3'>
-        <div className='flex items-center gap-2 text-sm'>
+        <div className=flex items-center gap-2 text-sm>
           <input'
-            id='isAdminToggle''
+            id='isAdminToggle
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
 
-        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
+
+=======
+        <div className=text-xs opacity-60 mt-2>Admin-only notes hidden.</div>
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       </div>
     )
-=======
-    <div className='rounded border p-4 space-y-3'>
-      <div className='flex items-center justify-between'>
-        <h3 className='font-medium'>Admin Notes</h3>
-        <div className='flex items-center gap-3 text-sm'>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           <label className='inline-flex items-center gap-2'>
-            <input'
-              type='checkbox'
+            <input
+              type=checkbox'
               checked={isAdmin}
               onChange={e => setIsAdmin(e.target.checked)}
             />
             <span>Admin</span>
           </label>
           <input'
-            className='border rounded px-2 py-1'
+            className=border rounded px-2 py-1
             value={adminId}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-        <textarea'
-=======
-            onChange={e => setAdminId(e.target.value)}
-            placeholder='Admin ID'
-          />
-        </div>
-      </div>
-      <div className='space-y-2'>
-        <textarea
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           className='w-full border rounded-md px-3 py-2'
-          rows={3}'
-          placeholder='Write a private note (abuse, spam, special support)'
+          rows={3}
+          placeholder=Write a private note (abuse, spam, special support)'
           value={text}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-      </div>;
-    </div>;
-  );
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50
+        >
+          {adding ? 'Adding…' : Add Note}
+        </button>
+      </div>'
+      <div className='border-t pt-3>
+        <div className='text-sm opacity-70 mb-2'>
+          Notes are private, time-stamped, and include author ID.
+        </div>
+        {loading ? (
+          <div className=text-sm'>Loading…</div>
+        ) : notes.length === 0 ? ('
+          <div className=text-sm opacity-70>No notes yet.</div>
+        ) : ('
+          <ul className='space-y-2>
+            {notes.map(n => (
+              <li key={n.id} className='rounded border p-2 text-sm'>
+                <div className=opacity-60 text-xs mb-1'>
 
-  );
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
 
-}
-
-}
-  );
-}
-  useEffect (() => {}
-    if (fetch_notes ()) {}
-  $2;
-}    if (fetch_notes ()) {}
-  $2;
-}
-}
-    set_adding (true);
-    try {'
-      const res = await fetch ('/api / admin / notes', {'
-        method: 'POST',
-        headers: {'
-          'Content - Type': 'application / json','
-          'X - Admin': is_admin ? 'true' : 'false','
-          'X - Admin - User': admin_id,
-        },
-        body: JSON.stringify ({ target_type, target_id, text }),
-      });
-      // Check condition;
-if ( {) {}
-  $2;
-}'
-        alert ('Failed to add note');
-        return;
-      }'
-      set_text ('');
-      await fetch_notes ();
-    } finally {}
-      set_adding (false);    }      // Check condition;
-if ( {) {}
-  $2;
-}'
-        alert ('Failed to add note');
-        return;
-      }'
-      set_text ('');
-      await fetch_notes ();
-    } finally {}
-      set_adding (false);
-    }
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    return ('
-      <div className='rounded border p - 3'>;'
-        <div className='flex items - center gap - 2 text - sm'>;
-          <input;'
-            id='isAdminToggle';'
-            type='checkbox';
-            checked={is_admin}
-            on_change={e => setIsAdmin (e.target.checked)}
-          />;'
-          <label html_for='isAdminToggle'>Admin</label>;'
-        <div className='text - xs opacity - 60 mt - 2'>Admin - only notes hidden.</div>;
-      </div>);
-  }
-  return ('
-    <div className='rounded border p - 4 space - y-3'>;'
-      <div className='flex items - center justify - between'>;'
-        <h3 className='font - medium'>Admin Notes</h3>;'
-        <div className='flex items - center gap - 3 text - sm'>;'
-          <label className='inline - flex items - center gap - 2'>;
-            <input;'
-              type='checkbox';
-              checked={is_admin}
-              on_change={e => setIsAdmin (e.target.checked)}
-            />;
-            <span > Admin</span>;
-          </label>;
-          <input;'
-            className='border rounded px - 2 py - 1';
-            value={admin_id}
-            on_change={e => setAdminId (e.target.value)}'
-            placeholder='Admin ID';
-          />;
-        </div>;
-      </div>;
-      <div className=&quot;space-y-2&quot>
-
-        <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />;
-        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white "disabled":opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>;'
-      </div>;
-      <div className=&quot;border-t pt-3&quot>
-
-        <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>;
-        {loading ? (<div className=&quot;text-sm&quot;>Loading…</div>;
-        ) : notes.length === 0 ? (<div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>;
-        ) : (<ul className=&quot;space-y-2&quot>
-
-            {notes.map((n) => (<li key={n.id} className=&quot;rounded border p-2 text-sm&quot>
-
-                <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>;
-                <div>{n.text}</div>;
-          onChange={e => { return setText(e.target.value)}
-        />; }
-        <button;
-          disabled={!text.trim() |adding}
-          onClick={addNote}
-          className='px-3 py-2 rounded-md bg-gray-900 text-white "disabled": opacity-50'>'
-
-          {adding ? 'Adding…' : 'Add Note,'
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 }
 =======
 );
@@ -488,29 +182,27 @@ if ( {) {}
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   
   static getDerivedStateFromError(error) {}
-    return { hasError: true };
+    return { hasError: true }
   }
   
   componentDidCatch(error, errorInfo) {'
 =======
-class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true }
   }
   componentDidCatch(error, errorInfo) {
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  target_type: string; // e.g., 'user' | 'listing';
+  target_type: string; // e.g., user | 'listing';
   target_id: string; // unique identifier for the target;
 }
-;
 type Note = {}
   id: string;
   target_type: string;
@@ -524,19 +216,15 @@ type Note = {}
   authorId: string;
   createdAt: number;
 }
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {};
-};
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {}
+}
 
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {};
-  const [isAdmin, setIsAdmin] = useState(true);'
-  const [adminId, setAdminId] = useState('admin-demo');
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {}
+  const [adminId, setAdminId] = useState(admin-demo');
   const [adding, setAdding] = useState(false);'
-  const [text, setText] = useState('');
         }
       );
-      if (!res && res.ok) {;
+      if (!res && res.ok) {
         setNotes([]);
         return;
       }
@@ -558,94 +246,82 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     if (!text.trim()) return;
     setAdding(true);
     try {'
-      const res = await fetch('/api/admin/notes', {}
+      const res = await fetch('/api/admin/notes, {}
       const data = await res && res.json();
       setNotes(data && data.notes || []);
-    } finally {;
+    } finally {
       setLoading(false);
     }
   }
 
-  useEffect(() => {;
+  useEffect(() => {
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
 
   async function addNote() { return null; }
-        },;
-        body: JSON && JSON.stringify({ targetType, targetId, text }),;
-      });
-      if (!res && res.ok) {;'
+        },
+        body: JSON && JSON.stringify({ targetType, targetId, text })});
+      if (!res && res.ok) {
         alert('Failed to add note');
         return;
-      }'
-      setText('');
+      }
+      setText(');
       await fetchNotes();
-    } finally {;
-      setAdding(false);    }      if (!res && res.ok) {;'
-        alert('Failed to add note');
+    } finally {
+      setAdding(false);    }      if (!res && res.ok) {'
+        alert(Failed to add note);
         return;
       }'
-      setText('');
+      setText(');
     }
   }
 
-  if (!isAdmin) {;
-    return ('
-      <div className='rounded border p-3'>;'
-        <div className='flex items-center gap-2 text-sm'>;
+  if (!isAdmin) {
+    return (
+      <div className='rounded border p-3'>;
+        <div className=flex items-center gap-2 text-sm'>;
           <input'
-            id='isAdminToggle''
-            type='checkbox'
+            id=isAdminToggle'
+            type='checkbox
             checked={isAdmin}
             onChange={e => setIsAdmin(e && e.target.checked)}
-          />;'
-          <label htmlFor='isAdminToggle'>Admin</label>;'
-        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>;
+          />;
+          <label htmlFor='isAdminToggle'>Admin</label>;
+        <div className=text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>;
       </div>;
     );
   }
   return ('
-    <div className='rounded border p-4 space-y-3'>;'
-      <div className='flex items-center justify-between'>;'
-        <h3 className='font-medium'>Admin Notes</h3>;'
-        <div className='flex items-center gap-3 text-sm'>;'
-          <label className='inline-flex items-center gap-2'>;
+    <div className=rounded border p-4 space-y-3>;'
+      <div className='flex items-center justify-between>;
+        <h3 className='font-medium'>Admin Notes</h3>;
+        <div className=flex items-center gap-3 text-sm'>;'
+          <label className=inline-flex items-center gap-2>;
             <input'
-              type='checkbox'
+              type='checkbox
               checked={isAdmin}
               onChange={e => setIsAdmin(e && e.target.checked)}
             />;
             <span>Admin</span>;
           </label>;
-          <input'
+          <input
             className='border rounded px-2 py-1'
             value={adminId}
-        <textarea'
-          className='w-full border rounded-md px-3 py-2'
+        <textarea
+          className=w-full border rounded-md px-3 py-2'
           rows={3}'
-          placeholder='Write a private note (abuse, spam, special support)'
+          placeholder=Write a private note (abuse, spam, special support)
           value={text}
           onChange={e => setText(e && e.target.value)}
         />;
         <button;
           onClick={addNote}'
-          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'>;'
-          {adding ? 'Adding…' : 'Add Note'}
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50>;
+          {adding ? 'Adding…' : Add Note}
               </li>
         </button>;
       </div>;
-      <div className='border-t pt-3'>;'
-        <div className='text-sm opacity-70 mb-2'>;'
-          Notes are private, time-stamped, and include author ID.;
-        </div>;
-        {loading ? (<div className='text-sm'>Loading…</div>;'
-        ) : notes.length === 0 ? (<div className='text-sm opacity-70'>No notes yet.</div>;'
-        ) : (<ul className='space-y-2'>;'
-            {notes.map(n => (<li key={n.id} className='rounded border p-2 text-sm'>;'
-                <div className='opacity-60 text-xs mb-1'>;'
-                  {new Date(n.createdAt).toLocaleString()} • {n.authorId}
-                </div>;
-                <div>{n.text}</div>;
+
               </li>;
             ))}
           </ul>;
@@ -659,7 +335,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
   $2;
 }
   }, [is_admin, target_type, target_id]);
-;
   async /**
  * add_note - Function description;
  */
@@ -669,32 +344,30 @@ function add_note() {}
 }
     set_adding (true);
     try {'
-      const res = await fetch ('/api / admin / notes', {'
-        method: 'POST',
-        headers: {'
-          'Content - Type': 'application / json','
-          'X - Admin': is_admin ? 'true' : 'false','
-          'X - Admin - User': admin_id,
-        },
-        body: JSON.stringify ({ target_type, target_id, text }),
-      });
+      const res = await fetch (/api / admin / notes, {'
+        method: 'POST,
+        headers: {
+          'Content - Type': application / json,'
+          'X - Admin: is_admin ? true' : 'false,
+          'X - Admin - User': admin_id},
+        body: JSON.stringify ({ target_type, target_id, text })});
       // Check condition;
 if ( {) {}
   $2;
-}'
-        alert ('Failed to add note');
+}
+        alert (Failed to add note');
         return;
       }'
-      set_text ('');
+      set_text ();
       await fetch_notes ();
     } finally {}
       set_adding (false);    }      // Check condition;
 if ( {) {}
   $2;
 }'
-        alert ('Failed to add note');
+        alert ('Failed to add note);
         return;
-      }'
+      }
       set_text ('');
       await fetch_notes ();
     } finally {}
@@ -705,85 +378,78 @@ if ( {) {}
 if ( {) {}
   $2;
 }
-    return ('
-      <div className='rounded border p - 3'>;'
-        <div className='flex items - center gap - 2 text - sm'>;
+    return (
+      <div className=rounded border p - 3'>;'
+        <div className=flex items - center gap - 2 text - sm>;
           <input;'
-            id='isAdminToggle';'
+            id='isAdminToggle;
             type='checkbox';
             checked={is_admin}
             on_change={e => setIsAdmin (e.target.checked)}
-          />;'
-          <label html_for='isAdminToggle'>Admin</label>;'
-        <div className='text - xs opacity - 60 mt - 2'>Admin - only notes hidden.</div>;
+          />;
+          <label html_for=isAdminToggle'>Admin</label>;'
+        <div className=text - xs opacity - 60 mt - 2>Admin - only notes hidden.</div>;
       </div>);
   }
   return ('
-    <div className='rounded border p - 4 space - y-3'>;'
-      <div className='flex items - center justify - between'>;'
-        <h3 className='font - medium'>Admin Notes</h3>;'
-        <div className='flex items - center gap - 3 text - sm'>;'
-          <label className='inline - flex items - center gap - 2'>;
-            <input;'
+    <div className='rounded border p - 4 space - y-3>;
+      <div className='flex items - center justify - between'>;
+        <h3 className=font - medium'>Admin Notes</h3>;'
+        <div className=flex items - center gap - 3 text - sm>;'
+          <label className='inline - flex items - center gap - 2>;
+            <input;
               type='checkbox';
               checked={is_admin}
               on_change={e => setIsAdmin (e.target.checked)}
             />;
             <span > Admin</span>;
           </label>;
-          <input;'
-            className='border rounded px - 2 py - 1';
+          <input;
+            className=border rounded px - 2 py - 1';
             value={admin_id}
             on_change={e => setAdminId (e.target.value)}'
-            placeholder='Admin ID';
+            placeholder=Admin ID;
           />;
         </div>;
       </div>;'
-      <div className='space - y-2'>;
-        <textarea;'
+      <div className='space - y-2>;
+        <textarea;
           className='w - full border rounded - md px - 3 py - 2';
-          rows={3}'
-          placeholder='Write a private note (abuse, spam, special support)';
+          rows={3}
+          placeholder=Write a private note (abuse, spam, special support)';
           value={text}
           on_change={e => set_text (e.target.value)}
         />;
         <button;
           disabled={!text.trim () || adding}
           on_click={add_note}'
-          className='px - 3 py - 2 rounded - md bg - gray - 900 text - white disabled:opacity - 50';
+          className=px - 3 py - 2 rounded - md bg - gray - 900 text - white disabled:opacity - 50;
         >;'
-          {adding ? 'Adding…' : 'Add Note'}
+          {adding ? 'Adding… : Add Note'}
         </button>;
       </div>;'
-      <div className='border - t pt - 3'>;'
-        <div className='text - sm opacity - 70 mb - 2'>;
+      <div className=border - t pt - 3>;'
+        <div className='text - sm opacity - 70 mb - 2>;
           Notes are private, time - stamped, and include author ID.;
         </div>;
-        {loading ? ('
-          <div className='text - sm'>Loading…</div>) : notes.length === 0 ? ('
-          <div className='text - sm opacity - 70'>No notes yet.</div>) : ('
-          <ul className='space - y-2'>;
+        {loading ? (
+          <div className='text - sm'>Loading…</div>) : notes.length === 0 ? (
+          <div className=text - sm opacity - 70'>No notes yet.</div>) : ('
+          <ul className=space - y-2>;
             {notes.map (number => ('
-              <li key={n.id} className='rounded border p - 2 text - sm'>;'
+              <li key={n.id} className='rounded border p - 2 text - sm>;
                 <div className='opacity - 60 text - xs mb - 1'>;
-                  {new Date (n.created_at).toLocaleString ()} • {n.author_id}"
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
+                  {new Date (n.created_at).toLocaleString ()} • {n.author_id}
+                </div>                <div>{n.text}</div>          <ul className=space - y-2">;
             {notes.map ((n) => ("
-              <li key={n.id} className="rounded border p - 2 text - sm">;"
+              <li key={n.id} className=rounded border p - 2 text - sm>;"
                 <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
 =======
   );
 }

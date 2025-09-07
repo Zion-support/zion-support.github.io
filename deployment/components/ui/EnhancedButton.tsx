@@ -111,7 +111,6 @@ export default EnhancedButton;
 };
 
 
-const baseStyles =;"
   \"inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]\";
 "
 const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> = {;"
@@ -121,7 +120,6 @@ const sizeStyles: Record<NonNullable<EnhancedButtonProps[\"size\"] />, string> =
 };
 
 
-const variantStyles: Record<;"
   NonNullable<EnhancedButtonProps[\"variant\"] />,;
   string;
 > = {;"
@@ -152,7 +150,6 @@ export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement /
   fullWidth?: boolean}
 };
 
-const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
 
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size'] />, string> = {
   sm: 'text-sm px-3 py-2',
@@ -230,7 +227,6 @@ sizeStyles[size]
 );
 }
 
-const EnhancedButton: React.FC<EnhancedButtonProps /> = ({ className    }) => {
 
 
 }

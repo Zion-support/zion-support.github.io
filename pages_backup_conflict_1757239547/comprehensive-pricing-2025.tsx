@@ -40,10 +40,8 @@ export default function ComprehensivePricingPage() {
     return categoryData?.icon |'🚀'
   }
   ],
-  const filteredServices = selectedCategory === 'all'
     ? allServices
     : allServices.filter(service => service.category === selectedCategory),
-  const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },

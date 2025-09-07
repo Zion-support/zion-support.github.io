@@ -25,8 +25,6 @@ interface CodeBlockProps {
   showLineNumbers?: boolean,
   className?: string
 }
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";export function CodeBlock({ 
   code,
   language = 'bash',
@@ -106,8 +104,6 @@ export function CodeBlock({
 
 export default CodeBlock;
 
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
 import { cn } from '@/lib / utils';
 interface CodeBlockProps {
   code: string,

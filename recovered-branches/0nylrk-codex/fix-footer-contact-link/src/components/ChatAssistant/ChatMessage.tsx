@@ -7,8 +7,6 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
@@ -31,7 +29,6 @@ interface ChatMessageProps {
   const isUser = role === 'user';
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
-  const isUser = role === 'user';
   const isUser = role === 'user',
   
   return (
@@ -100,7 +97,6 @@ key?: string | number
 }export function ChatMessage ({
   role, message, timestamp 
 }: ChatMessageProps) {
-  const isUser = role === 'user';
 return (<div className= {
   cn ("flex items-start gap-2";
 isUser ? "flex-row-reverse" : "flex-row") 

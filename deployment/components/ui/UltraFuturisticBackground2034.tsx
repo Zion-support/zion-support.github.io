@@ -159,7 +159,6 @@ if (return) {$2;}
     }
     // Create particles;
 
-const particles: Particle[] = [];
     for (let index = 0; i < 100; i++) {particles.push (new Particle ())}
 
 const particles: Particle[] = [],for (let index = 0, i < 100, i++) {particles.push (new Particle ())}
@@ -176,10 +175,8 @@ const gradient = ctx.createLinearGradient (0, 0, 0, canvas.height)gradient.addCo
       ctx.stroke_style = 'rgba (0, 255, 255, 0.1)';
       ctx.line_width = 0.5;for (let index = 0; i < particles.length; i++) {for (let inner_index = i + 1; j < particles.length; j++) {const dx = particles[i].x - particles[j].x;
 
-const dy = particles[i].y - particles[j].y;
 
 const distance = Math.sqrt (dx * dx + dy * dy)for (let index = 0, i < particles.length, i++) {for (let inner_index = i + 1, j < particles.length, j++) ;
-  const dx = particles[i].x - particles[j].x;
 
 const dy = particles[i].y - particles[j].y;}
 }

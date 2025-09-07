@@ -150,7 +150,6 @@ const { ;
   }
   user ;
  } = useAuth ();
-const generateSuggestion = async () => {;
   }
   if (!jobTitle || !category) {;
   }

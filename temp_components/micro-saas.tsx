@@ -1873,7 +1873,6 @@ export default function MicroSaasPage() {export default function MicroSaasPage()
     },{trend:'Security Focus',description:'Enterprise-grade security and compliance built into every service.',impact:'High';
     }
   ],const categories = [...new Set(microSaasServices.map(service => service.category))];
-  const categories  = [...new Set(microSaasServices.map(service => service.category))];const competitiveAdvantages = [;
     {title:"Specialized Focus",description:"Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",icon:"🎯";
     },{icon:'💰',title:'Transparent Pricing',description:'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.';
     },{icon:'🔒',title:'Enterprise Security',description:'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.';
@@ -2365,13 +2364,7 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }className="border-gradient-blue hover:bg-gray-800/50 transition-all duration-300"> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400" > <TrendingUp className="w-6 h-6" /> </div> </div> </div> </div> </Card>) )}</div> </div> </section> Our Competitive Advantages </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > What sets us apart from traditional SaaS providers and market leaders. </p> </div> key= {index ;
 }className="border-gradient-blue hover:bg-gray-700/50 transition-all duration-300" > </div>) )}</div> </Card>) )}</div> </div> </section> Comprehensive Service Breakdown </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Detailed analysis of each micro SaaS service with market data, pricing, and use cases. </p> </div> <div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <Zap className="w-5 h-5 mr-2 text-blue-400" /> Key Features </h4> </li>) )}</ul> </div> {/* Pricing */ ;
 }<div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <DollarSign className="w-5 h-5 mr-2 text-green-400" /> Pricing Plans </h4> </li>) )}</ul> </div>) )}</div> </div> </div> Market Analysis </h4> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <div> </div> </div> </div> </span>) )}</div> </div> > View Pricing & Start Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div>) )}</div> </div> </section> Ready to Get Started? </h2> <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/pricing" variant="secondary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" > View Pricing <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> Get in Touch </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Ready to transform your business with our AI-powered micro SaaS solutions? Contact us today. </p> </div> </svg> </div> <h3 className="text-xl font-bold text-white mb-2" >Phone</h3> <p className="text-blue-400 text-lg font-semibold" >+1 302 464 0950</p> <p className="text-gray-400 text-sm mt-2" >Available 24/7 for urgent support</p> </div> </div> </svg> </div> <h3 className="text-xl font-bold text-white mb-2" >Email</h3> <p className="text-green-400 text-lg font-semibold" >kleber@ziontechgroup && ziontechgroup.com</p> <p className="text-gray-400 text-sm mt-2" >Response within 2 hours</p> </div> </div> </svg> </div> <h3 className="text-xl font-bold text-white mb-2" >Address</h3> <p className="text-purple-400 text-lg font-semibold" >364 E Main St STE 1008</p> <p className="text-purple-400 text-lg font-semibold" >Middletown DE 19709</p> <p className="text-gray-400 text-sm mt-2" >United States</p> </div> </div> </div> <div> <h3 className="text-2xl font-bold text-white mb-6" >Why Choose Zion Tech Group?</h3> <div className="space-y-4" > <div className="flex items-start" > <Check className="w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0" /> <span className="text-gray-300" >85+ specialized micro SaaS solutions</span> </div> <div className="flex items-start" > <Check className="w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0" /> <span className="text-gray-300" >AI-powered automation and optimization</span> </div> <div className="flex items-start" > <Check className="w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0" /> <span className="text-gray-300" >Enterprise-grade security and compliance</span> </div> <div className="flex items-start" > <Check className="w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0" /> <span className="text-gray-300" >24/7 expert support and consultation</span> </div> <div className="flex items-start" > <Check className="w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0" /> <span className="text-gray-300" >Competitive pricing with free trials</span> </div> </div> </div> <div> <h3 className="text-2xl font-bold text-white mb-6" >Get Started Today</h3> <div className="space-y-4" > <p className="text-gray-300" > Ready to transform your business? Start with a 14-day free trial of any service. No credit card required, no commitment. </p> <div className="flex flex-col sm:flex-row gap-4" > <Button href="/contact" size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700" > Contact Sales <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white" > View Pricing </Button> </div> </div> </div> </div> </div> </div> </section> {/* CTA Section */ ;}</>) import React from 'react';
-import React from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target   } from 'lucide-react';
-import Button from '../components/ui/Button';
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning } from 'lucide-react';
 export default function MicroSaasPage() {}</>) import React from 'react';
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning  } from 'lucide-react';
 export default function MicroSaasPage() {}</>) import React from 'react';
 export default function MicroSaasPage() {const [selectedCategory, setSelectedCategory] = useState('All')identity management, and enterprise analytics. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Unified dashboard</span> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Integrated billing</span> </div> </div> </div> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white" > View All 85+ Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing. </p> </div> Popular </span>)}</div> </li>) )}</ul> </div> </div> </div> <div className="flex flex-col gap-3" > <a </div> </div>) )}</div> </div> </section> Ready to Get Started? </h2> <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Choose from our portfolio of 85+ specialized solutions. All services include comprehensive documentation;
 dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution and add more as your business grows. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" variant="secondary" size="lg" className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl" > Contact Sales <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl" > View All Pricing </Button> </div> </div> <Card key= {index;
@@ -5516,13 +5509,9 @@ export default function MicroSaasPage() {;
 
 
 }</>) import React from 'react';
-import React from 'react';
-import Head from 'next/head';
-
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
 
 
-import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
+
 export default function MicroSaasPage() {;
 
 
@@ -5551,32 +5540,20 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
-import Button from '../components/ui/Button';
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
-import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
 export default function MicroSaasPage() {;
 
 
 
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const microSaasServices = [
-import React from 'react';
-import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
-import Button from '../components/ui/Button';
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState($2);
   const microSaasServices = $2;
@@ -6897,11 +6874,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-import React from 'react',;
-import Head from 'next/head',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react',;
 
 
 
@@ -6917,21 +6889,13 @@ import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, 
 
 
 
-import React from 'react',;
-import Head from 'next/head',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react',;
 
 
 
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All'),;
 
 
 
@@ -6956,23 +6920,18 @@ export default function MicroSaasPage() {;
       title: 'Seamless Integration'
       description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
 
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
 
 export default function MicroSaasPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const microSaasServices = [;
     {;
       name: 'AI Content Generator Pro',;
       tagline: 'Professional AI-powered content creation',;
@@ -10289,7 +10248,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-  const industryTrends = [;
     {trend: 'AI Integration';
       description: 'Every service includes AI-powered features for enhanced automation and intelligence.';
       impact: 'High';
@@ -10307,7 +10265,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       impact: 'High';
     }
   ];
-  const categories  = [...new Set(microSaasServices.map(service => service.category))];const competitiveAdvantages = [;
     {title: "Specialized Focus";
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.";
       icon: "🎯";
@@ -11106,10 +11063,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   ],
 
-  const categories = [...new Set(microSaasServices.map(service => service.category))],
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-  const competitiveAdvantages = [
     {
       title: "Specialized Focus",
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
@@ -11170,9 +11125,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   ],
 
-  const categories = [...new Set(microSaasServices.map(service => service.category))],
 
-  const competitiveAdvantages = [
     {
       title: "Specialized Focus",
   ],
@@ -11229,7 +11182,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   const categories = [...new Set(microSaasServices && microSaasServices.map(service => service && service.category))];
 
 
-  const competitiveAdvantages = [
     {
       title: "Specialized Focus",
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
@@ -11467,7 +11419,6 @@ dedicated support, enterprise - grade reliability, and 14 - day free trials. Sta
   /* CTA Section */;
 }</>) import React from 'react';
 import Head from 'next / head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
 import Button from '../components / ui / Button';
 export default /**;
  * MicroSaasPage - Function description;
@@ -12456,7 +12407,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const microSaasServices = null;
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
 origin/cursor/automate-test-improve-and-merge-code-2533

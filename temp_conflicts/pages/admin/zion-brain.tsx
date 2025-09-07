@@ -43,14 +43,12 @@ export default function ZionBrainAdmin() {
 
   async function handleEvaluateReflex() {
     const res = await fetch('/api/zion-brain/reflex', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify(metrics) }),
-    const data = await res.json(),
     setTriggers(data.triggers || []),
     await refreshLogs()
   }
 
   async function handleOptimize() {
     const res = await fetch('/api/zion-brain/optimize', { method: 'POST', headers: { 'Content-Type': 'application/json', ...authHeaders }, body: JSON.stringify({ prompt, userIntent }) }),
-    const data = await res.json(),
     setOptimized(data.optimized || ''),
     await refreshLogs()
   }

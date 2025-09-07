@@ -270,9 +270,7 @@ Generated on ${new Date().toISOString()}
     return props;
   }
   extractComponentDescription(content) {
-    const commentMatch = content.match(/\/\*\*[\s\S]*?\*\//);
     if (commentMatch) {
-      const descriptionMatch = commentMatch[0].match(/@description\s+(.+)/);
       if (descriptionMatch) {
         return descriptionMatch[1].trim();
       }
@@ -389,9 +387,6 @@ generator.run().catch(error => {
  * Automatically generates and updates documentation;
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 class DocsGenerator {}
   constructor() {}
@@ -411,7 +406,6 @@ class DocsGenerator {}
     };
   };
   log(message) {}
-    const timestamp = new Date().toISOString();
 
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -539,7 +533,6 @@ class DocsGenerator {}
       markdown += "**"File": ** \"${relativePath}\"\n\n";
       
       try {}
-        const content = fs.readFileSync(file, 'utf8');
         
         // Extract component name (simplified);
         const componentMatch = content.match(/(?:export\s+(?:default\s+)?(?:function|const|class)\s+)(\w+)/);
@@ -626,7 +619,6 @@ class DocsGenerator {}
     };
   };
   generateReadmeContent(projectInfo, existingContent) {}
-    const timestamp = new Date().toISOString();
     
     let readme = `# ${projectInfo.name}\n\n`;`
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`

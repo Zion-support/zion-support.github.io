@@ -95,7 +95,6 @@ title: 'Business Intelligence',
     }
   ];
 
-const stats = [
     {
       number: '2000+',
   label: 'Revolutionary Services',
@@ -122,7 +121,6 @@ const stats = [
     }
   ];
 
-const testimonials = [
     {
 name: 'Dr. Sarah Chen',
   role: 'Chief AI Officer',
@@ -231,7 +229,6 @@ className='min-h-screen flex items-center justify-center px-4 relative overflow-
         'Autonomous business intelligence with consciousness insights',href: '/autonomous - healthcare - ai - ecosystem',
   color: 'from - yellow - 500 to - orange - 500',gradient: 'bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20'}];
 
-const stats = [
   {number: '2000+'}
   label: 'Revolutionary Services',icon: Star,color: 'from - yellow - 400 to - orange - 500'},{number: '99.99%'}
   label: 'Uptime Guarantee',icon: TrendingUp,color: 'from - green - 400 to - emerald - 500'},{number: '24 / 7'}
@@ -245,7 +242,6 @@ const testimonials = ["
 },{ number: \"150+\", label: \"Countries Served\", icon: Globe, color: \"from - blue - 400 to - cyan - 500\"}
 }
 
-const testimonials = [
   {name: 'Dr. Sarah Chen',
   role: 'Chief AI Officer',company: 'QuantumTech Industries'}
   content:;}"

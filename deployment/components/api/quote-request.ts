@@ -23,12 +23,9 @@ const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||;
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
-const openaiApiKey = process.env.OPENAI_API_KEY;
 
-const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey,}
 }) : null;
 
 export default async function handler(

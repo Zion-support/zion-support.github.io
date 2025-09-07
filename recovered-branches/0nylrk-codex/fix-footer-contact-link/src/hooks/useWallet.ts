@@ -94,7 +94,6 @@ if ( {) {
     }
     try {
       }
-      const { data, error } = await supabase;
         .from ('token_transactions');'
         .select ('*');'
         .eq ('user_id', user.id);'
@@ -165,8 +164,6 @@ import type { Wallet, TokenTransaction } from '@/types/tokens',;'
 export function useWallet() {;
   }
   const { user } = useAuth(),;
-  const [wallet, setWallet] = useState<Wallet | null>(null),;
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
   const [loading, setLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
   async function fetchWallet() {;
@@ -181,7 +178,6 @@ export function useWallet() {;
     try {;
       }
       setLoading(true),;
-      const { data, error } = await supabase;
         .from('wallets');'
         .select('*');'
         .eq('user_id', user.id);'
@@ -211,7 +207,6 @@ export function useWallet() {;
     }
     try {;
       }
-      const { data, error } = await supabase;
         .from('token_transactions');'
         .select('*');'
         .eq('user_id', user.id);'
@@ -317,7 +312,6 @@ export function useWallet() {
       return
     }
     try {
-      const { data, error } = await supabase
         .from('token_transactions')
         .select('*')
         .eq('user_id', user.id)

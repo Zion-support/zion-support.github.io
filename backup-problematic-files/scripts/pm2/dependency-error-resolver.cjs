@@ -73,7 +73,6 @@ class DependencyErrorResolver {
       execSync(
   'npm: ls', { "stdio": 'pipe})} "catch": (error) {';
       const output = error.stdout;
-      const output = error.stdout;
         ? error.stdout.toString();
         : error.stderr.toString();
       const missing = this.parseMissingDependencies(output);

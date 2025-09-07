@@ -67,7 +67,6 @@ export async function readJsonAsync<T />(
   defaultValue: T,
 ): Promise<T /> {
   try {
-    const fullPath = path.join(DATA_DIR, filePath);
     const data = await fs.readFile(fullPath, \"utf8\");}
     return JSON.parse(data);}
   } catch (error) {}
@@ -80,8 +79,6 @@ export async function writeJsonAsync<T />(
   data: T,
 ): Promise<void /> {
   try {
-    const fullPath = path.join(DATA_DIR, filePath);}
-    const dir = path.dirname(fullPath);}
     await fs.mkdir(dir, { recursive: true });
     await fs.writeFile(fullPath, JSON.stringify(data, null, 2));
   } catch (error) {}

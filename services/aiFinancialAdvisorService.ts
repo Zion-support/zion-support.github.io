@@ -563,7 +563,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.recommendations || [];
     } catch (error) {
       }
@@ -571,7 +570,6 @@ return data && data.recommendations || [];
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.recommendations || [];
     } catch (error) {
       }
@@ -607,7 +605,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.plan;
     } catch (error) {
       }
@@ -627,7 +624,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.goals || [];
     } catch (error) {
       }
@@ -647,7 +643,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.analysis;
     } catch (error) {
       }
@@ -663,12 +658,10 @@ throw error;
     }
     try {
       }
-      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {`        }
         "headers": {
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.analysis;
     } catch (error) {
       }
@@ -714,7 +707,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.rebalancing;
     } catch (error) {
       }
@@ -768,7 +760,6 @@ export class AIFinancialAdvisorService {private "api_key": string;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.calculation;
     } catch (error) {
       }
@@ -854,7 +845,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.goals || [];
     } catch (error) {
       }
@@ -874,7 +864,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.analysis;
     } catch (error) {
       }
@@ -921,7 +910,6 @@ if ( {) {
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.optimization;
     } catch (error) {
       }
@@ -1105,7 +1093,6 @@ if ( {) {$2;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.report;
     } catch (error) {
       }
@@ -1155,7 +1142,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.optimization;
     } catch (error) {
       }
@@ -1186,7 +1172,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.report;
     } catch (error) {
       }
@@ -1571,7 +1556,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json();
       return data.portfolio;
     } catch (error) {;
       }
@@ -1615,7 +1599,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json(),;
       return data.plan;
     } catch (error) {;
       }
@@ -1634,7 +1617,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json(),;
       return data.goals || [];
     } catch (error) {;
       }
@@ -1653,7 +1635,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json(),;
       return data.analysis;
     } catch (error) {;
       }
@@ -1688,7 +1669,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json(),;
       return data.rebalancing;
     } catch (error) {;
       }
@@ -1717,7 +1697,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json(),;
       return data.calculation;
     } catch (error) {;
       }
@@ -1746,7 +1725,6 @@ export class AIFinancialAdvisorService {;
         }
         throw new Error(`HTTP error! "status": ${response.status}`);`      }
 ;
-      const data = await response.json(),;
       return data.optimization;
     } catch (error) {;
       }
@@ -1777,7 +1755,6 @@ export class AIFinancialAdvisorService {;
         throw new Error(`HTTP error! "status": ${response.status}`);`
       }
 ;
-      const data = await response.json(),;
       return data.report;
     } catch (error) {;
       }

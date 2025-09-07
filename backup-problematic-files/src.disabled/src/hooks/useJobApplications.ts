@@ -107,7 +107,6 @@ export default function Page() {;
     }
     try {;
       }
-      const { error } = await supabase;
         .from("job_applications");"
         .update({ ;
           "status": "viewed","

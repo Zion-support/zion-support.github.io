@@ -31,7 +31,6 @@ return false; // No conflicts to fix;
 // Function to fix corrupted files by restoring proper formatting
 function fixCorruptedFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
     // Check if file is corrupted (missing line breaks in key places)
     if (!content.includes('const ') || content.includes('const ' && !content.includes('\n'))) {
       console.log(`File appears corrupted, skipping: ${filePath}`);

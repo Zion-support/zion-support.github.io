@@ -2,14 +2,10 @@ import { cn } from "@/lib/utils";"
 import React from "react","
 import { cn } from "@/lib/utils","
 import {cn} from "@/lib/utils";"
-import React from "react","
-import { cn } from "@/lib/utils","
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   }
   className?: string,
   children?: React.ReactNode,
-import React from "react","
-import { cn } from "@/lib/utils","
   children?: React && React.ReactNode;
 }
 
@@ -29,19 +25,10 @@ className={cn(
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200""
         }
         className,
-import { cn } from "@/lib/utils";"
-import React from "react","
-import { cn } from "@/lib/utils","
-import {cn} from "@/lib/utils";"
-import React from "react","
-import { cn } from "@/lib/utils","
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   }
   className?: string,
   children?: React.ReactNode,
-import React from "react","
-import { cn } from "@/lib/utils","
-import {cn} from "@/lib/utils";"
 interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   }
   className?: string;
@@ -58,7 +45,6 @@ className={cn(
         }
         className,
 import React from "react";"
-import { cn } from "@/lib/utils";"
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {;
   }
   className?: string,;

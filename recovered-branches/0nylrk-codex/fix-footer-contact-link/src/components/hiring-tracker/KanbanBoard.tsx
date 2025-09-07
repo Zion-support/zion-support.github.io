@@ -101,7 +101,6 @@ return;
 ;
 
 // Define the kanban board columns based on application statuses;
-const COLUMNS = [;
   {;
     }
     "id": "new",;"
@@ -221,7 +220,6 @@ interface DropResult {
   destination?: DnDLocation | null;
 }
 // Define the kanban board columns based on application statuses;
-const COLUMNS = [;
   {
     }
     "id": "new","
@@ -279,7 +277,6 @@ if ( {) {
   }, [applications]);
 ;
   // Handle drag end event to update the application status;
-  const handleDragEnd = async ("result": DropResult) => {
     }
     const { destination, source, draggable_id } = result;
 ;

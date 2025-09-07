@@ -62,7 +62,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 
 export default function UltraFuturisticBackground() {
   }
-  const getBackgroundClasses = () => {
    ;
   }
   const baseClasses = 'min-h-screen relative overflow-hidden';'
@@ -103,7 +102,6 @@ const "UltraFuturisticBackground": React.FC<UltraFuturisticBackgroundProps> = ({
   enableNeonEffects = true,
   enableSpaceTime = true,
 variant = 'quantum',;'
-import React from 'react';'
 interface UltraFuturisticBackgroundProps {
   }
   "children": React.ReactNode;
@@ -121,12 +119,10 @@ const "UltraFuturisticBackground": React.FC<UltraFuturisticBackgroundProps> = ({
 
 
 
-  const getBackgroundClasses = () => {
    ;
   }
   const baseClasses = 'relative overflow-hidden';'
     
-    const baseClasses = 'relative overflow-hidden';'
     switch (variant) {
       }
       case 'quantum':'

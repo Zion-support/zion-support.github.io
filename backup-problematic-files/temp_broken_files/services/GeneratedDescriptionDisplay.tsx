@@ -117,7 +117,6 @@ ursor/fix-lint-push-and-merge-to-main-"e10e":src/components/services/GeneratedDe
  } = useToast ();
 const [isEditing, setIsEditing] = useState (false);
 const [editedDescription, setEditedDescription] = useState (description);
-const handleSave = () => {;
   }
   onSave (editedDescription);
 setIsEditing (false);

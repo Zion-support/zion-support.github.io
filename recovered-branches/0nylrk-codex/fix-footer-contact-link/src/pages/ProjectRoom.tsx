@@ -92,7 +92,6 @@ import {toast} from 'sonner';
         title={`Project Room - ${projectId}`}
         description="Collaborate on your project"
       />
-import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -124,7 +123,6 @@ export default function ProjectRoom() {
       isMuted: false}
   ]),
   
-  const startVideoCall = () => {
     setIsInCall($2);
     toast.success($2);
     // Switch to video tab if not already there
@@ -133,7 +131,6 @@ export default function ProjectRoom() {
     }
   },
   
-  const endVideoCall = () => {
     setIsInCall($2);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"

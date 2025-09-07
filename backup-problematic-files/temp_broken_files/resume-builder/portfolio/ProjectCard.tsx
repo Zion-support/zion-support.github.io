@@ -117,7 +117,6 @@ export function ProjectCard() {;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}";"
 ursor/fix-lint-push-and-merge-to-main-"e10e":src/components/resume-builder/portfolio/ProjectCard.tsx;
   ),;}
- const handleDelete = () => {;
   }
   if (project.id) {;
   />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) ;"

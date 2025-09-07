@@ -1,15 +1,16 @@
-import React from \"react\","
-import fs from \"fs\";"
-import path from \"path\";
+import React from \"react\,
+import fs from \"fs\";
+import path from \path\";
 
 
-import React from "react","
-import fs from "fs";"
-import path from "path";"
+
+import React from 'react;
+import fs from fs';
+import path from 'path;
 
 type Experiment = any;
-import React from 'react';'
-import fs from 'fs';'
+import React from react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 import path from 'path';'
 
@@ -21,9 +22,9 @@ hypothesis?: string;
 metric?: string;
 effort?: number;impact?: number;
 }
-import React from "react";
-import fs from "fs";
-import path from "path";
+import React from "react;
+import fs from fs";
+import path from "path;
 type Experiment = $2;
   hypothesis?: string,
   metric?: string,
@@ -33,127 +34,62 @@ type Experiment = $2;
 
 type Props = {
 
-  }
 
-  "updatedAt": string | null;
-"items": Experiment[]
-};
-
-export default function CurationPage() {
-}
-return (;
-<main className = 'mx-auto max-w-4xl px-4 py-12'>'
-      <h1 className='text-2xl font-bold text-gray-900'>'
-        AI Curated Growth Experiments
-      </h1>
-        <p className='mt-2 text-sm text-gray-600'>Last "updated": {updatedAt}</p>'
-      ) : (
-        <p className='mt-2 text-sm text-gray-600'>'
-          No curated output yet. It will appear here automatically after the,
-next run.
-        </p>
-      
-}
-      <div className='mt-6 space-y-4'>'
-        {items.map((exp, idx) => (
-          <div
-}
-key={idx}
-            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm''
-          >
-            <div className='text-base font-semibold text-gray-900'>'
-              {exp.title}
-            </div>
-            {(exp.hypothesis |exp.metric) && (
-              <div className='mt-2 text-sm text-gray-700'>'
-                {exp.hypothesis && (
-                  <div>
-                    <span className='font-medium'>"Hypothesis": </span>{' '}'
                     {exp.hypothesis}
                   </div>
                 )}
                 {exp.metric && (
-                  <div>
-                    <span className='font-medium'>"Metric":</span> {exp.metric}'
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                   </div>
                 )}
               </div>
             )}
-            {(exp.effort |exp.impact) && (
-              <div className='mt-2 text-xs text-gray-500'>'
-                {exp.effort ? `"Effort": ${exp.effort}/5` : null}`                {exp.effort && exp.impact ? ' · ' : null}'
-                {exp.impact ? `"Impact": ${exp.impact}/5` : nul,`}
-return (;
- ;
-return (;
-    <main className='mx-auto max-w-4xl px-4 py-12'>;'
 
-      <h1 className='text-2xl font-bold text-gray-900'>;'
-        AI Curated Growth Experiments;
-      </h1>;
-        <p className='mt-2 text-sm text-gray-600'>Last "updated": {updatedA,'
-}</p>;
-      ) : (<p className='mt-2 text-sm text-gray-600'>;'
-          No curated output yet. It will appear here automatically after the;
-          next run.;
-        </p>;
-      )}<div className='mt-6 space-y-4'>;'
-        {items.map((exp, idx) => (<div;
-            }
+
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+  return (
+
+  return (
+    <main className='mx-auto max-w-4xl px-4 py-12    />
+      <h1 className=text-2xl font-bold text-gray-900'    />
+        AI Curated Growth Experiments
+      </h1>
+        <p className='mt-2 text-sm text-gray-600    />Last updated: {updatedA}
+}</p>
+      ) : (<p className=mt-2 text-sm text-gray-600'    />
+          No curated output yet. It will appear here automatically after the
+          next run.
+        </p>
+      )}<div className='mt-6 space-y-4    />
+        {items.map((exp, idx) => (<div;}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
             key={idx}
-            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>'
-
-            <div className='text-base font-semibold text-gray-900'>;'
+            className=rounded-xl border border-gray-200 bg-white p-5 shadow-sm';
+          >;
+            <div className='text-base font-semibold text-gray-900>;
               {exp.title}
             </div>;
-            {(exp.hypothesis |exp.metric) && (<div className='mt-2 text-sm text-gray-700'>;'
+            {(exp.hypothesis |exp.metric) && (<div className=mt-2 text-sm text-gray-700'>;
                 {exp.hypothesis && (<div>;
-                    <span className='font-medium'>"Hypothesis": </span>{' '}'
-                    {exp.hypothesi
-}
+                    <span className='font-medium>Hypothesis:</span>{ '}
+                    {exp.hypothesis}
                   </div>;
                 )}
                 {exp.metric && (<div>;
-                    <span className='font-medium'>"Metric": </span> {exp.metri,'
-}
+                    <span className='font-medium>Metric:</span> {exp.metric}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                   </div>;
                 )}
               </div>;
             )}
-            {(exp.effort |exp.impact) && (<div className='mt-2 text-xs text-gray-500'>;'
-                {exp.effort ? `"Effort": ${exp.effort}/5` : null}`                {exp.effort && exp.impact ? ' · ' : null}'
-                {exp.impact ? `"Impact": ${exp.impact}/5` : nul,`}
-  return (return (<main className='mx-auto max-w-4xl px-4 py-12'>;'
-      <h1 className='text-2xl font-bold text-gray-900'>;'
-        AI Curated Growth Experiments;
-      </h1>;
-        <p className='mt-2 text-sm text-gray-600'>Last "updated": {updatedA,'
-}</p>;
-      ) : (<p className='mt-2 text-sm text-gray-600'>;'
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
           No curated output yet. It will appear here automatically after the;
           next run.;
         </p>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            key={idx}
-            className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm'>'
 
-            <div className='text - base font - semibold text - gray - 900'>;'
-              {exp.title}
-            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>;'
-            <div className='text-base font-semibold text-gray-900'>;'
-              {exp && exp.title}
-            </div>;
-            {(exp && exp.hypothesis || exp && exp.metric) && (<div className='mt-2 text-sm text-gray-700'>;'
-                {exp && exp.hypothesis && (<div>;<span className='font-medium'>"Hypothesis": </span>{' '}'
-                    {exp && exp.hypothesi
-}
-                  </div>;
-                )}
-                {exp && exp.metric && (<div>;
-                    <span className='font-medium'>"Metric": </span> {exp && exp.metri,'
-}
                   </div>;
                 )}
               </div>;
@@ -161,92 +97,15 @@ return (;
             )}
           </div>;
         ))}
-        {!items && items.length && (<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;"
-            }
-            Nothing to show yet.;
-          </div>;
 
-export default function CurationPage() {return (<main className="mx-auto max-w-4xl px-4 py-12">;"
-      <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>;"
-      {updatedAt ? (<p className="mt-2 text-sm text-gray-600">Last "updated": {updatedA,"
-}</p>;
-      ) : (<p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>;"
-      )}
-      <div className="mt-6 space-y-4">;"
-        {items.map((exp, idx) => (<div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">;"
-            <div className="text-base font-semibold text-gray-900">{exp.title}</div>;"
-            {(exp.hypothesis || exp.metric) && (<div className="mt-2 text-sm text-gray-700">;"
-                {exp.hypothesis && <div><span className="font-medium">"Hypothesis": </span> {exp.hypothesis}</div>}"
-                {exp.metric && <div><span className="font-medium">"Metric":</span> {exp.metric}</div,"
-}
-              </div>;
-            )}
-            {(exp.effort || exp.impact) && (<div className="mt-2 text-xs text-gray-500">;"
-                {exp.effort ? `"Effort": ${exp.effort}/5` : null}`                {exp.effort && exp.impact ? " · " : null}"
-                {exp.impact ? `"Impact": ${exp.impact}/5` : null}`                {exp.impact ? `"Impact": ${exp.impact}/5` : nul,`
-}</div>;
-            )}
-          </div>
-        ))}
-        {!items.length && (
-          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
-
-        {!items.length && (
-
-<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>'
-            }
-            Nothing to show yet.
-          </div>
-        )}
-      </div>
-    </main>
-  );
-export async function getStaticProps() {
-  }
-  try {;
-
-}
-
-const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");"
-
-const raw = fs.readFileSync(filePath, "utf8");"
-
-const parsed = JSON.parse(raw);
-    );
-
-const raw = fs.readFileSync(filePath, 'utf8');'
-
-const parsed = JSON.parse(raw);
-    return {
       }
       "props": {
 
-        }
 
-        "updatedAt": parsed.updatedAt || null,
-"items": parsed.items || []
-      },
-      "revalidate": 300
-    };
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   } catch {
-    }
     return {
-      }
-      "props": {
-        }
-        "updatedAt": null,
-"items": []
-      },
-      "revalidate": 300
-    };
-  }
-      "revalidate": 300}
-}
-}
-'"`
-=======
-}
+      props: {
+        updatedAt: null,
 
-}
-}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

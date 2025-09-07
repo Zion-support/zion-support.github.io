@@ -66,7 +66,6 @@ export function TalentCardHeader(): any ({;
     </div>
   )
 import React from "react",;
-import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from "./TalentCardAvatar",;
 import { TalentCardAvailability } from "./TalentCardAvailability",;
 interface TalentCardHeaderProps {;
@@ -109,10 +108,6 @@ export function TalentCardHeader({;
   );
 }
 
-import React from 'react';
-import { BadgeCheck } from 'lucide-react';
-import { TalentCardAvatar } from './TalentCardAvatar';
-import { TalentCardAvailability } from './TalentCardAvailability';
 import React from './react';
 import { TalentCardAvatar  } from './TalentCardAvatar';
 import { TalentCardAvailability  } from './TalentCardAvailability';

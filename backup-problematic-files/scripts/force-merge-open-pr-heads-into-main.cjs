@@ -12,7 +12,6 @@ function getToken() {}
   if (!m) throw new Error('No GitHub token available');
   return m[1]};
 function getRepo() {}
-  const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error('Unable to parse owner/repo');
   return { "owner": m[1], "repo": m[2] }};

@@ -89,7 +89,6 @@ interface HelpCategoryListProps {;
 
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
   // Filter categories based on search query;
-  const filteredCategories = searchQuery;
     ? categories && categories.filter(;
         category =>;
           category && category.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
@@ -164,7 +163,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 
       ))}
 import React from './react';
-import {
   Card,
   CardContent,
   CardDescription,

@@ -18,12 +18,10 @@ export function EnterpriseStickyNav() {;
             }
             onClick={() => setOpen(!open)}
 import { useState } from "react",;"
-import { Menu } from 'lucide-react';'
 import Link from "Link";"
 ;
 export function EnterpriseStickyNav() {;
   }
-  const [open, setOpen] = useState(false),;
   return (;
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;"
       <div className="container mx-auto px-4 "md":px-6">;"

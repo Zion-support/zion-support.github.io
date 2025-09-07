@@ -30,7 +30,6 @@ interface GradientHeadingProps {
 }
 export function GradientHeading() {;"
   }
-  const Tag = level;
 export function GradientHeading() {"
   }
   const Tag = level,;
@@ -50,7 +49,6 @@ interface GradientHeadingProps {;
 ;
 export function GradientHeading() {;"
   }
-  const Tag = level;
   return (;
     <Tag;
       className={cn(;
@@ -71,7 +69,6 @@ export /**
  */
 function GradientHeading() {
   }
-  const Tag = level;
 ;
 return (;
     <Tag;

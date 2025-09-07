@@ -163,7 +163,6 @@ const benefits = [
   },
 ];
 
-const benefits = [
   {
     title: '80% Reduction in Manual Work',
     description: 'Automate repetitive tasks and focus on high-value activities',
@@ -192,13 +191,11 @@ const benefits = [
 ];
 }
 
-import { motion } from 'framer-motion';
 import {;
   Zap, Brain, Code, Shield, Users, TrendingUp,;
   CheckCircle, ArrowRight, Star, Clock, Target,;
   Cpu, Rocket, Globe, BarChart3, Settings;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';

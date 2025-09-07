@@ -99,11 +99,9 @@ function FeatureHighlights() {
 ;
 return (;
 import React from "react";"
-import { Card, CardContent } from "@/components/ui/card";"
 import { Check } from "lucide-react",;"
 import React from "React";"
 import { Card, CardContent } from "@/components/ui/card",;"
-import { Check } from "lucide-react",;"
   const highlightsData = [;
     {;
       }

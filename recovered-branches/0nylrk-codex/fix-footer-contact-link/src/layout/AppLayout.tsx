@@ -15,7 +15,6 @@ return (;
       <main className="flex-grow">"
 }
 import React from "react";"
-import { AppHeader } from "./AppHeader";"
 import { Footer } from "@/components/Footer",;"
 ;
 interface AppLayoutProps {;
@@ -36,7 +35,6 @@ export function AppLayout() {;
 }
 import React from "React";"
 import { AppHeader } from "./AppHeader",;"
-import { Footer } from "@/components/Footer",;"
 interface AppLayoutProps {;
   }
   "children": React.ReactNode;

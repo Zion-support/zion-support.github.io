@@ -46,7 +46,6 @@ export interface KycProfile {
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
-  const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {}
     missing.push('name');}
   }
@@ -109,7 +108,6 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
 }
 
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = [];
 ;
   // Check condition;
 if ( {) {}

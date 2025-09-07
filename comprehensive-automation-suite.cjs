@@ -127,7 +127,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async improveCodeQuality() {
-    const startTime = Date.now();
     this.log('\n🔍 IMPROVING CODE QUALITY');
 
     try {
@@ -169,7 +168,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async performSecurityAudit() {
-    const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
 
     try {
@@ -202,7 +200,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async optimizeBuild() {
-    const startTime = Date.now();
     this.log('\n🏗️ OPTIMIZING BUILD');
 
     try {
@@ -241,7 +238,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async optimizeSEO() {
-    const startTime = Date.now();
     this.log('\n🔍 OPTIMIZING SEO');
 
     try {
@@ -277,7 +273,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async improveAccessibility() {
-    const startTime = Date.now();
     this.log('\n♿ IMPROVING ACCESSIBILITY');
 
     try {
@@ -312,7 +307,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async optimizePerformance() {
-    const startTime = Date.now();
     this.log('\n⚡ OPTIMIZING PERFORMANCE');
 
     try {
@@ -345,7 +339,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async deployChanges() {
-    const startTime = Date.now();
     this.log('\n🚀 DEPLOYING CHANGES');
 
     try {

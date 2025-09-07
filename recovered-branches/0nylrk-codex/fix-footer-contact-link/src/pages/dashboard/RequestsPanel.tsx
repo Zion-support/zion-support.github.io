@@ -73,8 +73,6 @@ function RequestsPanel() {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
 import type { QuoteRequest } from "@/types/quotes","
 import { ProtectedRoute } from "@/components/ProtectedRoute","
 export default function RequestsPanel() {
@@ -83,7 +81,6 @@ const { user } = useAuth(),;
 const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;'
 const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
 const [showDetails, setShowDetails] = useState(false),;
-  const {
     }
     quotes,
     unreadCount,
@@ -108,7 +105,6 @@ if (quote.status === 'new') {'
   // Filter quotes by archive status,
 const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
-import React, { useState } from "react";"
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer",;"
 import { useTalentQuotes } from "@/hooks/useTalentQuotes",;"
@@ -124,11 +120,6 @@ import type { QuoteRequest } from "@/types/quotes",;"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 export default function RequestsPanel() {;
   }
-  const { user } = useAuth(),;
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;'
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
-  const [showDetails, setShowDetails] = useState(false),;
-  const {;
     }
     quotes,;
     unreadCount,;

@@ -126,7 +126,6 @@ import {;
   Wallet,;'
 } from 'lucide-react';'
 import { LanguageSelector } from '@/components/header/LanguageSelector';
-import {;
   HoverCard,;
   HoverCardTrigger,;
   HoverCardContent,;'
@@ -134,7 +133,6 @@ import {;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';'
 import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector } from '@/components/header/LanguageSelector';'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';'
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';'
 import { LoginModal } from '@/components/auth/LoginModal';
 
 interface MainNavigationProps {;

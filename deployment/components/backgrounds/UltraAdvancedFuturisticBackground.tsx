@@ -283,7 +283,6 @@ ctx.save();
 if (particle.type = == 'quantum') {
           // Quantum particle with wave effect;
          ;
-  const gradient = ctx.createRadialGradient(
             0;
 0,
 0;
@@ -386,7 +385,6 @@ ctx.stroke();
       // Add holographic matrix effect;
 if (enableHolographic && theme = == 'holographic') {
        ;
-  const time = Date.now() * 0.001;
         ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
         ctx.lineWidth = 1;
 

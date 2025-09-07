@@ -37,7 +37,6 @@ const canvasRef = useRef<HTMLCanvasElement />(null)const containerRef =;
 const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-let animationFrameId: number;
     let particles: Array<{
       x: number;
 
@@ -55,7 +54,6 @@ if (return) {$2;}
 const ctx = canvas.get_context ('2d')// Check condition;
 if (return) {$2;}
 }
-    let animationFrameId: number;
     let particles: Array<{coordinate_x: number;
       coordinate_y: number;
       vx: number;
@@ -223,15 +221,12 @@ type === 'neon' ? colors && colors.primary : colors && colors.secondary,type;
 const createQuantumEntanglement = (if (!enableQuantumEffects);
   return;for (let i = 0; i < particles && particles.length; i++) {for (let j = i + 1; j < particles && particles.length; j++) {const dx = particles[i].x - particles[j].x;
 
-const dy = particles[i].y - particles[j].y;
 
 const distance  = Math && Math.sqrt(dx * dx + dy * dy)if (distance < 100 &&;
             particles[i].type === 'quantum' &&;
             particles[j].type === 'quantum';
           ) {            ctx && ctx.beginPath()for (let i = 0, i < particles && particles.length, i++) {for (let j = i + 1, j < particles && particles.length, j++) ;
-  const dx = particles[i].x - particles[j].x;
 
-const dy = particles[i].y - particles[j].y;
 ) => {
   return $3;}
 }

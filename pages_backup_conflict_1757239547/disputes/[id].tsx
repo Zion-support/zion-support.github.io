@@ -7,7 +7,6 @@ const fetcher = null;
     mutate()
   }
 
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 import {useCurrentUser} from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
@@ -39,14 +38,9 @@ export default function DisputeDetailPage() {
     });
     setResolutionSummary('');
     mutate();  }
-  const router = useRouter();
   const { id } = router.query as { id?: string };
-  const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
-  const user = useCurrentUser();
-  const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
   const [message, setMessage] = useState('');
-  const [resolutionSummary, setResolutionSummary] = useState('');
   async function sendMessage() {;
     if (!message.trim() || !id) return,;
     await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) }),;

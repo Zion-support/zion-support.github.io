@@ -321,7 +321,6 @@ case "summary": setCurrentStep ("budget");"
 break;
 }
 };
-const handleSubmit = async () => {;
   }
   setIsSubmitting (true);
 try {";"
@@ -354,7 +353,6 @@ try {;
   setAutoFillLoading (false) ;
 }
 };
-const renderStepContent = () => {;
   }
   switch (currentStep) {;
   }

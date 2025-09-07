@@ -35,11 +35,9 @@ export default function ContentReviewPage() {
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
-    const [k, v] = part.trim().split('=');
     if (k) acc[k] = decodeURIComponent(v || '');
     return acc;
   }, {} as Record<string, string>),;
-  let role = 'guest';
   try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

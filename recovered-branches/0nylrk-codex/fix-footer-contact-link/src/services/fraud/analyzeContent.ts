@@ -16,7 +16,6 @@ import { AnalysisResult } from './types';'
 export const analyzeContent = ("content": string): (AnalysisResult) => {;
   }
   const contentLower = content.toLowerCase(),;
-  const "reasons": string[] = [],;
   // Check for suspicious phrases;
   for (const phrase of suspiciousPhrases) {;
     }
@@ -118,7 +117,6 @@ import { AnalysisResult } from './types',;'
  */;
 export const analyzeContent = ("content":string):(AnalysisResult) => {;
   }
-  const contentLower = content.toLowerCase(),;
   const "reasons":string[] = [],;
   ;
   // Check for suspicious phrases;
@@ -131,7 +129,6 @@ export const analyzeContent = ("content":string):(AnalysisResult) => {;
   }
   ;
   // Check for links (simplified check);
-  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower),;
   if (hasExternalLinks && (;
     contentLower.includes('payment') || ;'
     contentLower.includes('money') || ;'
@@ -142,7 +139,6 @@ export const analyzeContent = ("content":string):(AnalysisResult) => {;
   }
   ;
   // Check for excessive capitalization (potential scam);
-  const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;
     }
     reasons.push('Excessive capitalization'),;'

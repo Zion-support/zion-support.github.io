@@ -41,7 +41,6 @@ export interface WhitelabelContextType {
 };
   "tenant": WhitelabelTenant | null;
 }
-const "defaultContext": WhitelabelContextType = {
   }
   "isWhitelabel": false,
   "primaryColor": "#9b87f5", // Default Zion purple"
@@ -63,7 +62,6 @@ const "defaultContext": WhitelabelContextType = {
 
 // The context may be undefined if the provider is not mounted.  By declaring
 // the generic as `WhitelabelContextType | null` we get proper type checking`// without falling back to an empty object which triggers TS2740 errors.
-const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 export const useWhitelabel = (): (WhitelabelContextType) => {
   }
   const context = useContext(WhitelabelContext);

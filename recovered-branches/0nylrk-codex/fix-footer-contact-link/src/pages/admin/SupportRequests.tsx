@@ -117,7 +117,6 @@ import { Search, Filter } from "lucide-react",;"
 import { AppLayout } from "@/layout/AppLayout",;"
 import { SEO } from "@/components/SEO",;"
 // Mock data for support requests;
-const MOCK_SUPPORT_REQUESTS = [;
   {;
     }
     "id": "SR-1001",;"

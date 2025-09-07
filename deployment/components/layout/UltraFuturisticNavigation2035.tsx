@@ -34,7 +34,6 @@ const contactInfo = {
 }
   featured?: boolean;
 
-const contactInfo = {
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

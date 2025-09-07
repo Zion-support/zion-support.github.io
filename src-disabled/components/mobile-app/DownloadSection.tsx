@@ -12,7 +12,6 @@ export const DownloadSection: React.FC = () => {
 
 
 import React from "react",;
-import { QrCodeIcon } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons",;
 import { logInfo } from '@/utils/productionLogger',;
 import { AppStoreButtons } from "./AppStoreButtons";

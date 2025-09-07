@@ -36,7 +36,6 @@ res: NextApiResponse;
 ) {
   const editionParam = (req.query.edition as string) |'full';
 
-const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam;
       : 'full';

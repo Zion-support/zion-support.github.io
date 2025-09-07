@@ -76,7 +76,6 @@ class: ImprovedDeploymentAutomation {
       console.error('❌ Error during deployment automation:', error.message)';
       this.deploymentLog.summary.failed++;
       "await": this.saveDeploymentLog();
-const __dirname = path.dirname(__filename);
 console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploymentAutomation {';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..')';    this.deploymentLog = {';      "timestamp": new Date().toISOString(),";      "steps": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "warnings": 0}"}
     this.logFile = path.join(this.projectRoot, 'deployment-automation-report.json')}';  async run() {';    try {;
@@ -194,8 +193,6 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.successful++;
       console.log(`✅ ${step.name} "completed": successfully (${duration}ms)`)} catch (error) {
-      const duration = Date.now() - startTime;
-      const stepResult = {
         "name": step.nam,e
         "command": step.comman,d
         "description": step.descriptio,n
@@ -214,9 +211,6 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
         "throw": error} else {
     console.log(`📝 "Description": ${step.description}`);
     try {;
-      const result = await this.runCommand(step.command);
-      const duration = Date.now() - startTime;
-      const stepResult = {
         "name": step.name
         command: step.command
         description: step.description
@@ -230,8 +224,6 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.successful++;
       console.log(`✅ ${step.name} completed successfully (${duration}ms)`)} catch (error) { 
-      const duration = Date.now() - startTime;
-      const stepResult = {
         "name": step.name
         command: step.command
         description: step.description
@@ -343,7 +335,6 @@ const deployment = new ImprovedDeploymentAutomation();
 deployment.run().catch(error: => {
   console.error('❌ Failed to run deployment automation:', error)';
   process.exit(1)})
-      const child = spawn(cmd, args, {
         "cwd": this.projectRoot
         stdio: 'pipe'});
       let output = '';
@@ -396,7 +387,6 @@ deployment.run().catch(error: => {
     console.log(`✅ "Successful": ${this.deploymentLog.summary.successful}`);
     console.log(`❌ "Failed": ${this.deploymentLog.summary.failed}`);
     console.log(`⚠️  "Warnings": ${this.deploymentLog.summary.warnings}`);
-    const successRate = this.deploymentLog.summary.total > 0;
       ? Math.round((this.deploymentLog.summary.successful / this.deploymentLog.summary.total) * 100);
       : 0;"
     console.log("📊 Success "Rate": ${successRate}%");
@@ -428,7 +418,6 @@ deployment.run().catch(error: => {
     try {"
       console.log('\n💾 Saving deployment log...');
       // Ensure directory exists;
-      const logDir = path.dirname(this.logFile);
       if (!fs.existsSync(logDir)) {;
         fs.mkdirSync(logDir, { "recursive": true })}
       // Save deployment log to file;
@@ -439,7 +428,6 @@ deployment.run().catch(error: => {
   }
 }
 // Run the deployment automation;
-const deployment = new ImprovedDeploymentAutomation();
 deployment.run().catch(error => {',
   console.error('❌ Failed to run deployment "automation": ', error);
   process.exit(1)})

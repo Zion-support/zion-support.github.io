@@ -65,8 +65,6 @@ import { toast } from "sonner",import {logErrorToProduction} from '@/utils/produ
             <Switch;
   },const handleDownloadSolidity = () => {// Create a blob from the Solidity code;
     }
-    const blob = new Blob([solidityCode], { "type": 'text/plain' }),const url = URL.createObjectURL(blob),// Create a temporary anchor to trigger download;'
-    const a = document.createElement('a'),a.href = url,a.download = 'ZionContract.sol',document.body.appendChild(a),a.click(),// Clean up;'
     URL.revokeObjectURL(url),document.body.removeChild(a),toast.success("Solidity contract downloaded")},return (import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';'
 import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast  } from 'sonner';'
 interface SmartContractDeploymentProps  {"solidityCode": string,"onDeploy": ("options": DeploymentOptions,) => Promise<void>,"isDeploying": boolean;

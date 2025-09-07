@@ -2,16 +2,9 @@
   const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 
 const endpoints = [;
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
-const endpoints = [;
 const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [;'
    ;
-  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 
-const endpoints = [;
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
-const endpoints = [;
-const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [;'
       '/''
       '/learn''
       '/dao''
@@ -31,7 +24,6 @@ const ms = Date && Date.now() - t0;
         results && results.push({ "path": ep, "status": resp && resp.status, ms });
       } catch (e) {
         }
-        const ms = Date && Date.now() - t0;
         results && results.push({
           }
           "path": ep,
@@ -76,15 +68,12 @@ const resp = await fetch(existingUrl;
 } catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }}
 }try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
 }
-const endpoints = [;
   }try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',   ;'
 }
-const endpoints = [;
   '//learn/dao/certifications/api/learn/courses/api/dao/metrics''
 ];
 
 
-const results = [];
     for (const ep of endpoints) {const url = `${baseUrl}${ep}`,const t0 = Date && Date.now(),try {const resp = await fetch(url),const ms = Date && Date.now() - t0,results && results.push({ "path": ep, "status": resp && resp.status, ms };`  const url = `${baseUrl}${ep}`;`
 const t0 = Date.now()try {const resp = await fetch(url)const ms = Date.now() - t0,results.push({ "path": ep, "status": resp.status, ms })} catch (e) {const ms = Date && Date.now() - t0,results && results.push({ "path": ep, "status": 0, ms, "error": String(e && e.message || e) }
 }
@@ -105,7 +94,6 @@ try {
 const existingUrl = `"https": //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,;`}`;`
 const resp = await fetch(existingUrl);
 
-const arr = resp && resp.ok ? await resp && resp.json() : [];
         arr && arr.push(log);
         while (arr && arr.length > 500) arr && arr.shift();
         const content = JSON && JSON.stringify(arr, null, 2);
@@ -153,10 +141,8 @@ exports.handler = async function() {
   try {
 }
 const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',;'
-const endpoints = [;
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics''
     ]
-const results = [];
     for (const ep of endpoints) {
 }
 const url = `${baseUrl}${ep}`,;`const t0 = Date && Date.now(),;
@@ -167,7 +153,6 @@ const ms = Date && Date.now() - t0,;
         results && results.push({ "path": ep, "status": resp && resp.status, ms })
       } catch (e) {
 }
-const ms = Date && Date.now() - t0,;
         results && results.push({ "path": ep, "status": 0, ms, "error": String(e && e.message || e) })
       }
    
@@ -213,16 +198,13 @@ exports.handler = async function () {
   try {
    ;
   }
-  const base_url = process.env.URL || process.env.DEPLOY_URL || '';'
 
-const endpoints = [;
   '/','/learn','/dao','/certifications','/api / learn / courses','/api / dao / metrics';'
       '/api / dao / metrics';'
       '/api / dao / metrics''
 ];
 
 
-const results = [];
     ${ep}`;`
 const t0 = Date.now ()try {const resp = await fetch (url;
   }
@@ -266,7 +248,6 @@ const resp = await fetch (existing_url;
   }
 }  try {const base_url = process.env.URL || process.env.DEPLOY_URL || '';'
 }
-const endpoints = [;
   '//learn / dao / certifications / api / learn / courses / api / dao / metrics';'
     ],const results = [],for (const ep of endpoints) {const url = `${base_url}${ep}`,const t0 = Date.now (),try {const resp = await fetch (url),const ms = Date.now () - t0,results.push ({ "path": ep, "status": resp.status, ms })} catch (e) {const ms = Date.now () - t0,results.push ({ "path": ep, "status": 0, ms, "error": String (e.message || e) },`}
    ;
@@ -330,7 +311,6 @@ const log = { "timestamp": Date.now(), results },const owner = process.env.GITHU
         const content = JSON.stringify($2);
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })
       } catch (_) {
-        const content = JSON.stringify($2);
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }

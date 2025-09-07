@@ -85,7 +85,6 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 
 
 export function appendToJsonArrayFile<T />(fileName: string, item: T): void {;
-  const items = readJsonFile<T[] />(fileName, []);
   items.push(item);}
   writeJsonFile<T[] />(fileName, items);}
 }

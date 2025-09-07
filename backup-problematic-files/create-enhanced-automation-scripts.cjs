@@ -10,8 +10,6 @@ class EnhancedAutomationScriptCreator {
     .toISOString()}] ${message}`)}
   createPerformanceMonitor() {
     const content = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 class PerformanceMonitor {
   constructor() {
@@ -138,10 +136,6 @@ monitor.run()
     this.createdCount++;
     this.log('✅ Created enhanced performance monitor')}
   createHealthChecker() {
-    const content = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
@@ -172,14 +166,12 @@ class HealthChecker {
     return results}
   async checkConfiguration() {
     this.log('⚙️ Checking configuration files');
-    const results = {
       "packageJson": { valid: false, "issues": [] },
       "nextConfig": { valid: false, "issues": [] },
       "tsConfig": { valid: false, "issues": [] }
     };
     // Check package.json
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
       results.packageJson.valid = true;
       if (!packageJson.scripts?.build) {
         results.packageJson.issues.push('Missing build script')}
@@ -215,9 +207,6 @@ class HealthChecker {
   async checkDependencies() {
     this.log('📦 Checking dependencies');
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      const results = {
         "total": Object.keys(dependencies).length,
         "missing": [],
         "outdated": []
@@ -232,7 +221,6 @@ class HealthChecker {
       return { "error": error.message }}
   }
   generateReport(results) {
-    const report = {
       "timestamp": new Date().toISOString(),
       "fileStructure": results.fileStructure,
       "configuration": results.configuration,
@@ -257,7 +245,6 @@ class HealthChecker {
       const fileStructure = await this.checkFileStructure();
       const configuration = await this.checkConfiguration();
       const dependencies = await this.checkDependencies();
-      const report = this.generateReport({
         fileStructure,
         configuration,
         dependencies
@@ -284,9 +271,6 @@ checker.run()
     this.createdCount++;
     this.log('✅ Created enhanced health checker')}
   createSEOOptimizer() {
-    const content = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 class SEOOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -295,7 +279,6 @@ class SEOOptimizer {
     .toISOString()}] \${message}\")}
   async checkMetaTags() {
     this.log('🏷️ Checking meta tags');
-    const results = {
       "pages": [],
       "issues": []
     };
@@ -329,7 +312,6 @@ class SEOOptimizer {
     return results}
   async checkSitemap() {
     this.log('🗺️ Checking sitemap');
-    const results = {
       "exists": false,
       "valid": false,
       "issues": []
@@ -349,7 +331,6 @@ class SEOOptimizer {
     return results}
   async checkRobotsTxt() {
     this.log('🤖 Checking robots.txt');
-    const results = {
       "exists": false,
       "valid": false,
       "issues": []
@@ -379,7 +360,6 @@ class SEOOptimizer {
     }
     return files}
   generateReport(results) {
-    const report = {
       "timestamp": new Date().toISOString(),
       "metaTags": results.metaTags,
       "sitemap": results.sitemap,
@@ -403,7 +383,6 @@ class SEOOptimizer {
       const metaTags = await this.checkMetaTags();
       const sitemap = await this.checkSitemap();
       const robotsTxt = await this.checkRobotsTxt();
-      const report = this.generateReport({
         metaTags,
         sitemap,
         robotsTxt
@@ -430,9 +409,6 @@ optimizer.run()
     this.createdCount++;
     this.log('✅ Created enhanced SEO optimizer')}
   createSecurityAuditor() {
-    const content = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 class SecurityAuditor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -441,7 +417,6 @@ class SecurityAuditor {
     .toISOString()}] \${message}\")}
   async checkEnvironmentVariables() {
     this.log('🔐 Checking environment variables');
-    const results = {
       "issues": [],
       "recommendations": []
     };
@@ -470,7 +445,6 @@ class SecurityAuditor {
     return results}
   async checkCodeSecurity() {
     this.log('🛡️ Checking code security');
-    const results = {
       "issues": [],
       "recommendations": []
     };
@@ -481,7 +455,6 @@ class SecurityAuditor {
     const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
         // Check for dangerous patterns
         if (content.includes('eval(') || content.includes('Function(')) {
           results.issues.push(\"Use of eval() in \${file}\")}
@@ -497,13 +470,10 @@ class SecurityAuditor {
     return results}
   async checkDependencies() {
     this.log('📦 Checking dependency security');
-    const results = {
       "issues": [],
       "recommendations": []
     };
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
       // Check for known vulnerable packages
       const vulnerablePackages = {
         'lodash': '< 4.17.21',
@@ -519,18 +489,13 @@ class SecurityAuditor {
       results.issues.push(\"Error reading package."json": \${error.message}\")}
     return results}
   getAllFiles(dir, extensions) {
-    let files = [];
-    const items = fs.readdirSync(dir);
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)}
     }
     return files}
   generateReport(results) {
-    const report = {
       "timestamp": new Date().toISOString(),
       "environment": results.environment,
       "code": results.code,
@@ -555,8 +520,6 @@ class SecurityAuditor {
     try {
       const environment = await this.checkEnvironmentVariables();
       const code = await this.checkCodeSecurity();
-      const dependencies = await this.checkDependencies();
-      const report = this.generateReport({
         environment,
         code,
         dependencies
@@ -617,8 +580,6 @@ creator
 const fs = require('fs')
 const path = require('path')
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
     this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')
     this.log(' Checking build performance')

@@ -421,7 +421,6 @@ const "HealthDashboard":React.FC = () => {;
   ),;
 },;
 ;export default HealthDashboard, 
- const fetchHealthData = async () => {;
   }
   try {;
   }

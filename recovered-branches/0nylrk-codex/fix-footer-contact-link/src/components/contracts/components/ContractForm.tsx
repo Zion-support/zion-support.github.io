@@ -99,7 +99,6 @@ export function ContractForm({
   const [isGenerating, setIsGenerating] = useState($2);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
   const { toast } = useToast($2);
-  const form = useForm<ContractFormValues>({
     resolver: zodResolver($2);
     defaultValues: initialValues || {
       projectName: "",
@@ -153,7 +152,6 @@ export function ContractForm({
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
   },
   
-  const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating($2);
     try {
       const contract = await generateContract($2);

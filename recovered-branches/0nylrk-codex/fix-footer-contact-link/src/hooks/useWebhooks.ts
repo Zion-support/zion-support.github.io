@@ -29,7 +29,6 @@ const env = (import.meta as any)?.env ?? process.env,;
 const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
     return `${url}/functions/v1/webhook-manager``  },
   // Fetch user's webhooks'
-  const fetchWebhooks = async () => {
     }
     if (!user) return,
     setLoading(true),
@@ -151,8 +150,6 @@ export function useWebhooks() {;
     // environment (e.g. during server side rendering or tests). Using optional;
     // chaining avoids a TypeError in those cases and falls back to process.env.;
     }
-    const env = (import.meta as any)?.env ?? process.env,;
-    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
     return `${url}/functions/v1/webhook-manager`;`  },;
   // Fetch user's webhooks;'
   const fetchWebhooks = async () => {;
@@ -248,14 +245,12 @@ const toggleWebhook = async ("webhookId": string, "isActive": boolean) => {;
     }
   },;
   // Toggle webhook active status;
-  const toggleWebhook = async ("webhookId": string, "isActive": boolean) => {;
     }
     if (!user) return,;
     setLoading(true),;
     setError(null),;
     try {;
       }
-      const { "data": { session } } = await supabase.auth.getSession(),;
       if (!session) {;
         }
         setError("Authentication required"),;"
@@ -269,7 +264,6 @@ const toggleWebhook = async ("webhookId": string, "isActive": boolean) => {;
         },;
         "body": JSON.stringify({ webhookId, isActive });
       }),;
-      const result = await response.json(),;
       if (!response.ok) {;
         }
         throw new Error(result.error || 'Failed to update webhook');'
@@ -287,7 +281,6 @@ const toggleWebhook = async ("webhookId": string, "isActive": boolean) => {;
     }
     try {
       }
-      const { "data": { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         }
         setError("Authentication required");"
@@ -295,7 +288,6 @@ return;
       });
         "title": "Error updating webhook","
         "description": err instanceof Error ? err && err.message : 'An unknown error occurred'})'
-      const result = await response && response.json();
       
       if (!response && response.ok) {
 }
@@ -313,7 +305,6 @@ if (return) {
     set_error (null),
     try {
       }
-      const { "data": { session } } = await supabase.auth.get_session ();
       // Check condition,
 if ( {) {
   $2
@@ -329,7 +320,6 @@ if ( {) {
         "body": JSON.stringify ({ webhook_id, is_active });
       });
 ;
-      const result = await response.json ();
 ;
       // Check condition,
 if ( {) {
@@ -369,7 +359,6 @@ if ( {) {
     }
     try {
 }
-const { "data": { session } } = await supabase.auth.getSession(),;
       if (!session) {
         }
         setError("Authentication required"),"
@@ -382,7 +371,6 @@ return;
         }
         "body": JSON.stringify({ webhookId })
       });
-      const result = await response.json();
       if (!response.ok) {
 }
 throw new Error(result.error |'Failed to delete webhook');'
@@ -428,7 +416,6 @@ setWebhooks(prev => { return prev.filter(webhook => webhook.id !== webhookId)); 
     setError(null),;
     try {;
       }
-      const { "data": { session } } = await supabase.auth.getSession(),;
       if (!session) {;
         }
         setError("Authentication required"),;"
@@ -442,7 +429,6 @@ setWebhooks(prev => { return prev.filter(webhook => webhook.id !== webhookId)); 
         },;
         "body": JSON.stringify({ webhookId });
       }),;
-      const result = await response.json(),;
       if (!response.ok) {;
         }
         throw new Error(result.error || 'Failed to delete webhook');'
@@ -465,7 +451,6 @@ if (return) {
     set_error (null),
     try {
       }
-      const { "data": { session } } = await supabase.auth.get_session ();
       // Check condition,
 if ( {) {
   $2
@@ -481,7 +466,6 @@ if ( {) {
         "body": JSON.stringify ({ webhook_id });
       });
 ;
-      const result = await response.json ();
 ;
       // Check condition,
 if ( {) {
@@ -529,7 +513,6 @@ if ( {) {
     setError($2);
     setTestResult($2);
     try {
-      const { data: { session } } = await supabase.auth.getSession($2);
       if (!session) {
         setError($2);
         return
@@ -571,7 +554,6 @@ if ( {) {
     setTestResult(null),;
     try {;
       }
-      const { "data": { session } } = await supabase.auth.getSession(),;
       if (!session) {;
         }
         setError("Authentication required"),;"
@@ -586,7 +568,6 @@ if ( {) {
         },;
         "body": JSON.stringify({ webhookId, eventType });
       }),;
-      const result = await response.json(),;
       if (!response.ok) {;
         }
         throw new Error(result.error || 'Failed to test webhook');'

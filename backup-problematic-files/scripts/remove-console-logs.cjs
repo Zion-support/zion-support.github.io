@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
-const { glob } = require('glob');
+const path = require(path');
+const { glob } = require('glob);
 
 /**
  * Script to remove console.log statements from production builds
@@ -16,20 +16,20 @@ const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   // Keep console.error for debugging
 ];
 
-const EXCLUDE_PATTERNS = ['node_modules',
-  '.next',
-  'dist',
-  'build',
-  'coverage',
-  'scripts',
-  '*.test.*',
-  '*.spec.*'
+const EXCLUDE_PATTERNS = [node_modules',
+  '.next,
+  dist',
+  'build,
+  coverage',
+  'scripts,
+  *.test.*',
+  '*.spec.*
 ];
 
 function shouldProcessFile(filePath) {
   return !EXCLUDE_PATTERNS.some(pattern => {
-    if (pattern.includes('*')) {
-      return filePath.includes(pattern.replace('*', ''))}
+    if (pattern.includes(*')) {
+      return filePath.includes(pattern.replace('*, '))}
     return filePath.includes(pattern)})}
 
 function removeConsoleStatements(content) {
@@ -40,18 +40,18 @@ function removeConsoleStatements(content) {
     const matches = modifiedContent.match(pattern);
     if (matches) {
       removedCount += matches.length;
-      modifiedContent = modifiedContent.replace(pattern, '')}
+      modifiedContent = modifiedContent.replace(pattern, ')}
   });
 
-  return { "content": modifiedContent, removedCount }}
+  return { "content: modifiedContent, removedCount }}
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const { "content": newContent, removedCount } = removeConsoleStatements(content);
+    const content = fs.readFileSync(filePath, utf8');
+    const { content": newContent, removedCount } = removeConsoleStatements(content);
     
     if (removedCount > 0) {
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      fs.writeFileSync(filePath, newContent, 'utf8);
       
       return removedCount}
     
@@ -60,12 +60,8 @@ function processFile(filePath) {
     return 0}
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+function getAllFiles(dir, extensions = [.js', '.jsx, .ts', '.tsx]) {
   let results = [];
   const list = fs.readdirSync(dir);
   
@@ -85,14 +81,8 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   
   return results;
 }
-<<<<<<< HEAD
-function main() {
-=======
 
-function main() {
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-  const srcDir = path.join(process.cwd(), 'src');
+  const srcDir = path.join(process.cwd(), src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
@@ -113,25 +103,19 @@ function main() {
     }
   }
 
-  console.log("\n📊 Summary: ");
+  console.log("\n📊 Summary: );
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Console statements "removed": ${totalRemoved}`);
+  console.log(`   Console statements removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 if (require.main === module) {
   main().catch(console.error)}
 
-<<<<<<< HEAD
-module.exports = { removeConsoleStatements, processFile };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

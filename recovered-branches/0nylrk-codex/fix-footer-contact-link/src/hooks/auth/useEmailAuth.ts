@@ -219,7 +219,6 @@ export const useEmailAuth = $2;
           }
           "title": "Password reset failed","
   "description": error.message,
-const resetPassword = async ("email": string) => {
     }
     try {
       }

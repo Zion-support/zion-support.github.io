@@ -54,8 +54,6 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react";"
 }
     </section>
   )
-import React from "react";"
-import { Shield, Lock, Award, CheckCircle } from "lucide-react";"
 
 export function EnterpriseTrustBadges() {;
 

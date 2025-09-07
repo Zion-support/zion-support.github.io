@@ -605,7 +605,6 @@ if ( {') {$2;'
   setVerificationMessage ('Failed to resend verification email.')}finally {setIsResending (false)}'
 const handleCheckStatus = () =>: any {';'
   }
-  const email = form.get_values ('email')// Check condition;'
 if ( {') {$2;'
 }
   form.set_error ('root', {';'
@@ -630,7 +629,6 @@ if ( {') {$2;'
   "method": 'email' ;'
 })}finally {setIsSubmitting (false)}const handleResendEmail = async () => {';'
   }
-  const email = form.getValues ('email')if (!email) {';'
   }
   form.setError ('root', {';'
   }
@@ -639,7 +637,6 @@ if ( {') {$2;'
 }setIsResending (true)';'
 setVerificationMessage ('')try {';'
   }
-  const response = await fetch ('/api/auth/resend-verification-email', {';'
   }
   "method": 'POST';'
 "headers": {';'
@@ -653,7 +650,6 @@ setVerificationMessage ('')try {';'
   }
   setVerificationMessage ('Failed to resend verification email.')}finally {setIsResending (false)}const handleCheckStatus = () => {';'
   }
-  const email = form.getValues ('email')if (!email) {';'
   }
   form.setError ('root', {';'
   }

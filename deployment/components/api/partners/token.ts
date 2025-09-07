@@ -34,7 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
  
 }
 
-const { apiKey, ttlSeconds } = req.body |{}
   if (!apiKey) {}
     return res.status(400).json({ error: 'apiKey required'}
 });

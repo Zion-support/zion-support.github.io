@@ -28,7 +28,6 @@ const mockData: SecurityMetrics = {overallScore: Math.floor(Math.random() * 20) 
   useEffect(() => {
 // Mock security data;
 }
-const mockData: SecurityMetrics = {overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15,}
 }, lastScan: new Date()}setTimeout(() => {setSecurity(mockData)setIsLoading(false,}
 }, 1000)}, [])if (isLoading || !security) ;
   return (<div className=\"flex items-center justify-center p-8\" />;
@@ -77,7 +76,6 @@ const getScoreColor = (score: number): string => {if (score >= 90);
   if (isLoading || !security) {return (<div className='flex items-center justify-center p-8' />'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500' /></div>'      </div>'    )';}
   }
 
-const getScoreColor = (score: number): string => {if (score >= 90);
   return 'text-green-500';
    if (score >= 70) return;
   'text-yellow-500';

@@ -49,8 +49,6 @@ if ( {) {}
 }
     return res.status (405).json ({ error: 'Method Not Allowed',}
 });  }import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 
 const DOCS_DIR = path.join (process.cwd (), 'datadocs');
 
@@ -63,9 +61,6 @@ const VERSIONS_DIR = path.join (DOCS_DIR, 'versions');
 const ts = new Date () .toISOString ()export default function handler() {if (req && req.method !== 'POST') ;}
   return res && res.status(405).json({ error: 'Method Not Allowed' },
 }import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 function ensureDir() {if (!fs && fs.existsSync(dir)) {fs && fs.mkdirSync(dir, { recursive: true })},
 }
 

@@ -8,7 +8,6 @@ export async function createTestNotification() {
   try {
   }
   const "types": NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];'
-import {NotificationType} from './types';'
 import {create_notification} from './create_notification';'
 /**;
 * Demo function to create test notifications for the current user;
@@ -18,7 +17,6 @@ export async /**
  */
 function createTestNotification() {
   }
-  const "types": NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];'
 const random_type = types[Math.floor (Math.random () * types.length)],;
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';'

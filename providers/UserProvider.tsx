@@ -4,7 +4,6 @@ import React, {createContext,useContext,useEffect,useMemo,useState} from 'react'
 export type UserRole = 'client' | 'talent';export type User = {id: string;
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 export type UserRole = 'client' | 'talent';
 
@@ -85,7 +84,6 @@ const DEFAULT_USER: User = {;
   onboardingCompleted: false}
 ;
 export function UserProvider({ children }: { children: React.ReactNode }) {;
-  const [user, setUser] = useState<User | null>(null);
 
     const storedUser = localStorage.getItem('user');
     if (storedUser) {}
@@ -148,7 +146,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
 export function useUser() {;
-  const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
 }

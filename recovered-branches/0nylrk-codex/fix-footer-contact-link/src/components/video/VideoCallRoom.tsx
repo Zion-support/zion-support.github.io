@@ -16,7 +16,6 @@ import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume
   isScreenSharing?: boolean,
   isHost?: boolean
   };
-import React, { useState } from 'react';'
 import { Button } from "@/components/ui/button";"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
 import { Badge } from "@/components/ui/badge",;"
@@ -178,7 +177,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     }
   },
 
-  const handleToggleAudioOnly = () => {
     setIsAudioOnly($2);
     if (!isAudioOnly) {
       setIsVideoEnabled($2);
@@ -203,7 +201,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
     }
-    const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);    if (onToggleScreenShare) {;
       }
       onToggleScreenShare(newScreenShareState);
@@ -281,7 +278,6 @@ export const "VideoCallRoom": React.FC < VideoCallRoomProps> = ({
     }
     const hrs = Math.floor (seconds / 3600);
     const mins = Math.floor ((seconds % 3600) / 60);
-const secs = seconds % 60,;
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;`  }
 ;
   const handleToggleMute = () =>: any {
@@ -317,7 +313,6 @@ if ( {) {
 ;
   const handleToggleScreenShare = () =>: any {
     }
-    const newScreenShareState = !isScreenSharing;
     setIsScreenSharing (newScreenShareState);
     // Check condition,
 if ( {) {

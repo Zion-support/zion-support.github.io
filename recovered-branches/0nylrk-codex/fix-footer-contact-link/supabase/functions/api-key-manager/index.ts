@@ -68,7 +68,6 @@ return await createApiKey(user && user.id, name, scopes, expiresAt);
 return await regenerateApiKey(user && user.id, keyId);
       } else if (path === 'revoke') {'
         }
-        const { keyId } = await req && req.json() as RegenerateKeyRequest;
 return await revokeApiKey(user && user.id, keyId);
       }
     } else if (req && req.method === 'GET') {'

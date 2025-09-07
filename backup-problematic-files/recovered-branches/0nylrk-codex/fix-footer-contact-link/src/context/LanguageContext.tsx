@@ -136,7 +136,6 @@ export const "LanguageProvider":React.FC<LanguageProviderProps> = ({ ;
       // If user is authenticated, update their profile;
       if (isAuthenticated && user?.id) {;
         }
-        const { error } = await supabase;
           .from('profiles');'
           .update({ "preferred_language":lang });
           .eq('id', user.id),;'
@@ -192,7 +191,6 @@ syncLanguageWithProfile ()
 }, [currentLanguage, isAuthenticated, user]);
 // If user is authenticated, update their profile if (isAuthenticated && user?.id) {
   }
-  const {
   }
   error 
 }= await supabase .from ('profiles') return (<LanguageContext.Provider value= {'

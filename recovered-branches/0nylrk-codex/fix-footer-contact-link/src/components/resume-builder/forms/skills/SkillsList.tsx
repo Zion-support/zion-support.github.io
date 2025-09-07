@@ -17,7 +17,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 }
-const [skillsByCategory, setSkillsByCategory] = useState<;
     Record<string, Skill[]>
   >({});
   useEffect(() => {

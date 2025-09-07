@@ -139,7 +139,6 @@ export const measurePerformance = () => {"; if (typeof window !== "undefined" &&
 
 }
 
-const navigation = performance.getEntriesByType("; "navigation"; )[0] as PerformanceNavigationTiming; return {; "loadTime": navigation.loadEventEnd - navigation.loadEventStart,"domContentLoaded": navigation.domContentLoadedEventEnd -; navigation.domContentLoadedEventStart,"firstPaint": "; performance.getEntriesByName("first-paint")[0]?.startTime || 0,"firstContentfulPaint": "; performance.getEntriesByName("first-contentful-paint")[0]?.startTime ||; 0} } return null}"
 
 interface WebVitalMetric {; "name": string; valu,"e": number; i,"d": strin
 } ;
@@ -158,7 +157,6 @@ export const measurePerformance = () => {"; if (typeof window !== "undefined" &&
 
 }
 
-const navigation = performance.getEntriesByType("; "navigation"; )[0] as PerformanceNavigationTiming; return {; "loadTime": navigation.loadEventEnd - navigation.loadEventStart,"domContentLoaded": navigation.domContentLoadedEventEnd -; navigation.domContentLoadedEventStart,"firstPaint": "; performance.getEntriesByName("first-paint")[0]?.startTime || 0,"firstContentfulPaint": "; performance.getEntriesByName("first-contentful-paint")[0]?.startTime ||; 0} } return null}"
 
 interface WebVitalMetric {; "name": string; valu,"e": number; i,"d": strin
 } ;
@@ -177,7 +175,6 @@ export const measurePerformance = () => {"; if (typeof window !== "undefined" &&
 
 }
 
-const navigation = performance.getEntriesByType("; "navigation"; )[0] as PerformanceNavigationTiming; return {; "loadTime": navigation.loadEventEnd - navigation.loadEventStart,"domContentLoaded": navigation.domContentLoadedEventEnd -; navigation.domContentLoadedEventStart,"firstPaint": "; performance.getEntriesByName("first-paint")[0]?.startTime || 0,"firstContentfulPaint": "; performance.getEntriesByName("first-contentful-paint")[0]?.startTime ||; 0} } return null}"
 
 interface WebVitalMetric {; "name": string; valu,"e": number; i,"d": strin
 } ;

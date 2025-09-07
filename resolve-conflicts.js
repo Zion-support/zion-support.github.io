@@ -36,7 +36,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/automate-test-improve-and-merge-code-646c;
-const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')const filesToFix = [;
   'pages/about.tsx','pages/ITServices.tsx','pages/ai-services.tsx','pages/api-docs.tsx','pages/api.tsx','pages/careers.tsx','pages/guides.tsx','pages/services.tsx','pages/contact.tsx','pages/micro-saas.tsx','pages/it-services.tsx','pages/index.tsx','pages/404.tsx','pages/cookies.tsx','pages/case-studies.tsx','pages/industries/index.tsx';
 ];function resolveConflicts() {try {let content  = fs.readFileSync(filePath, 'utf8')// Remove merge conflict markers and keep the "theirs" version (after;
     // Remove merge conflict markers and keep the "theirs" version (after )content = content.replace(/;
@@ -157,11 +156,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
-const filesToFix = [
   'pages/about.tsx',
   'pages/ITServices.tsx', 
   'pages/ai-services.tsx',
@@ -182,7 +177,6 @@ const filesToFix = [
 
 function resolveConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
     
     
     // Remove any remaining conflict markers

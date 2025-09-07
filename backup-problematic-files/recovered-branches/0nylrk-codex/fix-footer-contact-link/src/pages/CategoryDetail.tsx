@@ -148,7 +148,6 @@ export default function CategoryDetail() {;
     ),;
     ;
     // If we don't have real listings for this category, generate placeholder listings;'
-    const listingsToShow = filteredListings.length > 0 ? filteredListings :;
       Array(4).fill(null).map((_, index) => ({;
         }
         "id":`${slug}-${index}`,;`        "title":`${currentCategory.title} Product ${index + 1}`,,`  "description":`A great ${currentCategory.title.toLowerCase()} solution for your needs.`,;`        "category":currentCategory.title,;

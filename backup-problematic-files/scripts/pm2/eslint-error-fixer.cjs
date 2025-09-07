@@ -39,7 +39,6 @@ class ESLintErrorFixer {}
 
     this.fixedFiles = new Set()};
   log(level, message, data = null) {}
-    const timestamp = new Date().toISOString();
     const logEntry = {}
       timestamp,
       level,
@@ -91,10 +90,8 @@ class ESLintErrorFixer {}
       console.log(`[${timestamp}] "DEBUG": ${message}`, data)};
     this.writeToLog(logEntry)};
   writeToLog(logEntry) {}
-    const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { "recursive": true })};
-    const logFile = path.join(logDir, 'eslint-error-fixer.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting ESLint Error Fixer Service...');
@@ -241,9 +238,7 @@ class ESLintErrorFixer {}
       process.exit(1)};
   };
   ensureDirectories() {}
-    const dirs = ['logs/pm2', 'backups/eslint-fixes', 'temp', 'fixed-files'];
     dirs.forEach(dir => {})
-      const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
         fs.mkdirSync(fullPath, { "recursive": true })};
     })};
@@ -252,7 +247,6 @@ class ESLintErrorFixer {}
     
     try {}
       this.resetCounters();
-      const errors = await this.getESLintErrors();
       
       if (errors.length === 0) {}
         this.log('info', 'No ESLint errors found');
@@ -260,7 +254,6 @@ class ESLintErrorFixer {}
       this.log('info', `Found ${errors.length} ESLint errors`);
 
       // Group errors by file for efficient processing;
-      const errorsByFile = this.groupErrorsByFile(errors);
       
       for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {}
         if (this.fixesApplied >= 100) break; // Limit fixes per run;
@@ -302,21 +295,16 @@ class ESLintErrorFixer {}
       
       
       if (result) {}
-        const parsed = JSON.parse(result);
         return parsed || []};
       return []} catch (error) {}
       // Parse stderr for errors;
-      const stderr = error.stderr ? error.stderr.toString() : '';
       return this.parseESLintErrors(stderr)};
   };
   parseESLintErrors(stderr) {}
-    const errors = [];
-    const lines = stderr.split('\n');
 
     
     
     lines.forEach(line => {})
-      const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
         errors.push({})
           "filePath": match[1].trim(),
@@ -332,7 +320,6 @@ class ESLintErrorFixer {}
     
     return errors};
   groupErrorsByFile(errors) {}
-    const errorsByFile = {};
     
     errors.forEach(error => {})
       if (!errorsByFile[error.filePath]) {}
@@ -360,7 +347,6 @@ class ESLintErrorFixer {}
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       
       // Process errors in reverse order to maintain line numbers
-      const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       for (const error of sortedErrors) {
         if (error.line > lines.length) {
           this.fixesSkipped++;
@@ -385,23 +371,18 @@ class ESLintErrorFixer {}
         // Write fixed content
 
       // Process errors in reverse order to maintain line numbers;
-      const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       // Process errors in reverse order to maintain line numbers;
-      const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       
       for (const error of sortedErrors) {}
         if (error.line > lines.length) {}
           this.fixesSkipped++;
           continue};
-        const lineIndex = error.line - 1;
-        const line = lines[lineIndex];
 
         
         
         if (this.shouldSkipLine(line)) {}
           this.fixesSkipped++;
           continue};
-        const fixedLine = await this.fixESLintError(line, error, lines, lineIndex);
 
         
         
@@ -423,7 +404,6 @@ class ESLintErrorFixer {}
         
         
         // Write fixed content;
-        const fixedContent = lines.join('\n');
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         
         this.fixedFiles.add(filePath);
@@ -473,7 +453,6 @@ class ESLintErrorFixer {}
            trimmed.startsWith('export');
   }
   async fixESLintError(line, error, allLines, lineIndex) {
-    let fixedLine = line;
     // Fix common ESLint errors
     if (error.message.includes('no-unused-vars') || error.message.includes('@typescript-eslint/no-unused-vars')) {
       fixedLine = this.fixUnusedVariable(line, error);
@@ -497,10 +476,8 @@ class ESLintErrorFixer {}
 
            trimmed.startsWith('export')};
   async fixESLintError(line, error, allLines, lineIndex) {}
-    let fixedLine = line;
            trimmed.startsWith('export')};
   async fixESLintError(line, error, allLines, lineIndex) {}
-    let fixedLine = line;
     
     // Fix common ESLint errors;
     if (error.message.includes('no-unused-vars') || error.message.includes('@typescript-eslint/no-unused-vars')) {}
@@ -520,10 +497,8 @@ class ESLintErrorFixer {}
     const varName = varMatch[1];
         
     
-    const varName = varMatch[1];
         
     
-    const varName = varMatch[1];
         
     // Add underscore prefix to indicate intentionally unused
     if (line.includes(varName)) {
@@ -551,7 +526,6 @@ class ESLintErrorFixer {}
       // Check if it's reassigned later
       const varMatch = line.match(/var\s+(\w+)/);
       if (varMatch) {
-        const varName = varMatch[1];
         // Default to 'const' for now
         return line.replace(/\bvar\b/, 'const');
       }
@@ -586,7 +560,6 @@ class ESLintErrorFixer {}
   async createBackup(filePath) {
     try {
     
-    const varName = varMatch[1];
 
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
@@ -606,9 +579,7 @@ class ESLintErrorFixer {}
     // Change 'var' to 'const' or 'let'
     if (line.includes('var ')) {}
       // Check if it's reassigned later;
-      const varMatch = line.match(/var\s+(\w+)/);
       if (varMatch) {}
-        const varName = varMatch[1];
         // Default to 'const' for now;
         return line.replace(/\bvar\b/, 'const')};
     };
@@ -623,7 +594,6 @@ class ESLintErrorFixer {}
     if (line.includes('return') || line.includes('throw')) {}
       // Look for code after this line that might be unreachable;
       for (let i = lineIndex + 1; i < allLines.length; i++) {}
-        const nextLine = allLines[i].trim();
         if (nextLine && !nextLine.startsWith('//') && !nextLine.startsWith('/*')) {}
           // Comment out unreachable code;
           allLines[i] = `// ${allLines[i]} // eslint-disable-line no-unreachable`};
@@ -656,7 +626,6 @@ class ESLintErrorFixer {}
         stdio: 'pipe'
       });
       if (result) {
-        const parsed = JSON.parse(result);
         return parsed.length === 0; // No errors means fix was successful
       }
       return true;
@@ -692,7 +661,6 @@ class ESLintErrorFixer {}
       
       
       if (result) {}
-        const parsed = JSON.parse(result);
         return parsed.length === 0; // No errors means fix was successful;
       };
       return true} catch (error) {}
@@ -784,7 +752,6 @@ fixer.start().catch(error => {
     this.log('info', `ESLint fix report "generated": ${reportPath}`);
     return report};
   generateRecommendations() {}
-    const recommendations = [];
 
 
     if (this.fixesFailed > 0) {}
@@ -820,7 +787,6 @@ fixer.start().catch(error => {
       await this.performESLintFixes()})};
 };
 // Start the service;
-const fixer = new ESLintErrorFixer();
 
 
 // Handle graceful shutdown;

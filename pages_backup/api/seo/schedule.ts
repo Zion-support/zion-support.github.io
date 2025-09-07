@@ -20,7 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
   try {
-    const seedTopics = [
 
       'AI Devs in Brazil'
       'AI Devs in Kenya'
@@ -59,8 +58,3 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-import fs from 'fs';
-import path from 'path';
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });

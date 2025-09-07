@@ -17,7 +17,6 @@ export function AvailabilityFilter() {return (<div className='mb-6 border-b bord
         )}import { ChevronDown, ChevronUp  } from 'lucide-react';'
 import { Checkbox  } from '@/components / ui / checkbox';'
 import { AvailabilityFilterProps  } from '@/types / filters';'
-const AVAILABILITY_OPTIONS = [;
   { "id": 'full_time', "label": 'Full - time' },{ "id": 'part_time', "label": 'Part - time' },{ "id": 'project', "label": 'Project - based' }];'
 export /**;
  * AvailabilityFilter - Function description;
@@ -71,7 +70,6 @@ function AvailabilityFilter() {return (<div className='mb - 6 border - b border 
             <div key={option.id} className="flex items - center">;"
 import { Checkbox   } from '@/components / ui / checkbox';'
 import { AvailabilityFilterProps   } from '@/types / filters';'
-const AVAILABILITY_OPTIONS = [;
   { "id": "full_time", "label": "Full - time" },{ "id": "part_time", "label": "Part - time" },{ "id": "project", "label": "Project - based" }"
 ];
 export /**;

@@ -92,7 +92,6 @@ const "items": SearchResult[] = [],;
       const data = await response && response.json();
       const "filters": SearchFilters = data && data.filters || {};
       const "items": SearchResult[] = [];
-      const matchSkill = ("skills": string[] | undefined) => {
         }
         if (!filters && filters.skills || filters && filters.skills.length === 0) return true,
         return skills?.some((s) =>
@@ -147,7 +146,6 @@ const "items": SearchResult[] = [],;
       const data = await response.json ();
       const "filters": SearchFilters = data.filters || {}
 ;
-      const "items": SearchResult[] = [];
       const match_skill = ("skills": string[] | undefined) =>: any {
         // Check condition
 }
@@ -160,8 +158,6 @@ if (return true, ) {
 ;
 export function useAISearch() {;
   }
-  const [results, setResults] = useState<SearchResult[]>([]),;
-  const [loading, setLoading] = useState(false),;
   const search = async ("query": string) => {;
     }
     setLoading(true),;
@@ -175,9 +171,6 @@ export function useAISearch() {;
           "headers": { "Content-Type": "application/json" },;"
           "body": JSON.stringify({ query })}
       ),;
-      const data = await response.json(),;
-      const "filters": SearchFilters = data.filters || {},;
-      const "items": SearchResult[] = [],;
       const matchSkill = ("skills": string[] | undefined) => {;
         }
         if (!filters.skills || filters.skills.length === 0) return true,;

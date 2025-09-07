@@ -83,7 +83,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;"
       </Head>;
       <div className=\"min-h-screen bg-gray-50\">;"
-const "API": NextPage = () => {const apiEndpoints = [{"name": 'Services API',"endpoint": '/api/services',"method": 'GET',"description": 'Retrieve all available services',"response": 'Array of services';'
     },{"name": 'Contact API',"endpoint": '/api/contact',"method": 'POST',"description": 'Submit contact form',"response": 'Success message';'
     },{"name": 'Quote API',"endpoint": '/api/quote',"method": 'POST',"description": 'Request a quote',"response": 'Quote details';'
     }

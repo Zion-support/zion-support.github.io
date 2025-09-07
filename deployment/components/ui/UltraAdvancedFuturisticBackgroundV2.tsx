@@ -41,7 +41,6 @@ const ctx = canvas.getContext('2d')if (!ctx);
     canvas.height = window.innerHeight;
 
 
-let animationFrameId: number;
     let particles: Array<{
       coordinate_x: number;
 

@@ -35,7 +35,6 @@ if ( {) {$2;
     }
     try {setIsLoading (true)// Check if Ethereum provider (e.g., MetaMask) is available;
       }
-      const ethereum = (window as any).ethereum;
       // Check condition;
 if ( {) {$2;
 }

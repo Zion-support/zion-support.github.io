@@ -96,7 +96,6 @@ const data = [;
     { "label": 'Churn rate', "value": '2.4%', "trend": -0.3,'
 }
 
-const data = [;
   { "label": 'Monthly Recurring Revenue (MRR)', "value": '$220,450', "trend": 8.2,'
 }{ "label": 'GMV', "value": '$4.8M', "trend": 5.1,'
 }{ "label": 'Active users (monthly)', "value": 18452, "trend": 3.9,'
@@ -133,7 +132,6 @@ const data = [;
     { "label": 'Churn rate', "value": '2.4%', "trend": -0.3,'
 }
 
-const data = [;
     { "label": 'Monthly Recurring Revenue (MRR)', "value": '$220,450', "trend": 8.2,'
 };
     { "label": 'GMV', "value": '$4.8M', "trend": 5.1,'

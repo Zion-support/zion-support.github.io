@@ -629,7 +629,6 @@ interface Deployment {;
 }
 ;
 // Mock data - replace with actual API calls;
-const "mockDeployments": Deployment[] = [;
   {;
     }
     "id": "deploy-001",;"
@@ -757,7 +756,6 @@ key={key}
 "use client",import { useState, useEffect } from "react",import {Rocket,Clock,CheckCircle,AlertCircle,Play,Eye,Settings,Globe,Activity,Calendar,User,Building2,Shield,TrendingUp,Users,Zap,Sparkles,ArrowRight,RefreshCw,Pause,StopCircle,MapPin;"
 } from "lucide-react",interface Deployment  {"id": string,"instanceName": string,"status": 'pending' | 'deploying' | 'completed' | 'failed' | 'paused',"createdAt": string,"updatedAt": string,"progress": number,"features": string[],"vertical": string,"governanceType": string,domain?: string,subdomain?: string,region?: string,country?: string;'
 }// Mock data - replace with actual API calls;
-const "mockDeployments": Deployment[] = [;
   {"id": "deploy-001","instanceName": "Zion Health Network","status": "completed","createdAt": "2024-01-"15T10":"30":00Z","updatedAt": "2024-01-"15T11":"45":00Z","progress": 100,"features": ["marketplace", "zion_gpt", "kyc_aml", "dao_voting"],"vertical": "HEALTH","governanceType": "DAO_FULL","domain": "health.zion.network","region": "North America","country": "United States";"
   },{"id": "deploy-002","instanceName": "EduDAO Academy","status": "deploying","createdAt": "2024-01-"15T14":"20":00Z","updatedAt": "2024-01-"15T15":"10":00Z","progress": 65,"features": ["academy", "zion_gpt", "incubator_grants"],"vertical": "EDUCATION","governanceType": "DAO_LITE","subdomain": "edu","region": "Europe","country": "Germany";"
   },{"id": "deploy-003","instanceName": "LegalTech DAO","status": "pending","createdAt": "2024-01-"15T16":"00":00Z","updatedAt": "2024-01-"15T16":"00":00Z","progress": 0,"features": ["marketplace", "onchain_contracts", "web3_login"],"vertical": "LAW","governanceType": "DAO_FULL","domain": "legal.zion.network","region": "Asia Pacific","country": "Singapore";"

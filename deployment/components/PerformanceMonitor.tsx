@@ -215,7 +215,6 @@ const timer = setTimeout(() => {setIsVisible(true)}, 3000)clearTimeout(timer)}
           </div>;
         )}
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps /> = ({ onPerformanceData   ,}
 }) => {
 
 
@@ -254,11 +253,9 @@ const observer = new PerformanceObserver((list) => ;}
         'paint', 'largest-contentful-paint';}
       ] })}
 
-const measurePerformance = () => ;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 
 const paint = performance.getEntriesByType('paint';
-  const performanceData = {// Navigation timing;
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,loadComplete: navigation.loadEventEnd - navigation.loadEventStart,totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,// Paint timing;
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,// Resource timing;}
         resourceCount: performance.getEntriesByType('resource').length,// Memory usage (if available)memory: (performance as any).memory ? {used: (performance as any).memory.usedJSHeapSize,total: (performance as any).memory.totalJSHeapSize,limit: (performance as any).memory.jsHeapSizeLimit;}
@@ -408,7 +405,6 @@ const getScoreText = (if (value <= thresholds.good);
       </div>;
     </div>;
 
-const getScoreColor = (if (value <= thresholds.good);
   return 'text-green-600';
    if (value <= thresholds.poor) return;
   'text-yellow-600';
@@ -418,7 +414,6 @@ const getScoreColor = (if (value <= thresholds.good);
 }
  }'';
 
-const getScoreText = (if (value <= thresholds.good);
   return;
   'Good';
    if (value <= thresholds.poor) return;
@@ -555,7 +550,6 @@ interface PerformanceMonitorProps {
 }
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps /> = ({ onPerformanceData   ,}
 }) => {
 
 
@@ -570,7 +564,6 @@ if (typeof window = == 'undefined' || typeof performance === 'undefined') {
 
 const measurePerformance = (
      ;
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 
 const paint = performance.getEntriesByType('paint');
 

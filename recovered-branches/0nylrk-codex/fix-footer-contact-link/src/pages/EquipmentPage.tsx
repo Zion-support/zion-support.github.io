@@ -23,7 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-const EquipmentPage = () => {;
   return (
   return (
     <div className="container mx-auto px-4 py-8">;
@@ -77,6 +76,5 @@ export default EquipmentPage;
 
 export default EquipmentPage;
 export default EquipmentPage,
-import React from 'react';
 const EquipmentPage = $2;
 export default EquipmentPage,

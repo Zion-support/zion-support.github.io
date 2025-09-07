@@ -71,7 +71,6 @@ caseStudies}
     return res && res.status(405).json({ error: 'Method not allowed',}
 });
 
-const {
     slug,
     name,
     services_offered,
@@ -99,7 +98,6 @@ const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStud
       slug;
       name;
 
-const vendor = registerVendor({
       slug;
       name;
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];

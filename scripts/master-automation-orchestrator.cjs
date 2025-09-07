@@ -58,7 +58,6 @@ class MasterAutomationOrchestrator {
   }
 
   log(message) {
-    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     const logMessage = `${prefix} [${timestamp}] ${message}`;
     console.log(logMessage);
@@ -165,9 +164,7 @@ class MasterAutomationOrchestrator {
       },
     ];
 
-    const results = [];
     for (const script of testingScripts) {
-      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -187,9 +184,7 @@ class MasterAutomationOrchestrator {
       },
     ];
 
-    const results = [];
     for (const script of performanceScripts) {
-      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -209,9 +204,7 @@ class MasterAutomationOrchestrator {
       },
     ];
 
-    const results = [];
     for (const script of buildScripts) {
-      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -243,7 +236,6 @@ class MasterAutomationOrchestrator {
       },
     ];
 
-    const results = [];
     for (const script of additionalScripts) {
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });
@@ -497,7 +489,6 @@ class MasterAutomationOrchestrator {
     }
 
     // Save comprehensive report
-    const report = {
       timestamp: new Date().toISOString(),
       duration,
       results: this.results,

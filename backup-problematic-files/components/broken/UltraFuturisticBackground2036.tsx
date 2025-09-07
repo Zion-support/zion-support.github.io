@@ -189,7 +189,6 @@ export default function UltraFuturisticBackground2036() {;
     },;
     const drawDataStreams = ("ctx": CanvasRenderingContext2D, "canvas": HTMLCanvasElement, "multiplier": number) => {;
       }
-      const time = Date.now() * 0.001,;
       for (let i = 0, i < 5, i++) {;
         }
         const x = canvas.width * (0.1 + i * 0.2),;
@@ -211,7 +210,6 @@ export default function UltraFuturisticBackground2036() {;
     },;
     const drawSpaceElements = ("ctx": CanvasRenderingContext2D, "canvas": HTMLCanvasElement, "multiplier": number) => {;
       }
-      const time = Date.now() * 0.001,;
       // Draw stars;
       for (let i = 0, i < 50 * multiplier, i++) {;
         }

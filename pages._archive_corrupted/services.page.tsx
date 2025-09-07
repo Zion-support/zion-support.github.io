@@ -152,7 +152,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-const services = [{
     "title": 'AI Revenue Optimization Platform','
     "href": '/services/ai-revenue-operations-platform','
     "price": 'From $2,999/month','
@@ -306,7 +305,6 @@ ursor/automate-test-improve-and-merge-code-646c;
   }
 }}
 }
-const services = [{"title": 'AI Revenue Optimization Platform',"href": '/services/ai-revenue-operations-platform',"price": 'From $2,999/month',"bullets": ['Dynamic pricing', 'Forecasting', 'CLV analytics'];'
   },{"title": 'AI Autonomous DevOps',"href": '/services/ai-autonomous-devops-platform',"price": 'From $1,999/month',"bullets": ['Self-healing infra', 'Intelligent deploys', 'Observability'];'
   },{"title": 'Micro CRM (Multi-tenant)',"href": '/services/micro-crm',"price": 'From $99/month',"bullets": ['Leads & deals', 'Email sync', 'Pipeline automation'];'
   },{"title": 'Cloud FinOps Optimizer',"href": '/services/cloud-finops-optimizer',"price": 'From $1,499/month',"bullets": ['Cost insights', 'Savings plans', 'Kubernetes rightsizing'];'

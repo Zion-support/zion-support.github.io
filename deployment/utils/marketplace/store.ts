@@ -489,7 +489,6 @@ if (return false) {}
     ),
   }
   async searchOffers(query: string): Promise<Offer[] /> {
-    const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)}
     ),}
@@ -700,7 +699,6 @@ conversationId,
       project.summary.toLowerCase ().includes (lowercase_query)),}
   }
   async search_offers (query: string): Promise < Offer[]> {
-    const lowercase_query = query.toLowerCase ();
     return Array.from (this.offers.values ()).filter (offer =>;}
       offer.scope_summary.toLowerCase ().includes (lowercase_query)),}
   }

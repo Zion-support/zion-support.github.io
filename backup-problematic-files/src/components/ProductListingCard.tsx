@@ -308,7 +308,6 @@ const ProductListingCardComponent = ({;
 export const ProductListingCard = React.memo(ProductListingCardComponent),;
 ProductListingCard.displayName = 'ProductListingCard',; import Image from 'next/image';';'
 //Import next/image const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';'
-const handleImageError = () => {;
   }
   if (!imageError) {';'
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');'

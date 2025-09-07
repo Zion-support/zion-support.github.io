@@ -132,9 +132,6 @@ export function ServiceDescriptionForm() { return null; }
     }
   },
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import {logErrorToProduction} from '@/utils/productionLogger';
-const formSchema = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 

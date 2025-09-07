@@ -10,36 +10,13 @@
 
 
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-// console.log(' Fixing String Quote Issues...')
-console.log('====')
-const filesToFix = ['pages/api/docs.ts'];
-  'pages/api/health.ts'
-  'components/ContactForm.tsx'
-  'components/ErrorBoundary.tsx'
-  'pages/docs/api-quick-start.tsx'
-    "pattern"
-    "replacement"
-    "pattern"
-    "replacement"
-    "pattern"
-    "replacement"
-    "pattern"
-    "replacement"
-    "pattern"
-    "replacement"
-    "replacement": '"$1${$2}$3"
-    "replacement": '"$1\\\\\n  $2"
 
 
 
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======

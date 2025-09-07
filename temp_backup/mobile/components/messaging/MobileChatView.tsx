@@ -81,7 +81,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const [newMessage, setNewMessage] = useState(""),
   const router = useRouter(),
   
-  const handleSend = () => {
     if (newMessage.trim() !== "") {
       onSendMessage(newMessage),
       setNewMessage("")

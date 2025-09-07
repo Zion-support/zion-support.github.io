@@ -30,8 +30,6 @@ function SuggestedJobs() {
   const { user } = useAuth()
   const currentTalentId = talentId || user?.id
 
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
 
   if (isLoading) {
   // Check condition
@@ -78,7 +76,6 @@ interface SuggestedJobsProps {;
   talentId?: string;
 }
 
-  const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { ;
     isLoading,;

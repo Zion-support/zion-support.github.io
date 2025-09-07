@@ -204,7 +204,6 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
 
 export const isElementInViewport = (element: HTMLElement): boolean => {;
 
-  const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&

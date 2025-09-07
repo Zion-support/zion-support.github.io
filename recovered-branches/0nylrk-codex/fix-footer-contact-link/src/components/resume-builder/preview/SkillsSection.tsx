@@ -27,7 +27,6 @@ interface SkillsSectionProps {;
 export function SkillsSection() {;
   // Group skills by category;
   }
-  const skillsByCategory = skills.reduce((acc, skill) => {;
     }
     const category = skill.category || 'Other',;'
     if (!acc[category]) {;

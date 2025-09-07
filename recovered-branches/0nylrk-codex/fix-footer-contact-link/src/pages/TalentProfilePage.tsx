@@ -63,10 +63,6 @@ export default function TalentProfilePage() {
 }
 const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
-  const { profile, isLoading, error } = useTalentProfile(id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
 import { toast } from "@/hooks/use-toast","
 export default function TalentProfilePage() {
@@ -88,7 +84,6 @@ const { isAuthenticated, user } = useAuth(),  // Handle loading error gracefully
         "title": "title","
     "description": "There was a problem loading this talent profile. Please try again.""
 "variant": "destructive"});"
-import React, { useState, useEffect } from "react";"
 import { useParams, useNavigate } from "react-router-dom";"
 import { TalentProfile } from "@/components/profile/TalentProfile",;"
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;"
@@ -107,12 +102,6 @@ import { toast } from "@/hooks/use-toast",;"
 export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   }
-  const { id } = useParams() as { id?: string },;
-  const navigate = useNavigate(),;
-  const { profile, isLoading, error } = useTalentProfile(id),;
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),;
-  const { userDetails } = useAuthStatus(),;
   const { isAuthenticated, user } = useAuth(),;
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const "userProfile": UserProfile = user ? {;

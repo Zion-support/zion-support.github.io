@@ -218,7 +218,6 @@ export const "MARKETPLACE_LISTINGS": ProductListing[] = [
 // Generate search suggestions based on existing listings,
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
 }
-const suggestions = [;
     'AI models','
     'GPT integration','
     'Machine learning','
@@ -321,7 +320,6 @@ export const generateFilterOptions = () => {
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   }
-  const suggestions = [;
     'AI models','
     'GPT integration','
     'Machine learning','
@@ -352,23 +350,18 @@ export const generateFilterOptions = () =>: any {
   }
   const product_types = [;
     ...new Set (MARKETPLACE_LISTINGS.map (listing => { return listing.category))].sort (); }
-  const locations = [;
     ...new Set (
       MARKETPLACE_LISTINGS.map (listing => { return listing.location).filter (Boolean))].sort (); }
-  const availability = [;
     ...new Set (
       MARKETPLACE_LISTINGS.map (listing => { return listing.availability).filter (Boolean))].sort (); }
 ;
     "product_types": product_types.map (type => ({
 }
-const productTypes = [;
     ...new Set(MARKETPLACE_LISTINGS.map(listing => { return listing.category)),; }
   ].sort();
-const locations = [;
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => { return listing.location).filter(Boolean)
     )].sort(); }
-const availability = [;
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => { return listing.availability).filter(Boolean)
     )].sort(); }
@@ -440,8 +433,6 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => { retur
 "ratingOptions": [1, 2, 3, 4, 5]
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => { return listing.price || 0)); }
     "ratingOptions": [1, 2, 3, 4, 5]
-import { ProductListing } from "@/types/listings";"
-import { SearchSuggestion } from "@/types/search";"
 // Shared data source for marketplace listings;
 export const "MARKETPLACE_LISTINGS": ProductListing[] = [;
   {;
@@ -581,7 +572,6 @@ export const "MARKETPLACE_LISTINGS": ProductListing[] = [;
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {;
   }
-  const suggestions = [;
     "AI models",;"
     "GPT integration",;"
     "Machine learning",;"

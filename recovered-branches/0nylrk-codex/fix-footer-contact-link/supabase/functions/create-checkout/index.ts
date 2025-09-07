@@ -25,7 +25,6 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serv
   try {
     // Retrieve the request body
     const requestData = await req.json(),
-    const { 
       amount, 
       serviceId = null,
       providerId = null,
@@ -56,7 +55,6 @@ serve(async (req) => {
   try {
     // Retrieve the request body
     const requestData = await req.json($2);
-    const { 
       amount, 
       serviceId = $2;
       providerId = $2;
@@ -128,7 +126,6 @@ serve(async (req) => {
         created_at: new Date().toISOString()
       })
     }
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
 
       metadata: {

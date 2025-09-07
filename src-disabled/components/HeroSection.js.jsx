@@ -38,7 +38,6 @@ const floatingVariants = { animate: { y[-15, 15, -15], rotate[0, 5, 0], transiti
 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 }
 
-const itemVariants = { hidden: { y: 30, opacity: 0,}
 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8,' ease: 'easeOut' },
 };
 }

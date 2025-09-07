@@ -275,7 +275,6 @@ const navigation = {
 export default function Header() {
   }
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
   useEffect(() => {
     }

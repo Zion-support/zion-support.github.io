@@ -12,7 +12,6 @@ import {
   NotificationContextType
 } from "@/context/notifications",
 import { formatDistanceToNow } from "date-fns";
-import { 
   Bell, Check, Trash2, ChevronRight, CheckCircle, 
   AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
 } from "lucide-react",
@@ -217,7 +216,6 @@ const NotificationCard: React.FC<{
                 {!notification.read && (
                   <Badge variant = $2;
 export default function NotificationsPage() {
-  const {;
     filteredNotifications;
     unreadCount;
     markAsRead;

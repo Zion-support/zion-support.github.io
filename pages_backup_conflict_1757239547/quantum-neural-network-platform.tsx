@@ -63,8 +63,6 @@ const QuantumNeuralNetworkPlatform = () => {
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
 } from 'lucide-react',
-const QuantumNeuralNetworkPlatform = () => {
-  const features = [
     {
       icon: Brain,
       title: 'Quantum Consciousness Integration',
@@ -94,7 +92,6 @@ const QuantumNeuralNetworkPlatform = () => {
     },
   ];
 
-  const benefits = [
     '1000x faster neural network training',
     'Quantum-level security and encryption',
     'Scalable consciousness simulation',
@@ -103,7 +100,6 @@ const QuantumNeuralNetworkPlatform = () => {
     'Future-proof technology foundation',
   ];
 
-  const useCases = [
     {
       title: 'AI Research & Development',
       description: 'Accelerate AI breakthroughs with quantum processing power',
@@ -128,7 +124,6 @@ const QuantumNeuralNetworkPlatform = () => {
   }
 }
   ],
-  const benefits = [
     "1000x faster neural network training",
     "Quantum-level security and encryption",
     "Scalable consciousness simulation",
@@ -136,7 +131,6 @@ const QuantumNeuralNetworkPlatform = () => {
     "Advanced pattern recognition",
     "Future-proof technology foundation"
   ],
-  const useCases = [
     {
       title: "AI Research & Development",
       description: "Accelerate AI breakthroughs with quantum processing power"

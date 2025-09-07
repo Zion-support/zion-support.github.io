@@ -26,9 +26,6 @@ import { TalentProfile as TalentProfileType } from "@/types/talent",;
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 
 
@@ -71,8 +68,6 @@ export function TalentProfile({
         {/* Right Column - Bio & Projects */}
         <div className='lg:col-span-2 space-y-8'>;
           {/* Bio Section */}
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { HireNowCTA } from './HireNowCTA';
 import { ProfileHero } from './ProfileHero';
@@ -116,7 +111,6 @@ function TalentProfile() {
     <div className="container mx-auto px-4 py-8">"
 
 import React from "react",
-import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
 import { ProfileHero } from "./ProfileHero",
@@ -172,12 +166,10 @@ export function TalentProfile({
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   },
   // Create proper skills array for ProfileSkills component
-  const skillsArray = profile.skills?.map(skill => ({
     name: skill,
     level: 3 // Default level since we don't have this data
   })) || [],
   // Create proper projects array for ProfileProjects component
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`,
     title: proj.title,
     description: proj.description,
@@ -186,17 +178,6 @@ export function TalentProfile({
   return (
     <div className="container mx-auto px-4 py-8">
 import React from "react",;
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { HireNowCTA } from "./HireNowCTA",;
-import { ProfileHero } from "./ProfileHero",;
-import { ProfileSkills } from "./ProfileSkills",;
-import { ProfileExperience } from "./ProfileExperience",;
-import { ProfileProjects } from "./ProfileProjects",;
-import { ProfileAvailability } from "./ProfileAvailability",;
-import { ProfileContact } from "./ProfileContact",;
-import { ProfileRatings } from "./ProfileRatings",;
-import { TalentProfile as TalentProfileType } from "@/types/talent",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Availability } from "@/types/profile",;
 interface TalentProfileProps {;
@@ -217,7 +198,6 @@ export function TalentProfile({;
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`;`
 }: TalentProfileProps) {;
-  const { isAuthenticated } = useAuth(),;
   // Create proper availability object from talent profile;
   const availability: Availability = {;
     status: profile.availability_type === 'full_time' ? 'available' :;
@@ -371,8 +351,6 @@ export function TalentProfile({;
 import { useAuth } from "@/hooks/useAuth","
 import { Availability } from "@/types/profile","
 
-import { useAuth } from "@/hooks/useAuth",;
-import { Availability } from "@/types/profile",;
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,

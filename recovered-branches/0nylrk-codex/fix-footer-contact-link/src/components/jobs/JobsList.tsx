@@ -18,27 +18,20 @@ interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
 
     const fetchJobs = async () => {
       if (!user) return;
       if (!user) return,  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
 
-    const fetchJobs = async () => {
       if (!user) return;
       if (!user) return,
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth($2);
-  const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState($2);
   useEffect(() => {
     const fetchJobs = $2;
@@ -385,10 +378,8 @@ onSelectJob?: (jobId: string, jobTitle: string) => void
 const [jobs, setJobs] = useState<Job[]> ([]);
 const [isLoading, setIsLoading] = useState (true);
 useEffect ( () => {
-  const fetchJobs = async () => {
   if (!user) return;
 try {
-  let query = supabase 
 }const {
   data, error 
 }= await query;

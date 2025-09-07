@@ -61,15 +61,11 @@ const featuredAI = realAIServices2025;
           </div>;"
           <div className=\"text-center max-w-5xl mx-auto relative z-10\" />;
 
-const Homepage2037: React.FC;
 
 const Homepage2037: React.FC = () => {// Get featured services from each category;
 
-const featuredMicroSaas = realMicroSaasServices2025;
     .filter(service = > service.popular).slice(0, 3;
-  const featuredIT = realITServices2025;
     .filter(service = > service.popular).slice(0, 3;
-  const featuredAI = realAIServices2025;
     .filter(service = > service.popular).slice(0, 3;}
   return (<Layout />;}
       {/* Main Content */}
@@ -385,16 +381,12 @@ import { realAIServices2025  } from '../data / real - ai - services - 2025';
 
 const Homepage2037: React.FC = () = /> {// Get featured services from each category;
 
-const featuredMicroSaas = realMicroSaasServices2025;
     .filter (service = > service.popular).slice (0, 3;
-  const featuredIT = realITServices2025;
     .filter (service = > service.popular).slice (0, 3;
-  const featuredAI = realAIServices2025;
     .filter (service = > service.popular).slice (0, 3;}
   return (<Layout />;}
       {/* Main Content */}
       <main className = 'relative z - 10';
-  const Homepage2037: React.FC = () = /> {// Get featured services from each category;
 
 const featuredMicroSaas = realMicroSaasServices2025.filter (service => service.popular).slice (0, 3)const featuredIT = realITServices2025.filter (service => service.popular).slice (0, 3;
   const featuredAI = realAIServices2025.filter (service => service.popular).slice (0, 3;}

@@ -21,8 +21,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
 
   const fetchSuggestedTalents = async () => {;
     setIsLoading(true);
@@ -108,7 +106,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     }
   },
 
-  const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log($2);
     toast({
@@ -116,7 +113,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       description: `Navigating to talent profile: ${talentId}`})
   },
 
-  const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     // // // console.log("View talent profile:", talentId),
     toast({  };

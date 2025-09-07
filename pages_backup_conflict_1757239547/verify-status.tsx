@@ -216,10 +216,8 @@ export default function VerifyStatus() {
   }
 }
   },
-  const handleTryLogin = () => {
     router.push(`/auth/login?email=${encodeURIComponent(email)}`)
   },
-  const handleGoBack = () => {
     router.back()
   },
   return (

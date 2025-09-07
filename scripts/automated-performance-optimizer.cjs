@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process");
-    this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing bundle size...")
 const buildDir = path.join(this.projectRoot, ".next");
@@ -41,7 +31,6 @@ const files = fs.readdirSync(dir, { "withFileTypes"});
 const srcDir = path.join(this.projectRoot, "src");
 const pagesDir = path.join(this.projectRoot, "pages");
     const analysis = {"dynamicImports": 0,"lazyComponents": 0,"largeComponents"}
-const files = fs.readdirSync(dir, { "withFileTypes"});
 const codeExtensions = [".js", ".jsx", ".ts", ".tsx"];
 const content = fs.readFileSync(filePath, "utf8");
 const lines = content.split("\n");
@@ -67,44 +56,25 @@ const importMatches = content.match(/import\s+.*\s+from\s+[""][^""]+["")];
     this.log(" Starting Performance Optimizer")
     const results = {"timestamp"}
     const reportFile = path.join(this.reportsDir, "performance-optimization-report.json")
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    this.log(` Performance optimization report "generated"`)
-// console.log("\n� Performance Analysis "Summary": ")
-    console.log(`�  Total "images"`)
-// console.log(`� Dynamic "imports"`)
-    console.log(`⚡ Lazy "components"`)
-    console.log(` Optimization "recommendations"`)
-    const highPriority = recommendations.filter(r => r.priority === "high")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-      console.log("\n� High Priority "Optimizations")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
+    this.log(` Performance optimization report "generated`)
+// console.log(\n� Performance Analysis "Summary": )
+    console.log(`�  Total images"`)
+// console.log(`� Dynamic "imports`)
+    console.log(`⚡ Lazy components"`)
+    console.log(` Optimization "recommendations`)
+    const highPriority = recommendations.filter(r => r.priority === high")
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      console.log("\n� High Priority "Optimizations")
+
+      console.log("\n� High Priority Optimizations)
+
+      console.log("\n� High Priority "Optimizations)
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
-      console.log("\n� High Priority "Optimizations")
-<<<<<<< HEAD
-      console.log("\n� High Priority "Optimizations")
+      console.log(\n� High Priority "Optimizations")
 
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

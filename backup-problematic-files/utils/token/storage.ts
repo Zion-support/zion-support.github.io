@@ -76,7 +76,6 @@ export const tokenStore = {
     return wallets[userId]
   },
   setWalletBalance(userId: string, balance: number): Wallet {
-    const wallets = store.getData().wallets
     wallets[userId] = { userId, balance },
     store.save(),
     return wallets[userId]

@@ -77,8 +77,6 @@ import {;
 import Link from "Link";"
 export default function MarketPricing() {;
   }
-  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness'),;'
-  const markets = [;
     { "id": 'ai-consciousness', "name": 'AI Consciousness', "icon": <Brain className="w-6 h-6" /> },;"
     { "id": 'quantum-computing', "name": 'Quantum Computing', "icon": <Atom className="w-6 h-6" /> },;"
     { "id": 'autonomous-systems', "name": 'Autonomous Systems', "icon": <Zap className="w-6 h-6" /> },;"
@@ -383,7 +381,6 @@ return (;
           </div>
           <motion.div
   },;
-  const currentMarket = marketData[selectedMarket as keyof typeof marketData],;
   const getGrowthIcon = ("trend": string) => {;
     }
     return trend === 'up' ?;'

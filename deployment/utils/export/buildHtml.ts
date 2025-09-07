@@ -52,7 +52,6 @@ export function buildPrintableHtml (project: BookProject): string {}
     .map ((src) => `<figure class=\"visual\" /><img src=\"${src}\" /></figure>`) // base64 ok;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class=\"barcode\" src=\"/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}\" />` : '';
-  const barcode = meta.isbn ? `<img class=\"barcode\" src=\"/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}\" />` : '';
   return `<!doctype html>;
 <html />;
 <head />;

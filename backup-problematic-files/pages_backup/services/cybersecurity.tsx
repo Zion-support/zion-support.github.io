@@ -133,7 +133,6 @@ export default function CybersecurityPage() {const securityServices = [;
           <div className="container mx-auto px-4">";"
             <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8">";"
               {securityServices && securityServices.map((service, index) => {}
-                const IconComponent = service && service.icon;
                 return (<motion&& motion.div)key={index}
                     className="bg-white p-6 rounded-lg shadow-lg "hover":shadow-xl transition-all duration-300"";"
                     initial={{ "opacity": 0, "y": 30 }}

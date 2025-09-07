@@ -65,7 +65,6 @@ import { TalentProfile } from "@/types/talent";
 export default function TalentDirectory() {
   const navigate = useNavigate($2);
   // Use our custom hook to manage state
-  const {
     filteredTalents,
     isLoading,
     searchTerm,

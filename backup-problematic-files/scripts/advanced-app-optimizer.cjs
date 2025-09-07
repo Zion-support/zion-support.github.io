@@ -19,7 +19,6 @@ class AdvancedAppOptimizer {;
       seo:{ score:0, improvements:[] },;
       accessibility:{ score:0, improvements:[] }
 const fs = require('fs');
-const path = require('path');
 class AdvancedAppOptimizer {
   constructor() {
     this.startTime = Date.now();
@@ -466,7 +465,6 @@ class AdvancedAppOptimizer {
   }
   async removeConsoleLogs() {
     try {
-      const sourceDirs = ["src", "pages", "components"]
       for (const dir of sourceDirs) {
         if (fs.existsSync(dir)) {
           this.removeConsoleLogsInDirectory(dir),,
@@ -477,10 +475,7 @@ class AdvancedAppOptimizer {
 }
   }
   removeConsoleLogsInDirectory(dir) {
-    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         this.removeConsoleLogsInDirectory(fullPath),,
 } else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx"))) {
@@ -490,7 +485,6 @@ class AdvancedAppOptimizer {
   }
   removeConsoleLogsInFile(filePath) {
     try {
-      let content = fs.readFileSync(filePath, "utf8")
       const originalContent = content;
       // Remove console.log statements;
       content = content.replace(/console\.log\([^)]*\)?\n?/g, "")
@@ -507,7 +501,6 @@ class AdvancedAppOptimizer {
   async removeUnusedVariables() {
     try {
       this.log("Removing unused variables...")
-      const sourceDirs = ["src", "pages", "components"]
       for (const dir of sourceDirs) {
         if (fs.existsSync(dir)) {
           this.removeUnusedVariablesInDirectory(dir),,
@@ -518,10 +511,7 @@ class AdvancedAppOptimizer {
 }
   }
   removeUnusedVariablesInDirectory(dir) {
-    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         this.removeUnusedVariablesInDirectory(fullPath),,
 } else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx"))) {
@@ -531,8 +521,6 @@ class AdvancedAppOptimizer {
   }
   removeUnusedVariablesInFile(filePath) {
     try {
-      let content = fs.readFileSync(filePath, "utf8")
-      const originalContent = content;
       // Remove unused imports (simplified)
       const lines = content.split("\n")
       const usedImports = new Set()
@@ -549,9 +537,7 @@ class AdvancedAppOptimizer {
       // Remove unused imports;
       content = lines.filter(line => {
         if (line.includes("import")) {
-          const importMatch = line.match(/import\s+.*?\s+from\s+[""]([^""]+)[""]/)
           if (importMatch) {
-            const importPath = importMatch[1]
             return usedImports.has(importPath),,
 }
         }
@@ -578,10 +564,7 @@ class AdvancedAppOptimizer {
 }
   }
   optimizeImagesInDirectory(dir) {
-    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         this.optimizeImagesInDirectory(fullPath),,
 } else if (stat.isFile() && (item.endsWith(".jpg") || item.endsWith(".jpeg") || item.endsWith(".png"))) {

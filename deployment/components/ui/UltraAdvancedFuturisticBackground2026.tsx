@@ -88,8 +88,6 @@ if (return) {$2;}
     let neural_nodes: NeuralNode[] = [];
     let quantum_fields: QuantumField[] = [];
     let holographic_layers: HolographicLayer[] = [];    let particles: Particle[] = [];
-    let neural_nodes: NeuralNode[] = [];
-    let quantum_fields: QuantumField[] = [];
     let holographic_layers: HolographicLayer[] = [];
     let animationFrameId: number,let particles: Particle[] = [],let neural_nodes: NeuralNode[] = [],let quantum_fields: QuantumField[] = [],let holographic_layers: HolographicLayer[] = [],// Set canvas size;
 

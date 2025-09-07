@@ -1,52 +1,40 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
 
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-console.log('� Starting Security Enhancement Automation...')
-    "file"
+console.log('� Starting Security Enhancement Automation...)
+    "file
+    issue"
+    "severity
+    line"
+        content = content.replace(/dangerouslySetInnerHTML/g, // "SECURITY)
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value: 
     "issue"
-    "severity"
-    "line"
-        content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY")
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value": "
+    severity
     "issue"
-    "severity"
+    severity
     "issue"
-    "severity"
+    severity
     "issue"
-    "severity"
+    severity
     "issue"
-    "severity"
-    "issue"
-    "severity"
+    severity
     "high"
-    "medium"
+    medium
     "low"
-      "securityHeaders"
+      securityHeaders
       "validationScript"
-    "recommendations"
+    recommendations
     "nextSteps"
   console.log('� Security improvements "applied")
-<<<<<<< HEAD
-  console.error(' Security enhancement automation "failed")
-  console.error(' Security enhancement automation "failed")
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

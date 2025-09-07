@@ -1,39 +1,27 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 class DeploymentAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
 
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
-=======
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if () {}
-        fs.mkdirSync(dirPath, { "recursive": true })};"
-    })};"
-  log(message, level = 'INFO') {}
+        fs.mkdirSync(dirPath, { "recursive: true })}
+    })}"
+  log(message, level = INFO') {}
     const timestamp = new Date().toISOString() {}
     ) {}
 
     const timestamp = new Date().toISOString(})
 });
-const logMessage = `[${timestamp}] [${level}] ${message};;`;
+
     console.log(logMessage);
     try {}
 
@@ -42,420 +30,223 @@ const logMessage = `[${timestamp}] [${level}] ${message};;`;
       const duration = Date.now() - stepSta;r;t;
       this.results.steps.push({})"
 
-        "result": result;"
+        result: result;"
       }
 });"`;
-      this.log(`Completed "step": ${stepName} (${duration}ms)`);"
+      this.log(`Completed step: ${stepName} (${duration}ms)`);"
       return result} catch(error) {}
-<<<<<<< HEAD
 
-    // Check if working directory is clean;
-    try {}
-      const gitStatus = execSync('git status --porcelain', { })
-        "cwd": this.projectRoot, 
-=======
-      const duration = Date.now() - stepSta;r;t;
-      this.results.steps.push({})
-        "name": stepName,
-        "status": 'error',
-        "duration": duration,
-        "error": error.message;
-      }
-});
-      this.log(`Failed "step": ${stepName} - ${error.message}`, 'ERROR');
-      return null};
-  };
-  async preDeploymentChecks() {}
-    this.log('Running pre-deployment checks...');
-    const checks = [];
-    // Check if working directory is clean;
-    try {}
-const gitStatus = execSync('git status --porcelain', { });
-        "cwd": this.projectRoot, 
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      };);
+
       if () {}
-        checks.push({ "type": 'git-status', "status": 'uncommitted-changes', "message": 'Working directory has uncommitted changes' })} else {}
-        checks.push({ "type": 'git-status', "status": 'clean', "message": 'Working directory is clean' })};
+        checks.push({ "type: 'git-status, status": uncommitted-changes', "message: 'Working directory has uncommitted changes })} else {}
+        checks.push({ type": git-status', "status: 'clean, message": Working directory is clean' })}
     } catch(error) {}
-      checks.push({ "type": 'git-status', "status": 'error', "message": error.message })};
+      checks.push({ "type: 'git-status, status": error', "message: error.message })}
     // Check if tests pass;
     try {}
-      execSync('npm test -- --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot, 
-=======
-        "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        "stdio": 'pipe',
-        "timeout": 120000;
+      execSync('npm test -- --watchAll=false, {})
+
+        stdio": pipe',
+        "timeout: 120000;
       })) {}
     ) {}
-        checks.push({ "type": 'git-status', "status": 'uncommitted-changes', "message": 'Working directory has uncommitted changes' })} else {}
-        checks.push({ "type": 'git-status', "status": 'clean', "message": 'Working directory is clean' })};
+        checks.push({ type": 'git-status, "status: uncommitted-changes', message": 'Working directory has uncommitted changes })} else {}
+        checks.push({ "type: git-status', status": 'clean, "message: Working directory is clean' })}
     } catch(error) {}
-      checks.push({ "type": 'git-status', "status": 'error', "message": error.message })};
+      checks.push({ type": 'git-status, "status: error', message": error.message })}
     // Check if tests pass;
     try {}
-      execSync('npm test -- --watchAll=false', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot, 
-=======
-        "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        "stdio": 'pipe',
-        "timeout": 120000;
-      })};
-      checks.push({ "type": 'tests', "status": 'passed', "message": 'All tests passed' })} catch(error) {}
-      checks.push({ "type": 'tests', "status": 'failed', "message": 'Tests failed' })};
+      execSync('npm test -- --watchAll=false, {})
+
+        "stdio: pipe',
+        timeout": 120000;
+      })}
+      checks.push({ "type: 'tests, status": passed', "message: 'All tests passed })} catch(error) {}
+      checks.push({ type": tests', "status: 'failed, message": Tests failed' })}
     // Check if build succeeds;
     try {}
-      execSync('npm run build', { })
-<<<<<<< HEAD
-        "cwd": this.projectRoot, 
-=======
-        "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-        "stdio": 'pipe',
-        "timeout": 300000;
+      execSync('npm run build, {})
+
+        "stdio: pipe',
+        timeout": 300000;
       }
 });
-      checks.push({ "type": 'build', "status": 'passed', "message": 'Build successful' })} catch(error) {}
-      checks.push({ "type": 'build', "status": 'failed', "message": 'Build failed' })};
+      checks.push({ "type: 'build, status": passed', "message: 'Build successful })} catch(error) {}
+      checks.push({ type": build', "status: 'failed, message": Build failed' })}
     this.results.deployment.preDeploymentChecks = checks;
-    return checks};
+    return checks}
   async buildApplication() {}
-    this.log('Building application...');
+    this.log('Building application...);
     try {}
-const buildOutput = execSync('npm run build', { });
-        "cwd": this.projectRoot, 
-=======
-        "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
       };);
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
       // Extract build information;
       const buildInfo = {}
-        "status": 'success',
-        "output": buildOutput,
-        "timestamp": new Date().toISOString();
-     };
-<<<<<<< HEAD
+        status": 'success,
+        "output: buildOutput,
+        timestamp": new Date().toISOString();
+     }
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.build = buildInfo;
-      this.log('Application built successfully');
+      this.log(Application built successfully');
       return buildInfo} catch(error) {}
-      this.log(`Build "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
+      this.log(`Build "failed: ${error.message}`, 'ERROR);
+      throw error}
+  }
   async runTests() {}
-    this.log('Running test suite...');
+    this.log(Running test suite...');
     try {}
-const testOutput = execSync('npm test -- --coverage --watchAll=false', { });
-        "cwd": this.projectRoot, 
-=======
-        "cwd": this.projectRoot,
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 120000;
       };);
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
       const testInfo = {}
-        "status": 'success',
-        "output": testOutput,
-        "timestamp": new Date().toISOString();
-     };
-<<<<<<< HEAD
+        "status: success',
+        output": testOutput,
+        "timestamp: new Date().toISOString();
+     }
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      this.log('Test suite passed');
+      this.log('Test suite passed);
       return testInfo} catch(error) {}
-      this.log(`Test suite "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
+      this.log(`Test suite failed": ${error.message}`, ERROR');
+      throw error}
+  }
   async commitChanges() {}
-    this.log('Committing changes...');
+    this.log('Committing changes...);
     try {}
       // Add all changes;
-      execSync('git add .', { "cwd": this.projectRoot }
+      execSync(git add .', { "cwd: this.projectRoot }
 });
-      this.log('Changes staged');
-<<<<<<< HEAD
+      this.log('Changes staged);
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Create commit;
-const commitMessage = `"feat": automated deployment - ${new Date().toISOString()};;`;
-      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
+
 });
-      this.log('Changes committed');
-<<<<<<< HEAD
+      this.log(Changes committed');
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const commitInfo = {}
-        "message": commitMessage,
-        "timestamp": new Date().toISOString();
-     };
-<<<<<<< HEAD
+        "message: commitMessage,
+        timestamp": new Date().toISOString();
+     }
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.git.commit = commitInfo;
       return commitInfo} catch(error) {}
-      this.log(`Commit "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
+      this.log(`Commit "failed: ${error.message}`, 'ERROR);
+      throw error}
+  }
   async pushToRepository() {}
-    this.log('Pushing to repository...');
+    this.log(Pushing to repository...');
     try {}
-const currentBranch = execSync('git branch --show-current', {});
-        "cwd": this.projectRoot,
-        "encoding": 'utf8'
+
       }).trim(;);
-<<<<<<< HEAD
 
-      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
-});
-      this.log(`Pushed to ${currentBranch}`);
-
-=======
-      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
-});
-      this.log(`Pushed to ${currentBranch}`);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const pushInfo = {}
-        "branch": currentBranch,
-        "timestamp": new Date().toISOString();
-     };
-<<<<<<< HEAD
+        branch": currentBranch,
+        "timestamp: new Date().toISOString();
+     }
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.git.push = pushInfo;
       return pushInfo} catch(error) {}
-      this.log(`Push "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
+      this.log(`Push failed": ${error.message}`, 'ERROR);
+      throw error}
+  }
   async mergeToMain() {}
-    this.log('Merging to main branch...');
+    this.log(Merging to main branch...');
     try {}
-const currentBranch = execSync('git branch --show-current', {});
-        "cwd": this.projectRoot,
-        "encoding": 'utf8'
+
       }).trim(;);
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       if ( {})
-        this.log('Already on main branch')) {}
+        this.log('Already on main branch)) {}
      {}
-        this.log('Already on main branch')};
-        return { "merged": true, "alreadyOnMain": true }};
+        this.log(Already on main branch')}
+        return { "merged: true, alreadyOnMain": true }}
       // Switch to main;
-      execSync('git checkout main', { "cwd": this.projectRoot }
+      execSync('git checkout main, { "cwd: this.projectRoot }
 });
-      this.log('Switched to main branch');
-<<<<<<< HEAD
+      this.log(Switched to main branch');
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Pull latest changes;
-      execSync('git pull origin main', { "cwd": this.projectRoot }
+      execSync('git pull origin main, { cwd": this.projectRoot }
 });
-      this.log('Pulled latest main changes');
-<<<<<<< HEAD
+      this.log(Pulled latest main changes');
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Merge current branch;
-      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }
+      execSync(`git merge ${currentBranch}`, { "cwd: this.projectRoot }
 });
       this.log(`Merged ${currentBranch} into main`);
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Push to main;
-      execSync('git push origin main', { "cwd": this.projectRoot }
+      execSync('git push origin main, { cwd": this.projectRoot }
 });
-      this.log('Pushed merged changes to main');
-<<<<<<< HEAD
+      this.log(Pushed merged changes to main');
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       const mergeInfo = {}
-        "merged": true,
-        "fromBranch": currentBranch,
-        "toBranch": 'main',
-        "timestamp": new Date().toISOString();
-     };
-<<<<<<< HEAD
+        "merged: true,
+        fromBranch": currentBranch,
+        "toBranch: 'main,
+        timestamp": new Date().toISOString();
+     }
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       this.results.git.merge = mergeInfo;
       return mergeInfo} catch(error) {}
-      this.log(`Merge "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
+      this.log(`Merge "failed: ${error.message}`, ERROR');
+      throw error}
+  }
   async createDeploymentTag() {}
-    this.log('Creating deployment tag...');
+    this.log('Creating deployment tag...);
     try {}
-const tagName = `deployment-${new Date().toISOString().split('T')[0]};;`;
-      execSync(`git tag -a ${tagName} -m "Deployment tag ${tagName}"`, { "cwd": this.projectRoot }
+
 });
-      execSync(`git push origin ${tagName}`, { "cwd": this.projectRoot }
+      execSync(`git push origin ${tagName}`, { cwd": this.projectRoot }
 });
-<<<<<<< HEAD
-      
-      this.log(`Created and pushed "tag": ${tagName}`);
-      
-=======
-      this.log(`Created and pushed "tag": ${tagName}`);
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
       const tagInfo = {}
         tagName,
-        "timestamp": new Date().toISOString();
-     };
+        "timestamp: new Date().toISOString();
+     }
 
-<<<<<<< HEAD
-        "timeout": 300000;"
-});"
 
-        "timestamp": new Date().toISOString();"
-
-      this.results.build = buildInfo;"
-      this.log('Application built successfully');
-
-        this.log('Already on main branch')) {}
-     {}
-        this.log('Already on main branch')};
-        return { "merged": true, "alreadyOnMain": true }};"
-      // Switch to main;"
-
-      const tagInfo = {}
-        tagName,"
-
-      this.results.git.tag = tagInfo;
-
-    const successRate = totalSteps > 0 ? Math.round((successfulSteps / totalSteps) * 100) :;0;
-
-=======
-      this.results.git.tag = tagInfo;
-
-    const successRate = totalSteps > 0 ? Math.round((successfulSteps / totalSteps) * 100) :;0;
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     this.results.summary = {}
       totalSteps,
       successfulSteps,
       failedSteps,
       successRate,
-<<<<<<< HEAD
 
-=======
-      "deploymentStatus": failedSteps === 0 ? 'success' : 'failed',
-      "timestamp": new Date().toISOString();
-    };
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    this.log(`Deployment "Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)};
+    this.log(`Deployment Summary": ${successfulSteps}/${totalSteps} steps successful (${successRate}%)`)}
   async run() {}
-    this.log('Starting Deployment Automation...');
+    this.log('Starting Deployment Automation...);
     try {}
       // Pre-deployment checks;
-      await this.runStep('Pre-deployment Checks', () => this.preDeploymentChecks());
-<<<<<<< HEAD
-      
-      // Build application;
-      await this.runStep('Build Application', () => this.buildApplication());
-      
-      // Run tests;
-      await this.runStep('Run Tests', () => this.runTests());
-      
-      // Commit changes;
-      await this.runStep('Commit Changes', () => this.commitChanges());
-      
-      // Push to repository;
-      await this.runStep('Push to Repository', () => this.pushToRepository());
-      
-      // Merge to main;
-      await this.runStep('Merge to Main', () => this.mergeToMain());
-      
-      // Create deployment tag;
-      await this.runStep('Create Deployment Tag', () => this.createDeploymentTag());
+      await this.runStep(Pre-deployment Checks', () => this.preDeploymentChecks());
 
-      this.generateDeploymentSummary();
-
-=======
-      // Build application;
-      await this.runStep('Build Application', () => this.buildApplication());
-      // Run tests;
-      await this.runStep('Run Tests', () => this.runTests());
-      // Commit changes;
-      await this.runStep('Commit Changes', () => this.commitChanges());
-      // Push to repository;
-      await this.runStep('Push to Repository', () => this.pushToRepository());
-      // Merge to main;
-      await this.runStep('Merge to Main', () => this.mergeToMain());
-      // Create deployment tag;
-      await this.runStep('Create Deployment Tag', () => this.createDeploymentTag());
-      this.generateDeploymentSummary();
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       // Save results;
-      const reportFile = path.join(this.projectRoot, 'deployment-reports', 'deployment-report.json';);
+      const reportFile = path.join(this.projectRoot, 'deployment-reports, deployment-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Deployment report saved to ${reportFile}`);
-<<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-      this.log('Deployment Automation completed successfully!');
+      this.log('Deployment Automation completed successfully!);
       return this.results} catch(error) {}
-      this.log(`Deployment Automation "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
-};
+      this.log(`Deployment Automation "failed": ${error.message}`, ERROR');
+      throw error}
+  }
+}
 if ( {})
 
   const deployment = new DeploymentAutomation) {}
   const deployment = new DeploymentAutomation}(;);
-  deployment.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = DeploymentAutomation;
-
-module.exports = DeploymentAutomation;
-module.exports = DeploymentAutomation;
-module.exports = DeploymentAutomation;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  deployment.run().catch(console.error)}
 
 =======
-module.exports = DeploymentAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 module.exports = DeploymentAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -465,10 +256,7 @@ module.exports = DeploymentAutomation;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = DeploymentAutomation;
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

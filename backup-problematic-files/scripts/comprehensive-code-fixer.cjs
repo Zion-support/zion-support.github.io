@@ -4,8 +4,6 @@
 const fs = require('fs')
 const path = require('path')
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -27,7 +25,6 @@ console.log('')
     'pages/pricing.tsx'
     'pages/services.tsx'
     'pages/terms.tsx'
-        let content = fs.readFileSync(filePath, 'utf8')
         let content = fs.readFileSync(filePath, 'utf8')
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')

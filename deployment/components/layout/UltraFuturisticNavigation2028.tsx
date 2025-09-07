@@ -406,7 +406,6 @@ const resourceLinks = [
 export default function UltraFuturisticNavigation2028() {
 export default function UltraFuturisticNavigation2028() {;
 
-const companyLinks = [
   { name: '🏠 Home'}
   href: '/', icon: Home}
 },;

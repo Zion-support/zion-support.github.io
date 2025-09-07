@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';"
 import type { QuoteRequest } from "@/types/quotes";
 
-import type { QuoteRequest } from "@/types/quotes";
 
 interface ExportToCSVProps {}
   quotes: QuoteRequest[]
@@ -136,12 +135,10 @@ interface ExportToCSVProps {
 export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToCSVProps) =>: any {
   const handle_export = () =>: any {
     // Define CSV Headers;
-    const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
       'StatusCreated Date';
     ];
     // Format quote data for CSV;
-    const rows = quotes.map (quote => [;
       quote.id;
       quote.talent_name || 'Unknown';
       quote.requester_name;
@@ -159,7 +156,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       new Date (quote.created_at).toLocaleDateString ();
     ]);
     // Create CSV content;
-    const csv_content = [;
       headers.join ();
       ...rows.map (row =>;
         row.map (cell =>;
@@ -170,8 +166,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     ].join ('\n');
     // Create download link;
     const blob = new Blob ([csv_content], { type: 'text / csv, charset = utf - 8, ' });
-    const url = URL.createObjectURL (blob);
-    const link = document.create_element ('a');
     link.set_attribute ('href', url);
     link.set_attribute ('download', `${filename}-${new Date ().toISOString ().split ('T')[0]}.csv`);
     document.body.append_child (link);
@@ -257,7 +251,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     <Button 
       variant="outline" 
 import { Button } from "@/components/ui/button",;
-import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
 
 interface ExportToCSVProps {;
@@ -268,7 +261,6 @@ interface ExportToCSVProps {;
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;
-    const headers = [;
 
       disabled={quotes.length === 0}
     >;

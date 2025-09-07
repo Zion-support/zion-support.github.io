@@ -18,7 +18,6 @@ const server = http.createServer((req, res) => {
 const http = require($2);
 const fs = require($2);
 const path = require($2);
-const server = http.createServer((req, res) => {
   if (req.url === '/' || req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
       if (err) {
@@ -103,7 +102,6 @@ const server = http.createServer((req, res) => {;
   }
 }),;
 ;
-const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
 ╔══════════════════════════════════════════════════════════════════╗;

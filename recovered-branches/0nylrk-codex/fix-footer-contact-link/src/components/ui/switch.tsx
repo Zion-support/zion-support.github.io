@@ -1,8 +1,6 @@
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
-import * as React from "react"
-import * as SwitchPrimitives from "@radix-ui/react-switch"
 
 import { cn } from "@/lib/utils"
 
@@ -21,7 +19,6 @@ import * as React from 'react';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
 import {cn} from '@/lib/utils';
 
-import { cn } from "@/lib/utils"
 
 const Switch = $2;
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>

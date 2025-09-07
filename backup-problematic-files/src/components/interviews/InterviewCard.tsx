@@ -311,7 +311,6 @@ export function InterviewCard() {;
   }
   user ;
 }= useAuth ();
-const {;
   }
   respondToInterview, cancelInterview ;
 }= useInterviews ();
@@ -327,7 +326,6 @@ const formattedEndTime = format (endTime, '"h": mm a');';'
 const isInterviewPending = interview.status === 'requested';';'
 const isInterviewConfirmed = interview.status === 'confirmed';'
 const isInterviewLive = isInterviewConfirmed && !isPast (interviewDate) && isPast (new Date (interviewDate.getTime () - 5 * 60000) ), //5 minutes before const isInterviewPast = isPast (interviewDate);
-const getRelativeTime = () => {;
   }
   if (isPast (interviewDate) ) {;
   }
@@ -353,7 +351,6 @@ if (success) {;
 };
 }setIsLoading (false) 
 };
-const getStatusBadge = () => {;
   }
   switch (interview.status) {';'
   }

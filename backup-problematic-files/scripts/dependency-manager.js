@@ -40,7 +40,6 @@ const fs = // // require('fs')const path = // // require('path')const { execSync
       if (fs.existsSync(this.packageLockPath)) {const stats = fs.statSync(this.packageLockPath)this.log(`package-lock.json updated "at": ${stats.mtime}`, 'INFO')}'    } catch (error) {this.log(`Error updating "dependencies": ${error.message}`, 'ERROR')throw error}'  }
   async fixSecurityVulnerabilities() {const criticalCount = Object.values(this.securityIssues).filter(v => { return v.severity === 'critical').length; }'
     }
-    const highCount = Object.values(this.securityIssues).filter(v => { return v.severity === 'high').length; }'
     if (criticalCount === 0 && highCount === 0) {this.log('No critical or high security issues to fix', 'INFO'),return}'
     this.log('Fixing security vulnerabilities...', 'INFO')try {// Run npm audit fix;'
       }

@@ -10,7 +10,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import React from "react"
 export default function ITSupportPage() {
 
-  const benefits = [
     {
       title: '24/7 Assistance'
       description:
@@ -118,7 +117,6 @@ export default function ITSupportPage() {;
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"",
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 }}}}}}}}}]]]]]
-  const benefits = [;
     {;
       title: "24/7 Assistance",;
       description: "Our experts are available around the clock to keep your systems running.",;
@@ -131,7 +129,6 @@ export default function ITSupportPage() {;
       title: "Multi-Channel Support",;
       description: "Get help via phone, chat, or onsite visits tailored to your needs.",;
       icon: <Phone className="h-8 w-8" />}],;
-  const testimonials = [;
     {;
       name: "Lisa Wong",;
       role: "Operations Manager",;

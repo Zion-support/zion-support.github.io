@@ -54,7 +54,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'POST') {
-      const { slides, format, version } = req.body || {};
       if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
 
       if (format === 'gslides') {

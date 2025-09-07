@@ -398,7 +398,6 @@ background: #666;
 
   // Public method to reset error state
   public resetErrorState(): void {
-    const sessionKey = this.getSessionKey($2);
     this.errorStats.delete(sessionKey)
   }
 }

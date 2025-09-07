@@ -33,7 +33,6 @@ export function ApplicationScoreCard() {;
   const hasScore = typeof application.match_score === 'number',;'
   ;
   // Format the date when the application was scored;
-  const scoredDate = application.scored_at ;
     ? new Date(application.scored_at).toLocaleDateString() ;
     :null,;
 ;

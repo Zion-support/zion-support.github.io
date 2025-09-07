@@ -1,7 +1,4 @@
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'
-const React from "react"; export default function Home() { return ( <main style={{ "padding": "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'";"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'
-const React from "react"; export default function Home() { return ( <main style={{ "padding": "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'""
-const React from "react"; export default function Home() { return ( <main style={{ "padding": "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'""
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'
 
+=======
+>>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

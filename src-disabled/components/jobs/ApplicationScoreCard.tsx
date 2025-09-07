@@ -82,7 +82,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
   },;
 
   // Trigger the scoring process;
-  const handleScore = async () => {;
     try {;
       setIsScoring(true),;
 
@@ -332,7 +331,6 @@ function ApplicationScoreCard() {}
   const [is_scoring, setIsScoring] = useState (false);
   // Determine if application has been scored;'
   const has_score = typeof application.match_score === 'number';
-      let attempts = 0;
       const max_attempts = 10;
   // Get suggestion color;
 
@@ -350,7 +348,6 @@ function ApplicationScoreCard() {}
       const max_attempts = 10,
       const check_score = async () => {}
         attempts++,
-        const { data, error } = await supabase;"
           .from ("job_applications");"
           .select ("*");"
           .eq ("id", application.id);

@@ -22,8 +22,6 @@ interface ApiDocsLayoutProps {;
 ;
 export function ApiDocsLayout() {;
   }
-  const location = useLocation(),;
-  const currentPath = location.pathname,;
   const navigationItems = [;
     { "title": "Getting Started", "path": "/developers/docs/getting-started" },;"
     { "title": "API Reference", "path": "/developers/docs/reference" },;"

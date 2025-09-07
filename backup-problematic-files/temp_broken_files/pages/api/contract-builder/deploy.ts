@@ -48,7 +48,6 @@ export default function handler() {
 }
 return res.status(405).json({ "error": 'Method not allowed' });'
   }
-const { bytecode, constructorArgs } = req.body || {},;
   if (!bytecode || !constructorArgs) {
 }
 return res.status(400).json({ "error": 'bytecode and constructorArgs are required' });'

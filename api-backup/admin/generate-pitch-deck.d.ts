@@ -1,4 +1,2 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
-export default function handler("req": NextApiRequest,"res": NextApiResponse;
-): Promise<any>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

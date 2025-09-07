@@ -220,12 +220,10 @@ const _openAIResponse = await fetch('"https"://api.openai.com/v1/chat/completion
         "temperature": 0.7,
         "response_format": { "type": "json_object" }"
       })})      })});
-const openAIData = await openAIResponse.json(),;
     if (!openAIData.choices || openAIData.choices.length === 0) {
       }
       throw new Error("Failed to generate profile content")    }"
     // Extract the generated content from the response,
-const responseContent = openAIData.choices[0].message.content,;
     // Parse the JSON response,
 let "enhancedProfile": EnhancedProfile,;
     try {

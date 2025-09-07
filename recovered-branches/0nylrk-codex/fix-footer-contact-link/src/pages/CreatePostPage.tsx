@@ -21,8 +21,6 @@ export default function CreatePostPage() {;
   const [searchParams] = useSearchParams();
 export default function CreatePostPage() {
   }
-  const navigate = useNavigate();
-  const { toast } = useToast();
   const [searchParams] = useSearchParams();  // Get category from URL query params if available,
 const initialCategory = searchParams.get("category") as ForumCategory | null;"
   const "initialValues": Partial<PostFormValues> = {

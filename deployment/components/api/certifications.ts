@@ -73,14 +73,11 @@ if ( {) {}
   return res.status(500).json({ error: \"Failed to load certifications\"}
 })"
 import type {_NextApiRequest, _NextApiResponse} from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";
 
 const CERTS_FILE = path.join(process.cwd()'data';
   'certifications';
   'certifications.json';
 
-const CERTS_FILE = path.join(process.cwd()'data';
   'certifications';
   'certifications.json';
 )export default async function handler() {}

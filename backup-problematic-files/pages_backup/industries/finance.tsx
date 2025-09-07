@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';'
 import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;'
 import React from 'react';'
 import Link from 'next/link';';'
-import { motion } from 'framer-motion';'
 import {
   }
   DollarSign,
@@ -22,7 +21,6 @@ import {
 import Layout from '../../components/Layout';';'
 const services = [;
   {}
-const services = [;
   {"title": 'Blockchain Solutions',"description": 'Secure, transparent, and efficient blockchain implementations for financial services.',"icon": Shield,"features": [;'
       'Smart contract development,','Cryptocurrency integration',','Decentralized finance (DeFi)',',"title": 'Blockchain Solutions,',,"description": 'Secure, transparent, and efficient blockchain implementations for financial services.',',const services = [;'
   {"title": 'Blockchain Solutions',,"description": 'Secure, transparent, and efficient blockchain implementations for financial services.',"icon": Shield,"features": [,'Smart contract development,','Cryptocurrency integration',','Decentralized finance (DeFi)',','Digital identity management'';'
@@ -47,7 +45,6 @@ const benefits = [;
   {}
     "title": 'Enhanced Security,',,"description": 'Bank-grade security measures protect sensitive financial data and transactions.,',"icon": Shield;'
 ];
-const benefits = [;
   {"title": 'Enhanced Security',,"description": 'Bank-grade security measures protect sensitive financial data and transactions.',"icon": Shield;'
   },{}
     "title": 'Improved Efficiency,',,"description": 'Automated processes reduce manual work and increase operational efficiency.,',"icon": BarChart3},{}'
@@ -56,8 +53,6 @@ const benefits = [;
 export default function FinancePage() {return (<Layout)title="Financial Technology Solutions - Zion Tech Group"";"
       }
       description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."";"
-import Layout from '../../components/Layout';'
-const services = [;
   {
     }
     "title": 'Blockchain Solutions','
@@ -69,8 +64,6 @@ const services = [;
       'Decentralized finance (DeFi)',','
     "title": 'Blockchain Solutions,',,'
   "description": 'Secure, transparent, and efficient blockchain implementations for financial services.',',;'
-import Layout from '../../components/Layout';'
-const services = [;
   {;
     }
     "title": 'Blockchain Solutions',,'
@@ -139,13 +132,11 @@ const services = [;
     ];
   }
 ;];
-const benefits = [;
   {}
     "title": 'Enhanced Security,',,'
   "description": 'Bank-grade security measures protect sensitive financial data and transactions.,',;'
     "icon": Shield;
 ];
-const benefits = [;
   {;
     }
     "title": 'Enhanced Security',,'

@@ -45,7 +45,6 @@ export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({ 
     const savedFontSize = localStorage.getItem('zion-font-size')// Load accessibility preferences from localStorage;'
   useEffect(() => {const savedHighContrast = localStorage.getItem('zion-high-contrast') === 'true';'
     }
-    const savedReducedMotion = localStorage.getItem('zion-reduced-motion') === 'true';'
     const savedFontSize = localStorage.getItem('zion-font-size')const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';'
     setHighContrast(savedHighContrast)setReducedMotion(savedReducedMotion)setFontSize(savedFontSize ? parseInt(savedFontSize) : "16)setVoiceNavigation(savedVoiceNavigation)"}, [])// Apply accessibility settings to document;"
   useEffect(() => {}, [])// Apply accessibility settings to document;

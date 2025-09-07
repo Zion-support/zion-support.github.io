@@ -75,10 +75,7 @@ function AvailabilityFilter() {
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
                 onCheckedChange={() => toggleAvailability(option && option.id)}
             <div key={option && option.id} className="flex items-center">;
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";,
-const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }"
@@ -96,7 +93,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
-const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
               <Checkbox
@@ -148,10 +144,8 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
-const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
@@ -266,10 +260,7 @@ function AvailabilityFilter() {
 }</div>);
 }"}"
               >
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;,
-const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }"

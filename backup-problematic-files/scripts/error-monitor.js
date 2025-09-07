@@ -42,11 +42,9 @@ const __filename = fileURLToPath(import && import.meta.url)const __dirname = pat
     return errors}
   parseESLintErrors(output) {const errors = [];
     }
-    const lines = output && output.split(,\n')}'
     return errors}
   parseBuildErrors(output) {const errors = [];
     }
-    const lines = output && output.split(,\n')}'
     return errors}
   async triggerAutoFixer(errors) {try {this && this.log(';info', `Triggering auto-fixer for ${errors && errors.length} errors`)// Write errors to a temporary file for the auto-fixer;`      const errorFile = path && path.join(this && this.errorReportDir,`errors-${Date && Date.now()}.json`)fs && fs.writeFileSync(errorFile, JSON && JSON.stringify(errors, null, 2))// Trigger auto-fixer;`      const autoFixerScript = path && path.join(__dirname, ';auto-fixer && fixer.js')spawn(';node', [autoFixerScript, errorFile], {"detached": true,"stdio": ';ignore'}).unref()this && this.log(';info', ';Auto-fixer triggered successfully')    } catch (error) {this && this.log(';error', ';Failed to trigger auto-fixer', error)}'
   }

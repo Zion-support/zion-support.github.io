@@ -362,7 +362,6 @@ import React from './react';
 import Link from './next / link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github    } from './lucide-react';
 
-const EnhancedFooter: React.FC = () => ;
   const current_year = new Date ().getFullYear ()import React from 'react';,import { motion } from 'framer-motion',import {Phone, Mail, MapPin, Globe,Twitter, Linkedin, Facebook, Instagram,ArrowRight, Rocket, Brain, Cpu, Shield,Star, Users, TrendingUp, Zap;}
 } from 'lucide-react',const contact_info = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -542,7 +541,6 @@ function EnhancedFooter() {const current_year = new Date ().getFullYear ();
 }
 ];
 
-const company = [
     { name: 'About Us'}
   href: '/about'}
 },
@@ -560,7 +558,6 @@ const company = [
 }
 ];
 
-const resources = [
     { name: 'Blog'}
   href: '/blog'}
 },

@@ -29,7 +29,6 @@ departments: parseArray(req.query.departments)
     search: (req.query.search as string) |undefined;}
 teamOnly: req.query.teamOnly === 'true' ? true : undefined,  }
 ;
-  const filters: OrgFilters = {
     view: (req.query.view as OrgFilters['view']) |'all';
 
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined;}

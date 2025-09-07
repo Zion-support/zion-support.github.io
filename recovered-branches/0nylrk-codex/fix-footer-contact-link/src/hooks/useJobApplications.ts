@@ -56,7 +56,6 @@ if ( {) {
       }
       setIsLoading (true);
 ;
-      let query = supabase;
         .from ("job_applications");"
         .select (`;`          *;
           "job": jobs (*),
@@ -256,7 +255,6 @@ return false;
     }
     try {
 }
-const { error } = await supabase;
         .from("job_applications")"
         .update({
           }
@@ -288,7 +286,6 @@ return false;
     }
     try {
       }
-      const { error } = await supabase;
         .from ("job_applications");"
         .update ({ status });
         .eq ("id", application_id);"
@@ -315,7 +312,6 @@ if (throw error) {
     }
     try {
       }
-      const { error } = await supabase;
         .from ("job_applications");"
         .update ({
           }

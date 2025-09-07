@@ -53,7 +53,6 @@ export const useAccessibility = ("options": UseAccessibilityOption s = {}) => {c
     if (nextElement) {manageFocus(nextElement)}
   }, [manageFocus])// Horizontal navigation;
     if (direction = == 'left') {nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}'
-    const nextElement = items[nextIndex] as HTMLElement;
     if (nextElement) {manageFocus(nextElement)}
   }, [manageFocus])// Close active elements;
   const closeActiveElements = useCallback(() => {// Close modals, dropdowns, etc.;';';'
