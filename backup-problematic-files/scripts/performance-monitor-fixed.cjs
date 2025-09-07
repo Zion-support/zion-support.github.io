@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env node;#!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
@@ -85,7 +83,6 @@ async collectSystemMetrics() {
   async collectApplicationMetrics() {
     try {
       // Check file sizes
-
       "timestamp"
         "cpu"
         "process"
@@ -162,7 +159,6 @@ const { execSync } = require("child_process")
     } catch (error) {
       console.error("Error collecting web "metrics": ", error.message)}
       }
-
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -444,7 +440,6 @@ class PerformanceMonitor {
       "} catch (error) {console.error("Error saving report":", error.message),"}"}
   getRecommendations() {
     const recommendations = []
-
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -500,5 +495,4 @@ class PerformanceMonitor {
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
-
   console.error("Fatal "error": ")  console.error("Fatal "error": ")

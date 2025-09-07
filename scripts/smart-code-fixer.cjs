@@ -4,9 +4,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 // Function to fix unescaped entities only in JSX content;
 function fixUnescapedEntities(content) {
-  // Only replace single quotes that are not in import statements or string literals;
-  // This regex looks for single quotes that are not preceded by import, from, or within quotes;
-
+  // Only replace single quotes that are not in import statements or string literals
+  // This regex looks for single quotes that are not preceded by import, from, or within quotes
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
     if (content.includes('&') || content.includes('<') || content.includes('>')) {}
 // Function to fix specific linting issues,

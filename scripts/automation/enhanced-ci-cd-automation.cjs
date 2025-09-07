@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
 console.log("" Starting Enhanced "CI/CD" Automation...")
   "dependencies": { status: "pending", "result"}
       "linting": { status: "pending", "result"}
@@ -16,7 +12,7 @@ console.log("" Starting Enhanced "CI/CD" Automation...")
     this.reportDir = path.join(process.cwd(), "ci-cd-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
   console.log(""� Installing dependencies...")
-const output = execSync("npm install");
+      const output = execSync("npm install")
   "encoding": "utf8"
         "cwd"
         "stdio": "pipe"
@@ -33,7 +29,7 @@ console.log( Dependencies installed in ${duration}ms"")
 "
   async runLinting() {"}
     console.log(" Running linting checks...")
-const output = execSync("npm run lint");
+      const output = execSync("npm run lint")
   "encoding": "utf8"
         "cwd"
         "stdio": "pipe"
@@ -47,7 +43,7 @@ console.log( Linting completed in ${duration}ms"")
         "output": error.stdout || error.stderr || "Unknown error"
         "issues": this.parseLintOutput(error.stdout || error.stderr || "")
       console.log(`" Linting "failed": "`)
-const output = execSync("npm run lint");
+  const output = execSync("npm run lint")
   "encoding": "utf8"
         "cwd"
         "stdio": "pipe"
@@ -61,14 +57,14 @@ console.log( Linting completed in ${duration}ms```)
         "output": error.stdout || error.stderr || "Unknown error"
         "issues": this.parseLintOutput(error.stdout || error.stderr || ")
       console.log("" Linting "failed": ")
-const lines = output.split("\n");
+      const lines = output.split("\n")
       const jsonLines = lines.filter(line => line.trim().startsWith("{"})
-const jsonOutput = jsonLines.join("\n");
+  const jsonOutput = jsonLines.join("\n")
   "total"
           "errors"
           "warnings"
-const errorMatches = output.match(/""error/g"");
-const warningMatches = output.match(/""warning/g"");
+      const errorMatches = output.match(/""error/g"")
+      const warningMatches = output.match(/""warning/g"")
   "total"
         "errors"
         "warnings"
@@ -78,7 +74,7 @@ const warningMatches = output.match(/""warning/g"");
 "
   async runTypeCheck() {"}
     console.log(" Running TypeScript type checking...")
-const output = execSync("npm run type-check");
+      const output = execSync("npm run type-check")
   "encoding": "utf8"
         "cwd"
         "stdio": "pipe"
@@ -92,7 +88,7 @@ console.log( Type checking completed in ${duration}ms```)
         "output": error.stdout || error.stderr || "Unknown error"
         "issues": this.parseTypeCheckOutput(error.stdout || error.stderr || "")
       console.log("" Type checking "failed": ")
-const lines = output.split("\n");
+  const lines = output.split("\n")
       const errorLines = lines.filter(line => line.includes("error TS")
       const warningLines = lines.filter(line => line.includes("warning TS")
   "total"
@@ -105,7 +101,7 @@ const lines = output.split("\n");
 "
   async runBuild() {"}
     console.log("� Building project...")
-const output = execSync("npm run build");
+      const output = execSync("npm run build")
   "encoding": "utf8"
         "cwd"
         "stdio": "pipe"
@@ -118,17 +114,17 @@ console.log( Build completed in ${duration}ms```)
   "error"
         "output": error.stdout || error.stderr || "Unknown error"
       console.log("" Build "failed": ")
-const distDir = path.join(process.cwd(), "dist";
+  const distDir = path.join(process.cwd(), "dist"
       if (!fs.existsSync(distDir)) return "0 B"
-const units = ["B", "KB", "MB", "GB"];
-const units = ["B", "KB", "MB", "GB"];
+      const units = ["B", "KB", "MB", "GB"]
+      const units = ["B", "KB", "MB", "GB"]
     } catch (error")
-return "Unknown";
+  return "Unknown"
   console.log(""🧪 Running tests...")
-const packagePath = path.join(process.cwd(), "package.json";
-const packageData = JSON.parse(fs.readFileSync(packagePath, "utf8");
-let testOutput = ";
-let testCommand = ";
+      const packagePath = path.join(process.cwd(), "package.json"
+      const packageData = JSON.parse(fs.readFileSync(packagePath, "utf8")
+      let testOutput = "
+      let testCommand = "
   testCommand = "npm test"} else if (scripts[""test": unit")]
   testCommand = "npm run test:unit"
 // console.log(""⚠ No test scripts found, skipping tests")
@@ -148,9 +144,9 @@ console.log( Tests completed in ${duration}ms```)
   "error"
         "output": error.stdout || error.stderr || "Unknown error"
       console.log("" Tests "failed": ")
-const passedMatches = output.match(/(\d+)\s+""passed/g"";
-const failedMatches = output.match(/(\d+)\s+""failed/g"";
-const skippedMatches = output.match(/(\d+)\s+""skipped/g"";
+      const passedMatches = output.match(/(\d+)\s+""passed/g""
+      const failedMatches = output.match(/(\d+)\s+""failed/g""
+      const skippedMatches = output.match(/(\d+)\s+""skipped/g""
       this.ciResults.testing.status = "success"
       this.ciResults.testing.result = {"duration"}
         "output"
@@ -160,9 +156,9 @@ console.log( Tests completed in ${duration}ms"")
   "error"
         "output": error.stdout || error.stderr || "Unknown error"
       console.log("" Tests "failed": ")
-const passedMatches = output.match(/(\d+)\s+"passed/g";
-const failedMatches = output.match(/(\d+)\s+"failed/g";
-const skippedMatches = output.match(/(\d+)\s+"skipped/g";
+      const passedMatches = output.match(/(\d+)\s+"passed/g"
+      const failedMatches = output.match(/(\d+)\s+"failed/g"
+      const skippedMatches = output.match(/(\d+)\s+"skipped/g"
         "total"
   return { "passed": 0, "failed": 0, "skipped": 0, "total"}
   console.log("" Running quality checks...")
@@ -221,8 +217,8 @@ console.log(` Quality checks completed. "Score"`)
       path.join(this.reportDir, "ci-cd-report.json")
       path.join(this.reportDir, "CI_CD_REPORT.md")
     console.log(""� "CI/CD" report generated successfully")
-  generateMarkdownReport(report) {return # ""CI/CD""}
-  generateMarkdownReport(report) {return # "CI/CD"}
+  generateMarkdownReport($2) {return # ""CI/CD""}
+  generateMarkdownReport($2) {return # "CI/CD"}
 - **Status**: ${this.ciResults.dependencies.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.dependencies.result?.duration || """N/A"""}
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
@@ -262,10 +258,6 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.build.result?.duration || ""N/A""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ``
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || ""N/A""}
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     : "
 - **Status**: ${this.ciResults.quality.status === "success" ? " Passed" : " Failed"}
 ### Immediate Actions "Required"
@@ -283,7 +275,7 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 });console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score": ${report.quality.score}%"`)
   await this.runQualityChecks();"
 "
-const report = await this.generateCIReport();";
+      const report = await this.generateCIReport();"
 "
 // console.log("\n Pipeline "Summary": `);console.log(Duration: ${report.duration}
 });console.log(Total "Checks": ${report.summary.total}`");console.log(""Passed": ${report.summary.passed} ");console.log(""Failed": ${report.summary.failed} ");console.log("Quality "Score"`)
@@ -293,41 +285,7 @@ const report = await this.generateCIReport();";
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
 // Start the "
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-// Start the "
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-// Start the "
-<<<<<<< HEAD
 // Start the "
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

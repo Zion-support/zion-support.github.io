@@ -1,7 +1,6 @@
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 function fixMergeConflicts(filePath) {
   try {}

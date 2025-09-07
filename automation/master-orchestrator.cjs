@@ -17,33 +17,17 @@ class MasterAutomationOrchestrator {
   }
 
   ensureLogDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  log(message, level = 'INFO') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      // Ignore log file errors
-    }
-  }
-
-  runCmd(cmd) {
-    try {
-      const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
-      return { success: true, output: out };
-    } catch (e) {
-      return {
-        success: false,
-        error: e.message,
-        output: e.stdout?.toString?.() || ''
-      };
-    }
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
   async runCommand(command, description) {
@@ -52,7 +36,7 @@ class MasterAutomationOrchestrator {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: this.projectRoot
+        cwd: path.join(__dirname, '..'),
       });
       this.log(`✅ ${description} - Success`);
       return { success: true, result };
@@ -60,66 +44,6 @@ class MasterAutomationOrchestrator {
       this.log(`❌ ${description} - Failed: ${error.message}`);
       return { success: false, error: error.message };
     }
-  }
-
-  async runAllChecks() {
-    this.log('Starting comprehensive system check.');
-    
-    const tasks = [
-      ['health', 'node automation/health-check.cjs'],
-      ['security', 'node automation/security-scanner.cjs'],
-      ['performance', 'node automation/performance-optimizer.cjs'],
-      ['codeQuality', 'node automation/code-quality-monitor.cjs'],
-      ['build', 'npm run build'],
-      ['lint', 'npm run lint'],
-      ['typeCheck', 'npm run type-check'],
-    ];
-
-    for (const [name, cmd] of tasks) {
-      this.log(`Running: ${name}`);
-      const res = this.runCmd(cmd);
-      this.results[name] = { success: res.success, error: res.error || null };
-      
-      if (!res.success && name === 'lint') {
-        this.log('Attempting lint auto-fix.');
-        const fixRes = this.runCmd('npm run lint:fix');
-        this.results.lint.autoFixed = fixRes.success;
-      }
-    }
-
-    const passed = Object.values(this.results).filter(r => r.success).length;
-    const total = Object.keys(this.results).length;
-    const durationMs = Date.now() - this.startTime;
-    
-
-    
-
-main
-
-    const summary = {
-      timestamp: new Date().toISOString(),
-      durationMs,
-      total,
-      passed,
-      failed: total - passed,
-      status: passed === total
-          ? 'HEALTHY'
-          : passed >= Math.floor(total * 0.8)
-            ? 'WARNING'
-            : 'CRITICAL'
-    };
-
-    try {
-      fs.writeFileSync(
-        path.join(this.logsDir, 'master-orchestrator-report.json'),
-        JSON.stringify({ summary, results: this.results }, null, 2)
-      );
-    } catch (error) {
-      this.log(`Error writing report: ${error.message}`, 'ERROR');
-    }
-
-    this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
-    return passed === total;
   }
 
   async runLinting() {
@@ -158,7 +82,7 @@ main
 
     const fixCommands = [
       { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
-      { cmd: 'node automation/comprehensive-syntax-fixer.cjs', desc: 'Fix syntax issues' },
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' },
     ];
 
     for (const { cmd, desc } of fixCommands) {
@@ -170,12 +94,17 @@ main
     this.log('🤖 Running automation scripts...');
 
     const scripts = [
-      'automation/enhanced-automation-suite.cjs',
-      'automation/comprehensive-app-improver.cjs',
+      'enhanced-automation-suite.cjs',
+      'comprehensive-automation-suite.cjs',
+      'app-optimizer.cjs',
+      'performance-optimizer.cjs',
+      'security-scanner.cjs',
+      'seo-optimizer.cjs',
+      'health-check.cjs'
     ];
 
     for (const script of scripts) {
-      const scriptPath = path.join(this.projectRoot, script);
+      const scriptPath = path.join(__dirname, script);
       if (fs.existsSync(scriptPath)) {
         await this.runCommand(`node ${scriptPath}`, `Running ${script}`);
       } else {
@@ -197,7 +126,6 @@ main
       },
       summary: 'Master automation orchestrator completed successfully',
     };
-main
 
     const reportPath = path.join(
       __dirname,
@@ -225,30 +153,6 @@ main
   }
 }
 
-if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  const command = process.argv[2] || 'check';
-  
-  switch (command) {
-    case 'check':
-      orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
-      break;
-    case 'run':
-      orchestrator.run().catch(console.error);
-      break;
-    default:
-      console.log('Usage: node automation/master-orchestrator.cjs [check|run]');
-      process.exit(1);
-  }
-}
-module.exports = MasterOrchestrator;
-
-module.exports = MasterOrchestrator;
-
-module.exports = MasterOrchestrator;
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
-
-
-
-module.exports = MasterAutomationOrchestrator;
+// Run the orchestrator
+const orchestrator = new MasterAutomationOrchestrator();
+orchestrator.run().catch(console.error);

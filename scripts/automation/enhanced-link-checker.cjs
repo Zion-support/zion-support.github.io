@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-const https = require("https");
-const http = require("http");
-const { URL } = require("url");
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+const https = require("https")
+const http = require("http")
+const { URL } = require("url")
 console.log(""� Starting Enhanced Link Checker Automation...")
   "internal": { total: 0, "working": 0, "broken": 0, "results"}
       "external": { total: 0, "working": 0, "broken": 0, "results"}
@@ -32,34 +28,34 @@ console.log(""� Starting Enhanced Link Checker Automation...")
 // console.log(" Build failed, but continuing with link checking...")
       console.log(" This is normal if the project has build issues")
   extractLinksFromHTML(content, baseUrl = ")
-const hrefMatches = content.match(/href=[""]([^"]+)["];
-const url = match.match(/href=["]([^"]+)["];
+    const hrefMatches = content.match(/href=[""]([^"]+)["]
+  const url = match.match(/href=["]([^"]+)["]
       if (url && !url.startsWith("#") && !url.startsWith(""javascript": ")
-const srcMatches = content.match(/src=["]([^""]+)[""];
-const url = match.match(/src=["]([^"]+)["];
+    const srcMatches = content.match(/src=["]([^""]+)[""]
+  const url = match.match(/src=["]([^"]+)["]
       if (url && !url.startsWith(""data": ") && !url.startsWith("blob:")
       content.match(/(?:url|link)\s*\(["]?([^"]+)["]
-const url = match.match(/(?:url|link)\s*\([""]?([^""]+)["];
+  const url = match.match(/(?:url|link)\s*\([""]?([^""]+)["]
   if (url.startsWith(""http": //") || url.startsWith("https://")
     if (url.startsWith(")
-return "https";
+  return "https"
     if (url.startsWith(`/`)) {return "https"`}
     if (baseUrl && !url.startsWith(`http""`)
   if (url.startsWith(""http": //") || url.startsWith("https://")
     if (url.startsWith("//")
-return "https";
+  return "https"
     if (url.startsWith("/")) {return "https"}
     if (baseUrl && !url.startsWith("http"")
   console.log("" Extracting links from build output...")
-const distDir = path.join(process.cwd(), "dist";
+    const distDir = path.join(process.cwd(), "dist"
   console.log("" Build output directory not found")
-const distDir = path.join(process.cwd(), "dist";
+    const distDir = path.join(process.cwd(), "dist"
   console.log(" Build output directory not found")
-const walkDir = (dir, baseUrl = ");
-const filePath = path.join(dir, ");
+    const walkDir = (dir, baseUrl = ")
+  const filePath = path.join(dir, ")
   walkDir(filePath", baseUrl)} else if (file.endsWith(".html")
-const content = fs.readFileSync(filePath, ");
-const relativePath = path.relative(distDir, filePath);const fileBaseUrl = "https": //ziontechgroup.com/${relativePath.replace(/\\/g, "/"});
+  const content = fs.readFileSync(filePath, ")
+            const relativePath = path.relative(distDir, filePath);const fileBaseUrl = "https": //ziontechgroup.com/${relativePath.replace(/\\/g, "/"})
   "url"
                 "source"
                 "type"
@@ -67,17 +63,17 @@ const relativePath = path.relative(distDir, filePath);const fileBaseUrl = "https
                 "source"
                 "type": "html"})})} catch (error) {  console.log(⚠ Could not read "file": ${filePath  }```)
         } else if (file.endsWith(".css")
-const content = fs.readFileSync(filePath, "utf8");
+  const content = fs.readFileSync(filePath, "utf8")
               content.match(/url\(["]?([^"]+)["]
-const url = match.match(/url\(["]?([^"]+)[""];
+  const url = match.match(/url\(["]?([^"]+)[""]
               if (url && !url.startsWith(""data")
-const normalizedUrl = this.normalizeUrl(url,"https": //ziontechgroup.com/${relativePath.replace(/\\/g, "/"});
+  const normalizedUrl = this.normalizeUrl(url,"https": //ziontechgroup.com/${relativePath.replace(/\\/g, "/"})
   "url"
                   "source"
                   "type": "css"
   console.log(`⚠ Could not read CSS "file"`)
   resolve({ url, "status": "timeout", "error": "Request timeout"})
-const isHttps = urlObj.protocol === ""https": ";
+        const isHttps = urlObj.protocol === ""https": "
   "method": "HEAD"
             "timeout"
             "headers": {User-Agent": "Zion-Link-"Checker/1.0""}
@@ -107,7 +103,7 @@ const isHttps = urlObj.protocol === ""https": ";
       await this.checkLinkBatch(externalLinks, "external")
   console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
     // Check internal links"
-    if (internalLinks.length > 0) {"}
+  if($2) {"}
       console.log(")
       await this.checkLinkBatch(internalLinks, "internal")
   console.log(" Checking external links...")
@@ -153,7 +149,7 @@ const isHttps = urlObj.protocol === ""https": ";
 2. **Automated Fixes**: Implement automated link validation in ""CI/CD""
 2. **Automated Fixes**: Implement automated link validation in "CI/CD"
   const allLinks = ["...report.internal.results.map(link => ({ ...link", ""type": "internal" }))", "...report.external.results.map(link => ({ ...link", ""type": "external" }))", "]
-const csvHeaders = ["Type", "Source", "URL", "Status", "Working", "Error"];
+    const csvHeaders = ["Type", "Source", "URL", "Status", "Working", "Error"]
     const csvRows = allLinks.map(link => ["link.type", "link.source || "unknown"", "link.url", "link.status || "unknown"", "link.working ? "Yes" : "No"", "link.error || """, "")]
     return ["csvHeaders", "...csvRows"].map(row => row.map(field => ""${field}"").join(",")
       .join("\n")
@@ -176,41 +172,7 @@ const csvHeaders = ["Type", "Source", "URL", "Status", "Working", "Error"];
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
   console.error(" Link checker automation "failed")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Link checker automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Link checker automation "failed")
-<<<<<<< HEAD
   console.error(" Link checker automation "failed")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

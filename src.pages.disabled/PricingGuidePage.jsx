@@ -34,7 +34,6 @@ import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
 
-
 }
 
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
@@ -45,27 +44,7 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-}
-
-}
-:src.pages.disabled/PricingGuidePage.jsx
 }
 }
 }
 }
-}
-
-
-
-
-
-
-:src.pages.disabled/PricingGuidePage.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/PricingGuidePage.jsx;

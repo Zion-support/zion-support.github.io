@@ -3,11 +3,11 @@ const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing All Corrupted Files...')
 console.log('=====')
-const corruptedFiles = ['pages/docs/api-reference.tsx'];
+const corruptedFiles = ['pages/docs/api-reference.tsx']
   'pages/docs/authentication.tsx'
   'pages/docs/first-steps.tsx'
   'pages/docs/getting-started.tsx'
-let content = '';
+    let content = ''
     if (filePath === 'pages/docs/api-reference.tsx')
       content = "
     "phone"

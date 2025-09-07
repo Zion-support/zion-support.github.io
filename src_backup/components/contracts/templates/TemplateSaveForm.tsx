@@ -48,46 +48,6 @@ const form_schema = z.object ({'
 type FormValues = z.infer < typeof form_schema>;
 
   on_cancel: () => void;
-
-import { Loader2  } from 'lucide-react';
-import { ContractFormValues  } from '@/components/contracts/components/ContractForm';
-import { ContractTemplate  } from '@/types/contracts';
-import { useContractTemplates  } from '@/hooks/useContractTemplates';
-import { Button  } from '@/components/ui/button';
-import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components/ui/form';
-import { Input  } from '@/components/ui/input';
-import { Switch  } from '@/components/ui/switch';
-const formSchema = z && z.object({title: z && z.string().min(1, 'Title is required'),isDefault: z && z.boolean()})type FormValues = z && z.infer<typeof formSchema>;interface TemplateSaveFormProps  {onCancel: () => void;
-  onComplete: () => void;
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;export function TemplateSaveForm(): any ({onCancel,onComplete,editTemplate,currentValues}: TemplateSaveFormProps) {const [saving, setSaving] = useState(false)const { createTemplate, updateTemplate }  = useContractTemplates()const form = useForm<FormValues>({resolver: zodResolver(formSchema),defaultValues: {title: editTemplate?.title || '',isDefault: editTemplate?.is_default || false}})const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {return;import { ContractFormValues } from "@/components/contracts/components/ContractForm",import { ContractTemplate } from "@/types/contracts",import { useContractTemplates } from "@/hooks/useContractTemplates",import { Button } from "@/components/ui/button",import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",const formSchema = null;
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage;
- } from '@/components/ui/form';
-const formSchema = z.object({title: z.string().min(1, 'Title is required')isDefault: z.boolean()})type FormValues = z.infer<typeof formSchema>;
-interface TemplateSaveFormProps  {onCancel: () => void;
-  onComplete: () => void;
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues;
-export function TemplateSaveForm() {const [saving, setSaving] = useState(false)const { createTemplate, updateTemplate } = useContractTemplates()const form = useForm<FormValues>({resolver: zodResolver(formSchema)defaultValues: {title: editTemplate?.title |'';
-      isDefault: editTemplate?.is_default |false;
-    }setSaving(true)try {if (editTemplate) {await updateTemplate && updateTemplate.mutateAsync({templateId: editTemplate && editTemplate.id,title: values && values.title,templateData: editTemplate && editTemplate.template_data,isDefault: values && values.isDefault})} else if (currentValues) {await createTemplate && createTemplate.mutateAsync({title: values && values.title,templateData: currentValues,isDefault: values && values.isDefault})}onComplete()} finally {setSaving(false)import { useState  } from 'react';
-import { use_form, type ControllerRenderProps  } from 'react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from 'zod';
-import { ContractFormValues  } from '@/components / contracts / components / ContractForm';
-import { ContractTemplate  } from '@/types / contracts';
-import { useContractTemplates  } from '@/hooks / useContractTemplates';
-import { Button  } from '@/components / ui / button';
-import { Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Switch  } from '@/components / ui / switch';
-const form_schema = z.object ({title: z.string ().min (1, 'Title is required'),is_default: z.boolean ()})type FormValues = z.infer < typeof form_schema>;
-interface TemplateSaveFormProps  {on_cancel: () => void;
   on_complete: () => void;
   edit_template?: ContractTemplate | null;
   current_values?: ContractFormValues;
@@ -109,17 +69,9 @@ if ( {) {}
   $2;
 }
       return;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
     }
+
     set_saving (true);
-    }set_saving (true)try {// Check condition;
-if ( {) {$2;
-}
-        await update_template.mutate_async ({template_id: edit_template.id,title: values.title,template_data: edit_template.template_data,is_default: values.is_default})} else // Check condition;
-if ( {) {$2;
-}
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-        await create_template.mutate_async ({
     try {}
       // Check condition;
 if ( {) {}
@@ -164,60 +116,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 
-        await create_template.mutate_async ({title: values.title,template_data: current_values,is_default: values.is_default})}
-      on_complete ()} finally {set_saving (false)}
-  }return (<Form {...form}>;<form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
-        <FormField;
-          control={form.control}
-          name='title';render={({field;
-          }: {}
-  },return (<Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}name="title";
-          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (<FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-              <FormControl>;
-                <Input {...field} placeholder='Enter template name' />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-            field: ControllerRenderProps < FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel > Template Name</FormLabel>;<FormControl>;
-                <Input {...field} placeholder='Enter template name' />;
-              </FormControl>;
-              <FormMessage />;</FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name='is_default';render={({field;
-          }: {field: ControllerRenderProps<FormValues, 'isDefault'>;
-          }) => (<FormItem className='flex items-center justify-between'>;
-              <FormLabel className='cursor-pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;<Switch;
-                  aria-label='Default template';
-                  checked={field && field.value}
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-                  onCheckedChange={field && field.onChange}                />;
-
-  };
-  return (;
-    <Form {...form}>;
-                  onCheckedChange={field && field.onChange}                />;}return (<Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (<FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-              <FormControl>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
   };
 
   return (;
@@ -236,11 +134,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;
             </FormItem>;
           )}
+
         />;
-                <Input {...field} placeholder="Enter template name" />;</FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}/>;
         <FormField;
           control={form.control}"
           name="isDefault""
@@ -263,7 +158,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </FormControl>;
               <FormMessage />;
             </FormItem>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
           )}
         />
         "
@@ -282,46 +176,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (;'
               `${editTemplate ? 'Update' : 'Save'} Template`;
 
-          )}/>;
-        <div className="flex gap-2 justify-end">;
-          <Button type="button" variant="outline" onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={saving}>;
-            {saving ? (<Button type='submit' disabled={saving}>;
-            field: ControllerRenderProps < FormValues, 'is_default'>;
-          }) => (<FormItem className='flex items - center justify - between'>;
-              <FormLabel className='cursor - pointer'>;
-                Set as default template;
-              </FormLabel>;
-              <FormControl>;
-                <Switch;
-                  aria - label='Default template';
-                  checked={field.value}
-                  onCheckedChange={field.on_change}                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <div className='flex gap - 2 justify - end'>;
-          <Button type='button' variant='outline' on_click={on_cancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
-            {saving ? (/>;<div className='flex gap-2 justify-end'>;
-          <Button type='button' variant='outline' onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
-            {saving ? (<>;
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                Saving...;
-              </>;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-            ) : (;
-              `${editTemplate ? 'Update' : 'Save'} Template`;
-
-              <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
@@ -342,39 +196,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 ;
 
-            )}
-    </Form>;
-  );
-
-
-
-  // Check condition
-if ( {) {
-  $2
-            ) : (`${editTemplate ? 'Update' : 'Save'} Template`;<>;
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                Saving...;
-              </>;
-            ) : (editTemplate ? "Update" : "Save";
-}Template`)}</Button> </div> </form> </Form>)}"}`${editTemplate ? "Update" : "Save"} Template`;
-            )}</Button>;
-        </div>;
-      </form>;</Form>;
-  )// Check condition;
-if ( {) {$2;
-}
-  await update_template.mutate_async ({<FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {...field ";
-}placeholder="Enter template name" />;
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
-  edit_template ? "Update" : "Save";
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
-}Template`);
-}</Button> </div> </form> </Form>);
-}"}
-}
-;
-
           </Button>
         </div>
       </form>
@@ -387,18 +208,10 @@ try {;
   await updateTemplate.mutateAsync ({;
   <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
   ...field ";
-}Template`)}</Button> </div> </form> </Form>)}"}
-}</Button>;
-        </div>;
-      </form>;
-    </Form>;
-  )setSaving (true)try {if (editTemplate) {await updateTemplate.mutateAsync ({<FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {...field ";
 }placeholder="Enter template name" /> ;
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
   editTemplate ? "Update" : "Save" ;
-<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateSaveForm.tsx
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
-}Template`)}</Button> </div> </form> </Form>)}";
 }"

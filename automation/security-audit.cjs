@@ -4,20 +4,6 @@
 }},
 
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-}},
-}},
-}},
-
-}},
-
-
-
-
-
-
 
 
 
@@ -36,8 +22,6 @@ const securityChecks = [{
       } catch (error) {
       }
     },
-main
-
 main
 
     }},
@@ -61,23 +45,9 @@ main
 
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-      
-
-
-      
-
-      
-
-
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
-
-
-
-
-
-
 
 
 
@@ -97,17 +67,12 @@ main
           .readdirSync(apiDir)
           .filter(file => file.endsWith('.ts') || file.endsWith('.js'));
         let securityIssues = 0;
-            !content.includes('// Security: ')
-            !content.includes('// Security: ')
-            !content.includes('// Security: ')
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
-
 
         apiFiles.forEach(file => {)
 
@@ -125,12 +90,6 @@ main
             securityIssues++;
 
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
 
 
 
@@ -145,19 +104,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`)
         );
-
-
-main
-
-
-
-
-
-
-        
-
-
-
         
 
       }
@@ -175,31 +121,12 @@ main
 
 
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
 
 
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
   },
-
-
-main
-
-
-
-
-
-
-        
-
-
-
         
 
       }
@@ -214,20 +141,12 @@ main
         const content = fs.readFileSync(nextConfigPath, 'utf8')
         if (content.includes('https') || content.includes('secure')) {
         } else {
-    },
-  },
-    },
-  },
-    },
-  },
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
-
 
 
 
@@ -298,10 +217,6 @@ const report = {
     name: check.name,
 
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
 
 
 
@@ -313,7 +228,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     failed: totalCount - successCount,
   },
 };
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -331,24 +245,9 @@ main
 
 
     "status": 'completed'})),
-  "summary": {
-    total: totalCount,
-    "successful": successCount,
-    "failed": totalCount - successCount}};
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-    "status": 'completed'})),
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
-
-
-
-
-
-
-
 
 
 
@@ -382,13 +281,6 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-
-
-
-
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -396,34 +288,10 @@ const { execSync } = require('child_process')
 console.log('� Security Audit Starting...\n')
     "status"
     "status"
-    "status"
-    "status"
-
-    "status"
-    "status"
-    "status"
-
-    "status"
-    "status"
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-    "status"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
-
-
-
-
-
-
-
-
-
-
-
 
 
     "status"

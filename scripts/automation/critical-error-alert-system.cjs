@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
     this.logsPath = path.join(this.workspacePath, "logs")
     this.reportsPath = path.join(this.workspacePath, "automation-reports")
   "buildFailures"
@@ -16,17 +12,17 @@ const { execSync } = require("child_process");
   fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
     console.log(")
-const logFile = path.join(this.logsPath, "critical-error-alert-system.log");
+    const logFile = path.join(this.logsPath, "critical-error-alert-system.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
   log(message, level = "INFO")
-const logMessage = "[${timestamp}] [${level}] ${message}";
+    const logMessage = "[${timestamp}] [${level}] ${message}"
     console.log(")
-const logFile = path.join(this.logsPath, "critical-error-alert-system.log");
+    const logFile = path.join(this.logsPath, "critical-error-alert-system.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
-const resourceStatus = await this.checkSystemResources();";
-    if (resourceStatus.critical) {"}
+    const resourceStatus = await this.checkSystemResources();"
+  if($2) {"}
       criticalErrors.push(resourceStatus);")}"
 this.log(Found ${criticalErrors.length} critical error conditions")
   this.log(" Checking build status...")
@@ -38,7 +34,7 @@ this.log(Found ${criticalErrors.length} critical error conditions")
         "critical"
         "message": "Build successful"
         "severity": "low"
-const errorCount = this.countBuildErrors(error.stdout || "");
+  const errorCount = this.countBuildErrors(error.stdout || "")
   "type": "build"
         "critical": errorCount >= this.criticalThresholds.buildFailures,"message": "Build failed with ${errorCount  } errors"
         "severity"
@@ -53,7 +49,7 @@ const errorCount = this.countBuildErrors(error.stdout || "");
         "critical"
         "message": "TypeScript check passed"
         "severity": "low"
-const errorCount = this.countTypeScriptErrors(error.stdout || "");
+  const errorCount = this.countTypeScriptErrors(error.stdout || "")
   "type": "typescript"
         "critical": errorCount >= this.criticalThresholds.typeErrors,"message": "TypeScript check failed with ${errorCount  } errors"
         "severity"
@@ -68,7 +64,7 @@ const errorCount = this.countTypeScriptErrors(error.stdout || "");
         "critical"
         "message": "ESLint check passed"
         "severity": "low"
-const errorCount = this.countLintErrors(error.stdout || "");
+  const errorCount = this.countLintErrors(error.stdout || "")
   "type": "lint"
         "critical": errorCount >= this.criticalThresholds.lintErrors,"message": "ESLint check failed with ${errorCount  } errors"
         "severity"
@@ -83,32 +79,32 @@ const errorCount = this.countLintErrors(error.stdout || "");
         "critical"
         "message": "Dependencies check passed"
         "severity": "low"
-const issueCount = this.countDependencyIssues(error.stdout || "");
+  const issueCount = this.countDependencyIssues(error.stdout || "")
   "type": "dependencies"
         "critical": issueCount >= this.criticalThresholds.dependencyIssues,"message": "Dependency check failed with ${issueCount  } issues"
         "severity"
             ? "critical"
             : "high"
   this.log(" Checking system resources...")
-const diskSpace = execSync("df -h .");
+      const diskSpace = execSync("df -h .")
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-const memory = execSync("free -h");
+      const memory = execSync("free -h")
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-const diskSpace = execSync("df -h .");
+      const diskSpace = execSync("df -h .")
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-const memory = execSync("free -h");
+      const memory = execSync("free -h")
   "cwd"
         "encoding": "utf8"
         "stdio": "pipe"
-const diskLines = diskSpace.split("\n");
+      const diskLines = diskSpace.split("\n")
       const usageLine = diskLines.find(line => line.includes("%")
-const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || "0";
+  const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || "0"
   "type": "system"
             "critical": true,"message": "Disk usage critical: ${usage}%"
             "severity": "critical"
@@ -180,41 +176,7 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
         "ERROR"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-        "ERROR"
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-        "ERROR"
-<<<<<<< HEAD
         "ERROR"
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

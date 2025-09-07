@@ -4,17 +4,6 @@ const { execSync } = require('child_process')
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-:scripts/resolve-final-conflicts.cjs
-:backup-problematic-files/scripts/final-build-fix.cjs
-:scripts/resolve-final-conflicts.cjs
-
-
-console.log('🔧 Resolving Final Conflicts');
-console.log('');
-
-// Function to resolve merge conflicts by keeping the first version
-function resolveMergeConflicts(content) {
-  return content
 
 
 // Function to resolve merge conflicts by keeping the first version
@@ -26,21 +15,6 @@ console.log('🔧 Final Build Fix');
 console.log('====');
 :backup-problematic-files/scripts/final-build-fix.cjs
 :scripts/resolve-final-conflicts.cjs
-console.log('🔧 Resolving Final Conflicts');
-console.log('
-}
-    .replace(/
-}
-:backup-problematic-files/scripts/final-build-fix.cjs
-
-console.log('🔧 Final Build Fix');
-console.log('====');
-
-
-
-console.log('🔧 Resolving Final Conflicts');
-console.log('
-}
 console.log('🔧 Resolving Final Conflicts');
 console.log('
 }
@@ -99,12 +73,6 @@ console.log(
 }
 
 
-:backup-problematic-files/scripts/final-build-fix.cjs
-:scripts/resolve-final-conflicts.cjs
-    let modified = false;
-
-    // Check for merge conflict markers
-
     const originalContent = content;
     
     content = fixAllSyntax(content);
@@ -156,12 +124,4 @@ console.log('\n🎉 Final build fix completed!');
     let modified = false
     // Check for merge conflict markers
 :scripts/resolve-final-conflicts.cjs
-
-
-
-    let modified = false;
-
-    // Check for merge conflict markers
-
-
 

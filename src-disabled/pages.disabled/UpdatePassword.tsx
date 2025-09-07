@@ -1,8 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
-
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-origin/cursor/automate-test-improve-and-merge-code-2533
 :src/pages/UpdatePassword.tsx
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -442,7 +437,6 @@ export default function UpdatePassword() {;
                   </form>
                 </Form>
               )}
-<<<<<<< HEAD:src_backup/pages/UpdatePassword.tsx
 :src/pages/UpdatePassword.tsx
 
             </div>

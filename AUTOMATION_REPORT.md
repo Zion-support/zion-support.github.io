@@ -2,21 +2,11 @@
 **Timestamp:** 2025-09-07T05:23:29.906Z
 **Duration:** NaNms
 ## Summary
-- ✅ Successful: 5
+- ✅ Successful: 4
 - ❌ Errors: 4
-=======
-**Timestamp:** 2025-09-07T02:51:20.034Z
-**Duration:** 9764ms
-
-## Summary
-- ✅ Successful: 1
-- ❌ Errors: 8
->>>>>>> fc9e555998eb59b8e7a598af5aaae6093b04ae4e
 - ⚠️ Warnings: 0
 ## Successful Operations
 - Operation
-<<<<<<< HEAD
-- scripts/auto-fixer.js
 - scripts/advanced-build-optimizer.js
 - scripts/performance-monitor-enhanced.js
 - scripts/auto-fixer.js
@@ -222,7 +212,6 @@ Caused by:
 ./app/layout.tsx
 > Build failed because of webpack errors
 ## Warnings
-<<<<<<< HEAD
 - ESLint had issues
 - TypeScript had issues
 ## Recommendations

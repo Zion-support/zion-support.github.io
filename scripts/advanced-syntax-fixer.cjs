@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("$1")
 const path = require("$1")
@@ -20,7 +19,7 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, "utf8")
     // Fix "1"
       /import\s+\{\s*useState\s*\}\s+from\s+[]react["];?\s*\nimport\s+\{\s*useState\s*\}\s+from\s+["]react[]
         useStateRegex,import { useState } from "react"
@@ -30,7 +29,7 @@ let content = fs.readFileSync(filePath, "utf8");
       content = content.replace(linkRegex, "import { Link } from "next/link")
       fixed = true;log(`Fixed duplicate Link imports in ${filePath}, "yellow"`)
     // Fix "3"
-const unterminatedStringRegex = /(["])([^")];
+    const unterminatedStringRegex = /(["])([^")]
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log(`Fixed unterminated strings in ${filePath}, "yellow"`)
     // Fix "4": Fix unexpected keyword "import"
@@ -46,7 +45,7 @@ const unterminatedStringRegex = /(["])([^")];
       content = content.replace(linkRegex, import { Link  } from "next/link)
       fixed = true;log("Fixed duplicate Link imports in ${filePath}", "yellow")
     // Fix "3"
-const unterminatedStringRegex = /([""])([^")];
+    const unterminatedStringRegex = /([])([^")]
       content = content.replace(unterminatedStringRegex, "$1$2$1")
       fixed = true;log("Fixed unterminated strings in ${filePath}", "yellow")
     // Fix "4": Fix unexpected keyword "import"
@@ -82,11 +81,11 @@ const unterminatedStringRegex = /([""])([^")];
   log(" Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log(`\n� Processing "directory": ${dir}, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);"
   log(" Advanced Syntax Fixer Starting...", "cyan")
-const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
-const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"]
     if (fs.existsSync(dir)) {log("\n� Processing "directory": ${dir}", "blue")
 log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white")
-  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
+  if($2) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"

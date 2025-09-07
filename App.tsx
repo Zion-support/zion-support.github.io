@@ -105,7 +105,7 @@ function App() {
           <div className="container mx-auto max-w-6xl text-center">
             <h2 className="text-4xl font-bold mb-8">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help transform your business with technology.
+              Let&apos;s discuss your project and see how we can help transform your business with technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
@@ -122,4 +122,4 @@ function App() {
   );
 }
 
-export default App;"
+export default App;

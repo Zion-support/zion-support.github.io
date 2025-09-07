@@ -42,12 +42,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }`;
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
-      return true;
     }
-    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 function walkDir(dir) {

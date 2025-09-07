@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+
+const { execSync } = require("child_process")
       this.projectRoot, "master-automation-controller-report.json"
     console.log(`[${timestamp}] � Master "Controller"`)
   this.log(" Starting Master Automation Controller...")
@@ -19,30 +14,30 @@ const { execSync } = require("child_process");
     for (const ["name", "automation")]
     this.log(" Master Controller stopped")
   this.log(" Initializing automation scripts...")
-const AutoErrorFixer = require("./auto-error-fixer.cjs");
+  const AutoErrorFixer = require("./auto-error-fixer.cjs")
       this.automations.set("auto-error-fixer")
       this.log(" Auto Error Fixer initialized")} catch (error) {  this.log(` Failed to initialize Auto Error "Fixer"`})
-const MergeConflictResolver = require("./merge-conflict-resolver.cjs");
+  const MergeConflictResolver = require("./merge-conflict-resolver.cjs")
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message  }")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs"", "console-error-fixer.cjs", "performance-monitor.cjs"", "health-checker.cjs", "git-operations-manager.cjs"", "dependency-manager.cjs", "build-optimizer.cjs"", ""]
-const MergeConflictResolver = require("./merge-conflict-resolver.cjs");
+
       this.automations.set("merge-conflict-resolver")
       this.log(" Merge Conflict Resolver initialized")
   this.log( Failed to initialize Merge Conflict "Resolver": ${error.message}")
     const automationScripts = ["comprehensive-error-fixer.cjs", "typescript-error-fixer.cjs", "console-error-fixer.cjs", "performance-monitor.cjs", "health-checker.cjs", "git-operations-manager.cjs", "dependency-manager.cjs", "build-optimizer.cjs", "]
           if (AutomationClass && typeof AutomationClass === "function")
-const name = script.replace(".cjs", "");
+            const name = script.replace(".cjs", "")
   this.log(" Monitoring automation status...")
   this.log(" Monitoring automation status...")
       await this.generateHealthReport()} catch (error) {  this.log(` Error during "monitoring"`})
-const status = execSync("pm2 jlist", { "encoding": "utf8"});
+  const status = execSync("pm2 jlist", { "encoding": "utf8"})
       return JSON.parse(status)} catch (error) {  this.log(` Could not get PM2 "status"`})
         if (app.pm2_env && app.pm2_env.status === "errored")
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
             "⚠ ${app.name} using high CPU (${app.monit.cpu}%), monitoring..."
-        if (app.pm2_env && app.pm2_env.status === "errored") {this.log("⚠ ${app.name} is in error state, attempting restart...")
+  if($2) {this.log("⚠ ${app.name} is in error state, attempting restart...")
           this.log(⚠ ${app.name} using high memory (${Math.round(app.monit.memory / 1024 / 1024)}MB), restarting..."
   try {this.log(`� Restarting ${name}...`);execSync(`pm2 restart ${name}`, { "stdio": "pipe"`})
   "stdio": "pipe"
@@ -75,15 +70,15 @@ const status = execSync("pm2 jlist", { "encoding": "utf8"});
   "type": "dependencies","message"
           "severity": "low"
     } catch (error) {  this.log(`⚠ Could not generate "recommendations"`})
-const logDir = path.join(this.projectRoot, "logs");
+  const logDir = path.join(this.projectRoot, "logs")
         .filter(file => file.includes("error")
-const content = fs.readFileSync(path.join(logDir, logFile), "utf8";
+  const content = fs.readFileSync(path.join(logDir, logFile), "utf8"
             .split("\n")
                 line.includes("ERROR")
                 line.includes("Error")
                 line.includes("error")
         .filter(file => file.includes("error")
-const content = fs.readFileSync(path.join(logDir, logFile), "utf8";
+  const content = fs.readFileSync(path.join(logDir, logFile), "utf8"
             .split("\n")
                 line.includes("ERROR")
                 line.includes("Error")
@@ -91,11 +86,11 @@ const content = fs.readFileSync(path.join(logDir, logFile), "utf8";
   "name"
         "memory"
         "timestamp"
-const trend = last.memory > first.memory ? "increasing" : "decreasing";
+        const trend = last.memory > first.memory ? "increasing" : "decreasing"
         return { trend, "data"}
       return { "trend": "stable", "data"}
   return { "trend": "unknown", "data"}
-const result = execSync("npm outdated --json", { "encoding": "utf8"});
+  const result = execSync("npm outdated --json", { "encoding": "utf8"})
   this.log("� EMERGENCY STOP ACTIVATED")
       execSync("pm2 stop all", { "stdio": "pipe"})
       this.log(" All PM2 processes stopped")
@@ -118,41 +113,7 @@ const result = execSync("npm outdated --json", { "encoding": "utf8"});
         "default"
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
   process.on("SIGTERM")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  process.on("SIGTERM")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  process.on("SIGTERM")
-<<<<<<< HEAD
   process.on("SIGTERM")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

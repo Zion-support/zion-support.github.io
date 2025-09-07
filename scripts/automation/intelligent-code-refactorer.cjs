@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
 console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
       "appliedRefactorings"
       "codeQualityScore"
       "complexityReduction"
       "refactoringPatterns"
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+const { execSync } = require("child_process")
+
 console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
 console.log(" Starting Intelligent Code Refactorer...")
@@ -28,7 +23,7 @@ console.log(" Starting Intelligent Code Refactorer...")
       console.log(`" Intelligent code refactoring completed successfully"`)
   console.error(" Intelligent code refactoring "failed": ")
   console.log(" Analyzing code patterns...")
-const srcPath = path.join(process.cwd(), "src";
+    const srcPath = path.join(process.cwd(), "src"
   console.log("⚠ Source directory not found")
   "longFunctions"
       "duplicateCode"
@@ -37,8 +32,8 @@ const srcPath = path.join(process.cwd(), "src";
       "inconsistentNaming"
       "unusedVariables"
       "largeComponents"
-const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")];
-const content = fs.readFileSync(file, "utf8");
+    const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx")]
+  const content = fs.readFileSync(file, "utf8")
   "file"
           "functions"
   "file"
@@ -81,8 +76,8 @@ const content = fs.readFileSync(file, "utf8");
   console.log(" Applying automatic refactorings...")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
   console.log("� Extracting magic numbers...")
-const filePath = path.join(process.cwd(), "src";
-let content = fs.readFileSync(filePath, "utf8");
+  const filePath = path.join(process.cwd(), "src"
+        let content = fs.readFileSync(filePath, "utf8")
   content = constantDeclaration + "\n"
             // Replace magic number with constantconst regex = new RegExp(\\b${number.value}\\b, "g"")
   "type": "extract_constants"
@@ -98,10 +93,10 @@ let content = fs.readFileSync(filePath, "utf8");
 "
   async standardizeNaming(namingPatterns) {"}
     console.log("� Standardizing naming conventions...")
-const filePath = path.join(process.cwd(), "src";
-let content = fs.readFileSync(filePath, "utf8");
+  const filePath = path.join(process.cwd(), "src"
+        let content = fs.readFileSync(filePath, "utf8")
   if (inconsistency.type === "camelCase")
-const regex = new RegExp(inconsistency.original, "g");
+            const regex = new RegExp(inconsistency.original, "g")
   "type": "
           "file"
           "timestamp"
@@ -110,8 +105,8 @@ const regex = new RegExp(inconsistency.original, "g");
 // console.log("" Simplifying complex code...")
   console.log("" Simplifying complex code...")
     console.log(" Simplifying complex code...")
-const filePath = path.join(process.cwd(), "src";
-let content = fs.readFileSync(filePath, "utf8");
+  const filePath = path.join(process.cwd(), "src"
+        let content = fs.readFileSync(filePath, "utf8")
   if (conditional.type === "nested_if")
   "type": "
           "file"
@@ -160,7 +155,7 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
       "
   // Skip directories that can"
   // Skip directories that can"
-const lines = content.split("\n");
+    const lines = content.split("\n")
     let functionName = "
         line.includes("function ")
         (line.includes("const ") && line.includes("=") && line.includes("(")
@@ -173,13 +168,13 @@ const lines = content.split("\n");
             "length"
             "startLine"
             "endLine"
-const lines = content.split("\n");
-const block = lines.slice(i, i + 3).join("\n");
+    const lines = content.split("\n")
+  const block = lines.slice(i, i + 3).join("\n")
       codeBlocks.push({ block, "startLine"})
   "code"
             "startLine"
             "duplicateLine"
-const lines = content.split("\n");
+    const lines = content.split("\n")
         line.includes("if (")
         (line.includes("&&") || line.includes("||")
         line.includes("if (")
@@ -194,21 +189,21 @@ const lines = content.split("\n");
             "line"
             "code": line.trim() + "\n"
             "complexity"
-const lines = content.split("\n");
-const numberMatches = line.match(/\b\d+\"b/g");
+    const lines = content.split("\n")
+      const numberMatches = line.match(/\b\d+\"b/g")
   "value"
               "line"
               "context"
   "value"
               "line"
               "context"
-const lines = content.split("\n");
-const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\""b/g"");
+    const lines = content.split("\n")
+      const variableMatches = line.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\""b/g"")
   "type": "camelCase"
               "original"
               "suggested"
               "line"
-const prefix = contextWords[0] ? contextWords[0].toUpperCase() : ";
+    const prefix = contextWords[0] ? contextWords[0].toUpperCase() : "
   isConsistentNaming(name")
   isConsistentNaming(name")
       /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)"}
@@ -219,41 +214,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
   console.error(" Failed to start intelligent code "refactorer")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Failed to start intelligent code "refactorer")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start intelligent code "refactorer")
-<<<<<<< HEAD
   console.error(" Failed to start intelligent code "refactorer")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

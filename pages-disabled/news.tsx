@@ -1,22 +1,118 @@
-import React from 'react';'
-import MainLayout from '../components/layout/MainLayout';'
+import React from "react";
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next/link';
+import { motion } from 'framer-motion;
+import {},
+  {
+  // TODO: Implement
+  },
+  {
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Award,;
+  Globe,";
+  Zap,'
+  Building;'
+} from 'lucide-react;
+const newsArticles = [
+  {
+    id: 1,'
+    title: "Zion Tech Group Launches New AI-Powered Analytics Platform",
+    excerpt: "We're excited to announce the launch of our next-generation AI analytics platform that helps businesses make data-driven decisions with unprecedented accuracy.",
+    content: "Our new AI analytics platform represents a major breakthrough in business intelligence. Built with advanced machine learning algorithms, it can process vast amounts of data in real-time and provide actionable insights that were previously impossible to obtain. The platform features intuitive dashboards, predictive analytics, and automated reporting capabilities that will revolutionize how businesses approach data analysis.",
+    author: "Sarah Chen",
+    authorRole: "CTO",
+    date: "2024-01-15",
+    category: "Product Launch",
+    image: "/images/news/ai-platform.jpg",
+    featured: true];
+    tags: [AI", "Analytics", "Product Launch", "Innovation"],
+  {
+    id: 2,
+    title: "Company Expands to European Market with New Office in London",
+    excerpt: "Zion Tech Group announces the opening of its first European office in London, marking a significant milestone in our global expansion strategy.",
+    content: "The new London office will serve as our European headquarters, providing local support and services to clients across the region. This expansion reflects our commitment to serving international clients and our confidence in the European market's potential for growth in technology services.",
+    author: "Michael Rodriguez",
+    authorRole: "VP of International Operations",
+    date: "2024-01-10",
+    category: "Company News",
+    image: "/images/news/london-office.jpg",
+    featured: true,
+    tags: [Expansion", "International", "Europe", "Growth"],
+  {
+    id: 3,
+    title: "Zion Tech Group Achieves SOC 2 Type II Certification",
+    excerpt: "We're proud to announce that Zion Tech Group has successfully achieved SOC 2 Type II certification, demonstrating our commitment to the highest security standards.",
+    content: "This certification validates our comprehensive security controls and processes, ensuring that our clients' data is protected according to industry best practices. The audit covered our security, availability, processing integrity, confidentiality, and privacy controls over a six-month period.",
+    author: "David Kim",
+    authorRole: "Chief Security Officer",
+    date: "2024-01-05",
+    category: "Security",
+    image: "/images/news/soc2-certification.jpg",
+    featured: false,
+    tags: [Security", "Certification", "Compliance", "Trust"],
+  {
+    id: 4,
+    title: "New Partnership with Leading Cloud Provider Accelerates Innovation",
+    excerpt: "Strategic partnership with a major cloud provider enables us to offer enhanced scalability and performance to our enterprise clients.",
+    content: "This partnership allows us to leverage cutting-edge cloud infrastructure and services, enabling us to deliver more robust and scalable solutions to our clients. The collaboration will focus on developing next-generation cloud-native applications and services.",
+    author: "Emily Johnson",
+    authorRole: "VP of Strategic Partnerships",
+    date: "2023-12-28",
+    category: "Partnerships",
+    image: "/images/news/cloud-partnership.jpg",
+    featured: false,
+    tags: [Partnership", "Cloud", "Innovation", "Enterprise"],
+  {
+    id: 5,
+    title: "Zion Tech Group Named 'Best AI Solutions Provider' by Tech Industry Awards",
+    excerpt: "We're honored to receive the 'Best AI Solutions Provider' award at the annual Tech Industry Awards, recognizing our innovation and excellence in artificial intelligence.",
+    content: "This prestigious award recognizes our outstanding contributions to the AI industry and our commitment to delivering cutting-edge solutions that drive real business value. Our team's expertise in machine learning, natural language processing, and computer vision has set new standards in the industry.",
+    author: "Dr. Sarah Chen",
+    authorRole: "CTO",
+    date: "2023-12-20",
+    category: "Awards",
+    image: "/images/news/ai-award.jpg",
+    featured: false,
+    tags: [Award", "AI", "Recognition", "Excellence"],
+  {
+    id: 6,
+    title: "Company Announces $10M Series A Funding Round",
+    excerpt: "Zion Tech Group secures $10M in Series A funding to accelerate product development and market expansion.",
+    content: "This funding round will enable us to significantly expand our engineering team, accelerate the development of new AI and cloud services, and expand our market presence. The investment reflects strong confidence in our vision and execution capabilities.",
+    author: "Alex Thompson",
+    authorRole: "CEO",
+    date: "2023-12-15",
+    category: "Funding",
+    image: "/images/news/funding-round.jpg",
+    featured: false,
+    tags: [Funding", "Growth", "Investment", "Expansion"],
+  {
+];
 
-const Page = () => {
+const categories = [
+  { name: "All", count: newsArticles.length, active: true },
+  { name: "Product Launch", count: 1, active: false },
+  { name: "Company News", count: 1, active: false },
+  { name: "Security", count: 1, active: false },
+  { name: "Partnerships", count: 1, active: false },
+  { name: "Awards", count: 1, active: false },
+  { name: "Funding", count: 1, active: false }
+]
+];
+
+const featuredArticle = newsArticles.find(article => article.featured);
+const regularArticles = newsArticles.filter(article => !article.featured);
 }
-return (;
-    <MainLayout,
-title="News - Zion Tech Group""
-      description="Latest news and updates from Zion Tech Group""
+
+export default function NewsPage() {},
+  {
+  
     >
-      <div className="min-h-screen bg-gray-50">"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">News</h1>"
-          <p className="text-xl text-gray-600">Coming soon...</p>"
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
 
       <div className="min-h-screen bg-gray-50">
 

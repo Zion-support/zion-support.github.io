@@ -1,89 +1,32 @@
-}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-
-}
-
-export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true 
-}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
-  render() {if (this.state.hasError) ;
-  }
-  return <div>Something went wrong.</div>;
-}
-
-export default function Layout() {"
 
 
-}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-
-}
-
-export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
-  static getDerivedStateFromError(error) {return { "hasError": true 
-}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
-  render() {if (this.state.hasError) ;
-  }
-  return <div>Something went wrong.</div>;
 class ErrorBoundary extends React.Component {
-  }
   constructor(props) {
-    }
     super(props);
-    this.state = { "hasError": false
-};
+    this.state = { hasError: false };
   }
   static getDerivedStateFromError(error) {
-}
-return { "hasError": true,;
-};
+    return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
-    }
-    console.error('Error caught by "boundary":', error, errorInfo);'
+    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
-    }
     if (this.state.hasError) {
-      }
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
-interface LayoutProps  {"children": React.ReactNode;
-
 }
 
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
 interface LayoutProps {
-  }
-  "children": React.ReactNode;
-
-interface LayoutProps  {"children": React && React.ReactNode;
-}
-import React from "react";"
-import Head from "next/head";"
-import Header from "./Header";"
-import Footer from "./Footer";"
-interface LayoutProps {
-  }
-  "children": React.ReactNode;
+  children: React.ReactNode;
 interface LayoutProps {;
-  }
-  "children": React && React.ReactNode;
-interface LayoutProps  {"children": React.ReactNode;
-
-}
-
-interface LayoutProps {
-  }
-  "children": React.ReactNode;
-
+  children: React && React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
@@ -92,225 +35,154 @@ interface LayoutProps {
   og_description?: string;
   og_image?: string;
   no_index?: boolean;
-
 }
-const "Layout": React.FC < LayoutProps> = ({children,title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",canonical = ""https"://ziontechgroup.com",og_title,og_description,og_image = ""https"://ziontechgroup.com / og - image.jpg",no_index = false;"
+const Layout: React.FC < LayoutProps> = ({
+  children,
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
+  canonical = "https://ziontechgroup.com",
+  og_title,
+  og_description,
+  og_image = "https://ziontechgroup.com / og - image.jpg",
+  no_index = false,
+}) => {
+  const json_ld = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com / logo.png",
+    description: description,
+    address: {
+      "@type": "PostalAddress",
+      street_address: "364 E Main St STE 1008",
+      address_locality: "Middletown",
+      address_region: "DE",
+      postal_code: "19709",
+      address_country: "US",
+    },
+    contact_point: {
+      "@type": "ContactPoint",
+      telephone: "+1 - 302 - 464 - 0950",
+      contact_type: "customer service",
+      email: "kleber@ziontechgroup.com",
+    },
   }
-  no_index = false;
-  no_index = false;
-}) => {const json_ld = {"@context": ""https"://schema.org","@type": "Organization","name": "Zion Tech Group","url": ""https"://ziontechgroup.com","logo": ""https"://ziontechgroup.com / logo.png","description": description,"address": {"@type": "PostalAddress","street_address": "364 E Main St STE 1008","address_locality": "Middletown","address_region": "DE","postal_code": "19709","address_country": "US";"
-
-}
-
-const "Layout": React.FC < LayoutProps> = ({ children,title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",canonical = ""https"://ziontechgroup.com",og_title,og_description,og_image = ""https"://ziontechgroup.com / og - image.jpg",no_index = false;"
-  }
-  no_index = false;
-  no_index = false;
-   }) => {
-
-
-}
-
-
-const json_ld = {"@context": ""https"://schema.org","@type": "Organization","name": "Zion Tech Group","url": ""https"://ziontechgroup.com","logo": ""https"://ziontechgroup.com / logo.png","description": description,"address": {"@type": "PostalAddress","street_address": "364 E Main St STE 1008","address_locality": "Middletown","address_region": "DE","postal_code": "19709","address_country": "US";"
-      }
-      "address_country": "US";"
-      "address_country": "US";"
-    },"contact_point": {"@type": "ContactPoint","telephone": "+1 - 302 - 464 - 0950","contact_type": "customer service","email": "kleber@ziontechgroup.com";"
-    }
-      "email": "kleber@ziontechgroup.com";"
-    }
-      "email": "kleber@ziontechgroup.com";"
-    }
-  }return (<div className="min - h-screen bg - white">;"
+;
+  return (
+    <div className="min - h-screen bg - white">;
       <Head>;
         <title>{title}</title>;
-        <meta name="description" content={description} />;"
-        <meta name="keywords" content={keywords} />;"
-        {canonical && <link rel="canonical" href={canonical} />}"
-        <meta;
-          property=""og":description";"
-          content={ogDescription || description} />;
-        <meta property=""og": image" content={ogImag,"
-} />;
-        <meta property=""og": url" content={canonica,"
-} />;
-        <meta property=""og":type" content="website" />;"
+        <meta name="description" content={description} />;
+        <meta name="keywords" content={keywords} />;
+        {canonical && <link rel="canonical" href={canonical} />}
+        <meta
+          property="og:description"
+          content={ogDescription || description}
+        />;
+        <meta property="og:image" content={ogImage} />;
+        <meta property="og:url" content={canonical} />;
+        <meta property="og:type" content="website" />;
         {/* Twitter */}
-        <meta name=""twitter":card" content="summary_large_image" />;"
-        <meta name=""twitter":title" content={ogTitle || title} />;"
-        <meta name=""twitter": title" content={ogTitle || titl,"
-} />;
-        <meta;
-          name=""twitter":description";"
-          content={ogDescription || description} />;
-        <meta name=""twitter": image" content={ogImag,"
-} />;
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={ogTitle || title} />;
+        <meta
+          name="twitter:description"
+          content={ogDescription || description}
+        />;
+        <meta name="twitter:image" content={ogImage} />;
         {/* JSON-LD */}
-        <script;
-          type="application/ld+json";"
+        <script
+          type="application/ld+json"
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
-  )}interface LayoutProps  {"children": ReactNode;
-  )
+  );
 };
+
 interface LayoutProps {
-  }
-  "children": ReactNode
+  children: ReactNode,
 }
-const "Layout": React.FC<LayoutProps> = ({ children }) => {
-}
-return (;
-    <main className="min-h-screen">"
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
       {children}
     </main>
-import React, { ReactNode } from "react";"
+import React, { ReactNode } from "react";
 interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  "children": ReactNode;
-  "children": ReactNode;
-}
-const "Layout": React.FC<LayoutProps> = ({ children }) => {return (<main className="min-h-screen">;"
-      {children}
-    </main>;
-import React, { ReactNode } from 'react';'
-interface LayoutProps  {"children": ReactNode;
-  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-  )}
-
-interface LayoutProps {
-  }
-  "children": ReactNode;
-  "children": ReactNode;
-  "children": ReactNode;
-
-}
-
-const "Layout": React.FC<LayoutProps> = ({ children   ,;
-}) => {
-
-
-}
-
-
-return (<main className="min-h-screen">;"
-      {children}
-    </main>;
-import React, { ReactNode } from 'react';'
-
-interface LayoutProps  {"children": ReactNode;
-  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" },"
-} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" },"
-}
-  )}interface LayoutProps  {"children": ReactNode;
-  )
-};
-interface LayoutProps {
-  }
-  "children": ReactNode
-}
-const "Layout": React.FC<LayoutProps> = ({ children }) => {
-}
-return (;
-    <main className="min-h-screen">"
-      {children}
-    </main>
-import React, { ReactNode } from "react";"
-interface LayoutProps {
-        {no_index && <meta name="robots" content="noindex, nofollow" />}"
+        {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
-        <meta property=""og": title" content={og_title || titl,"
-} />;
+        <meta property="og:title" content={og_title || title} />;
         <meta;
-          property=""og":description";"
-          content={og_description || description} />;
-        <meta property=""og": image" content={og_imag,"
-} />;
-        <meta property=""og": url" content={canonica,"
-} />;
-        <meta property=""og":type" content="website" />;"
+          property="og:description";
+          content={og_description || description}
+        />;
+        <meta property="og:image" content={og_image} />;
+        <meta property="og:url" content={canonical} />;
+        <meta property="og:type" content="website" />;
         {/* Twitter */}
-        <meta name=""twitter":card" content="summary_large_image" />;"
-        <meta name=""twitter": title" content={og_title || titl,"
-} />;
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={og_title || title} />;
         <meta;
-          name=""twitter":description";"
-          content={og_description || description} />;
-        <meta name=""twitter": image" content={og_imag,"
-} />;
+          name="twitter:description";
+          content={og_description || description}
+        />;
+        <meta name="twitter:image" content={og_image} />;
         {/* JSON - LD */}
         <script;
-          type="application / ld + json";"
-          dangerouslySetInnerHTML={{ "__html": JSON.stringify (json_ld) 
-} />;
+          type="application / ld + json";
+          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
+        />;
       </Head>;
       <Header />;
       <main>{children}</main>;
       <Footer />;
-    </div>)}
-  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
+    </div>);
 }
-const "Layout": React.FC<LayoutProps> = ({ children }) => {return (<main className="min-h-screen">;"
-      {children  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}
-  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}
-    </main>;
-  )}export default Layout;
   } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-      <Footer />
-    </div>
-  );
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const "Layout": React.FC<LayoutProps> = ({ children   ,;
-}) => {
-
-
-}
-
-
-return (<main className="min-h-screen">;"
-      {children  } catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" },"
-} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })}"
-}
- 
-} catch (error) {console.error(""Error":", error)return res.status(500).json({ "error": "Internal server error" })},"
-}
-    </main>;
-  )}
-
-export default Layout;
   } catch (error) {
-    }
-    console.error(""Error":", error);"
-return res.status(500).json({ "error": "Internal server error",;"
-});
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     </main>
-  )
+  );
 };
-
-
 export default Layout;
-import React, { useState } from 'react';'
-import Sidebar from './Sidebar';'
-import Link from 'next/link';'
 
-interface LayoutProps {
-  }
-  title?: string;
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  }
   Home, 
   Users, 
   Briefcase, 
@@ -322,17 +194,9 @@ import {
   ChevronDown,
   Star,
   CheckCircle
-} from 'lucide-react';'
-interface LayoutProps {
-  }
-  title?: string;
+} from 'lucide-react';
 
 interface LayoutProps {
-  }
-  title?: string;
-
-interface LayoutProps {
-  }
   title?: string;
   description?: string;
   keywords?: string;
@@ -340,116 +204,24 @@ interface LayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
-  "children": React.ReactNode;
-}export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useState(false)ursor/automate-test-improve-and-merge-code-646c;
-
+  children: React.ReactNode;
 }
 
-export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useState(false)ursor/automate-test-improve-and-merge-code-646c;
-  }
-  return (<>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;"
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;"
-        <link rel="icon" href="/favicon.ico" />;"
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;"
-        {children}
-      </div>;
-    </>;
-  )}
-        <meta name="keywords" content={keywords} />;"
-        <meta property=""og":title" content={ogTitle || title} />;"
-        <meta property=""og":description" content={ogDescription || description} />;"
-        <meta property=""og":image" content={ogImage} />;"
-        <meta property=""og":url" content={ogUrl || ""https"://ziontechgroup.com"} />;"
-        <meta property=""og":type" content="website" />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-        <meta name=""twitter":title" content={ogTitle || title} />;"
-        <meta name=""twitter":description" content={ogDescription || description} />;"
-        <meta name=""twitter":image" content={ogImage} />;"
-        <link rel="icon" href="/favicon.ico" />;"
-        <link rel="canonical" href={ogUrl || ""https"://ziontechgroup.com"} />;"
-        <meta property=""og": title" content={ogTitle || titl,"
-} />;
-        <meta property=""og": description" content={ogDescription || descriptio,"
-} />;
-        <meta property=""og": image" content={ogImag,"
-} />;
-        <meta property=""og": url" content={ogUrl || ""https"://ziontechgroup.com,"
-} />;
-        <meta property=""og":type" content="website" />;"
-        <meta name=""twitter":card" content="summary_large_image" />;"
-        <meta name=""twitter": title" content={ogTitle || titl,"
-} />;
-        <meta name=""twitter": description" content={ogDescription || descriptio,"
-} />;
-        <meta name=""twitter": image" content={ogImag,"
-} />;
-        <link rel="icon" href="/favicon.ico" />;"
-        <link rel="canonical" href={ogUrl || ""https": //ziontechgroup.com,"
-} />;
-      </Head>;
-      <div className="min-h-screen flex flex-col bg-gray-50">;"
-        <Header />;
-        <main className="flex-1">;"
-          {children}
-        </main>;
-        <Footer />;
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />;
-      </div>;
-    </>;
-  )}interface LayoutProps  {"children": ReactNode;
-}const "Layout": React.FC<LayoutProps> = ({ children }) => {return (<main className="min-h-screen">;"
-  )}
-
-interface LayoutProps {
-  }
-  "children": ReactNode;
-
-}
-
-const "Layout": React.FC<LayoutProps> = ({ children   ,;
-}) => {
-
-
-}
-
-
-return (<main className="min-h-screen">;"
-      {children}
-    </main>;
-    <main className="min-h-screen">;"
-      {children}
-    </main>;
-    <div className="min-h-screen flex flex-col">;"
-      <Navigation />;
-      <main className="flex-1">{children}</main>;"
-      <Footer />;
-    </div>;
-  )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
-  )}
-
-export default Layout;ursor/automate-test-improve-and-merge-code-646c;
-}
-export default function Layout() {
- ;
-  }
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogTitle,
+  ogDescription,
+  ogUrl
+}: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-return (;
+
+  return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />"
-        <meta name="viewport" content="width=device-width, initial-scale=1" />"
-        <link rel="icon" href="/favicon.ico" />"
-      </Head>
-      <div className="min-h-screen bg-gray-50">"
-        {children}
-      </div>
-    </>
-  );
-}
-        <meta name="description" content={description} />"
+        <meta name="description" content={description} />
 

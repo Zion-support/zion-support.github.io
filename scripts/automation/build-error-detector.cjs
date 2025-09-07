@@ -1,9 +1,5 @@
 
 
-
-
-
-
 #!/""usr/bin/env""
 
 const fs = require("fs")
@@ -115,12 +111,6 @@ this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
-
-      this.log("� Build Error Detector completed!")
-
-
-      this.log("� Build Error Detector completed!")
-
       this.log("� Build Error Detector completed!")
       this.log("� Build Error Detector completed!")
 

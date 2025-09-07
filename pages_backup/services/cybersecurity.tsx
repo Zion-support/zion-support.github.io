@@ -1,8 +1,8 @@
-const benefits = [;
-  'Protection against cyber threats and attacks','Compliance with industry regulations','Reduced risk of data breaches','Enhanced customer trust and confidence','Lower insurance costs and liability','Peace of mind with 24/7 monitoring';
 import React from 'react';
 
 
+=======
+=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -26,6 +26,7 @@ const securityServices = [
 ];
 
 
+=======
 
 export default function CybersecurityPage() {
 
@@ -102,6 +103,8 @@ export default function CybersecurityPage() {
         </section>
 
 
+=======
+=======
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -155,6 +158,7 @@ export default function CybersecurityPage() {
         </section>
 
 
+=======
 
 
         {/* CTA Section */}

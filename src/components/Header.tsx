@@ -1,122 +1,231 @@
+
+
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+,
+const Header = $2;
+  const [isMenuOpen, setIsMenuOpen] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+,
+  const navigation = $2;
+    {,
+      nam: 'Home',
+      hre: f: '/'
+    },
+    {,
+      nam: 'Services',
+      hre: f: '/services',
+      dropdow: [,
+        { nam: 'AI Services', hre: f: '/ai-services' },
+        { nam: 'IT Services', hre: f: '/it-services' },
+        { nam: 'Micro SaaS', hre: f: '/micro-saas' },
+        { nam: 'Cloud Solutions', hre: f: '/solutions/cloud-migration' },
+        { nam: 'Cybersecurity', hre: f: '/services/cybersecurity' },
+        { nam: 'Data Analytics', hre: f: '/services/data-analytics' }
+      ]
+    },
+    {,
+      nam: 'Solutions',
+      hre: f: '/solutions',
+      dropdow: [,
+        { nam: 'Enterprise Solutions', hre: f: '/solutions/enterprise' },
+        { nam: 'Healthcare', hre: f: '/solutions/healthcare' },
+        { nam: 'Finance', hre: f: '/solutions/finance' },
+        { nam: 'Government', hre: f: '/solutions/government' },
+        { nam: 'Retail', hre: f: '/solutions/retail' },
+        { nam: 'Education', hre: f: '/solutions/education' }
+      ]
+    },
+    {,
+      nam: 'Industries',
+      hre: f: '/industries',
+      dropdow: [,
+        { nam: 'Financial Services', hre: f: '/industries/financial' },
+        { nam: 'Healthcare', hre: f: '/industries/healthcare' },
+        { nam: 'Manufacturing', hre: f: '/industries/manufacturing' },
+        { nam: 'Retail', hre: f: '/industries/retail' },
+        { nam: 'Government', hre: f: '/industries/government' }
+      ]
+    },
+    {,
+      nam: 'Company',
+      hre: f: '/about',
+      dropdow: [,
+        { nam: 'About Us', hre: f: '/about' },
+        { nam: 'Our Team', hre: f: '/team' },
+        { nam: 'Careers', hre: f: '/careers' },
+        { nam: 'Partners', hre: f: '/partners' },
+        { nam: 'Case Studies', hre: f: '/case-studies' }
+      ]
+    },
+    {,
+      nam: 'Resources',
+      hre: f: '/resources',
+      dropdow: [,
+        { nam: 'Blog', hre: f: '/blog' },
+        { nam: 'White Papers', hre: f: '/white-papers' },
+        { nam: 'Webinars', hre: f: '/webinars' },
+        { nam: 'Tutorials', hre: f: '/tutorials' },
+        { nam: 'API Documentation', hre: f: '/api-docs' }
+      ]
+    },
+    {,
+      nam: 'Contact',
+      hre: f: '/contact'
+    }
+  ],
+,
+  const toggleMenu = () => setIsMenuOpen($2);
+  const toggleDropdown = $2;
+    setActiveDropdown(activeDropdown = $2;
+,
+  return (,
+    <header className = $2;
+      {/* Top Bar */},
+      <div className = $2;
+        <div className = $2;
+          <div className = $2;
+            <div className = $2;
+              <div className = $2;
+                <Phone className = $2;
+                <span>+1 302 464 0950</span>,
+              </div>,
+              <div className = $2;
+                <Mail className = $2;
+                <span>kleber@ziontechgroup.com</span>,
+              </div>,
+            </div>,
+            <div className = $2;
+              <MapPin className = $2;
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+      {/* Main Navigation */},
+      <nav className = $2;
+        <div className = $2;
+          {/* Logo */},
+          <Link href = $2;
+            <div className = $2;
+              <span className = $2;
+            </div>,
+            <div>,
+              <h1 className = $2;
+              <p className = $2;
+            </div>,
+          </Link>,
+          {/* Desktop Navigation */},
+          <div className = $2;
+            {navigation.map((item) => (,
+              <div key = $2;
+                <button,
+                  onClick = $2;
+                  className = $2;
+                >,
+                  <Link href = $2;
+                  {item.dropdown && (,
+                    <ChevronDown className = $2;
+                      activeDropdown = $2;
+                </button>,
+                {/* Dropdown Menu */},
+                {item.dropdown && (,
+                  <AnimatePresence>,
+                    {activeDropdown = $2;
+                      <motion.div,
+                        initial={{ opacit: 0, y: 10}},
+                        animate={{ opacit: 1, y: 0}},
+                        exit={{ opacit: 0, y: 10}},
+                        className = $2;
+                      >,
+                        {item.dropdown.map((subItem) => (,
+                          <Link,
+                            key = $2;
+                            href = $2;
+                            className = $2;
+                            onClick = $2;
+                          >,
+                            {subItem.name},
+                          </Link>,
+                        ))},
+                      </motion.div>,
+                    )},
+                  </AnimatePresence>,
+                )},
+              </div>,
+            ))},
+          </div>,
+          {/* Mobile Menu Button */},
+          <button,
+            onClick = $2;
+            className = $2;
+          >,
+            {isMenuOpen ? <X className = $2;
+          </button>,
+        </div>,
+        {/* Mobile Navigation */},
+        <AnimatePresence>,
+          {isMenuOpen && (,
+            <motion.div,
+              initial={{ opacit: 0, heigh: 0}},
+              animate={{ opacit: 1, heigh: 'auto' }},
+              exit={{ opacit: 0, heigh: 0}},
+              className = $2;
+            >,
+              {navigation.map((item) => (,
+                <div key = $2;
+                  <div className = $2;
+                    <Link,
+                      href = $2;
+                      className = $2;
+                      onClick = $2;
+                    >,
+                      {item.name},
+                    </Link>,
+                    {item.dropdown && (,
+                      <button,
+                        onClick = $2;
+                        className = $2;
+                      >,
+                        <ChevronDown className = $2;
+                          activeDropdown = $2;
+                      </button>,
+                    )},
+                  </div>,
+                  {item.dropdown && activeDropdown = $2;
+                    <div className = $2;
+                      {item.dropdown.map((subItem) => (,
+                        <Link,
+                          key = $2;
+                          href = $2;
+                          className = $2;
+                          onClick = $2;
+                        >,
+                          {subItem.name},
+                        </Link>,
+                      ))},
+                    </div>,
+                  )},
+                </div>,
+              ))},
+              <div className = $2;
+                <Link,
+                  href = $2;
+                  className = $2;
+                  onClick = $2;
+                >,
+                  Get Started,
+                </Link>,
+              </div>,
+            </motion.div>,
+          )},
+        </AnimatePresence>,
+      </nav>,
+    </header>,
+  )
+},
+,
+export default Header,
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  return (
-
-            </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
-          </Link>
-
-          </button>
-        </div>
-
-        {isMenuOpen && (
-
-            </nav>
-          </div>
-=======
-import { Link  } from 'react-router-dom';
-import { Menu, X, Search  } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import SearchModal from './SearchModal';
-const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false)const [isSearchOpen, setIsSearchOpen]  = useState(false)const toggleMenu = () => {setIsMenuOpen(!isMenuOpen)}const toggleSearch = () => {setIsSearchOpen(!isSearchOpen)}return (<header className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-          <div className="flex items-center">;
-            <Link to="/" className="flex-shrink-0">;
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">;
-                Zion Tech Group;
-              </h1>;
-            </Link>;
-          </div>;
-          <div className="hidden md:block">;
-            <div className="ml-10 flex items-baseline space-x-4">;
-              <Link;
-                to="/";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium";
-              >;
-                Home;
-              </Link>;
-              <Link;
-                to="/services";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium";
-              >;
-                Services;
-              </Link>;
-              <Link;
-                to="/about";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium";
-              >;
-                About;
-              </Link>;
-              <Link;
-                to="/contact";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium";
-              >;
-                Contact;
-              </Link>;
-            </div>;
-          </div>;
-          <div className="flex items-center space-x-4">;
-            <button;
-              onClick={toggleSearch}
-              className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 p-2";
-            >;
-              <Search className="h-5 w-5" />;
-            </button>;
-            <ThemeToggle />;
-            <button;
-              onClick={toggleMenu}
-              className="md:hidden text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 p-2";
-            >;
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>;
-          </div>;
-        </div>;
-        {isMenuOpen && (<div className="md:hidden">;
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">;
-              <Link;
-                to="/";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium";
-                onClick={() => setIsMenuOpen(false)}
-              >;
-                Home;
-              </Link>;
-              <Link;
-                to="/services";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium";
-                onClick={() => setIsMenuOpen(false)}
-              >;
-                Services;
-              </Link>;
-              <Link;
-                to="/about";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium";
-                onClick={() => setIsMenuOpen(false)}
-              >;
-                About;
-              </Link>;
-              <Link;
-                to="/contact";
-                className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium";
-                onClick={() => setIsMenuOpen(false)}
-              >;
-                Contact;
-              </Link>;
-            </div>;
-          </div>;
->>>>>>> 157aff07b859488146569974cc7382910d9762e2
-        )}
-      </div>;
-      {isSearchOpen && <SearchModal onClose={() => setIsSearchOpen(false)} />}
-    </header>;
-  )}export default Header;

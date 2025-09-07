@@ -12,7 +12,7 @@ const REPO_OWNER = 'Zion-Holding;s,
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
   console.log('� Fetching open PRs...')
-const prs = await githubApiCall('/pulls?state=open;');
+  const prs = await githubApiCall('/pulls?state=open;')
     execSync('git fetch origin', { "stdio"})
     execSync(`git checkout ${headBranch}`, { "stdio"`})
       execSync(`git merge origin/${baseBranch}`, { "stdio"`})

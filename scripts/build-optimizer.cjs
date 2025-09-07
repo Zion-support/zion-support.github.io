@@ -6,8 +6,6 @@ const fs = require('fs')
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
-
-
     console.error(' Build optimization "failed")
     console.error(' Build optimization "failed")
 
@@ -77,10 +75,6 @@ if (require.main === module) {
 }
 
 module.exports = BuildOptimizer;
-
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const { execSync } = require('child_process')

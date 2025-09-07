@@ -1,23 +1,19 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
     this.logsPath = path.join(this.workspacePath, "logs")
     this.reportsPath = path.join(this.workspacePath, "automation-reports")
   ["this.logsPath", "this.reportsPath"]
   fs.mkdirSync(dir, { "recursive"})
   log(message, level = "INFO")
     console.log(")
-const logFile = path.join(this.logsPath, "config-error-fixer.log");
+    const logFile = path.join(this.logsPath, "config-error-fixer.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   log(message, level = "INFO")
-const logMessage = "[${timestamp}] [${level}] ${message}";
+    const logMessage = "[${timestamp}] [${level}] ${message}"
     console.log(")
-const logFile = path.join(this.logsPath, "config-error-fixer.log");
+    const logFile = path.join(this.logsPath, "config-error-fixer.log")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log(" Scanning configuration files...")
     const configFiles = ["package.json"", "tsconfig.json", "eslint.config.js"", "vite.config.ts", "tailwind.config.js"", "postcss.config.js", "next.config.js"", "jest.config.js", "netlify.toml"", ""]
@@ -27,7 +23,7 @@ const logFile = path.join(this.logsPath, "config-error-fixer.log");
           this.log( ⚠ Could not analyze ${configFile}: ${error.message}",WARN")
     }"
     this.log(Found ${issues.length} configuration issues```)
-const content = fs.readFileSync(filePath, "utf8");
+  const content = fs.readFileSync(filePath, "utf8")
       if (fileName.endsWith(".json")
   "file"
             "type": "syntax"
@@ -35,12 +31,14 @@ const content = fs.readFileSync(filePath, "utf8");
             "severity": "high"
             "error"
         content.includes("")
+        content.includes(">>>>>>>")
   "file"
           "type": "merge-conflict"
           "description": "Merge conflicts detected"
           "severity": "high"
       if (fileName === "package.json")
         content.includes(")
+        content.includes(">>>>>>>")
   "file"
           "type": "merge-conflict"
           "description": "Merge conflicts detected"
@@ -103,15 +101,15 @@ const content = fs.readFileSync(filePath, "utf8");
           "error"
           "timestamp"
     return { fixedCount, "totalIssues": issues.length, "results"}
-const filePath = path.join(this.workspacePath, ");
+  const filePath = path.join(this.workspacePath, ")
   let content = fs.readFileSync(filePath", "utf8")} catch (fixError) {this.log(" Error fixing config "issue": ${fixError.message}`, "ERROR"`)
           "fixed"
           "error"
           "timestamp"
     this.log( Fixed ${fixedCount} out of ${issues.length} configuration issues")
     return { fixedCount, "totalIssues": issues.length, "results"}
-const filePath = path.join(this.workspacePath, ");
-let content = fs.readFileSync(filePath", "utf8");
+  const filePath = path.join(this.workspacePath, ")
+  let content = fs.readFileSync(filePath", "utf8")
   case "merge-conflict"
         case "syntax"
           if (issue.file === "package.json")
@@ -159,3 +157,6 @@ this.log(`� Report "generated"`)
   this.log("� No configuration issues found!")
         return { "success": true, "issues": [], "fixed"}
       this.log("� Config Error Fixer completed!")
+      this.log("� Config Error Fixer completed!")
+
+

@@ -37,7 +37,8 @@ const NavigationMenu = React.forwardRef<
 
     <NavigationMenuViewport />;
   </NavigationMenuPrimitive.Root>;
-))NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
+));
+NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
 const NavigationMenuList = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.List>,;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
@@ -163,7 +164,8 @@ const NavigationMenuIndicator = React.forwardRef<
 
     />;
   </div>;
-))NavigationMenuViewport.displayName =;
+));
+NavigationMenuViewport.displayName =;
   NavigationMenuPrimitive.Viewport.displayName;
 const NavigationMenuIndicator = React.forwardRef<;
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,;

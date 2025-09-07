@@ -56,25 +56,79 @@ const trainingPrograms = []
   };
 ];
 
-import React from 'react';'
-import MainLayout from '../components/layout/MainLayout';'
-
-const Page = () => {
+const certificationPaths = []
+  {}
+    name: "AI Solutions Architect",
+    description: "Design and implement AI solutions for enterprise applications",
+    duration: "6 months",
+    courses: 8;
+  },
+  {}
+    name: "Cloud Security Specialist",
+    description: "Secure cloud infrastructure and applications",
+    duration: "4 months",
+    courses: 6;
+  },
+  {}
+    name: "DevOps Engineer",
+    description: "Automate and optimize development workflows",
+    duration: "5 months",
+    courses: 7;
+  },
+  {}
+    name: "Data Science Professional",
+    description: "Extract insights from data using advanced analytics",
+    duration: "7 months",
+    courses: 10;
+  };
+];
 }
-return (;
-    <MainLayout,
-title="Page - Zion Tech Group""
-      description="Zion Tech Group page""
+
+export default function TrainingPage() {}
+  return ()
+    <Layout;
+      title="Training Programs - Zion Tech Group"
+      description="Professional training programs in AI, cloud computing, cybersecurity, and quantum computing. Get certified and advance your career."
+      keywords="technology training, AI certification, cloud training, cybersecurity courses, professional development"
     >
-      <div className="min-h-screen bg-gray-50">"
-        <div className="max-w-7xl mx-auto px-4 py-20">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>"
-          <p className="text-xl text-gray-600">Coming soon...</p>"
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Hero Section */};
+        <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
+              className="text-center"
+            >
+              <GraduationCap className="w-16 h-16 mx-auto mb-6 text-blue-400" />
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Professional;
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  {' '}Training;
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Advance your career with our comprehensive training programs in cutting-edge technologies. 
+                Learn from industry experts and get certified in AI, cloud computing, cybersecurity, and more.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Enroll Now;
+                </Link>
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  Learn More;
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Training Programs Section */};
         <section className="py-20 bg-gray-50">

@@ -1,18 +1,3 @@
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
-};
-  // Format availability status;
-  const getAvailabilityColor = (status: string) => {;
-    switch (status) {;
-      case 'full-time':;        return 'Full-time';
-      case 'part-time':;
-        return 'Part-time';
-      case 'project-based':;
-        return 'Project',;
-      default:;
-        return status;
-
-    }
-  },
 import React from "react";
 import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
@@ -47,5 +32,4 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-}
 }

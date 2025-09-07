@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs");
-const path = require("path");
-const { execSync, spawn } = require("child_process");
-const crypto = require("crypto");
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
       this.projectRoot,logs"
       "smart-testing-automation.log"
       this.projectRoot,logs"
@@ -51,13 +47,13 @@ const crypto = require("crypto");
       "utilities"
       "hooks"
   this.log(" Running Jest coverage analysis...")
-const coverageOutput = execSync(npm run test -- --coverage --watchAll=false");
+  const coverageOutput = execSync(npm run test -- --coverage --watchAll=false")
   "cwd"
               "stdio": "pipe"
               "encoding": "utf8"
           Object.assign(coverage, coverageData)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "WARN"`)
       Object.assign(coverage, testStructure)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "ERROR"`)
-const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"];
+  const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"]
   // This is a simplified parser - in production you"d use Jest"
   "total"
       "covered"
@@ -69,10 +65,10 @@ const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"];
       "components"
       "utilities"
       "hooks"
-const testsDir = path.join(this.projectRoot, "tests");
-const srcDir = path.join(this.projectRoot, "src");
-const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")];
-const testContent = fs.readFileSync(testFile, "utf8");
+    const testsDir = path.join(this.projectRoot, "tests")
+    const srcDir = path.join(this.projectRoot, "src")
+  const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
+  const testContent = fs.readFileSync(testFile, "utf8")
         // Track what"
   "suites"
       "cases"
@@ -86,9 +82,9 @@ const testContent = fs.readFileSync(testFile, "utf8");
       "utilities"
       "hooks"
       "total"
-const srcDir = path.join(this.projectRoot, "src");
-const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")];
-const content = fs.readFileSync(file, "utf8");
+    const srcDir = path.join(this.projectRoot, "src")
+    const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")]
+  const content = fs.readFileSync(file, "utf8")
         for (const ["category", "items")]
   "name"
                 "file"
@@ -118,10 +114,10 @@ const content = fs.readFileSync(file, "utf8");
             "exportType": pattern.pattern.source.includes("default")
               ? "default"
               : "named"
-const lines = content.substring(0, index).split("\n");
-const testsDir = path.join(this.projectRoot, "tests");
-const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")];
-const testContent = fs.readFileSync(testFile, "utf8");
+  const lines = content.substring(0, index).split("\n")
+  const testsDir = path.join(this.projectRoot, "tests")
+    const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
+  const testContent = fs.readFileSync(testFile, "utf8")
     for (const ["category", "items")]
   if (category === "total")
     for (const ["category", "items")]
@@ -134,7 +130,7 @@ const testContent = fs.readFileSync(testFile, "utf8");
   "component"
       "utility"
       "hook"
-  getComponentTestTemplate(item) {return "import React from "react"}
+  getComponentTestTemplate($2) {return "import React from "react"}
 import { render, screen  } from "@testing-";"library/react""
 import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
 describe("${item.name}")
@@ -148,25 +144,25 @@ describe("${item.name}")
   it("should work correctly with valid input")
   it("should handle edge cases")
   it(`should handle invalid input gracefully``)
-return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}";
+  return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
 describe("${item.name}")
   it("should work correctly with valid input")
   it("should handle edge cases")
   it("should handle invalid input gracefully")
-return "import { renderHook, act  } from "@testing-";`library/react"";
+  return "import { renderHook, act  } from "@testing-";`library/react""
 import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
 describe("${item.name}")
   it(")
       .replace(/\\/g, `/``)
       .replace(/\.(tsx?|jsx?)$/, ""
     if (importPath.endsWith("/index")
-return importPath.replace("/index", "");
+  return importPath.replace("/index", "")
       .replace(/\\/g, "/")
       .replace(/\.(tsx?|jsx?)$/, "
     if (importPath.endsWith("/index")
-return importPath.replace("/index", ");
+  return importPath.replace("/index", ")
       path.join(this.projectRoot, "src")
-const testDir = path.join(this.projectRoot, "tests");
+    const testDir = path.join(this.projectRoot, "tests")
       relativePath.replace(/\.(tsx?|jsx?)$/, ".test.$1"
   fs.mkdirSync(testDirPath, { "recursive"})
   "success"
@@ -176,15 +172,15 @@ const testDir = path.join(this.projectRoot, "tests");
       "errors"
       "duration"
   this.log("🧪 Running existing tests...")
-const testOutput = execSync("npm test -- --watchAll=false");
+      const testOutput = execSync("npm test -- --watchAll=false")
   "cwd"
         "stdio": "pipe"
         "encoding": "
       this.log(Tests "completed")
-const errorOutput = error.stdout || error.stderr || "";
+  const errorOutput = error.stdout || error.stderr || ""
   this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
       this.log(Tests "completed": ${results.passed} passed, ${results.failed} failed")
-const errorOutput = error.stdout || error.stderr || ";
+  const errorOutput = error.stdout || error.stderr || "
   this.log(`Failed to parse test "output": ${parseError.message}`, "WARN"`)
 this.log(`Tests "failed": ${error.message}`, "ERROR"`)
   "success"
@@ -194,7 +190,7 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       "errors"
       "duration"
   this.log("🧪 Running newly generated tests...")
-const testOutput = execSync("npm test -- --watchAll=false");
+      const testOutput = execSync("npm test -- --watchAll=false")
   "cwd"
         "stdio": "pipe"
         "encoding": "
@@ -240,43 +236,9 @@ const testOutput = execSync("npm test -- --watchAll=false");
       this.log(Committed test "improvements")
         "INFO"
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
-const fullPath = path.join(dir, ");
+  const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
-<<<<<<< HEAD
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

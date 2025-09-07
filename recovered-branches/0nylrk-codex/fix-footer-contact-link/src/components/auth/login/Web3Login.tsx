@@ -1,48 +1,8 @@
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-
-  const handleWeb3Login = async () => {
-    try {
-
-      setIsLoading(true),
-      
-
-      // Check if wallet is available
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { Wallet } from "@/components/icons";
 import { toast } from "sonner";
-      const ethereum = (window as any).ethereum;        toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet"})
-        return
-      }
-      await loginWithWeb3()
-    } catch (error: any) {
-      toast("Login failed", {
-        description: error.message |"Failed to connect wallet"})
-      console.error("Web3 login error:", error)
-    } finally {
-      setIsLoading(false)
-
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;
-        toast("Web3 wallet not found", {,
-  description: "Please install MetaMask or another compatible wallet"}),;
-        return;
-      }
-
-      await loginWithWeb3();
-
-    } catch (error: any) {;
-      toast("Login failed", {,
-  description: error && error.message || "Failed to connect wallet"}),;
-      console && console.error("Web3 login error:", error);
-    } finally {;
-      setIsLoading(false);
-
-    }
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth($2);
   const [isLoading, setIsLoading] = useState($2);
@@ -72,10 +32,6 @@ export function Web3Login() {
       variant="outline"
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
-  }    }
-
-  },
-
       disabled={isLoading}
     >
       {isLoading ? (
@@ -95,19 +51,4 @@ export function Web3Login() {
     </Button>
   )
 }
-      )}
-    </Button>
-  )
-}import { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { use_auth } from '@/hooks / use_auth';
-import { Wallet } from '@/components / icons';
-import { toast } from './sonner';
-export /**
- * Web3Login - Function description
- */
-function Web3Login() {
-  const { loginWithWeb3 } = use_auth ();
-  const [is_loading, setIsLoading] = useState (false);
-;
 ;

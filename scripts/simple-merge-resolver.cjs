@@ -14,7 +14,7 @@ const util = require('util')
     this.projectRoot = path.join(__dirname, '..')
   async log(message, level = 'INFO')
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
-return stdout.trim().split('\n');
+      return stdout.trim().split('\n')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")

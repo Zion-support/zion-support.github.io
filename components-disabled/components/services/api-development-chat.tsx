@@ -1,47 +1,46 @@
 ;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-const "ApiDevelopmentChat": NextPage = () => ;
-  return (<div>;
-      <Head>;
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
 
-const "ApiDevelopmentChat": NextPage = () => ;
-  return (<div>;
-      <Head>;
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
-        <meta name = "description" content="ApiDevelopmentChat service" />{" "}"
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
 ;
-  const "ApiDevelopmentChat": NextPage = () => ;
-  return (<div>;
-      <Head></Head>;<meta name="description" content="ApiDevelopmentChat service" />;"
+  const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"ApiDevelopmentChat service\" />;
       </Head>;
-      </Head>;<meta name="description" content="ApiDevelopmentChat service" />;"
+      </Head>;<meta name=\"description\" content=\"ApiDevelopmentChat service\" />;
       </Head>;
 
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
 
-const "ApiDevelopmentChat": NextPage = () => {
+const ApiDevelopmentChat: NextPage = () => {
  ;
-}
-return (;
-    <div>
-      <Head>
+  return (
+    <div />
+      <Head />
 ;
-  const "ApiDevelopmentChat": NextPage = () => {;
-}
-return (;
-    <div>;
-      <Head>;
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
+  const ApiDevelopmentChat: NextPage = () => {;
+  return (
+    <div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
 
-
-const "ApiDevelopmentChat": NextPage = () => {
-}
-return (;
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const ApiDevelopmentChat: NextPage = () => {
+  return (
     <div>
 </div>
       <Head>
@@ -51,24 +50,25 @@ return (;
 
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
 
-const "ApiDevelopmentChat": NextPage = () => {
+const ApiDevelopmentChat: NextPage = () => {
+  return (
+    <div />
+      <Head />
+
+      </Head>;
+
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+        <a href="/services">Back to Services</a>
+
       </main>
     </div>
       </Head>;
-      <main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
-      </main>;
-    </div>;
-      </Head>;<main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />ApiDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
       </Head>;<main />;
@@ -90,20 +90,20 @@ export default ApiDevelopmentChat;
 
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';'
-import Head from './next / head';'
-import Link from './next / link';'
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
 
-const "ApiDevelopmentChat": NextPage = () => ;
-  return (<div>;
-      <Head>;
-        <title > ApiDevelopmentChat - Zion Tech Solutions</title>;
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title  /> ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
       </Head>;
-      <main>;
-        <h1 > ApiDevelopmentChat</h1>;
-        <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1  /> ApiDevelopmentChat</h1>;
+        <p  /> Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>
     </div>
   );
@@ -122,16 +122,16 @@ export default ApiDevelopmentChat;<div />;
     </div>;
   )},export default ApiDevelopmentChat;
 
-const "ApiDevelopmentChat": NextPage = () => ;
-  return (<div>;
-      <Head>;
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
       </Head>;
-      <main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />ApiDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
@@ -142,19 +142,18 @@ export default ApiDevelopmentChat;<title />ApiDevelopmentChat - Zion Tech Soluti
 };
 
 export default ApiDevelopmentChat;
-const "ApiDevelopmentChat": NextPage = () => {
+const ApiDevelopmentChat: NextPage = () => {
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+  return (
+    <div />
+      <Head />}
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>}
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
       </Head>
-      <main>
-        <h1>ApiDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />ApiDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -165,19 +164,18 @@ export default ApiDevelopmentChat;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 ;
-const "ApiDevelopmentChat": NextPage = () => {
+const ApiDevelopmentChat: NextPage = () => {
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+  return (
+    <div />
+      <Head />}
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>}
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
       </Head>
-      <main>
-        <h1>ApiDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />ApiDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );

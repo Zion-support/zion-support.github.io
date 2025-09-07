@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
 :src/pages/AccountSettings.tsx
 import { useState  } from 'react';
 import { useLocalStorage  } from '@/hooks';
@@ -260,14 +259,6 @@ export default function AccountSettings() {
 const AccountSettings: React.FC = () => {
   return (
 
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-
-
-
-
-
-
-
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -311,14 +302,11 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSave = null;
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />"
       <Header />
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
 :src/pages/AccountSettings.tsx
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
@@ -341,7 +329,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Manage your personal information and privacy
               </CardDescription>
             </CardHeader>
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
 
               <CardDescription>;
                 Manage your personal information and privacy;
@@ -404,7 +391,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
 :src/pages/AccountSettings.tsx
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
@@ -437,14 +423,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
               <Separator />
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-              
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="backup" className="flex items-center gap-1">
-                    <Database className="h-4 w-4" />
-
-
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -458,7 +436,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
                 <Switch
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
 :src/pages/AccountSettings.tsx
                   id='backup'
                   checked={enableBackup}
@@ -501,10 +478,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-                className="w-full"
-              >
-                {isSubmitting ? "Saving..." : "Save Settings"}
 :src/pages/AccountSettings.tsx
                 className='w-full'              >
 
@@ -516,8 +489,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
 
           <Card>
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-            <CardHeader>
 
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
@@ -635,9 +606,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </main>
     </>
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-  );
-
 :src/pages/AccountSettings.tsx
   )
 }
@@ -663,14 +631,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>;
         </div>;
       </main>;
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-
-
 
     </>);
 
 }
 ;
-<<<<<<< HEAD:src_backup/pages/AccountSettings.tsx
-
-origin/cursor/automate-test-improve-and-merge-code-2533

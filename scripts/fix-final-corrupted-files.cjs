@@ -3,12 +3,12 @@ const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing Final Corrupted Files...')
 console.log('')
-const corruptedFiles = ['pages/docs/integration-examples.tsx'];
+const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/marketplace.tsx'
   'pages/privacy.tsx'
   'pages/request-quote.tsx'
   'pages/schedule-demo.tsx'
-let content = '';
+    let content = ''
     if (filePath === 'pages/docs/integration-examples.tsx')
       content = "
     "name"

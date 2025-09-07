@@ -4,7 +4,7 @@ const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Simple App Improvement Automation')
 console.log('====')
-const output = execSync(command, { "encoding": 'utf8', "stdio"});
+    const output = execSync(command, { "encoding": 'utf8', "stdio"})
   "status"
       "status"
       "status"

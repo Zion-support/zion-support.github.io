@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 import { execSync  } from "child_process"
 import fs from "fs"
@@ -25,7 +21,7 @@ console.log("� Starting continuous sitemap runner automation...")
 // console.log(" Build completed"")
   console.log(""⚠  Build failed but continuing...")
   console.log("⚠  Build failed but continuing...")
-const distPath = path.join(process.cwd(), "dist";
+    const distPath = path.join(process.cwd(), "dist"
 // console.log("⚠  Build verification "failed": dist folder not found")
     console.log("� Generating sitemap...")
   if (fs.existsSync(""scripts/generate-sitemap.js"")
@@ -37,12 +33,12 @@ const distPath = path.join(process.cwd(), "dist";
     console.log("🤖 Generating robots.txt...")
     try {const robotsContent = User-"agent"}
 Sitemap: https://ziontechgroup."com/sitemap.xml"
-const robotsPath = path.join(distPath, "robots.txt");
+      const robotsPath = path.join(distPath, "robots.txt")
 // console.log(" robots.txt generated")
   console.log("⚠  robots.txt generation failed but continuing..."")
     console.log("" Validating sitemap...")
   if (fs.existsSync(path.join(distPath, "sitemap.xml")
-const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8";
+  const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8"
 // console.log("⚠  Sitemap not found")
   console.log("⚠  Sitemap validation failed but continuing..."")
 // console.log(""� Checking sitemap links...")
@@ -51,7 +47,7 @@ const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8
   if (fs.existsSync(path.join(distPath, "sitemap.xml")
     console.log(" Validating sitemap...")
   if (fs.existsSync(path.join(distPath, "sitemap.xml")
-const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8";
+  const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8"
 // console.log("⚠  Sitemap not found")
   console.log("⚠  Sitemap validation failed but continuing..."")
     console.log(""� Checking sitemap links...")
@@ -66,7 +62,7 @@ const sitemapContent = fs.readFileSync(path.join(distPath, "sitemap.xml"), "utf8
   "timestamp"
       "summary": "Sitemap runner completed"
       "status": "completed"
-const reportPath = path.join(process.cwd(), "sitemap-runner-report.json";
+    const reportPath = path.join(process.cwd(), "sitemap-runner-report.json"
     console.log(" Continuous sitemap runner completed successfully")
   console.error(" Continuous sitemap runner "failed": ")
   console.error(" Continuous sitemap runner "failed": ")
@@ -75,7 +71,7 @@ const reportPath = path.join(process.cwd(), "sitemap-runner-report.json";
   "timestamp"
       "summary": "Sitemap runner completed"
       "status": "completed"
-const reportPath = path.join(process.cwd(), "sitemap-runner-report.json";
+    const reportPath = path.join(process.cwd(), "sitemap-runner-report.json"
     console.log(" Continuous sitemap runner completed successfully")
   console.error(" Continuous sitemap runner "failed": ")
     // Don"
@@ -84,41 +80,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
   console.error(" Failed to start continuous sitemap "runner": ")
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  console.error(" Failed to start continuous sitemap "runner": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start continuous sitemap "runner": ")
-<<<<<<< HEAD
   console.error(" Failed to start continuous sitemap "runner": ")
 
 
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

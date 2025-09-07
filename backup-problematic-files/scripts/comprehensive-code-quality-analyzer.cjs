@@ -1,4 +1,3 @@
-
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -38,7 +37,6 @@
     log('error', 'Fatal error in comprehensive code quality analysis', error.message);
     process.exit(1)}
 }
-
 
 main();#!/usr/bin/env node;
 #!/usr/bin/env node;

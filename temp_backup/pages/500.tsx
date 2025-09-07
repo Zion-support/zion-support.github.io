@@ -1,25 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
-
-const Custom500 = () => {
+export default function Custom500() {
   return (
     <>
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
-        <meta name="description" content="Internal server error occurred. Please try again later." />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="Something went wrong on our end. We're working to fix it." />
+        <meta property="og: title" content="500 - Server Error" />
+        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-8 text-center">
-          <div>
-            <h1 className="text-9xl font-bold text-indigo-600">500</h1>
-            <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-              Internal Server Error
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
+        <div className="text-center">
+          <div className="mb-8">
+            <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400 mb-4">
+              500
+            </h1>
+            <h2 className="text-3xl font-semibold text-white mb-4">
+              Server Error
             </h2>
-<<<<<<< HEAD:temp_backup/pages/500.tsx
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
               Something went wrong on our end. We&apos,re working to fix it. 
               Please try again in a few moments.
@@ -29,21 +28,9 @@ const Custom500 = () => {
             <Link 
               href="/" 
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
-=======
-            <p className="mt-2 text-sm text-gray-600">
-              Something went wrong on our end. We're working to fix this issue.
-            </p>
-          </div>
-          
-          <div className="mt-8 space-y-4">
-            <Link
-              href="/"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/500.tsx
             >
-              Go back home
+              Go Home
             </Link>
-<<<<<<< HEAD:temp_backup/pages/500.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/about" 
@@ -64,52 +51,9 @@ const Custom500 = () => {
                 Contact
               </Link>
             </div>
-=======
-            
-            <button
-              onClick={() => window.location.reload()}
-              className="group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
-            >
-              Try again
-            </button>
-          </div>
-          
-          <div className="mt-8 text-xs text-gray-500">
-            <p>If this problem persists, please contact our support team.</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/500.tsx
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD:temp_backup/pages/500.tsx
   )
 }
-=======
-  );
-};
-
-export default Custom500;
-=======
-import Layout from '../components/layout/Layout';
-
-export default function 500() {
-  return (
-    <Layout>
-      <Head>
-        <title>500 - Zion Tech Group</title>
-        <meta name="description" content="500 solutions and services." />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">500</h1>
-          <p className="text-lg text-gray-600">
-            Professional 500 solutions tailored to your business needs.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/500.tsx

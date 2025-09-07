@@ -99,11 +99,11 @@ console.log($2);
         const content = fs.readFileSync($2);
         if (content.includes('') || content.includes('>>>>>>>')) {
           if (fixMergeConflicts(file)) {
-            fixedCount++;
+            fixedCount++
           }
         }
-      } catch (error) {
-        // Skip files that can't be read
+      } catch (error) {;
+        // Skip files that can't be read;
       }
     }
     if (fixedCount > 0) {
