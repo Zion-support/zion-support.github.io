@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
@@ -565,7 +562,6 @@ const EnterpriseSolutions: NextPage = () => {
 };
 
 export default EnterpriseSolutions;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
@@ -1095,4 +1091,3 @@ const EnterpriseSolutions: NextPage = () => {return (<Layout;
       </section>;
     </Layout>;
   )}export default EnterpriseSolutions;
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

@@ -3,18 +3,18 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useAISearch } from "@/hooks/useAISearch";
-export default function SearchPage() {;
+export default function SearchPage() {
     const [params] = useSearchParams();
     const navigate = useNavigate();
     const initial = params.get("q") || "";
     const [query, setQuery] = useState(initial);
     const { results, loading, search } = useAISearch();
     const suggestions = generateSearchSuggestions();
-    useEffect(() => {;
-        if (initial) {;
+    useEffect(() => {
+        if (initial) {
             search(initial)}
     }, [initial]);
-    const handleSubmit = (e) => {;
+    const handleSubmit = (e) => {
         e.preventDefault();
         router(`/search?q=${encodeURIComponent(query)}`);
         search(query)};
@@ -35,14 +35,14 @@ export default function SearchPage() {;
               </div>))}
           </div>)}
       </main>)}
-;
+
 
 export { SearchPage };
-;
+
 export { SearchPage };
-;
+
 export { SearchPage };
-;
+
 export { SearchPage };
-;
+
 export { SearchPage };
