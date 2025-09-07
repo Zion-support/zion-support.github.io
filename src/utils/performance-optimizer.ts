@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> pr-12243
-const images = document && document.querySelectorAll('img');
-  images && images.forEach(img => {
-    if (!img && img.loading) {
-      img && img.loading = 'lazy';
-    }
-    if (!img && img.decoding) {
-      img && img.decoding = 'async';
-
-=======
-// Performance optimization utilities;
-export const optimizeImages = () => {;
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {}
-    if (!img.loading) {}
-      img.loading = "lazy";
-    }
-    if (!img.decoding) {"
-      img.decoding = "async";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -33,154 +7,137 @@ export const optimizeImages = () => {
     }
     if (!img.decoding) {
       img.decoding = 'async';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   });
 };
 
-<<<<<<< HEAD
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
+export const optimizeFonts = () => {
+  // Preload critical fonts
+  const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
+  fontLinks.forEach(link => {
+    link.setAttribute('crossorigin', 'anonymous');
+  });
+};
 
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-=======
-<<<<<<< HEAD
-export const preloadCriticalResources = () => {';
-  const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
-'
-  criticalResources && criticalResources.forEach(resource => {    const link = document && document.createElement('link');'
-    link && link.rel = 'preload';
-    link && link.href = resource;'
-    link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
-    document && document.head.appendChild(link);
+export const optimizeScripts = () => {
+  // Add defer to non-critical scripts
+  const scripts = document.querySelectorAll('script:not([defer]):not([async])');
+  scripts.forEach(script => {
+    if (!script.src.includes('critical')) {
+      script.defer = true;
+    }
+  });
+};
 
-<<<<<<< HEAD
-=======
+export const optimizeStyles = () => {
+  // Inline critical CSS
+  const criticalStyles = document.querySelectorAll('style[data-critical]');
+  criticalStyles.forEach(style => {
+    style.setAttribute('media', 'all');
+  });
+};
 
-export const preloadCriticalResources = null;
-    '/css/critical.css'
+export const optimizeResources = () => {
+  // Preload critical resources
+  const criticalResources = [
+    '/fonts/inter-var.woff2',
+    '/images/hero-bg.webp'
   ];
   
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
-
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+    if (resource.endsWith('.woff2')) {
+      link.crossOrigin = 'anonymous';
+    }
     document.head.appendChild(link);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
+};
+
+export const measurePerformance = () => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    
+    return {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+    };
+  }
+  return null;
+};
+
+export const optimizeLazyLoading = () => {
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        }
+      });
+    });
+
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach(img => imageObserver.observe(img));
+  }
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
-  const loadComponent = (componentName: string) => {
-    return import(`./components/${componentName}`);
-=======
-const loadComponent = componentName => {    return import(`./components/${componentName}`);
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398
-  };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  criticalResources.forEach((resource) => {"
-    const link = document.createElement("link");"
-    link.rel = "preload";
-    link.href = resource;"
-    link.as = resource.endsWith(".css") ? "style" : "font";
-    document.head.appendChild(link);
+  const lazyComponents = document.querySelectorAll('[data-lazy-component]');
+  lazyComponents.forEach(element => {
+    const componentName = element.getAttribute('data-lazy-component');
+    if (componentName) {
+      import(`../components/${componentName}`).then(module => {
+        // Component loaded
+        element.classList.add('loaded');
+      });
+    }
   });
 };
 
-export const optimizeBundleSize = () => {};
-  // Dynamic imports for non-critical components;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-// Performance optimization utilities;
-export const optimize_images = () =>: any {';
-  const images = document.querySelectorAll ('img');
-;
-  images.for_each (img => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      img.loading = 'lazy';
+export const initPerformanceOptimizations = () => {
+  if (typeof window !== 'undefined') {
+    // Run optimizations after DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        optimizeImages();
+        optimizeFonts();
+        optimizeScripts();
+        optimizeStyles();
+        optimizeResources();
+        optimizeLazyLoading();
+        optimizeBundleSize();
+      });
+    } else {
+      optimizeImages();
+      optimizeFonts();
+      optimizeScripts();
+      optimizeStyles();
+      optimizeResources();
+      optimizeLazyLoading();
+      optimizeBundleSize();
     }
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      img.decoding = 'async';
-    }
-  });
-}
-export const preloadCriticalResources = () =>: any {';
-  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];'
-  critical_resources.for_each (resource => {    const link = document.create_element ('link');'
-    link.rel = 'preload';
-    link.href = resource;'
-    link.as = resource.ends_with ('.css') ? 'style' : 'font';
-    document.head.append_child (link);
-  });
-}
-export const optimizeBundleSize = () =>: any {};
-  // Dynamic imports for non - critical components;
-  const load_component = component_name => {    return import (`./components/${component_name}`);
-
   }
-  return { load_component }
-}
-`
-  const loadComponent = componentName => {    return import(`./components/${componentName}`);
-
-export const lazyLoadComponents = () => {';
-  console.log('Lazy loading components...');
-
 };
 
-'
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
-;
-  });
+export default {
+  optimizeImages,
+  optimizeFonts,
+  optimizeScripts,
+  optimizeStyles,
+  optimizeResources,
+  measurePerformance,
+  optimizeLazyLoading,
+  optimizeBundleSize,
+  initPerformanceOptimizations
 };
-
-export const lazyLoadComponents = () => {'
-  console.log('Lazy loading components...')
-}
-
-export const optimizeBundleSize = () => {};
-  // Dynamic imports for non-critical components;
-  const loadComponent = componentName => {}`
-    return import(`./components/${componentName}`);
-
-  };
-
-  return { loadComponent };
-<<<<<<< HEAD
-};
-
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
-=======
->>>>>>> pr-12243
-=======
-};"
-link.rel = "preload";
-((link.href = resource),"
-  (link.as = resource.endsWith(".css") ? "style" : "font"));
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  return { loadComponent };
-<<<<<<< HEAD
-};
-=======
-};
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398
