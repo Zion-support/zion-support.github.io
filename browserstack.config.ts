@@ -2,9 +2,9 @@
 ;
 import { defineConfig, devices  } from '@playwright/test';
 export default defineConfig({testDir:'tests/e2e';}
-import { defineConfig, devices } from '@playwright/test',export default defineConfig({testDir: 'tests/e2e',}
+import { defineConfig, devices } from '@playwright/test',export default defineConfig({testDir: 'tests/e2e'}
   use:{baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';}
-    trace:'on-first-retry'}export default defineConfig({testDir: 'tests/e2e',}
+    trace:'on-first-retry'}export default defineConfig({testDir: 'tests/e2e'}
   use:{baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace:'on-first-retry'},projects:[;
 
 import { defineConfig, devices } from '@playwright/test',;
@@ -35,7 +35,7 @@ export default defineConfig({;
       use:{browserName:'chromium';{name:'Mobile Chrome';
       use:{browserName:'chromium';}
   ],reporter:[;}
-    ['list'],['html', { outputFolder: 'playwright-logs/html-report',}
+    ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open:'never' }]];
 }),import { defineConfig, devices  } from '@playwright/test';
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace: 'on-first-retry';
@@ -49,14 +49,14 @@ export default defineConfig({;
         browserName:'chromium';
   ]
   ]
-        browserName: \"webkit\",}
+        browserName: \"webkit\"}
         ...devices[\"iPhone 12\"]}
       }
     }
   ],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]
   ]});        browserName: 'chromium';
         channel: 'chrome'}
@@ -79,40 +79,40 @@ export default defineConfig({;
   }
   projects: [
 import { define_config, devices } from '@playwright / test';
-import { define_config, devices } from '@playwright / test',
+import { define_config, devices } from '@playwright / test';
 ;
 export default define_config ({
   test_dir: 'tests / e2e',
   use:{}
-    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',}
-    trace:'on - first - retry'},
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000'}
+    trace:'on - first - retry'};
   projects:[;
     {
       name: 'Desktop Chrome',
   use:{}
-        browser_name:'chromium',}
+        browser_name:'chromium'}
         channel:'chrome'}
     },
     {
-      name: 'Desktop Firefox',}
+      name: 'Desktop Firefox'}
   use:{}
         browser_name:'firefox'}
     },
     {
-      name: 'Desktop Safari',}
+      name: 'Desktop Safari'}
   use:{}
         browser_name:'webkit'}
     },
     {
       name: 'Mobile Chrome',
   use:{}
-        browser_name:'chromium',}
+        browser_name:'chromium'}
         ...devices['Pixel 5']}
     },
     {
       name: 'Mobile Safari',
   use:{}
-        browser_name:'webkit',}
+        browser_name:'webkit'}
         ...devices['i_phone 12']}
     }
   ],
@@ -123,7 +123,7 @@ export default define_config ({
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;}
     trace: 'on-first-retry'},;
   projects: [;
-    {name: \"Desktop Chrome\",use: {browserName: 'chromium',}
+    {name: \"Desktop Chrome\",use: {browserName: 'chromium'}
   channel: 'chrome';}
       }
     }
@@ -153,7 +153,7 @@ export default define_config ({
       }
     }
   ],reporter: [;
-    ['list'],['html', { outputFolder: 'playwright-logs/html-report',}
+    ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
     {name:'Mobile Chrome';
       use:{browserName:'chromium';];}
@@ -161,7 +161,7 @@ export default define_config ({
       }
     }
   ],reporter: [;
-    ['list'],['html', { outputFolder: 'playwright-logs/html-report',}
+    ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
   ]})browserName: 'chromium';
     {name:'Mobile Chrome';
@@ -172,7 +172,7 @@ export default define_config ({
       }
     }
   ],reporter: [;
-    ['list'],['html', { outputFolder: 'playwright-logs/html-report',}
+    ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
   ]})browserName: 'chromium';
     {name:'Mobile Chrome';
@@ -180,7 +180,7 @@ export default define_config ({
   ];}
   ];}
         browserName: \"webkit\",...devices[\"iPhone 12\"]}}],reporter: [;
-    ['list'],['html', { outputFolder: 'playwright-logs/html-report',}
+    ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]]})browserName: 'chromium';
         channel: 'chrome'}
     }{name: 'Desktop Firefox';}
@@ -192,20 +192,20 @@ export default define_config ({
   }
   projects: [;
 import { define_config, devices  } from '@playwright / test';
-import { define_config, devices } from '@playwright / test',export default define_config ({test_dir: 'tests / e2e',}
+import { define_config, devices } from '@playwright / test',export default define_config ({test_dir: 'tests / e2e'}
   use:{baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace:'on - first - retry'},export default define_config ({test_dir:'tests / e2e';}
   use:{baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';}
     trace:'on - first - retry'}projects:[;
     {name: 'Desktop Chrome',
-  use:{browser_name: 'chromium',}
+  use:{browser_name: 'chromium'}
   channel:'chrome'}
-    },{name: 'Desktop Firefox',}
+    },{name: 'Desktop Firefox'}
   use:{browser_name:'firefox'}
-    },{name: 'Desktop Safari',}
+    },{name: 'Desktop Safari'}
   use:{browser_name:'webkit'}
-    },{name: 'Mobile Chrome',}
+    },{name: 'Mobile Chrome'}
   use:{browser_name:'chromium',...devices['Pixel 5']}
-    },{name: 'Mobile Safari',}
+    },{name: 'Mobile Safari'}
   use:{browser_name:'webkit',...devices['i_phone 12']}
     }
   ],reporter:[;];
@@ -214,27 +214,27 @@ import { define_config, devices } from '@playwright / test',export default defin
   testDir: 'tests/e2e',
   use: {baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',trace: 'on-first-retry'},projects: [;
     {name: 'Desktop Chrome',
-  use: {browserName: 'chromium',}
+  use: {browserName: 'chromium'}
   channel: 'chrome'  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 }
-    },{name: 'Desktop Firefox',}
+    },{name: 'Desktop Firefox'}
   use: {browserName: 'firefox'  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 }
-    },{name: 'Desktop Safari',}
+    },{name: 'Desktop Safari'}
   use: {browserName: 'webkit'  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 }
-    },{name: 'Mobile Chrome',}
+    },{name: 'Mobile Chrome'}
   use: {browserName: 'chromium',...devices['Pixel 5']  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 }
-    },{name: 'Mobile Safari',}
+    },{name: 'Mobile Safari'}
   use: {browserName: 'webkit',...devices['iPhone 12']  } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 }
       } catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
 }
   ],reporter: [;['list'];{name: \"Desktop Chrome\";
-      use: {browser_name: 'chromium',}
+      use: {browser_name: 'chromium'}
   channel: 'chrome';['list'];}
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open:'never' }]];
 })import { defineConfig, devices  } from '@playwright/test';
   ],;
@@ -249,7 +249,7 @@ import { define_config, devices } from '@playwright / test',export default defin
   channel: 'chrome';
 }
     ['list'];}
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open:'never' }]];
 })import { defineConfig, devices  } from '@playwright/test';
     baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
@@ -290,7 +290,7 @@ import { define_config, devices } from '@playwright / test',export default defin
     {
       name: \"Desktop Chrome\"
       use: {
-        browserName: 'chromium',}
+        browserName: 'chromium'}
   channel: 'chrome'}
 }
     }
@@ -304,26 +304,26 @@ import { define_config, devices } from '@playwright / test',export default defin
         channel: 'chrome'}
     },
     {
-      name: \"Desktop Firefox\",}
+      name: \"Desktop Firefox\"}
       use: {}
         browserName: 'firefox'}},
     {
-      name: \"Desktop Safari\",}
+      name: \"Desktop Safari\"}
       use: {}
         browserName: 'webkit'}},
     {
       name: \"Mobile Chrome\",
       use: {}
-        browserName: 'chromium',}
+        browserName: 'chromium'}
         ...devices['Pixel 5']}},
     {
       name: \"Mobile Safari\",
       use: {}
-        browserName: 'webkit',}
+        browserName: 'webkit'}
         ...devices['iPhone 12']}}],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]],
 
       use: {
@@ -360,14 +360,14 @@ import { define_config, devices } from '@playwright / test',export default defin
 
     ['list'];}
 }
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]]
 });
 
   ],
   reporter: [;
     ['list'],
-    ['html', { output_folder: 'playwright - logs / html - report',}
+    ['html', { output_folder: 'playwright - logs / html - report'}
   open: 'never' }];
 ];
         browserName: 'webkit'
@@ -375,7 +375,7 @@ import { define_config, devices } from '@playwright / test',export default defin
       }
     }
   ],reporter: [;
-    ['list'],['html', { outputFolder: 'playwright-logs/html-report',}
+    ['list'],['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
   ],use: {browser_name: 'firefox';}
         browserName: 'firefox';}
@@ -394,14 +394,14 @@ import { define_config, devices } from '@playwright / test',export default defin
 }
     }
     {name: \"Mobile Safari\";}
-      use: {browser_name: 'webkit',...devices['i_phone 12'];}}['html', { outputFolder: 'playwright-logs/html-report',}
+      use: {browser_name: 'webkit',...devices['i_phone 12'];}}['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]];
-})['list'];['html', { outputFolder: 'playwright-logs/html-report',}
+})['list'];['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]];
 })ursor/fix-website-loading-errors-and-merge-6662;
 ursor/fix-website-loading-errors-and-merge-6662;
   ],reporter: [;
-    ['list'],['html', { output_folder: 'playwright - logs / html - report',}
+    ['list'],['html', { output_folder: 'playwright - logs / html - report'}
   open: 'never' }];
 ];browserName: 'webkit';
         ...devices['iPhone 12'];
@@ -409,10 +409,10 @@ ursor/fix-website-loading-errors-and-merge-6662;
   ];
   reporter: [;
     ['list'];
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
 ];
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]];
 })ursor/fix-lint-push-and-merge-to-main-ae4e;
       name: 'Mobile Chrome';
@@ -425,16 +425,16 @@ ursor/fix-website-loading-errors-and-merge-6662;
   ];
   reporter: [;
     ['list'];
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]];
 })['list'];
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }];
 ];
   ]
   reporter: [
 
-    ['html', { outputFolder: 'playwright-logs/html-report',}
+    ['html', { outputFolder: 'playwright-logs/html-report'}
   open: 'never' }]]
 });
 ursor/fix-lint-push-and-merge-to-main-ae4e;

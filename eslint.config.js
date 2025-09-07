@@ -15,33 +15,26 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.browser,
-        ...globals.node,
-      },
+        ...globals.node},
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true}}},
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-    },
+      '@typescript-eslint': tseslint},
     rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
-      ],
+        { allowConstantExport: true }],
       'no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
       // '@typescript-eslint/no-explicit-any': 'warn', // Disabled due to plugin config issue
-    },
-  },
+    }},
   {
     ignores: [
       'node_modules/**',
@@ -182,8 +175,5 @@ export default [
       'security-config.js',
       'seo-improvements.js',
       'simple-test.js',
-      'syntax-fixer.js',
-      'performance-monitor.js',
-    ],
-  },
-];
+      'syntax-fixer.js';
+      'performance-monitor.js']}];
