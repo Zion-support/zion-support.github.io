@@ -1,3 +1,10 @@
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,25 +24,45 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+<<<<<<< HEAD
+import {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD:pages.disabled/login.tsx
 
 
-
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
+<<<<<<< HEAD
+origin/automation-improvements-final
+import {
+=======
 
 import {;
   Mail,;
@@ -215,6 +242,7 @@ import {;
   DizzyFace2,;
 
 } from "lucide-react";
+<<<<<<< HEAD:pages.disabled/login.tsx
   DizzyFace2
 } from 'lucide-react';
 origin/automation-improvements-final
@@ -397,6 +425,205 @@ Mail,
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Database,
+  Cloud,
+  Brain,
+  Code,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Unlock,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2,
+  DizzyFace2,;
+
+
+
+
+
+} from "lucide-react";
+  DizzyFace2
+} from 'lucide-react';
+<<<<<<< HEAD
+origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
 
   Mail
   Lock
@@ -574,11 +801,17 @@ Mail,
   YawningFace2
   DizzyFace2
 } from "lucide-react";
+<<<<<<< HEAD:pages.disabled/login.tsx
     email: ""
     password: ""
     email: "",
     password: "",;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -590,6 +823,23 @@ Mail,
       [name]: value,
   const [error, setError] = useState('');
 
+<<<<<<< HEAD
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+    email: "",
+    password: "",;
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev
+      [name]: value
+=======
 } from './lucide-react';
 ;
 export default /**
@@ -608,17 +858,14 @@ function LoginPage() {
     const { name, value } = e.target;
     setFormData ((prev) => ({
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-origin/automation-improvements-final
-      ...prev
-      [name]: value
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+
+
 export default function LoginPage() {
   const [formData, setFormData] = useState({
 
@@ -628,17 +875,69 @@ export default function LoginPage() {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+origin/automation-improvements-final
+      ...prev
+      [name]: value
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+
+    email: "",
+    password: "",;
+
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD:pages.disabled/login.tsx
 const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+=======
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
     const { name, value } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: value,;
     }));
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
     try {;
       // Simulate API call;
     setIsLoading(true);
@@ -646,22 +945,34 @@ const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
+<<<<<<< HEAD:pages.disabled/login.tsx
 // For demo purposes, accept any email/password;
+=======
+      // For demo purposes, accept any email/password;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
       if (formData && formData.email && formData && formData.password) {;
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
@@ -671,14 +982,59 @@ const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
+<<<<<<< HEAD:pages.disabled/login.tsx
 } finally {
     } finally {
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+    } finally {
+<<<<<<< HEAD
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    } finally {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
     } finally {;
       setIsLoading(false);
     }
   }
   return (
+<<<<<<< HEAD:pages.disabled/login.tsx
 <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+=======
+<<<<<<< HEAD
+    <Layout>
+      <Head>
+        <title>Login - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Sign in to your Zion Tech Group account to access your dashboard and services."
+        />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+
+
+
+<<<<<<< HEAD
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+origin/automation-improvements-final
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -695,7 +1051,15 @@ const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+<<<<<<< HEAD:pages.disabled/login.tsx
 <Layout>;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <Layout>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
       <Head>;
         <title>Login - Zion Tech Group</title>;
         <meta
@@ -717,19 +1081,44 @@ const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
               Sign in to your account;
             </h2>;
             <p className="mt-2 text-sm text-gray-600">;
+<<<<<<< HEAD
+              Or{" "}
+<<<<<<< HEAD:pages.disabled/login.tsx
+              Or{' '}
+=======
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              Or{" "}
               Or{" "}
               Or{' '}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
               <Link
                 href="/contact"
 
+<<<<<<< HEAD
+              <Link
+                href="/contact"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
             </p>;
           </motion && motion.div>;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -745,16 +1134,48 @@ const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
                   {error}
                 </motion && motion.div>;
               )}
+<<<<<<< HEAD:pages.disabled/login.tsx
 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+<<<<<<< HEAD
+              <div>
+
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+origin/automation-improvements-final
+=======
+
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+=======
+
+=======
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
+<<<<<<< HEAD:pages.disabled/login.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
               <div>;
                 <label
                   htmlFor="email"
@@ -765,6 +1186,7 @@ const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
+<<<<<<< HEAD:pages.disabled/login.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye } from 'lucide-react';
@@ -805,6 +1227,8 @@ export default function LoginPage() {
                   Email address
                 </label>
                 <div className="mt-1 relative">
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                   <input
                     id="email"
                     name="email"
@@ -816,7 +1240,32 @@ export default function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
+<<<<<<< HEAD:pages.disabled/login.tsx
 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+<<<<<<< HEAD
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+
+
+<<<<<<< HEAD
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+origin/automation-improvements-final
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                   Password
                 </label>
                 <div className="relative">
@@ -826,7 +1275,6 @@ export default function LoginPage() {
                   />;
                 </div>;
               </div>;
-
               <div>;
                 <label
                   htmlFor="password"
@@ -858,17 +1306,54 @@ export default function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
+<<<<<<< HEAD:pages.disabled/login.tsx
 </button>;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </button>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                 </div>;
               </div>;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+<<<<<<< HEAD:pages.disabled/login.tsx
 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+=======
+<<<<<<< HEAD
+                  />
+                  <label
+                    htmlFor="remember-me"
+                    className="ml-2 block text-sm text-gray-900"
+                  >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+
+
+<<<<<<< HEAD
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+origin/automation-improvements-final
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                     Remember me
                   </label>
                 </div>
@@ -882,7 +1367,11 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
+<<<<<<< HEAD:pages.disabled/login.tsx
 />;
+=======
+                  />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900">;
@@ -1053,7 +1542,50 @@ if ( {) {
                 </div>;
               </div>;
 
+<<<<<<< HEAD
+
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  {isLoading ? (
+                    <div className="flex items-center">
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      Signing in...
+                    </div>
+                  ) : (
+                    <div className="flex items-center">
+                      Sign in
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  )}
+                </button>
+              </div>
+            </form>
+            <div className="mt-6">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">
+                    Or continue with
+                  </span>
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+origin/automation-improvements-final
+=======
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+<<<<<<< HEAD:pages.disabled/login.tsx
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1075,7 +1607,15 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+<<<<<<< HEAD:pages.disabled/login.tsx
 </button>;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                </button>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
               </div>;
             </form>;
             <div className="mt-6">;
@@ -1107,9 +1647,29 @@ if ( {) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <p className="text-sm text-gray-600">;
+<<<<<<< HEAD
+              Don't have an account?{" "}
+<<<<<<< HEAD:pages.disabled/login.tsx
+              Don't have an account?{' '}
+=======
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              Don't have an account?{" "}
               Don't have an account?{" "}
               Don't have an account?{' '}
+<<<<<<< HEAD
+
+
+origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -1181,6 +1741,7 @@ if ( {) {
         </div>;
       </div>;
     </Layout>);
+<<<<<<< HEAD:pages.disabled/login.tsx
 required
                     className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Enter your email"
@@ -1230,4 +1791,6 @@ required
       </div>
     </Layout>
   );
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/login.tsx
 }

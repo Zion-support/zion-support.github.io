@@ -1,8 +1,89 @@
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
 
+=======
+<<<<<<< HEAD
+
+  import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer'
+import { toast } from '@/hooks/use-toast'
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
+
+export function AIEnhancementButton({
+  options
+  onEnhanced
+  buttonText = "Enhance with AI"
+  className
+  variant = "ghost"
+  size = "sm"
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
+  const [showActions, setShowActions] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions,
+
+import { useState } from 'react',
+import { Button } from '@/components/ui/button',
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
+import { toast } from '@/hooks/use-toast',
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions,
+  onEnhanced: (enhancedContent: string) => void,
+  buttonText?: string,
+  className?: string,
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
+  size?: "default" | "sm" | "lg" | "icon",
+  contentLength?: number
+export function AIEnhancementButton({
+}
+export function AIEnhancementButton({
+}
+export function AIEnhancementButton({
+
+  options
+  onEnhanced
+  buttonText = "Enhance with AI"
+  className
+  variant = "ghost"
+  size = "sm"
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
+  const [showActions, setShowActions] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+  options,
+  onEnhanced,
+  buttonText = "Enhance with AI",
+  className,
+  variant = "ghost",
+  size = "sm",
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
+  const [showActions, setShowActions] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
 const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
         title: "Not enough content"",
   description: `Please enter at least ${contentLength} characters before enhancing.`"
         variant: "destructive"""
@@ -15,6 +96,70 @@ import { Button } from '@/components/ui/button',;''
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';''
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/ useAIContentEnhancer';''
 import { toast } from '@/hooks/ use - toast';'
+=======
+        title: "Not enough content"
+        description: `Please enter at least ${contentLength} characters before enhancing.`
+        variant: "destructive"
+<<<<<<< HEAD
+      })
+      return;
+    }
+    const enhancedContent = await enhanceContent(options)
+    if (enhancedContent) {
+      setGeneratedContent(enhancedContent)
+      setShowActions(true)
+    }
+  }
+  const handleAccept = () => {
+    if (generatedContent) {
+      onEnhanced(generatedContent)
+      setShowActions(false)
+      setGeneratedContent(null)
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  import { useState } from 'react';
+import { Button } from '@/components / ui / button';
+
+      }),
+      return
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+<<<<<<< HEAD
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+import { toast } from '@/hooks/use-toast',;
+interface AIEnhancementButtonProps {;
+  options: AIEnhancementOptions,;
+  onEnhanced: (enhancedContent: string) => void,;
+  buttonText?: string,;
+  className?: string,;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;
+  size?: "default" | "sm" | "lg" | "icon",;
+  contentLength?: number;
+}
+;
+export function AIEnhancementButton({;
+  options,;
+  onEnhanced,;
+  buttonText = "Enhance with AI",;
+  className,;
+  variant = "ghost",;
+  size = "sm",;
+  contentLength = 10;
+}: AIEnhancementButtonProps) {;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const [showActions, setShowActions] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+  const handleEnhance = async () => {;
+    if ((!options.content || options.content.trim().length < contentLength) &&;
+        (!options.context || options.context.trim().length < contentLength)) {;
+=======
+
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks / useAIContentEnhancer';
+import { toast } from '@/hooks / use - toast';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
 interface AIEnhancementButtonProps {
   // TODO: Implement
 }
@@ -111,10 +256,29 @@ export function AIEnhancementButton(): any ({;
 </string>
     if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {;
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
       toast({;"
         title: "Not enough content",;"
         description: `Please enter at least ${contentLength} characters before enhancing.`,;"
         variant: "destructive";")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      toast({;
+        title: "Not enough content",;
+        description: `Please enter at least ${contentLength} characters before enhancing.`,;
+        variant: "destructive";
+<<<<<<< HEAD
+      }),;
+      return;
+    }
+;
+    const enhancedContent = await enhanceContent(options),;
+    if (enhancedContent) {;
+      setGeneratedContent(enhancedContent),;
+      setShowActions(true);
+    }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
       });
       return;
     }
@@ -125,6 +289,129 @@ export function AIEnhancementButton(): any ({;
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  },
+  
+  const handleAccept = () => {
+    if (generatedContent) {
+      onEnhanced(generatedContent),
+      setShowActions(false),
+      setGeneratedContent(null),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      toast({
+        title: "Content applied"
+        description: "AI-enhanced content has been applied."})
+    }
+<<<<<<< HEAD
+  }
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  }
+  const handleCancel = () => {
+    setShowActions(false)
+    setGeneratedContent(null)
+  }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  },
+  
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  },
+  
+  const handleCancel = () => {
+    setShowActions(false),
+    setGeneratedContent(null)
+  },
+  
+<<<<<<< HEAD
+  
+  if (showActions) {
+    return (
+      <div className="flex gap-2 items-center">
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleAccept}
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
+        >
+          <Check className="h-4 w-4 mr-1" />
+          Apply
+        </Button>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleRegenerate}
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+          disabled={isEnhancing}
+        >
+          {isEnhancing ? (
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+          ) : (
+            <RefreshCw className="h-4 w-4 mr-1" />
+          )}
+          Regenerate
+        </Button>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleCancel}
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
+        >
+          <X className="h-4 w-4 mr-1" />
+          Cancel
+        </Button>
+      </div>
+    )
+  }
+  return (
+    <Button
+      type="button"
+  return (
+    <Button
+      type="button"
+      variant = {variant,}
+      size = {size,}
+      className={`gap-1 ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+  
+  return (
+    <Button
+      type="button"
+  },;
+  const handleAccept = () => {;
+    if (generatedContent) {;
+      onEnhanced(generatedContent),;
+      setShowActions(false),;
+      setGeneratedContent(null),;
+      toast({;
+        title: "Content applied",;
+        description: "AI-enhanced content has been applied."});
+    }
+  },;
+  const handleRegenerate = async () => {;
+    await handleEnhance();
+  },;
+  };
+  const handleRegenerate = async () => {;
+    await handleEnhance();
+  };
+  const handleCancel = () => {;
+    setShowActions(false);
+    setGeneratedContent(null);
+  };
+  if (showActions) {;
 
   },
   
@@ -152,9 +439,12 @@ export function AIEnhancementButton(): any ({;
     setGeneratedContent(null)
   },
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   if (showActions) {
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
     return ("
       <div className="flex gap-2 items-center">;"
 </div>
@@ -167,6 +457,21 @@ export function AIEnhancementButton(): any ({;
 </Button>"
           <Check className="h-4 w-4 mr-1" />;"
 </Check>
+=======
+    return (
+<<<<<<< HEAD
+=======
+      <div className="flex gap-2 items-center">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick = {handleAccept,}
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;
+          <Check className="h-4 w-4 mr-1" />;
+          Apply;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
         </Button>;
         <Button;"
           type="button"""
@@ -175,6 +480,7 @@ export function AIEnhancementButton(): any ({;
           onClick = {handleRegenerate,}"
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20""
           disabled = {isEnhancing,}>;
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
 </Button>"
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;"
 </Loader2>"
@@ -195,11 +501,159 @@ export function AIEnhancementButton(): any ({;
       </div>;
     <Button;"
       type="button""
+=======
+<<<<<<< HEAD
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
+          ) : (;
+
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+import { toast } from '@/hooks/use-toast',;
+;
+interface AIEnhancementButtonProps {;
+  options:AIEnhancementOptions,;
+  onEnhanced:(enhancedContent:string) => void,;
+  buttonText?:string,;
+  className?:string,;
+  variant?:"default" | "destructive" | "outline" | "secondary" | "ghost" | "link",;
+  size?:"default" | "sm" | "lg" | "icon",;
+  contentLength?:number;
+}
+;
+export function AIEnhancementButton({;
+  options,;
+  onEnhanced,;
+  buttonText = "Enhance with AI",;
+  className,;
+  variant = "ghost",;
+  size = "sm",;
+  contentLength = 10;
+} AIEnhancementButtonProps) {;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const [showActions, setShowActions] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+  ;
+  const handleEnhance = async () => {;
+    if ((!options.content || options.content.trim().length < contentLength) && ;
+        (!options.context || options.context.trim().length < contentLength)) {;
+      toast({;
+        title:"Not enough content",;
+        description:`Please enter at least ${contentLength} characters before enhancing.`,;
+        variant:"destructive";
+      }),;
+      return,;
+    }
+    ;
+    const enhancedContent = await enhanceContent(options),;
+    ;
+    if (enhancedContent) {;
+      setGeneratedContent(enhancedContent),;
+      setShowActions(true),;
+    }
+  },;
+  ;
+  const handleAccept = () => {;
+    if (generatedContent) {;
+      onEnhanced(generatedContent),;
+      setShowActions(false),;
+      setGeneratedContent(null),;
+      toast({;
+        title:"Content applied",;
+        description:"AI-enhanced content has been applied."}),;
+    }
+  },;
+  ;
+  const handleRegenerate = async () => {;
+    await handleEnhance(),;
+  },;
+  ;
+  const handleCancel = () => {;
+    setShowActions(false),;
+    setGeneratedContent(null),;
+  },;
+  ;
+  if (showActions) {;
+    return (;
+      <div className="flex gap-2 items-center">;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          onClick={handleAccept}
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20";
+        >;
+          <Check className="h-4 w-4 mr-1" />;
+          Apply;
+        </Button>;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          onClick={handleRegenerate}
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";
+          disabled={isEnhancing}
+        >;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
+          ) : (;
+            <RefreshCw className="h-4 w-4 mr-1" />;
+          )}
+          Regenerate;
+        </Button>;
+<<<<<<< HEAD
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          onClick={handleCancel}
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20";
+        >;
+=======
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick = {handleCancel,}
+
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <X className="h-4 w-4 mr-1" />;
+          Cancel;
+        </Button>;
+      </div>;
+<<<<<<< HEAD
+    );
+  }
+  ;
+  return (;
+    <Button;
+      type="button";      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >;
+=======
+    ),;
+  }
+
+
+  return (
+    <Button
+      type="button"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
       variant = {variant,}
       size = {size,}
       className={`gap-1 ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}>;
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
 </Button>"
         <Loader2 className="h-4 w-4 animate-spin" />;"
 </Loader2>"
@@ -223,6 +677,28 @@ export function AIEnhancementButton(): any ({;
           size="sm";"
           on_click = {handle_accept, }"
           className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {isEnhancing ? (;
+        <Loader2 className="h-4 w-4 animate-spin" />;
+      ) :(;
+        <Sparkles className="h-4 w-4" />;
+      )}
+      <span className="text-xs">{buttonText}</span>;
+    </Button>;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="flex gap - 2 items - center">;
+        <Button;
+          type="button";
+          variant="ghost";
+          size="sm";
+          on_click = {handle_accept, }
+          className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
         >;
 </Button>"
           <Check className="h - 4 w - 4 mr - 1" />;"
@@ -254,8 +730,26 @@ export function AIEnhancementButton(): any ({;
 </X>
         </Button>;
       </div>),
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
     <Button;"
       type="button";"
+=======
+  }
+  return (
+    <Button;
+    );
+  }
+;
+  return (;
+    <Button;
+      type="button";
+      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+      type="button";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx
       variant = {variant, }
       size = {size, }
       className={`gap - 1 ${class_name}`}
@@ -282,3 +776,75 @@ export function AIEnhancementButton(): any ({;
 </Sparkles>"
       <span className="text-xs">{buttonText}</span>""
 
+<<<<<<< HEAD:temp-disabled/src/components/ai-enhancement/AIEnhancementButton.tsx
+=======
+
+<<<<<<< HEAD
+    >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-4 w-4 animate-spin" />
+      ) : (
+        <Sparkles className="h-4 w-4" />
+      )}
+<<<<<<< HEAD
+    </Button>;
+  );
+    </Button>
+  )
+    </Button>;
+  );
+};"
+<Button type="button" variant="ghost" size="sm" onClick={
+  handleAccept "
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
+}return (<Button) : (<Sparkles className=" h-4 w-4" />)
+}</Button>)
+}"}
+}
+;
+ursor/fix-website-loading-errors-and-merge-6662
+  ),; ;
+}export function AIEnhancementButton ({;
+  options;
+onEnhanced;
+buttonText = "Enhance with AI";
+className;";
+variant = "ghost";";
+size = "sm";
+contentLength = 10 ;
+}: AIEnhancementButtonProps) {;
+  const {;
+  enhanceContent, isEnhancing ;
+}= useAIContentEnhancer ();
+const [showActions, setShowActions] = useState (false);
+const [generatedContent, setGeneratedContent] = useState<string | null> (null);
+if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {;
+  toast ({";
+  variant: "destructive" ;
+});
+return ;
+}
+}
+};";
+<Button type="button" variant="ghost" size="sm" onClick={;
+  handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
+}</Button>) ;
+}"
+}
+;
+    </Button>
+  )
+}
+;
+      <span className="text-xs">{buttonText}</span>
+=======
+      <span className="text-xs">{buttonText}</span>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ai-enhancement/AIEnhancementButton.tsx

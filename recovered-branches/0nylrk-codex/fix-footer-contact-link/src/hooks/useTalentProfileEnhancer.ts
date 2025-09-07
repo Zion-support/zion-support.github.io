@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface TalentProfileData {}
 ';
 import {useState} from 'react';'
@@ -7,23 +8,24 @@ export interface TalentProfileData {export interface TalentProfileData {
 }
 import {supabase} from '@/integrations/supabase/client';'
 =======
+=======
+
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+export interface TalentProfileData {
+
+import {useState} from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {supabase} from '@/integrations/supabase/client';
 >>>>>>> origin/chore/fix-lint-and-merge
 export interface TalentProfileData {;
 
-  name: string;
-  title: string;
-  bio: string;
-
-  skills: string[],
-  location?: string;
-
-}
-
-export interface CategorizedSkills {
-
-export interface CategorizedSkills {;
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   name: string;
   title: string;
   bio: string;
@@ -31,8 +33,8 @@ export interface CategorizedSkills {;
   location?: string;
 }
 export interface CategorizedSkills {
-
 }
+
 
 export interface CategorizedSkills {;
 
@@ -41,10 +43,86 @@ export interface CategorizedSkills {;
   platforms: string[];
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+export interface TalentProfileData {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface TalentProfileData {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  name: string;
+  title: string;
+  bio: string;
 
+<<<<<<< HEAD
+  skills: string[]
+
+  location?: string
+}
+export interface CategorizedSkills {
+
+export interface CategorizedSkills {;
+=======
+  skills: string[],
+  location?: string;
+
+}
+
+export interface CategorizedSkills {
+
+export interface CategorizedSkills {;
+
+  name: string;
+  title: string;
+  bio: string;
+  skills: string[],
+  location?: string;
+}
+export interface CategorizedSkills {
+
+}
+
+export interface CategorizedSkills {;
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  programming: string[];
+  devops: string[];
+  platforms: string[];
+import { useState  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+
+<<<<<<< HEAD
 export interface TalentProfileData {
 export interface TalentProfileData {
 export interface TalentProfileData {export interface TalentProfileData {
+=======
+<<<<<<< HEAD
+  softSkills: string[]
+
+  other: string[]
+}
+export interface EnhancedProfile {
+
+  summary: string
+
+  categorizedSkills: CategorizedSkills
+}
+export function useTalentProfileEnhancer() {
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+    setIsGenerating(true);
+    setError(null)
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 export interface EnhancedProfile {
   summary: string,
@@ -66,12 +144,31 @@ export function useTalentProfileEnhancer() { return null; }
     setIsGenerating(true);
     setError(null),
 
+<<<<<<< HEAD
+
+      if (error) {
+        throw new Error(error.message)
+
+    try {
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: { talentData: profileData }
+      });
+
+=======
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (error) {
 
     try {
@@ -113,24 +210,58 @@ export function useTalentProfileEnhancer() { return null; }
       if (error) {;
         throw new Error(error.message);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       }
       return data as EnhancedProfile;
     } catch (err: any) {}
 '
       setError(err && err.message || 'Failed to enhance profile'),
 
+<<<<<<< HEAD
 export interface CategorizedSkills {
 
   programming: string[];
   devops: string[];
+=======
+<<<<<<< HEAD
+      setError(err && err.message || 'Failed to enhance profile'),
+      }
+      return data as EnhancedProfile
+    } catch (err: any) {
+      setError(err.message |'Failed to enhance profile')
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      return null
+    } finally {
+      setIsGenerating(false)
+    }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
+<<<<<<< HEAD
+  return {
+    enhanceProfile;
+    isGenerating;
+    error
+  }
+  };
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     enhanceProfile;
     isGenerating;
 
     error
+<<<<<<< HEAD
 
   }
   return {
@@ -139,12 +270,22 @@ export interface CategorizedSkills {
 
     error
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   },;
   return {;
     enhanceProfile;
     isGenerating;
     error;
+<<<<<<< HEAD
 
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  soft_skills: string[],
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   other: string[];
 
 }
@@ -201,7 +342,82 @@ export interface EnhancedProfile {
 pr-12325
 }
     enhance_profile;
+<<<<<<< HEAD
 
   }
 
 }
+=======
+    is_generating;
+    error;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }
+}
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+;
+export interface TalentProfileData {;
+  name:string,;
+  title:string,;
+  bio:string,;
+  skills:string[],;
+  location?:string;}
+;
+export interface CategorizedSkills {;
+  programming:string[],;
+  devops:string[],;
+  platforms:string[],;
+  softSkills:string[],;
+  other:string[];
+}
+;
+export interface EnhancedProfile {;
+  summary:string,;
+  categorizedSkills:CategorizedSkills;
+}
+;
+export function useTalentProfileEnhancer() {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ;
+  const enhanceProfile = async (profileData:TalentProfileData):Promise<EnhancedProfile | null> => {;
+    setIsGenerating(true),;
+    setError(null),;
+    ;
+    try {;
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
+        body:{ talentData:profileData }
+      }),;
+;
+      if (error) {;
+        throw new Error(error.message),;
+      }
+      ;
+      return data as EnhancedProfile,;
+    } catch (err:any) {;
+      setError(err.message || 'Failed to enhance profile'),;
+      return null;
+    } finally {;
+      setIsGenerating(false),;
+    }
+  },;
+  ;
+  return {;
+    enhanceProfile,;
+    isGenerating,;
+    error;
+  },;
+} 
+}
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Toaster as SonnerToaster } from "sonner";"
 import * as React from "react","
 import { Toaster as SonnerToaster } from "sonner","
@@ -7,10 +8,19 @@ export function Toaster() {
 }
 return (;
 =======
+=======
+
+
+<<<<<<< HEAD
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import * as React from "react";
 import { Toaster as SonnerToaster } from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
+<<<<<<< HEAD
 
 import {Toaster, as, SonnerToaster} from "sonner";
 import * as React from "react",
@@ -22,13 +32,29 @@ import { Toaster as SonnerToaster } from "sonner",
 import {Toaster, as, SonnerToaster} from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {Toaster, as, SonnerToaster} from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
+<<<<<<< HEAD
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
+export function Toaster() {
+  return (
+
+=======
 
 export function Toaster() {
   return (
@@ -36,8 +62,15 @@ export function Toaster() {
 import {Toaster, as, SonnerToaster} from "sonner";
 >>>>>>> origin/chore/fix-lint-and-merge
 export function Toaster() {;
+<<<<<<< HEAD
   return (    <SonnerToaster
 
+=======
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <SonnerToaster
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       position="top-right"
       toastOptions={{}
         className:"
@@ -50,6 +83,7 @@ export function Toaster() {;
 
         descriptionClassName: "text-zion-slate-light"}}
 
+<<<<<<< HEAD
     />
   )
 
@@ -71,6 +105,20 @@ return (    <SonnerToaster;
 import * as React from "react";"
 =======
 
+=======
+<<<<<<< HEAD
+
+
+    />
+  )
+}
+=======
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -86,7 +134,15 @@ export function Toaster() {;
           border: '1px solid #1e3a6f'};
         duration: 4000;
         descriptionClassName: "text-zion-slate-light"}}
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+    />;
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 import * as React from './react';
@@ -129,11 +185,21 @@ function Toaster() {
     />);
 }}
 
+<<<<<<< HEAD
 ;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     />;
   );
 }
 ;
+<<<<<<< HEAD
 
 "
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

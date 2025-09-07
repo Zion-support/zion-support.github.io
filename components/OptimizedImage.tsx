@@ -1,10 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useCallback } from 'react';
+=======
+import React from 'react';
+import Image from 'next/image';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 interface OptimizedImageProps {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from "react";
 import Image from "next/image";
 interface OptimizedImageProps {
@@ -24,7 +31,22 @@ interface OptimizedImageProps {
   className?: string
   priority?: boolean
   quality?: number
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface OptimizedImageProps {
+  src: string
+  alt: string
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
+<<<<<<< HEAD
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+=======
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -36,6 +58,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
 }) => {
 =======
+<<<<<<< HEAD
 import React from "react";
 import Image from "next/image";
 interface OptimizedImageProps {
@@ -52,6 +75,23 @@ interface OptimizedImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
+=======
+const OptimizedImage: React.FC < OptimizedImageProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  src;
+  alt;
+
+  width = 800;
+  height = 600;
+  className = '';
+  priority = false;
+<<<<<<< HEAD
+  quality = 75
+
+}) => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 const OptimizedImage = ({
   src,
@@ -67,6 +107,7 @@ const OptimizedImage = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
+<<<<<<< HEAD
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
@@ -147,8 +188,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
-    <Image;
+    <Image
       src={src}
       alt={alt}
       width={width}
@@ -157,11 +201,22 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
 <<<<<<< HEAD
       quality={quality}
+<<<<<<< HEAD
       placeholder=blur"
 =======
       quality={quality}"
       placeholder="blur""
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      placeholder="blur"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
     />
   );
@@ -170,6 +225,7 @@ export default OptimizedImage;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 return (
     <Image,
   src={src}
@@ -188,3 +244,19 @@ return (
 }) => {
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
+=======
+<<<<<<< HEAD
+export default OptimizedImage;
+      placeholder="blur"
+      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+/>  );
+}
+    />  );
+};
+
+export default OptimizedImage;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default OptimizedImage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,6 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -8,12 +16,25 @@ import Link from 'next / link';
 const Blueprint20250818122901: React.FC = () => {
   const blueprint_details = {
     id: 'blueprint - 2025 - 08 - 18 - 122901',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
 const Blueprint20250818122901: React.FC = () => {
   const blueprintDetails = {
 
     id: 'blueprint-2025-08-18-122901',
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 const Blueprint20250818122901: React.FC = () => {
   const blueprintDetails = {
     id: 'blueprint-2025-08-18-122901'
@@ -77,50 +98,72 @@ const Blueprint20250818122901: React.FC = () => {
       status: 'implemented'
     }
     id: 'blueprint-2025-08-18-122901',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     name: 'AI Content Factory Blueprint',
-    description: 'Automated content generation system with AI - powered optimization',
+    description: 'Automated content generation system with AI-powered optimization',
     category: 'Content Automation',
     status: 'deployed',
     complexity: 'high',
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     lastUpdated: '2025-08-18 12:29:01',
     version: '2.1.0'
   };
 
   const systemComponents = [
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Content Generator',
-      description: 'AI - powered content creation engine',
+      description: 'AI-powered content creation engine',
       status: 'active',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
       health: 'excellent';
 health: 'excellent'
+=======
+      health: 'excellent'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     },
     {
       name: 'SEO Optimizer',
       description: 'Automated search engine optimization',
       status: 'active',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
       health: 'excellent';
 health: 'excellent'
       health: 'excellent';
       health: 'excellent';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
       health: 'excellent'
     },
     {
       name: 'Quality Controller',
       description: 'Content quality assessment and improvement',
       status: 'active',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
       health: 'excellent';
 health: 'excellent'
       health: 'excellent';
       health: 'excellent';
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
       health: 'excellent'
     },
     {
       name: 'Distribution Engine',
       description: 'Automated content publishing and distribution',
       status: 'active',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 health: 'excellent';
     }
   ];
@@ -133,6 +176,14 @@ health: 'excellent';
   }
 }
   ];
+=======
+<<<<<<< HEAD
+      health: 'excellent';
+    }
+  ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
       health: 'excellent'
 
@@ -143,7 +194,11 @@ health: 'excellent';
       description: 'Advanced NLP for human - like content creation',
       benefit: 'High - quality, engaging content',
       status: 'implemented';
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 health: 'excellent'
+=======
+      health: 'excellent'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     }
   ];
 
@@ -164,6 +219,7 @@ health: 'excellent'
       feature: 'SEO Automation',
       description: 'Intelligent keyword optimization and meta tag generation',
       benefit: 'Improved search rankings',
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
       status: 'implemented';
     },
     {
@@ -183,6 +239,10 @@ health: 'excellent'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
   ];
 
   ];
@@ -196,14 +256,26 @@ health: 'excellent'
 
   };
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
   const getHealthColor = (health: string) => {
 status: 'implemented';
+=======
+
+
+  const getHealthColor = (health: string) => {
+<<<<<<< HEAD
+      status: 'implemented';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
     }
   ];
 ;
@@ -215,12 +287,19 @@ status: 'implemented';
       default: return 'text - gray - 400';
     }
   }
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
   const getHealthColor = (health: string) => {
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 ;
   const getHealthColor = (health: string) =>: any {
     switch (health) {
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 case 'excellent': return 'bg-green-500/20 text-green-400';
       case 'good': return 'bg-yellow-500/20 text-yellow-400';
       case 'warning': return 'bg-orange-500/20 text-orange-400';
@@ -228,6 +307,11 @@ case 'excellent': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
   };
 
+=======
+  };
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -235,6 +319,11 @@ case 'excellent': return 'bg-green-500/20 text-green-400';
 }
   };
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -250,6 +339,10 @@ case 'excellent': return 'bg-green-500/20 text-green-400';
   }
 }
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -276,6 +369,10 @@ case 'excellent': return 'bg-green-500/20 text-green-400';
   }
 }
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
@@ -299,13 +396,23 @@ case 'excellent': return 'bg-green-500/20 text-green-400';
           </div>
         </div>
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
+=======
+<<<<<<< HEAD
+      case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
       case 'good': return 'bg - yellow - 500 / 20 text - yellow - 400';
       case 'warning': return 'bg - orange - 500 / 20 text - orange - 400';
       case 'critical': return 'bg - red - 500 / 20 text - red - 400';
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900 text - white">;
@@ -350,7 +457,10 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
             <p className="text - gray - 300 text - sm mt - 2">Recently deployed</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* System Components */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">System Components</h2>;
@@ -367,13 +477,19 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (component.status)}`}>;
                     ● {component.status}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </span>;
                 </div>;
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Key Features</h2>;
@@ -384,6 +500,8 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                   <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
+<<<<<<< HEAD
+=======
 
         {/* System Components */  } catch (error) {
     console.error("Error:", error);
@@ -400,6 +518,7 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                   <h3 className="text-lg font-semibold text-white">{component.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -467,6 +586,10 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
   }
 }
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -505,6 +628,10 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
   }
 }
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -545,6 +672,10 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
@@ -661,7 +792,11 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
 }
 ;
 
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 };
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
 };
 
       status: 'implemented'
@@ -709,7 +844,12 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
       case 'warning': return 'bg-orange-500/20 text-orange-400';
       case 'critical': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400';
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
+=======
+    }
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
   };
 
       } catch (error) {
@@ -726,16 +866,52 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+        {/* Header */}
+        {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+            {blueprintDetails.name}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
           </h1>
           <p className="text-gray-300 text-lg">
             {blueprintDetails.description}
           </p>
         </div>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+        {/* Blueprint Overview */}
+            {blueprintDetails.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </h1>
+          <p className="text-gray-300 text-lg">
+            {blueprintDetails.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </p>
+        </div>
+        {/* Blueprint Overview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-blue-400">Status</h3>
@@ -758,6 +934,15 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
             <p className="text-gray-300 text-sm mt-2">Recently deployed</p>
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+        {/* System Components */}
+        {/* System Components */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">System Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -766,6 +951,10 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{component.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+                    {component.health}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -776,6 +965,17 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(component.status)}`}>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+                    ● {component.status}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Features */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                     ● {component.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -804,6 +1004,10 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+                    {feature.status}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -814,6 +1018,25 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-blue-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+            ))}
+          </div>
+        </div>
+        {/* Content Generation Pipeline */}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Content Generation Pipeline */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Content Generation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -821,11 +1044,19 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
               <div className="text-6xl font-bold text-blue-400 mb-4">📝</div>
               <h3 className="text-xl font-semibold mb-2 text-white">AI-Powered Content Creation</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+                Our AI Content Factory automates the entire content creation process, from
+                initial concept to final publication, ensuring high-quality, SEO-optimized
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                 Our AI Content Factory automates the entire content creation process, from 
                 initial concept to final publication, ensuring high-quality, SEO-optimized 
                 Our AI Content Factory automates the entire content creation process, from
                 initial concept to final publication, ensuring high-quality, SEO-optimized
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
                 content that engages your audience.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
@@ -849,6 +1080,15 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
             </div>
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+        {/* Technology Stack */}
+        {/* Technology Stack */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -876,27 +1116,50 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
             </div>
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
+=======
+        {/* Navigation */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
+=======
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
             All Blueprints
           </Link>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
+=======
+          <Link
+          <Link 
+          <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 
+=======
+          <Link
+          <Link 
+          <Link
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -906,6 +1169,7 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
       </div>
     </div>
   );
+<<<<<<< HEAD:pages.disabled/reports/blueprints/blueprint-2025-08-18-122901.tsx
 ;
 
 };
@@ -913,3 +1177,16 @@ case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
 export default Blueprint20250818122901;
 export default Blueprint20250818122901;
 export default Blueprint20250818122901;
+=======
+}
+};
+
+=======
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default Blueprint20250818122901;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/reports/blueprints/blueprint-2025-08-18-122901.tsx

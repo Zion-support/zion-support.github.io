@@ -43,4 +43,25 @@ export function AIEnhancementButton({;
         <Sparkles className="h-3 w-3" />;
       )}
       <span className="text-xs">{buttonText}</span>;
+<<<<<<< HEAD
     </Button>;
+=======
+    </Button>;
+  ),;}
+ currentContent;
+enhancementType;
+context);
+) : (<Sparkles className="h-3 w-3" />) ;
+<<<<<<< HEAD
+:temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
+}</Button>) ;"}"
+}</Button>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/AIEnhancementButton.tsx
+=======
+
+}</Button>) ;
+}"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

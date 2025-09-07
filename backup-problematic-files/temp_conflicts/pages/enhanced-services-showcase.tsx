@@ -368,4 +368,25 @@ pr-12325
 </a>
       </a>;
     <button onClick={onClick} className={classes}>;
+<<<<<<< HEAD
     </button>;"`;
+=======
+      {children}
+    </button>;
+<<<<<<< HEAD
+:temp_conflicts/pages/enhanced-services-showcase.tsx
+  );
+};
+}
+}
+}
+  ),;
+},
+:backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
+=======
+
+  ),;
+},
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

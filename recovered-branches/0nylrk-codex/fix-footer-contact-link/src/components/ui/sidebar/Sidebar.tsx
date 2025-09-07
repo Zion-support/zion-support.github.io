@@ -10,6 +10,7 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 =======
 import React from "react",
 
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 
 ;
@@ -19,6 +20,27 @@ import React from "react",
 import { cn } from "@/lib/utils",
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+<<<<<<< HEAD
+export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
+  return (
+    <div
+=======
+=======
+import {cn} from "@/lib/utils";
+interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  className?: string;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   children?: React && React.ReactNode;
 }
 
@@ -39,6 +61,7 @@ className={cn(
         }
         className,
 =======
+<<<<<<< HEAD
   return (
     <div;
       className={cn(;"
@@ -83,17 +106,54 @@ export function Sidebar(): any ({ className, children, ...props }: SidebarProps)
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
     <div
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       className={cn(;
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
 
         className
+<<<<<<< HEAD
         className
+=======
+<<<<<<< HEAD
 
       className={cn(
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
         className
 
+
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+}
+export function Sidebar({ className, children, ...props }: SidebarProps) {
+  return (
+    <div
+      className;
+      className={cn(;
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
+        className
+      className={cn(
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200",
+        className
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+      className={cn(
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
+        className
+
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -108,6 +168,9 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 import React from "react",
 import { cn } from "@/lib/utils",
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from "react",;
 import { cn } from "@/lib/utils",;
 
@@ -141,7 +204,13 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {;
       )}
       {...props}>;
       {children}
+<<<<<<< HEAD
 
+=======
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from './react';
 
 import { cn } from '@/lib / utils';
@@ -163,10 +232,55 @@ function Sidebar() {}
 }> {
 }</div>) 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+;
+interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?:string,;
+  children?:React.ReactNode,;
+}
+;
+export function Sidebar({ className, children, ...props } SidebarProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200",;
+        className;
+      )}
+      {...props}
+    >;
+      {children}
+    </div>;
+  ),;}
+ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+children?: React.ReactNode 
+}className, children, ...props 
+}: SidebarProps) {
+  return (<div className= {
+  cn () 
+}{
+  ...props 
+}> {
+  children 
+}</div>) 
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       )}
       {...props}
     >
       {children}
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

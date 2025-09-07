@@ -22,4 +22,20 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
 }talent$ {;"
   resultCount !== 1 ? 's' :  ;')`;
 }`) ;
+<<<<<<< HEAD
 }</span>) ;
+=======
+}</span>) ;
+<<<<<<< HEAD
+:temp_broken_files/talent/ResultsHeader.tsx
+}</div>) ;"}'"
+}</div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ResultsHeader.tsx
+=======
+
+}</div>) ;
+}'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

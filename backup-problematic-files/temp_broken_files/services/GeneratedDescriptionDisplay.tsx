@@ -96,8 +96,16 @@ const handleSave = () => {;
 setIsEditing (false);
 
 };
+<<<<<<< HEAD
 :temp_broken_files/services/GeneratedDescriptionDisplay.tsx
 pr-12325
+=======
+<<<<<<< HEAD
+:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
           <Button ;
             onClick={handleSave}"
@@ -109,11 +117,38 @@ pr-12325
 
 }   <CardContent> {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+}</Button> </CardTitle> </CardHeader> <CardContent> {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   isEditing ? (<Textarea value= {;
   editedDescription ;)
 }</div>) ;
+<<<<<<< HEAD
 
 } {;"
   isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes  ) ;""
 });"}'""
   isEditing && (<CardFooter> <Button onClick={;
+=======
+}</CardContent> {;
+<<<<<<< HEAD
+:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
+  isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+}</Card>) ;"}'"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  isEditing && (<CardFooter> <Button onClick={;
+  handleSave ";
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+}</Card>) ;
+}'"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

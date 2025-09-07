@@ -46,4 +46,21 @@ pr-12325
 }</button> <span> {;
 </span>
 }years</span> <span> {;
+<<<<<<< HEAD
 }years</span> </div> <Slider /> </div>) ;
+=======
+  experienceRange[1] ;
+}years</span> </div> <Slider /> </div>) ;
+<<<<<<< HEAD
+:temp_broken_files/talent/filters/ExperienceFilter.tsx
+}</div>) ;"}"
+}</div>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/ExperienceFilter.tsx
+=======
+
+}</div>) ;
+}"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -16,9 +16,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
 export default function ITServices() {
   return (
     <Layout
@@ -40,6 +41,8 @@ export default function ITServices() {
         </div>
       </div>
     </Layout>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx
 export default function ITServices() {;
   return (
     <Layout
@@ -81,14 +84,138 @@ function ITServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
+=======
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+import React from "react";
+import Layout from "../components/Layout";
+ursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+import Layout from '../components/Layout';
+origin/automation-improvements-final
+
+import React from "react";
+import Layout from "../components/Layout";
+origin/main
+=======
+
+import React from "react";
+import Layout from "../components/Layout";
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function ITServices() {
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
+
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              IT Services
+            </h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
+origin/automation-improvements-final
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete IT solutions to power your digital transformation.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">
+              IT Services page is under construction.
+            </p>
+            <p className="text-gray-600">IT Services page is under construction.</p>
+origin/automation-improvements-final
+          </div>
+        </div>
+      </div>
+    </Layout>;
+  );
+            <p className="text-gray-600">IT Services page is under construction.</p>
+
+          </div>
+        </div>
+      </div>
+<<<<<<< HEAD
+=======
+    </Layout>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function ITServices() {;
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              IT Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * ITServices - Function description
+ */
+function ITServices() {
+  return (
+    <Layout;
+      title="IT Services - Zion Tech Group";
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              IT Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx
               IT Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
 }
 
+=======
+<<<<<<< HEAD
+    </Layout>;
+  );
+}
+}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx
 import { Star } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
@@ -122,7 +249,6 @@ Network,
   FileText,
   Cpu;
 } from 'lucide-react';
-
 const itServices = [
   {
 category: "Managed IT Services",
@@ -286,7 +412,6 @@ category: "Managed IT Services",
     ]
   }
 ];
-
 const microSaaS = [
   {
     name: "IT Asset Management",
@@ -366,7 +491,6 @@ const microSaaS = [
     icon: Wifi
   }
 ];
-
 const processSteps = [
   {
     step: "01",
@@ -394,11 +518,21 @@ const processSteps = [
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
   }
 ];
-
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
 >
       <div className="min-h-screen bg-gray-50 py-20">
+=======
+  { number: "15min", label: "Response Time" },
+  { number: "500+", label: "IT Projects Completed" },
+  { number: "24/7", label: "Support Available" }
+];
+export default function ITServices() {
+    >
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -574,7 +708,11 @@ export default function ITServicesPage() {
                   <service.icon className="h-8 w-8 text-blue-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
 <p className="text-gray-600 mb-4">
+=======
+                <p className="text-gray-600 mb-4">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx
                   {solution.description}
                 </p>
                 <ul className="space-y-2 mb-6">
@@ -634,6 +772,7 @@ export default function ITServicesPage() {
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -648,6 +787,22 @@ export default function ITServicesPage() {
               Contact us today to discuss your IT needs and get expert solutions.
             </p>
 </motion.div>
+=======
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our IT Service Process
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              A proven methodology that ensures successful IT implementation and maximum value for your investment.
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -751,6 +906,7 @@ export default function ITServicesPage() {
       </div>
     </MainLayout>
   );
+<<<<<<< HEAD:pages.disabled/ITServices.tsx
 { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
@@ -770,3 +926,22 @@ export default function ITServicesPage() {
 
 }
 
+=======
+<<<<<<< HEAD
+}
+    </Layout>);
+}
+=======
+
+
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ITServices.tsx

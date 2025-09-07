@@ -1,11 +1,17 @@
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
 
 
 
 
 
 
-
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export interface Real2026Q4NewService {
   "id": string;
   name: string;
@@ -13,6 +19,7 @@ export interface Real2026Q4NewService {
   price: string;
   features: string[]}
 export const "real2026Q4NewServices": Real2026Q4NewService[] = [{
+<<<<<<< HEAD
 export interface Real2026Q4NewService {
   // TODO: Implement
 }
@@ -22,6 +29,8 @@ export interface Real2026Q4NewService {
   price: string;,
   features: string[]}"
 export const "real2026Q4NewServices": Real2026Q4NewService[] = [{""
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     id: 'q4-2026-new-service-1',
     "name": 'Q4 2026 New Service 1',
     "tagline": 'Fourth quarter 2026 new service',
@@ -55,6 +64,7 @@ export const "real2026Q4NewServices": Real2026Q4NewService[] = [{
       'Cutting-edge solutions',
     ]},
 ];
+<<<<<<< HEAD
 export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
 
 export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
@@ -101,3 +111,38 @@ export interface Real2026Q4NewService { id: string; name: string; tagline: strin
       'Cutting-edge solutions',']
     ]},
 ];
+=======
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+<<<<<<< HEAD
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+export interface Real2026Q4NewService {
+  "id": string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[]}
+export const "real2026Q4NewServices": Real2026Q4NewService[] = [{
+    id: 'q4-2026-new-service-1',
+    "name": 'Q4 2026 New Service 1',
+    "tagline": 'Fourth quarter 2026 new service',
+    "price": '$1099',
+    "features": [
+      'Q4 2026 new features',
+      'Brand new innovations',
+      'Cutting-edge solutions',
+    ]},
+];
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+export interface Real2026Q4NewService { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Q4NewServices: Real2026Q4NewService[] = [ { id: 'q4-2026-new-service-1',name: 'Q4 2026 New Service 1',tagline: 'Fourth quarter 2026 new service',price: '$1099',features: [ 'Q4 2026 new features','Brand new innovations','Cutting-edge solutions',],},];
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

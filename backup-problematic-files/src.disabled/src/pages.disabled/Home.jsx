@@ -1,26 +1,29 @@
+<<<<<<< HEAD
 import _React from 'react'; import { Link } from 'react-router-dom'; import { motion } from 'framer-motion'; import {}} from 'lucide-react'; export default function Home() {}; return null} },; {}},; {}},; {}} ]; <HeroSection /> <QuickAccess /> <FeatureCTAs /> <FeatureHighlights /> <CategoriesSection /> <BenefitsSection /> <HowItWorksSection /> <FeaturedListingsSection /> <ServicesShowcase /> <NewsletterSection /> <ITServiceRequestHero /> <FloatingCTA /> ></div> );} ; export { Home }; export { Home }; export { Home }; export { Home }; export { Home };
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
 
 >
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   static getDerivedStateFromError(error) {
     return { hasError: true ;};
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary: ';, error, errorInfo);'
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }

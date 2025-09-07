@@ -1,3 +1,19 @@
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+<<<<<<< HEAD
+import Button from '../components/ui/Button';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+=======
+
+
+import Button from '../components/ui/Button';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -5,6 +21,7 @@ import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 import Button from '../components/ui/Button';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -41,6 +58,8 @@ import { motion } from 'framer-motion',;
 import {}
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -49,6 +68,7 @@ import { motion } from 'framer-motion',
 import {}
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
 
@@ -81,6 +101,12 @@ import {}
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
 
+=======
+
+  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
   Target, BarChart, PieChart, Activity, Eye, Key
 
 } from 'lucide-react',;
@@ -95,13 +121,33 @@ export default function QuantumSecureCommunication() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+  DollarSign, Shield, Mail, MapPin, Rocket, Lock
+  Brain, Database, TrendingUp as TrendingUpIcon, Users
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
   DollarSign, Shield, Mail, MapPin, Rocket, Lock,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Key
@@ -113,14 +159,22 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import Button from '../components/ui/Button',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 export default function QuantumSecureCommunication() {
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+  }
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
   const features = [
     'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
     'Advanced threat detection and monitoring24/7 security monitoring and support'
@@ -140,6 +194,7 @@ export default function QuantumSecureCommunication() {
     'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
   ]
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
       colorScheme="quantum-fusion"
 
   return (
@@ -147,13 +202,40 @@ export default function QuantumSecureCommunication() {
       intensity="high"
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+  ],
+  const useCases = [
+    'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
+  ],
+  const integrations = [
+    'SlackMicrosoft TeamsZoomEmail systemsFile storage platforms'
+  ],
+  const technology = [
+    'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
+  ],
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return (
+    <UltraAdvancedFuturisticBackground
+      intensity="high"
+    <UltraAdvancedFuturisticBackground 
+      intensity="high" 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
       colorScheme="quantum-fusion"
 
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
       enableQuantumEffects={true}
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+<<<<<<< HEAD
+    <UltraAdvancedFuturisticBackground
+      intensity="high"
+      colorScheme="quantum-fusion"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
       particleCount={500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -174,7 +256,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
     website: 'https://ziontechgroup.com'
 
       particleCount={500  } catch (error) {
@@ -216,6 +303,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
     >
 
       <div className="min-h-screen">
@@ -232,6 +325,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
         <UltraAdvancedNavigation />
+<<<<<<< HEAD
+        {/* Hero Section */}
+=======
 
 import React from 'react',
 import Head from 'next / head',
@@ -295,6 +391,7 @@ function QuantumSecureCommunication() {
 
         {/* Hero Section */}
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
         {/* Hero Section */}
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -302,6 +399,14 @@ function QuantumSecureCommunication() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
               transition={{ duration: 0.8 }}
 
             >
@@ -309,7 +414,88 @@ function QuantumSecureCommunication() {
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
+<<<<<<< HEAD
+    >
+      <div className=&quot;min-h-screen&quot;>
+        <Head>
+          <title>Quantum-Secure Communication - Zion Tech Group | Unbreakable Encryption</title>
+          <meta name=&quot;description&quot; content=&quot;Unbreakable encryption for the quantum era with quantum key distribution and quantum-resistant protocols. Contact: +1 302 464 0950&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;quantum secure communication, quantum encryption, quantum key distribution, post-quantum cryptography, secure messaging, quantum security&quot; />
+          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+          <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Quantum-Secure Communication - Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/quantum-secure-communication&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/quantum-secure-communication&quot; />
+        </Head>
 
+        <UltraAdvancedNavigation />
+
+        {/* Hero Section */}
+        <section className=&quot;relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;max-w-7xl mx-auto&quot;>
+        {/* Hero Section */}
+        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ scale: 1, rotate: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 1, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 className="mb-8"
               >"
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">"
@@ -318,17 +504,117 @@ function QuantumSecureCommunication() {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+              <motion.h1
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: 0.3 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
+
+
+=======
+
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-6"
               >;
                 Quantum-Secure Communication;
               </motion.h1>
+<<<<<<< HEAD
+              <motion.p
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+
+
+=======
+
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
 
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
+<<<<<<< HEAD
+              <motion.p
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: 0.5 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+=======
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -370,13 +656,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
               >
                 Next-generation communication platform that uses quantum cryptography to provide unbreakable encryption for sensitive communications, ensuring your data remains secure even against quantum computers.
               </motion.p>
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
+=======
+<<<<<<< HEAD
+              {/* Pricing and CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="mb - 8";
               >;
                 <div className="inline - flex items - center justify - center w - 24 h - 24 bg - gradient - to - br from - purple - 500 to - pink - 600 rounded - 3xl shadow - 2xl mb - 6 relative overflow - hidden">;
@@ -432,6 +729,56 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
+                transition={{ duration: 0.8, delay: 0.6 }}
+                  <Button 
+                    href="/contact" 
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+              {/* Pricing and CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <motion.div;
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
                 transition={{ duration: 0.8, delay: 0.6 }}
 "
@@ -442,6 +789,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   while_tap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   className="bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2xl"
                 >"
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">"
@@ -450,11 +802,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="text-purple-200 text-lg mb-4">per month</div>"
                       <div className="text-gray-300 mb-6">30-day free trial</div>
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+
+<<<<<<< HEAD
+                      <Button
+                        href="/contact"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                       <Button 
                         href="/contact" 
                       <Button
                         href="/contact"
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         variant="primary"
                         className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl"
 
@@ -497,7 +862,37 @@ className='bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
                 <motion.div;
+=======
+                <motion.div
+<<<<<<< HEAD
+                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+
+
+                  <Button
+                    href="/contact"
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
@@ -508,6 +903,14 @@ className='bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2
                   <Button
                     href="/contact"
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                     variant="secondary"
 
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
@@ -530,6 +933,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 </motion.div>
               </motion.div>
+<<<<<<< HEAD
+                  className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 rounded - 2xl shadow - 2xl";
+=======
 
                   className="bg - gradient - to - r from - purple - 500 to - pink - 600 p - 1 rounded - 2xl shadow - 2xl";
                 >;
@@ -566,11 +972,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>;
               </motion.div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Key Benefits */}
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
+<<<<<<< HEAD
+=======
 
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >"
@@ -619,6 +1028,11 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
           </div>
         </section>
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto";
               >;
                 <div className="text - center p - 4">;
@@ -637,7 +1051,14 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {/* Features Section */}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
 
           <div className="max - w-7xl mx - auto">;
@@ -646,6 +1067,8 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -691,6 +1114,7 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -705,7 +1129,104 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {features.map ((feature, index) => (
                 <motion.div;
+<<<<<<< HEAD
+              {/* Key Benefits */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+              {/* Key Benefits */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <motion.div;
+                initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 1, delay: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+              >
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">500% ROI</div>
+                  <div className="text-gray-300">Average customer sees 500% ROI through avoided security breaches</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-green-400 mb-2">4 Hours</div>
+                  <div className="text-gray-300">Setup time from installation to first secure communication</div>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">1200+</div>
+                  <div className="text-gray-300">Active customers worldwide</div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+        {/* Features Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  Quantum Security Features
+                </span>
+              </h2>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Advanced quantum cryptography and security features for unbreakable communications
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -731,11 +1252,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {features.map((feature, index) => (
                 <motion.div
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
                   key={index  } catch (error) {
     console.error("Error:", error);
@@ -901,6 +1427,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <h3 className='text-lg font-semibold text-white group-hover:text-purple-300 transition-colors'>
                       {feature}
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
                     </h3>
                   </div>
                 </motion.div>
@@ -911,6 +1438,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Use Cases Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
+=======
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                      {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+<<<<<<< HEAD
+                      {feature}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    </h3>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+<<<<<<< HEAD
+        {/* Use Cases Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+=======
+
+        {/* Use Cases Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -934,12 +1502,66 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {useCases.map((useCase, index) => (
                 <motion.div
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              className="text - center mb - 16";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                <span className="bg - gradient - to - r from - green - 400 to - emerald - 500 bg - clip - text text - transparent">;
+                  Use Cases;
+                </span>;
+              </h2>;
+              <p className="text - gray - 300 text - xl max - w-3xl mx - auto leading - relaxed">;
+                Discover how quantum - secure communication protects your most sensitive communications;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {use_cases.map ((use_case, index) => (
+                <motion.div;
+<<<<<<< HEAD
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileHover={{ scale: 1.02, y: -5 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300"
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
                   whileHover={{ scale: 1.02, y: -5 }}
 className='group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -951,10 +1573,121 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                >
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+<<<<<<< HEAD
+                    <h3 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors">
+                      {feature}
+                    </h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+=======
+                    <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </h3>;
+                  </div>;
+                </motion.div>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Use Cases Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                  Use Cases
+                </span>
+              </h2>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Discover how quantum-secure communication protects your most sensitive communications
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+                      {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                    </h3>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
         {/* Technology & Integrations */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16">;
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
                     <h3 className='text-lg font-semibold text-white group-hover:text-green-300 transition-colors'>
                       {useCase}
@@ -970,6 +1703,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
 
+=======
+<<<<<<< HEAD
+              {/* Technology Stack */}
+              <motion.div;
+                initial={{ opacity: 0, coordinate_x: -20 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
               {/* Technology Stack */}
               <motion.div;
 
@@ -1004,6 +1748,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="grid grid-cols-2 gap-4">
                   {technology.map((tech, index) => (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >;
                 <h3 className="text - 3xl font - bold text - white mb - 8">;
                   <span className="bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
@@ -1013,7 +1758,125 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="grid grid - cols - 2 gap - 4">;
                   {technology.map ((tech, index) => (
                     <motion.div;
+<<<<<<< HEAD
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileHover={{ scale: 1.02, y: -5 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
+                >
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                      <Shield className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+                      {useCase}
+                    </h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Technology & Integrations */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Technology Stack */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                      {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </h3>;
+                  </div>;
+                </motion.div>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Technology & Integrations */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Technology Stack */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <motion.div;
+                initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >
+                <h3 className="text-3xl font-bold text-white mb-8">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                    Technology Stack
+                  </span>
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {technology.map((tech, index) => (
+                    <motion.div
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
               >
 <h3 className='text-3xl font-bold text-white mb-8'>
                   <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -1024,11 +1887,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {technology.map((tech, index) => (
                     <motion.div
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >"
@@ -1036,6 +1904,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-gray-200">{tech}</span>
                     </motion.div>
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+                      className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
+                    >;
+                      <div className="w - 2 h - 2 bg - purple - 400 rounded - full"></div>;
+                      <span className="text - gray - 200">{tech}</span>;
+                    </motion.div>))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1044,6 +1923,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 </div>;
               </motion.div>;
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
 className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
@@ -1056,6 +1936,69 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
 
                 initial={{ opacity: 0, x: 20 }  } catch (error) {"
     console.error("Error:", error);"
+=======
+<<<<<<< HEAD
+                      key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      initial={{ opacity: 0, y: 10 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      transition={{ duration: 0.4, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
+                    >
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-gray-200">{tech}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+              {/* Integrations */}
+              <motion.div;
+                initial={{ opacity: 0, coordinate_x: 20 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>;
+              </motion.div>;
+              {/* Integrations */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <motion.div;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              {/* Integrations */}
+              <motion.div;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                initial={{ opacity: 0, x: 20 }  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -1074,7 +2017,15 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
 
@@ -1084,6 +2035,12 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                 </h3>"
                 <div className="grid grid-cols-2 gap-4">
                   {integrations.map((integration, index) => (
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+                    <motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 
               >;
                 <h3 className="text - 3xl font - bold text - white mb - 8">;
@@ -1095,6 +2052,7 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                   {integrations.map ((integration, index) => (
                     <motion.div;
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
               >
 <h3 className='text-3xl font-bold text-white mb-8'>
                   <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -1105,11 +2063,16 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                   {integrations.map((integration, index) => (
                     <motion.div
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                       key={index}
                       initial={{ opacity: 0, coordinate_y: 10 }}
                       whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >"
@@ -1117,6 +2080,7 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                       <span className="text-gray-200">{integration}</span>
                     </motion.div>
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
               initial={{ opacity: 0, y: 20 }  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -1134,6 +2098,16 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
 }
               viewport={{ once: true }  } catch (error) {"
     console.error("Error:", error);"
+=======
+=======
+                      className="flex items - center space - x-3 p - 3 bg - gray - 800 / 40 rounded - lg border border - gray - 700 / 50";
+                    >;
+                      <div className="w - 2 h - 2 bg - cyan - 400 rounded - full"></div>;
+                      <span className="text - gray - 200">{integration}</span>;
+                    </motion.div>))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1144,7 +2118,72 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+        {/* Market Position & ROI */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+                      key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      initial={{ opacity: 0, y: 10 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      transition={{ duration: 0.4, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
+                    >
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span className="text-gray-200">{integration}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+        {/* Market Position & ROI */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>;
+              </motion.div>;
+            </div>;
+          </div>;
+        </section>;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Market Position & ROI */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1180,7 +2219,15 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
               className="text-center mb-16"
             >"
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
@@ -1211,6 +2258,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>
             </motion.div>
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+=======
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <motion.div
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
 
@@ -1232,7 +2296,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
 
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
@@ -1242,6 +2314,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <p className="text-gray-300 mb-6">
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+
+<<<<<<< HEAD
+                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
+                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month). 
+                  Competitive with Signal (Free), Wickr ($4.99/user/month), and Wire ($5.83/user/month).
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   Our advantage: Quantum-resistant encryption, enterprise features, and compliance tools.
                 </p>
                 <div className="space-y-4">
@@ -1292,7 +2376,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+              <motion.div
 
+<<<<<<< HEAD
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
 
@@ -1314,7 +2410,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
 
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
@@ -1379,7 +2483,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1391,6 +2498,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1463,8 +2573,77 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
               className="text - center mb - 16";
+<<<<<<< HEAD
+
+
+                  <Button 
+                    href="/contact" 
+        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready for Quantum-Secure Communication?
+              </h2>
+              <p className="text-gray-300 text-xl mb-8 leading-relaxed">
+                Join 1200+ organizations that have already secured their communications with quantum cryptography.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <Button
+                    href="/contact"
+                  <Button 
+                    href="/contact" 
+                  <Button
+                    href="/contact"
+=======
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 <span className="bg - gradient - to - r from - yellow - 400 to - orange - 500 bg - clip - text text - transparent">;
@@ -1530,7 +2709,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
 
@@ -1541,6 +2723,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/25"
                   >
@@ -1572,7 +2763,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>
                   </Button>
                 </motion.div>
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+                <motion.div
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1590,11 +2786,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
                 >
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+                  <Button
+                    href="/contact"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   <Button 
                     href="/contact" 
                   <Button
                     href="/contact"
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
@@ -1607,6 +2813,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="flex items-center">"
                       <Phone className="mr-3 w-5 h-5" />
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
 
@@ -1626,6 +2838,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
               </div>
 
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
+=======
+
+              <div className="mt-8 text-gray-400">
+
+<<<<<<< HEAD
+              <div className="mt-8 text-gray-400">
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>
+=======
+
+                <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
                 <p className="mt-2">{contactInfo.address}</p>
 
 <div className='mt-8 text-gray-400'>
@@ -1653,6 +2882,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 
   )
   } catch (error) {
@@ -1661,6 +2891,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+=======
+<<<<<<< HEAD
+}
+
+  );
+};
+  )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx
             >;
 
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -1713,4 +2964,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
+<<<<<<< HEAD:pages.disabled/quantum-secure-communication.tsx
 }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/quantum-secure-communication.tsx

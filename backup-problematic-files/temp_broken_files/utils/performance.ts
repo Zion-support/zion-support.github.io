@@ -41,4 +41,21 @@ pr-12325
         const image = entry.target as HTMLImageElement,;
         if (image.dataset.src) {,;"
           image.src = image.dataset.src,',, ';
+<<<<<<< HEAD
           image.classList.remove('lazy'),;
+=======
+          image.classList.remove('lazy'),;
+          observer.unobserve(image)};
+<<<<<<< HEAD
+:temp_broken_files/utils/performance.ts
+      };"}})),'"
+      };
+}})),'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/performance.ts
+=======
+
+      };
+}})),'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

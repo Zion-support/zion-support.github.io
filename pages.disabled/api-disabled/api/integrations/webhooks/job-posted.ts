@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+
+try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { job } = req && req.body as { job?: Record<string, any> };
+  if (!job) return res && res.status(400).json({ error: "Missing job payload" });
+
+=======
 
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 
 
 
@@ -11,6 +21,9 @@ try {
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -18,6 +31,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { job } = req.body as { job?: Record<string, any> }
+  if (!job) return res.status(400).json({ error: "Missing job payload" });
+=======
 
 
 
@@ -27,21 +46,36 @@ export default async function handler(
   const { job } = req && req.body as { job?: Record<string, any> };
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { job } = req.body as { job?: Record<string, any> }
   if (!job) return res.status(400).json({ error: "Missing job payload" });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       c && c.providerId === "salesforce" ||
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 
       c && c.providerId === "pipedrive"
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -64,13 +98,23 @@ function handler() {
       c.provider_id === "salesforce" ||;
       c.provider_id === "hubspot" ||;
       c.provider_id === "zoho" ||;
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 c.provider_id === "pipedrive",
+=======
+      c.provider_id === "pipedrive",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
@@ -79,14 +123,24 @@ c.provider_id === "pipedrive",
     await crm && crm.syncContact(conn, {
       company: job && job.company,
       contact: job && job.contact,
+<<<<<<< HEAD
+    });
+    writeState((s) => s && s.logs.push(log));
+    results && results.push({ providerId: conn && conn.providerId, ok: true });
+=======
 
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -101,18 +155,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 
 
 
 
+=======
+<<<<<<< HEAD
+results.push({ providerId: conn.providerId, ok: true })
+  }
+  // record Zapier event
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
     results.push({ providerId: conn.providerId, ok: true })
 
   }
   // record Zapier event
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 results.push({ providerId: conn.providerId, ok: true })
   }
   // record Zapier event
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
     s && s.events.push({
       id: `${Date && Date.now()}-job-posted`
       type: "zion && zion.job.posted"
@@ -121,13 +188,28 @@ results.push({ providerId: conn.providerId, ok: true })
     });
   });
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
+=======
+<<<<<<< HEAD
+  writeState(s => {
+res && res.status(200).json({ ok: true, results });
+}
+writeState(s => {
+=======
+  res && res.status(200).json({ ok: true, results });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
 
   res && res.status(200).json({ ok: true, results });
 
 }
 
   writeState(s => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
 res.status(200).json({ ok: true, results });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -161,10 +243,12 @@ export default async function handler(req, res) {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
 
   });
-
   res.status(200).json({ ok: true, results })
 }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
       level: "info"
@@ -173,6 +257,9 @@ export default async function handler(req, res) {
 
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
@@ -197,6 +284,7 @@ export default async function handler(req, res) {
   });
 ;
   res.status (200).json ({ ok: true, results });
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -249,12 +337,15 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
+<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/job-posted.ts
 }
 
 
@@ -273,3 +364,57 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true, results })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+}
+<<<<<<< HEAD
+
+res.status(200).json({ ok: true, results });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors';
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
+    writeState(s => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // record Zapier event;
+  writeState(s => {;
+    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
+  });
+  res.status(200).json({ ok: true, results });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/job-posted.ts

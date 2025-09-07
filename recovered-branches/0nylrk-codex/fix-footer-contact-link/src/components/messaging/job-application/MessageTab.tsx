@@ -6,6 +6,17 @@ export function MessageTab(): any ({;
   setProposalLink,;
 }: MessageTabProps) {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <div className="space-y-4">;
       <div>;"
@@ -15,6 +26,57 @@ export function MessageTab(): any ({;
         <Textarea"
           id="message"
           value={message}
+<<<<<<< HEAD
+import React from "react";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+export interface MessageTabProps {;
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void;
+
+import React from 'react',
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+export interface MessageTabProps {
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void
+}
+export function MessageTab({
+  message
+  setMessage
+  proposalLink
+  setProposalLink
+}: MessageTabProps) {
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+export interface MessageTabProps {
+  message: string,
+  setMessage: (message: string) => void,
+  proposalLink: string,
+  setProposalLink: (link: string) => void
+}
+
+export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
+  return (
+    <div className="space-y-4">
+      <div>
+        <Label htmlFor="message" className="text-white">Application Message</Label>
+        <Textarea
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white"
+          placeholder="Write a message to the job poster..."
+        />
+      </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Label } from "@/components/ui/label";
 export interface MessageTabProps {};
@@ -86,11 +148,16 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           id="message";
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+<<<<<<< HEAD
 
+=======
+          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           placeholder="Write a message to the job poster...";
         />;
       </div>;
 
+<<<<<<< HEAD
       <div>;
         <Label htmlFor="proposalLink" className="text-white">;
           Link to Proposal/Portfolio (Optional);
@@ -101,11 +168,34 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+=======
+      
+
+      <div>
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+<<<<<<< HEAD
+      
+      <div>
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
+<<<<<<< HEAD
+          onChange={(e) => setProposalLink(e && e.target.value)}
+          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+          placeholder="https: //...";
+        />;
+      </div>;
+    </div>;
+  );
+=======
 
+<<<<<<< HEAD
 onChange={(e) => setProposalLink(e && e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
           placeholder="https: //...";
@@ -199,6 +289,9 @@ onChange={(e) => setProposalLink(e && e.target.value)}
           id="proposalLink"""
           type="url""
           value={proposalLink}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from './react';
 pr-12325
 import { Textarea  } from '@/components / ui / textarea';
@@ -238,8 +331,15 @@ export /**;
         />;
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
 
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           onChange={(e) => setProposalLink(e.target.value)}
 }          onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
@@ -285,7 +385,48 @@ export interface MessageTabProps {
     </div>);
 
       </div>
+<<<<<<< HEAD
+    </div>
+  );
+}
+  )
+import React from 'react',;
+import { Textarea } from "@/components/ui/textarea",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+export interface MessageTabProps {;
+  message: string,;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void;
+}
+;
+export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {;
+  return (;
+    <div className="space-y-4">;
+      <div>;
+        <Label htmlFor="message" className="text-white">Application Message</Label>;
+        <Textarea;
+          id="message";
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+          placeholder="Write a message to the job poster...";
+        />;
+      </div>;
+}
+      ;
+      <div>;
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>;
+        <Input;
+          id="proposalLink";
+          type="url";
+          value={proposalLink}
+          onChange={(e) => setProposalLink(e.target.value)}
+          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
     </div>;
   );
@@ -334,6 +475,7 @@ export function MessageTab() { return null; }
     <div className="space - y-4">;"
         <Label html_for="message" className="text - white">;"
 
+<<<<<<< HEAD
           on_change={(e) => set_message (e.target.value)}
 
         <Label html_for="proposal_link" className="text - white">;"
@@ -364,3 +506,33 @@ export function MessageTab() { return null; }
     </div>);
 
 }
+=======
+<<<<<<< HEAD
+          placeholder="https://...";
+        />;
+      </div>;
+    </div>;
+  );}
+ export interface MessageTabProps {
+  message: string;
+setMessage: (message: string) => void;
+proposalLink: string;
+setProposalLink: (link: string) => void 
+}export function MessageTab ({
+  message, setMessage, proposalLink, setProposalLink 
+}: MessageTabProps) {
+  return (<div className="space-y-4" > message"className=" text-white">Application Message</Label> <Textarea id=" message"value= {
+  message 
+}/> </div> <div> <Label htmlFor=" proposalLink"className=" text-white">Link to Proposal/Portfolio (Optional) </Label> <Input className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"placeholder="https: //..." 
+}
+          placeholder="https: //...";
+        />;
+      </div>;
+    </div>;
+  );
+}
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+=======
+;
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 const InteractiveNavigation = () => {
   return (
@@ -34,11 +43,21 @@ import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-;
+
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -79,13 +98,31 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   className = "",
 }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            </Link>;
+            {/* Submenu */}
+            {item && item.submenu && activeItem === item && item.name && (;
+              <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -112,6 +149,50 @@ interface NavigationItem {;
     </nav>;
   );
 
+<<<<<<< HEAD
+=======
+
+
+};
+
+export default InteractiveNavigation;};
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+
+
+<<<<<<< HEAD
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+};
+
+export default InteractiveNavigation;};
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const InteractiveNavigation: React.FC: = () => {";
+    <nav className="bg-white shadow-lg">";";
+      <div: className="container mx-auto px-4">";";
+        <div: className="flex justify-between items-center py-4">";";
+          <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
+          <div: className="hidden md:flex: space-x-8">",";
+            <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
+<<<<<<< HEAD
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
+            <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
+            <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+=======
+
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
+
+            <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
+            <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+
+interface InteractiveNavigationProps {
+  items: NavigationItem[], class_name?: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 export default InteractiveNavigation;}"
@@ -203,6 +284,7 @@ const InteractiveNavigation: React.FC: = () => {";
 export default Component}
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 >>>>>>> origin/chore/fix-lint-and-merge
   const [isOpen, setIsOpen] = useState(false);
@@ -431,6 +513,7 @@ ursor / automate - test - fix - improve - and - merge - code - 99d1, ";
 export default Component}
 ;
 
+<<<<<<< HEAD
 export default Component}
 };
 
@@ -467,3 +550,14 @@ export default InteractiveNavigation;
 =======
 export default Component}
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+export default Component}
+
+export default Component}
+export default Component}
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

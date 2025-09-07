@@ -320,7 +320,17 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
 }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
+<<<<<<< HEAD
+:temp_broken_files/utils/serverless-polyfill.ts
 
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
@@ -341,6 +351,19 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts;
   ';
 }//Node.js environment polyfills (for SSR/build time) if (typeof global !== 'undefined'&& typeof window === 'undefined') {';
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
+<<<<<<< HEAD
+=======
+  return Object.values (checks) .every (Boolean);
+};
+<<<<<<< HEAD
+:temp_broken_files/utils/serverless-polyfill.ts
+
+  ;"}, // Ensure this can be imported as a module'"
+  ;
+}, // Ensure this can be imported as a module'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   return Object.values (checks) .every (Boolean)
 
@@ -350,6 +373,7 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts;
   ;"}, // Ensure this can be imported as a module'"
   ;
 }, // Ensure this can be imported as a module'"
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
   return Object.values (checks) .every (Boolean);
   ;"}, // Ensure this can be imported as a module'""
@@ -357,3 +381,7 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts
 }, // Ensure this can be imported as a module'""
 ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/serverless-polyfill.ts;"
 pr-12325
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

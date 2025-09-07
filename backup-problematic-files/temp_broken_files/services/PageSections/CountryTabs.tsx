@@ -132,6 +132,31 @@ export function CountryTabs({;
   true ;"}/>) ) ";"}</div>  <TabsContent value="all" className="mt-0" > <div className="mb-6 max-w-md mx-auto" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /> <Input /> </div> </div> <CountryServiceCard key= {;"
 
 }</div> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
+<<<<<<< HEAD
 
 }/>  {;
 }, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
+=======
+  `?page=$ {;
+  currentPage - 1 ;
+}` ;
+}/> </PaginationItem> {;
+  Array.from ({;
+  length: totalPages ;
+}, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
+  page ;
+}> <PaginationButton /> </PaginationItem>) ) ;
+}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ;
+<<<<<<< HEAD
+:temp_broken_files/services/PageSections/CountryTabs.tsx
+}</TabsContent> </Tabs>) ;"}"
+}</TabsContent> </Tabs>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx
+=======
+
+}</TabsContent> </Tabs>) ;
+}"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

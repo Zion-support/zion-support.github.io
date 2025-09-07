@@ -1,19 +1,53 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+  doc && doc.setFontSize(24);
+  doc && doc.setTextColor(colors && colors.heading),
+  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);
+  
+  let yPos = 30;
+  
+  if (basicInfo && basicInfo.headline) {
+    doc && doc.setFontSize(14);
+    doc && doc.setTextColor(colors && colors.subheading);
+    doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     yPos += 5
   }
   // Add horizontal line divider
@@ -22,6 +56,76 @@ export function addBasicInfoSection(;
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
+<<<<<<< HEAD
+  doc.setFontSize(24);
+
+  doc.setTextColor(colors.heading)
+  doc.text(basicInfo.title |'Resume', 20, 20);
+  let yPos = 30;
+  if (basicInfo.headline) {
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(basicInfo.headline, 20, yPos);
+    yPos += 5
+  }
+  // Add horizontal line divider
+  doc.setDrawColor(colors.accent);
+  doc.setLineWidth(0.5);
+  doc.line(20, yPos, 190, yPos);
+  yPos += 10;
+  // Add summary if available
+  if (basicInfo.summary) {
+    doc.setFontSize(12);
+    doc.setTextColor(colors.text);
+    // Split text into multiple lines to fit within page width
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
+
+    yPos += (summaryLines.length * 6) + 10
+import { jsPDF } from 'jspdf',;
+import { ResumeBasicInfo } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+export function addBasicInfoSection(;
+  doc: jsPDF,;
+  basicInfo: ResumeBasicInfo,;
+  colors: PdfThemeColors;
+): number {;
+  // Add header with name and title;
+  doc.setFontSize(24),;
+  doc.setTextColor(colors.heading),;
+  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  let yPos = 30,;
+  if (basicInfo.headline) {;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(basicInfo.headline, 20, yPos),;
+    yPos += 5;
+  }
+;
+  // Add horizontal line divider;
+  doc.setDrawColor(colors.accent),;
+  doc.setLineWidth(0.5),;
+  doc.line(20, yPos, 190, yPos),;
+  yPos += 10,;
+  // Add summary if available;
+  if (basicInfo.summary) {;
+    doc.setFontSize(12),;
+    doc.setTextColor(colors.text),;
+    // Split text into multiple lines to fit within page width;
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines.length * 6) + 10;
+
+  if (basicInfo && basicInfo.summary) {
+    doc && doc.setFontSize(12);
+    doc && doc.setTextColor(colors && colors.text);
+    // Split text into multiple lines to fit within page width
+    const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
+    doc && doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines && summaryLines.length * 6) + 10
+  }
+  return yPos
+=======
 
   colors: PdfThemeColors;
 ): number {}
@@ -37,6 +141,11 @@ export function addBasicInfoSection(;
   }
 
   return yPos
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
 
@@ -94,6 +203,7 @@ pr-12325
   }
   return y_pos;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}
 import { jsPDF } from 'jspdf';
 import { ResumeBasicInfo } from '@/types/resume';
@@ -145,16 +255,70 @@ export function addBasicInfoSection(
     yPos += 5,;
   // Add horizontal line divider;
   // Add summary if available;
+=======
+}
+
+import { jsPDF } from 'jspdf',;
+import { ResumeBasicInfo } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+;
+export function addBasicInfoSection(;
+  doc:jsPDF,;
+  basicInfo:ResumeBasicInfo,;
+  colors:PdfThemeColors;
+):number {;
+  // Add header with name and title;
+  doc.setFontSize(24),;
+  doc.setTextColor(colors.heading),;
+  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  ;
+  let yPos = 30,;
+  ;
+  if (basicInfo.headline) {;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(basicInfo.headline, 20, yPos),;
+    yPos += 5,;
+  }
+  ;
+  // Add horizontal line divider;
+  doc.setDrawColor(colors.accent),;
+  doc.setLineWidth(0.5),;
+  doc.line(20, yPos, 190, yPos),;
+  yPos += 10,;
+  ;
+  // Add summary if available;
+  if (basicInfo.summary) {;
+    doc.setFontSize(12),;
+    doc.setTextColor(colors.text),;
+    ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Split text into multiple lines to fit within page width;
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170),;
     doc.text(summaryLines, 20, yPos),;
     yPos += (summaryLines.length * 6) + 10,;
+<<<<<<< HEAD
   return yPos,;}
  // Add horizontal line divider doc.setDrawColor (colors.accent);
+=======
+  }
+  ;
+  return yPos,;}
+ // Add horizontal line divider doc.setDrawColor (colors.accent);
+doc.setLineWidth (0.5);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 doc.line (20, yPos, 190, yPos);
 yPos += 10;
 // Add summary if available return yPos 
 }
   }
   return yPos
+<<<<<<< HEAD
 }
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 conflictType = 'incoming';
         continue;
       }
@@ -65,6 +66,16 @@ console.log('🔧 Starting merge conflict resolution...');
 conflictType = incoming;
         continue;
       }
+=======
+conflictType = 'incoming';
+        continue;
+      }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      if (line.includes('')) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       
       if (line.includes('=======')) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -98,6 +109,7 @@ function resolveMergeConflicts(filePath) {
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -105,11 +117,13 @@ function resolveMergeConflicts(filePath) {
 =======
       if (line.includes('>>>>>>>')) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         inConflict = false;
         conflictType = ;
         continue;
       }
-      
       if (!inConflict) {
 =======
     // Split by merge conflict markers;
@@ -132,12 +146,10 @@ conflictType = 'incoming';
       // Skip incoming version (second part)
 <<<<<<< HEAD
     }
-    
     // Write resolved content
     fs.writeFileSync(filePath, resolvedLines.join(\n));
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
-    
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
@@ -200,23 +212,40 @@ class MergeConflictResolver {
   // TODO: Implement
             const content = fs.readFileSync(fullPath, "utf8")"
               filesWithConflicts.push(fullPath),,
+<<<<<<< HEAD
           } catch (error) {"
             // Skip files that can"t be read,,"
 // Function to find all files with merge conflicts;
+=======
+}
+          } catch (error) {
+            // Skip files that can"t be read,,
+}
+// Function to find all files with merge conflicts
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function findConflictedFiles(dir) {
   const conflictedFiles = [];
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
+<<<<<<< HEAD
+=======
+    for (const item of items) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       const fullPath = path.join(currentDir, item);
 <<<<<<< HEAD
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
+=======
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith(.ts) || item.endsWith('.js') || item.endsWith(.jsx))) {
         try {
 <<<<<<< HEAD
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
           if (content.includes() || content.includes('') || content.includes(>>>>>>>)) {
 =======
 <<<<<<< HEAD
@@ -226,6 +255,8 @@ function findConflictedFiles(dir) {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
@@ -340,4 +371,13 @@ try {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

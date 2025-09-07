@@ -1,10 +1,24 @@
 
 ;
 
+<<<<<<< HEAD
 export default function Placeholder() {export default function Placeholder() {return (<main className='min-h-screen p-8'    />;
       <Head    />;
         <title    />Reports • Seo • Index.html - Placeholder</title>;
         <meta name='robots' content='noindex'    />;
+=======
+<<<<<<< HEAD
+export default function Placeholder() {;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function Placeholder() {
+  return (
+    <main className='min-h-screen p-8'>;
+      <Head>;
+        <title>Reports • Seo • Index && Index.html - Placeholder</title>;
+        <meta name='robots' content='noindex' />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       </Head>;
       <div className='max-w-3xl mx-auto'    />;
         <h1 className='text-2xl font-semibold mb-2'    />;
@@ -176,6 +190,9 @@ export default /**;
  */;
 function Placeholder() {return (<main className='min - h-screen p - 8'>;'
   );
+<<<<<<< HEAD
+}
+=======
 
 }
 
@@ -184,6 +201,7 @@ function Placeholder() {return (<main className='min - h-screen p - 8'>;'
   )}}
   )}}
 =======
+<<<<<<< HEAD
 "
     <main className=\"min-h-screen p-8\"    />;
       <Head    />;
@@ -198,6 +216,9 @@ function Placeholder() {return (<main className='min - h-screen p - 8'>;'
     </main>;
   )}}
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import Head from 'next / head';
 import Link from 'next / link';
 
@@ -297,8 +318,16 @@ export default function Placeholder() {return (<main className='min-h-screen p-8
 <<<<<<< HEAD
     </main>);
 }
+<<<<<<< HEAD
 export default function Placeholder() {
   return (
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import Head from 'next/head';
 =======
@@ -389,6 +418,7 @@ export default function Placeholder() {
 export default function Placeholder() {
   return (
 
+<<<<<<< HEAD
 export default function Placeholder() {
   return ("
     <main className=\"min-h-screen p-8\"    />
@@ -429,6 +459,32 @@ export default function Placeholder() {
   );
 
 
+=======
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+export default function Placeholder() {
+  return (
+    <main className='min-h-screen p-8'>
+      <Head>
+        <title>Reports • Seo • Index.html - Placeholder</title>
+        <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
+      </Head>
+      <div className=&quot;max-w-3xl mx-auto&quot;>
+        <h1 className=&quot;text-2xl font-semibold mb-2&quot;>Reports • Seo • Index.html</h1>
+        <p className=&quot;text-gray-600 mb-6&quot;>Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
+        <Link href=&quot;/&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Home</a></a>
+      </div>
+    </main>;
+  );export default function Placeholder() {
+  return (
+
+export default function Placeholder() {
+  return (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -439,8 +495,28 @@ export default function Placeholder() {
         <p className=text-gray-600 mb-6>Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
         <Link href="/"><a className=text-blue-600 hover:underline>Back to Home</a></Link>
       </div>
+<<<<<<< HEAD
+    </main>
+  );
+}
+    </main>;
+  );
+}
+
+}
+    </main>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+=======
 
 
+<<<<<<< HEAD
   }
 }
 
@@ -468,3 +544,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

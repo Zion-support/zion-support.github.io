@@ -1,10 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { CHAINS } from '../../../utils/chains';
+<<<<<<< HEAD
 import { CHAINS } from '../../../utils/chains';
 =======
 import { CHAINS  } from '../../../utils/chains';
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 const stake = Number(stakeUsd || 0)const stake  = Number(stakeUsd || 0)export default async function handler() {if (req.method !== 'POST');}
   return res.status(405).json({ error: 'Method not allowed',}
@@ -94,6 +99,7 @@ export default async function handler(
 
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
 
 
     return res.status(405).json({ error: 'Method not allowed' });
@@ -121,6 +127,19 @@ export default async function handler(
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body |{}
+  const stake = Number(stakeUsd |0);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Simple heuristics
 origin/cursor/automate-test-improve-and-merge-code-382a
 import { CHAINS } from '../../../utils/chains';
@@ -163,6 +182,7 @@ pr-12243
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
 
 
+<<<<<<< HEAD
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
 
 
@@ -185,22 +205,29 @@ ursor/fix-website-loading-errors-and-merge-6662
   let candidates = ['polygon', 'bnb', 'avalanche'];
 
 let candidates = ['polygon', 'bnb', 'avalanche'];
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
+<<<<<<< HEAD
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum;
 '
   let candidates = ['polygon', 'bnb', 'avalanche'];'
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];'
   const regionLc = (region |'').toString().toLowerCase();'
   if (regionLc.includes('apac') |regionLc.includes('asia')) {}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     candidates =
       stake > 5000
         ? ['arbitrum', 'optimism', 'avalanche']
         : ['bnb', 'avalanche', 'polygon'];
+<<<<<<< HEAD
   } else if (regionLc && regionLc.includes('eu') || regionLc && regionLc.includes('europe')) {candidates =;
       stake > 5000;
         ? ['arbitrum', 'ethereum', 'optimism'];
@@ -278,6 +305,40 @@ pr-12243
     candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism']
   } else if (regionLc && regionLc.includes('us') || regionLc && regionLc.includes('na') || regionLc && regionLc.includes('america')) {
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']
+=======
+  } else if (regionLc && regionLc.includes('eu') || regionLc && regionLc.includes('europe')) {
+    candidates =
+      stake > 5000
+        ? ['arbitrum', 'ethereum', 'optimism']
+        : ['polygon', 'arbitrum', 'optimism'];
+  } else if (
+    regionLc && regionLc.includes('us') ||
+    regionLc && regionLc.includes('na') ||
+    regionLc && regionLc.includes('america')
+  ) {
+    candidates =
+      stake > 5000
+        ? ['arbitrum', 'optimism', 'ethereum']
+        : ['polygon', 'arbitrum', 'optimism'];
+  }
+  let candidates = ['polygonbnbavalanche'];
+  if (stake > 5000) candidates = ['arbitrumoptimismethereum'];
+  const regionLc = (region || '').toString().toLowerCase();
+  if (regionLc.includes('apac') || regionLc.includes('asia')) {
+    candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
+  } else if (regionLc.includes('eu') |regionLc.includes('europe')) {
+    candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism']
+  } else if (regionLc.includes('us') |regionLc.includes('na') |regionLc.includes('america')) {
+    candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']
+  }
+  const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+}
+
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 
 export default async /**;
@@ -699,3 +760,9 @@ const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k],}
 });
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

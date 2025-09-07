@@ -1,4 +1,23 @@
 }});
+<<<<<<< HEAD
+console.log(`Fixed ${fixedCount} files`)));
+}
+});
+};
+});
+
+;
+console.log(`Fixed ${fixedCount} files`),));
+;
+  }
+}),
+,
+console.log(`Fixed ${fixedCount} files`),)),
+}),;
+,;
+console.log(`Fixed ${fixedCount} files`),)),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
@@ -13,6 +32,7 @@ console.log(`Fixed ${fixedCount} files`)));
 };
 });
 
+<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} files`)));
 ;
 
@@ -25,3 +45,9 @@ console.log(`Fixed ${fixedCount} files`),)),
 }),;
 ,;
 console.log(`Fixed ${fixedCount} files`),)),;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

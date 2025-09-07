@@ -1,14 +1,29 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function runNode(relPath, args = []) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
     status: res && res.status || 0,
@@ -25,18 +40,45 @@ ursor/expand-services-advertise-and-build-project-4b36
 
     stderr: res && res.stderr || '',
   };'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    status: res && res.status || 0,
+    stdout: res && res.stdout || '',
+    stderr: res && res.stderr || '',
+  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 exports && exports.config = { schedule: '0 */6 * * *' };
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/chore/fix-lint-and-merge
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+exports && exports.handler = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const logs = [];
   const step = (name, fn) => {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+    return status;
+  };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
 const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8',;'
@@ -48,11 +90,16 @@ const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'ut
 }, "body": logs && logs.join('\n') },'
 },ursor/expand-services-advertise-and-build-project-4b36;
 
+<<<<<<< HEAD
 const path = require ('path';'
   const { spawn_sync }  = require ('child_process')/**;'
  * run_node - Function description;
  */;
 function run_node() {const abs = path.resolve (__dirname, '..', '..', rel_path;'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    return status;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   const res = spawn_sync ('node', [abs, ...args], {"stdio": 'pipe',"encoding": 'utf8';'
     }
@@ -111,12 +158,18 @@ const { status, stdout, stderr } = fn();
   step('og-images:generate', () =>'
     runNode('automation/og-image-generator && generator.cjs')
   );
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     "statusCode": 200,
@@ -134,7 +187,39 @@ const abs = path.resolve(__dirname, '....', relPath),;'
 }
 
 exports && exports.config = { "schedule": '0 */6 * * *','
+=======
+    statusCode: 200,
+    headers: { 'content-type': 'text/plain' },
+    body: logs && logs.join('\n'),
+  };
+};function runNode(relPath, args = []) {
+  const abs = path && path.resolve(__dirname, '....', relPath),
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
+}
+exports && exports.config = { schedule: '0 */6 * * *' },
+exports && exports.handler = async () => {
+  const logs = [],
+  const step = (name, fn) => {
+    logs && logs.push(`\n=== ${name} ===`),
+    const { status, stdout, stderr } = fn(),
+    if (stdout) logs && logs.push(stdout),
+    if (stderr) logs && logs.push(stderr),
+    logs && logs.push(`exit=${status}`),
+    return status
+  },
+  step('og-images:generate', () => runNode('automation/og-image-generator && generator.cjs')),
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 },
+<<<<<<< HEAD
+=======
 
 exports && exports.config = { "schedule": '0 */6 * * *' },'
 exports && exports.handler = async () => {
@@ -149,6 +234,7 @@ const logs = [],;
   step('og-"images":generate', () => runNode('automation/og-image-generator && generator.cjs')),'
   step('"git":sync', () => runNode('automation/advanced-git-sync && sync.cjs')),'
 
+<<<<<<< HEAD
  ;
 return { "statusCode": 200, "headers": { 'content-type': 'text/plain',;'
 }, "body": logs && logs.join('\n') },'
@@ -158,6 +244,12 @@ return { "statusCode": 200, "headers": { 'content-type': 'text/plain',;'
   return { "statusCode": 200, "headers": { 'content-type': 'text/plain' }, "body": logs && logs.join('\n') }'
 },
 const { spawn_sync } = require ('child_process');'
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const path = require ('path');
+const { spawn_sync } = require ('child_process');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 /**
  * run_node - Function description
@@ -262,6 +354,7 @@ exports && exports.handler = async () => {}
     logs && logs.push(`exit=${status}`),
     return status;
   },
+<<<<<<< HEAD
 '
   step('og-images:generate', () => runNode('automation/og-image-generator && generator.cjs')),'
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
@@ -342,3 +435,9 @@ exports.handler = async () => {}
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 function runNode(relPath, args = []) {
+=======
+  step ('og - images:generate', () => run_node ('automation / og - image - generator.cjs')),
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -25,8 +25,14 @@ function log(message, level = 'INFO')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -159,7 +165,10 @@ class ComprehensiveAppImprover {
 }
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
+<<<<<<< HEAD
+<<<<<<< HEAD
 improver.run().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
@@ -240,3 +249,11 @@ improver.run().catch(console.error);
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+improver.run().catch(console.error);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+improver.run().catch(console.error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,12 +1,40 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { BadgeDollarSign } from 'lucide-react';
+<<<<<<< HEAD
+=======
+export default function WalletPage() {
+=======
+=======
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
+<<<<<<< HEAD
+=======
+export default function WalletPage() {;
+<<<<<<< HEAD
+  const { wallet, transactions, loading } = useWallet();
+import { useWallet } from '@/hooks/useWallet',
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { BadgeDollarSign } from 'lucide-react',
+export default function WalletPage() {
+  const { wallet, transactions, loading } = useWallet(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   Card,
   CardContent,
@@ -42,6 +70,19 @@ export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet(),
 
   return (
+<<<<<<< HEAD
+
+import { useWallet } from '@/hooks/useWallet',;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { BadgeDollarSign } from 'lucide-react',;
+;
+export default function WalletPage() {;
+  const { wallet, transactions, loading } = useWallet(),;
+;
+  return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="container max-w-4xl py-10">;
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
         <BadgeDollarSign className="h-6 w-6" /> Wallet;
@@ -56,11 +97,13 @@ export default function WalletPage() {
         <CardContent>;
           {loading ? (;
             <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;
-          ) : (;
+<<<<<<< HEAD
+          ) :(;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
 
           )}
 
+<<<<<<< HEAD
           <TabsTrigger value="spending">Spending</TabsTrigger>
         </TabsList>"
         <TabsContent value="earnings">"
@@ -95,10 +138,63 @@ export default function WalletPage() {
                     <span className="font-medium">-{t.amount} ZION$</span>
                   </li>
                 ))}
+=======
+  return (
+    <div className="container max-w-4xl py-10">
+      <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
+        <BadgeDollarSign className="h-6 w-6" /> Wallet
+      </h1>
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" /> Balance
+          </CardTitle>
+          <CardDescription>Your current ZION$ balance</CardDescription>
+        </CardHeader>
+        <CardContent>
+          {loading ? (
+            <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />
+          ) : (
+            <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>
+          )}
+        </CardContent>
+      </Card>
+      <Tabs defaultValue="earnings">
+        <TabsList className="grid w-full grid-cols-2 mb-4">
+          <TabsTrigger value="earnings">Earnings</TabsTrigger>
+          <TabsTrigger value="spending">Spending</TabsTrigger>
+        </TabsList>
+        <TabsContent value="earnings">
+          {transactions.filter(t => t.transaction_type === 'earn').length === 0 ? (
+            <p className="text-muted-foreground">No earnings yet</p>
+          ) : (
+            <ul className="space-y-2">
+              {transactions.filter(t => t.transaction_type === 'earn').map(t => (
+                <li key={t.id} className="flex justify-between border-b py-2">
+                  <span>{t.reason |'Reward'}</span>
+                  <span className="font-medium">+{t.amount} ZION$</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </TabsContent>
+        <TabsContent value="spending">
+          {transactions.filter(t => t.transaction_type === 'burn').length === 0 ? (
+            <p className="text-muted-foreground">No spending yet</p>
+          ) : (
+            <ul className="space-y-2">
+              {transactions.filter(t => t.transaction_type === 'burn').map(t => (
+                <li key={t.id} className="flex justify-between border-b py-2">
+                  <span>{t.reason |'Purchase'}</span>
+                  <span className="font-medium">-{t.amount} ZION$</span>
+                </li>
+              ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             </ul>
           )}
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
 "
       <div className="mt-8">"
         <h2 className="text-xl font-semibold mb-2">On-chain Export (Beta)</h2>"
@@ -111,17 +207,73 @@ export default function WalletPage() {
       </div>
     </div>
 
+=======
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold mb-2">On-chain Export (Beta)</h2>
+        <p className="text-sm text-muted-foreground mb-4">Export your ZION$ to an external crypto wallet.</p>
+        <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>
+      </div>
+    </div>
+  )
+=======
+          ) : (;
+            <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
+          )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        </CardContent>;
+      </Card>;
+;
+      <Tabs defaultValue="earnings">;
+        <TabsList className="grid w-full grid-cols-2 mb-4">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
           <TabsTrigger value="spending">Spending</TabsTrigger>;
         </TabsList>;
         <TabsContent value="earnings">;
+<<<<<<< HEAD
 
+=======
+              ))}
+            </ul>;
+          )}
+        </TabsContent>;
+      </Tabs>;
+          {transactions.filter(t => t.transaction_type === 'earn').length === 0 ? (;
+            <p className="text-muted-foreground">No earnings yet</p>;
+          ) :(;
+            <ul className="space-y-2">;
+              {transactions.filter(t => t.transaction_type === 'earn').map(t => (;
+                <li key={t.id} className="flex justify-between border-b py-2">;
+                  <span>{t.reason || 'Reward'}</span>;
+                  <span className="font-medium">+{t.amount} ZION$</span>;
+                </li>;              ))}
+            </ul>;
+          )}
+        </TabsContent>;
+        <TabsContent value="spending">;
+          {transactions.filter(t => t.transaction_type === 'burn').length === 0 ? (;
+            <p className="text-muted-foreground">No spending yet</p>;
+          ) :(;
+            <ul className="space-y-2">;
+              {transactions.filter(t => t.transaction_type === 'burn').map(t => (;
+                <li key={t.id} className="flex justify-between border-b py-2">;
+                  <span>{t.reason || 'Purchase'}</span>;
+                  <span className="font-medium">-{t.amount} ZION$</span>;
+                </li>;              ))}
+            </ul>;
+          )}
+        </TabsContent>;
+      </Tabs>;
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <div className="mt-8">;
         <h2 className="text-xl font-semibold mb-2">On-chain Export (Beta)</h2>;
         <p className="text-sm text-muted-foreground mb-4">Export your ZION$ to an external crypto wallet.</p>;
         <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>;
       </div>;
     </div>;
+<<<<<<< HEAD
 
   );
 }
@@ -129,6 +281,37 @@ export default function WalletPage() {
           {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted - foreground">No earnings yet</p>) : (
             <ul className="space - y-2">;
+=======
+          {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
+            <p className="text - muted - foreground">No earnings yet</p>) : (
+            <ul className="space - y-2">;
+              {transactions.filter (t => t.transaction_type === 'earn').map (t => (
+                <li key={t.id} className="flex justify - between border - b py - 2">;
+                  <span>{t.reason || 'Reward'}</span>;
+                  <span className="font - medium">+{t.amount} ZION$</span>;
+                </li>))}
+            </ul>)}
+        </TabsContent>;
+        <TabsContent value="spending">;
+          {transactions.filter (t => t.transaction_type === 'burn').length === 0 ? (
+            <p className="text - muted - foreground">No spending yet</p>) : (
+            <ul className="space - y-2">;
+              {transactions.filter (t => t.transaction_type === 'burn').map (t => (
+                <li key={t.id} className="flex justify - between border - b py - 2">;
+                  <span>{t.reason || 'Purchase'}</span>;
+                  <span className="font - medium">-{t.amount} ZION$</span>;
+                </li>))}
+            </ul>)}
+        </TabsContent>;
+      </Tabs>;
+      <div className="mt - 8">;
+        <h2 className="text - xl font - semibold mb - 2">On - chain Export (Beta)</h2>;
+        <p className="text - sm text - muted - foreground mb - 4">Export your ZION$ to an external crypto wallet.</p>;
+        <button className="px - 4 py - 2 bg - zion - purple text - white rounded - md">Connect Wallet</button>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
               ))}
             </ul>
@@ -136,13 +319,32 @@ export default function WalletPage() {
             <p className="text - muted-foreground">No earnings yet</p>) : (
             <ul className="space-y-2">;
 
+<<<<<<< HEAD
   transactions.filter (t => t.transaction type === 'earn') .map (t => (</li>) ) 
 }</ul>) "
 }</TabsContent>) : (<ul className="space-y-2" > {'
+=======
+<<<<<<< HEAD
+  ),;}
+ return (<div className="container max-w-4xl py-10" > <h1 className="text-3xl font-bold mb-6 flex items-center gap-2" > <BadgeDollarSign className="h-6 w-6" /> Wallet </h1> <Card className="mb-6" > <CardHeader> <CardTitle className="flex items-center gap-2" > <BadgeDollarSign className="h-5 w-5" /> Balance </CardTitle> <CardDescription>Your current ZION$ balance</CardDescription> </CardHeader> <CardContent>) : (<p className="text-2xl font-bold" > {
+  wallet?.balance ?? 0 
+}ZION$</p>) 
+}</CardContent> </Card> <Tabs defaultValue="earnings" > <TabsList className="grid w-full grid-cols-2 mb-4" > <TabsTrigger value="earnings" >Earnings</TabsTrigger> <TabsTrigger value="spending" >Spending</TabsTrigger> </TabsList>) : (<ul className="space-y-2" > {
+  transactions.filter (t => t.transaction type === 'earn') .map (t => (</li>) ) 
+}</ul>) 
+}</TabsContent>) : (<ul className="space-y-2" > {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   transactions.filter (t => t.transaction type === 'burn') .map (t => (</li>) ) 
 }</ul>) 
 }</TabsContent> </Tabs> </div> </div>) 
 }
 }
 }
+<<<<<<< HEAD
 ;
+=======
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -46,4 +46,21 @@ pr-12325
 }</button> <span>$ {;
 </span>
 }/hr</span> <span>$ {;
+<<<<<<< HEAD
 }/hr</span> </div> <Slider /> </div>) ;
+=======
+  priceRange[1] ;
+}/hr</span> </div> <Slider /> </div>) ;
+<<<<<<< HEAD
+:temp_broken_files/talent/filters/PriceFilter.tsx
+}</div>) ;"}"
+}</div>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/PriceFilter.tsx
+=======
+
+}</div>) ;
+}"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

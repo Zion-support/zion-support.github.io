@@ -1,15 +1,35 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
 
   const [progress, setProgress] = useState(0);
 
+<<<<<<< HEAD
+
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+import { useState, useEffect } from "react";
+import { Resume } from "@/types/resume";
+export const useResumeProgress = (resume: Resume | null) => {
+import {useState, useEffect} from 'react';
+import {Resume} from '@/types/resume';
+export const useResumeProgress = (resume: Resume | null) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {}
@@ -18,7 +38,36 @@ export const useResumeProgress = (resume: Resume | null) => {;
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+    let completed = 0;
+    // Basic info is always considered (1 point)
+    completed += 1;
+    // Work experience (1 point if at least one entry)
+
+import { useState, useEffect  } from './react';
+import { Resume  } from '@/types / resume';
+export const useResumeProgress = (resume: Resume | null) =>: any {
+  const [progress, set_progress] = useState (0);
+;
+  useEffect (() => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    if (resume.work_experience && resume.work_experience.length > 0) {
+
+      completed += 1
+
+<<<<<<< HEAD
+    if (resume.work_experience && resume.work_experience.length > 0) {
+      completed += 1
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -29,6 +78,7 @@ export const useResumeProgress = (resume: Resume | null) => {;
 
       completed += 1;
 
+<<<<<<< HEAD
     }
 
 ;
@@ -62,48 +112,119 @@ export const useResumeProgress = (resume: Resume | null) => {;
 ;
   return progress;
 
+=======
+
+<<<<<<< HEAD
+    }
+;
+let completed = 0;
+    // Basic info is always considered (1 point)
+    completed += 1;
+    // Work experience (1 point if at least one entry)
+    if (resume.work_experience && resume.work_experience.length > 0) {
+
+    }
+;
+    // Education (1 point if at least one entry);
+    if (resume.education && resume.education.length > 0) {;
+      completed += 1;
     }
 
+    let completed = 0;
+
+    // Basic info is always considered (1 point)
+    completed += 1;
+
+    // Work experience (1 point if at least one entry)
+    if (resume.work_experience && resume.work_experience.length > 0) {
+      completed += 1;
+    }
+
+    // Education (1 point if at least one entry)
+    if (resume.education && resume.education.length > 0) {
+      completed += 1;
+    }
+
+    // Skills (1 point if at least one entry)
+    if (resume.skills && resume.skills.length > 0) {
+      completed += 1;
+    }
+// Certifications (1 point if at least one entry)
+    if (resume.certifications && resume.certifications.length > 0) {
+      completed += 1;
+    }
+
+    // Certifications (1 point if at least one entry)
+    if (resume.certifications && resume.certifications.length > 0) {
+      completed += 1;
+    }
+    
+    const progressPercentage = (completed / 5) * 100;
+    setProgress(progressPercentage);
+  }, [resume]);
+  return progress;
+}
+
+  return progress
+=======
+
+    }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+    const progressPercentage = (completed / 5) * 100,;
+    setProgress(progressPercentage);
+    // Work experience (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+      completed += 1;
+    if (resume && resume.work_experience && resume && resume.work_experience.length > 0) {
+      completed += 1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+    }
     // Education (1 point if at least one entry);
 
     // Check condition
 if ( {) {
   $2
 }
-
       completed += 1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
-
     // Skills (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
-
       completed += 1;
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
-
     // Certifications (1 point if at least one entry);
     // Check condition
 if ( {) {
   $2
 }
-
       completed += 1;
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }
-
     const progress_percentage = (completed / 5) * 100;
     set_progress (progress_percentage);
   }, [resume]);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useResumeProgress = ("resume":Resume | null) => {;
   }
@@ -116,11 +237,25 @@ export const useResumeProgress = ("resume":Resume | null) => {;
 };
 
 import { useState, useEffect } from 'react',;'
+=======
+  return progress;
+}
+;
+
+
+};
+<<<<<<< HEAD
+
+import { useState, useEffect } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { Resume } from '@/types/resume',;
 ;
 export const useResumeProgress = (resume:Resume | null) => {;
   const [progress, setProgress] = useState(0),;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ;
   useEffect(() => {;
     // Calculate progress based on completed sections;
@@ -159,6 +294,7 @@ export const useResumeProgress = (resume:Resume | null) => {;
   }, [resume]),;
 ;
   return progress,;
+<<<<<<< HEAD
 },; useEffect ( () => {}
   // Calculate progress based on completed sections if (!resume) {}
   // Basic info is always considered (1 point) completed += 1;
@@ -172,8 +308,23 @@ return progress;
   }, [resume]);
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+},; useEffect ( () => {
+  // Calculate progress based on completed sections if (!resume) {
+  // Basic info is always considered (1 point) completed += 1;
+// Work experience (1 point if at least one entry) return progress 
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return progress;
 
 };
 
+<<<<<<< HEAD
 };
+=======
+};
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

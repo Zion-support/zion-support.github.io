@@ -1,11 +1,25 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props  {children: ReactNode,  fallback?: ReactNode;}
+=======
+import {AlertTriangle, RefreshCw} from 'lucide-react';
+<<<<<<< HEAD
+;
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface Props {
+  children: ReactNode,  fallback?: ReactNode;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 <<<<<<< HEAD
 interface State {
+<<<<<<< HEAD
   hasError: boolean,
   error?: Error;
 }
@@ -21,6 +35,50 @@ interface State  {}
               <AlertTriangle className=\"w-12 h-12 text-red-500\"    />;
             </div>;"
             <h2 className=\"text-xl font-semibold text-gray-900 mb-2\"    />;
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface Props {;
+  children: ReactNode,  fallback?: ReactNode;
+}
+interface State {;
+  hasError: boolean,;
+  error?: Error;
+}
+class ErrorBoundary extends Component<Props, State> {;
+  public state: State = {;
+    hasError: false;
+  },;
+  public static getDerivedStateFromError(error: Error): State {;
+    return { hasError: true, error };
+  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    // eslint-disable-next-line no-console;
+    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+  private handleRetry = () => {;
+    this && this.setState({ hasError: false, error: undefined }),;
+  };
+  public render() {;
+    if (this && this.state.hasError) {;
+      if (this && this.props.fallback) {;
+        return this && this.props.fallback;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      }
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">;
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">;
+            <div className="flex justify-center mb-4">;
+              <AlertTriangle className="w-12 h-12 text-red-500" />;
+            </div>;
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               Something went wrong;
             </h2>;"
             <p className=\"text-gray-600 mb-6\"    />;
@@ -52,7 +110,26 @@ interface State  {}
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
   has_error: boolean,error?: Error;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </div>;
+        </div>;
+      ),;
+    }
+    return this && this.props.children;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  has_error: boolean,
+  error?: Error;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 <<<<<<< HEAD
 class ErrorBoundary extends Component < Props, State> {}

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Cookie, Settings, Shield, Eye, Database, AlertCircle } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 const cookieTypes = [
   {
     icon: Cookie,
@@ -140,11 +141,31 @@ export default function CookiesPage() {
         </div>
       </div>
     </MainLayout>
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
   Shield,
   Settings,
   Info,
@@ -238,7 +259,6 @@ import {;
   XCircle,;
   AlertTriangle;
 } from 'lucide-react';
-
 export default function CookiePolicyPage() {;
   const [cookiePreferences, setCookiePreferences] = useState({;
     necessary: true,;
@@ -246,6 +266,11 @@ export default function CookiePolicyPage() {;
     marketing: false,;
     functional: false;
 
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+origin/automation-improvements-final
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -308,16 +333,13 @@ export default function CookiePolicyPage() {
       examples: ['Language preferences', 'User settings', 'Chat widgets'];
     }
   ];
-
   const handleCookieToggle = (cookieId: string) => {;
     if (cookieId === 'necessary') return; // Can't disable necessary cookies;
-
     setCookiePreferences(prev => ({;
       ...prev,;
       [cookieId]: !prev[cookieId];
     }));
   };
-
   const savePreferences = () => {;
     // In a real implementation, this would save to localStorage and update cookie settings;
     alert('Cookie preferences saved!');
@@ -331,20 +353,43 @@ export default function CookiePolicyPage() {
     <MainLayout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Cookie{' '}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                   Policy;
                 </span>;
               </h1>;
@@ -355,6 +400,14 @@ export default function CookiePolicyPage() {
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
         {/* Cookie Management */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -362,7 +415,15 @@ export default function CookiePolicyPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 transition={{ duration: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Manage Your Cookie Preferences;
@@ -378,6 +439,13 @@ transition={{ duration: 0 && 0.8 }}
                   {cookieTypes && cookieTypes.map((cookie, index) => (;
                     <motion&& motion.div
                       key={cookie && cookie.id}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                       className="border border-gray-200 rounded-lg p-6"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -418,7 +486,15 @@ transition={{ duration: 0 && 0.8 }}
                               />;
                             </button>;
                           )}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 </div>;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                        </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                       </div>;
                       <div className="ml-9">;
                         <h4 className="text-sm font-medium text-gray-900 mb-2">Examples:</h4>;
@@ -433,7 +509,11 @@ transition={{ duration: 0 && 0.8 }}
                       </div>;
                     </motion && motion.div>;
                   ))}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 </div>;
+=======
+                </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">;
                   <button
                     onClick={() => setCookiePreferences({;
@@ -441,17 +521,39 @@ transition={{ duration: 0 && 0.8 }}
                       analytics: false,;
                       marketing: false,;
                       functional: false;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
                     Reject All;
                   </button>;
                   <button
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 onClick={() => setCookiePreferences({;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    onClick={() => setCookiePreferences({;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                       necessary: true,;
                       analytics: true,;
                       marketing: true,;
                       functional: true;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
@@ -459,7 +561,15 @@ onClick={() => setCookiePreferences({;
                   </button>;
                   <button
                     onClick={savePreferences}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
   Shield,
   Settings,
   Info,
@@ -665,6 +775,13 @@ if (return) {
                     on_click={save_preferences}
                     className="px - 6 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
                   >;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
                     Save Preferences;
                   </button>;
                 </div>;
@@ -672,7 +789,15 @@ if (return) {
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 transition={{ duration: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 What Are Cookies?;
@@ -822,10 +947,18 @@ transition={{ duration: 0 && 0.8 }}
                     </li>;
                   </ul>;
                 </motion.div>;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -976,6 +1109,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function CookiesPage() {
 transition={{ duration: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
                 Questions About Our Cookie Policy?;
@@ -985,7 +1125,10 @@ transition={{ duration: 0 && 0.8 }}
                 please don't hesitate to contact us.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="max-w-2xl mx-auto text-center">;
               <div className="bg-white rounded-lg shadow-lg p-8">;
                 <div className="space-y-4">;
@@ -1001,6 +1144,13 @@ transition={{ duration: 0 && 0.8 }}
                   </p>;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
         {/* Contact Information */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -1034,6 +1184,74 @@ transition={{ duration: 0 && 0.8 }}
                   </p>;
                   <p className="text - sm text - gray - 500">;
                     Last updated: {new Date ().toLocaleDateString ()}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  </p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+<<<<<<< HEAD
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Questions About Our Cookie Policy?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                If you have any questions about our use of cookies or this policy
+                please don't hesitate to contact us.
+              </p>
+            </motion.div>
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-indigo-600 mr-3" />
+                    <span className="text-lg font-semibold text-gray-900">Privacy Team</span>
+                  </div>
+                  <p className="text-gray-600">
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text-indigo-600 hover:text-indigo-700">privacy@ziontechgroup.com</a>
+                  </p>
+                  <p className="text-gray-600">
+                    Phone: <a href="tel:+13024640950" className="text-indigo-600 hover:text-indigo-700">+1 302 464 0950</a>
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Last updated: {new Date().toLocaleDateString()}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Questions About Our Cookie Policy?;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                If you have any questions about our use of cookies or this policy,
+                please don't hesitate to contact us.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-2xl mx - auto text - center">;
+              <div className="bg - white rounded - lg shadow - lg p - 8">;
+                <div className="space - y-4">;
+                  <div className="flex items - center justify - center">;
+                    <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
+                    <span className="text - lg font - semibold text - gray - 900">Privacy Team</span>;
+                  </div>;
+                  <p className="text - gray - 600">;
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text - indigo - 600 hover:text - indigo - 700">privacy@ziontechgroup.com</a>;
+                  </p>;
+                  <p className="text - gray - 600">;
+                    Phone: <a href="tel:+13024640950" className="text - indigo - 600 hover:text - indigo - 700">+1 302 464 0950</a>;
+                  </p>;
+                  <p className="text - sm text - gray - 500">;
+                    Last updated: {new Date ().toLocaleDateString ()}
 
                   </p>;
                 </div>;
@@ -1042,14 +1260,53 @@ transition={{ duration: 0 && 0.8 }}
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+=======
+  );
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+<<<<<<< HEAD
+origin/automation-improvements-final
+
+export default function CookiesPage() {
+export default function CookiesPage() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+=======
+
+
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+ursor/fix-lint-push-and-merge-to-main-ae4e
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -1057,6 +1314,7 @@ export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+<<<<<<< HEAD:pages.disabled/cookies.tsx
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -1080,6 +1338,9 @@ export default function CookiesPage() {
           </p>
           <ul className='list-disc list-inside text-gray-300 space-y-1'>
 
+=======
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
@@ -1088,6 +1349,7 @@ export default function CookiesPage() {
 
 
 
+<<<<<<< HEAD:pages.disabled/cookies.tsx
     </UltraAdvancedFuturisticBackground>
   )
 }
@@ -1101,6 +1363,89 @@ export default function CookiesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            <li>Purpose: performance and security</li>
+
+<<<<<<< HEAD
+<li>Purpose: performance and security</li>
+
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+origin/automation-improvements-final
+            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+origin/automation-improvements-final
+          <p className='text-gray-400 text-sm'>
+            Questions?{' '}
+            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+              kleber@ziontechgroup.com
+            </a>
+          </p>
+        </div>
+
+
+  );
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+
+        canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+<<<<<<< HEAD
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+            <li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+          <p className=&quot;text-gray-400 text-sm&quot;>Questions? <a className=&quot;text-cyan-400&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</Link></p>
+
+        </div>
+      </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  );
+      </Layout>
+    </>;
+  );
+
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+=======
+
+
+  );
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+=======
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
 
 canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
       />;
@@ -1167,20 +1512,41 @@ function CookiesPage() {
             <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
               kleber@ziontechgroup.com;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </a>;
           </p>;
         </div>;
       </Layout>;
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD:pages.disabled/cookies.tsx
+  );
+
+}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
   );
 
 }
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx
     </>);
 ;
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD:pages.disabled/cookies.tsx
 <MainLayout
       title="Cookie Policy - Zion Tech Group"
       description="Cookie policy for Zion Tech Group website"
@@ -1305,3 +1671,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </MainLayout>
   );
 }
+=======
+<<<<<<< HEAD
+
+}
+}
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/cookies.tsx

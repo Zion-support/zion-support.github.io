@@ -1,8 +1,13 @@
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 import {useRouter} from 'next/router';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,6 +27,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useState } from 'react';
 
 import {
@@ -30,6 +36,21 @@ import {
   fetchMilestones,;
   updateMilestoneStatus,;
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
   if (typeof window === 'undefined') return 'client';
 
 import { Milestone  } from '../../../utils/types/milestones';
@@ -53,11 +74,89 @@ const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import Head from 'next/head',
+import MilestoneForm from '../../../components/monetization/MilestoneForm',
+import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
+import {
+  createMilestone
+  fetchMilestones
+  updateMilestoneStatus;
+import {
+  createMilestone,
+  fetchMilestones,;
+  updateMilestoneStatus,;
+} from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+  if (typeof window === 'undefined') return 'client';
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (r === 'talent' |r === 'admin') return r;
+  return 'client';
+export default function ProjectMilestonesPage() {;
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
+    getRoleFromEnvOrQuery()
+  );  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    setRole(getRoleFromEnvOrQuery());  }, []);
+  // Demo cookie-based auth to hit API successfully
+  useEffect(() => {
+    if (!role) return;
+    try {
+      const userId =
+        role === 'talent'
+          ? 'talent-1'
+          : role === 'client'
+            ? 'client-1'
+            : 'client-1';
+      document.cookie = `x-user-id=${userId}; path=/`;
+      document.cookie = `x-user-role=${role}; path=/`;    } catch {}
+  }, [role]);
+  useEffect(() => {
+    if (!projectId) return;
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+import { Milestone } from '../../../utils/types/milestones';
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
+  if (typeof window === 'undefined') return 'client',;
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+export default function ProjectMilestonesPage(req, res) {
+  try {
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());
   }, []),;
 
+<<<<<<< HEAD
+
+    if (!projectId) return;
+
+import {useRouter} from 'next/router';
+=======
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
     if (!role) return;
@@ -66,6 +165,23 @@ const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
 
   useEffect(() => {;
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+    if (!projectId) return;
+=======
+
+import {useRouter} from 'next/router';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useRouter } from 'next/router';
+
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
@@ -108,11 +224,68 @@ import MilestoneCard from '../../../components/monetization/MilestoneCard';
 '
 import { Milestone } from '../../../utils/types/milestones';
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+<<<<<<< HEAD
+    try {
+      const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
+      document.cookie = `x-user-id=${userId}, path=/`;
+      document.cookie = `x-user-role=${role}, path=/`
+    } catch {}
+  }, [role]);
+  useEffect(() => {;
+    if (!projectId) return;
+  useEffect(() => {;
+    setRole(getRoleFromEnvOrQuery());
+  }, []),;
+  // Demo cookie-based auth to hit API successfully;
+  useEffect(() => {;
+    if (!role) return,;
+    try {
+      const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
+      document.cookie = `x-user-id=${userId}, path=/`,;
+      document.cookie = `x-user-role=${role}, path=/`;
+    } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [role]),;
+  useEffect(() => {;
+    if (!projectId) return,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
     let cancelled = false;
     (async () => {;
       setLoading(true);
       setError(null);
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      try {;
+        const data = await fetchMilestones(projectId as string);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+        if (!cancelled) setMilestones(data.milestones || []);
+      } catch (error) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones');
+      } finally {;
+
+<<<<<<< HEAD
+        if (!cancelled) setMilestones(data && data.milestones || []);
+      } catch (e: any) {;
+        if (!cancelled) setError(e?.message || 'Failed to load milestones');
+      } finally {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         if (!cancelled) setLoading(false);
 import {use_router} from 'next / router';
 import Head from 'next / head';
@@ -198,19 +371,37 @@ if (!cancelled) setMilestones(data.milestones || []);
       } catch (e: any) {
         if (!cancelled) setError(e?.message |'Failed to load milestones');
       } finally {
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
         if (!cancelled) setLoading(false);
 
+=======
+        if (set_loading (false)) {
+  $2
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
       }
     })();
     return () => {;
       cancelled = true;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
     };
 
   }, [projectId]);
 
   const handleCreate = async (payload: {;
 
+<<<<<<< HEAD
+    }
+  const handleCreate = async (payload: {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: string;
     description?: string;
     dueDate: string;
@@ -218,6 +409,20 @@ if (!cancelled) setMilestones(data.milestones || []);
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
+    } catch {}
+  }, [role]),
+
+  useEffect(() => {
+    if (!projectId) return,
+    let cancelled = false
+    (async () => {
+      setLoading(true),
+      setError(null),
+      try {
+        const data = await fetchMilestones(projectId as string)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {'
@@ -225,6 +430,7 @@ if (!cancelled) setMilestones(data.milestones || []);
       } finally {}
         if (!cancelled) setLoading(false)
       }
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
     })();
     return () => {}
       cancelled = true;
@@ -244,6 +450,43 @@ if (!cancelled) setMilestones(data.milestones || []);
 
     setMilestones(prev => [res.milestone, ...prev]);  };
 
+=======
+})();
+    return () => {
+      cancelled = true
+    }
+      try {
+        const data = await fetchMilestones(projectId as string);
+        if (!cancelled) setMilestones(data.milestones |[]);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message |'Failed to load milestones');
+      } finally {
+        if (!cancelled) setMilestones(data.milestones || []);
+      } catch (error) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones');
+      } finally {;
+        if (!cancelled) setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+    return () => {;
+      cancelled = true;
+    }
+    };
+  }, [projectId]);
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    setMilestones(prev => [res.milestone, ...prev]);  };
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
       } catch (error) {
     console.error("Error:", error);
 
@@ -255,14 +498,48 @@ if (!cancelled) setMilestones(data.milestones || []);
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {}
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 
+=======
+<<<<<<< HEAD
+
+
+  };
+    setMilestones(prev => [res.milestone, ...prev]);  }
+    setMilestones(prev => [res.milestone, ...prev]);  };
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [projectId]),
+  const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
+    if (!projectId) return,
+    const res = await createMilestone(projectId as string, payload),
+    setMilestones((prev) => [res.milestone, ...prev])
+  },
+=======
+<<<<<<< HEAD
+    setMilestones((prev) => [res.milestone, ...prev])
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
     milestoneId: string;
   ) => {}
     if (!projectId) return;
@@ -273,13 +550,45 @@ if (!cancelled) setMilestones(data.milestones || []);
       approved: 'Approved''
       paid: 'Paid'
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    setMilestones(prev => [res && res.milestone, ...prev]);  };
+  const handleAction = async (;
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
+    milestoneId: string;
+  ) => {;
+    if (!projectId) return,;
+    const map: Record<string, string> = {;
+      in_progress: 'In Progress',;
+      submitted: 'Submitted',;
+      approved: 'Approved',;
+      paid: 'Paid',;
+    };
+      in_progress: 'In Progress'
+      submitted: 'Submitted'
+      approved: 'Approved'
+      paid: 'Paid'
+    }
+    const status = map[action];
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, {;
+      status,;
+    });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    setMilestones(prev =>;
+      prev && prev.map(m => (m && m.id === milestoneId ? res && res.milestone : m));
+    );  };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
 
     const status = map[action];
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {}
       status;
     });
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
     <div>
       <Head>
         <title>Project Milestones</title>
@@ -292,6 +601,56 @@ if (!cancelled) setMilestones(data.milestones || []);
         </div>
 
         {role !== 'talent' && (
+=======
+    <div>;
+      <Head>;
+        <title>Project Milestones</title>;
+        <meta
+          name='description'
+          content='Track project deliverables and milestone payments'
+<<<<<<< HEAD
+    setMilestones(prev =>
+      prev.map(m => (m.id === milestoneId ? res.milestone : m))
+    );  }
+
+      in_progress: 'In Progress',
+      submitted: 'Submitted',
+      approved: 'Approved',
+      paid: 'Paid'},
+    const status = map[action],
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status }),
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
+  },
+  return (
+    <div>
+      <Head>
+        <title>Project Milestones</title>
+        <meta name="description" content="Track project deliverables and milestone payments" />
+      </Head>
+      <div className='max-w-5xl mx-auto px-4 py-8'>
+        <div className='mb-6'>
+          <h1 className='text-2xl font-bold'>Milestones</h1>
+          <p className='text-sm text-gray-600'>
+            Project: {projectId as string}
+          </p>
+=======
+
+          </p>
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+      in_progress: 'In Progress',
+      submitted: 'Submitted',
+      approved: 'Approved',
+      paid: 'Paid'},
+    const status = map[action];
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status });
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
+
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
 
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
@@ -309,7 +668,10 @@ if (!cancelled) setMilestones(data.milestones || []);
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 <meta
           name='description'
           content='Track project deliverables and milestone payments'
@@ -322,8 +684,13 @@ if (!cancelled) setMilestones(data.milestones || []);
             Project: {projectId as string}
           </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
-        </div>
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
+        </div>
         {role !== 'talent' && (
 
               <span className="text-xs text-gray-500">Role: {role}</span>
@@ -338,11 +705,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+
+        />;
+      </Head>;
+      <div className='max-w-5xl mx-auto px-4 py-8'>;
+        <div className='mb-6'>;
+          <h1 className='text-2xl font-bold'>Milestones</h1>;
+          <p className='text-sm text-gray-600'>;
+            Project: {projectId as string}
+
+          </p>;
+        </div>;
+        {role !== 'talent' && (;
+          <div className='mb-8 p-4 rounded bg-gray-50 border'>;
+            <div className='flex items-center justify-between mb-3'>;
+              <h2 className='text-lg font-semibold'>Add Milestone</h2>;
+              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>;
+            <MilestoneForm onSubmit={handleCreate} />;
+          </div>;
+<<<<<<< HEAD
+        )}
+        {loading && <div>Loading milestones...</div>}
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         )}
         {loading && <div>Loading milestones...</div>}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [project_id]);
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         )  } catch (error) {
     console.error("Error:", error);
 
@@ -375,16 +775,83 @@ if (return, ) {}
 {error && <div className='text-red-600'>{error}</div>}
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         {!loading && !error && (
 
           <div className='space - y-4'>;
             {milestones.length === 0 && (
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
         {!loading && !error && (;'
+=======
+
+
+<<<<<<< HEAD
+    const map: Record < string, string> = {
+      in_progress: 'In Progress',
+      submitted: 'Submitted',
+      approved: 'Approved',
+      paid: 'Paid',
+    }
+    const status = map[action];
+    const res = await updateMilestoneStatus (project_id as string, milestone_id, {
+      status,
+    });
+    set_milestones (prev =>;
+      prev.map (m => (m.id === milestone_id ? res.milestone : m)));  }
+;
+  return (
+    <div>;
+      <Head>;
+        <title > Project Milestones</title>;
+        <meta;
+          name='description';
+          content='Track project deliverables and milestone payments';
+        />;
+      </Head>;
+      <div className='max - w-5xl mx - auto px - 4 py - 8'>;
+        <div className='mb - 6'>;
+          <h1 className='text - 2xl font - bold'>Milestones</h1>;
+          <p className='text - sm text - gray - 600'>;
+            Project: {project_id as string}
+          </p>;
+        </div>;
+        {role !== 'talent' && (
+          <div className='mb - 8 p - 4 rounded bg - gray - 50 border'>;
+            <div className='flex items - center justify - between mb - 3'>;
+              <h2 className='text - lg font - semibold'>Add Milestone</h2>;
+              <span className='text - xs text - gray - 500'>Role: {role}</span>            </div>;
+            <MilestoneForm on_submit={handle_create} />;
+          </div>)}
+        {loading && <div > Loading milestones...</div>}
+        {error && <div className='text - red - 600'>{error}</div>}
+        {!loading && !error && (
+          <div className='space - y-4'>;
+            {milestones.length === 0 && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {!loading && !error && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
           <div className='space-y-4'>;
             {milestones && milestones.length === 0 && (;'
               <div className='text-gray-600'>;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
                 No milestones yet.{' '}
 
                 {role !== 'talent' ? 'Create the first one.' : ''}
@@ -393,7 +860,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {milestones && milestones.map(m => (;
               <MilestoneCard;
                 key={m && m.id}
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
               <div className='text - gray - 600'>;
                 No milestones yet.{' '}
 
@@ -402,14 +876,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {milestones.map (m => (
               <MilestoneCard;
                 key={m.id}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 milestone={m}
                 project_id={String (project_id)}
                 role={role}
                 on_action={handle_action}
               />            ))}
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 '
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         <div className='mt-12 text-xs text-gray-500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
           Paid &rarr; capture via Stripe/PayPal/Escrow.;
@@ -417,13 +902,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
   );
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
 
 }
 }
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 "
         {error && <div className="text-red-600">{error}</div>}
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        {error && <div className="text-red-600">{error}</div>}
+        {!loading && !error && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
           <div className="space-y-4">
             {milestones.length === 0 && ('"
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
@@ -433,13 +938,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>
         )}
+        )}
+        {loading && <div>Loading milestones...</div>}
+        {error && <div className='text-red-600'>{error}</div>}
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
         )  } catch (error) {"
     console.error("Error:", error);"
+=======
+        )  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
         {loading && <div>Loading milestones...</div>  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
@@ -455,12 +969,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="space-y-4">
             {milestones.length === 0 && (
 
+=======
+        {loading && <div>Loading milestones...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {!loading && !error && (
+          <div className="space-y-4">
+            {milestones.length === 0 && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
               <div className='text-gray-600'>
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>
             )}
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 
+=======
+            {milestones.map(m => (
+              <MilestoneCard
+                key={m.id}
+                milestone={m}
+                projectId={String(projectId)}
+                role={role}
+                onAction={handleAction}
+              />            ))}
+          </div>
+        )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         <div className='mt-12 text-xs text-gray-500'>
           Integration hooks ready: on Approved &rarr; trigger payout intent; on
           Paid &rarr; capture via Stripe/PayPal/Escrow.
@@ -471,6 +1013,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 }
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 
             {milestones.map(m => (
               <MilestoneCard
@@ -491,29 +1034,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )  } catch (error) {"
     console.error("Error:", error);"
+=======
+              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+            )  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
             {milestones.map((m) => (;
               <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />;
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
             ))  } catch (error) {"
     console.error("Error:", error);"
+=======
+            ))  } catch (error) {
+    console.error("Error:", error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           </div>;
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
         )  } catch (error) {"
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+=======
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
       </div>
     </div>
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 
+=======
+  )
+<<<<<<< HEAD
+    </div>);
+;
+;
+        <div className="mt-12 text-xs text-gray-500">;
+          Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.;
+        </div>;
+      </div>;
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx
           </div>)}
 
         <div className='mt - 12 text - xs text - gray - 500'>;
@@ -522,6 +1098,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
   } catch (error) {"
@@ -530,6 +1107,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+<<<<<<< HEAD:pages.disabled/project/[projectId]/milestones.tsx
 <div className='mt-12 text-xs text-gray-500'>
           Integration hooks ready: on Approved &rarr; trigger payout intent; on
           Paid &rarr; capture via Stripe/PayPal/Escrow.
@@ -537,3 +1115,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/project/[projectId]/milestones.tsx

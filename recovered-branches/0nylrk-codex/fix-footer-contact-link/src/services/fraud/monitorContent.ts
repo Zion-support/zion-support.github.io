@@ -9,6 +9,23 @@ import { flagContent } from './flagContent';
 export const monitorContent = async (
 export const monitorContent = async (;
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+// Content monitoring functionality
+import { FraudFlag, FraudSeverity  } from '@/types/fraud';
+import { analyzeContent  } from './analyzeContent';
+import { flagContent } from './flagContent';
+/**
+ * Create a monitoring system helper to easily monitor any content
+ */
+
+export const monitorContent = async (
+export const monitorContent = async (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -16,25 +33,59 @@ export const monitorContent = async (;
   content: string;
 ): Promise<void> => {}
   const analysis = analyzeContent(content);
+<<<<<<< HEAD
+if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+=======
 
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+<<<<<<< HEAD
 if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+=======
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // If contains highly suspicious phrases, mark as dangerous
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
 
       r && r.includes('bypass')
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
     )) {'
       severity = 'dangerous'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     )) {
       severity = 'dangerous'
     }
 
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+  if (analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious'
+    // If contains highly suspicious phrases, mark as dangerous
+    if (analysis.reasons.some(r =>
+      r.includes('payment') |
+      r.includes('external') |
+      r.includes('bypass')
+    )) {
+      severity = 'dangerous'
+    }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -60,12 +111,22 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;'
       severity = 'dangerous';
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
     }
 
       severity = 'dangerous'
     }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+    }
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     await flagContent(
       userId;
       userEmail;
@@ -80,6 +141,45 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
+    }
+    
+    await flagContent(
+      userId,
+      userEmail,
+      contentType,
+      contentId,
+      content,
+      severity,
+      analysis.reasons.join(),
+      undefined // IP address would be added in a real implementation
+    );
+    ),
+    
+    // If this is a 'dangerous' flag, automatically hide content
+    // This would be implemented in a real system with appropriate flags
+    if (severity === 'dangerous') {
+      // // // console.log('Auto-hiding dangerous content:', contentId),
+      // Code to hide content would go here
+    }
+  }
+}
+
+;
+    await flagContent(;
+      userId,;
+      userEmail,;
+      contentType,;
+      contentId,;
+      content,;
+      severity,;
+      analysis.reasons.join(),;
+      undefined // IP address would be added in a real implementation;
+    ),;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    if (severity === 'dangerous') {;
+      // // // console.log('Auto-hiding dangerous content:', contentId);
+      // Code to hide content would go here;
 
     }
   }
@@ -104,6 +204,7 @@ export const monitorContent = async (;
       // Code to hide content would go here;
 
 // Content monitoring functionality;
+<<<<<<< HEAD
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
 
@@ -190,6 +291,74 @@ pr-12325
       severity;)
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
+=======
+import { FraudFlag, FraudSeverity } from '@/types/fraud',;
+import { analyzeContent } from './analyzeContent',;
+import { flagContent } from './flagContent',;
+;
+/**;
+ * Create a monitoring system helper to easily monitor any content;
+ */;
+export const monitorContent = async (;
+  userId:string,;
+  userEmail:string | undefined,;
+  contentType:FraudFlag['content_type'],;
+  contentId:string,;
+  content:string;
+):Promise<void> => {;
+  const analysis = analyzeContent(content),;
+  ;
+  if (analysis.isSuspicious) {;
+    let severity:FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' :'suspicious',;
+    ;
+    // If contains highly suspicious phrases, mark as dangerous;
+    if (analysis.reasons.some(r => ;
+      r.includes('payment') || ;
+      r.includes('external') || ;
+      r.includes('bypass');
+    )) {;
+      severity = 'dangerous',;
+    }
+    ;
+    await flagContent(;
+      userId,;
+      userEmail,;
+      contentType,;
+      contentId,;
+      content,;
+      severity,;
+      analysis.reasons.join(),;
+      undefined // IP address would be added in a real implementation;
+    ),;
+    ;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    if (severity === 'dangerous') {;
+      // // // console.log('Auto-hiding dangerous content:', contentId),;
+      // Code to hide content would go here;    }
+    if (severity === 'dangerous') {_// Code to hide content would go here}
+  }
+},;
+ //Content monitoring functionality /** * Create a monitoring system helper to easily monitor any content */export const monitorContent = async (userId: string;
+userEmail: string | undefined;
+contentType: FraudFlag['content type'];
+contentId: string;
+content: string if (analysis.isSuspicious) {
+  let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious';
+//If contains highly suspicious phrases, mark as dangerous if (analysis.reasons.some (r => r.includes ('payment') || r.includes ('external') || r.includes ('bypass') ) ) {
+  await flagContent (userId;
+userEmail;
+contentType;
+contentId;
+content;
+severity;
+analysis.reasons.join ();
+undefined //IP address would be added in a real implementation);
+//If this is a 'dangerous' flag, automatically hide content //This would be implemented in a real system with appropriate flags // Code to hide content would go here 
+}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ;
     // If this is a 'dangerous' flag, automatically hide content;
@@ -201,11 +370,22 @@ if ( {) {
 
       console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
   }
 }
 ;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 };
     }
@@ -213,4 +393,11 @@ if ( {) {
 };
     }
   }
+<<<<<<< HEAD
 };
+=======
+};
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

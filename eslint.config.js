@@ -1,6 +1,130 @@
+<<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsparser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+
+import js from '@eslint/js';
+      'coverage/**',
+
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-merge-conflicts/**',
+      '**/*.backup.*',
+      '**/*.old.*',
+      '**/*.disabled.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.test.*',
+      '**/*.spec.*',
+
+      '**/performance-*.txt'
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/public/**',
+      '**/static/**',
+
+    ],
+=======
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+<<<<<<< HEAD
+        // Browser globals
+
+        window: "readonly",
+        document: "readonly",
+        console: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        location: "readonly",
+        navigator: "readonly",
+        performance: "readonly",
+        addEventListener: "readonly",
+        removeEventListener: "readonly",
+        requestAnimationFrame: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        self: "readonly",
+        // Node.js globals
+        process: "readonly",
+        Buffer: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        module: "readonly",
+        require: "readonly",
+        exports: "readonly",
+        global: "readonly",
+        // DOM types
+        Element: "readonly",
+        HTMLElement: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLTextAreaElement: "readonly",
+        HTMLSelectElement: "readonly",
+        HTMLDivElement: "readonly",
+        MouseEvent: "readonly",
+        KeyboardEvent: "readonly",
+        Node: "readonly",
+        PerformanceObserver: "readonly",
+        PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
+        LayoutShift: "readonly",
+        IntersectionObserver: "readonly",
+        IntersectionObserverEntry: "readonly",
+
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
@@ -159,6 +283,41 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
     }
+<<<<<<< HEAD
+=======
+=======
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'jsx-a11y/anchor-is-valid': 'warn',
+      'react/no-unescaped-entities': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   },
   {
     ignores: [
@@ -223,6 +382,7 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
       'vite.config.*',
       '**/*.cjs',
       'next.config.*',
@@ -356,6 +516,64 @@ export default [
       '*.ear',
       '*.sar',
       '*.nar'
+=======
+<<<<<<< HEAD
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/utils/',
+      'tests/',
+      'tests.disabled/',
+      'types.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_working/',
+      'test_build/',
+      'supabase/',
+      'working-automation-suite.cjs'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     ]
   }
 ];
+<<<<<<< HEAD
+=======
+
+
+
+  }
+];
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  }
+];
+origin/automation-improvements-final
+
+  }
+];
+  }
+];
+=======
+  }
+];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+      'vite.config.*',
+      'tailwind.config.*',
+      'postcss.config.*',
+      'public/**',
+      'build/**',
+      'coverage/**',
+      '*.backup.*',
+      'temp_*/**',
+      'src_backup/**',
+      'src.disabled/**',
+      'src.broken/**',
+    ],
+  },
+];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-5a8d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

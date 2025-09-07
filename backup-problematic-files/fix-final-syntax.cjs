@@ -26,6 +26,7 @@ const path = require('path');
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -35,6 +36,13 @@ const path = require('path');
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
@@ -42,6 +50,7 @@ const path = require('path');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -57,6 +66,12 @@ const path = require('path');
 const fs = require('fs');
 const path = require('path');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -65,6 +80,7 @@ const fixes = [
     replacement: 'import { $1 } from \'$2\';'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
@@ -73,12 +89,32 @@ const fixes = [
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Fix malformed import statements
   {
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     replacement: 'import { $1 } from \'$2\';\n\nexport default function'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/automation-improvements-final
@@ -87,12 +123,32 @@ const fixes = [
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Fix missing semicolons after import statements
   {
     pattern: /import\s+([^]+)\s*$/gm,
     replacement: 'import $1;'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix unterminated string literals
@@ -123,11 +179,35 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix unterminated string literals
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons after export statements
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons after export statements
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix unterminated string literals
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /export\s+([^]+)\s*$/gm,
     replacement: 'export $1;'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed function declarations
@@ -158,11 +238,35 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix malformed function declarations
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in variable declarations
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in variable declarations
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix malformed function declarations
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = $2;'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix missing closing brackets and parentheses
@@ -193,11 +297,35 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix missing closing brackets and parentheses
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in function declarations
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in function declarations
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix missing closing brackets and parentheses
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: 'function $1() {\n'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed JSX attributes
@@ -228,10 +356,34 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix malformed JSX attributes
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in arrow functions
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in arrow functions
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix malformed JSX attributes
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = () => $2;'
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -241,12 +393,32 @@ const fixes = [
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+  
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Fix missing semicolons in object properties
   {
     pattern: /(\w+):\s*([^,}]+)\s*$/gm,
     replacement: '$1: $2,'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed return statements
@@ -277,11 +449,35 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix malformed return statements
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in array elements
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in array elements
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix malformed return statements
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /(\w+)\s*$/gm,
     replacement: '$1,'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix duplicated content (remove duplicate lines)
@@ -312,11 +508,35 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix duplicated content (remove duplicate lines)
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in return statements
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in return statements
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix duplicated content (remove duplicate lines)
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix missing closing brackets in arrays
@@ -347,11 +567,35 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix missing closing brackets in arrays
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in if statements
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in if statements
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix missing closing brackets in arrays
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
   // Fix malformed JSX closing tags
@@ -382,6 +626,29 @@ const fixes = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:fix-final-syntax.cjs
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Fix malformed JSX closing tags
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in for loops
+=======
+<<<<<<< HEAD
+  
+  // Fix missing semicolons in for loops
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  // Fix malformed JSX closing tags
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'for (let i = 0; i < length; i++) {\n'
@@ -467,8 +734,13 @@ const fixes = [
     replacement: 'import $1;'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -774,6 +1046,7 @@ const fixes = [// Fix missing semicolons in import statements
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 console.log('🔧 Fixing final syntax errors...');
 =======
@@ -811,6 +1084,13 @@ console.log('🔧 Fixing final syntax errors...');
 =======
 console.log('🔧 Fixing final syntax errors...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+console.log('🔧 Fixing final syntax errors...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -841,8 +1121,19 @@ const filesToFix = [
 ];
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         console.log(`File not found: ${filePath}`);
         return 0;        return;
         console.log(`File not found: ${filePath}`);
@@ -874,6 +1165,7 @@ function fixFile(filePath) {
         console.log(`File not found: ${filePath}`);
         return 0;
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -887,10 +1179,31 @@ function fixFile(filePath) {
         
         return;
 <<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
-
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     let modified = false;
+=======
+    let fixes = 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    let fixes = 0;
+    let modified = false;
+    let modified = false;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -906,6 +1219,7 @@ function fixFile(filePath) {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
     let content = fs.readFileSync(filePath, 'utf8');
@@ -946,6 +1260,12 @@ function fixFile(filePath) {
     let modified = false;
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -953,9 +1273,18 @@ function fixFile(filePath) {
         modified = true}
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+=======
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
 
@@ -968,13 +1297,49 @@ function fixFile(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return true}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
   return false}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+function walkDirectory(dir) {
+  let fixedCount = 0;
+  try {
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 
 function walkDirectory(dir) {
@@ -987,7 +1352,16 @@ function walkDirectory(dir) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (stat.isDirectory()) {
         fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
         if (fixFile(filePath)) {
@@ -997,8 +1371,18 @@ function walkDirectory(dir) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  return fixedCount}
+    let fixes = 0;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return fixedCount}
     let fixes = 0;
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
@@ -1215,18 +1599,38 @@ console.log(`   Total fixes applied: ${totalFixes}`);
 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
-
 if (totalFixes > 0) {
 =======
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
     console.log('\n✨ No syntax errors found to fix.');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+}#!/usr/bin/env node;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+<<<<<<< HEAD
+=======
+=======
+}
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -1243,11 +1647,23 @@ if (totalFixes > 0) {
 }
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Final targeted fixes for remaining syntax errorsconst fixes = [/ Fix missing semicolons in import statements {" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*$/gm,"" replacement: "import { $1 } from \"$2\";" }, / Fix malformed import statements {"" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*export\s*default\s*function/g,"" replacement: "import { $1 } from \"$2\";\n\nexport default function" }, / Fix missing semicolons after import statements {" pattern: /import\s+([^]+)\s*$/gm,"" replacement: "import $1;" }, / Fix unterminated string literals {"" pattern: /"([^"]*)\s*$/gm,"" replacement: "\"$1\";" }, / Fix malformed function declarations {" pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,"" replacement: "export default function $1() {\n return (" }, / Fix missing closing brackets and parentheses {" pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix malformed JSX attributes {" pattern: /className="([^"]*);\s*"/g,"" replacement: "className="$1"" }, / Fix missing semicolons in object properties {"" pattern: /(\w+):\s*"([^"]*)",\s*;/g,"" replacement: "$1: \"$2\"," }, / Fix malformed return statements {" pattern: /return\s*\(\s*<div";"/g,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix duplicated content (remove duplicate lines) {" pattern: /^(.*)\n\1$/gm,"" replacement: "$1" }, / Fix missing closing brackets in arrays {" pattern: /(\[.*?);\s*\]\s*},/g,"" replacement: "$1\n ]\n}," }, / Fix malformed JSX closing tags {" pattern: /<\/div>\s*\)\s*}\s*$/gm,"" replacement: " </div>\n );\n}" }];function fixFile(filePath) { if (!fs.existsSync(filePath)) {" console.log(` File not found: ${filePath}`); return; }" let content = fs.readFileSync(filePath, "utf8"); let modified = false; fixes.forEach(fix => { const newContent = content.replace(fix.pattern, fix.replacement); if (newContent !== content) { content = newContent; modified = true} }); if (modified) {" fs.writeFileSync(filePath, content, "utf8");"` console.log(`Fixed: ${filePath}`); return true} } catch (error) {` console.error(`Error fixing ${filePath}:`, error.message)} return false}function walkDirectory(dir) { let fixedCount = 0; try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) {" fixedCount += walkDirectory(filePath)} else if (file.endsWith(".tsx") | file.endsWith(".ts") | file.endsWith(".jsx") | file.endsWith(".js")) { if (fixFile(filePath)) { fixedCount++} } } } catch (error) {` console.error(`Error reading directory ${dir}:`, error.message)} return fixedCount}"console.log("\n Summary: ");`console.log(` Files processed: ${filesToFix.length}`);"`console.log(` Total fixes applied: ${totalFixes}`);if (totalFixes > 0) {" console.log("\n Final syntax error fixing completed!");} else {" console.log("\n No syntax errors found to fix.");}""`"`
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
         return;
     }
@@ -1288,11 +1704,16 @@ if (totalFixes > 0) {
 } else {
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
@@ -1316,7 +1737,18 @@ if (totalFixes > 0) {
 #!/usr/bin/env node;
 }#!/usr/bin/env node;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const fs = require('fs')
 const path = require('path')
     "pattern"
@@ -1331,7 +1763,17 @@ const path = require('path')
     "replacement"
     "replacement"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
+=======
+<<<<<<< HEAD
+    "replacement"
+    "replacement"
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1441,5 +1883,16 @@ module.exports = { fixFile, findFiles };
     "replacement"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -58,12 +58,39 @@ class SecurityAuditor {
       const vulnerablePackages = ['lodash', 'moment'];
       vulnerablePackages.forEach(pkg => {
         if (packageJson.dependencies && packageJson.dependencies[pkg]) {
+<<<<<<< HEAD
 
+=======
+          this.issues.push(`Potentially vulnerable package: ${pkg}`);
+      if (!packageJson && packageJson.scripts.audit) {
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script')}
+      // Check for known vulnerable packages
+      const vulnerablePackages = ['lodash', 'moment'];
+      vulnerablePackages && vulnerablePackages.forEach(pkg => {
+        if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) {
+          this && this.issues.push(`Potentially vulnerable package: ${pkg}`);
+        }
+      });
+    } catch (error) {
+      this && this.issues.push(`Error reading package && package.json: ${error && error.message}`);
+    }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
           this && this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
       })} catch (error) {
       this && this.issues.push(`Error reading package."json": ${error && error.message}`)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   checkNextConfig() {
     try {
@@ -124,7 +151,32 @@ class SecurityAuditor {
 }
 if (require.main === module) {
   const auditor = new SecurityAuditor();
+<<<<<<< HEAD
 
+=======
+  auditor.runAudit();
+  auditor.fixIssues();
+  auditor.generateReport();
+    fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Security report generated');
+  }
+}
+    };
+    fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Security report generated');
+  }
+}
+if (require && require.main === module) {
+  const auditor = new SecurityAuditor();
+  auditor && auditor.runAudit();
+  auditor && auditor.fixIssues();
+  auditor && auditor.generateReport();
+}
+module && module.exports = SecurityAuditor;
+  auditor && auditor.checkPackageJson();
+  auditor && auditor.checkNextConfig();
+  auditor && auditor.generateReport();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 module.exports = SecurityAuditor;
   auditor.generateReport()}

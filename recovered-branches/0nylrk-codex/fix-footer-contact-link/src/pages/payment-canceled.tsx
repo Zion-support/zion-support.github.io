@@ -34,19 +34,52 @@ import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
+export default function PaymentCanceled() {
+
+  const navigate = useNavigate();
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
 import { XCircle } from 'lucide-react',
 export default function PaymentCanceled() {
+<<<<<<< HEAD
   const navigate = useNavigate(),  return (
 
+=======
+  const navigate = useNavigate(),
+<<<<<<< HEAD
+  
+  
+  
+=======
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
@@ -69,11 +102,23 @@ export default function PaymentCanceled() {
             Try Again;
           </Button>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <Button 
+
+
+          <Button
+          <Button 
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <Button 
 
           <Button
           <Button 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             variant="outline"
             onClick={() => navigate("/dashboard")}
 
@@ -87,6 +132,7 @@ export default function PaymentCanceled() {
 
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';'
 import { Button } from '@/components/ui/button';'
 import { useNavigate } from 'react-router-dom',;'
@@ -96,7 +142,10 @@ import { XCircle } from 'lucide-react',;'
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">;"
           <XCircle className="h-6 w-6 text-red-600" />;"
 =======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
@@ -105,17 +154,64 @@ import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
 import { XCircle } from 'lucide-react',;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+import { XCircle } from 'lucide-react',;
+;
+export default function PaymentCanceled() {;
+  const navigate = useNavigate(),;
+  ;
+  return (;
+export default function PaymentCanceled() {;
+  const navigate = useNavigate();
+  return (;
+=======
+export default function PaymentCanceled() {;
+  const navigate = useNavigate();
+
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">;
           <XCircle className="h-6 w-6 text-red-600" />;
 >>>>>>> origin/chore/fix-lint-and-merge
         </div>;
+<<<<<<< HEAD
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>;
+        <p className="text-zion-slate-light mb-6">;
+          Your payment process was canceled. No charges have been made to your account.;
+        </p>;
+        <div className="flex flex-col space-y-3">;
+        ;
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>;
+        ;
+        <p className="text-zion-slate-light mb-6">;
+          Your payment process was canceled. No charges have been made to your account.;
+        </p>;
+        ;
+        <div className="flex flex-col space-y-3">;
+          <Button ;
+          <Button;
+=======
 
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>;
 
@@ -124,21 +220,87 @@ import { XCircle } from 'lucide-react',;
         </p>;
 
         <div className="flex flex-col space-y-3">;
+<<<<<<< HEAD
 
+=======
+          <Button
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             onClick={() => navigate('/payments')}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
             Try Again;
           </Button>;
+<<<<<<< HEAD
+          ;
+          <Button ;
+            variant="outline";
+            onClick={() => navigate('/dashboard')}
+            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+          <Button;
+            variant="outline";
+            onClick={() => navigate('/dashboard')}
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+=======
 
 ;
+<<<<<<< HEAD
 
+=======
+  return (
+    <div className="min - h-screen bg - zion - blue flex flex - col items - center justify - center p - 4">;
+      <div className="max - w-md w - full bg - zion - blue - dark rounded - xl p - 8 border border - zion - blue - light shadow - lg text - center">;
+        <div className="inline - flex h - 12 w - 12 rounded - full bg - red - 100 mb - 4 items - center justify - center">;
+          <XCircle className="h - 6 w - 6 text - red - 600" />;
+        </div>;
+        <h1 className="text - 2xl font - bold text - white mb - 2">Payment Canceled</h1>;
+        <p className="text - zion - slate - light mb - 6">;
+          Your payment process was canceled. No charges have been made to your account.;
+        </p>;
+        <div className="flex flex - col space - y-3">;
+          <Button;
+            on_click={() => navigate ('/payments')}
+            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+          >;
+            Try Again;
+          </Button>;
+          <Button;
+            variant="outline";
+            on_click={() => navigate ('/dashboard')}
+            className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           >;
             Return to Dashboard;
           </Button>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+
+
+
+<<<<<<< HEAD
+}
+    </div>);
+}
+    </div>);
+}
+    </div>;
+  );}
+ </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {
+  () => navigate ('/payments') 
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button 
+}
+    </div>;
+  );
+}
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
     </div>);
@@ -151,6 +313,7 @@ import { XCircle } from 'lucide-react',;
 }
     </div>);
 }
+<<<<<<< HEAD
     </div>);
 }
     </div>;
@@ -170,3 +333,7 @@ import { XCircle } from 'lucide-react',;
 }
 
 '"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

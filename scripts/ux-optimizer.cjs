@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<<< HEAD:scripts/ux-optimizer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,8 +8,14 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const fs = require('fs')
 const path = require('path')
         console.log('⚡ Optimizing loading performance...')
@@ -19,6 +26,7 @@ const path = require('path')
         this.improvements.push('Mobile optimization completed')
             "recommendations"
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -27,11 +35,21 @@ const path = require('path')
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<<< HEAD:scripts/ux-optimizer.cjs
+            "recommendations"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 console.log('🎨 Running UX optimization...);
 
+<<<<<<< HEAD
 class UXOptimizer {
   // TODO: Implement
 }
@@ -140,3 +158,15 @@ function checkErrorHandling(dir) {
 >>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+console.log('🎨 Running UX optimization...');
+console.log('✅ UX optimization completed');
+<<<<<<<< HEAD:scripts/ux-optimizer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+========
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

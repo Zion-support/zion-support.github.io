@@ -340,9 +340,26 @@ href: '/analytics';';';',
 } </li>) ';';"}? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan') ;";"}> {";";"  cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" > cartCount ;";"}</span>) ";";"}  <HoverCardContent> <MiniCartPreview />   </li> </ul> <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto" > <LanguageSelector /> </div> </div> </nav> <LoginModal isOpen= {;"
   loginOpen ;
 }onOpenChange= {;
+<<<<<<< HEAD
 :temp_broken_files/layout/MainNavigation.tsx;"
   setLoginOpen ;"}/> </>) ;'";"}'"'""
   setLoginOpen ;"
 }/> </>) ;'";""
 }'"'""
 ursor/fix-lint-push-and-merge-to-main-e10e:src/layout/MainNavigation.tsx;"`;
+=======
+<<<<<<< HEAD
+:temp_broken_files/layout/MainNavigation.tsx
+  setLoginOpen ;"}/> </>) ;'";"}'"'"
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/layout/MainNavigation.tsx
+=======
+
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

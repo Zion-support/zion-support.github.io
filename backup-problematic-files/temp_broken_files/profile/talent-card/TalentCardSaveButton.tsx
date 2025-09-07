@@ -96,6 +96,7 @@ isAuthenticated ;
  } = useToast ();
 const router = useRouter ();
 //Handle save toggle return;
+<<<<<<< HEAD
 :temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
 
 }variant: "default",
@@ -103,10 +104,30 @@ const router = useRouter ();
 }) 
 };
 }/> </button>) ;"}"
+=======
+<<<<<<< HEAD
+:temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
+
+}variant: "default",
+}) ;
+};
+}/> </button>) ;"}"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }variant: "default" ;
 }) 
 
 };
 }/> </button>) ;
 }"
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
+=======
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/talent-card/TalentCardSaveButton.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

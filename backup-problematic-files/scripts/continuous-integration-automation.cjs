@@ -25,6 +25,7 @@ const path = require('path')
       message"
       console.log('\n FAILED "STEPS")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -41,3 +42,9 @@ const path = require('path')
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      this.log(`� CI automation "failed"`)
+=======
+      this.log(`� CI automation "failed"`)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

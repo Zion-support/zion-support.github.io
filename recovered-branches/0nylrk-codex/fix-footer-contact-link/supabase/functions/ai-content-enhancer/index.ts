@@ -1,4 +1,29 @@
+<<<<<<< HEAD
 const corsHeaders = {
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm ;
+
+<<<<<<< HEAD
+
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 serve(async (req) => {
 
@@ -8,6 +33,14 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
@@ -19,6 +52,16 @@ serve(async (req) => {
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  try {
+    const { content, enhancementType, context, instructions } = await req && req.json();
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+    if (!openAiKey) {
+      throw new Error("OPENAI_API_KEY is not defined")
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
@@ -43,6 +86,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+<<<<<<< HEAD
 
     return new Response(null, { headers: corsHeaders })
   }
@@ -56,16 +100,74 @@ serve(async (req) => {
     if (!openAiKey) {"
       throw new Error("OPENAI_API_KEY is not defined")
 
+=======
+    return new Response(null, { headers: corsHeaders })
+  }
+
+  try {
+    const { content, enhancementType, context, instructions } = await req.json();
+    const openAiKey = Deno.env.get("OPENAI_API_KEY");
+    if (!openAiKey) {
+      throw new Error("OPENAI_API_KEY is not defined")
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
   try {;
     const { content, enhancementType, context, instructions } = await req.json(),;"
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
+<<<<<<< HEAD
 
+=======
+
+
+;
+    if (!openAiKey) {;
+      throw new Error("OPENAI_API_KEY is not defined"),;
+    }
+;
+    if (!content && !context) {;
+      throw new Error("Either content or context is required"),;
+    }
+    if (!openAiKey) {;
+      throw new Error("OPENAI_API_KEY is not defined");
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     if (!content && !context) {"
       throw new Error("Either content or context is required")
     }
+<<<<<<< HEAD
+    // Determine the system prompt based on enhancement type
+    let systemPrompt = "";
+    let userPrompt = "";
+    switch (enhancementType) {
+      case "resume-summary":
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
+        userPrompt = `Create a professional summary for someone with the following background: ${content |context}. Include key strengths and career objectives. Keep it under 200 words.`;
+        break;
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
+        break;
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.";
+        userPrompt = `Write a comprehensive job description for ${context |'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`;
+        break;
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.";
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context |'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`;
+        break;
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional."
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+<<<<<<< HEAD
     if (!openAiKey) {;"
       throw new Error("OPENAI_API_KEY is not defined");
 
@@ -111,6 +213,61 @@ serve(async (req) => {
         userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,;
         break,;"
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;'`
+=======
+    // Determine the system prompt based on enhancement type
+    let systemPrompt = "",
+    let userPrompt = "",
+
+    switch (enhancementType) {
+      case "resume-summary":
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`;
+        break;
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
+        break;
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.";
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`;
+        break;
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.";
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`;
+        break;
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,
+        break,
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,
+        break,
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,
+        break,
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,
+        break,
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+;
+    // Determine the system prompt based on enhancement type;
+    let systemPrompt = "",;
+    let userPrompt = "",;
+    switch (enhancementType) {;
+      case "resume-summary":;
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",;
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,;
+        break,;
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",;
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,;
+        break,;
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",;
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,;
+        break,;
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",;
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,;
+        break,;
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;
 
     // Determine the system prompt based on enhancement type
@@ -120,7 +277,11 @@ serve(async (req) => {
       case "resume-summary":
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         userPrompt = `Create a professional summary for someone with the following background: ${content |context}. Include key strengths and career objectives. Keep it under 200 words.`;
+<<<<<<< HEAD
 
+=======
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
       throw new Error("OPENAI_API_KEY is not defined")import "https: //deno.land / x/xhr@0.1.0 / mod.ts",;
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
@@ -161,11 +322,12 @@ if ( {) {
       case "resume - summary":;
         system_prompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         user_prompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`;
-
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
+<<<<<<< HEAD
+=======
 
     // Determine the system prompt based on enhancement type
     let systemPrompt = "",
@@ -174,6 +336,11 @@ if ( {) {
     switch (enhancementType) {
       case "resume-summary":
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
 
     // Add custom instructions if provided
@@ -181,10 +348,21 @@ if ( {) {
       userPrompt += ` Additional instructions: ${instructions}`
     }
 
+<<<<<<< HEAD
     // Call OpenAI API;
 "`
         "Authorization": `Bearer ${openAiKey}`,"
         "Content-Type": "application/json"},
+=======
+<<<<<<< HEAD
+
+    // Call OpenAI API
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST"
+      headers: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       body: JSON.stringify({}
 "
@@ -358,8 +536,30 @@ if ( {) {}
         model: "gpt-4o-mini";
         messages: [
           {
+<<<<<<< HEAD
             role: "system"
             content: systemPrompt}
+=======
+
+
+<<<<<<< HEAD
+        "Authorization": `Bearer ${openAiKey}`;
+        "Content-Type": "application/json"}
+        "Authorization": `Bearer ${openAiKey}`,
+        "Content-Type": "application/json"},
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [
+          {
+            role: "system"
+            content: systemPrompt}
+          {
+            role: "user"
+            content: userPrompt}];
+        temperature: 0.7})});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             role: "system",
             content: systemPrompt},
           {
@@ -367,14 +567,29 @@ if ( {) {}
             content: userPrompt}],
         temperature: 0.7})}),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         temperature: 0 && 0.7})});
+<<<<<<< HEAD
 
 role: "system"
+=======
+
+
+
+            role: "system"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             content: systemPrompt}
           {
             role: "user"
@@ -384,7 +599,12 @@ role: "system"
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
+<<<<<<< HEAD
 
+=======
+    const data = await response && response.json();
+    const enhancedContent = data && data.choices[0].message && message.content;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -437,14 +657,18 @@ if ( {) {
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
-
     console.error ("Error in ai - content - enhancer function:", error);
     return new Response (
       JSON.stringify ({
         error: error.message});
       {
         status: 500,
+<<<<<<< HEAD
         headers: { ...cors_headers, "Content - Type": "application / json" }});
+=======
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 if (!response.ok) {
       const errorData = await response.json(),
@@ -453,6 +677,17 @@ if (!response.ok) {
     const data = await response.json();
     const enhancedContent = data.choices[0].message.content;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (!response.ok) {
+      const errorData = await response.json(),
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+    const data = await response.json();
+    const enhancedContent = data.choices[0].message.content;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const data = await response.json(),
     const enhancedContent = data.choices[0].message.content,
 
@@ -473,6 +708,13 @@ if (!response.ok) {
     )
   }
 });
+<<<<<<< HEAD
+=======
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -509,6 +751,7 @@ if (!response.ok) {
         error: error.message}),;
       {;
         status: 500,;
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }});
   }
 });
@@ -527,10 +770,21 @@ if (!response.ok) {
         break,
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+=======
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    );
+
+
+  }
+});
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
     let userPrompt = "",;
+<<<<<<< HEAD
     switch (enhancementType) {;
       case "resume-summary":;
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",;
@@ -826,12 +1080,121 @@ temperature: 0.7;)
   const errorData = await response.json ();`;
 throw new Error (`OpenAI API error: $ {)
   JSON.stringify (errorData) `;
+=======
+;
+    switch (enhancementType) {;
+      case "resume-summary":;
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",;
+        userPrompt = `Create a professional summary for someone with the following background:${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,;
+        break,;
+      case "work-description":systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",;
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills:${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context:${context}` :''}`,;
+        break,;
+      case "job-post":systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",;
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information:${content}.` :''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,;
+        break,;
+      case "proposal":systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",;
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job:${context || 'the described position'}. ${content ? `The freelancer has these qualifications:${content}.` :''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,;
+        break,;
+      default:systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
+        userPrompt = `Enhance this professional text to be more impactful:${content}. ${context ? `Additional context:${context}` :''}`,;
+    }
+;
+    // Add custom instructions if provided;
+    if (instructions) {;
+      userPrompt += ` Additional instructions:${instructions}`,;
+    }
+;
+    // Call OpenAI API;
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method:"POST",;
+      headers:{;
+        "Authorization":`Bearer ${openAiKey}`,;
+        "Content-Type":"application/json"},;
+      body:JSON.stringify({;
+        model:"gpt-4o-mini",;
+        messages:[;
+          {;
+            role:"system",;
+            content:systemPrompt},;
+          {;
+            role:"user",;
+            content:userPrompt}],;
+        temperature:0.7})}),;
+;
+    if (!response.ok) {;
+      const errorData = await response.json(),;
+      throw new Error(`OpenAI API error:${JSON.stringify(errorData)}`),;
+    }
+;
+    const data = await response.json(),;
+    const enhancedContent = data.choices[0].message.content,;
+;
+    return new Response(;
+      JSON.stringify({;
+        enhancedContent}),;
+      {;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
+    ),;
+  } catch (error) {;
+    console.error("Error in ai-content-enhancer function:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error:error.message}),;
+      {;
+        status:500,;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
+    ),;  }
+}),;
+ serve (async (req) => {
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {
+  
+}//Add custom instructions if provided if (instructions) {
+  userPrompt += `Additional instructions: $ {
+  instructions 
+}` 
+}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {
+  method: "POST";
+headers: {
+  "Authorization" : `Bearer $ {
+  openAiKey 
+}`;
+"Content-Type" : "application/json" 
+};
+body: JSON.stringify ({
+  model: "gpt-4o-mini";
+messages: [ {
+  role: "system";
+content: systemPrompt 
+};
+{
+  role: "user";
+content: userPrompt 
+}];
+temperature: 0.7 
+}) 
+});
+if (!response.ok) {
+  const errorData = await response.json ();
+throw new Error (`OpenAI API error: $ {
+  JSON.stringify (errorData) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }`) 
 }const data = await response.json ();
 const enhancedContent = data.choices[0].message.content;
 return new Response (JSON.stringify ({
+<<<<<<< HEAD
   enhancedContent;)
   error: error.message;)
+=======
+  enhancedContent 
+});
+{
+  return new Response (JSON.stringify ({
+  error: error.message 
+});
+{
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   status: 500;
 );
 }
@@ -839,4 +1202,11 @@ return new Response (JSON.stringify ({
   }
 });
   }
+<<<<<<< HEAD
 });
+=======
+});
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

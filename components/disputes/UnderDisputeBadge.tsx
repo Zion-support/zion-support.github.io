@@ -2,11 +2,21 @@ import useSWR from 'swr';
 <<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
+<<<<<<< HEAD
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
+=======
+<<<<<<< HEAD
+=======
+
+  hasActiveDispute: boolean;
+  isLoading: boolean;
+} {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
 const fetcher = null;
 
+<<<<<<< HEAD
   "isLoading": boolean;
 } {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some(("d": any) =>;`
       d && d.projectId === projectId &&;
@@ -16,9 +26,26 @@ export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: 
   const hasActiveDispute = $2;
   return { hasActiveDispute, isLoading: !data && !error }
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const hasActiveDispute = !!data?.disputes?.some(;
+    (d: any) =>;
+      d && d.projectId === projectId &&;
+      (d && d.status === 'Open' || d && d.status === 'Under Review');
+  );
+  return { hasActiveDispute, isLoading: !data && !error };
+export default function UnderDisputeBadge(): any ({;
+  projectId,;
+}: {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const fetcher = null;
 
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 export function useProjectDisputeStatus(projectId: string): {
@@ -31,6 +58,14 @@ export function useProjectDisputeStatus(projectId: string): {
 
 <<<<<<< HEAD
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  projectId: string;
+}) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
@@ -83,6 +118,16 @@ if (return null) {$2;
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+<<<<<<< HEAD
+=======
+
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d && d.projectId === projectId && (d && d.status === 'Open' || d && d.status === 'Under Review')),;
+
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
@@ -103,11 +148,25 @@ export default function UnderDisputeBadge(): any ({;}
 
   }
 
+<<<<<<< HEAD
   projectId
 }: {;
   }
   "projectId": string;
 }) {;
+=======
+<<<<<<< HEAD
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d && d.projectId === projectId && (d && d.status === 'Open' || d && d.status === 'Under Review')),;
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
+  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
@@ -161,10 +220,18 @@ if (return null) {$2;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
   return { hasActiveDispute, isLoading: !data && !error }
 }
+<<<<<<< HEAD
+=======
 
 export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
   projectId}
 }: {;}
@@ -191,6 +258,14 @@ return (;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -234,6 +309,7 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);
+<<<<<<< HEAD
 )}
   )
 }
@@ -254,3 +330,69 @@ if (return null) {
 
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  return (
+    <span className=&quot;inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs&quot;>
+      Under Dispute
+    </span>
+  )
+
+}
+<<<<<<< HEAD
+
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export function useProjectDisputeStatus(projectId: string): {
+
+export function useProjectDisputeStatus(projectId: string): {;
+  hasActiveDispute: boolean;
+  isLoading: boolean;
+} {
+  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+  const hasActiveDispute = !!data?.disputes?.some(
+    (d: any) =>
+      d.projectId === projectId &&
+      (d.status === 'Open' |d.status === 'Under Review')
+  );
+  return { hasActiveDispute, isLoading: !data && !error }
+export default function UnderDisputeBadge({
+  projectId
+}: {
+  projectId,
+}: {;
+  projectId: string;
+}) {
+  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+  if (!hasActiveDispute) return null;
+  return (
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+      Under Dispute
+    </span>
+  );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' |d.status === 'Under Review'))
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+
+export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
+export default function UnderDisputeBadge({ projectId }: { projectId: string }) {;
+  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
+  if (!hasActiveDispute) return null;
+
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+      Under Dispute
+    </span>
+);
+}
+  );
+}
+
+}
+  );
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

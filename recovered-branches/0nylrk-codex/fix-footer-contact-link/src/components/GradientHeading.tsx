@@ -1,13 +1,88 @@
 interface GradientHeadingProps {;
   children: React && React.ReactNode,;
 
-  const Tag = level;
+<<<<<<< HEAD
+=======
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
 
+
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  const Tag = level;
   return (
     <Tag;
       className={cn("
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
 
+<<<<<<< HEAD
+=======
+import { cn } from "@/lib/utils";
+import React from "react";
+interface GradientHeadingProps {
+
+<<<<<<< HEAD
+  children: React.ReactNode
+  className?: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { cn } from "@/lib/utils",
+import React from "react",
+import {cn} from "@/lib/utils";
+import React from "react";
+import { cn } from "@/lib/utils",
+import React from "react",
+
+<<<<<<< HEAD
+
+  return (
+    <Tag
+      className={cn(
+
+interface GradientHeadingProps {
+  children: React.ReactNode,
+  className?: string,
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
+
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+  const Tag = level;
+  const Tag = level,
+  
+  return (
+    <Tag
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+
+        className
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+import { cn } from "@/lib/utils",;
+import React from "react",;
+interface GradientHeadingProps {;
+  children: React.ReactNode,;
+  className?: string,;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+  return (;
+    <Tag;
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+        className;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -74,6 +149,7 @@ interface GradientHeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";"
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className
 
@@ -81,6 +157,19 @@ interface GradientHeadingProps {
     >
       {children}
 
+<<<<<<< HEAD
+=======
+    </Tag>;
+  );
+}
+
+        className
+      )}>;
+      {children}
+    </Tag>;
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { cn } from '@/lib / utils';
 
 import React from './react';
@@ -118,6 +207,19 @@ interface GradientHeadingProps {;
   className?:string,;
   level?:"h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils",;
+import React from "react",;
+;
+interface GradientHeadingProps {;
+  children:React.ReactNode,;
+  className?:string,;
+  level?:"h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 export function GradientHeading({ children, className, level = "h2" } GradientHeadingProps) {;
   const Tag = level,;
@@ -141,10 +243,20 @@ return (<Tag className= {
   children 
 }</Tag>) 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       )}
     >
       {children}
     </Tag>
   )
+<<<<<<< HEAD
 }
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

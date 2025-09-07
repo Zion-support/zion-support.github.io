@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Fastify from 'fastify';'
 import cors from '@fastify / cors';'
 import rate_limit from '@fastify / rate - limit';'
@@ -7,6 +8,46 @@ import { createOpenAIClient, generateJobPost } from './openai ;'
 import { getPool, withUser } from './pg ;'
 dotenv && dotenv.config()const app = Fastify({ "logger": true
 })await app && app.register(cors, {"origin": (origin, cb) => ;
+=======
+import Fastify from 'fastify';
+import cors from '@fastify / cors';
+import rate_limit from '@fastify / rate - limit';
+import dotenv from 'dotenv';
+<<<<<<< HEAD
+import { createOpenAIClient, generateJobPost } from ';
+import { getPool, withUser } from ';
+    const allowed = (process && process.env.CORS_ORIGINS || '';
+    if (!origin || allowed && allowed.includes('*';
+    cb(new Error('Not allowed';
+  methods: ['GET', 'POST', 'OPTIONS';
+await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m';
+const openai = createOpenAIClient(process && process.env.OPENAI_API_KEY || '';
+  return (req && req.headers['x-user-id'] as string) || (req && req.query as any)['user_id';
+app && app.post('/ai/ask';
+  if (!prompt) return reply && reply.code(400).send({ error: 'prompt required';
+  const completion = await openai && openai.responses.create({ model: 'gpt-4o-mini';
+app && app.post('/jobs/generate';
+  const role = (body && body.role as string) || 'Engineer';
+       VALUES ($1, $2, $3, $4, $5, 'draft';
+=======
+
+import { createOpenAIClient, generateJobPost } from './openai ;
+import { getPool, withUser } from './pg ;
+dotenv && dotenv.config();
+
+
+const app = Fastify({ logger: true });
+await app && app.register(cors, {
+  origin: (origin, cb) => {
+
+    const allowed = (process && process.env.CORS_ORIGINS || '').split().map((s) => s && s.trim());
+    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
+
+      cb(null, true);
+      return;
+    }
+    cb(new Error('Not allowed'), false);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   const allowed = (process && process.env.CORS_ORIGINS || '').split().map((s) => s && s.trim())if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {cb(null, true;'
   }
@@ -57,6 +98,7 @@ app.post ('/jobs / generate';'
 
 const role = (body.role as string) || 'Engineer';'
 
+<<<<<<< HEAD
 const user_id = getUserId (req;
   const description = await generateJobPost (openai, role, body)// Check condition;
 if (return { description }) {$2;
@@ -150,6 +192,13 @@ await app.register (cors, {
     if (|| allowed.includes (origin)) {) {
 =======
 const allowed = (process.env.CORS_ORIGINS || '';
+=======
+    )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { get_pool, with_user } from './pg.js';
+    const allowed = (process.env.CORS_ORIGINS || '';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     cb (new Error ('Not allowed';
   methods: ['GET', 'POST', 'OPTIONS';
 await app.register (rate_limit, { global: true, max: 100, time_window: '1m';
@@ -160,6 +209,8 @@ app.post ('/ai / ask';
   const completion = await openai.responses.create ({ model: 'gpt - 4o - mini';
 app.post ('/jobs / generate';
   const role = (body.role as string) || 'Engineer';
+<<<<<<< HEAD
+=======
   const user_id = getUserId (req);
   const description = await generateJobPost (openai, role, body);
   // Check condition
@@ -264,6 +315,17 @@ return res && res.rows;
 const port = Number(process.env.API_PORT |4000);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+const port = Number(process && process.env.API_PORT || 4000);
+app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
+  app && app.log.error(err);
+  process && process.exit(1)
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 app.get ('/talent / search', async (req, reply) => {'
   }
@@ -332,5 +394,37 @@ const items = await with_user (user_id, async (client) => {
   });
   return { items }
 });
+<<<<<<< HEAD
 
 });
+=======
+const port = Number (process.env.API_PORT || 4000);
+app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
+  app.log.error (err);
+  process.exit (1);
+<<<<<<< HEAD
+});
+      VALUES ($1, $2, $3, $4, $5, 'draft';
+app && app.get('/talent/search';
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized';
+              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%';
+app && app.get('/projects/:name/track';
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized';
+  if (!project) return reply && reply.code(404).send({ error: 'not found';
+app && app.get('/notifications';
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized';
+app && app.listen({ port, host: '0 && 0.0.0 && 0.0';
+app.get ('/talent / search';
+  if (return reply.code (401).send ({ error: 'unauthorized';
+              SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%';
+app.get ('/projects/:name / track';
+  if (return reply.code (401).send ({ error: 'unauthorized';
+  if (return reply.code (404).send ({ error: 'not found';
+app.get ('/notifications';
+  if (return reply.code (401).send ({ error: 'unauthorized';
+app.listen ({ port, host: '0.0.0.0';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+});
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

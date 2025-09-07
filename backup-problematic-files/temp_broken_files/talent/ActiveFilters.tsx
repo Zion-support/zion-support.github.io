@@ -116,7 +116,28 @@ export function ActiveFilters({;
   selectedAvailability.map (status => (<ClickableBadge key= {;
   status ;"
 }> {';
+<<<<<<< HEAD
 )
 }<X className="h-3 w-3" /> ) ) ;"
 
   selectedRegions.map (region => (<ClickableBadge key= {;
+=======
+  status === 'full-time' ? 'Full-time' : status === 'part-time' ? 'Part-time' : 'Project-based' ;
+}<X className="h-3 w-3" /> </ClickableBadge>) ) ;
+}{;
+  selectedRegions.map (region => (<ClickableBadge key= {;
+  region ;
+}</ClickableBadge>) ;
+<<<<<<< HEAD
+:temp_broken_files/talent/ActiveFilters.tsx
+}<Button ;"}'"
+}<Button ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ActiveFilters.tsx
+=======
+
+}<Button ;
+}'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

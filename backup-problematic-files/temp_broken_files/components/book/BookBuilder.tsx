@@ -61,6 +61,7 @@ function fileToBase64(file: File): Promise<string> {
 }
 
 export default function BookBuilder() {
+<<<<<<< HEAD
   const [project, setProject] = useState<BookProject>(initialProject);
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER');
   const [busy, setBusy] = useState<boolean>(false);
@@ -95,12 +96,31 @@ export default function BookBuilder() {
               <img;
                 alt='ISBN barcode';
                 className='h-16';
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+  const [project, setProject] = useState<BookProject>(initialProject)
+  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER')
+  const [busy, setBusy] = useState<boolean>(false)
+  const coverPreview = useMemo(() => {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
   const [busy, setBusy] = useState<boolean>(false),
+<<<<<<< HEAD
 
   const coverPreview = useMemo(() => {
+=======
+  const coverPreview = useMemo_(() => {
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -109,11 +129,32 @@ export default function BookBuilder() {
           <div className="text-lg opacity-80">{project.meta.subtitle}</div>
           <div className="pt-6 text-sm opacity-70">By {project.meta.author}</div>
           {project.meta.isbn ? (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <div className="pt-4">
               <img
                 alt="ISBN barcode"
                 className="h-16"
+<<<<<<< HEAD
 
+=======
+            <div className=&quot;pt-4&quot;>              <img,
+alt=&quot;ISBN barcode&quot;
+                className=&quot;h-16&quot;
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+            <div className=&quot;pt-4&quot;>              <img,
+alt=&quot;ISBN barcode&quot;
+                className=&quot;h-16&quot;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />;
             </div>;
@@ -269,6 +310,7 @@ URL.revokeObjectURL(url);
   }
 
   return (
+<<<<<<< HEAD
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
         <h1 className='text-2xl font-bold'>Book Builder</h1>
@@ -287,6 +329,40 @@ URL.revokeObjectURL(url);
 
             <option value="LETTER">8.5x11 Letter</option>
             <option value="A4">A4</option>
+=======
+    <div className="space-y-8">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold">Book Builder</h1>
+        <div className="flex gap-2">
+          <button className="btn btn-sm btn-outline" onClick={handleGenerateWithAI} disabled={busy}>
+            <Wand2 className="w-4 h-4 mr-1" /> AI Assist
+          </button>
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+          <select
+            className="border rounded px-2 py-1 text-sm"
+            value={pageSize}
+            onChange={(e) => setPageSize(e.target.value as any)}
+          >
+            <option value="LETTER">8.5x11 Letter</option>
+            <option value="A4">A4</option>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <select,
+className=&quot;border rounded px-2 py-1 text-sm&quot;
+            value={pageSize}
+            onChange={(e) => setPageSize(e.target.value as any)}          >
+            <option value=&quot;LETTER&quot;>8.5x11 Letter</option>
+            <option value=&quot;A4&quot;>A4</option>
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           </select>
           <button className="btn btn-sm btn-primary onClick={handleExportPdf} disabled={busy}>
             <Download className=w-4 h-4 mr-1" /> PDF
@@ -327,7 +403,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
           <button className="btn btn-sm btn-secondary" onClick={handleExportEpub} disabled={busy}>
             <FileType className="w-4 h-4 mr-1" /> EPUB
           </button>
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+          <button className="btn btn-sm btn-secondary" onClick={handleExportEpub} disabled={busy}>
+            <FileType className="w-4 h-4 mr-1" /> EPUB
+          </button>
+          <button className=&quot;btn btn-sm btn-secondary&quot; onClick={handleExportEpub} disabled={busy}>
+            <FileType className=&quot;w-4 h-4 mr-1&quot; /> EPUB          </button>
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 
+<<<<<<< HEAD
+=======
+          <button className=&quot;btn btn-sm btn-secondary&quot; onClick={handleExportEpub} disabled={busy}>
+            <FileType className=&quot;w-4 h-4 mr-1&quot; /> EPUB          </button>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         </div>
       </div>
 
@@ -384,16 +478,110 @@ function fileToBase64(file: File): Promise<string> {
 pr-12325
 >>>>>>> origin/chore/fix-lint-and-merge
           </h2>
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">Title</div>
+              <input
+                className="w-full border rounded px-3 py-2"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>Title</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+<<<<<<< HEAD
+                value={project.meta.title}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
+            </label>
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={project.meta.title}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
+            </label>
+:components/book/BookBuilder.tsx
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">Subtitle</div>
+              <input
+                className="w-full border rounded px-3 py-2"
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                value={project.meta.title}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
+            </label>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <label className=&quot;space-y-1&quot;>
 </label>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
+<<<<<<< HEAD
 </input>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
+=======
+<<<<<<< HEAD
+                value={project.meta.subtitle}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
+            </label>
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={project.meta.subtitle}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
+            </label>
+:components/book/BookBuilder.tsx
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">Author</div>
+              <input
+                className="w-full border rounded px-3 py-2"
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                value={project.meta.subtitle}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
+            </label>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <label className=&quot;space-y-1&quot;>
+              <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
+              <input,
+className=&quot;w-full border rounded px-3 py-2&quot;
+<<<<<<< HEAD
+                value={project.meta.author}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
+            </label>
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+                value={project.meta.author}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
+            </label>
+:components/book/BookBuilder.tsx
+            <label className="space-y-1">
+              <div className="text-xs uppercase opacity-60">ISBN (optional)</div>
+              <input
+                className="w-full border rounded px-3 py-2"
+                placeholder="9781234567897"
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                value={project.meta.author}
+                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
+            </label>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <label className=&quot;space-y-1&quot;>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
                 placeholder=&quot;9781234567897&quot;
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             <label className='space-y-1'>
               <div className='text-xs uppercase opacity-60'>Title</div>
@@ -533,6 +721,15 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 placeholder='9781234567897'
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 value={project.meta.isbn}
                 onChange={e =>
                   setProject({
@@ -543,6 +740,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
               />
             </label>
           </div>
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
           <div className='pt-2'>{coverPreview}</div>
         </div>
@@ -558,6 +756,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <div className="space-y-4">
           <h2 className="font-semibold flex items-center gap-2">
             <Settings className="w-4 h-4" /> Visual Elements
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+          <div className="pt-2">{coverPreview}</div>
+        </div>
+        <div className="space-y-4">
+          <h2 className="font-semibold flex items-center gap-2">
+            <Settings className="w-4 h-4" /> Visual Elements
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <div className=&quot;pt-2&quot;>{coverPreview}</div>        </div>
+
+        <div className=&quot;space-y-4&quot;>
+          <h2 className=&quot;font-semibold flex items-center gap-2&quot;>
+            <Settings className=&quot;w-4 h-4&quot; /> Visual Elements
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           </h2>
           <div className="space-y-3>
             <label className=block">
@@ -620,6 +842,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+                <div key={i} className="aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden">
+                  <img src={src} alt="visual" className="object-cover w-full h-full" />
+                </div>
+                <div key={i} className=&quot;aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden&quot;>
+                  <img src={src} alt=&quot;visual&quot; className=&quot;object-cover w-full h-full&quot; />                </div>
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+                <div key={i} className=&quot;aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden&quot;>
+                  <img src={src} alt=&quot;visual&quot; className=&quot;object-cover w-full h-full&quot; />                </div>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               ))}
             <div className='grid grid-cols-3 gap-2'>
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -716,12 +957,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <h2 className="font-semibold">Chapters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <div key={idx} className="border rounded-lg p-4 space-y-2">
               <div className="font-medium">{ch.title}</div>
               <textarea
                 className="w-full min-h-[160px] border rounded p-2"
                 value={ch.content}
                 onChange={(e) => {
+<<<<<<< HEAD
                   const chapters: BookChapter[] = [...project.chapters],
 :backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 =======
@@ -746,16 +993,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
 pr-12325
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+                  const chapters: BookChapter[] = [...project.chapters]
+                  chapters[idx] = { ...chapters[idx], content: e.target.value }
+                  setProject({ ...project, chapters })
+                }}
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
               <div className=&quot;font-medium&quot;>{ch.title}</div>
               <textarea,
 className=&quot;w-full min-h-[160px] border rounded p-2&quot;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 value={ch.content}
                 onChange={(e) => {
 <<<<<<< HEAD
                   const chapters: BookChapter[] = [...project.chapters],
                   chapters[idx] = { ...chapters[idx], content: e.target.value },
                   setProject({ ...project, chapters })                }}
+<<<<<<< HEAD
 
 =======
                   const chapters: BookChapter[] = [...project.chapters];,
@@ -782,6 +1051,9 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                 }}
 origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               />
             </div>
           ))}
@@ -793,10 +1065,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
+<<<<<<< HEAD
             <div key={i} className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <input
                 className='border rounded px-2 py-1'
 
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+            <div key={i} className="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <input
+                className="border rounded px-2 py-1"
+            <div key={i} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2&quot;>
+              <input,
+className=&quot;border rounded px-2 py-1&quot;
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+            <div key={i} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2&quot;>
+              <input,
+className=&quot;border rounded px-2 py-1&quot;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts];
@@ -845,19 +1138,58 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
               />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components/book/BookBuilder.tsx
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <input
                 className="border rounded px-2 py-1"
                 value={q.attribution ?? ''}
                 onChange={(e) => {
+<<<<<<< HEAD
                   const quoteCallouts = [...project.visuals.quoteCallouts];
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"
+=======
+                  const quoteCallouts = [...project.visuals.quoteCallouts]
+                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value }
+
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
+                }}
+                placeholder="Attribution"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <input,
+className=&quot;border rounded px-2 py-1&quot;
+              <input,
+className=&quot;border rounded px-2 py-1&quot;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
+<<<<<<< HEAD
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
+                placeholder=&quot;Attribution&quot;
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+:components/book/BookBuilder.tsx
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
+                }}
+                placeholder="Attribution"
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
+                placeholder=&quot;Attribution&quot;
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
                 placeholder=&quot;Attribution&quot;
@@ -887,6 +1219,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
                 }}
                 placeholder="Attribution"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />
               <div />
             </div>
@@ -894,6 +1227,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
         </div>
       </section>
     </div>
+<<<<<<< HEAD
                       alt='visual';
                       className='object-cover w-full h-full';
                     />;
@@ -984,3 +1318,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuil
 "
 pr-12325
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+  )}
+:components/book/BookBuilder.tsx
+  );
+};
+  )}
+:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

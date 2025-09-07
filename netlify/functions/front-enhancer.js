@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 function runNode(relPath, args = []) {
 
 <<<<<<< HEAD
@@ -12,37 +20,60 @@ function runNode(relPath, args = []) {
 =======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
 >>>>>>> origin/chore/fix-lint-and-merge
   return {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
 exports && exports.config = {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   schedule: '*/20 * * * *', // every 20 minutes
 
 }
+<<<<<<< HEAD
 
 exports && exports.handler = async () => {}
+=======
+exports && exports.handler = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const logs = [];
   function logStep(name, fn) {}
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+=======
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return status;
   }
   // Update the front page auto-generated section'
@@ -50,24 +81,41 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     runNode('automation/front-index-advertiser && advertiser.cjs')
   );
   // Attempt to sync changes back to main (best-effort)
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+=======
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
+<<<<<<< HEAD
 
 exports && exports.config = {'
   schedule: '*/20 * * * *', // every 20 minutes;
 },
 
 exports && exports.handler = async () => {}
+=======
+exports && exports.config = {
+  schedule: '*/20 * * * *', // every 20 minutes
+},
+exports && exports.handler = async () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const logs = [],
   function logStep(name, fn) {}`
     logs && logs.push(`\n=== ${name} ===`),
@@ -75,8 +123,22 @@ exports && exports.handler = async () => {}
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),`
     logs && logs.push(`exit=${status}`),
+<<<<<<< HEAD
     return status;
   }
+=======
+    return status
+  }
+  // Update the front page auto-generated section
+<<<<<<< HEAD
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser && advertiser.cjs')),
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'))
+  // Attempt to sync changes back to main (best-effort)
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   logStep('front-index:advertise', () => runNode('automation/front-index-advertiser && advertiser.cjs')),
 
@@ -87,8 +149,13 @@ exports && exports.handler = async () => {}
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const path = require ('path');
 
 const { spawn_sync } = require ('child_process');
@@ -231,6 +298,7 @@ function log_step() {}`
   // Attempt to sync changes back to main (best - effort);'
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -276,3 +344,6 @@ return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.st
   // Attempt to sync changes back to main (best - effort);'
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),''
   return { status_code: 200, body: logs.join ('\n') }''
+=======
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

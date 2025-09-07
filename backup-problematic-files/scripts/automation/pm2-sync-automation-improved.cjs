@@ -616,7 +616,10 @@ process.on(SIGINT', async () => {}
     await global.improvedPm2SyncAutomation.stop()}
   process.exit(0)}
 });
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 process.on(SIGTERM', async () => {}
 =======
 
@@ -641,6 +644,9 @@ process.on('SIGTERM', async () => {}
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Start the automation system;
 if (require.main === module) {}
   global.improvedPm2SyncAutomation = new ImprovedPM2SyncAutomation();
@@ -654,6 +660,7 @@ if (require.main === module) {}
 
 =======
   }, 60000)};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -672,3 +679,9 @@ module.exports = ImprovedPM2SyncAutomation;
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+module.exports = ImprovedPM2SyncAutomation;
+=======
+module.exports = ImprovedPM2SyncAutomation;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

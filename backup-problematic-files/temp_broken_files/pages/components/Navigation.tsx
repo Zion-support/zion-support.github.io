@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React, { useState } from "react";
@@ -10,6 +21,33 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 
 import {
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+
+
+<<<<<<< HEAD
+  ArrowRight,
+  Award,
+  BarChart3,
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
   BookOpen,
   Brain,
   Building,
@@ -44,6 +82,13 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
 import {;
   ArrowRight,;
   Award,;
@@ -86,8 +131,28 @@ import {;
   Users,;
   X,;
   Zap,;
+<<<<<<< HEAD
+} from "lucide-react";
+ursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
+  Zap,;
+} from "lucide-react";
+
+  Truck,
+  Users,
+  X,
+  Zap
+=======
 
 } from "lucide-react";
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
   Clock,
   DollarSign,
   Cpu,
@@ -126,9 +191,42 @@ import {;
   Clock as Time,
   DollarSign as Money;
 
+<<<<<<< HEAD
+=======
 } from 'lucide-react';
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 
 } from 'lucide-react';
+=======
+>>>>>>> origin/automation-improvements-final
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+} from 'lucide-react';
+
+
+<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+} from 'lucide-react';
+origin/automation-improvements-final
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
   ArrowRight
   Award
   BarChart3
@@ -171,6 +269,18 @@ import {;
   X
   Zap
 } from "lucide-react";
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+
+
+
+<<<<<<< HEAD
+origin/main
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
 const navigationItems = [
   {
     title: "Services"
@@ -235,7 +345,15 @@ const navigation_items = [;
         popular: false
       }
       {
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 title: "Cloud Solutions",
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        title: "Cloud Solutions",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
         href: "/cloud - solutions",
         icon: Cloud,
         description: "Scalable cloud infrastructure",
@@ -329,6 +447,13 @@ title: "Resources",
     href: "/resources",
     icon: FileText,
     submenu: [;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
       {
         title: "Blog"
         href: "/blog"
@@ -336,7 +461,15 @@ title: "Resources",
         description: "Latest insights and trends"
       }
       {
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 title: "Case Studies",
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        title: "Case Studies",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
         href: "/case - studies",
         icon: BarChart3,
         description: "Success stories and results",
@@ -353,6 +486,13 @@ title: "Tutorials",
         icon: BookOpen,
         description: "Step - by - step guides",
       },
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
       {
         title: "FileTextation"
         href: "/docs"
@@ -362,10 +502,25 @@ title: "Tutorials",
     ]
   }
   {
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 title: "Company",
     href: "/about",
     icon: Building,
     submenu: [;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    title: "Company",
+    href: "/about",
+    icon: Building,
+    submenu: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
       {
         title: "About Us"
         href: "/about"
@@ -405,6 +560,13 @@ title: "Company",
     ]
   }
 ];
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
 const navigationItems = [;
   {;
     title: "Services",;
@@ -610,6 +772,7 @@ const navigationItems = [;
     ],;
   },;
 ];
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 const quickLinks = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },;
   { title: "Contact", href: "/contact", icon: Phone },;
@@ -620,6 +783,15 @@ const quickLinks = [;
 ];
 export default function Navigation() {;
 export default function Navigation() {
+=======
+export default function Navigation() {
+
+export default function Navigation() {;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
 
 export default function Navigation() {;
 
@@ -633,6 +805,18 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+export default function Navigation() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -657,7 +841,15 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 className="hover:text-blue-200 transition-colors">;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                className="hover:text-blue-200 transition-colors">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
 ;
 const quick_links = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },
@@ -702,13 +894,28 @@ function Navigation() {
                 href="/pricing";
                 className="hover:text - blue - 200 transition - colors";
               >;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 <Link href="/" className="flex items-center space-x-2">;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Link href="/" className="flex items-center space-x-2">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
               <span className="text-white font-bold text-xl">Z</span>;
             </div>;
@@ -730,16 +937,39 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text - sm text - gray - 500">;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 href={item && item.href}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  href={item && item.href}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
                   <item && item.icon className="w-5 h-5" />;
                   <span>{item && item.title}</span>;
                   <ChevronDown className="w-4 h-4" />;
                 </Link>;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -788,16 +1018,42 @@ href={item && item.href}
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 </div>;
           </div>;
+=======
+<<<<<<< HEAD
+            </div>;
+          </div>;
+=======
+
+            </div>;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 </button>;
         </div>;
+=======
+<<<<<<< HEAD
+          </button>;
+        </div>;
+=======
+
+          </button>;
+        </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
@@ -986,6 +1242,7 @@ href={item && item.href}
           </motion.div>)}
       </div>;
     </nav>);
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/components/Navigation.tsx
 }
 import React from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
@@ -1007,3 +1264,6 @@ const Page = () => {
 };
 
 export default Page;
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/components/Navigation.tsx

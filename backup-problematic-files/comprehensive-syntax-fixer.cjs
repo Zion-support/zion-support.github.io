@@ -3,8 +3,19 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -112,9 +123,13 @@ const path = require('path');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 class ComprehensiveSyntaxFixer {
   // TODO: Implement
 }
@@ -122,8 +137,17 @@ class ComprehensiveSyntaxFixer {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;
     this.totalErrors = 0;
+<<<<<<< HEAD
   log(message) {
 
+=======
+  }
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+  async fixAllSyntaxErrors() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
   // TODO: Implement
       // Get all TypeScript and JavaScript files;
@@ -131,6 +155,7 @@ class ComprehensiveSyntaxFixer {
       this.log(`Found ${files.length} files to check`);
       for (const file of files) {
         await this.fixFileSyntax(file);
+<<<<<<< HEAD
 
       throw error;
 <<<<<<< HEAD
@@ -140,6 +165,26 @@ class ComprehensiveSyntaxFixer {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      }
+      this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
+      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
+    } catch (error) {
+      this.log(`❌ Error during syntax fixing: ${error.message}`);
+      throw error;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
   }
 
@@ -306,6 +351,14 @@ class ComprehensiveSyntaxFixer {
     return fixed;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Run the fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllSyntaxErrors().catch(console.error);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
     
@@ -420,9 +473,16 @@ module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
 >>>>>>> origin/main
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 "`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -2,6 +2,14 @@
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
 
 pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -102,18 +110,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   const form = formidable({ multiples: false }),
+=======
+<<<<<<< HEAD
+import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
+export const config = { api: { bodyParser: false } }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
     const section = String(fields.section |'General');
     const file = files.file as formidable.File | undefined;
+<<<<<<< HEAD
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
 
@@ -151,6 +170,27 @@ import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 export const config = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
+=======
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+  const form = formidable({ multiples: false });
+  form && form.parse(req, (err, fields, files) => {
+    if (err) return res && res.status(400).json({ error: 'Invalid form data' });
+    const section = String(fields && fields.section || 'General');
+    const file = files && files.file as formidable && formidable.File | undefined;
+    if (!file || !file && file.filepath)
+      return res && res.status(400).json({ error: 'File missing' });
+    const targetDir = resolveDataPath(path && path.join('dataroom', section));
+    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
+    const targetPath = path && path.join(
+      targetDir,
+      file && file.originalFilename || path && path.basename(file && file.filepath)
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
@@ -298,6 +338,7 @@ const targetPath = path && path.join(
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -315,6 +356,9 @@ const targetPath = path && path.join(
     res && res.status(200).json({ ok: true });'
   });    appendAuditLog({ type: 'file_upload, section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
+  })
+=======
 
     res.status(200).json({ ok: true })
     appendAuditLog({}
@@ -372,6 +416,7 @@ const targetPath = path && path.join(
 }
 
 =======
+<<<<<<< HEAD
 const form = formidable ({ multiples: false,}
 })form.parse (req, (err, fields, files) => {if ;}
   return res.status (400).json ({ error: 'Invalid form data',}
@@ -386,6 +431,9 @@ const section = String (fields.section || 'General';
 >>>>>>> origin/chore/fix-lint-and-merge
   })
   })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 
@@ -499,7 +547,9 @@ const target_path = path.join (
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
     res.status (200).json ({ ok: true });
   });
+
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
@@ -544,3 +594,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 pr-12243
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

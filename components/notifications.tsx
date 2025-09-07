@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import dynamic from 'next/dynamic';
 const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
@@ -51,12 +52,18 @@ const NotificationCenter = dynamic (() => import ('../components / notifications
  */;
 function NotificationsPage() {return <NotificationCenter    />;}
 }
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);}
     this.state = { hasError: false,}
 };
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true,}
@@ -65,20 +72,69 @@ class ErrorBoundary extends React.Component {
   
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  }
   render() {
     if (this.state.hasError) {}
       return <div    />Something went wrong.</div>;}
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+import React from 'react';
+<<<<<<< HEAD
+import dynamic from 'next / dynamic';
+;
+const NotificationCenter = dynamic (
+  () => import ('../components / notifications / NotificationCenter'),
+  {
+    ssr: false
+  }
+);
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false}),
+export default function NotificationsPage() {
+const NotificationCenter = dynamic(;
+  () => import('../components/notifications/NotificationCenter'),;
+  {;
+    ssr: false,;
+  }
+);
+export default function NotificationsPage() {;
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;
+  ssr: false}),;
+export default function NotificationsPage() {;
+  return <NotificationCenter />;
+}
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+  ssr: false}),
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;
+}
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
   return <NotificationCenter    />;
 }
+<<<<<<< HEAD
 import dynamic from 'next / dynamic';
 ;
 
@@ -128,3 +184,7 @@ function NotificationsPage() {
 }
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

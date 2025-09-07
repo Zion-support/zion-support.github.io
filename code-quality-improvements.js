@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
 
@@ -11,14 +12,22 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
+=======
+const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
+const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
+const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; 
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const improvements = ['Extracted common components to reduce duplication',
   'Added proper TypeScript types',
   'Improved error handling',
@@ -34,6 +43,7 @@ console.log('Code quality improvements "applied": ', improvements.length);
 
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
+<<<<<<< HEAD
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 
@@ -42,10 +52,14 @@ const improvements = [ 'Extracted common components to reduce duplication','Adde
 
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
+<<<<<<< HEAD
 
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
@@ -64,3 +78,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
+const improvements = [ 'Extracted common components to reduce duplication','Added proper TypeScript types','Improved error handling','Added loading states','Optimized bundle size','Enhanced accessibility','Improved SEO meta tags','Added performance monitoring',]; console.log('Code quality improvements applied:',improvements.length);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

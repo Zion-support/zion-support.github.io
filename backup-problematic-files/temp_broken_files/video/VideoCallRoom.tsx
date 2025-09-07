@@ -195,4 +195,24 @@ className?: string ;
   isVideoEnabled ? <Video /> : <VideoOff /> ;
 
   isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
+<<<<<<< HEAD
 :temp_broken_files/video/VideoCallRoom.tsx
+=======
+<<<<<<< HEAD
+:temp_broken_files/video/VideoCallRoom.tsx
+}</Button> <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
+};"'"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}</Button> <Button > {;
+  isAudioOnly ? <VolumeX /> : <Volume2 /> ";
+}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
+};
+'"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/video/VideoCallRoom.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

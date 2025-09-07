@@ -1,5 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from';react''';'';'
+=======
+import React from\';react\''\';\'';
+const React from";react""";"";''"
+:src.disabled/components/home/EnhancedServicesOverview.jsx
+import React from\';react\''\';\'';
+const React from";react""";"";''"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\''\';\'';
+const React from";react""";"";''"
+:temp_exclude/src.disabled/components/home/EnhancedServicesOverview.jsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 import React from\';react\''\';\'';'
@@ -18,12 +31,17 @@ const React from";react""";"";''";
 >>>>>>> origin/chore/fix-lint-and-merge
 import React from\';react\''\';\'';
 const React from";react""";"";''"
+<<<<<<< HEAD
 
 
 
 :src.disabled/components/home/EnhancedServicesOverview.jsx
 
 <<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/home/EnhancedServicesOverview.jsx
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import _React from';react''';'';
 =======
 const React from";react""";"";''"

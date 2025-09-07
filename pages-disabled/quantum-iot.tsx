@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 }
 import React from 'react';
 import Head from 'next/head';
@@ -14,6 +17,71 @@ export default function QuantumInternetSecurityPage() {const service = enhancedR
         <link;
           rel=\"canonical\";
           href=\"https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform\";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Head from "next/head";
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Check,;
+  ArrowRight,;
+  Shield,;
+  Star,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+} from "lucide-react";
+import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
+import Button from "../components/ui/Button";
+import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
+<<<<<<< HEAD
+export default function QuantumInternetSecurityPage() {;
+  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
+    s && s.link.endsWith("/quantum-internet-security-platform"),;
+=======
+
+export default function QuantumInternetSecurityPage() {;
+  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
+    s && s.link.endsWith("/quantum-internet-security-platform"),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  );
+  if (!service) return null;
+
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service && service.name} - Zion Tech Group</title>;
+        <meta name="description" content={service && service.description} />;
+        <link
+          rel="canonical"
+          href="https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         />;
       </Head>;
       <div className=\"min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8\" />;

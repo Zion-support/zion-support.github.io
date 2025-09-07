@@ -8,6 +8,7 @@ const path = // // require(path');
 const { execSync } = // // require('child_process');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -23,6 +24,11 @@ const { execSync } = // // require('child_process');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -63,6 +69,7 @@ class TypeScriptErrorFixer {}
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -71,6 +78,11 @@ class TypeScriptErrorFixer {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -96,6 +108,7 @@ class TypeScriptErrorFixer {}
       this.startContinuousFixing();
       this.setupSignalHandlers();
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 <<<<<<< HEAD
       this.log(info', 'TypeScript Error Fixer Service started successfully);
@@ -115,6 +128,13 @@ class TypeScriptErrorFixer {}
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      this.log('info', 'TypeScript Error Fixer Service started successfully');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log(error', 'Failed to start TypeScript Error Fixer Service, error);
@@ -275,6 +295,7 @@ class TypeScriptErrorFixer {}
         
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
+<<<<<<< HEAD
 
         this.log(info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++}
@@ -295,6 +316,12 @@ class TypeScriptErrorFixer {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -345,6 +372,7 @@ class TypeScriptErrorFixer {}
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, g);
@@ -362,6 +390,11 @@ class TypeScriptErrorFixer {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
 =======
@@ -407,6 +440,7 @@ class TypeScriptErrorFixer {}
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -423,6 +457,11 @@ class TypeScriptErrorFixer {}
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Try to fix common module issues;
     if (moduleName.startsWith(@/')) {}
       const fixedModule = moduleName.replace('@/, ./src/');
@@ -433,10 +472,18 @@ class TypeScriptErrorFixer {}
   fixPropertyError(line, error, allLines, lineIndex) {}
     const propertyMatch = error.message.match(/Property ([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
+<<<<<<< HEAD
     
     const propertyName = propertyMatch[1];
 <<<<<<< HEAD
 
+=======
+    const propertyName = propertyMatch[1];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Add type assertion;
     if (line.includes(. + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)}
@@ -458,6 +505,7 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, g);
     let firstUsage = -1;
     let declaration = -1;
+<<<<<<< HEAD
 
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
@@ -511,6 +559,12 @@ class TypeScriptErrorFixer {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -643,6 +697,7 @@ fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -659,3 +714,9 @@ fixer.start().catch(error => {})
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+});
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,9 +1,51 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
 export default function AgenticRAGPage() {
 	const contactInfo = null;
 	return (
 		<UltraFuturisticMatrixBackground>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
+
+import React from 'react'
+import Head from 'next/head'
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
+export default function AgenticRAGPage() {
+	const contactInfo = {
+		mobile: '+1 302 464 0950'
+		email: 'kleber@ziontechgroup.com'
+		address: '364 E Main St STE 1008 Middletown DE 19709'
+		website: 'https://ziontechgroup.com'
+
+
+	},
+	const plans = [
+		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
+		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }],
+export default function AgenticRAGPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+	const _plans = [
+		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
+		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
+		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
+
+	return (_<UltraFuturisticMatrixBackground>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -18,6 +60,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</Link>
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
 
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -42,6 +88,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -78,6 +128,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</div>
 			</div>
 		</UltraFuturisticMatrixBackground>
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
 	)
   } catch (error) {
     console.error("Error:", error);
@@ -87,6 +138,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
+=======
+
+}
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 import React from 'react',
 import Head from 'next / head',
 import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',
@@ -167,6 +226,16 @@ return (
   </div>;
   </UltraFuturisticMatrixBackground>);
 
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
+=======
+	return (_<UltraFuturisticMatrixBackground>
+			<Head>
+				<title>Agentic RAG Platform | Zion Tech Group</title>
+				<meta name=&quot;description&quot; content=&quot;High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in.&quot; />
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/agentic-rag&quot; />
+			</Head>
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 			<div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
 				<div className=&quot;text-center max-w-4xl mx-auto mb-12&quot;>
 					<h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6&quot;>Agentic RAG</h1>
@@ -185,6 +254,13 @@ return (
 							<ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
 								{p.items.map((i) => (
 									<li key={i} className=&quot;flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400&quot;><Check /> <span>{i}</span></li>
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 
 import React from 'react';
 import Head from 'next/head';
@@ -224,6 +300,10 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
 		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
+=======
+ursor/fix-lint-push-and-merge-to-main-ce13
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx
 	return (_<UltraFuturisticMatrixBackground>
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
@@ -258,7 +338,68 @@ export default function AgenticRAGPage() {_const _contactInfo = {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages.disabled/agentic-rag.tsx
 
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+
+
+							</ul>;
+						</div>;
+					))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				</div>
+				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
+						<div className="text-gray-400 text-sm mb-2">Ingestion</div>
+						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400"><Link /> Connectors</div>
+						<p className="text-gray-400 mt-2 text-sm">Web, PDFs, DOCX, Markdown, GitHub, and cloud storage with auto-chunking.</p>
+					</div>
+					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
+						<div className="text-gray-400 text-sm mb-2">Indexing</div>
+						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-purple-400"><Database /> Hybrid + Rerank</div>
+						<p className="text-gray-400 mt-2 text-sm">Embedding + keyword + reranker for fidelity. Namespace partitioning with filters.</p>
+					</div>
+					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
+						<div className="text-gray-400 text-sm mb-2">Evaluation</div>
+						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-rose-400"><Gauge /> Accuracy & Sources</div>
+						<p className="text-gray-400 mt-2 text-sm">Evals with reference answers, source grounding checks, and hallucination detection.</p>
+					</div>
+				</div>
+				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
+						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
+						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
+						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+					</div>
+					<div className="text-center">
+						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
+						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
+					</div>
+				</div>
+			</div>
+		</UltraFuturisticMatrixBackground>
+	);
+};
+	)
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/agentic-rag.tsx

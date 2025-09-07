@@ -1,7 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-deployment-automation.cjs
+=======
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 <<<<<<< HEAD
 =======
@@ -27,6 +35,7 @@ const path = require('path')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 =======
@@ -41,6 +50,14 @@ const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"
@@ -60,6 +77,9 @@ console.log('\n� Phase "8")
   "criticalFailures"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+console.log('� Deployment summary saved "to")
+=======
 console.log('� Deployment summary saved "to")
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +87,7 @@ console.log('� Deployment summary saved "to")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+<<<<<<< HEAD
 console.log('� Deployment summary saved "to")
 <<<<<<< HEAD
 console.log('� Deployment summary saved "to")
@@ -76,3 +97,11 @@ console.log('� Deployment summary saved "to")
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

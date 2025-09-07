@@ -60,6 +60,15 @@ return (;
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export function MobileResumeBuilder() {
+=======
+export function MobileResumeBuilder() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import React from "react";
 
@@ -72,11 +81,45 @@ import {}
 
 >>>>>>> origin/chore/fix-lint-and-merge
 export function MobileResumeBuilder() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
 
     <div className="min-h-screen">;
       <MobileHeader"
         title="Resume Builder"
+<<<<<<< HEAD
+=======
+        showBack
+<<<<<<< HEAD
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
+export function MobileResumeBuilder() {
+  return (
+    <div className="min-h-screen">
+      <MobileHeader
+        title="Resume Builder"
+        showBack
+      />
+      <main className="py-4">
+        <ResumeBuilderComponent />
+      </main>
+      <BottomNavigation />
+    </div>
+  )
+
+
+
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       />
       <main className="py-4">
@@ -102,6 +145,11 @@ export function MobileResumeBuilder() {
         <ResumeBuilderComponent />
       </main>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 
@@ -113,6 +161,12 @@ export function MobileResumeBuilder() {;
       <MobileHeader;
         title="Resume Builder";
         showBack;
+<<<<<<< HEAD
+      />;
+      <main className="py-4">;
+        <ResumeBuilderComponent />;
+      </main>;
+=======
 
       />;
 
@@ -120,6 +174,7 @@ export function MobileResumeBuilder() {;
         <ResumeBuilderComponent />;
       </main>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <BottomNavigation />;
 
   );
@@ -138,7 +193,10 @@ export /**;
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
 import React from "react",;
@@ -164,6 +222,7 @@ import {
 } from "../components/resume/MobileResumeBuilder";"
 export function MobileResumeBuilder() {
 
+<<<<<<< HEAD
   return ("
     <div className="min-h-screen">;"
 </div>
@@ -197,6 +256,27 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
 
       </main>;
 
+=======
+<<<<<<< HEAD
+
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",;
+;
+export function MobileResumeBuilder() {;
+  return (;
+    <div className="min-h-screen">;
+      <MobileHeader;
+        title="Resume Builder";
+        showBack;
+      />;
+      ;
+      <main className="py-4">;
+        <ResumeBuilderComponent />;
+      </main>;
+      ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <BottomNavigation />;
     </div>;
   ),;
@@ -205,4 +285,11 @@ import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/res
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

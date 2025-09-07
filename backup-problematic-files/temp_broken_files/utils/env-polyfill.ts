@@ -78,4 +78,20 @@ browser: true ;
 });
 //Ensure process is available on globalThis ;
 }
+<<<<<<< HEAD
 }//Ensure process is available on window ;
+=======
+}//Ensure process is available on window ;
+<<<<<<< HEAD
+:temp_broken_files/utils/env-polyfill.ts
+}"}// Ensure process is available globally '"
+}
+}// Ensure process is available globally '"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
+=======
+
+}
+}// Ensure process is available globally '"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+
+=======
 
 <<<<<<< HEAD
     </div>;
@@ -56,6 +60,12 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default function AutomationPage() {
 }
 return (;
@@ -77,6 +87,18 @@ export default function AutomationPage() {
     </div>
 
 
+<<<<<<< HEAD
+  ),
+}
+
+  )
+}
+
+  )
+}
+  ),
+}
+=======
 export default function AutomationPage() {;
   return ("
     <div className=\"container mx-auto px-4 py-10\"    />;"
@@ -103,9 +125,19 @@ function AutomationPage() {
   ),;
 pr-12243
 }
+<<<<<<< HEAD
 return (;
     <div className="container mx - auto px - 4 py - 10">;"
       <h1 className="text - 2xl font - semibold">Automation</h1>;"
+=======
+export default /**
+ * AutomationPage - Function description
+ */
+function AutomationPage() {
+  return (
+    <div className="container mx - auto px - 4 py - 10">;
+      <h1 className="text - 2xl font - semibold">Automation</h1>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Automation tools overview coming soon.</p>;
     </div>),
 }
@@ -136,6 +168,7 @@ pr-12243
   );}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),
     </div>)
@@ -187,3 +220,7 @@ import React from 'react';
 }
 "
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

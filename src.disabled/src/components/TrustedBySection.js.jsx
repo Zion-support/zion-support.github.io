@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from \"react\"; export function TrustedBySection() { const companies = []; return () <section className=\"py-16 bg-white/5> <div className=\"container\" mx-auto px-4 text-center> <h3 className=\"text-lg\" font-medium text-zion-slate-light mb-8\"> Trusted by leading companies worldwide </h3>\" <div className=\"flex\" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key=\"{comp}\" className=\"text-zion-slate-light\" font-semibold> {comp} </div> ))} </div> </div> </section> )} \");} ); \"export default ComponentName;\"
+const React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"""
+import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
+=======
 
 =======
 import _React from react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className=container mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8> Trusted by leading companies worldwide </h3> <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key={comp} className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} );} ); export default ComponentName;"
@@ -19,6 +24,7 @@ const React from react"; export function TrustedBySection() { const companies = 
 
 import _React from react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className=container mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8> Trusted by leading companies worldwide </h3> <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies && companies.map(comp => ( <div key={comp} className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} );} ); export default ComponentName;"
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -27,3 +33,6 @@ import _React from react"; export function TrustedBySection() { const companies 
 import React from \"react\; export function TrustedBySection() { const companies = []; return () <section className=\py-16 bg-white/5> <div className=\"container\" mx-auto px-4 text-center> <h3 className=\text-lg\ font-medium text-zion-slate-light mb-8\"> Trusted by leading companies worldwide </h3>\" <div className=\flex\ flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key=\"{comp}\" className=\text-zion-slate-light\ font-semibold> {comp} </div> ))} </div> </div> </section> )} \");} ); \"export default ComponentName;\
 const React from react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className=container mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8> Trusted by leading companies worldwide </h3> <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key={comp} className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} );} ); export default ComponentName;"""
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

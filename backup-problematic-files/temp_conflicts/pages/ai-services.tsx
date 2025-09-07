@@ -146,8 +146,19 @@ pr-12325
     </>;
   );
 }
-
+<<<<<<< HEAD
 :temp_conflicts/pages/ai-services.tsx
 ;
 }
 :backup-problematic-files/temp_conflicts/pages/ai-services.tsx
+=======
+
+<<<<<<< HEAD
+:temp_conflicts/pages/ai-services.tsx
+;
+}
+:backup-problematic-files/temp_conflicts/pages/ai-services.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

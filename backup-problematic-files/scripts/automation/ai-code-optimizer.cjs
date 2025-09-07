@@ -180,6 +180,7 @@ console.log( AI optimization report saved to ${reportPath})
   recommendations.push(♿ Accessibility improvements recommended for better user experience)
   console.log("🤖 Starting AI Code Optimizer...")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -196,3 +197,9 @@ console.log( AI optimization report saved to ${reportPath})
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.error(" AI Code Optimizer "failed")
+=======
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

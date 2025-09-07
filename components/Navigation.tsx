@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 'use client';
 
@@ -221,6 +222,11 @@ export default function Navigation() {export default function Navigation() {expo
 };
 
 export default Navigation;
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 import React, { useState } from "react";
@@ -228,6 +234,110 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+  BarChart3
+} from 'lucide-react;
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+ursor/integrate-build-improve-and-re-verify-8f7d
+  BarChart3,
+  Search,;
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+  BarChart3,
+  Search
+} from 'lucide-react';
+import SearchModal from './SearchModal';
+=======
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  ChevronRight,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+  ArrowRight,;
+  Building,;
+  Users,;
+  ShoppingCart,;
+  Shield,;
+  Zap,;
+  Globe,;
+  BarChart3,;
+  Search,;
+
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+  BarChart3
+} from 'lucide-react;
+  BarChart3
+} from 'lucide-react;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+<<<<<<< HEAD
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   Menu
   X
   ChevronDown
@@ -252,15 +362,74 @@ import {
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 
+<<<<<<< HEAD
 export default function Navigation() {
 export default function Navigation() {;
 export default function Navigation() {;
+=======
+
+
+<<<<<<< HEAD
+export default function Navigation() {
+export default function Navigation() {;
+origin/main
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function Navigation() {
+export default function Navigation() {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+} from './lucide-react';
+import SearchModal from "./SearchModal";
+;
+export default /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState (false);
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState (false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState (false);
+  const [isSearchOpen, setIsSearchOpen] = useState (false);
+;
+  const services = [;
+    {
+      name: "AI Services",
+      href: "/ai - services",
+      description: "Machine Learning, NLP, Computer Vision",
+      icon: BarChart3,
+    },
+    {
+      name: "IT Services",
+      href: "/it - services",
+      description: "Cloud, DevOps, Cybersecurity",
+      icon: Shield,
+    },
+    {
+      name: "Micro SaaS",
+      href: "/micro - saas",
+      description: "Custom SaaS Solutions",
+      icon: Zap,
+    },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -280,6 +449,25 @@ export default function Navigation() {;
       icon: Shield
     }
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+  const solutions = [;
+    {
+      name: "Enterprise Solutions",
+      href: "/enterprise",
+      description: "Large - scale business solutions",
+      icon: Building,
+    },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -287,6 +475,97 @@ export default function Navigation() {;
       icon: Zap
     }
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      name: "E - commerce",
+      href: "/ecommerce",
+      description: "Online store solutions",
+      icon: ShoppingCart,
+    },
+    {
+      name: "Healthcare",
+      href: "/industries / healthcare",
+      description: "Medical technology solutions",
+      icon: Users,
+    },
+    {
+      name: "Finance",
+      href: "/industries / finance",
+      description: "Fintech and banking solutions",
+      icon: BarChart3,
+    },
+    {
+      name: "Education",
+      href: "/industries / education",
+      description: "EdTech platforms",
+      icon: Users,
+    },
+  ];
+;
+  const industries = [;
+    {
+      name: "Healthcare",
+      href: "/industries / healthcare",
+      description: "Medical technology solutions",
+    },
+    {
+      name: "Finance",
+      href: "/industries / finance",
+      description: "Fintech and banking solutions",
+    },
+    {
+      name: "Education",
+      href: "/industries / education",
+      description: "EdTech platforms",
+    },
+    {
+      name: "Government",
+      href: "/industries / government",
+      description: "Public sector solutions",
+    },
+    {
+      name: "Manufacturing",
+      href: "/industries / manufacturing",
+      description: "Industrial automation",
+    },
+    {
+      name: "Retail",
+      href: "/industries / retail",
+      description: "E - commerce and retail tech",
+    },
+    {
+      name: "Real Estate",
+      href: "/industries / real - estate",
+      description: "Property technology",
+    },
+  ];
+;
+  const resources = [;
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" },
+    {
+      name: "Case Studies",
+      href: "/case - studies",
+      description: "Success stories and projects",
+    },
+    {
+      name: "White Papers",
+      href: "/white - papers",
+      description: "In - depth research and analysis",
+    },
+    {
+      name: "Tutorials",
+      href: "/tutorials",
+      description: "Step - by - step guides",
+    },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       name: "Training"
       href: "/training"
@@ -299,6 +578,181 @@ export default function Navigation() {;
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const services = [;
+    {;
+      name: "AI Services",;
+      href: "/ai-services",;
+      description: "Machine Learning, NLP, Computer Vision",;
+      icon: BarChart3,;
+    },;
+    {;
+      name: "IT Services",;
+      href: "/it-services",;
+      description: "Cloud, DevOps, Cybersecurity",;
+      icon: Shield,;
+    },;
+    {;
+      name: "Micro SaaS",;
+      href: "/micro-saas",;
+      description: "Custom SaaS Solutions",;
+      icon: Zap,;
+    },;
+    {;
+      name: "Blockchain",;
+      href: "/blockchain",;
+      description: "Smart Contracts, DeFi, NFTs",;
+      icon: Building,;
+    },;
+    {;
+      name: "IoT Solutions",;
+      href: "/iot",;
+      description: "Connected Devices, Edge Computing",;
+      icon: Globe,;
+    },;
+    {;
+      name: "Cybersecurity",;
+      href: "/cybersecurity",;
+      description: "Security Audits, Compliance",;
+      icon: Shield,;
+    },;
+  ];
+  const solutions = [;
+    {;
+      name: "Enterprise Solutions",;
+      href: "/enterprise",;
+      description: "Large-scale business solutions",;
+      icon: Building,;
+    },;
+    {;
+      name: "Startup Solutions",;
+      href: "/startup",;
+      description: "Scalable startup platforms",;
+      icon: Zap,;
+    },;
+    {;
+      name: "E-commerce",;
+      href: "/ecommerce",;
+      description: "Online store solutions",;
+      icon: ShoppingCart,;
+    },;
+    {;
+      name: "Healthcare",;
+      href: "/industries/healthcare",;
+      description: "Medical technology solutions",;
+      icon: Users,;
+    },;
+    {;
+      name: "Finance",;
+      href: "/industries/finance",;
+      description: "Fintech and banking solutions",;
+      icon: BarChart3,;
+    },;
+    {;
+      name: "Education",;
+      href: "/industries/education",;
+      description: "EdTech platforms",;
+      icon: Users,;
+    },;
+  ];
+  const industries = [;
+    {;
+      name: "Healthcare",;
+      href: "/industries/healthcare",;
+      description: "Medical technology solutions",;
+    },;
+    {;
+      name: "Finance",;
+      href: "/industries/finance",;
+      description: "Fintech and banking solutions",;
+    },;
+    {;
+      name: "Education",;
+      href: "/industries/education",;
+      description: "EdTech platforms",;
+    },;
+    {;
+      name: "Government",;
+      href: "/industries/government",;
+      description: "Public sector solutions",;
+    },;
+    {;
+      name: "Manufacturing",;
+      href: "/industries/manufacturing",;
+      description: "Industrial automation",;
+    },;
+    {;
+      name: "Retail",;
+      href: "/industries/retail",;
+      description: "E-commerce and retail tech",;
+    },;
+    {;
+      name: "Real Estate",;
+      href: "/industries/real-estate",;
+      description: "Property technology",;
+    },;
+  ];
+  const resources = [;
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" },;
+    {;
+      name: "Case Studies",;
+      href: "/case-studies",;
+      description: "Success stories and projects",;
+    },;
+    {;
+      name: "White Papers",;
+      href: "/white-papers",;
+      description: "In-depth research and analysis",;
+    },;
+    {;
+      name: "Tutorials",;
+      href: "/tutorials",;
+      description: "Step-by-step guides",;
+    },;
+    {;
+      name: "Training",;
+      href: "/training",;
+      description: "Professional development",;
+    },;
+    {;
+      name: "Events",;
+      href: "/events",;
+      description: "Webinars and conferences",;
+    },;
+    { name: "News", href: "/news", description: "Industry news and updates" },;
+  ];
+  const quickLinks = [;
+    { name: "About Us", href: "/about" },;
+    { name: "Our Team", href: "/team" },;
+    { name: "Careers", href: "/careers" },;
+    { name: "Contact", href: "/contact" },;
+    { name: "Support", href: "/support" },;
+    { name: "Status", href: "/status" },;
+<<<<<<< HEAD
+=======
+
+  ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  ];
+
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+
+<<<<<<< HEAD
+  ];
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <>;
       {/* Top Bar */}
@@ -315,21 +769,146 @@ export default function Navigation() {;
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  href="mailto:kleber@ziontechgroup && ziontechgroup.com"
+                  className="hover:text-blue-300">;
+                  kleber@ziontechgroup && ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+            <div className="flex items-center space-x-4">;
+              <span className="text-blue-200">24/7 Support Available</span>;
+              <div className="flex space-x-2">;
+                <a href="#" className="hover:text-blue-300">;
+                  <Facebook className="w-4 h-4" />;
+                </a>;
+                <a href="#" className="hover:text-blue-300">;
+                  <Twitter className="w-4 h-4" />;
+                </a>;
+                <a href="#" className="hover:text-blue-300">;
+                  <Linkedin className="w-4 h-4" />;
+                </a>;
+                <a href="#" className="hover:text-blue-300">;
+                  <Instagram className="w-4 h-4" />;
+;
+  const quick_links = [;
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/team" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact", href: "/contact" },
+    { name: "Support", href: "/support" },
+    { name: "Status", href: "/status" },
+  ];
+;
+  return (
+    <>;
+      {/* Top Bar */}
+      <div className="bg - blue - 900 text - white py - 2">;
+        <div className="container mx - auto px - 4">;
+          <div className="flex flex - col md:flex - row justify - between items - center text - sm">;
+            <div className="flex items - center space - x-6 mb - 2 md:mb - 0">;
+              <div className="flex items - center">;
+                <Phone className="w - 4 h - 4 mr - 2" />;
+                <a href="tel:+13024640950" className="hover:text - blue - 300">;
+                  +1 302 464 0950;
+                </a>;
+              </div>;
+              <div className="flex items - center">;
+                <Mail className="w - 4 h - 4 mr - 2" />;
+                <a;
+                  href="mailto:kleber@ziontechgroup.com";
+                  className="hover:text - blue - 300";
+                >;
+                  kleber@ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+            <div className="flex items - center space - x-4">;
+              <span className="text - blue - 200">24 / 7 Support Available</span>;
+              <div className="flex space - x-2">;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Facebook className="w - 4 h - 4" />;
+                </a>;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Twitter className="w - 4 h - 4" />;
+                </a>;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Linkedin className="w - 4 h - 4" />;
+                </a>;
+                <a href="#" className="hover:text - blue - 300">;
+                  <Instagram className="w - 4 h - 4" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <Link href="/" className="flex items-center space-x-2">;
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
+                <span className="text-white font-bold text-xl">Z</span>;
+              </div>;
+              <div>;
+                <div className="text-xl font-bold text-gray-900">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text-xs text-gray-500">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {/* Main Navigation */}
       <nav className="bg-white shadow-lg sticky top-0 z-50">;
         <div className="container mx-auto px-4">;
           <div className="flex justify-between items-center py-4">;
             {/* Logo */}
+<<<<<<< HEAD
+=======
+            <Link href="/" className="flex items - center space - x-2">;
+              <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
+                <span className="text - white font - bold text - xl">Z</span>;
+              </div>;
+              <div>;
+                <div className="text - xl font - bold text - gray - 900">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text - xs text - gray - 500">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Home;
+              </Link>;
+=======
+
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
+                Home;
+              </Link>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -387,6 +966,19 @@ export default function Navigation() {;
                           return (
                             <Link;
                               key={index}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </AnimatePresence>;
+              </div>;
+=======
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -463,6 +1055,19 @@ export default function Navigation() {;
                           return (
                             <Link;
                               key={index}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </AnimatePresence>;
+              </div>;
+=======
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -500,6 +1105,19 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                </AnimatePresence>;
+              </div>;
+=======
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -537,26 +1155,84 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </AnimatePresence>;
               </div>;
-
               <Link
                 href="/pricing"
+<<<<<<< HEAD
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Pricing;
               </Link>;
             </div>;
+=======
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+                </AnimatePresence>;
+              </div>;
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+origin/main
+origin/automation-improvements-final
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
                 onClick={() => setIsSearchOpen(true)}
+<<<<<<< HEAD
+=======
+                className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
+                aria-label="Search";
+              >;
+                <Search className="w-5 h-5" />;
+              </button>;
+              <Link
+                href="/contact"
+
+<<<<<<< HEAD
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               >
                 Get Started
               </Link>
@@ -586,6 +1262,19 @@ export default function Navigation() {;
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            </button>;
+          </div>;
+=======
+
+            </button>;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -599,6 +1288,21 @@ export default function Navigation() {;
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  >;
+                    Home;
+                  </Link>;
+=======
+
+                  >;
+                    Home;
+                  </Link>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -615,6 +1319,19 @@ export default function Navigation() {;
                           {service && service.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -631,6 +1348,19 @@ export default function Navigation() {;
                           {solution && solution.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -647,6 +1377,19 @@ export default function Navigation() {;
                           {industry && industry.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -663,10 +1406,38 @@ export default function Navigation() {;
                           {resource && resource.name}
                         </Link>;
                       ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    </div>;
+                  </div>;
+=======
+
+                    </div>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  >;
+                    Pricing;
+                  </Link>;
+                  <div className="px-4 py-2 space-y-2">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -929,6 +1700,21 @@ export default function Navigation() {;
                     </a>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </AnimatePresence>;
+        </div>;
+      </nav>;
+=======
+
+          </AnimatePresence>;
+        </div>;
+      </nav>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -946,6 +1732,7 @@ export default function Navigation() {;
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
+<<<<<<< HEAD
 }
 } from 'lucide-react';
 
@@ -2818,3 +3605,6 @@ export default Navigation
 =======
 export default Navigation;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

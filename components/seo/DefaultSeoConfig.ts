@@ -1,13 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 pr-12243
 import type { DefaultSeoProps } from 'next-seo';
+=======
+import type { DefaultSeoProps } from 'next-seo';
+
+  defaultTitle: 'Zion Tech Solutions';
+  titleTemplate: '%s | Zion Tech Solutions'
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
+  openGraph: {
+    type: 'website';
+    locale: 'en_US';
+    url: 'https://ziontechgroup.netlify.app'
+    siteName: 'Zion Tech Solutions'}
+  twitter: {
+    handle: '@ziontech';
+    site: '@ziontech'
+    cardType: 'summary_large_image'}
+const config: DefaultSeoProps = {
+  defaultTitle: 'Zion Tech Solutions', titleTemplate: '%s | Zion Tech Solutions',
+  description: 'Engineering services, AI/ML, DevOps, and product development by Zion.',
+    openGraph: {
+    type: 'website', locale: 'en_US',
+    url: 'https://ziontechgroup.netlify.app',
+    siteName: 'Zion Tech Solutions'
+    },
+    twitter: {
+    handle: '@ziontech', site: '@ziontech',
+    cardType: 'summary_large_image'};
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   defaultTitle: 'Zion Tech Solutions';
   titleTemplate: '%s | Zion Tech Solutions';
 =======
 import type { DefaultSeoProps } from 'next-seo';
 
+<<<<<<< HEAD
   defaultTitle: 'Zion Tech Solutions';
   titleTemplate: '%s | Zion Tech Solutions'
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -35,6 +65,9 @@ const config: DefaultSeoProps = {defaultTitle: 'Zion Tech Solutions',
     { name: 'theme-color',}
   content: '#111827',}
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   additionalMetaTags: [
 { name: 'viewport}
   content: width = device-width, initial-scale=1' }
@@ -50,7 +83,9 @@ import type { DefaultSeoProps } from 'next - seo;
 
 
 
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
     url: 'https://ziontechgroup.netlify.app'
     siteName: 'Zion Tech Solutions'}
@@ -88,6 +123,10 @@ pr-12243
 >>>>>>> origin/chore/fix-lint-and-merge
 export default config;
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',
@@ -134,4 +173,19 @@ export default config;
 ;
 export default config;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+
+
+export default config
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

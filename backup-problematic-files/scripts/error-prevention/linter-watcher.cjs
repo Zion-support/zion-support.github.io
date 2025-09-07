@@ -21,6 +21,7 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     console.log(Linter Watcher started successfully')}
   async runLint() {}
@@ -45,20 +46,32 @@ class LinterWatcher {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+=======
+    
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
       console.log('Running lint check...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       const child = spawn('npm', ['run', 'lint'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 
       let output = ;;';
@@ -99,6 +112,20 @@ class LinterWatcher {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      let output = ;';';
+      let errorOutput = ;';';
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+});
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+});
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       child.on('close', (code) => {}
         if ( {})
 =======
@@ -122,6 +149,7 @@ class LinterWatcher {}
   }
   async attemptAutoFix() {}
     try {}
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.log('Attempting to auto-fix linting issues...);
       
@@ -157,6 +185,21 @@ class LinterWatcher {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      console.log('Attempting to auto-fix linting issues...');
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      const child = spawn('npm', ['run', '"lint": fix'], {})
+        "stdio": 'inherit',
+        "cwd": process.cwd();
+      };);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       child.on('close', (code) => {}
 >>>>>>> origin/chore/fix-lint-and-merge
         if ( {})
@@ -222,6 +265,13 @@ module.exports = LinterWatcher;
   // Handle graceful shutdown;
 
   watcher.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = LinterWatcher;
+<<<<<<< HEAD
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+=======
+module.exports = LinterWatcher;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

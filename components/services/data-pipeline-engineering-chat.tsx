@@ -36,6 +36,8 @@ const DataPipelineEngineeringChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
+=======
       <main>;
         <h1>DataPipelineEngineeringChat</h1>;
 <<<<<<< HEAD
@@ -51,6 +53,7 @@ const DataPipelineEngineeringChat: NextPage = () => {;
 }
 export default DataPipelineEngineeringChat;
 
+<<<<<<< HEAD
 "
 import type { NextPage } from "next";"
 import Head from "next/head";"
@@ -61,6 +64,24 @@ import Head from 'next/head';'
 import Link from 'next/link';
 
 const DataPipelineEngineeringChat: NextPage = () => {}
+=======
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+
+const DataPipelineEngineeringChat: NextPage = () => {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
     <div>
       <Head>
@@ -71,6 +92,14 @@ const DataPipelineEngineeringChat: NextPage = () => {}
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import type { NextPage } from './next';
 import Head from './next / head';
 
@@ -95,14 +124,22 @@ const DataPipelineEngineeringChat: NextPage = () => {}
 ;
 export default DataPipelineEngineeringChat;
 ;
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     <div>
       <Head>
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;DataPipelineEngineeringChat service&quot; />
       </Head>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       <main>
         <h1>DataPipelineEngineeringChat</h1>
         <p>Service details coming soon...</p>
@@ -114,6 +151,17 @@ pr-12243
 
 export default DataPipelineEngineeringChat
 
+<<<<<<< HEAD
+=======
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const DataPipelineEngineeringChat: NextPage = () => {
   return (
     <div>
@@ -136,8 +184,15 @@ export default DataPipelineEngineeringChat;
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 
 =======
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

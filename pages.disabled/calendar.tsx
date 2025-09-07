@@ -1,5 +1,26 @@
-import {
+<<<<<<< HEAD:pages.disabled/calendar.tsx
+=======
+<<<<<<< HEAD
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
+import {
+  Calendar
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Video
+  MessageSquare
+  Building
   Calendar,
   Clock,
   Users,
@@ -120,6 +141,12 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
+<<<<<<< HEAD:pages.disabled/calendar.tsx
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
 import {;
   Calendar,;
   Clock,;
@@ -132,11 +159,17 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
+<<<<<<< HEAD:pages.disabled/calendar.tsx
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD:pages.disabled/calendar.tsx
   Calendar
   Clock
   Users
@@ -148,6 +181,8 @@ import {
   Video
   MessageSquare
   Building
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
   Calendar,
   Clock,
   Users,
@@ -263,15 +298,36 @@ export default function CalendarPage() {;
         <meta
           name="keywords"
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
+<<<<<<< HEAD:pages.disabled/calendar.tsx
 />;
       </Head>;
+=======
+<<<<<<< HEAD
+        />;
+      </Head>;
+=======
+
+        />;
+      </Head>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages.disabled/calendar.tsx
 transition={{ duration: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            transition={{ duration: 0 && 0.8 }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
             className="text-center">;
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">;
               Schedule a <span className="text-blue-600">Consultation</span>;
@@ -299,6 +355,14 @@ transition={{ duration: 0 && 0.8 }}
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD:pages.disabled/calendar.tsx
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
@@ -351,9 +415,24 @@ transition={{ duration: 0 && 0.8 }}
                 </button>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD:pages.disabled/calendar.tsx
 </div>;
         </div>;
       </section>;
+=======
+<<<<<<< HEAD
+          </div>;
+        </div>;
+      </section>;
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -398,9 +477,24 @@ transition={{ duration: 0 && 0.8 }}
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD:pages.disabled/calendar.tsx
 </div>;
         </div>;
       </section>;
+=======
+<<<<<<< HEAD
+          </div>;
+        </div>;
+      </section>;
+=======
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
@@ -771,11 +865,21 @@ function CalendarPage() {
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
+          </div>;
+        </div>;
+      </section>;
+=======
 
           </div>;
         </div>;
       </section>;
 
+<<<<<<< HEAD:pages.disabled/calendar.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -868,7 +972,10 @@ function CalendarPage() {
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_x: 20 }}
@@ -892,24 +999,36 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold">Video Calls</div>;
                     <div className="text - blue - 100">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items - center">;
                   <MessageSquare className="w - 6 h - 6 mr - 4" />;
                   <div>;
                     <div className="font - semibold">Live Chat</div>;
                     <div className="text - blue - 100">;
                       Available 24 / 7 on our website;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">;
                   Contact Us Now;
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -919,7 +1038,14 @@ function CalendarPage() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages.disabled/calendar.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -943,6 +1069,7 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
+<<<<<<< HEAD:pages.disabled/calendar.tsx
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -1234,6 +1361,8 @@ export default function Calendar() {
               </Link>
               <Link
                 href="/about"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Learn About Us
@@ -1242,6 +1371,7 @@ export default function Calendar() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/calendar.tsx
 image: "/images / team / david - kim.jpg",
     available: true,
   },
@@ -1560,6 +1690,8 @@ function CalendarPage() {
               <Link
                 href="/about"
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
     </div>;
   );
               <div className="mt - 8">;
@@ -1609,6 +1741,9 @@ function CalendarPage() {
         </div>;
       </section>;
     </div>);
+<<<<<<< HEAD:pages.disabled/calendar.tsx
 </div>
   );
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/calendar.tsx
 }

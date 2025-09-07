@@ -5,8 +5,16 @@ const path = require(path');
 const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -79,10 +87,17 @@ console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Function to fix malformed test files;
   try {}
 <<<<<<< HEAD
@@ -125,6 +140,13 @@ describe(${componentName}, () => {}
 
 >>>>>>> origin/chore/fix-lint-and-merge
     // Add styling tests here;
+<<<<<<< HEAD
+=======
+  }
+});
+}
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 `;`
       fs.writeFileSync(filePath, fixedContent);
     };
@@ -148,7 +170,75 @@ files.forEach(file => {})
     // Remove unused fireEvent;
     if (removeUnusedFireEvent(filePath)) {}
       fireEventCount++;
+<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} malformed test files`);`;
+=======
+    };
+  };
+}
+});
+console.log(`Fixed ${fixedCount} malformed test files`);
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+<<<<<<< HEAD
+=======
+=======
+}
+});
+`;`
+      fs.writeFileSync(filePath, fixedContent);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`Error fixing file ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Function to remove unused fireEvent imports;
+function removeUnusedFireEvent(filePath) {}
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Check if fireEvent is imported but not used;
+    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
+      console.log(`Removing unused fireEvent from: ${filePath}`);
+      // Remove fireEvent from import statement;
+      content = content.replace(/, fireEvent/g, '');
+      content = content.replace(/fireEvent, /g, '');
+      content = content.replace(/fireEvent/g, '');
+      fs.writeFileSync(filePath, content);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`Error processing file ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Get all test files;
+const testDir = path.join(__dirname, '__tests__');
+const files = fs.readdirSync(testDir);
+let fixedCount = 0;
+let fireEventCount = 0;
+files.forEach(file => {})
+  if (file.endsWith('.test.js')) {}
+    const filePath = path.join(testDir, file);
+    // Fix malformed files;
+    if (fixTestFile(filePath)) {}
+      fixedCount++;
+    };
+    // Remove unused fireEvent;
+    if (removeUnusedFireEvent(filePath)) {}
+      fireEventCount++;
+    };
+  };
+}
+});
+console.log(`Fixed ${fixedCount} malformed test files`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,12 +249,19 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
+<<<<<<< HEAD
 }
 });
 `;`
@@ -231,12 +328,16 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { execSync } = require('child_process');
 class TestFileFixer {
   // TODO: Implement
   constructor() {
     this.fixedFiles = [];
     this.errors = [];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     // Fix malformed function names with .test in them
@@ -274,13 +375,25 @@ class TestFileFixer {
       
       // Skip if no merge conflicts or obvious syntax issues
       if (!content.includes(<<<<<<<') && !content.includes(') && !content.includes(>>>>>>>')) {
+=======
+  }
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+  fixMergeConflicts(content) {
+    // Remove merge conflict markers and keep the main branch content
+    return content
+      .replace(/[\s\S]*?
+      .replace(/
+      .replace(/') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         // Check for other syntax issues
         if (!content.includes('.test) && !content.includes(interface') || content.includes('export default)) {
           return;
         }
       }
-
       this.log(`Processing: ${filePath}`);
+<<<<<<< HEAD
       
 =======
   fixMergeConflicts(content) {
@@ -296,6 +409,10 @@ class TestFileFixer {
       fixed = fixed;
 
 <<<<<<< HEAD
+=======
+      let fixed = this.fixMergeConflicts(content);
+      fixed = this.fixTestFileSyntax(fixed, filePath);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Clean up extra whitespace and empty lines
       fixed = fixed
         .replace(/\n\s*\n\s*\n/g, \n\n')
@@ -306,41 +423,50 @@ class TestFileFixer {
         .trim();
       if (fixed !== content) {
         fs.writeFileSync(filePath, fixed);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   async fixAllTestFiles() {
     this.log(Starting test file cleanup...');
 
+=======
+        this.fixedFiles.push(filePath);
+        this.log(`Fixed: ${filePath}`);
+      }
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      this.log(`Error processing ${filePath}: ${error.message}`);
+    }
+  }
+  async fixAllTestFiles() {
+    this.log('Starting test file cleanup...');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Find all test files
     const testFiles = [];
-    
     try {
       const result = execSync('find . -name *.test.* -o -name "*.spec.*" | grep -v node_modules, { encoding: utf8' });
       testFiles.push(...result.trim().split('\n).filter(f => f));
     } catch (error) {
       this.log(Error finding test files: ' + error.message);
     }
-
     // Process each file
     for (const file of testFiles) {
       this.processFile(file);
     }
-
     // Summary
     this.log(`\n=== SUMMARY ===`);
     this.log(`Files processed: ${testFiles.length}`);
     this.log(`Files fixed: ${this.fixedFiles.length}`);
     this.log(`Errors: ${this.errors.length}`);
-
     if (this.fixedFiles.length > 0) {
       this.log('\nFixed files:);
       this.fixedFiles.forEach(f => this.log(`  - ${f}`));
     }
-
     if (this.errors.length > 0) {
       this.log(\nErrors:');
       this.errors.forEach(e => this.log(`  - ${e.file}: ${e.error}`));
     }
+<<<<<<< HEAD
 =======
     // Find all test files;
     const testFiles = [];
@@ -348,6 +474,11 @@ class TestFileFixer {
 >>>>>>> origin/chore/fix-lint-and-merge
 
     return this.fixedFiles.length;
+=======
+    return this.fixedFiles.length;
+  }
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 if (require.main === module) {
   const fixer = new TestFileFixer();
   fixer.fixAllTestFiles().then(fixedCount => {)`;
@@ -357,11 +488,18 @@ if (require.main === module) {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+module.exports = TestFileFixer;
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 module.exports = TestFileFixer;
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
@@ -372,3 +510,9 @@ module.exports = TestFileFixer;
 module.exports = TestFileFixer;
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

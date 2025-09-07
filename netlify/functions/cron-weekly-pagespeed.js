@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 async function psi(url, strategy = 'mobile', key) {
 
+=======
+<<<<<<< HEAD
+const endpoint = new URL(
+=======
+
+
+async function psi(url, strategy = 'mobile', key) {
+
+  const endpoint = new URL(
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
 
   );
@@ -25,11 +37,20 @@ const key = process && process.env.PSI_API_KEY || '';'
   const resp = await fetch(endpoint && endpoint.toString());
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`);
   return resp && resp.json();
+<<<<<<< HEAD
 exports && exports.handler = async function () {}
   try {'
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
+=======
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const key = process && process.env.PSI_API_KEY || '';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];`
     ${p}`;
@@ -38,7 +59,14 @@ exports && exports.handler = async function () {}
         const mobile = await psi(url, 'mobile', key);'
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
+<<<<<<< HEAD
+=======
+      } catch (e) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { upsert_file } = require ('./_lib / github');
 
 ;
@@ -92,13 +120,19 @@ exports.handler = async function () {}
         results.push ({ url, mobile, desktop });
       } catch (e) {}
         results.push ({ url, error: e.message || String (e) });
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         results && results.push({ url, error: e && e.message || String(e) });
 
       }
@@ -107,8 +141,13 @@ exports.handler = async function () {}
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2);
+<<<<<<< HEAD
     if (owner && repo && token) {}
       await upsertFile({}
+=======
+    if (owner && repo && token) {
+      await upsertFile({
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         owner,
         repo,'
         path: 'data/reports/performance/weekly-pagespeed && pagespeed.json',
@@ -122,20 +161,31 @@ if ( {) {}
         owner,
         repo,'
         path: 'data / reports / performance / weekly - pagespeed.json',
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         content,
 
         message: 'chore (automation): weekly PageSpeed report',
         token,
       });
     }
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+    return {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
 
   endpoint.searchParams.set('url', url),
   endpoint.searchParams.set('strategy', strategy),
+<<<<<<< HEAD
 
   if (key) endpoint.searchParams.set('key', key),
   const resp = await fetch(endpoint.toString()),`
@@ -155,6 +205,31 @@ ursor/expand-services-advertise-and-build-project-4b36
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {}
 
   $2;
+=======
+  if (key) endpoint.searchParams.set('key', key),
+  const resp = await fetch(endpoint.toString()),
+  if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`),
+  return resp.json()
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, pages: results.length }),
+    }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+}async /**
+ * psi - Function description
+ */
+function psi() {
+  const endpoint = new URL ('https: //www.googleapis.com / pagespeedonline / v5 / run_pagespeed'),
+  endpoint.search_params.set ('url', url),
+  endpoint.search_params.set ('strategy', strategy),
+  if (endpoint.search_params.set ('key', key), ) {
+  $2
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
   const resp = await fetch (endpoint.to_string ()),
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {
@@ -247,8 +322,18 @@ exports.handler = async function () {}
         const desktop = await psi (url, 'desktop', key),'
 
         results.push ({ url, mobile, desktop });
+<<<<<<< HEAD
       } catch (e) {}
+=======
+      } catch (e) {
+        results.push ({ url, error: e.message || String (e) });
+      }
+    }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const owner = process.env.GITHUB_OWNER,
 
     const repo = process.env.GITHUB_REPO,
@@ -262,13 +347,22 @@ if ( {) {}
       await upsert_file ({ owner, repo, path: 'data / reports / performance / weekly - pagespeed.json', content, message: 'chore (automation): weekly PageSpeed report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
+<<<<<<< HEAD
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+=======
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       statusCode: 200,
 
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length }),
@@ -288,12 +382,25 @@ async function psi(url, strategy = 'mobile', key) {
   return resp.json()
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+exports && exports.handler = async function() {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+    const key = process && process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'],
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -377,6 +484,20 @@ const mobile = await psi (url, 'mobile', key),;'
        ;
 const desktop = await psi (url, 'desktop', key),;'
         results.push ({ url, mobile, desktop });
+=======
+    const pages = ['//learn/dao/certifications']
+    const results = []
+    for (const p of pages) {
+      const url = `${baseUrl}${p}`
+      try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results && results.push({ url, mobile, desktop })
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       } catch (e) {
         }
         results.push ({ url, "error": e.message || String (e)
@@ -483,16 +604,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         results && results.push({ url, error: e && e.message || String(e) })
       }
     }
+<<<<<<< HEAD
 
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
     const content = JSON.stringify({ updatedAt: Date.now(), results }, null, 2);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+    const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
@@ -500,13 +634,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   } catch (e) {
 
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -515,3 +654,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+=======
+},
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

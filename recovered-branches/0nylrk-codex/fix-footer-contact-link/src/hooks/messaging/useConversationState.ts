@@ -7,6 +7,7 @@ export function useConversationState() {
   const [messages, setMessages] = useState<Message[]>([]),
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),
 
+<<<<<<< HEAD
 import {useState} from 'react';
 
 import {Conversation, Message} from '@/types/messaging';
@@ -18,7 +19,20 @@ import {Conversation, Message} from '@/types/messaging';
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
+=======
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Conversation, Message  } from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {
+  const [messages, setMessages] = useState<Message[]>([]),
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -27,9 +41,34 @@ import {Conversation, Message} from '@/types/messaging';
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
   const [conversations, setConversations] = useState<Conversation[]>([]);
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
+  const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+  return {
+    // State
+    messages;
+    setMessages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+=======
+=======
+import {useState} from 'react';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {Conversation, Message} from '@/types / messaging';
 /**;
 * Hook to manage messaging state;
@@ -55,8 +94,13 @@ function useConversationState() {}
     set_conversations;
     unread_count;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     activeConversation;
+<<<<<<< HEAD
 
+=======
+import { useState } from 'react',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { Conversation, Message } from '@/types/messaging',;
     setUnreadCount;
 
@@ -87,6 +131,7 @@ export function useConversationState() {;
     unreadCount,;
     setUnreadCount,;
     activeConversation,;
+<<<<<<< HEAD
     active_conversation;
     setActiveConversation;
     is_loading;
@@ -103,3 +148,46 @@ import { Conversation, Message } from '@/types/messaging';
 
 }
 }
+=======
+
+
+    setActiveConversation;
+    is_loading;
+    setIsLoading}
+}
+
+import { useState } from 'react',;
+import { Conversation, Message } from '@/types/messaging',;
+;
+/**;
+ * Hook to manage messaging state;
+ */;
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]),;
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
+  const [conversations, setConversations] = useState<Conversation[]>([]),;
+  const [unreadCount, setUnreadCount] = useState(0),;
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
+  const [isLoading, setIsLoading] = useState(false),;
+;
+  return {;
+    // State;
+    messages,;
+    setMessages,;
+    activeMessages,;
+    setActiveMessages,;
+    conversations,;
+    setConversations,;
+    unreadCount,;
+    setUnreadCount,;
+    activeConversation,;
+    setActiveConversation,;
+    isLoading,;
+    setIsLoading},;
+} /** * Hook to manage messaging state */ 
+}
+    setActiveConversation;
+    isLoading;
+    setIsLoading}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

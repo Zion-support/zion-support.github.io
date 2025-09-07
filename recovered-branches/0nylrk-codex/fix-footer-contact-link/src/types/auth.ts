@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 export interface UserDetails {
 
+=======
+<<<<<<< HEAD
+export interface UserDetails {
+export interface UserDetails {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   id?: string;
   name?: string;
   email?: string;
@@ -10,15 +16,24 @@ export interface UserDetails {
   profileComplete?: boolean;
   role?: string;
   permissions?: string[];
+<<<<<<< HEAD
   companyId?: string;
   bio?: string;
   createdAt?: string;
   updatedAt?: string;
 }
+=======
+  company_id?: string;
+
+  permissions?: string[];
+  company_id?: string;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   permissions?: string[];
   company_id?: string;
 
+<<<<<<< HEAD
 export interface UserDetails {
 
 export interface UserDetails {;
@@ -34,6 +49,9 @@ export interface UserDetails {;
   role?: string;
 
   companyId?: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   bio?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -55,8 +73,110 @@ export interface UserDetails {;
   avatar_url?: string;
   headline?: string;
   role?: string;
+<<<<<<< HEAD
+  permissions?: string[],
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string
+}
+export interface UserProfile {
+
+export interface UserProfile {;
+  id?: string;
+  displayName?: string;
+  email: string;
+  userType: string;
+  profileComplete: boolean;
+  createdAt: string;
+  updatedAt: string;
+  avatar_url?: string;
+  bio?: string;
+  avatarUrl?: string;
+  headline?: string;
+  role?: string;
+
+  permissions?: string[]
+
+  companyId?: string
+}
+// Update AuthContextType definition to match implementation
+export interface AuthContextType {;
+  user: UserDetails | null;
+  isLoading: boolean;
+
+  isAuthenticated: boolean
+  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
+  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
+  logout: () => Promise<void>
+  resetPassword: (email: string) => Promise<{ error?: any }>;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>
+  signIn?: (email: string, password: string) => Promise<{ error: any }>;
+  signOut?: () => Promise<void>;
+
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+}
+export interface UserDetails {;
+  id?: string,;
+  name?: string,;
+  email?: string,;
+  userType?: string,;
+  displayName?: string,;
+  avatarUrl?: string,;
+  headline?: string,;
+  profileComplete?: boolean,;
+  role?: string,;
+  permissions?: string[],;
+  companyId?: string,;
+  bio?: string,;
+  createdAt?: string,;
+  updatedAt?: string;
+  permissions?: string[],
+  company_id?: string;
+}
+;
+export interface UserProfile {;
+  id?: string,;
+  displayName?: string,;
+  email: string,;
+  userType: string,;
+  profileComplete: boolean,;
+  createdAt: string,;
+  updatedAt: string,;
+  avatar_url?: string,;
+  bio?: string,;
+  avatarUrl?: string,;
+  headline?: string,;
+  role?: string,;
+  permissions?: string[],;
+  companyId?: string;
+}
+;
+// Update AuthContextType definition to match implementation;
+export interface AuthContextType {;
+  user: UserDetails | null,;
+  isLoading: boolean,;
+  isAuthenticated: boolean,;
+  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>,;
+  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>,;
+  logout: () => Promise<void>,;
+  resetPassword: (email: string) => Promise<{ error?: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>,;
+  loginWithGoogle: () => Promise<void>,;
+  loginWithFacebook: () => Promise<void>,;
+  loginWithTwitter: () => Promise<void>,;
+  loginWithWeb3: () => Promise<void>,;
+  signIn?: (email: string, password: string) => Promise<{ error: any }>,;
+  signOut?: () => Promise<void>;
+  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+=======
 
 }
+<<<<<<< HEAD
 
   permissions?: string[],
 
@@ -82,6 +202,11 @@ export interface UserProfile {;
   permissions?: string[]
 
 export interface AuthContextType {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Update AuthContextType definition to match implementation;
+export interface AuthContextType {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   user: UserDetails | null;
   isLoading: boolean;
 
@@ -99,8 +224,11 @@ export interface AuthContextType {;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export interface UserDetails {;
 
   id?: string,;
@@ -119,6 +247,7 @@ export interface UserDetails {;
   updatedAt?: string;
 }
 ;
+<<<<<<< HEAD
 export interface UserProfile {;
   id?: string,;
   displayName?: string,;
@@ -212,6 +341,11 @@ export interface AuthContextType {;
 export interface UserDetails {;
 
 pr-12325
+=======
+<<<<<<< HEAD
+}
+export interface UserDetails {;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   id?:string,;
   name?:string,;
   email?:string,;
@@ -230,7 +364,10 @@ pr-12325
 export interface UserProfile {;
   id?:string,;
   displayName?:string,;
+<<<<<<< HEAD
 pr-12325
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   email:string,;
   userType:string,;
   profileComplete:boolean,;
@@ -247,9 +384,12 @@ pr-12325
 ;
 // Update AuthContextType definition to match implementation;
 export interface AuthContextType {;
+<<<<<<< HEAD
   companyId?:string;
 // Update AuthContextType definition to match implementation;
 pr-12325
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   user:UserDetails | null,;
   isLoading:boolean,;
   isAuthenticated:boolean,;
@@ -258,8 +398,11 @@ pr-12325
   logout:() => Promise<void>,;
   resetPassword:(email:string) => Promise<{ error?:any }>,;
   updateProfile:(data:Partial<UserDetails>) => Promise<{ error?:any }>,;
+<<<<<<< HEAD
 
 pr-12325
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   loginWithGoogle:() => Promise<void>,;
   loginWithFacebook:() => Promise<void>,;
   loginWithTwitter:() => Promise<void>,;
@@ -268,8 +411,20 @@ pr-12325
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
+<<<<<<< HEAD
 
 }
 }
 ;
 }
+=======
+}
+}
+;
+}
+;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

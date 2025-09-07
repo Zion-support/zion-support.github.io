@@ -123,6 +123,7 @@ profileType ;
 
   coverImageUrl ? (<img src= {;
   coverImageUrl ;
+<<<<<<< HEAD
 }alt= {;`;
   `$ {;)"`;
   name ;"}cover` ";"}className="w-full h-full object-cover" loading="lazy" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />) ;"
@@ -131,3 +132,29 @@ profileType ;
 });
 } </div>) ;
 }</div>) ;
+=======
+}alt= {;
+  `$ {;
+  name ;"}cover` ";"}className="w-full h-full object-cover" loading="lazy" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />) ;
+}</AspectRatio> </AvatarFallback>) ;
+}</Avatar>) ;
+}> {';
+  profileType === 'service' ? 'Service Provider' : 'Talent' ;
+}</Badge> </div>) ;
+}</div>) ;
+}AI Match: {;
+  aiScore ;
+}% </div>) ;
+<<<<<<< HEAD
+:temp_broken_files/profile/ProfileHero.tsx
+}</div> </div> </div> </div> </div> </div>) ;"}'"
+}</div> </div> </div> </div> </div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileHero.tsx
+=======
+
+}</div> </div> </div> </div> </div> </div>) ;
+}'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

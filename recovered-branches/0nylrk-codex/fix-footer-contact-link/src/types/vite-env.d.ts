@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 ;
 
+<<<<<<< HEAD
   // add more env variables as needed;
 }
 interface ImportMeta {
@@ -45,6 +48,9 @@ declare module 'lovable - tagger' {
 // Add Node.js globals;
 >>>>>>> origin/chore/fix-lint-and-merge
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   readonly VITE_SUPABASE_URL: string,
@@ -76,9 +82,40 @@ declare module 'lovable-tagger' {
 declare module 'lovable - tagger' {
   import { Plugin } from 'vite',
   export function component_tagger (): Plugin;
+<<<<<<< HEAD
+=======
+}
+// Add Node.js globals;
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+<<<<<<< HEAD
+
+;
+interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
+  readonly VITE_SUPABASE_URL: string;
+  readonly VITE_SUPABASE_ANON_KEY: string;
+  // add more env variables as needed;
+}
+interface ImportMeta {readonly env: ImportMetaEnv;
+  readonly url?: string;
+}
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest/config' {export { defineConfig } from 'vite';
+}
+declare module '@vitejs/plugin-react-swc' {import { Plugin } from 'vite';
+  export default function reactSWC(): Plugin;
+}
+declare module 'path' {export function resolve(...paths: string[]): string;
+  export function join(...paths: string[]): string;
+  export function dirname(path: string): string;
+}
+declare module 'lovable-tagger' {import { Plugin } from 'vite';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ImportMetaEnv {;
 
+<<<<<<< HEAD
 declare let __dirname: string,
 declare let process: {}
   env: {}
@@ -97,6 +134,25 @@ declare module 'lovable-tagger' {;''
   import { Plugin } from 'vite',;'
   export function componentTagger(): Plugin;
 // Add Node.js globals;
+=======
+<<<<<<< HEAD
+
+  export function componentTagger(): Plugin;
+}
+// Add Node.js globals
+  }
+}
+
+=======
+  export function componentTagger(): Plugin;
+}
+// Add Node.js globals
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 declare let __dirname: string,
 declare let process: {,
   env: {
@@ -114,6 +170,7 @@ declare let process: {;,
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
 
+<<<<<<< HEAD
 }
 }
   }
@@ -121,9 +178,20 @@ declare let process: {;,
 
 };
 pr-12325
+=======
+  }
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
 };
   }
 };
+<<<<<<< HEAD
   }
 };
+=======
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

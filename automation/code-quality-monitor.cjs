@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,6 +22,14 @@ const { execSync } = require("child_process");"const fs = require("fs");"const p
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -353,15 +362,28 @@ async function checkCodeDuplication() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -376,11 +398,12 @@ async function checkCodeDuplication() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
@@ -392,24 +415,20 @@ class CodeQualityMonitor {
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async analyzeCodeQuality() {
     try {
       this.log("Starting code quality analysis...");
-      
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
       this.metrics.performance = this.calculatePerformance();
       this.metrics.lastUpdated = new Date().toISOString();
-      
       this.saveMetrics();
       this.log("Code quality analysis completed successfully");
       return this.metrics;
@@ -418,7 +437,6 @@ class CodeQualityMonitor {
       return null;
     }
   }
-
   calculateComplexity() {
     try {
       const files = this.getTypeScriptFiles();
@@ -433,7 +451,6 @@ class CodeQualityMonitor {
       return Math.floor(Math.random() * 10) + 1;
     }
   }
-
   calculateMaintainability() {
     try {
       const files = this.getTypeScriptFiles();
@@ -442,35 +459,33 @@ class CodeQualityMonitor {
         const stats = fs.statSync(file);
         return acc + stats.size;
       }, 0) / totalFiles;
-      
       // Lower file size = higher maintainability
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000));
     } catch (error) {
       return Math.floor(Math.random() * 100) + 50;
     }
   }
-
   calculateTestCoverage() {
     // Placeholder for test coverage calculation
     return Math.floor(Math.random() * 100);
   }
-
   calculatePerformance() {
     // Placeholder for performance calculation
     return Math.floor(Math.random() * 100) + 70;
   }
-
   getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname, "..");
     const files = [];
-    
     const walkDir = (dir) => {
       const items = fs.readdirSync(dir);
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
         
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
           walkDir(fullPath);
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
@@ -478,16 +493,16 @@ class CodeQualityMonitor {
         }
       });
     };
-    
     walkDir(projectRoot);
     return files;
   }
-
   saveMetrics() {
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json");
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -615,6 +630,7 @@ async function checkCodeStyle() {
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -658,6 +674,15 @@ async function checkCodeStyle() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
@@ -683,6 +708,7 @@ async function checkCodeStyle() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -694,6 +720,14 @@ async function checkCodeStyle() {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -737,6 +771,7 @@ async function checkTypeScriptQuality() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -758,6 +793,14 @@ async function checkTypeScriptQuality() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   };
 };
 async function checkTypeScriptQuality() {}
@@ -770,6 +813,7 @@ async function checkTypeScriptQuality() {}
   } catch (error) {}
     console.error(`[ERROR] TypeScript quality issues "found": ${error.message}`);
     return { "passed": false, "error": 'TypeScript quality issues detected' };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -787,6 +831,14 @@ async function checkTypeScriptQuality() {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -845,6 +897,7 @@ async function checkTestCoverage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -859,6 +912,14 @@ async function checkTestCoverage() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
@@ -892,6 +953,14 @@ async function checkDocumentationCoverage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -922,6 +991,7 @@ async function checkDocumentationCoverage() {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 =======
@@ -954,6 +1024,16 @@ async function checkDocumentationCoverage() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   };
 };
 async function checkTestCoverage() {}
@@ -987,6 +1067,25 @@ async function runCodeQualityMonitor() {}
   const tsQualityResult = await checkTypeScriptQuality();
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const results = [
+    complexityResult,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const results = [
+    complexityResult,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const results = [
+    complexityResult,
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1015,6 +1114,7 @@ async function runCodeQualityMonitor() {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1036,6 +1136,14 @@ async function runCodeQualityMonitor() {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const results = [complexityResult,]
     duplicationResult,
     styleResult,
@@ -1046,6 +1154,7 @@ async function runCodeQualityMonitor() {}
   const issuesFound = results.filter(r => !r.passed);
   const endTime = Date.now();
   const duration = endTime - startTime;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1085,10 +1194,19 @@ async function runCodeQualityMonitor() {}
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     process.exit(1);
   } else {
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1151,6 +1269,7 @@ async function runCodeQualityMonitor() {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
@@ -1199,6 +1318,15 @@ async function runCodeQualityMonitor() {}
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -1216,6 +1344,7 @@ async function runCodeQualityMonitor() {}
   } else {}
     console.log('[INFO] Code quality is high.');
     process.exit(0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1241,6 +1370,14 @@ runCodeQualityMonitor();
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1258,6 +1395,19 @@ runCodeQualityMonitor();
   }
 }
 runCodeQualityMonitor();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  };
+};
+<<<<<<< HEAD
+runCodeQualityMonitor();
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+runCodeQualityMonitor();
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   };
 };
 <<<<<<< HEAD
@@ -1324,6 +1474,10 @@ runCodeQualityMonitor();
 runCodeQualityMonitor();
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 runCodeQualityMonitor();
 =======
 =======
@@ -1332,6 +1486,7 @@ runCodeQualityMonitor();
 };
 runCodeQualityMonitor();
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
@@ -1359,11 +1514,20 @@ runCodeQualityMonitor();
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1383,6 +1547,10 @@ monitor.analyzeCodeQuality().then(metrics => {
 <<<<<<< HEAD
 =======
 =======
+=======
+});
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 });
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1392,6 +1560,7 @@ monitor.analyzeCodeQuality().then(metrics => {
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
@@ -1935,3 +2104,12 @@ main
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -4,19 +4,72 @@ Dialog
   DialogHeader
   DialogTitle
 
+<<<<<<< HEAD
+import React from "react";
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Dialog,
   DialogContent,
   DialogDescription,
+<<<<<<< HEAD
+=======
+  DialogHeader,
+DialogTitle,;
+<<<<<<< HEAD
+import React from "react";
+import {
+Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+
+  DialogTitle,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 } from "@/components/ui/dialog";
 
+<<<<<<< HEAD
 import { ApplyForm } from "./ApplyForm";
+=======
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-[600px]">
+        <DialogHeader>
+          <DialogTitle>Apply to Job: {job.title}</DialogTitle>
+          <DialogDescription>
+            Complete your application for this position
+          </DialogDescription>
+        </DialogHeader>
+<<<<<<< HEAD
+        <ApplyForm
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />
+      </DialogContent>
+    </Dialog>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import React from 'react',;
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogHeader,;
+<<<<<<< HEAD
 
 import { ApplyToJobModalProps } from "./types";
 export function ApplyToJobModal(): any ({;
@@ -31,6 +84,11 @@ export function ApplyToJobModal(): any ({;
         <DialogHeader>;
           <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
 
+=======
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from './react';
 <<<<<<< HEAD
 =======
@@ -59,12 +117,27 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[600px]">;
         <DialogHeader>;
+<<<<<<< HEAD
           <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
 
+=======
+          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
+  DialogTitle} from '@/components/ui/dialog',;
+import { ApplyForm } from './ApplyForm',;
+import { ApplyToJobModalProps } from './types',;
+;
+export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyToJobModalProps) {;
+  return (;
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-[600px]">;
+        <DialogHeader>;
+          <DialogTitle>Apply to Job:{job.title}</DialogTitle>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
+<<<<<<< HEAD
 
 DialogTitle,;"
 } from "@/components/ui/dialog";""
@@ -105,6 +178,9 @@ export function ApplyToJobModal({
         <ApplyForm;
 
 ;
+=======
+        ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <ApplyForm ;
           job={job}
           on_close={on_close}
@@ -121,6 +197,7 @@ export function ApplyToJobModal({
     </Dialog>;
   );
     </Dialog>);
+<<<<<<< HEAD
 }
     </Dialog>;
   ),;}
@@ -150,3 +227,34 @@ pr-12325
 
   );
 }
+=======
+<<<<<<< HEAD
+}
+    </Dialog>;
+  ),;}
+ <DialogHeader> <DialogTitle>Apply to Job: {
+  job.title 
+}</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
+  job 
+}onClose= {
+  onClose 
+}onApplySuccess= {
+  onApplySuccess 
+}/> </DialogContent> </Dialog>) 
+}
+<ApplyForm
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />
+      </DialogContent>
+</Dialog>
+    </Dialog>;
+
+  );
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

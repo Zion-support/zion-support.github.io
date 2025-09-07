@@ -1,5 +1,8 @@
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -82,6 +85,7 @@ module.exports = {
   "parser": '@typescript-eslint/parser',
   "plugins": ['@typescript-eslint'],
   "rules": {
+<<<<<<< HEAD
 =======
   extends: [
     'next/core-web-vitals',
@@ -91,6 +95,8 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
@@ -108,6 +114,7 @@ module.exports = {
   },
   globals: {
     KeyboardEvent: 'readonly',
+<<<<<<< HEAD
 =======
     es6: true
   },
@@ -193,3 +200,14 @@ module.exports = {
   ],
 };
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    "HTMLElement": 'readonly',
+    "HTMLButtonElement": 'readonly',
+    "HTMLAnchorElement": 'readonly',
+    "MutationObserver": 'readonly',
+    "RequestInit": 'readonly',
+    "AbortController": 'readonly',
+    "fs": 'readonly',
+    "CodeQualityChecker": 'readonly'}};
+module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

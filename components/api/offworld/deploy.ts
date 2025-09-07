@@ -3,12 +3,29 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { execSync  } from 'child_process';
 import path from 'path';
 import fs from 'fs';
+<<<<<<< HEAD
 import { addDirectory  } from '@/utils/offworld/ipfs';
 export default async function handler() {if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
 })try {// Ensure export;
+=======
+import { addDirectory } from '@/utils/offworld/ipfs';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  try {
+    // Ensure export
+    const outDir = path.resolve(process.cwd(), 'out');
+    try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 }
 
+<<<<<<< HEAD
 const outDir = null;
     return res.status(200).json({ cid, provider })export default async function handler() {if (req.method !== 'POST')return res.status(405).json({ "error": 'Method not allowed','
 })try {// Ensure export;
@@ -27,6 +44,9 @@ return res}
         .status(500)}
         .json({ error: 'Export failed, no out/ directory found' });
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   try {
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
@@ -46,7 +66,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Ensure export
     const outDir = path.resolve(process.cwd(), out');
     try {
+<<<<<<< HEAD
       execSync('npm run export, { stdio: inherit' })
+=======
+<<<<<<< HEAD
+      execSync('npm run export', { stdio: 'inherit' });
+    } catch (e) {
+      // attempt minimal static export try {;
+        execSync('next build && next export', { stdio: 'inherit' });      } catch (e2) {}
+    }
+    if (!fs.existsSync(outDir)) {
+      return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });    }      execSync('npm run export', { stdio: 'inherit' })
+    } catch (e) {
+      // attempt minimal static export try {
+        execSync('next build && next export', { stdio: 'inherit' })
+    }
+    if (!fs.existsSync(outDir)) {
+      return res
+        .status(500);
+        .json({ error: 'Export failed, no out/ directory found' });      return res.status(500).json({ error: 'Export failed, no out/ directory found' });
+    }
+    const { cid, provider } = await addDirectory(outDir);
+=======
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     } catch (e) {
       // attempt minimal static export
       try {
@@ -54,6 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (e2) {}
     }
 
+<<<<<<< HEAD
     if (!fs.existsSync(outDir)) {
       return res.status(500).json({ error: 'Export failed, no out/ directory found' })
     }
@@ -62,9 +109,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
 
     return res.status(200).json({ cid, provider })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
+
+    return res.status(200).json({ cid, provider })
+
+<<<<<<< HEAD
+    return res.status(500).json({ error: error?.message |'Unknown error' });
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }    return res.status(200).json({ cid, provider })
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' })
     return res.status(500).json({ error: error?.message |'Unknown error' })
+<<<<<<< HEAD
   } catch (error: any) {}
     return res.status(200).json({ ok: true });
     return res.status(200).json({ ok: true });
@@ -75,6 +137,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 import { execSync  } from 'child_process';
 
+=======
+    if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
+    return res && res.status(200).json({ cid, provider });
+  } catch (error: any) {
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
+  }    return res && res.status(200).json({ cid, provider })
+  } catch (error: any) {
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  };
+}
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import {exec_sync} from 'child_process';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import path from 'path';
 import fs from 'fs';
 import { addDirectory  } from '@/utils/offworld/ipfs';
@@ -240,7 +320,27 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || Unknown error' });
 }
+  }
+
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+
+}
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
+
+}
+}
+  }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 
@@ -253,3 +353,9 @@ function handler() {
 }
 >>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

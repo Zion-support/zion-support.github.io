@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -72,6 +73,26 @@ const content = JSON.stringify(summary, null, 2)if (owner && repo && token) {awa
   return { "statusCode": 200, "body": JSON.stringify({ "ok": true, summary }) }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+exports.handler = async function() {
+  try {
+    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
+    const summary = {
+      updatedAt: Date.now()
+      totals: {
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 exports && exports.handler = async function () {
   try {
 
@@ -93,7 +114,14 @@ exports && exports.handler = async function () {
           0;
         ),
       },
+<<<<<<< HEAD
 
+=======
+      topBadges: Object && Object.values(users).reduce((map, u) => {
+        (u && u.badges || []).forEach(b => {
+const fs = require ('fs');
+const path = require ('path');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { upsert_file } = require ('./_lib / github');
 ;
 
@@ -140,17 +168,53 @@ const courses = JSON.parse (fs.readFileSync (courses_path, 'utf - 8')),;'
 completions: Object.values(users).reduce(
 >>>>>>> origin/chore/fix-lint-and-merge
           (acc, u) => acc + (u.certifications?.length || 0),
+<<<<<<< HEAD
 
+=======
+          0),
+      },
+      top_badges: Object.values (users).reduce ((map, u) => {
+        (u.badges || []).for_each (boolean => {
+          map[b] = (map[b] || 0) + 1;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         });
         return map;
       }, {}),
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    const content = JSON.stringify (summary, null, 2);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / learn / insights - weekly.json',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         content,
 
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
+=======
 
         users: Object.keys(users).length,
         courses: courses.length,
@@ -159,10 +223,16 @@ completions: Object.values(users).reduce(
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         return map
 
       }, {})
     },
+<<<<<<< HEAD
       updated_at: Date.now (),
   users: Object.keys (users).length,
         courses: courses.length,
@@ -184,19 +254,42 @@ completions: Object.values(users).reduce(
         return map;
       }, {})
 pr-12325
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     const content = JSON && JSON.stringify(summary, null, 2),
+<<<<<<< HEAD
     if (owner && repo && token) {'
+=======
+    if (owner && repo && token) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+=======
+
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+    const content = JSON.stringify(summary, null, 2),
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 };      }
       topBadges: Object.values(users).reduce((map, u) => {}
@@ -211,6 +304,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (owner && repo && token) {'
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
+<<<<<<< HEAD
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -225,6 +319,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return { "statusCode": 200, "body": JSON.stringify({ "ok": true, summary }) }
     return { "status_code": 200, "body": JSON.stringify ({ "ok": true, summary }) }
   } catch (e) {return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
+=======
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
 }     
 },"top_badges": Object.values (users).reduce ((map, u) => {(u.badges || []).for_each ((b) => { map[b] = (map[b] || 0) + 1 });
@@ -257,11 +357,21 @@ const token = process.env.GITHUB_TOKEN,;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 await upsert_file ({ owner, repo, "path": 'data / learn / insights - weekly.json', content, "message": 'chore (automation): weekly learning insights', token });'
     }
     return { "status_code": 200, "body": JSON.stringify ({ "ok": true, summary }) }
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+<<<<<<< HEAD
+},
+=======
+<<<<<<< HEAD
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
@@ -270,7 +380,16 @@ await upsert_file ({ owner, repo, "path": 'data / learn / insights - weekly.json
 },
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {}
@@ -279,8 +398,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 },
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+},
+},
+
+},
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

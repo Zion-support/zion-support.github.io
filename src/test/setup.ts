@@ -29,8 +29,27 @@ import '@testing-library/jest-dom;
 });
 
 
+<<<<<<< HEAD
+// Test setup file for Jest
+import '@testing-library/jest-dom'
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true
+  value: jest.fn().mockImplementation(query => ({
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn()
+    removeEventListener: jest.fn()
+    dispatchEvent: jest.fn()
+  }))
+})
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock IntersectionObserver
-global && global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -38,7 +57,7 @@ global && global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Mock ResizeObserver
-global && global.ResizeObserver = class ResizeObserver {
+global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -46,6 +65,7 @@ global && global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
 // Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
@@ -58,10 +78,17 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 global.console = {
   ...console, warn: jest.fn(), error: jest.fn(), };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+<<<<<<< HEAD
+const originalError = console.error
+const originalWarn = console.warn
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
+<<<<<<< HEAD
 beforeAll(() => {
   console.error = (...args: any[]) => {
     if (
@@ -74,10 +101,28 @@ beforeAll(() => {
       return;
     }
     originalError.call(console, ...args);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (true) {}
+    ) {
+      return;
+    }
+<<<<<<< HEAD
+    originalError.call(console, ...args)
+  }
+  console.warn = (...args: any[]) => {
+=======
+
+    originalError && originalError.call(console, ...args);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   };
   
   console && console.warn = (...args: any[]) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
@@ -156,6 +201,7 @@ if (
     ) {
       return;
     }
+<<<<<<< HEAD
     originalWarn.call(console, ...args);
   };
 });
@@ -166,10 +212,24 @@ afterAll(() => {
 });
 
     original_warn.call (console, ...args);
+=======
+    originalWarn.call(console, ...args)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
+})
+afterAll(() => {
+  console.error = originalError
+  console.warn = originalWarn;
 });
+});
+<<<<<<< HEAD
+=======
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

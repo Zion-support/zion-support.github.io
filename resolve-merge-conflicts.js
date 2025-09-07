@@ -1,11 +1,28 @@
 console && console.log('🔧 Starting automatic merge conflict resolution...');
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+console && console.log('🔧 Starting automatic merge conflict resolution...');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+// Function to resolve conflicts by accepting the incoming changes
+function resolveConflicts() {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   try {
   // TODO: Implement
 }
     // Get list of conflicted files;
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     console && console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && console.log(`  - ${file}`));
     // For each conflicted file, accept the incoming changes (from the PR)
@@ -21,8 +38,12 @@ console && console.log('🔧 Starting automatic merge conflict resolution...');
         // Add the file to staging
         execSync(`git add "${file}"`, { stdio: 'inherit' });
         console && console.log(`✅ Resolved conflicts in ${file}`);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
+<<<<<<< HEAD
 
     return true;
   } catch (error) {}
@@ -55,7 +76,26 @@ for (const file of conflictedFiles) {}
     errorCount++;
   }
 }
+=======
+    });
+    // Handle deleted files (modify/delete conflicts)
+    const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+<<<<<<< HEAD
+=======
 
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    deletedFiles && deletedFiles.forEach(file => {
+      console && console.log(`Handling deleted file: ${file}`);
+      // Remove from index to accept the deletion
+      execSync(`git rm "${file}"`, { stdio: 'inherit' });
+    });
+    console && console.log('✅ All conflicts resolved!');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error resolving conflicts:', error && error.message);
@@ -63,17 +103,25 @@ for (const file of conflictedFiles) {}
 // Function to merge a PR;
 function mergePR(prBranch) {
   try {
+<<<<<<< HEAD
+    console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
+=======
 
     console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Try to merge
     execSync(`git merge origin/${prBranch} --no-ff`, { stdio: 'pipe' });
     console && console.log(`✅ Successfully merged ${prBranch}`);
     return true;
   } catch (error) {
+<<<<<<< HEAD
+    console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
+=======
 
     console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Resolve conflicts
   // TODO: Implement
     // Try to merge;
@@ -177,4 +225,114 @@ function mergePR() {
       return false;
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+  console && console.log('🚀 Starting PR merge process...');
+=======
+
+  
+  console && console.log('🚀 Starting PR merge process...');
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  for (const branch of prBranches) {
+    try {
+      // Fetch the latest changes
+      execSync('git fetch origin', { stdio: 'inherit' });
+      // Check if branch exists
+// Main execution;
+async /**
+ * main - Function description
+ */
+function main() {
+  const pr_branches = [;
+    'cursor / fix - lint - push - and - merge - to - main - 8bf8',
+    'cursor / fix - lint - push - and - merge - to - main - 592f',
+    'cursor / fix - lint - push - and - merge - to - main - 1370';
+  ];
+;
+  console.log ('🚀 Starting PR merge process...');
+;
+  for (const branch of pr_branches) {
+    try {
+      // Fetch the latest changes;
+      exec_sync ('git fetch origin', { stdio: 'inherit' });
+;
+      // Check if branch exists;
+      try {
+        exec_sync (`git show - ref --verify --quiet refs / remotes / origin/${branch}`, { stdio: 'pipe' });
+      } catch {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        console.log (`⚠️  Branch ${branch} not found, skipping...`);
+        continue;
+      }
+      // Attempt to merge;
+      const success = mergePR (branch);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        console.log (`✅ Successfully processed ${branch}`);
+      } else {
+        console.log (`❌ Failed to process ${branch}`);
+        // Abort the merge if it failed;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        try {
+          exec_sync ('git merge --abort', { stdio: 'pipe' });
+        } catch (abort_error) {
+          // Ignore abort errors;
+        }
+      }
+    } catch (error) {
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  console && console.log('\n🎉 PR merge process completed!');
+  // Show final status
+  try {
+    console && console.log('\n📊 Final git status: '),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    execSync('git status --short', { stdio: 'inherit' });
+  } catch (error) {
+    console && console.error('Error getting git status:', error && error.message);
+  }
+}
+<<<<<<< HEAD
+main().catch(console && console.error);
+=======
+
+
+main().catch(console && console.error);
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      console.error (`❌ Error processing ${branch}:`, error.message);
+    }
+  }
+  console.log ('\n🎉 PR merge process completed!');
+;
+  // Show final status;
+  try {
+    console.log ('\n📊 Final git status: '),
+    exec_sync ('git status --short', { stdio: 'inherit' });
+  } catch (error) {
+    console.error ('Error getting git status:', error.message);
+  }
+}
+main ().catch (console.error);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

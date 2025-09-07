@@ -1,13 +1,41 @@
 import React from 'react';
 
+<<<<<<< HEAD
   res.status(200).send(sitemap)}
 
 import React from 'react';
 
+=======
+<<<<<<< HEAD
 interface SitemapProps {
   // Add props here as needed
 }
 
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+ursor/add-new-services-and-deploy-updates-0462
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+interface SitemapProps {
+  // Add props here as needed
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   res.status(200).send(sitemap)}
 
   res.status(200).send(sitemap)}
@@ -44,6 +72,26 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
 
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+}
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+}
+}
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 }
@@ -52,7 +100,12 @@ export default function Sitemap({ }: SitemapProps) {
 }
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -65,4 +118,16 @@ ursor/add-new-services-and-deploy-updates-0462
 
 }
 
+<<<<<<< HEAD
 }
+=======
+
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

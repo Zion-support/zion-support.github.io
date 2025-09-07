@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React,{ useState } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; export default function Page() {; ,\"; { \"icon\": <Star className=\"w-6 h-6\"/>,\"value\": \"4.8/5\",\"label\": \"Global Rating\" },\"; { \"icon\": <TrendingUp className=\"w-6 h-6\"/>,\"value\": \"98%\",\"label\": \"Client Satisfaction\" } ]; const partnerships = [{}; export {};
+const React,{ useState } from "react"; import { motion,AnimatePresence } from "framer-motion"; export default function Page() {; ,"; { icon: <Star className="w-6 h-6"/>,value: "4.8/5",label: "Global Rating" },"; { icon: <TrendingUp className="w-6 h-6"/>,value: "98%",label: "Client Satisfaction" } ]; const partnerships = [{}; export {};'"'"
+import _React,{ useState } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export default function Page() {; ,"; { "icon": <Star className="w-6 h-6"/>,"value": "4.8/5","label": "Global Rating" },"; { "icon": <TrendingUp className="w-6 h-6"/>,"value": "98%","label": "Client Satisfaction" } ]; const partnerships = [{}; export {};
+=======
 
 =======
 import _React,{ useState } from 'react; import { motion,AnimatePresence } from framer-motion'; export default function Page() { ,; { "icon": <Star className=w-6 h-6/>,"value": 4.8/5,"label": Global Rating },"; { "icon: <TrendingUp className=w-6 h-6"/>,"value: 98%","label: Client Satisfaction" } ]; const partnerships = [{} export {}
@@ -16,6 +21,7 @@ const React,{ useState } from react"; import { motion,AnimatePresence } from "fr
 
 import _React,{ useState } from react'; import { motion,AnimatePresence } from 'framer-motion; export default function Page() { ,; { "icon": <Star className=w-6 h-6/>,"value": 4 && 4.8/5,"label": Global Rating },"; { "icon: <TrendingUp className=w-6 h-6"/>,"value: 98%","label: Client Satisfaction" } ]; const partnerships = [{} export {}
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
@@ -24,3 +30,6 @@ import _React,{ useState } from react'; import { motion,AnimatePresence } from '
 import React,{ useState } from \react\'; import { motion,AnimatePresence } from \'framer-motion\; export default function Page() { ,\"; { \icon\: <Star className=\"w-6 h-6\"/>,\value\: \"4.8/5\",\label\: \"Global Rating\" },\; { \icon\": <TrendingUp className=\"w-6 h-6\/>,\value\": \"98%\,\label\": \"Client Satisfaction\ } ]; const partnerships = [{} export {}
 const React,{ useState } from react"; import { motion,AnimatePresence } from "framer-motion; export default function Page() { ,; { icon: <Star className="w-6 h-6"/>,value: 4.8/5,label: "Global Rating" },; { icon: <TrendingUp className=w-6 h-6"/>,value: "98%,label: Client Satisfaction" } ]; const partnerships = [{} export {}"'"
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:fix-final-errors.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +173,7 @@ files.forEach(file => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
@@ -206,6 +208,10 @@ main
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -229,10 +235,19 @@ const fixes = [// Fix missing semicolons in import statements;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
     "replacement"
+=======
+=======
+    "replacement"
+<<<<<<<< HEAD:fix-final-errors.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     "replacement"
 <<<<<<< HEAD
 =======
@@ -370,6 +385,7 @@ console.log(`Fixed final errors in ${fixedCount} files.`);
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     "replacement"
@@ -394,3 +410,8 @@ console.log(`Fixed final errors in ${fixedCount} files.`);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+========
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

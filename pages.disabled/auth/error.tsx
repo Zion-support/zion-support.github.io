@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 import { use_router } from 'next / router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
+<<<<<<< HEAD:pages.disabled/auth/error.tsx
 const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 }
@@ -11,6 +14,10 @@ export default function AuthErrorPage() {
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/auth/error.tsx
 
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
@@ -27,6 +34,10 @@ const errorMessages: Record<string, string> = {;
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
+<<<<<<< HEAD:pages.disabled/auth/error.tsx
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/auth/error.tsx
   return (
     <>
       <Head>
@@ -102,6 +113,10 @@ function AuthErrorPage() {
     </>);
 
 }
+<<<<<<< HEAD:pages.disabled/auth/error.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/auth/error.tsx
 import { useRouter } from 'next/router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -160,10 +175,24 @@ export default function AuthErrorPage() {
     </>
   )
 }
+<<<<<<< HEAD:pages.disabled/auth/error.tsx
+=======
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/auth/error.tsx
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD:pages.disabled/auth/error.tsx
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/auth/error.tsx

@@ -10,6 +10,7 @@ export default async function handler(;
     return res.status(200).json(profile);
 
     const { address } = req && req.query as { address?: string };
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { buildIdentityProfile } from '@/utils/offworld/identity';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
@@ -37,17 +38,52 @@ res: NextApiResponse;
 >>>>>>> origin/chore/fix-lint-and-merge
 }
 const { address } = req && req.query as { address?: string };
+=======
+<<<<<<< HEAD
+const { address } = req && req.query as { address?: string };
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
     const { address } = req.query as { address?: string },
     const profile = await buildIdentityProfile($2);
     return res.status(200).json(profile)
   } catch (e: any) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
+=======
+    const { address } = req.query as { address?: string };
+    const profile = await buildIdentityProfile(address);
+    return res && res.status(200).json(profile);
+  } catch (e: any) {
+<<<<<<< HEAD
+    const { address } = req && req.query as { address?: string };
+=======
+
+    const { address } = req && req.query as { address?: string };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const profile = await buildIdentityProfile(address);
+    return res && res.status(200).json(profile);
+  } catch (e: any) {
+    return res && res.status(500).json({ error: e && e.message });
+import type { NextApiRequest, NextApiResponse } from './next';
+import { buildIdentityProfile  } from '@/utils / offworld / identity';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  try {
+    const { address } = req.query as { address?: string }
+    const profile = await buildIdentityProfile (address);
+    return res.status (200).json (profile);
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
   }
@@ -57,6 +93,15 @@ import { buildIdentityProfile } from @/utils/offworld/identity;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { address } = req.query as { address?: string }
+<<<<<<< HEAD
+=======
+    const profile = await buildIdentityProfile (address);
+    return res.status (200).json (profile);
+
+  try {;
+    const { address } = req.query as { address?: string };
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {
@@ -116,6 +161,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
   } catch (e: any) {}
     return res.status (500).json ({ error: e.message });
+<<<<<<< HEAD
 
 const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
@@ -152,3 +198,47 @@ const profile = await buildIdentityProfile(address);
 });
   }
 
+=======
+  }
+}
+<<<<<<< HEAD
+    return res.status(500).json({ error: e.message })
+  };
+}
+    return res.status(500).json({ error: e.message })
+  };
+import type { NextApiRequest, NextApiResponse } from "next";
+import { buildIdentityProfile } from "@/utils/offworld/identity";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+try {
+    const { address } = req.query as { address?: string }
+    const profile = await buildIdentityProfile(address);
+    return res.status(200).json(profile);
+
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
+  }
+  try {
+
+    const { address } = req.query as { address?: string }
+  try {;
+    const { address } = req.query as { address?: string };
+    const profile = await buildIdentityProfile(address);
+    return res.status(200).json(profile);
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
+
+  }
+
+}
+=======
+=======
+    return res.status(500).json({ error: e.message })
+  };
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

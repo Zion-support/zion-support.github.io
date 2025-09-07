@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+import React, { useState, useEffect, useMemo } from 'react';
+import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import React, { useState, useEffect, useMemo } from 'react',;
+import {;
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  BarChart3, Globe, Database, Cpu, Rocket, Brain;
+} from 'lucide-react';
+interface ContentItem {id: string;
+  title: string;
+  href: string;
+  desc: string;
+  category: string;
+  subcategory?: string;
+  date: string;
+  relevance: 'high' | 'medium' | 'low';
+  tags: string[];
+  source: string;
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React, { useState, useEffect, useMemo } from 'react',
 import { 
 
@@ -12,12 +44,62 @@ interface ContentItem {
   desc: string;,
   category: string;,
   subcategory?: string,
+<<<<<<< HEAD
 
+=======
+  date: string,
+  relevance: 'high' | 'medium' | 'low',
+  tags: string[],
+  source: string,
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
+interface ContentCategory {id: string;
+  name: string;
+  icon: any;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   description: string;
   color: string;,
   count: number;
   subcategories?: string[];
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedDateRange, setSelectedDateRange] = useState('all');
+  const [selectedRelevance, setSelectedRelevance] = useState('all');
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+const ContentCategorizer: React.FC = () => {;
+  const [searchTerm, setSearchTerm] = useState(''),;
+  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),;
+  const [selectedType, setSelectedType] = useState('all'),;
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),;
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),;
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -32,7 +114,84 @@ interface ContentItem {
       tags: ['seojson-ldschemaaudit'];',
   source: 'autonomous-auditor';
       type: 'report';
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    },;
+    {;
+      id: '2',;
+      title: 'Security Vulnerability Scan Results',;
+      href: '/reports/security-scan-2025-08-19',;
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',;
+      category: 'security',;
+      subcategory: 'vulnerability-scan',;
+      date: '2025-08-19',;
+      relevance: 'high',;
+      tags: ['securityvulnerabilityscanremediation'],;
+      source: 'security-scanner',;
+      type: 'security';
+    },;
+    {;
+      id: '3',;
+      title: 'AI Model Performance Update',;
+      href: '/reports/ai-model-performance-2025-08-19',;
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',;
+      category: 'ai',;
+      subcategory: 'performance',;
+      date: '2025-08-19',;
+      relevance: 'high',;
+      tags: ['aiperformanceoptimizationmetrics'],;
+      source: 'ai-monitor',;
+      type: 'update';
+    },;
+    {;
+      id: '4',;
+      title: 'Feature Deployment Summary',;
+      href: '/reports/feature-deployment-2025-08-19',;
+      desc: 'Overview of newly deployed features and their impact on user experience.',;
+      category: 'features',;
+      subcategory: 'deployment',;
+      date: '2025-08-19',;
+      relevance: 'medium',;
+      tags: ['featuresdeploymentuximpact'],;
+      source: 'deployment-tracker',;
+      type: 'feature';
+    },;
+    {;
+      id: '5',;
+      title: 'System Health Dashboard',;
+      href: '/reports/system-health-2025-08-19',;
+      desc: 'Real-time system performance metrics and infrastructure health status.',;
+      category: 'monitoring',;
+      subcategory: 'system-health',;
+      date: '2025-08-19',;
+      relevance: 'medium',;
+      tags: ['monitoringperformanceinfrastructurehealth'],;
+      source: 'health-monitor',;
+      type: 'report';
+    },;
+    {;
+      id: '6',;
+      title: 'User Behavior Insights',;
+      href: '/reports/user-behavior-2025-08-19',;
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',;
+      category: 'analytics',;
+      subcategory: 'user-behavior',;
+      date: '2025-08-19',;
+      relevance: 'high',;
+      tags: ['analyticsuser-behaviorengagementoptimization'],;
+      source: 'behavior-analyzer',;
+      type: 'insight';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -57,7 +216,93 @@ const contentItems: ContentItem[] = [
       source: 'autonomous-auditor';,
       type: 'report;
     },
+<<<<<<< HEAD
 
+=======
+    {
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'
+    },
+    {
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'
+    },
+    {
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'
+    },
+    {
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'
+    },
+    {
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight'
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    }
+    {id: '2';
+      title: 'Security Vulnerability Scan Results';
+      href: '/reports/security-scan-2025-08-19';
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
+      category: 'security';
+      subcategory: 'vulnerability-scan';
+      date: '2025-08-19';
+      relevance: 'high';
+      tags: ['securityvulnerabilityscanremediation'];
+      source: 'security-scanner';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       type: 'security';
     {id: '3';',
   title: 'AI Model Performance Update';
@@ -221,7 +466,41 @@ pr-12325
     { id: 'month';, name: 'This Month' ;}
     { id: 'quarter';, name: 'This Quarter' ;}']
   const relevanceLevels = [;
+<<<<<<< HEAD
+=======
+    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
+    { id: 'high', name: 'High Priority', color: 'text-green-400' }
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
+    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+  ];
+  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
+      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
+      const matchesType = selectedType === 'all' |item.type === selectedType;
+      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  ],;
+  const filteredItems = useMemo(() => {;
+    const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,;
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,;
+      const matchesType = selectedType === 'all' || item.type === selectedType,;
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -229,7 +508,24 @@ pr-12325
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
+<<<<<<< HEAD
 
+=======
+          break;
+<<<<<<< HEAD
+        case 'relevance':;
+          const relevanceOrder = { high: 3, medium: 2, low: 1 }
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
+          break;
+        case 'title':;
+          comparison = a.title.localeCompare(b.title);
+          break;
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ],
 
   const filteredItems = useMemo(() => {
@@ -254,7 +550,20 @@ filtered.sort((a, b) => {
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
+<<<<<<< HEAD
 
+=======
+          break
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return sortOrder === 'asc' ? comparison : -comparison;
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
@@ -291,13 +600,64 @@ type=&quot;text&quot;
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+            <select
+              value={selectedCategory}
+              onChange={(e) => {setSelectedCategory(e.target.value);
+                setSelectedSubcategory('all');
+              }}
+className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+            >
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <select,
+value={selectedCategory}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value),
+                setSelectedSubcategory('all')
+              }}
+              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+            </select>;
+          </div>;
+          {/* Subcategory Filter */}
+<div>
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            </select>
+          </div>
+
+          {_/* Subcategory Filter */}
+          <div>
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -305,20 +665,89 @@ value={selectedSubcategory}
 </select>
               <option value=&quot;all&quot;>All Subcategories</option>
                 <option key={sub} value={sub}>
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
+                </option>;
+              ))}
+            </select>;
+          </div>;
+          {/* Content Type Filter */}
+<div>
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
+              ))}
+            </select>
+          </div>
+
+          {_/* Content Type Filter */}
+          <div>
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
                 <option key={type.id} value={type.id}>
                 </option>;
+<<<<<<< HEAD
 
+=======
+              ))}
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+            </select>;
+          </div>;
+          {/* Relevance Filter */}
+<div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            </select>
+          </div>
+
+          {_/* Relevance Filter */}
+          <div>
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
                 <option key={level.id} value={level.id}>
             </select>;
           </div>;
+<<<<<<< HEAD
 
+=======
+        </div>;
+<<<<<<< HEAD
+;
+:components/ContentCategorizer.tsx
+;
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {/* Sort Controls and Clear Filters */}
 
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
@@ -332,11 +761,64 @@ value={sortBy}
                 <option value=&quot;title&quot;>Title</option>
               <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+<<<<<<< HEAD
 
+=======
+                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
+                {sortOrder === 'asc' ? '↑' : '↓'}
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+              </button>;
+            </div>;
+          </div>;
+          <button;
+            onClick={clearAllFilters}
+className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+          >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              </button>
+            </div>
+          </div>
+          
+          <button,
+onClick={clearAllFilters}
+            className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             Clear All Filters
           </button>
         </div>
       </div>
+:components/ContentCategorizer.tsx
+      {/* Category Pills */}
+      <div>
+        <div className=&quot;flex flex-wrap gap-2&quot;>
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
+                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
+                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
+              }`}
+>
+              <category.icon className=&quot;w-4 h-4&quot; />
+              {category.name}
+              <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
+                {category.count}
+              </span>;
+            </button>;
+          ))}
+        </div>;
+      </div>;
 
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -346,10 +828,26 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
               <category.icon className=&quot;w-4 h-4&quot; />
 </category>
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
+<<<<<<< HEAD
 </span>
               </span>;
             </button>;
 
+=======
+                {category.count}              </span>
+            </button>
+          ))}
+        </div>;
+      </div>;
+;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -358,7 +856,18 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+<<<<<<< HEAD
 
+:components/ContentCategorizer.tsx
+
+=======
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   {item.type}
                 </div>;
               </div>;
@@ -392,7 +901,22 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                   <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
                 <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
                   <TypeIcon className=&quot;w-3 h-3&quot; />
+<<<<<<< HEAD
 
+=======
+                  {item.type}
+                </div>;
+              </div>;
+;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Title and Description */}
 
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
@@ -400,12 +924,56 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
 </p>
               </p>;
+<<<<<<< HEAD
+;
+:components/ContentCategorizer.tsx
+;
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
 
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Tags */}
 
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
+<<<<<<< HEAD
 
+=======
+                    {tag}
+                  </span>;
+                ))}
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+{item.tags.length > 3 && (
+                  <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
+                    +{item.tags.length - 3}
+                  </span>;
+                )}
+              </div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                {item.tags.length > 3 && (
+                  <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
+                  </span>
+                )}
+              </div>;
+;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Metadata */}
 
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
@@ -418,7 +986,28 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>
+<<<<<<< HEAD
 
+=======
+                  Source: {item.source}
+                </span>
+<<<<<<< HEAD
+:components/ContentCategorizer.tsx
+                <a
+                  href={item.href}
+                <a 
+                  href={item.href} 
+
+=======
+
+                <a 
+                  href={item.href} 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        })}
+      </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <a,
 href={item.href} 
                   target="blank"""
@@ -428,8 +1017,30 @@ href={item.href}
                   rel=&quot;noopener&quot;
                   className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
                 >
+<<<<<<< HEAD
 </a>
                   <span aria-hidden></span>
+=======
+                  Open Content
+                  <span aria-hidden>→</span>
+                </a>
+              </div>
+            </div>
+          )
+        })}
+      </div>;
+;
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {/* No Results */}
+{filteredItems.length === 0 && (
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
 

@@ -22,6 +22,7 @@ console.log('\n App Optimization Summary")
 console.log(`   - Total images"`)
 // console.log('\n "Improvements")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -38,3 +39,9 @@ console.log(`   - Total images"`)
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.log('\n "Recommendations")
+=======
+  console.log('\n "Recommendations")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

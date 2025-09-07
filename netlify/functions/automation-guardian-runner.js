@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
 function runNode(relPath, args = []) {
+=======
+<<<<<<< HEAD
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ;
 
@@ -100,8 +108,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const abs = path && path.resolve(__dirname, '....', relPath),
 
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
@@ -109,16 +121,30 @@ ursor/expand-services-advertise-and-build-project-4b36
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   /**
  * log_step - Function description
 =======
 
   function logStep(name, fn) {}
+=======
+exports && exports.config = {
+  schedule: '*/10 * * * *'},
+exports && exports.handler = async () => {
+  const logs = [],
+  function logStep(name, fn) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     logs && logs.push(`\n=== ${name} ===`),
     const { status, stdout, stderr } = fn(),
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),`
     logs && logs.push(`exit=${status}`),
+<<<<<<< HEAD
+    return status
+  }
+  // Generate sitemap for crawling
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
+=======
 
     return status
   }
@@ -129,6 +155,7 @@ ursor/expand-services-advertise-and-build-project-4b36
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Build search index if available
 
   try {
@@ -137,6 +164,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {}`
     logs && logs.push(`Search index generation skipped: ${String(error)}`)
   }
+<<<<<<< HEAD
+=======
+  // Commit and push
+<<<<<<< HEAD
+  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+=  // Run the automation guardian
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
+  // Attempt to push any changes
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
@@ -149,9 +190,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { spawn_sync } = require ('child_process');
 
 /**
@@ -197,6 +243,7 @@ function log_step() {}`
   // Attempt to push any changes;'
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 
   logStep('git:sync', () => runNode('automation/git-sync.cjs'))
 =  // Run the automation guardian
@@ -204,3 +251,6 @@ function log_step() {}`
   // Attempt to push any changes
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
+=======
+},
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

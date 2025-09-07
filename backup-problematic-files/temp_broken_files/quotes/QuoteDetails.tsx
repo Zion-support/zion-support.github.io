@@ -135,7 +135,27 @@ return (<Dialog open= {;
 }(quote.budget min && quote.budget max ? `$$ {;
   quote.budget min ;
 }- $$ {;
+<<<<<<< HEAD
   quote.budget max ;`;
 }` : quote.budget min ? `$$ {;"
   quote.budget min ';')`;
 }` : 'Not specified') ;
+=======
+  quote.budget max ;
+}` : quote.budget min ? `$$ {;
+  quote.budget min ';
+}` : 'Not specified') ;
+}</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
+<<<<<<< HEAD
+:temp_broken_files/quotes/QuoteDetails.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteDetails.tsx
+=======
+
+};
+'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

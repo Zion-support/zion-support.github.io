@@ -29,5 +29,13 @@ const OptimizedImage = ({ className }) => {
   )
 };
 
+<<<<<<< HEAD
     </div>)'
 pr-12325
+=======
+<<<<<<< HEAD
+export default OptimizedImage;
+=======
+export default OptimizedImage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

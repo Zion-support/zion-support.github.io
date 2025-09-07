@@ -288,6 +288,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
 
                 <span>Call Now:+1 302 464 0950</span>;
               </a>;
+<<<<<<< HEAD
                 href="mailto:kleber@ziontechgroup.com";""
                 className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105";"
 </a>
@@ -295,3 +296,39 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
               <p>Address: 364 E Main St STE 1008;, Middletown DE 19709</p>;"
               <p>Website:<a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>;"
       </section>;
+=======
+              <a ;
+                href="mailto:kleber@ziontechgroup.com";
+                className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105";
+              >;
+                Email Us;
+              </a>;
+            </div>;
+            ;
+            <div className="text-sm text-gray-400">;
+              <p>Address:364 E Main St STE 1008, Middletown DE 19709</p>;
+              <p>Website:<a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+<<<<<<< HEAD
+:temp_conflicts/pages/comprehensive-2025-innovative-services-showcase.tsx
+};
+export default Comprehensive2025InnovativeServicesShowcase;
+}
+}
+},;
+;
+export default Comprehensive2025InnovativeServicesShowcase,;
+:backup-problematic-files/temp_conflicts/pages/comprehensive-2025-innovative-services-showcase.tsx
+=======
+
+},;
+;
+export default Comprehensive2025InnovativeServicesShowcase,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

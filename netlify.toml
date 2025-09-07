@@ -121,6 +121,7 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
 
+<<<<<<< HEAD
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
@@ -128,6 +129,8 @@ package = "@netlify/plugin-nextjs"
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 [functions]
 directory = "netlify/functions"
 

@@ -128,5 +128,23 @@ case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className
   disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="pt-2 flex justify-between" > <div> {';
 
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
+<<<<<<< HEAD
   projectId ;)
 }/>) ;
+=======
+  projectId ;
+}/>) ;
+}</div> Actions frozen due to dispute </Button>) ;
+<<<<<<< HEAD
+:temp_broken_files/projects/milestones/MilestoneCard.tsx
+}</div> </CardFooter> </Card>) ;"}'"
+}</div> </CardFooter> </Card>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx
+=======
+
+}</div> </CardFooter> </Card>) ;
+}'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -52,8 +52,23 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 }</Badge>) ) ;
 }</div>) ;
 }</div> </CardContent> </Card>) ) ;
+<<<<<<< HEAD
 :temp_broken_files/profile/ProfileProjects.tsx
 }</div> </div>) ;"}'"
 }</div> </div>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx
+=======
+<<<<<<< HEAD
+:temp_broken_files/profile/ProfileProjects.tsx
+}</div> </div>) ;"}'"
+}</div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx
+=======
+
+}</div> </div>) ;
+}'"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

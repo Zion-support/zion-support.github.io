@@ -51,9 +51,12 @@ const fs = require('fs');
 const path = require('path');
 const outDir = path.join(__dirname, '..', 'automation');
 const outFile = path.join(outDir, 'netlify-functions-manifest.json');
+<<<<<<< HEAD
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const manifest = {
 	generatedAt: new Date().toISOString(),
 	functions: []
@@ -63,6 +66,7 @@ fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 <<<<<<< HEAD
 console.log('[netlify:manifest] wrote', outFile);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/generate-netlify-functions-manifest.cjs
 =======
 >>>>>>> origin/chore/fix-build-nav-links
@@ -70,6 +74,8 @@ console.log('[netlify:manifest] wrote', outFile);
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/generate-netlify-functions-manifest.cjs
 =======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/env node
 // Placeholder Netlify functions manifest generator to satisfy build pipeline.
 // If Netlify Functions are used, implement manifest generation here.
@@ -80,8 +86,25 @@ fs.mkdirSync(outDir, { recursive: true });
 const manifestPath = path.join(outDir, 'functions-manifest.json');
 const manifest = { generatedAt: new Date().toISOString(), functions: [] };
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+<<<<<<< HEAD
+console.log('[netlify] Functions manifest generated at', manifestPath);
+=======
 console.log('[netlify] Functions manifest generated at', manifestPath);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+<<<<<<< HEAD
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

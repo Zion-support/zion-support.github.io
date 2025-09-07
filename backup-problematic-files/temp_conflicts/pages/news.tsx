@@ -773,4 +773,19 @@ export default function News() {;
                     className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50";"
         </main>;
     </>;
+<<<<<<< HEAD
   );
+=======
+  );
+}
+<<<<<<< HEAD
+:temp_conflicts/pages/news.tsx
+;
+}
+}
+:backup-problematic-files/temp_conflicts/pages/news.tsx
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

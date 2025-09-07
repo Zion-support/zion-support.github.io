@@ -202,8 +202,23 @@ try {;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> {;
   /* Future file upload field would go here */ ;
+<<<<<<< HEAD
 :temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
 }</Button> </div> </form> </Form>) ;"}"
 }</Button> </div> </form> </Form>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
+=======
+<<<<<<< HEAD
+:temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
+}</Button> </div> </form> </Form>) ;"}"
+}</Button> </div> </form> </Form>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
+=======
+
+}</Button> </div> </form> </Form>) ;
+}"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

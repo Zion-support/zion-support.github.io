@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+let totalFixed = 0;
+files && files.forEach((file) => {
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
 files && files.forEach((file) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
@@ -11,11 +21,33 @@ files && files.forEach((file) => {
 
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
+<<<<<<< HEAD
           const fixedMatch = match && match.trim() + ";";
           content = content && content.replace(match, fixedMatch);
 #!/usr / bin / env node;'
 import fs from './fs';'
 import path from './path';'
+=======
+    const matches = content && content.match(importRegex);
+
+
+<<<<<<< HEAD
+    // Fix import statements missing semicolons
+
+    // Fix import statements missing semicolons;
+    const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
+    const matches = content && content.match(importRegex);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    if (matches) {
+      matches && matches.forEach((match) => {
+        if (!match && match.trim().endsWith(";")) {
+          const fixedMatch = match && match.trim() + ";";
+          content = content && content.replace(match, fixedMatch);
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { glob  } from './glob';
 ;
 // Find all TypeScript and JavaScript files;"
@@ -48,18 +80,82 @@ if (.ends_with (") {}
           modified = true;
       });
     }
+<<<<<<< HEAD
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+=======
 
+<<<<<<< HEAD
           !match && match.includes("import")
         ) {}
 
+=======
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      (match, varName) => {
+        if (
+          !match && match.includes("function") &&
+          !match && match.includes("if") &&
+          !match && match.includes("for") &&
+          !match && match.includes("while") &&
+          !match && match.includes("switch") &&
+          !match && match.includes("try") &&
+          !match && match.includes("catch") &&
+          !match && match.includes("finally") &&
+          !match && match.includes("return") &&
+          !match && match.includes("throw") &&
+          !match && match.includes("break") &&
+          !match && match.includes("continue") &&
+          !match && match.includes("debugger") &&
+          !match && match.includes("export") &&
+          !match && match.includes("import")
+        ) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
     content = content.replace ()
       /(\w+)\s*=\s*[^;]+(?!)\s*$/gm,
+<<<<<<< HEAD
 
+=======
+      (match, var_name) => {
+        // Check condition
+if (&&) {
+  $2
+}
+          !match.includes ("if") &&;
+          !match.includes ("for") &&;
+          !match.includes ("while") &&;
+          !match.includes ("switch") &&;
+          !match.includes ("try") &&;
+          !match.includes ("catch") &&;
+          !match.includes ("finally") &&;
+          !match.includes ("return") &&;
+          !match.includes ("throw") &&;
+          !match.includes ("break") &&;
+          !match.includes ("continue") &&;
+          !match.includes ("debugger") &&;
+          !match.includes ("export") &&;
+          !match.includes ("import")) {
+          return match + ";";
+        }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         return match;
     );
+<<<<<<< HEAD
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+=======
 
+<<<<<<< HEAD
+=======
+
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     // Check condition;
 if ( {) {}
@@ -69,4 +165,16 @@ if ( {) {}
     // Check condition;
       fs.writeFileSync (file_path, content, "utf8");"
       console.log (`Fixed: ${file}`);
+<<<<<<< HEAD
       total_fixed++;
+=======
+      total_fixed++;
+    }
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message);
+  }
+});
+;
+console.log (`\n_total files fixed: ${total_fixed}`);
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

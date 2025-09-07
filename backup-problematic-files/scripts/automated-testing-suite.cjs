@@ -6,11 +6,14 @@ const fs = require('fs');
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 console.log('🧪 Automated Testing Suite');
 console.log('=====');
 
@@ -26,6 +29,7 @@ async function runTests() {
 
   const results = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -36,6 +40,11 @@ async function runTests() {
 
   const results = [];
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+  
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   for (const test of tests) {
     try {
   // TODO: Implement
@@ -55,12 +64,17 @@ async function runTests() {
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
 
 =======
 
 
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -74,6 +88,7 @@ async function runTests() {
 }
 <<<<<<< HEAD
 runTests().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
   
@@ -90,3 +105,9 @@ runTests().catch(console.error);
 =======
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+
+runTests().catch(console.error);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -82,6 +82,7 @@ export function MobileConversationList({;
 }) ;"
 }onClick={;"  () => onSelectConversation (conversation.id) ";"}> <div className=" flex items-center gap-3 py-3 cursor-pointer"> <Avatar> <AvatarImage src= {;"
 }/> <AvatarFallback >{;
+<<<<<<< HEAD
 
 }  ? <em>Typing...</em> : conversation.lastMessage ;
 }</p> {;"
@@ -90,3 +91,25 @@ export function MobileConversationList({;
 }) ";""
 }</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;"
 }</div> </div>) ;"
+=======
+  conversation.name.charAt (0) .toUpperCase () ;
+}</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage ;
+}</p> {;
+<<<<<<< HEAD
+:temp_broken_files/mobile/components/messaging/MobileConversationList.tsx
+  conversation.unreadCount ;"}</Badge>) ";"}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
+}</div> </div>) ;"}"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  conversation.unreadCount ;
+}</Badge>) ";
+}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
+}</div> </div>) ;
+}"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/messaging/MobileConversationList.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

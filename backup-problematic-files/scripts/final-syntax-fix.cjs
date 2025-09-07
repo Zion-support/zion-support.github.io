@@ -20,6 +20,7 @@ console.log('🔧 Final Syntax Fix);
 const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-fix.cjs
 =======
@@ -38,6 +39,17 @@ console.log('====');
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
+console.log('====');
+=======
+
+console.log('🔧 Final Syntax Fix');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Function to fix specific syntax errors
 =======
 
@@ -115,6 +127,7 @@ let totalFixed = 0;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
@@ -128,6 +141,9 @@ let totalFixed = 0;
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 for (const file of filesToFix) {
   try {
   // TODO: Implement
@@ -138,12 +154,18 @@ for (const file of filesToFix) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
     let content = fs.readFileSync(file, utf8');
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     let content = fs.readFileSync(file, 'utf8');
 >>>>>>> origin/chore/fix-lint-and-merge
     const originalContent = content;
@@ -162,6 +184,7 @@ for (const file of filesToFix) {
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
@@ -174,3 +197,9 @@ console.log('🎉 Final syntax fix completed!');
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+console.log('🎉 Final syntax fix completed!');
+=======
+console.log('🎉 Final syntax fix completed!');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

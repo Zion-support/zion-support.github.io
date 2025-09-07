@@ -1,14 +1,29 @@
+<<<<<<< HEAD
 // Security Configuration;
 export const security_config = {
   // Content Security Policy;
 // Security Configuration;
 export const security_config = {
   // Content Security Policy;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Security Configuration
 export const securityConfig = {
   // Content Security Policy
   csp: {
     directives: {
+<<<<<<< HEAD
+      defaultSrc: ["'self'"]
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"]
+      fontSrc: ["'self'", "https://fonts.gstatic.com"]
+      imgSrc: ["'self'", "data:", "https:"]
+      scriptSrc: ["'self'"]
+      connectSrc: ["'self'"]
+      frameSrc: ["'none'"]
+      objectSrc: ["'none'"]
+      baseUri: ["'self'"]
+      formAction: ["'self'"]
+=======
 
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
@@ -41,6 +56,7 @@ export const securityConfig = {
 
 export default securityConfig;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       upgradeInsecureRequests: []
     }
   }
@@ -81,4 +97,8 @@ export default securityConfig;
     max: 100 // limit each IP to 100 requests per window_ms;
   }
 };
+<<<<<<< HEAD
 export default securityConfig;
+=======
+export default securityConfig;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

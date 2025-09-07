@@ -164,12 +164,34 @@ isAuthenticated ;
 }</span>) ) ;
 }more </span>) ;
 }</div> </div>) ;
+<<<<<<< HEAD
 :temp_broken_files/talent/TalentCard.tsx
 
 };""
+=======
+<<<<<<< HEAD
+:temp_broken_files/talent/TalentCard.tsx
+}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+};""
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }$ {;
   talent.hourly rate ";
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
 }</div> <Button size="sm" variant="secondary" onClick={;
   handleRequestHire ";
+<<<<<<< HEAD
 }className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
+=======
+}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
+}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+};
+"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

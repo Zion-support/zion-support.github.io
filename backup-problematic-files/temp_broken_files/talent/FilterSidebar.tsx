@@ -152,4 +152,29 @@ isMobileFilterOpen ;)
 }setPriceRange= {;
   setPriceRange ;
   expandedSections.price ;
+<<<<<<< HEAD
   () => toggleSection ('price') ;
+=======
+}toggleSection= {';
+  () => toggleSection ('price') ;
+}isMobileFilterOpen= {;
+  isMobileFilterOpen ;
+}/> {;
+<<<<<<< HEAD
+:temp_broken_files/talent/FilterSidebar.tsx
+  isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+}</>) ;"}'"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  isMobileFilterOpen && (<Button onClick={';
+  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";
+}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+}</>) ;
+}'"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

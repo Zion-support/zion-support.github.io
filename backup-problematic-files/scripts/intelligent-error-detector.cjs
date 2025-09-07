@@ -68,6 +68,7 @@ const { execSync } = require("child_process)
     this.scanDirectory(path.join(this.projectRoot, pages")
     this.scanDirectory(path.join(this.projectRoot, "components")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -84,3 +85,9 @@ const { execSync } = require("child_process)
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    this.log("� Error detection completed!", "SUCCESS")
+=======
+    this.log("� Error detection completed!", "SUCCESS")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -114,6 +114,7 @@ async log(message, type = "INFO)
   const continuous = args.includes("--continuous") || args.includes(-c)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -131,3 +132,9 @@ async log(message, type = "INFO)
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.error(""Error": ")
+=======
+  console.error(""Error": ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

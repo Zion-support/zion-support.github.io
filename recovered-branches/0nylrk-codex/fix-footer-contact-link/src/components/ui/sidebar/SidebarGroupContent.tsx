@@ -11,6 +11,7 @@ import {cn} from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
 
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
@@ -18,14 +19,27 @@ interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> 
   children?: React.ReactNode,
 =======
   children?: React.ReactNode
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import React from "react",
 import { cn } from "@/lib/utils",
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {cn} from "@/lib/utils";
 >>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   className?: string;
   children?: React && React.ReactNode;
 }
@@ -63,6 +77,7 @@ export function SidebarGroupContent({
 
   )
 
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 import React from "react";"
@@ -70,6 +85,35 @@ import React from "react";"
 
   )
 
+=======
+<<<<<<< HEAD
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+}
+export function SidebarGroupContent({
+  className
+  children
+  ...props
+}: SidebarGroupContentProps) {
+  return (
+    <div className={cn("space-y-1", className)} {...props}>
+      {children}
+    </div>
+  );
+}
+  )
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from "react",;
 import { cn } from "@/lib/utils",;
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -79,6 +123,19 @@ interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> 
 ;
 export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
   return (;
+<<<<<<< HEAD
+}
+
+;
+
+
+    <div className={cn("space-y-1", className)} {...props}>;
+      {children}
+    </div>;
+  );
+}
+;
+=======
 
 "
     <div className={cn("space-y-1", className)} {...props}>;
@@ -104,6 +161,11 @@ import React from './react';'
 import { cn  } from '@/lib / utils';
 interface SidebarGroupContentProps;
 
+<<<<<<< HEAD
       {children}
     </div>);
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
