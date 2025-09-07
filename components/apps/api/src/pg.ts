@@ -1,24 +1,43 @@
-import { Pool, PoolClient } from 'pg';
-let pool: Pool | null = $2;
-export function getPool(): Pool {
-  if (!pool) {
-    pool = new Pool({ connectionString: process.env.DATABASE_URL })
-  }
-  return pool
-}
 
-export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {
-  const client = await getPool().connect($2);
+
+import { Pool, PoolClient } from 'pg';'
+let "pool": Pool | null;
+throw err;
+export async function withUser<T>(
+  "userId": string,
+"fn": ("client": PoolClient) => Promise<T>
+): Promise<T> {
+  }
+  const client = await getPool().connect();
+<<<<<<< HEAD
   try {
-    await client.query($2);
-    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),
-    const result = await fn($2);
-    await client.query($2);
-    return result
+
+    }
+
+    await client.query('BEGIN');'
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [`
+      userId
+    ]);
+
+const result = await fn(client);
+    await client.query('COMMIT');'
+    return result;
   } catch (err) {
-    await client.query($2);
-    throw err
+    }
+    await client.query('ROLLBACK');'
+    throw err;
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } finally {
-    client.release()
+    }
+    client.release ();
   }
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+    await client.query('ROLLBACK');}
+    throw err;}
+  } finally {}
+    client.release ();}
+  }

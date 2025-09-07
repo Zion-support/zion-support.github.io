@@ -1,3 +1,6 @@
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
+          "text-muted-foreground hover: text-foreground hover:bg-accent"
+
 import React, { forwardRef } from "react",
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
@@ -35,6 +38,46 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
           "text-muted-foreground hover:text-foreground hover:bg-accent",;
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",;
           className;
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+);
+SidebarMenuButton.displayName = "SidebarMenuButton";
+);
+import React, { forward_ref } from './react';
+import { Slot } from '@radix - ui / react - slot';
+import { cn } from '@/lib / utils';
+interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes < HTMLButtonElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+  as_child?: boolean;
+}
+export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuButtonProps>(
+  ({ class_name, children, as_child = false, ...props }, ref) => {
+    const Comp = as_child ? Slot : "button";
+    return (
+      <Comp;
+        className={cn (
+          "flex items - center w - full px - 3 py - 2 text - sm rounded - md font - medium transition - colors";
+          "text - muted - foreground hover: text - foreground hover:bg - accent";
+          "focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring",
+          class_name)}
+        ref={ref as any}
+        {...props}
+      >;
+        {children}
+      </Comp>);
+  }
+);
+;
+SidebarMenuButton.display_name = "SidebarMenuButton";
+;
+),
+
+SidebarMenuButton.displayName = "SidebarMenuButton",
+);
+
+SidebarMenuButton.displayName = "SidebarMenuButton";
         )}
         ref = $2;
 SidebarMenuButton.displayName = $2;

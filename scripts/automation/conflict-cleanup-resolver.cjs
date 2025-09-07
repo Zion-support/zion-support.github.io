@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
     this.logsDir = path.join(this.projectRoot, "logs")
   "conflictsResolved"
       "filesCleaned"
@@ -9,7 +13,7 @@ const { execSync } = require("child_process")
   fs.mkdirSync(this.logsDir, { "recursive"})
   log(message, level = "INFO")
     console.log(")
-    const logFile = path.join(this.logsDir, "conflict-cleanup.log")
+const logFile = path.join(this.logsDir, "conflict-cleanup.log");
     fs.appendFileSync(logFile, logEntry + "\n")
   this.log(")
   // Step "1"
@@ -20,7 +24,7 @@ const { execSync } = require("child_process")
       // Step 4: Finalize the merge"
       await this.finalizeMerge();")} catch (error) {this.log( Fatal "error": ${error.message}, "ERROR"")
   this.log("🧹 Cleaning up backup files...")
-      const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", "**/*.cleanup-backup.1756*", ""]
+const backupPatterns = ["**/*.backup.*"", "**/*.cleanup-backup.*", "**/*.backup.1756*"", "**/*.cleanup-backup.1756*", ""];
   try {const files = execSync("find . -name "${pattern} -type f")
   "encoding": "utf8"})            .split("\n")
   fs.unlinkSync(file);this.log("� Removed backup "file")
@@ -28,7 +32,7 @@ const { execSync } = require("child_process")
   this.log(` Error cleaning up backup "files": ${error.message  }`, "ERROR"`)
   this.log(" Resolving merge conflicts...")
   this.log("🧹 Cleaning up backup files...")
-      const backupPatterns = ["**/*.backup.*", "**/*.cleanup-backup.*", "**/*.backup.1756*", "**/*.cleanup-backup.1756*", "]
+const backupPatterns = ["**/*.backup.*", "**/*.cleanup-backup.*", "**/*.backup.1756*", "**/*.cleanup-backup.1756*", "];
   "encoding": "utf8"
             .split("\n")
   fs.unlinkSync(file);this.log(`� Removed backup "file": ${file}"`)
@@ -36,9 +40,9 @@ const { execSync } = require("child_process")
                 "WARN"
   this.log(` Error cleaning up backup "files": ${error.message}", "ERROR"`)
   this.log(" Resolving merge conflicts...")
-      const conflictedFiles = this.getConflictedFiles();this.log("Found ${conflictedFiles.length} conflicted files")
+const conflictedFiles = this.getConflictedFiles();this.log("Found ${conflictedFiles.length} conflicted files");
     } catch (error) {  this.log(" Error resolving merge "conflicts": ${error.message  }", "ERROR")
-  const statusOutput = execSync("git status --porcelain")
+const statusOutput = execSync("git status --porcelain");
   "encoding": "utf8"
         .split("\n")
             line.startsWith("UU ")
@@ -46,16 +50,14 @@ const { execSync } = require("child_process")
             line.startsWith("DD ")
   async resolveFileConflict(filePath) {this.log(" Resolving conflict "in": ${filePath}")
   if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
-      const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
   if (!fs.existsSync(filePath)) {this.log("⚠ File does not "exist": ${filePath}", "WARN")
-      const content = fs.readFileSync(filePath, "utf8")
+const content = fs.readFileSync(filePath, "utf8");
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
       ) {this.log(" No conflicts "in": ${filePath}")
 this.log(" Resolved conflicts "in")
         "ERROR"
@@ -71,10 +73,10 @@ this.log(" Resolved conflicts "in")
   resolvedContent = this.cleanupJson(resolvedContent)} else if ([".js", ".jsx", ".ts", ".tsx")]
   resolvedContent = this.cleanupCode(resolvedContent)} else if (fileExt === ".md")
       fixed = fixed.replace(/,(\s*[}\]])/g, "$1"
-    const lines = content.split("\n")
+const lines = content.split("\n");
         trimmedLine.startsWith("import ")
         trimmedLine.startsWith("export ")
-    return cleanedLines.join("\n")
+return cleanedLines.join("\n");
       /([\s\S]*?)      "$1"
   this.log("🧹 Cleaning up duplicate files...")
             this.log(`� Removed deleted "file"`)
@@ -82,7 +84,7 @@ this.log(" Resolved conflicts "in")
             "
   this.log( Error cleaning up duplicate "files")
         "ERROR"
-  const statusOutput = execSync(`git status --porcelain``)
+const statusOutput = execSync(`git status --porcelain``);
   "encoding": "utf8"
         .split("\n")
         .filter(line => line.startsWith("DD ")
@@ -90,7 +92,7 @@ this.log(" Resolved conflicts "in")
             "WARN"
   this.log( Error cleaning up duplicate "files": ${error.message}")
         "ERROR"
-  const statusOutput = execSync("git status --porcelain")
+const statusOutput = execSync("git status --porcelain");
   "encoding": "utf8"
         .split("\n")
         .filter(line => line.startsWith("DD ")
@@ -110,7 +112,7 @@ this.log(" Resolved conflicts "in")
       "summary"
         "filesCleaned"
         "errors"
-    const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
+const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json");
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
   console.error(" Fatal "error": ")
@@ -126,10 +128,7 @@ this.log("� Detailed report saved "to": ${reportPath}")
       "summary"
         "filesCleaned"
         "errors"
-    const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
+const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json");
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
   console.error(" Fatal "error")
-  console.error(" Fatal "error")
-
-

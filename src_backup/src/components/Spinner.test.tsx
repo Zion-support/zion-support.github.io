@@ -1,7 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
-
-describe('Spinner', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
+import { render, screen  } from '@testing-library/react';'
+import Spinner from './Spinner';'
+describe('Spinner', () => {it('renders without crashing', () => {render(<$1>)expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()it('displays expected content', () => {render(<Spinner />)})// Add specific test assertions based on component content;'
+  })

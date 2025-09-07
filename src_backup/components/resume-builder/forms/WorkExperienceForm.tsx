@@ -1,12 +1,4 @@
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await updateWorkExperience (editing_id, experience_data);
-      } else {
-        success = await addWorkExperience(resumeId, experienceData)
-      }
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
 
   };
   const handleEdit = (work: WorkExperience) => {;
@@ -54,6 +46,8 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 
   const handleEdit = (work: WorkExperience) => {
 
+  const handleEdit = (work: WorkExperience) => {
+origin/cursor/automate-test-improve-and-merge-code-2533
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -178,26 +172,8 @@ interface WorkExperienceFormProps {;
   resumeId: string;
   workExperiences: WorkExperience[];
   onComplete: () => void;
-  onBack: () => void;
-
-export function WorkExperienceForm(): any ({;
-  resumeId,;
-  workExperiences,;
-  onComplete,;
-  onBack,;
-}: WorkExperienceFormProps) {;
-  const {;
-    addWorkExperience,;
-    updateWorkExperience,;
-    deleteWorkExperience,;
-    isLoading,;
-  } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '';
+  onBack: () => void;export function WorkExperienceForm(): any ({resumeId,workExperiences,onComplete,onBack}: WorkExperienceFormProps) {const {addWorkExperience,updateWorkExperience,deleteWorkExperience,isLoading} = useResume()const [editingId, setEditingId] = useState<string | null>(null)const [error, setError]  = useState<string | null>(null)// Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd')
 };
@@ -281,13 +257,9 @@ export function WorkExperienceForm(): any ({;
         <p className='text-muted-foreground'>;
           Add your work history to showcase your professional experience.;
         </p>;
-      </div>;
-
-      {workExperiences && workExperiences.length > 0 && (;
-        <div className='space-y-4'>;
+      </div>;{workExperiences && workExperiences.length > 0 && (<div className='space-y-4'>;
           <h3 className='text-md font-medium'>Added Experience</h3>;
-          {workExperiences && workExperiences.map(work => (;
-            <Card key={work && work.id} className='bg-muted/40'>;
+          {workExperiences && workExperiences.map(work => (<Card key={work && work.id} className='bg-muted/40'>;
               <CardContent className='pt-6'>;
                 <div className='flex justify-between'>                  <div>;
                     <h4 className='font-medium'>{work && work.role_title}</h4>;
@@ -324,6 +296,7 @@ export function WorkExperienceForm(): any ({;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -376,19 +349,47 @@ export function WorkExperienceForm(): any ({;
                     Next
                   </Button>
                 )}
+              </div>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </div>
+  );
 
-              </Button>;
-
-              <div className='flex gap-2'>;
-                <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
-                  {editingId ? 'Update' : 'Add'} Experience;
+}> {';
+  editingId ? 'Cancel': 'Back' ;
+}</Button> Next </Button>) ;
+}</div> </div> </form> </Form> </div> </div>) ;
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    </p>;
+                    {work.location && (<p className="text-xs text-muted-foreground">{work.location}</p>;
+                    )}</div>;
+                  <div className='flex gap-2'>;</div>;
+                  <div className="flex gap-2">;
+                    <Button;
+                    setEditingId(null),setEditingId(null),form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})} else {onBack()/>;{error && (<Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}<div className='flex justify-between pt-2'>;
+              <Button;
+                type='button';
+                variant='outline';
+                onClick={() => {if (editingId) {setEditingId(null)form && form.reset({company_name: '',role_title: '',start_date: format(new Date(), 'yyyy-MM-dd'),is_current: false,description: '',location: ''})} else {onBack()onClick={() => {if (editingId) {setEditingId(null)form.reset({company_name: '';
+                      role_title: '';
+                      start_date: format(new Date(), 'yyyy-MM-dd')is_current: false;
+                      description: '';
+                      location: '';
+                    })} else {onBack()}
+                }}
+              >;
+                {editingId ? 'Cancel' : 'Back'}</Button>;
+              <div className="flex gap-2">;
+                <Button type="submit" disabled={isLoading}>;
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}{editingId ? 'Update' : 'Add'} Experience;
                 </Button>;
-
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
-                  <Button type='button' onClick={onComplete}>;
+                {!editingId && workExperiences.length > 0 && (<Button type='button' onClick={onComplete}>;
                     Next;
                   </Button>;
                 )}
@@ -397,43 +398,27 @@ export function WorkExperienceForm(): any ({;
 
                 </FormItem>)}
             />;
-            {error && (
-              <Alert variant='destructive'>;
+            {error && (<Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>)}
             <div className='flex justify - between pt - 2'>;
               <Button;
                 type='button';
                 variant='outline';
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
+                on_click={() => {// Check condition;
+if ( {) {$2;
 }
-                    setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format (new Date (), 'yyyy - MM - dd'),
-                      is_current: false,
-                      description: '',
-                      location: '',
-                    });
-                  } else {
-                    on_back ();
-                  }
+                    setEditingId (null)form.reset ({company_name: '',role_title: '',start_date: format (new Date (), 'yyyy - MM - dd'),is_current: false,description: '',location: ''})} else {on_back ()}
                 }}
               >;
                 {editing_id ? 'Cancel' : 'Back'}
               </Button>;
               <div className='flex gap - 2'>;
                 <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {is_loading && (<Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
                   {editing_id ? 'Update' : 'Add'} Experience;
                 </Button>;
-                {!editing_id && work_experiences.length > 0 && (
-                  <Button type='button' on_click={on_complete}>;
+                {!editing_id && work_experiences.length > 0 && (<Button type='button' on_click={on_complete}>;
                     Next;
                   </Button>)}
               </div>;

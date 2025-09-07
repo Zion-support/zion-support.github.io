@@ -1,12 +1,16 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
     this.logFile = path.join(this.projectRoot, ""automation/logs/project-error-automation.log")
     this.errorReportFile = path.join(this.projectRoot, "automation/reports/error-report.json"")
     await this.log(" Starting Project Error Automation")
-  const dirs = ["""automation/logs"""", """automation/reports""", """automation/backups""""]
+const dirs = ["""automation/logs"""", """automation/reports""", """automation/backups""""];
   await fs.mkdir(path.join(this.projectRoot, "dir)", { "recursive"}
     console.log(")
     await fs.appendFile(this.logFile, logMessage + "\n")
@@ -21,7 +25,7 @@ const glob = require("glob")
       return { "success": true, "output"}
   return { "success": false, "output"}
   await this.log("� Checking dependencies...")
-    const npmCheck = await this.runCommand("npm ls --depth=0", { "silent"})
+const npmCheck = await this.runCommand("npm ls --depth=0", { "silent"});
   await this.log("⚠  Dependency conflicts detected")
   "type": "dependency-conflict"
         "message": "Dependency conflicts found"
@@ -30,14 +34,14 @@ const glob = require("glob")
         "message": "Dependency conflicts found"
         "details"
       await this.log(" Attempting to fix dependency conflicts...")
-      const fixResult = await this.runCommand("npm install --legacy-peer-deps")
+const fixResult = await this.runCommand("npm install --legacy-peer-deps");
   await this.log(" Dependencies fixed successfully")
   "type": "dependency-fix"
           "action": "npm install --legacy-peer-deps"
           "timestamp"
   await this.log(" Dependencies are healthy")
   await this.log(" Checking TypeScript errors...")
-    const typeCheck = await this.runCommand("npm run type-check", { "silent"})
+const typeCheck = await this.runCommand("npm run type-check", { "silent"});
   await this.log("⚠  TypeScript errors detected")
   "type": "typescript-error"
         "message": "TypeScript compilation errors"
@@ -58,11 +62,11 @@ const glob = require("glob")
   case "import-fix"
       case "type-annotation-fix"
       case "jsx-fix"
-  const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
+const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
         if (content.includes("React") && !content.includes(")
-  content = import React from "react"
+  content = import React from "react";
         if (content.includes("useState") && !content.includes(import { useState }")
             /import React from "react"/,import React, { useState } from "react""
   modified = true;")}"
@@ -70,25 +74,25 @@ const glob = require("glob")
   "type": "import-fix"
             "file"
             "timestamp"
-  const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
-  const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
+const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
+const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
   "type": "type-annotation-fix"
             "file"
             "timestamp"
-  const jsxFiles = glob.sync("src/**/*.{jsx,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
+const jsxFiles = glob.sync("src/**/*.{jsx,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
         if (content.includes("<>") && !content.includes("</>")
   content = content.replace(/<>/g, "<React.Fragment>").replace(/<\/>/g, "</React.Fragment>")
         if (content.includes("class=")
   content = content.replace(/class=/g, "className=")
-  const jsxFiles = glob.sync("src/**/*.{jsx,tsx}", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
+const jsxFiles = glob.sync("src/**/*.{jsx,tsx}", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
         if (content.includes("<>") && !content.includes("</>")
   content = content.replace(/<>/g, "<React.Fragment>").replace(/<\/>/g, "</React.Fragment>")
         if (content.includes("class=")
@@ -97,26 +101,26 @@ const glob = require("glob")
             "file"
             "timestamp"
   await this.log(" Checking linting errors...")
-    const lintCheck = await this.runCommand("npm run lint", { "silent"})
+const lintCheck = await this.runCommand("npm run lint", { "silent"});
   await this.log("⚠  Linting errors detected")
   "type": "linting-error"
         "message": "ESLint errors found"
         "details"
   await this.log(" Checking linting errors...")
-    const lintCheck = await this.runCommand("npm run lint", { "silent"})
+const lintCheck = await this.runCommand("npm run lint", { "silent"});
   await this.log("⚠  Linting errors detected")
   "type": "linting-error"
         "message": "ESLint errors found"
         "details"
       await this.log(" Attempting to auto-fix linting issues...")
-      const fixResult = await this.runCommand("npm run lint -- --fix", { "silent"})
+const fixResult = await this.runCommand("npm run lint -- --fix", { "silent"});
   await this.log(" Linting issues auto-fixed")
   "type": "linting-fix"
           "action": "npm run lint -- --fix"
           "timestamp"
   await this.log(" No linting errors found")
-  const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
-      const configContent = await fs.readFile(eslintConfigPath, "utf8")
+const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js");
+const configContent = await fs.readFile(eslintConfigPath, "utf8");
       // Check if there"
       if (!configContent.includes("module.exports")
   await this.log(" Fixing ESLint configuration...");const fixedConfig = "
@@ -132,7 +136,7 @@ const glob = require("glob")
           "timestamp"
     } catch (error) {  await this.log(` Error fixing ESLint "config"`})
   await this.log(" Checking build errors...")
-    const buildCheck = await this.runCommand("npm run build", { "silent"})
+const buildCheck = await this.runCommand("npm run build", { "silent"});
   await this.log("⚠  Build errors detected")
   "type": "build-error"
         "message": "Build compilation errors"
@@ -143,10 +147,10 @@ const glob = require("glob")
     if (errorOutput.includes("Cannot find module")
     if (errorOutput.includes("Unexpected token")
     if (errorOutput.includes("Cannot find module")
-  const jsFiles = glob.sync("automation/**/*.js", { "cwd"})
-  const filePath = path.join(this.projectRoot, ")
-        let content = await fs.readFile(filePath", "utf8")
-        const objectPattern = /(\w+:\s*["^", "}")]
+const jsFiles = glob.sync("automation/**/*.js", { "cwd"});
+const filePath = path.join(this.projectRoot, ");
+let content = await fs.readFile(filePath", "utf8");
+const objectPattern = /(\w+:\s*["^", "}")];
   content = content.replace(objectPattern, "$1,\n  $2")
   content = content.replace(semicolonPattern, "$1;\n$2")
   "type": "syntax-fix"
@@ -156,8 +160,8 @@ const glob = require("glob")
             "file"
             "timestamp"
   await this.log(" Fixing module resolution issues...")
-  const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
-      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8")
+const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
+const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8");
       tsConfig.compilerOptions.moduleResolution = "node"
       await this.log(" TypeScript configuration updated")
   "type": "tsconfig-fix"
@@ -189,7 +193,41 @@ const glob = require("glob")
       return report} catch (error) {  await this.log(` Error in "automation": ${error.message  }`)} catch (error) {await this.log(` Error in "automation"`})
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error("Automation "failed": ")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  console.error("Automation "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error("Automation "failed": ")
+<<<<<<< HEAD
   console.error("Automation "failed": ")
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

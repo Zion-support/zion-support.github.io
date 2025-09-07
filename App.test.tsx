@@ -1,49 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './src/App';
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './App';
->>>>>>> origin/main
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App.tsx';
->>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
+import { render, screen } from '@testing-library/react';'
+import { describe, it, expect } from 'vitest';'
+import App from './App';'
 
-describe('App', () => {
-  it('renders without crashing', () => {
+describe('App', () => {'
+  }
+  it('renders without crashing', () => {'
+    }
     render(<App />);
-<<<<<<< HEAD
-<<<<<<< HEAD
+    expect(screen.getByRole('main')).toBeInTheDocument();'
   });
 
-  it('renders the main content', () => {
+  it('displays correct content', () => {'
+    }
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-aa0d
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();'
   });
 
-  it('has correct structure', () => {
+  it('handles user interactions', () => {'
+    }
     render(<App />);
-    // Add more specific tests here
+    // Add interaction tests here,
+expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
-<<<<<<< HEAD
-
-  it('handles user interactions', () => {
-    render(<HomePage />);
-    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
-  });
->>>>>>> origin/main
 });
-=======
-});
->>>>>>> cursor/automate-test-improve-and-merge-code-aa0d

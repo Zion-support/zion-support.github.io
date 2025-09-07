@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports')
     this.logFile = path.join(this.reportsDir, 'comprehensive-test-improve.log')
   log(message, level = 'INFO')
@@ -14,16 +18,16 @@ const { execSync } = require('child_process')
       { command: 'npm run build', description: 'Application Build'}
       { command: 'npm test -- --passWithNoTests', description: 'Jest Tests'}
     this.log(' Fixing identified issues...')
-      const lintFix = await this.runCommand('npm run lint:fix', 'ESLint Auto-fix')
+const lintFix = await this.runCommand('npm run lint:fix', 'ESLint Auto-fix');
       this.log('ESLint fix failed, continuing...', 'WARN')
-      const tsFix = await this.runCommand('npx tsc --noEmit --skipLibCheck', 'TypeScript Check')
+const tsFix = await this.runCommand('npx tsc --noEmit --skipLibCheck', 'TypeScript Check');
       this.log('TypeScript check failed, continuing...', 'WARN')
     this.log(' Fixing script syntax errors...')
       'scripts/syntax-fixer.cjs'
       'scripts/performance-monitor.cjs'
       'scripts/seo-optimizer.cjs'
       'scripts/remove-console-logs.cjs'
-          const content = fs.readFileSync(scriptFile, 'utf8')
+const content = fs.readFileSync(scriptFile, 'utf8');
           this.log(` Error fixing ${scriptFile}: ${error.message}`, 'ERROR'`)
     fixed = fixed.replace(/,\s*\)/g, ')'
     fixed = fixed.replace(/,\s*}/g, '}')
@@ -35,7 +39,41 @@ const { execSync } = require('child_process')
     fixed = fixed.replace(/var\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'var $1 = () => {'}
       if (content.includes('${'})
     fixed = fixed.replace(/(\w+):\s*([^,}]+)/g, '"$1"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
+<<<<<<< HEAD
     optimized = optimized.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"]([^'')]
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

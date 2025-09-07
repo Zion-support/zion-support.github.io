@@ -51,6 +51,12 @@ interface FilterSidebarProps {;
     selectedLocations: string[],;
     selectedAvailability: string[],;
     selectedRating: number | null;
+import { FilterOptions } from "@/types/search",  filters: {;
+    selectedProductTypes: string[],;
+    selectedLocations: string[],;
+    selectedAvailability: string[],;
+    selectedRating: number | null
+};  };
   },;
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
@@ -151,6 +157,12 @@ export function FilterSidebar({;
             </div>
           ))}
         </div>
+      </div>      <div className="mb-6">;
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+          Minimum Rating;
+        </label>;
+        <div className="flex flex-wrap gap-2">;
+          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
       </div>
       {/* Rating Filter */}
       <div className="mb-6">
@@ -163,6 +175,24 @@ export function FilterSidebar({;
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
+              onClick={() => onRatingChange(rating)}              }`}
+            >;
+              {rating === null ? (;
+                "Any";
+              ) : (;                <div className="flex items-center">;
+                  {[...Array(rating)].map((_, i) => (;
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
+                  ))}
+                  <span className="ml-1">& Up</span>;
+                </div>;
+              )}
+            </Button>;
+          ))}
+
+        </div>;
+      </div>;
+    </div>;
+  );
               onClick={() => onRatingChange(rating)}
               className={`${
                 filters.selectedRating === rating
@@ -186,4 +216,5 @@ export function FilterSidebar({;
       </div>
     </div>
   )
+}
 }

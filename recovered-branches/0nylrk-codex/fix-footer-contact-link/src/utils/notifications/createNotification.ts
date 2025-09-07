@@ -5,32 +5,97 @@ import { CreateNotificationParams, CreateNotificationResult } from './types';
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
-  userId,
-  title,
-  message,
-  type,
-  relatedId = $2;
-  sendEmail = $2;
-  actionUrl = $2;
-  actionText = $2;
+  }
+  userId;
+  title;
+  message;
+  type;
+
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  }
+  void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
-    const { data, error } = await supabase.rpc($2);
-    if (error) throw error,
+}
+userId,
+  title,
+  message,
+  type,
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  }
+  void actionUrl;
+  void actionText;
+  try {
+    // Call the create_notification database function
+}
+const { data, error } = await supabase.rpc('create_notification', {'
+  }
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  }
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
+}
+const { data, error } = await supabase.rpc('create_notification', {'
+      }
+      "_user_id": userId;
+      "_title": title;
+      "_message": message;
+      "_type": type;
+    "_related_id": relatedId
+    });
+    if (error) throw error;
+      "_user_id": userId,
+      "_title": title,
+      "_message": message,
+      "_type": type,
+      "_related_id": relatedId
+    }),
     
-    // If sendEmail is true, call the edge function to send an email
-    if (sendEmail && data) {
-      const notificationId = $2;
-      await supabase.functions.invoke('send-notification-email', {
-        body: { user_id: userId, notification_id: notificationId}
+    if (error) throw error,
+import { supabase } from "@/integrations/supabase/client";"
+import { CreateNotificationParams, CreateNotificationResult } from './types';'
+/**;
+ * Creates a notification for a user and optionally sends an email notification;
+ */;
+export async function createNotification({;
+  }
+  userId,;
+  title,;
+  message,;
+  type,;
+  relatedId = null,;
+  sendEmail = false,;
+  actionUrl = null,;
+  actionText = null;
+}: CreateNotificationParams): Promise<CreateNotificationResult> {;
+  }
+  void actionUrl,;
+  void actionText,;
+  try {;
+    // Call the create_notification database function;
+    }
+    const { data, error } = await supabase.rpc('create_notification', {;'
+      }
+      "_user_id": userId,;
+      "_title": title,;
+      "_message": message,;
+      "_type": type,;
+      "_related_id": relatedId;
+    }),;
+    if (error) throw error,;
+    // If sendEmail is true, call the edge function to send an email;
+    if (sendEmail && data) {;
+      }
+      const notificationId = data;
+      await supabase.functions.invoke('send-notification-email', {;'
+        }
+        "body": { "user_id": userId, "notification_id": notificationId }
       })
     }
-    
-    return { success: true, notificationId: data}
-  } catch (error) {
-    console.error($2);
-    return { success: false, error }
-  }
-}
-}
+    return { "success": true, "notificationId": data }

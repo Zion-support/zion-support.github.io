@@ -4,6 +4,18 @@ console.log('🔧 Fixing remaining problematic files...');
 
 const filesToFix = [
   {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import Link from 'next/link';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+;
+const files = [;
+  {;
+    pat:h:'components/Header.tsx',;
+    conten:t:`import React, { useState } from 'react';
+>
+
+
+
     path: 'components/Header.tsx',
     content: `import React, { useState } from 'react';
 import Link from 'next/link';
@@ -255,7 +267,7 @@ export default SimpleLayout;`
     path: 'components/layout/Footer.tsx',
     content: `import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -848,6 +860,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return;
     }
+main
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const { id } = req.query;
     if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });

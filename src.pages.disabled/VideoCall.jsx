@@ -30,6 +30,7 @@ import React from 'react';
 interface VideoCallProps {
   // Add props here as needed
 
+
 }
 
 export default function VideoCall({ }: VideoCallProps) {
@@ -39,7 +40,27 @@ export default function VideoCall({ }: VideoCallProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+}
+
+}
+:src.pages.disabled/VideoCall.jsx
 }
 }
 }
 }
+}
+
+
+
+
+
+
+:src.pages.disabled/VideoCall.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/VideoCall.jsx;

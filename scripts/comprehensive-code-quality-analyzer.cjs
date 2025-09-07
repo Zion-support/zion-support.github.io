@@ -1,22 +1,76 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
+    log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
+    log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
+    log('info', `"Critical": ${qualityReport.summary.critical}`);
+    log('info', `"High": ${qualityReport.summary.high}`);
+    log('info', `"Medium": ${qualityReport.summary.medium}`);
+    log('info', `"Low": ${qualityReport.summary.low}`);
+    log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
+    
+    if (qualityReport.issues.length > 0) {
+      log('warn', 'Issues "found": ');
+      qualityReport.issues.forEach(issue => {
+        log('warn', `- [${issue.severity.toUpperCase()}] ${issue.message} (${issue.file}:${issue.line})`)})}
+    
+    if (qualityReport.recommendations.length > 0) {
+      log('info', 'Quality "Recommendations": ');
+      qualityReport.recommendations.forEach(rec => {
+        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
+        log('info', `  "Action": ${rec.action}`)})}
+    
+    // Save quality report
+    const reportPath = path.join(process.cwd(), `comprehensive-quality-report-${qualityReport.sessionId}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(qualityReport, null, 2));
+    
+    log('info', `Comprehensive quality report saved "to": comprehensive-quality-report-${qualityReport.sessionId}.json`);
+    
+    // Exit with appropriate status
+    if (qualityReport.summary.critical > 0) {
+      log('error', 'Critical quality issues found');
+      process.exit(1)} else if (qualityReport.summary.high > 0) {
+      log('warn', 'High severity quality issues found');
+      process.exit(0)} else {
+      log('info', 'Code quality analysis completed successfully');
+      process.exit(0)}
+    
+  } catch (error) {
+    log('error', 'Fatal error in comprehensive code quality analysis', error.message);
+    process.exit(1)}
+}
+
+main();
+
+
+
+
+
+
+
+
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log()
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
+console.log('')
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
 <<<<<<< HEAD
+"severity"""
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       "severity"""
-=======
-"severity"""
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -27,11 +81,13 @@ console.log()
       "action"""
       log('warn', 'Issues "found")""
 <<<<<<< HEAD
+=======
       log('info', 'Quality "Recommendations")""`;
 
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       "severity"
       "message"
       "recommendation"
@@ -116,9 +172,10 @@ console.log()
       log('warn', 'Issues "found")
       log('info', 'Quality "Recommendations")
 <<<<<<< HEAD
+      log('info', 'Quality "Recommendations")""`
+=======
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-      log('info', 'Quality "Recommendations")""`
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

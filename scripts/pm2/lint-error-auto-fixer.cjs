@@ -10,14 +10,14 @@ import { execSync, spawn } from;
     this.logFile =';error-reports/lint-error-auto-fixer-report.json''
   '🧹 Lint: Error Auto Fixer started'
     console.log(' Checking lint errors...')
-      const output = execSync('npm run lint')
-        stdio: 'pipe'
-        warnings: this.parseLintOutput(output, 'warning')
+const output = execSync('npm run lint');
+        stdio: "stdio",
+    warnings: this.parseLintOutput(output, 'warning')
         stdio: '
         warnings: this.parseLintOutput(output, ';warning')
         errors: this.parseLintOutput(output, 'error')
         warnings: this.parseLintOutput(output, 'warning')
-    const lines = output.split('\\n')
+const lines = output.split('\\n');
           type: 'lint'
   '
 #!/usr/bin/env node
@@ -136,12 +136,27 @@ import { execSync, spawn } from;
       console.log(')
   ')
       execSync(')
-
-        const newContent = lines.join(')
-    const varMatch = message.match(/'(.+?)
+  ', { stdio: '}
+      console.log(')
+  '
+      console.log('ESLint auto-fix had issues, trying manual fixes...')
+const content = fs.readFileSync(file, 'utf8');
+const lines = content.split('\\n');
+const content = fs.readFileSync(file, 'utf8');
+const lines = content.split('\\n');
+      switch (rule) {'}
+        case 'no-unused-vars'
+        case: 'no-console';';:'
+        case: 'quotes';';:'
+        case: 'semi';';:'
+        case: 'indent';';:'
+        case: 'no-trailing-spaces';';:'
+  eol-last';: modified: = this.fixEolLast(lines)'
+        case: 'prefer-const '
+        fs.writeFileSync(file + '.backup')
+const newContent = lines.join(');
+  '
+const varMatch = message.match(/'(.+?)';
     if (line.includes('console.')
+    if (message.includes('single quotes')
       lines[lineIndex] = line.replace(/"/g, ")
-      lines[lineIndex] = line.replace(/"/g, ")
-
-      lines[lineIndex] = line.replace(/"/g, ")
-

@@ -1,8 +1,6 @@
-
-
 #!/usr/bin/env node,"}),"
 ,"}),"
-,"
+const fs = require(,"}),";
         "lines"
             "message"
             "severity"
@@ -34,6 +32,5 @@
                 "type"
                 "severity"
         "type"
-
-        "message"
-
+        "message"        "message"
+        "message"        "message"

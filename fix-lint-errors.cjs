@@ -1,3 +1,17 @@
+[\s\S]*?
+
+
+    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/^.*$/gm, "");
+    content = content.replace(/^
+    
+
+    // Clean up any remaining conflict markers
+    content = content.replace(/^.*$/gm, "");
+    content = content.replace(/^
+
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?    
     // Clean up any remaining conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, "");
@@ -125,6 +139,8 @@ try {
 } catch (error) {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
+
+#!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")

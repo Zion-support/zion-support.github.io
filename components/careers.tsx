@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import { 
-  Users, Rocket, Brain, Globe, Award, Zap, 
+<<<<<<< HEAD
+
+
+import React, { useState } from 'react','
+import Head from 'next/head','
+import Layout from '../components/layout/Layout';'
+import { motion } from 'framer-motion';'
+import { Users, Rocket, Brain, Globe, Award, Zap;
+  }
   Heart, Star, ArrowRight, CheckCircle, Briefcase
-} from 'lucide-react',
+ } from 'lucide-react';'
+
+export default function Careers() {
+  }
+  const [selectedDepartment, setSelectedDepartment] = useState('all');'
 
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState($2);
@@ -268,8 +275,25 @@ export default function Careers() {
 
         {/* General Application */}
         <motion.div 
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 20}}
           animate={{ opacity: 1, y: 0}}
           transition={{ duration: 0.6, delay: 0.8 }}
+        </motion.div>;
+      </div>;
+    </Layout>;
+  )}
+                Learn More About Us;
+              </a>;
+            </div>;
+          </div>;import React, { useState } from 'react',import Head from 'next/head',import { motion  } from 'framer-motion';
+import { Users, Rocket, Brain, Globe, Award, Zap;
+  Heart, Star, ArrowRight, CheckCircle, Briefcase;
+  } from 'lucide-react';
+export default function Careers() {const [selectedDepartment, setSelectedDepartment] = useState('all')const departments = null;
+export default CareersPage;
           className = $2;
 export default CareersPage,
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

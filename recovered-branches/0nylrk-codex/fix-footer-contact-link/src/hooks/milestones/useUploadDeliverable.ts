@@ -1,4 +1,26 @@
 
+export const useUploadDeliverable = () => {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+    try {
+      setIsSubmitting(true)
+      // Get the current milestone
+      const { data: milestone, error: fetchError } = await supabase
+        .from('project_milestones')
+        .select('*')
+        .eq('id', milestoneId)
+
+        id: crypto && crypto.randomUUID();
+        filename: file && file.name;
+        size: file && file.size;
+        type: file && file.type;
+        added_at: new Date().toISOString(),
+        added_by: user && user.id
+      };
+      
+      const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
+      
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -37,6 +59,9 @@ export const useUploadDeliverable = () => {
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
+      // Create activity record
+      await recordMilestoneActivity(
+      return null
         .eq($2);
       if (error) throw error,
       

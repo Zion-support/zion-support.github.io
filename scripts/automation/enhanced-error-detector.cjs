@@ -1,5 +1,9 @@
 
 
+
+
+
+
 #!/""usr/bin/env""
 
 const { execSync } = require("child_process")
@@ -125,6 +129,12 @@ function checkSyntaxErrors(content")
         "line"
         "message": "Missing semicolon"
         "type": "syntax"
+
+  console.error(" Error detection "failed": ")
+
+
+  console.error(" Error detection "failed": ")
+
   console.error(" Error detection "failed": ")
   console.error(" Error detection "failed": ")
 
