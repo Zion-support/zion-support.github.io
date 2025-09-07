@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
 interface SidebarProps {
@@ -21,24 +20,12 @@ export default function Sidebar({
   visibilityFilter
   onChangeVisibility
 }: SidebarProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
             <button
               key={v}
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
-<<<<<<< HEAD
-      <nav className="space-y-3">
-        {spec.sections.map((section) => (
-          <div key={section.id}>
-            <div className="text-sm font-medium mb-1">{section.title}</div>
-            <ul className="space-y-1">
-              {section.endpoints
-                .filter((e) => e.versions.includes(selectedVersion))
-                .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
-                .map((e) => (
-                  <li key={e.id}>
-=======
+
             >
               {v}
             </button>
@@ -84,7 +71,6 @@ export default function Sidebar({
                       <span className='font-mono'>{e.path}</span>
                     </button>
                   </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
             </ul>;
           </div>;
@@ -183,8 +169,5 @@ function Sidebar() {
 }
     </aside>
   );
-<<<<<<< HEAD
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

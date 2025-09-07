@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Social Media Management | Zion Tech Group',
   description: 'Professional social media management services for your business needs.',
   keywords: 'social-media-management, services, business, technology'
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

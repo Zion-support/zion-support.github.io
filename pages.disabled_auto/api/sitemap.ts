@@ -1,10 +1,36 @@
-import React from 'react';
+export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
+  const baseUrl ,=
+  https: //ziontechgroup.com'';;
+  const staticPages = [',';
 
 import React from 'react';
 
 interface SitemapProps {
   // Add props here as needed
-}  res.status(200).send(sitemap)}
+}
+
+interface SitemapProps {
+  // Add props here as needed
+}
+
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+ursor/add-new-services-and-deploy-updates-0462
+interface SitemapProps {
+  // Add props here as needed
+}
+
+  res.status(200).send(sitemap)}
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
@@ -22,5 +48,24 @@ export default function Sitemap({ }: SitemapProps) {
     </div>
   );
 }
+}
+}
 
+
+
+}
+
+
+
+
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+}
 }

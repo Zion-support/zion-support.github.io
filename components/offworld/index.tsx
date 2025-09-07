@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-  const [chat, setChat] = useState('');
-  const [voteChoice, setVoteChoice] = useState('yes');
-  const [proposalId, setProposalId] = useState('prop-1');
-  const [name, setName] = useState('');
-  const [skills, setSkills] = useState('');
-  const [status, setStatus] = useState('');
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
-  }
-  async function syncProfile() {
-    setStatus('Pinning profile...');
-    const data = await res.json();
-    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
-  }
-  async function broadcast() {
-    setStatus('Broadcasting manifesto...');
-    });
-    setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
 
-=======
 import { useState  } from 'react';
 import Head from 'next/head';
     const res = null;
@@ -61,7 +42,6 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       body: JSON.stringify({ message: 'We build beyond platforms.' }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
         <input
           className='border p-2 w-full'
@@ -222,48 +202,5 @@ function broadcast() {
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
-<<<<<<< HEAD
-);
-}
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={cast_vote}
-        >;
-          Vote;
-        </button>;
-      </section>;
-      <section className='space - y-2'>;
-        <h2 className='font - semibold'>Talent Profile Sync</h2>;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Name';
-          value={name}
-          on_change={e => set_name (e.target.value)}
-        />;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Skills (comma separated)';
-          value={skills}
-          on_change={e => set_skills (e.target.value)}
-        />;
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={sync_profile}
-        >;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
-      <section className='space - y-2'>;
-        <h2 className='font - semibold'>Broadcast Manifesto</h2>;
-        <button;
-          className='px - 3 py - 2 bg - indigo - 600 text - white rounded';
-          on_click={broadcast}
-        >;
-          Broadcast;
-        </button>;
-      </section>;
-      {status && <p className='text - sm text - gray - 700'>{status}</p>}
-    </div>);
-=======
+
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

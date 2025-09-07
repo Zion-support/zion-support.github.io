@@ -1,14 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { 
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  ClockIcon,
-  CheckCircleIcon,
-  ExclamationTriangleIcon
-} from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 
 export default function ContactPage() {
@@ -136,6 +130,9 @@ export default function ContactPage() {
                   <option value="it-services">IT Services</option>
                   <option value="cybersecurity">Cybersecurity</option>
                   <option value="cloud-solutions">Cloud Solutions</option>
+                  <option value="blockchain-solutions">Blockchain Solutions</option>
+                  <option value="ai-automation-suite">AI Automation Suite</option>
+                  <option value="data-analytics">Data Analytics</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -204,6 +201,35 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Map Section (Placeholder) */}
+        <div className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Find Us on the Map</h2>
+            <div className="bg-gray-200 h-96 rounded-2xl flex items-center justify-center text-gray-500 text-xl">
+              [Google Maps Embed Placeholder]
+            </div>
+          </div>
+        </div>
+
+        {/* Final CTA */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Let's discuss how Zion Tech Group can help you achieve your goals.
+            </p>
+            <Link
+              href="/services"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
+            >
+              Explore Our Solutions
+              <ArrowRightIcon className="inline-block h-5 w-5 ml-2" />
+            </Link>
           </div>
         </div>
       </div>

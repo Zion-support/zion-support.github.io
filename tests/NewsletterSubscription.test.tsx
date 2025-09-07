@@ -2,13 +2,12 @@ import React from 'react';
 interface NewsletterSubscription.testProps {
   // Add props here as needed
 }
+}
+
 
 interface NewsletterSubscription.testProps {
   // Add props here as needed
-<=
-}
-
->interface NewsletterSubscription.testProps {
+interface NewsletterSubscription.testProps {
   // Add props here as needed
 }
 export default function NewsletterSubscription.test({ }: NewsletterSubscription.testProps) {
@@ -18,13 +17,10 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
       <p>This component is currently under development.</p>
     </div>
   );
-<
 
-=
+
 }
 }
-=
 
 
->}
->
+}

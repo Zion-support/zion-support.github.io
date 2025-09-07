@@ -1,6 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 const path = require('path');
+
 class ComprehensiveSyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
@@ -11,6 +12,7 @@ class ComprehensiveSyntaxErrorFixer {}
     try {}
       const content = await fs.readFile(filePath, 'utf8');
       let fixedContent = content;
+
       // Fix common syntax errors;
       const fixes = [// Fix malformed imports;]
         { "from": 'import React from "react.ts";""', "to": 'import React from "react";' },
@@ -26,6 +28,7 @@ class ComprehensiveSyntaxErrorFixer {}
         { "from": './_servicesData.route.js', "to": './_servicesData.js' },
         { "from": '../../../components/layout/ModernLayout', "to": '../../../components/layout/ModernLayout' };
       ];
+
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fixedContent.includes(fix.from)) {}
@@ -43,10 +46,12 @@ class ComprehensiveSyntaxErrorFixer {}
   };
   async run() {}
     await this.log('Starting comprehensive syntax error fixing...');
+    
     const filesToFix = ['components/layout/ModernLayout.tsx',]
       'pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];
+
     let fixedCount = 0;
     for (const file of filesToFix) {}
       const fullPath = path.join(this.projectRoot, file);
@@ -58,5 +63,4 @@ class ComprehensiveSyntaxErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)};
-module.exports = ComprehensiveSyntaxErrorFixer;
-module.exports = ComprehensiveSyntaxErrorFixer;
+

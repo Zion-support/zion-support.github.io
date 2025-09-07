@@ -1,3 +1,5 @@
+
+
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -35,8 +37,11 @@
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
+
 main();
+
 #!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -66,5 +71,4 @@ console.log('======')
     "message"
     "action"
       log('warn', 'Vulnerabilities "found")
-      log('info', 'Security "Recommendations")
       log('info', 'Security "Recommendations")

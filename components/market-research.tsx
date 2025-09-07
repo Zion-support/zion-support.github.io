@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-
-
-export default function MarketResearchPage() {
-
-  const marketSegments = [
-    {
-      name: 'AI & Machine Learning'
-      marketSize: '$15.7B'
-      growthRate: '23.4% CAGR'
-      keyTrends: [
-=======
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -47,27 +35,12 @@ export default function MarketResearchPage() {
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Database & Analytics'
       marketSize: '$8.9B'
       growthRate: '18.7% CAGR'
       keyTrends: [
-<<<<<<< HEAD
-      opportunities: [
-        'Database performance monitoring'
-        'Real-time analytics dashboards'
-        'Data visualization tools'
-        'Query optimization platforms'
-      ]
-      color: 'from-cyan-500 to-blue-600'
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'Database performance monitoringReal-time analytics dashboardsData visualization toolsQuery optimization platforms'
-      ];
-      color: 'from-cyan-500 to-blue-600'
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-=======
+
 'Real-time analytics demand',
         'Cloud database migration',
         'Data privacy regulations',
@@ -83,27 +56,12 @@ export default function MarketResearchPage() {
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className='w-8 h-8 text-white' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Security & Identity'
       marketSize: '$12.3B'
       growthRate: '21.2% CAGR'
       keyTrends: [
-<<<<<<< HEAD
-      opportunities: [
-        'Identity verification platforms'
-        'API security gateways'
-        'Compliance monitoring tools'
-        'Threat detection systems'
-      ]
-      color: 'from-green-500 to-emerald-600'
-      icon: <Target className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'Identity verification platformsAPI security gatewaysCompliance monitoring toolsThreat detection systems'
-      ];
-      color: 'from-green-500 to-emerald-600'
-      icon: <Target className="w-8 h-8 text-white" />
-=======
+
 'Zero-trust security adoption',
         'Multi-factor authentication growth',
         'API security concerns',
@@ -119,27 +77,12 @@ export default function MarketResearchPage() {
       color: 'from-green-500 to-emerald-600',
       icon: <Target className='w-8 h-8 text-white' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Business Intelligence'
       marketSize: '$22.1B'
       growthRate: '19.8% CAGR'
       keyTrends: [
-<<<<<<< HEAD
-      opportunities: [
-        'Custom dashboard builders'
-        'Data integration platforms'
-        'Mobile analytics solutions'
-        'Predictive modeling tools'
-      ]
-      color: 'from-orange-500 to-red-600'
-      icon: <Activity className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'Custom dashboard buildersData integration platformsMobile analytics solutionsPredictive modeling tools'
-      ];
-      color: 'from-orange-500 to-red-600'
-      icon: <Activity className="w-8 h-8 text-white" />
-=======
+
 'Self-service BI adoption',
         'Real-time data integration',
         'Mobile BI growth',
@@ -155,27 +98,12 @@ export default function MarketResearchPage() {
       color: 'from-orange-500 to-red-600',
       icon: <Activity className='w-8 h-8 text-white' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'API Management'
       marketSize: '$6.8B'
       growthRate: '24.1% CAGR'
       keyTrends: [
-<<<<<<< HEAD
-      opportunities: [
-        'API rate limiting services'
-        'Developer portal platforms'
-        'API analytics tools'
-        'Webhook management systems'
-      ]
-      color: 'from-indigo-500 to-purple-600'
-      icon: <Globe className='w-8 h-8 text-white' />
-    },    {      opportunities: [
-        'API rate limiting servicesDeveloper portal platformsAPI analytics toolsWebhook management systems'
-      ];
-      color: 'from-indigo-500 to-purple-600'
-      icon: <Globe className="w-8 h-8 text-white" />
-=======
+
 'Microservices architecture growth',
         'API-first development',
         'Rate limiting importance',
@@ -191,147 +119,12 @@ export default function MarketResearchPage() {
       color: 'from-indigo-500 to-purple-600',
       icon: <Globe className='w-8 h-8 text-white' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'User Experience Analytics'
       marketSize: '$9.4B'
       growthRate: '20.5% CAGR'
       keyTrends: [
-<<<<<<< HEAD
-      opportunities: [
-        'Heatmap and session recording'
-        'A/B testing platforms'
-        'User journey mapping tools'
-        'Conversion funnel analytics'
-      ]
-      color: 'from-teal-500 to-cyan-600'
-      icon: <Users className='w-8 h-8 text-white' />
-    },  ];      opportunities: [
-        'Heatmap and session recordingA/B testing platformsUser journey mapping toolsConversion funnel analytics'
-      ];
-      color: 'from-teal-500 to-cyan-600'
-      icon: <Users className="w-8 h-8 text-white" />
-    }
-        'AI content generation tools',
-        'Predictive analytics platforms',
-        'Automated customer service',
-        'Intelligent process automation',
-      ],
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className='w-8 h-8 text-white' />,
-    },    {      opportunities: [
-        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
-      ];
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className="w-8 h-8 text-white" />
-    };
-    {
 
-      name: 'Database & Analytics',
-      marketSize: '$8.9B',
-      growthRate: '18.7% CAGR',
-      keyTrends: [
-        'Real-time analytics demand',
-        'Cloud database migration',
-        'Data privacy regulations',
-        'Performance optimization focus',
-      ],
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
-
-      opportunities: [
-        'Database performance monitoring',
-        'Real-time analytics dashboards',
-        'Data visualization tools',
-        'Query optimization platforms',
-      ],
-      color: 'from-cyan-500 to-blue-600',
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'Security & Identity',
-      marketSize: '$12.3B',
-      growthRate: '21.2% CAGR',
-      keyTrends: [
-        'Zero-trust security adoption',
-        'Multi-factor authentication growth',
-        'API security concerns',
-        'Compliance requirements increasing',
-      ],
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
-
-      opportunities: [
-        'Identity verification platforms',
-        'API security gateways',
-        'Compliance monitoring tools',
-        'Threat detection systems',
-      ],
-      color: 'from-green-500 to-emerald-600',
-      icon: <Target className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'Business Intelligence',
-      marketSize: '$22.1B',
-      growthRate: '19.8% CAGR',
-      keyTrends: [
-        'Self-service BI adoption',
-        'Real-time data integration',
-        'Mobile BI growth',
-        'Predictive analytics demand',
-      ],
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-
-      opportunities: [
-        'Custom dashboard builders',
-        'Data integration platforms',
-        'Mobile analytics solutions',
-        'Predictive modeling tools',
-      ],
-      color: 'from-orange-500 to-red-600',
-      icon: <Activity className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'API Management',
-      marketSize: '$6.8B',
-      growthRate: '24.1% CAGR',
-      keyTrends: [
-        'Microservices architecture growth',
-        'API-first development',
-        'Rate limiting importance',
-        'Developer experience focus',
-      ],
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
-
-      opportunities: [
-        'API rate limiting services',
-        'Developer portal platforms',
-        'API analytics tools',
-        'Webhook management systems',
-      ],
-      color: 'from-indigo-500 to-purple-600',
-      icon: <Globe className='w-8 h-8 text-white' />,
-    },    {
-
-    {
-
-      name: 'User Experience Analytics',
-      marketSize: '$9.4B',
-      growthRate: '20.5% CAGR',
-      keyTrends: [
-        'Privacy-compliant tracking',
-        'Real-time user insights',
-        'Conversion optimization focus',
-        'Mobile app analytics growth',
-      ],
-      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
-
-      opportunities: [
-=======
 'Privacy-compliant tracking',
         'Real-time user insights',
         'Conversion optimization focus',
@@ -339,7 +132,6 @@ export default function MarketResearchPage() {
       ],
       topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
       opportunities: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Heatmap and session recording',
         'A/B testing platforms',
         'User journey mapping tools',
@@ -347,52 +139,18 @@ export default function MarketResearchPage() {
       ],
       color: 'from-teal-500 to-cyan-600',
       icon: <Users className='w-8 h-8 text-white' />,
-<<<<<<< HEAD
-    },  ];
 
-  ];
-  const competitiveAnalysis = [
-    {
-
-      company: 'Enterprise Giants',
-      examples: ['SalesforceMicrosoftOracleSAP'],
-=======
     },
   ];
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
 examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       strengths: [
         'Extensive resources and R&DEstablished customer baseComprehensive feature setsGlobal presence and support'
       ];
       weaknesses: [
-<<<<<<< HEAD
-        'High pricing and complexitySlow innovation cyclesDifficult customizationLong implementation times'
-      ];
-      marketShare: '45-60%',
 
-      pricing: 'High ($1000+/month)'
-    },    {
-      company: 'Mid-Market Leaders'
-      examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom']
-      strengths: [
-        'Balanced features and pricing'
-        'Strong user experience'
-        'Active community support'
-        'Regular feature updates'
-      ]
-      weaknesses: [
-        'Limited customization options'
-        'Growing complexity over time'
-        'Dependency on integrations'
-        'Scalability challenges'
-      ]
-      marketShare: '25-35%'
-      pricing: 'Medium ($100-500/month)'
-    }
-=======
         'High pricing and complexity',
         'Slow innovation cycles',
         'Difficult customization',
@@ -437,7 +195,6 @@ examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
       marketShare: '15-25%',
       pricing: 'Low ($10-100/month)',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const marketTrends = [
     {
@@ -446,54 +203,7 @@ examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
       impact: 'High'
       timeline: '2024-2026'
       examples: [
-<<<<<<< HEAD
-import {;
-  TrendingUp,;
-  BarChart3,;
-  DollarSign,;
-  Users,;
-  Globe,;
-  Target,;
-  Clock,;
-  Award,;
-  ArrowRight,;
-  ExternalLink,;
-  PieChart,;
-  LineChart,;
-  Activity,;
-  Zap,;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  TrendingUp,
-  BarChart3,
-  DollarSign,
-  Users,
-  Globe,
-  Target,
-  Clock,
-  Award,
-  ArrowRight,
-  ExternalLink,
-  PieChart,
-  LineChart,
-  Activity,
-  Zap,
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-import { Zap } from 'lucide-react';
-      ];
-    }
-  ];
-;
-  return (
-            ))}
-              Detailed analysis of key micro SaaS market segments with market;
-              size, growth rates, trends, and opportunities.;
-            </p>;
-          </div>;
-=======
+
 'AI-powered content generation',
         'Intelligent automation',
         'Predictive analytics',
@@ -730,68 +440,11 @@ description: 'Average time for SaaS companies to reach profitability',
                         <div
                           className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                           {segment.icon}
                         </div>;
                         <h3 className='text - 2xl font - bold mb - 3 text - white'>;
                           {segment.name}
-<<<<<<< HEAD
-            </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.
-            </p>
-          </div>
-          <div className="space-y-8">
-            {marketSegments.map((segment, index) => (
-                          className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>;
-                          {segment && segment.icon}
-                        </div>;
-                        <h3 className='text-2xl font-bold mb-3 text-white'>;
-                          {segment && segment.name}
-                        </h3>;
-                        {/* Market Data */}
-                        <div className='space-y-3 text-sm mb-6'>;
-                          <div className='flex items-center justify-between'>;
-                            <span className='text-gray-400'>Market Size:</span>;
-                            <span className='text-white font-semibold'>;
-                              {segment && segment.marketSize}
-                            </span>;
-                          </div>;
-                          <div className='flex items-center justify-between'>;
-                            <span className='text-gray-400'>Growth Rate:</span>;
-                            <span className='text-green-400 font-semibold'>;
-                              {segment && segment.growthRate}
-                            </span>                          </div>              Market Segment Analysis;
-            </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.;
-            </p>;
-          </div>;
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue overflow-hidden"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="p-8">;
-                  <div className="flex flex-col lg:flex-row gap-8">;
-                    {/* Segment Header */}
-                        {/* Top Players */}
-                        <div>;
-                          <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
-                            <Award className='w-5 h-5 mr-2 text-yellow-400' />;
-                            Top Players;
-                          </h4>;
-                          <ul className='space-y-2'>;
-                            {segment && segment.topPlayers.map((player, playerIndex) => (;
-                              <li
-                                key={playerIndex}
-                                className='flex items-start text-gray-300 text-sm'>;
-                                <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {player}                            Top Players;
-                          </h4>;
-                          <ul className="space-y-2">;
-                            {segment && segment.topPlayers.map((player, playerIndex) => (;
-                              <li key={playerIndex} className="flex items-start text-gray-300 text-sm">;
-                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />;
-=======
+
                         </h3>
                         {/* Market Data */}
                         <div className='space-y-3 text-sm mb-6'>
@@ -844,7 +497,6 @@ description: 'Average time for SaaS companies to reach profitability',
                                 className='flex items-start text-gray-300 text-sm'
                               >
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                                 {player}
                               </li>;
                             ))}
@@ -865,23 +517,9 @@ description: 'Average time for SaaS companies to reach profitability',
                                 {opportunity}
                               </div>
                             )
-<<<<<<< HEAD
-                          )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {segment.opportunities.map((opportunity, oppIndex) => (
-                            <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
-                              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
-                              {opportunity}
-                            </div>
-                          ))}
 
-                        </div>
-
-
-
-=======
                           )}
                         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
@@ -933,118 +571,7 @@ description: 'Average time for SaaS companies to reach profitability',
                       <span className='text - gray - 400'>Pricing:</span>;
                       <div className='text - white font - semibold'>;
                         {analysis.pricing}
-<<<<<<< HEAD
-            </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Understanding the competitive landscape and positioning strategies for different types of SaaS companies.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {competitiveAnalysis.map((analysis, index) => (
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
-                  {/* Examples */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <div className="text-sm text-gray-300">{analysis.examples.join()}</div>
-                  </div>
-                  {/* Market Share & Pricing */}
-                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                    <div>
-                      <span className="text-gray-400">Market Share:</span>
-                      <div className="text-white font-semibold">{analysis.marketShare}</div>
-                    </div>
-                    <div>
-                      <span className="text-gray-400">Pricing:</span>
-                      <div className="text-white font-semibold">{analysis.pricing}</div>
-                    </div>
-                  </div>
-      {/* Competitive Analysis */}
-      <section className='section-padding bg-gradient-cursor-accent'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Competitive Landscape Analysis;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              Understanding the competitive landscape and positioning strategies;
-              for different types of SaaS companies.;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
-            {competitiveAnalysis && competitiveAnalysis.map((analysis, index) => (;
-              <Card
-                key={index}
-                className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='p-6'>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
-                    {analysis && analysis.company}
-                  </h3>;
-                  {/* Examples */}
-                  <div className='mb-6'>;
-                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>;
-                      Examples:;
-                    </h4>;
-                    <div className='text-sm text-gray-300'>;
-                      {analysis && analysis.examples.join(', ')}
-                    </div>;
-                  </div>;
-                  {/* Market Share & Pricing */}
-                  <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
-                    <div>;
-                      <span className='text-gray-400'>Market Share:</span>;
-                      <div className='text-white font-semibold'>;
-                        {analysis && analysis.marketShare}
-                      </div>;
-                    </div>;
-                    <div>;
-                      <span className='text-gray-400'>Pricing:</span>;
-                      <div className='text-white font-semibold'>;
-                        {analysis && analysis.pricing}
-                      </div>                    </div>;
-                  </div>;
-                  {/* Strengths */}              Competitive Landscape Analysis;
-            </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Understanding the competitive landscape and positioning strategies for different types of SaaS companies.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {competitiveAnalysis && competitiveAnalysis.map((analysis, index) => (;
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="p-6">;
-                  <h3 className="text-xl font-bold text-white mb-4">{analysis && analysis.company}</h3>;
-                  {/* Examples */}
-                  <div className="mb-6">;
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>;
-                    <div className="text-sm text-gray-300">{analysis && analysis.examples.join()}</div>;
-                  </div>;
-                  {/* Market Share & Pricing */}
-                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm">;
-                    <div>;
-                      <span className="text-gray-400">Market Share:</span>;
-                      <div className="text-white font-semibold">{analysis && analysis.marketShare}</div>;
-                    </div>;
-                    <div>;
-                      <span className="text-gray-400">Pricing:</span>;
-                      <div className="text-white font-semibold">{analysis && analysis.pricing}</div>;
-                    </div>;
-                  </div>;
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.strengths.map((strength, strengthIndex) => (
-                        <li key={strengthIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
+
                       </div>
                     </div>
                   </div>
@@ -1058,14 +585,11 @@ description: 'Average time for SaaS companies to reach profitability',
                         <li key={strengthIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
                           {strength}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
 
-=======
                   {/* Weaknesses */}
                   <div>
 <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -1077,7 +601,6 @@ description: 'Average time for SaaS companies to reach profitability',
                           <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
                           {weakness}
                         </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                   {/* Weaknesses */}
                   <div>;
@@ -1117,40 +640,7 @@ description: 'Average time for SaaS companies to reach profitability',
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {marketTrends.map((trend, index) => (
-<<<<<<< HEAD
-              Key trends shaping the micro SaaS landscape and creating new;
-              opportunities for innovation and growth.;
-            </p>;
-          </div>;
-                        }`}>;
-                        {trend && trend.impact} Impact;
-                      </span>;
-                      <span className='px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400'>                        {trend && trend.timeline}
-                      </span>;
-                    </div>;
-                  </div>              Emerging Market Trends;
-            </h2>;
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{trend.trend}</h3>
-                    <div className="flex items-center space-x-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${
-                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
-                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-green-500/20 text-green-400'
-                  <p className="text-gray-300 mb-4">{trend.description}</p>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
+
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
@@ -1189,22 +679,18 @@ description: 'Average time for SaaS companies to reach profitability',
                         <li key={exampleIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />
                           {example}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <p className="text-xs text-gray-300">{trend.opportunities}</p>
-=======
+
 <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Opportunities:
                     </h4>
                     <p className='text-xs text-gray-300'>
                       {trend.opportunities}
                     </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </Card>
@@ -1331,63 +817,7 @@ description: 'Average time for SaaS companies to reach profitability',
                 <div className='p - 6'>;
                   <h3 className='text - xl font - bold text - white mb - 3'>;
                     {strategy.strategy}
-<<<<<<< HEAD
-            </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingStrategies.map((strategy, index) => (
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
-                  <p className="text-gray-300 mb-6">{strategy.description}</p>
-                      }`}>;
-                        {trend && trend.impact} Impact;
-                      </span>;
-                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">;
-                        {trend && trend.timeline}
-                      </span>;
-                    </div>;
-                  </div>;
 
-                  <p className='text-gray-300 mb-4'>{trend && trend.description}</p>;
-                  <div className='mb-4'>;
-                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>;
-                      Examples:;
-                    </h4>;
-                    <ul className='space-y-1 text-xs text-gray-300'>;
-                      {trend && trend.examples.map((example, exampleIndex) => (;
-                        <li key={exampleIndex} className='flex items-start'>;
-                          <span className='w-1 && 1.5 h-1 && 1.5 bg-cursor-blue rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {example}                  ;
-                  <p className="text-gray-300 mb-4">{trend && trend.description}</p>;
-                  <div className="mb-4">;
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>;
-                    <ul className="space-y-1 text-xs text-gray-300">;
-                      {trend && trend.examples.map((example, exampleIndex) => (;
-                        <li key={exampleIndex} className="flex items-start">;
-                          <span className="w-1 && 1.5 h-1 && 1.5 bg-cursor-blue rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
-                        </li>;
-                      ))}
-                    </ul>;
-                  </div>;
-                  <div>;
-                    <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                      Opportunities:;
-                    </h4>;
-                    <p className='text-xs text-gray-300'>;
-                      {trend && trend.opportunities}
-                    </p>                  </div>                    <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>;
-                    <p className="text-xs text-gray-300">{trend && trend.opportunities}</p>;
-                  </div>;
-                </div>;
-              </Card>;
-=======
                   </h3>
                   <p className='text-gray-300 mb-6'>{strategy.description}</p>
                   {/* Pros */}
@@ -1400,7 +830,6 @@ description: 'Average time for SaaS companies to reach profitability',
                         <li key={proIndex} className='flex items-start'>
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
                           {pro}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         </li>
                       ))}
                     </ul>
@@ -1426,15 +855,11 @@ description: 'Average time for SaaS companies to reach profitability',
 
                   {/* Best For */}
                   <div>
-<<<<<<< HEAD
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
-                    <p className="text-xs text-gray-300">{strategy.bestFor}</p>
-=======
+
 <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                       Best For:
                     </h4>
                     <p className='text-xs text-gray-300'>{strategy.bestFor}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </Card>
@@ -1542,38 +967,14 @@ description: 'Average time for SaaS companies to reach profitability',
             <Button
               href='/contact'
               size='lg'
-<<<<<<< HEAD
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'            >
-              Get Strategic Consultation
-            </Button>
-            <Button
-              href='/services'
-              variant='outline'
-              size='lg'
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
-              href="/contact"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
-=======
+
               className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Get Strategic Consultation
             </Button>
 
             <Button
-<<<<<<< HEAD
-              View Our Services
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>);
-=======
+
 href='/services'
               variant='outline'
               size='lg'
@@ -1586,5 +987,4 @@ href='/services'
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

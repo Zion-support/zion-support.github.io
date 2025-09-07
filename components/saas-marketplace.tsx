@@ -1,44 +1,6 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 
-import {
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Zap,
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
-  Cloud,
-  ArrowRight,
-  Star,
-  Zap;
-  Shield
-  BarChart3
-  Globe
-  Users
-  Lock
-  TrendingUp
-  Code
-  Database
-
-  Zap;
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
-=======
 import { Zap;
   Shield;
   BarChart3;
@@ -48,14 +10,11 @@ import { Zap;
   TrendingUp;
   Code;
   Database;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   Cloud;
   ArrowRight;
   Star;
   Check;
-<<<<<<< HEAD
 
-=======
   ExternalLink
  } from 'lucide-react';
 export default function SaaSMarketplacePage() {
@@ -270,7 +229,6 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
@@ -299,14 +257,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
     'Hosting',;
     'Project Management',;
   ];
-<<<<<<< HEAD
 
-  return (
-    <>;
-      <Head>;
-        <title>SaaS Marketplace - Zion Tech Group</title>;
-        <meta
-=======
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
     selectedCategory === 'All'
@@ -320,7 +271,6 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
               <Button
@@ -335,41 +285,16 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                 href='/contact'
                 variant='outline'
                 size='lg'
-<<<<<<< HEAD
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-=======
+
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                 style={{ animationDelay: '0.4s' }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Recommendations
               </Button>
             </div>
           </div>
           {/* Stats */}
-<<<<<<< HEAD
-                {microSaasServices.length}+
-              </div>
-              <div className="text-gray-400 text-sm">Curated Services</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
-                9
-              </div>
-              <div className="text-gray-400 text-sm">Categories</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
-                4.7+
-              </div>
-              <div className="text-gray-400 text-sm">Avg Rating</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
-                100K+
-              </div>
-              <div className="text-gray-400 text-sm">Total Users</div>
-=======
+
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
@@ -397,28 +322,17 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                 100K+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-                Get Recommendations;
-              </Button>;
-            </div>;
-          </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-=======
+
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -534,27 +448,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                         href={service && service.website}
                         variant='outline'
                         size='sm'
-<<<<<<< HEAD
-                        className='group-hover:border-blue-500 group-hover:text-blue-400'>;
-                        Visit Website;
-                        <ExternalLink className='w-4 h-4 ml-2' />;
-                      </Button>;
 
-                      <div className='text-right'>;
-                        <div className='text-xs text-gray-500 mb-1'>;
-                          Use Case:;
-                        </div>;
-                        <div className='text-sm text-gray-300 max-w-xs'>;
-                          {service && service.useCase}
-                        </div>                      </div>                      ;
-                      <div className="text-right">;
-                        <div className="text-xs text-gray-500 mb-1">Use Case:</div>;
-                        <div className="text-sm text-gray-300 max-w-xs">{service && service.useCase}</div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>;
-=======
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -572,7 +466,6 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>;
         </div>;
@@ -674,17 +567,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
               href='/services'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-              View Our Services;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-  );
-}
-    </>);
-}
-=======
+
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               View Our Services
@@ -695,4 +578,3 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

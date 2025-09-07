@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -9,7 +8,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const raw = null;
 
@@ -30,9 +28,6 @@ export default async function handler(
     const items = JSON.parse (raw);
     res.status (200).json ({ items });
   } catch {
-<<<<<<< HEAD
-    res.status (200).json ({ items: [] });
-=======
+
     res.status(200).json({ items: [] });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

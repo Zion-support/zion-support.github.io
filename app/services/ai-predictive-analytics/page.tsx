@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Ai Predictive Analytics | Zion Tech Group',
   description: 'Professional ai predictive analytics services for your business needs.',
@@ -47,8 +48,11 @@ export default function ServicePage() {
               <li>• Benefit 3</li>
             </ul>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+

@@ -1,48 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-export default function AutomationInsightsPage() {
 
-  const automationTrends = [
-    {
-      id: 'ai-automation-2025'
-      title: 'AI Automation Trends 2025'
-      description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
-      readTime: '8 min read',
-export default function AutomationInsightsPage() {;
-  const automationTrends = [;
-    {;
-      id: 'ai-automation-2025',;
-      title: 'AI Automation Trends 2025',,
-  description:;
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',;
-      readTime: '8 min read',;
-      featured: true;
-    {
-      id: 'ai - automation - 2025',
-      title: 'AI Automation Trends 2025',
-    };
-    {
-      id: 'autonomous-systems'
-      title: 'Building Autonomous Systems'
-      description: 'Learn how to design and implement truly autonomous systems that operate independently.'
-      category: 'Implementation'
-      readTime: '12 min read'
-      featured: false
-    }
-    {
-      id: 'automation-roi'
-      title: 'Calculating Automation ROI'
-      description: 'A comprehensive guide to measuring and maximizing return on investment for automation projects.'
-      category: 'Business'
-      readTime: '10 min read'
-      featured: false
-    },      featured: false
-    }
-=======
   const automationTrends = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const automationTools = [;
@@ -55,35 +14,7 @@ export default function AutomationInsightsPage() {;
       complexity: 'Advanced',      type: 'Framework',;
       complexity: 'Advanced';
     {
-<<<<<<< HEAD
-      id: 'automation - framework',
-      title: 'Zion Automation Framework',
-    };
-    {;
-      id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',,
-  description: 'Comprehensive tools for monitoring and optimizing automation performance.',;
-      type: 'Tool',;
-      complexity: 'Intermediate',;
-    },;
-    {;
-      id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',,
-  description:;
-        'Comprehensive tools for monitoring and optimizing automation performance.',;
-      type: 'Tool',;
-      complexity: 'Intermediate',;
-    },    {      complexity: 'Intermediate'
-};
-    {;
-      id: 'deployment-automation',;
-      title: 'Deployment Automation',,
-  description: 'Streamlined deployment processes for automation systems.',;
-      type: 'Process',;
-      complexity: 'Beginner',;
-    },  ];      complexity: 'Beginner';
-    }
-=======
+
       id: 'automation-framework',
       title: 'Zion Automation Framework',
 description:
@@ -106,7 +37,6 @@ description:
       type: 'Process',
 complexity: 'Beginner',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const successMetrics = [;
@@ -123,93 +53,7 @@ complexity: 'Beginner',
       label: 'Uptime',,
   description: 'Reliable automation performance';
     {
-<<<<<<< HEAD
-      id: 'deployment - automation',
-      title: 'Deployment Automation',
-      description: 'Streamlined deployment processes for automation systems.',
-      type: 'Process',
-    }
-  ];
-;
-  const success_metrics = [;
-    {
-      metric: '227',
-      label: 'Active Automations',
-    };
-    {;
-      metric: '40%',;
-      label: 'Efficiency Gain',;
-      label: 'Average improvement across projects'
-};
-    {;
-      metric: '2,960+';
-      label: 'Pages Generated',,
-  description: 'Content created autonomously',;
-    },;
-    {;
-      metric: '40%',;
-      label: 'Efficiency Gain',;
-      label: 'Average improvement across projects',;
-    },;
-    {;
-      metric: '2,960+',;
-      label: 'Pages Generated',,
-  description: 'Content created autonomously',;
-    },  ],
-  description: 'Content created autonomously',
-  description: 'Successfully deployed and running',
-    },
-    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable automation performance',    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable automation performance';
-    }
-    {
-      metric: '40%',
-      label: 'Efficiency Gain',
-      label: 'Average improvement across projects';
-    }
-    {
-      metric: '2, 960+';
-      label: 'Pages Generated',
-      description: 'Content created autonomously',
-    },
-    {
-      metric: '40%',
-      label: 'Efficiency Gain',
-      label: 'Average improvement across projects',
-    },
-    {
-      metric: '2, 960+',
-      label: 'Pages Generated',
-      description: 'Content created autonomously',
-    },  ],
-  description: 'Content created autonomously';
-    }
-  ];
-;
-  return (
-    <>;
-      <Head>;
-        <title>;
-          Automation Insights | Zion Tech Group - AI Automation Expertise;
-        </title>;
 
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
-        <main className='container mx-auto px-6 py-12'>;
-          <section className='text-center mb-16'>;
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
-              Automation Insights;
-            </h1>;
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-              Deep insights into AI automation, autonomous systems, and the;
-              future of intelligent technology;
-            </p>;
-          </section>;
-=======
       metric: '227',
       label: 'Active Automations',
 description: 'Successfully deployed and running',
@@ -279,7 +123,6 @@ description: 'Successfully deployed and running',
                       {item.description}
                     </div>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </div>;
             </div>;
@@ -316,25 +159,11 @@ description: 'Successfully deployed and running',
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
                     <Link
-<<<<<<< HEAD
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
-                      <span className="text-white/60 text-sm">{trend.readTime}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
-                    <p className="text-white/70 mb-4">{trend.description}</p>
-                    <Link
-                      href={`/blog/${trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Read More <span className="ml-1">→</span>
-=======
+
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
                       Read More <span className='ml-1'>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
 
@@ -451,32 +280,7 @@ description: 'Successfully deployed and running',
                 </Link>;
                 <Link
                   href='/case-studies'
-<<<<<<< HEAD
-                <Link
-                  href="/contact"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href="/case-studies"
-                  View Case Studies;
-                </Link>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </div>;
-  );
-}
-    </>;
-  );
-}
-  );
-}
-    </>);
-}
-=======
+
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
                   View Case Studies
@@ -489,4 +293,3 @@ description: 'Successfully deployed and running',
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

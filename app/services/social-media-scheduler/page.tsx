@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Social Media Scheduler | Zion Tech Group',
   description: 'Professional social media scheduler services for your business needs.',
@@ -47,8 +48,11 @@ export default function ServicePage() {
               <li>• Benefit 3</li>
             </ul>
           </div>
+
         </div>
       </div>
     </div>
   );
+
 }
+

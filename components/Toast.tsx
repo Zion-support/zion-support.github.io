@@ -139,15 +139,10 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
     if (isVisible) {
       return `${baseStyles} translate-x-0 opacity-100`;
     }
-<<<<<<< HEAD
-    
-    return `${baseStyles} translate-x-full opacity-0`
-};
-=======
+
 
     return `${baseStyles} translate-x-full opacity-0`;
   };
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
   const getIconAndColor = () => {
     switch (toast.type) {
@@ -237,18 +232,7 @@ export const useToastNotifications = () => {
   const { addToast } = useToast();
 
   return {
-<<<<<<< HEAD
-    success: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'success', title, message, ...options }),
-    error: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'error', title, message, ...options }),
-    warning: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'warning', title, message, ...options }),
-    info: (title: string, message?: string, options?: Partial<Toast>) => 
-      addToast({ type: 'info', title, message, ...options }),
-  }
-};
-=======
+
     success: (title: string, message?: string, options?: Partial<Toast>) =>
       addToast({ type: "success", title, message, ...options }),
     error: (title: string, message?: string, options?: Partial<Toast>) =>
@@ -259,4 +243,3 @@ export const useToastNotifications = () => {
       addToast({ type: "info", title, message, ...options }),
   };
 };
->>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

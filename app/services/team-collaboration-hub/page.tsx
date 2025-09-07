@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Team Collaboration Hub | Zion Tech Group',
   description: 'Professional team collaboration hub services for your business needs.',
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

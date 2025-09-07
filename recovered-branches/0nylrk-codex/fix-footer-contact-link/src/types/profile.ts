@@ -3,9 +3,10 @@ export interface ProfileSkill {
   level: number; // 1-5
   endorsements?: number;
 }
+
 }
   id: string;
-  title: string,
+  title: string;
   description: string;
   image_url?: string;
   tags?: string[];
@@ -20,12 +21,24 @@ export interface ProfileSkill {
 export interface ProfileExperience {
   id: string;
   role: string;
-  company: string,
+  company: string;
   description: string;
-  status: 'available' | 'limited' | 'unavailable';
-  next_available?: string;
-  message?: string,
-  available_hours?: { day: string, hours: string }[];
+  startDate: string;
+  endDate?: string;
+  current?: boolean;
+}
+
+  start_date: string;
+  end_date?: string,
+  current?: boolean;
+}
+export interface Availability {
+  status: "available" | "limited" | "unavailable";
+  nextAvailable?: string;
+  message?: string;
+  availableHours?: { day: string; hours: string }[];
+}
+
 }
 export interface ProfileData {
   id: string;
@@ -67,11 +80,21 @@ export interface ProfileData {;
   experience: ProfileExperience[];
   availability: Availability;
   hourlyRate?: number;
+  contactEmail?: string;
+}
+  hourlyRate?: number
+
   contactEmail?: string
-};
+}
+export interface ProfileSkill {;
+  name: string,;
+  level: number, // 1-5;
+  endorsements?: number;
+}
+;
 export interface ProfileProject {;
   id: string,;
-  title: string,,
+  title: string,;
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
@@ -82,7 +105,7 @@ export interface ProfileProject {;
 export interface ProfileExperience {;
   id: string,;
   role: string,;
-  company: string,,
+  company: string,;
   description: string,;
   startDate: string,;
   endDate?: string,;
@@ -116,3 +139,4 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+}

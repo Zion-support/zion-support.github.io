@@ -395,6 +395,9 @@ import axios from 'axios',;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
+import axios from 'axios',
+// @ts - ignore;
+axios.create = jest.fn (() => axios),
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;

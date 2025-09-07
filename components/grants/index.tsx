@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 import type {;
   GrantApplication,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -34,9 +27,6 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -65,115 +55,6 @@ export default function GrantsPage() {;
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
-=======
-    <EnhancedLayout>;
-      <div className='flex items - center justify - between mb - 6'>;
-        <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;
-        <div className='flex gap - 2'>;
-          <Link href='/grants / apply'>;
-            <a className='px - 3 py - 2 bg - blue - 600 text - white rounded'>Apply</a>;
-          </Link>;
-          <Link href='/incubator'>;
-            <a className='px - 3 py - 2 bg - purple - 600 text - white rounded'>;
-
-              Incubator;
-            </a>;
-          </Link>;
-      </div>;
-
-          value={filters && filters.status || ''}
-          onChange={e =>;
-            setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
-
-=======
-
-import type {;
-  GrantApplication,;
-  GrantCategory,;
-  GrantStatus,;
-} from '../../types/grants';
-
-const categories: GrantCategory[] = [;
-  'Ecosystem Tools',;
-  'Talent Development',;
-  'Regional Expansion',;
-  'Research Grants',;
-];
-const statuses: GrantStatus[] = [;
-  'Draft',;
-  'Submitted',;
-  'Under Review',;
-  'Approved',;
-  'Rejected',;
-import { useEffect, useState  } from 'react';
-import Link from 'next/link',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-import {useEffect, useState} from 'react';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type {
-  GrantApplication,
-  GrantCategory,;
-  GrantStatus,;
-} from '../../types/grants';
-
-=======
-import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-import type {
-  GrantApplication
-  GrantCategory
-  GrantStatus;
-} from '../../types/grants';
-const categories: GrantCategory[] = [
-  'Ecosystem Tools'
-  'Talent Development'
-  'Regional Expansion'
-  'Research Grants'
-];
-const statuses: GrantStatus[] = [
-  'Draft'
-  'Submitted'
-  'Under Review'
-  'Approved'
-  'Rejected'
-];
-<<<<<<< HEAD
-
-export default function GrantsPage() {;
-=======
-export default function GrantsPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{
-    sector?: string;
-    status?: string;
-    region?: string;
-    program?: string;
-  }>({});
-
-<<<<<<< HEAD
-
-      .catch(() => setItems([]));  }, [filters]);
-  return (
-
-      .then((r) => r.json())
-      .then((d) => setItems(d.items || []))
-
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
-export default function GrantsPage() {
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
-export default function GrantsPage() {;
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -205,16 +86,8 @@ export default function GrantsPage() {;
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
   }, [filters]);
-=======
-  useEffect(() => {
-.then(r => r.json())
-      .then(d => setItems(d.items || []))
-      .catch(() => setItems([]));
-  }, [filters]);
-  return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     <EnhancedLayout>
-<div className='flex items-center justify-between mb-6'>
+      <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
           <Link href='/grants/apply'>
@@ -232,7 +105,6 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
-<<<<<<< HEAD
           }
         >
           <option value=''>All Sectors</option>
@@ -247,8 +119,6 @@ export default function GrantsPage() {;
           value={filters.status |''}
           onChange={e =>
             setFilters(f => ({ ...f, status: e.target.value |undefined }))
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default /**
  * GrantsPage - Function description
  */
@@ -286,10 +156,6 @@ function GrantsPage() {
             </a>;
           </Link>;
       </div>;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         >
           <option value=''>All Stages</option>
@@ -302,31 +168,15 @@ function GrantsPage() {
         <input
           className='border rounded p-2'
           placeholder='Region'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
-=======
-          value={filters.region |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, region: e.target.value |undefined }))
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         />
         <select
           className='border rounded p-2'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
@@ -334,9 +184,6 @@ function GrantsPage() {
           value={filters.sector || ''}
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         >;
           <option value=''>All Sectors</option>;
@@ -362,11 +209,6 @@ function GrantsPage() {
           placeholder='Region'
           }
         />;
-<<<<<<< HEAD
-        <select
-          className='border rounded p-2'
-=======
-<<<<<<< HEAD
         <select;
           className='border rounded p - 2';
           value={filters.program || ''}
@@ -395,47 +237,13 @@ function GrantsPage() {
                 <div className='text - xs text - gray - 600 dark:text - gray - 400'>;
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}
 
-=======
-          value={filters.program |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, program: e.target.value |undefined }))
-          }
-        >
-          <option value=''>All Programs</option>
-          <option value='grant'>Grant</option>
-          <option value='incubator'>Incubator</option>
-        </select>
-      </div>
-      <div className='grid gap-4'>
-        {items.map(g => (
-          <div
-            key={g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40'
-          >
-            <div className='flex items-center justify-between'>
-              <div>
-                <h3 className='text-lg font-medium'>
-                  <Link href={`/grants/${g.id}`}>
-                    <a>{g.projectName}</a>
-                  </Link>
-                </h3>
-                <div className='text-xs text-gray-600 dark:text-gray-400'>
-                  {g.sector |'General'} • {g.region |'Global'} •{' '}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         <select
           className='border rounded p-2'
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           value={filters && filters.program || ''}
           onChange={e =>;
@@ -447,9 +255,6 @@ function GrantsPage() {
           <option value='incubator'>Incubator</option>;
         </select>;
       </div>;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -459,9 +264,6 @@ function GrantsPage() {
       </div>
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className='grid gap-4'>;
         {items && items.map(g => (;
           <div
@@ -483,19 +285,9 @@ function GrantsPage() {
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -518,34 +310,20 @@ function GrantsPage() {
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 );
-=======
       </div>;
     </EnhancedLayout>;
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 
-<<<<<<< HEAD
   return (
     <EnhancedLayout>
     <EnhancedLayout>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
                     Incubated by Zion;
                   </span>)}
@@ -570,10 +348,3 @@ function GrantsPage() {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

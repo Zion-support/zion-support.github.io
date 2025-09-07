@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Ai Healthcare Analytics | Zion Tech Group',
   description: 'Professional ai healthcare analytics services for your business needs.',
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

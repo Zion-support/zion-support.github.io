@@ -1,4 +1,5 @@
 export const metadata = {
+
   title: 'Ai Chatbot | Zion Tech Group',
   description: 'Professional ai chatbot services for your business needs.',
   keywords: 'ai-chatbot, services, business, technology'
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+
