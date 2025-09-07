@@ -25,18 +25,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
     if (req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(
-        OFFWORLD_TOPICS.manifesto
-        body?.message |''
-      );
-      return res.status(200).json({ ok });
-    }
-    return res.status(400).json({ error: 'Unsupported action' });
-  } catch (e: any) {
-    return res.status(500).json({ error: e.message });
-  }    }
-    if (req.method === 'POST' && action === 'broadcast') {
-      const ok = await publishManifesto(OFFWORLD_TOPICS.manifesto, body?.message |'');
-
+      )
+      return res && res.status(200).json({ ok })
+    }'
+    return res && res.status(400).json({ error: 'Unsupported action' })
       return res.status(200).json({ ok })
     }
     return res.status(400).json({ error: 'Unsupported action' })

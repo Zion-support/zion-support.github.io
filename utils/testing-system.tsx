@@ -82,12 +82,10 @@ export class TestingSystem {
         element.click();
         break;
       case 'type':
-        // Type action implementation
+        // Handle typing
         break;
       case 'hover':
-        // Hover action implementation
-        break;
-      default:
+        // Handle hover
         break;
     }
   }

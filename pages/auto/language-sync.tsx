@@ -4,21 +4,13 @@ import Link from 'next/link';
 const LanguageSync: NextPage;
 const LanguageSync: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>Global Language Sync Agent</title>
-        <meta name="description" content="AI-powered translation backfill for locale files." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">Global Language Sync Agent</h1>
-        <p>This autonomous agent scans English strings and backfills missing translations in Portuguese, Spanish, and Arabic. It opens commits automatically.</p>
-        <div className="space-x-4 text-blue-600 underline">
-          <Link href="/public/locales/en/common.json">EN</Link>
-          <Link href="/public/locales/pt/common.json">PT</Link>
-          <Link href="/public/locales/es/common.json">ES</Link>
-          <Link href="/public/locales/ar/common.json">AR</Link>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

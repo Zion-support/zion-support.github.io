@@ -26,69 +26,71 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
-    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.attach(videoRef.current);
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.attach(audioRef.current);      }
+
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {;'
+  if($2) {
+        track && track.attach(videoRef && videoRef.current)
+      }'
+  if($2) {
+        track && track.attach(audioRef && audioRef.current);      }
     }
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.detach(videoRef.current);
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current);      }        track.attach(videoRef.current)
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.attach(audioRef.current)
-      }
+    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {;'
+  if($2) {
+        track && track.detach(videoRef && videoRef.current)
+      }'
+  if($2) {
+        track && track.detach(audioRef && audioRef.current);      }        track && track.attach(videoRef && videoRef.current)
+      }'
+  if($2) {
+        track && track.attach(audioRef && audioRef.current)
+      }'
+  if($2) {
+        track && track.detach(audioRef && audioRef.current);        track && track.detach(videoRef && videoRef.current)
     }
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.detach(videoRef.current);
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current);        track.detach(videoRef.current)
-      }
-      if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current)
-    }
-    participant.tracks.forEach(pub => {
-      const track = pub.track;
-      if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
-    });
-    participant.on('trackSubscribed', handleTrackSubscribed);
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+    participant.on('trackUnsubscribed', handleTrackUnsubscribed)
     return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed);
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    }
-  }, [participant]);
-  return (
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
-      <video
+      participant.off('trackSubscribed', handleTrackSubscribed)
         ref={videoRef}
         autoPlay
         playsInline
         muted={Boolean(isLocal)}
+
         className='w-full h-48 object-cover bg-black'
-      />
-      <audio ref={audioRef} autoPlay className='hidden' />
-      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
-        {displayName |
-          (participant as any).name |
+
+         />
+      <audio ref={audioRef} autoPlay className='hidden'    />
+      <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'    />
+        {displayName |}
+          (participant as any).name |}
           (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
-  );  }, [participant]);
+  )
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
-    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
-      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
-      <audio ref={audioRef} autoPlay className="hidden" />
-      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
-        {displayName |(participant as any).name |(isLocal ? 'You' : 'Participant')}
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,
+
+  participant: RemoteParticipant | LocalParticipant
+  is_local?: boolean;}
+  display_name?: string;}
+
+        track.attach (audio_ref.current)}
+
+        track.attach (audio_ref.current)}
+
+      <video
+        ref={video_ref}
+        auto_play
+        plays_inline
+        muted={Boolean (is_local)}
+        className='w - full h - 48 object - cover bg - black'
+        {display_name || (participant as any).name || (is_local ? 'You' : 'Participant')}
+      </div>
+    </div>)
       </div>
     </div>
 );

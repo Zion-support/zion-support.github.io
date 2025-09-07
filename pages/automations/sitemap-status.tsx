@@ -11,7 +11,7 @@ const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
       <div className="enhanced-card">
         <div className="text-lg">Indexed URLs: {urlCount}</div>
       </div>
-    </main>
+    </div>
   )
 }
 export const getServerSideProps: GetServerSideProps = async () => {

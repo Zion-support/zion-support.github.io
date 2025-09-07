@@ -875,3 +875,12 @@ this.logError("Performance measurement failed")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
     this.logError("Unhandled rejection")
+
+    this.logError("Unhandled rejection")
+    this.logError("Unhandled rejection")
+    this.logError("Unhandled rejection")
+
+
+
+this.logError("Unhandled rejection")
+    this.logError("Unhandled rejection")

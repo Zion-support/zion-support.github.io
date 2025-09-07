@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 /**
- * Security Enhancer
- * Comprehensive security improvements for the Zion Tech Group website
+ * Security Enhancement Script
+ * Enhances app security
  */
-
-const fs = require('fs');
-const path = require('path');
-
+const fs = require("fs")
+const path = require("path")
 class SecurityEnhancer {
   constructor() {
     this.securityImprovements = [];

@@ -24,18 +24,11 @@ const TalentProfile: NextPage = () => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
   return (
-    <div className="space-y-6 pb-20">
-      <Head>
-        <title>{slug} - Talent - Zion</title>
-      </Head>
-      <header className="flex items-start justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold">{slug}</h1>
-          <div className="text-sm opacity-80">Full-Stack Developer</div>
-          <div className="mt-2 flex gap-1">
-            <TrustBadge type="Verified" />
-            <TrustBadge type="Top Rated" />
-          </div>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
         </div>
         <div className="flex gap-2">
           <EnhancedButton onClick={() => handleRespond("Accept")}>

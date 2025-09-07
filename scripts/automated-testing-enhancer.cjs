@@ -161,6 +161,12 @@ describe('${pageName} Page', () => {
 // Run the enhancer
 const enhancer = new AutomatedTestingEnhancer;(;);
 enhancer.start().catch(console.error);
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+///usr/bin/env node
 const { execSync } = require('child_process')
   log(message, type = 'info')
     this.log('🧪 Generating component tests...')
@@ -182,4 +188,13 @@ const { execSync } = require('child_process')
         "type"
         "status"
       this.log(` Tests "failed"`)
+        "successRate"
+
+        "successRate"
+        "successRate"
+        "successRate"
+
+
+
+"successRate"
         "successRate"

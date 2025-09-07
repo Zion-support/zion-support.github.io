@@ -2,23 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Menu, X, Search, User, ShoppingCart, ChevronDown } from 'lucide-react';
 }
-
-export default function EnhancedHeader() {
-  const router = useRouter();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState();
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   const handleSearch = async ("e": React.FormEvent) => {
+
     e.preventDefault();
-    if (searchQuery.trim()) {
+    if (searchQuery.trim()) {}
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
@@ -102,60 +89,80 @@ export default function EnhancedHeader() {
           </div>{' '}
           {}{' '}
           <nav className="hidden "md": flex items-center space-x-8">
+
             {' '}
-            {navigation.map(item => (
-              <div key={item.name} className="relative">
+            {navigation.map(item => ("
+              <div key={item.name} className="relative">'
                 {' '}
-                {item.dropdown ? (
-                  <div className="relative">
+                {item.dropdown ? ("
+                  <div className="relative">'
                     {' '}
-                    <button
+                    <button;
                       onClick={() => toggleDropdown(item.name)}
+
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
                       className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
-                    >
-                      {' '}
-                      <span>{item.name}</span>{' '}
-                      <ChevronDown className="h-4 w-4" />{' '}
+                    >'
+                      {' '}'
+                      <span>{item.name}</span>{' '}'"
+                      <ChevronDown className="h-4 w-4" />{' '}'
                     </button>{' '}
-                    {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    {activeDropdown === item.name && ("
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">'
                         {' '}
                         {item.dropdown.map(dropdownItem => (
-                          <a
+                          <a;
                             key={dropdownItem.name}
                             href={dropdownItem.href}
                             className="block px-4 py-2 text-gray-700 "hover": bg-gray-50 hover:text-blue-600 transition-colors duration-200"
-                          >
-                            {' '}
+                          >'
+                            {' '}'
                             {dropdownItem.name}{' '}
-                          </a>
+                          </a>'
                         ))}{' '}
-                      </div>
+                      </div>'
                     )}{' '}
                   </div>
                 ) : (
-                  <a
+                  <a;
                     href={item.href}
+
+                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                    className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
                     className="text-gray-700 "hover": text-blue-600 transition-colors duration-200"
-                  >
-                    {' '}
+                  >'
+                    {' '}'
                     {item.name}{' '}
-                  </a>
+                  </a>'
                 )}{' '}
-              </div>
-            ))}{' '}
-          </nav>{' '}
+              </div>'
+            ))}{' '}'
+          </nav>{' '}'
           {}{' '}
           <div className="hidden "md": flex items-center space-x-4">
             {' '}
             {}{' '}
             <form onSubmit={handleSearch} className="relative">
+
               {' '}
-              <input
-                type="text"
+              <input"
+                type="text""
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+
+                className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
                 className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />{' '}
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
@@ -177,6 +184,7 @@ export default function EnhancedHeader() {
                 <ShoppingCart className="h-5 w-5" />{' '}
               </button>{' '}
             </div>{' '}
+
           </div>{' '}
           {}{' '}
           <div className="md:hidden">
@@ -188,46 +196,257 @@ export default function EnhancedHeader() {
             {' '}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
+
+          {}{' '}
+
+          <div className="md:hidden">
+          <div className="md:hidden">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+          <div className=""md": hidden">
+            {' '}
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+
+                        className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                        className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+                        className="flex items-center justify-between w-full px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
+                      >'
+                        {' '}'
+                        <span>{item.name}</span>{' '}'"
+                        <ChevronDown className="h-4 w-4" />{' '}'
+                      </button>{' '}
+                      {activeDropdown === item.name && ("
+                        <div className="pl-4 space-y-1">'
+                          {' '}
+                          {item.dropdown.map(dropdownItem => (
+                            <a;
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+
+                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+                              className="block px-3 py-2 text-gray-600 "hover": text-blue-600 transition-colors duration-200"
+                            >'
+                              {' '}'
+                              {dropdownItem.name}{' '}
+                            </a>'
+                          ))}{' '}
+                        </div>'
+                      )}{' '}
+                    </div>
+                  ) : (
+                    <a;
+                      href={item.href}
+
+                      className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                      className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+                      className="block px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
+                    >'
+                      {' '}'
+                      {item.name}{' '}
+                    </a>'
+                  )}{' '}
+                </div>'
+              ))}{' '}'
+              {}{' '}"
+              <form onSubmit={handleSearch} className="px-3 py-2">'
+                {' '}"
+                <div className="relative">'
+                  {' '}
+                  <input"
+                    type="text""
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={e => setSearchQuery(e.target.value)}
+
+                    className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+          <div className=""md": hidden">
+;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+          <div className=\"md:hidden\" />;
+            {' '}
+            <button;
+              onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
+              className=\"p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+          <div className=\"\"md\": hidden\" />;
+            {' '}
+            <button;
+              onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
+              className=\"p-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
+            >;
+              {' '}
+              {mobileMenuOpen ? (<X className=\"h-6 w-6\" />;
+              ) : (<Menu className=\"h-6 w-6\" />;
+
+}
+          <div className=\"\"md\": hidden\" />}
+            {' '}
+            <button;
+onClick={() = /> setMobileMenuOpen(!mobileMenuOpen)}
+              className=\"p-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
             >
               {' '}
               {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
+                <X className=\"h-6 w-6\" />
+              ) : (}
+                <Menu className=\"h-6 w-6\" />}
               )}{' '}
             </button>{' '}
           </div>{' '}
         </div>{' '}
         {}{' '}
         {mobileMenuOpen && (
+
+          <div className="md:hidden">
+          <div className="md:hidden">
+          <div className="md:hidden">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
           <div className=""md": hidden">
+        {mobileMenuOpen && (;
+          <div className=\"md:hidden\" />;
+          <div className=\"md:hidden\" />;
+          <div className=\"md:hidden\" />;
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;}
+          <div className=\"\"md\": hidden\" />;}
             {' '}
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className=\"px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200\" />;
               {' '}
-              {navigation.map(item => (
-                <div key={item.name}>
+              {navigation.map(item => (<div key={item.name} />;
                   {' '}
-                  {item.dropdown ? (
-                    <div>
+                  {item.dropdown ? (<div />;}
                       {' '}
                       <button
                         onClick={() => toggleDropdown(item.name)}
                         className="flex items-center justify-between w-full px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
+                      <button;
+                        onClick={() = /> toggleDropdown(item.name)}
+;
+                        className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+                        className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+                        className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+                        className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
+                      >;
+        {mobileMenuOpen && (
+
+}
+          <div className=\"\"md\": hidden\" />}
+            {' '}
+            <div className=\"px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200\" />
+              {' '}
+              {navigation.map(item => (}
+                <div key={item.name} />
+                  {' '}
+                  {item.dropdown ? (}
+                    <div />}
+                      {' '}
+                      <button;
+onClick={() = /> toggleDropdown(item.name)}
+
+                        className=\"flex items-center justify-between w-full px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
                       >
                         {' '}
-                        <span>{item.name}</span>{' '}
-                        <ChevronDown className="h-4 w-4" />{' '}
+                        <span />{item.name}</span>{' '}
+                        <ChevronDown className=\"h-4 w-4\" />{' '}
                       </button>{' '}
-                      {activeDropdown === item.name && (
-                        <div className="pl-4 space-y-1">
+                      {activeDropdown === item.name && (<div className=\"pl-4 space-y-1\" />;}
                           {' '}
-                          {item.dropdown.map(dropdownItem => (
-                            <a
+                          {item.dropdown.map(dropdownItem => (<a;}
                               key={dropdownItem.name}
                               href={dropdownItem.href}
+
+                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                              className="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
                               className="block px-3 py-2 text-gray-600 "hover": text-blue-600 transition-colors duration-200"
                             >
+;
+                              className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\";
+                              className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\";
+                              className=\"block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200\";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+                              className=\"block px-3 py-2 text-gray-600 \"hover\": text-blue-600 transition-colors duration-200\";
+                             />;
+                              {' '}
+                              {dropdownItem.name}{' '}
+                            </a>;
+                          ))}{' '}
+                        </div>;
+                      )}{' '}
+                    </div>;
+                  ) : (<a;
+                      href={item.href}
+;
+                      className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+                      className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+                      className=\"block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200\";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+                      className=\"block px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\";
+                     />;
+                      {' '}
+                      {item.name}{' '}
+                    </a>;
+                  )}{' '}
+                </div>;
+              ))}{' '}
+              {}{' '}
+              <form onSubmit={handleSearch} className=\"px-3 py-2\" />;
+                {' '}
+                <div className=\"relative\" />;
+                  {' '}
+                  <input;
+                    type=\"text\";
+                    placeholder=\"Search...\";
+                    value={searchQuery}
+                    onChange={e = /> setSearchQuery(e.target.value)}
+;
+                    className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
+                    className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
+                    className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+                    className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg \"focus\": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\";
+                      {activeDropdown === item.name && (}
+                        <div className=\"pl-4 space-y-1\" />}
+                          {' '}
+                          {item.dropdown.map(dropdownItem => (}
+                            <a;}
+key={dropdownItem.name}
+                              href={dropdownItem.href}
+
+                              className=\"block px-3 py-2 text-gray-600 \"hover\": text-blue-600 transition-colors duration-200\"
+                             />
                               {' '}
                               {dropdownItem.name}{' '}
                             </a>
@@ -240,6 +459,11 @@ export default function EnhancedHeader() {
                       href={item.href}
                       className="block px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
+                    <a;
+href={item.href}
+
+                      className=\"block px-3 py-2 text-gray-700 \"hover\": text-blue-600 transition-colors duration-200\"
+                     />
                       {' '}
                       {item.name}{' '}
                     </a>
@@ -247,23 +471,28 @@ export default function EnhancedHeader() {
                 </div>
               ))}{' '}
               {}{' '}
-              <form onSubmit={handleSearch} className="px-3 py-2">
+              <form onSubmit={handleSearch} className=\"px-3 py-2\" />
                 {' '}
-                <div className="relative">
+                <div className=\"relative\" />
                   {' '}
-                  <input
-                    type="text"
-                    placeholder="Search..."
+                  <input;
+type=\"text\"
+                    placeholder=\"Search...\"
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
+
                     className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    onChange={e = /> setSearchQuery(e.target.value)}
+
+                    className=\"w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg \"focus\": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
                   />{' '}
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
+                  <Search className=\"absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400\" />{' '}
                 </div>{' '}
               </form>{' '}
+
             </div>{' '}
-          </div>
-        )}{' '}
+          </div>'
+        )}{' '}'
       </div>{' '}
     </header>
   );

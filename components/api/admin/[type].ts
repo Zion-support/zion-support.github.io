@@ -18,14 +18,15 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
   return (
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
     process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
-  );
-function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
+  )
+function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv'}
+} {}
   const { search, sort, order, page, pageSize, format, ...rest } =
-    req.query as Record<string, string>;
-  const filters: Record<string, any> = {}
-  Object.keys(rest).forEach(k => {
-    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];
-  });
+    req.query as Record<string, string    />
+const filters: Record<string, any    /> = {}
+  Object.keys(rest).forEach(k => {}
+    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];}
+  })
   return {
     search
     sort
@@ -79,7 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let query = client.from(table).select('*', { count: 'exact' });
       if (params.search) {
         // heuristic: search name/title/email
-        query = query.or(
+query = query.or(
           'name.ilike.%' +
             params.search +
             '%,title.ilike.%' +
@@ -87,47 +88,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             '%,email.ilike.%' +
             params.search +
             '%'
-        );
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          if (v !== undefined) query = query.eq(k, v);
-        }
-      }
-      if (params.sort)
-        query = query.order(params.sort, { ascending: params.order === 'asc' });      const from = params.page * params.pageSize;      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          if (v !== undefined) query = query.eq(k, v)
-        }
-      }
-      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
-      const from = params.page * params.pageSize;
-      const to = from + params.pageSize - 1;
-      const { data, error, count } = await query.range(from, to);
-      if (error) return res.status(500).json({ error: error.message });
-      if (params.format === 'csv') {
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader(
-          'Content-Disposition'
-          `attachment; filename="${type}.csv"`
-        );
-        return res.status(200).send(toCsv(data |[]));      }        res.setHeader('Content-Typetext/csv');
-        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
-        return res.status(200).send(toCsv(data |[]))
-      }
-      return res.status(200).json({ items: data |[], total: count |0 });
+        );}
+
+      if (params.sort)query = query.order(params.sort, { ascending: params.order === 'asc'}
+}
+  const from = params.page * params.pageSize
+const to = from + params.pageSize - 1
+const { data, error, count } = await query.range(from, to)
+      if (error) return res.status(500).json({ error: error.message}
+})
+  if($2) {
+res.setHeader('Content-Type', 'text/csv')
+        res.setHeader(}
+          'Content-Disposition'}"
+          `attachment; filename=\"${type}.csv\"`
+        )
+        return res.status(200).send(toCsv(data || []))
+      return res.status(200).json({ items: data |[], total: count |0}
+})
     } else {
       // fallback
-      const all = (MOCK_DATA[type] |[]).slice();
-      let filtered = all;
-      if (params.search) {
-        const s = params.search.toLowerCase();
-        filtered = filtered.filter(r =>
-          JSON.stringify(r).toLowerCase().includes(s)
-        );
-      }
-      if (params.filters) {
+const all = (MOCK_DATA[type] |[]).slice()
+      let filtered = all
+  if($2) {
+        const s = params.search.toLowerCase()
+filtered = filtered.filter(r =>
+          JSON.stringify(r).toLowerCase().includes(s)}
+        );}
+  if($2) {
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter(
             (r: any) => String((r as any)[k]) === String(v)
@@ -174,20 +162,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (useSupabase) {
       const { data, error } = await client
         .from(type)
-        .update({ ...updates, updated_at: new Date().toISOString() })
+        .update({ ...updates, updated_at: new Date().toISOString()}
+})
         .eq('id', id)
         .select('*')
-        .single();
-      if (error) return res.status(500).json({ error: error.message });
-      return res.status(200).json({ item: data });
+        .single()
+      if (error) return res && res.status(500).json({ error: error && error.message}
+})
+      return res && res.status(200).json({ item: data}
+})
     } else {
-      const list = MOCK_DATA[type] |[];
-      const idx = list.findIndex((r: any) => r.id === id)
-      if (idx === -1) return res.status(404).json({ error: 'Not found' });
       const updated = {
-        ...list[idx]
-        ...updates
-        updated_at: new Date().toISOString()
+        ...list[idx],
+        ...updates}
+        updated_at: new Date().toISOString()}
       }
       list[idx] = updated as any;
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })

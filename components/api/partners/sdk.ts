@@ -13,10 +13,10 @@ export default async function handler(
     return res
       .status(200)
       .send(
-        `# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`
-      );
-  }
-  res.setHeader('Content-Type', 'text/markdown');
+        `# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`}
+      );}
+
+  res && res.setHeader('Content-Type', 'text/markdown')
   return res
     .status(200)
     .send(

@@ -25,7 +25,7 @@ export default function EmailDmarcAnalyzerPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

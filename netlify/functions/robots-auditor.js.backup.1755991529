@@ -29,6 +29,7 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 };
+
 exports.config = { schedule: '15 */6 * * *' };
 
 exports.handler = async () => {

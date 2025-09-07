@@ -395,10 +395,9 @@ export default function Header() {;
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
@@ -415,12 +414,19 @@ export default function Header() {;
                   onClick={closeMenu}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                 >
-                  Get Started
+                  {item.name}
                 </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              ))}
+              <Link
+                href="/contact"
+                className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -2,11 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const bwipjs = require('bwip-js')
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string) |''
-  if (!code) {
-    res.status(400).json({ error: 'Missing code' })
-    return
-  }
+  if($2) {
+    res.setHeader('Allow', ['GET'])
+    return res.status(405).end('Method Not Allowed')
   try {
     const png = await bwipjs.toBuffer({
       bcid: 'ean13'

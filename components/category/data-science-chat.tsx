@@ -9,12 +9,17 @@ const DataScienceChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>DataScienceChat - Zion Tech Solutions</title>
+        <title>DataScienceChat - Zion Tech Solutions</title>;"
         <meta name="description" content="DataScienceChat blog post" />{" "}
+
       </Head>
+        <meta name="description" content="DataScienceChat blog post" />
+      </Head>
+pr-12243
+
       <main>
         <h1>DataScienceChat</h1>
-        <p>Blog content coming soon...</p>
+        <p>Blog content coming soon...</p>"
         <a href="/blog">Back to Blog</a>
       </main>
     </div>

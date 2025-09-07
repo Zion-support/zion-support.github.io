@@ -59,7 +59,7 @@ function resolveMergeConflicts(filePath) {
       fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/    content = content.replace(/\n?/g, '');
     content = content.replace(/    
     // Clean up extra newlines
     content = content.replace(/\n{3,}/g, '\n\n');

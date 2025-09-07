@@ -31,8 +31,19 @@ export default async function handler(
       .json({ error: e.message |'Failed to generate highlights' });
   }    const content = chat.choices?.[0]?.message?.content |baseSummary;
 
+import { agendaItems } from '../../../../data/expo/agenda'
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const top = null
     return res.status(200).json({ summary: content, provider: 'openai' })
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
-    return res.status(500).json({ error: e.message |'Failed to generate highlights' })
-}
-}
+
+      .json({ error: e.message || 'Failed to generate highlights',}
+})
+    return res.status(200).json({ summary: content, provider: 'openai' })
+  } catch (e) {
+    return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+

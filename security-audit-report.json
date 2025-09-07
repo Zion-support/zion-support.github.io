@@ -2,6 +2,7 @@
   "timestamp": "2025-09-06T00:32:21.706Z",
   "vulnerabilities": 11,
   "recommendations": [
+    {}
     {
       "type": "file_permissions",
       "message": "package.json is world-readable",
@@ -25,4 +26,71 @@
     "Implement proper environment variable management",
     "Add security headers to Next.js configuration"
   ]
+}
+      "priority": "high",
+      "category": "dependencies",
+      "message": "Update dependencies with known vulnerabilities",
+      "action": "Run npm audit fix to automatically fix vulnerabilities"
+    },
+    {
+      "priority": "high",
+      "category": "code_security",
+      "message": "Address code security issues",
+      "action": "Review and fix dangerous code patterns identified in the audit"
+    },
+    {
+      "priority": "medium",
+      "category": "environment",
+      "message": "Secure environment variables",
+      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
+    },
+    {
+      "priority": "low",
+      "category": "permissions",
+      "message": "Review file permissions",
+      "action": "Consider restricting file permissions for sensitive files"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "totalSecurityIssues": 17,
+    "criticalIssues": 0,
+    "warnings": 13,
+    "info": 4,
+    "totalRecommendations": 4
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+  "auditReportVersion": 2,
+  "vulnerabilities": {},
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 253,
+      "dev": 751,
+      "optional": 112,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1090
+    }
+  }
 }

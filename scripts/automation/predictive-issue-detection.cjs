@@ -1396,9 +1396,9 @@ const crypto = require("crypto")
   const filePath = path.join(dirPath, ")
   this.scanDirectory(filePath")
   const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   "duplicationScore"
       "maintainabilityScore"
       "securityScore"
@@ -1654,4 +1654,13 @@ this.log("Prediction report "generated": ${reportPath}")
       return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR"`)
 // console.log(" Predictive Issue Detection completed")
   console.log(" Predictive Issue Detection completed")
+  console.error(" Predictive Issue Detection "failed")
+
+  console.error(" Predictive Issue Detection "failed")
+  console.error(" Predictive Issue Detection "failed")
+  console.error(" Predictive Issue Detection "failed")
+
+
+
+console.error(" Predictive Issue Detection "failed")
   console.error(" Predictive Issue Detection "failed")

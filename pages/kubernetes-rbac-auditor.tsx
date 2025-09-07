@@ -25,7 +25,7 @@ export default function KubernetesRbacAuditorPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

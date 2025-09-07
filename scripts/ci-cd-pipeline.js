@@ -135,63 +135,64 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       console.log('🎯 Starting CI/CD Pipeline...');
       console.log("🌍 "Environment": ${this.pipelineLog.environment}");"
       console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);"
-      console.log("📝 "Commit": ${this.pipelineLog.commit}");
-      // Define pipeline stages;
-      const pipelineStages = [;
-        {;
-          "name": 'Source Code Checkout',
-          "description": 'Checkout source code from repository',
-          "critical": true,
+
+      console.log("📝 "Commit": ${this.pipelineLog.commit}")
+      // Define pipeline stages
+      const pipelineStages = [
+        {;'"
+          "name": 'Source Code Checkout','"
+          "description": 'Checkout source code from repository',"
+          "critical": true,"
           "skip": false},
-        {;
-          "name": 'Dependency Installation',
-          "description": 'Install project dependencies',
-          "critical": true,
+        {;'"
+          "name": 'Dependency Installation','"
+          "description": 'Install project dependencies',"
+          "critical": true,"
           "skip": false},
-        {;
-          "name": 'Code Quality Analysis',
-          "description": 'Run code quality checks and linting',
-          "critical": false,
+        {;'"
+          "name": 'Code Quality Analysis','"
+          "description": 'Run code quality checks and linting',"
+          "critical": false,"
           "skip": false},
-        {;
-          "name": 'Type Checking',
-          "description": 'Run TypeScript type checking',
-          "critical": true,
+        {;'"
+          "name": 'Type Checking','"
+          "description": 'Run TypeScript type checking',"
+          "critical": true,"
           "skip": false},
-        {;
-          "name": 'Unit Testing',
-          "description": 'Run unit tests',
-          "critical": false,
+        {;'"
+          "name": 'Unit Testing','"
+          "description": 'Run unit tests',"
+          "critical": false,"
           "skip": false},
-        {;
-          "name": 'Integration Testing',
-          "description": 'Run integration tests',
-          "critical": false,
+        {;'"
+          "name": 'Integration Testing','"
+          "description": 'Run integration tests',"
+          "critical": false,"
           "skip": false},
-        {;
-          "name": 'Security Scanning',
-          "description": 'Run security vulnerability scans',
-          "critical": false,
+        {;'"
+          "name": 'Security Scanning','"
+          "description": 'Run security vulnerability scans',"
+          "critical": false,"
           "skip": false},
-        {;
-          "name": 'Build Application',
-          "description": 'Build application for production',
-          "critical": true,
+        {;'"
+          "name": 'Build Application','"
+          "description": 'Build application for production',"
+          "critical": true,"
           "skip": false},
-        {;
-          "name": 'Performance Testing',
-          "description": 'Run performance tests',
-          "critical": false,
+        {;'"
+          "name": 'Performance Testing','"
+          "description": 'Run performance tests',"
+          "critical": false,"
           "skip": false},
-        {;
-          "name": 'Deploy to Staging',
-          "description": 'Deploy to staging environment',
-          "critical": true,
+        {;'"
+          "name": 'Deploy to Staging','"
+          "description": 'Deploy to staging environment',"
+          "critical": true,'"
           "skip": this.pipelineLog.environment === 'development'},
-        {;
-          "name": 'Deploy to Production',
-          "description": 'Deploy to production environment',
-          "critical": true,
+        {;'"
+          "name": 'Deploy to Production','"
+          "description": 'Deploy to production environment',"
+          "critical": true,'"
           "skip": this.pipelineLog.environment !== 'production'}
       ];
       // Execute each pipeline stage;
@@ -249,6 +250,7 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
           "name": 'Deploy to Production',
           "description": 'Deploy to production environment',
           "critical": true,
+
           "skip": this.pipelineLog.environment !== 'production'}
       ];
       // Execute each pipeline stage;

@@ -65,10 +65,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('AllowPOST');
     res.status(405).end('Method Not Allowed');
     return
-  }
-  const existing = readGrant(id);
-  if (!existing) {
-    res.status(404).json({ error: 'Not found' });
+  const existing = read_grant (id)
+  // Check condition
+  if($2) {}
+  $2
+}'
+    res.status (404).json ({ error: 'Not found' })
     return;  }    return
   }
 const payload = req.body as StatusUpdatePayload;

@@ -8,17 +8,13 @@ export default function SEOIndex() {
   }, [])
 
   return (
-    <div>
-      <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
-      {slugs.length === 0 ? (
-        <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
-      ) : (
-        <ul className="list-disc ml-5">
-          {slugs.map((s) => (
-            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
-          ))}
-        </ul>
-      )}
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
+      </div>
     </div>
   )
 }

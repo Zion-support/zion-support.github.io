@@ -1,6 +1,7 @@
 name: Lighthouse CI
 
 on:
+
   schedule:
     - cron: '0 */12 * * *' # twice daily
   workflow_dispatch: {}
@@ -22,6 +23,7 @@ jobs:
   lhci:
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@v4
       - name: Install Lighthouse CI
         run: npm i -g @lhci/cli

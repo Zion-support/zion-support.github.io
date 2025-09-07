@@ -7,6 +7,7 @@ function runNode(relPath, args = []) {
 
 exports.config = {
   schedule: '*/30 * * * *'};
+
 exports.handler = async () => {
   const logs = [];
   function step(name, fn) {

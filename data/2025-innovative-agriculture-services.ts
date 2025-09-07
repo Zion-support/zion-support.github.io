@@ -30,87 +30,10 @@ export interface InnovativeAgricultureService {
     mobile: string;
     email: string;
     address: string;
-
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number
-}
-
-  reviews: number;
-const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  {  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
-    id: 'ai-powered-precision-agriculture'
-    name: 'AI-Powered Precision Agriculture'
-    tagline:
-      'Intelligent farming with AI-powered crop monitoring and optimization'
-    price: '$1,899'
-    period: '/month'
-    description:
-      'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.'
-    features: [
-      'AI-powered crop monitoring'
-      'Irrigation optimization'
-      'Yield prediction'
-      'Real-time monitoring'
-      'Performance analytics'
-      'Integration capabilities'
-      'Custom monitoring models'
-      'Multi-field support'
-      'Compliance management'
-    ]
-    popular: true
-    icon: '🌾'
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/ai-powered-precision-agriculture'
-    marketPosition:
-      'Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.'
-    targetAudience:
-      'Farmers, Agricultural companies, Crop consultants, Food producers'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Agriculture & Food Technology'
-    realService: true
-    technology: [
-      'AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning'
-    ]
-    integrations: [
-      'IoT devices, Weather stations, Soil sensors, Analytics platforms'
-    ]
-    useCases: [
-      'Crop monitoring, Irrigation optimization, Yield prediction, Resource management'
-    ]
-    roi: 'Increase crop yields by 25% and reduce water usage by 30%'
-    competitors: ['John Deere, Trimble, Raven Industries, AGCO']
-    marketSize: '$12.8B+ precision agriculture market'
-    growthRate: '200% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-      'AI-powered precision agriculture platform with intelligent crop monitoring and optimization capabilities.'
-    launchDate: '2025-01-09'
-    customers: 234
-    rating: 4.8
-    reviews: 178
-  }
+
+
   {
     id: 'quantum-agriculture-optimization'
     name: 'Quantum Agriculture Optimization'

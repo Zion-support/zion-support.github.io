@@ -289,6 +289,12 @@ if ( {
   }
   process.exit(0)} else {
   process.exit(0)}
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+///usr/bin/env node
 const { execSync } = require('child_process')
 console.log(' Starting App Optimizer...')
     // Directory doesn't exist or can'
@@ -306,4 +312,13 @@ console.log('\n App Optimization "Summary")
 // console.log(`   - Bundle "size"`)
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
+  console.log('\n "Recommendations")
+
+  console.log('\n "Recommendations")
+  console.log('\n "Recommendations")
+  console.log('\n "Recommendations")
+
+
+
+console.log('\n "Recommendations")
   console.log('\n "Recommendations")

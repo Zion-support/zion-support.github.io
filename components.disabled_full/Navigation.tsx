@@ -14,6 +14,43 @@ const "Navigation": React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navigation = [
+    { name: 'Services';,}
+  href: '/services';, hasDropdown: 'true' ;},
+    { name: 'Solutions';,}
+  href: '/solutions';, hasDropdown: 'true' ;},
+    { name: 'About';,}
+  href: '/about' ;},
+    { name: 'Blog';,}
+  href: '/blog' ;},
+    { name: 'Contact';,}
+  href: '/contact' ;}
+  ];
+  const servicesDropdown = [;
+    { name: 'AI Services';,}
+  href: '/services/ai-services' ;},{ name: 'IT Services';,}
+  href: '/services/it-services' ;},{ name: 'Micro SaaS';,}
+  href: '/services/micro-saas' ;},{ name: 'Cloud Services';,}
+  href: '/services/cloud-services' ;},{ name: 'Cybersecurity';,}
+  href: '/services/cybersecurity' ;}
+    { name: 'Cybersecurity';,}
+  href: '/services/cybersecurity' ;}
+    { name: 'Cybersecurity';,}
+  href: '/services/cybersecurity' ;}
+  ];
+  const solutionsDropdown = [;
+    { name: 'AI Content Creation';,}
+  href: '/solutions/ai-content-creation' ;},{ name: 'Customer Support';,}
+  href: '/solutions/customer-support' ;},{ name: 'Email Automation';,}
+  href: '/solutions/email-automation' ;},{ name: 'Project Management';,}
+  href: '/solutions/project-management' ;}
+  ];
+  const handleDropdownToggle = (itemName: string) => {
+
+
+
+
   const navigation = [{ "name": 'Services', "href": '/services', "hasDropdown": 'true' },
     { "name": 'Solutions', "href": '/solutions', "hasDropdown": 'true' },
     { "name": 'About', "href": '/about' },
@@ -160,6 +197,10 @@ const "Navigation": React.FC = () => {
                               onClick={() => {
                                 setIsOpen(false);
                                 setActiveDropdown(null);
+                              className=\"block px-3 py-2 rounded-md text-sm text-gray-600 \"hover\": text-blue-600 hover:bg-gray-50 transition-colors\"
+                              onClick={() = /> {
+                                setIsOpen(false);}
+                                setActiveDropdown(null);}
                               }}
                             >
                               {' '}

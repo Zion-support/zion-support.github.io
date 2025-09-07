@@ -9,12 +9,17 @@ const CybersecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>CybersecurityChat - Zion Tech Solutions</title>
+        <title>CybersecurityChat - Zion Tech Solutions</title>;"
         <meta name="description" content="CybersecurityChat blog post" />{" "}
+
       </Head>
+        <meta name="description" content="CybersecurityChat blog post" />
+      </Head>
+pr-12243
+
       <main>
         <h1>CybersecurityChat</h1>
-        <p>Blog content coming soon...</p>
+        <p>Blog content coming soon...</p>"
         <a href="/blog">Back to Blog</a>
       </main>
     </div>

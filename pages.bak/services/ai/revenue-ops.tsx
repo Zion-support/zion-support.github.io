@@ -4,7 +4,6 @@ import React from 'react';
 
 interface RevenueopsProps {
   // Add props here as needed
-}
 
 import React from 'react';
 interface RevenueopsProps {

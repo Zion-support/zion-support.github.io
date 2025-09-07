@@ -13,7 +13,7 @@ import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-  req: NextApiRequest
+  req: NextApiRequest,
   res: NextApiResponse
 ) {
   const user = parseUserFromRequest(req);

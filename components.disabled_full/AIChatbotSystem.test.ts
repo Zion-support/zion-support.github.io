@@ -1,5 +1,9 @@
-import AIChatbotSystem from './AIChatbotSystem;';
+import AIChatbotSystem from './AIChatbotSystem;
+
+import AIChatbotSystem from './AIChatbotSystem;
+
 describe('AIChatbotSystem', () => {;
+
   it('renders without crashing', () => {;
     render(<AIChatbotSystem />);
     expect(screen.getByRole('main')).toBeInTheDocument();'  });';

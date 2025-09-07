@@ -6,6 +6,15 @@ export interface Real2025Q2Addition {
   price: string;
 features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{
     id:,
+export interface Real2025Q2Addition {
+  // TODO: Implement
+}
+  "id": string;"
+  name: string;,
+  tagline: string;
+  price: string;,
+  features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{,
+  id:,"
   ai-meeting-notes',
     "name": 'AI Meeting Notes & Action Items,
     tagline:,
@@ -16,6 +25,7 @@ features: string[];export const real2025Q2Additions: Real2025Q2Addition[] = [{
   'Decision and action item extraction',
   'Email and Slack follow‑ups',
   'Workspace search'
+  'Workspace search]
     ]
   },
   {

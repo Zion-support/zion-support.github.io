@@ -45,45 +45,35 @@ top: `$ {
   Math.random () * 100
 }%`
 }/>) )
-}</div> </div> {
+}</div> </div> {}
   /* Floating geometric shapes - optimized animations */
-}<motion.div /> </div> </div> </Layout>)
-}return (<> <Head> <title>Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." /> <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> {
+}<motion.div /> </div> </div> </Layout>);"
+}return (<> <Head> <title > Zion Tech Group - Revolutionary 2044 Technology Solutions | AI Consciousness & Quantum Computing</title> <meta name="description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Experience the future with Zion Tech Group." /> <meta name="keywords" content="AI consciousness, quantum computing, space technology, cybersecurity, autonomous solutions, business intelligence, Zion Tech Group" /> <meta name="author" content="Zion Tech Group" /> <meta name="robots" content="index, follow" /> {}
   /* Structured Data */
 }<script
-})
-}/> > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]" > Zion Tech Group </span> </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div > <span className="relative z-10 flex items-center" > Experience the Future <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" ></div> </button> <button > <span className="flex items-center" > Explore Services <Play className="w-7 h-7 ml-4" /> </span> </button> </motion.div> {
-  /* Enhanced Stats Section */
-}<motion.div > {
-  stats.map ( (stat, index) => (<motion.div key= {
-  stat.label
-}> <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </div> </motion.div>) )
-}</motion.div> {
-  /* Featured Service Showcase */
-}<motion.div > <div className="text-center mb-12" > <h2 className="text-4xl font-bold text-white mb-4" > Featured Revolutionary Services </h2> <p className="text-xl text-gray-400" > Experience the future of technology with our cutting-edge solutions </p> </div> key= {
   category.id
-}onClick= {
+}on_click= {}
   () => handleCategoryChange (category.id)
-}className= {
-  `px-6 py-3 rounded-full border transition-all duration-300 flex items-center gap-2 $ {
-  selectedCategory === category.id ? `bg-gradient-to-r $ {
-  category.color
-}text-white border-transparent shadow-lg`: 'bg-gray-900/50 text-gray-300 border-gray-600 hover:border-gray-500 hover:text-white'
+}className= {}`
+  `px - 6 py - 3 rounded - full border transition - all duration - 300 flex items - center gap - 2 $ {}`
+  selected_category === category.id ? `bg - gradient - to - r $ {}
+  category.color;'`
+}text - white border - transparent shadow - lg`: 'bg - gray - 900 / 50 text - gray - 300 border - gray - 600 hover:border - gray - 500 hover:text - white';`
 }`
 }> </button>) )
-}</div> key= {
+}</div> key= {}
   service.id
-}className= {
-  `relative group cursor-pointer $ {
-  index === currentServiceIndex ? 'scale-105' : 'scale-100'
-}transition-transform duration-500`
-}onClick= {
+}className= {}`
+  `relative group cursor - pointer $ {'
+  index === currentServiceIndex ? 'scale - 105' : 'scale - 100';`
+}transition - transform duration - 500`
+}on_click= {}
   () => handleServiceClick (service)
-}whileHover= {
-  {
+}while_hover= {}
+  {}
   scale: 1.05
-}whileTap= {
-  {
+}while_tap= {}
+  {}
   scale: 0.95
 }initial= {
   {

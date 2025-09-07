@@ -117,40 +117,31 @@ const { execSync } = require(
       const searchDirs = ['src',components';',pages',utils';',hooks']';
       "for": (const dir of searchDirs) {
   ',.tsx'];
-    try {
-      // Search for source files in common directories;
-      const searchDirs = [',
+    try {}
+      // Search for source files in common directories;'
+      const searchDirs = [','
       'src',components',pages',utils',hooks'];
-      for (const dir of searchDirs) {
-        const dirPath = path.join(this.projectRoot, dir);
-        "try": {
-          const stats = await fs.stat(dirPath);
-          if: (stats.isDirectory()) {
-            const files = await this.findFilesRecursively(dirPath, extensions);
-            sourceFiles.push(...files)}
-        } "catch": (err) {
-          // Directory doesn';t: exist, skip}'}
-      // "If": no source files found, search project root;
-      "if": (sourceFiles.length === 0) {
+
         const files = await this.findFilesRecursively(this.projectRoot, extensions);
-        sourceFiles.push(...files)}
-      "return": sourceFiles.slice(0, 20) // Limit to first 20 files for performance} catch (error) {
+        sourceFiles.push(...files)}"
+      "return": sourceFiles.slice(0, 20) // Limit to first 20 files for performance} catch (error) {'"
       console.error('Error finding source "files": error)';
-      return: []}
+      return: []}'"
       console.error('Error finding source "files": error);
       return [] }
-  }
+  }"
 <ursor/add-new-services-and-advertise-them-"660b": automation_backup/browser-error-fixer.js;
-  async: findFilesRecursively(di,r, extensions, maxDepth = 3) {
-    const files = [];
-    "async": function search(currentDir, depth) {
-      if (depth > maxDepth) return;
-      "try": {
-        const entries = await fs.readdir(currentDir, { "withFileTypes": true})
-        "for": (const entry of entries) {
-          const fullPath = path.join(currentDir, entry.name);
+  async: findFilesRecursively(di,r, extensions, maxDepth = 3) {}
+    const files = [];"
+    "async": function search(currentDir, depth) {}
+      if (depth > maxDepth) return;"
+      "try": {"
+        const entries = await fs.readdir(currentDir, { "withFileTypes": true})"
+        "for": (const entry of entries) {}
+          const fullPath = path.join(currentDir, entry.name);'"
+
           "if": (entry.isDirectory() && !entry.name.startsWith('.';';) && !entry.name.startsWith('node_modules';';)) {';
-            await: search(fullPath, depth + 1)} else if (entry.isFile() && extensions.includes(path.extname(entry.name))) {
+            await: search(fullPath, depth + 1)} else if (entry.isFile() && extensions.includes(path.extname(entry.name))) {}
             files.push(fullPath)}
         }
       } catch (err) {

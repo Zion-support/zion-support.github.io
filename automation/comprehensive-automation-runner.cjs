@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -9,12 +7,6 @@ class ComprehensiveAutomationRunner {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
     this.results = [];
-  }
-
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
   async runScript(scriptPath, scriptName) {
@@ -50,8 +42,13 @@ this.log('🎯 Starting Comprehensive Automation Runner');
       { path: 'automation/health-check.cjs', name: 'Health Check' },
     ];
 
-    for (const script of scripts) {
-      await this.runScript(script.path, script.name);
+    for (const script of automationScripts) {
+      const scriptPath = path.join(this.projectRoot, script);
+      if (fs.existsSync(scriptPath)) {
+        await this.runScript(scriptPath, path.basename(script));
+      } else {
+        this.log(`⚠️  Script not found: ${script}`, 'WARN');
+      }
     }
 
     this.generateReport();
@@ -62,26 +59,26 @@ this.log('🎯 Starting Comprehensive Automation Runner');
     const duration = endTime - this.startTime;
     
     const report = {
-      timestamp: endTime.toISOString(),
+      startTime: this.startTime.toISOString(),
+      endTime: endTime.toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       totalScripts: this.results.length,
-      successful: this.results.filter(r => r.success).length,
-      failed: this.results.filter(r => !r.success).length,
-      successRate: `${Math.round((this.results.filter(r => r.success).length / this.results.length) * 100)}%`,
+      successfulScripts: this.results.filter(r => r.success).length,
+      failedScripts: this.results.filter(r => !r.success).length,
       results: this.results
     };
 
-    const reportPath = path.join(this.projectRoot, 'automation-reports', 'comprehensive-automation-runner-report.json');
+    const reportPath = path.join(this.projectRoot, 'comprehensive-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`\n📊 Comprehensive Automation Runner completed!`);
-    this.log(`📈 Success Rate: ${report.successRate}`);
-    this.log(`⏱️ Duration: ${report.duration}`);
-    this.log(`📄 Report saved to: ${reportPath}`);
+    
+    this.log(`\n📊 Automation Report Generated: ${reportPath}`);
+    this.log(`✅ Successful: ${report.successfulScripts}/${report.totalScripts}`);
+    this.log(`❌ Failed: ${report.failedScripts}/${report.totalScripts}`);
+    this.log(`⏱️  Total Duration: ${report.duration}`);
   }
 }
 
-// Run the automation runner
+// Run the automation if this file is executed directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
   runner.runAllAutomations().catch(console.error);

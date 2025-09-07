@@ -20,12 +20,14 @@ const { withErrorLogging } = require(
   try {;
     // Authentication would normally be checked here;
     res.statusCode = 200;
-    res.json({ "points": 0, "history": [] })} catch (err) {
-    console.error(',
-      'Wallet API "error": err);
+    res.json({ points: 0, history: [] });
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('Wallet API error:', err);
     res.statusCode = 500;
     res.json({ error: err.message || 'Failed to fetch wallet' });
   }
+}
 
 module.exports = withErrorLogging(handler);
     res.json({ error: err.message ||';Failed to fetch wallet }})'}

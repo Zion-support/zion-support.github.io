@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -78,6 +79,7 @@ const "DocsPage": React.FC = () => {
       "icon": <Shield className="w-6 h-6"  />,
       "color": 'red'
     }
+
   ]
   const codeExamples = [{
       "language": 'JavaScript',

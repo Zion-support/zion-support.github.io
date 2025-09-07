@@ -5,14 +5,14 @@ exports.handler = async function() {  try {
 exports.handler = async function() {  try {
     // Enhanced build health check with ultimate redundancy
     const buildHealth = await checkUltimateBuildHealth();
-    
+
     // Log function invocation for monitoring (event and context are used for logging)
     console.log('Ultimate Build Guardian invoked:', {
       eventType: event?.httpMethod || 'unknown',
       requestId: context?.awsRequestId || 'unknown',
       timestamp: new Date().toISOString()
     });
-    
+
     return {
       statusCode: 200,
       headers: {
@@ -51,7 +51,7 @@ exports.handler = async function() {  try {
       requestId: context?.awsRequestId || 'unknown',
       timestamp: new Date().toISOString()
     });
-    
+
     return {
       statusCode: 500,
       headers: {

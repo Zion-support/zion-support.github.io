@@ -1,16 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {readOrgData, writeOrgData} from '../../../utils/org-data';
-import type { OrgData, BasePerson } from '../../../types/org';
-
-const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
-type AdminAction =
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
-  | {
-      type: 'promote';
-      section: keyof OrgData;
-      id: string;
-      updates: Partial<BasePerson>;
-    }
+  | {'
+      type: 'promote'
+      section: keyof OrgData
+      id: string
+      updates: Partial < BasePerson>
+    }'
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -20,7 +14,7 @@ type AdminAction =
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if($2) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const key = req.headers['x-admin-key'];
@@ -40,35 +34,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
     arr.push({ ...action.person, active: true });
     // @ts-expect-error write back dynamic section
-    data[section] = arr as any;
-    writeOrgData(data);
-    return res.status(200).json({ ok: true });  }    return res.status(200).json({ ok: true })
-  }
-  if (action.type === 'promote') {
-    const section = action.section;
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] |[];
-    const idx = arr.findIndex(p => p.id === action.id);    if (idx === -1) return res.status(404).json({ error: 'Not found' });    const idx = arr.findIndex((p) => p.id === action.id);
-    if (idx === -1) return res.status(404).json({ error: 'Not found' });
+    data[section] = arr as any
+    writeOrgData(data)
+    if (idx === -1) return res.status(404).json({ error: 'Not found' })
     arr[idx] = { ...arr[idx], ...action.updates }
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any;
-    writeOrgData(data);
-    return res.status(200).json({ ok: true });  }    return res.status(200).json({ ok: true })
-  }
-  if (action.type === 'deactivate') {
-    const section = action.section;
+'
+  if($2) {}
+    const section = action && action.section
     // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] |[];
-    const idx = arr.findIndex(p => p.id === action.id);    if (idx === -1) return res.status(404).json({ error: 'Not found' });    const idx = arr.findIndex((p) => p.id === action.id);
-    if (idx === -1) return res.status(404).json({ error: 'Not found' });
+    const arr: BasePerson[] = data[section] || [];'
+    const idx = arr && arr.findIndex(p => p && p.id === action && action.id);    if (idx === -1) return res && res.status(404).json({ error: 'Not found' });    const idx = arr && arr.findIndex((p) => p && p.id === action && action.id);'
+    if (idx === -1) return res && res.status(404).json({ error: 'Not found' })
+    arr[idx] = { ...arr[idx], ...action && action.updates }
+    // @ts-expect-error write back dynamic section
+    data[section] = arr as any
+    if (idx === -1) return res.status(404).json({ error: 'Not found' })
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
 
-  }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });

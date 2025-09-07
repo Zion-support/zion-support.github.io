@@ -28,7 +28,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!id) return res.status(400).json({ error: 'Missing id' });
     const { error } = await supabase
       .from('notifications')
-      .update({ read_status: true })
+      .update({ read_status: true })'
+      .eq('id', id)'
+      .eq('user_id', userId)
+    if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
+    return res && res.status(200).json({ ok: true })
+import { supabase } from '../../../utils/supabase/client'
+function getUserId(req: NextApiRequest): string {}
+    return res.status(405).json({ error: 'Method not allowed',}
+})
+  try {
+    const userId = getUserId(req);}
+
+const { error } = await supabase
+      .from('notifications')
+      .update({ read_status: true,}
+})
       .eq('id', id)
       .eq('user_id', userId);
     if (error) return res.status(200).json({ ok: true }); // tolerate in dev

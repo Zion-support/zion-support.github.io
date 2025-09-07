@@ -6,33 +6,9 @@ import { withUser  } from './pg';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const app = Fastify({ logger: true });
-await app.register(cors, {
-  origin: (
-    origin: string | undefined
-    cb: (err: Error | null, allow?: boolean) => void
-  ) => {
-    const allowed = (process.env.CORS_ORIGINS |'')
-      .split(',')
-      .map(s => s.trim());    if (!origin |allowed.includes('*') |allowed.includes(origin)) {  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
-    const allowed = (process.env.CORS_ORIGINS |'').split().map((s) => s.trim());
-    if (!origin |allowed.includes('*') |allowed.includes(origin)) {
-      cb(null, true);
-      return;
-    }
-    cb(new Error('Not allowed'), false);
-  }
-  methods: ['GET', 'POST', 'OPTIONS'],});  }
-  methods: ['GET', 'POST', 'OPTIONS']
-});
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
-const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
+// Mock functions for demonstration
 function getUserId(req: any): string | null {
-  return (
-    (req.headers['x-user-id'] as string) |
-    (req.query as any)['user_id'] |
-    null
-  );  return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
+  return req.headers['user-id'] || null;
 }
 app.post('/ai/ask', async (req: any, reply: any) => {
   const body = (req.body as any) |{}

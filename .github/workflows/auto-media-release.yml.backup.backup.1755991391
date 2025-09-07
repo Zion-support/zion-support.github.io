@@ -29,6 +29,7 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
+
 :.github/workflows/auto-media-release.yml.backup
         run: npm ci
       - name: Run Autonomous Meta Orchestrator (once)
@@ -47,6 +48,7 @@ jobs:
           npm run type-check || true
       - name: Build (non-blocking)
         run: npm run build || true
+
       - name: Commit and push changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then

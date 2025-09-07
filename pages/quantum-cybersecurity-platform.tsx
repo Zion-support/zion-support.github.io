@@ -28,6 +28,6 @@ export default function QuantumCybersecurityPlatform() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

@@ -1,3 +1,5 @@
+
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -10,7 +12,7 @@ exports.handler = async function(event, context) {
     try {
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'fast-front-promoter-report.md');
-    
+
     const reportContent = `# fast-front-promoter Report
 
 Generated: ${timestamp}
@@ -28,7 +30,7 @@ Generated: ${timestamp}
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
-    
+
     try {
       execSync('git add ' + reportPath, { stdio: 'inherit' });
       execSync('git commit -m "🤖 Add fast-front-promoter report [skip ci]"', { stdio: 'inherit' });
@@ -37,9 +39,9 @@ Generated: ${timestamp}
     } catch (gitError) {
       console.log('Git error:', gitError.message);
     }
-    
+
     console.log('✅ fast-front-promoter completed successfully');
-    
+
     return {
       statusCode: 200,
       body: JSON.stringify({
@@ -47,10 +49,10 @@ Generated: ${timestamp}
         timestamp: timestamp
       })
     };
-    
+
   } catch (error) {
     console.error('❌ fast-front-promoter failed:', error.message);
-    
+
     return {
       statusCode: 500,
       body: JSON.stringify({

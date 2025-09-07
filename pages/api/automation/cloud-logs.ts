@@ -33,7 +33,9 @@ return results
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-const dir = path.join(process.cwd(), 'automation_logs')
+  if($2) {
+    res.setHeader('Allow', ['GET'])
+    return res.status(405).end('Method Not Allowed')
   try {
     if (fs.existsSync(dir)) {
       const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()

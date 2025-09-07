@@ -23,6 +23,6 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 export const isAdmin = () => {
-  // Placeholder implementation;
+  // Placeholder implementation
   return true;
 }

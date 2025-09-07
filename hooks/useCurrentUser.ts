@@ -13,4 +13,6 @@ export function useCurrentUser() {
     error
 
     mutate}
+    mutate}
 }
+

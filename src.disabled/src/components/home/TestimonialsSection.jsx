@@ -1,9 +1,21 @@
+super(props);
+    this.state = { hasError: false };
+  }
+
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+
 import React from 'react';
 interface TestimonialsSectionProps {
   // Add props here as needed
+
 }
 
 export default function TestimonialsSection({ }: TestimonialsSectionProps) {
+
   return (
     <div>
       <h1>TestimonialsSection</h1>

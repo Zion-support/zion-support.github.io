@@ -33,6 +33,6 @@ export default async function handler(
     res.status(200).json({ summary, timestamp: new Date().toISOString() });
 
   } catch (e) {
-    res.status(200).json({ summary: [], error: 'Failed to compute summary' });
-  }
-}
+    res.status (200).json ({ summary: [], error: 'Failed to compute summary' })
+origin/cursor/automate-test-improve-and-merge-code-2533
+

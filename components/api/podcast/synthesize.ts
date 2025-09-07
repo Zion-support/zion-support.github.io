@@ -55,33 +55,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resp = await axios.post(
         `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`
         {
-          text
-          model_id: process.env.ELEVENLABS_MODEL |'eleven_multilingual_v2'
-        }
         {
-          responseType: 'arraybuffer'
-          headers: {
-            'xi-api-key': elevenKey
-            'Content-Type': 'application/json'
-          }
-        }
-      fs.writeFileSync(mp3Path, Buffer.from(resp.data));
-      mp3Created = true;
-    } else if (playhtKey) {
-      const resp = await axios.post(
-        'https://api.play.ht/api/v2/tts'
-        { text, voice: process.env.PLAYHT_VOICE |'en-US-MichelleNeural' }
-        {
-          responseType: 'arraybuffer'
-          headers: {
+          responseType: 'arraybuffer',}
+  headers: {}
             Authorization: `Bearer ${playhtKey}`
-            'Content-Type': 'application/json'
-          }
-        }
-      );
-      fs.writeFileSync(mp3Path, Buffer.from(resp.data));
-      mp3Created = true;
-    } else {
+            "Content-Type": "application/json"
+
+      )
+      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data))
+      mp3Created = true
+    } else {}
       // Stub silent mp3 if no provider configured
       fs.writeFileSync(mp3Path, Buffer.alloc(0));
       mp3Created = true;
@@ -116,6 +99,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }    return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error)
+    return res
+      .status(500)'
+      .json({ error: error?.message |'Synthesis failed' })
+  }    return res.status(200).json({ episode })
+  } catch (error: any) {}
+    console.error(error)'
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
 
 }

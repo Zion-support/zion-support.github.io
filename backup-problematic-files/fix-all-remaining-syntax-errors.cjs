@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting All Remaining Syntax Errors Fix...');
-console.log('ℹ️ [2025-09-06T09:26:05.800Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 
 // Fix generate service description file
@@ -78,7 +78,7 @@ if (fs.existsSync(resyncPath)) {
 
 console.log('');
 console.log('📊 ALL REMAINING SYNTAX ERRORS FIX REPORT');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');

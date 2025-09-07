@@ -1,10 +1,5 @@
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const allIcons = [ 'ArrowRight','CheckCircle','Star','Users','Zap','Shield','Globe','TrendingUp','Award','Clock','Brain','Cloud','Database','Network','Target','Phone','Mail','MessageSquare','FileText','Search','Menu','X','ChevronDown','ChevronUp','ChevronLeft','ChevronRight','Plus','Minus','Edit','Trash','Save','Download','Upload','Settings','User','Lock','Unlock','Eye','EyeOff','Heart','Share','Copy','ExternalLink','Home','Info','AlertCircle','Check','XCircle','Monitor','BarChart3','PieChart','Activity','TrendingDown','ArrowUp','ArrowDown','ArrowLeft','Calendar','Clock','MapPin','Mail','Phone','Globe','Wifi','Bluetooth','Camera','Video','Image','File','Folder','Archive','Bookmark','Tag','Filter','Sort','Grid','List','Layout','Maximize','Minimize','RotateCcw','RotateCw','RefreshCw','RefreshCcw','Play','Pause','Stop','SkipBack','SkipForward','Volume2','VolumeX','Mic','MicOff','Headphones','Speaker','Radio','Tv','Monitor','Laptop','Smartphone','Tablet','Watch','Gamepad2','Joystick','Mouse','Keyboard','Printer','Scanner','HardDrive','Cpu','MemoryStick','Wifi','Bluetooth','Nfc','QrCode','Barcode','CreditCard','Wallet','Banknote','Coins','PiggyBank','TrendingUp','TrendingDown','BarChart','LineChart','PieChart','Activity','Pulse','Heart','Zap','Battery','BatteryCharging','Power','Plug','Outlet','Lightbulb','Sun','Moon','Cloud','CloudRain','CloudSnow','CloudLightning','Wind','Thermometer','Droplets','Umbrella','TreePine','Tree','Flower','Leaf','Bug','Bird','Fish','Cat','Dog','Car','Truck','Bus','Train','Plane','Ship','Bike','Motorbike','Helicopter','Rocket','Map','MapPin','Navigation','Compass','Flag','Building','Building2','Home','Store','Factory','Warehouse','Hospital','School','University','Church','Mosque','Temple','Castle','Tower','Bridge','Road','Rail','Anchor','Sailboat','LifeBuoy','Umbrella','Shield','Sword','Axe','Hammer','Wrench','Screwdriver','Drill','Saw','Scissors','Knife','Fork','Spoon','Plate','Bowl','Cup','Glass','Bottle','Can','Box','Package','Gift','Party','Cake','Cookie','Coffee','Tea','Beer','Wine','Cocktail','Ice','Fire','Flame','Smoke','Water','Droplet','Waves','Snowflake','Sunrise','Sunset','Moon','Star','Planet','Satellite','Telescope','Microscope','Atom','Dna','Virus','Pill','Syringe','Stethoscope','Bandage','Cross','Heart','Lungs','Brain','Eye','Ear','Nose','Mouth','Tooth','Bone','Muscle','Foot','Hand','Finger','Thumb','Palm','Fist','Peace','Point','Wave','Clap','ThumbsUp','ThumbsDown','Ok','Victory','Rock','Paper','Scissors','Dice','Cards','Poker','Chess','Checkers','Puzzle','Rubik','Magic','Crystal','Gem','Diamond','Gold','Silver','Bronze','Copper','Iron','Steel','Aluminum','Plastic','Wood','Stone','Brick','Concrete','Glass','Mirror','Lens','Telescope','Binoculars','Camera','Video','Film','Tv','Radio','Speaker','Headphones','Mic','Microphone','Amplifier','Equalizer','Volume','Mute','Play','Pause','Stop','Record','Skip','Rewind','FastForward','Repeat','Shuffle','Loop','Random','Sequential','Alphabetical','Numerical','Chronological','Ascending','Descending','Up','Down','Left','Right','Forward','Backward','North','South','East','West','Northeast','Northwest','Southeast','Southwest','Center','Middle','Top','Bottom','Front','Back','Side','Inside','Outside','Above','Below','Over','Under','Through','Across','Around','Between','Among','Within','Without','With','Against','Toward','Away','Near','Far','Close','Open','Closed','Locked','Unlocked','Secure','Insecure','Safe','Dangerous','Risky','Careful','Careless','Accurate','Inaccurate','Correct','Incorrect','Right','Wrong','True','False','Yes','No','Maybe','Perhaps','Possibly','Definitely','Certainly','Absolutely','Never','Always','Sometimes','Often','Rarely','Frequently','Occasionally','Regularly','Irregularly','Consistently','Inconsistently','Constantly','Temporarily','Permanently','Immediately','Eventually','Finally','Initially','Originally','Previously','Currently','Presently','Now','Then','Before','After','During','While','Since','Until','Till','From','To','For','By','With','Without','Within','Beyond','Past','Future','Present','Today','Yesterday','Tomorrow','Now','Later','Earlier','Soon','Late','Early','Quick','Slow','Fast','Rapid','Gradual','Sudden','Instant','Momentary','Brief','Long','Short','Tall','Small','Large','Big','Little','Huge','Tiny','Massive','Miniature','Giant','Dwarf','Wide','Narrow','Broad','Thin','Thick','Deep','Shallow','High','Low','Elevated','Depressed','Raised','Lowered','Uplifted','Downcast','Optimistic','Pessimistic','Positive','Negative','Good','Bad','Better','Worse','Best','Worst','Excellent','Poor','Great','Terrible','Wonderful','Awful','Amazing','Disappointing','Surprising','Expected','Unexpected','Normal','Abnormal','Regular','Irregular','Standard','Nonstandard','Typical','Atypical','Common','Uncommon','Rare','Frequent','Occasional','Constant','Variable','Fixed','Flexible','Rigid','Soft','Hard','Smooth','Rough','Sharp','Dull','Bright','Dark','Light','Heavy','Lightweight','Strong','Weak','Powerful','Powerless','Energetic','Lazy','Active','Passive','Dynamic','Static','Moving','Stationary','Mobile','Immobile','Portable','Fixed','Flexible','Rigid','Elastic','Plastic','Metal','Wooden','Glass','Paper','Fabric','Leather','Rubber','Plastic','Ceramic','Crystal','Diamond','Gold','Silver','Bronze','Copper','Iron','Steel','Aluminum','Titanium','Carbon','Silicon','Oxygen','Hydrogen','Nitrogen','Helium','Neon','Argon','Krypton','Xenon','Radon','Uranium','Plutonium','Radium','Polonium','Astatine','Francium','Radon','Actinium','Thorium','Protactinium','Neptunium','Americium','Curium','Berkelium','Californium','Einsteinium','Fermium','Mendelevium','Nobelium','Lawrencium','Rutherfordium','Dubnium','Seaborgium','Bohrium','Hassium','Meitnerium','Darmstadtium','Roentgenium','Copernicium','Nihonium','Flerovium','Moscovium','Livermorium','Tennessine','Oganesson',]; let totalFixes = 0; let filesProcessed = 0; function findAllMissingImports(content,filePath) { const missingImports = []; allIcons.forEach(icon => { const iconRegex = new RegExp(`\\b${icon}\\b`,'g'); const matches = content.match(iconRegex); if (matches && matches.length > 0) { const importRegex = new RegExp( `import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`,'g' ); const existingImport = content.match(importRegex); if (!existingImport) { missingImports.push(icon)} } }); return [...new Set(missingImports)]} function fixAllMissingImports(content,filePath) { const missingImports = findAllMissingImports(content,filePath); if (missingImports.length === 0) { return { content,changes: 0 }} let fixedContent = content; let changes = 0; const existingImportRegex = /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g; const existingImport = fixedContent.match(existingImportRegex); if (existingImport) { const existingIcons = existingImport[0] .match(/{([^}]*)}/)?.[1] ?.split(',') .map(icon => icon.trim()) || []; const allIcons = [...new Set([...existingIcons,...missingImports])].sort(); const newImport = `import { ${allIcons.join(',')} } from 'lucide-react';`; fixedContent = fixedContent.replace(existingImportRegex,newImport); changes++} else { const newImport = `import { ${missingImports.join(',')} } from 'lucide-react';\n`; const importIndex = fixedContent.indexOf('import'); if (importIndex !== -1) { const nextLineIndex = fixedContent.indexOf('\n',importIndex); fixedContent = fixedContent.slice(0,nextLineIndex) + '\n' + newImport + fixedContent.slice(nextLineIndex)} else { fixedContent = newImport + fixedContent} changes++} return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const result = fixAllMissingImports(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes; `)} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}',]; const excludeDirs = [ 'node_modules','.next','build','dist','scripts','automation','automation_backup','src.disabled','pages.disabled','components.disabled',]; /**`),});  }    } main().catch(console.error);
-#!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-// Extended list of Lucide React icons
-const allIcons = ['ArrowRight',
+///usr/bin/env node
+import { glob } from 'glob'
   'CheckCircle',
   'Star',
   'Users',
@@ -61,11 +56,7 @@ const allIcons = ['ArrowRight',
   'ArrowDown',
   'ArrowLeft',
   'Calendar',
-  'Clock',
   'MapPin',
-  'Mail',
-  'Phone',
-  'Globe',
   'Wifi',
   'Bluetooth',
   'Camera',
@@ -100,7 +91,6 @@ const allIcons = ['ArrowRight',
   'Speaker',
   'Radio',
   'Tv',
-  'Monitor',
   'Laptop',
   'Smartphone',
   'Tablet',
@@ -114,8 +104,6 @@ const allIcons = ['ArrowRight',
   'HardDrive',
   'Cpu',
   'MemoryStick',
-  'Wifi',
-  'Bluetooth',
   'Nfc',
   'QrCode',
   'Barcode',
@@ -124,15 +112,9 @@ const allIcons = ['ArrowRight',
   'Banknote',
   'Coins',
   'PiggyBank',
-  'TrendingUp',
-  'TrendingDown',
   'BarChart',
   'LineChart',
-  'PieChart',
-  'Activity',
   'Pulse',
-  'Heart',
-  'Zap',
   'Battery',
   'BatteryCharging',
   'Power',
@@ -141,7 +123,6 @@ const allIcons = ['ArrowRight',
   'Lightbulb',
   'Sun',
   'Moon',
-  'Cloud',
   'CloudRain',
   'CloudSnow',
   'CloudLightning',
@@ -169,13 +150,11 @@ const allIcons = ['ArrowRight',
   'Helicopter',
   'Rocket',
   'Map',
-  'MapPin',
   'Navigation',
   'Compass',
   'Flag',
   'Building',
   'Building2',
-  'Home',
   'Store',
   'Factory',
   'Warehouse',
@@ -193,8 +172,6 @@ const allIcons = ['ArrowRight',
   'Anchor',
   'Sailboat',
   'LifeBuoy',
-  'Umbrella',
-  'Shield',
   'Sword',
   'Axe',
   'Hammer',
@@ -233,8 +210,6 @@ const allIcons = ['ArrowRight',
   'Snowflake',
   'Sunrise',
   'Sunset',
-  'Moon',
-  'Star',
   'Planet',
   'Satellite',
   'Telescope',
@@ -247,10 +222,7 @@ const allIcons = ['ArrowRight',
   'Stethoscope',
   'Bandage',
   'Cross',
-  'Heart',
   'Lungs',
-  'Brain',
-  'Eye',
   'Ear',
   'Nose',
   'Mouth',
@@ -273,7 +245,6 @@ const allIcons = ['ArrowRight',
   'Victory',
   'Rock',
   'Paper',
-  'Scissors',
   'Dice',
   'Cards',
   'Poker',
@@ -297,27 +268,15 @@ const allIcons = ['ArrowRight',
   'Stone',
   'Brick',
   'Concrete',
-  'Glass',
   'Mirror',
   'Lens',
-  'Telescope',
   'Binoculars',
-  'Camera',
-  'Video',
   'Film',
-  'Tv',
-  'Radio',
-  'Speaker',
-  'Headphones',
-  'Mic',
   'Microphone',
   'Amplifier',
   'Equalizer',
   'Volume',
   'Mute',
-  'Play',
-  'Pause',
-  'Stop',
   'Record',
   'Skip',
   'Rewind',
@@ -388,7 +347,6 @@ const allIcons = ['ArrowRight',
   'Inaccurate',
   'Correct',
   'Incorrect',
-  'Right',
   'Wrong',
   'True',
   'False',
@@ -435,9 +393,6 @@ const allIcons = ['ArrowRight',
   'To',
   'For',
   'By',
-  'With',
-  'Without',
-  'Within',
   'Beyond',
   'Past',
   'Future',
@@ -445,7 +400,6 @@ const allIcons = ['ArrowRight',
   'Today',
   'Yesterday',
   'Tomorrow',
-  'Now',
   'Later',
   'Earlier',
   'Soon',
@@ -553,29 +507,13 @@ const allIcons = ['ArrowRight',
   'Mobile',
   'Immobile',
   'Portable',
-  'Fixed',
-  'Flexible',
-  'Rigid',
   'Elastic',
-  'Plastic',
   'Metal',
   'Wooden',
-  'Glass',
-  'Paper',
   'Fabric',
   'Leather',
   'Rubber',
-  'Plastic',
   'Ceramic',
-  'Crystal',
-  'Diamond',
-  'Gold',
-  'Silver',
-  'Bronze',
-  'Copper',
-  'Iron',
-  'Steel',
-  'Aluminum',
   'Titanium',
   'Carbon',
   'Silicon',
@@ -594,7 +532,6 @@ const allIcons = ['ArrowRight',
   'Polonium',
   'Astatine',
   'Francium',
-  'Radon',
   'Actinium',
   'Thorium',
   'Protactinium',
@@ -622,31 +559,34 @@ const allIcons = ['ArrowRight',
   'Moscovium',
   'Livermorium',
   'Tennessine',
-  'Oganesson',
-];
-let totalFixes = 0;
-let filesProcessed = 0;
-// Find all missing imports in a file
-function findAllMissingImports(content, filePath) {
-  const missingImports = [];
+
+]
+let totalFixes = 0
+let filesProcessed = 0
   // Check for each icon
   allIcons.forEach(icon => {
-    const iconRegex = new RegExp(`\\b${icon}\\b`, 'g');
-    const matches = content.match(iconRegex);
-    if (matches && matches.length > 0) {
+  // Check for each icon
+  allIcons.forEach(icon => {)
+pr-12325
+    const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')
+    const matches = content.match(iconRegex)
+  if($2) {
       // Check if the icon is already imported
-      const importRegex = new RegExp(
-        `import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`,
-        'g'
-      );
-      const existingImport = content.match(importRegex);
-      if (!existingImport) {
+      const importRegex = new RegExp(`
+        `import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`,""
+        'g)
+      )
+      const existingImport = content.match(importRegex)
+  if($2) {
         missingImports.push(icon)}
     }
   });
   return [...new Set(missingImports)]; // Remove duplicates
 }
 // Fix all missing imports in a file
+  return [...new Set(missingImports)]; // Remove duplicates
+// Fix all missing imports in a file
+pr-12325
 function fixAllMissingImports(content, filePath) {
   const missingImports = findAllMissingImports(content, filePath);
   if (missingImports.length === 0) {
@@ -662,6 +602,26 @@ function fixAllMissingImports(content, filePath) {
     const existingIcons =
       existingImport[0]
         .match(/{([^}]*)}/)?.[1]
+
+    const existingIcons = existingImport[0]
+      .match(/{([^}]*)}/)?.[1]
+      ?.split(',')
+      .map(icon => icon.trim()) || []
+    const allIcons = [...new Set([...existingIcons, ...missingImports])].sort()
+  if($2) {
+    return { content, changes: 0 }
+  let fixedContent = content
+  let changes = 0
+  // Find existing lucide-react import
+  const existingImportRegex =
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g
+  const existingImport = fixedContent.match(existingImportRegex)
+  if($2) {
+    // Add missing icons to existing import
+    const existingIcons =
+      existingImport[0]
+        .match(/{([^}]*)}/)?.[1]
+
         ?.split(',')
         .map(icon => icon.trim()) || [];
     const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
@@ -671,37 +631,70 @@ function fixAllMissingImports(content, filePath) {
     // Create new import statement
     const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
     // Find the best place to insert the import
-    const importIndex = fixedContent.indexOf('import');
-    if (importIndex !== -1) {
-      const nextLineIndex = fixedContent.indexOf('\n', importIndex);
+  // TODO: Implement
+}`
+    const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`
+    // Find the best place to insert the import
+pr-12325
+    const importIndex = fixedContent.indexOf('import')
+  if($2) {
+      const nextLineIndex = fixedContent.indexOf('\n', importIndex)
       fixedContent =
         fixedContent.slice(0, nextLineIndex) +
         '\n' +
         newImport +
-        fixedContent.slice(nextLineIndex)} else {
-      fixedContent = newImport + fixedContent}
-    changes++}
-  return { "content": fixedContent, changes }}
+
+        fixedContent.slice(nextLineIndex)
+    } else {
+
+      fixedContent = newImport + fixedContent
+    changes++
+  return { content: fixedContent, changes }
 // Process individual file
+  return { "content": fixedContent, changes }}"
+// Process individual file
+pr-12325
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const result = fixAllMissingImports(content, filePath);
-    if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-      totalFixes += result.changes;
+  // TODO: Implement
+}"
+    const content = fs.readFileSync(filePath, 'utf8')
+    const result = fixAllMissingImports(content, filePath)
+  if($2) {
+      fs.writeFileSync(filePath, result.content, 'utf8')
+      totalFixes += result.changes
+:scripts/fix-all-remaining-imports.js
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
+    filesProcessed++} catch (error) {
+      totalFixes += result.changes;`
+      console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
+    filesProcessed++} catch (error) {
+:scripts/fix-all-remaining-imports.js
       console.log(`✅ Fixed ${filePath} (${result.changes} import fixes)`)}
     filesProcessed++} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
 // Main function
-async function main() {;
-  console.log('🔧 Starting comprehensive missing imports fix...\n');
+
+`
+// Main function
+pr-12325
+async function main() {
+  console.log('🔧 Starting comprehensive missing imports fix...\n')
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
-    'components/**/*.{tsx,jsx}',
-  ];
+    'components/**/*.{tsx,jsx}',']
   const excludeDirs = ['node_modules',
+
+  const patterns = [
+    'pages/**/*.{tsx,jsx}',
+    'src/**/*.{tsx,jsx}',
+    'components/**/*.{tsx,jsx}',
+  ]
+  const excludeDirs = [
+    'node_modules',
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
     '.next',
     'build',
     'dist',
@@ -711,8 +704,9 @@ async function main() {;
     'src.disabled',
     'pages.disabled',
     'components.disabled',
-  ];
-  for (const pattern of patterns) {
+  ]
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+  for($2) {
     const files = await glob(pattern, {
       "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
     for (const file of files) {

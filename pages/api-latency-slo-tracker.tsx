@@ -25,7 +25,7 @@ export default function ApiLatencySloTrackerPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

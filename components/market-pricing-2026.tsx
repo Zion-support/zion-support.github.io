@@ -204,145 +204,192 @@ export default function MarketPricing2026() {
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className='text-5xl md:text-7xl font-bold mb-6'>
-                <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
-                  2026 Market Pricing
-                </span>
-              </h1>
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-                Comprehensive pricing analysis and competitive positioning for
-                our revolutionary AI, quantum computing, and emerging technology
-                services
-              </p>
-              {/* Pricing Statistics */}
-              <div className='grid grid-cols-2 md:grid-cols-5 gap-6 mb-12'>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                    {pricingStats.totalServices}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Total Services</div>
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>
-                    ${pricingStats.averagePrice.toFixed(0)}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Avg. Price/Month</div>
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
-                  <div className='text-3xl font-bold text-pink-400 mb-2'>
-                    ${pricingStats.lowestPrice.toFixed(0)}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Lowest Price</div>
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
-                  <div className='text-3xl font-bold text-green-400 mb-2'>
-                    ${pricingStats.highestPrice.toFixed(0)}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Highest Price</div>
-                </div>
-                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
-                  <div className='text-3xl font-bold text-yellow-400 mb-2'>
-                    {pricingStats.totalCustomers.toLocaleString()}+
-                  </div>
-                  <div className='text-gray-400 text-sm'>Total Customers</div>                </div>                  2026 Market Pricing
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive pricing analysis and competitive positioning for our revolutionary AI
-
-                quantum computing, and emerging technology services
-              </p>
-              {/* Pricing Statistics */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{pricingStats.totalServices}</div>
-                  <div className="text-gray-400 text-sm">Total Services</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">${pricingStats.averagePrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Avg. Price/Month</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">${pricingStats.lowestPrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Lowest Price</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-green-400 mb-2">${pricingStats.highestPrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Highest Price</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">{pricingStats.totalCustomers.toLocaleString()}+</div>
-                  <div className="text-gray-400 text-sm">Total Customers</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Filters Section */}
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                {/* Category Filter */}
-                <div>
-                  <label className='block text-white font-semibold mb-3'>
-                    Service Category
-                  </label>
-                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Category Filter */}
-                <div>
-                  <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                       <button
-                        key={category.id}
-                        onClick={() => setSelectedCategory(category.id)}
+
+                        key={category && category.id}
+                        onClick={() => setSelectedCategory(category && category.id)}
                         className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${
-                          selectedCategory === category.id
-                            ? 'bg-cyan-500 text-black'
-                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
+                          selectedCategory === category && category.id;'
+                            ? 'bg-cyan-500 text-black';'
+                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';`
                         }`}
                       >
-                        <div className='flex items-center justify-center space-x-2'>
+<div className='flex items-center justify-center space-x-2'>
                           <category.icon className='w-4 h-4' />
                           <span>{category.name}</span>
                         </div>
                         <div className='text-xs mt-1 opacity-75'>
                           ({category.count})
-                        </div>                      </button>                        <div className="flex items-center justify-center space-x-2">
-                          <category.icon className="w-4 h-4" />
-                          <span>{category.name}</span>
                         </div>
                         <div className="text-xs mt-1 opacity-75">({category.count})</div>
                     ))}
                   </div>
                 </div>
                 {/* Price Range Filter */}
-                <div>
+
                   <label className='block text-white font-semibold mb-3'>
                     Price Range
-                  </label>
-                  <div className='space-y-2'>                    {priceRanges.map(range => (                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
+                  </label>;'"
+                  <div className='space-y-2'>                    {priceRanges && priceRanges.map(range => (                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>;"
                   <div className="space-y-2">
+                    {priceRanges && priceRanges.map(range => (
+                <div>
+<label className='block text-white font-semibold mb-3'>
+                    Price Range
+                  </label>
+                  <div className='space-y-2'>
                     {priceRanges.map(range => (
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <button
-                        key={range.id}
-                        onClick={() => setPriceRange(range.id)}
+
+                        key={range && range.id}
+                        onClick={() => setPriceRange(range && range.id)}`
                         className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${
-                          priceRange === range.id
-                            ? 'bg-cyan-500 text-black'
-                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
+                          priceRange === range && range.id;'
+                            ? 'bg-cyan-500 text-black';'
+                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';`
                         }`}
+
                       >
-                        <div className='font-medium'>{range.name}</div>
-                        <div className='text-xs opacity-75'>{range.range}</div>                      </button>                        <div className="font-medium">{range.name}</div>
-                        <div className="text-xs opacity-75">{range.range}</div>
+<div className='font-medium'>{range.name}</div>
+                        <div className='text-xs opacity-75'>{range.range}</div>
+                      </button>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+'
+        <section className='relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8'>;'"
+          <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;"
+          <div className="max - w-7xl mx - auto text - center">
+            <motion.div
+                <span className='bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent'>
+                  2026 Market Pricing
+                </span>
+              </h1>
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'    />
+                Comprehensive pricing analysis and competitive positioning for
+                our revolutionary AI, quantum computing, and emerging technology
+                services
+              </p>
+              {/* Pricing Statistics */}
+              <div className='grid grid-cols-2 md:grid-cols-5 gap-6 mb-12'    />
+                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'    />
+                  <div className='text-3xl font-bold text-cyan-400 mb-2'    />
+                    {pricingStats.totalServices}
+                  </div>
+                  <div className='text-gray-400 text-sm'    />Total Services</div>
+                </div>
+                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'    />
+                  <div className='text-3xl font-bold text-purple-400 mb-2'    />
+                    ${pricingStats.averagePrice.toFixed(0)}
+                  </div>
+                  <div className='text-gray-400 text-sm'    />Avg. Price/Month</div>
+                </div>
+                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'    />
+                  <div className='text-3xl font-bold text-pink-400 mb-2'    />
+                    ${pricingStats.lowestPrice.toFixed(0)}
+                  </div>
+                  <div className='text-gray-400 text-sm'    />Lowest Price</div>
+                </div>
+                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'    />
+                  <div className='text-3xl font-bold text-green-400 mb-2'    />
+                    ${pricingStats.highestPrice.toFixed(0)}
+
+                  </div>
+                  <div className='text-gray-400 text-sm'    />Highest Price</div>
+                </div>
+                <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'    />
+                  <div className='text-3xl font-bold text-yellow-400 mb-2'    />
+                    {pricingStats.totalCustomers.toLocaleString()}+
+                  </div>
+                  <div className='text-gray-400 text-sm'    />Total Customers</div>
+                quantum computing, and emerging technology services
+              </p>
+              {/* Pricing Statistics */}
+              <div className=\"grid grid-cols-2 md: grid-cols-5 gap-6 mb-12\"    />
+                <div className=\"text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm\"    />
+                  <div className=\"text-3xl font-bold text-cyan-400 mb-2\"    />{pricingStats.totalServices}</div>
+                  <div className=\"text-gray-400 text-sm\"    />Total Services</div>
+                </div>
+                <div className=\"text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm\"    />
+                  <div className=\"text-3xl font-bold text-purple-400 mb-2\"    />${pricingStats.averagePrice.toFixed(0)}</div>
+                  <div className=\"text-gray-400 text-sm\"    />Avg. Price/Month</div>
+                </div>
+                <div className=\"text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm\"    />
+                  <div className=\"text-3xl font-bold text-pink-400 mb-2\"    />${pricingStats.lowestPrice.toFixed(0)}</div>
+                  <div className=\"text-gray-400 text-sm\"    />Lowest Price</div>
+                </div>
+                <div className=\"text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm\"    />
+                  <div className=\"text-3xl font-bold text-green-400 mb-2\"    />${pricingStats.highestPrice.toFixed(0)}</div>
+                  <div className=\"text-gray-400 text-sm\"    />Highest Price</div>
+                </div>
+                <div className=\"text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm\"    />
+                  <div className=\"text-3xl font-bold text-yellow-400 mb-2\"    />{pricingStats.totalCustomers.toLocaleString()}+</div>
+                  <div className=\"text-gray-400 text-sm\"    />Total Customers</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Filters Section */}
+<section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'    />
+          <div className='max-w-7xl mx-auto'    />
+            <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'    />
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'    />
+                {/* Category Filter */}
+                <div    />
+                  <label className='block text-white font-semibold mb-3'    />
+                    Service Category
+                  </label>
+
+                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'    />
+                    {categories.map(category => (}
+                      <button;}
+key={category && category.id}
+                        onClick={() =    /> setSelectedCategory(category && category.id,}
+
+                        className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${selectedCategory === category && category.id
+                            ? 'bg-cyan-500 text-black'
+                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';}
+
+                        }`}
+
+                      >
+<div className='flex items-center justify-center space-x-2'    />
+                          <category.icon className='w-4 h-4'    />
+                          <span    />{category.name}</span>
+                        </div>
+                        <div className='text-xs mt-1 opacity-75'    />
+                          ({category.count})
+                        </div>
+                      </button>
+                    ))}
+                {/* Price Range Filter */}
+
+                <div    />
+<label className='block text-white font-semibold mb-3'    />
+                    Price Range
+                  </label>
+                  <div className='space-y-2'    />
+                    {priceRanges.map(range => (}
+                      <button;}
+key={range && range.id}
+                        onClick={() =    /> setPriceRange(range && range.id)}
+                        className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${priceRange === range && range.id
+                            ? 'bg-cyan-500 text-black'
+                            : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';}
+
+                        }`}
+
+                      >
+<div className='font-medium'    />{range.name}</div>
+                        <div className='text-xs opacity-75'    />{range.range}</div>
                       </button>
                     ))}
                   </div>
@@ -356,54 +403,14 @@ export default function MarketPricing2026() {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-12'
-            >
-              <h2 className='text-4xl font-bold text-white mb-4'>
-                Market Analysis & Competitive Positioning
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our services are strategically positioned to provide maximum
-                value while maintaining competitive pricing in the rapidly
-                evolving technology landscape              </p>
-            </motion.div>
-            {/* Market Insights Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our services are strategically positioned to provide maximum value while maintaining competitive pricing
-                in the rapidly evolving technology landscape
-            </motion.div>
-            {/* Market Insights Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
               >
                 <div className='text-4xl mb-4'>📊</div>
+
                 <h3 className='text-xl font-bold text-white mb-3'>
                   Competitive Pricing
-                </h3>
+                </h3>'
                 <p className='text-gray-300 text-sm mb-4'>
-                  Our pricing is strategically positioned to be 20-40% more
-                  affordable than enterprise competitors while providing
-                  superior features and ROI
-                </p>
-                <div className='flex items-center text-cyan-400 text-sm'>
-                  <TrendingUp className='w-4 h-4 mr-2' />                  <span>20-40% cost savings</span>              >
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-white mb-3">Competitive Pricing</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors
-                  while providing superior features and ROI
-                </p>
-                <div className="flex items-center text-cyan-400 text-sm">
-                  <TrendingUp className="w-4 h-4 mr-2" />
+
                   <span>20-40% cost savings</span>
                 </div>
               </motion.div>
@@ -415,23 +422,12 @@ export default function MarketPricing2026() {
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
               >
                 <div className='text-4xl mb-4'>🎯</div>
+
                 <h3 className='text-xl font-bold text-white mb-3'>
                   ROI Guarantee
-                </h3>
+                </h3>'
                 <p className='text-gray-300 text-sm mb-4'>
-                  Every service comes with our 1000% ROI guarantee, ensuring
-                  that customers see exceptional returns on their investment
-                </p>
-                <div className='flex items-center text-green-400 text-sm'>
-                  <Award className='w-4 h-4 mr-2' />                  <span>1000% ROI guarantee</span>              >
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold text-white mb-3">ROI Guarantee</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Every service comes with our 1000% ROI guarantee, ensuring that customers see
-                  exceptional returns on their investment
-                </p>
-                <div className="flex items-center text-green-400 text-sm">
-                  <Award className="w-4 h-4 mr-2" />
+
                   <span>1000% ROI guarantee</span>
                 </div>
               </motion.div>
@@ -443,23 +439,12 @@ export default function MarketPricing2026() {
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
               >
                 <div className='text-4xl mb-4'>🚀</div>
+
                 <h3 className='text-xl font-bold text-white mb-3'>
                   Future-Proof Technology
-                </h3>
+                </h3>'
                 <p className='text-gray-300 text-sm mb-4'>
-                  Our 2026 services incorporate cutting-edge technologies that
-                  will remain relevant and competitive for years to come
-                </p>
-                <div className='flex items-center text-purple-400 text-sm'>
-                  <Zap className='w-4 h-4 mr-2' />                  <span>Future-proof solutions</span>              >
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-3">Future-Proof Technology</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Our 2026 services incorporate cutting-edge technologies that will remain
-                  relevant and competitive for years to come
-                </p>
-                <div className="flex items-center text-purple-400 text-sm">
-                  <Zap className="w-4 h-4 mr-2" />
+
                   <span>Future-proof solutions</span>
                 </div>
               </motion.div>
@@ -480,16 +465,14 @@ export default function MarketPricing2026() {
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Service Pricing & Features
               </h2>
-              <p className='text-xl text-gray-300'>                {filteredServices.length} services found matching your criteria
+              <p className='text-xl text-gray-300'    />
+                {filteredServices.lengt,}
+} services found matching your criteria
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices.map((service, index) => (              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
-              <p className="text-xl text-gray-300">
-              </p>
-            </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -498,9 +481,10 @@ export default function MarketPricing2026() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group'
                 >
+
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
-                    {/* Service Header */}
-                    <div className='flex items-start justify-between mb-4'>
+                    {/* Service Header */}'
+                    <div className='flex items-start justify-between mb-4'>'
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
@@ -517,41 +501,97 @@ export default function MarketPricing2026() {
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
-                    {/* Tagline */}
+                    {/* Tagline */}'
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
                     </p>
-                    {/* Pricing Section */}
-                    <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
-                      <div className='text-center'>
+                    {/* Pricing Section */}'
+                    <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>'
+                      <div className='text-center'>'"
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                      {service.name}
+                >'
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                    {/* Service Header */}'
+                    <div className='flex items-start justify-between mb-4'>'
+                      <div className='text-4xl'>{service.icon}</div>
+                      {service.popular && ("
+                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">'
+              className='text - center mb - 12'
+            >;'
+              <h2 className='text - 4xl font - bold text - white mb - 4'>
+                Service Pricing & Features
+              </h2>;'
+              <p className='text - xl text - gray - 300'>                {filtered_services.length} services found matching your criteria
+              </p>
+              <p className="text - xl text - gray - 300">
+              </p>
+            </motion.div>;'"
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
+              {filtered_services.map ((service, index) => (
+                <motion.div
+                  key={service.id}
+
+                  className='group'
+                >;'
+                  <div className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105'>
+                    {/* Service Header */}'
+                    <div className='flex items - start justify - between mb - 4'>;'
+                      <div className='text - 4xl'>{service.icon}</div>
+                    {/* Service Header */}"
+                    <div className="flex items - start justify - between mb - 4">;"
+                      <div className="text - 4xl">{service.icon}</div>
+                      {service.popular && ("
+                        <span className="bg - gradient - to - r from - pink - 500 to - purple - 600 text - white text - xs px - 3 py - 1 rounded - full">
+                          Popular
+                        </span>)}
+                    </div>
+                    {/* Service Title */}"
+                          <span className="text-gray-400 text-lg font-normal">{service.period}</span>
+                        </div>"
+                        <div className="text-gray-400 text-sm">Starting price</div>
+
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'    />
+
+                      {service.nam,}
+
                     </h3>
                     {/* Tagline */}
-                    <p className='text-gray-300 text-sm mb-4'>                    <p className="text-gray-300 text-sm mb-4">
+<p className='text-gray-300 text-sm mb-4'    />
                       {service.tagline}
                     </p>
                     {/* Pricing Section */}
-                    <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
-                      <div className='text-center'>
-                        <div className='text-3xl font-bold text-cyan-400 mb-1'>
-                          {service.price}
-                          <span className='text-gray-400 text-lg font-normal'>
-                            {service.period}
-                          </span>
-                        </div>
-                        <div className='text-gray-400 text-sm'>
-                          Starting price
-                        </div>                      </div>
-                    </div>
-                    {/* Market Position */}                          {service.price}
-                          <span className="text-gray-400 text-lg font-normal">{service.period}</span>
-                        </div>
-                        <div className="text-gray-400 text-sm">Starting price</div>
+
                       </div>
                     </div>
                     {/* Market Position */}
-                    <div className='mb-4'>
-                      <h4 className='text-white font-semibold mb-2 text-sm'>
+                      </div>
+                    </div>
+                    {/* Market Position */}
+
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+                      {service.name}
+                    </h3>
+                    {/* Tagline */}
+<p className='text-gray-300 text-sm mb-4'>
+                      {service.tagline}
+                    </p>
+                    {/* Pricing Section */}
+<div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
+                      <div className='text-center'>
+                        <div className='text-3xl font-bold text-cyan-400 mb-1'>
+                          {service.price}
+                          <span className='text-gray-400 text-lg font-normal'    />
+                            {service.period}
+                          </span>
+                        </div>
+                        <div className='text-gray-400 text-sm'    />
+                          Starting price
+                        </div>
+                      </div>
+                    </div>
+                    {/* Market Position */}
+
+<div className='mb-4'    />
+                      <h4 className='text-white font-semibold mb-2 text-sm'    />
                         Market Position
                       </h4>
                       <p className='text-gray-400 text-xs leading-relaxed'>                        {service.marketPosition}                    <div className="mb-4">
@@ -560,40 +600,120 @@ export default function MarketPricing2026() {
                         {service.marketPosition}
                       </p>
                     </div>
-                    {/* ROI & Customers */}
-                    <div className='grid grid-cols-2 gap-4 mb-4'>
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
+
                         <div className='text-lg font-bold text-green-400 mb-1'>
+
+'
                           {service.roi.split(' ')[0]}
-                        </div>
+                        </div>'
                         <div className='text-gray-400 text-xs'>ROI</div>
-                      </div>
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
+                      </div>'
+                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>'
                         <div className='text-lg font-bold text-blue-400 mb-1'>
                           {service.customers.toLocaleString()}+
-                        </div>
+
                         <div className='text-gray-400 text-xs'>Customers</div>                      </div>
-                    </div>
-                    {/* Key Features */}                          {service.roi.split(' ')[0]}
-                        </div>
+                    </div>'
+                    {/* Key Features */}                          {service.roi.split(' ')[0]}'
+                          {service.roi.split(' ')[0]}
+                        </div>"
                         <div className="text-gray-400 text-xs">ROI</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">
+                      </div>"
+                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">"
                         <div className="text-lg font-bold text-blue-400 mb-1">
                           {service.customers.toLocaleString()}+
                         </div>
+
+                        <div className='text-gray-400 text-xs'    />Customers</div>
+                      </div>
+                    </div>
+
+                    </h3>
+                    {/* Tagline */}'
+                    <p className='text-gray-300 text-sm mb-4'>                      {service && service.tagline}
+                    </p>
+                    {/* Pricing Section */}'
+                    <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>;'
+                      <div className='text-center'>;'"
+                        <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                      {service && service.name}
+                    </h3>
+                    {/* Tagline */}'"
+                    <p className='text-gray-300 text-sm mb-4'>                    <p className="text-gray-300 text-sm mb-4">
+                      {service && service.tagline}
+                    </p>
+                    {/* Pricing Section */}'
+                    <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>;'
+                      <div className='text-center'>;'
+                        <div className='text-3xl font-bold text-cyan-400 mb-1'>
+                          {service && service.price}'
+                          <span className='text-gray-400 text-lg font-normal'>
+                            {service && service.period}
+                          </span>
+                        </div>;'
+                        <div className='text-gray-400 text-sm'>
+                          Starting price
+                        </div>                      </div>
+                    </div>
+                    {/* Market Position */}                          {service && service.price}"
+                          <span className="text-gray-400 text-lg font-normal">{service && service.period}</span>
+                        </div>;"
+                        <div className="text-gray-400 text-sm">Starting price</div>
+                      </div>
+                    </div>
+                    {/* Market Position */}'
+                    <div className='mb-4'>;'
+                      <h4 className='text-white font-semibold mb-2 text-sm'>
+                        Market Position
+                      </h4>;'"
+                      <p className='text-gray-400 text-xs leading-relaxed'>                        {service && service.marketPosition}                    <div className="mb-4">;"
+                      <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>;"
+                      <p className="text-gray-400 text-xs leading-relaxed">
+                        {service && service.marketPosition}
+                      </p>
+                    </div>
+                    {/* ROI & Customers */}'
+                    <div className='grid grid-cols-2 gap-4 mb-4'>;'
+                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>;'
+                        <div className='text-lg font-bold text-green-400 mb-1'>;'
+                          {service && service.roi.split(' ')[0]}
+                        </div>;'
+                        <div className='text-gray-400 text-xs'>ROI</div>
+                      </div>;'
+                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>;'
+                        <div className='text-lg font-bold text-blue-400 mb-1'>
+                          {service && service.customers.toLocaleString()}+
+                        </div>;'
+                        <div className='text-gray-400 text-xs'>Customers</div>                      </div>
+                    </div>;'
+                    {/* Key Features */}                          {service && service.roi.split(' ')[0]}
+                        </div>;"
+                        <div className="text-gray-400 text-xs">ROI</div>
+                      </div>;"
+                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">;"
+                        <div className="text-lg font-bold text-blue-400 mb-1">
+                          {service && service.customers.toLocaleString()}+
+                        </div>;"
                         <div className="text-gray-400 text-xs">Customers</div>
+                      </div>
+                    </div>;"
+                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>"
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, idx) => ("
+                          <li key={idx} className="text-gray-400 text-xs flex items-center">"
+                            <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                        <div className='text-gray-400 text-xs'>Customers</div>
                       </div>
                     </div>
                     {/* Key Features */}
-                    <div className='mb-4'>
-                      <h4 className='text-white font-semibold mb-2 text-sm'>
+<div className='mb-4'    />
+                      <h4 className='text-white font-semibold mb-2 text-sm'    />
                         Key Features
                       </h4>
-                      <ul className='space-y-1'>
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li
+                      <ul className='space-y-1'    />
+                        {service.features.slice(0, 3).map((feature, idx) => (<li;}
                             key={idx}
+
                             className='text-gray-400 text-xs flex items-center'
                           >
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">
@@ -607,7 +727,11 @@ export default function MarketPricing2026() {
                       </ul>
                     </div>
                     {/* Technology Stack */}
-                    <div className='mb-4'>
+
+                          </span>
+                        )}
+
+<div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Technology
                       </h4>
@@ -646,17 +770,14 @@ export default function MarketPricing2026() {
               ))}
             </div>
             {/* No Results */}
-            {filteredServices.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className='text-center py-16'
-              >
-                <div className='text-6xl mb-4'>🔍</div>
-                <h3 className='text-2xl font-bold text-white mb-2'>
+            {filteredServices && filteredServices.length === 0 && (
+className='text-center py-16'
+                  />
+                <div className='text-6xl mb-4'    />🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'    />
                   No services found
                 </h3>
-                <p className='text-gray-400'>
+                <p className='text-gray-400'    />
                   Try adjusting your category or price range filters
                 </p>              </motion.div>                className="text-center py-16"
               >
@@ -677,69 +798,67 @@ export default function MarketPricing2026() {
               transition={{ duration: 0.8 }}
               className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
             >
+
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Ready to Get Started?
               </h2>
-              <p className='text-xl text-gray-300 mb-8'>
+              <p className='text-xl text-gray-300 mb-8'    />
+                Contact our team to discuss pricing, implementation, and how our
+revolutionary 2026 services can transform your business with
+exceptional ROI
+              </p>
+              <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-8'    />
+                <div className='flex items-center justify-center space-x-3 text-cyan-300'    />
+                  <span className='text-2xl'    />📱</span>
+                  <span className='font-semibold'    />{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center justify-center space-x-3 text-purple-300'    />
+                  <span className='text-2xl'    />✉️</span>
+                  <span className='font-semibold'    />{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center justify-center space-x-3 text-pink-300'    />
+                  <span className='text-2xl'    />📍</span>
+                  <span className='font-semibold text-sm'    />
+                    {contactInfo.addres,}
+
+                  </span>
+                </div>
+              </div>'
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 Contact our team to discuss pricing, implementation, and how our
                 revolutionary 2026 services can transform your business with
                 exceptional ROI
-              </p>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
-                <div className='flex items-center justify-center space-x-3 text-cyan-300'>
-                  <span className='text-2xl'>📱</span>
-                  <span className='font-semibold'>{contactInfo.mobile}</span>
-                </div>
-                <div className='flex items-center justify-center space-x-3 text-purple-300'>
-                  <span className='text-2xl'>✉️</span>
-                  <span className='font-semibold'>{contactInfo.email}</span>
-                </div>
-                <div className='flex items-center justify-center space-x-3 text-pink-300'>
-                  <span className='text-2xl'>📍</span>
-                  <span className='font-semibold text-sm'>
-                    {contactInfo.address}
-                  </span>
-                </div>
-              </div>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='/contact'
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'                >
-                  Get Custom Quote
-                </a>
-                <a
-                  href='/2026-services-showcase'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                >            >
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+              </p>;'
+                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            >;"
+              <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>;"
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services
                 can transform your business with exceptional ROI
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 text-cyan-300">
-                  <span className="text-2xl">📱</span>
-                  <span className="font-semibold">{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-purple-300">
-                  <span className="text-2xl">✉️</span>
-                  <span className="font-semibold">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-pink-300">
-                  <span className="text-2xl">📍</span>
-                  <span className="font-semibold text-sm">{contactInfo.address}</span>
+              </p>;"
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;"
+                <div className="flex items-center justify-center space-x-3 text-cyan-300">;"
+                  <span className="text-2xl">📱</span>;"
+                  <span className="font-semibold">{contactInfo && contactInfo.mobile}</span>
+                </div>;"
+                <div className="flex items-center justify-center space-x-3 text-purple-300">;"
+                  <span className="text-2xl">✉️</span>;"
+                  <span className="font-semibold">{contactInfo && contactInfo.email}</span>
+                </div>;"
+                <div className="flex items-center justify-center space-x-3 text-pink-300">;"
+                  <span className="text-2xl">📍</span>;"
+                  <span className="font-semibold text-sm">{contactInfo && contactInfo.address}</span>
                 </div>
               </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+                  href='/contact'
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
+                    />
                   Get Custom Quote
                 </a>
                 <a
-                  href='/2026-services-showcase'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/2026-services-showcase"
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+href='/2026-services-showcase'
+                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+
                 >
                   View All Services
                 </a>

@@ -45,3 +45,12 @@ const { execSync } = require('child_process')
         execSync(step.cmd, { "stdio"})
           "status"
           "status"
+
+          "status"
+          "status"
+          "status"
+
+
+
+"status"
+          "status"

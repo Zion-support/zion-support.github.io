@@ -1,3 +1,5 @@
+
+
 name: Issue Triage
 
 on:
@@ -24,6 +26,7 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/github-script@v7
         with:
           script: |
@@ -39,12 +42,3 @@ jobs:
               await github.rest.issues.addLabels({ owner, repo, issue_number: issue.number, labels });
             }
             }
-
-            const result = await aiClassify(title, body);
-            if (result && result.labels.length) {
-              await github.issues.addLabels({ owner: context.repo.owner, repo: context.repo.repo, issue_number: number, labels: result.labels });
-            }
-            if (result && result.summary) {
-              await github.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: number, body: `AI triage summary:\n\n${result.summary}` });
-            }
-            core.info('Triage complete');

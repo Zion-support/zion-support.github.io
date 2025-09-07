@@ -1,128 +1,137 @@
-import React, { useEffect } from 'react';
-import {Star} from 'lucide-react';
-interface PerformanceData {
-  domContentLoaded: number
-  loadComplete: number
-  totalLoadTime: number
-  firstPaint: number
-  firstContentfulPaint: number
-  resourceCount: number
   memory: {
     used: number
     total: number
     limit: number
-  } | null;
-}
+  } | null
+import React, { useEffect } from 'react'
+interface PerformanceMonitorProps {}
+  onPerformanceData?: (data: any) => void
+interface Performance {
+  getEntriesByType (type: string): PerformanceEntry[]
+  now (): number
+interface PerformanceEntry {
+
+interface PerformanceData {
+  domContentLoaded: number;,
+  loadComplete: number;,
+  totalLoadTime: number;,
+  firstPaint: number;,
+  firstContentfulPaint: number;,
+  resourceCount: number;,
+  memory: {
+    used: number;,
+    total: number;,
+    limit: number;,
+  } | null
+import React, { useEffect, useState } from 'react'
+interface PerformanceMetrics {
+import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {'
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  ttfb?: number
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
-}
 // Extend the Window interface to include performance
 declare global {
   interface Window {
     performance: Performance
-  }
+pr-12325
+
+export default function PerformanceMonitor({ onPerformanceData }: PerformanceMonitorProps) {
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null)
+// Extend the Window interface to include performance
+declare global {
+  interface Window {
+    performance: Performance;,
   interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[]
+    getEntriesByType(type: string): PerformanceEntry[];,
     memory?: {
-      usedJSHeapSize: number, totalJSHeapSize: number
-      jsHeapSizeLimit: number
+      usedJSHeapSize: number;, totalJSHeapSize: number;,
+      jsHeapSizeLimit: number;,
     }
-  }
   interface PerformanceEntry {
-    name: string, startTime: number
-    duration: number
-  }
+    name: string;, startTime: number;,
+    duration: number;,
   interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number, domContentLoadedEventEnd: number
-    loadEventStart: number, loadEventEnd: number
-    fetchStart: number
-  }
+    domContentLoadedEventStart: number;, domContentLoadedEventEnd: number;,
+    loadEventStart: number;, loadEventEnd: number;,
+    fetchStart: number;,
 // Define Performance types if not available
 interface PerformanceEntry {
-  name: string
-  entryType: string
-  startTime: number
-  duration: number
-}
+  name: string;,
+  entryType: string;,
+  startTime: number;,
+  duration: number;,
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[];,
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  loadEventEnd: number;,
+  loadEventStart: number;,
+  domContentLoadedEventEnd: number;,
+  domContentLoadedEventStart: number;,
+  responseEnd: number;,
+  responseStart: number;,
+  requestStart: number;,
+  navigationStart: number;,
+// Define Performance types if not available
 interface Performance {
   getEntriesByType(type: string): PerformanceEntry[]
-}
-interface PerformanceNavigationTiming extends PerformanceEntry {
-  loadEventEnd: number
-  loadEventStart: number
-  domContentLoadedEventEnd: number
-  domContentLoadedEventStart: number
-  responseEnd: number
-  responseStart: number
-  requestStart: number
-  navigationStart: number
-}
-// Define Performance types if not available
-interface Performance {
-  getEntriesByType(type: string): PerformanceEntry[];
-  now(): number;
-}
+  now(): number
 interface PerformanceEntry {
-  name: string;
-  entryType: string;
-  startTime: number;
-  duration: number;
-}
+  name: string
+  entry_type: string
+  start_time: number
+  duration: number
+  readonly connectEnd: number
+  readonly connectStart: number
+  readonly domComplete: number
 interface PerformanceNavigationTiming extends PerformanceEntry {
-  readonly connectEnd: number;
-  readonly connectStart: number;
-  readonly domComplete: number;
-  readonly domContentLoadedEventEnd: number;
-  readonly domContentLoadedEventStart: number;
-  readonly domInteractive: number;
-  readonly domLoading: number;
-  readonly domainLookupEnd: number;
-  readonly domainLookupStart: number;
-  readonly fetchStart: number;
-  readonly loadEventEnd: number;
-  readonly loadEventStart: number;
-  readonly navigationStart: number;
-  readonly redirectCount: number;
-  readonly redirectEnd: number;
-  readonly redirectStart: number;
-  readonly requestStart: number;
-  readonly responseEnd: number;
-  readonly responseStart: number;
-  readonly secureConnectionStart: number;
-  readonly transferSize: number;
-  readonly type: string;
-  readonly unloadEventEnd: number;
-  readonly unloadEventStart: number;
-}
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  readonly connect_end: number
+  readonly connect_start: number
+  readonly dom_complete: number
+  readonly domContentLoadedEventEnd: number
+  readonly domContentLoadedEventStart: number
+  readonly dom_interactive: number
+  readonly dom_loading: number
+  readonly domainLookupEnd: number
+  readonly domainLookupStart: number
+  readonly fetch_start: number
+  readonly loadEventEnd: number
+  readonly loadEventStart: number
+  readonly navigation_start: number
+  readonly redirect_count: number
+  readonly redirect_end: number
+  readonly redirect_start: number
+  readonly request_start: number
+  readonly response_end: number
+  readonly response_start: number
+  readonly secureConnectionStart: number
+  readonly transfer_size: number
+  readonly type: string
+  readonly unloadEventEnd: number
+  readonly unloadEventStart: number
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
   useEffect(() => {
 // Only run on client side
-    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
+    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return
     const measurePerformance = () => {
 
-      const navigationEntries = window.performance.getEntriesByType('navigation');
-      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
-      const paintEntries = window.performance.getEntriesByType('paint');
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
-        // Paint timing
-        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
-        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
-        // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length
-// Memory usage (if available)
-
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const paint = window.performance.getEntriesByType('paint')
+      const performanceData = null
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.usedJSHeapSize
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.totalJSHeapSize
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number ;} }).memory.jsHeapSizeLimit
+        } : null
       }
-      if (onPerformanceData) {
-        onPerformanceData(performanceData);
-      }
+  if($2) {
+        onPerformanceData(performanceData)
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
          
@@ -130,8 +139,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       }
     }
     // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
+  if($2) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+      measurePerformance()
     } else {
       window.addEventListener('load', measurePerformance);
     }

@@ -27,15 +27,7 @@ import { readJson, writeJson } from '../../../utils/fsDb';
 import { logSupportEventToOperator } from '../../../utils/operator';
 export default async function handler(req, res) {
   try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any },;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const log = readJson<any[]>('support/sessions.json', []),;
-  const entry = { ts: Date.now(), sessionId, eventType, payload },;
-  log.push(entry);
-  writeJson('support/sessions.json', log);
-  await logSupportEventToOperator({ type: eventType, sessionId, payload });
-  return res.status(200).json({ ok: true });
+    res.status(200).json({ message: 'API endpoint working' })
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

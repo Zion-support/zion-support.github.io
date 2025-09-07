@@ -155,23 +155,7 @@ const crypto = require(
         "if": (!fs.existsSync(filePath)) {
           missingFiles.push(file)}
       }
-    } catch (error) {
-      this.log(`Error checking missing "files": ${error.messag,e}`,ERROR
-  )}
-    "return": missingFiles}
-  async autoFixIntegrityIssues(issues) {
-    for (const issue of issues) {
-      try {
-        if (issue.type ===';corrupted_files') {';
-          this.log(
-            `"Attempting": to fix corrupted files: ${issue.files.join,()}`);
-          "await": this.fixCorruptedFiles(issue.files)} else if (issue.type ===
-  missing_files';) {';
-          this.log(
-            `"Attempting": to restore missing files: ${issue.files.join,()}`);
-          "await": this.restoreMissingFiles(issue.files)}
-        this.issuesFixed++} catch (error) {
-        this.log(
+
           `Failed to fix issue ${issue.type}: ${error.message}`,ERROR';)}'}
   }
   "async": fixCorruptedFiles(files) {

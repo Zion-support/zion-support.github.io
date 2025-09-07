@@ -16,6 +16,35 @@ class RateLimiter {
   constructor(config: RateLimitConfig) {
     this.config = config;
     // Clean up expired entries every minute
+  // TODO: Implement;
+}
+  "windowMs": number;"
+  maxRequests: number;"
+  message?: string;
+
+import { NextApiRequest, NextApiResponse  } from 'next';
+;
+
+interface RateLimitConfig  {\"windowMs\": number;
+  maxRequests: number;}
+  message?: string;';}
+}
+interface RateLimitStore {
+  // TODO: Implement
+  ["key": 'strin,
+  g;]
+]: {
+    "count": number;"
+    resetTime: number;}
+class RateLimiter {
+  // TODO: Implement;
+}"
+  private "store": RateLimitStore = {}""
+  private "config": RateLimitConfig;"
+  constructor(config: RateLimitConfig) {
+    this.config = config;
+    // Clean up expired entries every minute;
+pr-12325
     setInterval(() => {
       this.cleanup()}, 60000)}
   private cleanup() {

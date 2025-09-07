@@ -218,6 +218,6 @@ export default function CloudNativeAutomation() {
           </div>
         </main>
       </div>
-    </>
+    </div>
   )
 }

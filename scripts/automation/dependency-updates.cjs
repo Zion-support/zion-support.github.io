@@ -152,11 +152,8 @@ const fs = require("fs")
 const path = require("path")
 console.log(""� Starting continuous dependency updates automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
 console.log(""� Starting continuous dependency updates automation...")
-// Get automation interval from environment variable ("default")
-// console.log(`" Checking for outdated dependencies..."`)
+//
   console.log("� Starting continuous dependency updates automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Checking for outdated dependencies..."`)
@@ -228,4 +225,13 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+  console.error(" Failed to start continuous dependency "updates": ")
+
+  console.error(" Failed to start continuous dependency "updates": ")
+  console.error(" Failed to start continuous dependency "updates": ")
+  console.error(" Failed to start continuous dependency "updates": ")
+
+
+
+console.error(" Failed to start continuous dependency "updates": ")
   console.error(" Failed to start continuous dependency "updates": ")

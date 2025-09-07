@@ -141,8 +141,7 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 console.log(""� Starting continuous build and test automation...")
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
 console.log(""� Starting continuous build and test automation...")
 // Get automation interval from environment variable ("default")
@@ -207,4 +206,13 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+  console.error(" Failed to start continuous build and "test": ")
+
+  console.error(" Failed to start continuous build and "test": ")
+  console.error(" Failed to start continuous build and "test": ")
+  console.error(" Failed to start continuous build and "test": ")
+
+
+
+console.error(" Failed to start continuous build and "test": ")
   console.error(" Failed to start continuous build and "test": ")

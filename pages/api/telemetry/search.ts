@@ -29,18 +29,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const memoryStore: { q: string, ts: number }[] = [];
 export default function handler(req, res) {
   try {
-  if (req.method === 'GET') {
-    const { q } = req.body || {};
-    if (typeof q === 'string' && q.trim()) {;
-      memoryStore.push({ q: q.trim(), ts: Date.now() });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    res.status(200).json({ message: 'API endpoint working' })
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

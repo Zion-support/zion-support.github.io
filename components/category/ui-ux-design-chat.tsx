@@ -9,12 +9,17 @@ const UiUxDesignChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>UiUxDesignChat - Zion Tech Solutions</title>
+        <title>UiUxDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="UiUxDesignChat blog post" />{" "}
+
       </Head>
+        <meta name="description" content="UiUxDesignChat blog post" />
+      </Head>
+pr-12243
+
       <main>
         <h1>UiUxDesignChat</h1>
-        <p>Blog content coming soon...</p>
+        <p>Blog content coming soon...</p>"
         <a href="/blog">Back to Blog</a>
       </main>
     </div>

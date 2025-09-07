@@ -337,3 +337,12 @@ module.exports = LogAnalyzer;
         "message"
         "impact"
       console.error('\n� Log Analyzer "failed")
+
+      console.error('\n� Log Analyzer "failed")
+      console.error('\n� Log Analyzer "failed")
+      console.error('\n� Log Analyzer "failed")
+
+
+
+console.error('\n� Log Analyzer "failed")
+      console.error('\n� Log Analyzer "failed")

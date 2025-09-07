@@ -1,4 +1,8 @@
 import Head from "next/head"
+
+import React, { useState } from "react"
+const Head = dynamic(() => import("next/head"), { "ssr": false })
+
 import React, { useState } from "react"
 const Head = dynamic(() => import("next/head"), { "ssr": false })
 }
@@ -9,9 +13,46 @@ const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr"
 const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false })
 }
 const Demo = () => {"
-  const [selectedDemo, setSelectedDemo] = useState("ai-services")
+
 }
+import Head from "next/head";
+import React, { useState } from "react";
+const Head = dynamic(() => import("next/head"), { "ssr": false });
+}
+const Link = dynamic(() => import("next/link"), { "ssr": false });
+}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr": false });
+}
+const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false });
+
+}
+
+import Head from "next/head"
+
+}
+import Head from "next/head";
+import React, { useState } from "react";
+
+import Head from "next/head"
+
+import React, { useState } from "react"
+
+const Head = dynamic(() => import("next/head"), { "ssr": false })
+
   const demos = []
+import React, { useState } from "react"
+const Head = dynamic(() => import("next/head"), { "ssr": false })
+}
+const Link = dynamic(() => import("next/link"), { "ssr": false })
+}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr": false })
+}
+const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false })
+}
+const Demo = () => {"
+  const [selectedDemo, setSelectedDemo] = useState("ai-services")import Head from "next/head"
+import React, { useState } from "react"
+const Head = dynamic(() => import("next/head"), { "ssr": false })  const demos = []
 },
     {"
       "id": "it-services","
@@ -41,9 +82,57 @@ const Demo = () => {"
         "Analytics Dashboard"
       ]
   ]
+
+import Head from "next/head"""
+import React, { useState } from "react"""
+const Head = dynamic(() => import("next/head"), { "ssr": false })"
+}"
+const Link = dynamic(() => import("next/link"), { "ssr": false })"
+const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr": false })"
+const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false })"
+const Demo = () => {"""
+  const [selectedDemo, setSelectedDemo] = useState("ai-services")"
+import Head from "next/head";""
+import React, { useState } from "react";""
+const Head = dynamic(() => import("next/head"), { "ssr": false });"
+const Link = dynamic(() => import("next/link"), { "ssr": false });"
+const Navigation = dynamic(() => import("../src/components/Navigation"), { "ssr": false });"
+const Footer = dynamic(() => import("../src/components/Footer"), { "ssr": false });"
+  const demos = []
+},"
+    {"""
+      "id": "it-services","""
+      "title": "IT Services Demo","""
+      "description": "Explore our comprehensive IT infrastructure and support solutions","""
+      "duration": "20 minutes",""
+      "icon": Cloud,""
+      "features": [",""
+        "Cloud Migration","""
+        "Network Security","""
+        "System Monitoring","""
+        "Backup Solutions","""
+        "Performance Optimization""]
+      ]
+      "id": "micro-saas","""
+      "title": "Micro SaaS Demo","""
+      "description": "Discover our scalable software-as-a-service development capabilities","""
+      "duration": "25 minutes",""
+      "icon": Zap,""
+        "Custom SaaS Development","""
+        "API Integration","""
+        "User Management","""
+        "Payment Processing","""
+        "Analytics Dashboard""]
+pr-12325
+
+      ]
+  ]
+ ;
   const testimonials = []
+
   return (
     <>
+
 <Head>
         <title>Live Demo - Zion Tech Group</title>
         <meta name="description" content="See our AI services, IT solutions, and micro SaaS development in action. Book a personalized demo today."  />

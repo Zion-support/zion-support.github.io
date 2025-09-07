@@ -422,6 +422,18 @@ export const cuttingEdgeITServices2025 = [
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+
+;
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    ];'
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+
+'
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ];

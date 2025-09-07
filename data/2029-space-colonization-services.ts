@@ -31,25 +31,38 @@ export interface SpaceColonization2029Service {
     email: string;
     address: string;
 
-    website: string;
-  }
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number
-}
-export const spaceColonization2029Services: SpaceColonization2029Service[] = [
-  // Space Colonization & Mining Services
-  {
 
-    id: 'mars-colonization-automation-platform'
-    name: 'Mars Colonization Automation Platform'
-    tagline: 'Automate Mars colonization process with AI and robotics'
-    price: '$99,999'
-    period: '/month'
+    period: '/month';
+
+      'Quantum communication protocols',
+
+      'AI - powered routing optimization',
+      'Multi - planet network management',
+      'Satellite constellation control',
+      'Communication security protocols',
+      'Bandwidth optimization',
+      'Network redundancy systems',
+      'Real - time monitoring',
+      'Emergency communication channels',
+    ],
+    popular: true,
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+    id: 'space - energy - harvesting - platform',
+    name: 'Space Energy Harvesting Platform',
+    tagline: 'Harvest energy from space sources and celestial bodies',
+    price: '$55, 999',
+    period: '/month',
     description:
       'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.'
       'Autonomous habitat construction'
@@ -447,10 +460,10 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     }
     realImplementation: true
-    implementationDetails: 'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
+    implementationDetails: 'Advanced space energy harvesting platform with multi-source collection;, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.';
     launchDate: '2029-03-01';
     customers: 18;
     rating: 4.8

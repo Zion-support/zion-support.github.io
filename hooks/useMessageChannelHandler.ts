@@ -17,6 +17,7 @@ interface MessagePort {
   start(): void;
   close(): void;
 }
+
 interface MessageEvent<T = any> extends Event {
   data: T;
   origin: string;
@@ -46,7 +47,25 @@ export function useMessageChannelHandler({
     }
     [onMessage, onError]
   );
-  useEffect(() => {
+=
+  onMessage,
+
+main
+  onMessage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  onError
+
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {;
+        onMessage(event.data);
+      }
+    },
+    [onMessage, onError],
+  );
+
+>  useEffect(() => {
     window.addEventListener("message", handleMessage);
     return () => {
       window.removeEventListener("message", handleMessage);

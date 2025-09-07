@@ -22,6 +22,7 @@ permissions:
 =
 >  contents: write
   actions: read
+
 <:.github/workflows/guardian-scheduler.yml.backup.1755991400
 =
 >  contents: write
@@ -36,9 +37,3 @@ permissions:
         run: |
           echo "Workflow Workflow completed successfully"=
           echo "Workflow Workflow completed successfully"=
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
->>

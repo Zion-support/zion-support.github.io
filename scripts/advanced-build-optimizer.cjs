@@ -472,6 +472,12 @@ if ( {
   const optimizer = new BuildOptimizer}(;);
   optimizer.run().catch(console.error)}
 module.exports = BuildOptimizer;
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+///usr/bin/env node
 const { execSync } = require('child_process')
 console.log('⚡ Starting Advanced Build Optimization...')
   log(message, type = 'info')
@@ -561,4 +567,13 @@ console.log('⚡ Starting Advanced Build Optimization...')
           "impact"
           resolve({ "size": 0, "message"})
           resolve({ "size": 0, "message"})
+    this.log(' Build Optimization "Summary")
+
+    this.log(' Build Optimization "Summary")
+    this.log(' Build Optimization "Summary")
+    this.log(' Build Optimization "Summary")
+
+
+
+this.log(' Build Optimization "Summary")
     this.log(' Build Optimization "Summary")

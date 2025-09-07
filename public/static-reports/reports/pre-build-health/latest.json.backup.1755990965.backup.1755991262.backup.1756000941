@@ -12,11 +12,17 @@
     "timestamp": "2025-08-19T23:51:14.696Z"
     "timestamp": "2025-08-19T18:52:46.389Z"    "timestamp": "2025-08-19T23:54:02.694Z"
     "timestamp": "2025-08-19T23:51:14.696Z"
+    "timestamp": "2025-08-19T18:52:46.389Z"    "timestamp": "2025-08-19T23:54:02.694Z"
+    "timestamp": "2025-08-19T23:51:14.696Z"
   },
   "results": [
     {
       "name": "Page Structure Validation",
       "status": "PASS",
+      "result": "All 1 pages are properly structured",
+      "result": "All 29 pages are properly structured",
+      "result": "All 1 pages are properly structured",      "result": "All 29 pages are properly structured",
+      "result": "All 1 pages are properly structured",      "result": "All 29 pages are properly structured",
       "result": "All 1 pages are properly structured",
       "result": "All 29 pages are properly structured",
       "result": "All 1 pages are properly structured",      "result": "All 29 pages are properly structured",

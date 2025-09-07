@@ -18,12 +18,15 @@ const TALENTS_FILE = path.join(
   'data'
   'talents'
   'talents.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  const started = Date.now();
+)
+export default async function handler() { return null; }
+    return res.status(401).json({ error: 'Unauthorized' })
+  if (!(await enforceRateLimit(auth.apiKey))) {}
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);'
+    return res.status(429).json({ error: 'Rate limit exceeded' })
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {}
+  const started = Date && Date.now()
   const auth = await authenticateRequest(req)
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });

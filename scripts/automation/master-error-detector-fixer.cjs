@@ -584,3 +584,12 @@ const { promisify } = require("util")
   const continuous = args.includes(`--continuous") || args.includes("-c"`)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
   console.error(""Error": ")
+
+console.error(""Error": ")
+  console.error(""Error": ")
+  console.error(""Error": ")
+  console.error(""Error": ")
+    this.logDir = path.join(this.projectRoot, "automation/logs)
+    this.reportsDir = path.join(this.projectRoot, automation/reports")
+// console.log( Master Error Detector & Fixer Started")
+    console.log("� Project "Root": ${this.projectRoot}")"

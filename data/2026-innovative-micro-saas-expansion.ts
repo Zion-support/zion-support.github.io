@@ -9,45 +9,29 @@ export interface InnovativeMicroSaasService2026 {
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: {
+  market_size: string;
+  growth_rate: string;
+  contact_info: {}
     mobile: string;
     email: string;
     address: string;
 
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
   customers: number;
   rating: number;
-
   reviews: number;
-const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
-  [
-    // AI-Powered Business Intelligence & Analytics
     {
       id: 'ai-business-intelligence-suite'
       name: 'AI Business Intelligence Suite'
@@ -70,7 +54,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         '24/7 AI monitoring and alerts'
       ]
       popular: true
-      icon: '📊'
       color: 'from-blue-600 to-cyan-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-business-intelligence-suite'
@@ -141,7 +124,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Mobile app access'
       ]
       popular: true
-      icon: '✍️'
       color: 'from-green-600 to-emerald-600'
       textColor: 'text-green-400'
       link: 'https://ziontechgroup.com/ai-content-factory-pro'
@@ -212,10 +194,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'API for custom integrations'
       ]
       popular: true
-      icon: '🤖'
-      color: 'from-purple-600 to-pink-600'
-      textColor: 'text-purple-400'
-      link: 'https://ziontechgroup.com/ai-customer-service-automation'
       marketPosition:
         'Competes with Zendesk ($49/month), Intercom ($39/month). Our advantage: AI automation reduces response time by 90% and handles 70% of inquiries automatically.'
       targetAudience:
@@ -283,10 +261,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Mobile optimization tools'
       ]
       popular: false
-      icon: '🛒'
-      color: 'from-orange-600 to-red-600'
-      textColor: 'text-orange-400'
-      link: 'https://ziontechgroup.com/ai-ecommerce-optimizer'
       marketPosition:
         'Competes with Dynamic Yield ($1000+/month), Optimizely ($1000+/month). Our advantage: Affordable pricing for SMBs with enterprise-level AI capabilities.'
       targetAudience:
@@ -354,7 +328,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Integration with job boards'
       ]
       popular: false
-      icon: '👥'
       color: 'from-indigo-600 to-blue-600'
       textColor: 'text-indigo-400'
       link: 'https://ziontechgroup.com/ai-hr-recruitment-suite'
@@ -418,7 +391,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Mobile app for on-the-go management'
       ]
       popular: false
-      icon: '💰'
       color: 'from-yellow-600 to-orange-600'
       textColor: 'text-yellow-400'
       link: 'https://ziontechgroup.com/ai-financial-management-platform'
@@ -489,7 +461,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Advanced reporting and insights'
       ]
       popular: false
-      icon: '📋'
       color: 'from-teal-600 to-cyan-600'
       textColor: 'text-teal-400'
       link: 'https://ziontechgroup.com/ai-project-management-suite'
@@ -560,10 +531,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Advanced reporting and insights'
       ]
       popular: false
-      icon: '🎓'
-      color: 'from-violet-600 to-purple-600'
-      textColor: 'text-violet-400'
-      link: 'https://ziontechgroup.com/ai-learning-management-system'
       marketPosition:
         'Competes with Canvas ($40/user/year), Blackboard ($40/user/year), Moodle (Free). Our advantage: AI personalization improves learning outcomes by 30% and reduces dropout rates.'
       targetAudience:
@@ -631,10 +598,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Integration with EHR systems'
       ]
       popular: false
-      icon: '🏥'
-      color: 'from-red-600 to-pink-600'
-      textColor: 'text-red-400'
-      link: 'https://ziontechgroup.com/ai-healthcare-assistant'
       marketPosition:
         'Competes with Epic ($1200/user/month), Cerner ($1000/user/month), Allscripts ($800/user/month). Our advantage: Affordable pricing for small practices with enterprise-level AI capabilities.'
       targetAudience:
@@ -679,6 +642,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.3
       reviews: 18
     }
+
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
@@ -690,15 +654,36 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
 export const getPopularInnovativeMicroSaasServices2026 = () => {
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
+  ];
+
+    website: string;
+  }
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+;
+
+const contact = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      customers: 24,
+      rating: 4 && 4.3,
+      reviews: 18,
+
+    },;
+
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
+
   })
 }
   return innovativeMicroSaasServices2026.filter(service => {;

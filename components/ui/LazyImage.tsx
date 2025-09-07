@@ -68,26 +68,22 @@ useEffect ( () => {
         style={{ width, height }}
       />
       {/* Actual Image */}
-      {isInView && (
-        <motion.img
+      {isInView && (<motion&& motion.img;}
           ref={imgRef}
           src={src}
           alt={alt}
+
           onLoad={handleLoad}
-          initial={{ opacity: 0, scale: 1.1 }}
+
+          initial={{ opacity: 0, scale: 1.1 ,}
+
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 }}
-          className='w-full h-full object-cover'
-          loading='lazy'          style={{ width, height }}
-        />
-      )}
-    </div>
-  );
-}
-export default LazyImage;          className="w-full h-full object-cover"
-          loading="lazy"
+          transition={{ duration: 0.5 ,}
+
+className='w-full h-full object-cover'
+          loading='lazy'
           style={{ width, height }}
-        />
+           />
       )}
     </div>
   );

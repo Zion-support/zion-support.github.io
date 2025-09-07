@@ -49,25 +49,12 @@ export default function TalentPortfolio() {
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
   return (
-    <div className="relative">
-      <div className="flex items-center gap-3 mb-4">
-        <label className="text-sm">Theme</label>
-        <select
-          value={theme  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          onChange={(e) => setTheme(e.target.value as 'light' | 'dark')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-        >
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
       </div>
       <PdfExportButton
         targetRef={ref}

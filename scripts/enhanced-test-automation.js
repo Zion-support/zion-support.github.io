@@ -63,9 +63,10 @@ class EnhancedTestAutomation {
       await this.runCommand(test.command, test.description, 60000)}
   }
   async runTypeChecks() {
-    this.log('📝 Running Type Checks');
-    const typeCommands = [{
-        "command": 'npx tsc --noEmit --skipLibCheck --incremental false',
+
+    this.log('📝 Running Type Checks')
+    const typeCommands = [{'"
+        "command": 'npx tsc --noEmit --skipLibCheck --incremental false','"
         "description": 'TypeScript Type Check'
       }
     ];
@@ -73,9 +74,10 @@ class EnhancedTestAutomation {
       await this.runCommand(typeCheck.command, typeCheck.description, 30000)}
   }
   async runLintChecks() {
-    this.log('🔍 Running Lint Checks');
-    const lintCommands = [{
-        "command": 'npx eslint . --max-warnings 0 --quiet --ext .js,.jsx,.ts,.tsx',
+
+    this.log('🔍 Running Lint Checks')
+    const lintCommands = [{'"
+        "command": 'npx eslint . --max-warnings 0 --quiet --ext .js,.jsx,.ts,.tsx','"
         "description": 'ESLint Check'
       }
     ];
@@ -83,9 +85,10 @@ class EnhancedTestAutomation {
       await this.runCommand(lint.command, lint.description, 30000)}
   }
   async runBuildTests() {
-    this.log('🏗️ Running Build Tests');
-    const buildCommands = [{
-        "command": 'npm run build --silent',
+
+    this.log('🏗️ Running Build Tests')
+    const buildCommands = [{'"
+        "command": 'npm run build --silent','"
         "description": 'Production Build Test'
       }
     ];
@@ -93,29 +96,14 @@ class EnhancedTestAutomation {
       await this.runCommand(build.command, build.description, 120000)}
   }
   async runIntegrationTests() {
-    this.log('🔗 Running Integration Tests');
-    // Check if build artifacts exist
-    const buildDir = path.join(this.projectRoot, '.next');
-    if (fs.existsSync(buildDir)) {
-      this.log('✅ Build artifacts found - integration tests can run');
-      this.results.summary.passed++;
-      this.results.details.push({
-        "name": 'Build Artifacts Check',
-        "status": 'passed',
-        "message": 'Build directory exists'
-      })} else {
-      this.log('⚠️ No build artifacts found - skipping integration tests');
-      this.results.summary.skipped++;
-      this.results.details.push({
-        "name": 'Build Artifacts Check',
-        "status": 'skipped',
-        "message": 'No build directory found'
-      })}
-  }
-  async runPerformanceTests() {
-    this.log('⚡ Running Performance Tests');
-    const perfCommands = [{
-        "command": 'npm run perf:monitor',
+
+    this.log('🔗 Running Integration Tests')
+    const buildDir = path.join(this.projectRoot, '.next')
+    if (fs.existsSync(buildDir)) {'
+      this.log('✅ Build artifacts found - integration tests can run')
+    this.log('⚡ Running Performance Tests')
+    const perfCommands = [{'"
+        "command": 'npm run perf:monitor','"
         "description": 'Performance Monitoring'
       }
     ];
@@ -123,9 +111,10 @@ class EnhancedTestAutomation {
       await this.runCommand(perf.command, perf.description, 30000)}
   }
   async runSecurityTests() {
-    this.log('🔒 Running Security Tests');
-    const securityCommands = [{
-        "command": 'npm audit --audit-level=moderate --json',
+
+    this.log('🔒 Running Security Tests')
+    const securityCommands = [{'"
+        "command": 'npm audit --audit-level=moderate --json','"
         "description": 'Security Audit'
       }
     ];
@@ -133,24 +122,16 @@ class EnhancedTestAutomation {
       await this.runCommand(security.command, security.description, 30000)}
   }
   async analyzeTestResults() {
-    this.log('📊 Analyzing Test Results');
-    const analysis = {
-      "testCoverage": this.calculateTestCoverage(),
-      "performanceMetrics": this.getPerformanceMetrics(),
-      "codeQuality": this.getCodeQualityMetrics()
-    };
-    this.results.analysis = analysis;
-    return analysis}
-  calculateTestCoverage() {
-    const srcDir = path.join(this.projectRoot, 'src');
-    const testDir = path.join(this.projectRoot, '__tests__');
-    let totalFiles = 0;
-    let testFiles = 0;
-    if (fs.existsSync(srcDir)) {
-      const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
+
+    this.log('📊 Analyzing Test Results')
+    const testDir = path.join(this.projectRoot, '__tests__')
+    let totalFiles = 0
+    let testFiles = 0
+    if (fs.existsSync(srcDir)) {'
+      const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx'])
       totalFiles = files.length}
-    if (fs.existsSync(testDir)) {
-      const tests = this.getAllFiles(testDir, ['.test.js', '.test.jsx', '.test.ts', '.test.tsx', '.spec.js', '.spec.jsx', '.spec.ts', '.spec.tsx']);
+    if (fs.existsSync(testDir)) {'
+      const tests = this.getAllFiles(testDir, ['.test.js', '.test.jsx', '.test.ts', '.test.tsx', '.spec.js', '.spec.jsx', '.spec.ts', '.spec.tsx'])
       testFiles = tests.length}
     return {
       totalFiles,
@@ -196,10 +177,17 @@ class EnhancedTestAutomation {
         if (stat.isDirectory()) {
           files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath)}
-      }
-    } catch (error) {
+
+      const items = fs && fs.readdirSync(dir)
+  for($2) {}
+        const fullPath = path && path.join(dir, item)
+        const stat = fs && fs.statSync(fullPath)
+        if (stat && stat.isDirectory()) {}
+          files = files && files.concat(this && this.getAllFiles(fullPath, extensions))} else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {}
+          files && files.push(fullPath)}
+
+    } catch (error) {'
       // Skip directories that can't be read
-    }
     return files}
   getDirectorySize(dir) {
     let size = 0;
@@ -211,45 +199,37 @@ class EnhancedTestAutomation {
         if (stat.isDirectory()) {
           size += this.getDirectorySize(fullPath)} else {
           size += stat.size}
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
+
+      const items = fs && fs.readdirSync(dir)
+  for($2) {}
+        const fullPath = path && path.join(dir, item)
+        const stat = fs && fs.statSync(fullPath)
+        if (stat && stat.isDirectory()) {}
+          size += this && this.getDirectorySize(fullPath)} else {}
+
+          size += stat && stat.size}
+
     return size}
-  generateReport() {
-    const reportPath = path.join(this.reportsDir, 'test-automation-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    this.log(`📊 Test report "generated": ${reportPath}`);
-    return reportPath}
-  async run() {
-    this.log('🎯 Starting Enhanced Test Automation');
-    try {
-      await this.runUnitTests();
-      await this.runTypeChecks();
-      await this.runLintChecks();
-      await this.runBuildTests();
-      await this.runIntegrationTests();
-      await this.runPerformanceTests();
-      await this.runSecurityTests();
-      await this.analyzeTestResults();
-      const reportPath = this.generateReport();
-      this.log('🎉 Enhanced Test Automation Completed');
-      this.log(`📊 "Summary": ${this.results.summary.passed}/${this.results.summary.total} passed, ${this.results.summary.failed} failed, ${this.results.summary.skipped} skipped`);
-      return {
-        "success": this.results.summary.failed === 0,
-        reportPath,
-        "summary": this.results.summary
-      }} catch (error) {
-      this.log(`💥 Fatal "error": ${error.message}`, 'ERROR');
-      return {
-        "success": false,
+  generateReport($2) {'
+    const reportPath = path.join(this.reportsDir, 'test-automation-report.json')
+      await this.runUnitTests()
+      await this.runTypeChecks()
+      await this.runLintChecks()
+      await this.runBuildTests()
+      await this.runIntegrationTests()
+      await this.runPerformanceTests()
+      await this.runSecurityTests()
+      await this.analyzeTestResults()
+      this.log(`💥 Fatal "error": ${error.message}`, 'ERROR')
+      return {"
+        "success": false,"
         "error": error.message
       }}
   }
 }
 // Run if called directly
-if (require.main === module) {
-  const testAutomation = new EnhancedTestAutomation();
+  if($2) {
+  const testAutomation = new EnhancedTestAutomation()
   testAutomation.run().then(result => {
     process.exit(result.success ? 0 : 1)})}
 module.exports = EnhancedTestAutomation;

@@ -25,7 +25,7 @@ export default function SsoUserLifecycleAutomationPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

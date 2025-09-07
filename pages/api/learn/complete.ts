@@ -15,9 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
 res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
-  }
-  const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
-  if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
     const users = readJson(usersPath)
     const courses = readJson(coursesPath)

@@ -111,6 +111,84 @@ const "ContactPage": React.FC = () => {
                   >
                     <Mail className="w-5 h-5"  />
                     Send Email
+
+import React from 'react'''
+import dynamic from 'next/dynamic'''
+import { motion } from 'framer-motion'''
+import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'''
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })""
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })"
+export default function ContactPage() {
+  const [formData, setFormData] = useState({"
+    "name": '',''
+    "email": '',''
+    "company": '',''
+    "phone": '',''
+    "service": '',''
+    "message": ''')
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);'
+  const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {"
+</HTMLInputElement>"
+      icon: <Phone className="w-6 h-6"  />,"
+</Phone>"
+      "icon": <Mail className="w-6 h-6"  />,"
+</Mail>"
+      "icon": <MapPin className="w-6 h-6"  />,"
+</MapPin>"
+      "icon": <Clock className="w-6 h-6"  />,"
+</Clock>
+    <>"
+      <SEO title="Contact Us - Zion Tech Group"""
+        description="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"""
+        keywords="contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address"""
+        canonical=""https": //ziontechgroup.com/contact""
+       />
+</SEO>
+      <PageTransition>
+</PageTransition>"
+        <main className="min-h-screen bg-white">"
+</main>"
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
+</section>"
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">"
+</div>
+              <motion.div;"
+                initial={{ opacity: 0, "y": 20 }}""
+                animate={{ "opacity": 1, "y": 0 }}""
+                transition={{ "duration": 0.6 }}""
+                className="text-center""
+              >
+</motion>"
+                <h1 className="text-4xl "md": text-6xl font-bold text-gray-900 mb-6">"
+</h1>"
+                  Get In <span className="text-blue-600">Touch</span>"
+                </h1>"
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">"
+</p>
+                </p>"
+                <div className="flex flex-col "sm": flex-row gap-4 justify-center">"
+</div>
+                  <motion.a;"
+                    href="tel:+13024640950""
+                    whileHover={{ scale: 1.05 }}"
+                    whileTap={{ "scale": 0.95 }}""
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
+                  >
+</motion>"
+                    <Phone className="w-5 h-5"  />"
+</Phone>
+                  </motion.a>
+                  <motion.a;"
+                    href="mailto:kleber@ziontechgroup.com""
+                    whileHover={{ scale: 1.05 }}"
+                    whileTap={{ "scale": 0.95 }}""
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
+                  >
+</motion>"
+                    <Mail className="w-5 h-5"  />"
+</Mail>
                   </motion.a>
                 </div>
               </motion.div>
@@ -275,6 +353,134 @@ const "ContactPage": React.FC = () => {
                   >
                     <Send className="w-5 h-5"  />
                     Send Message
+          </section>"
+          <section className="bg-gray-50 py-20">"
+</section>"
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">"
+</div>
+              <motion.div;"
+                initial={{ opacity: 0, "y": 20 }}""
+                animate={{ "opacity": 1, "y": 0 }}""
+                transition={{ "duration": 0.6 }}""
+                className="text-center mb-16""
+              >
+</motion>"
+                <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+                </h2>"
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+</p>
+                </p>
+              </motion.div>"
+              <div className="max-w-4xl mx-auto">"
+</div>
+                <motion.form;"
+                  initial={{ opacity: 0, "y": 20 }}""
+                  animate={{ "opacity": 1, "y": 0 }}""
+                  transition={{ "duration": 0.6, "delay": 0.2 }}""
+                  className="bg-white rounded-xl shadow-lg p-8""
+                >
+</motion>"
+                  <div className="grid grid-cols-1 "md": grid-cols-2 gap-6 mb-6">"
+</div>
+                    <div>
+</div>"
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                      </label>"
+                      <input type="text"""
+                        id="name"""
+                        name="name""
+                        required;"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                        placeholder="Your full name""
+                       />
+</input>
+                    </div>
+                    <div>
+</div>"
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                      </label>"
+                      <input type="email"""
+                        id="email"""
+                        name="email""
+                        required;"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                        placeholder="your.email@example.com""
+                       />
+</input>
+                    </div>
+                  </div>"
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">"
+</div>
+                    <div>
+</div>"
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                      </label>"
+                      <input type="tel"""
+                        id="phone"""
+                        name="phone"""
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                        placeholder="+1 (555) 123-4567""
+                       />
+</input>
+                    </div>
+                    <div>
+</div>"
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                      </label>"
+                      <input type="text"""
+                        id="company"""
+                        name="company"""
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                        placeholder="Your company name""
+                       />
+</input>
+                    </div>
+                  </div>"
+                  <div className="mb-6">"
+</div>"
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                    </label>
+                    <select;"
+                      id="service"""
+                      name="service"""
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                    >
+</select>"
+                      <option value="">Select a service</option>"
+                        <option key={index} value={service}>
+</option>
+                        </option>
+                    </select>
+                  </div>"
+                  <div className="mb-6">"
+</div>"
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                    </label>
+                    <textarea;"
+                      id="message"""
+                      name="message""
+                      rows={6}
+                      required;"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent"""
+                      placeholder="Tell us about your project requirements...""
+                    ></textarea>
+                  </div>
+                  <motion.button;"
+                    type="submit""
+                    whileHover={{ scale: 1.02 }}"
+                    whileTap={{ "scale": 0.98 }}""
+                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": bg-blue-700 transition-colors""
+                  >
+</motion>"
+                    <Send className="w-5 h-5"  />"
+</Send>
                   </motion.button>
                 </motion.form>
               </div>

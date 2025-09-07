@@ -7,12 +7,6 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch: {}
-
-jobs:
-  run-automations:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4

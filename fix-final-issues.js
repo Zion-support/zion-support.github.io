@@ -194,32 +194,6 @@ import { ArrowRight, Phone } from "lucide-react";
 }
 }
 
-export default function ${componentName}() {
-  return (;
-    <div className="min-h-screen bg-white">;
-      <div className="max-w-4xl mx-auto px-6 py-16">;
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">${componentName}</h1>;
-        <p className="text-lg text-gray-600 mb-8">;
-          This is a placeholder component for ${componentName.toLowerCase()}.;
-        </p>;
-        ${isPage ? ";
-        <div className="flex flex-col "sm": flex-row gap-4">;
-          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
-            Contact Us <ArrowRight className="w-4 h-4 ml-2" />;
-          </Link>;
-          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">;
-            Go Home <Phone className="w-4 h-4 ml-2" />;
-          </Link>;
-        </div>" : ""}
-      </div>;
-    </div>;
-  )}
-";
-// Template for utility files;
-const utilityTemplate = (fileName) => "// ${fileName} utility;
-}
-}
-
 export const ${fileName.replace(/[^a-zA-Z0-9]/g, "")} = {
   // Placeholder utility functions;
   "init": () => {
@@ -240,6 +214,7 @@ export class ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service {
       throw error}
   }
 }
+;
 export default new ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service();
 ";
 // Template for type files;
@@ -262,6 +237,7 @@ function getComponentName(filePath) {
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
     .join("")}
+;
 // Fix remaining corrupted files;
 remainingCorruptedFiles.forEach(filePath => {
   try {
@@ -281,6 +257,7 @@ remainingCorruptedFiles.forEach(filePath => {
   content = serviceTemplate(path.basename(filePath, path.extname(filePath)))} else if (isType) {
   content = typeTemplate(path.basename(filePath, path.extname(filePath)))} else {
   content = basicComponentTemplate(componentName, isPage)}
+    ;
     fs.writeFileSync(filePath, content, "utf8");
     console.log("✓ Fixed ${filePath}")} catch (error) {
   console.error("✗ Error fixing ${filePath}:`, error.message)}

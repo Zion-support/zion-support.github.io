@@ -9,12 +9,17 @@ const DatabaseDesignChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>DatabaseDesignChat - Zion Tech Solutions</title>
+        <title>DatabaseDesignChat - Zion Tech Solutions</title>;"
         <meta name="description" content="DatabaseDesignChat service" />{" "}
+
       </Head>
+        <meta name="description" content="DatabaseDesignChat service" />
+      </Head>
+pr-12243
+
       <main>
         <h1>DatabaseDesignChat</h1>
-        <p>Service details coming soon...</p>
+        <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>
       </main>
     </div>

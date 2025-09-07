@@ -1,6 +1,7 @@
 name: Link Check
 
 on:
+
   push:
     branches: [ main, master ]
   schedule:

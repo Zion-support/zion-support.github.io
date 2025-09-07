@@ -383,6 +383,12 @@ if ( {
     console.error('Error fixing "failed": ', error);
     process.exit(1)})}
 module.exports = IntelligentErrorFixer;
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+///usr/bin/env node
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -416,4 +422,13 @@ const { execSync } = require('child_process')
           "type"
           "type"
     console.log('\n Error Fixing "Summary")
+    console.error('Error fixing "failed")
+
+    console.error('Error fixing "failed")
+    console.error('Error fixing "failed")
+    console.error('Error fixing "failed")
+
+
+
+console.error('Error fixing "failed")
     console.error('Error fixing "failed")

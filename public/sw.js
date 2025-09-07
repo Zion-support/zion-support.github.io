@@ -111,6 +111,7 @@ const CACHE_NAME = 'zion-tech-group-v1'; const STATIC_CACHE = 'static-v1'; const
     )
 }
 });
+
 // Helper functions
 function shouldCache(url) {
   // Cache API responses, images, and other assets
@@ -140,6 +141,7 @@ async function doBackgroundSync() {
   console.error('Background sync failed:', error)
 }
 }
+
 async function getOfflineData() {
   // Get offline data from IndexedDB or localStorage
   return []
@@ -158,6 +160,7 @@ async function clearOldCaches() {
     oldCaches.map(name => caches.delete(name))
   )
 }
+
 // Periodic cache cleanup
 setInterval(() => {
   clearOldCaches()

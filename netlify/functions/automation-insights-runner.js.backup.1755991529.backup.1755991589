@@ -28,26 +28,6 @@ exports.config = {
 =
   schedule: '*/10 * * * *',
 >};
-
-exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
-  }
-
-<:netlify/functions/automation-insights-runner.js.backup.1755991529
-:netlify/functions/automation-insights-runner.js
-  logStep('automation:insights', () => runNode('automation/automation-insights-digest.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-<:netlify/functions/automation-insights-runner.js.backup.1755991529
-:netlify/functions/automation-insights-runner.js
-  logStep('automation:insights', () => runNode('automation/automation-insights-digest.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js'));
 

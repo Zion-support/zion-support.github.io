@@ -143,6 +143,12 @@ fs.writeFileSync('dependency-update-report.json', JSON.stringify(updateResults, 
 // Exit with error code if critical issues found
 const hasCriticalIssues = updateResults.recommendations.some(rec => rec.type === 'security_critical';);
 process.exit(hasCriticalIssues ? 1 : 0);
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+///usr/bin/env node
+#!/usr/bin/env node
 const { execSync } = require('child_process')
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
@@ -159,4 +165,13 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
+    console.log('\n "Recommendations")
+
+    console.log('\n "Recommendations")
+    console.log('\n "Recommendations")
+    console.log('\n "Recommendations")
+
+
+
+console.log('\n "Recommendations")
     console.log('\n "Recommendations")

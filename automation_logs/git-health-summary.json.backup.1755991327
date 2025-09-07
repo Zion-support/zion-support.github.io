@@ -21,6 +21,7 @@
     "fsck": {
       "status": 0,
       "output": "dangling tree d4f031a23dbd1679466038f364c54cbbdae7b964\n"    },
+
     "origin": "origin\thttps://x-access-token:ghs_MvlRpXkYffreNQF8jUrOZ4sCN4RatT0Gr3Kf@github.com/Zion-Holdings/zion.app (fetch)\norigin\thttps://x-access-token:ghs_MvlRpXkYffreNQF8jUrOZ4sCN4RatT0Gr3Kf@github.com/Zion-Holdings/zion.app (push)",
     "fsck": {
       "status": 0,

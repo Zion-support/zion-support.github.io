@@ -61,6 +61,7 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/services/ai-development"
+
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   AI Development
@@ -73,6 +74,7 @@ const "EnhancedNavigation": React.FC = () => {
                 </Link>{' '}
                 <Link
                   href="/services/web-development"
+
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Web Development
@@ -85,6 +87,7 @@ const "EnhancedNavigation": React.FC = () => {
                 </Link>{' '}
                 <Link
                   href="/services/blockchain-solutions"
+
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Blockchain Solutions
@@ -122,6 +125,7 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/solutions/enterprise"
+
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Enterprise Solutions
@@ -134,6 +138,7 @@ const "EnhancedNavigation": React.FC = () => {
                 </Link>{' '}
                 <Link
                   href="/solutions/startups"
+
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Startups
@@ -146,6 +151,7 @@ const "EnhancedNavigation": React.FC = () => {
                 </Link>{' '}
                 <Link
                   href="/solutions/finance"
+
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Finance
@@ -160,6 +166,7 @@ const "EnhancedNavigation": React.FC = () => {
             </Link>{' '}
             <Link
               href="/solutions"
+
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Solutions
@@ -172,6 +179,7 @@ const "EnhancedNavigation": React.FC = () => {
             </Link>{' '}
             <Link
               href="/blog"
+
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Blog
@@ -184,6 +192,7 @@ const "EnhancedNavigation": React.FC = () => {
             </Link>{' '}
             <Link
               href="/contact"
+
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Contact
@@ -239,6 +248,7 @@ const "EnhancedNavigation": React.FC = () => {
                   </Link>{' '}
                   <Link
                     href="/services/cloud-services"
+
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Cloud Services
@@ -251,6 +261,7 @@ const "EnhancedNavigation": React.FC = () => {
                   </Link>{' '}
                   <Link
                     href="/services/mobile-development"
+
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Mobile Development
@@ -263,6 +274,7 @@ const "EnhancedNavigation": React.FC = () => {
                   </Link>{' '}
                   <Link
                     href="/services/iot-platforms"
+
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     IoT Platforms
@@ -284,6 +296,7 @@ const "EnhancedNavigation": React.FC = () => {
                   {' '}
                   <Link
                     href="/solutions/enterprise"
+
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Enterprise Solutions
@@ -296,6 +309,7 @@ const "EnhancedNavigation": React.FC = () => {
                   </Link>{' '}
                   <Link
                     href="/solutions/startups"
+
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Startups
@@ -308,6 +322,7 @@ const "EnhancedNavigation": React.FC = () => {
                   </Link>{' '}
                   <Link
                     href="/solutions/finance"
+
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Finance
@@ -322,6 +337,7 @@ const "EnhancedNavigation": React.FC = () => {
               </Link>{' '}
               <Link
                 href="/about"
+
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 About
@@ -334,6 +350,7 @@ const "EnhancedNavigation": React.FC = () => {
               </Link>{' '}
               <Link
                 href="/careers"
+
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Careers

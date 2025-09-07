@@ -4,8 +4,7 @@ export: interface InnovativeAIService { id: string; name: string; tagline: strin
    name: string;
    tagline: string;
    price: string;
-   period: string;
-   description: string;
+
    features: string[];
    popular: boolean;
    icon: string;
@@ -25,12 +24,9 @@ export: interface InnovativeAIService { id: string; name: string; tagline: strin
    competitors: string[];
    marketSize: string;
    growthRate: string;
-   contactInfo: {
-   mobile: string;
-   email: string;
-   address: string;
-   website: strin,g}
+
   "realImplementation": boolean;
+
   implementationDetails: string;
   launchDate: string;
   customers: number;

@@ -28,6 +28,6 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
               ))}
           </div>
         </div>
-      ))}
+      </div>
     </div>
 );

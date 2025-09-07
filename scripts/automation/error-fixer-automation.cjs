@@ -466,9 +466,9 @@ const path = require("path")
 const { execSync } = require("child_process")
 const glob = require("glob")
     this.reportsDir = path.join(this.projectRoot, "error-reports")
-// console.log("" Starting Error Fixer Automation...")
-      console.log("" Error Fixer Automation completed successfully!")
-      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues"")
+// console.log( Starting Error Fixer Automation...")
+      console.log( Error Fixer Automation completed successfully!")
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues)
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
 // console.log("" Error Fixer Automation completed successfully!")
@@ -537,7 +537,7 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   let content = fs.readFileSync(file, "utf8")
             /import\s+React\s+from\s+["]react[""];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "
-            /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react";
+            /import\s+React\s+from\s+["]react["];\s*import\s+React\s+from\s+[""]react[""]/g,import React from "react"
             /interface\s+(\w+)\s*{[^}]*}\s*interface\s+\1/g,interface $1"
           .replace(/(\w+)\s*=\s*([^]+)\s*$/gm, "$1 = $2;"
           .replace(/\bundefined\""b/g"", "null")
@@ -644,3 +644,11 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
         "totalErrors"
         "successRate"
       console.error('Automation "failed")
+
+console.error('Automation "failed")
+      console.error('Automation "failed")
+      console.error('Automation "failed")
+      console.error('Automation "failed")
+// console.log( Error Fixer Automation completed successfully!")
+      console.log(")"
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"

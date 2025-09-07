@@ -1,10 +1,31 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to fix merge conflicts in a file
+// List of files with merge conflicts
+const files = [
+  'app/services/mobile-development/page.tsx',
+  'app/services/it-services/page.tsx',
+  'app/services/project-management/page.tsx',
+  'app/services/ai-services/page.tsx',
+  'app/services/blockchain/page.tsx',
+  'app/services/automation-solutions/page.tsx',
+  'app/services/crm-platform/page.tsx',
+  'app/services/industry-solutions/finance/page.tsx',
+  'app/services/mobile-app-development/page.tsx',
+  'app/services/ai-hr-management/page.tsx',
+  'app/services/crm-solution/page.tsx',
+  'app/services/helpdesk-platform/page.tsx',
+  'app/services/ecommerce-platform/page.tsx',
+  'app/services/digital-transformation/page.tsx',
+  'app/services/analytics-dashboard/page.tsx',
+  'app/services/cloud-services/page.tsx',
+  'app/services/ai-inventory-management/page.tsx',
+  'app/services/project-management-suite/page.tsx',
+  'app/services/social-media-management/page.tsx',
+  'app/services/email-automation/page.tsx',
+  'app/services/micro-saas/page.tsx'
+];
+
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -29,7 +50,6 @@ function fixMergeConflicts(filePath) {
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 

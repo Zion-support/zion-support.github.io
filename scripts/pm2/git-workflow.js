@@ -29,126 +29,77 @@ gitWorkflow.run().catch(error = > {process.exit(1)});
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
               cw: d: this.projectRoot,
-              encodin: g: 'utf8'
-            }).trim(),
-,
+              encodin: g: 'utf8)
             branchInfo.push({,
               nam: e: branchName,
-              lastCommi: t: lastCommit,
+              lastCommi: t: lastCommit,)
               commitCoun: t: parseInt(commitCount),
               isActiv: e: true
             })
           } catch (error) {,
             // Skip if can't access branch
-  },;
-,;
-  async checkBranchHealth() {,;
-    try {,;
-      this.log('🌿 Checking branch health...'),;
-,;
-      const branches = execSync('git branch -r', {,;
-        cw: d: this.projectRoot,;
-        encodin: g: 'utf8';
-      }).trim().split('\n'),;
-,;
-      const branchInfo = [],;
-,;
-      for (const branch of branches) {,;
-        const branchName = branch.replace('origin/', '').trim(),;
-        if (branchName && !branchName.includes('HEAD')) {,;
-          try {,;
-            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,;
-              cw: d: this.projectRoot,;
-              encodin: g: 'utf8';
-            }).trim(),;
-,;
-            const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,;
-              cw: d: this.projectRoot,;
-              encodin: g: 'utf8';
-            }).trim(),;
-,;
-            branchInfo.push({,;
-              nam: e: branchName,;
-              lastCommi: t: lastCommit,;
-              commitCoun: t: parseInt(commitCount),;
-              isActiv: e: true;
-            });
-          } catch (error) {,;
-            // Skip if can't access branch;
-          }
-        }
-      },;
-,;
-      return {,;
-        succes: s: true,;
-        branche: s: branchInfo;
-      }
-    } catch (error) {,;
-      return {,;
-        succes: s: false,;
-        erro: r: error.message,;
-        branche: s: [];
-      }
-    }
-  },;
-,;
-  async checkMergeConflicts() {,;
-    try {,;
-      this.log('🔀 Checking for merge conflicts...'),;
-,;
-      const status = execSync('git status --porcelain', {,;
-        cw: d: this.projectRoot,;
-        encodin: g: 'utf8';
-      }),;
-,;
-      const conflictFiles = status,;
-        .split('\n'),;
-        .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD')),;
-        .map(line => line.trim().split(/\s+/)[1]),;
-,;
-      return {,;
-        succes: s: true,;
-        hasConflict: s: conflictFiles.length > 0,;
-        conflictFile: s: conflictFiles;
-      }
-    } catch (error) {,;
-      return {,;
-        succes: s: false,;
-        erro: r: error.message,;
-        hasConflict: s: false,;
-        conflictFile: s: [];
-      }
-    }
   },
 ,
+  async checkBranchHealth() {,
+    try {,
+      this.log('🌿 Checking branch health...'),
+      const branches = execSync('git branch -r', {,
+        cw: d: this.projectRoot,
+        encodin: g: 'utf8';')
+      }).trim().split('\n'),
+      const branchInfo = [],
+  for($2) {,
+        const branchName = branch.replace('origin/', ).trim(),
+        if (branchName && !branchName.includes('HEAD')) {,
+          try {,;`
+            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,;"
+              cw: d: this.projectRoot,;"
+            }).trim(),
+,;`
+            const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
+            branchInfo.push({,
+              nam: e: branchName,
+              lastCommi: t: lastCommit,;)
+              commitCoun: t: parseInt(commitCount),
+            })
+          } catch (error) {,
+            // Skip if can't access branch
+      return {,
+        succes: s: true,
+        branche: s: branchInfo
+        succes: s: false,
+        erro: r: error.message,
+        branche: s: []
+  async checkMergeConflicts() {,
+      this.log('🔀 Checking for merge conflicts...'),
+      const status = execSync('git status --porcelain', {,
+      }),
+      const conflictFiles = status,
+        .split('\n'),
+        .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD')),
+        .map(line => line.trim().split(/\s+/)[1]),
+        hasConflict: s: conflictFiles.length > 0,
+        conflictFile: s: conflictFiles
+        hasConflict: s: false,
+        conflictFile: s: []
+  },
   async checkStaleBranches() {,
     try {,
       this.log('🍂 Checking for stale branches...'),
-,
       const branches = execSync('git branch -r', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8'
       }).trim().split('\n'),
-,
       const staleBranches = [],
       const mainBranch = 'main',
-,
-      for (const branch of branches) {,
-        const branchName = branch.replace('origin/', '').trim(),
+  for($2) {,
+        const branchName = branch.replace('origin/', ).trim(),
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,
-          try {,
-            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
-              cw: d: this.projectRoot,
-              encodin: g: 'utf8'
-            }).trim(),
-,
+          try {,`
+            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,"
+              cw: d: this.projectRoot,"
             const lastCommitDate = new Date(lastCommit),
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),
-,
-            if (daysSinceLastCommit > 30) {,
+  if($2) {,
               staleBranches.push({,
-                nam: e: branchName,
-                lastCommi: t: lastCommit,
                 daysSinceLastCommi: t: Math.floor(daysSinceLastCommit)
               })
   },;

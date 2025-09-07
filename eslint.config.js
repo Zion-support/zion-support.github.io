@@ -56,7 +56,6 @@ export default [
       "*.spec.tsx"
     ]
   },
-  js.configs.recommended,
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
@@ -211,7 +210,7 @@ export default [
     }
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'no-undef': 'error'
+      'prefer-const': 'error'
     }
       'no-unused-vars': 'warn'
     }

@@ -177,8 +177,7 @@ monitor.startStatusReporting()
 const fs = require("fs")
 const path = require("path")
 const { spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 const { spawn } = require("child_process")
   console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}
     this.log("Continuous error monitoring is now active")
@@ -227,4 +226,13 @@ const { spawn } = require("child_process")
 process.on("SIGINT")
   console.log(`� Received SIGINT, shutting down gracefully...``)
 process.on("SIGTERM")
+  console.log(")
+
+  console.log(")
+  console.log(")
+  console.log(")
+
+
+
+console.log(")
   console.log(")

@@ -7,6 +7,7 @@ import {
   Settings,
   Wand2,;
 } from 'lucide-react';
+
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
 import type {
   BookProject,

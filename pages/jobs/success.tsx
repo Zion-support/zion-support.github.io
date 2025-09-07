@@ -1,5 +1,5 @@
-import Link from 'next/link';
-export default function JobSuccessPage() {
+import React from 'react'
+export default function Page() {
   return (
     <div className="max-w-xl text-center mx-auto py-16">
       <div className="mx-auto mb-6 h-20 w-20 rounded-full bg-green-100 dark: bg-green-900/30 flex items-center justify-center">

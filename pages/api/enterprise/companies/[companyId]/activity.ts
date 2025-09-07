@@ -22,17 +22,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore';
 export default function handler(req, res) {
   try {
-  const { companyId } = req.query;
-  if (!companyId || typeof companyId !== 'string') {;
-    return res.status(400).json({ error: 'companyId required' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    res.status(200).json({ message: 'API endpoint working' })
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

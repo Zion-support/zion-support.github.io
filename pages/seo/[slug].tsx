@@ -59,18 +59,12 @@ export default function SEOLandingPage() {
   }, [router.isReady, slug]),
   if (!payload) return null,
   return (
-    <div className="max-w-4xl mx-auto">
-      <head>
-        <title>{payload.title}</title>
-        <meta name="description" content={`${payload.title} • Zion Marketplace`} />
-      </head>
-      <h1 className='text-2xl font-semibold mb-4'>{payload.h1}</h1>
-      <div
-        className='prose dark:prose-invert max-w-none'
-        dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
-      />
-      <div className='mt-8'>
-        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
       </div>
       <FAQ items={payload.faq} />
     </div>

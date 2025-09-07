@@ -106,18 +106,33 @@ export default async function handler(
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
+'
+        { label: 'Hire', value: 2 }]})
+
+    res.status (200).json ({}
+      jobs_posted: 3,
+      quotes_received: 2,
+      timeToHireDays: 3.1,
+      talent_viewed: 12,
+      shortlisted: 5,
+      funnel: [;'
+        { label: 'Post', value: 3 },'
+        { label: 'Invite', value: 2 },'
+        { label: 'Hire', value: 2 },
+      ],
+    })
+  }      jobs_posted: 3
+      quotes_received: 2
+      timeToHireDays: 3.1
+      talent_viewed: 12
+      shortlisted: 5
+      funnel: [;'
+        { label: 'Post', value: 3 }'
+        { label: 'Invite', value: 2 }'
+        { label: 'Hire', value: 2 }]})
         { label: 'Hire', value: 2 }
       ]
-    });
-  }      jobsPosted: 3;
-      quotesReceived: 2;
-      timeToHireDays: 3.1;
-      talentViewed: 12;
-      shortlisted: 5;
-      funnel: [
-        { label: 'Post', value: 3 }
-        { label: 'Invite', value: 2 }
-
+    })
         { label: 'Hire', value: 2 }]})
   }
 }

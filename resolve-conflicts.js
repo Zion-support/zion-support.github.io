@@ -8,30 +8,28 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-function resolveMergeConflicts() {
+import fs from 'fs';
+import path from 'path';
+
+function resolveConflicts(filePath) {
   try {
-    // Get list of conflicted files
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-      .trim()
-      .split('\n')
-      .filter(file => file.length > 0);
-
-    console.log(`Found ${conflictedFiles.length} conflicted files`);
-
-    // Accept our changes for all conflicted files
-    for (const file of conflictedFiles) {
-      try {
-        execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
-        execSync(`git add "${file}"`, { stdio: 'pipe' });
-        console.log(`Resolved: ${file}`);
-      } catch (error) {
-        console.log(`Error resolving ${file}: ${error.message}`);
-      }
-    }
-
-    console.log('All merge conflicts resolved');
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove conflict markers and keep HEAD version
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)    
+    // Remove any remaining conflict markers
+    content = content.replace(/\n/g, '');
+    content = content.replace(/\n/g, '');
+    content = content.replace(/    
+    // Clean up extra whitespace
+    content = content.replace(/\n\n\n+/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Resolved conflicts in: ${filePath}`);
+    return true;
   } catch (error) {
-    console.error('Error resolving merge conflicts:', error.message);
+    console.error(`Error resolving ${filePath}:`, error.message);
+    return false;
   }
 }
 

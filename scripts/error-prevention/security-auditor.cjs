@@ -12,11 +12,12 @@ class SecurityAuditor {}
     this.interval = 300000; // 5 minutes;
   };
   async start() {}
-    console.log('Starting Security Auditor...');
-    this.isRunning = true;
-    // Initial security check;
-    await this.runSecurityCheck();
-    // Set up interval for periodic checks;
+
+    this.isRunning = true
+    // Initial security check
+    await this.runSecurityCheck();    // Initial security check
+    await this.runSecurityCheck()
+    // Set up interval for periodic checks
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
     }
@@ -26,15 +27,35 @@ class SecurityAuditor {}
   async runSecurityCheck() {}
     try {}
       console.log('Running security audit...');
+
+    
+
+    
+
+
+    console.log('Security Auditor started successfully')};
+      this.runSecurityCheck()}, this.interval)
+    console.log('Security Auditor started successfully')}
+  async runSecurityCheck() {}
+    try {}
+      console.log('Running security audit...')
       const child = spawn('npm', ['audit'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
-      let output = ;';';
-      let errorOutput = ;';';
+        "cwd": process.cwd();"
+      };)
+      let output = ;';'
+      let errorOutput = ;';'
       child.stdout.on('data', (data) => {}
         output += data.toString()}
-});
+})
+      child.stderr.on('data', (data) => {}
+        errorOutput += data.toString()}
+})
+      let output = ;';'
+      let errorOutput = ;';'
+      child.stdout.on('data', (data) => {}
+        output += data.toString()}
+})
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
@@ -50,19 +71,21 @@ class SecurityAuditor {}
   }
   async attemptSecurityFix() {
     try {
+
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Security audit passed ✓')) {}
      {}
           console.log('Security audit passed ✓')}} else {}
-          console.log('Security audit found issues ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
-          // Attempt to auto-fix security issues;
-          this.attemptSecurityFix()};
+console.log('Security audit found issues ✗')
+          console.log('"Output": ', output)
+          console.log('"Errors": ', errorOutput)
+          // Attempt to auto-fix security issues
+          this.attemptSecurityFix()}
       })} catch (error) {}
-      console.error('Error running security "audit": ', error.message)};
-  };
+      console.error('Error running security "audit": ', error.message)}
+  }
   async attemptSecurityFix() {}
     try {}
       console.log('Attempting to fix security issues...');
@@ -92,38 +115,54 @@ class SecurityAuditor {}
 if ( {
   const auditor = new SecurityAuditor) {
      {
+
+
+        "cwd": process.cwd()
+      };)
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Security fix completed ✓')) {}
      {}
           console.log('Security fix completed ✓')}} else {}
-          console.log('Security fix failed ✗')};
+          console.log('Security fix failed ✗')}
       })} catch (error) {}
-      console.error('Error running security "fix": ', error.message)};
-  };
-  stop() {}
-    console.log('Stopping Security Auditor...');
-    this.isRunning = false;
+console.error('Error running security "fix": , error.message)}
+  }
+  stop($2) {}
+    console.log('Stopping Security Auditor...)
+    this.isRunning = false
     if ( {})
-      clearInterval(this.intervalId)};
+      clearInterval(this.intervalId)}
     console.log('Security Auditor stopped')) {}
      {}
-      clearInterval(this.intervalId)};
-    console.log('Security Auditor stopped')}};
-};
-// Start the auditor if run directly;
-if ( {})
+      clearInterval(this.intervalId)}
+    console.log('Security Auditor stopped')}}
+}
+// Start the auditor if run directly
   const auditor = new SecurityAuditor) {}
-     {}
-  const auditor = new SecurityAuditor}(;);
-  // Handle graceful shutdown;
+const auditor = new SecurityAuditor}(;)
+  // Handle graceful shutdown
   process.on('SIGINT', () => {}
-    auditor.stop();
+    auditor.stop()
     process.exit(0)}
-});
+})
   process.on('SIGTERM', () => {}
-    auditor.stop();
+    auditor.stop()
     process.exit(0)}
 });
   auditor.start().catch(console.error)};
 module.exports = SecurityAuditor;
+module.exports = SecurityAuditor;
+module.exports = SecurityAuditor;
+  // Handle graceful shutdown;
+
+  auditor.start().catch(console.error)};
+
+})
+  auditor.start().catch(console.error)}
+  auditor.start().catch(console.error)}
+module.exports = SecurityAuditor
+module.exports = SecurityAuditor
+  // Handle graceful shutdown
+  auditor.start().catch(console.error)}

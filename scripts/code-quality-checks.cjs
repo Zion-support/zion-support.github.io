@@ -54,6 +54,14 @@ class CodeQualityChecks {
     try {
       const result = execSync("npm run build", { "encoding": "utf8" })
       this.addCheck("Performance", "passed", "Build completed successfully")} catch (error) {
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const { execSync } = require("child_process")
+const fs = require("fs")
+///usr/bin/env node
+const { execSync } = require("child_process")
+
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -95,4 +103,13 @@ qualityChecks.runChecks().catch(console.error)
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
+    console.log(`� Report saved "to"`)
+
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+
+
+
+console.log(`� Report saved "to"`)
     console.log(`� Report saved "to"`)

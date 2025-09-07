@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 import {
   createSessionCookie
   validateCredentials;
@@ -25,5 +25,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ ok: true });  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
   res.setHeader('Set-Cookie', cookie);
 
+    return res && res.status(405).json({ error: 'Method not allowed' })
+  const result = validateCredentials(email, password, code);'
+  res.setHeader('Set-Cookie', cookie)
   return res.status(200).json({ ok: true })
 }

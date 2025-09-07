@@ -45,92 +45,83 @@ class MasterAutomation {}
       const { stdout, stderr } = await execAsync(command, {})
         cwd: process.cwd(),
         timeout: 30000,
-        ...options}
-});
-      return { success: true, stdout, stderr };
-    } catch (error) {}
-      this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
-        success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
-      };
-    }
-  }
+        ...options
+      })
+      this.log(`✅ ${description} completed successfully`)
+      return { success: true, stdout, stderr }
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'error')
+      return {
+        success: false,
+        stdout: error.stdout || '',
+        stderr: error.stderr || error.message
+      }
   async checkPM2Status() {
-    this.log("Checking PM2 status.");
-    const result = await this.runCommand("pm2 status");
-    if (result.success) {
-      this.log("PM2 status check completed");
-      return true;
+    this.log('Checking PM2 status...')
+    const result = await this.runCommand('pm2 status')
+  if($2) {
+      this.log('PM2 status check completed')
+      return true
     } else {
-      this.log("PM2 status check failed");
-      return false;
-    }
-  }
+      this.log('PM2 status check failed')
+      return false
   async startPM2Processes() {
-    this.log("Starting PM2 processes.");
+    this.log('Starting PM2 processes...')
     // Start all processes from ecosystem file
-    const result = await this.runCommand("pm2 start ecosystem.config.cjs");
-    if (result.success) {
-      this.log("PM2 processes started successfully");
-      return true;
+    const result = await this.runCommand('pm2 start ecosystem.config.cjs')
+  if($2) {
+      this.log('PM2 processes started successfully')
+      return true
     } else {
-      this.log("Failed to start PM2 processes");
-      return false;
-    }
-  }
+      this.log('Failed to start PM2 processes')
+      return false
   async stopPM2Processes() {
-    this.log("Stopping PM2 processes.");
-    for (const processName of this.pm2Processes) {
-      await this.runCommand(`pm2 stop ${processName}`);
-    }
-    this.log("PM2 processes stopped");
-  }
+    this.log('Stopping PM2 processes...')
+  for($2) {
+      await this.runCommand(`pm2 stop ${processName}`)
+    this.log('PM2 processes stopped')
   async restartPM2Processes() {
-    this.log("Restarting PM2 processes.");
-    const result = await this.runCommand("pm2 restart ecosystem.config.cjs");
-    if (result.success) {
-      this.log("PM2 processes restarted successfully");
-      return true;
+    this.log('Restarting PM2 processes...')
+    const result = await this.runCommand('pm2 restart ecosystem.config.cjs')
+  if($2) {
+      this.log('PM2 processes restarted successfully')
+      return true
     } else {
-      this.log("Failed to restart PM2 processes");
-      return false;
-    }
-  }
+      this.log('Failed to restart PM2 processes')
+      return false
   async getPM2Logs(processName = null, lines = 50) {
-    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ""}.`);
-    const command = processName 
-      ? `pm2 logs ${processName} --lines ${lines}` 
-      : `pm2 logs --lines ${lines}`;
-    const result = await this.runCommand(command);
-    if (result.success) {
-      this.log("PM2 logs retrieved successfully");
-      return result.stdout;
+    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`)
+    const command = processName
+      ? `pm2 logs ${processName} --lines ${lines}`
+      : `pm2 logs --lines ${lines}`
+    const result = await this.runCommand(command)
+  if($2) {
+      this.log('PM2 logs retrieved successfully')
+      return result.stdout
     } else {
-      this.log("Failed to get PM2 logs");
-      return null;
-    }
-  }
+      this.log('Failed to get PM2 logs')
+      return null
   async monitorProcesses() {
-    this.log("Monitoring PM2 processes.");
-    const result = await this.runCommand("pm2 jlist");
-    if (result.success) {
+    this.log('Monitoring PM2 processes...')
+    const result = await this.runCommand('pm2 jlist')
+  if($2) {
       try {
-        const processes = JSON.parse(result.stdout);
-        const runningProcesses = processes.filter(p => p.pm2_env && p.pm2_env.status === "online");
-        this.log(`Found ${runningProcesses.length} running processes`);
-        for (const process of runningProcesses) {
-          this.log(`  Process: ${process.name} - Status: ${process.pm2_env.status} - Uptime: ${process.pm2_env.pm_uptime}`);
-        }
-        return runningProcesses;
+        const processes = JSON.parse(result.stdout)
+        const runningProcesses = processes.filter(
+          p => p.pm2_env && p.pm2_env.status === 'online'
+        )
+        this.log(`Found ${runningProcesses.length} running processes`)
+  for($2) {
+          this.log(
+            `Process: ${process.name} - Status: ${process.pm2_env.status} - Uptime: ${process.pm2_env.pm_uptime}`
+          )
+        return runningProcesses
       } catch (error) {
         this.log(`Error parsing PM2 process list: ${error.message}`);
         return [];
 
   async runBuildProcess() {
-    this.log('🚀 Starting build process...');
-
+    this.log('🚀 Starting build process...')
     const steps = [
       { command: 'npm install', description: 'Installing dependencies' },
       { command: 'npm run build', description: 'Building application' },
@@ -263,8 +254,7 @@ class MasterAutomation {}
       this.log("All processes are running normally");
 
   async runQualityChecks() {
-    this.log('🔍 Running quality checks...');
-
+    this.log('🔍 Running quality checks...')
     const checks = [
       { command: 'npm run lint', description: 'Linting check' },
       { command: 'npm run type-check', description: 'TypeScript type check' },
@@ -281,48 +271,41 @@ class MasterAutomation {}
   }
 
   async runAutomationScripts() {
-    this.log('🤖 Running automation scripts...');
-
+    this.log('🤖 Running automation scripts...')
     const scripts = [
       {
         command: 'node automation/ai-intelligent-code-analyzer.cjs',
-        description: 'AI Code Analyzer',
+        description: 'AI Code Analyzer'
       },
       {
         command: 'node automation/intelligent-git-workflow.cjs',
-        description: 'Git Workflow Automation',
+        description: 'Git Workflow Automation'
       },
       {
         command: 'node automation/advanced-performance-optimizer.cjs',
-        description: 'Performance Optimizer',
+        description: 'Performance Optimizer'
       },
       {
         command: 'node automation/automated-test-runner.cjs',
-        description: 'Automated Test Runner',
+        description: 'Automated Test Runner'
       },
       {
         command: 'node automation/security-auditor.cjs',
-        description: 'Security Auditor',
+        description: 'Security Auditor'
       },
       {
         command: 'node automation/performance-monitor.cjs',
-        description: 'Performance Monitor',
-      },
-    ];
+        description: 'Performance Monitor'
 
-    const results = [];
-    for (const script of scripts) {
-      const result = await this.runCommand(script.command, script.description);
-      results.push({ ...script, result });
-    }
-
-    this.log('✅ Automation scripts completed');
-    return { success: true, results };
-  }
-
+    ]
+    const results = []
+  for($2) {
+      const result = await this.runCommand(script.command, script.description)
+      results.push({ ...script, result })
+    this.log('✅ Automation scripts completed')
+    return { success: true, results }
   async generateReport() {
-    this.log('📊 Generating automation report...');
-
+    this.log('📊 Generating automation report...')
     const report = {
       timestamp: new Date().toISOString(),
       build: await this.runBuildProcess(),
@@ -355,16 +338,14 @@ class MasterAutomation {}
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
+    }
     // Calculate summary
-    if (report.build.success) report.summary.successfulScripts++;
-    else report.summary.failedScripts++;
-
-    if (report.quality.success) report.summary.successfulScripts++;
-    else report.summary.failedScripts++;
-
-    if (report.automation.success) report.summary.successfulScripts++;
-    else report.summary.failedScripts++;
-
+    if (report.build.success) report.summary.successfulScripts++
+    else report.summary.failedScripts++
+    if (report.quality.success) report.summary.successfulScripts++
+    else report.summary.failedScripts++
+    if (report.automation.success) report.summary.successfulScripts++
+    else report.summary.failedScripts++
     // Save report
     const reportFile = path.join(
       this.logsDir,
@@ -379,28 +360,17 @@ class MasterAutomation {}
   async start() {
     this.log("Master Automation started");
     // Ensure logs directory exists
-    const logsDir = path.join(__dirname, "logs");
+    const logsDir = path.join(__dirname, 'logs')
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
+      fs.mkdirSync(logsDir, { recursive: true })
     // Start PM2 processes
-  };
-  async start() {}
-    this.log('Master Automation started');
-    // Ensure logs directory exists;
-    const logsDir = path.join(__dirname, 'logs');
-    if (!fs.existsSync(logsDir)) {}
-      fs.mkdirSync(logsDir, { "recursive": true }
-});
-    };
-    // Start PM2 processes;
-    await this.startPM2Processes();
-    // Perform initial health check;
-    await this.performHealthCheck();
+    await this.startPM2Processes()
+    // Perform initial health check
+    await this.performHealthCheck()
     // Set up periodic health checks every 30 minutes
     setInterval(async () => {
-      await this.performHealthCheck();
-    }, 30 * 60 * 1000);
+      await this.performHealthCheck()
+    }, 30 * 60 * 1000)
     // Set up daily report generation
     setInterval(async () => {
       this.log("Generating daily report.");
@@ -409,41 +379,35 @@ class MasterAutomation {}
   }
 
   async status() {
-    this.log('📊 Checking automation status...');
-
+    this.log('📊 Checking automation status...')
     const status = {
       timestamp: new Date().toISOString(),
       buildStatus: 'unknown',
       gitStatus: 'unknown',
-      dependenciesStatus: 'unknown',
-    };
-
+      dependenciesStatus: 'unknown'
+    }
     // Check build status
     try {
-      const buildResult = await this.runCommand('npm run build', 'Build check');
-      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+      const buildResult = await this.runCommand('npm run build', 'Build check')
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed'
     } catch (_error) {
-      status.buildStatus = 'error';
-    }
-
+      status.buildStatus = 'error'
     // Check git status
     try {
       const gitResult = await this.runCommand(
         'git status --porcelain',
         'Git status check'
-      );
-      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+      )
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty'
     } catch (_error) {
-      status.gitStatus = 'error';
-    }
-
+      status.gitStatus = 'error'
     // Check dependencies
     try {
       const depsResult = await this.runCommand(
         'npm list --depth=0',
         'Dependencies check'
-      );
-      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+      )
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing'
     } catch (_error) {
       status.dependenciesStatus = 'error';
     }

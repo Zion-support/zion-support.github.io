@@ -1,3 +1,5 @@
+
+
 name: Cloud Autonomous Automations
 
 on:
@@ -62,5 +64,6 @@ jobs:
             git push origin HEAD:${{ github.ref_name }}
           else
             echo "No new commits to push"
+
           fi
           fi

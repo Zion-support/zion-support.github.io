@@ -1,21 +1,17 @@
-import React, {
-  createContext
-  useContext
-  useEffect
-  useMemo
-  useState;} from 'react';} from 'react';
+export type User = {;
+
 export type UserRole = 'client' | 'talent';
+
 export type User = {
 export type User = {;
   id: string;
   name: string;
+
   role: UserRole;
-  avatarUrl?: string;
-  onboardingCompleted: boolean;
-}
-export type UserContextValue = {
+
   user: User | null;
-  setUser: (user: User | null) => void;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
   logout: () => void;
   completeOnboarding: () => void;};}
 export type UserContextValue = {;
@@ -46,33 +42,39 @@ const DEFAULT_USER: User = {;
 ;
 export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
-  useEffect(() => {;
-    try {;
-      const raw = localStorage.getItem('zion.user');
-      if (raw) {
-        setUser(JSON.parse(raw));
-      } else {
-        setUser(DEFAULT_USER);
+
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {}
+      try {}
+        setUser(JSON.parse(storedUser));
+      } catch (error) {'
+        console.error('Error parsing stored user:', error);'
+        localStorage.removeItem('user');
       }
     } catch {
-      setUser(DEFAULT_USER);
+      // Ignore localStorage errors
     }
   }, []);
   useEffect(() => {
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
-    } catch {}  }, [user]);  }, [user]);
+    } catch {}
+  }, [user]);
+
   const value = useMemo<UserContextValue>(
     () => ({
       user
       setUser
       logout: () => setUser(null)
       completeOnboarding: () =>
-        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    })
+setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
+    }),
     [user]
   );
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
 export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');

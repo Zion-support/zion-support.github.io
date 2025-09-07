@@ -33,10 +33,13 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       margin: [10, 10, 10, 10],
 
       filename: fileName,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    } as any;
+      image: { type: 'jpeg'}
+  quality: 0.98}
+},
+      html2canvas: { scale: 2, useCORS: true}
+},
+      jsPDF: { unit: 'mm'}
+  format: 'a4', orientation: 'portrait'}
 
     html2pdf().set(opt).from(element).save();
   };

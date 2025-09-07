@@ -1,8 +1,15 @@
 import type { NextPage } from 'next';
 import EnhancedLayout from '../../components/EnhancedLayout';
 import Link from 'next/link';
+const "CategoryIndexPage": NextPage = () => {;
+  return (
+
+import type { NextPage } from 'next';
+import EnhancedLayout from '../../components/EnhancedLayout';
+import Link from 'next/link';
 const "CategoryIndexPage": NextPage = () => {
   return (
+
     <EnhancedLayout>
       <section>
         <h1 className="text-3xl font-bold mb-4">Categories</h1>

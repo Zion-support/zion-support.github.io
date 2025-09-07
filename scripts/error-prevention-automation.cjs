@@ -464,14 +464,28 @@ process.on("SIGTERM", () => {";    process.exit(0),"});
 process.on("SIGINT", () => {";    process.exit(0),"});
 // Run the main function;
 main().catch(error => {console.error(`Fatal "error": ${error.message}`);`;  process.exit(1),,})})))
+
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+//
 const { execSync, spawn } = require("$1")
 const fs = require("$1")
 const path = require("path")
 // console.log("� Error Prevention & Automation System")
-console.log(""Process": ", process.env.PM2_PROCESS || "unknown")
+console.log(Process": ", process.env.PM2_PROCESS || "unknown")
 const { execSync, spawn } = require("$1")
-const fs = require("$1")
-const path = require("path")";console.log("� Error Prevention & Automation System");console.log("""Process": ", process.env.PM2_PROCESS || "unknown");"
+
+";console.log("� Error Prevention & Automation System");console.log("Process": ", process.env.PM2_PROCESS || "unknown");"
         "encoding"
         "stdio"
+      this.log(` ${description} "failed"`)
+
+      this.log(` ${description} "failed"`)
+      this.log(` ${description} "failed"`)
+      this.log(` ${description} "failed"`)
+
+
+
+this.log(` ${description} "failed"`)
       this.log(` ${description} "failed"`)

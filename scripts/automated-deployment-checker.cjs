@@ -70,3 +70,12 @@ checker.run().catch(console.error)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
     console.log(` Git status "clean"`)
+
+    console.log(` Git status "clean"`)
+    console.log(` Git status "clean"`)
+    console.log(` Git status "clean"`)
+
+
+
+console.log(` Git status "clean"`)
+    console.log(` Git status "clean"`)

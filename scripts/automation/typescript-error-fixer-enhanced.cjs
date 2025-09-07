@@ -378,11 +378,13 @@ async log(message, type = "INFO")
     const files = await this.findFiles("src", [".ts", ".tsx")]
   const content = await readFile(file, "utf8")
           this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }
+
+          this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }")"
 });await this.log("Fixed types in ${file}")
       } catch (error) {  await this.log("Error fixing types in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing component errors...")
     const componentFixes = ["]
-  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", ""replacement": (match", "componentName) => {return "}
+  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
   )}"
           this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
 });await this.log("Added default export to ${file}")
@@ -416,3 +418,12 @@ async log(message, type = "INFO")
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
   console.error(""Error": ")
+
+  console.error(""Error": ")
+  console.error(""Error": ")
+  console.error(""Error": ")
+          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
+
+console.error(""Error": ")
+  console.error(""Error": ")
+          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"

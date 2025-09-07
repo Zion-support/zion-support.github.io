@@ -52,6 +52,9 @@ Allow: /contact"
     }
   async addMetaTags() {
     console.log("� Generating sitemap...")
+
+const fs = require("child_process")
+const path = require("path")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9"
     <loc>"https"
@@ -89,5 +92,22 @@ Allow: /contact"
 const improver = new SEOImprover()
 improver.run().catch(console.error)
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")

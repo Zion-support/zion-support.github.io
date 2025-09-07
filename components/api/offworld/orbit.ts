@@ -39,14 +39,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (action === 'vote' && req.method === 'POST') {
       await recordVote(stores, body);
       return res.status(200).json({ ok: true })
-    }
-    if (action === 'constitution' && req.method === 'POST') {
-      await editConstitution(stores, body);
 
-      return res.status(200).json({ ok: true })
-    }
-    return res.status(400).json({ error: 'Unsupported action' })
-  } catch (e: any) {
+      await recordVote(stores, body)
+      return res && res.status(200).json({ ok: true })
+    }'
+  if($2) {}
+      await editConstitution(stores, body)
+      return res && res.status(200).json({ ok: true })
+    }'
+    return res && res.status(400).json({ error: 'Unsupported action' })
+  } catch (e: any) {}
+    return res && res.status(500).json({ error: e && e.message })
+  }    }'
+  if($2) {}
+      await recordVote(stores, body)
+      return res && res.status(200).json({ ok: true })
+    }'
+  if($2) {}
+      await editConstitution(stores, body)
     return res.status(500).json({ error: e.message })
 }
 }

@@ -26,7 +26,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userId = getUserId(req);
     const { error } = await supabase
       .from('notifications')
-      .update({ read_status: true })
+      .update({ read_status: true,}
+})
       .eq('user_id', userId)
       .eq('read_status', false);
     if (error) return res.status(200).json({ ok: true });

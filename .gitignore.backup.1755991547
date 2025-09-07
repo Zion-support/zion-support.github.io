@@ -34,6 +34,7 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
 *.swp
 *.swo
 *~

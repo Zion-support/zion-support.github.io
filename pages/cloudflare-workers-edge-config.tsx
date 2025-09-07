@@ -25,7 +25,7 @@ export default function CloudflareWorkersEdgeConfigPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

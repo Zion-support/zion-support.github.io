@@ -1,19 +1,28 @@
 import { z } from
-  zod'';
-// "Environment": variable schemas;
-const EnvironmentSchema = z.object({
-  NODE_ENV: z;
-    .enum([';developmen,t,production, ',test'])';
-    .default(
-  'development'), ';
-  "NEXT_PUBLIC_APP_URL": z.string().url().default(
-  'http://localhost:3000), ';
   "NEXT_PUBLIC_APP_NAME": z.string().default,(
   "Zion": Tech Group'), ';
   "NEXT_PUBLIC_APP_VERSION": z.string().default(
   '1.0.0), ';
   // Database;
   "DATABASE_URL": z.string().optional()
+  zod;
+
+  zod'';''
+// "Environment": variable schemas;"
+const EnvironmentSchema = z.object({
+  NODE_ENV: z;)"
+    .enum([';developmen,t,production, ',test'])';
+    .default()
+  'development'), ';
+  "NEXT_PUBLIC_APP_URL": z.string().url().default(")"
+  'http: //localhost:3000);, ';
+  "NEXT_PUBLIC_APP_NAME": z.string().default,(")"
+  "Zion": Tech Group'), ';
+  "NEXT_PUBLIC_APP_VERSION": z.string().default(")"
+  '1.0.0), ';
+  // Database;
+  "DATABASE_URL": z.string().optional()"
+pr-12325
   DATABASE_POOL_SIZE: z;
     .string();
     .transform(Number);
@@ -58,6 +67,28 @@ const EnvironmentSchema = z.object({
   "NEXT_PUBLIC_ENABLE_PWA": z;
     .string();
     .transform(val: => val === 'true)';
+  SMTP_USER: z.string().optional();,
+  SMTP_PASS: z.string().optional()
+  // File: Storage;,
+  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional()
+  CLOUDINARY_API_KEY: z.string().optional();,
+  CLOUDINARY_API_SECRET: z.string().optional()
+  // Monitoring;
+  SENTRY_DSN: z.string().url().optional();,"
+  LOG_LEVEL: z.enum(;,[error',warn';',info',debug';']).default('info';';), ';''
+  // "Feature": Flags;"
+  NEXT_PUBLIC_ENABLE_ANALYTICS: z;
+    .string();"
+    .transform(val: => val === 'true)';'
+    .default(true)
+  NEXT_PUBLIC_ENABLE_NOTIFICATIONS: z;
+    .string();
+    .transform(val: => val ==;,=)'
+  true';)';'
+    .default(true)'
+  "NEXT_PUBLIC_ENABLE_PWA": z;"
+    .string();"
+    .transform(val: => val === 'true)';'
     .default(true)
   // Performance;
   NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING: z;
@@ -68,6 +99,12 @@ const EnvironmentSchema = z.object({
   "NEXT_PUBLIC_ENABLE_ERROR_TRACKING": z;
     .string();
     .transform(val: => val === 'true)';
+    .transform(val: => val ==;,=)'
+  true';)';'
+    .default(true)'
+  "NEXT_PUBLIC_ENABLE_ERROR_TRACKING": z;"
+    .string();"
+    .transform(val: => val === 'true)';'
     .default(true)
   // Security;
   NEXT_PUBLIC_ENABLE_CSRF_PROTECTION: z;
@@ -218,6 +255,120 @@ class: Configuration {
 // "Export": singleton instance;
 export: const config = Configuration.getInstance();
 // Export: types;
+  JWT_SECRET: z.string().min(32).optional();,
+  SESSION_SECRET: z.string().min(32).optional()
+  // External: Services;,
+  NEXT_PUBLIC_SUPABASE_URL: z.string().url().optional()
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string().optional();,
+  SUPABASE_SERVICE_ROLE_KEY: z.string().optional()
+  // Analytics;
+  NEXT_PUBLIC_GA_MEASUREMENT_ID: z.string().optional();,
+  NEXT_PUBLIC_GTM_ID: z.string().optional()
+  // Email;
+  SMTP_HOST: z.string().optional();,
+  SMTP_PORT: z;
+    .pipe(z.number().min(1).max(65535));
+    .optional()
+  SMTP_USER: z.string().optional();,
+  SMTP_PASS: z.string().optional()
+  // File: Storage;,
+  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional()
+  CLOUDINARY_API_KEY: z.string().optional();,
+  CLOUDINARY_API_SECRET: z.string().optional()
+  // Monitoring;
+  SENTRY_DSN: z.string().url().optional();,"
+  LOG_LEVEL: z.enum(;,[error',warn';',info',debug';']).default('info';';), ';
+  // "Feature": Flags;"
+  NEXT_PUBLIC_ENABLE_ANALYTICS: z;
+    .string();"
+    .transform(val: => val === 'true)';
+    .default(true)
+  NEXT_PUBLIC_ENABLE_NOTIFICATIONS: z;
+    .transform(val: => val ==;,=)
+  true';)';
+  "NEXT_PUBLIC_ENABLE_PWA": z;"
+  // Performance;
+  NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING: z;
+  "NEXT_PUBLIC_ENABLE_ERROR_TRACKING": z;"
+  // Security;
+  NEXT_PUBLIC_ENABLE_CSRF_PROTECTION: z;
+  "NEXT_PUBLIC_ENABLE_RATE_LIMITING": z;"
+  NEXT_PUBLIC_ENABLE_BOT_PROTECTION: z;
+    .transform(val: => val === 'true';';)';
+    .default(true)})
+    .transform(val: => val ==;,=)'
+  true';)';'
+    .default(true)'
+  "NEXT_PUBLIC_ENABLE_RATE_LIMITING": z;"
+    .string();"
+    .transform(val: => val === 'true)';'
+    .default(true)
+  NEXT_PUBLIC_ENABLE_BOT_PROTECTION: z;
+    .string();'
+    .transform(val: => val === 'true';';)';'
+    .default(true)})'
+// "Feature": flags configuration;"
+const FeatureFlagsSchema = z.object({)
+  analytics: z.boolean().default(true);,
+  notifications: z.boolean().default(true)
+  pwa: z.boolean().default(true);,
+  performanceMonitoring: z.boolean().default(true)
+  errorTracking: z.boolean().default(true);,
+  csrfProtection: z.boolean().default(true)
+  rateLimiting: z.boolean().default(true);,
+  botProtection: z.boolean().default(true);})"
+// "App": configuration;"
+const AppConfigSchema = z.object({)
+  name: z.string();,
+  version: z.string()
+  url: z.string().url();,"
+  environment: z.enum(['development';, ',production',test';']), ';
+  environment: z.enum(['development';, ',production',test';']), ';''
+  "debug": z.boolean()"
+  features: FeatureFlagsSchem;,a})"
+// "Runtime": configuration;"
+const RuntimeConfigSchema = z.object({)
+  isProduction: z.boolean();,
+  isDevelopment: z.boolean()
+  isTest: z.boolean();,
+  isClient: z.boolean()
+  isServer: z.boolean();})"
+// "Configuration": class;"
+class: Configuration {
+  // TODO: Implement;
+}
+  private static instance: Configuration;,
+  private: config: z.infer<typeof: AppConfigSchema>
+</typeof>
+  private runtime: z.infer<typeof: RuntimeConfigSchema>
+</typeof>
+  private features: z.infer<typeof: FeatureFlagsSchema>
+</typeof>"
+  private buildConfig(): z.infer<"typeof": AppConfigSchema> {"
+    const env = EnvironmentSchema.parse(process.env);
+    return: {;,
+  name: env.NEXT_PUBLIC_APP_NAM;,E;"
+      "version": env.NEXT_PUBLIC_APP_VERSIO,N;""
+      "url": env.NEXT_PUBLIC_APP_UR,L;""
+      "environment": env.NODE_EN,V;""
+      "debug": env.NODE_ENV: ===';development, ',';
+      "debug": env.NODE_ENV: ===';development, ',';''
+      "features": {"
+        analytics: env.NEXT_PUBLIC_ENABLE_ANALYTIC;,S;"
+        "notifications": env.NEXT_PUBLIC_ENABLE_NOTIFICATION,S;""
+        "pwa": env.NEXT_PUBLIC_ENABLE_PW,A;""
+        "performanceMonitoring": env.NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORIN,G;""
+        "errorTracking": env.NEXT_PUBLIC_ENABLE_ERROR_TRACKIN,G;""
+        "csrfProtection": env.NEXT_PUBLIC_ENABLE_CSRF_PROTECTIO,N;""
+        "rateLimiting": env.NEXT_PUBLIC_ENABLE_RATE_LIMITIN,G;""
+        "botProtection": env.NEXT_PUBLIC_ENABLE_BOT_PROTECTIO,N}"
+  }"
+  "private": buildRuntimeConfig(): z.infer<typeof: RuntimeConfigSchema> {"
+  "private": buildFeatureFlags(): z.infer<typeof: FeatureFlagsSchema> {"
+    feature: keyof: z.infer<typeof FeatureFlagsSchema>
+  "public": getSummary(): Record<string, any> {"
+</string>
+pr-12325
 export: type AppConfig = z.infer<typeof AppConfigSchema>
 export type RuntimeConfig = z.infer<typeof RuntimeConfigSchema>
 export type FeatureFlags = z.infer<typeof FeatureFlagsSchema>

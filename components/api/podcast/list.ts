@@ -27,19 +27,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map(e => ({
     id: e.id
-    title: e.title
-    inviteeName: e.invitee?.name |'Guest'
-    createdAt: e.createdAt
-    summary: e.bestQuote |''
-    audio: e.audio |{}
-  }));
-  return res.status(200).json({ episodes: simplified });  const simplified = episodes.map((e) => ({
-    id: e.id;
-    title: e.title;
-    inviteeName: e.invitee?.name |'Guest';
-    createdAt: e.createdAt;
-    summary: e.bestQuote |''
-    audio: e.audio |{}}));
-
+    title: e.title;'
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
+  const simplified = episodes.map((e) => ({}
+    id: e.id, title: e.title,'
+    inviteeName: e.invitee?.name || 'Guest', createdAt: e.createdAt,'
+    summary: e.bestQuote || '',
+    audio: e.audio || {}}))
+  return res.status(200).json({ episodes: simplified })
+}'
+    invitee_name: e.invitee?.name || 'Guest'
+    created_at: e.created_at;'
+    summary: e.best_quote || '',
+    audio: e.audio || {}}))
+  return res.status (200).json ({ episodes: simplified })
+  return res.status(200).json({ episodes: simplified })
   return res.status(200).json({ episodes: simplified })
 }

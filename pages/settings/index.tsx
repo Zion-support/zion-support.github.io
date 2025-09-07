@@ -1,4 +1,5 @@
-export default function SettingsPage() {
+import React from 'react'
+export default function Page() {
   return (
     <div>;
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Settings</h2>

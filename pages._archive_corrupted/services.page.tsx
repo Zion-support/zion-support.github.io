@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Head from 'next/head';
 const services = [{
     "title": 'AI Revenue Optimization Platform',

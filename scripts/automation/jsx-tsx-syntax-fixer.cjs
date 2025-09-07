@@ -327,3 +327,12 @@ console.log(' Starting JSX/TSX syntax fixer...')
       "summary"
       "status"
   console.error(' JSX/TSX syntax fixer failed to "start")
+
+  console.error(' JSX/TSX syntax fixer failed to "start")
+  console.error(' JSX/TSX syntax fixer failed to "start")
+  console.error(' JSX/TSX syntax fixer failed to "start")
+
+
+
+console.error(' JSX/TSX syntax fixer failed to "start")
+  console.error(' JSX/TSX syntax fixer failed to "start")

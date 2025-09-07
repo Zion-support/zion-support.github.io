@@ -1,3 +1,5 @@
+
+
 name: Weekly Security Audit
 
 on:
@@ -34,5 +36,6 @@ jobs:
           body: 'Weekly npm audit report in data/security/npm-audit.json'
           branch: automation/security-audit
           delete-branch: true
+
           labels: automation, security
           labels: automation, security

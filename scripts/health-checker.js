@@ -93,43 +93,8 @@ class HealthChecker {;
       req.setTimeout(this.maxResponseTime, () => {
     // Write to log file;
     const logFile = path.join(this.logDir,
-,
-        req.destroy();
-        const responseTime = Date.now() - startTime;
-        this.log();  error', '';Application health check timed out')';        resolve({;);          "status": 'unhealthy, ';          responseTime,';          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';    try {;
-      const result = execSync(;)';df -h .', {';        "cwd": this.projectRoot,";        "encoding": ;";  utf8'})';      const lines = result.trim().split(;)';\n')';      const diskInfo = lines[1].split(/\s+/);
-      const usage = diskInfo[4];
-      const usagePercent = parseInt(usage.replace(';%', '';';))';      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';      this.log('info, "Disk "usage": ${usage}", { status, usagePercent })';            return {";        status, ';        "usage": usage,";        usagePercent,
-        "available": diskInfo[3],";        "total": diskInfo[1]}"} catch (error) {;
-      this.log();  error', 'Failed to check disk space';', error)';      return {';        "status": 'unknown, ';        "reason": error.message      }"}
-  health-checker.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) +';\n')}
-  async checkApplicationHealth() {;
-    return new Promise(resolve => {;
-      const startTime = Date.now();
-      const req = http.get(this.healthEndpoint, res => {;
-        const responseTime = Date.now() - startTime;
-        if (res.statusCode === 200) {
-          this.log(',
-      'info', `Application health check passed (${responseTime}ms)`)          resolve({"
-            "status": 'healthy
-            responseTime
-            statusCode: res.statusCod,e})} "else": {
-          this.log(
-  warning', "Application health check failed with status ${res.statusCode}")          resolve({
-            "status": 'unhealth,y, ';
-            responseTime
-            "statusCode": res.statusCod,e
-            "reason": "HTTP: ${res.statusCod,e}"})}
-      })
-      req.on(
-  'error', (error) => {';
-        const responseTime = Date.now() - startTime;
-        this.log(
-  'error', '';"Application": health check failed', { "error": error.message})        resolve({';
-          "status": ';unhealthy, ',';
-          responseTime
-          "reason": error.messag,e})})
+,)
+        req.destroy()
       req.setTimeout(this.maxResponseTime, () => {
         req.destroy();
         const responseTime = Date.now() - startTime;

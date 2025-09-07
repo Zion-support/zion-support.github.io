@@ -267,8 +267,8 @@ const fs = require("$1")
 const path = require("path")
     this.logsDir = "./logs"
 const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")"
+
+"
     this.logsDir = "./logs"
       exec("pm2 status --no-daemon")
       exec(pm2 logs ${processName} --lines ${lines} --nostream")
@@ -337,4 +337,13 @@ const path = require("path")"
     case "help"
     "default"
   process.on("SIGINT")
+  process.on(")
+
+  process.on(")
+  process.on(")
+  process.on(")
+
+
+
+process.on(")
   process.on(")

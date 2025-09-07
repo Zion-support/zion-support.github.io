@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
+import React from 'react'
 interface AnalyticsProps {
   trackingId?: string;
 }
@@ -105,7 +104,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           `
         }}
       />
-    </Head>
-  );
+    </>
+  )
 }
 export default Analytics;

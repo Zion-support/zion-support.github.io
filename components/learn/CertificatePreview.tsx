@@ -22,6 +22,8 @@ export default function CertificatePreview({
       </div>
       <a
         href={url}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF
@@ -40,7 +42,7 @@ export default function CertificatePreview({
         </div>
       </div>
       <a
-        href={url}
+        href={url}"
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF

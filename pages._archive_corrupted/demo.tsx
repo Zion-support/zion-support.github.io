@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';

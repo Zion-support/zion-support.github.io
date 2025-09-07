@@ -8,7 +8,7 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse
+res: NextApiResponse
 ) {
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
@@ -21,7 +21,7 @@ export default async function handler(
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key
-  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
+  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false
   // Create new key
   const now = new Date().toISOString();
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next";

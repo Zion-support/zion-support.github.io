@@ -70,6 +70,7 @@ async function main() {
       // Skip files that can't be read
     }
   }
+  
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   console.log('🎉 Merge conflict resolution completed!');}
 }

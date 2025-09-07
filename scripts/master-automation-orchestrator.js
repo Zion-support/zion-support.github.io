@@ -191,15 +191,15 @@ class MasterAutomationOrchestrator {
       // Phase "1": Monitoring
       await this.runMonitoringPhase();
       // Phase 2: Testing
-      await this.runTestPhase();
+      await this.runTestPhase()
       // Phase 3: Enhanced Automation
-      await this.runAutomationPhase();
+      await this.runAutomationPhase()
       // Phase 4: Deployment
-      await this.runDeploymentPhase();
+      await this.runDeploymentPhase()
       // Phase 5: Legacy Scripts
-      await this.runLegacyScripts();
+      await this.runLegacyScripts()
       // Phase 6: Custom Scripts
-      await this.runCustomScripts();
+      await this.runCustomScripts()
       // Generate master report
       const reportPath = this.generateMasterReport();
       this.log('🎉 Master Automation Orchestrator Completed');

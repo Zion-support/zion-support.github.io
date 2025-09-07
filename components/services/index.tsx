@@ -36,13 +36,13 @@ body: JSON.stringify ({
 budgetRange: values.budgetRange;
 }
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
-}</div> </div> </div> </div> <QuoteRequestModal open= {
+}</div> </div> </div> </div> <QuoteRequestModal open= {}
   modalOpen
-}onClose= {
+}onClose= {}
   () => setModalOpen (false)
-}service= {
+}service= {}
   selected
-}onSubmit= {
+}onSubmit= {}
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
@@ -156,6 +156,13 @@ export default function ServicesIndexPage() {
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+export default ServicesPage
+export default ServicesPage
+      <QuoteRequestModal
+        open={modal_open}
+        on_close={() => setModalOpen (false)}
+        service={selected}
+        on_submit={handle_submit}
       />
     </div>
   )

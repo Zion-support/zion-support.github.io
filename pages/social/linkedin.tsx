@@ -11,26 +11,12 @@ export default function LinkedInRedirect() {
     }
   }, []);
   return (
-    <>
-      <Head>
-        <title>LinkedIn | Zion Tech Group</title>
-        <link
-          rel='canonical'
-          href='https: //www.linkedin.com/company/zion-tech-group'
-        />
-        <meta
-          httpEquiv='refresh'
-          content='0,url=https://www.linkedin.com/company/zion-tech-group'
-        />
-        <meta name='robots' content='noindex, nofollow' />
-      </Head>
-      <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
-        <a
-          href='https: //www.linkedin.com/company/zion-tech-group'
-          className='text-cyan-400 underline'
-        >
-          Continue to LinkedIn
-        </a>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
       </div>
     </>
   );

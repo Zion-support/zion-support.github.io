@@ -1,9 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { AlertTriangle } from 'lucide-react'
-import Link from 'next/link'
-import Head from 'next/head'
-export default function ErrorPage() {
+import React from 'react'
+export default function Page() {
   return (
     <>
       <Head>;
@@ -51,6 +47,6 @@ export default function ErrorPage() {
           </CardContent>
         </Card>
       </div>
-    </>
+    </div>
   )
 }

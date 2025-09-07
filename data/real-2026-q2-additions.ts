@@ -1,8 +1,24 @@
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub'
-    name: 'AI Governance & Compliance Hub'
-    category: 'AI & Data'
+
+      'Jira',
+      'ServiceNow',
+      'Slack',
+      'GitHub',
+      'Azure OpenAI',
+      'Vertex AI',
+
+      'Datadog',
+    ],'
+    competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],'
+    price: '$2, 500','
+    period: '/month',
+
+id: 'ai-governance-compliance-hub',
+    name: 'AI Governance & Compliance Hub',
+    category: 'AI & Data',
+origin/cursor/automate-test-improve-and-merge-code-2533
+
     tagline:
       'Policy, risk, and model governance with automated evidence and audit trails.'
     description:
@@ -317,16 +333,14 @@ export const real2026Q2Additions = [
   }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
+    use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
     price: '$4';
-    period: '/device/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Cost-effective RMM for partners and IT teams';
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
+
   }
 ];
   }

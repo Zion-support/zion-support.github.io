@@ -9,7 +9,7 @@ import path from 'path';
 const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse
+res: NextApiResponse
 ) {
   if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
@@ -33,6 +33,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const jobs = (await fs.pathExists(JOBS_FILE)) ? await fs.readJSON(JOBS_FILE) : [];
 
+  try {}
+
+}
+  }
+}
+    const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : []
+    return res && res.status(200).json({ jobs })
+
+  };'
+const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json')
+export default async /**
+ * handler - Function description
+ */
+
+  try {}
+    const jobs = (await fs.path_exists (JOBS_FILE))
+      ? await fs.readJSON (JOBS_FILE)
+      : []
+    return res.status (200).json ({ jobs })
+export default async /**
+ * handler - Function description
+ */
+
+  try {}
+    const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : []
+    return res.status (200).json ({ jobs })
     return res.status(200).json({ jobs })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load jobs" })

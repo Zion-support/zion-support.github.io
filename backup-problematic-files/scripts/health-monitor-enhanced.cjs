@@ -392,7 +392,7 @@ class HealthMonitor {
    */
   displayStatus() {
     console.log('\n🏥 HEALTH MONITOR REPORT');
-    console.log('========================');
+    console.log('===');
     console.log(`Overall Status: ${this.healthData.overallStatus.toUpperCase()}`);
     console.log(`Timestamp: ${this.healthData.timestamp}`);
     

@@ -35,6 +35,7 @@ const "Sidebar": React.FC = () => {
                 {' '}
                 <Link
                   href={svc.link}
+
                   className="text-blue-700 "hover": text-blue-900 underline"
                 >
                   {' '}

@@ -1,13 +1,7 @@
 {
   "summary": {
     "totalChecks": 6,
-    "passedChecks": 6,
-    "failedChecks": 0,
-    "criticalFailures": 0,
-    "canBuild": true,
-    "timestamp": "2025-08-19T17:38:03.158Z"
   },
-    "timestamp": "2025-08-19T17:38:03.158Z"  },
     "timestamp": "2025-08-19T17:38:03.158Z"  },
   "results": [
     {
@@ -32,6 +26,8 @@
       "name": "Environment Variables",
       "status": "PASS",
       "result": "Environment variables check completed",
+      "status": "PASS",
+      "result": "Environment variables check completed",
       "critical": false
       "status": "PASS",
       "result": "Environment variables check completed",      "critical": false
@@ -51,6 +47,10 @@
       "critical": false
     }
   ],
+  "recommendations": []
+}
+  "recommendations": []}
+  "recommendations": []}
   "recommendations": []
 }
   "recommendations": []}

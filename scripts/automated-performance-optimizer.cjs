@@ -91,3 +91,12 @@ optimizer.run().catch(console.error)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
       console.log("\n� High Priority "Optimizations")
+
+      console.log("\n� High Priority "Optimizations")
+      console.log("\n� High Priority "Optimizations")
+      console.log("\n� High Priority "Optimizations")
+
+
+
+console.log("\n� High Priority "Optimizations")
+      console.log("\n� High Priority "Optimizations")

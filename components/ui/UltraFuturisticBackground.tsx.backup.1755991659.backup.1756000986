@@ -511,11 +511,6 @@ export default function UltraFuturisticBackground({
       
       drawDataStreams();
       
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    initParticles();
-    initConnections();
     animate();
 
     return () => {

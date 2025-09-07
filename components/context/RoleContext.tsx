@@ -34,24 +34,16 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
     try {
       const saved =
         typeof window !== 'undefined'
-          ? window.localStorage.getItem('zion_user_role')
-          : null;
-      if (saved === 'client' |saved === 'talent') {
-        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' |saved === 'talent') {
-        setRole(saved)
-      }
     } catch {}
-  }, []);
+  }, [])
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_user_role', role);      }        window.localStorage.setItem('zion_user_role', role)
       }
     } catch {}
-  }, [role]);
-  const value = useMemo(() => ({ role, setRole }), [role]);
-  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;};  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
+  }, [role])
+  const value = useMemo(() => ({ role, setRole }), [role])
 }
 export function useRole(): RoleContextValue {
 const ctx = useContext(RoleContext);

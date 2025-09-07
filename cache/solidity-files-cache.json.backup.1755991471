@@ -1,6 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
+
     "/workspace/contracts/ZionGovernor.sol": {
       "lastModificationDate": 1754702703638,
       "contentHash": "c24f231bae64c8a2917b543da0d052c6",
@@ -32,6 +33,7 @@
         }
       },
       "imports": [
+
         "@openzeppelin/contracts/governance/Governor.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorCountingSimple.sol",
@@ -77,6 +79,7 @@
         }
       },
       "imports": [
+
         "../token/ERC721/IERC721Receiver.sol",
         "../token/ERC1155/IERC1155Receiver.sol",
         "../utils/cryptography/ECDSA.sol",
@@ -322,6 +325,7 @@
       },
       "imports": [],
       "versionPragmas": [
+
         "^0.8.1"
       ],
       "artifacts": [
@@ -992,6 +996,7 @@
       },
       "imports": [],
       "versionPragmas": [
+
         "^0.8.0"
       ],
       "artifacts": [
@@ -1069,6 +1074,7 @@
       },
       "imports": [],
       "versionPragmas": [
+
         "^0.8.0"
       ],
       "artifacts": [
@@ -1226,6 +1232,7 @@
       },
       "imports": [],
       "versionPragmas": [
+
         "^0.8.0"
       ],
       "artifacts": [

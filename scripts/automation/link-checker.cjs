@@ -197,12 +197,9 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 console.log(""� Starting continuous link checker automation...")
-const fs = require("fs")
-const path = require("path")
 const { execSync } = require("child_process")
 console.log(""� Starting continuous link checker automation...")
-// Get automation interval from environment variable ("default")
-// console.log(`"� Building project..."`)
+//
   console.log("� Starting continuous link checker automation...")
 // Get automation interval from environment variable ("default")
     console.log(`"� Building project..."`)
@@ -265,4 +262,13 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+  console.error(" Failed to start continuous link "checker": ")
+
+  console.error(" Failed to start continuous link "checker": ")
+  console.error(" Failed to start continuous link "checker": ")
+  console.error(" Failed to start continuous link "checker": ")
+
+
+
+console.error(" Failed to start continuous link "checker": ")
   console.error(" Failed to start continuous link "checker": ")

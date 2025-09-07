@@ -4,10 +4,17 @@ import Link from 'next/link';
 }
 
 import React from 'react';
+
+import Head from 'next/head';
+import Link from 'next/link';
+export default function MicroCrm() {;
+  return (
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function MicroCrm() {
   return (
+
     <>
       <Head>
         <title>Micro CRM (Multi-tenant) — Zion Tech Group</title>
@@ -22,6 +29,26 @@ export default function MicroCrm() {
             <section>
               <h2 className="text-xl font-semibold mb-2">Highlights</h2>
               <ul className="list-disc pl-5 space-y-1 text-gray-700">
+)
+        <title>Micro CRM (Multi-tenant) — Zion Tech Group</title>
+        <meta name="description" content="Lightweight CRM with pipeline automation, email sync, and reporting." />"
+</meta>"
+        <link rel="canonical" href=""https": //ziontechgroup.com/services/micro-crm" />"
+</link>
+      "
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">"
+</div>"
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">Micro CRM (Multi-tenant)</h1>""
+        <p className="text-gray-600 mb-6">From $99/month</p>""
+        <div className="grid gap-8 md:grid-cols-3">"
+          <div className="md:col-span-2 space-y-6">"
+</div>
+            <section>
+</section>"
+              <h2 className="text-xl font-semibold mb-2">Highlights</h2>""
+              <ul className="list-disc pl-5 space-y-1 text-gray-700">"
+</ul>
+pr-12325
                 <li>Lead, deal, and account management</li>
                 <li>Email sync, templates, and sequences</li>
                 <li>Kanban pipelines with automation rules</li>

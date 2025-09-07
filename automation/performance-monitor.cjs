@@ -218,6 +218,35 @@ async function main() {
   }
 }
 
+        "projectRoot": this.projectRoot};"
+      const errorFile = path.join()
+        this.projectRoot,"
+        'automation/logs/performance-error-report.json
+
+  async start() {}
+    this.isRunning = true
+    this.log('Performance Monitor started')
+    await this.checkPerformance()
+    setInterval(async () => {}
+if (!this.isRunning) return
+    }, this.checkInterval)
+    process.on('SIGTERM', () => {}
+      this.log('Received SIGTERM, shutting down gracefully')
+      this.isRunning = false
+      process.exit(0)
+})
+    process.on('SIGINT', () => {}
+      this.log('Received SIGINT, shutting down gracefully')
+      this.isRunning = false
+      process.exit(0)
+})
+  }
+}
+const monitor = new PerformanceMonitor()
+monitor.start().catch(error => {})
+console.error('Failed to start performance "monitor": ', error)
+  process.exit(1)
+})
 // Run if called directly
 if (require.main === module) {
   main();

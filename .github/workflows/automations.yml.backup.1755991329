@@ -1,3 +1,5 @@
+
+
 name: Autonomous Cloud Automations
 
 on:
@@ -29,6 +31,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - name: Install deps
+
         run: npm ci --no-audit --no-fund
       - name: Generate ideas
         run: node scripts/generate-ideas.cjs

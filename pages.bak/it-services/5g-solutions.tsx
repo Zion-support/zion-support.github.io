@@ -10,7 +10,6 @@ import React from 'react';
 
 interface 5gsolutionsProps {
   // Add props here as needed
-}
 
 import React from 'react';
 interface 5gsolutionsProps {

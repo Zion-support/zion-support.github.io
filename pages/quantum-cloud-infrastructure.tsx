@@ -32,7 +32,7 @@ export default function QuantumCloudInfrastructurePage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

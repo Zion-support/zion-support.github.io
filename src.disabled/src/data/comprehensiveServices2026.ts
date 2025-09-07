@@ -1,12 +1,12 @@
 // Comprehensive Services 2026 - Zion Tech Group;
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services;
-export interface ServiceContact {}
+export interface ServiceContact {};
+
   "phone": string;
   email: string;
   website: string;
   address: string}
-;
-export interface MicroSaasService {}
+
   "id": number;
   name: string;
   category: string;
@@ -30,8 +30,7 @@ export interface MicroSaasService {}
   innovationLevel: string;
   marketSize: string;
   growthRate: string}
-;
-export interface ITService {}
+
   "id": number;
   name: string;
   category: string;
@@ -52,8 +51,7 @@ export interface ITService {}
   innovationLevel: string;
   marketSize: string;
   compliance: string[]}
-;
-export interface AIService {}
+
   "id": number;
   name: string;
   category: string;

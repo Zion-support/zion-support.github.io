@@ -75,6 +75,10 @@
     "h1": ""
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
+    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",
+    "h1": ""
+    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
+    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
   },
   {
     "route": "/about",
@@ -413,6 +417,8 @@
   },
   {
     "route": "/",
+    "title": "",
+    "h1": ""
     "title": "",
     "h1": ""
   },

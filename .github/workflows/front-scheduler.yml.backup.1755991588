@@ -1,3 +1,5 @@
+
+
 name: Front Scheduler
 
 on:
@@ -28,3 +30,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"

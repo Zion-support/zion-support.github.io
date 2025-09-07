@@ -1,3 +1,5 @@
+
+
 // Netlify Scheduled Function: Link & Health Scheduler
 // Replaces GH Actions for link integrity, health scans, and sitemap generation.
 

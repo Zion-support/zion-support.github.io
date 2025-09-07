@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const method = null;
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse
+res: NextApiResponse
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')
@@ -19,21 +19,18 @@ export default async function handler(
     `Generate a compelling, unbiased job description for a role.\n` +
     `- Title: ${title |'Software Engineer'}\n` +
     `- Level: ${level |'Mid'}\n` +
-    `- Location: ${location |'Remote'}\n` +
+    `- Location: ${location |'Remote,}
+}\n` +
     `- Key skills: ${(skills |[]).join(', ')}\n` +
     `- Responsibilities: ${(responsibilities |[]).join('; ')}\n` +
-    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
-  const text = await generateText(
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`
+const text = await generateText(
     prompt
     'You are an expert technical recruiter and compensation analyst.'
-  );
-  return res.status(200).json({ jobDescription: text });    `- Title: ${title |'Software Engineer'}\n` +
-    `- Level: ${level |'Mid'}\n` +
-    `- Location: ${location |'Remote'}\n` +
-    `- Key skills: ${(skills |[]).join()}\n` +
-    `- Responsibilities: ${(responsibilities |[]).join()}\n` +
-    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
-  const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
+  )
+  return res.status(200).json({ jobDescription: text,}
+})
+  return res.status(200).json({ jobDescription: text }),
 
   return res.status(200).json({ jobDescription: text })
 }

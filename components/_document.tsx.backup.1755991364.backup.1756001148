@@ -21,15 +21,3 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
         <body className="bg-high-contrast-primary text-high-contrast">
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
-}
-
-export default MyDocument;
-}
-
-export default MyDocument;

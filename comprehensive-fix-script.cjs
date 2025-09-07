@@ -104,7 +104,7 @@ class ComprehensiveFixScript {
           
           // Fix common syntax issues
           content = content
-            .replace(/            .replace(/=======/g, '')
+            .replace(/            .replace(//g, '')
             .replace(/            .replace(/^\s*$/gm, '')
             .replace(/\n\s*\n\s*\n/g, '\n\n');
 

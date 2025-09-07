@@ -831,8 +831,7 @@ const fs = require("fs")
 const path = require("path")
 console.log("" Starting comprehensive code quality automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log("" Starting comprehensive code quality automation...")
 // Get automation interval from environment variable ("default")
   console.log(` Running code quality automation at ${new Date().toISOString()}
@@ -1029,3 +1028,12 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
   console.error(" Failed to start code quality "automation": ")
+
+console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
+  console.error(" Failed to start code quality "automation": ")
+
+// Get automation interval from environment variable ("default")"
+  console.log(` Running code quality automation at ${new Date().toISOString()}`
+console.log(` Starting comprehensive code quality automation...``)"

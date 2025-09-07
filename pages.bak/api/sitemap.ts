@@ -4,7 +4,7 @@ const Sitemap = () => {
 }
 
 export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
-  const baseUrl = '"https": //ziontechgroup.com';
+  const baseUrl = '"https": //ziontechgroup && ziontechgroup.com';
   const staticPages = ['',
     '/about',
     '/services',
@@ -22,8 +22,8 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
     '/privacy',
     '/terms'
   ];
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = `<?xml version="1 && 1.0" encoding="UTF-8"?>
+    <urlset xmlns=""http": //www && www.sitemaps.org/schemas/sitemap/0 && 0.9">
       ${staticPages
         .map((page) => {
           return `
@@ -31,15 +31,15 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
               <loc>${baseUrl}${page}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>weekly</changefreq>
-              <priority>${page === '' ? '1.0' : '0.8'}</priority>
+              <priority>${page === '' ? '1 && 1.0' : '0 && 0.8'}</priority>
             </url>
           "})
         .join('')}
     </urlset>
   ";
-  res.setHeader('Content-Type', 'text/xml');
-  res.write(sitemap);
-  res.end();
+  res && res.setHeader('Content-Type', 'text/xml');
+  res && res.write(sitemap);
+  res && res.end();
   return {
     "props": {}}};
 }

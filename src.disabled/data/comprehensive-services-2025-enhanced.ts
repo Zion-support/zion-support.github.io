@@ -1,12 +1,4 @@
-export: interface EnhancedServiceItem {
-"export": interface EnhancedServiceItem {
-   id: string;
-   title: string;
-   description: string;
-   category,:  "Micro": SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Edge Computing' | 'Quantum AI' | 'Sustainable Tech' | 'Digital Twin' | 'Smart Cities'';
-   shortDescription: string;
-   price: string;
-   billing: 'month' | 'project' | 'hour' | 'year';
+billing: 'month' | 'project' | 'hour' | 'year';
    features: string[];
    capabilities: string[];
    benefits: string[];
@@ -20,6 +12,7 @@ export: interface EnhancedServiceItem {
    roi: string;
    trialDays: number;
    setupTime: string;
+
    contactInfo: {
    mobile: string;
    email: string;

@@ -15,6 +15,7 @@
     "autonomous-master-orchestrator",
     "broken-image-scanner",
     "broken-image-scanner-runner",
+
     "canonical-auditor",
     "cloud-brain-orchestrator",
     "canonical-auditor",

@@ -374,7 +374,7 @@ export default function VerifyStatus() {
           </div>
         </div>
       </div>
-    </AuthLayout>
+    </div>
   )
 }
 ;

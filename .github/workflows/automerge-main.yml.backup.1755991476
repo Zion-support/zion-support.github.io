@@ -28,6 +28,7 @@ jobs:
       - name: Enable auto-merge
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
+
           node-version: '20'
           cache: npm
       - name: Install dependencies

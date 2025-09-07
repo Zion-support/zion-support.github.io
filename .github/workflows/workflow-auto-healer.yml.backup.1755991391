@@ -41,6 +41,7 @@ jobs:
         id: validate
         run: |
           echo "Validating all workflow files..."
+
           invalid_files=()
 
           while IFS= read -r workflow_file; do
@@ -133,27 +134,27 @@ PY
             const workflowName = '${{ github.event.workflow_run.name }}';
             const workflowId = '${{ github.event.workflow_run.id }}';
             const conclusion = '${{ github.event.workflow_run.conclusion }}';
-            
+
             const title = `Workflow Failure: ${workflowName}`;
             const body = `## Workflow Failure Detected
-            
+
             **Workflow:** ${workflowName}
             **Status:** ${conclusion}
             **Workflow ID:** ${workflowId}
             **Triggered by:** ${{ github.event.workflow_run.event }}
-            
+
             ## Next Steps
             1. Review the workflow logs
             2. Check for configuration issues
             3. Verify dependencies and secrets
             4. Run the auto-healer if needed
-            
+
             ## Auto-Healing
             The Workflow Auto-Healer will attempt to fix common issues automatically.
-            
+
             ---
             *This issue was automatically created by the Workflow Auto-Healer*`;
-            
+
             try {
               await github.rest.issues.create({
                 owner: context.repo.owner,

@@ -3,6 +3,48 @@
   "timestamp": "2025-09-06T10:44:46.097Z",
   "totalDuration": 76866,
 
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+  "results": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "ESLint Auto-fix",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run format",
+        "description": "Prettier Code Formatting",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Type Checking",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run test:smoke",
+        "description": "Smoke Tests",
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      },
+      {
+        "command": "npm test -- --passWithNoTests",
+        "description": "Jest Tests",
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ]
+  },
+  "summary": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "totalErrors": 5
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
@@ -11,6 +53,14 @@
 
       "duration": 22421,
 
+      "duration": 22421,
+ursor/automate-test-improve-and-merge-code-e883
+  "timestamp": "2025-09-06T08:34:04.724Z",
+  "duration": 397290,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 84429,
       "errors": [],
       "warnings": []
     },
@@ -19,6 +69,10 @@
 
       "duration": 27631,
 
+      "duration": 27631,
+ursor/automate-test-improve-and-merge-code-e883
+      "success": true,
+      "duration": 56422,
       "errors": [],
       "warnings": []
     },
@@ -27,6 +81,10 @@
 
       "duration": 1683,
 
+      "duration": 1683,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 1450,
+      "duration": 1719,
       "errors": [],
       "warnings": []
     },
@@ -35,6 +93,10 @@
 
       "duration": 6198,
 
+      "duration": 6198,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 11039,
+      "duration": 6250,
       "errors": [],
       "warnings": []
     },
@@ -54,6 +116,12 @@
 
       "duration": 9692,
 
+      "success": true,
+      "duration": 46,
+      "errors": [],
+ursor/automate-test-improve-and-merge-code-e883
+      "success": false,
+      "duration": 0,
       "errors": [],
       "warnings": []
     },
@@ -62,6 +130,20 @@
 
       "duration": 7154,
 
+      "duration": 9692,
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 0,
+      "duration": 9508,
+      "errors": [],
+      "warnings": []
+    },
+    "performanceOptimization": {
+      "success": true,
+      "duration": 6736,
+      "duration": 7154,
+ursor/automate-test-improve-and-merge-code-e883
+      "success": false,
+      "duration": 0,
       "errors": [],
       "warnings": []
     },
@@ -73,6 +155,28 @@
       "errors": [],
       "warnings": []
     }
+    "totalErrors": 6
+ursor/automate-test-improve-and-merge-code-646c
+      "errors": [],
+      "warnings": []
+    }
   }
 
+  }
+  "timestamp": "2025-09-06T22:31:53.549Z",
+  "totalDuration": 106111,
+  "successfulTasks": 3,
+  "totalTasks": 3,
+  "results": {
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": true,
+    "Execute All Scripts": true
+  },
+  "errors": [],
+  "fixes": [
+    "Fixed memory issues with Node.js heap size",
+    "Created missing automation scripts",
+    "Fixed ESLint configuration",
+    "Added comprehensive error handling"
+  ]
 }

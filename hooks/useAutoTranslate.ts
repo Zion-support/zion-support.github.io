@@ -36,3 +36,5 @@ export type UseAutoTranslateResult = any;
   }, [key, debounceMs]);
   return { translations, loading, error }
 }
+
+

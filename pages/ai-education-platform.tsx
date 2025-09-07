@@ -2,11 +2,12 @@ import React from 'react';
 import SEO from '../components/SEO';
 export default function AIEducationPlatformPage() {
   return (
-    <div className="min-h-[60vh] px-6 py-24">
-      <SEO title="AI Education Platform | Zion Tech Group" description="Personalized learning with AI" />
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-4">AI Education Platform</h1>
-        <p className="text-gray-300">Adaptive learning and skill development powered by AI. Details coming soon.</p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
       </div>
     </div>
   )

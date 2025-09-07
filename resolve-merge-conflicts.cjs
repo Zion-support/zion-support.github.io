@@ -11,9 +11,9 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Remove merge conflict markers and keep the version from our branch (after =======)
+    // Remove merge conflict markers and keep the version from our branch (after )
     content = content
-      .replace(/      .replace(/=======[\s\S]*?      .replace(/      .replace(/=======/g, '')
+      .replace(/      .replace(/[\s\S]*?      .replace(/      .replace(//g, '')
       .replace(/    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
@@ -25,12 +25,22 @@ function resolveMergeConflicts(filePath) {
     console.error(`❌ Error resolving ${filePath}:`, error.message);
     return false;
   }
-}
 
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async resolveConflicts() {
+    this.log('🚀 Starting merge conflict resolution...', 'PROGRESS');
+    
     try {
       const items = fs.readdirSync(currentDir);
       
@@ -56,29 +66,34 @@ function findFilesWithConflicts(dir) {
           }
         }
       }
+
+      this.log('\n📊 Merge Conflict Resolution Report', 'INFO');
+      this.log('='.repeat(60));
+      this.log(`Resolved ${this.resolvedFiles.length} files.`, 'SUCCESS');
+      if (this.errors.length > 0) {
+        this.log(`Encountered ${this.errors.length} errors:`, 'WARNING');
+        this.errors.forEach(err => this.log(`  - ${err.filePath}: ${err.error}`, 'ERROR'));
+      } else {
+        this.log('No errors encountered during resolution.', 'SUCCESS');
+      }
+
+      // Add resolved files to git
+      if (this.resolvedFiles.length > 0) {
+        this.log('Adding resolved files to git...', 'PROGRESS');
+        execSync(`git add ${this.resolvedFiles.join(' ')}`, { stdio: 'inherit' });
+        this.log('Files added to git successfully', 'SUCCESS');
+      }
+
     } catch (error) {
-      // Skip directories we can't read
+      this.log(`Error during conflict resolution: ${error.message}`, 'ERROR');
+      throw error;
     }
   }
-  
-  traverse(dir);
-  return files;
-}
 
-// Main execution
-const targetDir = process.cwd();
-console.log(`📁 Scanning ${targetDir} for files with merge conflicts`);
-
-const files = findFilesWithConflicts(targetDir);
-console.log(`📄 Found ${files.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
+  async resolveFile(filePath) {
+    if (!fs.existsSync(filePath)) {
+      this.log(`  ⚠️ File ${filePath} does not exist, skipping`, 'WARNING');
+      return;
     }
   } catch (error) {
     console.error(`❌ Error processing ${file}:`, error.message);
@@ -113,19 +128,38 @@ function resolveConflicts(filePath) {
     // Read the file content
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Replace merge conflict markers with incoming changes
-    // Remove and
-    content = content.replace(/[\s\S]*?
+    // Check if file has merge conflicts
+    if (!content.includes('') || !content.includes('>>>>>>>')) {
+      this.log(`  ℹ️ No conflicts in ${filePath}, skipping`, 'INFO');
+      return;
+    }
+
+    // Strategy: Choose incoming changes (from remote) for most files
+    // This means we'll take the version after  and before >>>>>>>
+    let resolvedContent = content;
     
-    // Write the resolved content back
-    fs.writeFileSync(filePath, content);
-    
-    // Add the file to git
-    execSync(`git add "${filePath}"`, { stdio: 'inherit' });
-    
-    console.log(`✅ Resolved conflicts in ${filePath}`);
-  } catch (error) {
-    console.error(`❌ Failed to resolve conflicts in ${filePath}:`, error.message);
+    // Handle different conflict patterns
+    const conflictPatterns = [
+      // Standard conflict markers
+      /[\s\S]*?([\s\S]*?)      // Modified/delete conflicts
+      /[\s\S]*?([\s\S]*?)    ];
+
+    for (const pattern of conflictPatterns) {
+      resolvedContent = resolvedContent.replace(pattern, (match, incoming) => {
+        return incoming ? incoming.trim() : '';
+      });
+    }
+
+    // Clean up any remaining conflict markers
+    resolvedContent = resolvedContent
+      .replace(/[\s\S]*?/g, '')
+      .replace(/      .replace(/^$/gm, '')
+      .replace(/^$/gm, '')
+      .replace(/^
+    // Write resolved content
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    this.resolvedFiles.push(filePath);
+    this.log(`  ✅ Resolved ${filePath}`);
   }
 }
 

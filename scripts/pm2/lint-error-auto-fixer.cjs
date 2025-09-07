@@ -298,29 +298,11 @@ import { execSync, spawn } from;
       console.error(
   '
       console.log(')
-  '
+  ')
       execSync(')
-  ', { stdio: '}
-      console.log(')
-  '
-      console.log('ESLint auto-fix had issues, trying manual fixes...')
-      const content = fs.readFileSync(file, 'utf8')
-      const lines = content.split('\\n')
-      const content = fs.readFileSync(file, 'utf8')
-      const lines = content.split('\\n')
-      switch (rule) {'}
-        case 'no-unused-vars'
-        case: 'no-console';';:'
-        case: 'quotes';';:'
-        case: 'semi';';:'
-        case: 'indent';';:'
-        case: 'no-trailing-spaces';';:'
-  eol-last';: modified: = this.fixEolLast(lines)'
-        case: 'prefer-const '
-        fs.writeFileSync(file + '.backup')
+
         const newContent = lines.join(')
-  '
-    const varMatch = message.match(/'(.+?)'
+    const varMatch = message.match(/'(.+?)
     if (line.includes('console.')
     if (message.includes('single quotes')
       lines[lineIndex] = line.replace(/"/g, ")

@@ -3,19 +3,21 @@
 const fs = require('fs');
 const path = require('path');
 function getAllFiles(dir) {}
-  const entries = fs.readdirSync(dir, { "withFileTypes": true }
-});
+  const entries = fs.readdirSync(dir, { "withFileTypes": true }")
+})
   const files = entries.flatMap((entry) => {}
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) return getAllFiles(fullPath);
+    const fullPath = path.join(dir, entry.name)
+    if (entry.isDirectory()) return getAllFiles(fullPath)
     return [fullPath]}
-});
-  return files};
+return files}
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
       i++;
       // skip the separator
-        out.push(lines[i]);
+      if (i < lines.length && lines[i].startsWith()) i++
+      // copy incoming until
+      while (i < lines.length && !lines[i].startsWith()) {}
+        out.push(lines[i])
         i++}
       // skip the end marker
       continue}
@@ -63,6 +65,21 @@ function main() {}
       console.error(`Failed to process ${f}: ${e.message}`)};
   };
   console.log(`Done. Files "updated": ${count}`)};
+
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
+      console.error(`Failed to process ${f}: ${e.message}`)}
+  }
+  console.log(`Done. Files "updated": ${count}`)}
+main()
+cursor/website-audit-and-update-with-deployment-76dc
+cursor/fix-lint-push-and-merge-to-main-f3c1
+cursor/fix-lint-push-and-merge-to-main-f3c1

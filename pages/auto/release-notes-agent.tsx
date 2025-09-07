@@ -4,16 +4,13 @@ import Link from 'next/link';
 const ReleaseNotesAgent: NextPage;
 const ReleaseNotesAgent: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>AI Release Notes Agent</title>
-        <meta name="description" content="Daily AI-generated release notes." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">AI Release Notes Agent</h1>
-        <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
-        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
-      </main>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
+      </div>
     </div>
   )
 }

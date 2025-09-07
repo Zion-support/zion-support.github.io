@@ -36,12 +36,11 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
             </tr>
           </thead>
           <tbody>
-            {routes.map(r => (
-              <tr key={r.path} className="border-t">
-                <td className="p-2">{r.path}</td>
-                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
-              </tr>
-            ))}
+            {routes.map (r => ("
+              <tr key={r.path} className="border - t">;"
+                <td className="p - 2">{r.path}</td>;"
+                <td className="p - 2">{new Date (r.last_modified).toLocaleString ()}</td>
+              </tr>))}
           </tbody>
         </table>
       </div>

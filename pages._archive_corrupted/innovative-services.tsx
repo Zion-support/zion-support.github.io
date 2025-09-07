@@ -5,6 +5,25 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+import React from "react"""
+import Head from "next/head"""
+import Link from "next/link""
+import {
+  // TODO: Implement
+}
   ArrowRight, 
   Award, 
   BarChart3, 
@@ -214,6 +233,7 @@ export default function InnovativeServices() {
       "category": "Development Tools",
       "benefits": "Improve code quality by 40% and reduce bugs by 60%",
       "marketPrice": "Average market price: $300-1,800/month"
+
     }
   ]
   return (

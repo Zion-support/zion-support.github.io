@@ -53,11 +53,6 @@
     "route": "/404",
     "title": "404 - Page Not Found | Zion Tech Group",
     "h1": "404"
-  },
-    "title": "404 - Page Not Found | Zion Tech Group",
-    "h1": "404"  },
-    "title": "404 - Page Not Found | Zion Tech Group",
-    "h1": "404"  },
   {
     "route": "/500",
     "title": "",
@@ -83,6 +78,7 @@
   {
     "route": "/about",
     "title": "About Us | Zion Tech Group",
+    "h1": "About Zion Tech Group"
     "h1": "About Zion Tech Group"
     "title": "About Us - Zion Tech Group",
     "h1": "We build practical AI and platform solutions"
@@ -306,6 +302,8 @@
   },
   {
     "route": "/contact",
+    "title": "Contact Us | Zion Tech Group",
+    "h1": "Get in Touch"
     "title": "Contact Us | Zion Tech Group",
     "h1": "Get in Touch"
   },
@@ -691,6 +689,10 @@
   {
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
+    "h1": "Site Map"
+  },
+    "h1": "Site Map"  },
+    "h1": "Site Map"  },
     "h1": "Site Map"
   },
     "h1": "Site Map"  },

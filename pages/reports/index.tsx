@@ -44,60 +44,12 @@ export default function Reports() {
   const lastUptime = uptime[uptime.length - 1];
 
   return (
-    <div className='space-y-6'>
-      <div>
-        <h1 className='text-2xl font-semibold'>Automation Reports</h1>
-        <div className='text-sm text-gray-500'>
-          Autonomously generated and synced
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
         </div>
       </div>
-      <section className='grid lg:grid-cols-2 gap-6'>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Uptime</div>
-          {lastUptime ? (
-            <div className='text-sm'>
-              Last check: {new Date(lastUptime.timestamp).toLocaleString()} —{' '}
-              {
-                lastUptime.results?.filter(
-                  (r: any) => r.status >= 200 && r.status < 400
-                ).length
-              }
-              /{lastUptime.results?.length} ok
-            </div>
-          ) : (
-            <div className='text-sm text-gray-500'>No data</div>
-          )}
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>SEO (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Pages: {seo?.results?.length |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Broken Links (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Broken: {links?.broken?.length |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Dependencies (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Checked: {deps?.entries?.length |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Changelog (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Commits: {changelog?.totalCommits |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>PageSpeed (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Pages: {pagespeed?.results?.length |0}
-          </div>
-        </div>
-      </section>
     </div>
 );

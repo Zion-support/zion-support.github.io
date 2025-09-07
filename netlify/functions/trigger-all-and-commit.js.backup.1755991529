@@ -1,14 +1,16 @@
+
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 exports.handler = async function(event, context) {
   console.log('🤖 Starting trigger-all-and-commit...');
-  
+
   try {
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
-    
+
     const reportContent = `# trigger-all-and-commit Report
 exports.handler = async function() {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
@@ -46,7 +48,7 @@ Generated: ${timestamp}
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
-    
+
     try {
       execSync('git add ' + reportPath, { stdio: 'inherit' });
       execSync('git commit -m "🤖 Add trigger-all-and-commit report [skip ci]"', { stdio: 'inherit' });
@@ -59,7 +61,7 @@ Generated: ${timestamp}
     console.log('✅ trigger-all-and-commit completed successfully');
     
     return {
-    
+
     console.log('✅ trigger-all-and-commit completed successfully');
         return {
     
@@ -71,10 +73,10 @@ Generated: ${timestamp}
         timestamp: timestamp
       })
     };
-    
+
   } catch (error) {
     console.error('❌ trigger-all-and-commit failed:', error.message);
-    
+
     return {
       statusCode: 500,
       body: JSON.stringify({

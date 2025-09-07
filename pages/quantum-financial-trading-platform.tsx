@@ -32,7 +32,7 @@ export default function QuantumFinancialTradingPlatformPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

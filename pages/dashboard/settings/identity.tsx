@@ -46,15 +46,11 @@ export default function IdentitySettingsPage() {
   }, [])
 
   return (
-    <>
-      <Head>
-        <title>Identity Settings - Zion</title>
-        <meta name="description" content="Manage your identity verification status" />
-      </Head>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity</h1>
-        <div className="mb-4">
-          <ProfileBadges profile={profile |undefined} />
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
         </div>
         <div className="mb-4 text-sm text-gray-600">
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}

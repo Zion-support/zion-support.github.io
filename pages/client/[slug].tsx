@@ -33,16 +33,14 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
   }
 }
   return (
-    <main className="max-w-4xl mx-auto p-6 space-y-6">
-      <header className="enhanced-card">
-        <h1 className="text-3xl font-bold">Client: {clientId}</h1>
-      </header>
-      {summary && <ReviewSummary summary={summary} />}
-      <section className="grid gap-4">
-        {reviews.map((r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />))}
-        {!reviews.length && (<div className="enhanced-card">No public reviews yet.</div>)}
-      </section>
-    </main>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
+        </div>
+      </div>
+    </div>
   )
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {

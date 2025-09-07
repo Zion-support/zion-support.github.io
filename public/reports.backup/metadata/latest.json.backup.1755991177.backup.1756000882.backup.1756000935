@@ -1,11 +1,6 @@
 {
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,
-  "items": [
-  "generatedAt": "2025-08-14T09:38:10.923Z",
-  "pagesScanned": 2974,  "items": [
-  "generatedAt": "2025-08-14T09:38:10.923Z",
-  "pagesScanned": 2974,  "items": [
     {
       "route": "/404",
       "missing": [
@@ -21099,253 +21094,6 @@
       "suggestion": {
         "title": "Guide — Cloud Improving Implementation",
         "description": "Guide — Cloud Improving Implementation — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-041903",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-042122",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-043122",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-044122",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-051017",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-052014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-053013",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-054013",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-055013",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-060739",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-061014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-062105",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-063014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-063112",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-064014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-065933",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-070014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-071014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-072014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-074014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-075015",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-080014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-080809",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-082014",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Reference Architecture — Autonomous Content Mesh",
-        "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/blueprints/blueprint-2025-08-14-083015",
-      "missing": [
-      "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
-      "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
         "og:image"
       ],
       "suggestion": {
@@ -26340,17 +26088,6 @@
         "og:description",
         "og:image",
         "twitter:card"
-      ],
-      "suggestion": {
-        "title": "Guide — Techcrunch Pebble Implementation",
-        "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/guides/guide-2025-08-14-093804",
-      "missing": [
-      "missing": [
-      "route": "/reports/guides/guide-2025-08-14-093804",      "missing": [
         "og:image"
       ],
       "suggestion": {
@@ -26364,6 +26101,7 @@
       ],
       "suggestion": {
         "title": "Guide — Techcrunch Pebble Implementation",
+        "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
     },
@@ -32902,14 +32640,6 @@
         "og:description",
         "og:image",
         "twitter:card"
-      ],
-      "suggestion": {
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/playbooks/playbook-2025-08-14-040018",
       "missing": [
         "og:image"
       ],
@@ -32918,12 +32648,6 @@
         "og:image"
       ],
       "suggestion": {
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/playbooks/playbook-2025-08-14-041113",
       "missing": [
         "og:image"
       ],
@@ -32932,30 +32656,7 @@
         "og:image"
       ],
       "suggestion": {
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
-    },
-    {
-      "route": "/reports/playbooks/playbook-2025-08-14-041903",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/playbooks/playbook-2025-08-14-042123",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"
-      }
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
     },
     {
@@ -43157,14 +42858,6 @@
         "og:description",
         "og:image",
         "twitter:card"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-13 19:45",
-        "description": "Autonomous Update — 2025-08-13 19:45 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-13-1946",
       "missing": [
         "og:image"
       ],
@@ -43173,30 +42866,11 @@
         "og:image"
       ],
       "suggestion": {
-        "title": "Autonomous Update — 2025-08-13 19:46",
-        "description": "Autonomous Update — 2025-08-13 19:46 — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/update-2025-08-13-1947",
-      "missing": [
-      "missing": [
-      "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
         "og:image"
       ],
       "suggestion": {
         "title": "Autonomous Update — 2025-08-13 19:47",
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"
-        "title": "Lightning Innovation Cycle",
-        "description": "Lightning Innovation Cycle — auto-suggested description"
-      }
-      "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Autonomous Update — 2025-08-13 19:47",
-        "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
-        "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
     },
     {
       "route": "/reports/updates/update-2025-08-13-1948",
@@ -50203,18 +49877,6 @@
     {
       "route": "/services/",
       "missing": [
-        "description",
-        "og:title",
-        "og:description",
-        "og:image",
-        "twitter:card"
-      ],
-      "suggestion": {
-        "title": "Services",
-        "description": "Services — auto-suggested description"
-      }
-        "description": "Services — auto-suggested description"      }
-        "description": "Services — auto-suggested description"      }
     },
     {
       "route": "/site-health",

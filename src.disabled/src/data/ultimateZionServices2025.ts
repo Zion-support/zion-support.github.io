@@ -1,14 +1,14 @@
-// Ultimate Zion Services 2025 - Zion Tech Group
-// Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-;
-export interface ServiceContact {
+// Ultimate Zion Services 2025 - Zion Tech Group;
+// Revolutionary Micro SAAS, IT Infrastructure, and AI Services;
+export interface ServiceContact {};
   "phone": string;
   email: string;
   website: string;
-  address: string
+  address: string;
 }
-;
-export interface MicroSaasService {
+
+export interface MicroSaasService {";
+
   "id": number;
   name: string;
   category: string;
@@ -35,8 +35,7 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[]
 }
-;
-export interface ITService {
+
   "id": number;
   name: string;
   category: string;
@@ -60,8 +59,7 @@ export interface ITService {
   useCases: string[];
   technologies: string[]
 }
-;
-export interface AIService {
+
   "id": number;
   name: string;
   category: string;

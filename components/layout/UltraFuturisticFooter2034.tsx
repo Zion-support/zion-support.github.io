@@ -265,6 +265,8 @@ const stats = [
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle },];
 
 export default function UltraFuturisticFooter2034() {
+  return($2) {
+  return($2) {}
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
@@ -297,71 +299,130 @@ export default function UltraFuturisticFooter2034() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
                 className='space-y-6'
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
+
                       <Rocket className='w-7 h-7 text-white' />
-                    </div>
+                    </div>'
                     <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30'></div>
                   </div>
-                  <div>
+                  <div>'
                     <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
                       Zion Tech Group
-                    </h3>
+                    </h3>'
                     <p className='text-sm text-gray-400'>
                       Future Technology Solutions
                     </p>
                   </div>
-                </div>
+                </div>'
                 <p className='text-gray-300 leading-relaxed'>
                   Leading provider of cutting-edge AI, quantum computing, and
                   emerging technology solutions. Empowering businesses with
                   innovative tools for the future.
                 </p>
-                {/* Stats */}
-                <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                {/* Stats */}'
+                <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >"
+
+                className="space-y-6"
+              >"
+                <div className="flex items-center space-x-3">"
+                  <div className="relative">"
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">"
                       <Rocket className="w-7 h-7 text-white" />
-                    </div>
+                    </div>"
                     <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30"></div>
                   </div>
-                  <div>
+                  <div>"
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                       Zion Tech Group
-                    </h3>
+                    </h3>"
                     <p className="text-sm text-gray-400">Future Technology Solutions</p>
                   </div>
-                </div>
+                </div>"
                 <p className="text-gray-300 leading-relaxed">
                   Leading provider of cutting-edge AI, quantum computing, and emerging technology solutions.
                   Empowering businesses with innovative tools for the future.
+                </p>'
+                className='space-y-6'>;'
+                <div className='flex items-center space-x-3'>;'
+                  <div className='relative'>;'
+                    <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>;'
+                      <Rocket className='w-7 h-7 text-white' />
+                    </div>;'
+                    <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl blur opacity-30'></div>
+                  </div>
+                  <div>;'
+                    <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
+                      Zion Tech Group
+                    </h3>;'
+                    <p className='text-sm text-gray-400'>
+                      Future Technology Solutions
+                    </p>
+                  </div>
+                </div>;'
+                <p className='text-gray-300 leading-relaxed'>
+                  Leading provider of cutting-edge AI, quantum computing, and
+                  emerging technology solutions. Empowering businesses with
+                  innovative tools for the future.
                 </p>
-                {/* Stats */}
+                <div className='grid grid-cols-2 gap-4'>
+                  {stats.map((stat, index) => (
+                    <motion.div
+                      key={stat.label}
+                      initial={{ opacity: 0;, scale: 0.8 ;}}
+                      whileInView={{ opacity: 1;, scale: 1 ;}}
+
+                <div className='grid grid-cols-2 gap-4'    />
+                  {stats.map((stat, index) => (}
+                    <motion.div;}
+key={stat.label}
+                      initial={{ opacity: 0, scale: 0.8 }
+
+                      whileInView={{ opacity: 1, scale: 1 }
+
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }
+
+className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10'    />
+
+                      <stat.icon className='w-6 h-6 text-cyan-400 mx-auto mb-2'    />
+                      <div className='text-lg font-bold text-white'    />
+                        {stat.value}
+                      </div>
+                      <div className='text-xs text-gray-400'    />{stat.label}</div>
+                    </motion.div>
+                  ))}
+
+                </div>
+                {/* Contact Info */}
+
+                    <Phone className='w-4 h-4' />
+                    <span>{contactInfo.mobile}</span>
+                  </div>'
+                  <div className='flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors'>'
+                    <Mail className='w-4 h-4' />
+                    <span>{contactInfo.email}</span>
+                  </div>'
+                  <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>'
+                    <MapPin className='w-4 h-4' />'
+                    <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>"
+
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10'
-                    >
-                      <stat.icon className='w-6 h-6 text-cyan-400 mx-auto mb-2' />
-                      <div className='text-lg font-bold text-white'>
-                        {stat.value}
-                      </div>
-                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
-                    >
-                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                      <div className="text-lg font-bold text-white">{stat.value}</div>
+
+                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
+                    >"
+                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />"
+                      <div className="text-lg font-bold text-white">{stat.value}</div>"
                       <div className="text-xs text-gray-400">{stat.label}</div>
+                    </motion.div>
                   ))}
                 </div>
                 {/* Contact Info */}
@@ -394,17 +455,16 @@ export default function UltraFuturisticFooter2034() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-                className='space-y-8'
-              >
-                <h3 className='text-xl font-bold text-white mb-6'>
+
+className='space-y-8'
+                  />
+                <h3 className='text-xl font-bold text-white mb-6'    />
                   Our Services
                 </h3>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>                  {serviceCategories.map((category, index) => (                className="space-y-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                  {serviceCategories.map((category, index) => (
                     <motion.div
                       key={category.title}
                       initial={{ opacity: 0, x: -20 }}
@@ -414,18 +474,33 @@ export default function UltraFuturisticFooter2034() {
                       className='space-y-4'
                     >
                       <div className='flex items-center space-x-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8' />
+                  {serviceCategories.map((category, index) => (}
+                    <motion.div;}
+key={category.title}
+                      initial={{ opacity: 0, x: -20 }
+
+                      whileInView={{ opacity: 1, x: 0 }
+
+                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                      viewport={{ once: true }}
+
+className='space-y-4'
+                     />
+                      <div className='flex items-center space-x-2' />
                         <category.icon className='w-5 h-5 text-cyan-400' />
+
                         <h4 className='font-semibold text-white'>
                           {category.title}
                         </h4>
-                      </div>
+                      </div>'
                       <div className='space-y-2'>
                         {category.services.map(service => (
                           <Link
                             key={service.name}
-                            href={service.href}
+                            href={service.href}'
                             className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'
-                          >
+                          >'
                             <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
                               {service.name}
                             </span>
@@ -447,16 +522,52 @@ export default function UltraFuturisticFooter2034() {
                             <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
                               {service.price}
                             </span>
+                          </Link>'
+                      className='space-y-4'>;'
+                      <div className='flex items-center space-x-2'>;'
+                        <category && category.icon className='w-5 h-5 text-cyan-400' />;'
+                        <h4 className='font-semibold text-white'>
+                          {category && category.title}
+                        </h4>
+                      </div>;'
+                      <div className='space-y-2'>
+                        {category && category.services.map(service => (
+                          <Link
+                            key={service && service.name}
+                            href={service && service.href}'
+                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'>;'
+                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
+                              {service && service.name}
+                            </span>;'
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service && service.price}                    >;"
+                      <div className="flex items-center space-x-2">;"
+                        <category && category.icon className="w-5 h-5 text-cyan-400" />;"
+                        <h4 className="font-semibold text-white">{category && category.title}</h4>
+                      </div>;"
+                      <div className="space-y-2">
+                        {category && category.services.map((service) => (
+                          <Link
+                            key={service && service.name}
+                            href={service && service.href}"
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200">;"
+                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
+                              {service && service.name}
+                            </span>;"
+                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
+                              {service && service.price}
+                            </span>
                           </Link>
+                            key={service.name}
+                            href={service.href}"
+
+                              {service.price}
                         ))}
                       </div>
-                    </motion.div>
+                    </motion && motion.div>
                   ))}
-                </div>
-              </motion.div>
-            </div>
-            {/* Quick Links & Social */}
-            <div className='lg:col-span-1'>              <motion.div            <div className="lg:col-span-1">
+
+<div className='lg:col-span-1'>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -465,22 +576,8 @@ export default function UltraFuturisticFooter2034() {
                 className='space-y-8'
               >
                 {/* Quick Links */}
-                <div>
-                  <h4 className='text-lg font-semibold text-white mb-4'>
-                    Quick Links
-                  </h4>
-                  <div className='space-y-2'>
-                    {quickLinks.map(link => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
-                      >
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-                        <span className='text-sm'>{link.name}</span>                      </Link>              >
-                {/* Quick Links */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                <div>;"
+                  <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>;"
                   <div className="space-y-2">
                     {quickLinks.map((link) => (
                       <Link
@@ -503,7 +600,7 @@ export default function UltraFuturisticFooter2034() {
                     {companyLinks.map(link => (
                       <Link
                         key={link.name}
-                        href={link.href}
+                        href={link.href}'
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
                       >
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
@@ -548,21 +645,16 @@ export default function UltraFuturisticFooter2034() {
             </div>
           </div>
           {/* Certifications */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-            className='mt-16 pt-8 border-t border-white/10'
-          >
-            <h4 className='text-lg font-semibold text-white mb-6 text-center'>
+          <motion&& motion.div
+className='mt-16 pt-8 border-t border-white/10'
+              />
+            <h4 className='text-lg font-semibold text-white mb-6 text-center'    />
               Certifications & Compliance
             </h4>
-            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>              {certifications.map((cert, index) => (            className="mt-16 pt-8 border-t border-white/10"
-          >
-            <h4 className="text-lg font-semibold text-white mb-6 text-center">Certifications & Compliance</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>
+              {certifications.map((cert, index) => (
                 <motion.div
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={cert}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -587,25 +679,23 @@ export default function UltraFuturisticFooter2034() {
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
               <div className='flex items-center space-x-6 text-sm text-gray-400'>;
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
-                <Link
-                  href='/privacy'
-                  className='hover:text-cyan-400 transition-colors'
-                >
+                <Link'
+                  href='/privacy''
+                  className='hover:text-cyan-400 transition-colors'>
                   Privacy Policy
                 </Link>
                 <Link
-                  href='/terms'
+href='/terms'
+
                   className='hover:text-cyan-400 transition-colors'
-                >
+                    />
                   Terms of Service
                 </Link>
               </div>
-              <div className='flex items-center space-x-2 text-gray-400'>
-                <Heart className='w-4 h-4 text-red-400' />
-                <span className='text-sm'>Made with ❤️ for the future</span>              </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Heart className="w-4 h-4 text-red-400" />
-                <span className="text-sm">Made with ❤️ for the future</span>
+              <div className='flex items-center space-x-2 text-gray-400'    />
+                <Heart className='w-4 h-4 text-red-400'    />
+                <span className='text-sm'    />Made with ❤️ for the future</span>
+              </div>
             </div>
           </div>
         </div>

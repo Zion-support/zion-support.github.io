@@ -9,12 +9,17 @@ const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>;"
         <meta name="description" content="SecurityAuditingChat service" />{" "}
+
       </Head>
+        <meta name="description" content="SecurityAuditingChat service" />
+      </Head>
+pr-12243
+
       <main>
         <h1>SecurityAuditingChat</h1>
-        <p>Service details coming soon...</p>
+        <p>Service details coming soon...</p>"
         <a href="/services">Back to Services</a>
       </main>
     </div>

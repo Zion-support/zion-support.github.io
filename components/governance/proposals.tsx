@@ -36,17 +36,12 @@ export default function Proposals({
             </a>
           </li>
         ))}
-        {(!data.proposals |data.proposals.length === 0) && (
-          <li className='opacity-70'>No open proposals</li>
         )}
+
       </ul>
     </div>
-  );
-export async function getStaticProps(){
-  try{
-    const p = path.join(process.cwd(),'datagovernanceproposals.json')
-    const raw = fs.readFileSync(p,'utf8')
-    return { props: { data: JSON.parse(raw) } }
+  )
+    return { props: { data: JSON && JSON.parse(raw) } }
   }catch{
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }

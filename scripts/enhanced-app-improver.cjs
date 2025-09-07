@@ -302,24 +302,25 @@ if (require.main === module) {;
 module.exports = EnhancedAppImprover
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
+
       console.error(" Error during "improvements":", error.message);"}"
-    console.log("⚡ Optimizing performance...");""
-    const performanceHook = "import { useState, useEffect  } from "react"";"
-  const [metrics, setMetrics] = useState({);    "loadTime": 0,""renderTime": 0,""memoryUsage": 0,"}
-          "renderTime": endTime - startTime,""memoryUsage"
-  return metrics,,};";"
+    console.log("⚡ Optimizing performance...")
+    const performanceHook = "import { useState, useEffect  } from "react;"
+  const [metrics, setMetrics] = useState({);    "loadTime": 0,renderTime": 0,memoryUsage": 0,"}
+          "renderTime": endTime - startTime,memoryUsage"
+  return metrics,};";"
     this.writeFile("src/hooks/usePerformanceMonitoring.ts", performanceHook);";    this.improvements.push("Created performance monitoring hook");"}"
-    console.log("� Improving code quality...");""
-      "compilerOptions": {""target": "ES2020", ""lib": ["DOM", "DOM.Iterable", "ES6"],""allowJs": true,""skipLibCheck": true,""strict": true,""forceConsistentCasingInFileNames": true,""noEmit": true,""esModuleInterop": true,""module": "esnext", ""moduleResolution": "node", ""resolveJsonModule": true,""isolatedModules": true,""jsx": "preserve", ""incremental": true,""plugins": ["}]
+    console.log("� Improving code quality...")
+      "compilerOptions": {target": "ES2020", lib": ["DOM", "DOM.Iterable", "ES6"],allowJs": true,skipLibCheck": true,strict": true,forceConsistentCasingInFileNames": true,noEmit": true,esModuleInterop": true,module": "esnext", moduleResolution": "node", resolveJsonModule": true,isolatedModules": true,jsx": "preserve", incremental": true,plugins": ["}]
             "name": "next", "},,"
-        "baseUrl": ".", ""paths": {""@/*": ["./src/*"],""@/components/*": ["./src/components/*"],""@/pages/*": ["./src/pages/*"],""@/utils/*": ["./src/utils/*"],""@/hooks/*": ["./src/hooks/*"],""@/types/*": ["./src/types/*"],"},,"
-      "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],""exclude": ["node_modules"],"};"
+        "baseUrl": ".", paths": {@/*": ["./src/*"],@/components/*": ["./src/components/*"],@/pages/*": ["./src/pages/*"],@/utils/*": ["./src/utils/*"],@/hooks/*": ["./src/hooks/*"],@/types/*": ["./src/types/*"],"},,"
+      "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],exclude": ["node_modules"],"};"
     this.writeFile("tsconfig.json", JSON.stringify(tsConfig, null, 2));";    this.improvements.push("Enhanced TypeScript configuration");"}"
-    console.log("� Enhancing security...");""
-    const securityMiddleware = "import { NextResponse  } from "next/server"";import type { NextRequest } from "next/server"";";export function middleware("request": NextRequest) {"}
+    console.log("� Enhancing security...")
+    const securityMiddleware = "import { NextResponse  } from "next/server;import type { NextRequest } from "next/server;";export function middleware("request": NextRequest) {"}
   response.headers.set("X-Frame-Options", "DENY");";  response.headers.set("X-Content-Type-Options", "nosniff");";  response.headers.set("Referrer-Policy", "origin-when-cross-origin");";  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");";"
-    "default-src "self", ""script-src "self" "unsafe-eval" "unsafe-inline", ""style-src "self" "unsafe-inline", ""img-src "self" "data": "https":", ""font-src "self", ""connect-src "self", ""frame-ancestors "none"""].join("");";";  response.headers.set("Content-Security-Policy", csp);";"
-  "matcher": [""/((?!api|_next/static|_next/image|favicon.ico).*)", "],,"};";"
+    "default-src "self", script-src "self" "unsafe-eval" "unsafe-inline", style-src "self" "unsafe-inline", img-src "self" "data": "https":", font-src "self", connect-src "self", frame-ancestors "none"].join();";";  response.headers.set("Content-Security-Policy", csp);";"
+  "matcher": [/((?!api|_next/static|_next/image|favicon.ico).*)", "],,"};";"
     this.writeFile("middleware.ts", securityMiddleware);";    this.improvements.push("Created security middleware with CSP headers");"}"
     console.log(" Optimizing SEO...");""
     const seoComponent = "import Head from "next/head"";";interface SEOProps {"}
@@ -351,7 +352,7 @@ export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({";  size = "md"
     this.writeFile("src/components/LoadingSpinner.tsx", loadingSpinner);";    this.improvements.push("Created loading spinner component");"}"
     console.log("� Optimizing build process...");""
     const buildOptimizer = "#!/usr/bin/env node"
-const { execSync } = require("child_process")";const fs = require("fs")";const path = require("path")""
+const { execSync } = require("child_process")";";""
     console.log("� Starting build optimization...");";"
       console.log(" Build optimization completed successfully");"} catch (error) {";      console.error(" Build optimization "failed":", error.message);";      process.exit(1),"}
     console.log("🧹 Cleaning previous builds...");";    const buildDirs = [".next", "dist", "build"];";"
@@ -385,7 +386,7 @@ module.exports = BuildOptimizer";"
     this.writeFile("README.md", readme);";    this.improvements.push("Created comprehensive README");"}"
     console.log(" Creating additional automation scripts...");""
     const deploymentScript = "#!/usr/bin/env node"
-const { execSync } = require("child_process")";const fs = require("fs")""
+const { execSync } = require("child_process")";""
     console.log(" Starting deployment automation...");";"
       console.log(" Deployment completed successfully");"} catch (error) {";      console.error(" Deployment "failed":", error.message);";      process.exit(1),"}
     console.log("🧪 Running tests...");";    execSync("npm run test", { "stdio": "inherit" }
@@ -399,7 +400,7 @@ module.exports = DeploymentAutomation";"
     this.writeFile("scripts/deployment-automation.cjs", deploymentScript);";    this.improvements.push("Created deployment automation script");"}"
       fs.mkdirSync(dir, { "recursive": true }),"
     console.log("\\n� Enhanced App Improvement "Summary":");";    console.log(`Total "Improvements": ${this.improvements.length}`);";    console.log("Total "Fixes": ${this.fixes.length}");"
-    console.log("\\n� Improvements "Applied":");";    this.improvements.forEach(improvement => {);      console.log(` ${improvement}`);
+    console.log("\\n� Improvements "Applied":");";    this.improvements.forEach(improvement => {);      console.log(` ${improvement}`)
     console.log("\\n Fixes "Applied":");";    this.fixes.forEach(fix => {);      console.log(" ${fix}");"
       "timestamp": new Date().toISOString(),""improvements": this.improvements,""fixes": this.fixes,""summary": {""totalImprovements": this.improvements.length,""totalFixes": this.fixes.length,,"}
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"

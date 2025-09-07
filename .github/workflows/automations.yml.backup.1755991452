@@ -1,3 +1,5 @@
+
+
 name: Cloud Automations
 
 on:
@@ -19,6 +21,7 @@ jobs:
   run-automations:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
         with:

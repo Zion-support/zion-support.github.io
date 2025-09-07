@@ -24,7 +24,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   });
 
 export default async function handler(
-  req: NextApiRequest
+  req: NextApiRequest,
   res: NextApiResponse
 ) {
   const editionParam = (req.query.edition as string) |'full';
@@ -50,38 +50,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Cover page
   doc.addPage();
   doc
-    .fontSize(26)
-    .fillColor('#000000')
-    .text('Zion Protocol Whitepaper', { align: 'left' });
-  doc.moveDown();
+    .fontSize(26)'
+    .fillColor('#000000')'
+    .text('Zion Protocol Whitepaper', { align: 'left' });'`
+  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`)
+  doc.moveDown();'
+  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):')
+  doc.moveDown(0.5);'
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
+  const sections = getWhitepaperSections(edition as any)
+  sections.forEach(s => writeSection(doc, s.title, s.contentMd))
+  const sections = getWhitepaperSections(edition as any)
+  doc && doc.addPage()
   doc
-    .fontSize(14)
+    .fontSize(10)'
     .fillColor('#444444')
-    .text(`Edition: ${edition.toUpperCase()}`);
-  doc.moveDown();
-  doc
-    .fontSize(10)
-    .fillColor('#666666')
-    .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-  const sections = getWhitepaperSections(edition as any);
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown();
-  doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
-  doc.moveDown();
-  doc.fontSize(10).fillColor('#666666').text('Operator Prompt (for maintenance):');
-  doc.moveDown(0.5);
-  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-  const sections = getWhitepaperSections(edition as any);
-  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
-  // End
-  doc.addPage();
-  doc
-    .fontSize(10)
-    .fillColor('#444444')
-    .text(
+    .text('
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
-    );
-  doc.end();
+    )
+  doc && doc.end()
   // End
   doc.addPage();
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');

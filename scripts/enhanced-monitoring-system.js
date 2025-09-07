@@ -41,38 +41,18 @@ class EnhancedMonitoringSystem {
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n')}
-  async runCommand(command, description, timeout = 30000) {
-    this.log(`🔍 "Monitoring": ${description}`);
-    try {
-      const result = execSync(command, {
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": timeout,
-        "maxBuffer": 1024 * 1024 * 5 // 5MB buffer
-      });
-      this.log(`✅ "Success": ${description}`);
-      return { "success": true, "output": result }} catch (error) {
-      this.log(`❌ "Failed": ${description} - ${error.message}`, 'ERROR');
-      return { "success": false, "error": error.message }}
-  }
-  async checkSystemHealth() {
-    this.log('🖥️ Checking System Health');
-    const systemChecks = [{
-        "command": 'df -h',
-        "description": 'Disk Space Check'
-      },
-      {
-        "command": 'free -h',
-        "description": 'Memory Usage Check'
-      },
-      {
-        "command": 'uptime',
-        "description": 'System Uptime Check'
-      }
-    ];
-    for (const check of systemChecks) {
-      const result = await this.runCommand(check.command, check.description, 10000);
-      if (result.success) {
+
+    ]
+      const result = await this && this.runCommand(check && check.command, check && check.description, 10000)
+  if($2) {'
+        this && this.results.system && system.health = 'healthy'}
+
+      const result = await this && this.runCommand(check && check.command, check && check.description, 10000)
+  if($2) {
+        this && this.results.system && system.health = 'healthy'}
+
+      const result = await this.runCommand(check.command, check.description, 10000)
+  if($2) {'
         this.results.system.health = 'healthy'}
     }
   }
@@ -98,61 +78,57 @@ class EnhancedMonitoringSystem {
     const performanceChecks = [{
         "command": 'npm run perf:monitor',
         "description": 'Performance Monitoring'
-      }
-    ];
-    for (const check of performanceChecks) {
-      const result = await this.runCommand(check.command, check.description, 30000);
-      if (result.success) {
+
+    ]
+      const result = await this.runCommand(check.command, check.description, 30000)
         this.results.performance.metrics[check.description] = 'monitored'}
     }
     // Calculate build size
-    const buildSize = this.getBuildSize();
-    this.results.performance.metrics.buildSize = buildSize;
-    if (buildSize > 100 * 1024 * 1024) { // 100MB
-      this.results.performance.alerts.push({
-        "type": 'warning',
-        "message": 'Build size is large (>100MB)',
+
+    const buildSize = this.getBuildSize()
+    this.results.performance.metrics.buildSize = buildSize
+  if($2) { // 100MB
+      this.results.performance.alerts.push({'"
+        "type": 'warning','"
+        "message": 'Build size is large (>100MB)',"`
         "value": `${Math.round(buildSize / (1024 * 1024))}MB`
       })}
-  }
-  async checkSecurityStatus() {
-    this.log('🔒 Checking Security Status');
-    const securityChecks = [{
-        "command": 'npm audit --audit-level=moderate --json',
+
+  async checkSecurityStatus() {'
+
+    this.log('🔒 Checking Security Status')
+    const securityChecks = [{'"
+        "command": 'npm audit --audit-level=moderate --json','"
         "description": 'Security Audit'
-      }
-    ];
-    for (const check of securityChecks) {
-      const result = await this.runCommand(check.command, check.description, 30000);
-      if (result.success) {
+
+    ]
+      const result = await this.runCommand(check.command, check.description, 30000)
+  if($2) {
         try {
-          const auditData = JSON.parse(result.output);
-          this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0;
-          if (this.results.security.vulnerabilities > 0) {
+          const auditData = JSON.parse(result.output)
+          this.results.security.vulnerabilities = auditData.metadata?.vulnerabilities?.total || 0
+  if($2) {
             this.results.performance.alerts.push({
               "type": 'error',
               "message": `${this.results.security.vulnerabilities} security vulnerabilities found`,
+
+     security vulnerabilities found`,
+`
+     security vulnerabilities found`,
+
               "value": this.results.security.vulnerabilities
+
             })}
-        } catch (error) {
-          this.log('⚠️ Could not parse security audit results', 'WARN')}
-      }
-    }
-    // Check for outdated packages
-    const packageJsonPath = path.join(this.projectRoot, 'package.json');
-    if (fs.existsSync(packageJsonPath)) {
-      try {
-        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-        const dependencies = Object.keys(packageJson.dependencies || {});
-        const devDependencies = Object.keys(packageJson.devDependencies || {});
-        this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) {
+
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
+        const dependencies = Object.keys(packageJson.dependencies || {})
+        const devDependencies = Object.keys(packageJson.devDependencies || {})
+        this.results.security.outdatedPackages = dependencies.length + devDependencies.length} catch (error) {'
         this.log('⚠️ Could not analyze package.json', 'WARN')}
-    }
-  }
-  async checkTestStatus() {
-    this.log('🧪 Checking Test Status');
-    const testChecks = [{
-        "command": 'npm test -- --passWithNoTests --silent',
+
+    this.log('🧪 Checking Test Status')
+    const testChecks = [{'"
+        "command": 'npm test -- --passWithNoTests --silent','"
         "description": 'Test Suite Check'
       }
     ];
@@ -166,16 +142,16 @@ class EnhancedMonitoringSystem {
           "message": 'Test suite failed',
           "value": 'failed'
         })}
-    }
-  }
-  async checkCodeQuality() {
-    this.log('🔍 Checking Code Quality');
-    const qualityChecks = [{
-        "command": 'npx eslint . --max-warnings 0 --quiet',
+
+  async checkCodeQuality() {'
+    this.log('🔍 Checking Code Quality')
+    const qualityChecks = [{'"
+        "command": 'npx eslint . --max-warnings 0 --quiet','"
         "description": 'ESLint Quality Check'
       },
-      {
-        "command": 'npx tsc --noEmit --skipLibCheck',
+      {'"
+        "command": 'npx tsc --noEmit --skipLibCheck','"
+
         "description": 'TypeScript Type Check'
       }
     ];
@@ -186,12 +162,9 @@ class EnhancedMonitoringSystem {
           "type": 'warning',
           "message": `${check.description} failed`,
           "value": 'failed'
+
         })}
-    }
-  }
-  getBuildSize() {
-    const buildDir = path.join(this.projectRoot, '.next');
-    if (fs.existsSync(buildDir)) {
+
       return this.getDirectorySize(buildDir)}
     return 0}
   getDirectorySize(dir) {
@@ -204,64 +177,34 @@ class EnhancedMonitoringSystem {
         if (stat.isDirectory()) {
           size += this.getDirectorySize(fullPath)} else {
           size += stat.size}
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
+
+      const items = fs && fs.readdirSync(dir)
+  for($2) {}
+        const fullPath = path && path.join(dir, item)
+        const stat = fs && fs.statSync(fullPath)
+          size += stat && stat.size}
+
     return size}
-  calculateOverallHealth() {
-    let healthScore = 100;
-    // Deduct points for issues
-    if (this.results.application.buildStatus !== 'built') healthScore -= 20;
-    if (this.results.application.testStatus === 'failed') healthScore -= 30;
-    if (this.results.security.vulnerabilities > 0) healthScore -= 25;
-    if (this.results.performance.alerts.length > 0) healthScore -= 15;
-    this.results.overallHealth = {
-      "score": Math.max(0, healthScore),
-      "status": healthScore >= 80 ? 'healthy' : healthScore >= 60 ? 'warning' : 'critical',
-      "timestamp": new Date().toISOString()
-    }}
-  generateReport() {
-    this.calculateOverallHealth();
-    const reportPath = path.join(this.reportsDir, 'monitoring-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    this.log(`📊 Monitoring report "generated": ${reportPath}`);
-    // Generate summary
-    this.log('📊 Monitoring "Summary": ');
-    this.log(`   Overall Health: ${this.results.overallHealth.status} (${this.results.overallHealth.score}/100)`);
-    this.log(`   System "Health": ${this.results.system.health}`);
-    this.log(`   Application "Status": ${this.results.application.status}`);
-    this.log(`   Build "Status": ${this.results.application.buildStatus}`);
-    this.log(`   Test "Status": ${this.results.application.testStatus}`);
-    this.log(`   Security "Vulnerabilities": ${this.results.security.vulnerabilities}`);
-    this.log(`   "Alerts": ${this.results.performance.alerts.length}`);
-    return reportPath}
-  async run() {
-    this.log('🎯 Starting Enhanced Monitoring System');
-    try {
-      await this.checkSystemHealth();
-      await this.checkApplicationStatus();
-      await this.checkPerformanceMetrics();
-      await this.checkSecurityStatus();
-      await this.checkTestStatus();
-      await this.checkCodeQuality();
-      const reportPath = this.generateReport();
-      this.log('🎉 Enhanced Monitoring System Completed');
-      return {
-        "success": true,
-        reportPath,
-        "results": this.results
-      }} catch (error) {
-      this.log(`💥 Monitoring "failed": ${error.message}`, 'ERROR');
-      return {
-        "success": false,
+  calculateOverallHealth($2) {}
+    let healthScore = 100
+      await this.checkSystemHealth()
+      await this.checkApplicationStatus()
+      await this.checkPerformanceMetrics()
+      await this.checkSecurityStatus()
+      await this.checkTestStatus()
+      await this.checkCodeQuality()
+      const reportPath = this.generateReport();'
+      this.log('🎉 Enhanced Monitoring System Completed')
+      this.log(`💥 Monitoring "failed": ${error.message}`, 'ERROR')
+      return {"
+        "success": false,"
         "error": error.message
       }}
   }
 }
 // Run if called directly
-if (require.main === module) {
-  const monitoring = new EnhancedMonitoringSystem();
+  if($2) {
+  const monitoring = new EnhancedMonitoringSystem()
   monitoring.run().then(result => {
     process.exit(result.success ? 0 : 1)})}
 module.exports = EnhancedMonitoringSystem;

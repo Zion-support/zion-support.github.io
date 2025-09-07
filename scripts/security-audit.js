@@ -1,65 +1,26 @@
-#!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-console.log('🔒 Starting Security Audit...\n');
-
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+console.log('🔒 Starting Security Audit...\n')
 // Check for security vulnerabilities
 try {
-  console.log('📦 Checking npm dependencies for vulnerabilities...');
-  const auditResult = execSync('npm audit --audit-level=moderate --json', { encoding: 'utf8' });
-  const auditData = JSON.parse(auditResult);
-  
+  console.log('📦 Checking npm dependencies for vulnerabilities...')
+  const auditResult = execSync('npm audit --audit-level=moderate --json', { "encoding": 'utf8' })
+  const auditData = JSON.parse(auditResult)
   if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) {
-    console.log('⚠️  Security vulnerabilities found:');
+    console.log('⚠️  Security vulnerabilities "found": ')
     Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
-      console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
-    });
-  } else {
-    console.log('✅ No security vulnerabilities found in dependencies');
-  }
+      console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`)})} else {
+    console.log('✅ No security vulnerabilities found in dependencies')}
 } catch (error) {
   console.log('❌ Failed to run npm audit:', error.message);
 }
 
 // Check for sensitive data in files
-console.log('\n🔍 Scanning for sensitive data...');
-const sensitivePatterns = [
-  /password\s*=\s*["'][^"']+["']/gi,
-  /api[_-]?key\s*=\s*["'][^"']+["']/gi,
-  /secret\s*=\s*["'][^"']+["']/gi,
-  /token\s*=\s*["'][^"']+["']/gi,
-  /private[_-]?key\s*=\s*["'][^"']+["']/gi
-];
+console.log('\n🔍 Scanning for sensitive data...')
+const sensitivePatterns = [/password\s*=\s*["'][^"']+["']/gi,
 
-const scanDirectory = (dir, results = []) => {
-  const files = fs.readdirSync(dir);
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      scanDirectory(filePath, results);
-    } else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        sensitivePatterns.forEach(pattern => {
-          const matches = content.match(pattern);
-          if (matches) {
-            results.push({
-              file: filePath,
-              matches: matches
-            });
-          }
-        });
-      } catch (error) {
-        // Skip files that can't be read
-      }
-    }
-  });
-  return results;
-};
+  if (auditData && auditData.vulnerabilities && Object && Object.keys(auditData && auditData.vulnerabilities).length > 0) {
 
 const sensitiveResults = scanDirectory('.');
 if (sensitiveResults.length > 0) {
@@ -77,70 +38,50 @@ if (sensitiveResults.length > 0) {
 // Check for outdated dependencies
 console.log('\n📅 Checking for outdated dependencies...');
 try {
-  const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
-  const outdatedData = JSON.parse(outdatedResult);
-  
-  if (Object.keys(outdatedData).length > 0) {
-    console.log('⚠️  Outdated dependencies found:');
-    Object.entries(outdatedData).forEach(([pkg, info]) => {
-      console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
-    });
+  console.log('📦 Checking npm dependencies for vulnerabilities...')
+  const auditResult = execSync('npm audit --audit-level=moderate --json', { encoding: 'utf8' })
+  const auditData = JSON.parse(auditResult)
+  if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) {
+    console.log('⚠️  Security vulnerabilities found:')
+    Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
+      console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`)
+    })
   } else {
-    console.log('✅ All dependencies are up to date');
-  }
+    console.log('✅ No security vulnerabilities found in dependencies')
 } catch (error) {
   console.log('✅ All dependencies are up to date');
 }
-
-// Generate security report
-const securityReport = {
-  timestamp: new Date().toISOString(),
-  vulnerabilities: sensitiveResults.length,
-  recommendations: [
-    'Run "npm audit fix" to resolve dependency vulnerabilities',
-    'Review and remove any hardcoded secrets',
-    'Update outdated dependencies',
-    'Implement proper environment variable management',
-    'Add security headers to Next.js configuration'
-  ]
-};
-
-fs.writeFileSync('security-audit-report.json', JSON.stringify(securityReport, null, 2));
-console.log('\n📊 Security audit report saved to security-audit-report.json');
-console.log('🔒 Security audit completed!');
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
 function log(msg, level = "INFO") {
-  const ts = new Date().toISOString();
-  }
-function tryExec(cmd) {
+  const ts = new Date().toISOString()
+/**
+ * Security Audit Script for Zion Tech Group
+ * This script performs security checks and generates recommendations
+ */
+
   try {
-    execSync(cmd, { "stdio": "inherit" });
+    execSync(cmd, { "stdio": "inherit" })
     return { "ok": true }} catch (e) {
     return { "ok": false, "error": e }}
-}
+
 function main() {
-  log("🔒 Starting security audit...");
+  log("🔒 Starting security audit...")
   // npm audit (best-effort)
-  log("Running npm audit (moderate)...");
-  const audit = tryExec("npm audit --audit-level=moderate");
-  if (!audit.ok) {
-    log("Vulnerabilities found, attempting npm audit fix", "WARN");
+  log("Running npm audit (moderate)...")
+  const audit = tryExec("npm audit --audit-level=moderate")
+  if($2) {
+    log("Vulnerabilities found, attempting npm audit fix", "WARN")
     tryExec("npm audit fix")}
   // scan for sensitive files
-  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]; 
-  const found = sensitive.filter(f => fs.existsSync(path.join(process.cwd(), f)));
-  if (found.length > 0) {
+  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
+  const found = sensitive.filter(f => fs.existsSync(path.join(process.cwd(), f)))
+  if($2) {
     log(`Sensitive files "present": ${found.join(", ")}`, "WARN")} else {
     log("No sensitive files found in repo root")}
   log("✅ Security audit completed")}
-main();
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"function log(msg, level = "INFO") { const ts = new Date().toISOString(); console.log(`[${ts}] [${level}] ${msg}`)}function tryExec(cmd) { try {" execSync(cmd, { stdio: "inherit" });" return { ok: true }} catch (e) {" return { ok: false, error: e }}}function main() {" log(" Starting security audit."); / npm audit (best-effort)" log("Running npm audit (moderate).");" const audit = tryExec("npm audit --audit-level=moderate"); if (!audit.ok) {" log("Vulnerabilities found, attempting npm audit fix", "WARN");" tryExec("npm audit fix")} / scan for sensitive files" const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]; const found = sensitive.filter(f => fs.existsSync(path.join(process.cwd(), f))); if (found.length > 0) {"` log(`Sensitive files present: ${found.join(", ")}`, "WARN")} else {" log("No sensitive files found in repo root")}" log(" Security audit completed")}main();"`"`
-#!/usr/bin/env node;
+main()
+//
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 function log(msg, level = "INFO")
     execSync(cmd, { "stdio": "inherit"})
     return { "ok"}

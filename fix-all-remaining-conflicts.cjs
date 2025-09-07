@@ -27,10 +27,10 @@ function fixMergeConflicts(filePath) {
     
     // Remove all merge conflict markers and keep the first version (HEAD)
     let fixedContent = content
-      .replace(/      .replace(/=======\n[\s\S]*?      .replace(/      .replace(/    
+      .replace(/      .replace(/\n[\s\S]*?      .replace(/      .replace(/    
     // Clean up any remaining conflict markers
     fixedContent = fixedContent
-      .replace(/      .replace(/=======\n/g, '')
+      .replace(/      .replace(/\n/g, '')
       .replace(/    
     fs.writeFileSync(filePath, fixedContent);
     log(`✅ Fixed: ${filePath}`);

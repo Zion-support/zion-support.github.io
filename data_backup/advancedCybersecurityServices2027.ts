@@ -1,5 +1,9 @@
 export interface AdvancedCybersecurityService2027 {
   "id": string;
+;
+;
+
+export interface AdvancedCybersecurityService2027  {\"id\": string;
   title: string;
   description: string;
   category: string;

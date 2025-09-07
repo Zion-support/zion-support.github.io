@@ -116,7 +116,7 @@ export default function PrivatePage({ user }: PrivatePageProps) {
           </CardContent>
         </Card>
       </div>
-    </>
+    </div>
   )
 }
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);

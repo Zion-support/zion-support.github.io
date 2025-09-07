@@ -30,8 +30,11 @@ export async function getServerSideProps() {;
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
   } catch {}
-  items.sort((a, b) => (a.date < b.date ? 1 : -1));
-
+  items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1))
+import fs from 'fs'
+import path from 'path'
+export type Trend = any
+origin/cursor/automate-test-improve-and-merge-code-2533
   return { props: { items } }
 }
 export default function AiTrendsPage({ items }: { items: Trend[] }) {

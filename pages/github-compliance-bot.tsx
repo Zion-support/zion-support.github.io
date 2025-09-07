@@ -25,7 +25,7 @@ export default function GitHubComplianceBotPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

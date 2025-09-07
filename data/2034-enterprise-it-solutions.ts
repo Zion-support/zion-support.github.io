@@ -1,6 +1,8 @@
 export type EnterpriseITSolution = any;
 export type EnterpriseITSolution = {
   id: string;
+export type EnterpriseITSolution = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline?: string;
   description: string;
@@ -17,112 +19,75 @@ export type EnterpriseITSolution = {
   }
   features: string[];
   integrations?: string[];
-  useCases?: string[];
-  link: string; // canonical internal link under /services/*
-  realService?: boolean;
+  use_cases?: string[];
+  link: string; // canonical internal link under /services/*;
+  real_service?: boolean;
   rating?: number;
-  launchDate?: string;
+
 }
+;
+export const enterpriseITSolutions: EnterpriseITSolution[] = [;
+  {}
+    id: 'zero - trust - network - architecture','
+    name: 'Zero Trust Network Architecture','
+    tagline: 'Identity - first perimeterless security for modern enterprises',
+    description:'
+      'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.','
+    category: 'Enterprise Security','
+    pricing: { starter: '$4, 999 / mo', enterprise: 'Custom' },
+    features: [;'
+      'Policy - based access','
+      'Micro - segmentation',
+
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
   {
     id: 'zero-trust-network-architecture'
     name: 'Zero Trust Network Architecture'
+
     tagline: 'Identity-first perimeterless security for modern enterprises'
-    description:
-      'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'
-    category: 'Enterprise Security'
+    description:'
+      'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.''
+    category: 'Enterprise Security''
     pricing: { starter: '$4,999/mo', enterprise: 'Custom' }
-    features: [
-      'Policy-based access'
-      'Micro-segmentation'
-      'Device posture checks'
-      'SSO & MFA integration'
-    ]
-    integrations: ['Okta', 'Azure AD', 'Cloudflare Zero Trust']
-    useCases: ['Secure remote work', 'Lateral movement prevention']
-    link: 'https://ziontechgroup.com/services/zero-trust-network-architecture'
-    realService: true
-    launchDate: '2025-11-01'
-  }
-  {
-    id: 'platform-engineering-foundation'
+    features: []
+  {'
+    id: 'platform-engineering-foundation''
     name: 'Platform Engineering Foundation'
-    description:
-      'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'
-    category: 'DevOps & Automation'
+    description:'
+      'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.''
+    category: 'DevOps & Automation''
     pricing: { starter: '$3,499/mo' }
-    features: [
-      'Self-service templates'
-      'Golden pipelines'
-      'RBAC and policy packs'
-      'Cost guardrails'
-    ]
-    integrations: ['GitHub', 'ArgoCD', 'Backstage']
-    useCases: ['Developer productivity', 'Standardized delivery']
-    link: 'https://ziontechgroup.com/services/platform-engineering-foundation'
-    realService: true
-    rating: 4.8
-  }
-  {
-    id: 'enterprise-data-mesh'
+    features: []
+  {'
+    id: 'enterprise-data-mesh''
     name: 'Enterprise Data Mesh'
-    description:
-      'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'
-    category: 'Data & Analytics'
+    description:'
+      'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.''
+    category: 'Data & Analytics''
     pricing: { starter: '$5,999/mo' }
-    features: [
-      'Domain data products'
-      'Catalog & lineage'
-      'Access governance'
-      'Quality SLAs'
-    ]
-    integrations: ['Snowflake', 'Databricks', 'BigQuery']
-    useCases: ['Faster analytics', 'Federated governance']
-    link: 'https://ziontechgroup.com/services/enterprise-data-mesh'
-    realService: true
-  }
-  {
-    id: 'cloud-migration-accelerator'
+    features: []
+  {'
+    id: 'cloud-migration-accelerator''
     name: 'Cloud Migration Accelerator'
-    description:
-      'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'
-    category: 'Cloud Services'
+    description:'
+      'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.''
+    category: 'Cloud Services''
     pricing: { starter: '$2,999/mo' }
-    features: [
-      'Landing zones'
-      'Infra as Code'
-      'Automated cutovers'
-      'FinOps baselines'
-    ]
-    integrations: ['AWS', 'Azure', 'GCP']
-    useCases: ['Datacenter exit', 'Hybrid cloud enablement']
-    link: 'https://ziontechgroup.com/services/cloud-landing-zone'
-    realService: true
-  }
-  {
-    id: 'threat-detection-response'
+    features: []
+  {'
+    id: 'threat-detection-response''
     name: 'Threat Detection & Response'
-    description:
-      'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'
-    category: 'Cybersecurity'
+    description:'
+      'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.''
+    category: 'Cybersecurity''
     pricing: { starter: '$3,999/mo' }
-    features: [
-      'Detections-as-code'
-      'SOAR playbooks'
-      'Attack surface monitoring'
-      'Threat intel'
-    ]
-    integrations: ['CrowdStrike', 'Wiz', 'Snyk', 'Cloudflare']
-    useCases: ['Compliance readiness', 'Breaches prevention']
-    link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services'
-    realService: true
-  }
-  {
-    id: 'observability-platform-starter'
+    features: []
+  {'
+    id: 'observability-platform-starter''
     name: 'Observability Platform Starter'
-    description:
-      'Unified logs, metrics, traces with SLO governance and incident workflows.'
-    category: 'DevOps & Automation'
+    description:'
+      'Unified logs, metrics, traces with SLO governance and incident workflows.''
+    category: 'DevOps & Automation''
     pricing: { starter: '$1,999/mo' }
     features: [
       'OpenTelemetry ingest'
@@ -183,11 +148,17 @@ link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true
 }];	id: string;
 	name: string;
+
+	id: string, name: string,
+
 	tagline?: string;
 	description: string;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
+ursor/fix-website-loading-errors-and-merge-6662
 	pricing: {
+		starter: string, // e && e.g. "$2,999/mo"
+		professional?: string;
 		starter: string, // e.g. "$2,999/mo"
 		professional?: string,
 		enterprise?: string
@@ -196,38 +167,22 @@ realService: true
 	integrations?: string[];
 	useCases?: string[]
 	link: string, // canonical internal link under /services/*
-	realService?: boolean,
-	rating?: number,
+	realService?: boolean;
+	rating?: number;
 	launchDate?: string
-}
-export const enterpriseITSolutions: EnterpriseITSolution[] = [
-	{
-		id: 'zero-trust-network-architecture';
-		name: 'Zero Trust Network Architecture';
-		tagline: 'Identity-first perimeterless security for modern enterprises'
-		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.';
-		category: 'Enterprise Security'
-		pricing: { starter: '$4,999/mo', enterprise: 'Custom' }
-		features: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'];
-		integrations: ['OktaAzure ADCloudflare Zero Trust'];
-		useCases: ['Secure remote workLateral movement prevention'];
-		link: 'https://ziontechgroup.com/services/zero-trust-network-architecture';
-		realService: true
+
 		launchDate: '2025-11-01'
 	}
-	{
-		id: 'platform-engineering-foundation';
-		name: 'Platform Engineering Foundation'
-		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.';
-		category: 'DevOps & Automation'
-		pricing: { starter: '$3,499/mo' }
-		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];
-		integrations: ['GitHubArgoCDBackstage'];
+	{'
+		id: 'platform-engineering-foundation';'
+		name: 'Platform Engineering Foundation''
+		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.';'
+		category: 'DevOps & Automation''
+		pricing: { starter: '$3,499/mo' }'
+		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];'
+		integrations: ['GitHubArgoCDBackstage'];'
 		useCases: ['Developer productivityStandardized delivery'];
-		link: 'https://ziontechgroup.com/services/platform-engineering-foundation';
-		realService: true
-		rating: 4.8
-	}
+
 	{
 		id: 'enterprise-data-mesh';
 		name: 'Enterprise Data Mesh'
@@ -237,69 +192,76 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'];
 		integrations: ['SnowflakeDatabricksBigQuery'];
 		useCases: ['Faster analyticsFederated governance'];
-		link: 'https://ziontechgroup.com/services/enterprise-data-mesh'
+
 		realService: true
+
 	}
-	{
-		id: 'cloud-migration-accelerator';
-		name: 'Cloud Migration Accelerator'
-		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.';
-		category: 'Cloud Services'
-		pricing: { starter: '$2,999/mo' }
-		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];
-		integrations: ['AWSAzureGCP'];
+	{'
+		id: 'cloud-migration-accelerator';'
+		name: 'Cloud Migration Accelerator''
+		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.';'
+		category: 'Cloud Services''
+		pricing: { starter: '$2,999/mo' }'
+		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];'
+		integrations: ['AWSAzureGCP'];'
 		useCases: ['Datacenter exitHybrid cloud enablement'];
-		link: 'https://ziontechgroup.com/services/cloud-landing-zone'
+
 		realService: true
+
 	}
-	{
-		id: 'threat-detection-response';
-		name: 'Threat Detection & Response'
-		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.';
-		category: 'Cybersecurity'
-		pricing: { starter: '$3,999/mo' }
-		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];
-		integrations: ['CrowdStrikeWizSnykCloudflare'];
+	{'
+		id: 'threat-detection-response';'
+		name: 'Threat Detection & Response''
+		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.';'
+		category: 'Cybersecurity''
+		pricing: { starter: '$3,999/mo' }'
+		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];'
+		integrations: ['CrowdStrikeWizSnykCloudflare'];'
 		useCases: ['Compliance readinessBreaches prevention'];
-		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services'
+
 		realService: true
+
 	}
-	{
-		id: 'observability-platform-starter';
-		name: 'Observability Platform Starter'
-		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.';
-		category: 'DevOps & Automation'
-		pricing: { starter: '$1,999/mo' }
-		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];
-		integrations: ['GrafanaDatadogPagerDuty'];
+	{'
+		id: 'observability-platform-starter';'
+		name: 'Observability Platform Starter''
+		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.';'
+		category: 'DevOps & Automation''
+		pricing: { starter: '$1,999/mo' }'
+		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];'
+		integrations: ['GrafanaDatadogPagerDuty'];'
 		useCases: ['MTTR reductionReliability governance'];
-		link: 'https://ziontechgroup.com/services/api-observability-starter'
+
 		realService: true
+
 	}
-	{
-		id: 'cost-governance-suite';
-		name: 'Cloud Cost Governance Suite'
-		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.';
-		category: 'Cloud Services'
-		pricing: { starter: '$2,499/mo' }
-		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];
-		integrations: ['AWS CURAzure CostGCP Billing'];
+	{'
+		id: 'cost-governance-suite';'
+		name: 'Cloud Cost Governance Suite''
+		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.';'
+		category: 'Cloud Services''
+		pricing: { starter: '$2,499/mo' }'
+		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];'
+		integrations: ['AWS CURAzure CostGCP Billing'];'
 		useCases: ['Cost optimizationBudget adherence'];
-		link: 'https://ziontechgroup.com/cloud-cost-optimizer'
+
 		realService: true
+
 	}
-	{
-		id: 'identity-governance-administration';
-		name: 'Identity Governance & Administration'
-		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.';
-		category: 'Enterprise Security'
-		pricing: { starter: '$3,499/mo' }
-		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];
-		integrations: ['OktaAzure ADGoogle Workspace'];
+	{'
+		id: 'identity-governance-administration';'
+		name: 'Identity Governance & Administration''
+		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.';'
+		category: 'Enterprise Security''
+		pricing: { starter: '$3,499/mo' }'
+		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];'
+		integrations: ['OktaAzure ADGoogle Workspace'];'
 		useCases: ['Audit readinessInsider risk reduction'];
-		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub'
-		realService: true
-	}
+
+    use_cases: ['Audit readiness', 'Insider risk reduction'],
+    link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
+    real_service: true,
+  },
 ];
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
@@ -309,100 +271,100 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		integrations: ['OktaAzure ADCloudflare Zero Trust'],
 		useCases: ['Secure remote workLateral movement prevention'],
 		link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
-		realService: true,
+		realService: true,'
 		launchDate: '2025-11-01'
 	},
-	{
-		id: 'platform-engineering-foundation',
-		name: 'Platform Engineering Foundation',
-		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',
-		category: 'DevOps & Automation',
-		pricing: { starter: '$3,499/mo' },
-		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
-		integrations: ['GitHubArgoCDBackstage'],
-		useCases: ['Developer productivityStandardized delivery'],
+	{'
+		id: 'platform-engineering-foundation','
+		name: 'Platform Engineering Foundation','
+		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.','
+		category: 'DevOps & Automation','
+		pricing: { starter: '$3,499/mo' },'
+		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],'
+		integrations: ['GitHubArgoCDBackstage'],'
+		useCases: ['Developer productivityStandardized delivery'],'
 		link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
-		realService: true,
-		rating: 4.8
+		realService: true,;
+		rating: 4.8;
 	},
-	{
-		id: 'enterprise-data-mesh',
-		name: 'Enterprise Data Mesh',
-		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
-		category: 'Data & Analytics',
-		pricing: { starter: '$5,999/mo' },
-		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
-		integrations: ['SnowflakeDatabricksBigQuery'],
-		useCases: ['Faster analyticsFederated governance'],
+	{'
+		id: 'enterprise-data-mesh','
+		name: 'Enterprise Data Mesh','
+		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.','
+		category: 'Data & Analytics','
+		pricing: { starter: '$5,999/mo' },'
+		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],'
+		integrations: ['SnowflakeDatabricksBigQuery'],'
+		useCases: ['Faster analyticsFederated governance'],'
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
-		realService: true
+		realService: true;
 	},
-	{
-		id: 'cloud-migration-accelerator',
-		name: 'Cloud Migration Accelerator',
-		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
-		category: 'Cloud Services',
-		pricing: { starter: '$2,999/mo' },
-		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
-		integrations: ['AWSAzureGCP'],
-		useCases: ['Datacenter exitHybrid cloud enablement'],
+	{'
+		id: 'cloud-migration-accelerator','
+		name: 'Cloud Migration Accelerator','
+		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.','
+		category: 'Cloud Services','
+		pricing: { starter: '$2,999/mo' },'
+		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],'
+		integrations: ['AWSAzureGCP'],'
+		useCases: ['Datacenter exitHybrid cloud enablement'],'
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone',
-		realService: true
+		realService: true;
 	},
-	{
-		id: 'threat-detection-response',
-		name: 'Threat Detection & Response',
-		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',
-		category: 'Cybersecurity',
-		pricing: { starter: '$3,999/mo' },
-		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
-		integrations: ['CrowdStrikeWizSnykCloudflare'],
-		useCases: ['Compliance readinessBreaches prevention'],
+	{'
+		id: 'threat-detection-response','
+		name: 'Threat Detection & Response','
+		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.','
+		category: 'Cybersecurity','
+		pricing: { starter: '$3,999/mo' },'
+		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],'
+		integrations: ['CrowdStrikeWizSnykCloudflare'],'
+		useCases: ['Compliance readinessBreaches prevention'],'
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
-		realService: true
+		realService: true;
 	},
-	{
-		id: 'observability-platform-starter',
-		name: 'Observability Platform Starter',
-		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',
-		category: 'DevOps & Automation',
-		pricing: { starter: '$1,999/mo' },
-		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
-		integrations: ['GrafanaDatadogPagerDuty'],
-		useCases: ['MTTR reductionReliability governance'],
+	{'
+		id: 'observability-platform-starter','
+		name: 'Observability Platform Starter','
+		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.','
+		category: 'DevOps & Automation','
+		pricing: { starter: '$1,999/mo' },'
+		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],'
+		integrations: ['GrafanaDatadogPagerDuty'],'
+		useCases: ['MTTR reductionReliability governance'],'
 		link: 'https://ziontechgroup.com/services/api-observability-starter',
-		realService: true
+		realService: true;
 	},
-	{
-		id: 'cost-governance-suite',
-		name: 'Cloud Cost Governance Suite',
-		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
-		category: 'Cloud Services',
-		pricing: { starter: '$2,499/mo' },
-		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
-		integrations: ['AWS CURAzure CostGCP Billing'],
-		useCases: ['Cost optimizationBudget adherence'],
+	{'
+		id: 'cost-governance-suite','
+		name: 'Cloud Cost Governance Suite','
+		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.','
+		category: 'Cloud Services','
+		pricing: { starter: '$2,499/mo' },'
+		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],'
+		integrations: ['AWS CURAzure CostGCP Billing'],'
+		useCases: ['Cost optimizationBudget adherence'],'
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-		realService: true
+		realService: true;
 	},
-	{
-		id: 'identity-governance-administration',
-		name: 'Identity Governance & Administration',
-		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',
-		category: 'Enterprise Security',
-		pricing: { starter: '$3,499/mo' },
-		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
-		integrations: ['OktaAzure ADGoogle Workspace'],
-		useCases: ['Audit readinessInsider risk reduction'],
+	{'
+		id: 'identity-governance-administration','
+		name: 'Identity Governance & Administration','
+		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.','
+		category: 'Enterprise Security','
+		pricing: { starter: '$3,499/mo' },'
+		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],'
+		integrations: ['OktaAzure ADGoogle Workspace'],'
+		useCases: ['Audit readinessInsider risk reduction'],'
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
-		realService: true
+
 export type EnterpriseITSolution = {;
 	id: string,;
 	name: string,;
 	tagline?: string,;
-	description: string,;
+	description: string,;'
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',;
-	pricing: {;
+	pricing: {;"
 		starter: string, // e.g. "$2,999/mo";
 		professional?: string,;
 		enterprise?: string;
@@ -416,102 +378,102 @@ export type EnterpriseITSolution = {;
 	launchDate?: string;
 },;
 export const enterpriseITSolutions: EnterpriseITSolution[] = [;
-	{;
-		id: 'zero-trust-network-architecture',;
-		name: 'Zero Trust Network Architecture',;
-		tagline: 'Identity-first perimeterless security for modern enterprises',;
-		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',;
-		category: 'Enterprise Security',;
-		pricing: { starter: '$4,999/mo', enterprise: 'Custom' },;
-		features: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],;
-		integrations: ['OktaAzure ADCloudflare Zero Trust'],;
-		useCases: ['Secure remote workLateral movement prevention'],;
+	{;'
+		id: 'zero-trust-network-architecture',;'
+		name: 'Zero Trust Network Architecture',;'
+		tagline: 'Identity-first perimeterless security for modern enterprises',;'
+		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',;'
+		category: 'Enterprise Security',;'
+		pricing: { starter: '$4,999/mo', enterprise: 'Custom' },;'
+		features: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],;'
+		integrations: ['OktaAzure ADCloudflare Zero Trust'],;'
+		useCases: ['Secure remote workLateral movement prevention'],;'
 		link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',;
-		realService: true,;
+		realService: true,;'
 		launchDate: '2025-11-01';
 	},;
-	{;
-		id: 'platform-engineering-foundation',;
-		name: 'Platform Engineering Foundation',;
-		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',;
-		category: 'DevOps & Automation',;
-		pricing: { starter: '$3,499/mo' },;
-		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],;
-		integrations: ['GitHubArgoCDBackstage'],;
-		useCases: ['Developer productivityStandardized delivery'],;
+	{;'
+		id: 'platform-engineering-foundation',;'
+		name: 'Platform Engineering Foundation',;'
+		description: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',;'
+		category: 'DevOps & Automation',;'
+		pricing: { starter: '$3,499/mo' },;'
+		features: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],;'
+		integrations: ['GitHubArgoCDBackstage'],;'
+		useCases: ['Developer productivityStandardized delivery'],;'
 		link: 'https://ziontechgroup.com/services/platform-engineering-foundation',;
 		realService: true,;
 		rating: 4.8;
 	},;
-	{;
-		id: 'enterprise-data-mesh',;
-		name: 'Enterprise Data Mesh',;
-		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',;
-		category: 'Data & Analytics',;
-		pricing: { starter: '$5,999/mo' },;
-		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],;
-		integrations: ['SnowflakeDatabricksBigQuery'],;
-		useCases: ['Faster analyticsFederated governance'],;
+	{;'
+		id: 'enterprise-data-mesh',;'
+		name: 'Enterprise Data Mesh',;'
+		description: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',;'
+		category: 'Data & Analytics',;'
+		pricing: { starter: '$5,999/mo' },;'
+		features: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],;'
+		integrations: ['SnowflakeDatabricksBigQuery'],;'
+		useCases: ['Faster analyticsFederated governance'],;'
 		link: 'https://ziontechgroup.com/services/enterprise-data-mesh',;
 		realService: true;
 	},;
-	{;
-		id: 'cloud-migration-accelerator',;
-		name: 'Cloud Migration Accelerator',;
-		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',;
-		category: 'Cloud Services',;
-		pricing: { starter: '$2,999/mo' },;
-		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],;
-		integrations: ['AWSAzureGCP'],;
-		useCases: ['Datacenter exitHybrid cloud enablement'],;
+	{;'
+		id: 'cloud-migration-accelerator',;'
+		name: 'Cloud Migration Accelerator',;'
+		description: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',;'
+		category: 'Cloud Services',;'
+		pricing: { starter: '$2,999/mo' },;'
+		features: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],;'
+		integrations: ['AWSAzureGCP'],;'
+		useCases: ['Datacenter exitHybrid cloud enablement'],;'
 		link: 'https://ziontechgroup.com/services/cloud-landing-zone',;
 		realService: true;
 	},;
-	{;
-		id: 'threat-detection-response',;
-		name: 'Threat Detection & Response',;
-		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',;
-		category: 'Cybersecurity',;
-		pricing: { starter: '$3,999/mo' },;
-		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],;
-		integrations: ['CrowdStrikeWizSnykCloudflare'],;
-		useCases: ['Compliance readinessBreaches prevention'],;
+	{;'
+		id: 'threat-detection-response',;'
+		name: 'Threat Detection & Response',;'
+		description: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',;'
+		category: 'Cybersecurity',;'
+		pricing: { starter: '$3,999/mo' },;'
+		features: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],;'
+		integrations: ['CrowdStrikeWizSnykCloudflare'],;'
+		useCases: ['Compliance readinessBreaches prevention'],;'
 		link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',;
 		realService: true;
 	},;
-	{;
-		id: 'observability-platform-starter',;
-		name: 'Observability Platform Starter',;
-		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',;
-		category: 'DevOps & Automation',;
-		pricing: { starter: '$1,999/mo' },;
-		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],;
-		integrations: ['GrafanaDatadogPagerDuty'],;
-		useCases: ['MTTR reductionReliability governance'],;
+	{;'
+		id: 'observability-platform-starter',;'
+		name: 'Observability Platform Starter',;'
+		description: 'Unified logs, metrics, traces with SLO governance and incident workflows.',;'
+		category: 'DevOps & Automation',;'
+		pricing: { starter: '$1,999/mo' },;'
+		features: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],;'
+		integrations: ['GrafanaDatadogPagerDuty'],;'
+		useCases: ['MTTR reductionReliability governance'],;'
 		link: 'https://ziontechgroup.com/services/api-observability-starter',;
 		realService: true;
 	},;
-	{;
-		id: 'cost-governance-suite',;
-		name: 'Cloud Cost Governance Suite',;
-		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',;
-		category: 'Cloud Services',;
-		pricing: { starter: '$2,499/mo' },;
-		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],;
-		integrations: ['AWS CURAzure CostGCP Billing'],;
-		useCases: ['Cost optimizationBudget adherence'],;
+	{;'
+		id: 'cost-governance-suite',;'
+		name: 'Cloud Cost Governance Suite',;'
+		description: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',;'
+		category: 'Cloud Services',;'
+		pricing: { starter: '$2,499/mo' },;'
+		features: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],;'
+		integrations: ['AWS CURAzure CostGCP Billing'],;'
+		useCases: ['Cost optimizationBudget adherence'],;'
 		link: 'https://ziontechgroup.com/cloud-cost-optimizer',;
 		realService: true;
 	},;
-	{;
-		id: 'identity-governance-administration',;
-		name: 'Identity Governance & Administration',;
-		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',;
-		category: 'Enterprise Security',;
-		pricing: { starter: '$3,499/mo' },;
-		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],;
-		integrations: ['OktaAzure ADGoogle Workspace'],;
-		useCases: ['Audit readinessInsider risk reduction'],;
+	{;'
+		id: 'identity-governance-administration',;'
+		name: 'Identity Governance & Administration',;'
+		description: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',;'
+		category: 'Enterprise Security',;'
+		pricing: { starter: '$3,499/mo' },;'
+		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],;'
+		integrations: ['OktaAzure ADGoogle Workspace'],;'
+		useCases: ['Audit readinessInsider risk reduction'],;'
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',;
 		realService: true;
 	}

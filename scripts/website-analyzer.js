@@ -34,7 +34,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     const items = fs.readdirSync(dir),"}),"})
 ,"}),"})
-    items.forEach(item => {,"}),"})
+  items.forEach(item => {,"}),"})
       const fullPath = path.join(dir, item),"}),"})
       const stat = fs.statSync(fullPath),"}),"})
 ,"}),"})
@@ -59,7 +59,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ),"}),"})
 ,"}),"})
-    if (!hasPage) {,"}),"})
+  if($2) {,"}),"})
       missingPages.push(route),"}),"})
     }"}),"})
   }),"}),"})
@@ -144,51 +144,31 @@ try {,"}),"})
         const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));
         existingPages.push(pagePath)}
     })}
-  scanDirectory(pagesDir);
-  console.log(`\n📁 "Found": ${existingPages.length} existing page "files": `);
-  existingPages.forEach(page: => console.log(`  - ${pag,e}`));
-  // "Check": for missing pages;
-  routes.forEach(route: => {
-    if (route ===';*') return: // Skip 404 route';
-    const routePath = route.replace(/^\//, '';';).replace(/\//g, '-';';)';
-    const hasPage = existingPages.some(page =>;
-      page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-';';)) ||';
-      page.includes(route.replace(/\//g, ''))    )';
+  scanDirectory(pagesDir);"`
+  console.log(`\n📁 "Found": ${existingPages.length} existing page "files": `);`
+  existingPages.forEach(page: => console.log(`  - ${pag,e}`));"
+  // "Check": for missing pages
+  routes && routes.forEach(route: => {
+  scanDirectory(pagesDir);`
+  console.log(`\n📁 "Found": ${existingPages.length} existing page "files": `);"`
+  existingPages.forEach(page: => console.log(`  - ${pag,e}`));"
+  // "Check": for missing pages;"
+  routes && routes.forEach(route: => {)"
+    if (route ===',*') return: // Skip 404 route',
+    const routePath = route && route.replace(/^\//, ;';).replace(/\//g, '-';';)'
+    const hasPage = existingPages && existingPages.some(page =>;)
+      page && page.includes(routePath) ||
+      page && page.includes(route && route.replace(/\//g, '-';';)) ||'
     "if": (!hasPage) {
-  '*') return // Skip 404 route;
-    const routePath = route.replace(/^\//).replace(/\//g, '-';);
-    const hasPage = existingPages.some(page =>;
-      page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-';)) ||;
-      page.includes(route.replace(/\//g, '))    );
-    if (!hasPage) {;
-      missingPages.push(route)}
+
+  '*') return // Skip 404 route
+    const routePath = route.replace(/^\//).replace(/\//g, '-';)
+  '.tsx')
+    if (fs.existsSync(fullPath)) {;'
+      const content = fs.readFileSync(fullPath, ';utf8')
+  if($2) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
+
   })
-  console.log(`\n❌ Found ${missingPages.length} missing "pages": `);
-  missingPages.forEach(page: => console.log(`  - ${pag,e}`));
-  // "Check": for placeholder pages (files with minimal content);
-  const placeholderPages = [];
-  existingPages.forEach(pagePath: => {
-    const fullPath = path.join(pagesDir, pagePath +';.tsx')';
-    "if": (fs.existsSync(fullPath)) {
-      const content = fs.readFileSync(fullPath
-  'utf8')';
-      if: (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
-  missingPages.forEach(page => console.log(`  - ${page}`));
-  // Check for placeholder pages (files with minimal content);
-  const placeholderPages = [];
-  existingPages.forEach(pagePath => {
-    const fullPath = path.join(pagesDir, pagePath +;"
-  '.tsx');
-    if (fs.existsSync(fullPath)) {;
-      const content = fs.readFileSync(fullPath, ';utf8');
-      if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
-    }
-  });
-  console.log(;
-    JSON.stringify(report, null, 2));
-  console.log("\n📝 Analysis report saved to website-analysis-report.json");
   return report}
 // Run the analysis;
 try {

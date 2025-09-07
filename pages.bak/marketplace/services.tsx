@@ -10,7 +10,6 @@ import React from 'react';
 
 interface ServicesProps {
   // Add props here as needed
-}
 
 import React from 'react';
 interface ServicesProps {

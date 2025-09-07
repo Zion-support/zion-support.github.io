@@ -4,30 +4,18 @@
  * Dependency Updater Script
  * Replaces GitHub Actions dependencies workflow
  * Checks and updates project dependencies
- */
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-console.log('📦 Dependency Updater Started');
-class DependencyUpdater {
-  constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
-    this.updates = [];
-    this.vulnerabilities = [];
-    this.outdatedPackages = [];
-  }
-  async updateDependencies() {
-    try {
-      console.log('🔍 Checking dependencies...');
+import path from 'path'
+    this.projectRoot = path.resolve(__dirname, '..')
+    this.updates = []
+    this.vulnerabilities = []
+    this.outdatedPackages = []
+      console.log('🔍 Checking dependencies...')
       // Check for outdated packages
-      await this.checkOutdatedPackages();
+      await this.checkOutdatedPackages()
       // Run security audit
-      await this.runSecurityAudit();
+      await this.runSecurityAudit()
       // Check for available updates
-      await this.checkAvailableUpdates();
+      await this.checkAvailableUpdates()
       // Generate update report
       await this.generateReport();
       console.log('✅ Dependency update check completed');
@@ -169,7 +157,10 @@ class DependencyUpdater {
   }
 }
 // Run the dependency updater
-const updater = new DependencyUpdater();
+const updater = new DependencyUpdater()
+});`
+//
+//
 updater.updateDependencies().then(() => {
   console.log('📦 Dependency Updater Completed');
   process.exit(0);

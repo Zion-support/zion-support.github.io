@@ -121,7 +121,7 @@ export default function MarketPricingPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

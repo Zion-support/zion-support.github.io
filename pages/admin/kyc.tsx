@@ -24,17 +24,11 @@ export default function AdminKycPage() {
     if (data.ok) load()
   }
   return (
-    <>
-      <Head>
-        <title>Admin KYC Queue - Zion</title>
-        <meta name="description" content="Review and approve or reject KYC submissions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">KYC Review Queue</h1>
-        <div className="mb-4">
-          <label className="block text-sm font-medium">Reason/Note (optional)</label>
-          <input className="mt-1 w-full border rounded px-3 py-2" value={reason} onChange={(e) => setReason(e.target.value)} />
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
         </div>
         <div className="grid gap-4">
           {queue.map((p) => (

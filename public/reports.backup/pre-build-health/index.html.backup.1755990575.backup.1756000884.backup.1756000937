@@ -22,6 +22,7 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <p><strong>Total Checks:</strong> 6</p>
 <p><strong>Passed:</strong> 6</p>
 <p><strong>Failed:</strong> 0</p>
+<p><strong>Failed:</strong> 0</p>
 <p><strong>Passed:</strong> 5</p>
 <p><strong>Failed:</strong> 1</p>
 <p><strong>Critical Failures:</strong> 0</p>
@@ -48,6 +49,8 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <span class="status pass">PASS</span>
 </div>
 <div style="margin:8px 0;padding:8px;border-radius:8px;background:rgba(255,255,255,.03)">
+<strong>✅ Environment Variables</strong>
+<span class="status pass">PASS</span>
 <strong>✅ Environment Variables</strong>
 <span class="status pass">PASS</span>
 </div>

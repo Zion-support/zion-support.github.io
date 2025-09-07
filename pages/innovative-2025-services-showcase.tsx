@@ -472,7 +472,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           </motion.footer>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default Innovative2025ServicesShowcase;

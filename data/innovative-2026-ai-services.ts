@@ -31,14 +31,26 @@ export interface Innovative2026AIService {
     email: string;
     address: string;
 
-    website: string;
-  }
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+
+    id: 'ai-business-intelligence-suite';
+    name: 'AI Business Intelligence Suite';
+    tagline: 'Transform data into actionable insights with AI';
+    price: '$299';
+
+  contactInfo: {
+
+    mobile: string, email: string,
+    address: string,
+    website: string
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
   reviews: number
 }
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -679,25 +691,3 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     }
     realImplementation: true
     implementationDetails:
-      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
-    launchDate: '2025-06-20'
-    customers: 1900
-    rating: 4.8
-    reviews: 950
-  },];
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
-    launchDate: '2025-06-20';
-    customers: 1900;
-    rating: 4.8
-
-    reviews: 950
-  }
-];
-  }
-];

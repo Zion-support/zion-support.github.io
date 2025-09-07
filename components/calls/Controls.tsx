@@ -36,10 +36,14 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   }
   return (      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled)
-    } catch (e) {
+    } catch (e) {'
       console.warn('Screen share failed', e)
   }
   return (
+<div className = 'flex items-center gap-3'    />
+
+  return (
+
     <div className='flex items-center gap-3'>
       <button
         onClick={toggleMic}
@@ -47,21 +51,22 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
       >
       </button>
       <button
-        onClick={toggleCam}
+        onClick={toggleCam}`
         className={`px-4 py-2 rounded ${accentClass} text-white`}
-      >
+      >'
         {camEnabled ? 'Stop Video' : 'Start Video'}
       </button>
       <button
-        onClick={toggleScreenShare}
+        onClick={toggleScreenShare}'
         className='px-4 py-2 rounded bg-gray-700 text-white'
-      >
+      >'
         {sharing ? 'Stop Share' : 'Share Screen'}
       </button>
       <button
-        onClick={onLeave}
+        onClick={onLeave}'
         className='px-4 py-2 rounded bg-red-600 text-white'
       >
+
         Leave
       </button>
     </div>

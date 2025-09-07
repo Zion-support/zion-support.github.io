@@ -19,8 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Invalid credentials' });
   }
   } else {
-    res.status(401).json({ error: 'Invalid credentials' })
-  }  } else {
-    res.status(401).json({ error: 'Invalid credentials' })
-  }
-}
+
+    res.status (401).json ({ error: 'Invalid credentials' })
+  } else {'
+    res.status (401).json ({ error: 'Invalid credentials' })

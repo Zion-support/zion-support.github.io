@@ -9,10 +9,18 @@
   },
     "timestamp": "2025-08-20T12:26:14.200Z"  },
     "timestamp": "2025-08-20T12:26:14.200Z"  },
+    "timestamp": "2025-08-20T12:26:14.200Z"
+  },
+    "timestamp": "2025-08-20T12:26:14.200Z"  },
+    "timestamp": "2025-08-20T12:26:14.200Z"  },
   "results": [
     {
       "name": "Page Structure Validation",
       "status": "PASS",
+      "result": "All 23 pages are properly structured",
+      "critical": true
+      "result": "All 23 pages are properly structured",      "critical": true
+      "result": "All 23 pages are properly structured",      "critical": true
       "result": "All 23 pages are properly structured",
       "critical": true
       "result": "All 23 pages are properly structured",      "critical": true

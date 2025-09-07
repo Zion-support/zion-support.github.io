@@ -23,38 +23,28 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const siteUrl = process.env.SITE_URL |'http://localhost:3000';
-
-  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const items = episodes
+  if (req && req.method !== 'POST')}
+    return res && res.status(405).json({ error: 'Method not allowed'}
+})
+  ensureStorage()
+const items = episodes
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
-    <item>
-      <title><![CDATA[${e.title}]]></title>
-      <description><![CDATA[${e.youtubeDescription |e.spotifyDescription |''}]]></description>
-      <link>${siteUrl}/media/podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-      <pubDate>${pubDate}</pubDate>
-      <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
-    </item>`;
-    })
-    .join('\n');
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <channel>
-    <title>Zion Podcast</title>
-    <link>${siteUrl}/media/podcast</link>
-    <language>en-us</language>
-    <itunes:author>Zion</itunes:author>
-    <description>Zion interviews builders, founders, and contributors.</description>
+    <item    />
+      <pubDate    />${pubDate}</pubDate>
+      <enclosure url=\"${audioUrl}\" length=\"0\" type=\"audio/mpeg\"    />
+
+    </item>`
+    }).join('\n')<channel    />
+    <title    />Zion Podcast</title>
+    <link    />${siteUrl}/media/podcast</link>
+    <language    />en-us</language>
+    <itunes:author    />Zion</itunes:author>
+    <description    />Zion interviews builders, founders, and contributors.</description>
     ${items}
   </channel>
 </rss>`;

@@ -3,8 +3,10 @@
 }
 
 export const trackEvent = (;
-  "eventName": string,
+
+  "eventName": string,"
   properties?: Record<string, any>;
+</string>
   properties?: Record<string, string | number | boolean>;
 ) => {;
   if (typeof window !== "undefined" && window.gtag) {";

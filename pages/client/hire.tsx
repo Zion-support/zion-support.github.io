@@ -143,23 +143,6 @@ export default function ClientHirePage() {
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
         </div>
       </div>
-      {result && (
-        <div className='border rounded p-4 bg-emerald-50'>
-          <div className='font-medium'>Offer sent</div>
-          <div className='text-sm'>Offer ID: {result.id}</div>        </div>
-      )}
-      <FeedbackModal
-        isOpen={showFeedback}
-        onClose={() => setShowFeedback(false)}
-        defaultContext={{
-          actionType: 'listing_publish'
-          metadata: { talentSlug }
-        }}
-        userHeaders={{
-          'x-demo-user-role': 'client'
-          'x-demo-user-id': 'client-1'
-        }}
-      />
     </div>
 );
         <div className="border rounded p-4 bg-emerald-50">

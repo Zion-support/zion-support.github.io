@@ -1,14 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
-  try {
-    return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'));
-  } catch {
-    return [];
-  }
-function writeAll(items: any[]) {
-  fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path'
+  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2))
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json')
+  try {}
+    return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'));}
+  } catch {}
+    return [];}
 
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
 export default async function handler(

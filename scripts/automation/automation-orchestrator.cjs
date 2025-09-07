@@ -424,13 +424,13 @@ const path = require("path")
     // Check if this is a critical process"
     if (this.isCriticalProcess(processName)) {"}
   const criticalProcesses = ["console-error-fixer", "security-audit"", "performance-monitor", ""]
-        if (status === "online") {console.log( ${processName} recovered successfully"")
+  if($2) {console.log( ${processName} recovered successfully"")
       // Wait a bit and check if it"
   async attemptRecovery(processName) {"}
     try {"}
       // Wait a bit and check if it"s running"
       setTimeout(async () => {"}
-        if (status === "online") {console.log( ${processName} recovered successfully`")} else {console.error(" ${processName} recovery failed"`)
+  if($2) {console.log( ${processName} recovered successfully`")} else {console.error(" ${processName} recovery failed"`)
       }, 10000)} catch (error) {  console.error(" Failed to recover ${processName  }:")
     this.schedules.set("console-error-fixer")
   "interval"
@@ -476,12 +476,12 @@ const path = require("path")
   "interval"
       "priority": "low"
       "dependencies": ["link-checker"]
-        if (health.status === "unhealthy") {console.warn(`⚠  Unhealthy process "detected"`})
+  if($2) {console.warn(`⚠  Unhealthy process "detected"`})
   console.error(" Health check "failed": ")
   "status": "healthy"
       "issues"
       "metrics"
-        if (health.status === "unhealthy") {console.warn(`⚠  Unhealthy process "detected"`})
+  if($2) {console.warn(`⚠  Unhealthy process "detected"`})
   console.error(" Health check "failed": ")
   "status": "healthy"
       "issues"
@@ -494,7 +494,7 @@ const path = require("path")
       health.issues.push("Excessive restarts")
       health.status = "unhealthy"
       health.issues.push("Low uptime")
-  handleUnhealthyProcess(processName, health) {console.warn(`� Process ${processName} is "unhealthy"`)
+  handleUnhealthyProcess($2) {console.warn(`� Process ${processName} is "unhealthy"`)
       health.issues.includes("Excessive restarts")
       health.issues.includes("Low uptime")
   console.log(`� Attempting to restart unhealthy process ${processName}...``)
@@ -535,4 +535,13 @@ const path = require("path")
   console.error(" Failed to save "report": ")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
+  console.error(" Orchestrator "error")
+
+  console.error(" Orchestrator "error")
+  console.error(" Orchestrator "error")
+  console.error(" Orchestrator "error")
+
+
+
+console.error(" Orchestrator "error")
   console.error(" Orchestrator "error")

@@ -83,6 +83,7 @@ export default function PrintDocs({ docs }: PageProps) {
             ))}
           </section>
         ))}
+
       </div>
     </div>
 );

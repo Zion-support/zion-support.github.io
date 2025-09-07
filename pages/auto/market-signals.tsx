@@ -15,7 +15,7 @@ const MarketSignals: NextPage = () => {
         <div className="space-y-2">
           <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

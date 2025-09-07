@@ -48,51 +48,22 @@ class BuildWatcher {
       fs.mkdirSync(logsDir, { "recursive": true });
     }
     // Initial build check
-    await this.performInitialBuild();
+    await this.performInitialBuild()
     // Start file watching
-    this.startFileWatching();
+    this.startFileWatching()
     // Start periodic health checks
-    this.startPeriodicHealthChecks();
-    // Handle graceful shutdown
-    process.on('SIGINT', () => this.shutdown());
-    process.on('SIGTERM', () => this.shutdown());
-  }
-  async performInitialBuild() {
-    console.log('🏗️ Performing initial build check...');
-    try {
-      await this.runBuild();
-      console.log('✅ Initial build successful');
-    } catch (error) {
-      console.log('❌ Initial build failed, triggering error fixer...');
-      await this.triggerErrorFixer();
-    }
-  }
-  startFileWatching() {
-    console.log('👀 Starting file watching...');
-    // Simple file watching using fs.watch
-    const watchDirs = [path.join(this.projectRoot, 'src'),
-      path.join(this.projectRoot, 'pages'),
-      path.join(this.projectRoot, 'components'),
-    ];
-    for (const dir of watchDirs) {
-      if (fs.existsSync(dir)) {
-        this.watchDirectory(dir);
-      }
-    }
-    // Watch root config files
-    const configFiles = ['package.json',
-      'tsconfig.json',
-      'next.config.js',
+    this.startPeriodicHealthChecks()
+      console.log('✅ Initial build successful')
+    } catch (error) {'
+      console.log('❌ Initial build failed, triggering error fixer...')
+      await this.triggerErrorFixer()
+    // Watch root config files'
+    const configFiles = ['package.json','
+      'tsconfig.json','
+      'next.config.js','
       'eslint.config.js',
-    ];
-    for (const file of configFiles) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        this.watchFile(filePath);
-      }
-    }
-  }
-  watchDirectory(dir) {
+    ]
+  watchDirectory($2) {
     try {
       const watcher = fs.watch(dir, { recursive: true }, (eventType, filename) => {
         if (filename && this.shouldWatchFile(filename)) {
@@ -101,7 +72,7 @@ class BuildWatcher {
       });
       console.log(`👀 Watching directory: ${dir}`);
       const watcher = fs.watch(
-        dir,
+        dir,"
         { "recursive": true },
         (eventType, filename) => {
           if (filename && this.shouldWatchFile(filename)) {
@@ -128,11 +99,11 @@ class BuildWatcher {
   shouldWatchFile(filename) {
     if (!filename) return false;
     // Check if file matches watch patterns
-    const matchesPattern = this.watchPatterns.some(pattern => {
-      const regex = this.patternToRegex(pattern);
-      return regex.test(filename);
-    });
-    if (!matchesPattern) return false;
+    const matchesPattern = this.watchPatterns.some(pattern => {}
+
+      const regex = this.patternToRegex(pattern)
+      return regex.test(filename)
+    if (!matchesPattern) return false
     // Check if file is ignored
     const isIgnored = this.ignoredPatterns.some(pattern => {
       const regex = this.patternToRegex(pattern);
@@ -144,7 +115,7 @@ class BuildWatcher {
   }
   patternToRegex(pattern) {
     // Convert glob pattern to regex
-    const regexStr = pattern
+    const regexStr = pattern;"
       .replace(/\./g, '\\.')
       .replace(/\*/g, '.*')
       .replace(/\?/g, '.')
@@ -162,34 +133,29 @@ class BuildWatcher {
       "file": relativePath,
       "timestamp": new Date().toISOString()});
     // Queue build
-    this.queueBuild();
-  }
-  queueBuild() {
-    const now = Date.now();
+    this.queueBuild()
+  queueBuild($2) {}
+    const now = Date.now()
     // Clear existing timeout
-    if (this.buildTimeout) {
-      clearTimeout(this.buildTimeout);
-    }
+  if($2) {}
+      clearTimeout(this.buildTimeout)
     // Set new timeout for debounced build
-    this.buildTimeout = setTimeout(async () => {
-      if (this.isRunning && !this.isBuilding) {
-        await this.runBuild();
-      }
-    }, this.buildDebounceTime);
-  }
-  async runBuild() {
-    if (this.isBuilding) {
-      console.log('⏳ Build already in progress, skipping...');
-      return;
-    }
-    this.isBuilding = true;
-    const buildStartTime = Date.now();
-    console.log('🏗️ Starting build...');
-    try {
+    this.buildTimeout = setTimeout(async () => {}
+  if($2) {}
+        await this.runBuild()
+    }, this.buildDebounceTime)
+  async runBuild() {}
+  if($2) {'
+
+      console.log('⏳ Build already in progress, skipping...')
+      return
+    this.isBuilding = true
+    const buildStartTime = Date.now();'
+    console.log('🏗️ Starting build...')
       // Run type check first
-      await this.runTypeCheck();
+      await this.runTypeCheck()
       // Run lint check
-      await this.runLintCheck();
+      await this.runLintCheck()
       // Run build
       await this.runNextBuild();
       const buildDuration = Date.now() - buildStartTime;
@@ -266,6 +232,7 @@ class BuildWatcher {
       execSync('npx next build', { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
+
         stdio: 'pipe',
         timeout: this.buildTimeout
       });
@@ -277,29 +244,19 @@ class BuildWatcher {
         "encoding": 'utf8',
         "cwd": this.projectRoot,
         "stdio": 'pipe',
-        "timeout": this.buildTimeout});
-      console.log('✅ Next.js build completed');
-    } catch (error) {
-      console.log('❌ Next.js build failed');
-      throw new Error(`Next.js build "failed": ${error.message}`);
-    }
-  }
-  async triggerErrorFixer() {
-    console.log('🚀 Triggering error fixer...');
-    try {
-      const ErrorFixerAutomation = require('./error-fixer-automation.js');
-      const automation = new ErrorFixerAutomation();
-      await automation.run();
-      console.log('✅ Error fixer completed');
+        "timeout": this.buildTimeout})
+      console.log('✅ Next.js build completed')
+    } catch (error) {'
+      console.log('❌ Next.js build failed');"`
+      throw new Error(`Next.js build "failed": ${error.message}`)
+      const automation = new ErrorFixerAutomation()
+      await automation.run();'
+      console.log('✅ Error fixer completed')
       // Try build again after error fixing
-      setTimeout(async () => {
-        if (this.isRunning) {
-          console.log('🔄 Retrying build after error fixing...');
-          await this.runBuild();
-        }
-      }, 5000);
+          console.log('🔄 Retrying build after error fixing...')
+      }, 5000)
     } catch (error) {
-      console.error('❌ Error fixer failed:', error);
+      console.error('❌ Error fixer failed:', error)
     } catch (error) {
       console.error('❌ Error fixer "failed": ', error);
     }

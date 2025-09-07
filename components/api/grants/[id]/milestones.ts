@@ -45,15 +45,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {;
-    res.status(401).json({ error: 'Unauthorized' });
+export default /**
+ * handler - Function description
+ */
+function handler() {}
+  if($2) {) {}
+  $2
+}'
+    res.status (401).json ({ error: 'Unauthorized' })
     return;    return
-  }
+    writeGrant(existing)
+return res.status(200).json({ record: existing })
+origin/cursor/automate-test-improve-and-merge-code-2533
+
   const { id } = req.query as { id: string }
-  if (!id) {
-    res.status(400).json({ error: 'Missing id' });
+  // Check condition
+  if($2) {}
+  $2
+}'
+    res.status (400).json ({ error: 'Missing id' })
     return;  }    return
   }
   if (req.method === 'GET') {

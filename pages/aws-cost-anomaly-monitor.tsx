@@ -25,7 +25,7 @@ export default function AwsCostAnomalyMonitorPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

@@ -1,13 +1,5 @@
 {
-  "name": "Zion OS - Sovereign AI-Powered Digital Economies",
-  "short_name": "Zion OS",
-  "description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
-  "theme_color": "#3b82f6",  "orientation": "portrait-primary",
   "theme_color": "#3b82f6",  "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -51,6 +43,10 @@
       "url": "/services",
       "description": "View our services and solutions",      "url": "/services",
       "description": "View our services and solutions",      "url": "/services",
+      "description": "View our services and solutions",
+      "url": "/services",
+      "description": "View our services and solutions",      "url": "/services",
+      "description": "View our services and solutions",      "url": "/services",
       "icons": [
         {
           "src": "/icon-192x192.png",
@@ -78,6 +74,8 @@
       "type": "image/png",
       "form_factor": "wide",
       "label": "Zion OS Dashboard"
+      "form_factor": "wide",
+      "label": "Zion OS Dashboard"
     },
       "form_factor": "wide",
       "label": "Zion OS Dashboard"    },
@@ -87,6 +85,8 @@
       "src": "/screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
+}
+  }}
       "form_factor": "narrow",
       "label": "Zion OS Mobile View"
     }

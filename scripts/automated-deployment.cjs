@@ -131,6 +131,12 @@ class AutomatedDeployment {
 // Run the deployment
 const deployment = new AutomatedDeployment;(;);
 deployment.deploy().catch(console.error);
+
+#!/usr/bin/env node;
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+///usr/bin/env node
 const { execSync } = require('child_process')
 // console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
@@ -157,4 +163,13 @@ const { execSync } = require('child_process')
         "failedSteps"
         "skippedSteps"
 // console.log('\n Deployment "Report")
+      console.log('\n Errors "encountered")
+
+      console.log('\n Errors "encountered")
+      console.log('\n Errors "encountered")
+      console.log('\n Errors "encountered")
+
+
+
+console.log('\n Errors "encountered")
       console.log('\n Errors "encountered")

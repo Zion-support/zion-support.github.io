@@ -241,3 +241,11 @@ module.exports = ComprehensiveWebsiteAnalyzer
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
       return { "success": false, "error"}
+
+return { "success": false, "error"}
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+      return { "success": false, "error"}
+
+      if (!html.includes("<h1>")"
+</h1>"`

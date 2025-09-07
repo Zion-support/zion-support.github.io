@@ -70,3 +70,12 @@ const path = require('path')
         "successRate"
         "version"
   console.error('Fatal "error")
+
+  console.error('Fatal "error")
+  console.error('Fatal "error")
+  console.error('Fatal "error")
+
+
+
+console.error('Fatal "error")
+  console.error('Fatal "error")

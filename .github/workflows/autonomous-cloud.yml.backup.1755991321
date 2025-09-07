@@ -25,14 +25,3 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install deps
-        with:
-          persist-credentials: true
-        with:
-          persist-credentials: true

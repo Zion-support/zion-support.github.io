@@ -27,7 +27,7 @@ export default function OsvWatchPage() {
           </ul>
         )}
       </div>
-    </EnhancedLayout>
+    </div>
   )
 }
 }

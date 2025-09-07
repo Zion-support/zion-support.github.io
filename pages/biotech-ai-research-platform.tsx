@@ -32,7 +32,7 @@ export default function BiotechAIResearchPlatformPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

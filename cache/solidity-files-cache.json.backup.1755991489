@@ -1,6 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
+
     "/workspace/contracts/SemaphoreVerifier.sol": {
       "lastModificationDate": 1754694378585,
       "contentHash": "7a19a155a1e7aab498adb0fa6a054075",
@@ -32,6 +33,7 @@
         }
       },
       "imports": [
+
         "@semaphore-protocol/contracts/base/SemaphoreVerifier.sol"
       ],
       "versionPragmas": [
@@ -72,6 +74,7 @@
         }
       },
       "imports": [
+
         "./Constants.sol",
         "./SemaphoreVerifierKeyPts.sol"
       ],
@@ -112,6 +115,7 @@
           }
         }
       },
+
       "imports": [],
       "versionPragmas": [
         ">=0.8.23 <0.9.0"
@@ -186,6 +190,7 @@
       },
       "imports": [],
       "versionPragmas": [
+
         "^0.8.21"
       ],
       "artifacts": [
@@ -225,6 +230,7 @@
       },
       "imports": [],
       "versionPragmas": [
+
         "^0.8.21"
       ],
       "artifacts": [

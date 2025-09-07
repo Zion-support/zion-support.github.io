@@ -32,7 +32,7 @@ export default function EnterpriseAIOpsPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

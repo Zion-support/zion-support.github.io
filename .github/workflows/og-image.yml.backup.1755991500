@@ -1,3 +1,5 @@
+
+
 name: OG Image Generator
 
 on:
@@ -13,6 +15,7 @@ permissions:
   contents: write
 
 jobs:
+
   generate:
     runs-on: ubuntu-latest
     steps:

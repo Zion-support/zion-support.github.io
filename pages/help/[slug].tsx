@@ -36,15 +36,11 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   }
 }
   return (
-    <article className="prose dark:prose-invert max-w-none">
-      <h1>{article.title}</h1>
-      <div className="text-sm opacity-70">Last updated {new Date(article.updatedAt).toLocaleDateString()}</div>
-      <div className="mt-6 whitespace-pre-wrap">{article.body}</div>
-      <div className="mt-8 p-4 rounded-lg border border-gray-200 dark:border-gray-800 flex items-center justify-between">
-        <div>Was this article helpful?</div>
-        <div className="flex gap-2">
-          <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
-          <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-2xl font-bold mb-6">Page</h1>
+        <div className="bg-white rounded-lg shadow p-6">
+          <p className="text-gray-600">Content coming soon.</p>
         </div>
       </div>
     </article>

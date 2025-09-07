@@ -74,7 +74,7 @@ export default function EnterpriseITPage() {_const _features = [
           </section>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 }

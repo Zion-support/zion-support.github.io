@@ -21,12 +21,7 @@ export function getShared(id: string) {
 const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
 export default async function handler(req, res) {
   try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
-  res.status(200).json({ id, url });
+    res.status(200).json({ message: 'API endpoint working' })
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

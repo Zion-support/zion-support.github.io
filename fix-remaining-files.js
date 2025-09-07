@@ -241,6 +241,7 @@ function getServiceName(filePath) {
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
     .join("")}
+;
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {
   // Remove common prefixes and convert to readable format;
@@ -258,6 +259,7 @@ remainingCorruptedFiles.forEach(filePath => {
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })}
+    ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");

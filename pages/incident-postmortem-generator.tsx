@@ -25,7 +25,7 @@ export default function IncidentPostmortemGeneratorPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
 ;

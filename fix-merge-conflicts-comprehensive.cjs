@@ -27,7 +27,7 @@ function fixMergeConflicts(filePath) {
     });
 
     // Remove any remaining conflict markers
-    content = content.replace(/    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/    content = content.replace(/\n?/g, '');
     content = content.replace(/
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
