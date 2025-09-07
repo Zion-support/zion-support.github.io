@@ -40,19 +40,19 @@ export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [sortBy, setSortBy] = useState<string>('title');
   const [showFilters, setShowFilters] = useState(false);
 
   // Filter services
   const filteredServices = comprehensiveServices2025.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPrice = selectedPriceRange === 'all' || 
-      (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-      (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
-      (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+      (selectedPriceRange === 'low' && parseInt(service.pricing.replace(/[^0-9]/g, '')) < 1000) ||
+      (selectedPriceRange === 'medium' && parseInt(service.pricing.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.pricing.replace(/[^0-9]/g, '')) < 10000) ||
+      (selectedPriceRange === 'high' && parseInt(service.pricing.replace(/[^0-9]/g, '')) >= 10000);
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
@@ -60,12 +60,12 @@ export default function ComprehensiveServicesShowcase2025() {
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-      case 'name':
-        return a.name.localeCompare(b.name);
+      case 'title':
+        return a.title.localeCompare(b.title);
       case 'price':
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-      case 'roi':
-        return parseInt(b.roi.replace(/[^0-9]/g, '')) - parseInt(a.roi.replace(/[^0-9]/g, ''));
+        return parseInt(a.pricing.replace(/[^0-9]/g, '')) - parseInt(b.pricing.replace(/[^0-9]/g, ''));
+      case 'category':
+        return a.category.localeCompare(b.category);
       default:
         return 0;
     }
@@ -73,9 +73,9 @@ export default function ComprehensiveServicesShowcase2025() {
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: comprehensiveServices2025.length },
-    { id: 'low', name: 'Under $1K/month', count: comprehensiveServices2025.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },
-    { id: 'medium', name: '$1K - $10K/month', count: comprehensiveServices2025.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },
-    { id: 'high', name: '$10K+/month', count: comprehensiveServices2025.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
+    { id: 'low', name: 'Under $1K/month', count: comprehensiveServices2025.filter(s => parseInt(s.pricing.replace(/[^0-9]/g, '')) < 1000).length },
+    { id: 'medium', name: '$1K - $10K/month', count: comprehensiveServices2025.filter(s => parseInt(s.pricing.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.pricing.replace(/[^0-9]/g, '')) < 10000).length },
+    { id: 'high', name: '$10K+/month', count: comprehensiveServices2025.filter(s => parseInt(s.pricing.replace(/[^0-9]/g, '')) >= 10000).length }
   ];
 
   const ServiceCard = ({ service, index }: { service: Service; index: number }) => (
@@ -102,7 +102,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
         {/* Service Info */}
         <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-          {service.name}
+          {service.title}
         </h3>
         <p className="text-gray-600 text-sm mb-4 line-clamp-3">
           {service.description}
@@ -110,13 +110,8 @@ export default function ComprehensiveServicesShowcase2025() {
 
         {/* Price */}
         <div className="mb-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-gray-900">
-              {service.price}
-            </div>
-            <div className="text-sm text-gray-500">
-              Market: {service.marketPrice}
-            </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {service.pricing}
           </div>
         </div>
 
@@ -142,32 +137,17 @@ export default function ComprehensiveServicesShowcase2025() {
           </div>
         </div>
 
-        {/* ROI */}
-        <div className="mb-6 text-center">
-          <div className="text-green-600 font-semibold text-lg">
-            ROI: {service.roi}
-          </div>
-          <div className="text-gray-500 text-xs">
-            Return on Investment
-          </div>
-        </div>
-
         {/* Implementation Info */}
-        <div className="mb-6 grid grid-cols-2 gap-4 text-xs text-gray-600">
-          <div>
-            <div className="font-medium text-gray-900">Implementation</div>
-            <div>{service.implementationTime}</div>
-          </div>
-          <div>
-            <div className="font-medium text-gray-900">Support</div>
-            <div>{service.supportLevel}</div>
+        <div className="mb-6 text-center text-gray-600">
+          <div className="text-sm">
+            Ready to implement
           </div>
         </div>
 
         {/* Actions */}
         <div className="flex space-x-3">
           <Link
-            href={service.link}
+            href={service.href}
             className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center text-sm flex items-center justify-center space-x-2"
           >
             <span>Learn More</span>

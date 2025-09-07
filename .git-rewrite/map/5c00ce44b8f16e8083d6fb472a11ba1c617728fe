@@ -1,5 +1,0 @@
-<<<<<<< HEAD:temp_conflicts/pages/open-app.page.tsx
-export { default } from "./open-app";
-=======
-2c531ab4c14bd14ad0ea9b823e3ae8f40f1e7ac1
->>>>>>> cursor/integrate-build-improve-and-re-verify-7ffc:.git-rewrite/map/5c00ce44b8f16e8083d6fb472a11ba1c617728fe
