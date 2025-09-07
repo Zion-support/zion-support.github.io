@@ -1,16 +1,7 @@
-
-;
-import React from 'react';
-import Head from 'next/head';
-interface LayoutProps  {children: React.ReactNode;
-  title?: string;
-  description?: string;
-<<<<<<< HEAD
 }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
   static getDerivedStateFromError(error) {return { hasError: true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-=======
 
 }
 
@@ -20,12 +11,24 @@ export default function Layout() {class ErrorBoundary extends React.Component {c
   componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   render() {if (this.state.hasError) ;
   return <div>Something went wrong.</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 
 
+}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+
+}
+
+export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true ,
+}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -45,17 +48,26 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-}import Header from './Header';
-import Footer from './Footer';
-<<<<<<< HEAD
 interface LayoutProps  {children: React.ReactNode;
-=======
 
 interface LayoutProps {
   children: React.ReactNode;
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 interface LayoutProps  {children: React && React.ReactNode;
+}
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+interface LayoutProps {
+  children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
+interface LayoutProps  {children: React.ReactNode;
+
+interface LayoutProps {
+  children: React.ReactNode;
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -66,12 +78,10 @@ interface LayoutProps  {children: React && React.ReactNode;
   no_index?: boolean;
 
 }
-<<<<<<< HEAD
 const Layout: React.FC < LayoutProps> = ({children,title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",canonical = "https://ziontechgroup.com",og_title,og_description,og_image = "https://ziontechgroup.com / og - image.jpg",no_index = false;
   no_index = false;
   no_index = false;
 }) => {const json_ld = {"@context": "https://schema.org","@type": "Organization",name: "Zion Tech Group",url: "https://ziontechgroup.com",logo: "https://ziontechgroup.com / logo.png",description: description,address: {"@type": "PostalAddress",street_address: "364 E Main St STE 1008",address_locality: "Middletown",address_region: "DE",postal_code: "19709",address_country: "US";
-=======
 
 const Layout: React.FC < LayoutProps> = ({ children,title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",canonical = "https://ziontechgroup.com",og_title,og_description,og_image = "https://ziontechgroup.com / og - image.jpg",no_index = false;
   no_index = false;
@@ -80,7 +90,6 @@ const Layout: React.FC < LayoutProps> = ({ children,title = "Zion Tech Group - A
 
 
 const json_ld = {"@context": "https://schema.org","@type": "Organization",name: "Zion Tech Group",url: "https://ziontechgroup.com",logo: "https://ziontechgroup.com / logo.png",description: description,address: {"@type": "PostalAddress",street_address: "364 E Main St STE 1008",address_locality: "Middletown",address_region: "DE",postal_code: "19709",address_country: "US";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       address_country: "US";
       address_country: "US";
     },contact_point: {"@type": "ContactPoint",telephone: "+1 - 302 - 464 - 0950",contact_type: "customer service",email: "kleber@ziontechgroup.com";
@@ -106,12 +115,9 @@ const json_ld = {"@context": "https://schema.org","@type": "Organization",name: 
         <meta property="og:type" content="website" />;
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
-<<<<<<< HEAD
         <meta name="twitter:title" content={ogTitle || title} />;
-=======
         <meta name="twitter: title" content={ogTitle || titl,
 } />;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <meta;
           name="twitter:description";
           content={ogDescription || description}
@@ -125,8 +131,19 @@ const json_ld = {"@context": "https://schema.org","@type": "Organization",name: 
       <main>{children}</main>;
       <Footer />;
     </div>;
-<<<<<<< HEAD
   )}interface LayoutProps  {children: ReactNode;
+  )
+};
+interface LayoutProps {
+  children: ReactNode,
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+import React, { ReactNode } from "react";
+interface LayoutProps {
   children: ReactNode;
   children: ReactNode;
 }
@@ -136,7 +153,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {return (<main className
 import React, { ReactNode } from 'react';
 interface LayoutProps  {children: ReactNode;
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-=======
   )}
 
 interface LayoutProps {
@@ -159,7 +175,19 @@ interface LayoutProps  {children: ReactNode;
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" },
 } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" },
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+  )}interface LayoutProps  {children: ReactNode;
+  )
+};
+interface LayoutProps {
+  children: ReactNode,
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+import React, { ReactNode } from "react";
+interface LayoutProps {
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og: title" content={og_title || titl,
@@ -192,7 +220,6 @@ interface LayoutProps  {children: ReactNode;
       </Head>;
       <Header />;
       <main>{children}</main>;
-<<<<<<< HEAD
       <Footer />;
     </div>)}
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
@@ -207,7 +234,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {return (<main className
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
       <Footer />
     </div>
   );
@@ -234,7 +260,6 @@ export default Layout;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error",
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   }
 }
     </main>
@@ -246,16 +271,31 @@ export default Layout;
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Home,Users,Briefcase,Phone,Mail,MapPin,Menu,X,ChevronDown,Star,CheckCircle;
- } from 'lucide-react';
-<<<<<<< HEAD
-interface LayoutProps  {title?: string;
-=======
 
 interface LayoutProps {
   title?: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  ChevronDown,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+interface LayoutProps {
+  title?: string;
+
+interface LayoutProps {
+  title?: string;
+
+interface LayoutProps {
+  title?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -263,14 +303,11 @@ interface LayoutProps {
   ogDescription?: string;
   ogUrl?: string;
   children: React.ReactNode;
-<<<<<<< HEAD
 }export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useState(false)ursor/automate-test-improve-and-merge-code-646c;
-=======
 
 }
 
 export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useState(false)ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   return (<>;
       <Head>;
         <title>{title}</title>;
@@ -284,7 +321,6 @@ export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useStat
     </>;
   )}
         <meta name="keywords" content={keywords} />;
-<<<<<<< HEAD
         <meta property="og:title" content={ogTitle || title} />;
         <meta property="og:description" content={ogDescription || description} />;
         <meta property="og:image" content={ogImage} />;
@@ -296,7 +332,6 @@ export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useStat
         <meta name="twitter:image" content={ogImage} />;
         <link rel="icon" href="/favicon.ico" />;
         <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />;
-=======
         <meta property="og: title" content={ogTitle || titl,
 } />;
         <meta property="og: description" content={ogDescription || descriptio,
@@ -316,7 +351,6 @@ export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useStat
         <link rel="icon" href="/favicon.ico" />;
         <link rel="canonical" href={ogUrl || "https: //ziontechgroup.com,
 } />;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       </Head>;
       <div className="min-h-screen flex flex-col bg-gray-50">;
         <Header />;
@@ -327,10 +361,8 @@ export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useStat
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />;
       </div>;
     </>;
-<<<<<<< HEAD
   )}interface LayoutProps  {children: ReactNode;
 }const Layout: React.FC<LayoutProps> = ({ children }) => {return (<main className="min-h-screen">;
-=======
   )}
 
 interface LayoutProps {
@@ -343,7 +375,6 @@ const Layout: React.FC<LayoutProps> = ({ children   ,
 
 
 return (<main className="min-h-screen">;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       {children}
     </main>;
     <main className="min-h-screen">;
@@ -354,15 +385,11 @@ return (<main className="min-h-screen">;
       <main className="flex-1">{children}</main>;
       <Footer />;
     </div>;
-<<<<<<< HEAD
   )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
-=======
   )}
 
 export default Layout;ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 }
-
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -375,7 +402,6 @@ export default function Layout({
 }: LayoutProps) {
  ;
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
     <>
       <Head>
@@ -390,3 +416,5 @@ export default function Layout({
     </>
   );
 }
+        <meta name="description" content={description} />
+

@@ -13,12 +13,9 @@ interface OptimizedImageProps {
 
 }
 
-<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   alt,
   width,
   height,
@@ -26,15 +23,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
   priority = false,
   quality = 75,
   sizes = "100vw",
-<<<<<<< HEAD
 }) => {
-=======
    }) => {
 
 
 
  ;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   return (
     <Image
       src={src}
@@ -46,14 +40,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
       sizes={sizes}
       quality={quality}
     />
-<<<<<<< HEAD
   );
 };
 
-=======
   )
 };
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default OptimizedImage;

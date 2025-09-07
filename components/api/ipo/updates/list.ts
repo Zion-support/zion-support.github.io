@@ -63,15 +63,12 @@ const data = readJsonFile('updates.json', [] as any[]);
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
-<<<<<<< HEAD
 const data = readJsonFile('updates.json', [] as any[]);
-=======
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
 
   const data = readJsonFile('updates.json', [] as any[]);
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   res.status(200).json(data)
 }
 import { readJsonFile } from '../../../../utils / api / storage';
@@ -124,3 +121,4 @@ const data = readJsonFile('updates.json', [] as any[]);
 }
 
 }
+

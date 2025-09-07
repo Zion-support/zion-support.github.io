@@ -32,6 +32,36 @@ class: AppHealthMonitor {constructor() {this.projectRoot = path.resolve(__dirnam
           stdio: 'pipe';
         })const outdatedDeps = JSON.parse(outdated)if (Object.keys(outdatedDeps).length > 0) {issues.push(';
             `${Object.keys(outdatedDeps).length} outdated dependencies`;
+          "cwd": this.projectRoo,t
+          "stdio": 'pipe''})
+        const outdatedDeps = JSON.parse(outdated);
+        "if": (Object.keys(outdatedDeps).length > 0) {
+          issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}
+    console.log(' Running comprehensive health checks...');
+    await this.checkDependencies();
+    await this.checkBuildHealth();
+    await this.checkCodeQuality();
+    await this.checkPerformance();
+    await this.checkSecurity();
+    await this.checkAccessibility();
+    this.generateReport()}
+  async checkDependencies() {'
+    console.log(' Checking dependencies...');
+    try {'
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      const issues = [];
+      // Check for outdated dependencies
+      try {'
+        const outdated = execSync('npm outdated --json', {'
+          "encoding": 'utf8',
+          "cwd": this.projectRoot;
+    stdio: 'pipe'
+        });
+        const outdatedDeps = JSON.parse(outdated);
+        if (Object.keys(outdatedDeps).length > 0) {
+          issues.push('
+            `${Object.keys(outdatedDeps).length} outdated dependencies`
           )}
       } catch (error) {// npm outdated returns non-zero exit code when there are outdated deps;
       }
@@ -185,3 +215,7 @@ class: AppHealthMonitor {constructor() {this.projectRoot = path.resolve(__dirnam
         issues.push('ESLint errors detected')}
       // Check for console.log statements in production code;
       const srcFiles = this.findSourceFiles()let consoleLogCount  = 0;
+      // Check for console.log statements in production code
+      const srcFiles = this.findSourceFiles();
+      let consoleLogCount = 0;
+

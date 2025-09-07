@@ -1,6 +1,7 @@
 
 ;
 "use client",import { useState, useEffect  } from './react';,import { use_auth  } from '@/contexts / AuthContext';,interface WalkthroughStep  {id: string,title: string,description: string,target?: string,<>;
+    <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
       {/* Walkthrough Modal */}
@@ -55,6 +56,8 @@
       </div>;
       {/* Highlight Target Element */}
       {currentStepData.target && (<div;
+      {currentStepData.target && (
+        <div;
             bottom: 0}}
         >;
           <div;
@@ -73,3 +76,5 @@ export function useWalkthroughTarget() {return {"data-walkthrough-target": id;"d
     "data-walkthrough-target": id;
     id}
 }
+}
+

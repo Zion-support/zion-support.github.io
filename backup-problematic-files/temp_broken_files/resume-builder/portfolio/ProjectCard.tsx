@@ -3,6 +3,33 @@ import { useState } from 'react',import { Card, CardContent, CardFooter } from '
 import Image from 'next/image',import { PortfolioProject } from '@/types/resume',interface ProjectCardProps  {project:PortfolioProject,onEdit:(project:PortfolioProject) => void,onDelete:(projectId:string) => void;
 }export function ProjectCard() {const [deleteDialogOpen, setDeleteDialogOpen]  = useState(false),const handleDelete = () => {if (project.id) {onDelete(project.id),}
     setDeleteDialogOpen(false),},return (<Card className="h-full flex flex-col">;
+import { useState } from 'react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
+import Image from "Image";
+import { PortfolioProject } from '@/types/resume',;
+;
+interface ProjectCardProps {;
+  project:PortfolioProject,;
+  onEdit:(project:PortfolioProject) => void,;
+  onDelete:(projectId:string) => void;
+}
+;
+export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),;
+  ;
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id),;
+    }
+    setDeleteDialogOpen(false),;
+  },;
+  ;
+  return (;
+    <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project.image_url ? (<Image;
             src={project.image_url}
@@ -80,3 +107,22 @@ import Image from 'next/image',import { PortfolioProject } from '@/types/resume'
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)"}";
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}";
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectCard.tsx;
+  ),;}
+ const handleDelete = () => {;
+  if (project.id) {;
+  />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) ;
+}</div> </Badge>) ) ;
+}</div>) ;
+}</div> </CardContent> <a href= {;"  project.github url ";"}target="blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" > <Button variant="ghost" size="icon" aria-label="GitHub link" > <Github className="h-4 w-4" /> </Button> </Link>) ;
+}{;
+  project.demo url && (<a href= {;"  project.demo url ";"}target="blank" rel="noopener noreferrer" aria-label="Live demo" title="Live demo" > <Button variant="ghost" size="icon" aria-label="Live demo link" > <Link className="h-4 w-4" /> </Button> </Link>) ;
+}</div> </Button> </div> </CardFooter> <AlertDialog open= {;
+  deleteDialogOpen ;
+}onOpenChange= {;
+  setDeleteDialogOpen ;
+:temp_broken_files/resume-builder/portfolio/ProjectCard.tsx
+}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;"}"
+}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectCard.tsx
+

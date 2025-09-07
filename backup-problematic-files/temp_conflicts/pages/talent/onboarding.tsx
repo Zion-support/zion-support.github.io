@@ -10,6 +10,144 @@ import { useMemo, useState } from 'react',import { motion, AnimatePresence } fro
     return null,}async function handleSubmit() {const missing = requiredMissingForStep(),if (missing) {setErrorMessage(missing),return,}
     setErrorMessage(null),setSubmitting(true),try {const response = await fetch('/api/talent/onboard', {method:'POST',headers:{ 'Content-Type':'application/json' },body:JSON.stringify({ ...formData })}),if (!response.ok) throw new Error('Submission failed'),setSubmitted(true),} catch (err) {setErrorMessage('Submission failed. Please try again.'),} finally {setSubmitting(false),}
   }if (submitted) {return (<div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">;
+import { useMemo, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+;
+interface FileData {;
+  name:string,;
+  type:string,;
+  size:number,;
+  base64:string, // data URL;
+}
+;
+interface OnboardingFormData {;
+  fullName:string,;
+  professionalTitle:string,;
+  profilePicture?:FileData | null,;
+;
+  bio:string,;
+  projects:string,;
+  yearsOfExperience:string, // keep as string for input, convert on submit;
+;
+  skills:string,;
+  tools:string,;
+;
+  availability:'Full-time' | 'Part-time' | 'Project-based' | '',;
+  timezone:string,;
+  hourlyRate?:string,;
+  portfolioLinks?:string,;
+  cvFile?:FileData | null;
+}
+;
+const steps = [;
+  'Basic InfoExperience',;
+  'Skills & TechAvailability'] as const,;
+;
+type StepKey = typeof steps[number],;
+;
+const containerVariants = {;
+  initial:{ opacity:0, y:16 },;
+  animate:{ opacity:1, y:0 },;
+  exit:{ opacity:0, y:-16 }},;
+;
+function useInitialFormState():OnboardingFormData {;
+  return {;
+    fullName:'',;
+    professionalTitle:'',;
+    profilePicture:null,;
+    bio:'',;
+    projects:'',;
+    yearsOfExperience:'',;
+    skills:'',;
+    tools:'',;
+    availability:'',;
+    timezone:'',;
+    hourlyRate:'',;
+    portfolioLinks:'',;
+    cvFile:null},;
+}
+;
+async function fileToBase64(file:File):Promise<FileData> {;
+  const toBase64 = (fileInner:File) =>;
+    new Promise<string>((resolve, reject) => {;
+      const reader = new FileReader(),;
+      reader.readAsDataURL(fileInner),;
+      reader.onload = () => resolve(reader.result as string),;
+      reader.onerror = (error) => reject(error),;
+    }),;
+  const base64 = await toBase64(file),;
+  return {;
+    name:file.name,;
+    type:file.type,;
+    size:file.size,;
+    base64},;
+}
+;
+export default function TalentOnboardingPage() {;
+  const [stepIndex, setStepIndex] = useState(0),;
+  const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState),;
+  const [submitting, setSubmitting] = useState(false),;
+  const [submitted, setSubmitted] = useState(false),;
+  const [errorMessage, setErrorMessage] = useState<string | null>(null),;
+;
+  const currentStep:StepKey = steps[stepIndex],;
+  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]),;
+;
+  function nextStep() {;
+    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1),;
+  }
+  function prevStep() {;
+    if (stepIndex > 0) setStepIndex(stepIndex - 1),;
+  }
+;
+  function update<K extends keyof OnboardingFormData>(key:K, value:OnboardingFormData[K]) {;
+    setFormData((prev) => ({ ...prev, [key]:value })),;
+  }
+;
+  function requiredMissingForStep():string | null {;
+    if (currentStep === 'Basic Info') {;
+      if (!formData.fullName.trim()) return 'Full Name is required.',;
+      if (!formData.professionalTitle.trim()) return 'Professional Title is required.',;
+    }
+    if (currentStep === 'Experience') {;
+      if (!formData.bio.trim()) return 'Short Bio is required.',;
+      if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.',;
+    }
+    if (currentStep === 'Skills & Tech') {;
+      if (!formData.skills.trim()) return 'Please list at least one skill.',;
+    }
+    if (currentStep === 'Availability') {;
+      if (!formData.availability) return 'Please select your current availability.',;
+      if (!formData.timezone.trim()) return 'Preferred Timezone is required.',;
+    }
+    return null,;
+  }
+;
+  async function handleSubmit() {;
+    const missing = requiredMissingForStep(),;
+    if (missing) {;
+      setErrorMessage(missing),;
+      return,;
+    }
+    setErrorMessage(null),;
+    setSubmitting(true),;
+    try {;
+      const response = await fetch('/api/talent/onboard', {;
+        method:'POST',;
+        headers:{ 'Content-Type':'application/json' },;
+        body:JSON.stringify({ ...formData })}),;
+      if (!response.ok) throw new Error('Submission failed'),;
+      setSubmitted(true),;
+    } catch (err) {;
+      setErrorMessage('Submission failed. Please try again.'),;
+    } finally {;
+      setSubmitting(false),;
+    }
+  }
+;
+  if (submitted) {;
+    return (;
+      <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">;
         <div className="max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in">;
           <div className="text-center space-y-3">;
           </div>;

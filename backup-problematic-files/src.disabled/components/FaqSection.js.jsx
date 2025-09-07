@@ -4,3 +4,14 @@ const FaqSection.js = ({ className }) => {return (<div className={className || '
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const FaqSection.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FaqSection.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

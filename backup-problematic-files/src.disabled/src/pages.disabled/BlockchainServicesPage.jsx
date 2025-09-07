@@ -4,3 +4,14 @@ const BlockchainServicesPage = ({ className }) => {return (<div className={class
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const BlockchainServicesPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BlockchainServicesPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

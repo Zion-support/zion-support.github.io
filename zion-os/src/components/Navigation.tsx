@@ -300,6 +300,8 @@ export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = us
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (<div className="lg:hidden animate - fade-in">;
             <div className="px - 2 pt - 2 pb - 3 space - y-1 bg - black / 90 rounded - lg mt - 2 mb-4">;
+            </div>;
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
             <div className="px - 2 pt - 2 pb - 3 space - y-1 bg - black / 90 rounded - lg mt - 2 mb - 4">;
@@ -388,3 +390,5 @@ export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = us
         </div>;
       </div>;</nav>;
   )}
+      </div>;
+

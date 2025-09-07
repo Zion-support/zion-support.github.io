@@ -1,5 +1,10 @@
 
 import React from "react",import { Star } from "lucide-react",export const CommunityTrust:React.FC = () => {// Stats display with social proof;
+import React from "react";
+import { Star } from "lucide-react";
+;
+export const CommunityTrust:React.FC = () => {;
+  // Stats display with social proof;
   const stats = [;
     { value:"4.8", label:"App Store Rating" },{ value:"50K+", label:"Downloads" },{ value:"96%", label:"User Satisfaction" },{ value:"12M+", label:"Matches Made" }
   ],return (<section className="py-16 bg-zion-blue">;
@@ -18,6 +23,14 @@ import React from "react",import { Star } from "lucide-react",export const Commu
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;          ))}
         </div>;{/* Rating display */}export const CommunityTrust:React.FC = () => {// Stats display with social proof;
+        </div>;
+        ;
+        {/* Rating display */}
+import React from "React";
+import { Star } from "lucide-react",;
+;
+export const CommunityTrust:React.FC = () => {;
+  // Stats display with social proof;
   const stats = [;
     { value:"4.8", label:"App Store Rating" },{ value:"50K+", label:"Downloads" },{ value:"96%", label:"User Satisfaction" },{ value:"12M+", label:"Matches Made" }
   ],return (<section className="py-16 bg-zion-blue">;
@@ -52,3 +65,5 @@ import React from "react",import { Star } from "lucide-react",export const Commu
       </div>;
     </section>;
   ),
+  ),;
+

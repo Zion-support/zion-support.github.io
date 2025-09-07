@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -42,14 +43,23 @@ import { ProfileData } from '@/types/profile';
 
 
 import { ProfileData } from "@/types/profile";
+=======
+{
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',      {
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',import { ProfileData } from "@/types/profile";
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
-
       {
+<<<<<<< HEAD
 
         id: 'p1'
         title: 'Facial Recognition System'
+=======
+        id: "id",
+    title: 'Facial Recognition System'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         description:
           'Built a state-of-the-art facial recognition system using deep learning for a major retail chain, improving security protocols and reducing losses by 32%.'
         imageUrl:
@@ -727,7 +737,6 @@ availableHours: [ {
 };
 {
   day: "Friday", hours: "1:00 PM - 5:00 PM" 
-
 };
 hourlyRate: 135;
 contactEmail: "michael.reynolds@example.com" 
@@ -743,7 +752,6 @@ contactEmail: "james && james.wilson@example && example.com"
 };
 current: true 
 };
-
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -759,7 +767,7 @@ available_hours: [ {
 }
 {
     contactEmail: "david.martinez@example.com"
-import { ProfileData } from "@/types/profile",;
+import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing;
 export const MOCK_TALENTS: ProfileData[] = [;
   {;
@@ -1152,7 +1160,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
   }
 ];
       {
-
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
         id: 'p2',
         title: 'Sentiment Analysis API',
@@ -1160,12 +1167,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
         image_url:;
           'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
-
         tags: ['NLP', 'API', 'Python'],
         date: 'May 2023',
       },
       {
-
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
         id: 'p3',
         title: 'Predictive Maintenance System',
@@ -1173,13 +1178,15 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Developed ML models to predict equipment failures before they occur for a manufacturing client, reducing downtime by 45% and saving approximately $2M annually.',
         image_url:;
           'https://images.unsplash.com / photo - 1581094288338 - 2314dddb7ece?auto = format & fit = crop & w=600 & h=400',
-
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
         date: 'Dec 2022',
       },
     ],
+<<<<<<< HEAD
 
     experience: [;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {
         id: 'e1',
         role: 'Senior AI Engineer',
@@ -1214,7 +1221,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
       message:;
         'Open to new projects starting immediately. Prefer projects with 3+ month engagement.',
       available_hours: [;
-
         { day: 'Monday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Tuesday', hours: '10:00 AM - 6:00 PM' },
         { day: 'Wednesday', hours: '10:00 AM - 6:00 PM' },
@@ -1222,13 +1228,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' },
       ],
     },
-
     hourly_rate: 150,
     contact_email: 'alexandra.chen@example.com',
-
   },
   {
-
       'https://images && images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
       'https://images && images.unsplash.com/photo-1563237023-b1e970526dcb?auto=format&fit=crop&w=1600&h=600',
@@ -1238,7 +1241,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     reviewCount: 37,
     aiScore: 92,
     profileType: 'talent',
-
     skills: [
       { name: 'Kubernetes', level: 5, endorsements: 28 }
       { name: 'Docker', level: 5, endorsements: 31 }
@@ -1256,7 +1258,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
         description:
           'Led migration of a legacy monolithic application to a microservices architecture on AWS, reducing operational costs by 40% and improving deployment frequency.'
         imageUrl:
-
           'https://images && images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&h=400',
     id: 'talent - 2',
     name: 'Michael Reynolds',
@@ -1289,18 +1290,15 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Led migration of a legacy monolithic application to a microservices architecture on AWS, reducing operational costs by 40% and improving deployment frequency.',
         image_url:;
           'https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?auto = format & fit = crop & w=600 & h=400',
-
         tags: ['AWS', 'Kubernetes', 'Microservices'],
         date: 'Nov 2023',
       },
       {
-
           'https://images && images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',
         tags: ['CI/CD', 'GitHub Actions', 'DevOps'],
         date: 'Jul 2023',
       },
     ],
-
     experience: [
       {
         id: 'e1'
@@ -1327,9 +1325,13 @@ export const MOCK_TALENTS: ProfileData[] = [;
       message:
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
+<<<<<<< HEAD
 
 
     experience: [;
+=======
+=======    experience: [;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       {
         id: 'e1',
         role: 'Chief Information Security Officer',
@@ -1355,7 +1357,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
       message:;
         'Available for security audits, penetration testing, and security strategy consulting.',
       available_hours: [;
-
         { day: 'Monday', hours: '9:00 AM - 5:00 PM' },
         { day: 'Tuesday', hours: '9:00 AM - 5:00 PM' },
         { day: 'Wednesday', hours: '9:00 AM - 5:00 PM' },
@@ -1363,13 +1364,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         { day: 'Friday', hours: '9:00 AM - 5:00 PM' },
       ],
     },
-
     hourly_rate: 165,
     contact_email: 'james.wilson@example.com',
-
   },
   {
-
       'https://images && images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
       'https://images && images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&h=600',
@@ -1394,7 +1392,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ai_score: 89,
     profile_type: 'talent',
     skills: [;
-
       { name: 'React', level: 5, endorsements: 35 },
       { name: 'Node && Node.js', level: 4, endorsements: 30 },
       { name: 'TypeScript', level: 5, endorsements: 32 },
@@ -1404,7 +1401,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
       { name: 'Redux', level: 5, endorsements: 29 },
       { name: 'AWS', level: 3, endorsements: 18 },
     ],
-
           'Developed a responsive e-commerce platform using React and Node && Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
         imageUrl:
           'https://images && images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&h=400',
@@ -1418,11 +1414,9 @@ export const MOCK_TALENTS: ProfileData[] = [;
         image_url:;
           'https://images.unsplash.com / photo - 1563013544 - 824ae1b704d3?auto = format & fit = crop & w=600 & h=400',
         tags: ['React', 'Node.js', 'E - Commerce'],
-
         date: 'Nov 2023',
       },
       {
-
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         imageUrl:
           'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
@@ -1434,11 +1428,9 @@ export const MOCK_TALENTS: ProfileData[] = [;
         image_url:;
           'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=600 & h=400',
         tags: ['React', 'Analytics', 'D3.js'],
-
         date: 'Jul 2023',
       },
       {
-
           'https://images && images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
         id: 'p3',
         title: 'SaaS Application',
@@ -1446,12 +1438,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Architected and developed a SaaS project management tool with React, GraphQL, and MongoDB, featuring team collaboration tools, task management, and reporting.',
         image_url:;
           'https://images.unsplash.com / photo - 1559028012 - 481c04fa702d?auto = format & fit = crop & w=600 & h=400',
-
         tags: ['SaaS', 'React', 'GraphQL'],
         date: 'Mar 2023',
       },
     ],
-
           'Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
         startDate: 'Jun 2018',
         endDate: 'Apr 2021',
@@ -1474,13 +1464,16 @@ export const MOCK_TALENTS: ProfileData[] = [;
           'Developed full - stack web applications using React, Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
         start_date: 'Jun 2018',
         end_date: 'Apr 2021',
-
       },
     ],
     availability: {
+<<<<<<< HEAD
 
 
 hourly_rate: 150;
+=======
+=======hourly_rate: 150;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 contact_email: "alexandra.chen@example.com";
 }
 }];
@@ -1493,6 +1486,7 @@ available_hours: [ {
 {
   day: "Wednesday", hours: "1:00 PM - 5:00 PM";
 }
+<<<<<<< HEAD
 {
 
   day: "Friday", hours: "1:00 PM - 5:00 PM";
@@ -1879,3 +1873,6 @@ contact_email: "david.martinez@example.com";
 
 
 
+=======
+{
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

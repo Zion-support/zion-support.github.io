@@ -6,3 +6,5 @@ describe('App', () => {test('renders without crashing', () => {render(<App />)ex
   })test('handles user interactions', () => {render(<App />)// Add interaction tests here;
   })test('applies correct styling', () => {render(<App />)// Add styling tests here;
   })})
+import React from "React";
+

@@ -236,6 +236,7 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             </div>;
           </div>;
         </div>;
+
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
           <div className='flex items-center gap-3'>;
             <div className='p-2 bg-blue-500/20 rounded-lg'>;
@@ -249,6 +250,9 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             </div>;
           </div>;
         </div>;<div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
+        </div>;
+
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
           <div className='flex items-center gap-3'>;
             <div className='p-2 bg-green-500/20 rounded-lg'>;
               <CheckCircle className='w-5 h-5 text-green-400' />;
@@ -340,6 +344,8 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             </div>;
           </div>;
         </div>;
+        </div>;
+
         <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>;
           <div className='flex items-center gap-3'>;
             <div className='p-2 bg-red-500/20 rounded-lg'>;
@@ -457,6 +463,10 @@ const getVerticalIcon = (vertical: string) => {switch (vertical) {case 'HEALTH':
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${filter === key;
                 ? 'bg-blue-600 text-white shadow-lg';
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
+        ].map(({ key, label, count }) => (
+          <button
+            key={key}
+            onClick={() => setFilter(key as any)}
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
               filter === key
                 ? 'bg-blue-600 text-white shadow-lg'
@@ -654,6 +664,14 @@ const mockDeployments: Deployment[] = [;
       {/* Deployments Grid */}<div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (<div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments.map(deployment => (<div;
+            {label} ({count});
+          </button>;
+
+      </div>;
+
+
+      {/* Deployments Grid */}
+      <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
       {/* Deployments Grid */}
@@ -687,6 +705,9 @@ const mockDeployments: Deployment[] = [;
       {/* Deployments Grid */}
 <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments.map(deployment => (<div;
+                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>                        {deployment && deployment.governanceType}          <div
+            key={deployment && deployment.id}
+            className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
         ))}
       </div>
@@ -719,6 +740,22 @@ const mockDeployments: Deployment[] = [;
                   </div>;
                 </div>;
 <div className='flex items-center gap-2'>;
+            className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'
+          >
+            {/* Status Header */}
+            <div className='p-6 border-b border-white/10'>
+              <div className='flex items-start justify-between mb-4'>
+                <div className='flex items-center gap-3'>
+                  <div className='p-2 bg-white/10 rounded-lg'>
+                    {getVerticalIcon(deployment.vertical)}
+                  </div>
+                  <div>
+                    <h3 className='font-bold text-lg text-white group-hover:text-white/90 transition-colors'>
+                      {deployment.instanceName}
+                    </h3>
+                    <div className='flex items-center gap-2 mt-1'>
+                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80'>
+                        {deployment.vertical}
                       </span>
                       <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>                        {deployment.governanceType}          <div
             key={deployment.id}
@@ -773,6 +810,8 @@ const mockDeployments: Deployment[] = [;
       {/* Deployments Grid */}<div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (<div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}ursor/fix-website-loading-errors-and-merge-6662;
+                  <span
+                    className={`text-sm font-medium ${getStatusColor(deployment.status)}`}
                   >
                     {deployment.status.charAt(0).toUpperCase() +
                       deployment.status.slice(1)}                  </span>                <div className="flex items-center gap-2">
@@ -1083,12 +1122,15 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </div>;
                   <div className='w-full bg-white/10 rounded-full h-2'>;
                     <div;
+                    <div
                       className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ width: `${deployment && deployment.progress}%` }}                    <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
                   <div className="w-full bg-white/10 rounded-full h-2">;
                     <div;
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out";
+                    <div
+                      className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
                       style={{ width: `${deployment && deployment.progress}%` }}></div>;
                   </div>;
                 </div>;
@@ -1157,6 +1199,16 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";
                       style={{ width: `${deployment.progress}%` }}></div>;
+            </div>
+            {/* Deployment Details */}
+              {/* Domain & Location */}
+              <div className='grid grid-cols-2 gap-4 text-sm'>
+                <div className='flex items-center gap-2 text-white/70'>
+                  <Globe className='w-4 h-4' />
+                  <span className='font-mono'>
+                    {deployment.domain |
+                      deployment.subdomain |
+                      'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
@@ -1228,6 +1280,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <MapPin className='w-4 h-4' />;
                     <span>{[deployment && deployment.region, deployment && deployment.country];
                         .filter(Boolean).join(', ')}
+                {(deployment && deployment.region || deployment && deployment.country) && (;
+                  <div className='flex items-center gap-2 text-white/70'>;
+                    <MapPin className='w-4 h-4' />;
+                    <span>;
+                      {[deployment && deployment.region, deployment && deployment.country];
+                        .filter(Boolean);
+                        .join(', ')}
                     </span>                  </div>              {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
                 <div className="flex items-center gap-2 text-white/70">;
@@ -1344,6 +1403,22 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <span>📍</span>;
                     <span>{deployment.region} {deployment.country}</span>;
                   </div>;
+                {(deployment && deployment.region || deployment && deployment.country) && (;
+                  <div className="flex items-center gap-2 text-white/70">;
+                    <span>📍</span>;
+                    <span>{deployment && deployment.region} {deployment && deployment.country}</span>;
+                  </div>;
+                      key={feature}
+                      className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'
+                    >
+                      {feature.replace('_', ' ')}
+                    </span>
+                  ))}
+                  )}
+              {/* Timestamps */}
+              )}
+            </div>
+            {/* Deployment Details */}
             <div className='p-6 space-y-4'>
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
@@ -1385,6 +1460,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </span>;
                 </div>;
                 {(deployment.region || deployment.country) && (<div className="flex items-center gap-2 text-white/70">;
+                {(deployment.region || deployment.country) && (;
+                  <div className="flex items-center gap-2 text-white/70">;
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
@@ -1395,6 +1472,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                       {feature}
                     </span>;
                   ))}<div className="space-y-2">;
+              {/* Features */}
+
+
+                      key={feature}
+                      className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
+                      {feature}
+                    </span>;
                   ))}
 
 
@@ -1412,6 +1496,14 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   )}</div>;
               </div>;{/* Timestamps */}<div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
               {/* Timestamps */}<div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
+                  {deployment.features.slice(0, 4).map((feature) => (;
+                    <span key={feature} className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
+                      {feature.replace('_ ')}
+                    </span>;
+                  ))}
+                  {deployment.features.length > 4 && (;
+                    <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
+                      +{deployment.features.length - 4} more;
                     </span>;
 
                   )}
@@ -1427,6 +1519,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   <span>Created: {formatDate(deployment && deployment.createdAt)}</span>;
                 </div>;
                 {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (<div className='flex items-center gap-1'>;
+                {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (;
+                  <div className='flex items-center gap-1'>;
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment && deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
                 <div className="flex items-center gap-1">;
                   <span>📅</span>;
@@ -1436,6 +1530,9 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <span>🔄</span>;
                   </div>;</div>;
               </div>;{/* Timestamps */}
+                {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (;
+                  <div className="flex items-center gap-1">;
+                    <span>🔄</span>;
                   </div>;
 
                 </div>;
@@ -1486,6 +1583,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   <span>Created: {formatDate(deployment.createdAt)}</span>;
                 </div>;
                 {deployment.updatedAt !== deployment.createdAt && (<div className="flex items-center gap-1">;
+                {deployment.updatedAt !== deployment.createdAt && (;
+                  <div className="flex items-center gap-1">;
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
@@ -1522,6 +1621,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </button>;
                 )}
                 {deployment && deployment.status === 'failed' && (<button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
+                {deployment && deployment.status === 'completed' && (;
+                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
+                    👁️ View Instance;
+                  </button>;
+                )}
+                {deployment && deployment.status === 'failed' && (;
+                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                     🔄 Retry;
                   </button>;
                 )}
@@ -1563,6 +1669,12 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 {deployment.status === 'pending' && (<button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                     ▶️ Start Deployment;
                   </button>;
+          {filter === 'all' && (;
+            <a
+              href='/admin/os-deploy'
+              className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'>;
+              <Rocket className='w-4 h-4' />              Deploy First Instance;
+            </a>;
           )}
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
@@ -1586,6 +1698,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     <MapPin className='w - 4 h - 4' />;
                     <span>{[deployment.region, deployment.country];
                         .filter (Boolean).join (', ')}
+                {(deployment.region || deployment.country) && (
+                  <div className='flex items - center gap - 2 text - white / 70'>;
+                    <MapPin className='w - 4 h - 4' />;
+                    <span>;
+                      {[deployment.region, deployment.country];
+                        .filter (Boolean);
+                        .join (', ')}
                     </span>                  </div>              {/* Domain & Location */}
               <div className="grid grid - cols - 2 gap - 4 text - sm">;
                 <div className="flex items - center gap - 2 text - white / 70">;
@@ -1595,6 +1714,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   </span>;
                 </div>;
                 {(deployment.region || deployment.country) && (<div className="flex items - center gap - 2 text - white / 70">;
+                {(deployment.region || deployment.country) && (
+                  <div className="flex items - center gap - 2 text - white / 70">;
                     <span>📍</span>;
                     <span>{deployment.region} {deployment.country}</span>;
                   </div>)}
@@ -1606,18 +1727,24 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 </div>;
                 <div className='flex flex - wrap gap - 2'>;
                   {deployment.features.slice (0, 4).map (feature => (<span;
+                  {deployment.features.slice (0, 4).map (feature => (
+                    <span;
                       key={feature}
                       className='inline - flex items - center px - 2 py - 1 rounded - md text - xs bg - white / 10 text - white / 70';
                     >;
                       {feature.replace ('_', ' ')}
                     </span>))}
                   {deployment.features.length > 4 && (<span className='inline - flex items - center px - 2 py - 1 rounded - md text - xs bg - white / 10 text - white / 70'>                      +{deployment.features.length - 4} more                    <span;
+                  {deployment.features.length > 4 && (
+                    <span className='inline - flex items - center px - 2 py - 1 rounded - md text - xs bg - white / 10 text - white / 70'>                      +{deployment.features.length - 4} more                    <span;
                       key={feature}
                       className="inline - flex items - center px - 2 py - 1 rounded - md text - xs bg - white / 10 text - white / 70";
                     >;
                       {feature}
                     </span>))}
                   {deployment.features?.length > 4 && (<span className="inline - flex items - center px - 2 py - 1 rounded - md text - xs bg - white / 10 text - white / 70">;
+                  {deployment.features?.length > 4 && (
+                    <span className="inline - flex items - center px - 2 py - 1 rounded - md text - xs bg - white / 10 text - white / 70">;
                       +{deployment.features.length - 4} more;
                     </span>)}
                 </div>;
@@ -1629,12 +1756,16 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   <span > Created: {format_date (deployment.created_at)}</span>;
                 </div>;
                 {deployment.updated_at !== deployment.created_at && (<div className='flex items - center gap - 1'>;
+                {deployment.updated_at !== deployment.created_at && (
+                  <div className='flex items - center gap - 1'>;
                     <RefreshCw className='w - 3 h - 3' />                    <span > Updated: {format_date (deployment.updated_at)}</span>              <div className="flex items - center justify - between text - xs text - white / 60 pt - 2 border - t border - white / 10">;
                 <div className="flex items - center gap - 1">;
                   <span>📅</span>;
                   <span > Created: {format_date (deployment.created_at)}</span>;
                 </div>;
                 {deployment.updated_at !== deployment.created_at && (<div className="flex items - center gap - 1">;
+                {deployment.updated_at !== deployment.created_at && (
+                  <div className="flex items - center gap - 1">;
                     <span>🔄</span>;
                   </div>)}
               </div>;
@@ -1647,6 +1778,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     Start Deployment;
                   </button>)}
                 {deployment.status === 'deploying' && (<>;
+                {deployment.status === 'pending' && (
+                  <button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
+                    <Play className='w - 4 h - 4' />;
+                    Start Deployment;
+                  </button>)}
+                {deployment.status === 'deploying' && (
+                  <>;
                     <button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - orange - 600 hover:bg - orange - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
                       <Pause className='w - 4 h - 4' />;
                       Pause;
@@ -1661,6 +1799,11 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     View Instance;
                   </button>)}
                 {deployment.status === 'failed' && (<button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
+                {deployment.status === 'completed' && (
+                  <button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - green - 600 hover:bg - green - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
+                    <Eye className='w - 4 h - 4' />;
+                    View Instance;
+                  </button>)}
                 {deployment.status === 'failed' && (
                   <button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
                     <RefreshCw className='w - 4 h - 4' />;
@@ -1670,6 +1813,13 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                   <Settings className='w - 4 h - 4' />                </button>                {deployment.status === 'pending' && (<button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                     ▶️ Start Deployment;
                   </button>)}{deployment.status === 'deploying' && (<>;
+                  <Settings className='w - 4 h - 4' />                </button>                {deployment.status === 'pending' && (
+                  <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
+                    ▶️ Start Deployment;
+                  </button>)}
+
+                {deployment.status === 'deploying' && (
+                  <>;
                     <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - orange - 600 hover:bg - orange - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                       ⏸️ Pause;
                     </button>;
@@ -1681,6 +1831,12 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                     👁️ View Instance;
                   </button>)}
                 {deployment.status === 'failed' && (<button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
+                {deployment.status === 'completed' && (
+                  <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - green - 600 hover:bg - green - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
+                    👁️ View Instance;
+                  </button>)}
+                {deployment.status === 'failed' && (
+                  <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
                     🔄 Retry;
                   </button>)}
                 <button className="flex items - center justify - center px - 3 py - 2 bg - white / 10 hover:bg - white / 20 text - white / 80 text - sm font - medium rounded - lg transition - colors duration - 200">;
@@ -1748,6 +1904,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
             </thead>;
             <tbody className="divide-y divide-white/10">;
               {filteredDeployments && filteredDeployments.map((deployment) => (<tr key={deployment && deployment.id} className="hover:bg-white/5">;
+              {filteredDeployments && filteredDeployments.map((deployment) => (;
+                <tr key={deployment && deployment.id} className="hover:bg-white/5">;
                   <td className="px-6 py-4 whitespace-nowrap">;
                     <div className="text-sm font-medium text-white">{deployment && deployment.name}</div>;
                     <div className="text-sm text-white/60">ID: {deployment && deployment.id}</div>;
@@ -1768,6 +1926,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
                 </tr>;
               ))}
       {filtered_deployments.length === 0 && (<div className='text - center py - 16'>;
+      {filtered_deployments.length === 0 && (
+        <div className='text - center py - 16'>;
           <div className='w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full'>;
             <Rocket className='w - 8 h - 8 text - white / 40' />;
           </div>;
@@ -1780,6 +1940,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
               : `No deployments with status "${filter}" found`}
           </p>;
           {filter === 'all' && (<a;
+          {filter === 'all' && (
+            <a;
               href='/admin / os - deploy';
               className='inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200';
             >;
@@ -1794,6 +1956,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
             }
           </p>;
           {filter === 'all' && (<a;
+          {filter === 'all' && (
+            <a;
               href="/admin / os - deploy";
               className="inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200";
             >;
@@ -1821,6 +1985,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
             </thead>;
             <tbody className="divide - y divide - white / 10">;
               {filtered_deployments.map ((deployment) => (<tr key={deployment.id} className="hover:bg - white / 5">;
+              {filtered_deployments.map ((deployment) => (
+                <tr key={deployment.id} className="hover:bg - white / 5">;
                   <td className="px - 6 py - 4 whitespace - nowrap">;
                     <div className="text - sm font - medium text - white">{deployment.name}</div>;
                     <div className="text - sm text - white / 60">ID: {deployment.id}</div>;
@@ -1933,6 +2099,8 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
             }
           </p>;
           {filter === 'all' && (<a;
+          {filter === 'all' && (;
+            <a;
               href="/admin/os-deploy";
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200";
             >;
@@ -1995,3 +2163,4 @@ function DeploymentsPage() {const [deployments, set_deployments] = useState < De
     </div>))}
     </div>);
 }
+

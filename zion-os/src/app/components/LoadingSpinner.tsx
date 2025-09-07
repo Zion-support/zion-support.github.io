@@ -38,6 +38,8 @@ function LoadingSpinner() {const size_classes = {sm: 'w - 4 h - 4',md: 'w - 6 h 
       {text && <span className="text-sm">{text}</span>}
     </div>;
   )}}
+  className?: string;
+}
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4'
@@ -131,3 +133,4 @@ function LoadingSpinner() {
     </div>
   )
 }
+

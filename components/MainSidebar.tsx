@@ -4,7 +4,6 @@ import { useRouter  } from 'next/router';
 import { Home,Briefcase, Users,Phone, Mail,MapPin, Globe,Linkedin, Twitter,Shield, Handshake,ChevronDown, ChevronRight,Brain, Cpu,Database, Network,Code, Palette,Target, Rocket,Eye, DollarSign,ShoppingCart, Clock,Cloud, Search,Building, Zap,Heart, Lightbulb,TrendingUp, BarChart3,Lock, AlertTriangle,Server, CheckCircle,Truck, Car,TestTube, PenTool,Building2, Atom,FileText, Quote,Newspaper, Calendar,Video, HelpCircle,LifeBuoy, Store,PieChart, Share2,Monitor, Smartphone,Settings, User,Bell, BookOpen,Award, Leaf,Sun, Wind;
 import { Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind;
     } from 'lucide-react';
-<<<<<<< HEAD
 interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: boolean;
   onClose: () => void;
 }const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const router = useRouter()const [expandedSections, setExpandedSections] = useState<string[]>([])const toggleSection = (section: string) => {setExpandedSections(prev =>;
@@ -67,7 +66,6 @@ interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: boolean;
         className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium';
       >;
         <span className='text-sm font-semibold uppercase tracking-wide'>{title}</span>;
-=======
 
 interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: boolean;
   onClose: () => void;
@@ -262,7 +260,6 @@ const renderNavSection = (title: string, items: NavItem[], sectionKey: string) =
 
         <span className='text-sm font-semibold uppercase tracking-wide'>{titl,
 }</span>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         {expandedSections.includes(sectionKey) ? (<ChevronDown className='w-4 h-4' />;
         ) : (<ChevronRight className='w-4 h-4' />;
         )}
@@ -274,13 +271,10 @@ const renderNavSection = (title: string, items: NavItem[], sectionKey: string) =
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive(item.href)? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan';
                   : 'text-gray-400 hover:text-white hover:bg-white/5';
-<<<<<<< HEAD
               }`}
             >;
-=======
               }`}>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <item.icon className="w-4 h-4 flex-shrink-0" />;
               <div className="flex-1 min-w-0">;
                 <div className="font-medium">{item.name}</div>;
@@ -299,38 +293,30 @@ const renderNavSection = (title: string, items: NavItem[], sectionKey: string) =
           onClick={onClose}
         />;
       </button>  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (<div key={sectionKey} className='mb-6'>'      <button'        onClick={() => toggleSection(sectionKey)}
-<<<<<<< HEAD
         className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium''      >'        <span className='text-sm font-semibold uppercase tracking-wide'>{title}</span>'        {expandedSections.includes(sectionKey) ? ('          <ChevronDown className='w-4 h-4' />'        ) : ('          <ChevronRight className='w-4 h-4' />'        )}'      </button>;
-=======
         className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium''      >'        <span className='text-sm font-semibold uppercase tracking-wide'>{title}</span>'        {expandedSections.includes(sectionKey) ? ('          <ChevronDown className='w-4 h-4' />'        ) : ('          <ChevronRight className='w-4 h-4' />'        ,
 }'      </button>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       {expandedSections.includes(sectionKey) && (<div className='mt-2 space-y-1'>'          {items.map((item) => ('            <Link;
               key={item.name}
               href={item.href}
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`;
-<<<<<<< HEAD
                 isActive(item.href)?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-400 hover:text-white hover:bg-white/5'              }`}
   '            >`              <item.icon className='w-4 h-4 flex-shrink-0' />'              <div className='flex-1 min-w-0'>'                <div className='font-medium'>{item.name}</div>'                {item.description && ('                  <div className='text-xs text-gray-500 truncate'>{item.description}</div>'                )}'              </div></Link>          ))}';
-=======
                 isActive(item.href)?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-400 hover: text-white hover:bg-white/5'              }`}
   '            >`              <item.icon className='w-4 h-4 flex-shrink-0' />'              <div className='flex-1 min-w-0'>'                <div className='font-medium'>{item.name}</div>'                {item.description && ('                  <div className='text-xs text-gray-500 truncate'>{item.description}</div>'                )}'              </div></Link>          ),
 }';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         </div>;
       )}
     </div>;
   )return (<>;
       {/* Backdrop */}
       {isOpen && (<div;
-<<<<<<< HEAD
 className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClose}'        />;
       )}{/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full';
       } lg:translate-x-0 lg:relative lg:z-auto`}>;
         {/* Header */}
-=======
 className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClos,
 }'        />;
       )}{/* Sidebar */}
@@ -339,7 +325,6 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
 
         {/* Header *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <div className="p-6 border-b border-zion-blue-light">;
           <div className="flex items-center gap-3 mb-4">;
             <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">;
@@ -372,17 +357,14 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                   key={action.name}
                   href={action.href}
                   onClick={onClose}
-<<<<<<< HEAD
                   className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group";
                 >;
                   <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>;
-=======
                   className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group">
 
                   <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200,
 }>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     <action.icon className="w-4 h-4 text-white" />;
                   </div>;
                   <span className="text-xs text-white text-center">{action.name}</span>;
@@ -398,13 +380,10 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${isActive(item.href)? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan';
                     : 'text-gray-300 hover:text-white hover:bg-white/5';
-<<<<<<< HEAD
                 }`}
               >;
-=======
                 }`}>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <item.icon className="w-4 h-4 flex-shrink-0" />;
                 <span className="font-medium">{item.name}</span>;
               </Link>;
@@ -425,13 +404,10 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 href={contact.href}
                 target={contact.href.startsWith('http') ? '_blank' : '_self'}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
-<<<<<<< HEAD
                 className="flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200";
               >;
-=======
                 className="flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <contact.icon className="w-3 h-3" />;
                 <span className="truncate">{contact.text}</span>;
               </a>;
@@ -445,12 +421,9 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 target="_blank";
                 rel="noopener noreferrer";
                 className={`p-2 hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}
-<<<<<<< HEAD
                 aria-label={social.name}
-=======
                 aria-label={social.nam,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               >;
                 <social.icon className="w-4 h-4" />;
               </a>;
@@ -465,12 +438,9 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
 </>;
   )<div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${`;
         isOpen ?, translate-x-0;
-<<<<<<< HEAD
   ': '-translate-x-full'      } lg:translate-x-0 lg:relative lg:z-auto`}>'`        {/* Header */}
-=======
   ': '-translate-x-full'      } lg: translate-x-0 lg:relative lg:z-auto`}>'`        {/* Header *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <div className='p-6 border-b border-zion-blue-light'>'          <div className='flex items-center gap-3 mb-4'>'            <div className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center'>'              <Zap className='w-6 h-6 text-white' />'            </div>'            <div>              <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>'                ZION'              </div>';
               <div className='text-xs text-zion-slate-light'>Tech Group</div>'            </div>'          </div>;
           {/* Search */}
@@ -481,12 +451,9 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                   key={action.name}
                   href={action.href}
                   onClick={onClose}
-<<<<<<< HEAD
                   className='flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group''                >'                  <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>`                    <action.icon className='w-4 h-4 text-white' />'                  </div>'                  <span className='text-xs text-white text-center'>{action.name}</span>'                </Link>'              ))}</div>;
-=======
                   className='flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group''                >'                  <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>`                    <action.icon className='w-4 h-4 text-white' />'                  </div>'                  <span className='text-xs text-white text-center'>{action.name}</span>'                </Link>'              ),
 }</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           </div>;
           {/* Main Navigation */}
 <div className='space-y-1'>'            {navigation.main.map((item) => ('              <Link;
@@ -494,12 +461,9 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 href={item.href}
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`;
-<<<<<<< HEAD
                   isActive(item.href)?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300 hover:text-white hover:bg-white/5'                }`}
-=======
                   isActive(item.href)?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300 hover: text-white hover:bg-white/5'                },
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 , >`                <item.icon className='w-4 h-4 flex-shrink-0' />'                <span className='font-medium'>{item.name}</span>'              </Link>'            ))}          </div>';
           {/* Services Section */}
           {renderNavSection('Services';
@@ -520,32 +484,24 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
   '_blank': '_self}';
 , rel={contact.href.startsWith('http';
   ') ? 'noopener noreferrer;
-<<<<<<< HEAD
   ': '}'                className='flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />'                <span className='truncate'>{contact.text}</span>'              </a>'            ))}          </div>;
-=======
   ': '}'                className='flex items-center gap-2 text-xs text-zion-slate-light hover: text-zion-cyan transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />'                <span className='truncate'>{contact.text}</span>'              </a>'            ),
 }          </div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           {/* Social Links */}
           <div className='flex items-center gap-3 mb-4'>'            {socialLinks.map((social) => ('              <a;
                 key={social.name}
                 href={social.href}
-<<<<<<< HEAD
                 target='_blank''                rel='noopener noreferrer''                className={`p-2 hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}'                aria-label={social.name}`              >';
-=======
                 target='_blank''                rel='noopener noreferrer''                className={`p-2 hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}'                aria-label={social.nam,
 }`              >';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <social.icon className='w-4 h-4' />'              </a>'            ))}
           </div>;
           {/* Copyright */}
           <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group"          </div>'";
         </div>;
       </div>;
-<<<<<<< HEAD
 </>)}export default MainSidebar;
-=======
 </>)}
 
 export default MainSidebar;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+

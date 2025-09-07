@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ServiceVariant  } from '../types/service-variants';
 export interface NextGenAIService2026  {name: string;
@@ -5,9 +6,10 @@ export interface NextGenAIService2026  {name: string;
   price: string;
   period: string;
   period: string,description: string;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import { ServiceVariant } from '../types/service-variants';
 export interface NextGenAIService2026 {
-
   name: string;
   tagline: string;
   price: string;
@@ -55,7 +57,6 @@ export interface NextGenAIService2026 {
     mobile: string,email: string,address: string,website: string;
   }
   variant: ServiceVariant;
-
     website: string;
   }
   customers: number;
@@ -86,23 +87,25 @@ export interface NextGenAIService2026 {
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
-
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number;
     website: string;
   },real_implementation: boolean,implementation_details: string,launch_date: string,customers: number,rating: number,reviews: number;
@@ -253,6 +256,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Next
 ];
 
   reviews: number;    mobile: string
+=======
+  reviews: number;    mobile: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     email: string
     address: string
     mobile: string,
@@ -278,12 +284,17 @@ import { ServiceVariant } from '../types/service-variants',export interface Next
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
 };  website: 'https://ziontechgroup.com'
   website: 'https://ziontechgroup.com'
 
+=======
+  website: 'https://ziontechgroup.com',
+};  website: "website",
+    website: 'https://ziontechgroup.com'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 },
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     description:
@@ -618,9 +629,13 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4 && 4.7,
     reviews: 445
   }
+<<<<<<< HEAD
 
 ]
 
+=======
+],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];    implementation_details: 'Production - ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',
     launch_date: '2025 - 01 - 25',
     customers: 203,
@@ -633,7 +648,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 },
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     id: 'ai-emotional-intelligence-platform',
@@ -838,7 +852,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     launchDate: '2025-01-25',
     customers: 203,
     reviews: 445
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface NextGenAIService2026 {;
   id: string,;
   name: string,;

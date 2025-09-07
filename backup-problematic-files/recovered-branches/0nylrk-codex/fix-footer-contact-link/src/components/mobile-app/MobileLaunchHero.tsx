@@ -1,5 +1,14 @@
 
 import React from "react",import { Link } from "react-router-dom",import { ArrowRight, Smartphone } from "lucide-react",import { Button } from "@/components/ui/button",import { AppStoreButtons } from "./AppStoreButtons",import { Card, CardContent } from "@/components/ui/card",export const MobileLaunchHero:React.FC = () => {// App store links - these would come from environment variables in production;
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Smartphone } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { AppStoreButtons } from "./AppStoreButtons",;
+import { Card, CardContent } from "@/components/ui/card",;
+;
+export const MobileLaunchHero:React.FC = () => {;
+  // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl  = "#", // Replace with actual Google Play URL;return (<section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
       <div className="container mx-auto px-4 lg:px-8">;
@@ -44,3 +53,5 @@ import React from "react",import { Link } from "react-router-dom",import { Arrow
       </div>;
     </section>;
   ),
+  ),;
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -140,7 +139,6 @@ fixer
     console.error('❌ Test file fixing failed:', error.message);
     process.exit(1);
   });
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -167,4 +165,4 @@ describe('${componentName}')
     this.log(' Starting Test File Fixer')
     console.log(' Test file fixing completed')
     console.error(' Test file fixing "failed")
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+

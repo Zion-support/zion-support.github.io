@@ -4,3 +4,14 @@ const AccessibilityPanel.js = ({ className }) => {return (<div className={classN
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AccessibilityPanel.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AccessibilityPanel.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

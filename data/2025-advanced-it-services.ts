@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const advancedITServices2025 = [;
@@ -669,8 +670,14 @@ export const advancedITServices2025 = [;
 export const advancedITServices2025 = [
   {};
     marketSize: '$15 && 15.7B'
+=======
+=======export const advancedITServices2025 = [
+  {
+    };
+    marketSize: '$15 && 15.7B',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
-    category: 'IT Operations'
+    category: "category",
     tags: [
       'AI',
       'Autonomous Operations',
@@ -703,8 +710,8 @@ export const advancedITServices2025 = [
     ]
     pricing: {
       starter: {
-        price: 499
-        period: 'month'
+        price: 499;
+    period: 'month'
         features: [
           'Up to 100 racks'
           'Basic quantum features'
@@ -880,10 +887,13 @@ export const advancedITServices2025 = [
     marketSize: '$15.7B'
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     market_size: '$15.7B',
     target_audience:;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -892,7 +902,6 @@ export const advancedITServices2025 = [
   }
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-
     },;
     marketSize: '$178.9B',;
     targetAudience: 'Enterprise businesses, cloud providers, research institutions, government agencies',;
@@ -1114,7 +1123,6 @@ export const advancedITServices2025 = [
   }
 ];
 ;
-
 export const advancedITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;

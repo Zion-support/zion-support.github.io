@@ -2,6 +2,55 @@ import React, { useEffect, useMemo, useState } from "react",import { supabase } 
 },const SUGGESTION_TABLE_ENV =;
   process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",export default function TalentDashboardSuggestedJobs() {const [userId, setUserId] = useState<string | null>(null),const [loading, setLoading] = useState(true),const [suggestions, setSuggestions]  = useState<JobSuggestion[]>([]),useEffect(() => {let mounted = true,async function init() {try {const { data } = await supabase.auth.getUser(),const currentUserId = data.user?.id || null,if (!mounted) return,setUserId(currentUserId),if (!currentUserId) {setSuggestions([]),setLoading(false),return,}
         await fetchSuggestions(currentUserId),setupRealtime(currentUserId),} finally {if (mounted) setLoading(false),}
+import React, { useEffect, useMemo, useState } from "react";
+import { supabase } from "../../utils/supabase/client";
+import { AnimatePresence, motion } from "framer-motion",;
+;
+type JobSuggestion = {;
+  id:string,;
+  match_type?:"job_for_talent" | string,;
+  job_id:string,;
+  job_title:string,;
+  client_name?:string,;
+  client_id?:string,;
+  talent_id:string,;
+  summary?:string,;
+  skills?:string[],;
+  budget_min?:number | null,;
+  budget_max?:number | null,;
+  duration?:string | null,;
+  status?:"new" | "viewed" | "applied" | "declined" | "pending" | string | null,;
+  score?:number,;
+  created_at?:string,;
+  updated_at?:string;
+},;
+;
+const SUGGESTION_TABLE_ENV =;
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",;
+;
+export default function TalentDashboardSuggestedJobs() {;
+  const [userId, setUserId] = useState<string | null>(null),;
+  const [loading, setLoading] = useState(true),;
+  const [suggestions, setSuggestions] = useState<JobSuggestion[]>([]),;
+;
+  useEffect(() => {;
+    let mounted = true,;
+    async function init() {;
+      try {;
+        const { data } = await supabase.auth.getUser(),;
+        const currentUserId = data.user?.id || null,;
+        if (!mounted) return,;
+        setUserId(currentUserId),;
+        if (!currentUserId) {;
+          setSuggestions([]),;
+          setLoading(false),;
+          return,;
+        }
+        await fetchSuggestions(currentUserId),;
+        setupRealtime(currentUserId),;
+      } finally {;
+        if (mounted) setLoading(false),;
+      }
     }
     init(),return () => {mounted = false,},// eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []),const fetchSuggestions = async (currentUserId:string) => {setLoading(true),const { data, error } = await supabase;

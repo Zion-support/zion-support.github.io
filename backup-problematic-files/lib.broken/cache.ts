@@ -6,6 +6,16 @@ interface CacheConfig  {"defaultTTL": number; // Time to live in milliseconds;
   cleanupInterval: number;';
   constructor(config: Partial<CacheConfig> = {}) {this && this.config = {"defaultTTL": config && config.defaultTTL || 5 * 60 * 1000, // 5 minutes;
       "maxSize": config && config.maxSize || 1000,"cleanupInterval": config && config.cleanupInterval || 60 * 1000 // 1 minute;
+  createdAt: number;'
+interface CacheConfig {
+  "defaultTTL": number; // Time to live in milliseconds;
+    maxSize: number;
+  cleanupInterval: number;'
+  constructor(config: Partial<CacheConfig> = {}) {
+    this && this.config = {
+      "defaultTTL": config && config.defaultTTL || 5 * 60 * 1000, // 5 minutes
+      "maxSize": config && config.maxSize || 1000,
+      "cleanupInterval": config && config.cleanupInterval || 60 * 1000 // 1 minute
     }
     this && this.startCleanup()}
   private startCleanup() {this && this.cleanupTimer = setInterval(() => {this && this.cleanup()}, this && this.config.cleanupInterval)}
@@ -40,3 +50,18 @@ export const apiCache = new CacheManager({"defaultTTL": '5 * 60 * 1000', // 5 mi
 })export const staticCache = new CacheManager({"defaultTTL": '60 * 60 * 1000', // 1 hour;
   "maxSize": 200;
 })export default CacheManager;
+// Create cache instances for different purposes
+export const apiCache = new CacheManager({
+  "defaultTTL": '5 * 60 * 1000', // 5 minutes
+  "maxSize": 500
+});
+export const userCache = new CacheManager({
+  "defaultTTL": '15 * 60 * 1000', // 15 minutes
+  "maxSize": 100
+});
+export const staticCache = new CacheManager({
+  "defaultTTL": '60 * 60 * 1000', // 1 hour
+  "maxSize": 200
+});
+export default CacheManager;
+

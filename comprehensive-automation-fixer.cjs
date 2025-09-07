@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -557,7 +556,6 @@ fixer
     console.error('❌ Comprehensive Automation Fixer failed:', error.message);
     process.exit(1);
   });
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -599,4 +597,4 @@ const automationFiles = ['automation/dependency-fixer.cjs']
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
       .replace(/['"]lucide-react;['"]/g, ")
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
@@ -12,23 +10,31 @@ export default function BlockchainSolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
-=======
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
 export const metadata = {
-  title: 'Blockchain Solutions | Zion Tech Group',
-  description: 'Professional blockchain solutions services for your business needs.',
-  keywords: 'blockchain-solutions, services, business, technology'
+  title: 'Blockchain Solutions - Zion Tech Group',
+  description: 'Professional blockchain solutions solutions for your business needs.',
 };
 
-export default function ServicePage() {
+export default function BlockchainSolutionsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+export const metadata = {
+  title: 'Blockchain Solutions - Zion Tech Group',
+  description: 'Professional blockchain solutions solutions for your business needs.',
+};
+
+export default function BlockchainSolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Blockchain Solutions

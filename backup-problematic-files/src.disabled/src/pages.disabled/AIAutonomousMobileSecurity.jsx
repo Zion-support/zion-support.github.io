@@ -4,3 +4,14 @@ const AIAutonomousMobileSecurity = ({ className }) => {return (<div className={c
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousMobileSecurity = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousMobileSecurity</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

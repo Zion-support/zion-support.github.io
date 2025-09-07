@@ -6,6 +6,39 @@ import React, { useState } from "react",import { Button } from "@/components/ui/
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),onSuggestionApplied(suggestedRate),// Track this suggestion application;
       if (user) {trackPricingSuggestion({userId:user.id,suggestionType:'talent',suggestedMin:suggestion.minRate,suggestedMax:suggestion.maxRate,actualValue:suggestedRate,accepted:true;
         }),}
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ;
+  getTalentRateSuggestion,;
+  PricingSuggestion,;
+  TalentRateParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
+;
+interface TalentRateRecommenderProps {;
+  skills:string[],;
+  yearsExperience:number,;
+  location?:string,;
+  onSuggestionApplied:(value:number) => void,;
+  rateType:"hourly" | "fixed";
+}
+;
+export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
+  skills,;
+  yearsExperience,;
+  location,;
+  onSuggestionApplied,;
+  rateType}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+;
+  const generateSuggestion = async () => {;
+    if (skills.length === 0 || yearsExperience <= 0) {;
+      return,;
     }
   },return (<div className="space-y-4">;
       <div>;
@@ -35,5 +68,12 @@ yearsExperience: number;
 location?: string;
 }finally {setIsLoading (false)}
 }if (suggestion) {//We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {trackPricingSuggestion ({}
+}
+};
+if (suggestion) {
+  //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
+  trackPricingSuggestion ({
+}
+}
 }
 }

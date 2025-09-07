@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 ;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -67,8 +71,8 @@ const contact = {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziont
   rating: number;
   reviews: number;
   benefits: string[];
-  marketAdvantage: string
-  capabilities: string[],
+  marketAdvantage: string;
+    capabilities: string[],
   market_advantage: string;
 }
 const contact = {
@@ -84,10 +88,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     name: 'AI Content Generation Platform';
     tagline: 'Create high - quality content at scale with AI';
     price: '$299';
-
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation';
     marketPosition: 'Leading AI content generation platform with enterprise features',
-
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
@@ -224,7 +226,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
-    roi: 'Reduce deployment time by 70% and increase team productivity by 50%'
+    roi: "roi",
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.';
     features: [;
@@ -901,5 +903,9 @@ export default comprehensiveInnovativeServices;
 ;
 export default comprehensiveInnovativeServices;
 ;
+<<<<<<< HEAD
 ;
 export default comprehensiveInnovativeServices;
+=======
+export default comprehensiveInnovativeServices;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

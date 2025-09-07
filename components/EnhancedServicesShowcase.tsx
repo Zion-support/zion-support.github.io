@@ -18,16 +18,13 @@ import { Brain;
   Filter;
   ChevronDown;
   Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,Filter,ChevronDown,} from 'lucide-react';
-<<<<<<< HEAD
 interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';;
 interface Service  {id: string;
-=======
 
 interface Service  {Brain,Shield,Rocket,Cpu,Database,Atom,Users,CheckCircle,TrendingUp,Clock,Star,} from 'lucide-react';;
 
 interface Service {
   id: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   name: string;
   tagline: string;
   category: string;
@@ -40,13 +37,11 @@ interface Service {
   roi: string;
   market_size: string;
   growth_rate: string;
-<<<<<<< HEAD
   popular?: boolean;];icon: React.ComponentType<any>;
   color: string;
 }const EnhancedServicesShowcase: React.FC;
   color: string;} from 'lucide-react';
 interface Service  {id: string;
-=======
   popular?: boolean
 ];
 icon: React.ComponentType<any>;
@@ -59,7 +54,6 @@ const EnhancedServicesShowcase: React.FC;
 
 interface Service {
   id: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   name: string;
   tagline: string;
   category: string;
@@ -75,17 +69,14 @@ interface Service {
   popular?: boolean;
   icon: React.ComponentType<any>;
   color: string;
-<<<<<<< HEAD
 }
 const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] = useState('')const services: Service[] = [;
-=======
 
 }
 
 const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [searchTerm, setSearchTerm] =;
   useState('';
   const services: Service[] = [;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     {id: 'ai-bi',name: 'AI Business Intelligence',tagline:;
         'Transform data into actionable insights with AI-powered analytics',category: 'AI & Analytics',price: '$499',period: '/month',setupTime: '2-3 weeks',customers: '150+',features: [;
         'AI-powered dashboards','Predictive analytics','Real-time insights','Custom reporting',],benefits: [;
@@ -109,14 +100,11 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
         'Edge node management';
         'IoT device management';
         'Real-time monitoring';
-<<<<<<< HEAD
         'Auto-scaling';
       ];
-=======
         'Auto-scaling'
 ];
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       benefits: [;
         'Mission success rate 95%+','Reduced launch costs','Advanced capabilities',],roi: 'Average 5.2x ROI within 12 months',marketSize: '$8B',growthRate: '45% YoY',popular: true,icon: Rocket,color: 'from-violet-500 to-purple-500',},{id: 'neural-interface',name: 'Neural Interface Development',tagline:;
         'Build the future of human-computer interaction with neural interfaces',category: 'Emerging Tech',price: '$899',period: '/month',setupTime: '6-8 weeks',customers: '40+',features: [;
@@ -125,7 +113,6 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
         'Quantum neural networks';
         'Consciousness simulation';
         'Advanced learning';
-<<<<<<< HEAD
         'Quantum optimization';
       ];
       benefits: [;
@@ -136,7 +123,6 @@ const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSe
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
   })const getCategoryIcon = (category: string) => {const iconMap: { [key: string]: React.ComponentType<any> } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}return iconMap[category] || Brain;
-=======
         'Quantum optimization'
 ];
 
@@ -156,7 +142,6 @@ const matchesSearch =;
   })const getCategoryIcon = (category: string) => ;
   const iconMap: { [key: string]: React.ComponentType<any>,
 } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}return iconMap[category] || Brain;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   }return (<section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}}return (<section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
@@ -166,16 +151,13 @@ const matchesSearch =;
             <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12";
             >;
               {categories.map((category) => (<option key={category} value={category} className="bg-slate-800 text-white">;
-=======
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus: outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12">
 
               {categories.map((category) => (<option key={category} value={categor,
 } className="bg-slate-800 text-white">;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />;
@@ -200,7 +182,6 @@ const matchesSearch =;
             <select;
               value={selectedCategory}
               onChange={e => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12';
             >;
               {categories.map(category => (<option;
@@ -208,7 +189,6 @@ const matchesSearch =;
                   value={category}
                   className='bg-slate-800 text-white';
                 >;
-=======
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12'>
 
               {categories.map(category => (<option;
@@ -216,7 +196,6 @@ const matchesSearch =;
                   value={category}
                   className='bg-slate-800 text-white'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   {category === 'all' ? 'All Categories' : category}
                 </option>;
               ))}</select>;
@@ -248,16 +227,13 @@ const matchesSearch =;
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices.map((service, index) => (<div;
               key={service.id}
-<<<<<<< HEAD
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
             >;
               {/* Popular Badge */}
-=======
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
 
               {/* Popular Badge *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               {service.popular && (<div className='absolute top-4 right-4 z-20'>;
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                     <Star className='w-3 h-3' />;
@@ -289,26 +265,21 @@ const matchesSearch =;
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div;
-<<<<<<< HEAD
       color: 'from - blue - 500 to - cyan - 500',},];const categories = [;
     'all',...Array.from (new Set (services.map (string => s.category))),const filtered_services = services.filter (service => {const matches_category =;
-=======
       color: 'from - blue - 500 to - cyan - 500',},];
 
 const categories = [
   'all',...Array.from (new Set (services.map (string = > s.category))),const filtered_services = services.filter (service => ;
   const matches_category =;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       selected_category === 'all' || service.category === selected_category;
 
 const matches_search =;
       service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-<<<<<<< HEAD
       service.tagline.toLowerCase ().includes (search_term.toLowerCase ())return matches_category && matches_search;  })const getCategoryIcon = (category: string) =>: any {const icon_map: { [key: string]: React.ComponentType < any> } = {    const matches_category = selected_category === 'all' || service.category === selected_category;
     const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                         service.tagline.toLowerCase ().includes (search_term.toLowerCase ())return matches_category && matches_search;
   const getCategoryIcon = (category: string) =>: any {const icon_map: { [key: string]: React.ComponentType < any> } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}
-=======
       service.tagline.toLowerCase ().includes (search_term.toLowerCase ())return matches_category && matches_search;  })const getCategoryIcon = (category: string) =>: any {const icon_map: { [key: string]: React.ComponentType < any>,
 } = {   ;
   const matches_category = selected_category === 'all' || service.category === selected_category;
@@ -319,7 +290,6 @@ const matches_search = service.name.toLowerCase ().includes (search_term.toLower
 const getCategoryIcon = (category: string) =>: any ;
   const icon_map: { [key: string]: React.ComponentType < any>,
 } = {'AI & Analytics': Brain,Security: Shield,Infrastructure: Cpu,'Space Tech': Rocket,'Emerging Tech': Brain,'Quantum AI': Atom,}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     return icon_map[category] || Brain;
   }return (<section id='services' className='py - 24 px - 6 relative overflow - hidden'>;
       {/* Background */}
@@ -340,15 +310,12 @@ const getCategoryIcon = (category: string) =>: any ;
             business and accelerate innovation          </p>;
         </div>;
         {/* Filters */}
-<<<<<<< HEAD
         <div className='flex flex - col md:flex - row gap - 4 mb - 12 justify - center items - center'>    }
     return icon_map[category] || Brain;
-=======
         <div className = 'flex flex - col md: flex - row gap - 4 mb - 12 justify - center items - center'>   ,
 }
    ;
   return icon_map[category] || Brain;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   }return (<section id="services" className="py - 24 px-6 relative overflow-hidden">;
       {/* Background */}
       <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to-slate-950">;
@@ -374,13 +341,10 @@ const getCategoryIcon = (category: string) =>: any ;
             <select;
               value={selected_category}
               on_change={e => setSelectedCategory (e.target.value)}
-<<<<<<< HEAD
               className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance - none pr - 12';
             >;
-=======
               className='px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance - none pr - 12'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               {categories.map (category => (<option;
                   key={category}
                   value={category}
@@ -393,16 +357,13 @@ const getCategoryIcon = (category: string) =>: any ;
             <select;
               value={selected_category}
               on_change={(e) => setSelectedCategory (e.target.value)}
-<<<<<<< HEAD
               className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus:outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12";
             >;
               {categories.map ((category) => (<option key={category} value={category} className="bg - slate-800 text-white">;
-=======
               className="px - 6 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white focus: outline - none focus:border - blue - 400 transition - colors duration - 300 appearance-none pr-12">
 
               {categories.map ((category) => (<option key={category} value={categor,
 } className="bg - slate-800 text-white">;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>;
@@ -437,30 +398,24 @@ const getCategoryIcon = (category: string) =>: any ;
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {filtered_services.map ((service, index) => (<div;
               key={service.id}
-<<<<<<< HEAD
               className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
             >;
               {/* Popular Badge */}
-=======
               className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover: border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl'>
 
               {/* Popular Badge *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               {service.popular && (<div className='absolute top - 4 right - 4 z - 20'>;
                   <div className='bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'>;
                     <Star className='w - 3 h - 3' />                    Popular          {filtered_services.map ((service, index) => (<div;
               key={service.id}
-<<<<<<< HEAD
               className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl";
             >;
               {/* Popular Badge */}
-=======
               className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover: border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale-105 hover:shadow-2xl">
 
               {/* Popular Badge *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               {service.popular && (<div className="absolute top - 4 right-4 z-20">;
                   <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items-center gap-1">;
                     <Star className="w-3 h-3" />;
@@ -493,7 +448,6 @@ const getCategoryIcon = (category: string) =>: any ;
                     <div className='text - xs text - white / 40'>;
                       {service.category}
                 <div className="flex items-center justify-between mb-4">;
-<<<<<<< HEAD
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>;
                     <service.icon className="w-8 h-8 text-white" />;
                   </div>;
@@ -503,7 +457,6 @@ const getCategoryIcon = (category: string) =>: any ;
                   </div>;
                 </div>;
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
-=======
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
 
                     <service.icon className="w-8 h-8 text-white" />;
@@ -516,7 +469,6 @@ const getCategoryIcon = (category: string) =>: any ;
                 </div>;
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
                   <div className='text-right'>;
@@ -584,13 +536,10 @@ const getCategoryIcon = (category: string) =>: any ;
                   <div className='space-y-2'>;
                     {service.features.slice(0, 3).map((feature, idx) => (<div;
                         key={idx}
-<<<<<<< HEAD
                         className='flex items-center gap-2 text-xs text-white/70';
                       >;
-=======
                         className='flex items-center gap-2 text-xs text-white/70'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         <CheckCircle className='w-3 h-3 text-green-400' />;
                         {feature}
                       </div>;
@@ -605,13 +554,10 @@ const getCategoryIcon = (category: string) =>: any ;
                   <div className='space-y-2'>;
                     {service.benefits.slice(0, 2).map((benefit, idx) => (<div;
                         key={idx}
-<<<<<<< HEAD
                         className='flex items-center gap-2 text-xs text-white/70';
                       >;
-=======
                         className='flex items-center gap-2 text-xs text-white/70'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         <TrendingUp className='w-3 h-3 text-blue-400' />;
                         {benefit}
                       </div>;
@@ -623,12 +569,9 @@ const getCategoryIcon = (category: string) =>: any ;
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>;
                   <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>;
                   <div className="mt-2 text-xs text-white/60">;
-<<<<<<< HEAD
                     Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}))}<div className='mb-6 p-4 bg-white/5 rounded-lg'>;
-=======
                     Market: {service.marketSize} • Growth: {service.growthRate}{/* Benefits */}),
 }<div className='mb-6 p-4 bg-white/5 rounded-lg'>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className='text-xs text-white/60 mb-2'>;
                     ROI & Market Position;
                   </div>;
@@ -636,12 +579,9 @@ const getCategoryIcon = (category: string) =>: any ;
                     {service.roi}
                   </div>;
                   <div className='mt-2 text-xs text-white/60'>;
-<<<<<<< HEAD
                     Market: {service.marketSize} • Growth: {service.growthRate}</div>;
-=======
                     Market: {service.marketSize} • Growth: {service.growthRat,
 }</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 </div>;
                   </div>;
                 </div>;
@@ -661,7 +601,6 @@ const getCategoryIcon = (category: string) =>: any ;
                   </div>;
                 </div>;
                 {/* Action Buttons */}>;
-<<<<<<< HEAD
                     Demo;
                   </button>;
                 </div>;
@@ -684,14 +623,10 @@ onClick={() =>;
                       (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`)}
                     className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
                   >;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     Demo;
                   </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
                 <div className="flex gap-3">;
                   <button;
                     onClick={() => window.location.href = `mailto: kleber@ziontechgroup.com?subject=Inquiry about ${service.name},
@@ -717,7 +652,6 @@ onClick={() =>;
                   </button>;
                 </div>;
               </div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             </div>;
           ))}
         </div>;
@@ -808,7 +742,6 @@ onClick={() =>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;  )}export default EnhancedServicesShowcase;
     </section>)}export default EnhancedServicesShowcase)}export default EnhancedServicesShowcase;)export default EnhancedServicesShowcase;  )}
 export default EnhancedServicesShowcase;}
@@ -816,7 +749,6 @@ export default EnhancedServicesShowcase;}
 export default EnhancedServicesShowcase;href='mailto:kleber@ziontechgroup.com?subject=Consultation Request';
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
               >;
-=======
 
 export default EnhancedServicesShowcase;  )}
 
@@ -833,18 +765,14 @@ export default EnhancedServicesShowcase;}
 export default EnhancedServicesShowcase;href='mailto:kleber@ziontechgroup.com?subject=Consultation Request';
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Schedule Consultation;
               </a>;
               <a;
 href='tel:+13024640950';
-<<<<<<< HEAD
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10';
               >;
-=======
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Call Now;
               </a>;
             </div>;
@@ -852,10 +780,8 @@ href='tel:+13024640950';
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
 )}export default EnhancedServicesShowcase;
-=======
 )}
 
 export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+

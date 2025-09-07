@@ -2,6 +2,31 @@
 import type { NextApiRequest, NextApiResponse } from 'next',import type { PerformanceReport } from '@/utils/performance-monitor',interface PerformanceData  {timestamp:string,url:string,userAgent:string,fcp:number,lcp:number,fid:number,cls:number,ttfb:number,sessionId:string;
 }interface ErrorData  {timestamp:string,url:string,userAgent:string,error:string,stack?:string,sessionId:string;
 }// In-memory storage for demo purposes;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { PerformanceReport } from '@/utils/performance-monitor';
+;
+interface PerformanceData {;
+  timestamp:string,;
+  url:string,;
+  userAgent:string,;
+  fcp:number,;
+  lcp:number,;
+  fid:number,;
+  cls:number,;
+  ttfb:number,;
+  sessionId:string;
+}
+;
+interface ErrorData {;
+  timestamp:string,;
+  url:string,;
+  userAgent:string,;
+  error:string,;
+  stack?:string,;
+  sessionId:string;
+}
+;
+// In-memory storage for demo purposes;
 // In production, use a proper database;
 let performanceMetrics:PerformanceData[] = [],let errorLogs:ErrorData[]  = [],export default async function handler(req:NextApiRequest,res:NextApiResponse;
 ):Promise<void> {if (req.method === 'POST') {try {const performanceReport  = req['body'],// Validate the report structure;
@@ -30,3 +55,46 @@ let performanceMetrics:PerformanceData[] = [],let errorLogs:ErrorData[]  = [],ex
     }),}
 }function calculateAverages() {if (metrics.length === 0) return null,const sums = metrics.reduce((acc, metric) => ({fcp:acc.fcp + metric.fcp,lcp:acc.lcp + metric.lcp,fid:acc.fid + metric.fid,cls:acc.cls + metric.cls,ttfb:acc.ttfb + metric.ttfb;
   }), { fcp:0, lcp:0, fid:0, cls:0, ttfb:0 }),return {fcp:Math.round(sums.fcp / metrics.length),lcp:Math.round(sums.lcp / metrics.length),fid:Math.round(sums.fid / metrics.length),cls:Math.round((sums.cls / metrics.length) * 1000) / 1000,ttfb:Math.round(sums.ttfb / metrics.length)},}
+        }),;
+      } else {;
+        res.status(400).json({ ;
+          success:false, ;
+          message:'Invalid type parameter' ;
+        }),;
+      }
+    } catch (error) {;
+      console.error('Error retrieving data:', error),;
+      res.status(500).json({ ;
+        success:false, ;
+        message:'Internal server error' ;
+      }),;
+    }
+  } else {;
+    res.setHeader('Allow', ['POSTGET']),;
+    res.status(405).json({ ;
+      success:false, ;
+      message:`Method ${req.method} Not Allowed` ;
+    }),;
+  }
+}
+;
+function calculateAverages(metrics:PerformanceData[]) {;
+  if (metrics.length === 0) return null,;
+;
+  const sums = metrics.reduce((acc, metric) => ({;
+    fcp:acc.fcp + metric.fcp,;
+    lcp:acc.lcp + metric.lcp,;
+    fid:acc.fid + metric.fid,;
+    cls:acc.cls + metric.cls,;
+    ttfb:acc.ttfb + metric.ttfb;
+  }), { fcp:0, lcp:0, fid:0, cls:0, ttfb:0 }),;
+;
+  return {;
+    fcp:Math.round(sums.fcp / metrics.length),;
+    lcp:Math.round(sums.lcp / metrics.length),;
+    fid:Math.round(sums.fid / metrics.length),;
+    cls:Math.round((sums.cls / metrics.length) * 1000) / 1000,;
+    ttfb:Math.round(sums.ttfb / metrics.length);
+  },;
+}
+

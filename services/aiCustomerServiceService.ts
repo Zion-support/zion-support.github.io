@@ -236,7 +236,6 @@ export interface CustomerServiceResponse {
 
 export class AICustomerServiceService {;
   private apiKey: string;
-
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
@@ -293,12 +292,14 @@ export interface CustomerServiceResponse {
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
+<<<<<<< HEAD
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       if (!response && response.ok) {
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
       }
-
       const data = await response && response.json();
       return {
         ...data;
@@ -308,7 +309,6 @@ export interface CustomerServiceResponse {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
-
     } catch (error) {
       console && console.error('Error getting ticket:', error);
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
@@ -324,8 +324,8 @@ export interface CustomerServiceResponse {
         updatedAt: new Date(data.updatedAt);
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
         conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
+          ...msg;
+    timestamp: new Date(msg.timestamp)}))}
     } catch (error) {
       console.error('Error getting ticket:', error);
       throw error
@@ -336,13 +336,11 @@ export interface CustomerServiceResponse {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
         headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
-
       const data = await response && response.json();
       return {
         ...data;
@@ -352,7 +350,6 @@ export interface CustomerServiceResponse {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
-
     } catch (error) {
       console && console.error('Error getting ticket:', error);
       throw error
@@ -501,7 +498,6 @@ export interface CustomerServiceResponse {
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
-
     } catch (error) {
       console && console.error('Error searching tickets:', error);
     } catch (error) {
@@ -834,7 +830,6 @@ export interface CustomerTicket {;
 
 
 export interface CustomerTicket {;
-
 export interface CustomerTicket {;
   id:string,;
   customerId:string,;
@@ -1126,6 +1121,7 @@ export interface CustomerServiceResponse  {ticket_id: string;
     }
   }
 }
+<<<<<<< HEAD
 export const aiCustomerServiceService  = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'')id: string,customerId: string,subject: string,id: string,customerId: string,subject: string,,description: string,priority: 'low' | 'medium' | 'high' | 'urgent',status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',category: string,assignedTo?: string,createdAt: Date,updatedAt: Date,resolvedAt?: Date,customerSatisfaction?: number,tags: string[],attachments: string[],conversationHistory: CustomerMessage[];export const aiCustomerServiceService  = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '')next_steps: string[],assigned_agent?: string;
 }
 export class AICustomerServiceService {private api_key: string;
@@ -1268,3 +1264,8 @@ export const aiCustomerServiceService  = new AICustomerServiceService (process.e
     }
   }
 }export const aiCustomerServiceService  = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '')export interface CustomerTicket  {
+=======
+;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+export interface CustomerTicket {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

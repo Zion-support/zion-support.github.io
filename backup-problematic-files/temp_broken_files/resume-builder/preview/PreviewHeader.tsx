@@ -3,6 +3,30 @@ import { Button } from '@/components/ui/button',import { ArrowLeft, FileText, Li
 import { PdfExportButton } from '../PdfExportButton',import { Resume } from '@/types/resume',import { useState } from 'react',import { useIsMobile } from '@/hooks/use-mobile',interface PreviewHeaderProps  {resume:Resume,onBack:() => void;}export function PreviewHeader() {const [isPrinting, setIsPrinting] = useState(false),const isMobile  = useIsMobile(),const handleBrowserPrint = () => {setIsPrinting(true),// Inject print-specific CSS only for the duration of printing;
     const style = document.createElement('style'),style.innerHTML = `;
       @media print {body * {visibility:hidden;
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, FileText, Link } from 'lucide-react';
+import { PdfExportButton } from '../PdfExportButton';
+import { Resume } from '@/types/resume',;
+import { useState } from 'react',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+;
+interface PreviewHeaderProps {;
+  resume:Resume,;
+  onBack:() => void;}
+;
+export function PreviewHeader({ resume, onBack } PreviewHeaderProps) {;
+  const [isPrinting, setIsPrinting] = useState(false),;
+  const isMobile = useIsMobile(),;
+;
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true),;
+    ;
+    // Inject print-specific CSS only for the duration of printing;
+    const style = document.createElement('style'),;
+    style.innerHTML = `;
+      @media print {;
+        body * {;
+          visibility:hidden;
         }
         .print-section, .print-section * {visibility:visible;
         }
@@ -49,3 +73,11 @@ document.head.appendChild (style)//Trigger print dialog window.print ()//Remove 
 }> <PdfExportButton resume= {resume ";
 }/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>)}'";
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx;
+:temp_broken_files/resume-builder/preview/PreviewHeader.tsx
+}> <PdfExportButton resume= {;"  resume ";"}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;"}'"
+}> <PdfExportButton resume= {;
+  resume ";
+}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/preview/PreviewHeader.tsx
+

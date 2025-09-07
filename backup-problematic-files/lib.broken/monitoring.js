@@ -5,4 +5,13 @@ export const trackError = (error, context = {}) => {console && console.error('Er
 }export const trackPerformance = (metric, value) => {console && console.log(`Performance "metric": ${metric} = ${value}`)if (typeof window !== 'undefined' && window && window.gtag) {window && window.gtag('event', 'timing_complete', {"name": metric,"value": Math && Math.round(value)})}
 }export const trackUserAction = (action, category, label) => {console && console.log(`User "action": ${action} in ${category}`)if (typeof window !== 'undefined' && window && window.gtag) {window && window.gtag('event', action, {"event_category": category,"event_label": label;
     })}
+};
+export const trackUserAction = (action, category, label) => {
+  console && console.log(`User "action": ${action} in ${category}`);
+  if (typeof window !== 'undefined' && window && window.gtag) {
+    window && window.gtag('event', action, {
+      "event_category": category,
+      "event_label": label
+    })}
+}
 }

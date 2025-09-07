@@ -6,6 +6,27 @@ module.exports = {apps: [;
       autorestart: true;
       watch: false;
       max_memory_restart: "512M";
+module.exports = {
+  apps: [;
+    {
+module && module.exports = {
+  apps: [
+    {
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: { NODE_ENV: "production" },
+      log_file: "logs / pm2 / auto - fix.log",
+      error_file: "logs / pm2 / auto - fix - error.log",
+      out_file: "logs / pm2 / auto - fix - out.log",
+    },
+      name: "name",
+    script: "scripts/pm2/auto-fix.js"
+      instances: 1;
+    autorestart: true
+      watch: false
+      max_memory_restart: "512M"
       env: { NODE_ENV: "production" }
       log_file: "logs/pm2/auto-fix.log";
       error_file: "logs/pm2/auto-fix-error.log";
@@ -183,4 +204,5 @@ module.exports = {apps: [;
       out_file: "logs/pm2/code-quality-monitor-out.log";
     }
   ];
+  ]
 }

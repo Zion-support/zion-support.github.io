@@ -4,3 +4,14 @@ const AIAutonomousReasoning = ({ className }) => {return (<div className={classN
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousReasoning = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousReasoning</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

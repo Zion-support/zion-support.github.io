@@ -4,3 +4,14 @@ const AIBusinessIntelligenceElite = ({ className }) => {return (<div className={
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIBusinessIntelligenceElite = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIBusinessIntelligenceElite</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

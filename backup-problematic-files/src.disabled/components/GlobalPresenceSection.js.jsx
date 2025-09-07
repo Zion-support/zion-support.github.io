@@ -4,3 +4,14 @@ const GlobalPresenceSection.js = ({ className }) => {return (<div className={cla
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const GlobalPresenceSection.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>GlobalPresenceSection.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

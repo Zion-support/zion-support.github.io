@@ -1,5 +1,24 @@
 
 import React, { useState, useEffect } from "react",import { useParams, useNavigate } from "react-router-dom",import { useDisputes } from "@/hooks/useDisputes",import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",import { Button } from "@/components/ui/button",import { Textarea } from "@/components/ui/textarea",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { Separator } from "@/components/ui/separator",import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",import { format, formatDistanceToNow } from "date-fns",import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",import { useAuth } from "@/hooks/useAuth",import { toast } from "sonner",export function DisputeDetail() {// useParams may be untyped in this environment, so avoid passing a;
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDisputes } from "@/hooks/useDisputes",;
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { format, formatDistanceToNow } from "date-fns",;
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { toast } from "sonner",;
+;
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?:string },const navigate = useNavigate(),const { user } = useAuth(),const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage }  = useDisputes(),const [dispute, setDispute] = useState<any>(null),const [messages, setMessages] = useState<DisputeMessage[]>([]),const [isLoading, setIsLoading] = useState(true),const [message, setMessage] = useState(""),const [isSending, setIsSending] = useState(false),const [resolution, setResolution] = useState({summary:"",resolution_type:"compromise"}),const [activeTab, setActiveTab]  = useState("overview"),// Check if user is admin (placeholder - implement proper admin check)const isAdmin  = user?.userType === "admin",useEffect(() => {if (!disputeId) return,const loadDisputeData = async () => {setIsLoading(true),try {const disputeData = await getDisputeById(disputeId),if (!disputeData) {toast.error("Dispute not found"),navigate("/dashboard/disputes"),return,}
         setDispute(disputeData),const messagesData = await getDisputeMessages(disputeId),setMessages(messagesData),} catch (error) {console.error("Error loading dispute data:", error),toast.error("Failed to load dispute"),} finally {setIsLoading(false),}
@@ -343,6 +362,40 @@ import React, { useState, useEffect } from "react",import { useParams, useNaviga
 const loadDisputeData = async () => {setIsLoading (true)try {const disputeData = await getDisputeById (disputeId)if (!disputeData) {}setDispute (disputeData)const messagesData = await getDisputeMessages (disputeId)setMessages (messagesData)}catch (error) {}finally {setIsLoading (false)}
 }}, [disputeId, navigate, getDisputeById, getDisputeMessages])}
 }}const success = await resolveDispute (disputeId, resolution)if (success && dispute) {setDispute ({...dispute;
+  ),; export function DisputeDetail () {
+  //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. const {
+  disputeId 
+}= useParams () as {
+  disputeId?: string 
+};
+const navigate = useNavigate ();
+const {
+  user 
+}= useAuth ();
+const {
+  getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage 
+}= useDisputes ();
+if (!disputeId) return;
+const loadDisputeData = async () => {
+  setIsLoading (true);
+try {
+  const disputeData = await getDisputeById (disputeId);
+if (!disputeData) {
+}setDispute (disputeData);
+const messagesData = await getDisputeMessages (disputeId);
+setMessages (messagesData) 
+}catch (error) {
+}finally {
+  setIsLoading (false) 
+}
+};
+}, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+}
+};
+}const success = await resolveDispute (disputeId, resolution);
+if (success && dispute) {
+  setDispute ({
+  ...dispute;
 status: "resolved";
 resolution summary: resolution.summary;
 resolution type: resolution.resolution type;
@@ -375,6 +428,16 @@ resolved at: new Date () .toISOString ()})}
 }</AvatarFallback> </Avatar> <span className="text-sm font-medium"> {msg.user profile?.display name || 'Admin';
 }</span> </div> <span className="text-xs opacity-70"> {format (new Date (msg.created at), 'MMM d, h:mm a')}</span> </div> <p className="whitespace-pre-wrap text-sm"> {msg.message;
 }</p> </div>) )}{!messages.some (msg => msg.is admin note) && (<p className="text-sm text-muted-foreground italic">No admin notes yet</p>)}</div> <div className="mt-4 space-y-4" > <Textarea;
+};
+setIsSending (true);
+try {
+}finally {
+  setIsSending (false) 
+}
+};
+return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div> <p>Dispute not found</p> <Button onClick= {
+  () => navigate ("/dashboard/disputes") 
+}className="mt-4" > Back to Disputes </Button> </div>) 
 }
 }
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>)}</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>)}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const real2036AIServices = [;
@@ -658,9 +659,11 @@ export const real2036AIServices = [;
     ],popular: true,category: 'Vehicle AI',icon: '🚗🤖',marketPrice: '$15,000-25,000/month',benefits: [;
       'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance';
     ],useCases: [;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const real2036AIServices = [
   {
-    id: 'ai-emotion-intelligence-platform'
+    id: "id",
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding'
     description:
@@ -674,7 +677,7 @@ export const real2036AIServices = [
       'Multi-modal emotion detection'
       'Emotional pattern analysis'
     ]
-    popular: true
+    popular: true;
     category: 'Emotional AI'
     icon: '😊🤖'
     marketPrice: '$5,000-8,000/month'
@@ -1662,9 +1665,14 @@ export const real2036AIServices = [;
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
+<<<<<<< HEAD
       'Safety systems'
     ]
 
+=======
+      'Safety systems',
+    ],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
@@ -1691,6 +1699,7 @@ export const real2036AIServices = [
 
   }
 ];
+<<<<<<< HEAD
 ;
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
@@ -1919,3 +1928,7 @@ export const real2036AIServices = [;
     ];
   }
 ];
+=======
+;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

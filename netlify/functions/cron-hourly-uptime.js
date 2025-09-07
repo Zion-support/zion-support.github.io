@@ -1,35 +1,17 @@
-
-;
-
-const endpoints = [
-  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-
-const endpoints = [
-  '/';
-      '/learn';
-      '/dao';
-      '/certifications';
-      '/api/learn/courses';
-      '/api/dao/metrics'
-];
-
-
-const results = [];
-    ${ep}`;
-
-const t0 = Date && Date.now()try {const resp = await fetch(url;
-  const ms = Date && Date.now() - t0;
-        results && results.push({ path: ep, status: resp && resp.status, ms })} catch (e) {const ms = Date && Date.now() - t0;
-        results && results.push({path: ep,status: 0,ms,error: String(e && e.message || e)error: String(e && e.message || e)},
-}
-
-const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-exports && exports.handler = async function () {
-  try {
    ;
   const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
 const endpoints = [
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const endpoints = [
+const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
+   ;
+  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+
+const endpoints = [
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const endpoints = [
+const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
       '/'
       '/learn'
       '/dao'
@@ -128,8 +110,8 @@ const arr = resp && resp.ok ? await resp && resp.json() : [];
 const content = JSON && JSON.stringify(arr, null, 2);
         await upsertFile({
           owner
-          repo
-          path: existingPath
+          repo;
+    path: existingPath
           content
           message: 'chore(automation): hourly uptime log update'
           token
@@ -311,3 +293,7 @@ const log = { timestamp: Date.now(), results },const owner = process.env.GITHUB_
   return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
  ,
 }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+

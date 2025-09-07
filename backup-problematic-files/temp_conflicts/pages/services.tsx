@@ -28,13 +28,163 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
   ],const industries = [;
     "Finance & Banking","Healthcare & Life Sciences","Manufacturing & Industry 4.0","Retail & E-commerce","Energy & Utilities","Transportation & Logistics","Education & Research","Government & Defense";
   ],return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion',;
+import Link from "Link";
+import { ;
+  Brain, Shield, Rocket, Cpu, Database, Atom, ;
+  Users, Target, Star, Zap, Globe, TrendingUp,;
+  CheckCircle, ArrowRight, ExternalLink, Sparkles;
+} from 'lucide-react',;
+import EnhancedNavigation from "EnhancedNavigation";
+import EnhancedFooter from "EnhancedFooter";
+;
+export default function ServicesPage() {;
+  const mainServices = [;
+    {;
+      icon:Brain,;
+      title:"AI Business Intelligence",,
+  description:"Transform your data into actionable insights with our advanced AI-powered analytics platform.",;
+      features:[;
+        "Real-time data processing",;
+        "Predictive analytics",;
+        "Custom AI models",;
+        "Interactive dashboards",;
+        "Automated reporting";
+      ],;
+      price:"$499/month",;
+      color:"from-purple-500 to-pink-500",;
+      href:"/ai-business-intelligence";
+    },;
+    {;
+      icon:Shield,;
+      title:"Quantum Cybersecurity",,
+  description:"Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",;
+      features:[;
+        "Quantum-resistant encryption",;
+        "AI threat detection",;
+        "Zero-trust architecture",;
+        "24/7 monitoring",;
+        "Compliance ready";
+      ],;
+      price:"$799/month",;
+      color:"from-red-500 to-orange-500",;
+      href:"/quantum-cybersecurity";
+    },;
+    {;
+      icon:Users,;
+      title:"AI Customer Experience",,
+  description:"Deliver personalized customer experiences at scale with intelligent automation and insights.",;
+      features:[;
+        "Customer journey mapping",;
+        "AI personalization",;
+        "Sentiment analysis",;
+        "Automated support",;
+        "Behavioral insights";
+      ],;
+      price:"$399/month",;
+      color:"from-green-500 to-teal-500",;
+      href:"/ai-customer-experience";
+    },;
+    {;
+      icon:Database,;
+      title:"Edge Computing Orchestration",,
+  description:"Deploy and manage applications at the edge with intelligent orchestration and optimization.",;
+      features:[;
+        "Edge node management",;
+        "IoT device management",;
+        "Real-time monitoring",;
+        "Load balancing",;
+        "Auto-scaling";
+      ],;
+      price:"$349/month",;
+      color:"from-yellow-500 to-orange-500",;
+      href:"/edge-computing-orchestration";
+    },;
+    {;
+      icon:Rocket,;
+      title:"Space Technology Innovation",,
+  description:"Accelerate space exploration with cutting-edge AI and quantum technology solutions.",;
+      features:[;
+        "Satellite management",;
+        "AI mission planning",;
+        "Quantum communication",;
+        "Resource optimization",;
+        "Risk assessment";
+      ],;
+      price:"$2,499/month",;
+      color:"from-violet-500 to-purple-500",;
+      href:"/space-technology";
+    },;
+    {;
+      icon:Atom,;
+      title:"Neural Interface Development",,
+  description:"Build the future of human-computer interaction with advanced neural interfaces.",;
+      features:[;
+        "BCI development tools",;
+        "Neural signal processing",;
+        "AI pattern recognition",;
+        "Real-time analysis",;
+        "Custom algorithms";
+      ],;
+      price:"$899/month",;
+      color:"from-pink-500 to-rose-500",;
+      href:"/neural-interface";
+    }
+  ],;
+;
+  const specializedServices = [;
+    {;
+      title:"AI Autonomous Systems",,
+  description:"Build self-managing, self-optimizing systems that adapt and evolve",;
+      icon:Brain,;
+      color:"from-blue-500 to-cyan-500";
+    },;
+    {;
+      title:"Quantum Machine Learning",,
+  description:"Leverage quantum computing for unprecedented ML performance",;
+      icon:Atom,;
+      color:"from-purple-500 to-pink-500";
+    },;
+    {;
+      title:"AI-Powered DevOps",,
+  description:"Automate and optimize your development and deployment processes",;
+      icon:Cpu,;
+      color:"from-green-500 to-emerald-500";
+    },;
+    {;
+      title:"Blockchain AI Integration",,
+  description:"Combine blockchain security with AI intelligence for next-gen applications",;
+      icon:Shield,;
+      color:"from-orange-500 to-red-500";
+    }
+  ],;
+;
+  const industries = [;
+    "Finance & Banking",;
+    "Healthcare & Life Sciences",;
+    "Manufacturing & Industry 4.0",;
+    "Retail & E-commerce",;
+    "Energy & Utilities",;
+    "Transportation & Logistics",;
+    "Education & Research",;
+    "Government & Defense";
+  ],;
+;
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
         <meta name="description" content="Discover Zion Tech Group's comprehensive AI, quantum computing, and technology services. Transform your business with cutting-edge solutions." />;
         <meta property="og:title" content="Zion Tech Group Services" />;
         <meta property="og:description" content="AI, quantum computing, and technology solutions for modern businesses." />;
         <meta name="keywords" content="AI services, quantum computing, technology solutions, business intelligence, cybersecurity" />;
         <link rel="canonical" href="https://ziontechgroup.com/services" />;
-      </Head>;<EnhancedNavigation />;{/* Hero Section */}
+      </Head>;
+;
+      <EnhancedNavigation />;
+;
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
@@ -51,7 +201,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             </p>;
           </motion.div>;
         </div>;
-      </section>;{/* Main Services Grid */}
+      </section>;
+;
+      {/* Main Services Grid */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -63,10 +215,14 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Core Technology Services</h2>;
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;
-              Choose from our comprehensive suite of AI and quantum technology solutions,each designed to address specific business challenges and opportunities.;
+              Choose from our comprehensive suite of AI and quantum technology solutions, ;
+              each designed to address specific business challenges and opportunities.;
             </p>;
-          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {mainServices.map((service, index) => (<motion.div;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {mainServices.map((service, index) => (;
+              <motion.div;
                 key={service.title}
                 initial={{ opacity:0, y:30 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -76,17 +232,24 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
               >;
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <service.icon className="w-8 h-8 text-white" />;
-                </div>;<h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
-                <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>;<div className="mb-6">;
+                </div>;
+                ;
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
+                <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>;
+                ;
+                <div className="mb-6">;
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>;
                   <ul className="space-y-2">;
-                    {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center space-x-2 text-slate-300 text-sm">;
+                    {service.features.map((feature, featureIndex) => (;
+                      <li key={featureIndex} className="flex items-center space-x-2 text-slate-300 text-sm">;
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />;
                         <span>{feature}</span>;
                       </li>;
                     ))}
                   </ul>;
-                </div>;<div className="flex items-center justify-between mb-6">;
+                </div>;
+                ;
+                <div className="flex items-center justify-between mb-6">;
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>;
                   <a;
                     href={service.href}
@@ -95,7 +258,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
                     <span>Learn More</span>;
                     <ArrowRight className="w-4 h-4" />;
                   </a>;
-                </div>;<Link;
+                </div>;
+                ;
+                <Link;
                   href="/contact";
                   className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg text-white font-semibold text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2";
                 >;
@@ -106,7 +271,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             ))}
           </div>;
         </div>;
-      </section>;{/* Specialized Services */}
+      </section>;
+;
+      {/* Specialized Services */}
       <section className="py-20 px-6 bg-slate-900/50">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -120,8 +287,11 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;
               Advanced technology solutions for specific use cases and emerging opportunities.;
             </p>;
-          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {specializedServices.map((service, index) => (<motion.div;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+            {specializedServices.map((service, index) => (;
+              <motion.div;
                 key={service.title}
                 initial={{ opacity:0, x:index % 2 === 0 ? -30 :30 }}
                 whileInView={{ opacity:1, x:0 }}
@@ -145,7 +315,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             ))}
           </div>;
         </div>;
-      </section>;{/* Industries We Serve */}
+      </section>;
+;
+      {/* Industries We Serve */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -157,10 +329,14 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Industries We Serve</h2>;
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;
-              Our technology solutions are designed to work across all industries,with specialized expertise in key sectors.;
+              Our technology solutions are designed to work across all industries, ;
+              with specialized expertise in key sectors.;
             </p>;
-          </motion.div>;<div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-            {industries.map((industry, index) => (<motion.div;
+          </motion.div>;
+;
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
+            {industries.map((industry, index) => (;
+              <motion.div;
                 key={industry}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -176,7 +352,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             ))}
           </div>;
         </div>;
-      </section>;{/* Why Choose Us */}
+      </section>;
+;
+      {/* Why Choose Us */}
       <section className="py-20 px-6 bg-slate-900/50">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
@@ -191,7 +369,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
               We combine cutting-edge technology with deep industry expertise to deliver ;
               solutions that drive real business value.;
             </p>;
-          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion.div;
               initial={{ opacity:0, y:30 }}
               whileInView={{ opacity:1, y:0 }}
@@ -207,7 +387,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
                 Access to the latest AI, quantum computing, and emerging technologies ;
                 that give you a competitive advantage.;
               </p>;
-            </motion.div>;<motion.div;
+            </motion.div>;
+;
+            <motion.div;
               initial={{ opacity:0, y:30 }}
               whileInView={{ opacity:1, y:0 }}
               transition={{ duration:0.8, delay:0.2 }}
@@ -222,7 +404,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
                 World-class engineers, scientists, and consultants with deep expertise ;
                 in AI, quantum computing, and industry applications.;
               </p>;
-            </motion.div>;<motion.div;
+            </motion.div>;
+;
+            <motion.div;
               initial={{ opacity:0, y:30 }}
               whileInView={{ opacity:1, y:0 }}
               transition={{ duration:0.8, delay:0.3 }}
@@ -240,7 +424,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             </motion.div>;
           </div>;
         </div>;
-      </section>;{/* CTA Section */}
+      </section>;
+;
+      {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
@@ -272,6 +458,9 @@ import React from 'react',import Head from 'next/head',import { motion } from 'f
             </div>;
           </motion.div>;
         </div>;
-      </section>;<EnhancedFooter />;
+      </section>;
+;
+      <EnhancedFooter />;
     </div>;
-  )}
+  );
+}

@@ -4,3 +4,14 @@ const BackToTopButton = ({ className }) => {return (<div className={className ||
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const BackToTopButton = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BackToTopButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

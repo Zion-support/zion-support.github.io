@@ -13,7 +13,6 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Custom Development**: Tailored software solutions for unique business needs
 
 ## 🛠️ Technology Stack
-<<<<<<< HEAD
 
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
@@ -86,8 +85,6 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Error Boundaries** - Graceful error handling
 
 ## 🛠️ Tech Stack
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 - **Frontend**: React 18, TypeScript, Vite
 - **Styling**: Tailwind CSS, Custom CSS
@@ -99,12 +96,8 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Package Manager**: npm
 
 ## 📦 Installation
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 1. Clone the repository:
 ```bash
@@ -112,31 +105,22 @@ git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
-<<<<<<< HEAD
 
-=======
-=======
 - Node.js 18+
 - npm or yarn
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 2. Install dependencies:
 ```bash
 npm install
 ```
 
-<<<<<<< HEAD
-=======
 - Node.js 18+
 - npm or yarn
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
 
-<<<<<<< HEAD
 
 4. Open your browser and navigate to `http://localhost:3000`
 
@@ -147,9 +131,6 @@ npm run build
 ```
 
 The built files will be in the `dist` directory, ready for deployment.
-=======
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 1. Clone the repository:
 
 ```bash
@@ -178,15 +159,11 @@ npm run build
 npm start
 ```
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 ## 📁 Project Structure
 
 ```
-<<<<<<< HEAD
 
 4. Open your browser and navigate to `http://localhost:3000`
 
@@ -201,9 +178,7 @@ The built files will be in the `dist` directory, ready for deployment.
 ## 📁 Project Structure
 
 ```
-=======
 
-=======
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
 │   ├── about.tsx         # About page
@@ -219,7 +194,6 @@ The built files will be in the `dist` directory, ready for deployment.
 ├── ecosystem.config.cjs # PM2 configuration
 └── package.json         # Dependencies and scripts
 ```
-=======
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
 │   ├── about.tsx         # About page
@@ -284,7 +258,6 @@ Interactive service display cards with:
 - Icon support
 - Responsive design
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 ## 🔧 Available Scripts
 
@@ -292,7 +265,6 @@ Interactive service display cards with:
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
-<<<<<<< HEAD
 
 ### Frontend
 - **React 18.2.0** - Modern React with concurrent features
@@ -300,7 +272,6 @@ Interactive service display cards with:
 - **Vite 5.4.19** - Next-generation build tool
 - **Tailwind CSS 3.4.17** - Utility-first CSS framework
 - **Framer Motion 10.16.4** - Animation library
-=======
 ### Color Palette
 
 - **Primary**: Zion Purple (`#8B5CF6`)
@@ -328,7 +299,6 @@ The website is built with a mobile-first approach:
 - **Mobile**: Stacked layouts with touch-friendly interactions
 - **Tablet**: Adjusted grid layouts for medium screens
 - **Desktop**: Full-featured layouts with hover effects and advanced navigation
-=======
 - `npm run lint:fix` - Fix ESLint errors
 
 ## 🎨 Design System
@@ -347,7 +317,6 @@ The project uses a consistent design system with:
 - **Tablet**: Responsive design for tablet screens (768px+)
 - **Desktop**: Full desktop experience (1024px+)
 - **Large Screens**: Optimized for large displays (1280px+)
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 ### UI Components
 - **Radix UI** - Accessible component primitives
@@ -355,7 +324,6 @@ The project uses a consistent design system with:
 - **React Hook Form** - Performant forms with validation
 - **Zod** - TypeScript-first schema validation
 
-<<<<<<< HEAD
 
 ### Main Navigation
 
@@ -399,7 +367,6 @@ The project uses a consistent design system with:
 - **Lazy Loading** - Components loaded on demand
 - **Image Optimization** - Next.js image optimization
 - **Code Splitting** - Automatic bundle splitting
-=======
 ### State Management & Data
 - **Redux Toolkit** - Modern Redux with best practices
 - **React Query** - Server state management
@@ -434,7 +401,6 @@ The project uses a consistent design system with:
 - **Internationalization** - Multi-language support ready
 - **Progressive Enhancement** - Works without JavaScript
 - **Accessibility First** - Inclusive design principles
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 ## 🚀 Getting Started
 
@@ -476,7 +442,6 @@ The project uses a consistent design system with:
    yarn build
    ```
 
-<<<<<<< HEAD
 
 ### Build for Production
 
@@ -580,9 +545,7 @@ npm start
 - Configure analytics and monitoring
 
 ## 📜 Available Scripts
-=======
 ### Available Scripts
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
@@ -702,7 +665,6 @@ VITE_SENTRY_DSN=your-sentry-dsn
 - **Error Tracking**: Sentry integration
 - **Analytics**: Google Analytics 4
 
-<<<<<<< HEAD
 
 ### User Behavior
 - **Page Views**: Navigation tracking
@@ -713,8 +675,6 @@ VITE_SENTRY_DSN=your-sentry-dsn
 ## ♿ Accessibility
 
 
-=======
-=======
 - Meta tags for all pages
 - Open Graph tags for social sharing
 - Structured data markup
@@ -739,7 +699,6 @@ VITE_SENTRY_DSN=your-sentry-dsn
 - Lazy loading
 - Bundle analysis
 - Performance monitoring
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 - `npm run type-check` - Run TypeScript checks
 
 ## 🌐 Deployment
@@ -788,15 +747,10 @@ The project is configured for deployment on:
 - **Twitter Cards** - Twitter sharing optimization
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
-<<<<<<< HEAD
 
-=======
 - `npm run lint:fix` - Fix ESLint errors
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
-<<<<<<< HEAD
 The project uses a consistent design system with:
 
 - **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
@@ -867,8 +821,6 @@ The project uses a consistent design system with:
 3. Make changes with tests
 4. Submit pull request
 5. Code review and approval
-=======
-=======
 
 ## 🤝 Contributing
 
@@ -879,7 +831,6 @@ The project uses a consistent design system with:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 ### Development Workflow
 
 1. Create a feature branch
@@ -907,7 +858,6 @@ For technical support or questions about the website:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-<<<<<<< HEAD
 # Zion Tech Group - AI-Powered Technology Solutions
 
 ## 🚀 Overview
@@ -928,11 +878,9 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - **Frontend**: React, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express
 - **Database**: PostgreSQL, MongoDB
-=======
 - **Frontend**: React, Next.js, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express, Fastify
 - **Database**: MongoDB, PostgreSQL
-=======
 ## 📞 Contact
 
 - **Website**: [Zion Tech Group](https://zion.app)
@@ -944,7 +892,6 @@ Zion Tech Group is a cutting-edge technology company specializing in AI-powered 
 - Next.js team for the amazing framework
 - Tailwind CSS for the utility-first CSS framework
 - Lucide React for the beautiful icons
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 - **Cloud**: AWS, Azure, Google Cloud
 - **AI/ML**: OpenAI, TensorFlow, PyTorch
 - **DevOps**: Docker, Kubernetes, PM2
@@ -1033,7 +980,40 @@ A modern, responsive website built with React, TypeScript, and Vite, showcasing 
 - **Package Manager**: npm
 
 ## 📦 Installation
->>>>>>> main
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ursor/automate-test-improve-and-merge-code-646c
 
 1. Clone the repository:
@@ -1057,7 +1037,40 @@ npm install
 ```
 - Node.js 18+
 - npm or yarn
->>>>>>> main
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ursor/automate-test-improve-and-merge-code-646c
 # Install dependencies
 npm install
@@ -1212,10 +1225,76 @@ npm run dev
 ```bash
 npm run build
 npm start
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ```
 
->>>>>>> main
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ursor/automate-test-improve-and-merge-code-646c
 
 ## 📁 Project Structure
@@ -1317,7 +1396,40 @@ ursor/automate-test-improve-and-merge-code-646c
 ```
 
 
->>>>>>> main
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ursor/automate-test-improve-and-merge-code-646c
 zion.app/
 ├── src/                    # Source code
@@ -1392,7 +1504,40 @@ Interactive service display cards with:
 ├── public/              # Static assets
 ├── ecosystem.config.cjs # PM2 configuration
 └── package.json         # Dependencies and scripts
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ```
 
 ## 🔧 Available Scripts
@@ -1571,7 +1716,40 @@ Built with ❤️ by the Zion Tech Group team
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 
 ## 📄 License
 
@@ -1686,7 +1864,40 @@ The project uses a consistent design system with:
 - Bundle analysis
 - Performance monitoring
 
->>>>>>> main
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ursor/automate-test-improve-and-merge-code-646c
 
 ## 🤝 Contributing
@@ -1780,7 +1991,40 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Built with ❤️ by the Zion Tech Group team
 
->>>>>>> main
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
 ursor/automate-test-improve-and-merge-code-646c
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Zion-Holdings/zion.app)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -1803,4 +2047,38 @@ ursor/automate-test-improve-and-merge-code-646c
 
 Built with ❤️ by the Zion Tech Group team
 **Built with ❤️ by the Zion Tech Group team**
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+# Zion Tech Group - AI-Powered Technology Solutions
+
+## 🚀 Overview
+
+Zion Tech Group is a cutting-edge technology company specializing in AI-powered solutions, blockchain technology, and comprehensive IT services. Our platform provides innovative solutions for businesses looking to leverage the latest in artificial intelligence and blockchain technology.
+
+## ✨ Features
+
+- **AI-Powered Solutions**: Advanced AI services and automation
+- **Blockchain Technology**: Web3 and decentralized solutions
+- **IT Services**: Comprehensive IT infrastructure and support
+- **Micro SaaS**: Scalable software-as-a-service solutions
+- **Mobile Development**: Cross-platform mobile applications
+- **Cloud Services**: Cloud migration and optimization
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL, MongoDB
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express, Fastify
+- **Database**: MongoDB, PostgreSQL
+## 📞 Contact
+
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+

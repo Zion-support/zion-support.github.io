@@ -15,6 +15,8 @@ export default function CybersecurityPage() {return (;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;security solutions. From threat detection to compliance management,we secure your digital assets and ensure business continuity.;
+            Protect your organization from evolving cyber threats with our comprehensive;
+            we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
       </section>;
@@ -686,3 +688,6 @@ export default function CybersecurityPage() {return (;
         </div>;
       </section>;
     </div>)}
+    </div>);
+}
+

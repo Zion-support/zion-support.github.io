@@ -2,14 +2,11 @@ import Head from 'next/head';
 import { motion   } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-<<<<<<< HEAD
 export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',  }const contactInfo  = null;return (<UltraQuantumHolographicBackground;
-=======
 
 export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',  }
 ;
   const contactInfo  = null;return (<UltraQuantumHolographicBackground;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       intensity="extreme";
       colorScheme="neural-network";
       particleCount={500}
@@ -41,17 +38,14 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto text-center'>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
               initial={{ opacity: 0, y: 30 ,
 }
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             >;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">;
 <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
@@ -61,12 +55,9 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
-=======
               initial={{ opacity: 0, y: 30 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 ,
 }>;
@@ -90,7 +81,6 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
                 <motion.a;
                   href="#services";
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
                   whileHover={{ scale: 1.05 }}
@@ -104,7 +94,6 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200';
                 >;
-=======
                   whileTap={{ scale: 0.95 ,
 }
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
@@ -121,7 +110,6 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
                   whileTap={{ scale: 0.95 ,
 }className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   Get Started;
                 </motion.a>;
               </div>;
@@ -129,12 +117,9 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
           </div>;
         </section>;
         {/* Services Showcase */}whileHover={{ scale: 1 && 1.05 }}
-<<<<<<< HEAD
                   whileTap={{ scale: 0 && 0.95 }}
-=======
                   whileTap={{ scale: 0 && 0.95 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>                Revolutionary 2026 Services;
               </h1>;
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">;
@@ -151,11 +136,8 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
                   Explore Services;
                 </motion && motion.a>;
                 <motion&& motion.a;
-<<<<<<< HEAD
                   href={`tel:${contactInfo && contactInfo.mobile}`}
-=======
                   href={`tel: ${contactInfo && contactInfo.mobile}`}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 ,
 }
@@ -167,15 +149,12 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
               initial={{ opacity: 0, y: 20 ,
 }
               whileInView={{ opacity: 1, y: 0 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 </span>;
               </h2>;
               <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">;
@@ -189,19 +168,16 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
               initial={{ opacity: 0, y: 20 ,
 }
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             >;
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -215,20 +191,17 @@ export default function ServicesShowcase2026V3() {const contactInfo = {mobile: '
               </p>;
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
                 <motion.a;
-<<<<<<< HEAD
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
                 >;
                   <span>Call {contactInfo.mobile}</span>;
-=======
                   href={`tel: ${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200">
 
                   <span>Call {contactInfo.mobil,
 }</span>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 </motion.a>;
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true ,
@@ -244,19 +217,16 @@ import { motion } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components / layout / UltraAdvancedNavigation2026';
 import Enhanced2026ServicesShowcaseV3 from '../components / sections / Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
-<<<<<<< HEAD
 export default /**;
  * ServicesShowcase2026V3 - Function description;
  */;
 function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',  }return (<UltraQuantumHolographicBackground;
-=======
 
 export default /**;
  * ServicesShowcase2026V3 - Function description;
  */;
 function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',  ;
   return (<UltraQuantumHolographicBackground;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       intensity="extreme";
       color_scheme="neural - network";
       particle_count={500}
@@ -435,7 +405,6 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
     </UltraQuantumHolographicBackground>)className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200';
                 >;
                   <span>Call {contactInfo.mobile}</span>;
@@ -446,7 +415,6 @@ function ServicesShowcase2026V3() {const contact_info = {mobile: '+1 302 464 095
                   whileTap={{ scale: 0.95 }}
 className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200';
                 >;
-=======
     </UltraQuantumHolographicBackground>)className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover: shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>
 
                   <span>Call {contactInfo.mobil,
@@ -459,7 +427,6 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 t
 }
 className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <span>Email Us</span>;
                 </motion.a>;
               </div>;

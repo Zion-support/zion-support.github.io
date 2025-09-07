@@ -220,6 +220,8 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
         {instances.length === 0 && !error && (<div className="text - center py-16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify-center">;
               <span className="text-4xl">🚀</span>;
+                </div>;
+        {/* Empty State */}
         {instances.length === 0 && !error && (
           <div className="text - center py - 16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
@@ -300,6 +302,9 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           <div className="text - 6xl mb-4">🚀</div>;
           <h2 className="text - 2xl font - semibold mb-2">No Instances Yet</h2>;
           <p className="text - white / 70 mb-6">;
+        </div>;
+      </div>;
+      {/* Instances Grid */}
       {instances.length === 0 ? (
         <div className="card text - center py - 12">;
           <div className="text - 6xl mb - 4">🚀</div>;
@@ -729,8 +734,13 @@ function getGovernanceLabel() {switch (type) {case "ADMIN": return "Admin Contro
  * getTokenSystemLabel - Function description;
  */;
 function getTokenSystemLabel() {switch (type) {case "SHARED": return "ZION$ Shared";
+    </div>);
+}
+    case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;
   }
 }
 }
+}
+

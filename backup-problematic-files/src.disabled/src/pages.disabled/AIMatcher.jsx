@@ -4,3 +4,14 @@ const AIMatcher = ({ className }) => {return (<div className={className || ''}>;
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIMatcher = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIMatcher</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

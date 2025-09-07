@@ -2,6 +2,29 @@ import React from 'react',import Head from 'next/head',import UltraFuturisticBac
   },const features = [;
     'Append-only, tamper-evident storageFlexible retention and legal holds','Cryptographic digests and attestationsFine-grained search and export bundles','Chain-of-custody and access reviewsAlerts for risky access patterns';
   ],return (<UltraFuturisticBackground variant="quantum" intensity={1.5}>;
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from "UltraFuturisticBackground";
+import { Button } from '../components/ui/Button',;
+import Card from "Card";
+import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',;
+;
+export default function AuditLogVaultPage() {;
+  const contactInfo = {;
+    mobile:'+1 302 464 0950',;
+    email:'kleber@ziontechgroup.com',;
+    address:'364 E Main St STE 1008 Middletown DE 19709',;
+    website:'https://ziontechgroup.com';
+  },;
+;
+  const features = [;
+    'Append-only, tamper-evident storageFlexible retention and legal holds',;
+    'Cryptographic digests and attestationsFine-grained search and export bundles',;
+    'Chain-of-custody and access reviewsAlerts for risky access patterns';
+  ],;
+;
+  return (;
+    <UltraFuturisticBackground variant="quantum" intensity={1.5}>;
       <Head>;
         <title>Audit Log Vault | Zion Tech Group</title>;
         <meta name="description" content="Immutable, indexed, long-term audit trails for compliance and forensics with search, exports and cryptographic attestations." />;
@@ -41,3 +64,7 @@ import React from 'react',import Head from 'next/head',import UltraFuturisticBac
       </div>;
     </UltraFuturisticBackground>;
   ),}
+  ),;
+}
+}
+

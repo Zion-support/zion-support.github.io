@@ -8,6 +8,18 @@ export default defineConfig({plugins: [react({// Handle JSX in .js files;
 			// JSX runtime;
 			"jsxRuntime": 'automatic'})];
 	"resolve": {alias: {"extensions": ['.js', '.jsx', '.ts', '.tsx'];
+export default defineConfig({
+	plugins: [react({
+			// Handle JSX in .js files;
+    include: '**/*.{jsx,js,ts,tsx}'
+			// Fast refresh
+			"fastRefresh": true
+			// JSX runtime
+			"jsxRuntime": 'automatic'})
+	]
+	"resolve": {
+		alias: {
+		"extensions": ['.js', '.jsx', '.ts', '.tsx']
 	}
 	"build": {target: 'esnext';
 		"minify": 'terser';

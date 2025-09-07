@@ -1,9 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -18,11 +14,8 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-<<<<<<< HEAD
-=======
 // import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
-=======
 
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -30,41 +23,25 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-<<<<<<< HEAD
   allConfig: js.configs.all
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
-=======
 
   allConfig: js.configs.all,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+  allConfig: js.configs.all
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+  allConfig: js.configs.all
 });
 
 export default [
   ...compat.extends('next/core-web-vitals'),
-  {
-<<<<<<< HEAD
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
-<<<<<<< HEAD
     }
-=======
 
       '*.config.js',
       '*.config.cjs',
@@ -330,15 +307,12 @@ export default [
 
       '*.js'
     ],
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-<<<<<<< HEAD
       ecmaVersion: 2022,
       sourceType: 'module',
-=======
       ecmaVersion: 'latest',
 
     ]
@@ -363,20 +337,16 @@ export default [
         afterAll: 'readonly',
 
       },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
-<<<<<<< HEAD
           jsx: true
         }
       }
-=======
 
           jsx: true,
         },
       },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -385,15 +355,12 @@ export default [
       '@next/next': nextPlugin
     },
     rules: {
-<<<<<<< HEAD
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     }
   },
   {
@@ -507,7 +474,6 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
-<<<<<<< HEAD
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -533,7 +499,6 @@ export default [
       'pages-disabled/**',
       'pages-quarantine/**',
       'app/**'
-=======
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_exclude/**',
@@ -553,7 +518,6 @@ export default [
       'pages_disabled/**',
       'src.pages.disabled/**',
       'vite.config-backup.ts'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     ]
   },
   {
@@ -572,7 +536,6 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
-=======
   allConfig: js.configs.all
 });
 
@@ -593,29 +556,135 @@ export default [
         ...globals.browser,
         ...globals.node,
         ...globals.es2021
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+      'public/**',
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'app/**'
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
+      'tools/**',
+      'utils/**',
+      'recovered-branches/**',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
+      'pages.disabled_full/**',
+      'pages_api.disabled/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'src.pages.disabled/**',
+      'vite.config-backup.ts'
+  {
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
+      'src_backup/**',
+      'pages_backup/**',
+      'components_backup/**',
+      '*.cjs',
+      '*.mjs'
+    ],
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      'public/**',
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'app/**'
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
+      'tools/**',
+      'utils/**',
+      'recovered-branches/**',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
+      'pages.disabled_full/**',
+      'pages_api.disabled/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'src.pages.disabled/**',
+      'vite.config-backup.ts'
       },
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks
     },
     rules: {
-      'react/react-in-jsx-scope': 'off',
-<<<<<<< HEAD
       'react/display-name': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
       'no-unused-vars': 'off',
-=======
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
 
@@ -625,26 +694,25 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
       'no-unused-vars': 'off',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
       'react-hooks/rules-of-hooks': 'error',
-<<<<<<< HEAD
       'react-hooks/exhaustive-deps': 'warn'
-=======
 
       'react-hooks/exhaustive-deps': 'warn',
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
       'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/exhaustive-deps': 'warn'
+
+      'react-hooks/exhaustive-deps': 'warn',
+
       'no-console': 'warn',
+      'no-unused-vars': 'warn',
       'prefer-const': 'error',
       'no-var': 'error'
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     },
     settings: {
       react: {
@@ -660,27 +728,44 @@ export default [
         ...globals.browser,
         ...globals.node
       }
-<<<<<<< HEAD
-   ,
-},
-    rules: {
-<<<<<<< HEAD
       'no-console': 'off'
     }
   }
       'no-console': 'off'
     }
   }
-=======
 
       'no-console': 'off',
     },
   },
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
     }
   }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+      'no-console': 'off'
+    }
+  }
+      'no-console': 'off'
+    }
+  }
+
+      'no-console': 'off',
+    },
+  },
+
+
+    },
+  },
+      'no-console': 'off'
+    }
+  }
+      'no-console': 'off'
+    }
+  }
+
+      'no-console': 'off',
+    },
+  },
+
+
 ];

@@ -4,3 +4,14 @@ const ApplicationStatusTracker = ({ className }) => {return (<div className={cla
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const ApplicationStatusTracker = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ApplicationStatusTracker</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

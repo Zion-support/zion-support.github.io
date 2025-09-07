@@ -1,4 +1,10 @@
 import React from 'react',import Head from 'next/head',export default function MyVotesPage() {return (<>;
+import React from 'react';
+import Head from 'next/head';
+;
+export default function MyVotesPage() {;
+  return (;
+    <>;
       <Head>;
         <title>My Votes - Zion Tech Group</title>;
         <meta name="description" content="View your governance voting history" />;
@@ -13,3 +19,6 @@ import React from 'react',import Head from 'next/head',export default function M
       </div>;
     </>;
   )}
+  );
+}
+

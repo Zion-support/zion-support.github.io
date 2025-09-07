@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface Q3Service  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -83,17 +87,15 @@ const contact = {mobile: '+1 302 464 0950',address: '364 E Main St STE 1008 Midd
     marketPosition:;
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [;
   rating?: number;
-
 const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
+  mobile: "mobile",
+    email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'}
 export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
 }
 const contact = {
-
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -111,7 +113,6 @@ export const realServicesQ32025: Q3Service[] = [
 const contact = {
   mobile: '+1 302 464 0950';
 };
-
 export const realServicesQ32025: Q3Service[] = [
   {
     tagline:
@@ -121,12 +122,17 @@ export const realServicesQ32025: Q3Service[] = [
     description:
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     features: [
+<<<<<<< HEAD
 };
 
 export const realServicesQ32025: Q3Service[] = [
   {
 
 
+=======
+export const realServicesQ32025: Q3Service[] = [
+  {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
@@ -187,6 +193,7 @@ export const realServicesQ32025: Q3Service[] = [
     market_size: '$30B+ subscription economy tooling';
     growth_rate: '30% YoY';
     variant: 'ai - futuristic';
+<<<<<<< HEAD
     customers: 24;rating: 4 && 4.9;
     reviews: 31,roi: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.';
     competitors: ['Lemon SqueezyGumroadPaddle'];
@@ -401,6 +408,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion';
     price: '$999';
     // @ts-expect-error augment common shape for UI components that expect contactInfo
+=======
+    customers: 24;    // @ts-expect-error augment common shape for UI components that expect contactInfo;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     contactInfo: contact
   }
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
@@ -437,7 +447,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
     ],
     icon: '⭐',
     features: [
-
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   }];    contactInfo: contact
@@ -530,14 +539,15 @@ ursor/fix-website-loading-errors-and-merge-6662;
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
+<<<<<<< HEAD
 
   }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];
 ;
-
 }
 };
-
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization',

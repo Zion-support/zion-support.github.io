@@ -1295,7 +1295,6 @@ scanner.run().catch(error = > {process.exit(1)}));}),);
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
 
 const fs = require('fs');
 
@@ -1304,8 +1303,6 @@ const path = require('path');
 const { execSync } = require('child_process');
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
 
@@ -3130,3 +3127,4 @@ scanner.run().catch(error => {,
 }),);
 
 module.exports = SecurityScanner;
+

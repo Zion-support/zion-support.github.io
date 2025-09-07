@@ -1,29 +1,30 @@
 
-// Memory optimization settings
 const nextConfig = {
-  reactStrictMode: true,
-<<<<<<< HEAD
-=======
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+  // Security configurations
+  poweredByHeader: false,
+  compress: true,
+  
+  // Disable linting during build
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
+  
+  // Disable type checking during build
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-<<<<<<< HEAD
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-=======
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     unoptimized: true
   },
   experimental: {
@@ -32,9 +33,9 @@ const nextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
-<<<<<<< HEAD
-=======
   },
+  
+  // Headers for security
   async headers() {
     return [
       {
@@ -42,20 +43,31 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'DENY'
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            value: 'strict-origin-when-cross-origin'
           },
-        ],
-      },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload'
+          }
+        ]
+      }
     ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   },
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from webpack compilation
@@ -117,3 +129,8 @@ const nextConfig = {
 };
 
 export default nextConfig;
+  }
+};
+
+module.exports = nextConfig;
+

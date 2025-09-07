@@ -1,5 +1,15 @@
 
 import React from "react",import { Card, CardContent } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Badge } from "@/components/ui/badge",import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",import { Link } from "react-router-dom",export function ClientDashboard() {return (<div className="space-y-6 px-4 pb-24">;
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function ClientDashboard() {;
+  return (;
+    <div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;

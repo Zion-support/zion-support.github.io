@@ -4,3 +4,14 @@ const InteractiveHero.js = ({ className }) => {return (<div className={className
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const InteractiveHero.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>InteractiveHero.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

@@ -3,6 +3,30 @@ import React, { useState } from 'react',import Head from 'next/head',import Link
       },{question:'How long has Zion Tech Group been in business?',answer:'Zion Tech Group has been at the forefront of AI automation technology for over 8 years. We\'ve successfully delivered autonomous systems to hundreds of organizations across various industries, establishing ourselves as a trusted partner in digital transformation and AI implementation.';
       },{question:'What industries do you serve?',answer:'We serve a diverse range of industries including healthcare, manufacturing, financial services, retail, transportation, energy, and government. Our AI automation solutions are designed to be industry-agnostic and can be customized to meet the specific needs of any sector.';
       },{question:'Do you offer consulting services in addition to technology solutions?',answer:'Yes, we provide comprehensive consulting services including AI strategy development, implementation planning, change management, and ongoing optimization. Our team of experts works closely with clients to ensure successful adoption and maximum ROI from AI automation investments.';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from "Link";
+;
+export default function FAQPage() {;
+  const [openCategory, setOpenCategory] = useState('general'),;
+;
+  const faqData = {;
+    general:[;
+      {;
+        question:'What is Zion Tech Group and what do you specialize in?',;
+        answer:'Zion Tech Group is a leading technology company specializing in AI automation and autonomous systems. We develop cutting-edge solutions that enable organizations to operate more efficiently, intelligently, and autonomously. Our expertise spans across AI, machine learning, edge computing, IoT integration, and sustainable technology solutions.';
+      },;
+      {;
+        question:'How long has Zion Tech Group been in business?',;
+        answer:'Zion Tech Group has been at the forefront of AI automation technology for over 8 years. We\'ve successfully delivered autonomous systems to hundreds of organizations across various industries, establishing ourselves as a trusted partner in digital transformation and AI implementation.';
+      },;
+      {;
+        question:'What industries do you serve?',;
+        answer:'We serve a diverse range of industries including healthcare, manufacturing, financial services, retail, transportation, energy, and government. Our AI automation solutions are designed to be industry-agnostic and can be customized to meet the specific needs of any sector.';
+      },;
+      {;
+        question:'Do you offer consulting services in addition to technology solutions?',;
+        answer:'Yes, we provide comprehensive consulting services including AI strategy development, implementation planning, change management, and ongoing optimization. Our team of experts works closely with clients to ensure successful adoption and maximum ROI from AI automation investments.';
       }
     ],technology:[;
       {question:'What types of AI technologies do you work with?',answer:'We work with a comprehensive range of AI technologies including machine learning, deep learning, natural language processing, computer vision, reinforcement learning, and edge AI. Our solutions incorporate the latest advancements in AI research and are designed to be scalable, secure, and sustainable.';
@@ -131,3 +155,12 @@ import React, { useState } from 'react',import Head from 'next/head',import Link
     </>;
   ),import React from 'react',return (<>;
       <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">,)}
+  ),;
+import React from "React";
+import Head from "Head";
+  return (;
+    <>;
+      <Head><title>faq - Zion App</title><meta name="description" content="faq page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">faq</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">,;
+  );
+}
+

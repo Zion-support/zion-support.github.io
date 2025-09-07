@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-=======
 import { motion  } from 'framer-motion';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 interface ServiceCardProps {
   title: string;
@@ -14,7 +11,6 @@ interface ServiceCardProps {
   pricing?: string;
   link?: string;
   className?: string;
-<<<<<<< HEAD
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -36,7 +32,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       {icon && (
         <div className="text-4xl mb-4 text-center">
-=======
 
 }
 
@@ -55,7 +50,6 @@ return (<motion.div;
 }
     >;
       {icon && (<div className="text-4xl mb-4 text-center">;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           {icon}
         </div>
       )}
@@ -78,7 +72,6 @@ return (<motion.div;
           ))}
         </ul>
       )}
-<<<<<<< HEAD
       {link && (
         <div className="mt-4 text-center">
           <span className="text-blue-600 text-sm font-semibold hover:text-blue-800">
@@ -99,9 +92,7 @@ return (<motion.div;
 
   return <CardContent />;
 };
-=======
     </motion.div>;
   )}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 
 export default ServiceCard;

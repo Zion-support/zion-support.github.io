@@ -4,3 +4,14 @@ const AIBusinessIntelligenceSuite.js = ({ className }) => {return (<div classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIBusinessIntelligenceSuite.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIBusinessIntelligenceSuite.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

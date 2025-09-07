@@ -1,16 +1,14 @@
-import React from "react";
-import { Metadata } from 'next';
+import React from 'react';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Smart Invoice Generator | Zion Tech Group',
-  description: 'Automated invoice creation with AI-powered expense categorization and payment tracking. Streamline your billing process and get paid faster.',
-  keywords: 'invoice generator, automated billing, expense tracking, payment management, AI invoicing, financial automation',
+  description: 'AI-powered invoice automation with smart templates, payment tracking, and financial analytics. Reduce billing time by 80% and get paid 30% faster.',
+  keywords: 'invoice generator, billing automation, AI invoicing, payment tracking, financial analytics, smart templates'
 };
 
 export default function SmartInvoiceGeneratorPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -22,7 +20,6 @@ export default function SmartInvoiceGeneratorPage() {
             and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
-=======
     <div className="space-y-16">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -38,8 +35,6 @@ export default function SmartInvoiceGeneratorPage() {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -50,23 +45,136 @@ export default function SmartInvoiceGeneratorPage() {
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
             Revolutionize your billing process with AI-powered invoice generation. Automatically categorize expenses, 
             track payments, and get paid faster with our intelligent invoicing platform.
+              AI-powered invoice automation with smart templates, payment tracking, and financial analytics.
+              Reduce billing time by 80% and get paid 30% faster.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="#features"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <section id="features" className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to streamline your invoicing process and get paid faster.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Generation</h3>
+              <p className="text-gray-600 mb-4">
+                Automatically generate professional invoices using AI that learns from your business patterns.
+              </p>
+              <ul className="space-y-2">
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Smart template selection
+                </li>
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Auto-populate client data
+                </li>
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Intelligent pricing suggestions
+                </li>
+              </ul>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Payment Tracking</h3>
+              <p className="text-gray-600 mb-4">
+                Real-time payment tracking with automated reminders and status updates.
+              </p>
+              <ul className="space-y-2">
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Payment status monitoring
+                </li>
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Automated follow-ups
+                </li>
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Late payment alerts
+                </li>
+              </ul>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Analytics</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive insights into your billing performance and revenue trends.
+              </p>
+              <ul className="space-y-2">
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Revenue dashboards
+                </li>
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Payment trend analysis
+                </li>
+                <li className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  Client payment patterns
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Invoicing?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already saving time and getting paid faster with our AI-powered invoice generator.
+              AI-powered invoice automation with smart templates, payment tracking, and financial analytics. 
+              Reduce billing time by 80% and get paid 30% faster.
+            </p>
+          </div>
+        </div>
+      </div>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator Inquiry"
-              className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-lg"
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Start Free Trial
-            </a>
+              Start Your Free Trial
+            </Link>
             <a
               href="tel:+13024640950"
-              className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-lg"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>
           </div>
         </div>
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
         {/* Features Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -239,12 +347,7 @@ export default function SmartInvoiceGeneratorPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 }
 
 function FeatureItem({ icon, title, description, benefits }: { 
@@ -350,9 +453,10 @@ function IntegrationCard({ icon, title, description }: {
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-sm text-gray-600">{description}</p>
+      </section>
+}
     </div>
   );
-<<<<<<< HEAD
 }
 */
 
@@ -380,7 +484,32 @@ function TestimonialCard({
   );
 }
 */
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+}
+*/
+
+/*
+function TestimonialCard({
+  quote,
+  author,
+  role,
+  company,
+}: {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <p className="text-gray-600 mb-4 italic">&ldquo;{quote}&rdquo;</p>
+      <div className="border-t pt-4">
+        <div className="font-semibold text-gray-900">{author}</div>
+        <div className="text-sm text-gray-600">{role}</div>
+        <div className="text-sm text-gray-500">{company}</div>
+      </div>
+    </div>
+  );
+}
+*/
+

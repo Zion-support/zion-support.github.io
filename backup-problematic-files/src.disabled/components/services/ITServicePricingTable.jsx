@@ -4,3 +4,14 @@ const ITServicePricingTable = ({ className }) => {return (<div className={classN
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const ITServicePricingTable = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ITServicePricingTable</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

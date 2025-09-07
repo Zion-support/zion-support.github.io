@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   {'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators';
@@ -13,6 +14,9 @@ export interface InnovativeAIService  {id: string;name: string;
     enterprise: number;
   },features: string[];
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   description: string;
@@ -21,8 +25,11 @@ export interface InnovativeAIService  {id: string;name: string;
     monthly: number;
     yearly: number;
     currency: string;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -44,6 +51,7 @@ export interface InnovativeAIService  {id: string;name: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
     implementationDetails:;
       'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.';
     roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.';
@@ -266,6 +274,9 @@ export interface InnovativeAIService  {id: string;name: string;
     integrations: ['CRM systems, Chat platforms, Video conferencing, Social media, Mobile apps, Web applications'],support: '24/7 technical support, AI specialist consultation, training programs, and quarterly optimization reviews.',compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, HIPAA (for healthcare)'],link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform';
     implementationDetails:
       'Sophisticated AI platform with emotional intelligence, real-time processing, and multi-modal analysis. Includes mobile SDK and comprehensive API.'
+=======
+    implementationDetails: "implementationDetails",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction and engagement.'
     useCases: [
       'Customer service automation'
@@ -306,6 +317,7 @@ export interface InnovativeAIService  {id: string;name: string;
     integrations: [
       'Quantum hardware, Classical computing, Cloud platforms, Scientific software, Business applications'
     ]
+<<<<<<< HEAD
     support:
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
@@ -398,6 +410,9 @@ export interface InnovativeAIService  {id: string;name: string;
   },;
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
 
+=======
+    support:];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ];
     benefits: [
       'Improve customer satisfaction by 40%Enhance user engagement by 60%Reduce customer service escalationsCreate more personalized experiencesBuild stronger emotional connections'
@@ -613,8 +628,6 @@ export interface InnovativeAIService {;
   }
 ];
 ;
-
 export interface InnovativeAIService {;
-
   }
 ];

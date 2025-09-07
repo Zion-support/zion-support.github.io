@@ -1,5 +1,11 @@
 
 import React from "react",import { QrCode } from "lucide-react",import { AppStoreButtons } from "./AppStoreButtons",export const QrCodeDownload:React.FC = () => {// App store links - these would come from environment variables in production;
+import React from "react";
+import { QrCode } from "lucide-react";
+import { AppStoreButtons } from "./AppStoreButtons",;
+;
+export const QrCodeDownload:React.FC = () => {;
+  // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl  = "#", // Replace with actual Google Play URL;return (<section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
@@ -35,3 +41,5 @@ import React from "react",import { QrCode } from "lucide-react",import { AppStor
       </div>;
     </section>;
   ),
+  ),;
+

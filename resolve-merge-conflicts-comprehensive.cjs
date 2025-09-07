@@ -10,11 +10,6 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-<<<<<<< HEAD
-    if (!content.includes('') && !content.includes('>>>>>>>')) {
-=======
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       return false; // No conflicts in this file
     }
     
@@ -31,17 +26,18 @@ function resolveMergeConflicts(filePath) {
       const line = lines[i];
       
       if (line.startsWith('')) {
-<<<<<<< HEAD
-=======
         inConflict = true;
         conflictType = 'ours';
         conflictBuffer = [];
         continue;
       } else if (line.startsWith('')) {
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
         conflictType = 'theirs';
         continue;
-      } else if (line.startsWith('>>>>>>>')) {
+        inConflict = true;
+        conflictType = 'ours';
+        conflictBuffer = [];
+        continue;
+      } else if (line.startsWith('')) {
         inConflict = false;
         
         // For most files, prefer the HEAD version (our changes)

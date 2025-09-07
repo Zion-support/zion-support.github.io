@@ -56,6 +56,17 @@ function FeatureCard() {
 if ( {) {$2;
 }
           e.prevent_default ()on_click ()e.preventDefault()onClick()}
+  return (
+    <div;
+      className={`card group cursor - pointer transition - all duration - 300 ${
+        is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
+      } ${color_classes[color as keyof typeof color_classes]}`}
+      on_click={on_click}
+      onKeyDown={(e) => {
+        // Check condition
+if ( {) {
+  $2
+}
           e.prevent_default ();
           on_click ();
           e.preventDefault();
@@ -99,3 +110,6 @@ if ( {) {$2;
         </Link>;
       </div>;
     </div>)}
+    </div>);
+}
+

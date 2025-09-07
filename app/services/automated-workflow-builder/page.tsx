@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-<<<<<<< HEAD
 
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 export const metadata = {
   title: 'Automated Workflow Builder - Zion Tech Group',
@@ -23,98 +20,6 @@ export default function AutomatedWorkflowBuilderPage() {
             Streamline processes, reduce manual work, and increase efficiency.
           </p>
         </div>
-<<<<<<< HEAD
-
-        <div className="max-w-6xl mx-auto">
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🎨</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Drag & Drop Builder</h3>
-              <p className="text-gray-600">
-                Intuitive visual interface for building complex workflows without coding.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🔗</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Integration Hub</h3>
-              <p className="text-gray-600">
-                Connect with hundreds of apps and services to create seamless workflows.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Execution</h3>
-              <p className="text-gray-600">
-                Workflows run instantly with real-time monitoring and error handling.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">📊</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics & Insights</h3>
-              <p className="text-gray-600">
-                Track workflow performance and identify optimization opportunities.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🛡️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Security</h3>
-              <p className="text-gray-600">
-                Bank-level security with role-based access control and audit trails.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-3xl">🧠</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered</h3>
-              <p className="text-gray-600">
-                Smart suggestions and automated optimization for better workflow performance.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Build Your First Workflow?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Start automating your business processes today with our powerful workflow builder.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-<<<<<<< HEAD
-=======
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -148,23 +53,54 @@ export default function AutomatedWorkflowBuilderPage() {
           </div>
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+
+
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 
 
 }
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+}
+
+
+}
+
+
+

@@ -60,3 +60,5 @@ export default function AdminLayout({ children }: { children: ReactNode }) {retu
   )}export default Layout;<div className="py-8">;
         {children}
       </div>;
+      </div>;
+

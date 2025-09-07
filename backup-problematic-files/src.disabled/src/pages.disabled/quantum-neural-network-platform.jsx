@@ -4,3 +4,14 @@ const Quantum-neural-network-platform = ({ className }) => {return (<div classNa
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const Quantum-neural-network-platform = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Quantum-neural-network-platform</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

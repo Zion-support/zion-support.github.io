@@ -1,6 +1,36 @@
 import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Slider } from "@/components/ui/slider",import { Switch } from "@/components/ui/switch",import { Input } from "@/components/ui/input",import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",import { X, Filter } from "lucide-react",import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",import { Badge } from "@/components/ui/badge",import { Label } from "@/components/ui/label",interface BrowseFiltersProps  {type:"jobs" | "talents";
 }export function BrowseFilters() {const [activeFilters, setActiveFilters]  = useState<string[]>([]),const addFilter = (filter:string) => {if (!activeFilters.includes(filter)) {setActiveFilters([...activeFilters, filter]),}
   },const removeFilter = (filter:string) => {setActiveFilters(activeFilters.filter(f => f !== filter))},return (<div className="space-y-3">;
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Slider } from "@/components/ui/slider",;
+import { Switch } from "@/components/ui/switch",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { X, Filter } from "lucide-react",;
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
+import { Badge } from "@/components/ui/badge",;
+import { Label } from "@/components/ui/label",;
+;
+interface BrowseFiltersProps {;
+  type:"jobs" | "talents";
+}
+;
+export function BrowseFilters({ type } BrowseFiltersProps) {;
+  const [activeFilters, setActiveFilters] = useState<string[]>([]),;
+  ;
+  const addFilter = (filter:string) => {;
+    if (!activeFilters.includes(filter)) {;
+      setActiveFilters([...activeFilters, filter]),;
+    }
+  },;
+  ;
+  const removeFilter = (filter:string) => {;
+    setActiveFilters(activeFilters.filter(f => f !== filter));
+  },;
+  ;
+  return (;
+    <div className="space-y-3">;
       <div className="flex justify-between items-center px-4">;
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">;
           <Sheet>;
@@ -114,3 +144,9 @@ import React, { useState } from "react",import { Button } from "@/components/ui/
       </div>;
     </div>;
   ),}}export function BrowseFilters () {const [activeFilters, setActiveFilters]  = useState<string[]> ([])
+  ),;}
+}export function BrowseFilters ({
+  type 
+}: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]> ([]);
+

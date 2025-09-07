@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -205,7 +198,6 @@ const PricingGuide: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pricingFactors.map((factor, index) => (
               <motion.div
-=======
 import React from 'react';
 import { motion  } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -298,10 +290,6 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {pricingFactors.map((factor, index) => (<motion.div;
-<<<<<<< HEAD
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -355,10 +343,6 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingExamples.map((example, index) => (<motion.div;
-<<<<<<< HEAD
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -419,10 +403,6 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {costSavingTips.map((tip, index) => (<motion.div;
-<<<<<<< HEAD
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -482,12 +462,7 @@ const PricingGuide: React.FC = () => {const pricingFactors = [;
       </section>;
     </div>;
   )}export default PricingGuide;
-<<<<<<< HEAD
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
-=======
 
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+

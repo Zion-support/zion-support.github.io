@@ -4,3 +4,14 @@ const Affiliate-attribution-hub = ({ className }) => {return (<div className={cl
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const Affiliate-attribution-hub = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Affiliate-attribution-hub</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

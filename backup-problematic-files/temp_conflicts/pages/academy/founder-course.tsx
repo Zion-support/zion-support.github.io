@@ -2,6 +2,42 @@ import React, { useEffect, useMemo, useState } from 'react',import ModuleCard fr
   }, []),useEffect(() => {try {localStorage.setItem(STORAGE_KEY, JSON.stringify(completed)),} catch {}
   }, [completed]),const totalCount = founderCourseModules.length,const completedCount = useMemo(() => founderCourseModules.filter((m) => completed[m.id]).length,[completed];
   ),const toggleComplete = (moduleId:string) => {setCompleted((prev) => ({ ...prev, [moduleId]:!prev[moduleId] })),},return (<div className="space-y-8">;
+import React, { useEffect, useMemo, useState } from 'react';
+import ModuleCard from '../../components/academy/ModuleCard';
+import ProgressTracker from "ProgressTracker";
+import CertificateView from "CertificateView";
+import { founderCourseModules } from '../../components/academy/courseData',;
+;
+const STORAGE_KEY = 'founder_course_progress_v1',;
+;
+export default function FounderCoursePage() {;
+  const [completed, setCompleted] = useState<Record<string boolean>>({}),;
+;
+  useEffect(() => {;
+    try {;
+      const raw = localStorage.getItem(STORAGE_KEY),;
+      if (raw) setCompleted(JSON.parse(raw)),;
+    } catch {}
+  }, []),;
+;
+  useEffect(() => {;
+    try {;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(completed)),;
+    } catch {}
+  }, [completed]),;
+;
+  const totalCount = founderCourseModules.length,;
+  const completedCount = useMemo(;
+    () => founderCourseModules.filter((m) => completed[m.id]).length,;
+    [completed];
+  ),;
+;
+  const toggleComplete = (moduleId:string) => {;
+    setCompleted((prev) => ({ ...prev, [moduleId]:!prev[moduleId] })),;
+  },;
+;
+  return (;
+    <div className="space-y-8">;
       <div className="space-y-3">;
         <h1 className="text-2xl sm:text-3xl font-semibold">Founder Course:Launch Your Zion Instance</h1>;
         <p className="text-gray-700 dark:text-gray-300 max-w-3xl">;
@@ -22,3 +58,6 @@ import React, { useEffect, useMemo, useState } from 'react',import ModuleCard fr
       </div>;
     </div>;
   ),}
+  ),;
+}
+

@@ -21,6 +21,9 @@
     }
     {title: &quot;Enterprise Infrastructure&quot,description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
       features: [;
+      ]
+      gradient: &quot;bg-gradient-to-r from-green-600 to-emerald-600&quot;
+    }
     {
       title: &quot;Enterprise Infrastructure&quot;
       description: &quot;Built for scale with regional dashboards, partner APIs, and white-label solutions.&quot;
@@ -36,6 +39,9 @@
       description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
       title: &quot;Education & Growth&quot,description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
       features: [;
+      ]
+      gradient: &quot;bg-gradient-to-r from-orange-600 to-red-600&quot;
+    }
     {
       title: &quot;Education & Growth&quot;
       description: &quot;Zion Academy, incubator programs, and grants foster innovation and community growth.&quot;
@@ -84,6 +90,9 @@
   ],return (🚀 Launch Your Economy;
               </Link>;
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>;
+      ]
+      gradient: &quot;bg-gradient-to-r from-teal-600 to-cyan-600&quot;
+    }
     {
     {
       icon: &quot;🏪&quot;,
@@ -555,6 +564,8 @@
         </div>;
       </section>;
       {/* Stats Section */}<section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
+      {/* Stats Section */}
+      <section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
         <div className=&quot;max - w-7xl mx - auto & quot;>;
           <div className=&quot;grid grid - cols - 1 md:grid - cols - 4 gap - 8 text - center & quot;>;
             <div className=&quot;animate - fade - in & quot;>;
@@ -586,6 +597,7 @@
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">;
                 📊 Explore Examples;
               </Link>;
+              <div className=&quot;text - white / 70 & quot;>Scalability</div>;
             </div>;
           </div>;
         </div>;
@@ -636,3 +648,29 @@
       </section>;
     </div>;
   )}}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="animate-fade-in">
+              <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
+              <div className="text-white/70">Features Available</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-white/70">Deployment Options</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-white/70">AI Orchestration</div>
+            </div>
+            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
+              <div className="text-white/70">Scalability</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+

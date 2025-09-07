@@ -126,6 +126,10 @@ export default function BlockchainServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About DeFi Development;
+              </a>;
+            </div>;
+            {/* NFT Marketplace */}
                 and innovative monetization strategies for digital assets.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -189,6 +193,10 @@ export default function BlockchainServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About NFT Marketplace;
+              </a>;
+            </div>;
+            {/* Smart Contract Development */}
                 security analysis, and deployment support.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -252,6 +260,10 @@ export default function BlockchainServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About Smart Contracts;
+              </a>;
+            </div>;
+            {/* Web3 Infrastructure */}
                 indexing services, and decentralized storage solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -315,6 +327,10 @@ export default function BlockchainServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - orange - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About Web3 Infrastructure;
+              </a>;
+            </div>;
+            {/* DAO Development */}
                 treasury management, and community engagement tools.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -584,3 +600,6 @@ export default function BlockchainServicesPage() {return (;
         </div>;
       </section>;
     </div>)}
+    </div>);
+}
+

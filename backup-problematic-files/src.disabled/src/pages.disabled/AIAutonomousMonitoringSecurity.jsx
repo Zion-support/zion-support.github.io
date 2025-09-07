@@ -4,3 +4,14 @@ const AIAutonomousMonitoringSecurity = ({ className }) => {return (<div classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousMonitoringSecurity = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousMonitoringSecurity</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

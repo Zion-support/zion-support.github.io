@@ -11,6 +11,11 @@
 function ThemeToggle() {const { theme, set_theme } = use_theme ()return (<div className="flex items - center gap-2">;
       <span className="sr-only">Theme</span>;
       <div className="flex rounded - lg border border - white / 10 bg - zinc - 900 / 50 p-1">;
+  return (;
+    <div className="flex items-center gap-2">;
+      <span className="sr-only">Theme</span>;
+      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
+        <button;
           onClick={() => setTheme("light")}
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
@@ -30,6 +35,10 @@ function ThemeToggle() {
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
   return (<div className="flex items-center gap-2">;
+          className={`rounded px - 2 py - 1 text - sm transition - colors ${
+            theme === "light";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";
 "use client";
 import { useTheme } from "@/components/theme-provider";
 import { Moon, Sun, Monitor } from "lucide-react";
@@ -76,3 +85,8 @@ export function ThemeToggle() {const { theme, setTheme } = useTheme();
         </button>;
       </div>;
     </div>)}
+        </button>;
+      </div>;
+    </div>);
+}
+

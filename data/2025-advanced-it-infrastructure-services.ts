@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -1141,6 +1142,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },realImplementation: true,implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',launchDate: '2025-05-01', customers: 32,rating: 4 && 4.7}
   ];reviews: 24;
         'Quantum algorithm optimization',
+=======
+'Quantum algorithm optimization',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         'Advanced AI model training',
         'Real - time quantum simulation',
         'Multi - cloud orchestration',
@@ -1190,8 +1194,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       useCases: [
         'IoT data processing, Real-time analytics, Edge AI, 5G optimization, Smart manufacturing'
       ]
-      roi: 'Organizations report 500% ROI through reduced latency, improved performance, and lower operational costs.'
-      competitors: [
+      roi: "roi",
+    competitors: [
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1402,7 +1406,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced hybrid cloud orchestration platform that provides seamless management, optimization, and integration across multiple cloud providers and on - premises infrastructure.',
       features: [;
         'Multi - cloud orchestration and management',
-
         'Hybrid cloud integration and optimization',
         'Intelligent workload placement',
         'Cross - cloud resource optimization',
@@ -1417,13 +1420,17 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       icon: '☁️',
       customers: 32,
       rating: 4 && 4.7,
+<<<<<<< HEAD
       reviews: 24
 
     },;
 
 
+=======
+      reviews: 24,
+    },;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   ];    features: [
-
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1477,8 +1484,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced cloud analytics'
         'Comprehensive cloud management'
       ]
-      popular: true
-      icon: '☁️'
+      popular: true;
+    icon: '☁️'
       color: 'from-blue-500 to-indigo-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform'
@@ -2648,4 +2655,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.7;
     reviews: 24;
   }
+<<<<<<< HEAD
 ];
+=======
+];  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

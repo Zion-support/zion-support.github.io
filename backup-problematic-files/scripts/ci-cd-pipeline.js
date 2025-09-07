@@ -147,6 +147,40 @@ class: CICDPipeline {constructor() {this.projectRoot = path.resolve(__dirname, '
         timestamp: new Date().toISOString()}this.pipelineLog.stages.push(stageResult)this.pipelineLog.summary.failed++;
       console.log(` ${stage.name} failed (${duration}ms): ${error.message}`)if (stage.critical) {";
         console.log("  Critical stage failed, stopping pipeline")throw error} else {";
+        "duration": duratio,n
+        "output": nul,l
+        "error": error.messag,e
+        "critical": stage.critica,l
+        "timestamp": new: Date().toISOString()}
+;
+      this.pipelineLog.stages.push(stageResult);
+      this.pipelineLog.summary.failed++;
+      console.log(" ${stage.name} "failed": (${duration}ms): ${error.message}");
+      "if": (stage.critical) {
+        console.log("  Critical stage failed, stopping pipeline");
+        "throw": error} else {
+        "timestamp": new Date().toISOString()}
+;
+      this.pipelineLog.stages.push(stageResult);
+      this.pipelineLog.summary.successful++;
+      console.log(" ${stage.name} completed successfully (${duration}ms)")} catch (error) {;
+      const duration = Date.now() - startTime;
+      const stageResult = {
+        "name": stage.name;
+    description: stage.description,"
+        "status": 'failed',
+        "duration": duration,
+        "output": null,
+        "error": error.message
+        critical: stage.critical
+        timestamp: new Date().toISOString()}
+;
+      this.pipelineLog.stages.push(stageResult);
+      this.pipelineLog.summary.failed++;
+      console.log(` ${stage.name} failed (${duration}ms): ${error.message}`);
+      if (stage.critical) {"
+        console.log("  Critical stage failed, stopping pipeline");
+        throw error} else {"
         console.log("  Non-critical stage failed, continuing pipeline")}
     }
     this.pipelineLog.summary.total++}
@@ -214,3 +248,8 @@ const pipeline = new CICDPipeline()pipeline.run().catch(error: => {console.error
   }
 // Run the CI/CD pipeline;
 const pipeline = new CICDPipeline()pipeline.run().catch(error => {',console.error(' Failed to run CI/CD "pipeline": ', error)process.exit(1)})
+const pipeline = new CICDPipeline();
+pipeline.run().catch(error => {',
+  console.error(' Failed to run CI/CD "pipeline": ', error);
+  process.exit(1)})
+

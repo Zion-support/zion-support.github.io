@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   {{{'Multichannel ingestion','LLM clustering and themes','Impact scoring','Roadmap export';
     ],popular: true,id: 'customer - feedback - intelligence',name: 'Customer Feedback Intelligence',tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',price: '$149',period: '/month',description:;
@@ -62,6 +63,9 @@
 ];	{integrations: ['StripePayPalGoogle Analytics'];
   {
       'Multichannel ingestion',
+=======
+{      'Multichannel ingestion',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export'
@@ -365,8 +369,8 @@
 		name: 'Customer Feedback Intelligence';
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights';
 		price: '$149';
-		period: '/month'
-		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
+		period: "period",
+    description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
 		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
 		popular: true;
 		icon: '💬';
@@ -388,6 +392,7 @@
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
+<<<<<<< HEAD
 		implementationDetails: 'Connectors, clustering, scoring models';
 		launchDate: '2026-01-12';
 		customers: 9;rating: 4 && 4.7,reviews: 5;
@@ -399,6 +404,9 @@
 		period: '/month';
 		realImplementation: true
 		implementationDetails: 'Connectors, clustering, scoring models';
+=======
+    implementationDetails: 'Connectors, clustering, scoring models';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 		launchDate: '2026-01-12';
 		customers: 9;
 		reviews: 5
@@ -1213,5 +1221,9 @@ const contact  = null;
 		customers: 9;
 		reviews: 6
 	}
+<<<<<<< HEAD
 ];
 
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

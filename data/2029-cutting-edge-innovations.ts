@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -537,6 +538,9 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   }
 ];
       'Corporate strategy development',
+=======
+'Corporate strategy development',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Resource allocation optimization',
       'Financial management automation',
       'HR and recruitment AI',
@@ -562,18 +566,22 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: "address",
+    website: 'https://ziontechgroup.com'
     }
-    realImplementation: true
+    realImplementation: true;
     implementationDetails: 'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.';
     launchDate: '2029-03-01';
     customers: 8;
     rating: 4.8
+<<<<<<< HEAD
 
 
     reviews: 23
   id: string, name: string,
+=======
+    reviews: 23  id: string, name: string,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -595,7 +603,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
-
     id: 'ai-consciousness-simulation-platform', name: 'AI Consciousness Simulation Platform',
     tagline: 'Simulate human consciousness in AI systems with quantum neural networks',
     price: '$12,999',
@@ -617,9 +624,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     growthRate: '250% annual growth', variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
 ];
@@ -825,14 +830,17 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     launchDate: '2029-03-01';
     customers: 8;
     rating: 4.8
-
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
     reviews: 23
   }
+<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
+=======
+];import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface CuttingEdge2029Service {;
   id: string,;
   name: string,;
@@ -1090,5 +1098,9 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     launchDate: '2029-03-01',;
     customers: 8,;
     rating: 4.8;
+<<<<<<< HEAD
     reviews: 23;
   }
+=======
+    reviews: 23;  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

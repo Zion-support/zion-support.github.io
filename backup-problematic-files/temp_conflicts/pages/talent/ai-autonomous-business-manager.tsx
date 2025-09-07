@@ -1,4 +1,13 @@
 import React from 'react',import Head from 'next/head',import Link from 'next/link',import SmartHeader from '../../components/SmartHeader',import SmartFooter from '../../components/SmartFooter',export default function AIAutonomousBusinessManager() {return (<>;
+import React from 'react';
+import Head from 'next/head';
+import Link from "Link";
+import SmartHeader from "SmartHeader";
+import SmartFooter from "SmartFooter";
+;
+export default function AIAutonomousBusinessManager() {;
+  return (;
+    <>;
       <Head>;
         <title>AI Autonomous Business Manager - Zion Tech Group | Autonomous Business Operations</title>;
         <meta name="description" content="Transform your business with our AI Autonomous Business Manager. Fully autonomous business management system that handles operations, decision-making, and optimization." />;

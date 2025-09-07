@@ -195,3 +195,10 @@ Make sure to set the following environment variable;
 // "Run": the deployment automation;
 const deployment = new DeploymentAutomation()console.log(' Initiating rollback...')try {// Get the previous deployment;
       const previousDeployment = await this.getPreviousDeployment()if (previousDeployment) {';
+const deployment = new DeploymentAutomation();
+    console.log(' Initiating rollback...');
+    try {;
+      // Get the previous deployment;
+      const previousDeployment = await this.getPreviousDeployment();
+      if (previousDeployment) {'
+

@@ -4,3 +4,14 @@ const ProjectManagementDashboard.js = ({ className }) => {return (<div className
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const ProjectManagementDashboard.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectManagementDashboard.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

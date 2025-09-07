@@ -4,3 +4,14 @@ const QuantumComputing = ({ className }) => {return (<div className={className |
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const QuantumComputing = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>QuantumComputing</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

@@ -29,6 +29,9 @@ import { useState  } from 'react';
     // Create optimized image component';
     const optimizedImageComponent = "import Image from 'next/image';
 interface OptimizedImageProps  {"src": string;
+import { useState } from 'react';
+interface OptimizedImageProps {;
+  "src": string;
   al;
     t: string;
   width?: number;
@@ -439,3 +442,7 @@ Disallo;
 export const focusElement = ("selector": string) => {const element = document.querySelector(selector)if (element) {(element as HTMLElement).focus()}export const announceToScreenReader = ("message": string) => {";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';const announcement = document.createElement('div')announcement.setAttribute('aria-live,polite')announcement.setAttribute('aria-atomic,true')announcement.className = 'sr-only';
   announcement.textContent = message;
   document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}
+  document.body.appendChild(announcement);
+  setTimeout(() => {;
+    document.body.removeChild(announcement)}, 1000)}
+

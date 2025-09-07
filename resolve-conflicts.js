@@ -1,17 +1,14 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
 
     content = content.replace(/[\s\S]*?/g, '')content = content.replace(/[\s\S]*?
-=======
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = require("fs")const path = require("path")const { execSync } = require("child_process")function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,"utf8")let resolvedContent = content fs.writeFileSync(filePath,resolvedContent)return true} catch (error) { console.error(`Error resolving conflicts in ${filePath}:`,error.message)return false} } function findFilesWithConflicts() { try {'`'"`;
 #!/usr/bin/env node const fs = require('fs')const path = require('path')const { execSync } = require('child_process')function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8')let resolvedContent = content fs.writeFileSync(filePath,resolvedContent)return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message)return false} } function findFilesWithConflicts() { try {import fs from 'fs';
 const fs = require('fs')const path = require('path')const { execSync }  = require('child_process')const filesToFix = [;
   'pages/about.tsx','pages/ITServices.tsx','pages/ai-services.tsx','pages/api-docs.tsx','pages/api.tsx','pages/careers.tsx','pages/guides.tsx','pages/services.tsx','pages/contact.tsx','pages/micro-saas.tsx','pages/it-services.tsx','pages/index.tsx','pages/404.tsx','pages/cookies.tsx','pages/case-studies.tsx','pages/industries/index.tsx';
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
     // Remove any remaining conflict markers;
     content = content.replace(/    content = content.replace(/[\s\S]*?    content = content.replace(/    content = content.replace(//g, '')content = content.replace(/;
     // Remove merge conflict markers and keep the "theirs" version (after     content = content.replace(/;
@@ -145,4 +142,5 @@ console.log('Starting merge conflict resolution...');
 const processedCount = processDirectory('/workspace');
 console.log(`Processed ${processedCount} files with merge conflicts.`);
 console.log('Merge conflict resolution complete!');
+
 

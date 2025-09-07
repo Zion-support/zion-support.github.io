@@ -32,10 +32,8 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];opacity: 0;
 import React from 'react';
-<<<<<<< HEAD
 interface EnhancedHomepageProps  {className?: string;
 }const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {return (<div className={className || ''}>;
-=======
 
 interface EnhancedHomepageProps {
   className?: string;
@@ -47,7 +45,6 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className    }) => 
 
 return (<div className={className || ',
 }>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <h1>EnhancedHomepage</h1>;
       <p>This component is under development.</p>;
     </div>;
@@ -62,10 +59,7 @@ return (<div className={className || ',
 }
 visible: {opacity: 1, transition: {duration: 0.8, stagger_children: 0.1;
 }}}}}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard';
 // Import service data;
 import { revolutionary2044AdvancedMicroSaas  } from '../data / revolutionary - 2044 - advanced - micro - saas';
@@ -76,7 +70,6 @@ import { innovativeITServicesExpansion2025V3  } from '../data / 2025 - innovativ
 import { innovativeAIServicesExpansion2025V3  } from '../data / 2025 - innovative - ai - services - expansion - v3';
 import { innovative2025ITInfrastructureServices  } from '../data / 2025 - innovative - it - infrastructure - services';
 import { innovative2025AIAutonomousServices  } from '../data / 2025 - innovative - ai - autonomous - services';
-<<<<<<< HEAD
 const EnhancedHomepage: React.FC = () => {const [is_visible, setIsVisible] = useState (false)const [selected_category, setSelectedCategory] = useState ('all')const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),const [currentServiceIndex, setCurrentServiceIndex] = useState (0)const [color_scheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber')const [showPerformanceMonitor, setShowPerformanceMonitor]  = useState (false)useEffect (() => {setIsVisible (true)// Auto - rotate featured services;
     const interval = set_interval (() => {setCurrentServiceIndex ((prev) => (prev + 1) % 6)}, 6000)// Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) =>: any {setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y })}// Show performance monitor after 5 seconds;
@@ -84,7 +77,6 @@ const EnhancedHomepage: React.FC = () => {const [is_visible, setIsVisible] = use
   }, [])// Combine all revolutionary services;
   const allRevolutionaryServices = [;
     ...revolutionary2044AdvancedMicroSaas;
-=======
 
 const EnhancedHomepage: React.FC = () => {const [is_visible, setIsVisible] = useState (false)const [selected_category, setSelectedCategory] = useState ('all')const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0,
 }),const [currentServiceIndex, setCurrentServiceIndex] = useState (0)const [color_scheme, setColorScheme] =;
@@ -102,17 +94,13 @@ const performance_timer = set_timeout (() => {setShowPerformanceMonitor (true)},
 
 const allRevolutionaryServices = [
   ...revolutionary2044AdvancedMicroSaas;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     ...revolutionary2044ITServices;
     ...revolutionary2044AIServices;
     ...realEnterpriseMicroSaas2025;
     ...innovativeITServicesExpansion2025V3;
     setSelectedCategory(categoryId)const category = categories && categories.find(cat => cat && cat.id === categoryId)if (category) {setColorScheme(category && category.scheme)}
   }
-<<<<<<< HEAD
-=======
  ;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   return (<>;
       <Head>;
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>;
@@ -179,12 +167,9 @@ const allRevolutionaryServices = [
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600';
                   }`}
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
-=======
                   whileTap={{ scale: 0.95 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 >;
                   <category.icon className="inline-block w-5 h-5 mr-2" />;
                   {category.name}
@@ -205,12 +190,9 @@ const allRevolutionaryServices = [
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600';
                   }`}
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
-=======
                   whileTap={{ scale: 0.95 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 >;
                   <category.icon className="inline-block w-5 h-5 mr-2" />;
                   {category.name}
@@ -226,13 +208,10 @@ const allRevolutionaryServices = [
           className="py-16 px-4 lg:px-8";
           variants={containerVariants}
           initial="hidden";
-<<<<<<< HEAD
           animate="visible";
         >;
-=======
           animate="visible">
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className="max-w-7xl mx-auto">;
             </motion && motion.div>;
           </div>;
@@ -270,12 +249,9 @@ const allRevolutionaryServices = [
                   <motion.button;
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300";
                     whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                     whileTap={{ scale: 0.95 }}
-=======
                     whileTap={{ scale: 0.95 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   >;
                     View All Services;
                     <ArrowRight className="inline-block ml-2 w-5 h-5" />;
@@ -287,13 +263,10 @@ const allRevolutionaryServices = [
           className="py-16 px-4 lg:px-8";
           variants={containerVariants}
           initial="hidden";
-<<<<<<< HEAD
           animate="visible";
         >;
-=======
           animate="visible">
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className="max-w-6xl mx-auto">;
             <motion.h2;
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12";
@@ -322,7 +295,6 @@ const allRevolutionaryServices = [
               <AnimatePresence mode="wait">;
                 <motion&& motion.div;
                   key={currentServiceIndex}
-<<<<<<< HEAD
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}<Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
@@ -330,7 +302,6 @@ const allRevolutionaryServices = [
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-=======
                   initial={{ opacity: 0, x: 20 ,
 }
                   animate={{ opacity: 1, x: 0 ,
@@ -342,7 +313,6 @@ const allRevolutionaryServices = [
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       >;
                         Learn More;
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />;
@@ -407,12 +377,9 @@ const allRevolutionaryServices = [
                       <motion.button;
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300";
                         whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                         whileTap={{ scale: 0.95 }}
-=======
                         whileTap={{ scale: 0.95 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       >;
                         Learn More;
                         <ArrowRight className="inline-block ml-2 w-4 h-4" />;
@@ -453,13 +420,10 @@ const allRevolutionaryServices = [
       <AnimatePresence>;
         {showPerformanceMonitor && (<PerformanceMonitor />;
         )}duration: 0.8, staggerChildren: 0.1;
-<<<<<<< HEAD
 }}}}}export default EnhancedHomepage;
-=======
 }}}}}
 
 export default EnhancedHomepage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 // Import service data;
 import { revolutionary2044AdvancedMicroSaas   } from '../data/revolutionary-2044-advanced-micro-saas';
 import { revolutionary2044ITServices   } from '../data/revolutionary-2044-it-services';
@@ -469,8 +433,5 @@ import { innovativeITServicesExpansion2025V3   } from '../data/2025-innovative-i
 import { innovativeAIServicesExpansion2025V3   } from '../data/2025-innovative-ai-services-expansion-v3';
 import { innovative2025ITInfrastructureServices   } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices  } from '../data/2025-innovative-ai-autonomous-services';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 const EnhancedHomepage: React.FC;

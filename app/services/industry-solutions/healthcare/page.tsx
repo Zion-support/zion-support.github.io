@@ -1,19 +1,14 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Healthcare Solutions - Zion Tech Group',
-  description: 'Specialized technology solutions for the healthcare industry.',
-<<<<<<< HEAD
-=======
 
   title: 'Healthcare | Zion Tech Group',
   description: 'Professional healthcare services for your business needs.',
   keywords: 'healthcare, services, business, technology'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+
+  title: 'Healthcare | Zion Tech Group',
+  description: 'Professional healthcare services for your business needs.',
+  keywords: 'healthcare, services, business, technology'
 };
 
 export default function HealthcareSolutionsPage() {
@@ -29,7 +24,6 @@ export default function HealthcareSolutionsPage() {
             We understand the unique challenges and compliance requirements of your sector.
           </p>
         </div>
-<<<<<<< HEAD
 
         <div className="max-w-6xl mx-auto">
           {/* Industry-specific Features */}
@@ -130,7 +124,6 @@ export default function HealthcareSolutionsPage() {
                 View All Services
               </Link>
             </div>
-=======
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -161,22 +154,21 @@ export default function HealthcareSolutionsPage() {
               <li>• Benefit 2</li>
               <li>• Benefit 3</li>
             </ul>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           </div>
         </div>
       </div>
 
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
 
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+}
+}
+
+
+
+

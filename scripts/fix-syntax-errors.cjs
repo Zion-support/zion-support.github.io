@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 #!/usr/bin/env node;
 /**
  * Syntax Error Fixer;
@@ -36,7 +34,6 @@ const path = require('path')
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -88,16 +85,11 @@ class SyntaxErrorFixer {
         }
       }
       
-<<<<<<< HEAD
-=======
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       return false;
     }
   }
 
-<<<<<<< HEAD
-=======
   fixCommonErrors(content) {
     // Fix unterminated strings
     content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
@@ -119,7 +111,6 @@ class SyntaxErrorFixer {
     
     // Fix merge conflict markers
     content = content.replace(/
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
   async fixESLintErrors() {
     this.log('🔍 Running ESLint with auto-fix...');
@@ -150,7 +141,6 @@ class SyntaxErrorFixer {
     }
   }
 
-<<<<<<< HEAD
   async fixImportIssues() {
     this.log('🔍 Checking for import issues...');
     
@@ -277,5 +267,4 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+

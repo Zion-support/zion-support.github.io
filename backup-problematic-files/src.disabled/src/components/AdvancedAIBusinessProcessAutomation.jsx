@@ -4,3 +4,14 @@ const AdvancedAIBusinessProcessAutomation = ({ className }) => {return (<div cla
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AdvancedAIBusinessProcessAutomation = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AdvancedAIBusinessProcessAutomation</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

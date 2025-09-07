@@ -2,6 +2,16 @@
 import { Badge } from '@/components/ui/badge',import { Button } from '@/components/ui/button',import { Trash2  } from 'lucide-react';
 import { SkillItemProps } from './types',export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {return (<Badge ;
       key={skill.id}variant="secondary";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react';
+import { SkillItemProps } from './types',;
+;
+export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
+  return (;
+    <Badge ;
+      key={skill.id} ;
+      variant="secondary";
       className="flex items-center gap-1 py-1.5 px-3";
     >;
       {skill.name}
@@ -22,3 +32,13 @@ import { SkillItemProps } from './types',export const SkillItem = ({ skill, cate
 }"";
 }";
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/skills/SkillItem.tsx;
+  ),;
+},; <Badge key= {;
+  skill.id ;
+}variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) ;
+:temp_broken_files/resume-builder/forms/skills/SkillItem.tsx
+};""
+};
+"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/skills/SkillItem.tsx
+

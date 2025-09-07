@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface SpecializedEnterpriseService  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -357,7 +361,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
   customers: number;
@@ -366,8 +369,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
   benefits: string[];
   capabilities: string[];
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -379,8 +382,11 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -397,7 +403,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
       'Research institutions, Universities, AI labs, Government agencies, Tech companies'
-    trialDays: 14
+    trialDays: 14;
     setupTime: '6-8 weeks'
     category: 'Advanced AI & Consciousness'
     realService: true
@@ -556,7 +562,13 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     implementationDetails:
     customers: 189,
     rating: 4 && 4.8,
+<<<<<<< HEAD
     reviews: 145
+=======
+    reviews: 145,
+      'Advanced predictive analytics platform with custom ML model development',
+  },;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     benefits: [;
@@ -574,6 +586,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ],
     market_advantage:;
+<<<<<<< HEAD
       'Advanced predictive analytics platform with custom ML model development'
   },
       'Advanced predictive analytics platform with custom ML model development'
@@ -894,3 +907,7 @@ export default specializedEnterpriseServices;
 
 
 export default specializedEnterpriseServices;
+=======
+      'Advanced predictive analytics platform with custom ML model development',
+  },export default specializedEnterpriseServices;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,4 +1,9 @@
 import Head from 'next/head',export default function TestPage() {return (<>;
+import Head from 'next/head';
+;
+export default function TestPage() {;
+  return (;
+    <>;
       <Head>;
         <title>Test Page - Zion App</title>;
         <meta name="description" content="Test page to verify app functionality" />;

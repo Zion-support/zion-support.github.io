@@ -33,7 +33,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers  } from 'lucide-react';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 export default function ServicesIndex() {const services = [{"name": 'AI & Machine Learning',"description": 'Advanced AI solutions for business automation and intelligence',"icon": Brai n,"href": '/services/ai-machine-learning',"features": ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
     },{"name": 'Micro SaaS Solutions',"description": 'Specialized software solutions for specific business needs',"icon": Cp u,"href": '/services/micro-saas',"features": ['Custom Applications', 'API Integration', 'Scalable Infrastructure', 'Multi-tenant Support'];
@@ -43,9 +43,70 @@ export default function ServicesIndex() {const services = [{"name": 'AI & Machin
     },{"name": 'Event Management',"description": 'Complete event planning and management solution',"icon": Calenda r,"href": '/services/event-management',"features": ['Registration', 'Ticketing', 'Analytics', 'Mobile App'];
     },{"name": 'Cloud & DevOps',"description": 'Scalable cloud infrastructure and deployment automation',"icon": Databas e,"href": '/services/cloud-devops',"features": ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring'];
     },{"name": 'Cybersecurity',"description": 'Comprehensive security solutions for digital protection',"icon": Shiel d,"href": '/services/cybersecurity',"features": ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'];
+export default function ServicesIndex() {
+  const services = [{
+      "name": 'AI & Machine Learning',
+      "description": 'Advanced AI solutions for business automation and intelligence',
+      "icon": Brai n,
+      "href": '/services/ai-machine-learning',
+      "features": ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      "name": 'Micro SaaS Solutions',
+      "description": 'Specialized software solutions for specific business needs',
+      "icon": Cp u,
+      "href": '/services/micro-saas',
+      "features": ['Custom Applications', 'API Integration', 'Scalable Infrastructure', 'Multi-tenant Support']
+    },
+    {
+      "name": 'AI Content Creation',
+      "description": 'Generate high-quality content at scale with AI-powered tools',
+      "icon": FileTex t,
+      "href": '/services/ai-content-creation',
+      "features": ['Blog Posts', 'Social Media', 'Email Campaigns', 'SEO Optimization']
+    },
+    {
+      "name": 'Email Automation',
+      "description": 'Automate email marketing campaigns with intelligent sequences',
+      "icon": Sen d,
+      "href": '/services/email-automation',
+      "features": ['Lead Nurturing', 'Behavioral Triggers', 'A/B Testing', 'Analytics']
+    },
+    {
+      "name": 'Customer Support Platform',
+      "description": 'AI-powered customer support with chatbots and ticketing',
+      "icon": Headphone s,
+      "href": '/services/customer-support',
+      "features": ['Live Chat', 'Ticket Management', 'Knowledge Base', 'Analytics']
+    },
+    {
+      "name": 'Event Management',
+      "description": 'Complete event planning and management solution',
+      "icon": Calenda r,
+      "href": '/services/event-management',
+      "features": ['Registration', 'Ticketing', 'Analytics', 'Mobile App']
+    },
+    {
+      "name": 'Cloud & DevOps',
+      "description": 'Scalable cloud infrastructure and deployment automation',
+      "icon": Databas e,
+      "href": '/services/cloud-devops',
+      "features": ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring']
+    },
+    {
+      "name": 'Cybersecurity',
+      "description": 'Comprehensive security solutions for digital protection',
+      "icon": Shiel d,
+      "href": '/services/cybersecurity',
+      "features": ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     }
   ];
-  const benefits = ['Reduce operational costs by 50%','Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features';
+  const benefits = ['Reduce operational costs by 50%',
+    'Increase productivity by 70%',
+    'Improve business efficiency by 60%',
+    'Scale operations without proportional cost increase',
+    'Enhance customer experience and satisfaction',
+    'Accelerate time-to-market for new features'
   ];
   const useCases = ['E-commerce & Retail','SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations';
   ];
@@ -356,6 +417,24 @@ export default function ServicesIndex() {;
 
       <div className=\"min-h-screen bg-white\">
       <div className="min-h-screen bg-white">
+  const useCases = ['E-commerce & Retail',
+    'SaaS & Technology',
+    'Financial Services',
+    'Healthcare & Medical',
+    'Real Estate',
+    'Professional Services',
+    'Education & Training',
+    'Non-profit Organizations'
+  ];
+  return (
+    <>
+      <Head>
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology solutions including AI, micro SaaS, cloud services, and cybersecurity. Transform your business with our innovative services."  />
+      </Head>
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
   return (
     <EnhancedLayout>
       <h1 className=\"text-3xl font-bold mb-4\">Our Services</h1>
@@ -381,12 +460,43 @@ export default function ServicesIndex() {;
         </Link>
       </div>
     </EnhancedLayout>
-  );
+  )
 };
       <div className=\"min-h-screen bg-white\">
       <div className="min-h-screen bg-white">
 
         {/* Header */}
+
+      <div className=\"min-h-screen bg-white\">
+      <div className="min-h-screen bg-white">
+  return (
+    <EnhancedLayout>
+      <h1 className=\"text-3xl font-bold mb-4\">Our Services</h1>
+      <p className=\"text-gray-700 mb-6\">Comprehensive solutions across software, cloud, and AI.</p>
+      <div className=\"grid \"md\": grid-cols-2 lg:grid-cols-3 gap-6\">
+        <Link href=\"/services/web-application-development-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Web Application Development
+        </Link>
+        <Link href=\"/services/mobile-app-development-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Mobile App Development
+        </Link>
+        <Link href=\"/services/cloud-migration-services-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Cloud Migration
+        </Link>
+        <Link href=\"/services/ai-model-development-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          AI Model Development
+        </Link>
+        <Link href=\"/services/performance-optimization-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Performance Optimization
+        </Link>
+        <Link href=\"/services/security-auditing-chat\" className=\"bg-white p-4 rounded shadow hover:shadow-md transition\">
+          Security Auditing
+        </Link>
+      </div>
+    </EnhancedLayout>
+  )
+};
+      <div className="min-h-screen bg-white">        {/* Header */}
         <header className=\"bg-white shadow-sm\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
             <div className=\"flex justify-between items-center py-6\">
@@ -422,6 +532,7 @@ export default function ServicesIndex() {;
 
 
               Comprehensive Technology Solutions
+              <Layers className="w-4 h-4 mr-2"  />              Comprehensive Technology Solutions
             </div>
             <h1 className=\"text-4xl md: tex t-6xl font-bold text-white mb-4\">Our Services</h1>
             <p className=\"text-indigo-100 text-xl\">
@@ -438,6 +549,7 @@ export default function ServicesIndex() {;
 
 
             {services.map((service, index) => {
+          <div className="grid "md": gri d-cols-2 lg: gri d-cols-3 gap-8">            {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <div key={index} className=\"bg-white border border-gray-200 rounded-xl p-6 shadow-lg \"hover\": shado w-xl transition-shadow\">
@@ -455,11 +567,15 @@ export default function ServicesIndex() {;
 const \"Services\": NextPage = () => {
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <Check className="w-3 h-3 text-green-500 mr-2 flex-shrink-0"  />
+import type { NextPage } from 'next';
+import MainLayout from '../../components/layout/MainLayout';
+import Link from 'next/link';
 import { ArrowRight, Brain, Cloud, Globe, Smartphone, Shield, Database, Cpu, Zap } from 'lucide-react';
 const "Services": NextPage = () => {
 
 
   const services = [{
+const "Services": NextPage = () => {  const services = [{
       title: \'AI Development\',
       \"description\": \'Custom artificial intelligence solutions and machine learning models tailored to your business needs.\',
       \"icon\": Brain,
@@ -573,10 +689,25 @@ const "Services": NextPage = () => {
       \"color\": \'from-gray-500 to-slate-500\'
     }
   ];
-  const process = [{\"step\": \'01\',\"title\": \'Discovery & Planning\',\"description\": \'We start by understanding your business needs, goals, and technical requirements.\';
-    },{\"step\": \'02\',\"title\": \'Design & Architecture\',\"description\": \'Our team creates detailed technical specifications and system architecture.\';
-    },{\"step\": \'03\',\"title\": \'Development & Testing\',\"description\": \'We build your solution using agile methodologies with continuous testing.\';
-    },{\"step\": \'04\',\"title\": \'Deployment & Support\',\"description\": \'We deploy your solution and provide ongoing support and maintenance.\';
+  const process = [{
+      \"step\": \'01\',
+      \"title\": \'Discovery & Planning\',
+      \"description\": \'We start by understanding your business needs, goals, and technical requirements.\'
+    },
+    {
+      \"step\": \'02\',
+      \"title\": \'Design & Architecture\',
+      \"description\": \'Our team creates detailed technical specifications and system architecture.\'
+    },
+    {
+      \"step\": \'03\',
+      \"title\": \'Development & Testing\',
+      \"description\": \'We build your solution using agile methodologies with continuous testing.\'
+    },
+    {
+      \"step\": \'04\',
+      \"title\": \'Deployment & Support\',
+      \"description\": \'We deploy your solution and provide ongoing support and maintenance.\'
     }
   ];
   return (<MainLayout;
@@ -890,45 +1021,38 @@ const "Services": NextPage = () => {;
       \"description\": \'We deploy your solution and provide ongoing support and maintenance.\';
     }
   ];
+  return (
+    <MainLayout
+      title=\"Our Services - Zion Tech Group\"
+      description=\"Explore our comprehensive range of technology services including AI development, cloud solutions, web development, mobile apps, and more.\"
+    >
       {/* Hero Section */}
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center\">;
-            <h1 className=\"text-5xl font-bold mb-6\">Our Services</h1>;
-            <p className=\"text-xl max-w-3xl mx-auto\">;
-              Comprehensive technology solutions designed to transform your business ;
-              and drive digital innovation across all industries.;
-            </p>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Grid */}<div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">;
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">;
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">;
-ursor/automate-test-improve-and-merge-code-646c;
-      <section className=\"py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center mb-16\">;
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">;
-              Technology Solutions;
-            </h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
-              From AI and cloud computing to web development and cybersecurity,we provide end-to-end technology solutions for modern businesses.;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">;
-ursor/automate-test-improve-and-merge-code-646c;
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">;
-            {services.map((service) => (<div;
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center\">
+            <h1 className=\"text-5xl font-bold mb-6\">Our Services</h1>
+            <p className=\"text-xl max-w-3xl mx-auto\">
+              Comprehensive technology solutions designed to transform your business 
+              and drive digital innovation across all industries.
+            </p>
+          </div>
+        </div>
+      </section>
       {/* Services Grid */}
           <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"text-center mb-16\">
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">
+              Technology Solutions
+            </h2>
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
+              From AI and cloud computing to web development and cybersecurity, 
+              we provide end-to-end technology solutions for modern businesses.
+            </p>
+          </div>
           <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 \"md\": grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8">
@@ -938,20 +1062,17 @@ ursor/automate-test-improve-and-merge-code-646c;
             {services.map((service) => (
               <div
                 key={service.title}
-                className=\"bg-white rounded-lg shadow-lg overflow-hidden \"hover\": shadow-xl transition-shadow\";
-              >;
-                <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>;
-                  <service.icon className=\"h-16 w-16 text-white\" />;
-                </div>;
-                <div className=\"p-6\">;
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;
+                className=\"bg-white rounded-lg shadow-lg overflow-hidden \"hover\": shadow-xl transition-shadow\"
+              >
+                <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                  <service.icon className=\"h-16 w-16 text-white\" />
+                </div>
+                <div className=\"p-6\">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                     {service.title}
-                  </h3>;
-                  <p className=\"text-gray-600 mb-4\">;
+                  </h3>
+                  <p className=\"text-gray-600 mb-4\">
                     {service.description}
-                  </p>;
-                  <ul className=\"space-y-2 mb-6\">;
-                    {service.features.slice(0, 3).map((feature) => (ursor/automate-test-improve-and-merge-code-646c;
                   </p>
                   <ul className=\"space-y-2 mb-6\">
                     {service.features.slice(0, 3).map((feature) => (
@@ -1129,6 +1250,10 @@ ursor/automate-test-improve-and-merge-code-646c;
     </>
   );
 }
+                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                   <Link
                     href={service.href}
                     className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\"
@@ -1343,6 +1468,7 @@ ursor/automate-test-improve-and-merge-code-646c;
   );
 
 
+                  </ul>
 
                   <Link
                     href={service && service.href}
@@ -1356,31 +1482,6 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>;
         </div>;
       </section>;
-      {/* Process Section */}<div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-ursor/automate-test-improve-and-merge-code-646c;
-      <section className=\"py-20 bg-gray-50\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center mb-16\">;
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">;
-              Our Development Process;
-            </h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
-              We follow a proven methodology to ensure successful project delivery;
-              and exceed your expectations.;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-ursor/automate-test-improve-and-merge-code-646c;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {process.map((step) => (<div key={step.step} className=\"text-center\">;
-                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-xl font-bold\">;
       {/* Process Section */}
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1395,18 +1496,20 @@ ursor/automate-test-improve-and-merge-code-646c;
               <div key={step.step} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-xl font-bold\">
                   {step.step}
-                </div>;
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;
+                </div>
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   {step.title}
-                </h3>;
-                <p className=\"text-gray-600\">;
+                </h3>
+                <p className=\"text-gray-600\">
                   {step.description}
                 </p>;
               </div>;
+                </p>
+              </div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
       {/* Why Choose Us */}
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -1431,6 +1534,28 @@ ursor/automate-test-improve-and-merge-code-646c;
                   </div>;
                 </div>;
 ursor/automate-test-improve-and-merge-code-646c;
+      <section className=\"py-20\">
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12 items-center\">
+            <div>
+              <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">
+                Why Choose Zion Tech Group?
+              </h2>
+              <div className=\"space-y-6\">
+                <div className=\"flex items-start\">
+                  <div className=\"bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1\">
+                    <Zap className=\"h-6 w-6\" />
+                  </div>
+                  <div>
+                    <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
+                      Cutting-Edge Technology
+                    </h3>
+                    <p className=\"text-gray-600\">
+                      We stay ahead of the curve with the latest technologies and 
+                      industry best practices to deliver innovative solutions.
+                    </p>
+                  </div>
+                </div>
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1448,7 +1573,8 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {process && process.map((step) => (<div key={step && step.step} className=\"text-center\">;
+            {process && process.map((step) => (;
+              <div key={step && step.step} className=\"text-center\">;
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-xl font-bold\">;
                   {step && step.step}
                 </div>;
@@ -1600,6 +1726,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
                   <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1">
                     <Shield className="h-6 w-6" />
                   </div>
+      {/* Why Choose Us */}                  </div>
                   <div>
                     <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
                       Security First
@@ -1619,6 +1746,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
 
                   </div>
+                    <Brain className="h-6 w-6" />                  </div>
                   <div>
                     <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
                       Expert Team
@@ -1643,6 +1771,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
 
                 achieve your business goals with our technology solutions.
               </p>
+                Let's discuss your project requirements and how we can help you               </p>
               <div className=\"space-y-4\">
                 <Link
                   href=\"/contact\"
@@ -1688,7 +1817,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de;
         </div>
       </section>
     </MainLayout>
-  );
+  )
 };
 export default Services;
   import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Database,Brain,Check,ExternalLink,Phone,Mail,ArrowRight,Target,Zap,Shield,FileText,BarChart3,Cpu,Headphones,Calendar,Send,Layers } from 'lucide-react'; const categories = ['AI Services','IT Services','Development','Security']; export default function ServicesIndex() { const services = [ { name: 'AI & Machine Learning',description: 'Advanced AI solutions for business automation and intelligence',icon: Brai n,href: '/services/ai-machine-learning',features: ['Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics'] },{ name: 'Micro SaaS Solutions',description: 'Specialized software solutions for specific business needs',icon: Cp u,href: '/services/micro-saas',features: ['Custom Applications','API Integration','Scalable Infrastructure','Multi-tenant Support'] },{ name: 'AI Content Creation',description: 'Generate high-quality content at scale with AI-powered tools',icon: FileTex t,href: '/services/ai-content-creation',features: ['Blog Posts','Social Media','Email Campaigns','SEO Optimization'] },{ name: 'Email Automation',description: 'Automate email marketing campaigns with intelligent sequences',icon: Sen d,href: '/services/email-automation',features: ['Lead Nurturing','Behavioral Triggers','A/B Testing','Analytics'] },{ name: 'Customer Support Platform',description: 'AI-powered customer support with chatbots and ticketing',icon: Headphone s,href: '/services/customer-support',features: ['Live Chat','Ticket Management','Knowledge Base','Analytics'] },{ name: 'Event Management',description: 'Complete event planning and management solution',icon: Calenda r,href: '/services/event-management',features: ['Registration','Ticketing','Analytics','Mobile App'] },{ name: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and deployment automation',icon: Databas e,href: '/services/cloud-devops',features: ['Cloud Migration','CI/CD Pipelines','Infrastructure as Code','Monitoring'] },{ name: 'Cybersecurity',description: 'Comprehensive security solutions for digital protection',icon: Shiel d,href: '/services/cybersecurity',features: ['Threat Detection','Vulnerability Assessment','Compliance','Incident Response'] } ]; const benefits = [ 'Reduce operational costs by 50%','Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features' ]; const useCases = [ 'E-commerce & Retail','SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations' ]; return ( <> <Head> <title>Our Services - Zion Tech Group</title> <meta name="description" content="Comprehensive technology solutions including AI,micro SaaS,cloud services,and cybersecurity. Transform your business with our innovative services." /> </Head>  import type { NextPage } from 'next'; import Link from 'next/link'; import EnhancedLayout from '../../components/layout/EnhancedLayout'; return ( <EnhancedLayout> <h1 className="text-3xl font-bold mb-4">Our Services</h1> <p className="text-gray-700 mb-6">Comprehensive solutions across software,cloud,and AI.</p> <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> <Link href="/services/web-application-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Web Application Development </Link> <Link href="/services/mobile-app-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Mobile App Development </Link> <Link href="/services/cloud-migration-services-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Cloud Migration </Link> <Link href="/services/ai-model-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> AI Model Development </Link> <Link href="/services/performance-optimization-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Performance Optimization </Link> <Link href="/services/security-auditing-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Security Auditing </Link> </div> </EnhancedLayout> )};
@@ -1764,13 +1893,13 @@ export default Services;
                 achieve your business goals with our technology solutions.;
               </p>;
               <div className=\"space-y-4\">;
-                <Link;
-                  href=\"/contact\";
+                <Link
+                  href=\"/contact\"
                   className=\"block w-full bg-blue-600 \"hover\": bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors\">;
                   Get Free Consultation;
                 </Link>;
-                <Link;
-                  href=\"/about\";
+                <Link
+                  href=\"/about\"
                   className=\"block w-full bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors\">;
                   Learn More About Us;
                 </Link>;
@@ -1816,4 +1945,8 @@ ursor/automate-test-improve-and-merge-code-646c;
             <Link
               href=\"/case-studies\"
 
+
+      {/* CTA Section */}  import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Database,Brain,Check,ExternalLink,Phone,Mail,ArrowRight,Target,Zap,Shield,FileText,BarChart3,Cpu,Headphones,Calendar,Send,Layers } from 'lucide-react'; const categories = ['AI Services','IT Services','Development','Security']; export default function ServicesIndex() { const services = [ { name: 'AI & Machine Learning',description: 'Advanced AI solutions for business automation and intelligence',icon: Brai n,href: '/services/ai-machine-learning',features: ['Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics'] },{ name: 'Micro SaaS Solutions',description: 'Specialized software solutions for specific business needs',icon: Cp u,href: '/services/micro-saas',features: ['Custom Applications','API Integration','Scalable Infrastructure','Multi-tenant Support'] },{ name: 'AI Content Creation',description: 'Generate high-quality content at scale with AI-powered tools',icon: FileTex t,href: '/services/ai-content-creation',features: ['Blog Posts','Social Media','Email Campaigns','SEO Optimization'] },{ name: 'Email Automation',description: 'Automate email marketing campaigns with intelligent sequences',icon: Sen d,href: '/services/email-automation',features: ['Lead Nurturing','Behavioral Triggers','A/B Testing','Analytics'] },{ name: 'Customer Support Platform',description: 'AI-powered customer support with chatbots and ticketing',icon: Headphone s,href: '/services/customer-support',features: ['Live Chat','Ticket Management','Knowledge Base','Analytics'] },{ name: 'Event Management',description: 'Complete event planning and management solution',icon: Calenda r,href: '/services/event-management',features: ['Registration','Ticketing','Analytics','Mobile App'] },{ name: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and deployment automation',icon: Databas e,href: '/services/cloud-devops',features: ['Cloud Migration','CI/CD Pipelines','Infrastructure as Code','Monitoring'] },{ name: 'Cybersecurity',description: 'Comprehensive security solutions for digital protection',icon: Shiel d,href: '/services/cybersecurity',features: ['Threat Detection','Vulnerability Assessment','Compliance','Incident Response'] } ]; const benefits = [ 'Reduce operational costs by 50%','Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features' ]; const useCases = [ 'E-commerce & Retail','SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations' ]; return ( <> <Head> <title>Our Services - Zion Tech Group</title> <meta name="description" content="Comprehensive technology solutions including AI,micro SaaS,cloud services,and cybersecurity. Transform your business with our innovative services." /> </Head>  import type { NextPage } from 'next'; import Link from 'next/link'; import EnhancedLayout from '../../components/layout/EnhancedLayout'; return ( <EnhancedLayout> <h1 className="text-3xl font-bold mb-4">Our Services</h1> <p className="text-gray-700 mb-6">Comprehensive solutions across software,cloud,and AI.</p> <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> <Link href="/services/web-application-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Web Application Development </Link> <Link href="/services/mobile-app-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Mobile App Development </Link> <Link href="/services/cloud-migration-services-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Cloud Migration </Link> <Link href="/services/ai-model-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> AI Model Development </Link> <Link href="/services/performance-optimization-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Performance Optimization </Link> <Link href="/services/security-auditing-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Security Auditing </Link> </div> </EnhancedLayout> )};
+  import React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Database,Brain,Check,ExternalLink,Phone,Mail,ArrowRight,Target,Zap,Shield,FileText,BarChart3,Cpu,Headphones,Calendar,Send,Layers } from 'lucide-react'; const categories = ['AI Services','IT Services','Development','Security']; export default function ServicesIndex() { const services = [ { name: 'AI & Machine Learning',description: 'Advanced AI solutions for business automation and intelligence',icon: Brai n,href: '/services/ai-machine-learning',features: ['Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics'] },{ name: 'Micro SaaS Solutions',description: 'Specialized software solutions for specific business needs',icon: Cp u,href: '/services/micro-saas',features: ['Custom Applications','API Integration','Scalable Infrastructure','Multi-tenant Support'] },{ name: 'AI Content Creation',description: 'Generate high-quality content at scale with AI-powered tools',icon: FileTex t,href: '/services/ai-content-creation',features: ['Blog Posts','Social Media','Email Campaigns','SEO Optimization'] },{ name: 'Email Automation',description: 'Automate email marketing campaigns with intelligent sequences',icon: Sen d,href: '/services/email-automation',features: ['Lead Nurturing','Behavioral Triggers','A/B Testing','Analytics'] },{ name: 'Customer Support Platform',description: 'AI-powered customer support with chatbots and ticketing',icon: Headphone s,href: '/services/customer-support',features: ['Live Chat','Ticket Management','Knowledge Base','Analytics'] },{ name: 'Event Management',description: 'Complete event planning and management solution',icon: Calenda r,href: '/services/event-management',features: ['Registration','Ticketing','Analytics','Mobile App'] },{ name: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and deployment automation',icon: Databas e,href: '/services/cloud-devops',features: ['Cloud Migration','CI/CD Pipelines','Infrastructure as Code','Monitoring'] },{ name: 'Cybersecurity',description: 'Comprehensive security solutions for digital protection',icon: Shiel d,href: '/services/cybersecurity',features: ['Threat Detection','Vulnerability Assessment','Compliance','Incident Response'] } ]; const benefits = [ 'Reduce operational costs by 50%','Increase productivity by 70%','Improve business efficiency by 60%','Scale operations without proportional cost increase','Enhance customer experience and satisfaction','Accelerate time-to-market for new features' ]; const useCases = [ 'E-commerce & Retail','SaaS & Technology','Financial Services','Healthcare & Medical','Real Estate','Professional Services','Education & Training','Non-profit Organizations' ]; return ( <> <Head> <title>Our Services - Zion Tech Group</title> <meta name="description" content="Comprehensive technology solutions including AI,micro SaaS,cloud services,and cybersecurity. Transform your business with our innovative services." /> </Head>  import type { NextPage } from 'next'; import Link from 'next/link'; import EnhancedLayout from '../../components/layout/EnhancedLayout'; return ( <EnhancedLayout> <h1 className="text-3xl font-bold mb-4">Our Services</h1> <p className="text-gray-700 mb-6">Comprehensive solutions across software,cloud,and AI.</p> <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> <Link href="/services/web-application-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Web Application Development </Link> <Link href="/services/mobile-app-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Mobile App Development </Link> <Link href="/services/cloud-migration-services-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Cloud Migration </Link> <Link href="/services/ai-model-development-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> AI Model Development </Link> <Link href="/services/performance-optimization-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Performance Optimization </Link> <Link href="/services/security-auditing-chat" className="bg-white p-4 rounded shadow hover:shadow-md transition"> Security Auditing </Link> </div> </EnhancedLayout> )}
+}
 

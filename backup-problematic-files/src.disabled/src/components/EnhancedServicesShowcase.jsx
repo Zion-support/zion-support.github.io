@@ -4,3 +4,14 @@ const EnhancedServicesShowcase = ({ className }) => {return (<div className={cla
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const EnhancedServicesShowcase = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedServicesShowcase</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

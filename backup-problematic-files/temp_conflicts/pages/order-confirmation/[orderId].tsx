@@ -1,4 +1,14 @@
 import React from 'react',import Head from 'next/head',import { useRouter } from 'next/router',export default function OrderConfirmationPage() {const router = useRouter(),const { orderId }  = router.query,return (<>;
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router',;
+;
+export default function OrderConfirmationPage() {;
+  const router = useRouter(),;
+  const { orderId } = router.query,;
+;
+  return (;
+    <>;
       <Head>;
         <title>Order Confirmation - Zion Tech Group</title>;
         <meta name="description" content="Order confirmation details" />;
@@ -15,3 +25,6 @@ import React from 'react',import Head from 'next/head',import { useRouter } from
       </div>;
     </>;
   )}
+  );
+}
+

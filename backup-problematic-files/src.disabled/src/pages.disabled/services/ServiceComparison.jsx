@@ -4,3 +4,14 @@ const ServiceComparison = ({ className }) => {return (<div className={className 
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const ServiceComparison = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServiceComparison</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

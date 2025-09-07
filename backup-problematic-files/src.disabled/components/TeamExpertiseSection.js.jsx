@@ -4,3 +4,14 @@ const TeamExpertiseSection.js = ({ className }) => {return (<div className={clas
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const TeamExpertiseSection.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TeamExpertiseSection.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

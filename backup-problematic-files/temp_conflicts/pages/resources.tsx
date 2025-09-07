@@ -1,4 +1,12 @@
 import React from 'react',import SEO from '../components/SEO',import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',import Link from 'next/link',export default function ResourcesPage() {return (<UltraFuturisticBackground intensity="high" variant="quantum">;
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from "UltraFuturisticBackground";
+import Link from "Link";
+;
+export default function ResourcesPage() {;
+  return (;
+    <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />;
       <div className="container mx-auto px-4 py-16 text-white">;
         <div className="text-center max-w-3xl mx-auto">;
@@ -17,3 +25,8 @@ import React from 'react',import SEO from '../components/SEO',import UltraFuturi
       </div>;
     </UltraFuturisticBackground>;
   ),},export default ResourcesPage,
+  ),;
+},;
+;
+export default ResourcesPage,;
+

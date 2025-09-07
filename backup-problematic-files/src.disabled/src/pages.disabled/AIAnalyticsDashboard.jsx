@@ -4,3 +4,14 @@ const AIAnalyticsDashboard = ({ className }) => {return (<div className={classNa
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAnalyticsDashboard = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAnalyticsDashboard</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

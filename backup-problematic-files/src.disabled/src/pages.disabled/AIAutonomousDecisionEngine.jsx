@@ -4,3 +4,14 @@ const AIAutonomousDecisionEngine = ({ className }) => {return (<div className={c
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousDecisionEngine = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousDecisionEngine</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

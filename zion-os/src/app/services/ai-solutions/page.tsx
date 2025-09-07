@@ -155,6 +155,133 @@ const ai_services: AIService[] = [;
  * AISolutionsPage - Function description;
  */;
 function AISolutionsPage() {const [selected_service, setSelectedService] = useState < string | null>(null)return (<div className="space-y-8">;  return (<div className="space-y-8">;
+  },
+  {
+    id: "ai - content - generation",
+    name: "AI Content Generation Suite",
+    description: "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",
+    technical_specs: [;
+      "Multi - model AI integration",
+      "Brand voice training",
+      "SEO optimization",
+      "Plagiarism detection",
+      "Multi - format output",
+      "Collaborative editing";
+    ],
+    use_cases: [;
+      "Marketing copy and campaigns",
+      "Blog posts and articles",
+      "Product descriptions",
+      "Email marketing",
+      "Social media content",
+      "Technical documentation";
+    ],
+    pricing: "Starting at $199 / month",
+    starting_price: 199,
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Content%20Generation%20Inquiry",
+    features: [;
+      "AI - powered content creation",
+      "Brand voice consistency",
+      "SEO optimization tools",
+      "Multi - language support",
+      "Content calendar management",
+      "Performance analytics",
+      "A / B testing capabilities",
+      "Team collaboration tools";
+    ],
+    integration: [;
+      "WordPress integration",
+      "Shopify product descriptions",
+      "Mailchimp email campaigns",
+      "Social media platforms",
+      "CMS systems",
+      "Marketing automation tools";
+    ];
+  },
+  {
+    id: "ai - data - analytics",
+    name: "AI - Powered Business Intelligence",
+    description: "Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",
+    technical_specs: [;
+      "Machine learning models",
+      "Real - time data processing",
+      "Predictive analytics",
+      "Natural language queries",
+      "Automated reporting",
+      "Data visualization";
+    ],
+    use_cases: [;
+      "Sales forecasting",
+      "Customer behavior analysis",
+      "Risk assessment",
+      "Performance optimization",
+      "Market trend analysis",
+      "Operational efficiency";
+    ],
+    pricing: "Starting at $599 / month",
+    starting_price: 599,
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Analytics%20Inquiry",
+    features: [;
+      "Predictive analytics",
+      "Natural language queries",
+      "Automated reporting",
+      "Real - time dashboards",
+      "Data visualization",
+      "Custom ML models",
+      "Anomaly detection",
+      "Trend forecasting";
+    ],
+    integration: [;
+      "Database connectors",
+      "API integrations",
+      "BI tools (Tableau, Power BI)",
+      "CRM systems",
+      "ERP systems",
+      "Cloud data warehouses";
+    ];
+  },
+  {
+    id: "ai - automation",
+    name: "AI Process Automation",
+    description: "Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",
+    technical_specs: [;
+      "RPA with AI enhancement",
+      "Process mining",
+      "Workflow automation",
+      "Document processing",
+      "Decision automation",
+      "Learning algorithms";
+    ],
+    use_cases: [;
+      "Invoice processing",
+      "Customer onboarding",
+      "Data entry automation",
+      "Report generation",
+      "Quality control",
+      "Compliance monitoring";
+    ],
+    pricing: "Starting at $399 / month",
+    starting_price: 399,
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Automation%20Inquiry",
+    features: [;
+      "Process mining and discovery",
+      "Workflow automation",
+      "Document processing",
+      "Decision automation",
+      "Learning and optimization",
+      "Integration capabilities",
+      "Monitoring and analytics",
+      "Compliance tracking";
+    ],
+    integration: [;
+      "ERP systems",
+      "CRM platforms",
+      "Accounting software",
+      "HR systems",
+      "Email platforms",
+      "Cloud services";
+    ];
+  }
 ],
 export default /**
  * AISolutionsPage - Function description
@@ -379,3 +506,6 @@ function AISolutionsPage() {
         </a>;
       </div>;
     </div>)}
+    </div>);
+}
+

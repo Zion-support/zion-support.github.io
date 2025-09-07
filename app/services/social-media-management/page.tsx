@@ -1,19 +1,14 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Social Media Management - Zion Tech Group',
-  description: 'Professional social media management solutions for your business needs.',
-<<<<<<< HEAD
-=======
 
   title: 'Social Media Management | Zion Tech Group',
   description: 'Professional social media management services for your business needs.',
   keywords: 'social-media-management, services, business, technology'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+
+  title: 'Social Media Management | Zion Tech Group',
+  description: 'Professional social media management services for your business needs.',
+  keywords: 'social-media-management, services, business, technology'
 };
 
 export default function SocialMediaManagementPage() {
@@ -29,7 +24,6 @@ export default function SocialMediaManagementPage() {
             and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
-<<<<<<< HEAD
 
         <div className="max-w-6xl mx-auto">
           {/* Features Grid */}
@@ -89,7 +83,6 @@ export default function SocialMediaManagementPage() {
                 View All Services
               </Link>
             </div>
-=======
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
@@ -120,22 +113,21 @@ export default function SocialMediaManagementPage() {
               <li>• Benefit 2</li>
               <li>• Benefit 3</li>
             </ul>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           </div>
         </div>
       </div>
 
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
 
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+}
+}
+
+
+
+

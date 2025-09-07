@@ -4,3 +4,14 @@ const AIAutonomousBusinessPlatform.js = ({ className }) => {return (<div classNa
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousBusinessPlatform.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousBusinessPlatform.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

@@ -69,6 +69,8 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
+const res = spawnSync('node', [abs, ...args], {
+    stdio: "stdio",
     encoding: 'utf8'
  ,
 });
@@ -91,9 +93,14 @@ const { status, stdout, stderr } = fn();
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
+    return status;
+  };
     return status
 };
-
+    return status;
+  };
+    return status
+};
     return status;
   }
   step('netlify:auto-healer', () =>
@@ -118,6 +125,7 @@ function runNode(relPath, args = []) {
 exports && exports.config = { schedule: '*/30 * * * *',
 },
 
+exports && exports.config = { schedule: '*/30 * * * *' },
 exports && exports.handler = async () => {
   const logs = [],
   const step = (name, fn) => {
@@ -128,7 +136,6 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status
   },
-
   step('netlify:auto-healer', () => runNode('automation/netlify-auto-healer && healer.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
 
@@ -138,6 +145,9 @@ exports && exports.handler = async () => {
 },;
   const path = require ('path');
 
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
+},
+const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
 /**
@@ -210,3 +220,5 @@ exports.config = { schedule: '*/30 * * * *',
   return { status_code: 200, headers: { 'content - type': 'text / plain',
 }, body: logs.join ('\n'),
 }
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+

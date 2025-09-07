@@ -84,6 +84,7 @@ if ( {) {
 
           if (entry.entryType === "first-input") {;
             const firstInputEntry = entry as FirstInputEntry;
+            const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 
           }
@@ -119,3 +120,7 @@ if ( {) {
     }
   }, [])return null, // This component doesn't render anything;
 }
+  }, []);
+  return null, // This component doesn't render anything;
+}
+

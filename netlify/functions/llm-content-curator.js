@@ -3,6 +3,8 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
+const res = spawnSync('node', [abs, ...args], {
+    stdio: "stdio",
     encoding: 'utf8'
  ,
 });
@@ -48,6 +50,7 @@ function runNode(relPath, args = []) {
 exports && exports.config = { schedule: '0 */3 * * *',
 },
 
+exports && exports.config = { schedule: '0 */3 * * *' },
 exports && exports.handler = async () => {
   const logs = [],
   const step = (name, fn) => {
@@ -58,7 +61,6 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status
   },
-
   step('content:curate', () => runNode('automation/llm-content-curator && curator.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
 
@@ -68,6 +70,9 @@ exports && exports.handler = async () => {
 },;
   const path = require ('path');
 
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
+},
+const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
 
@@ -167,3 +172,5 @@ exports.config = { schedule: '0 */3 * * *',
   return { status_code: 200, headers: { 'content - type': 'text / plain',
 }, body: logs.join ('\n'),
 }
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+

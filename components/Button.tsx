@@ -1,14 +1,12 @@
 
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-<<<<<<< HEAD
 export default function Button(): any ({children,variant = 'primary',size = 'md',className = '',onClick,type = 'button',disabled = false,}: ButtonProps) {const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
 }const variantClasses = {primary:;
       'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600 focus:ring-cyan-500',secondary:;
       'bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 focus:ring-white/50',outline:;
       'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',}const sizeClasses = {sm: 'px-3 py-1 && 1.5 text-sm',md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg',}const disabledClasses = disabled;
-=======
 
 export default function Button(): any ({children,variant = 'primary',size = 'md',className = '',onClick,type = 'button',disabled = false,}: ButtonProps) ;
   const baseClasses =;
@@ -23,7 +21,6 @@ const variantClasses = {primary:;
 const sizeClasses = {sm: 'px-3 py-1 && 1.5 text-sm',md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg',}
 ;
   const disabledClasses = disabled;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     ? 'opacity-50 cursor-not-allowed';
     : 'hover:scale-105 transform';
 
@@ -34,15 +31,11 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 export default /**;
  * Button - Function description;
  */;
 function Button() {const base_classes =;
-<<<<<<< HEAD
     'inline - flex items - center justify - center font - semibold rounded - lg transition - all duration - 200 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - slate - 900';const variant_classes = {primary:;
       'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white hover:from - cyan - 600 hover:to - purple - 600 focus:ring - cyan - 500',secondary:;
       'bg - white / 10 text - white border border - white / 20 hover:bg - white / 20 hover:border - white / 30 focus:ring - white / 50',outline:;
@@ -52,7 +45,6 @@ function Button() {const base_classes =;
       {children}
     </button>)}  const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hover: scale - 105 transform',const classes  = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${disabled_classes} ${class_name}`;import React from 'react';
 interface ButtonProps  {variant?: 'primary' | 'secondary' | 'outline';
-=======
     'inline - flex items - center justify - center font - semibold rounded - lg transition - all duration - 200 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - slate - 900';
 
 const variant_classes = {primary:;
@@ -76,19 +68,15 @@ const disabled_classes = disabled ? 'opacity - 50 cursor - not - allowed' : 'hov
 
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset',disabled?: boolean;
-<<<<<<< HEAD
 }export default function Button({children;
-=======
 
 }
 
 export default function Button({children;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   variant;return (<button;
       type={type}
       className={classes}

@@ -1,4 +1,15 @@
 import React from 'react',import Head from 'next/head',import Link from 'next/link',import { motion } from 'framer-motion',import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',export default function Custom404() {const quickLinks  = [;return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">;
+import React from 'react';
+import Head from 'next/head';
+import Link from "Link";
+import { motion } from 'framer-motion',;
+import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',;
+;
+export default function Custom404() {;
+  const quickLinks = [;
+;
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">;
       <Head>;
         <title>404 - Page Not Found | Zion Tech Group</title>;
         <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Zion Tech Group's main services and solutions." />;
@@ -131,3 +142,6 @@ import React from 'react',import Head from 'next/head',import Link from 'next/li
       </div>;
     </div>;
   )}
+  );
+}
+

@@ -1,4 +1,10 @@
 import React from 'react',import Head from 'next/head',export default function LeadershipPage() {return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+import React from 'react';
+import Head from 'next/head';
+;
+export default function LeadershipPage() {;
+	return (;
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<Head>;
 				<title>Leadership | Zion Tech Group</title>;
 				<meta name="description" content="Meet the leadership team guiding Zion Tech Group's vision and execution." />;
@@ -20,3 +26,6 @@ import React from 'react',import Head from 'next/head',export default function L
 			</div>;
 		</div>;
 	)}
+	);
+}
+

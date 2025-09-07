@@ -1,5 +1,15 @@
 
 import { format } from 'date-fns',import { Edit, Trash2 } from 'lucide-react',import { Button } from '@/components/ui/button',import { Card, CardContent } from '@/components/ui/card',import { Education } from '@/types/resume',import { EducationItemProps } from './types',export function EducationItem() {return (<Card className="bg-muted/40">;
+import { format } from 'date-fns';
+import { Edit, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Education } from '@/types/resume',;
+import { EducationItemProps } from './types',;
+;
+export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {;
+  return (;
+    <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
         <div className="flex justify-between">;
           <div>;
@@ -41,3 +51,5 @@ import { format } from 'date-fns',import { Edit, Trash2 } from 'lucide-react',im
       </CardContent>;
     </Card>;
   ),}
+  ),;}
+

@@ -29,12 +29,10 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
 import { specializedEmergingTechServices  } from '../data/specialized-emerging-tech-services-2025';
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all')const [selectedService, setSelectedService] = useState<string | null>(null),const [searchTerm, setSearchTerm]  = useState('')const allServices = null;
   ];
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
-=======
 
 const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null),const [searchTerm, setSearchTerm]  = useState('');
@@ -45,7 +43,6 @@ const [selectedCategory, setSelectedCategory] = useState('all');
 const categories = [
   { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     {id: 'AI & Machine Learning';
       name: 'AI & ML';
       icon: '🧠';
@@ -125,7 +122,6 @@ const categories = [
       name: 'Neuro';
       icon: '🧠';
       count: allServices.filter(s => s.category === 'Neuromorphic Computing').length;
-<<<<<<< HEAD
     },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
     { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
     { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length }
@@ -147,7 +143,6 @@ const categories = [
     .filter(service => {const matchesCategory =;
         selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch =;
-=======
     },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length,
 }
     { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length,
@@ -188,7 +183,6 @@ const filteredServices = allServices;
         selectedCategory === 'all' || service.category === selectedCategory;
 
 const matchesSearch =;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
@@ -196,22 +190,17 @@ const matchesSearch =;
           return b.popular ? 1 : -1;
         case 'price':;
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-<<<<<<< HEAD
       <div className='max-w-7xl mx-auto'>        {/* Header */}return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
-=======
       <div className = 'max-w-7xl mx-auto'>        {/* Header */;
   return (parseFloat(a.price.replace('$', '').replace(',', '')) -;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             parseFloat(b.price.replace('$', '').replace(',', '')))case 'rating':;
           return b.rating - a.rating;
         case 'newest':;
           return (new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())default:;
           return 0;
       }
-<<<<<<< HEAD
     })const getCategoryIcon = (category: string) => {const categoryData = categories.find(cat => cat.id === category)return categoryData?.icon || '🚀';
   }const formatPrice = (price: string) => {return price.replace('$', '').replace(',', '')}
-=======
     })const getCategoryIcon = (category: string) => ;
   const categoryData = categories.find(cat => cat.id === category;
   return categoryData?.icon || '🚀';
@@ -219,13 +208,11 @@ const matchesSearch =;
 
 const formatPrice = (price: string) => {return price.replace('$', '').replace(',', '')}
  ;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   return (<section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
       <div className='max-w-7xl mx-auto'>;
   return (<section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}<motion.div;
-<<<<<<< HEAD
   const formatPrice = (price: string) => {return price && price.replace('$', '').replace(, '')}return ({/* Header */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
@@ -233,7 +220,6 @@ const formatPrice = (price: string) => {return price.replace('$', '').replace(',
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}className='text-center mb-16';
         >;
-=======
 
 const formatPrice = (price: string) => {return price && price.replace('$', '').replace(, '');
   return ({/* Header */}
@@ -245,7 +231,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
           viewport={{ once: true ,
 }className='text-center mb-16'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
           </h2>;
@@ -286,13 +271,10 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
               <div>;
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>;
                 <div className='text-white/60'>Average ROI</div>              </div>        >;
-<<<<<<< HEAD
           className="text-center mb-16";
         >;
-=======
           className="text-center mb-16">
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
             Revolutionary Micro SAAS Services 2025;
           </h2>;
@@ -418,13 +400,11 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
           </div>;
         </motion && motion.div>;{/* Search and Filters */}
         <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}className='mb-12';
         >;
-=======
           initial={{ opacity: 0, y: 20 ,
 }
           whileInView={{ opacity: 1, y: 0 }}
@@ -432,7 +412,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
           viewport={{ once: true ,
 }className='mb-12'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
@@ -461,13 +440,10 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
               <select;
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value as any)}
-<<<<<<< HEAD
                 className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400';
               >;
-=======
                 className='bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <option value='popularity'>Most Popular</option>;
                 <option value='price'>Price: Low to High</option>;
                 <option value='rating'>Highest Rated</option>;
@@ -477,7 +453,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
                 <button;
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${viewMode === 'grid';
-<<<<<<< HEAD
                       ? 'bg-blue-600 text-white';
                       : 'text-white/60 hover:text-white';
                   }`}>;
@@ -490,7 +465,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
                       : 'text-white/60 hover:text-white';
                   }`}
                 >;
-=======
                       ? 'bg-blue-600 text-white';
                       : 'text-white/60 hover:text-white';
                   }`}>
@@ -504,32 +478,26 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
                       : 'text-white/60 hover:text-white';
                   }`}>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <List className='w-5 h-5' />;
                 </button>;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
         </motion.div>;
                 >;
-=======
         </motion.div>>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <List className="w-5 h-5" />;
               </div>;
             </div>;
           </div>;
         </motion && motion.div>;{/* Category Filter */}
         <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}className='mb-12';
         >;
-=======
           initial={{ opacity: 0, y: 20 ,
 }
           whileInView={{ opacity: 1, y: 0 }}
@@ -537,7 +505,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
           viewport={{ once: true ,
 }className='mb-12'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className='flex flex-wrap justify-center gap-3'>;
             {categories.map(category => (<button;
                 key={category.id}
@@ -559,12 +526,10 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
                   key={service && service.id}{viewMode === 'grid' ? (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <AnimatePresence>;
               {filteredServices.map((service, index) => (<motion.div;
-<<<<<<< HEAD
                   key={service.id}initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-=======
                   key={service.id}initial={{ opacity: 0, y: 30 ,
 }
                   animate={{ opacity: 1, y: 0 ,
@@ -573,7 +538,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
 }
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
         {/* Services Display */}
@@ -591,7 +555,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
             <AnimatePresence>;
               {filtered_services.map ((service, index) => (<motion.div;
                   key={service.id}
-<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
@@ -600,7 +563,6 @@ const formatPrice = (price: string) => {return price && price.replace('$', '').r
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
                 >;
                   {/* Popular Badge */}
-=======
                   initial={{ opacity: 0, coordinate_y: 30 ,
 }
                   animate={{ opacity: 1, coordinate_y: 0 ,
@@ -614,7 +576,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 
                   {/* Popular Badge *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   {service.popular && (<div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>;
                       <Star className='w-3 h-3' />;
                       Popular;
@@ -652,13 +613,10 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                     </div>;<h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;{/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
-<<<<<<< HEAD
                           className='flex items-center gap-2 text-sm text-white/60';
                         >;
-=======
                           className='flex items-center gap-2 text-sm text-white/60'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                           <CheckCircle className='w-4 h-4 text-green-400' />;
                           {feature}
                         </div>;
@@ -726,13 +684,10 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                       href={service.link}
 target='_blank';
                       rel='noopener noreferrer';
-<<<<<<< HEAD
                       className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2';
                     >;
-=======
                       className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       Learn More;
                       <ExternalLink className='w-4 h-4' />;
                     </a>;
@@ -745,14 +700,12 @@ target='_blank';
             <AnimatePresence>;
               {filteredServices.map((service, index) => (<motion.div;
                   key={service.id}
-<<<<<<< HEAD
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6';
                       )}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6';
                 >;
-=======
                   initial={{ opacity: 0, x: -30 ,
 }
                   animate={{ opacity: 1, x: 0 ,
@@ -763,7 +716,6 @@ target='_blank';
 }className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6';
                       )}className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className='flex flex-col lg:flex-row gap-6'>;
                     {/* Left Side - Icon and Basic Info */}
                     <div className='flex-shrink-0'>;
@@ -850,13 +802,10 @@ target='_blank';
                       {/* Features Grid */}<div className='grid grid-cols-2 gap-2 mb-4'>;
                         {service.features.slice(0, 6).map((feature, idx) => (<div;
                             key={idx}
-<<<<<<< HEAD
                             className='flex items-center gap-2 text-sm text-white/60';
                           >;
-=======
                             className='flex items-center gap-2 text-sm text-white/60'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                             <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />;
                             <span className='truncate'>{feature}</span>;
                           </div>;
@@ -953,13 +902,10 @@ target='_blank';
                         href={service.link}
 target='_blank';
                         rel='noopener noreferrer';
-<<<<<<< HEAD
                         className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2';
                       >;
-=======
                         className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         Learn More;
                         <ArrowRight className='w-4 h-4' />;
                       </a>;
@@ -973,16 +919,13 @@ target='_blank';
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
             initial={{ opacity: 0 }}
-<<<<<<< HEAD
             animate={{ opacity: 1 }}
 className='text-center py-20';
           >;
-=======
             animate={{ opacity: 1 ,
 }
 className='text-center py-20'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             <div className='text-6xl mb-4'>🔍</div>;
             <h3 className='text-2xl font-bold text-white mb-2'>;
               No services found;
@@ -999,13 +942,11 @@ className='text-center py-20'>
         )}
         {/* Contact CTA */}
         <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}className='mt-20 text-center';
         >;
-=======
           initial={{ opacity: 0, y: 30 ,
 }
           whileInView={{ opacity: 1, y: 0 }}
@@ -1013,7 +954,6 @@ className='text-center py-20'>
           viewport={{ once: true ,
 }className='mt-20 text-center'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>;
             <h3 className='text-3xl font-bold text-white mb-4'>;
               Ready to Transform Your Business?;
@@ -1025,26 +965,20 @@ className='text-center py-20'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <a;
                 href='mailto:kleber@ziontechgroup.com';
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2';
               >;
-=======
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Contact Sales Team;
                 <ArrowRight className='w-5 h-5' />;
               </a>;
               <a;
                 href='tel:+13024640950';
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2";
-<<<<<<< HEAD
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2';
               >;
-=======
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 Call +1 302 464 0950;
               </a>;
             </div>;

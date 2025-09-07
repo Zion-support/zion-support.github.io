@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T19:03:27.857Z",
   "seoIssues": [
     {
@@ -40970,7 +40969,6 @@
     "recommendations": []
   }
 }
-=======
   "timestamp": "2025-09-07T00:10:53.613Z",
   "optimizations": [
     "Meta tags analysis completed",
@@ -40980,4 +40978,4 @@
   ],
   "status": "completed"
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+

@@ -4,3 +4,14 @@ const EnhancedSearchInput = ({ className }) => {return (<div className={classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const EnhancedSearchInput = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedSearchInput</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

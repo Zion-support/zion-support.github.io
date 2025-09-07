@@ -199,6 +199,10 @@ export default function ITServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About DevOps & CI / CD;
+              </a>;
+            </div>;
+            {/* Cybersecurity */}
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -402,6 +406,10 @@ export default function ITServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About API Development;
+              </a>;
+            </div>;
+            {/* Digital Transformation */}
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -619,3 +627,6 @@ export default function ITServicesPage() {return (;
         </div>;
       </section>;
     </div>)}
+    </div>);
+}
+

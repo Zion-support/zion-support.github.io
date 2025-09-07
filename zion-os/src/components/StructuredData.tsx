@@ -104,3 +104,6 @@ export function StructuredData() {const structuredData = {;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />)}
+    />);
+}
+

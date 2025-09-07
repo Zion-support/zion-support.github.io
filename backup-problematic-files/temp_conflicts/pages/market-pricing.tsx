@@ -1,5 +1,17 @@
 import React from 'react',import Head from 'next/head',import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',import Card from '../components/ui/Card',const ext = (url:string, label?:string) => (<a className="text-cyan-300 hover:text-cyan-200 underline" href={url} target="_blank" rel="noopener noreferrer">{label || url.replace('https://','')}</a>;
 ),export default function MarketPricingPage() {return (<UltraFuturisticBackground variant="quantum" intensity="high">;
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from "UltraFuturisticBackground";
+import Card from "Card";
+;
+const ext = (url:string, label?:string) => (;
+	<a className="text-cyan-300 hover:text-cyan-200 underline" href={url} target="_blank" rel="noopener noreferrer">{label || url.replace('https://','')}</a>;
+),;
+;
+export default function MarketPricingPage() {;
+	return (;
+		<UltraFuturisticBackground variant="quantum" intensity="high">;
 			<Head>;
 				<title>Market Pricing | Zion Tech Group</title>;
 				<meta name="description" content="Average market prices and credible references for AI, cloud, IT, and micro SaaS services." />;
@@ -284,3 +296,6 @@ import React from 'react',import Head from 'next/head',import UltraFuturisticBac
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),}
+  ),;
+}
+

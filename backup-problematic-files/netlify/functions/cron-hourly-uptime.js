@@ -15,6 +15,20 @@ const { upsertFile } = require('./_lib/github')exports.handler = async function 
           status: 0;
           ms;
           error: String(e.message |e)})}
+      const t0 = Date.now();
+      try {
+        const resp = await fetch(url);
+        const ms = Date.now() - t0;
+        results.push({ path: ep, status: resp.status, ms });
+      } catch (e) {
+        const ms = Date.now() - t0;
+        results.push({
+          path: ep;
+    status: 0
+          ms
+          error: String(e.message |e)
+        });
+      }
     }
     const log = { timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER;
@@ -42,4 +56,12 @@ const { upsertFile } = require('./_lib/github')exports.handler = async function 
       body: JSON.stringify({ ok: true, count: results.length })}
   } catch (e) {return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return {
+      statusCode: 200
+      body: JSON.stringify({ ok: true, count: results.length })
+    }
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }

@@ -1,4 +1,16 @@
 import fs from 'fs',import path from 'path',import EnhancedLayout from '../../components/layout/EnhancedLayout',export async function getStaticProps() {const dir = path.join(process.cwd(), 'datareports', 'economyoptimizer'),let latest:string | null = null,let top:any[] = [],if (fs.existsSync(dir)) {const latestPath = path.join(dir, 'latest.json'),if (fs.existsSync(latestPath)) {try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
+import fs from 'fs';
+import path from 'path';
+import EnhancedLayout from "EnhancedLayout";
+;
+export async function getStaticProps() {;
+  const dir = path.join(process.cwd(), 'datareports', 'economyoptimizer'),;
+  let latest:string | null = null,;
+  let top:any[] = [],;
+  if (fs.existsSync(dir)) {;
+    const latestPath = path.join(dir, 'latest.json'),;
+    if (fs.existsSync(latestPath)) {;
+      try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
     }
     if (latest) {const p = path.join(dir, `${latest}.json`),if (fs.existsSync(p)) {try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || [], } catch {}
       }

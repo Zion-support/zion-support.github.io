@@ -65,8 +65,6 @@ const shippingRates = [
 ursor/automate-test-improve-and-merge-code-646c;
     res.statusCode = 200;
     res.json({ "rates": data.rates })} catch (err) {console.error(','EasyPost "error": ', err)res.statusCode = 500;<:api/shipping-rates.js;
-<<<<<<< HEAD
-=>>>>>>>> main:corrupted_backup/shipping-rates.js;
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {}
 
 const apiKey = process.env.EASYPOST_API_KEY;
@@ -100,11 +98,9 @@ const response = await fetch(','https: method: POST' headers: {' 'Content-Type':
 } body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: fromAddress,parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: data.rates },
 } catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }},
 }ursor/automate-test-improve-and-merge-code-646c;
-=======
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch( 'https: ' method: POST','; headers: { 'Content-Type':';';application/jso,n,'; Authorization: `Bearer: ${apiKe,y}`} body: JSON.stringify({ shipment: { to_address: toAddres,s,from_address: 'fromAddres',s,parcel: ''}})}) const data = await response.json()if: (!response.ok) { res.statusCode = 500; res.json({ error: data.error: ||';Failed: to fetch rates'})'; return} res.statusCode: = 200; res.json({ rates: data.rates})} catch: (err) { console.error( 'EasyPost error:',err)';res.statusCode: = 500; res.json({ error: err.message})} return} try {const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch(','https: ' method: POST' headers: {' 'Content-Type':';application/json Authorization: `Bearer ${apiKey}`} body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: 'fromAddress',parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: 'data.rates' })} catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: 'err.message' }})}
     res.json({ "error": err.message }})}
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch( 'https: method: POST','; headers: { 'Content-Type':';';application/jso,n,'; Authorization: `Bearer: ${apiKe,y}`} body: JSON.stringify({ shipment: { to_address: toAddres,s,from_address: fromAddres,s,parcel: }})}) const data = await response.json()if: (!response.ok) { res.statusCode = 500; res.json({ error: data.error: ||';Failed: to fetch rates'})'; return} res.statusCode: = 200; res.json({ rates: data.rates})} catch: (err) { console.error( 'EasyPost error:',err)';res.statusCode: = 500; res.json({ error: err.message})} return} try {const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch(','https: method: POST' headers: {' 'Content-Type':';application/json Authorization: `Bearer ${apiKey}`} body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: fromAddress,parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: data.rates })} catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }})}ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 =;
 >export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {}
 
@@ -177,8 +173,6 @@ const response = await fetch(','https: method: POST' headers: {' 'Content-Type':
 } catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }},
 }
 <:api/shipping-rates.js;
-<<<<<<< HEAD
-=>>>>>>> main;
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {}
 
 const apiKey = process.env.EASYPOST_API_KEY;
@@ -212,7 +206,6 @@ const response = await fetch(','https: method: POST' headers: {' 'Content-Type':
 } body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: fromAddress,parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: data.rates },
 } catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }},
 }
->>>>>>>> main:corrupted_backup/shipping-rates.js;
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {}
 
 const apiKey = process.env.EASYPOST_API_KEY;
@@ -247,8 +240,6 @@ const response = await fetch(','https: method: POST' headers: {' 'Content-Type':
 } catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }})}
     res.json({ error: err.message || 'Failed to calculate shipping rates' },
 }module.exports = withErrorLogging(handler)<:api/shipping-rates.js;
-=>>>>>>>> main:corrupted_backup/shipping-rates.js;
-=======
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch( 'https: ' method: POST','; headers: { 'Content-Type':';';application/jso,n,'; Authorization: `Bearer: ${apiKe,y}`} body: JSON.stringify({ shipment: { to_address: toAddres,s,from_address: 'fromAddres',s,parcel: ''}})}) const data = await response.json()if: (!response.ok) { res.statusCode = 500; res.json({ error: data.error: ||';Failed: to fetch rates'})'; return} res.statusCode: = 200; res.json({ rates: data.rates})} catch: (err) { console.error( 'EasyPost error:',err)';res.statusCode: = 500; res.json({ error: err.message})} return} try {const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch(','https: ' method: POST' headers: {' 'Content-Type':';application/json Authorization: `Bearer ${apiKey}`} body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: 'fromAddress',parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: 'data.rates' })} catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: 'err.message' }})}
     res.json({ "error": err.message }})}
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch( 'https: method: POST','; headers: { 'Content-Type':';';application/jso,n,'; Authorization: `Bearer: ${apiKe,y}`} body: JSON.stringify({ shipment: { to_address: toAddres,s,from_address: fromAddres,s,parcel: }})}) const data = await response.json()if: (!response.ok) { res.statusCode = 500; res.json({ error: data.error: ||';Failed: to fetch rates'})'; return} res.statusCode: = 200; res.json({ rates: data.rates})} catch: (err) { console.error( 'EasyPost error:',err)';res.statusCode: = 500; res.json({ error: err.message})} return} try {const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch(','https: method: POST' headers: {' 'Content-Type':';application/json Authorization: `Bearer ${apiKey}`} body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: fromAddress,parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: data.rates })} catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }})}
@@ -256,7 +247,6 @@ export: default async function handler(req,res) { if (req.method !== POST') {'; 
     res.json({ "error": err.message }})}
 export: default async function handler(req,res) { if (req.method !== POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';res.end( 'Method: Not Allowed')';return} try: { const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch( 'https: method: POST','; headers: { 'Content-Type':';';application/jso,n,'; Authorization: `Bearer: ${apiKe,y}`} body: JSON.stringify({ shipment: { to_address: toAddres,s,from_address: fromAddres,s,parcel: }})}) const data = await response.json()if: (!response.ok) { res.statusCode = 500; res.json({ error: data.error: ||';Failed: to fetch rates'})'; return} res.statusCode: = 200; res.json({ rates: data.rates})} catch: (err) { console.error( 'EasyPost error:',err)';res.statusCode: = 500; res.json({ error: err.message})} return} try {const { fromAddress,toAddress,parcel } = req.body || {} const apiKey = process.env.EASYPOST_API_KEY; const response = await fetch(','https: method: POST' headers: {' 'Content-Type':';application/json Authorization: `Bearer ${apiKey}`} body: JSON.stringify({ shipmen t: { to_addres s: toAddress,from_address: fromAddress,parcel }})}) const data = await response.json()if (!response.ok) {res.statusCode = 500; res.json({ error: data.error ||;` 'Failed to fetch rates' })return} res.statusCode = 200; res.json({ rates: data.rates })} catch (err) { console.error(','EasyPost error:',err)res.statusCode = 500; res.json({ error: err.message }})}
     res.json({ error: err.message || 'Failed to calculate shipping rates' })}module.exports = withErrorLogging(handler)<:api/shipping-rates.js;
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 ursor/automate-test-improve-and-merge-code-646c;
 <;
 =>
@@ -301,3 +291,4 @@ const shippingRate = baseRate * weightMultiplier;
 });
   }
 }
+

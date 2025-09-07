@@ -1,6 +1,7 @@
 
 ;
 export default function AIServicesPage() {return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">;
         <div className="container mx-auto px-6 text-center">;
@@ -278,6 +279,10 @@ export default function AIServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About AI Analytics;
+              </a>;
+            </div>;
+            {/* AI Customer Support */}
                 and automated customer service solutions that never sleep.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -405,6 +410,10 @@ export default function AIServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About AI Process Automation;
+              </a>;
+            </div>;
+            {/* AI Security & Compliance */}
                 and automated security solutions that adapt to evolving threats.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -584,3 +593,6 @@ export default function AIServicesPage() {return (;
         </div>;
       </section>;
     </div>)}
+    </div>);
+}
+

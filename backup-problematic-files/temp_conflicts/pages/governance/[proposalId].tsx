@@ -1,4 +1,14 @@
 import React from 'react',import Head from 'next/head',import { useRouter } from 'next/router',export default function ProposalDetailPage() {const router = useRouter(),const { proposalId }  = router.query,return (<>;
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router',;
+;
+export default function ProposalDetailPage() {;
+  const router = useRouter(),;
+  const { proposalId } = router.query,;
+;
+  return (;
+    <>;
       <Head>;
         <title>Proposal Details - Zion Tech Group</title>;
         <meta name="description" content="View proposal details and vote" />;
@@ -15,3 +25,6 @@ import React from 'react',import Head from 'next/head',import { useRouter } from
       </div>;
     </>;
   )}
+  );
+}
+

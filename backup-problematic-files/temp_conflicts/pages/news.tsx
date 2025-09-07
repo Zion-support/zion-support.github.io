@@ -1,29 +1,165 @@
-import React from 'react',const featuredNews = [;
-    {title:'Zion Tech Group Launches Revolutionary AI Consciousness Platform',excerpt:'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',author:'Press Team',date:'2025-01-15',author:'Dr. Kleber',featured:true,image:'/api/placeholder/600/400',tags:['AI ConsciousnessBreakthrough', 'Innovation'],readTime:'5 min read';
-    },{title:'Quantum Computing Breakthrough:Solving Complex Optimization Problems',excerpt:'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',author:'Research Team',date:'2025-01-12',category:'Research',readTime:'6 min read',image:'/news/quantum-breakthrough.jpg',tags:['Quantum ComputingResearch', 'Breakthrough'],icon:<Atom className="w-6 h-6" />,featured:true;
-    },{title:'Cybersecurity Partnership with Global Tech Leaders',excerpt:'Strategic collaboration to advance AI-powered threat detection and response systems.',author:'Partnerships Team',date:'2025-01-10',const [searchQuery, setSearchQuery] = useState(''),const [selectedCategory, setSelectedCategory] = useState('all'),const [selectedYear, setSelectedYear]  = useState('all'),const categories = [;
-    { id:'all', name:'All News', icon:Newspaper, count:45 },{ id:'ai', name:'AI & Technology', icon:Brain, count:18 },{ id:'quantum', name:'Quantum Computing', icon:Atom, count:12 },{ id:'space', name:'Space Technology', icon:Rocket, count:8 },{ id:'security', name:'Cybersecurity', icon:Shield, count:7 }
-  ],const years = [;
-    { id:'all', name:'All Years' },{ id:'2025', name:'2025' },{ id:'2024', name:'2024' },{ id:'2023', name:'2023' }
-  ],Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,Clock, BookOpen, Video, Podcast, FileText, Search;
-} from 'lucide-react',import Link from 'next/link',return (<UltraFuturisticBackground>;
+import React from 'react';
+  const featuredNews = [;
+    {;
+      title:'Zion Tech Group Launches Revolutionary AI Consciousness Platform',;
+      excerpt:'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',;
+      author:'Press Team',;
+      date:'2025-01-15',;
+      author:'Dr. Kleber',;
+      featured:true,;
+      image:'/api/placeholder/600/400',;
+      tags:['AI ConsciousnessBreakthrough', 'Innovation'],;
+      readTime:'5 min read';
+    },;
+    {;
+      title:'Quantum Computing Breakthrough:Solving Complex Optimization Problems',;
+      excerpt:'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',;
+      author:'Research Team',;
+      date:'2025-01-12',;
+      category:'Research',;
+      readTime:'6 min read',;
+      image:'/news/quantum-breakthrough.jpg',;
+      tags:['Quantum ComputingResearch', 'Breakthrough'],;
+      icon:<Atom className="w-6 h-6" />,;
+      featured:true;
+    },;
+    {;
+      title:'Cybersecurity Partnership with Global Tech Leaders',;
+      excerpt:'Strategic collaboration to advance AI-powered threat detection and response systems.',;
+      author:'Partnerships Team',;
+      date:'2025-01-10',;
+  const [searchQuery, setSearchQuery] = useState(''),;
+  const [selectedCategory, setSelectedCategory] = useState('all'),;
+  const [selectedYear, setSelectedYear] = useState('all'),;
+;
+  const categories = [;
+    { id:'all', name:'All News', icon:Newspaper, count:45 },;
+    { id:'ai', name:'AI & Technology', icon:Brain, count:18 },;
+    { id:'quantum', name:'Quantum Computing', icon:Atom, count:12 },;
+    { id:'space', name:'Space Technology', icon:Rocket, count:8 },;
+    { id:'security', name:'Cybersecurity', icon:Shield, count:7 }
+  ],;
+;
+  const years = [;
+    { id:'all', name:'All Years' },;
+    { id:'2025', name:'2025' },;
+    { id:'2024', name:'2024' },;
+    { id:'2023', name:'2023' }
+  ],;
+;
+  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,;
+  TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,;
+  Clock, BookOpen, Video, Podcast, FileText, Search;
+} from 'lucide-react',;
+import Link from 'next/link';
+  return (;
+    <UltraFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />;
-        </Head>;id:1,title:"Zion Tech Group Launches Revolutionary Quantum AI Platform",excerpt:"Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",category:"Product Launch",author:"Zion Tech Group Team",date:"2025-01-15",readTime:"5 min read",image:"/images/news/quantum-ai-launch.jpg",tags:["Quantum Computing", "AI", "Product Launch"];
-    },{id:2,title:"New Partnership with Global Healthcare Consortium",excerpt:"We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",category:"Partnership",author:"Business Development",date:"2025-01-12",readTime:"4 min read",image:"/images/news/healthcare-partnership.jpg",tags:["Healthcare", "Partnership", "AI"];
-    },{id:3,title:"Breakthrough in Autonomous Cybersecurity Systems",excerpt:"Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",category:"Research",author:"Research Team",date:"2025-01-10",readTime:"6 min read",image:"/images/news/cybersecurity-breakthrough.jpg",tags:["Cybersecurity", "Research", "Autonomous Systems"];
-    },{id:4,title:"Space Technology Division Expands Operations",excerpt:"Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",category:"Company News",author:"Space Technology Team",date:"2025-01-08",readTime:"3 min read",image:"/images/news/space-expansion.jpg",tags:["Space Technology", "Expansion", "Satellites"];
-    },{id:5,title:"AI Ethics and Governance Framework Released",excerpt:"We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",category:"Policy",author:"AI Ethics Team",date:"2025-01-05",readTime:"7 min read",image:"/images/news/ai-ethics-framework.jpg",tags:["AI Ethics", "Governance", "Policy"];
-    },{id:6,title:"Financial Services Innovation Award Winner",excerpt:"Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",category:"Awards",author:"Marketing Team",date:"2025-01-03",readTime:"3 min read",image:"/images/news/financial-award.jpg",tags:["Awards", "Financial Services", "Quantum Computing"];
-export default function News() {const featuredNews = [;
-    {id:1,title:'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',excerpt:'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',category:'Company News',author:'Dr. Sarah Chen',date:'2024-01-15',readTime:'5 min read',image:'/api/placeholder/600/400',tags:['AIQuantum Computing', 'Innovation'],import Head from 'next/head',export default function NewsPage() {const newsArticles = [;
-    {id:1,title:"Zion Tech Group Launches New AI-Powered Automation Platform",excerpt:"Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",date:"2025-01-19",category:"Company News",author:"Zion Tech Group",readTime:"3 min read",image:"",featured:true;
-    },{id:2,</motion.div>;
+        </Head>;
+;
+      id:1,;
+      title:"Zion Tech Group Launches Revolutionary Quantum AI Platform",;
+      excerpt:"Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",;
+      category:"Product Launch",;
+      author:"Zion Tech Group Team",;
+      date:"2025-01-15",;
+      readTime:"5 min read",;
+      image:"/images/news/quantum-ai-launch.jpg",;
+      tags:["Quantum Computing", "AI", "Product Launch"];
+    },;
+    {;
+      id:2,;
+      title:"New Partnership with Global Healthcare Consortium",;
+      excerpt:"We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",;
+      category:"Partnership",;
+      author:"Business Development",;
+      date:"2025-01-12",;
+      readTime:"4 min read",;
+      image:"/images/news/healthcare-partnership.jpg",;
+      tags:["Healthcare", "Partnership", "AI"];
+    },;
+    {;
+      id:3,;
+      title:"Breakthrough in Autonomous Cybersecurity Systems",;
+      excerpt:"Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",;
+      category:"Research",;
+      author:"Research Team",;
+      date:"2025-01-10",;
+      readTime:"6 min read",;
+      image:"/images/news/cybersecurity-breakthrough.jpg",;
+      tags:["Cybersecurity", "Research", "Autonomous Systems"];
+    },;
+    {;
+      id:4,;
+      title:"Space Technology Division Expands Operations",;
+      excerpt:"Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",;
+      category:"Company News",;
+      author:"Space Technology Team",;
+      date:"2025-01-08",;
+      readTime:"3 min read",;
+      image:"/images/news/space-expansion.jpg",;
+      tags:["Space Technology", "Expansion", "Satellites"];
+    },;
+    {;
+      id:5,;
+      title:"AI Ethics and Governance Framework Released",;
+      excerpt:"We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",;
+      category:"Policy",;
+      author:"AI Ethics Team",;
+      date:"2025-01-05",;
+      readTime:"7 min read",;
+      image:"/images/news/ai-ethics-framework.jpg",;
+      tags:["AI Ethics", "Governance", "Policy"];
+    },;
+    {;
+      id:6,;
+      title:"Financial Services Innovation Award Winner",;
+      excerpt:"Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",;
+      category:"Awards",;
+      author:"Marketing Team",;
+      date:"2025-01-03",;
+      readTime:"3 min read",;
+      image:"/images/news/financial-award.jpg",;
+      tags:["Awards", "Financial Services", "Quantum Computing"];
+export default function News() {;
+  const featuredNews = [;
+    {;
+      id:1,;
+      title:'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',;
+      excerpt:'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',;
+      category:'Company News',;
+      author:'Dr. Sarah Chen',;
+      date:'2024-01-15',;
+      readTime:'5 min read',;
+      image:'/api/placeholder/600/400',;
+      tags:['AIQuantum Computing', 'Innovation'],;
+import Head from "Head";
+;
+export default function NewsPage() {;
+  const newsArticles = [;
+    {;
+      id:1,;
+      title:"Zion Tech Group Launches New AI-Powered Automation Platform",;
+      excerpt:"Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",;
+      date:"2025-01-19",;
+      category:"Company News",;
+      author:"Zion Tech Group",;
+      readTime:"3 min read",;
+      image:"",;
+      featured:true;
+    },;
+    {;
+      id:2,;
+            </motion.div>;
           </div>;
-        </section>;{/* Featured Article */}
-        {featuredArticle && (<section className="py-20">;
+        </section>;
+;
+        {/* Featured Article */}
+        {featuredArticle && (;
+          <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
               <motion.div;
                 initial={{ opacity:0, y:30 }}
@@ -35,7 +171,9 @@ export default function News() {const featuredNews = [;
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
                   Featured Story;
                 </h2>;
-              </motion.div>;<motion.div;
+              </motion.div>;
+              ;
+              <motion.div;
                 initial={{ opacity:0, y:30 }}
                 whileInView={{ opacity:1, y:0 }}
                 transition={{ duration:0.8, delay:0.2 }}
@@ -66,7 +204,8 @@ export default function News() {const featuredNews = [;
                       </div>;
                     </div>;
                     <div className="flex flex-wrap gap-2 mb-6">;
-                      {featuredArticle.tags.map((tag) => (<span;
+                      {featuredArticle.tags.map((tag) => (;
+                        <span;
                           key={tag}
                           className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50";
                         >;
@@ -91,13 +230,17 @@ export default function News() {const featuredNews = [;
               </motion.div>;
             </div>;
           </section>;
-        )}{/* Category Filter */}
+        )}
+;
+        {/* Category Filter */}
         <section className="py-12 bg-black/50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="flex flex-wrap justify-center gap-4">;
-              {categories.map((category) => (<button;
+              {categories.map((category) => (;
+                <button;
                   key={category.name}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${category.active;
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${;
+                    category.active;
                       ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white';
                       :'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
                   }`}
@@ -108,7 +251,9 @@ export default function News() {const featuredNews = [;
               ))}
             </div>;
           </section>;
-        )}{/* News Grid */}
+        )}
+;
+        {/* News Grid */}
               viewport={{ once:true }}
               className="text-center mb-16";
             >;
@@ -118,8 +263,11 @@ export default function News() {const featuredNews = [;
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
                 Stay updated with our latest developments and breakthroughs;
               </p>;
-            </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {newsArticles.filter(article => !article.featured).map((article, index) => (<motion.article;
+            </motion.div>;
+            ;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {newsArticles.filter(article => !article.featured).map((article, index) => (;
+                <motion.article;
                   key={article.id}
                   initial={{ opacity:0, y:30 }}
                   whileInView={{ opacity:1, y:0 }}
@@ -160,7 +308,8 @@ export default function News() {const featuredNews = [;
                       </div>;
                     </div>;
                     <div className="flex flex-wrap gap-2 mb-4">;
-                      {article.tags.slice(0, 2).map((tag) => (<span;
+                      {article.tags.slice(0, 2).map((tag) => (;
+                        <span;
                           key={tag}
                           className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30";
                         >;
@@ -204,7 +353,9 @@ export default function News() {const featuredNews = [;
                 Stay updated with the latest developments, breakthroughs, and innovations ;
                 from Zion Tech Group and the technology industry.;
               </p>;
-            </motion.div>;{/* Category Filter */}
+            </motion.div>;
+;
+        {/* Category Filter */}
         <section className="py-10 px-4">;
           <div className="container mx-auto max-w-6xl">;
             <motion.div;
@@ -213,37 +364,187 @@ export default function News() {const featuredNews = [;
               transition={{ duration:0.8, delay:0.2 }}
               className="flex flex-wrap justify-center gap-4";
             >;
-              {categories.map((category, index) => (<button;
+              {categories.map((category, index) => (;
+                <button;
                   key={category}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${category === "All News";
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${;
+                    category === "All News";
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white";
                       :"bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
-import React, { useState } from 'react',import { motion } from 'framer-motion',import {Search, Calendar, Clock, User, Tag,ArrowRight, ExternalLink, TrendingUp,BookOpen, Globe, Video;
-} from 'lucide-react',export default function News() {const [searchTerm, setSearchTerm] = useState(''),const [selectedCategory, setSelectedCategory]  = useState('all'),const categories = [;
-    { id:'all', name:'All News', count:24 },{ id:'ai', name:'AI & Consciousness', count:8 },{ id:'quantum', name:'Quantum Computing', count:6 },{ id:'enterprise', name:'Enterprise IT', count:5 },{ id:'research', name:'Research & Development', count:3 },{ id:'industry', name:'Industry Insights', count:2 }
-  ],const featuredNews = [;
-    {id:1,title:'Zion Tech Group Launches Revolutionary AI Consciousness Platform',excerpt:'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',category:'ai',author:'Dr. Sarah Chen',date:'2024-01-15',readTime:'5 min read',image:'/images/news/ai-consciousness-launch.jpg',featured:true,tags:['AI ConsciousnessPlatform Launch', 'Innovation'];
-    },{id:2,title:'Quantum Computing Breakthrough:Achieving 1000+ Qubit Stability',excerpt:'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',category:'quantum',author:'Prof. Michael Rodriguez',date:'2024-01-12',readTime:'7 min read',image:'/images/news/quantum-breakthrough.jpg',featured:true,tags:['Quantum ComputingResearch', 'Breakthrough'];
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
+import { ;
+  Search, Calendar, Clock, User, Tag, ;
+  ArrowRight, ExternalLink, TrendingUp, ;
+  BookOpen, Globe, Video;
+} from 'lucide-react',;
+import Link from "Link";
+;
+export default function News() {;
+  const [searchTerm, setSearchTerm] = useState(''),;
+  const [selectedCategory, setSelectedCategory] = useState('all'),;
+;
+  const categories = [;
+    { id:'all', name:'All News', count:24 },;
+    { id:'ai', name:'AI & Consciousness', count:8 },;
+    { id:'quantum', name:'Quantum Computing', count:6 },;
+    { id:'enterprise', name:'Enterprise IT', count:5 },;
+    { id:'research', name:'Research & Development', count:3 },;
+    { id:'industry', name:'Industry Insights', count:2 }
+  ],;
+;
+  const featuredNews = [;
+    {;
+      id:1,;
+      title:'Zion Tech Group Launches Revolutionary AI Consciousness Platform',;
+      excerpt:'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',;
+      category:'ai',;
+      author:'Dr. Sarah Chen',;
+      date:'2024-01-15',;
+      readTime:'5 min read',;
+      image:'/images/news/ai-consciousness-launch.jpg',;
+      featured:true,;
+      tags:['AI ConsciousnessPlatform Launch', 'Innovation'];
+    },;
+    {;
+      id:2,;
+      title:'Quantum Computing Breakthrough:Achieving 1000+ Qubit Stability',;
+      excerpt:'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',;
+      category:'quantum',;
+      author:'Prof. Michael Rodriguez',;
+      date:'2024-01-12',;
+      readTime:'7 min read',;
+      image:'/images/news/quantum-breakthrough.jpg',;
+      featured:true,;
+      tags:['Quantum ComputingResearch', 'Breakthrough'];
     }
-  ],const latestNews = [;
-    {id:3,title:'Enterprise AI Adoption:Trends and Best Practices for 2024',excerpt:'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.',category:'enterprise',author:'Jennifer Kim',date:'2024-01-10',readTime:'4 min read',image:'/images/news/enterprise-ai-trends.jpg',tags:['Enterprise AIBest Practices', '2024 Trends'];
-    },{id:4,title:'The Future of Autonomous Business Systems',excerpt:'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.',category:'research',author:'Dr. Alex Thompson',date:'2024-01-08',readTime:'6 min read',image:'/images/news/autonomous-systems.jpg',tags:['Autonomous SystemsFuture of Work', 'Innovation'];
-    },{id:5,title:'Cybersecurity in the Age of AI:New Threats and Solutions',excerpt:'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.',category:'enterprise',author:'Marcus Johnson',date:'2024-01-05',readTime:'5 min read',image:'/images/news/ai-cybersecurity.jpg',tags:['CybersecurityAI Security', 'Digital Protection'];
-    },{id:6,title:'Quantum Machine Learning:Bridging Two Revolutionary Technologies',excerpt:'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',category:'quantum',author:'Dr. Elena Petrova',date:'2024-01-03',readTime:'8 min read',image:'/images/news/quantum-ml.jpg',tags:['Quantum MLResearch', 'Technology Convergence'];
+  ],;
+;
+  const latestNews = [;
+    {;
+      id:3,;
+      title:'Enterprise AI Adoption:Trends and Best Practices for 2024',;
+      excerpt:'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.',;
+      category:'enterprise',;
+      author:'Jennifer Kim',;
+      date:'2024-01-10',;
+      readTime:'4 min read',;
+      image:'/images/news/enterprise-ai-trends.jpg',;
+      tags:['Enterprise AIBest Practices', '2024 Trends'];
+    },;
+    {;
+      id:4,;
+      title:'The Future of Autonomous Business Systems',;
+      excerpt:'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.',;
+      category:'research',;
+      author:'Dr. Alex Thompson',;
+      date:'2024-01-08',;
+      readTime:'6 min read',;
+      image:'/images/news/autonomous-systems.jpg',;
+      tags:['Autonomous SystemsFuture of Work', 'Innovation'];
+    },;
+    {;
+      id:5,;
+      title:'Cybersecurity in the Age of AI:New Threats and Solutions',;
+      excerpt:'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.',;
+      category:'enterprise',;
+      author:'Marcus Johnson',;
+      date:'2024-01-05',;
+      readTime:'5 min read',;
+      image:'/images/news/ai-cybersecurity.jpg',;
+      tags:['CybersecurityAI Security', 'Digital Protection'];
+    },;
+    {;
+      id:6,;
+      title:'Quantum Machine Learning:Bridging Two Revolutionary Technologies',;
+      excerpt:'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',;
+      category:'quantum',;
+      author:'Dr. Elena Petrova',;
+      date:'2024-01-03',;
+      readTime:'8 min read',;
+      image:'/images/news/quantum-ml.jpg',;
+      tags:['Quantum MLResearch', 'Technology Convergence'];
     }
-  ],const industryInsights = [;
-    {id:7,title:'The Rise of Conscious AI:Ethical Considerations and Business Impact',excerpt:'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.',category:'industry',author:'Dr. Robert Chang',date:'2024-01-01',readTime:'6 min read',tags:['AI EthicsBusiness Impact', 'Consciousness'];
-    },{id:8,title:'Micro-SaaS Revolution:How Small Teams Are Building Big Solutions',excerpt:'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.',category:'industry',author:'Lisa Wang',date:'2023-12-28',readTime:'4 min read',tags:['Micro-SaaSStartups', 'Software Industry'];
+  ],;
+;
+  const industryInsights = [;
+    {;
+      id:7,;
+      title:'The Rise of Conscious AI:Ethical Considerations and Business Impact',;
+      excerpt:'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.',;
+      category:'industry',;
+      author:'Dr. Robert Chang',;
+      date:'2024-01-01',;
+      readTime:'6 min read',;
+      tags:['AI EthicsBusiness Impact', 'Consciousness'];
+    },;
+    {;
+      id:8,;
+      title:'Micro-SaaS Revolution:How Small Teams Are Building Big Solutions',;
+      excerpt:'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.',;
+      category:'industry',;
+      author:'Lisa Wang',;
+      date:'2023-12-28',;
+      readTime:'4 min read',;
+      tags:['Micro-SaaSStartups', 'Software Industry'];
     }
   ],const upcomingEvents = [;
     {id:1,title:'AI Consciousness Summit 2024',type:'Conference',date:'2024-02-15',time:'9:00 AM - 6:00 PM',location:'San Francisco, CA',,description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
     },{id:2,title:'Quantum Computing Workshop',type:'Workshop',date:'2024-02-22',time:'1:00 PM - 5:00 PM',location:'Virtual',,description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',registration:'https://ziontechgroup.com/events/quantum-workshop';
+  ],;
+;
+  const upcomingEvents = [;
+    {;
+      id:1,;
+      title:'AI Consciousness Summit 2024',;
+      type:'Conference',;
+      date:'2024-02-15',;
+      time:'9:00 AM - 6:00 PM',;
+      location:'San Francisco, CA',,
+  description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+      registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
+    },;
+    {;
+      id:2,;
+      title:'Quantum Computing Workshop',;
+      type:'Workshop',;
+      date:'2024-02-22',;
+      time:'1:00 PM - 5:00 PM',;
+      location:'Virtual',,
+  description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+      registration:'https://ziontechgroup.com/events/quantum-workshop';
     }
-  ],const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  ],;
+;
+  const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {;
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,return matchesSearch && matchesCategory,}),const formatDate = (dateString:string) => {return new Date(dateString).toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric';
-    }),},const getCategoryColor = (category:string) => {const colors = {ai:'from-cyan-500 to-blue-500',quantum:'from-purple-500 to-pink-500',enterprise:'from-green-500 to-emerald-500',research:'from-orange-500 to-red-500',industry:'from-indigo-500 to-purple-500';
-    },return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600',},return (<div className="min-h-screen bg-black text-white">;
+                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,;
+    return matchesSearch && matchesCategory,;
+  }),;
+;
+  const formatDate = (dateString:string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year:'numeric',;
+      month:'long',;
+      day:'numeric';
+    }),;
+  },;
+;
+  const getCategoryColor = (category:string) => {;
+    const colors = {;
+      ai:'from-cyan-500 to-blue-500',;
+      quantum:'from-purple-500 to-pink-500',;
+      enterprise:'from-green-500 to-emerald-500',;
+      research:'from-orange-500 to-red-500',;
+      industry:'from-indigo-500 to-purple-500';
+    },;
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600',;
+  },;
+;
+  return (;
+    <div className="min-h-screen bg-black text-white">;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
@@ -261,8 +562,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             transition={{ duration:0.8, delay:0.2 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12";
           >;
-            Stay updated with the latest developments in AI consciousness, quantum computing,and emerging technologies from Zion Tech Group.;
-          </motion.p>;{/* Search and Filter */}
+            Stay updated with the latest developments in AI consciousness, quantum computing, ;
+            and emerging technologies from Zion Tech Group.;
+          </motion.p>;
+          ;
+          {/* Search and Filter */}
           <motion.div;
             initial={{ opacity:0, y:20 }}
             animate={{ opacity:1, y:0 }}
@@ -278,27 +582,49 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300";
               />;
-            </div>;<div className="flex flex-wrap gap-3 justify-center">;
-              {categories.map((category) => (<button;
+            </div>;
+            ;
+            <div className="flex flex-wrap gap-3 justify-center">;
+              {categories.map((category) => (;
+                <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.id;
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
+                    selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
                       :'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white';
                   }`}
                 >;
-                  {category.name} ({category.count})</button>;
+                  {category.name} ({category.count});
+                </button>;
               ))}
             </div>;
           </motion.div>;
         </div>;
-      </section>;{/* Featured News Section */}
+      </section>;
+;
+      {/* Featured News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.h2 ;
-    'All NewsCompany News','PartnershipsAI & Ethics','Quantum TechnologySpace Technology','Micro SAASIT Services','MetaverseIndustry Insights';
-  ],const formatDate = (dateString:string) => {const date = new Date(dateString),return date.toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric';
-    }),},return (<div className="min-h-screen bg-black text-white">;
+    'All NewsCompany News',;
+    'PartnershipsAI & Ethics',;
+    'Quantum TechnologySpace Technology',;
+    'Micro SAASIT Services',;
+    'MetaverseIndustry Insights';
+  ],;
+;
+  const formatDate = (dateString:string) => {;
+    const date = new Date(dateString),;
+    return date.toLocaleDateString('en-US', {;
+      year:'numeric',;
+      month:'long',;
+      day:'numeric';
+    }),;
+  },;
+;
+  return (;
+    <div className="min-h-screen bg-black text-white">;
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>;
@@ -334,13 +660,17 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             </a>;
           </motion.div>;
         </div>;
-      </section>;{/* Category Filter */}
+      </section>;
+;
+      {/* Category Filter */}
       <section className="py-8 border-b border-gray-800">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap gap-2 justify-center">;
-            {categories.map((category, index) => (<button;
+            {categories.map((category, index) => (;
+              <button;
                 key={index}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${index === 0 ;
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
+                  index === 0 ;
                     ? 'bg-purple-500 text-white' ;
                     :'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
                 }`}
@@ -350,7 +680,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Featured News */}
+      </section>;
+;
+      {/* Featured News */}
       <section id="featured" className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div ;
@@ -366,8 +698,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Our most important announcements and breakthrough developments.;
             </p>;
-          </motion.div>;<div className="grid lg:grid-cols-3 gap-8">;
-            {featuredNews.map((article, index) => (<motion.article ;
+          </motion.div>;
+          ;
+          <div className="grid lg:grid-cols-3 gap-8">;
+            {featuredNews.map((article, index) => (;
+              <motion.article ;
                 key={article.id}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -402,7 +737,8 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                     </span>;
                   </div>;
                   <div className="flex flex-wrap gap-2 mb-4">;
-                    {article.tags.map((tag, idx) => (<span key={idx} className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">;
+                    {article.tags.map((tag, idx) => (;
+                      <span key={idx} className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">;
                         {tag}
                       </span>;
                     ))}
@@ -416,7 +752,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Recent News */}
+      </section>;
+;
+      {/* Recent News */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div ;
@@ -432,8 +770,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Stay current with our latest developments and industry updates.;
             </p>;
-          </motion.div>;<div className="grid lg:grid-cols-2 gap-8">;
-            {recentNews.map((article, index) => (<motion.article ;
+          </motion.div>;
+          ;
+          <div className="grid lg:grid-cols-2 gap-8">;
+            {recentNews.map((article, index) => (;
+              <motion.article ;
                 key={article.id}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -464,7 +805,8 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                   </span>;
                 </div>;
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {article.tags.map((tag, idx) => (<span key={idx} className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">;
+                  {article.tags.map((tag, idx) => (;
+                    <span key={idx} className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">;
                       {tag}
                     </span>;
                   ))}
@@ -477,7 +819,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Industry Insights */}
+      </section>;
+;
+      {/* Industry Insights */}
       <section id="insights" className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion.div ;
@@ -493,8 +837,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Deep analysis and thought leadership on emerging technologies and industry trends.;
             </p>;
-          </motion.div>;<div className="grid lg:grid-cols-3 gap-8">;
-            {industryInsights.map((insight, index) => (<motion.div ;
+          </motion.div>;
+          ;
+          <div className="grid lg:grid-cols-3 gap-8">;
+            {industryInsights.map((insight, index) => (;
+              <motion.div ;
                 key={index}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -515,7 +862,8 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                   {insight.excerpt}
                 </p>;
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {insight.tags.map((tag, idx) => (<span key={idx} className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">;
+                  {insight.tags.map((tag, idx) => (;
+                    <span key={idx} className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded">;
                       {tag}
                     </span>;
                   ))}
@@ -528,7 +876,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Newsletter Signup */}
+      </section>;
+;
+      {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">;
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div ;
@@ -555,7 +905,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             </div>;
           </motion.div>;
         </div>;
-      </section>;}
+      </section>;
+;
+}
                     <div className="flex items-center gap-3 mb-4">;
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>;
                         {categories.find(c => c.id === article.category)?.name}
@@ -564,11 +916,17 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                         <Calendar className="w-4 h-4" />;
                         {formatDate(article.date)}
                       </span>;
-                    </div>;<h3 className="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300">;
+                    </div>;
+                    ;
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300">;
                       {article.title}
-                    </h3>;<p className="text-gray-300 mb-4 leading-relaxed">;
+                    </h3>;
+                    ;
+                    <p className="text-gray-300 mb-4 leading-relaxed">;
                       {article.excerpt}
-                    </p>;<div className="flex items-center justify-between">;
+                    </p>;
+                    ;
+                    <div className="flex items-center justify-between">;
                       <div className="flex items-center gap-4 text-sm text-gray-400">;
                         <span className="flex items-center gap-1">;
                           <User className="w-4 h-4" />;
@@ -578,7 +936,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                           <Clock className="w-4 h-4" />;
                           {article.readTime}
                         </span>;
-                      </div>;<ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />;
+                      </div>;
+                      ;
+                      <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />;
                     </div>;
                   </div>;
                 </div>;
@@ -586,7 +946,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Latest News Section */}
+      </section>;
+;
+      {/* Latest News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.h2 ;
@@ -597,8 +959,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             className="text-4xl md:text-5xl font-bold text-center mb-16";
           >;
             Latest News;
-          </motion.h2>;<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredNews.slice(2, 8).map((article, index) => (<motion.article;
+          </motion.h2>;
+          ;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {filteredNews.slice(2, 8).map((article, index) => (;
+              <motion.article;
                 key={article.id}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -609,16 +974,24 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                 <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">;
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">;
                     <BookOpen className="w-12 h-12 text-cyan-400" />;
-                  </div>;<div className="p-6">;
+                  </div>;
+                  ;
+                  <div className="p-6">;
                     <div className="flex items-center gap-2 mb-3">;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>;
                         {categories.find(c => c.id === article.category)?.name}
                       </span>;
-                    </div>;<h3 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">;
+                    </div>;
+                    ;
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">;
                       {article.title}
-                    </h3>;<p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">;
+                    </h3>;
+                    ;
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">;
                       {article.excerpt}
-                    </p>;<div className="flex items-center justify-between text-sm text-gray-400">;
+                    </p>;
+                    ;
+                    <div className="flex items-center justify-between text-sm text-gray-400">;
                       <span className="flex items-center gap-1">;
                         <User className="w-4 h-4" />;
                         {article.author}
@@ -634,7 +1007,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Upcoming Events Section */}
+      </section>;
+;
+      {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.h2 ;
@@ -645,8 +1020,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             className="text-4xl md:text-5xl font-bold text-center mb-16";
           >;
             Upcoming Events;
-          </motion.h2>;<div className="grid md:grid-cols-2 gap-8">;
-            {upcomingEvents.map((event, index) => (<motion.div;
+          </motion.h2>;
+          ;
+          <div className="grid md:grid-cols-2 gap-8">;
+            {upcomingEvents.map((event, index) => (;
+              <motion.div;
                 key={event.id}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -657,16 +1035,24 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                 <div className="flex items-start gap-4">;
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">;
                     {event.type === 'Conference' ? <Globe className="w-8 h-8" /> :<Video className="w-8 h-8" />}
-                  </div>;<div className="flex-1">;
+                  </div>;
+                  ;
+                  <div className="flex-1">;
                     <div className="flex items-center gap-2 mb-2">;
                       <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">;
                         {event.type}
                       </span>;
-                    </div>;<h3 className="text-xl font-bold mb-3">;
+                    </div>;
+                    ;
+                    <h3 className="text-xl font-bold mb-3">;
                       {event.title}
-                    </h3>;<p className="text-gray-300 mb-4 leading-relaxed">;
+                    </h3>;
+                    ;
+                    <p className="text-gray-300 mb-4 leading-relaxed">;
                       {event.description}
-                    </p>;<div className="space-y-2 text-sm text-gray-400 mb-4">;
+                    </p>;
+                    ;
+                    <div className="space-y-2 text-sm text-gray-400 mb-4">;
                       <div className="flex items-center gap-2">;
                         <Calendar className="w-4 h-4" />;
                         {formatDate(event.date)} at {event.time}
@@ -675,7 +1061,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                         <Globe className="w-4 h-4" />;
                         {event.location}
                       </div>;
-                    </div>;<a;
+                    </div>;
+                    ;
+                    <a;
                       href={event.registration}
                       target="_blank";
                       rel="noopener noreferrer";
@@ -690,7 +1078,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             ))}
           </div>;
         </div>;
-      </section>;{/* Newsletter Section */}
+      </section>;
+;
+      {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
@@ -705,7 +1095,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             </h2>;
             <p className="text-xl text-gray-300 mb-8">;
               Get the latest news, insights, and updates delivered directly to your inbox.;
-            </p>;<div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+            </p>;
+            ;
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
               <input;
                 type="email";
                 placeholder="Enter your email address";
@@ -714,12 +1106,16 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
                 Subscribe;
               </button>;
-            </div>;<p className="text-sm text-gray-400 mt-4">;
+            </div>;
+            ;
+            <p className="text-sm text-gray-400 mt-4">;
               No spam, unsubscribe at any time. We respect your privacy.;
             </p>;
           </motion.div>;
         </div>;
-      </section>;<div className="max-w-7xl mx-auto">;
+      </section>;
+;
+          <div className="max-w-7xl mx-auto">;
             <motion.div;
               initial={{ opacity:0, y:20 }}
               animate={{ opacity:1, y:0 }}
@@ -730,8 +1126,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
                 Stay updated with our most recent developments and announcements;
               </p>;
-            </motion.div>;<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {newsArticles.filter(article => !article.featured).map((article, index) => (<motion.article;
+            </motion.div>;
+;
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {newsArticles.filter(article => !article.featured).map((article, index) => (;
+                <motion.article;
                   key={article.title}
                   initial={{ opacity:0, y:20 }}
                   animate={{ opacity:1, y:0 }}
@@ -763,7 +1162,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               ))}
             </div>;
           </div>;
-        </section>;{/* Newsletter Signup */}
+        </section>;
+;
+        {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
                 Stay Updated;
               </h2>;
@@ -790,8 +1191,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                   Subscribe;
                 </button>;
               </div>;
-            </motion.div>;<div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pressReleases.map((release, index) => (<motion.article;
+            </motion.div>;
+;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+              {pressReleases.map((release, index) => (;
+                <motion.article;
                   key={release.title}
                   initial={{ opacity:0, y:20 }}
                   whileInView={{ opacity:1, y:0 }}
@@ -819,7 +1223,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               ))}
             </div>;
           </div>;
-        </section>;{/* News Categories */}
+        </section>;
+;
+        {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
@@ -835,8 +1241,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Explore news by category to find updates in your areas of interest.;
               </p>;
-            </motion.div>;<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">;
-              {newsCategories.map((category, index) => (<motion.div;
+            </motion.div>;
+;
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">;
+              {newsCategories.map((category, index) => (;
+                <motion.div;
                   key={category.name}
                   initial={{ opacity:0, y:20 }}
                   whileInView={{ opacity:1, y:0 }}
@@ -857,7 +1266,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               ))}
             </div>;
           </div>;
-        </section>;{/* Recent News */}
+        </section>;
+;
+        {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
@@ -873,8 +1284,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Stay updated with our latest announcements and developments.;
               </p>;
-            </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {recentNews.map((news, index) => (<motion.article;
+            </motion.div>;
+;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+              {recentNews.map((news, index) => (;
+                <motion.article;
                   key={news.title}
                   initial={{ opacity:0, y:20 }}
                   whileInView={{ opacity:1, y:0 }}
@@ -908,7 +1322,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
               ))}
             </div>;
           </div>;
-        </section>;{/* Media Contact */}
+        </section>;
+;
+        {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
@@ -921,7 +1337,8 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                 Media Inquiries;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
-                For press inquiries, media interviews, or additional information,please contact our communications team.;
+                For press inquiries, media interviews, or additional information, ;
+                please contact our communications team.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a;
@@ -978,7 +1395,8 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
         </div>;
       </section>;
     </div>;
-  )}
+  );
+}
       {/* Call to Action */}
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -1007,23 +1425,91 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
         </div>;
       </section>;
     </div>;
-  )}
-      title:"Partnership with TechCorp Announced for Cloud Infrastructure",excerpt:"Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",date:"2025-01-18",category:"Partnerships",author:"Sarah Chen",readTime:"2 min read",image:"";
-    },{id:3,title:"AI Ethics Guidelines Released for Responsible Development",excerpt:"Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.",date:"2025-01-17",category:"Innovation",author:"Dr. Emily Watson",readTime:"4 min read",image:"";
-    },{id:4,title:"New Office Opening in Singapore",excerpt:"Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.",date:"2025-01-16",category:"Company News",author:"Marcus Rodriguez",readTime:"2 min read",image:"";
-    },{id:5,title:"Machine Learning Model Achieves 99.7% Accuracy",excerpt:"Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.window.performance.",date:"2025-01-15",category:"Technology",author:"Dr. James Wilson",readTime:"5 min read",image:"";
-    },{id:6,title:"Annual Sustainability Report Published",excerpt:"Comprehensive overview of our environmental impact and commitment to sustainable technology development.",date:"2025-01-14",category:"Sustainability",author:"Lisa Park",readTime:"6 min read",image:"";
-    },{id:7,title:"Customer Success Story:Retail Automation",excerpt:"How we helped a major retailer increase efficiency by 300% through intelligent automation systems.",date:"2025-01-13",category:"Case Studies",author:"Alex Thompson",readTime:"4 min read",image:"";
-    },{id:8,title:"New Research Paper on Autonomous Systems",excerpt:"Published in leading AI journal, our research explores the future of self-managing technology infrastructure.",date:"2025-01-12",category:"Research",author:"Prof. Maria Garcia",readTime:"7 min read",image:"";
+  );
+}
+      title:"Partnership with TechCorp Announced for Cloud Infrastructure",;
+      excerpt:"Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",;
+      date:"2025-01-18",;
+      category:"Partnerships",;
+      author:"Sarah Chen",;
+      readTime:"2 min read",;
+      image:"";
+    },;
+    {;
+      id:3,;
+      title:"AI Ethics Guidelines Released for Responsible Development",;
+      excerpt:"Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.",;
+      date:"2025-01-17",;
+      category:"Innovation",;
+      author:"Dr. Emily Watson",;
+      readTime:"4 min read",;
+      image:"";
+    },;
+    {;
+      id:4,;
+      title:"New Office Opening in Singapore",;
+      excerpt:"Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.",;
+      date:"2025-01-16",;
+      category:"Company News",;
+      author:"Marcus Rodriguez",;
+      readTime:"2 min read",;
+      image:"";
+    },;
+    {;
+      id:5,;
+      title:"Machine Learning Model Achieves 99.7% Accuracy",;
+      excerpt:"Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.window.performance.",;
+      date:"2025-01-15",;
+      category:"Technology",;
+      author:"Dr. James Wilson",;
+      readTime:"5 min read",;
+      image:"";
+    },;
+    {;
+      id:6,;
+      title:"Annual Sustainability Report Published",;
+      excerpt:"Comprehensive overview of our environmental impact and commitment to sustainable technology development.",;
+      date:"2025-01-14",;
+      category:"Sustainability",;
+      author:"Lisa Park",;
+      readTime:"6 min read",;
+      image:"";
+    },;
+    {;
+      id:7,;
+      title:"Customer Success Story:Retail Automation",;
+      excerpt:"How we helped a major retailer increase efficiency by 300% through intelligent automation systems.",;
+      date:"2025-01-13",;
+      category:"Case Studies",;
+      author:"Alex Thompson",;
+      readTime:"4 min read",;
+      image:"";
+    },;
+    {;
+      id:8,;
+      title:"New Research Paper on Autonomous Systems",;
+      excerpt:"Published in leading AI journal, our research explores the future of self-managing technology infrastructure.",;
+      date:"2025-01-12",;
+      category:"Research",;
+      author:"Prof. Maria Garcia",;
+      readTime:"7 min read",;
+      image:"";
     }
-  ],const categories  = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],return (<>;
+  ],;
+;
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],;
+;
+  return (;
+    <>;
       <Head>;
         <title>News | Zion Tech Group - Latest Updates & Insights</title>;
         <meta name="description" content="Stay informed with the latest news, company updates, and industry insights from Zion Tech Group." />;
         <meta property="og:title" content="News - Zion Tech Group" />;
         <meta property="og:description" content="Latest company news, partnerships, and technology insights." />;
         <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+      </Head>;
+      ;
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
@@ -1032,12 +1518,16 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
             <p className="text-xl text-white/80 max-w-3xl mx-auto">;
               Stay updated with company news, partnerships, innovations, and industry insights;
             </p>;
-          </section>;<section className="mx-auto max-w-6xl">;
+          </section>;
+;
+          <section className="mx-auto max-w-6xl">;
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-12">;
-              {categories.map((category) => (<button;
+              {categories.map((category) => (;
+                <button;
                   key={category}
-                  className={`px-4 py-2 rounded-full border transition-all duration-200 ${category === "All";
+                  className={`px-4 py-2 rounded-full border transition-all duration-200 ${;
+                    category === "All";
                       ? "bg-cyan-400 text-white border-cyan-400";
                       :"bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:border-cyan-400/50";
                   }`}
@@ -1045,8 +1535,11 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                   {category}
                 </button>;
               ))}
-            </div>;{/* Featured Article */}
-            {newsArticles.filter(article => article.featured).map((article) => (<div key={article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">;
+            </div>;
+;
+            {/* Featured Article */}
+            {newsArticles.filter(article => article.featured).map((article) => (;
+              <div key={article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">;
                 <div className="flex items-start gap-6">;
                   <div className="text-6xl">{article.image}</div>;
                   <div className="flex-1">;
@@ -1077,9 +1570,12 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                   </div>;
                 </div>;
               </div>;
-            ))}{/* News Grid */}
+            ))}
+;
+            {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {newsArticles.filter(article => !article.featured).map((article) => (<article key={article.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">;
+              {newsArticles.filter(article => !article.featured).map((article) => (;
+                <article key={article.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105">;
                   <div className="text-4xl mb-4 text-center">{article.image}</div>;
                   <div className="mb-3">;
                     <span className="inline-block px-2 py-1 bg-white/20 text-white/80 text-xs rounded-full border border-white/30">;
@@ -1104,7 +1600,9 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
                   </button>;
                 </article>;
               ))}
-            </div>;{/* Newsletter Signup */}
+            </div>;
+;
+            {/* Newsletter Signup */}
             <div className="text-center mt-16">;
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
                 <h2 className="text-2xl font-bold mb-4 text-cyan-400">Stay in the Loop</h2>;
@@ -1127,4 +1625,5 @@ import React, { useState } from 'react',import { motion } from 'framer-motion',i
         </main>;
       </div>;
     </>;
-  )}
+  );
+}

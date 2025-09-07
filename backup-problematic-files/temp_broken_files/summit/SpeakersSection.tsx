@@ -1,6 +1,28 @@
 import Image from "next/image",import { Twitter, Linkedin   } from 'lucide-react';interface Speaker  {name:string,title:string,avatar:string,twitter?:string,linkedin?:string;
 }const speakers:Speaker[] = [;
   {name:'Alex Zion',title:'Founder & CEO',avatar:'https://placehold.co/100x100',twitter:'#',linkedin:'#'}],export function SpeakersSection() {return (<section className="py-12 bg-zion-blue-dark text-white" id="speakers">;
+import Image from "next/image";
+import { Twitter, Linkedin } from 'lucide-react';
+;
+interface Speaker {;
+  name:string,;
+  title:string,;
+  avatar:string,;
+  twitter?:string,;
+  linkedin?:string;
+}
+;
+const speakers:Speaker[] = [;
+  {;
+    name:'Alex Zion',;
+    title:'Founder & CEO',;
+    avatar:'https://placehold.co/100x100',;
+    twitter:'#',;
+    linkedin:'#'}],;
+;
+export function SpeakersSection() {;
+  return (;
+    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">;
       <div className="container mx-auto px-4">;
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>;
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">;

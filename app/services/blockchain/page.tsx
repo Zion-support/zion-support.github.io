@@ -1,31 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: 'Blockchain - Zion Tech Group',
   description: 'Professional blockchain solutions for your business needs.',
-=======
-=======
 import { Metadata } from 'next';
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import React from 'react';
 
 export const metadata: Metadata = { 
   title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Blockchain Solutions | Zion Tech Group',
+  description: 'Professional blockchain development services including smart contracts, DeFi, NFTs, and Web3 applications.',
+  keywords: 'blockchain, smart contracts, DeFi, NFTs, Web3, cryptocurrency, ethereum, polygon'
 };
 
 export default function BlockchainPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -37,7 +33,6 @@ export default function BlockchainPage() {
             and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
-=======
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -94,32 +89,32 @@ export default function BlockchainPage() {
             price="$10,000-30,000"
             icon="🪙"
           />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Blockchain Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with cutting-edge blockchain technology. We build secure, scalable, and innovative blockchain solutions.
+          </p>
         </div>
-      </section>
 
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Blockchain Development Process</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <BlockchainProcessStep
-            step="1"
-            title="Concept & Design"
-            description="Define tokenomics, architecture, and technical specifications"
-          />
-          <BlockchainProcessStep
-            step="2"
-            title="Smart Contract Development"
-            description="Write, test, and optimize smart contracts for security and efficiency"
-          />
-          <BlockchainProcessStep
-            step="3"
-            title="Frontend & Integration"
-            description="Build user interfaces and integrate with blockchain networks"
-          />
-          <BlockchainProcessStep
-            step="4"
-            title="Testing & Deployment"
-            description="Comprehensive testing, auditing, and mainnet deployment"
-          />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">Smart Contracts</h3>
+            <p className="text-gray-600">Automate business processes with secure, self-executing smart contracts.</p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">DeFi Applications</h3>
+            <p className="text-gray-600">Build decentralized finance solutions for lending, trading, and yield farming.</p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">NFT Marketplaces</h3>
+            <p className="text-gray-600">Create and launch NFT platforms for digital art, collectibles, and more.</p>
+          </div>
         </div>
       </section>
 
@@ -225,7 +220,6 @@ export default function BlockchainPage() {
     </div>
   );
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 function BlockchainServiceCard({ title, description, features, price, icon }: {
   title: string;
@@ -285,8 +279,6 @@ function BlockchainTechStack({ title, technologies }: {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -314,8 +306,6 @@ function BlockchainTechStack({ title, technologies }: {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 
 function BlockchainUseCase({ title, description, examples, icon }: {
   title: string;
@@ -454,8 +444,62 @@ function CTASection() {
       <div className="mt-6 text-sm text-blue-100">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Blockchain Services
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Build the future of decentralized applications with our comprehensive blockchain development services. 
+          From smart contracts to DeFi protocols, we help you create secure, scalable Web3 solutions.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Services Inquiry"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Start Your Blockchain Project
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
       </div>
     </div>
   );
 }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Blockchain Services
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Build the future of decentralized applications with our comprehensive blockchain development services. 
+          From smart contracts to DeFi protocols, we help you create secure, scalable Web3 solutions.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Services Inquiry"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Start Your Blockchain Project
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+}
+

@@ -4,3 +4,14 @@ const Ai-powered-it-asset-management = ({ className }) => {return (<div classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const Ai-powered-it-asset-management = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Ai-powered-it-asset-management</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

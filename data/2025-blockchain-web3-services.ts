@@ -501,16 +501,19 @@ export interface BlockchainWeb3Service {;
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
 
 
   {
 
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'
+=======
+  {
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ],
     realImplementation: true,
-
-    implementationDetails:
-      'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
+    implementationDetails: "implementationDetails",
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.'
     useCases: [
       'Yield farming optimization'
@@ -525,6 +528,7 @@ export interface BlockchainWeb3Service {;
     ]
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
+<<<<<<< HEAD
     compliance: [
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -617,6 +621,10 @@ export interface BlockchainWeb3Service {;
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+=======
+    compliance: [];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
+      'Community support, developer documentation, custom development services, and enterprise solutions.',    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
     name: 'Web3 Social Media Platform',
@@ -976,6 +984,11 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     rating: 4.6,;
     reviews: 18000;
     rating: 4.6,
+<<<<<<< HEAD
     reviews: 18000;
   }
 ];
+=======
+    reviews: 18000;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -41,6 +41,8 @@ export default function AIBusinessManagerPage() {return (;
                 with unprecedented efficiency and intelligence.;
               </p>;<p className="text - lg text - gray - 300 leading - relaxed">;
                 From strategic planning to daily operations, the system continuously learns,adapts, and optimizes every aspect of your business, ensuring maximum;
+              </p>;
+                adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
             </div>;
@@ -328,6 +330,16 @@ export default function AIBusinessManagerPage() {return (;
             <div className="card">;<h3 className="text - lg font - semibold mb - 2">Healthcare</h3>;
               <p className="text - gray - 400 text - sm">;
                 Patient scheduling, resource allocation, treatment optimization,and administrative efficiency.;
+            <div className="card">;
+                and regulatory compliance automation.;
+              </p>;
+            </div>;
+            <div className="card">;
+                and supply chain management.;
+              </p>;
+            </div>;
+            <div className="card">;
+                and administrative efficiency.;
               </p>;
             </div>;
             <div className="card">;
@@ -386,3 +398,6 @@ export default function AIBusinessManagerPage() {return (;
         </section>;
       </div>;
     </div>)}
+    </div>);
+}
+

@@ -1,6 +1,18 @@
 
 import { Button } from "@/components/ui/button",import { Download } from "lucide-react",import type { QuoteRequest } from "@/types/quotes",interface ExportToCSVProps  {quotes:QuoteRequest[],filename?:string;
 }export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVProps) => {const handleExport = () => {// Define CSV Headers;
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes",;
+;
+interface ExportToCSVProps {;
+  quotes:QuoteRequest[],;
+  filename?:string;
+}
+;
+export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVProps) => {;
+  const handleExport = () => {;
+    // Define CSV Headers;
     const headers = [;
       'IDTalent Name','Requester NameRequester Email','Project NameProject Summary','BudgetTimeline','StatusCreated Date';
     ],// Format quote data for CSV;
@@ -37,3 +49,11 @@ quote.budget min;
 }- $$ {quote.budget max;
 }`: quote.budget min ? `$$ {quote.budget min;
 }` : 'Not specified')quote.timeline;
+quote.budget min 
+}- $$ {
+  quote.budget max 
+}`: quote.budget min ? `$$ {
+  quote.budget min 
+}` : 'Not specified');
+quote.timeline;
+

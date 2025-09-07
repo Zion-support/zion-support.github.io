@@ -1,6 +1,29 @@
 
 import { useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Input } from "@/components/ui/input",import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",interface ReferralLinkProps  {referralLink:string,onCopy:() => void,onShare:(platform:'twitter' | 'facebook' | 'linkedin') => void;
 }export function ReferralLink() {const [copied, setCopied]  = useState(false),const handleCopy = () => {onCopy(),setCopied(true),setTimeout(() => setCopied(false), 2000),},return (<Card className="mt-6">;
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",;
+;
+interface ReferralLinkProps {;
+  referralLink:string,;
+  onCopy:() => void,;
+  onShare:(platform:'twitter' | 'facebook' | 'linkedin') => void;
+}
+;
+export function ReferralLink({ referralLink, onCopy, onShare } ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false),;
+  ;
+  const handleCopy = () => {;
+    onCopy(),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000),;
+  },;
+;
+  return (;
+    <Card className="mt-6">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Link className="h-5 w-5" />;
@@ -67,3 +90,15 @@ import { useState } from "react",import { Button } from "@/components/ui/button"
 onCopy: () => void;
 onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 }export function ReferralLink () {const [copied, setCopied] = useState (false)const handleCopy = () => {onCopy ()setCopied (true)setTimeout ( () => setCopied (false), 2000)}
+onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void 
+}export function ReferralLink ({
+  referralLink, onCopy, onShare 
+}: ReferralLinkProps) {
+  const [copied, setCopied] = useState (false);
+const handleCopy = () => {
+  onCopy ();
+setCopied (true);
+setTimeout ( () => setCopied (false), 2000) 
+}
+}
+

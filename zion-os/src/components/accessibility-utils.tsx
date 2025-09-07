@@ -19,6 +19,8 @@ function LiveRegion() {return (<div;
       role={role}
       aria - live={aria_live}
       className="sr - only";
+    </a>);
+}
     <div;
       role={role}
       aria - live={aria_live}
@@ -53,6 +55,22 @@ export function ProgressIndicator() {const percentage  = Math.round((value / max
           className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
             e.preventDefault()lastElement.focus()}
         } else {if (document.activeElement === lastElement) {e.preventDefault()firstElement.focus()}
+    </div>);
+}
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === "Tab") {;
+        if (e.shiftKey) {;
+          if (document.activeElement === firstElement) {;
+            firstElement.focus();
+          }
+        }
+      }
+  return (;
+    <div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (;
+        <div key={index}>{announcement}</div>;
+      ))}
+    </div>;
   );
 }
     const handleKeyDown = (e: KeyboardEvent) => {;
@@ -189,6 +207,7 @@ export function CollapsibleSection() {const [isExpanded, setIsExpanded] = useSta
         aria - hidden={!is_expanded}
       >;
         <div className="px - 4 pb - 3">;
+      <div;
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -217,6 +236,8 @@ export function Tooltip() {const [isVisible, setIsVisible] = useState(false),con
         {children}
       </div>;
       {is_visible && (<div;
+      {is_visible && (
+        <div;
           id={tooltip_id}
           className={`absolute z - 50 px - 2 py - 1 text - sm text - white bg - gray - 900 rounded shadow - lg ${position_classes[position]}`}
           role="tooltip";
@@ -226,3 +247,7 @@ export function Tooltip() {const [isVisible, setIsVisible] = useState(false),con
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
         </div>)}
     </div>)}
+        </div>)}
+    </div>);
+}
+

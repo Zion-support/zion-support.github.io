@@ -4,3 +4,14 @@ const AIContentCreationRevolution.js = ({ className }) => {return (<div classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIContentCreationRevolution.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIContentCreationRevolution.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

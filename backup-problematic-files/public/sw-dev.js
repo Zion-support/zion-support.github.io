@@ -18,6 +18,20 @@ self && self.addEventListener(activate', (event) => {'];
             cache && cache.add(url).catch(error => {';
               // // // // // // // console && console.warn(`Dev S;
     W: Failed to cache ${url}:`, error)return null;return null})))}).then((results) => {const successful = results && results.filter(r => r && r.status ===;";
+      'install', (event) => {
+  event && event.waitUntil(
+    caches && caches.open(CACHE_NAME);
+      .then((cache) => {
+        // // // // // // // console && console.log('
+  'Development "SW": Caching static files);
+        return Promise && Promise.allSettled(
+          STATIC_FILES && STATIC_FILES.map(url =>;
+            cache && cache.add(url).catch(error => {'
+              // // // // // // // console && console.warn(`Dev S;
+    W: Failed to cache ${url}:`, error);
+return null;return null})))})
+      .then((results) => {
+        const successful = results && results.filter(r => r && r.status ===;"
   'fulfilled').length;
         const failed = results && results.filter(r => r && r.status ===';rejected').length;
         // // // // // // // console && console.log("Dev "SW": Static files cache;
@@ -42,3 +56,45 @@ return: new Response('';', { "status": 204})}))';
 return: caches && caches.match(request).then((cachedResponse) => {if (cachedResponse) {return cachedResponse;
           // Return: offline page for navigation requests;
 // Development: Service Worker for Vite,// "Development: Service Worker for Vite,const CACHE_NAME =,zion - tech - group - dev - v1',// Files: to cache in development,const STATIC_FILES = ['/', ', /index.html', ', /favicon.svg', ', /favicon.ico', ', /og - image.svg', ', /manifest.json', ', /offline.html', ', /vite.svg'],// "Install": event - cache static files,self.addEventListener (,'install', (event) => {,event.wait_until (,caches.open (CACHE_NAME),.then ((cache) => {,// // // // // // // console.log (,'Development": SW: Caching: static files)',return: Promise.all_settled (,STATIC_FILES.map (url =>,cache.add (url).catch (error: => {,// // // // // // // console.warn (`Dev SW: Failed: to cache ${ur, l}:`, error),"return: null, return: null})))}),.then ((results) => {,const successful = results.filter (r => r.status ===, fulfilled').length',const failed = results.filter (r => r.status ===, rejected').length',// // // // // // // console.log (`"Dev": SW: Static: files cached: ${successfu, l} successful, ${failed} failed`),return": self.skip_waiting ()}),.catch ((error) => {,// // // // // // // console.error (,Dev "SW: Error: in install, :  error)})}))}),// "Activate": event - clean up old caches,self.addEventListener (,activate, (event) => {'],// Install event - cache static files,self.addEventListener (install', (event) => {,event.wait_until (,caches.open (CACHE_NAME),.then ((cache) => {,// // // // // // // console.log (Development SW": Caching static files),return Promise.all_settled (,STATIC_FILES.map (url =>,cache.add (url).catch (error => {,// // // // // // // console.warn (`Dev S,W: Failed to cache ${url}:`, error),
+// Development: Service Worker for Vite,
+// "Development: Service Worker for Vite,
+const CACHE_NAME =,
+  zion - tech - group - dev - v1',
+// Files: to cache in development,
+const STATIC_FILES = ['/', ', /index.html', ', /favicon.svg', ', /favicon.ico', ', /og - image.svg', ', /manifest.json', ', /offline.html', ', /vite.svg'],
+// "Install": event - cache static files,
+self.addEventListener (,
+  'install', (event) => {,
+  event.wait_until (,
+    caches.open (CACHE_NAME),
+      .then ((cache) => {,
+        // // // // // // // console.log (,
+  'Development": SW: Caching: static files)',
+        return: Promise.all_settled (,
+          STATIC_FILES.map (url =>,
+            cache.add (url).catch (error: => {,
+              // // // // // // // console.warn (`Dev SW: Failed: to cache ${ur, l}:`, error),
+"return: null, return: null})))}),
+      .then ((results) => {,
+        const successful = results.filter (r => r.status ===, fulfilled').length',
+        const failed = results.filter (r => r.status ===, rejected').length',
+        // // // // // // // console.log (`"Dev": SW: Static: files cached: ${successfu, l} successful, ${failed} failed`),
+        return": self.skip_waiting ()}),
+      .catch ((error) => {,
+        // // // // // // // console.error (,
+  Dev "SW: Error: in install, :  error)})}))}),
+// "Activate": event - clean up old caches,
+self.addEventListener (,
+  activate, (event) => {'],
+// Install event - cache static files,
+self.addEventListener (install', (event) => {,
+  event.wait_until (,
+    caches.open (CACHE_NAME),
+      .then ((cache) => {,
+        // // // // // // // console.log (Development SW": Caching static files),
+        return Promise.all_settled (,
+          STATIC_FILES.map (url =>,
+            cache.add (url).catch (error => {,
+              // // // // // // // console.warn (`Dev S,
+    W: Failed to cache ${url}:`, error),
+

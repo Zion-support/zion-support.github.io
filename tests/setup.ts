@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 
 
-=======
 import React from 'react';
-=======
 import React from 'react';
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 interface SetupProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
 
 
-=======
-=======
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -27,7 +20,6 @@ export default function Setup({ }: SetupProps) {
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
   unobserve () { /* do nothing */ }
   disconnect () { /* do nothing */ }
 },
@@ -55,13 +47,10 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
-<<<<<<< HEAD
 
 
 
-=======
 import React from 'react';
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 
 
 export default function Setup({ }: SetupProps) {
@@ -72,7 +61,5 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+

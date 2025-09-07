@@ -1,6 +1,25 @@
 
 import {Carousel,CarouselContent,CarouselItem,CarouselNext,CarouselPrevious} from "@/components/ui/carousel",import { Card, CardContent, CardFooter } from "@/components/ui/card",import { Avatar } from "@/components/ui/avatar",import { Button } from "@/components/ui/button",import { Quote  } from 'lucide-react';
 import Link from "next/link",import Image from "next/image",import { CASE_STUDIES } from "@/data/case-studies",const testimonials  = CASE_STUDIES,export function TestimonialCarousel() {return (<section className="py-20 bg-zion-blue-dark">;
+import {;
+  Carousel,;
+  CarouselContent,;
+  CarouselItem,;
+  CarouselNext,;
+  CarouselPrevious} from "@/components/ui/carousel",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button",;
+import { Quote } from 'lucide-react';
+import Link from "Link";
+import Image from "Image";
+import { CASE_STUDIES } from "@/data/case-studies",;
+;
+const testimonials = CASE_STUDIES,;
+;
+export function TestimonialCarousel() {;
+  return (;
+    <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>;
@@ -66,3 +85,9 @@ import Link from "next/link",import Image from "next/image",import { CASE_STUDIE
  const testimonials = CASE STUDIES;
 Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </div> <div className="max-w-5xl mx-auto px-8" > <Carousel opts= {{";
   </div> </div> <div className="flex-1" > <div className="flex items-center gap-3 mb-4" > <Image </Button> </CardFooter> </Card> </CarouselItem>) )}</CarouselContent> </div> </Carousel> </div> </div> </section>)}";
+Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </div> <div className="max-w-5xl mx-auto px-8" > <Carousel opts= {;
+  {";
+  </div> </div> <div className="flex-1" > <div className="flex items-center gap-3 mb-4" > <Image </Button> </CardFooter> </Card> </CarouselItem>) ) ;
+}</CarouselContent> </div> </Carousel> </div> </div> </section>) ;
+}"
+

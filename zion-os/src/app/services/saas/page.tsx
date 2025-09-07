@@ -196,6 +196,10 @@ export default function SAASServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About Resume AI Builder;
+              </a>;
+            </div>;
+            {/* Token Rewards System */}
                 and token economics for modern businesses and communities.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -329,6 +333,10 @@ export default function SAASServicesPage() {return (;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - purple - 400">Key Features:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
+                Learn More About KYC / AML Verification;
+              </a>;
+            </div>;
+            {/* DAO Governance Platform */}
                 and community governance for modern organizations.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -649,3 +657,6 @@ export default function SAASServicesPage() {return (;
         </div>;
       </section>;
     </div>)}
+    </div>);
+}
+

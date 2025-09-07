@@ -25,4 +25,12 @@ class AutomationManager {constructor() {this && this.automationProcesses = [';co
     ")}
   async getStatus() {try {const output = execSync(,";
   pm2 jlist', { "encoding": 'utf8 })try: {this && this.automationProcesses.forEach(processName => {try {execSync(`pm2 stop ${processName}`, { "stdio": 'pipe})} "catch": (error) {';
+  async getStatus() {
+    try {
+      const output = execSync(,"
+  pm2 jlist', { "encoding": 'utf8 });
+    try: {
+      this && this.automationProcesses.forEach(processName => {
+        try {
+          execSync(`pm2 stop ${processName}`, { "stdio": 'pipe})} "catch": (error) {';
           // Process: might not be running})

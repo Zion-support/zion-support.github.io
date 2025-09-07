@@ -8,6 +8,8 @@
   },const roundedClasses = {sm: 'rounded',md: 'rounded-md',lg: 'rounded-lg',xl: 'rounded-xl',full: 'rounded-full';
   },const widthClasses = fullWidth ? 'w-full' : '';
   const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,const content = (<>;
+  const content = (;
+    <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
       {icon && iconPosition === 'left' && !loading && <span className="mr-2">{icon}</span>}
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
@@ -121,3 +123,6 @@ export default Button,
       size="lg";
       rounded="full";
     />)}
+    />);
+}
+

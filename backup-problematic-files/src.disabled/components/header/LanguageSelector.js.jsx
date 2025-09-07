@@ -4,3 +4,14 @@ const LanguageSelector.js = ({ className }) => {return (<div className={classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const LanguageSelector.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LanguageSelector.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

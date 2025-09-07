@@ -1,6 +1,5 @@
 
 ;
-<<<<<<< HEAD
 export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false)const [showSettings, setShowSettings] = useState(false)const [preferences, setPreferences] = useState({necessary: true;
     analytics: false;
     marketing: false;
@@ -12,7 +11,6 @@ export default function CookieConsent() {const [isVisible, setIsVisible] = useSt
       functional: true;
     }export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false)const [showSettings, setShowSettings] = useState(false)const [preferences, setPreferences] = useState({necessary: true,analytics: false,marketing: false,functional: false,})useEffect(() => {const consent = localStorage && localStorage.getItem("cookie-consent")if (!consent) {setIsVisible(true)}
   }, [])const acceptAll = () => {const allAccepted = {necessary: true,analytics: true,marketing: true,functional: true,}setPreferences(allAccepted)localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted))setIsVisible(false)setPreferences(onlyNecessary)localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary))setIsVisible(false)return null;
-=======
 
 export default function CookieConsent() {const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -36,7 +34,6 @@ const consent = localStorage && localStorage.getItem("cookie-consent")if (!conse
   }, [])const acceptAll = () => ;
   const allAccepted = {necessary: true,analytics: true,marketing: true,functional: true,}setPreferences(allAccepted)localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted))setIsVisible(false)setPreferences(onlyNecessary)localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary))setIsVisible(false;
   return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   }
   return (We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
@@ -195,12 +192,10 @@ const consent = localStorage && localStorage.getItem("cookie-consent")if (!conse
 
                 Save Preferences;
               </button>;
-<<<<<<< HEAD
             </div>;
           </div>)}
       </div>;
     </div>)}
-=======
             </div>
     </div>
   );
@@ -209,4 +204,4 @@ const consent = localStorage && localStorage.getItem("cookie-consent")if (!conse
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+

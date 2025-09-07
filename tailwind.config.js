@@ -48,18 +48,16 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-<<<<<<< HEAD
-<<<<<<< HEAD
           950: '#030712'
         }
-=======
           950: '#030712',
         },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
           950: '#030712'
         }
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+          950: '#030712'
+        }
+          950: '#030712',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -78,27 +76,18 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         'float': 'float 6s ease-in-out infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+        'float': 'float 6s ease-in-out infinite',
+        'wiggle': 'wiggle 1s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           '100%': { opacity: '1' }
-=======
           '100%': { opacity: '1' },
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
@@ -176,15 +165,11 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-<<<<<<< HEAD
-<<<<<<< HEAD
         '5xl': '2.5rem'
-=======
         '5xl': '2.5rem',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
         '5xl': '2.5rem'
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+        '5xl': '2.5rem'
+        '5xl': '2.5rem',
       },
     },
   },
@@ -194,3 +179,4 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 };
+

@@ -4,3 +4,14 @@ const Popover = ({ className }) => {return (<div className={className || ''}>;
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const Popover = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Popover</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

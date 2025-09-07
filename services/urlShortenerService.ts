@@ -10,7 +10,6 @@ export interface ShortUrl {;
   expiresAt?: Date;original_url: string;
 export interface ShortUrl  {id: string;
   expiresAt?: Date;
-
 export interface ShortUrl {
   id: string;
 
@@ -23,8 +22,20 @@ export interface ShortUrl {
 }
   is_active: boolean,
   user_id?: string;
+<<<<<<< HEAD
 
 
+=======
+export interface ShortUrl {
+  id: string;
+}
+}
+export interface UrlAnalytics {
+  total_clicks: number;
+  unique_visitors: number;
+export interface ShortUrl {
+  id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 export interface UrlAnalytics  {total_clicks: number;
   unique_visitors: number;isActive: boolean;
@@ -121,7 +132,6 @@ class UrlShortenerService {private urls: Map < string, ShortUrl> = new Map ()pri
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
-
       id: this && this.generateId();
       originalUrl: request && request.originalUrl;
       shortCode,
@@ -131,7 +141,6 @@ class UrlShortenerService {private urls: Map < string, ShortUrl> = new Map ()pri
       isActive: true,
       userId: request && request.userId
     };
-
     this && this.urls.set(shortCode, shortUrl);
     this && this.analytics.set(shortCode, {
 
@@ -197,24 +206,40 @@ class UrlShortenerService {
       countries: [];
       devices: [];
       browsers: [];
-
     this && this.clicks.set(shortCode, []);
+<<<<<<< HEAD
 
 
+=======
     return shortUrl
   }
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
-
     const url = this && this.urls.get(shortCode);
     if (!url || !url && url.isActive) return null;
-    
     if (url && url.expiresAt && url && url.expiresAt < new Date()) {
       url && url.isActive = false,
+      return null    this && this.clicks.set(shortCode, []);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+    return shortUrl
+  }
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
+    const url = this && this.urls.get(shortCode);
+    if (!url || !url && url.isActive) return null;
+    if (url && url.expiresAt && url && url.expiresAt < new Date()) {
+      url && url.isActive = false,
+<<<<<<< HEAD
 
       return null
     this && this.clicks.set(shortCode, []);
 
 
+=======
+      return null;
+    lastClicked: new Date()
+      clickHistory: []
+    });
+    this.clicks.set(shortCode, []);
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     return shortUrl
   }
   async getShortUrl(shortCode: string): Promise<ShortUrl | null> {const url = this && this.urls.get(shortCode)if (!url || !url && url.isActive) return null;if (url && url.expiresAt && url && url.expiresAt < new Date()) {url && url.isActive = false,return null;
@@ -419,11 +444,14 @@ export interface ShortUrl {;
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     return true
   }
@@ -431,7 +459,6 @@ export interface ShortUrl {;
 
     const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
-
     Object && Object.assign(url, updates);
 
     return true
@@ -462,8 +489,29 @@ export interface ShortUrl {;
       if (!analytics.devices.includes(clickData.device)) {analytics.devices.push(clickData.device)}
       if (!analytics.browsers.includes(clickData.browser)) {analytics.browsers.push(clickData.browser)}
     }
+<<<<<<< HEAD
   }async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {const url = this && this.urls.get(shortCode)if (!url || (userId && url && url.userId !== userId)) return false;
     url && url.isActive = false;
+=======
+    return result
+  }
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9)
+  }
+      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
+      last_clicked: new Date (),
+      click_history: [];
+    });
+    this.clicks.set (short_code, []);
+;
+    return short_url;
+  }
+;
+  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || (userId && url.userId !== userId)) return false,;
+    Object.assign(url, updates),;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     return true;
   }
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {const url = this && this.urls.get(shortCode)if (!url || (userId && url && url.userId !== userId)) return false;
@@ -511,9 +559,12 @@ if (return null) {$2;
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   async getShortUrl (short_code: string): Promise < ShortUrl | null> {
     const url = this.urls.get (short_code);
     // Check condition
@@ -572,6 +623,7 @@ if ( {) {$2;
   async importData(data: any): Promise<void> {}
     return result;
   }
+<<<<<<< HEAD
   private generateId(): string {return Math.random().toString(36).substr(2, 9)}// Utility methods for data persistence (in a real app, this would use a database)async exportData(): Promise<any> {return {urls: Array.from(this.urls.entries())analytics: Array.from(this.analytics.entries())clicks: Array.from(this.clicks.entries())}
   }
   async importData(data: any): Promise<void> {this.urls = new Map(data.urls)this.analytics = new Map(data.analytics)this.clicks = new Map(data.clicks)async importData(data: any): Promise<void> {}
@@ -596,14 +648,14 @@ export const urlShortenerService  = new UrlShortenerService ()export const urlSh
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
-
       urls: Array && Array.from(this && this.urls.entries());
       analytics: Array && Array.from(this && this.analytics.entries()),
       clicks: Array && Array.from(this && this.clicks.entries())
-
     }
   }
   async importData(data: any): Promise<void> {
@@ -648,10 +700,13 @@ export const urlShortenerService = new UrlShortenerService();
 }
 export const urlShortenerService = new UrlShortenerService ();
 ;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const urlShortenerService = new UrlShortenerService();
 export const urlShortenerService = new UrlShortenerService();
 ;
@@ -719,8 +774,12 @@ export const urlShortenerService = new UrlShortenerService();
 }
 ;
 export const urlShortenerService = new UrlShortenerService();
+<<<<<<< HEAD
 export const urlShortenerService = new UrlShortenerService();
 
 export const urlShortenerService = new UrlShortenerService();
 
 export const urlShortenerService = new UrlShortenerService();
+=======
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

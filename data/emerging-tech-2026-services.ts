@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -252,10 +253,12 @@ import { ServiceVariant } from '../types/service-variants',export interface Emer
 ];
   contactInfo: {
       
+=======
+contactInfo: {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -263,8 +266,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Emer
   reviews: number
 }
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
-    launchDate: '2026-04-20'
-    customers: 180
+    launchDate: "launchDate",
+    customers: 180;
     rating: 4.8
     reviews: 120
   }
@@ -284,11 +287,10 @@ import { ServiceVariant } from '../types/service-variants',export interface Emer
     launchDate: '2026-04-20';
     customers: 180;
     rating: 4.8
-
     reviews: 120
   }
 ];
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026Service {;
   id: string,;
   name: string,;
@@ -329,12 +331,14 @@ export interface EmergingTech2026Service {;
   rating: number,;
   reviews: number;
 }
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neuromorphic Computing Platform
   {
-
     id: 'neuromorphic-computing-platform-2026', name: 'Neuromorphic Computing Platform 2026',
     tagline: 'Brain-inspired computing for next-generation AI and robotics',
     price: '$2,499',
@@ -355,11 +359,8 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], marketSize: '$8.7B market',
     growthRate: '400% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -367,6 +368,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     launch_date: '2026 - 04 - 20';
     customers: 180;
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 120;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -765,3 +767,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     reviews: 120;
   }
 ;
+=======
+    reviews: 120;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

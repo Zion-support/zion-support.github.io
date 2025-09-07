@@ -237,14 +237,11 @@ const getCategoryName = (categoryId: string) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-=======
       <SEO 
         title="Resources - Zion Tech Group"
         description="Access our comprehensive library of resources including blog posts, case studies, white papers, webinars, and documentation to help you stay informed and make better technology decisions."
         canonical="https: //ziontechgroup.com/resources"
       />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       
       {/* Hero Section *,
 }
@@ -360,13 +357,10 @@ const getCategoryName = (categoryId: string) => {
                   ))}
                 </div>
                 <Link
-<<<<<<< HEAD
                   href={resource.href}
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-=======
                   to={resource.href}
                   className="inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 >
                   Read More
                   <ArrowRight className="w-4 h-4" />
@@ -477,3 +471,4 @@ const getCategoryName = (categoryId: string) => {
     </div>
   );
 }
+

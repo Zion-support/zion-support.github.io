@@ -219,15 +219,19 @@ export interface ContentGenerationResponse {
 export interface ContentTemplate {
   suggestions: string[];
   metadata: {
+<<<<<<< HEAD
     title: string;
 
     description: string
 
+=======
+    title: string,
+  description: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     tags: string[]
   }
 }
 export interface ContentTemplate {
-
 export interface ContentTemplate {;
     description: string,
     tags: string[];
@@ -592,7 +596,6 @@ export const AI_CONTENT_PRICING = {
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
-
   }
   professional: {
     name: 'Professional';
@@ -609,7 +612,6 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-
     period: '/month',
 
     period: '/month'
@@ -620,6 +622,7 @@ export const AI_CONTENT_PRICING = {
 
 
     period: '/month',
+<<<<<<< HEAD
 
 
 ;
@@ -631,6 +634,8 @@ export const AI_CONTENT_PRICING = {;
     period: '/month',;
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     features: [;
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
     ];
@@ -652,6 +657,7 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
+<<<<<<< HEAD
 
 
   }
@@ -707,4 +713,10 @@ export const AI_CONTENT_PRICING = {starter:{name:'Starter',price:29,period:'/mon
 }}
   }
 }}
+=======
+  },
+};
+  }
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }

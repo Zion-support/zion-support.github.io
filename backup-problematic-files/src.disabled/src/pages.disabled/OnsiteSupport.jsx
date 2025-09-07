@@ -4,3 +4,14 @@ const OnsiteSupport = ({ className }) => {return (<div className={className || '
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const OnsiteSupport = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>OnsiteSupport</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

@@ -94,3 +94,6 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {cons
       </nav>;
       {children}
     </>)}
+    </>);
+}
+

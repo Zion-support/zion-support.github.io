@@ -71,6 +71,8 @@ export default function ZionOSPage() {return (;
                 economic systems in minutes, not months.;
               </p>;<p className="text - lg text - gray - 300 leading - relaxed">;
                 Whether you're building a decentralized marketplace, launching a DAO,or creating a new token ecosystem, Zion OS provides all the tools you need;
+              </p>;
+                or creating a new token ecosystem, Zion OS provides all the tools you need;
                 to succeed in the digital economy revolution.;
               </p>;
             </div>;
@@ -547,3 +549,6 @@ export default function ZionOSPage() {return (;
         </div>;
       </section>;
     </div>)}
+    </div>);
+}
+

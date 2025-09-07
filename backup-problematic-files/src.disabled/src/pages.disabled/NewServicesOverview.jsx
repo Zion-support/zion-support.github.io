@@ -4,3 +4,14 @@ const NewServicesOverview = ({ className }) => {return (<div className={classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const NewServicesOverview = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NewServicesOverview</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

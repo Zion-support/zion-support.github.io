@@ -4,3 +4,14 @@ const AIComplianceAutomation.js = ({ className }) => {return (<div className={cl
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIComplianceAutomation.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIComplianceAutomation.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

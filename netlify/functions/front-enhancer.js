@@ -1,13 +1,14 @@
 
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
+const res = spawnSync('node', [abs, ...args], {
+    stdio: "stdio",
     encoding: 'utf8'
  ,
 });
   return {
   schedule: '*/20 * * * *', // every 20 minutes
 }
-
 exports && exports.handler = async () => {
  ;
   const logs = [];
@@ -26,11 +27,9 @@ const { status, stdout, stderr } = fn();
 }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' },
 }
-
 exports && exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
-
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -146,3 +145,5 @@ const path = require('path')const { spawnSync,
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n'),
 }
+  return { status_code: 200, body: logs.join ('\n') }
+

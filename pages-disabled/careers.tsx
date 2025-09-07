@@ -1,22 +1,43 @@
 import Head from 'next/head';
-import { motion  } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
-  ArrowRight, MapPin, Clock, DollarSign, Star, Zap;
-  } from 'lucide-react';
+  ArrowRight, MapPin, Clock, DollarSign, Star, Zap
+ } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
       title: "Senior AI Engineer",department: "AI & Machine Learning",location: "San Francisco, CA / Remote";export default function CareersPage() {const openPositions = [;
     {title: "Senior AI Engineer",department: "AI & Machine Learning",location: "San Francisco, CA / Remote";
       type: "Full-time",experience: "5+ years",salary: "$150,000 - $200,000",description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",requirements: [;"Advanced degree in Computer Science, AI, or related field";
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+      location: "San Francisco, CA / Remote";
+export default function CareersPage() {;
+  const openPositions = [;
+    {;
+      title: "Senior AI Engineer",;
+      department: "AI & Machine Learning",;
+      location: "San Francisco, CA / Remote";
+      type: "Full-time",;
+      experience: "5+ years",;
+      salary: "$150,000 - $200,000",
+  description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
+      requirements: [;
+        "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
         "Strong background in machine learning algorithms";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
     }
-    {title: "Quantum Computing Researcher";
-      department: "Quantum Computing";
+    {
+      title: "title",
+    department: "Quantum Computing"
       location: "San Francisco, CA / Remote";
       type: "Full - time",experience: "3+ years",salary: "$120, 000 - $180, 000",description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",requirements: [;
+      type: "Full - time",
+      experience: "3+ years",
+      salary: "$120, 000 - $180, 000",
+  description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
+      requirements: [;
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
@@ -24,12 +45,14 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       ];
       benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
     }
-    {title: "Cybersecurity Architect";
-      department: "Cybersecurity";
+    {
+      title: "Cybersecurity Architect"
+      department: "Cybersecurity"
       location: "San Francisco, CA / Remote";
     }
-    {title: "Cloud Infrastructure Engineer";
-      department: "Cloud Infrastructure";
+    {
+      title: "Cloud Infrastructure Engineer"
+      department: "Cloud Infrastructure"
       location: "San Francisco, CA / Remote";
         "Expertise in AWS, Azure, or GCP";
         "Experience with Kubernetes, Docker, and CI/CD";
@@ -37,8 +60,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       ];
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
     }
-    {title: "Data Scientist";
-      department: "Data Analytics";
+    {
+      title: "Data Scientist"
+      department: "Data Analytics"
       location: "San Francisco, CA / Remote";
         "Master's degree in Data Science, Statistics, or related field";
         "Proficiency in Python, R, and SQL";
@@ -47,10 +71,16 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       ];
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
     }
-    {title: "Product Manager";
-      department: "Product";
+    {
+      title: "Product Manager"
+      department: "Product"
       location: "San Francisco, CA / Remote";
       type: "Full - time",experience: "5+ years",salary: "$140, 000 - $190, 000",description: "Lead product strategy and development for our technology solutions portfolio",requirements: [;
+      type: "Full - time",
+      experience: "5+ years",
+      salary: "$140, 000 - $190, 000",
+  description: "Lead product strategy and development for our technology solutions portfolio",
+      requirements: [;
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
@@ -58,21 +88,23 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
     }
-    {title: "Health & Wellness";
+    {
+      title: "Health & Wellness"
       description: "Comprehensive health, dental, and vision insurance for you and your family";
     }
-    {title: "Professional Growth";
+    {
+      title: "Professional Growth"
       description: "Continuous learning opportunities, conferences, and career development";
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
-          <motion&& motion.div;
+          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
       {/* Benefits Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div;
+          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -88,12 +120,15 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                 <h3 className="text-2xl font-bold text-white mb-4">{benefit && benefit.title}</h3>;
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
-            ))}</div>;
+            ))}
+          </div>;
         </div>;
       </section>;{/* Open Positions */}
+      </section>;
+      {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div;
+          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -113,7 +148,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                         <h3 className="text-2xl font-bold text-white">{position && position.title}</h3>;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
-                    </div>;<p className="text-white/80 mb-4">{position && position.description}</p>;<div className="flex flex-wrap gap-4 mb-4">;
+                    </div>;
+                    <p className="text-white/80 mb-4">{position && position.description}</p>;
+                    <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
                         <span>{position && position.location}</span>;
@@ -130,41 +167,53 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                         <DollarSign className="w-4 h-4" />;
                         <span>{position && position.salary}</span>;
                       </div>;
-                    </div>;<div className="mb-4">;
+                    </div>;
+                    <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
-                        {position && position.requirements.map((req, idx) => (<li key={idx} className="text-sm text-white/80 flex items-center">;
-                            <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;{req}
-                          </li>;
-                        ))}</ul>;
-                    </div>;<div className="mb-4">;
+                        {position && position.requirements.map((req, idx) => (;
+                          <li key={idx} className="text-sm text-white/80 flex items-center">;
+                            <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
+                            {req}
+                          </li>
+                        ))}
+                      </ul>;
+                    </div>;
+                    <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
-                        {position && position.benefits.map((benefit) => (<span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;{benefit}
-                          </span>;
+                        {position && position.benefits.map((benefit) => (;
+                          <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
+                            {benefit}
+                          </span>
                         ))}
-                      </div>;
-                    </div>;
-                  </div>;
-                  <div className="lg:flex-shrink-0">;
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-                      Apply Now;
-                    </button>;
-                  </div>;
-                </div>;
-              </motion.div>;
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
                       </div>;
                     </div>;
                   </div>;
                   <div className="lg:flex-shrink-0">;
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-      icon: Rocket,color: "from - orange - 500 to - red - 500";
+      icon: Rocket,
+      color: "from - orange - 500 to - red - 500";
     }
   ];return (<UltraAdvancedFuturisticBackground>;
+  ];
+;
+  return (
+    <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
           <title > Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
@@ -211,9 +260,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
       {/* CTA Section */}
-      <section className="py-20 px-6">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -227,6 +276,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
             {benefits.map ((benefit, index) => (<motion.div;
+            {benefits.map ((benefit, index) => (
+              <motion.div;
                 key={benefit.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -260,6 +311,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           </motion.div>;
           <div className="space-y-6">;
             {open_positions.map ((position, index) => (<motion.div;
+            {open_positions.map ((position, index) => (
+              <motion.div;
                 key={position.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -300,7 +353,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                     <div className="mb-4">;
                       <h4 className="text - sm font - semibold text - white / 60 mb - 2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
-                        {position.requirements.map ((req, idx) => (<li key={idx} className="text - sm text - white / 80 flex items-center">;
+                        {position.requirements.map ((req, idx) => (
+                          <li key={idx} className="text - sm text - white / 80 flex items-center">;
                             <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full mr-2" />;
                             {req}
                           </li>))}
@@ -310,6 +364,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
                       <h4 className="text - sm font - semibold text - white / 60 mb - 2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex - wrap gap-2">;
                         {position.benefits.map ((benefit) => (<span key={benefit} className="text - xs bg - white / 5 text - white / 70 px - 2 py-1 rounded">;
+                        {position.benefits.map ((benefit) => (
+                          <span key={benefit} className="text - xs bg - white / 5 text - white / 70 px - 2 py-1 rounded">;
                             {benefit}
                           </span>))}
                       </div>;

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
   static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-=======
   static getDerivedStateFromError(error) {return { hasError: true ,
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     }return this.props.children;
   }
 }
@@ -15,13 +12,10 @@ import React from 'react';
   color: string;
   glow: string;
   date?: string;category?: string;
-<<<<<<< HEAD
 }const ContentCard: React.FC<ContentCardProps> = ({title;
-=======
 }
 
 const ContentCard: React.FC<ContentCardProps> = ({ title;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   description;
   href;
   icon;
@@ -29,28 +23,22 @@ const ContentCard: React.FC<ContentCardProps> = ({ title;
   glow;
   date;
   category;
-<<<<<<< HEAD
 }) => {return (<Link;
-=======
    }) => {
 
 
 return (<Link;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       href;
       {/* Header */}
       <div className='flex items-start justify-between mb-6'>;
         <div;
-<<<<<<< HEAD
           className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
         >;
           <span className='text-2xl'>{icon}</span>;
-=======
           className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300`}>
 
           <span className='text-2xl'>{ico,
 }</span>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         </div>;
         {category && (<span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>;
             {category}
@@ -85,7 +73,6 @@ return (<Link;
         {title}
           Read More;
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>;
-<<<<<<< HEAD
         </div>;
         {date && (<div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;<span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>;
@@ -104,7 +91,6 @@ return (<Link;
         >;
           <span className='text - 2xl'>{icon}</span>;
         </div>;
-=======
         </div>;
         {date && (<div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;<span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>;
@@ -126,7 +112,6 @@ export default ContentCard;<div className='flex items - start justify - between 
           <span className='text - 2xl'>{ico,
 }</span>;
         </div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         {category && (<span className='px - 3 py - 1 bg - white / 10 backdrop - blur - xl rounded - full text - xs text - white / 60 border border - white / 20'>            {category}          <span className="px - 3 py - 1 bg - white / 10 backdrop - blur - xl rounded - full text - xs text - white / 60 border border - white / 20">;
             {category}
           </span>)}
@@ -164,13 +149,10 @@ export default ContentCard;<div className='flex items - start justify - between 
       </div>;
       {/* Hover Effects */}
       <div className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 5 to - blue - 600 / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
-<<<<<<< HEAD
     </Link>)}export default ContentCard;    </Link>)}export default ContentCard;{description}
-=======
     </Link>)}
 
 export default ContentCard;    </Link>)}
 
 export default ContentCard;{description}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       </p>;

@@ -1,5 +1,19 @@
 
 import { useState } from "react",import { Link } from "react-router-dom",import { Header } from "@/components/Header",import { Footer } from "@/components/Footer",import { GradientHeading } from "@/components/GradientHeading",import { SEO } from "@/components/SEO",import { Card, CardContent, CardFooter } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",import { BlogPost } from "@/types/blog",import { Search } from "lucide-react",// Sample blog data - in a real app this would come from an API or CMS;
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { BlogPost } from "@/types/blog",;
+import { Search } from "lucide-react",;
+;
+// Sample blog data - in a real app this would come from an API or CMS;
 const BLOG_POSTS:BlogPost[] = [;
   {id:"ai-trends-2025",title:"10 Emerging AI Trends to Watch in 2025",slug:"ai-trends-2025",excerpt:"From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",content:`<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>;<h2>1. Multimodal AI Systems</h2>;
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>;<h2>2. Neuromorphic Computing</h2>;

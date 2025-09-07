@@ -4,3 +4,14 @@ const AIAutonomousTesting.js = ({ className }) => {return (<div className={class
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousTesting.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousTesting.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

@@ -365,6 +365,10 @@ export default function APIPage() {return (;
             <div className="card">;
   blockchain: 'ethereum';
 })// // // console.log ('Economy created:', economy.id), `}
+            <div className="card">;
+  blockchain: 'ethereum';
+});
+// // // console.log ('Economy created:', economy.id), `}
                 </pre>;
               </div>;
             </div>;
@@ -381,6 +385,13 @@ export default function APIPage() {return (;
 client = ZionOS ('YOUR_API_KEY')# Deploy the economy;
 deployment = client.economies.deploy ('economy_id')# Wait for deployment to complete;
 deployment.wait_for_completion ()print (f"Economy deployed at: {deployment.url}")`}
+{`from zion_os import ZionOS;
+client = ZionOS ('YOUR_API_KEY');
+# Deploy the economy;
+deployment = client.economies.deploy ('economy_id');
+# Wait for deployment to complete;
+deployment.wait_for_completion ();
+print (f"Economy deployed at: {deployment.url}")`}
                 </pre>;
               </div>;
             </div>;
@@ -459,3 +470,6 @@ deployment.wait_for_completion ()print (f"Economy deployed at: {deployment.url}"
         </div>;
       </div>;
     </div>)}
+    </div>);
+}
+

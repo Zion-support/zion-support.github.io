@@ -9,6 +9,48 @@ const getServiceSetupTime = (service: any) => {if (service.setupTime) return ser
 },// Helper function to get service trial days;
 const getServiceTrialDays = (service: any) => {if (service.trialDays) return service.trialDays,if (service.pricing?.trialDays) return service.pricing.trialDays,if (service.price?.trialDays) return service.price.trialDays,return 'N/A';
 },// All services combined;
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion',;
+import {;
+  Brain, Building, Target, Cpu, Shield,;
+  Check, Phone, Mail, MapPin,;
+  TrendingUp, Zap, Globe;
+} from 'lucide-react',;
+// Import our new service data;
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',;
+import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services',;
+import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',;
+import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions',;
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',;
+const ComprehensiveServicesShowcase2025 = () => {;
+  const [activeTab, setActiveTab] = useState('all'),;
+// Helper function to get service pricing;
+const getServicePricing = (service: any) => {;
+  if (service.pricing?.starter) return service.pricing.starter,;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,;
+  if (typeof service.price === 'string') return service.price,;
+  return 'Contact for pricing';
+},;
+// Helper function to get service features;
+const getServiceFeatures = (service: any) => {;
+  return service.keyFeatures || service.features || [];
+},;
+// Helper function to get service setup time;
+const getServiceSetupTime = (service: any) => {;
+  if (service.setupTime) return service.setupTime,;
+  if (service.pricing?.setupTime) return service.pricing.setupTime,;
+  if (service.price?.setupTime) return service.price.setupTime,;
+  return 'N/A';
+},;
+// Helper function to get service trial days;
+const getServiceTrialDays = (service: any) => {;
+  if (service.trialDays) return service.trialDays,;
+  if (service.pricing?.trialDays) return service.pricing.trialDays,;
+  if (service.price?.trialDays) return service.price.trialDays,;
+  return 'N/A';
+},;
+// All services combined;
 const allServices = [;
   ...advancedAIMLServices,...advancedCybersecurityServices,...advancedCloudDevOpsServices2025,...industrySpecificSolutions,...emergingTechnologyServices;
 ],const categories = [;
@@ -277,6 +319,20 @@ const allServices = [;
                             <span className="text-sm font-medium">Popular</span>;
                           </div>;
                         )}{/* Price and Features */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-sm">
+                          <span className="text-gray-500">Expected ROI:</span>
+                          <span className="text-green-600 font-semibold ml-1">
+                            {service.roi.split(' ')[0]} ROI
+                          </span>
+                        </div>
+                        {service.popular && (
+                          <div className="flex items-center gap-1 text-yellow-600">
+                            <Star className="w-4 h-4 fill-current" />
+                            <span className="text-sm font-medium">Popular</span>
+                          </div>
+                        )}
+                        {/* Price and Features */}
                         <div className="lg:w-1/3">;
                           <div className="text-right mb-4">;
                             <span className="text-3xl font-bold text-gray-900">;
@@ -434,3 +490,6 @@ const allServices = [;
       </section>;
     </div>;
   )},
+  );
+},;
+

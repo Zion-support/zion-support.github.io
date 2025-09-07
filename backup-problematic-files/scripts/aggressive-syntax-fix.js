@@ -27,6 +27,25 @@ const winston  = require('winston'),const logger = winston.createLogger({level:'
             /Unexpected token \./, // Dot token issues;
         ],return errorPatterns.some(pattern => pattern.test(content)),}createValidFile(filePath) {const ext = path.extname(filePath),const fileName = path.basename(filePath, ext),const dirName  = path.dirname(filePath),// Convert invalid characters to valid ones;
         const validFileName  = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),if (ext === '.tsx' || ext === '.jsx') {return `import React from 'react',default function ${validFileName}() {return (<div>;
+        ],;
+;
+        return errorPatterns.some(pattern => pattern.test(content)),;
+    }
+;
+    createValidFile(filePath) {;
+        const ext = path.extname(filePath),;
+        const fileName = path.basename(filePath, ext),;
+        const dirName = path.dirname(filePath),;
+        ;
+        // Convert invalid characters to valid ones;
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
+        ;
+        if (ext === '.tsx' || ext === '.jsx') {;
+            return `import React from 'react';
+;
+default function ${validFileName}() {;
+  return (;
+    <div>;
       <h1>${validFileName}</h1>;
       <p>Component placeholder</p>;
     </div>;

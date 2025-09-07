@@ -4,3 +4,14 @@ const CloudMigrationServices = ({ className }) => {return (<div className={class
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const CloudMigrationServices = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CloudMigrationServices</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

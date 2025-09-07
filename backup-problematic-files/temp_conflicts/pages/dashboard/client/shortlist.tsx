@@ -1,5 +1,29 @@
 import React, { useEffect, useMemo, useState } from "react",import { useRouter } from "next/router",import { supabase } from "../../../utils/supabase/client",import HiringBoard from "../../../components/hiring/HiringBoard",import TalentCard from "../../../components/hiring/TalentCard",import Filters from "../../../components/hiring/Filters",import type { ApplicationFilters, CandidateStatus, JobApplication } from "../../../utils/types/hiring",import {fetchJobApplications,updateApplicationNotes,updateApplicationStatus} from "../../../utils/api/hiring",function useToast() {const [message, setMessage] = useState<string | null>(null),const [type, setType] = useState<"success" | "error" | "info">("info"),const show = (msg:string, t:"success" | "error" | "info" = "info") => {setMessage(msg),setType(t),setTimeout(() => setMessage(null), 2500),},const node = message ? (<div;
       className={`fixed top-4 right-4 z-50 rounded-md px-4 py-2 shadow-lg text-white ${type === "success" ? "bg-emerald-600" :type === "error" ? "bg-rose-600" :"bg-gray-800";
+import React, { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "../../../utils/supabase/client",;
+import HiringBoard from "HiringBoard";
+import TalentCard from "TalentCard";
+import Filters from "Filters";
+import type { ApplicationFilters, CandidateStatus, JobApplication } from "../../../utils/types/hiring",;
+import {;
+  fetchJobApplications,;
+  updateApplicationNotes,;
+  updateApplicationStatus} from "../../../utils/api/hiring",;
+;
+function useToast() {;
+  const [message, setMessage] = useState<string | null>(null),;
+  const [type, setType] = useState<"success" | "error" | "info">("info"),;
+  const show = (msg:string, t:"success" | "error" | "info" = "info") => {;
+    setMessage(msg),;
+    setType(t),;
+    setTimeout(() => setMessage(null), 2500),;
+  },;
+  const node = message ? (;
+    <div;
+      className={`fixed top-4 right-4 z-50 rounded-md px-4 py-2 shadow-lg text-white ${;
+        type === "success" ? "bg-emerald-600" :type === "error" ? "bg-rose-600" :"bg-gray-800";
       }`}
     >;
       {message}

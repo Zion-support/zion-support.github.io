@@ -1,4 +1,18 @@
 import { useEffect, useState } from 'react',import Head from 'next/head',export default function AutomationInsightsPage() {const [intel, setIntel] = useState<any>(null),const [talentMd, setTalentMd]  = useState<string>(''),useEffect(() => {fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {}),}, []),return (<div>;
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+;
+export default function AutomationInsightsPage() {;
+  const [intel, setIntel] = useState<any>(null),;
+  const [talentMd, setTalentMd] = useState<string>(''),;
+;
+  useEffect(() => {;
+    fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),;
+    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {}),;
+  }, []),;
+;
+  return (;
+    <div>;
       <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>;
       <section className="mb-8">;
         <h2 className="font-medium">Market Intelligence</h2>;

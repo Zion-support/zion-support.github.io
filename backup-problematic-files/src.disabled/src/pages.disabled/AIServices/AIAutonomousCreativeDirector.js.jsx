@@ -4,3 +4,14 @@ const AIAutonomousCreativeDirector.js = ({ className }) => {return (<div classNa
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIAutonomousCreativeDirector.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousCreativeDirector.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

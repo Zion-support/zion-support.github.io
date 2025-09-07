@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasV2  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -488,14 +492,15 @@ export interface InnovativeMicroSaasV2  {id: string, name: string,tagline: strin
     ]
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: "address",
+    website: 'https://ziontechgroup.com'
     }
-    realImplementation: true
+    realImplementation: true;
     implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
     launchDate: '2024-02-01';
     customers: 789;
     rating: 4.8
+<<<<<<< HEAD
 
 
     reviews: 912
@@ -537,6 +542,9 @@ export interface InnovativeMicroSaasV2 {
 
 
     integrations: [;
+=======
+=======    integrations: [;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Plaid',
       'Yodlee',
       'Financial institutions',
@@ -604,14 +612,17 @@ export interface InnovativeMicroSaasV2 {
   rating: number,
   reviews: number
 }
-
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
+<<<<<<< HEAD
 
 ;
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+=======
+;      address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -620,11 +631,13 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     customers: 789;
     rating: 4.8,
     reviews: 912;
-
   }
+];
+<<<<<<< HEAD
 
 ];
 
+
+=======
 ];
-
-
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

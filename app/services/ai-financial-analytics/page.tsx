@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 import React from 'react';
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+
+
+
+
 export const metadata = {
   title: 'Ai Financial Analytics | Zion Tech Group',
   description: 'Professional ai financial analytics services for your business needs.',

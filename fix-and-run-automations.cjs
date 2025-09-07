@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -24,7 +23,6 @@ class AutomationScriptFixer {
 
       if (
         content.includes('') ||
-        content.includes('>>>>>>>')
       ) {
         this.log(`Fixing merge conflicts in: ${filePath}`);
 
@@ -199,7 +197,6 @@ fixer
     );
     process.exit(1);
   });
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -217,4 +214,29 @@ const { execSync } = require('child_process')
         "encoding"
       ' Automation Script Fixer and Runner "failed"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class AutomationScriptFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.scriptsDir = path.join(this.projectRoot, 'scripts');
+    this.fixedCount = 0;
+    this.errors = [];
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  fixMergeConflicts(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+
+      if (
+        content.includes('') ||
+

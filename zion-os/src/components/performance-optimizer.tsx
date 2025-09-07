@@ -58,6 +58,43 @@ export /**;
 function Skeleton() {return (<div className={`animate - pulse ${class_name}`}>;
       {Array.from ({ length: lines }).map ((_, i) => (    <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (<div;
+  [key: string]: any;
+}) =>: any (
+  <Suspense fallback={fallback}>;
+    <Component {...props} />;
+    this.state = { hasError: false }
+  }
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
+  }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
+  }
+// Error boundary for better error handling;
+interface ErrorBoundaryState {
+  has_error: boolean,
+  error?: Error;
+}
+interface ErrorBoundaryProps {
+  children: ReactNode,
+  fallback?: ReactNode;
+}
+);
+// Error boundary for better error handling;
+interface ErrorBoundaryState {
+  has_error: boolean,
+  error?: Error;
+}
+interface ErrorBoundaryProps {
+  children: ReactNode,
+  fallback?: ReactNode;
+}
+export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryState> {
+  constructor (props: ErrorBoundaryProps) {
+    super (props),
+    this.state = { has_error: false }
+  }
+  static getDerivedStateFromError (error: Error): ErrorBoundaryState {
+    return { has_error: true, error }
+  }
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
   }
@@ -134,3 +171,9 @@ export function useIntersectionObserver() {const [isIntersecting, setIsIntersect
 // Debounced search hook for better performance;export function useDebounce<T>(value: T, delay: number): T {const [debouncedValue, setDebouncedValue] = useState<T>(value),useEffect(() => {const handler = setTimeout(() => {setDebouncedValue(value)}, delay),return () => {clearTimeout(handler)}
   }, [value, delay])return debounced_value;
 }export { LazyComponent }
+}
+    }
+  }, [value, delay]);
+  return debounced_value;
+}
+

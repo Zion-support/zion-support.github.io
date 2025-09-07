@@ -23,14 +23,12 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services   } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services   } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services  } from '../data/comprehensive-it-2026-services';
-<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('')const [selectedCategory, setSelectedCategory] = useState('all')const [sortBy, setSortBy]  = useState('name')// Combine all 2026 services;
   const allServices = [;
     ...revolutionary2026Services,...emergingTech2026Services,...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services;
   ];
-=======
 
 const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -42,7 +40,6 @@ const allServices = [
     ...comprehensiveIT2026Services
 ];
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           return (parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
             parse_float (b.price.replace (/[^0 - 9.]/g, '')))case 'rating':;
           return b.rating - a.rating;
@@ -56,7 +53,6 @@ const allServices = [
         default:;
           return a && a.name.localeCompare(b && b.name)default: return a && a.name.localeCompare(b && b.name)const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-<<<<<<< HEAD
                            service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory)return matchesSearch && matchesCategory;
   const allServices = null;
                 emerging technologies, and comprehensive IT solutions;
@@ -64,7 +60,6 @@ const allServices = [
   // Filter and sort services;
   const filteredServices = allServices;
     .filter(service => {const matchesSearch =;
-=======
                            service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory;
   return matchesSearch && matchesCategory;
 
@@ -77,25 +72,21 @@ const allServices = null;
 const filteredServices = allServices;
     .filter(service = > ;
   const matchesSearch =;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase())const matchesCategory =;
         selectedCategory === 'all' |;
         service.category.includes(selectedCategory)return matchesSearch && matchesCategory;}).sort((a, b) => {switch (sortBy) {case 'price':;
         default:;
-<<<<<<< HEAD
           return a.name.locale_compare (b.name)}      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.category.toLowerCase ().includes (search_term.toLowerCase ())const matches_category = selected_category === 'all' || service.category.includes (selected_category)return matches_search && matches_category;
-=======
           return a.name.locale_compare (b.name)}
 
 const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.category.toLowerCase ().includes (search_term.toLowerCase ())const matches_category = selected_category === 'all' || service.category.includes (selected_category;
   return matches_search && matches_category;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     .sort ((a, b) => {switch (sort_by) {case 'price':;
           return (parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
             parse_float (b.price.replace (/[^0 - 9.]/g, '')))return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''))case 'rating':;return (parseFloat(a.price.replace(/[^0-9.]/g, '')) -;
@@ -117,13 +108,11 @@ const matches_search = service.name.toLowerCase ().includes (search_term.toLower
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
         {/* Navigation */}
         {/* Hero Section */}
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}default:;
           return a.name.localeCompare(b.name)}
     })const categories = [;
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },{id: 'AI',name: 'AI & Machine Learning',icon: Brain,count: allServices.filter(s => s.category.includes('AI')).length,},{id: 'Quantum';
-=======
               initial={{ opacity: 0, y: 30 ,
 }
               animate={{ opacity: 1, y: 0 ,
@@ -132,7 +121,6 @@ const matches_search = service.name.toLowerCase ().includes (search_term.toLower
     })const categories = [
   { id: 'all', name: 'All Services', icon: Globe, count: allServices.length,
 },{id: 'AI',name: 'AI & Machine Learning',icon: Brain,count: allServices.filter(s => s.category.includes('AI')).length,},{id: 'Quantum';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       name: 'Quantum Computing';
       icon: Atom;
       count: allServices.filter(s => s.category.includes('Quantum')).length;
@@ -155,13 +143,10 @@ const matches_search = service.name.toLowerCase ().includes (search_term.toLower
     {id: 'Cloud';
       name: 'Cloud & DevOps';
       icon: Cloud;
-<<<<<<< HEAD
       count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length,},];const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}>;
-=======
       count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length,},];
 
 const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com',}>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       <div className='min-h-screen'>;
         <Head>;
           <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+;
@@ -201,17 +186,14 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com'
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
               initial={{ opacity: 0, y: 30 ,
 }
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             >;
 <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>;
@@ -333,16 +315,13 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com'
                   <select;
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none';
                   >;
                     {categories.map(category => (<option key={category.id} value={category.id}>;
-=======
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'>
 
                     {categories.map(category => (<option key={category.id} value={category.i,
 }>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         {category.name} ({category.count})</option>;
                     ))}
                 {/* Sort By */}<div className='relative'>;
@@ -350,13 +329,10 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com'
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
-<<<<<<< HEAD
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none';
                   >;
-=======
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     <option value='name'>Sort by Name</option>;
                     <option value='price'>Sort by Price</option>;
                     <option value='rating'>Sort by Rating</option>;
@@ -373,13 +349,11 @@ const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com'
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {filteredServices.map((service, index) => (<motion.div;
                   key={service.id}
-<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 className='group';
                 >;
-=======
                   initial={{ opacity: 0, y: 30 ,
 }
                   animate={{ opacity: 1, y: 0 ,
@@ -388,7 +362,6 @@ className='group';
 }
 className='group'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                     {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>;
@@ -398,12 +371,9 @@ className='group'>
                         </span>;
                       )}
                     </div>;
-<<<<<<< HEAD
                 {/* Sort By */}{/* Service Title */}<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
-=======
                 {/* Sort By */}{/* Service Title */}<h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service.nam,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     </h3>;
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
@@ -467,12 +437,9 @@ className='group'>
                         <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                         <span className='text - white text - sm'>;
                           {service.rating}</div>;{/* Service Title */}
-<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
-=======
                     <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service && service.nam,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     </h3>;{/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service && service.tagline}
                     </p>;{/* Price */}
@@ -537,13 +504,10 @@ className='group'>
                       <ul className='space-y-1'>;
                         {service.features.slice(0, 3).map((feature, idx) => (<li;
                             key={idx}
-<<<<<<< HEAD
                             className='text-gray-400 text-xs flex items-center';
                           >;
-=======
                             className='text-gray-400 text-xs flex items-center'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />;
                             {feature}</li>;
                         ))}
@@ -579,13 +543,10 @@ className='group'>
                     {/* CTA Button */}
                     <a;
                       href={service.link}
-<<<<<<< HEAD
 className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block';
                     >;
-=======
 className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       Learn More;
                     </a>;
                   </div>;
@@ -596,23 +557,17 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
                 initial={{ opacity: 0 }}
-<<<<<<< HEAD
                 animate={{ opacity: 1 }}{/* Contact Section */}
-=======
                 animate={{ opacity: 1 }}{/* Contact Section *,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div;
-<<<<<<< HEAD
 className='text-center py-16';
               >;
-=======
 className='text-center py-16'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 <div className='text-6xl mb-4'>🔍</div>;
                 <h3 className='text-2xl font-bold text-white mb-2'>;
                   No services found;
@@ -628,15 +583,12 @@ className='text-center py-16'>
 <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-=======
               initial={{ opacity: 0, y: 30 ,
 }
               whileInView={{ opacity: 1, y: 0 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         </span>;
                         <span className='text - gray - 400 text - sm'>;
                           ({service.reviews})</span>                      </div>;
@@ -721,12 +673,9 @@ className='text-center py-16'>
               initial={{ opacity: 0, coordinate_y: 30 ,
 }
               whileInView={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
               viewport={{ once: true }}<a;
-=======
               viewport={{ once: true ,
 }<a;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   href='/contact';
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
                   Contact Us Now;
@@ -754,16 +703,13 @@ className='text-center py-16'>
               </div>;
                 <a;
                   href="/contact";
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm';
             >;
-=======
               transition={{ duration: 0.8 ,
 }
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <h2 className='text-3xl font-bold text-white mb-6'>;
                 Ready to Transform Your Business?;
               </h2>;
@@ -790,24 +736,18 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                 <a;
                   href='/contact';
-<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
                 >;
-=======
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   Contact Us Now;
                 </a>;
                 <a;
 href='/pricing';
-<<<<<<< HEAD
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300';
                 >;
-=======
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   View Pricing;
                 </a>;
               </div>;
@@ -827,13 +767,10 @@ href='/pricing';
     </UltraAdvancedFuturisticBackground>;
   )}
   )}
-<<<<<<< HEAD
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
-=======
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <h2 className='text - 3xl font - bold text - white mb - 6'>;
                 Ready to Transform Your Business?;
               </h2>;

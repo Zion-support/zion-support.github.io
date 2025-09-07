@@ -4,3 +4,14 @@ const FinancialSolutions.js = ({ className }) => {return (<div className={classN
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const FinancialSolutions.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FinancialSolutions.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

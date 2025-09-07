@@ -301,10 +301,7 @@ import { define_config, devices } from '@playwright / test',export default defin
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
-<<<<<<< HEAD
-=======
 
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       use: {
 
 
@@ -417,3 +414,4 @@ ursor/fix-website-loading-errors-and-merge-6662;
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 ursor/fix-lint-push-and-merge-to-main-ae4e
+

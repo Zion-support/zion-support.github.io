@@ -6,6 +6,44 @@ import React, { useEffect, useState } from 'react',import Link from 'next/link',
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</a>;
       </div>;
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = {;
+  id: string,;
+  title: string,;
+  inviteeName: string,;
+  createdAt: string,;
+  summary: string,;
+  audio?: {;
+    mp3Url?: string,;
+    wavUrl?: string,;
+    mp4Url?: string;
+  }
+},;
+export default function PodcastIndexPage() {;
+  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]),;
+  const [loading, setLoading] = useState<boolean>(true),;
+  useEffect(() => {;
+    const load = async () => {;
+      try {;
+        const res = await fetch('/api/podcast/list'),;
+        const data = await res.json(),;
+        setEpisodes(data.episodes || []);
+      } catch (err) {;
+        console.error(err);
+      } finally {;
+        setLoading(false);
+      }
+    },
+    load()
+  }, []),
+  if (loading) return <div>Loading episodes</div>,
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold">Zion Podcast</h1>
+        <Link href="/studio/host" className="text-blue-600 underline">Create Episode</a>
+      </div>
       {episodes.length === 0 && <p>No episodes yet.</p>}
       <ul className="space-y-4">;
         {episodes.map((ep) => (<li key={ep.id} className="border rounded p-4">;
@@ -38,3 +76,7 @@ import React, { useEffect, useState } from 'react',import Link from 'next/link',
       </ul>;
     </div>;
   )}
+  );
+}
+}
+

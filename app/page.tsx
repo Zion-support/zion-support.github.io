@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import Link from 'next/link';
-=======
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -38,10 +33,8 @@ export const metadata: Metadata = {
     },
   },
 };
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+import React from 'react';
+import Link from 'next/link';
 
 interface CardProps {
   title: string;
@@ -51,54 +44,78 @@ interface CardProps {
   icon?: string;
 }
 
-function ServiceCard({
-  title,
-  href,
-  description,
-  bullets = [],
-  icon,
-}: CardProps) {
+function Card({ title, href, description, bullets = [], icon }: CardProps) {
   return (
     <Link
       href={href}
-      className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105"
-      aria-label={`Learn more about ${title} services`}
+      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
     >
       <div className="flex items-center mb-4">
-        {icon && <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{icon}</span>}
-        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+        {icon && <span className="text-2xl mr-3">{icon}</span>}
+        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       </div>
-      <p className="text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
+      <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
       {bullets.length > 0 && (
-        <ul className="space-y-2" role="list">
+        <ul className="space-y-2">
           {bullets.map((bullet, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center group-hover:text-gray-700 transition-colors duration-300">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-300" aria-hidden="true"></span>
-              {bullet}
+            <li key={index} className="flex items-start">
+              <span className="text-green-500 mr-2">✓</span>
+              <span className="text-sm text-gray-700">{bullet}</span>
             </li>
           ))}
         </ul>
       )}
-      <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-300">
-        Learn more →
-      </div>
     </Link>
   );
 }
 
-export default function HomePage() {
+export default function Home() {
+  const services = [
+    {
+      title: "AI Services",
+      href: "/services/ai-services",
+      description: "Revolutionary AI solutions that transform your business operations and drive unprecedented growth.",
+      icon: "🤖",
+      bullets: [
+        "AI-powered automation",
+        "Machine learning solutions",
+        "Natural language processing",
+        "Computer vision applications"
+      ]
+    },
+    {
+      title: "IT Services",
+      href: "/services/it-services",
+      description: "Comprehensive IT solutions designed to modernize your infrastructure and optimize performance.",
+      icon: "💻",
+      bullets: [
+        "Cloud migration",
+        "System integration",
+        "Network security",
+        "24/7 technical support"
+      ]
+    },
+    {
+      title: "Micro SaaS",
+      href: "/services/micro-saas",
+      description: "Custom micro SaaS applications that solve specific business problems with elegant simplicity.",
+      icon: "🚀",
+      bullets: [
+        "Rapid development",
+        "Scalable architecture",
+        "User-friendly interfaces",
+        "Cost-effective solutions"
+      ]
+    }
+  ];
+
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-<<<<<<< HEAD
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
         {/* Animated background elements */}
-=======
 
       <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
         {/* Animated background elements */}
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute -bottom-8 -right-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -224,21 +241,35 @@ export default function HomePage() {
             ]}
             icon="🔒"
           />
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg" aria-labelledby="why-choose-heading">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h2 id="why-choose-heading" className="text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
-            Why Choose Zion Tech Group?
-<<<<<<< HEAD
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            We deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results. 
+            Transform your operations with cutting-edge technology and expert implementation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <Card key={index} {...service} />
+          ))}
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
+        {/* Animated background elements */}
+
+      <section className="text-center py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-lg relative overflow-hidden" role="banner">
+        {/* Animated background elements */}
+
+        </div>
+
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-slide-up">
             We combine technical expertise with business acumen to deliver
             solutions that drive real results.
           </p>
-=======
 
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -371,7 +402,6 @@ export default function HomePage() {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
           <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
@@ -424,7 +454,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Animated background elements */}
@@ -436,36 +465,16 @@ export default function HomePage() {
         
         <div className="relative z-10">
           <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
-            Let&apos;s discuss your project and create a custom solution that drives
-            real business value. Our team has delivered 1000+ successful
-            projects across various industries. Contact us today for a free consultation.
+          <p className="text-lg text-gray-600 mb-8">
+            Let's discuss how our solutions can drive your success.
+            Let&apos;s discuss your project and create a custom solution that drives real business value. 
+            Our team has delivered 1000+ successful projects across various industries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 shadow-lg hover:shadow-xl"
-              aria-label="Contact us to get started with your project"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-              aria-label="Explore our services"
-            >
-              View Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
-=======
 
       {/* Contact Information Section */}
       <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
@@ -501,27 +510,31 @@ export default function HomePage() {
           />
         </div>
       </section>
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
+
+          <Link
+            href="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started Today
+          </Link>
+        </div>
+      </div>
+
+    </div>
+  );
+}
+function FeatureCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center p-6">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }
 
-function ContactCard({ icon, title, content, description, href }: {
-  icon: string;
-  title: string;
-  content: string;
-  description: string;
-  href: string;
-}) {
-  return (
-    <a
-      href={href}
-      className="group p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 text-center"
-    >
-      <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
-      <p className="text-lg font-medium text-gray-700 mb-2 group-hover:text-gray-900 transition-colors duration-300">{content}</p>
-      <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
-    </a>
-  );
-}

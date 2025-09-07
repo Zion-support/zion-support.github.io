@@ -1,5 +1,16 @@
 
 import { ChevronDown, ChevronUp } from "lucide-react",import { Slider } from "@/components/ui/slider",import { ExperienceFilterProps } from "@/types/filters",export function ExperienceFilter() {const handleChange = (values:number[]) => {setExperienceRange([values[0], values[1]]),},return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters",;
+;
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen } ExperienceFilterProps) {;
+  const handleChange = (values:number[]) => {;
+    setExperienceRange([values[0], values[1]]),;
+  },;
+;
+  return (;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium";
@@ -25,3 +36,12 @@ import { ChevronDown, ChevronUp } from "lucide-react",import { Slider } from "@/
     </div>;
   ),}
  export function ExperienceFilter () {const handleChange = (values: number[]) => {setExperienceRange ([values[0], values[1]])}
+  ),;}
+ export function ExperienceFilter ({
+  experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen 
+}: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+  setExperienceRange ([values[0], values[1]]) 
+}
+}
+

@@ -4,3 +4,14 @@ const AIClimatePredictionPlatform.js = ({ className }) => {return (<div classNam
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const AIClimatePredictionPlatform.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIClimatePredictionPlatform.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

@@ -90,6 +90,34 @@ const __dirname = path.dirname(__filename)console.log(' Improved Automation Orch
         description: script.description;
         status: "failed";
         duration: duration,"output": null,"error": error.message;
+        "duration": duratio,n
+        "output": nul,l
+        "error": error.messag,e
+        "critical": script.critica,l}
+;
+      this.results.scripts.push(scriptResult);
+      this.results.summary.failed++;
+      console.log(` ${script.name} "failed": (${duration}ms): ${error.message}`);
+      "if": (script.critical) {
+        console.log("  Critical script failed, stopping orchestration");
+        "throw": error}
+        "duration": duration,
+        "output": result.output;
+    error: null,
+        "critical": script.critical}
+;
+      this.results.scripts.push(scriptResult);
+      this.results.summary.successful++;
+      console.log(` ${script.name} completed successfully (${duration}ms)`)} catch (error) { 
+      const duration = Date.now() - startTime;
+      const scriptResult = {
+        "name": script.name
+        script: script.script
+        description: script.description
+        status: "status",
+    duration: duration,
+        "output": null,
+        "error": error.message
         critical: script.critical }
         "critical": script.critical}this.results.scripts.push(scriptResult)this.results.summary.failed++;
       console.log(` ${script.name} failed (${duration}ms): ${error.message}`)if (script.critical) {";
@@ -141,3 +169,8 @@ const orchestrator = new ImprovedAutomationOrchestrator()orchestrator.run().catc
   }
 // Run the automation orchestrator;
 const orchestrator = new ImprovedAutomationOrchestrator()orchestrator.run().catch(error => {',console.error(' Failed to run automation "orchestrator": ', error)process.exit(1)})
+const orchestrator = new ImprovedAutomationOrchestrator();
+orchestrator.run().catch(error => {',
+  console.error(' Failed to run automation "orchestrator": ', error);
+  process.exit(1)})
+

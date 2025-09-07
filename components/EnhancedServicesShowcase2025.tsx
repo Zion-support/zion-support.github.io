@@ -53,15 +53,12 @@ import {SiNextdotjs;
   SiAws;
   SiGooglecloud;
   SiMicrosoftazure;} from 'react-icons/si';
-<<<<<<< HEAD
 interface Service  {} from 'react-icons/si';interface Service  {FaRocket,FaBrain,FaCloud,FaShieldAlt,FaChartLine,FaCogs,FaLightbulb,FaGlobe,FaMobile,FaDatabase,FaNetworkWired,FaRobot,FaSearch,import { SiNextdotjs,SiReact,SiTypescript,SiTailwindcss,SiPrisma,SiSupabase,SiVercel,SiDocker,SiKubernetes,SiAws,SiGooglecloud,SiMicrosoftazure,} from 'react-icons/si';
-=======
 
 interface Service  {} from 'react-icons/si';
 
 interface Service  {FaRocket,FaBrain,FaCloud,FaShieldAlt,FaChartLine,FaCogs,FaLightbulb,FaGlobe,FaMobile,FaDatabase,FaNetworkWired,FaRobot,FaSearch,import { SiNextdotjs,SiReact,SiTypescript,SiTailwindcss,SiPrisma,SiSupabase,SiVercel,SiDocker,SiKubernetes,SiAws,SiGooglecloud,SiMicrosoftazure,} from 'react-icons/si';
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 interface Service  {id: string;
   title: string;
   description: string;
@@ -76,24 +73,18 @@ interface Service  {id: string;
     enterprise: number;
   },technologies: string[];
   benefits: string[];
-<<<<<<< HEAD
 }interface ServiceCategory  {id: string;
-=======
 }
 
 interface ServiceCategory  {id: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   name: string;
   description: string;
   icon: React.ReactNode;color: string;
 }color: string;  id: string,name: string,description: string,icon: React.ReactNode,color: string;
-<<<<<<< HEAD
 }const serviceCategories: ServiceCategory[] = [;
-=======
 }
 
 const serviceCategories: ServiceCategory[] = [;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   {id: 'ai-ml';
     name: 'AI & Machine Learning';
     description:;
@@ -174,11 +165,8 @@ const serviceCategories: ServiceCategory[] = [;
 
 export default EnhancedServicesShowcase2025
 ];
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 const services: Service[] = [;
   {id: 'ai-automation-suite',title: 'AI-Powered Automation Suite',description:;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',icon: <FaRobot className='w-6 h-6' />,category: 'automation',features: [;
@@ -191,14 +179,11 @@ const services: Service[] = [;
       'Predictive analytics';
       'Real-time decision making';
       'Custom AI model training';
-<<<<<<< HEAD
       'Multi-platform integration';
     ];
-=======
       'Multi-platform integration'
 ];
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
     pricing: {starter: 299,professional: 799,enterprise: 1999,},technologies: [;
       'TensorFlow','PyTorch','OpenAI','LangChain','React','Node.js',],benefits: [;
       'Reduce manual tasks by 80%','Improve accuracy by 95%','24/7 automated operations','Scalable AI infrastructure',],},{id: 'quantum-computing-platform',title: 'Quantum Computing Platform',description:;
@@ -214,19 +199,16 @@ const services: Service[] = [;
       'Future-proof security','Quantum-resistant encryption','Comprehensive compliance','Advanced threat protection',],},{id: 'data-fabric-platform',title: 'Intelligent Data Fabric Platform',description:;
       'Unified data management and analytics across all sources and formats',icon: <FaDatabase className='w-6 h-6' />,category: 'data',features: [;
       'Unified data access','Real-time analytics','Data governance','AI-powered insights','Multi-cloud support','Data lineage tracking',],pricing: {starter: 299,professional: 799,enterprise: 1999,},technologies: [;
-<<<<<<< HEAD
       'Apache Kafka','Apache Spark','Snowflake','Databricks','Airflow',],'Improved data quality','Reduced integration costs',],},  {id: 'cloud - native - platform',title: 'Cloud - Native Development Platform',description: 'Modern cloud - native development and deployment platform',icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
     ];benefits: [;
       'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},{id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',}
   {{id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',];
-=======
       'Apache Kafka','Apache Spark','Snowflake','Databricks','Airflow',],'Improved data quality','Reduced integration costs',],},  {id: 'cloud - native - platform',title: 'Cloud - Native Development Platform',description: 'Modern cloud - native development and deployment platform',icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs'
 ];
 benefits: [;
       'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},{id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',}
   {{id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',];
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 const services: Service[] = [;
   {id: 'ai-automation-suite',title: 'AI-Powered Automation Suite',description:;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',icon: <FaRobot className='w-6 h-6' />,features: [;
@@ -246,7 +228,6 @@ const services: Service[] = [;
       'Unified data management and analytics across all sources and formats',icon: <FaDatabase className='w-6 h-6' />,category: 'data',features: [;
       'Unified data access','Real-time analytics','Data governance','AI-powered insights','Multi-cloud support','Data lineage tracking',],pricing: {starter: 299,professional: 799,enterprise: 1999,},technologies: [;
       'Apache Kafka','Apache Spark','Snowflake','Databricks','Airflow',],benefits: [;
-<<<<<<< HEAD
       'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},  {id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs';
     ];
   }{id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',icon: <FaCloud className='w-6 h-6' />,features: [;
@@ -254,7 +235,6 @@ const services: Service[] = [;
       'Kubernetes','Docker','Helm','ArgoCD','Prometheus','Grafana',],benefits: [;
       'Faster deployment','Improved scalability','Better resource utilization','Enhanced reliability',],},];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability';
     ];
-=======
       'Unified data view','Real-time insights','Improved data quality','Reduced integration costs',],},  {id: 'cloud-native-platform',title: 'Cloud-Native Development Platform',description: 'Modern cloud-native development and deployment platform',icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
 ];
 
@@ -264,7 +244,6 @@ const services: Service[] = [;
       'Faster deployment','Improved scalability','Better resource utilization','Enhanced reliability',],},];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
 ];
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   }icon: <FaCloud className='w-6 h-6' />,category: 'cloud',features: [;
       'Kubernetes orchestration','Microservices architecture','CI/CD pipelines','Auto-scaling','Multi-cloud deployment','DevOps automation',],pricing: {starter: 199,professional: 599,enterprise: 1499,},technologies: [;
       'TensorFlow';
@@ -272,13 +251,11 @@ const services: Service[] = [;
       'OpenAI';
       'LangChain';
       'React';
-<<<<<<< HEAD
       'Node.js';
     ];
     benefits: [;
       'Faster deployment','Improved scalability','Better resource utilization','Enhanced reliability',],},];
 const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')const [selectedService, setSelectedService] = useState<Service | null>(null)const [searchTerm, setSearchTerm] = useState('')const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name')const filteredServices = useMemo(() => {let filtered  = services;if (selectedCategory !== 'all') {if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory;
-=======
       'Node.js'
 ];
 
@@ -289,7 +266,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
   useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name';
   const filteredServices = useMemo(() => {let filtered  = services;if (selectedCategory !== 'all') {if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       )}
     if (searchTerm) {filtered = filtered.filter(service =>;
           service.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
@@ -302,7 +278,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
         case 'category':;
           return a.category.localeCompare(b.category)default:;
           return a.title.localeCompare(b.title)}
-<<<<<<< HEAD
     })}, [selectedCategory, searchTerm, sortBy])const handleServiceSelect = (service: Service) => {setSelectedService(service)}
   const closeModal = () => {setSelectedService(null)}
   return (<div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white'>;
@@ -312,7 +287,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'      }
     })return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
-=======
     })}, [selectedCategory, searchTerm, sortBy])const handleServiceSelect = (service: Service) => {setSelectedService(service,
 }
 ;
@@ -328,22 +302,18 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
    ,
 };
   return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
       {/* Header */}
       <div className="container mx-auto px-4 py-16">;
         <motion&& motion.div;
       <div className='container mx-auto px-4 py-16'>;
         <motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-=======
           initial = {{ opacity: 0, y: 20 ,
 }
           animate={{ opacity: 1, y: 0 ,
 }
  ;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
   return (<div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
       {/* Header */}
       <div className="container mx - auto px - 4 py - 16">;
@@ -351,12 +321,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
           initial={{ opacity: 0, coordinate_y: 20 ,
 }
           animate={{ opacity: 1, coordinate_y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8 }}transition={{ duration: 0 && 0.8 }}
-=======
           transition={{ duration: 0.8 }}transition={{ duration: 0 && 0.8 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           className='text-center mb-16'>;
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
             2025 Services Showcase;
@@ -372,13 +339,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
             Discover our cutting-edge technology solutions designed for the future. ;
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.;
           </p>;
-<<<<<<< HEAD
         </motion && motion.div>;className='text-center mb-16';
         >;
-=======
         </motion && motion.div>;className='text-center mb-16'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
             2025 Services Showcase;
           </h1>;
@@ -390,12 +354,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
         </motion.div>;
         {/* Search and Filters */}
         <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='mb-12';
         >;
-=======
           initial={{ opacity: 0, y: 20 ,
 }
           animate={{ opacity: 1, y: 0 ,
@@ -403,7 +365,6 @@ className='mb-12';
 }
 className='mb-12'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
             <div className='relative flex-1 max-w-md'>;
               <input;
@@ -413,13 +374,10 @@ className='mb-12'>
             <select;
               value={sortBy}
               onChange={e =>;
-<<<<<<< HEAD
                 setSortBy(e && e.target.value as 'name' | 'price' | 'category')}className='text - center mb - 16';
         >;
-=======
                 setSortBy(e && e.target.value as 'name' | 'price' | 'category')}className='text - center mb - 16'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <h1 className='text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
             2025 Services Showcase;
           </h1>;
@@ -460,13 +418,10 @@ className='mb-12'>
               value={sort_by}
               on_change={e =>;
                 setSortBy (e.target.value as 'name' | 'price' | 'category')}
-<<<<<<< HEAD
               className='px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500';
             >;
-=======
               className='px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <option value='name'>Sort by Name</option>;
               <option value='price'>Sort by Price</option>;
               <option value='category'>Sort by Category</option>            </select>        >;
@@ -498,13 +453,10 @@ className='mb-12'>
               <option value="price">Sort by Price</option>;
               <option value="category">Sort by Category</option>;
             </select>;
-<<<<<<< HEAD
           </div>;className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500';
             >;
-=======
           </div>;className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               <option value='name'>Sort by Name</option>;
               <option value='price'>Sort by Price</option>;
               <option value='category'>Sort by Category</option>;
@@ -513,12 +465,10 @@ className='mb-12'>
         </motion.div>;
         {/* Category Tabs */}
         <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
 className='mb-12';
         >;
-=======
           initial={{ opacity: 0, y: 20 ,
 }
           animate={{ opacity: 1, y: 0 ,
@@ -526,19 +476,15 @@ className='mb-12';
 }
 className='mb-12'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
           <div className='flex flex-wrap justify-center gap-4'>;
             <button;
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
-<<<<<<< HEAD
               }`}>;
-=======
               }`}>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               All Services;
             </button>;
 {serviceCategories.map(category => (<button;
@@ -561,7 +507,6 @@ className='mb-12'>
             ))}
         {/* Services Grid */}
         <motion&& motion.div;
-<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
@@ -574,7 +519,6 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300';
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-=======
           initial={{ opacity: 0, y: 20 ,
 }
           animate={{ opacity: 1, y: 0 ,
@@ -596,7 +540,6 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 }
               whileHover={{ y: -5, scale: 1.02 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300';
               onClick={() => handleServiceSelect(service)}
             >;
@@ -626,13 +569,10 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                 {service && service.technologies.slice(0, 3).map(tech => (<span;
                     key={tech}{tech}
                   </span>;
-<<<<<<< HEAD
                 ))}className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300';
                   >;
-=======
                 ))}className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                     {tech}
                   </span>;
                 ))}
@@ -684,14 +624,11 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
         </motion && motion.div>;{/* No Results */}
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
             initial={{ opacity: 0 }}
-<<<<<<< HEAD
             animate={{ opacity: 1 }}className='text-center py-16';
           >;
-=======
             animate={{ opacity: 1 ,
 }className='text-center py-16'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
             <div className='text-6xl mb-4'>🔍</div>;
             <h3 className='text-2xl font-bold text-gray-300 mb-2'>;
               No services found;
@@ -706,28 +643,22 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
         {selectedService && (<motion&& motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
             exit={{ opacity: 0 }}
-=======
             exit={{ opacity: 0 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
 className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
             onClick={closeModal}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}>;
             <motion.div;
-<<<<<<< HEAD
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto';
-=======
               initial={{ scale: 0.9, opacity: 0 ,
 }
               animate={{ scale: 1, opacity: 1 ,
 }
               exit={{ scale: 0.9, opacity: 0 ,
 }className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               onClick={e => e.stopPropagation()}>;
               <div className='flex items-start justify-between mb-6'>;
                 <div className='flex items-center gap-4'>;
@@ -746,13 +677,10 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   </div>;
                 </div>;
                 <button;
-<<<<<<< HEAD
                   onClick={closeModal}className='p-2 hover:bg-white/10 rounded-lg transition-colors';
                 >;
-=======
                   onClick={closeModal}className='p-2 hover:bg-white/10 rounded-lg transition-colors'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                   <span className='text-2xl'>×</span>;
                 </button>;
               </div>;
@@ -772,7 +700,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   <span className="text-2xl">×</span>;
                 </button>;
               </div>;
-<<<<<<< HEAD
                 {/* Features */}className='flex items-center gap-2 text-gray-300';
                       >;
                         <div className='w-2 h-2 bg-blue-500 rounded-full'></div>;
@@ -781,7 +708,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   </ul>;
                 </div>;
                     ))}
-=======
                 {/* Features */}className='flex items-center gap-2 text-gray-300'>
 
                         <div className='w-2 h-2 bg-blue-500 rounded-full'></div>;
@@ -790,7 +716,6 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   </ul>;
                 </div>;
                     ))}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                 {/* Benefits */}<div>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     Key Benefits;
@@ -810,13 +735,10 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   <ul className='space-y-2'>;
                     {selectedService.benefits.map((benefit, index) => (<li;
                         key={index}
-<<<<<<< HEAD
                         className='flex items-center gap-2 text-gray-300';
                       >;
-=======
                         className='flex items-center gap-2 text-gray-300'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         <div className='w-2 h-2 bg-green-500 rounded-full'></div>;
                         {benefit}
                       </li>;
@@ -834,17 +756,14 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   {selectedService.technologies.map((tech) => (<span;
                       key={tech}
                       className="px-3 py-2 bg-white/10 rounded-lg text-gray-300";
-<<<<<<< HEAD
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >;
                     >;
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300';
                     >;
-=======
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >>
 
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                       {tech}
                     </span>;
                   ))}</div>;
@@ -855,13 +774,10 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
                   {Object.entries(selectedService.pricing).map(([plan, price]) => (<div;
                         key={plan}
-<<<<<<< HEAD
                         className='p-4 bg-white/5 border border-white/20 rounded-lg text-center';
                       >;
-=======
                         className='p-4 bg-white/5 border border-white/20 rounded-lg text-center'>
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
                         <h4 className='text-lg font-bold text-white capitalize mb-2'>;
                           {plan}
                         </h4>;
@@ -928,10 +844,8 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
             </motion && motion.div>;
           </motion && motion.div>;
         )}
-<<<<<<< HEAD
 }export default EnhancedServicesShowcase2025;  ))}export default EnhancedServicesShowcase2025;
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
-=======
 }
 
 export default EnhancedServicesShowcase2025;  ))}
@@ -939,7 +853,6 @@ export default EnhancedServicesShowcase2025;  ))}
 export default EnhancedServicesShowcase2025;
               while_hover={{ coordinate_y: -5, scale: 1.02 ,
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
               className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
               on_click={() => handleServiceSelect (service)}
             >;
@@ -1175,12 +1088,10 @@ export default EnhancedServicesShowcase2025;
               </div>;
             </motion.div>;
           </motion.div>)}
-<<<<<<< HEAD
       </AnimatePresence>;
     </div>)}export default EnhancedServicesShowcase2025)}export default EnhancedServicesShowcase2025;export default EnhancedServicesShowcase2025;}</AnimatePresence>;
     </div>;
 )}export default EnhancedServicesShowcase2025;
-=======
       </AnimatePresence>
     </div>
   );
@@ -1195,4 +1106,4 @@ export default EnhancedServicesShowcase2025;}</AnimatePresence>;
 )}
 
 export default EnhancedServicesShowcase2025;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-45a7
+

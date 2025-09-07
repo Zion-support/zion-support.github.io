@@ -4,3 +4,14 @@ const LazyWrapper.js = ({ className }) => {return (<div className={className || 
       <p>This component is under development.</p>;
     </div>;
   )}
+
+const LazyWrapper.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LazyWrapper.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  )
+}
+}
+

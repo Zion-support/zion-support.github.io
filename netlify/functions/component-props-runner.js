@@ -80,6 +80,8 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
+const res = spawnSync('node', [abs, ...args], {
+    stdio: "stdio",
     encoding: 'utf8'
  ,
 });
@@ -216,3 +218,5 @@ function log_step() {
  ;
   return { status_code: 200, body: logs.join ('\n'),
 }
+  return { status_code: 200, body: logs.join ('\n') }
+

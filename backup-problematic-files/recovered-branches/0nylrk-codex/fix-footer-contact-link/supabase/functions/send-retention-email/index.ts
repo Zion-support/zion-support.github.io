@@ -5,6 +5,46 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL")!,const supabaseServiceKey = Den
 }serve(async (req) => {// Handle CORS preflight requests;
   if (req.method === "OPTIONS") {return new Response(null, { headers:corsHeaders }),}try {// Extract job data from request;
     const jobData = await req.json(),const { id:jobId, payload } = jobData,const emailData  = payload as EmailData,// Fetch user's email;
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { Resend } from "npm:resend@2.0.0",;
+;
+// Initialize Resend with API key;
+const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
+;
+// Initialize Supabase client;
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
+const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin":"*",;
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
+;
+interface EmailData {;
+  user_id:string,;
+  email_type:string,;
+  display_name:string,;
+  user_type:string,;
+  days_inactive?:number,;
+  onboarding_status?:any,;
+  job_id?:string,;
+  job_title?:string;
+}
+;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers:corsHeaders }),;
+  }
+;
+  try {;
+    // Extract job data from request;
+    const jobData = await req.json(),;
+    const { id:jobId, payload } = jobData,;
+    const emailData = payload as EmailData,;
+    ;
+    // Fetch user's email;
     const { data:userData, error:userError } = await supabase;
       .from("profiles").select("id, display_name, avatar_url, user_type").eq("id", emailData.user_id).single(),if (userError) {throw new Error(`Error fetching user data:${userError.message}`),}const { data:authUser, error:authError } = await supabase;
       .from("auth.users").select("email").eq("id", emailData.user_id).single(),if (authError) {throw new Error(`Error fetching user email:${authError.message}`),}const userEmail = authUser.email,if (!userEmail) {throw new Error("User email not found"),}// Generate email content based on email type;
@@ -211,6 +251,16 @@ html: ` <h2>Welcome to Zion AI Marketplace!</h2> <p>Hi $ {firstName;
 }else {//For clients if (!onboarding.job posted) {}
 }
 }return {subject: `$ {firstName;
+}if (user type === "jobSeeker" || user type === "creator") {
+  if (!onboarding.profile completed) {
+}
+}else {
+  //For clients if (!onboarding.job posted) {
+}
+}
+}return {
+  subject: `$ {
+  firstName 
 }, one quick step to unlock more opportunities`;
 html: `jobSeeker"|| user type === " creator") {subject: `New projects waiting for your expertise, $ {firstName;
 }`;

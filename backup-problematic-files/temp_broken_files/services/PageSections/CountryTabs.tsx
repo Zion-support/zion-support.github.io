@@ -2,6 +2,51 @@ import { useState, useEffect } from 'react',import { Search  } from 'lucide-reac
 import { Input } from '@/components/ui/input',import { Button } from '@/components/ui/button',import {Pagination,PaginationContent,PaginationItem,PaginationButton,PaginationNext,PaginationPrevious} from '@/components/ui/pagination',import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',import { CountryServiceCard } from '@/components/services/CountryServiceCard',import { CountryPricing } from '@/data/onsiteServicePricing',interface CountryTabsProps  {popularCountries:string[],filteredCountries:CountryPricing[],handleCountrySelect:(country:CountryPricing) => void,onQuote?:(country:CountryPricing) => void,searchQuery:string,setSearchQuery:(query:string) => void;
 }export function CountryTabs() {const [currentPage, setCurrentPage] = useState(1),const countriesPerPage  = 50,useEffect(() => {setCurrentPage(1),}, [searchQuery]),const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),const paginatedCountries = filteredCountries.slice((currentPage - 1) * countriesPerPage,currentPage * countriesPerPage;
   ),return (<Tabs defaultValue="featured" className="w-full">;
+import { useState, useEffect } from 'react';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button',;
+import {;
+  Pagination,;
+  PaginationContent,;
+  PaginationItem,;
+  PaginationButton,;
+  PaginationNext,;
+  PaginationPrevious} from '@/components/ui/pagination',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
+import { CountryPricing } from '@/data/onsiteServicePricing',;
+;
+interface CountryTabsProps {;
+  popularCountries:string[],;
+  filteredCountries:CountryPricing[],;
+  handleCountrySelect:(country:CountryPricing) => void,;
+  onQuote?:(country:CountryPricing) => void,;
+  searchQuery:string,;
+  setSearchQuery:(query:string) => void;
+}
+;
+export function CountryTabs({;
+  popularCountries,;
+  filteredCountries,;
+  handleCountrySelect,;
+  onQuote,;
+  searchQuery,;
+  setSearchQuery} CountryTabsProps) {;
+  const [currentPage, setCurrentPage] = useState(1),;
+  const countriesPerPage = 50,;
+;
+  useEffect(() => {;
+    setCurrentPage(1),;
+  }, [searchQuery]),;
+;
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),;
+  const paginatedCountries = filteredCountries.slice(;
+    (currentPage - 1) * countriesPerPage,;
+    currentPage * countriesPerPage;
+  ),;
+  return (;
+    <Tabs defaultValue="featured" className="w-full">;
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
         <TabsTrigger;
           value="featured";
@@ -96,3 +141,16 @@ import { Input } from '@/components/ui/input',import { Button } from '@/componen
 }</TabsContent> </Tabs>)"}";
 }</TabsContent> </Tabs>)}";
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx;
+}/> </PaginationItem> {;
+  Array.from ({;
+  length: totalPages ;
+}, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
+  page ;
+}> <PaginationButton /> </PaginationItem>) ) ;
+}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ;
+:temp_broken_files/services/PageSections/CountryTabs.tsx
+}</TabsContent> </Tabs>) ;"}"
+}</TabsContent> </Tabs>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx
+

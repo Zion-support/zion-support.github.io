@@ -6,11 +6,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-    if (content.includes('') || content.includes('>>>>>>>')) {
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
       console.log(`Fixing merge conflicts in: ${filePath}`);
       
       // Simple merge conflict resolution - take the HEAD version
@@ -23,16 +18,16 @@ function fixMergeConflicts(filePath) {
         const line = lines[i];
         
         if (line.includes('')) {
-<<<<<<< HEAD
-=======
           inConflict = true;
           takeHead = true;
           continue;
         } else if (line.includes('')) {
->>>>>>> 5e6beaf9b7cc8c8eabc253c2e279e8ffb447f8e0
           takeHead = false;
           continue;
-        } else if (line.includes('>>>>>>>')) {
+          inConflict = true;
+          takeHead = true;
+          continue;
+        } else if (line.includes('')) {
           inConflict = false;
           continue;
         }

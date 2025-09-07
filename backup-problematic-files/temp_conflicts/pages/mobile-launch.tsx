@@ -1,5 +1,14 @@
 import Head from 'next/head',import { useEffect, useMemo, useState } from 'react',import EnhancedLayout from '../components/layout/EnhancedLayout',import Link from 'next/link',// Simple icons using inline SVG to avoid external assets;
 function StarIcon() {return (<svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">;
+import Head from 'next/head';
+import { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from "EnhancedLayout";
+import Link from "Link";
+;
+// Simple icons using inline SVG to avoid external assets;
+function StarIcon({ className = 'w-5 h-5 text-yellow-500' } { className?:string }) {;
+  return (;
+    <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">;
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.802 2.036a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.803-2.036a1 1 0 00-1.175 0l-2.803 2.036c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.88 8.72c-.783-.57-.38-1.81.588-1.81H6.93a1 1 0 00.95-.69l1.07-3.292z" />;
     </svg>;
   ),}function AppleBadge() {return (<a href={href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 rounded-lg bg-black text-white px-4 py-2 shadow hover:opacity-90">;
@@ -173,3 +182,6 @@ function StarIcon() {return (<svg className={className} viewBox="0 0 20 20" fill
       </section>;
     </EnhancedLayout>;
   )}
+  );
+}
+
