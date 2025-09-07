@@ -1,117 +1,14 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
-
-<<<<<<< HEAD
-=======
-[build.environment]
-  NODE_VERSION = "18"
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-command = "npm ci && npm run build"
-publish = ".next"
-
-[build.environment]
-NODE_VERSION = "20"
-NODE_OPTIONS = "--max-old-space-size=4096"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-command = "npm ci && npm run build"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-publish = ".next"
-=======
-publish = "dist"
->>>>>>> pr-12325
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-publish = "dist"
-
-[build.environment]
-<<<<<<< HEAD
-NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-publish = ".next"
-
-<<<<<<< HEAD
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-[build.environment]
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-<<<<<<< HEAD
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
-ursor/automate-test-improve-and-merge-code-646c
-NODE_VERSION = "20"
-NODE_OPTIONS = "--max-old-space-size=4096"
-  command = "npm install --legacy-peer-deps && npm run build"
-  publish = ".next"
-command = "npm ci && npm run build"
-publish = ".next"
-publish = "dist"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 79d75ebd63c0929536b7d47cf5dc16d1ef769356
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> b039dba24b91d7c4b1dfe2cb028125a66203882a
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
-
-[build.environment]
-NODE_VERSION = "20"
-NODE_OPTIONS = "--max-old-space-size=4096"
-NODE_VERSION = "20"
-NODE_OPTIONS = "--max-old-space-size=4096"
-<<<<<<< HEAD
->>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
-=======
-<<<<<<< HEAD
->>>>>>> cdb1a6eb45c264637444f20727f2adfe9fa7fadb
->>>>>>> b43254817b51666b4fff988ee16fcb7b1df0e58a
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-474c
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 505950bb5f65df61118ac41ff4bde74d3caba4f4
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
->>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
-
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-<<<<<<< HEAD
-# Optional: keep functions path if you rely on Netlify Functions in this repo
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
-[functions]
-  directory = "netlify/functions"
-
-[build]
   command = "npm ci && npm run build"
   publish = ".next"
   functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+[functions]
+  directory = "netlify/functions"
 
 # Next.js runtime for SSR/ISR on Netlify
 [[plugins]]
