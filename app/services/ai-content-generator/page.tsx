@@ -20,14 +20,18 @@ export default function AIContentGeneratorPage() {
             SEO-optimized content for blogs, social media, and marketing materials at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center" >
-            <a;
-href="mailto:kleber@ziontechgroup.com?subject = AI Content Generator Inquiry"
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
-             >Start Free Trial</a>
-            <a;
-href="tel:+13024640950"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
-             >Call +1 302 464 0950</a>
+            >
+              Call +1 302 464 0950
+            </a>
           </div>
         </div>
 
