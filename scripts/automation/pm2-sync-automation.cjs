@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * PM2 Sync Automation;
  * Manages PM2 processes and ensures synchronization;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -30,12 +22,17 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class PM2SyncAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -50,11 +47,7 @@ class PM2SyncAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     checkPM2Status() {}
         this.log('Checking PM2 status...');
@@ -68,6 +61,7 @@ class PM2SyncAutomation {}
             
             const status = JSON.parse(statusResult;);
             this.log(`Found ${status.length} PM2 processes`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         console.log(message)};
@@ -84,53 +78,47 @@ class PM2SyncAutomation {}
 =======
             
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+            
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {;}
 
                 "error": error.message;"
             }};
-<<<<<<< HEAD
     };
     syncPM2Processes() {}
         this.log('Syncing PM2 processes...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-        try {}
-            // Stop all processes;
-            execSync('pm2 stop all', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            
-            // Delete all processes;
-            execSync('pm2 delete all', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            // Start processes from ecosystem file;
-            execSync('pm2 start ecosystem.config.cjs', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
 =======
         
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             // Stop all processes;
             execSync('pm2 stop all', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
-=======
-    syncPM2Processes() {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            }
+});
+            
+            // Delete all processes;
+            execSync('pm2 delete all', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
+            // Start processes from ecosystem file;
+            execSync('pm2 start ecosystem.config.cjs', { })
+                "cwd": this.projectRoot,
+                "stdio": 'pipe'
+            }
+});
             }
             // Delete all processes;
-<<<<<<< HEAD
             execSync('pm2 delete all', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
@@ -144,10 +132,13 @@ class PM2SyncAutomation {}
             }
 });
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             this.log('PM2 processes synced successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`PM2 sync "failed": ${error.message}`);
@@ -157,9 +148,13 @@ class PM2SyncAutomation {}
         this.log('Checking process health...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const statusResult = execSync('pm2 status --json', { })
                 "cwd": this.projectRoot,
@@ -172,6 +167,7 @@ class PM2SyncAutomation {}
             const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
             
             this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         
@@ -192,6 +188,9 @@ class PM2SyncAutomation {}
 =======
             
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+            
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {;}
                 "status": 'success',
                 "total": processes.length,
@@ -206,33 +205,24 @@ class PM2SyncAutomation {}
         this.log('Restarting unhealthy processes...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const healthCheck = this.checkProcessHealth(;);
             
             if ( {})
                 execSync('pm2 restart all', { })
                     "cwd": this.projectRoot,
-=======
-        
-        try {}
-            const healthCheck = this.checkProcessHealth(;);
-            
-            if ( {})
-                execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('pm2 restart all', { })
-<<<<<<< HEAD
                     "cwd": this.projectRoot,
-=======
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
                     "stdio": 'pipe'
                 })};
                 this.log('Unhealthy processes restarted');
@@ -247,12 +237,16 @@ class PM2SyncAutomation {}
         this.log('Generating PM2 sync report...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -266,13 +260,17 @@ class PM2SyncAutomation {}
        };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`PM2 sync report saved to ${this.reportFile}`);
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`PM2 sync report saved to ${this.reportFile}`);
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -280,6 +278,8 @@ class PM2SyncAutomation {}
         this.log(`PM2 sync report saved to ${this.reportFile}`);
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         return report};
     generateSyncRecommendations() {}
         return [;]
@@ -295,18 +295,21 @@ class PM2SyncAutomation {}
         this.log('PM2 Sync Automation started');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         try {}
             const report = this.generateSyncReport(;);
             this.log('PM2 Sync Automation completed successfully');
             return report} catch (error) {}
             this.log(`PM2 Sync Automation "failed": ${error.message}`);
-=======
 
             "pm2": {}"
                 status: this.checkPM2Status(),"
@@ -316,12 +319,10 @@ class PM2SyncAutomation {}
             },"
             "recommendations": this.generateSyncRecommendations();"
 
-
         return report};
     generateSyncRecommendations() {}
         return [;]"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the automation if this script is executed directly;
     const automation = new PM2SyncAutomation) {}
@@ -331,9 +332,12 @@ class PM2SyncAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = PM2SyncAutomation;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -351,3 +355,6 @@ module.exports = PM2SyncAutomation;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

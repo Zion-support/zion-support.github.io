@@ -2,36 +2,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require("child_process");
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();"
@@ -123,11 +108,11 @@ class AutoFixer {}
       this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);"
   async runAllFixes() {}"
     this.log("info", "Starting comprehensive auto-fix process...");
-<<<<<<< HEAD
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}
       importErrors: await this.fixImportErrors();
       typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,14 +123,14 @@ class AutoFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-      duration: 0};
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      duration: 0};
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}"
       importErrors: await this.fixImportErrors();,
   typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;,
   duration: 0};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
 
     this.log("info", `"Duration": ${results.duration}ms`);"
@@ -169,9 +154,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = AutoFixer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -189,3 +177,6 @@ module.exports = AutoFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

@@ -11,8 +11,6 @@ export default {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-<<<<<<< HEAD
-=======
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -153,7 +151,6 @@ export default {
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem',
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       },
     },
   },
@@ -162,8 +159,5 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
 };
-=======
 };
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

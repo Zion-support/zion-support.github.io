@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -39,7 +38,6 @@ export default function ServicePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             This service page is under development. Please contact us for more information.
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -137,7 +135,6 @@ export default function BlockchainSolutionsPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Blockchain Development Process</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We follow a proven methodology to deliver secure, scalable, and innovative blockchain solutions.
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           </p>
           <a
             href="/contact"
@@ -146,11 +143,9 @@ export default function BlockchainSolutionsPage() {
             Contact Us
           </a>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
   )
-=======
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ProcessStep
             step={1}
@@ -214,5 +209,4 @@ export default function BlockchainSolutionsPage() {
       <ContactSection />
     </div>
   );
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 }

@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Comprehensive Error Fixer
  * Automatically fixes common syntax and import errors
  */
-<<<<<<< HEAD
 const fs = require("child_process");
 const path = require("child_process");
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { execSync } = require("child_process");
 class ComprehensiveErrorFixer {}
   constructor() {}
@@ -156,9 +140,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = ComprehensiveErrorFixer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -178,3 +165,6 @@ module.exports = ComprehensiveErrorFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

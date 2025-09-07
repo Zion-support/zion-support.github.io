@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
@@ -228,9 +227,4 @@ const Header: React.FC = () => {
 
 export default Header;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
-
-
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

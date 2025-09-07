@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
-=======
 #!/usr/bin/env node;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * AI-Powered Code Quality Enhancer - PM2 Automation;
  * Intelligently analyzes and improves code quality using pattern recognition;
@@ -21,8 +12,8 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-<<<<<<< HEAD
 const crypto = require("crypto");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -34,6 +25,9 @@ const crypto = require("crypto");"
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -52,7 +46,6 @@ class $1 {}
   "performance": [{}]"
   pattern: /useCallback\([^)]*\)/g,"
           "improvement": "useCallback optimization",
-<<<<<<< HEAD
           "priority": "HIGH"},
         {}
   "pattern": /useMemo\([^)]*\)/g,
@@ -84,12 +77,16 @@ class $1 {}
   "pattern": /as\s+""any/g""", ""improvement": "Avoid type assertions to any"", ""priority": "HIGH"", "}", ""],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // AI Pattern Recognition Rules;
     this.qualityPatterns = {}
   "performance": [{}]
@@ -124,11 +121,9 @@ class $1 {}
   pattern: /any\s*:/g", ""improvement": "Replace any with proper types", ""priority": "HIGH", "}", "{}
   "pattern": /:\s*string\s*\|\s*"undefined/g"", ""improvement": Use optional properties (?) instead of union with undefined", ""priority": "MEDIUM", "}", "{}
   "pattern": /as\s+"any/g"", ""improvement": "Avoid type assertions to any", ""priority": "HIGH", "}", "]};
-=======
           "priority": "HIGH"},"
         {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 ;
   ensureLogsDirectory() {}
@@ -139,9 +134,8 @@ class $1 {}
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,6 +155,8 @@ class $1 {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 
   async analyzeCodeQuality() {}"
@@ -168,18 +164,21 @@ class $1 {}
     const improvements = [];
     const patterns = [];
     try {}
-<<<<<<< HEAD
   async analyzeCodeQuality() {}
   this.log("🤖 Starting AI-powered code quality analysis...");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const improvements = [];
     const patterns = [];
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     const improvements = [];
     const patterns = [];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -187,10 +186,10 @@ class $1 {}
     const patterns = [];
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-    try {}
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    try {}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // 1. Analyze source files for quality patterns;
       const sourceAnalysis = await this.analyzeSourceFiles();
       improvements.push(...sourceAnalysis.improvements);
@@ -217,7 +216,6 @@ class $1 {}
         appliedFixes;
       // 8. Commit improvements;
       if (appliedFixes.length > 0) {}
-<<<<<<< HEAD
   await this.commitImprovements(appliedFixes)};
     } catch (error) {  this.log(`AI code quality analysis "failed": ${error.message  }`, "ERROR")};
 ;
@@ -239,12 +237,16 @@ class $1 {}
     const sourceDir = path.join(this.projectRoot, "src");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (!fs.existsSync(sourceDir)) {}
   return { improvements, patterns };
     };
@@ -252,24 +254,32 @@ class $1 {}
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const file of files) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
         const fileAnalysis = this.analyzeFileContent(content, file);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if (fileAnalysis.improvements.length > 0) {}
   improvements.push(...fileAnalysis.improvements)};
 ;
@@ -302,12 +312,16 @@ class $1 {}
           improvements.push(improvement);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           patterns.push({})
   "pattern": rule.pattern.source,
             category,
@@ -321,12 +335,16 @@ class $1 {}
       content,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Additional intelligent analysis;
     const additionalIssues = this.findAdditionalQualityIssues(;)
       content,
@@ -335,12 +353,16 @@ class $1 {}
     improvements.push(...additionalIssues);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return { improvements, patterns };
   };
 ;
@@ -348,12 +370,16 @@ class $1 {}
   const issues = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Check for large components (more than 200 lines);
     const lines = content.split("\n");
     if (lines.length > 200) {}
@@ -399,22 +425,24 @@ class $1 {}
     let currentNesting = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const char of content) {}
   if (char === "<" && content[content.indexOf(char) + 1] !== "/") {}
   currentNesting++;
         maxNesting = Math.max(maxNesting, currentNesting)} else if (char === "<" && content[content.indexOf(char) + 1] === "/") {}
-=======
 </div>"
   if (char === "<" && content[content.indexOf(char) + 1] !== "/") {}"
   currentNesting++;"
         maxNesting = Math.max(maxNesting, currentNesting)} else if (char === "<" && content[content.indexOf(char) + 1] === "/") {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   currentNesting = Math.max(0, currentNesting - 1)};
     return maxNesting};
   findUnusedImports(content, filePath) {}"
@@ -425,9 +453,9 @@ class $1 {}
     const imports = importMatches;
       .map(match => {})
   const importContent = match.match(/import\s+{([^}]+)}\s+from/);
-<<<<<<< HEAD
         return importContent;
           ? importContent[1].split(",").map(i => i.trim());
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -436,6 +464,9 @@ class $1 {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   findUnusedImports(content, filePath) {}
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;
     const importMatches = content.match(;)
@@ -444,24 +475,25 @@ class $1 {}
     if (!importMatches) return [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const imports = importMatches;
       .map(match => {})
   const importContent = match.match(/import\s+{([^}]+)}\s+from/);
         return importContent;
           ? importContent[1].split(",").map(i => i.trim());
-=======
         return importContent;"
           ? importContent[1].split(",").map(i => i.trim());"
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;"
 
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           : []}
 });
       .flat();
@@ -471,8 +503,8 @@ class $1 {}
       return (;)`;
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);
       )}
-<<<<<<< HEAD
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -483,11 +515,14 @@ class $1 {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return unused};
-<<<<<<< HEAD
 ;
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   findLineNumbers(content, pattern) {}
@@ -505,12 +540,17 @@ class $1 {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
     const lineNumbers = [];
 
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (let i = 0; i < lines.length; i++) {}
   if (pattern.test(lines[i])) {}
   lineNumbers.push(i + 1)};
@@ -520,21 +560,24 @@ class $1 {}
     const componentsDir = path.join(this.projectRoot, "src", "components");"
     if (!fs.existsSync(componentsDir)) {}
   return { improvements };
-<<<<<<< HEAD
     };
 ;
     const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     for (const file of componentFiles) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     for (const file of componentFiles) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);"
@@ -549,6 +592,8 @@ class $1 {}
   const content = fs.readFileSync(file, "utf8");
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Check component naming convention;
         const fileName = path.basename(file, path.extname(file));
         if (!/^[A-Z]/.test(fileName)) {}
@@ -571,8 +616,8 @@ class $1 {}
     const sourceDir = path.join(this.projectRoot, "src");"
     if (!fs.existsSync(sourceDir)) {}"
     if (!fs.existsSync(sourceDir)) {}
-<<<<<<< HEAD
   const sourceDir = path.join(this.projectRoot, "src");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -581,11 +626,15 @@ class $1 {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (!fs.existsSync(sourceDir)) {}
   return { improvements };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -597,6 +646,9 @@ class $1 {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const file of files) {}
         // Check for expensive operations in render;
 
@@ -610,11 +662,11 @@ class $1 {}
           "WARN";"
         )};
   async analyzeAccessibilityPatterns() {}
-<<<<<<< HEAD
   const improvements = [];
     const sourceDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(sourceDir)) {}
   const sourceDir = path.join(this.projectRoot, "src");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -623,6 +675,9 @@ class $1 {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (!fs.existsSync(sourceDir)) {}
   return { improvements };
     };
@@ -630,12 +685,16 @@ class $1 {}
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const file of files) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
@@ -671,16 +730,13 @@ class $1 {}
     return { improvements };
   };
 ;
-=======
         // Check for clickable divs without proper accessibility;"
         if (content.includes("onClick") && content.includes("<div")) {}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async generateIntelligentRecommendations(improvements) {}
   const recommendations = [];
     // Group improvements by category and priority;
     const grouped = improvements.reduce((acc, imp) => {}
-<<<<<<< HEAD
   // Group improvements by category and priority;
     const grouped = improvements.reduce((acc, imp) => {}
   if (!acc[imp.category]) acc[imp.category] = {};
@@ -729,12 +785,16 @@ class $1 {}
         "impact": "Low - affects code quality and developer experience",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Critical priority recommendations;
     if (priorities.CRITICAL && priorities.CRITICAL.length > 0) {}
   recommendations.push({})
@@ -776,12 +836,16 @@ class $1 {}
     );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const fix of safeFixes) {}
   try {}
   const success = await this.applyFix(fix);
@@ -803,12 +867,16 @@ class $1 {}
       let newContent = content;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       switch (improvement.pattern) {}
   case "unused-imports":;
           // Remove unused imports (simplified);
@@ -886,24 +954,32 @@ class $1 {}
         "stdio": "pipe",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     try {}
   // Stage all changes;
       execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" }
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m "${commitMessage}"`, {`})
   "cwd": this.projectRoot,
         "stdio": "pipe'}
@@ -915,6 +991,7 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
   const files = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!fs.existsSync(dir)) return files;
 =======
 
@@ -926,6 +1003,11 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
     if (!fs.existsSync(dir)) return files;
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+    if (!fs.existsSync(dir)) return files;
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const items = fs.readdirSync(dir);
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
@@ -958,6 +1040,7 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AICodeQualityEnhancer;
@@ -975,9 +1058,10 @@ module.exports = AICodeQualityEnhancer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 module.exports = AICodeQualityEnhancer;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+module.exports = AICodeQualityEnhancer;
+

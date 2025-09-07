@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
-<<<<<<< HEAD
     this.reportFile = path.join(this.projectRoot, 'import-error-fixer-report.json')
   log(message, type = 'info')
     this.log('Fixing import errors...')
@@ -28,9 +18,12 @@ const glob = require('glob')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(`Error during import fixing "process"`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -50,3 +43,6 @@ const glob = require('glob')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

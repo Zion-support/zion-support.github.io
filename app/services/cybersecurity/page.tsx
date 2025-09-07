@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function ServicePage() {
           <p className="text-xl text-gray-600 mb-8">
             This service page is under development. Please contact us for more information.
           </p>
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -118,7 +116,6 @@ export default function CybersecurityPage() {
           From threat detection to compliance management, we keep your data secure.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           <a
             href="/contact"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
@@ -127,8 +124,6 @@ export default function CybersecurityPage() {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       <section className="py-12">
         <div className="text-center mb-12">
@@ -198,7 +193,6 @@ export default function CybersecurityPage() {
       </section>
 
       <ContactSection />
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     </div>
   );
 }

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -23,9 +16,12 @@ console.log(' Starting smart linting fixer...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(' Smart linting fixer failed to "start")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -45,3 +41,6 @@ console.log(' Starting smart linting fixer...')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = { 
@@ -17,7 +16,6 @@ export default function AIPage() {
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
           Ship AI features with confidence: Custom LLM development, RAG systems, intelligent agents, 
           computer vision, and comprehensive MLOps. We help you harness the power of AI to transform your business.
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -99,7 +97,6 @@ export default function ServicePage() {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Transform your business with cutting-edge artificial intelligence solutions.
           From custom LLM development to computer vision, we deliver enterprise-grade AI that drives real results.
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         </p>
       </section>
 
@@ -266,7 +263,6 @@ export default function ServicePage() {
       </section>
 
       {/* Contact CTA */}
-<<<<<<< HEAD
       <ContactCTA />
     </div>
   );
@@ -400,9 +396,7 @@ function ContactCTA() {
       </div>
     </div>
   );
-=======
       <CTA />
     </div>
   );
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 }

@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 #!/usr/bin/env node;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const fs = require("$1")
 const path = require("path")
     this.log("♿ Creating accessibility configuration...")
@@ -81,26 +67,10 @@ const path = require("path")
       this.log(" Accessibility styles created successfully")
       this.log(` Failed to create accessibility "styles"`)
     this.log("♿ Starting accessibility enhancement...")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
     this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    this.log(` Accessibility enhancement completed. "Enhancements": ${this.accessibilityEnhancements.join(", "`})
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 #!/usr/bin/env node
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -117,7 +87,6 @@ class AccessibilityEnhancer {
           const imgPattern = /<img[^>]*>/gi;
 </img>`;
 
-<<<<<<< HEAD
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = {
@@ -236,6 +205,3 @@ const enhancer = new AccessibilityEnhancer();
 enhancer.run().catch(console.error);
 
 module.exports = AccessibilityEnhancer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

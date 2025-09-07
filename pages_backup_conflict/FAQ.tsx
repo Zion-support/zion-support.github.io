@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 import Head from 'next/head';
 export default function FAQ() {return (<>;
       <Head>;
@@ -49,9 +46,6 @@ export default function FAQ() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
   );
 }
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

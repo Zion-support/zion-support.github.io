@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,19 +16,21 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 async function analyzeBundle() {}
   try {}
     // Install bundle analyzer if not present;
-<<<<<<< HEAD
     try {}
       execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
       execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};
     // Run bundle analysis;
     execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,3 +76,6 @@ analyzeBundle();
 
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

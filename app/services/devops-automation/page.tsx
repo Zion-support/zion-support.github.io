@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,14 +13,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
 import Link from 'next/link';
 
 export const metadata = {
   title: 'DevOps Automation | Zion Tech Group',
   description: 'Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, and comprehensive monitoring solutions.',
   keywords: 'DevOps automation, CI/CD, infrastructure as code, monitoring, deployment automation'
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 };
 
 interface FeatureCardProps {
@@ -67,7 +64,6 @@ const ContactSection: React.FC = () => (
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +89,6 @@ export default function ServicePage() {
           <a
             href="/contact"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
-=======
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -106,7 +101,6 @@ export default function ServicePage() {
           <a
             href="mailto:kleber@ziontechgroup.com?subject=DevOps Automation Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           >
             Get Consultation
           </a>
@@ -118,11 +112,9 @@ export default function ServicePage() {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
   );
 }
-=======
 
       <section className="py-12">
         <div className="text-center mb-12">
@@ -154,4 +146,3 @@ export default function ServicePage() {
     </div>
   );
 }
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

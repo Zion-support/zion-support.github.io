@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-<<<<<<< HEAD
 export const metadata: Metadata = {
   title: 'Service | Zion Tech Group',
   description: 'Professional services for your business needs.',
@@ -39,7 +38,6 @@ export default function ServicePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             This service page is under development. Please contact us for more information.
-=======
 export const metadata = {
   title: 'AI-Powered CRM | Zion Tech Group',
   description: 'Revolutionary customer relationship management powered by artificial intelligence for enhanced sales and customer satisfaction.',
@@ -118,7 +116,6 @@ export default function ServicePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions tailored to your business needs.
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           </p>
           <a
             href="/contact"
@@ -127,9 +124,7 @@ export default function ServicePage() {
             Contact Us
           </a>
         </div>
-<<<<<<< HEAD
       </section>
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             title="Professional Service"
@@ -150,7 +145,6 @@ export default function ServicePage() {
       </section>
 
       <ContactSection />
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     </div>
   );
 }

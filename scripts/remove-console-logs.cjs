@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 #!/usr/bin/env node
 
@@ -25,9 +18,13 @@ const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
   'dist',
@@ -42,9 +39,6 @@ function shouldProcessFile(filePath) {
   return !EXCLUDE_PATTERNS.some(pattern => {
     if (pattern.includes('*')) {
       return filePath.includes(pattern.replace('*', ''))}
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return filePath.includes(pattern)})}
 
 function removeConsoleStatements(content) {
@@ -52,9 +46,13 @@ function removeConsoleStatements(content) {
   let removedCount = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   CONSOLE_PATTERNS.forEach(pattern => {
     const matches = modifiedContent.match(pattern);
     if (matches) {
@@ -71,6 +69,7 @@ function processFile(filePath) {
     
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -89,6 +88,9 @@ function processFile(filePath) {
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       return removedCount}
     
     return 0} catch (error) {
@@ -97,19 +99,22 @@ function processFile(filePath) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   let results = [];
   const list = fs.readdirSync(dir);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
   
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-  list.forEach(file => {
 =======
-  list.forEach(file => {)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+  list.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
@@ -120,7 +125,6 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
       const ext = path.extname(file);
       if (extensions.includes(ext)) {
         results.push(filePath);
-<<<<<<< HEAD
       }
     }
   });
@@ -132,6 +136,7 @@ function main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/expand-services-advertise-and-build-project-0033
 =======
@@ -153,13 +158,16 @@ function main() {
 
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const srcDir = path.join(process.cwd(), 'src');
-<<<<<<< HEAD
   const pagesDir = path.join(process.cwd(), 'pages');
   
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const pagesDir = path.join(process.cwd(), 'pages');`;
@@ -171,6 +179,9 @@ function main() {
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   let totalRemoved = 0;
   let filesProcessed = 0;
 
@@ -181,12 +192,8 @@ function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         filesProcessed++}
-<<<<<<< HEAD
     }
   }
 
@@ -195,14 +202,12 @@ function main() {
   console.log(`   Console statements "removed": ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,33 +228,24 @@ ursor/expand-services-advertise-and-build-project-0033
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }
 
 if (require.main === module) {
   main().catch(console.error)}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = { removeConsoleStatements, processFile };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-module.exports = { removeConsoleStatements, processFile };
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
 
   console.log("\n📊 Summary: ");"`;
   console.log(`   Files processed: ${filesProcessed}`);"`;
@@ -260,10 +256,7 @@ module.exports = { removeConsoleStatements, processFile };
 }`;
     console.log(`\n✨ No console statements found to remove.`);
 
-
-
 if (require.main === module) {
   main().catch(console.error)}
 
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = { 
@@ -116,7 +115,6 @@ export default function MicroSaaSPage() {
               "Ongoing support"
             ]} 
             step="4"
-=======
 import Link from 'next/link';
 
 export const metadata = {
@@ -231,12 +229,10 @@ export default function MicroSaaSPage() {
             step={3}
             title="Growth & Optimization"
             description="User feedback integration, feature expansion, and continuous performance optimization."
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           />
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Technology Stack */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technology Stack</h2>
@@ -260,7 +256,6 @@ export default function MicroSaaSPage() {
             title="AI/ML"
             description="OpenAI API, LangChain, Vector DBs"
             icon="🧠"
-=======
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Types of Micro SaaS We Build</h2>
@@ -298,12 +293,10 @@ export default function MicroSaaSPage() {
             title="Integration Tools"
             description="Connecting disparate systems and automating data flow between applications."
             icon="🔗"
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           />
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Pricing Plans */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
@@ -490,9 +483,7 @@ function ContactCTA() {
       </div>
     </div>
   );
-=======
       <ContactSection />
     </div>
   );
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 }

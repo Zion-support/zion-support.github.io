@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
 <<<<<<< HEAD:components/admin/TranslationPreview.tsx
 const defaultTargets = null;
-=======
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
 
 const defaultTargets = ['enptesar']
@@ -15,7 +14,6 @@ export default function TranslationPreview() {
   const [targets, setTargets] = useState<string[]>(defaultTargets)
   const { translations, loading, error } = useAutoTranslate(text, targets)
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
 
@@ -37,7 +35,6 @@ export default function TranslationPreview() {
             <div className="whitespace-pre-wrap text-sm min-h-[4rem]">
               {translations[lng] || (lng === 'en' ? text : '')}
             </div>
-=======
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
       <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
       <div className="grid md:grid-cols-2 gap-4">
@@ -62,7 +59,6 @@ export default function TranslationPreview() {
 <<<<<<< HEAD:components/admin/TranslationPreview.tsx
   )
 };
-=======
 :backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
 
   );

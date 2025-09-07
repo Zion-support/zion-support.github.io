@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 #!/usr/bin/env node
 
@@ -25,7 +21,6 @@ class AICodeQualityAnalyzer {
   log(message) {
 
   }
-
 
   async analyzeCodeQuality() {
     this.log('Starting AI-powered code quality analysis...);
@@ -76,12 +71,7 @@ class AICodeQualityAnalyzer {
           severity: error,
           count: errorCount,
 
-<<<<<<< HEAD
 main
-=======
-
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
 
   async analyzeReactComponents(analysis) {
     this.log('Analyzing React components...);
@@ -100,7 +90,6 @@ main
 
   async analyzePerformancePatterns(analysis) {
     this.log('Analyzing performance patterns...);
-
 
     const jsFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
     let performanceIssues = 0;
@@ -153,27 +142,13 @@ main
   generateRecommendations(analysis) {
     if (analysis.metrics.typescriptErrors > 0) {
       analysis.recommendations.push({
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     }
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-<<<<<<< HEAD
 main
-=======
-// Run the analyzer
-const analyzer = new AICodeQualityAnalyzer();
-analyzer.run().catch(console.error);
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 

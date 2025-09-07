@@ -4,7 +4,15 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Solutions | Zion Tech Group',
   description: 'Comprehensive technology solutions for modern businesses. AI, automation, and digital transformation services.',
-  keywords: 'solutions, technology, AI, automation, digital transformation, business'
+  keywords: 'solutions, technology, AI, automation, digital transformation, business',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Solutions | Zion Tech Group',
+    description: 'Comprehensive technology solutions for modern businesses.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
 };
 
 export default function SolutionsPage() {

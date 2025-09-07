@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 import Head from 'next/head';
 export default function Contact() {return (<>;
       <Head>;
@@ -43,9 +40,6 @@ export default function Contact() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
   );
 }
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

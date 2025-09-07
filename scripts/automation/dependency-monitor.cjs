@@ -1,27 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -32,18 +19,9 @@ class $1 {}
 ;"
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}"
@@ -65,7 +43,6 @@ class $1 {}
     // Check for outdated packages;"
     const outdatedResult = await this.runCommand("npm outdated --json");"
     if (outdatedResult.success) {}
-<<<<<<< HEAD
   try {}
   const outdatedData = JSON.parse(outdatedResult.output);
         if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");this.errorsFound.push(`Outdated "dependencies": ${Object.keys(outdatedData).join(", ")}`)} else {`}
@@ -139,14 +116,9 @@ class $1 {}
       "summary": {}
   dependenciesHealthy: this.errorsFound.length === 0,
         "totalIssues": this.errorsFound.length,
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async generateReport() {}
   this.log("Generating dependency monitor report...");
     const report = {}
-=======
 
   this.log("All dependencies are up to date", "success")};"
   this.log("No outdated dependencies found", "success")};"
@@ -167,7 +139,6 @@ class $1 {}
   async generateReport() {}"
   this.log("Generating dependency monitor report...");"
     const report = {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "timestamp": new Date().toISOString(),
       "duration": Date.now() - this.startTime,
       "errorsFound": this.errorsFound,
@@ -184,25 +155,16 @@ class $1 {}
   await this.checkDependencies();
 
       await this.generateReport()};
-<<<<<<< HEAD
   };
 };
 ;
-<<<<<<< HEAD
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
-<<<<<<< HEAD
-
-=======
-monitor.run().catch(console.error);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 monitor.run().catch(console.error);
@@ -218,5 +180,7 @@ monitor.run().catch(console.error);
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+monitor.run().catch(console.error);
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

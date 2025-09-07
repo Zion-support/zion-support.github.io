@@ -27,7 +27,6 @@
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
   "timestamp": "2025-09-05T22:09:22.350Z",
   "bundleAnalysis": {
     "success": true,
@@ -17317,9 +17316,6 @@ ursor/automate-test-improve-and-merge-code-646c
         "Consider consolidating JavaScript files"
       ]
 
-
-
-
       "type": "code-splitting",
       "file": "/workspace/src/App.optimized.tsx",
       "dynamicImports": 16,
@@ -20126,8 +20122,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "compressionSetup": true
 ursor/automate-test-improve-and-merge-code-646c
 
-
-
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -20179,9 +20173,6 @@ ursor/automate-test-improve-and-merge-code-646c
     "largeComponents": 448
   }
   }
-
-
-
 
 }
 

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -14,18 +7,10 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 console.log('🛡️ Starting error prevention monitor...');
-=======
 #!/usr/bin/env node;"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorPreventionMonitor {
   // TODO: Implement
 }
@@ -149,20 +134,13 @@ class ErrorPreventionMonitor {
       // Generate report;
 
       throw error}
-<<<<<<< HEAD
 }
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
     try {
-<<<<<<< HEAD
       execSync('bash start-simple-error-prevention.sh', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
-=======
-      execSync('bash start-simple-error-prevention.sh', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       });
       this.log('Auto-fix process completed')} catch (error) {
       this.log(`Auto-fix process "failed": ${error.message}`)}
@@ -170,15 +148,9 @@ class ErrorPreventionMonitor {
   checkBuildStatus() {
     try {
       this.log('Checking build status...');
-<<<<<<< HEAD
       execSync('yarn build', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
-=======
-      execSync('yarn build', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       });
       this.log('Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
@@ -190,7 +162,6 @@ class ErrorPreventionMonitor {
     this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true';
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
-=======
   triggerAutoFix() {"
 
   checkBuildStatus() {
@@ -198,27 +169,17 @@ class ErrorPreventionMonitor {
 
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { "recursive": true })}"
     this.preventionHistory = [];
     this.riskFactors = new Map()}"
   log(message, level = 'INFO') {
-<<<<<<< HEAD
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const largeFiles = [];
     const maxSize = 1024 * 1024; // 1MB;
   // TODO: Implement
@@ -263,7 +224,6 @@ class ErrorPreventionMonitor {
               vulnerabilities.push({"
 
     const performanceIssues = [];
-<<<<<<< HEAD
     try {
       // Check for large bundle size indicators
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -280,19 +240,13 @@ class ErrorPreventionMonitor {
       }
       // Check for multiple CSS frameworks
       const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
-<<<<<<< HEAD
       const foundFrameworks = cssFrameworks.filter(framework =>
-=======
-      const foundFrameworks = cssFrameworks.filter(framework => 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         packageJson.dependencies && packageJson.dependencies[framework]
       );
-=======
   // TODO: Implement
 
       const foundFrameworks = cssFrameworks.filter(framework => 
         packageJson.dependencies && packageJson.dependencies[framework])
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (foundFrameworks.length > 1) {
 
     const qualityIssues = [];
@@ -420,7 +374,6 @@ if (require.main === module) {
     this.checkProjectHealth();
     // Schedule periodic health checks;
     setInterval(() => {
-<<<<<<< HEAD
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
     this.log('Monitoring active - health checks every 15 minutes')}
 }
@@ -430,9 +383,12 @@ const monitor = new ErrorPreventionMonitor();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 monitor.run();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -448,11 +404,11 @@ monitor.run();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Start the monitor;
 
 `;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

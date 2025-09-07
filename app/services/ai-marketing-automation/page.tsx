@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-<<<<<<< HEAD
 export const metadata: Metadata = {
   title: 'Service | Zion Tech Group',
   description: 'Professional services for your business needs.',
@@ -14,12 +13,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
 export const metadata = {
   title: 'AI Marketing Automation | Zion Tech Group',
   description: 'Intelligent marketing automation with AI-powered personalization, predictive analytics, and automated campaign optimization.',
   keywords: 'AI marketing automation, marketing personalization, predictive analytics, campaign optimization, marketing AI'
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 };
 
 interface FeatureCardProps {
@@ -65,7 +62,6 @@ const ContactSection: React.FC = () => (
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +95,6 @@ export default function ServicePage() {
     </div>
   );
 
-=======
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -153,5 +148,4 @@ export default function ServicePage() {
       <ContactSection />
     </div>
   );
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 }

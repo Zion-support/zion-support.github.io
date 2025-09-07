@@ -1,18 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = { 
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and Web3 applications. Enterprise-grade blockchain solutions.'
-=======
 import Link from 'next/link';
 
 export const metadata = {
   title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 };
 
 interface FeatureCardProps {
@@ -74,7 +71,6 @@ const ContactSection: React.FC = () => (
 
 export default function BlockchainPage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -380,7 +376,6 @@ function ContactCTA() {
       <div className="mt-6 text-sm text-gray-600">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
-=======
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -392,8 +387,8 @@ function ContactCTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Services Inquiry"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
           >
             Get Blockchain Consultation
           </a>
@@ -474,7 +469,6 @@ function ContactCTA() {
       </section>
 
       <ContactSection />
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     </div>
   );
 }

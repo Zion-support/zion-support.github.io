@@ -9,15 +9,11 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?    content = content.replace(/=======[\s\S]*?    
     // Clean up any remaining conflict markers
     content = content.replace(/<<<<<<< HEAD/g, '');
     content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]*/g, '');
-    
+    content = content.replace(/    
     // Clean up extra semicolons and syntax issues
     content = content.replace(/;{2,}/g, ';');
     content = content.replace(/export const metadata = {;/g, 'export const metadata = {');

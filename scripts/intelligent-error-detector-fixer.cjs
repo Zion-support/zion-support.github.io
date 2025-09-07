@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "intelligent-error-detector.log")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     fs.appendFileSync(this.logFile, logMessage + "\n")
@@ -58,13 +45,7 @@ const { execSync } = require("child_process")
         "type": "error"
         "type": "success"
     recommendations.push({"type": "improvement","message": "Consider adding pre-commit hooks to catch errors early."})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // console.log("\n" + "=")
     console.log(" INTELLIGENT ERROR DETECTOR & FIXER SUMMARY")
 // console.log("=")
@@ -81,9 +62,12 @@ const { execSync } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(`� Error detection "failed": ${error.message}`, ``)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -103,3 +87,6 @@ const { execSync } = require("child_process")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

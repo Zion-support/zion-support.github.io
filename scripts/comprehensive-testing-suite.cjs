@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Comprehensive Testing Suite;
  * Runs all tests and generates comprehensive test reports;
@@ -30,20 +21,11 @@ class ComprehensiveTestingSuite {;}
 ;"
   log(message, type = "info") {;}"
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry),};
-=======
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message};`
     console.log(logEntry)};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   async runUnitTests() {;}
     try {;}"
@@ -142,7 +124,6 @@ class ComprehensiveTestingSuite {;}
       await this.runLintingTests();
       await this.runTypeChecking();
       await this.runBuildTests();
-<<<<<<< HEAD
       const report = await this.generateTestReport();
       this.log("Comprehensive Testing Suite completed");
       this.log(`"Summary": ${report.summary.totalPassed}/${report.summary.totalTests} tests passed`);
@@ -165,9 +146,12 @@ if (require.main === module) {;}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = ComprehensiveTestingSuite;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -183,10 +167,9 @@ module.exports = ComprehensiveTestingSuite;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       const report = await this.generateTestReport();"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
 
 "`;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

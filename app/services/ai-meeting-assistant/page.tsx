@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,14 +13,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
 import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
   description: 'Intelligent meeting automation with real-time transcription, action item extraction, and automated follow-ups.',
   keywords: 'AI meeting assistant, meeting automation, transcription, action items, meeting productivity'
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 };
 
 interface FeatureCardProps {
@@ -67,7 +64,6 @@ const ContactSection: React.FC = () => (
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +91,6 @@ export default function ServicePage() {
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
           >
             Contact Us
-=======
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -116,7 +111,6 @@ export default function ServicePage() {
             className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           </a>
         </div>
       </section>
@@ -150,8 +144,5 @@ export default function ServicePage() {
       <ContactSection />
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

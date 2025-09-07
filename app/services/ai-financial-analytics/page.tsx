@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,14 +13,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-=======
 import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Financial Analytics | Zion Tech Group',
   description: 'Advanced financial analysis and forecasting powered by artificial intelligence for data-driven business decisions.',
   keywords: 'AI financial analytics, financial forecasting, business intelligence, financial modeling, data analysis'
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 };
 
 interface FeatureCardProps {
@@ -67,7 +64,6 @@ const ContactSection: React.FC = () => (
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,7 +85,6 @@ export default function ServicePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             This service page is under development. Please contact us for more information.
-=======
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -119,7 +114,6 @@ export default function ServicePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions tailored to your business needs.
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           </p>
           <a
             href="/contact"
@@ -128,9 +122,7 @@ export default function ServicePage() {
             Contact Us
           </a>
         </div>
-<<<<<<< HEAD
       </section>
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             title="Professional Service"
@@ -151,7 +143,6 @@ export default function ServicePage() {
       </section>
 
       <ContactSection />
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     </div>
   );
 }

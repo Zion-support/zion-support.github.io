@@ -1,7 +1,5 @@
 {
 
-
-
       "warnings": []
     },
     "accessibilityImprovement": {
@@ -147,7 +145,7 @@ ursor/automate-test-improve-and-merge-code-e883
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     },
-    "accessibilityImprovement": {
+    "accessibilityImprovements": {
       "success": false,
       "duration": 9508,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -24,6 +18,9 @@ const glob = require('glob');
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 function deriveAlias(modulePath) {}
 
 function ensureDefaultExport(content, name) {}
@@ -46,13 +43,17 @@ function processFile(fullPath) {}
 	let content = original;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -60,6 +61,8 @@ function processFile(fullPath) {}
 	content = fixExportDefaultConst(fullPath, content);
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 	if (content !== original) {}
 
 		return true};
@@ -74,13 +77,7 @@ function run() {}
 		for (const rel of files) {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 			try {}
 				if (processFile(fp)) {}
 					changed++};
@@ -90,9 +87,12 @@ function run() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 run();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -110,3 +110,6 @@ run();
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 import {
   LightBulbIcon,
   CpuChipIcon,
@@ -14,7 +12,6 @@ import {
   StarIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -28,8 +25,6 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-<<<<<<< HEAD
-=======
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Enterprise AI & IT Solutions',
@@ -48,12 +43,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 };
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 text-center relative overflow-hidden">
@@ -119,7 +112,6 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-=======
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-700 to-purple-700 text-white py-20 md:py-32 overflow-hidden">
@@ -155,14 +147,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
               Our Services
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprehensive solutions for modern businesses
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card 
               title="Micro SaaS" 
@@ -208,7 +198,6 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
@@ -280,14 +269,11 @@ export default function HomePage() {
       <section className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-slate-400 mb-12">
-            Get in touch with our experts to discuss your project requirements and discover 
-            how our innovative solutions can drive your business forward.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how our solutions can help you achieve your goals.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
               href="/contact" 
@@ -311,14 +297,12 @@ export default function HomePage() {
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-=======
           <Link
             href="/contact"
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
           >
             Contact Us
           </Link>
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
         </div>
       </section>
     </div>

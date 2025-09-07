@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -11,27 +6,20 @@ const path = require('path');
 class JSXSyntaxFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 class JSXSyntaxFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   fixJSXSyntax() {}
     this.log('Fixing JSX syntax errors in AIChatbotSystem.tsx...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     let content = fs.readFileSync(this.filePath, 'utf8');
@@ -45,6 +33,11 @@ class JSXSyntaxFixer {}
     let content = fs.readFileSync(this.filePath, 'utf8');
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+    let content = fs.readFileSync(this.filePath, 'utf8');
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Fix various JSX syntax errors;
     const fixes = [// Fix missing closing tags and syntax errors;]
       { "pattern": /className="flex justify-start"\s*$/gm, "replacement": 'className="flex justify-start">' },
@@ -59,6 +52,7 @@ class JSXSyntaxFixer {}
       { "pattern": /<\/div>;\s*$/gm, "replacement": '</div>' },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -83,6 +77,8 @@ class JSXSyntaxFixer {}
 });
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Fix onClick syntax;
       { "pattern": /onClick\s*=\s*\{\s*\(\s*\)\s*=>\s*rateResponse\(message\.id,\s*'positive'\)\s*\)\s*\}\s*$/gm, "replacement": 'onClick={() => rateResponse(message.id, \'positive\')}' },
@@ -104,10 +100,13 @@ class JSXSyntaxFixer {}
       content = content.replace(fix.pattern, fix.replacement)}
 });
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Write the fixed content back;
     fs.writeFileSync(this.filePath, content);
     this.log('JSX syntax errors fixed successfully!')};
@@ -115,12 +114,16 @@ class JSXSyntaxFixer {}
     this.log('Starting JSX Syntax Fixer...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     try {}
       this.fixJSXSyntax();
       this.log('JSX Syntax Fixer completed successfully!')} catch (error) {}
@@ -131,13 +134,7 @@ class JSXSyntaxFixer {}
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new JSXSyntaxFixer();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   automation.run();
     .then(() => {}
       console.log('JSX Syntax Fixer completed successfully!');
@@ -150,9 +147,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = JSXSyntaxFixer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -172,3 +172,6 @@ module.exports = JSXSyntaxFixer;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

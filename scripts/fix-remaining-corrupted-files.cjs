@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -18,6 +19,9 @@
 
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -31,6 +35,7 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
     let content = 
     if (filePath === 'pages/docs/integration-examples.tsx')
 <<<<<<< HEAD
+<<<<<<< HEAD
       content = """
     "email"""
     "password"""
@@ -40,3 +45,8 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
     "email"
     "password"
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      content = "
+    "email"
+    "password"
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

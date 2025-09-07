@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 main
@@ -12,6 +13,8 @@ main
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -19,7 +22,6 @@ main
     log('info', `Low "severity": ${securityReport.summary.low}`);
     log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
     if (securityReport.vulnerabilities.length > 0) {
-<<<<<<< HEAD
       log('warn', 'Vulnerabilities "found": ');
       securityReport.vulnerabilities.forEach(vuln => {
         log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
@@ -52,6 +54,7 @@ main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 main();#!/usr/bin/env node;
 
 main();
@@ -79,6 +82,13 @@ main();
 
 main();#!/usr/bin/env node;
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+main();
+
+#!/usr/bin/env node;
+
+main();#!/usr/bin/env node;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
 const fs = require('fs')
 const path = require('path')
@@ -111,7 +121,10 @@ console.log('======')
       log('warn', 'Vulnerabilities "found")
       log('info', 'Security "Recommendations")
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

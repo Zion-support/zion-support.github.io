@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: 'Ai Powered Cybersecurity, business solutions, professional services'
 };
 
-export default function aipoweredcybersecurityPage() {
+export default function AiPoweredCybersecurityPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">

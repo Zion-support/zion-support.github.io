@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 main
@@ -12,6 +13,8 @@ main
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -22,13 +25,12 @@ main
     log('info', `Total "duration": ${Math.round(masterReport.metrics.totalDuration / 1000)}s`);
     if (masterReport.recommendations.length > 0) {
 
-<<<<<<< HEAD
 // Run the enhanced orchestrator
-<<<<<<< HEAD
 main();#!/usr/bin/env node;
 
 main();
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -50,18 +52,26 @@ main
 =======
 
 
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 
 main();#!/usr/bin/env node;
 
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const os = require('os')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 // console.log(' Enhanced Master Automation Orchestrator v2.0')
 console.log('======')
   "logLevel"
@@ -114,4 +124,7 @@ console.log('======')
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
       log('info', '"Recommendations")
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

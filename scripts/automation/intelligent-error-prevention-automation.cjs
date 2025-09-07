@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
-=======
 #!/usr/bin/env
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
   "jsx": [{ pattern: /<\/motion\.article>\s*\)\)\s*\}\s*<\/div>/g, "fix": "</div>\n                </motion.article>\n                ))"]
-<<<<<<< HEAD
         { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}
         { "pattern": /<\/div>\s*<\/>/g, "fix": "</div>\n    </>"}
         { "pattern"}
@@ -68,9 +58,12 @@ const { execSync, spawn } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -86,8 +79,7 @@ const { execSync, spawn } = require("child_process")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

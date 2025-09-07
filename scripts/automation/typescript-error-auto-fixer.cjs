@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,6 +12,9 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 class TypeScriptErrorAutoFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -27,6 +24,7 @@ class TypeScriptErrorAutoFixer {}
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -43,12 +41,16 @@ class TypeScriptErrorAutoFixer {}
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,22 +62,16 @@ class TypeScriptErrorAutoFixer {}
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.fixesApplied = 0;
     this.filesProcessed = 0};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)};
-=======
     console.log(`[${timestamp}] [${level}] ${message})};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runTypeScriptCheck() {}
     try {}
 
@@ -88,13 +84,17 @@ class TypeScriptErrorAutoFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const errors = [];
     let currentError = null;
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     
     const errors = [];
     let currentError = null;
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     const errors = [];
@@ -106,6 +106,8 @@ class TypeScriptErrorAutoFixer {}
     let currentError = null;
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const line of errorLines) {}
 
         const match = line.match(/([^:]+):(\d+):(\d+)/);
@@ -120,6 +122,7 @@ class TypeScriptErrorAutoFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -128,6 +131,9 @@ class TypeScriptErrorAutoFixer {}
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const error of errors) {}
         if (await this.fixSingleError(error)) {}
           fixesApplied++};
@@ -141,6 +147,7 @@ class TypeScriptErrorAutoFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -149,6 +156,9 @@ class TypeScriptErrorAutoFixer {}
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Apply common TypeScript fixes;
     const fixes = [this.fixAnyType.bind(this)]
       this.fixMissingImports.bind(this),
@@ -159,13 +169,17 @@ class TypeScriptErrorAutoFixer {}
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     let originalContent = content;
     let modifiedContent = content;
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     let originalContent = content;
     let modifiedContent = content;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -173,6 +187,8 @@ class TypeScriptErrorAutoFixer {}
     let modifiedContent = content;
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     for (const fix of fixes) {}
         const result = fix(lines, error);
         if (result.modified) {}
@@ -186,12 +202,16 @@ class TypeScriptErrorAutoFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (line.includes('any') && error.message.includes('any')) {}
       // Replace 'any' with more specific types;
       const fixedLine = line;
@@ -200,12 +220,16 @@ class TypeScriptErrorAutoFixer {}
         .replace(/<any>/g, '<unknown>');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         return {}
@@ -222,13 +246,17 @@ class TypeScriptErrorAutoFixer {}
         const moduleName = importMatch[1];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Add missing import at the top of the file;
         const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         
         // Add missing import at the top of the file;
         const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
@@ -236,12 +264,12 @@ class TypeScriptErrorAutoFixer {}
         const importStatement = `import * as ${moduleName.split('/').pop()} from '${moduleName}';`;`
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Find the last import statement;
         let lastImportIndex = -1;
-=======
 
 </any>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (let i = 0; i < lines.length; i++) {}
           if (lines[i].trim().startsWith('import ')) {}
             lastImportIndex = i};
@@ -254,9 +282,9 @@ class TypeScriptErrorAutoFixer {}
     };"
     return { "modified": false, "content": lines.join('\n') }};
   fixTypeAnnotations(lines, error) {}
-<<<<<<< HEAD
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -268,18 +296,21 @@ class TypeScriptErrorAutoFixer {}
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (error.message.includes('implicitly has an any type')) {}
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
-<<<<<<< HEAD
         const fixedLine = line.replace()
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           "$"1": unknown ="
         );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -289,6 +320,9 @@ class TypeScriptErrorAutoFixer {}
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
             modified: true,"
@@ -299,6 +333,7 @@ class TypeScriptErrorAutoFixer {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -307,11 +342,15 @@ class TypeScriptErrorAutoFixer {}
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         // Try to find and extend the interface;
 
             // Add the missing property;
             const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,6 +360,9 @@ class TypeScriptErrorAutoFixer {}
 =======
             
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+            
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
             return {}
               "modified": true,
               "content": lines.join('\n'),
@@ -335,12 +377,16 @@ class TypeScriptErrorAutoFixer {}
     const line = lines[lineIndex];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     if (error.message.includes('Generic type') && error.message.includes('requires')) {}
       // Add generic type parameters;
       const genericMatch = line.match(/(\w+<)([^>]*)(>)/);
@@ -348,12 +394,16 @@ class TypeScriptErrorAutoFixer {}
         const fixedLine = line.replace(genericMatch[0], `${genericMatch[1]}unknown${genericMatch[3]}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
         
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+        
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
           return {}
@@ -369,15 +419,19 @@ class TypeScriptErrorAutoFixer {}
     const line = lines[lineIndex];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (error.message.includes('Object is possibly undefined')) {}
       // Add optional chaining;
       const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     
     if (error.message.includes('Object is possibly undefined')) {}
       // Add optional chaining;
       const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
@@ -386,6 +440,8 @@ class TypeScriptErrorAutoFixer {}
       const fixedLine = line.replace(/\.(\w+)/g, '?.$1');
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (fixedLine !== line) {}
         lines[lineIndex] = fixedLine;
         return {}
@@ -402,15 +458,19 @@ class TypeScriptErrorAutoFixer {}
     this.log('Starting TypeScript error auto-fix...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       // Get current TypeScript errors;
       const checkResult = await this.runTypeScriptCheck();
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     
     try {}
       // Get current TypeScript errors;
       const checkResult = await this.runTypeScriptCheck();
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
@@ -419,10 +479,13 @@ class TypeScriptErrorAutoFixer {}
       const checkResult = await this.runTypeScriptCheck();
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       if (checkResult.success) {}
         this.log('No TypeScript errors found - no fixes needed', 'INFO');
         return};
       this.log(`Found ${checkResult.errors.length} TypeScript errors, attempting to fix...`, 'INFO');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -437,6 +500,8 @@ class TypeScriptErrorAutoFixer {}
       const postCheckResult = await this.runTypeScriptCheck();
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Apply fixes;
       const fixesApplied = await this.fixTypeScriptErrors(checkResult.errors);
@@ -446,6 +511,7 @@ class TypeScriptErrorAutoFixer {}
       // Run check again to see if fixes worked;
       const postCheckResult = await this.runTypeScriptCheck();
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -459,25 +525,30 @@ class TypeScriptErrorAutoFixer {}
 =======
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       const report = {}
 
         "initialErrors": checkResult.errors.length,"
         fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
-<<<<<<< HEAD
         "success": postCheckResult.success;
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       // Save report;
       const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       
       // Save report;
       const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       
@@ -486,6 +557,8 @@ class TypeScriptErrorAutoFixer {}
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.log(`TypeScript auto-fix completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {`}
       this.log(`TypeScript auto-fix "failed": ${error.message}`, 'ERROR')};
   };
@@ -493,13 +566,17 @@ class TypeScriptErrorAutoFixer {}
     this.log('Starting TypeScript error auto-fixer...');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Run initial fix;
     await this.runAutoFix();
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     
     // Run initial fix;
     await this.runAutoFix();
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
@@ -507,12 +584,15 @@ class TypeScriptErrorAutoFixer {}
     await this.runAutoFix();
     
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Set up periodic fixing;
     setInterval(async () => {}
       try {}
         await this.runAutoFix()} catch (error) {}
         this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')};
     }, this.fixInterval);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -534,6 +614,9 @@ class TypeScriptErrorAutoFixer {}
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
 // Main execution;
 if (require.main === module) {}
@@ -541,12 +624,16 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
   
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+  
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     fixer.log('Shutting down TypeScript error auto-fixer...');
@@ -554,32 +641,39 @@ if (require.main === module) {}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   process.on('SIGTERM', () => {}
     fixer.log('Shutting down TypeScript error auto-fixer...');
     process.exit(0)}
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
-=======
   // Handle graceful shutdown;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     process.exit(1)})};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -603,8 +697,10 @@ module.exports = TypeScriptErrorAutoFixer;
 =======
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 module.exports = TypeScriptErrorAutoFixer;
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = TypeScriptErrorAutoFixer;
+

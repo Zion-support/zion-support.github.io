@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
@@ -23,18 +14,9 @@ class ComprehensiveMergeConflictResolver {}
     this.totalFiles = 0};
   async log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)};
-=======
     console.log(`[${timestamp}] [${level}] ${message})};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async findFilesWithConflicts() {}
     const filesWithConflicts = [];
     try {}
@@ -47,9 +29,12 @@ class ComprehensiveMergeConflictResolver {}
           filesWithConflicts.push(path.join(this.projectRoot, file))};
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       const entries = await fs.readdir(dir, { "withFileTypes": true }")
 =======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     } catch (error) {}
       await this.log(`Git command failed, scanning files "manually": ${error.message}`, 'WARN')};
     // Also scan for files with merge conflict markers;
@@ -70,7 +55,10 @@ class ComprehensiveMergeConflictResolver {}
     const files = [];
     try {}
       const entries = await fs.readdir(dir, { "withFileTypes": true }
+<<<<<<< HEAD
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 });
       for (const entry of entries) {}
         const fullPath = path.join(dir, entry.name);
@@ -114,9 +102,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 module.exports = ComprehensiveMergeConflictResolver;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -135,3 +126,6 @@ module.exports = ComprehensiveMergeConflictResolver;
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

@@ -1,6 +1,5 @@
 {
 
-
   "timestamp": "2025-09-05T15:58:44.701Z",
   "totalDuration": "130s",
   "timestamp": "2025-09-06T22:32:48.949Z",
@@ -69,7 +68,6 @@
 
       "duration": 25
 
-
     },
     "healthCheck": {
 
@@ -111,8 +109,6 @@
   },
   "summary": {
     "totalPhases": 6,
-
-
 
     "successfulPhases": 6,
     "failedPhases": 0,

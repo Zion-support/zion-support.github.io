@@ -1,47 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class TypeChecker {}
   constructor() {}
     this.isRunning = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
 
     this.isRunning = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Initial type check;
     await this.runTypeCheck();
-=======
-    
     // Initial type check;
     await this.runTypeCheck();
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    // Initial type check;
-    await this.runTypeCheck();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
@@ -49,9 +24,12 @@ class TypeChecker {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -69,28 +47,18 @@ class TypeChecker {}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
       console.log('Running TypeScript type check...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
-<<<<<<< HEAD
-<<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
@@ -100,11 +68,6 @@ class TypeChecker {}
         errorOutput += data.toString()}
 });
 
-=======
-
-=======
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
@@ -113,7 +76,9 @@ class TypeChecker {}
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
+});
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -125,6 +90,8 @@ class TypeChecker {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on('close', (code) => {}
         if ( {})
 
@@ -132,26 +99,16 @@ class TypeChecker {}
      {}
           console.log('Type check passed ✓')}} else {}
           console.log('Type check failed ✗');
-<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
           
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
       console.error('Error running type "check": ', error.message)};
   };
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
@@ -161,9 +118,12 @@ class TypeChecker {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
     
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -182,24 +142,17 @@ class TypeChecker {}
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-    if ( {})
 =======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if ( {})
       console.log('TypeScript errors "found": ')) {}
       console.log('TypeScript errors found:')};
       typeErrors.forEach(error => {})
         console.log(`  ${error}`)})};
   stop() {}
     console.log('Stopping Type Checker...');
-<<<<<<< HEAD
     this.isRunning = false;
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if ( {})
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')) {}
     console.log('Type Checker stopped')}};
@@ -207,35 +160,21 @@ class TypeChecker {}
 // Start the checker if run directly;
   const checker = new TypeChecker) {}
   const checker = new TypeChecker}(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     checker.stop();
     process.exit(0)}
 });
-<<<<<<< HEAD
-=======
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   process.on('SIGTERM', () => {}
     checker.stop();
     process.exit(0)}
 });
-<<<<<<< HEAD
   checker.start().catch(console.error)};
-<<<<<<< HEAD
 
-=======
-module.exports = TypeChecker;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   
   checker.start().catch(console.error)};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = TypeChecker;
 <<<<<<< HEAD
@@ -249,10 +188,10 @@ module.exports = TypeChecker;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+module.exports = TypeChecker;
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Handle graceful shutdown;
 
   checker.start().catch(console.error)};
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

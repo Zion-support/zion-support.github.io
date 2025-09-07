@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   log(message, level = 'info')
     fixed = fixed.replace(/;\s*,/g, ',')
     fixed = fixed.replace(/{\s*;/g, '{'})
@@ -29,13 +16,7 @@ const path = require('path')
     fixed = fixed.replace(/\[\s*;\s*/g, '[')]
     fixed = fixed.replace(/,\s*\]/g, ']')
     fixed = fixed.replace(/\(\s*;\s*/g, '(')
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     fixed = fixed.replace(/;\s*\)/g, ')'
     fixed = fixed.replace(/['"]\s*;\s*['"]/g, '"")
     fixed = fixed.replace(/['"]\s*;\s*$/gm, '')
@@ -45,9 +26,12 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
       this.log(`� Script fixing "failed"`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -67,3 +51,6 @@ const path = require('path')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
