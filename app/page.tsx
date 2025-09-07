@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Home() {
-  return (
-    <div>
-      <h1>Zion Tech Group</h1>
-      <p>AI, Micro SaaS, and IT Services</p>
-=======
-import React from 'react';
-import Link from 'next/link';
-import {
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  StarIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
-=======
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -54,23 +31,15 @@ export const metadata: Metadata = {
     },
   },
 };
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 
-interface CardProps {
+// ServiceCard component
+function ServiceCard({ title, href, description, bullets, icon }: {
   title: string;
   href: string;
   description: string;
-  bullets?: string[];
-  icon?: string;
-}
-
-function ServiceCard({
-  title,
-  href,
-  description,
-  bullets = [],
-  icon,
-}: CardProps) {
+  bullets: string[];
+  icon: string;
+}) {
   return (
     <Link
       href={href}
@@ -78,20 +47,24 @@ function ServiceCard({
       aria-label={`Learn more about ${title} services`}
     >
       <div className="flex items-center mb-4">
-        {icon && <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{icon}</span>}
-        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+        <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
+          {icon}
+        </span>
+        <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+          {title}
+        </h3>
       </div>
-      <p className="text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">{description}</p>
-      {bullets.length > 0 && (
-        <ul className="space-y-2" role="list">
-          {bullets.map((bullet, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center group-hover:text-gray-700 transition-colors duration-300">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-300" aria-hidden="true"></span>
-              {bullet}
-            </li>
-          ))}
-        </ul>
-      )}
+      <p className="text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">
+        {description}
+      </p>
+      <ul className="space-y-2" role="list">
+        {bullets.map((bullet, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center group-hover:text-gray-700 transition-colors duration-300">
+            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-300" aria-hidden="true"></span>
+            {bullet}
+          </li>
+        ))}
+      </ul>
       <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-300">
         Learn more →
       </div>
@@ -100,19 +73,98 @@ function ServiceCard({
 }
 
 export default function HomePage() {
+  const services = [
+    {
+      title: "Micro SaaS Solutions",
+      href: "/services/micro-saas",
+      description: "Scalable, secure micro SaaS products that solve specific business challenges with modern architecture.",
+      bullets: [
+        "Custom web applications",
+        "API development",
+        "Database design",
+        "User authentication",
+        "Payment integration"
+      ],
+      icon: "🚀"
+    },
+    {
+      title: "AI & Machine Learning",
+      href: "/services/ai-ml",
+      description: "Intelligent automation, predictive analytics, and custom AI models tailored to your business needs.",
+      bullets: [
+        "Custom AI models",
+        "Predictive analytics",
+        "Natural language processing",
+        "Computer vision",
+        "Process automation"
+      ],
+      icon: "🤖"
+    },
+    {
+      title: "Cloud Infrastructure",
+      href: "/services/cloud",
+      description: "Scalable cloud solutions, DevOps, and infrastructure management for enterprise applications.",
+      bullets: [
+        "AWS/Azure/GCP migration",
+        "Container orchestration",
+        "CI/CD pipelines",
+        "Monitoring & logging",
+        "Cost optimization"
+      ],
+      icon: "☁️"
+    },
+    {
+      title: "Blockchain Solutions",
+      href: "/services/blockchain",
+      description: "Smart contracts, DeFi platforms, and blockchain integration for secure, transparent operations.",
+      bullets: [
+        "Smart contract development",
+        "DeFi protocols",
+        "NFT marketplaces",
+        "Token economics",
+        "Security auditing"
+      ],
+      icon: "⛓️"
+    },
+    {
+      title: "Data Analytics",
+      href: "/services/analytics",
+      description: "Transform raw data into actionable insights with advanced analytics and visualization tools.",
+      bullets: [
+        "Data warehousing",
+        "Business intelligence",
+        "Real-time dashboards",
+        "Predictive modeling",
+        "Data visualization"
+      ],
+      icon: "📊"
+    },
+    {
+      title: "Cybersecurity",
+      href: "/services/security",
+      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
+      bullets: [
+        "Security audits",
+        "Penetration testing",
+        "Compliance consulting",
+        "Incident response",
+        "Security training"
+      ],
+      icon: "🔒"
+    }
+  ];
+
   return (
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl relative overflow-hidden" role="banner">
-        {/* Enhanced animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-8 -left-8 w-80 h-80 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float"></div>
-          <div className="absolute -bottom-12 -right-8 w-80 h-80 bg-gradient-to-r from-purple-200 to-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-indigo-200 to-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute -bottom-12 -right-8 w-80 h-80 bg-gradient-to-r from-purple-200 to-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-indigo-200 to-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-float" style={{animationDelay: '4s'}}></div>
           <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-r from-cyan-200 to-cyan-300 rounded-full mix-blend-multiply filter blur-lg opacity-50 animate-pulse-slow"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-200 to-pink-300 rounded-full mix-blend-multiply filter blur-lg opacity-50 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-200 to-pink-300 rounded-full mix-blend-multiply filter blur-lg opacity-50 animate-pulse-slow" style={{animationDelay: '1s'}}></div>
         </div>
-        
         <div className="relative z-10">
           <div className="inline-block mb-6 animate-bounce-in">
             <span className="text-6xl animate-wiggle">🚀</span>
@@ -123,10 +175,10 @@ export default function HomePage() {
           <p className="text-2xl md:text-3xl text-gray-700 mb-4 max-w-5xl mx-auto animate-slide-up font-medium">
             Enterprise AI solutions, micro SaaS development, and comprehensive IT services
           </p>
-          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-4xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-4xl mx-auto animate-slide-up" style={{animationDelay: '0.1s'}}>
             that drive business transformation and growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style={{animationDelay: '0.3s'}}>
             <Link
               href="/services"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-offset-2 shadow-2xl hover:shadow-3xl animate-glow"
@@ -150,9 +202,7 @@ export default function HomePage() {
               </span>
             </a>
           </div>
-          
-          {/* Stats Section */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{animationDelay: '0.5s'}}>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-sm md:text-base text-gray-600">Services</div>
@@ -176,111 +226,29 @@ export default function HomePage() {
       {/* Featured Services */}
       <section className="py-12" role="main" aria-labelledby="services-heading">
         <div className="text-center mb-12">
-          <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">
-            Our Core Services
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            From AI-powered automation to complete IT infrastructure.
-          </p>
+          <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">From AI-powered automation to complete IT infrastructure.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Core service offerings">
-          <ServiceCard
-            title="Micro SaaS Solutions"
-            href="/services/micro-saas"
-            description="Scalable, secure micro SaaS products that solve specific business challenges with modern architecture."
-            bullets={[
-              "Custom web applications",
-              "API development",
-              "Database design",
-              "User authentication",
-              "Payment integration"
-            ]}
-            icon="🚀"
-          />
-          <ServiceCard
-            title="AI & Machine Learning"
-            href="/services/ai-ml"
-            description="Intelligent automation, predictive analytics, and custom AI models tailored to your business needs."
-            bullets={[
-              "Custom AI models",
-              "Predictive analytics",
-              "Natural language processing",
-              "Computer vision",
-              "Process automation"
-            ]}
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            href="/services/cloud"
-            description="Scalable cloud solutions, DevOps, and infrastructure management for enterprise applications."
-            bullets={[
-              "AWS/Azure/GCP migration",
-              "Container orchestration",
-              "CI/CD pipelines",
-              "Monitoring & logging",
-              "Cost optimization"
-            ]}
-            icon="☁️"
-          />
-          <ServiceCard
-            title="Blockchain Solutions"
-            href="/services/blockchain"
-            description="Smart contracts, DeFi platforms, and blockchain integration for secure, transparent operations."
-            bullets={[
-              "Smart contract development",
-              "DeFi protocols",
-              "NFT marketplaces",
-              "Token economics",
-              "Security auditing"
-            ]}
-            icon="⛓️"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            href="/services/analytics"
-            description="Transform raw data into actionable insights with advanced analytics and visualization tools."
-            bullets={[
-              "Data warehousing",
-              "Business intelligence",
-              "Real-time dashboards",
-              "Predictive modeling",
-              "Data visualization"
-            ]}
-            icon="📊"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            href="/services/security"
-            description="Comprehensive security solutions to protect your digital assets and ensure compliance."
-            bullets={[
-              "Security audits",
-              "Penetration testing",
-              "Compliance consulting",
-              "Incident response",
-              "Security training"
-            ]}
-            icon="🔒"
-          />
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} />
+          ))}
         </div>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="why-choose-heading">
-        {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
         </div>
-        
         <div className="relative z-10">
           <div className="text-center mb-20">
             <h2 id="why-choose-heading" className="text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent mb-8 animate-fade-in">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-2xl text-gray-700 max-w-4xl mx-auto animate-slide-up font-medium">
-              We combine technical expertise with business acumen to deliver
-              solutions that drive real results.
+              We combine technical expertise with business acumen to deliver solutions that drive real results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Key advantages and benefits">
@@ -295,9 +263,8 @@ export default function HomePage() {
                 Rapid development and deployment with agile methodologies and modern tools
               </p>
             </div>
-
             <div className="text-center p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 group border border-white/20">
-              <div className="w-24 h-24 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{ animationDelay: '0.5s' }}>
+              <div className="w-24 h-24 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{animationDelay: '0.5s'}}>
                 <span className="text-4xl animate-pulse-slow">🔒</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-green-600 transition-colors duration-300">
@@ -307,9 +274,8 @@ export default function HomePage() {
                 Enterprise-grade security and 99.9% uptime guarantee with 24/7 monitoring
               </p>
             </div>
-
             <div className="text-center p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 group border border-white/20">
-              <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{ animationDelay: '1s' }}>
+              <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{animationDelay: '1s'}}>
                 <span className="text-4xl animate-pulse-slow">🎯</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-purple-600 transition-colors duration-300">
@@ -319,9 +285,8 @@ export default function HomePage() {
                 Tailored solutions that perfectly fit your specific business needs and goals
               </p>
             </div>
-
             <div className="text-center p-10 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 group border border-white/20">
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 animate-float" style={{animationDelay: '1.5s'}}>
                 <span className="text-4xl animate-pulse-slow">📞</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-orange-600 transition-colors duration-300">
@@ -337,16 +302,14 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
-        {/* Enhanced animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="absolute -top-8 -left-8 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float"></div>
-          <div className="absolute -bottom-12 -right-8 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -bottom-12 -right-8 w-96 h-96 bg-white/10 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float" style={{animationDelay: '2s'}}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse-slow"></div>
           <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-r from-cyan-300/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-300/20 to-pink-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-pink-300/20 to-pink-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse-slow" style={{animationDelay: '1s'}}></div>
         </div>
-        
         <div className="relative z-10">
           <div className="inline-block mb-8 animate-bounce-in">
             <span className="text-6xl animate-wiggle">💼</span>
@@ -355,13 +318,12 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-slide-up font-medium">
-            Let&apos;s discuss your project and create a custom solution that drives
-            real business value.
+            Let's discuss your project and create a custom solution that drives real business value.
           </p>
-          <p className="text-lg text-blue-200 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-lg text-blue-200 mb-12 max-w-3xl mx-auto animate-slide-up" style={{animationDelay: '0.1s'}}>
             Our team has delivered 1000+ successful projects across various industries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style={{animationDelay: '0.3s'}}>
             <Link
               href="/contact"
               className="group bg-white text-blue-600 px-12 py-6 rounded-2xl font-bold text-xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white focus:ring-offset-2 shadow-2xl hover:shadow-3xl animate-glow"
@@ -383,9 +345,7 @@ export default function HomePage() {
               </span>
             </Link>
           </div>
-          
-          {/* Trust indicators */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{ animationDelay: '0.5s' }}>
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-slide-up" style={{animationDelay: '0.5s'}}>
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
               <div className="text-sm md:text-base text-blue-200">Happy Clients</div>
@@ -404,12 +364,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
       </section>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }
