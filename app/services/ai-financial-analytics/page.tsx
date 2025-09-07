@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
 
-=======
-import Link from 'next/link';
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 export const metadata = {
-  title: 'Ai Financial Analytics | Zion Tech Group',
-  description: 'Professional ai financial analytics services for your business needs.',
+  title: 'AI Financial Analytics | Zion Tech Group',
+  description: 'Professional AI financial analytics services for your business needs.',
   keywords: 'ai-financial-analytics, services, business, technology'
 };
 

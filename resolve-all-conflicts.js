@@ -40,12 +40,10 @@ function resolveMergeConflicts(filePath) {
         // Remove merge conflict markers and keep the HEAD version
         
         // Remove any remaining conflict markers
-        content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
         
         // Remove any remaining conflict markers
         content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
         content = content.replace(/\n?/g, '');
-        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
         
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');

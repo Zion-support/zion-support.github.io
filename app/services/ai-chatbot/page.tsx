@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'AI Chatbot Development | Zion Tech Group',
   description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
+  keywords: 'ai-chatbot, services, business, technology'
 };
 
 export default function AIChatbotPage() {

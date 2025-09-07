@@ -1,56 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-
-export const metadata = {
-  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
-  description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
-  keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
-=======
 import Link from "next/link";
 
 export const metadata = {
   title: "Services | Zion Tech Group",
   description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
-export const metadata = {
-  title: 'Services | Zion Tech Group',
-  description: 'Professional services services for your business needs.',
-  keywords: 'services, services, business, technology'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Comprehensive technology solutions to accelerate your digital transformation. 
-          From AI development to micro SaaS products, we deliver enterprise-grade solutions that drive real results.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Services Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-=======
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -182,6 +138,149 @@ export default function ServicePage() {
           icon="📊"
           pricing="From $3,500/month"
         />
+        <ServiceCard
+          href="/services/ai-content-generator"
+          title="AI Content Generator Pro"
+          description="Advanced AI-powered content creation platform for blogs, social media, and marketing materials"
+          bullets={[
+            "Multi-language support",
+            "SEO optimization",
+            "Brand voice consistency",
+            "Plagiarism detection"
+          ]}
+          icon="✍️"
+          pricing="From $199/month"
+        />
+        <ServiceCard
+          href="/services/smart-invoice-generator"
+          title="Smart Invoice Generator"
+          description="Automated invoice creation with AI-powered expense categorization and payment tracking"
+          bullets={[
+            "Auto-expense categorization",
+            "Payment reminders",
+            "Multi-currency support",
+            "Tax compliance"
+          ]}
+          icon="🧾"
+          pricing="From $149/month"
+        />
+        <ServiceCard
+          href="/services/ai-social-scheduler"
+          title="AI Social Media Scheduler"
+          description="Intelligent social media management with optimal posting times and content suggestions"
+          bullets={[
+            "Optimal timing AI",
+            "Content suggestions",
+            "Multi-platform posting",
+            "Analytics dashboard"
+          ]}
+          icon="📱"
+          pricing="From $99/month"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-assistant"
+          title="AI Meeting Assistant"
+          description="Automated meeting transcription, action item extraction, and follow-up management"
+          bullets={[
+            "Real-time transcription",
+            "Action item extraction",
+            "Meeting summaries",
+            "Calendar integration"
+          ]}
+          icon="🎤"
+          pricing="From $179/month"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights Platform"
+          description="Advanced customer behavior analysis and predictive insights for business growth"
+          bullets={[
+            "Behavioral analytics",
+            "Churn prediction",
+            "Personalization engine",
+            "ROI tracking"
+          ]}
+          icon="👥"
+          pricing="From $299/month"
+        />
+        <ServiceCard
+          href="/services/ai-project-manager"
+          title="AI Project Manager"
+          description="Intelligent project management with automated task assignment and progress tracking"
+          bullets={[
+            "Smart task assignment",
+            "Progress prediction",
+            "Resource optimization",
+            "Risk assessment"
+          ]}
+          icon="📋"
+          pricing="From $249/month"
+        />
+        <ServiceCard
+          href="/services/ai-finance-analyzer"
+          title="AI Finance Analyzer"
+          description="Automated financial analysis, budgeting, and investment recommendations"
+          bullets={[
+            "Expense categorization",
+            "Budget optimization",
+            "Investment insights",
+            "Financial forecasting"
+          ]}
+          icon="💰"
+          pricing="From $199/month"
+        />
+        <ServiceCard
+          href="/services/ai-email-optimizer"
+          title="AI Email Optimizer"
+          description="Email marketing optimization with AI-powered subject lines and content suggestions"
+          bullets={[
+            "Subject line optimization",
+            "Send time optimization",
+            "A/B testing automation",
+            "Open rate improvement"
+          ]}
+          icon="📧"
+          pricing="From $129/month"
+        />
+        <ServiceCard
+          href="/services/ai-seo-analyzer"
+          title="AI SEO Analyzer"
+          description="Comprehensive SEO analysis and optimization recommendations powered by AI"
+          bullets={[
+            "Keyword research",
+            "Content optimization",
+            "Competitor analysis",
+            "Ranking predictions"
+          ]}
+          icon="🔍"
+          pricing="From $179/month"
+        />
+        <ServiceCard
+          href="/services/ai-inventory-manager"
+          title="AI Inventory Manager"
+          description="Smart inventory management with demand forecasting and automated reordering"
+          bullets={[
+            "Demand forecasting",
+            "Automated reordering",
+            "Waste reduction",
+            "Cost optimization"
+          ]}
+          icon="📦"
+          pricing="From $299/month"
+        />
+        <ServiceCard
+          href="/services/ai-hr-assistant"
+          title="AI HR Assistant"
+          description="Automated HR processes including resume screening, interview scheduling, and employee analytics"
+          bullets={[
+            "Resume screening",
+            "Interview scheduling",
+            "Employee analytics",
+            "Performance tracking"
+          ]}
+          icon="👔"
+          pricing="From $229/month"
+        />
       </div>
       
       <CTA />
@@ -273,43 +372,6 @@ function CTA() {
       <div className="mt-6 text-sm text-gray-600">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional services services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored services solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your services solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     </div>
   );
 }

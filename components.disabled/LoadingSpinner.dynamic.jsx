@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const LoadingSpinner = dynamic(() => import(\"./LoadingSpinner\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default LoadingSpinner\' ,const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{"; loading: () => <p>Loading.</p,>}) export: "default LoadingSpinner" ,""";
 const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default LoadingSpinner' ,';
 </p>';
@@ -37,7 +35,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 const LoadingSpinner = dynamic(() => import("./LoadingSpinner"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default LoadingSpinner' ,'
 </p>'
 </p>'

@@ -1,28 +1,22 @@
 #!/bin/bash
 
-# Script to automatically resolve merge conflicts by choosing HEAD version
-echo "Fixing merge conflicts in all files..."
+# Script to fix merge conflicts in all files
+echo "Fixing merge conflicts..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find ./app -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD")
+files_with_conflicts=$(grep -r "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" | cut -d: -f1 | sort -u)
 
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
     
-    # Create a temporary file
-    temp_file=$(mktemp)
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Process the file to resolve conflicts
-    awk '
-    /^<<<<<<< HEAD/ { in_head = 1; next }
-    /^=======/ { in_head = 0; in_other = 1; next }
-    /^>>>>>>> / { in_other = 0; next }
-    in_other { next }
-    { print }
-    ' "$file" > "$temp_file"
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
     
-    # Replace the original file
-    mv "$temp_file" "$file"
+    echo "Fixed: $file"
 done
 
-echo "Merge conflicts resolved in all files."
+echo "Merge conflicts fixed!"

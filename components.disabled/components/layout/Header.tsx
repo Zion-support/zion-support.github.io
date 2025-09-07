@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 ;
 import React, { useState } from 'react';
@@ -164,4 +162,3 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
       </div>;
     </header>;
   )}export default Header;
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

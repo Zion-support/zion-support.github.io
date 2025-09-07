@@ -12,7 +12,6 @@ const { Send export function ChatInput({ onSend,disabled = false }) { const [mes
 const { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(") const inputRef = useRef(null) useEffect(() => {""""";'"'";
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('', ') const inputRef = useRef(null) useEffect(() => {'';''}
 =import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
->>>>>>>> main:corrupted_backup/ChatInput.jsx;
 const { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(") const inputRef = useRef(null) useEffect(() => {""""";'"'";
 ursor/automate-test-improve-and-merge-code-646c;
 =;

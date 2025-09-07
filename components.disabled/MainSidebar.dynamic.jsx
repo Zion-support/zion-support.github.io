@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const MainSidebar = dynamic(() => import(\"./MainSidebar\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default MainSidebar\' ,const MainSidebar = dynamic(() => import("./MainSidebar"),{"; loading: () => <p>Loading.</p,>}) export: "default MainSidebar" ,""";
 const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,';
 </p>';
@@ -37,7 +35,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
 </p>'
 </p>'

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
-=======
 const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>}) export: 'default SEOHead' ,';
 </p>';
 </p>';
@@ -25,7 +22,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>}) export: 'default SEOHead' ,'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 </p>'
 </p>'
 </p>'

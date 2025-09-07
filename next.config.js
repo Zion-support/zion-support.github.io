@@ -3,6 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
+<<<<<<< HEAD
+    dirs: []
+  },
+  typescript: {
+    ignoreBuildErrors: true
+=======
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -10,17 +16,10 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-<<<<<<< HEAD
-    unoptimized: true,
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-=======
     unoptimized: true
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
   },
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from webpack compilation
@@ -69,11 +68,7 @@ const nextConfig = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-<<<<<<< HEAD
-      tls: false,
-=======
       tls: false
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     };
 
     return config;
@@ -81,13 +76,9 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
-<<<<<<< HEAD
-    pagesBufferLength: 2,
-  },
-=======
     pagesBufferLength: 2
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
   }
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 export default nextConfig;
