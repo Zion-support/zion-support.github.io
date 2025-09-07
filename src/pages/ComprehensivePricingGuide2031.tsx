@@ -287,7 +287,13 @@ export default function ComprehensivePricingGuide2031() {
             </div>
           </div>
         </div>
-      </section>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl"></div>
+        </div>
+      </div>
 
       {/* Filters and Search */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -340,7 +346,7 @@ export default function ComprehensivePricingGuide2031() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -446,6 +452,15 @@ export default function ComprehensivePricingGuide2031() {
                       </div>
                     </div>
                   </div>
+                  <div className="text-right">
+                    <div className="text-lg font-bold text-green-400">
+                      Save {service.savings}
+                    </div>
+                    <div className="text-sm text-zion-cyan">
+                      ROI: {service.roi}
+                    </div>
+                  </div>
+                </div>
 
                   {/* CTA Button */}
                   <div className="flex space-x-3">
@@ -545,9 +560,17 @@ export default function ComprehensivePricingGuide2031() {
                 </a>
               </div>
             </div>
-          </motion.div>
+            <div className="mt-8 text-zion-slate-light">
+              <p className="text-sm">
+                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+              <p className="text-sm">
+                <strong>Website:</strong> <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline">https://ziontechgroup.com</a>
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

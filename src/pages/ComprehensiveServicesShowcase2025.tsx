@@ -514,7 +514,13 @@ export default function ComprehensiveServicesShowcase2025() {
             </div>
           </motion.div>
         </div>
-      </section>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl"></div>
+        </div>
+      </div>
 
       {/* Category Filter */}
       <section className="py-12 bg-zion-blue-dark">
@@ -538,7 +544,7 @@ export default function ComprehensiveServicesShowcase2025() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Highlighted Services */}
       <section className="py-20 bg-zion-blue">
@@ -722,8 +728,25 @@ export default function ComprehensiveServicesShowcase2025() {
                     {service.features.map((feature, idx) => (
                       <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full">
                         {feature}
-                      </span>
+                      </li>
                     ))}
+                  </div>
+                  <div className="text-right">
+                    <div className="flex items-center space-x-1 mb-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-4 h-4 ${
+                            i < Math.floor(service.rating)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-zion-slate-light'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs text-zion-slate-light">
+                      {service.rating} ({service.reviews} reviews)
+                    </span>
                   </div>
                 </div>
 
@@ -759,7 +782,7 @@ export default function ComprehensiveServicesShowcase2025() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Pricing Comparison Section */}
       <section className="py-20 bg-slate-800/50">
