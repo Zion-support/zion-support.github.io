@@ -25,8 +25,125 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 export default function Home() {
+  const stats = [
+    {
+      icon: Users,
+      value: "500+",
+      label: "Happy Clients",
+      description: "Trusted by businesses worldwide"
+    },
+    {
+      icon: TrendingUp,
+      value: "95%",
+      label: "Success Rate",
+      description: "Project completion success"
+    },
+    {
+      icon: Zap,
+      value: "24/7",
+      label: "Support",
+      description: "Round-the-clock assistance"
+    },
+    {
+      icon: Star,
+      value: "4.9/5",
+      label: "Rating",
+      description: "Client satisfaction score"
+    }
+  ];
+
+  const innovativeServices = [
+    {
+      icon: Brain,
+      title: "AI Customer Success Platform",
+      description: "Intelligent platform that predicts churn, automates onboarding, and personalizes customer experiences.",
+      features: ["Predictive churn analysis", "Automated workflows", "Real-time health scoring"],
+      path: "/services/ai-customer-success-platform",
+      price: "$1,999 - $5,999/month",
+      category: "AI & Analytics",
+      rating: 4.9,
+      reviewCount: 127,
+      highlights: ["40% churn reduction", "60% LTV increase", "80% automation"]
+    },
+    {
+      icon: Shield,
+      title: "AI Threat Intelligence Platform",
+      description: "Advanced cybersecurity platform with AI-powered threat detection and automated incident response.",
+      features: ["Real-time threat detection", "Automated response", "Compliance monitoring"],
+      path: "/services/ai-threat-intelligence-platform",
+      price: "$3,999 - $12,999/month",
+      category: "Cybersecurity",
+      rating: 4.8,
+      reviewCount: 89,
+      highlights: ["70% faster response", "85% accuracy", "60% automation"]
+    },
+    {
+      icon: Cloud,
+      title: "Cloud FinOps Optimizer",
+      description: "Intelligent cloud cost optimization platform that reduces spending while improving performance.",
+      features: ["Cost optimization", "Performance monitoring", "Automated scaling"],
+      path: "/services/cloud-finops-optimizer",
+      price: "$2,499 - $7,999/month",
+      category: "Cloud & DevOps",
+      rating: 4.7,
+      reviewCount: 156,
+      highlights: ["30% cost reduction", "Improved performance", "Automated scaling"]
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      name: "AI & Analytics",
+      description: "Intelligent business solutions powered by artificial intelligence",
+      icon: "🤖",
+      href: "/ai-services",
+      count: 15,
+      color: "from-purple-600 to-pink-600"
+    },
+    {
+      name: "Cybersecurity",
+      description: "Advanced security protocols and threat protection systems",
+      icon: "🔒",
+      href: "/services",
+      count: 8,
+      color: "from-red-600 to-orange-600"
+    },
+    {
+      name: "Cloud & DevOps",
+      description: "Enterprise-grade cloud infrastructure and automation",
+      icon: "☁️",
+      href: "/services",
+      count: 12,
+      color: "from-blue-600 to-cyan-600"
+    },
+    {
+      name: "Digital Transformation",
+      description: "End-to-end business process modernization",
+      icon: "🚀",
+      href: "/services",
+      count: 10,
+      color: "from-green-600 to-emerald-600"
+    },
+    {
+      name: "Micro SaaS",
+      description: "Productized software solutions for specific business needs",
+      icon: "💻",
+      href: "/micro-saas",
+      count: 25,
+      color: "from-indigo-600 to-purple-600"
+    },
+    {
+      name: "IT Infrastructure",
+      description: "Robust IT infrastructure and network management",
+      icon: "🏗️",
+      href: "/it-services",
+      count: 6,
+      color: "from-orange-600 to-yellow-600"
+    }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Zion Tech Group - Leading AI & Technology Solutions"
         description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
@@ -177,26 +294,28 @@ export default function Home() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.name}
-                variants={itemVariants}
                 className="group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Link to={category.href} className="block h-full">
-                  <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 h-full flex flex-col justify-between">
+                  <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 h-full flex flex-col justify-between">
                     <div>
                       <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
                         <span className="text-3xl">{category.icon}</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white mb-4 text-center group-hover:text-cyan-400 transition-colors duration-300">
                         {category.name}
                       </h3>
-                      <p className="text-zion-slate-light text-center mb-6 leading-relaxed">
+                      <p className="text-gray-300 text-center mb-6 leading-relaxed">
                         {category.description}
                       </p>
                     </div>
                     <div className="text-center">
-                      <span className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-semibold border border-zion-cyan/30">
+                      <span className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 text-cyan-400 text-sm font-semibold border border-cyan-500/30">
                         {category.count} Services
                       </span>
                     </div>
