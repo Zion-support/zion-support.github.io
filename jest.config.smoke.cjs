@@ -13,6 +13,21 @@ const customJestConfig = {
     '**/__tests__/**/*.(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/src_backup/',
+    '/backup-problematic-files/',
+    '/src.disabled/',
+    '/pages_backup/',
+    '/corrupted-files-backup/',
+    '/lib_backup/',
+    '/components.disabled/',
+    '/pages.disabled/',
+    '/src.pages.disabled/',
+    '/recovered-branches/',
+    '/temp_backup/',
+    '/api.disabled/'
+  ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
