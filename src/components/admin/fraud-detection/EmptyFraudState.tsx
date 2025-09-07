@@ -1,12 +1,21 @@
 
-interface EmptyFraudStateProps {
-  hasFilters: boolean,
-  onResetFilters: () => void
-}
+<<<<<<< HEAD
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters,
   onResetFilters 
+=======
+interface EmptyFraudStateProps {
+  hasFilters: boolean
+  onResetFilters: () => void
+}
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 },) => {
   return (
     <div className="text-center py-12">
@@ -22,21 +31,30 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   )
-};
+}
 '"
-
-import React from "react";
-import {Button} from "@/components/ui/button";
+import React from "react"
+import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
-
 interface EmptyFraudStateProps {
-  hasFilters: boolean,
+<<<<<<< HEAD
+  hasFilters: boolean;
   onResetFilters: () => void
 }
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters,
+  hasFilters;
   onResetFilters 
+}) => {
+  return (
+    <div className;
+=======
+  hasFilters: boolean
+  onResetFilters: () => void
+}
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
 }) => {
   return (
     <div className="text-center py-12">
@@ -52,4 +70,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   )
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

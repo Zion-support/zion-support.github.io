@@ -1,34 +1,31 @@
-          <div className="h-12 w-12 rounded bg-gray-200" />)};
+          <div className="h-12 w-12 rounded bg-gray-200" />)}
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
       <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>};
-
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
-
 interface EnhancedMarketplaceCardProps {
-  title: string, description: string,
+  title: string, description: string
   price?: string;
-  href: string, image?: string,
+  href: string, image?: string
   category?: string;
   rating?: number;
   reviews?: number;
   featured?: boolean;
   className?: string;
 }
-
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
-  title,
-  description,
-  price,
-  href,
-  image,
-  category,
-  rating,
-  reviews,
-  featured = false,
+  title
+  description
+  price
+  href
+  image
+  category
+  rating
+  reviews
+  featured = false
   className = ''
 }) => {
   return (
@@ -39,8 +36,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
         {/* Header */}
         <div className="flex items-start space-x-3 mb-4">
           {image ? (
-            <Image 
-              src={image} 
+            <Image
+              src={image}
               alt={title}
               width={48}
               height={48}
@@ -60,10 +57,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
             )}
           </div>
         </div>
-
         {/* Description */}
         <p className="text-sm text-gray-600 mb-4 flex-1">{description}</p>
-
         {/* Rating */}
         {rating && reviews && (
           <div className="flex items-center space-x-1 mb-4">
@@ -86,7 +81,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
             </span>
           </div>
         )}
-
         {/* Footer */}
         <div className="mt-auto flex items-center justify-between">
           {price && (
@@ -101,15 +95,14 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
       </div>
     </Link>
 interface MarketplaceCardProps {
-  title: string,
-  description: string,
-  price: number,
-  rating: number,
-  image: string,
+  title: string
+  description: string
+  price: number
+  rating: number
+  image: string
   onAddToCart?: () => void;
   onFavorite?: () => void;
 }
-
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title;
   description;
@@ -130,11 +123,9 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           <Heart className="w-4 h-4 text-gray-600" />
         </button>
       </div>
-      
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{description}</p>
-        
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -142,7 +133,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           </div>
           <span className="text-lg font-bold text-blue-600">$ + {price}</span>
         </div>
-        
         <button
           onClick={onAddToCart}
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center"
@@ -151,10 +141,29 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
-    </div>
-
+</div>
   );
+<<<<<<< HEAD
 };
 
 export default EnhancedMarketplaceCard;
 
+          <div className;
+export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
+  return (
+    <EnhancedCard className="p-5">
+      <div className="space-y-2">
+        <div>
+          <h3 className="text-base font-semibold leading-tight">{title}</h3>
+          {subtitle && <p className="text-sm text-gray-500 dark:text-gray-400">{subtitle}</p>}
+        </div>
+        {description && <p className="text-sm text-gray-700 dark:text-gray-300">{description}</p>}
+        {footer && <div className="pt-2">{footer}</div>}
+      </div>
+    </EnhancedCard>
+  )
+}
+=======
+}
+export default EnhancedMarketplaceCard;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

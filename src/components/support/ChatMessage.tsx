@@ -1,31 +1,37 @@
-import React, { useMemo } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { cn } from '@/lib/utils';
-import { format } from 'date-fns';
-// Use the wrapper hook so TypeScript properly infers the return type
-// from the ThemeProvider context
-import { useTheme } from '@/hooks/useTheme';
+import React, { useMemo } from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
-  timestamp: Date;
-
+  timestamp: Date
 export const ChatMessage: React.FC<ChatMessageProps> = ({
-  message,
-  isUser,
-  timestamp,
-}: ChatMessageProps) => {
+<<<<<<< HEAD
+  message;
+  isUser;
+  timestamp}: ChatMessageProps) => {
   const { theme } = useTheme();
-
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
+  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
+  const sanitizedHtml = null;
+  return formattedMessage
+}
+;
+=======
+  message
+  isUser
+  timestamp
+}: ChatMessageProps) => {
+  const { theme } = useTheme()
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
   const sanitizedHtml = useMemo<{ __html: string }>(
     () => ({ __html: formatMessageWithLinks(message) }),    [message]
-  );
-
+  )
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>
       <Avatar className='h-8 w-8'>
@@ -49,10 +55,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
           </>
         )}
       </Avatar>
-
       <div
         className={cn(
-          'max-w-[80%] rounded-lg px-4 py-2 text-sm',
+          'max-w-[80%] rounded-lg px-4 py-2 text-sm'
           isUser
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
@@ -63,7 +68,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div
           className={cn(
-            'text-xs mt-1',
+            'text-xs mt-1'
             isUser
               ? 'text-white/70'
               : theme === 'dark'
@@ -75,9 +80,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
@@ -88,26 +92,23 @@ function escapeHtml(unsafe: string): string {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-
+    .replace(/'/g, '&#039;')
 function formatMessageWithLinks(message: string): string {
   // First, escape any HTML so that user input cannot break out of the intended
   // markup.
-  const safeText = escapeHtml(message);
-
+  const safeText = escapeHtml(message)
   // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const urlRegex = /(https?:\/\/[^\s]+)/g
   let formattedMessage = safeText.replace(
-    urlRegex,
+    urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  );
-
+  )
   // Replace help-center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g;
+  const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex,
+    helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  );
-
-  return formattedMessage;  return formattedMessage
+  )
+  return formattedMessage; return formattedMessage
 }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -1,75 +1,75 @@
- const InitPage: NextPage = () => {
+<<<<<<< HEAD
+import { useState  } from 'react';
+import type { NextPage } from 'next';
+type GovernanceMode = any;
+=======
+const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
-  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
-
+  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' }
 const defaultModules: DeployFormState['modules'] = {
-  marketplace: true,
-  gpt: true,
-  academy: true,
-  token: true,
-  dao: true,
-  'nation-builder': true,
-  'launch-kit': true,
-  'book-builder': true,
-  'roadmap-whitepaper': true,
-  'api-docs-wiki': true,
-  'zion-brain': true,
-};
-
+  marketplace: true
+  gpt: true
+  academy: true
+  token: true
+  dao: true
+  'nation-builder': true
+  'launch-kit': true
+  'book-builder': true
+  'roadmap-whitepaper': true
+  'api-docs-wiki': true
+  'zion-brain': true
+}
 const defaultBonus: DeployFormState['bonusModules'] = {
-  'global-map': false,
-  'franchise-onboarding': false,
-  'referral-ambassadors': false,
-  'grant-portal': false,
-  trailer: false,
-  'book-store': false,
-};
+  'global-map': false
+  'franchise-onboarding': false
+  'referral-ambassadors': false
+  'grant-portal': false
+  trailer: false
+  'book-store': false
+}
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
-    instanceName: '',
-    defaultLanguage: 'en',
-    deploymentRegion: 'us-east-1',
-    tokenActivation: true,
-    governanceMode: 'Hybrid',
+    instanceName: ''
+    defaultLanguage: 'en'
+    deploymentRegion: 'us-east-1'
+    tokenActivation: true
+    governanceMode: 'Hybrid'
     branding: {
-      logoUrl: '',
-      primaryColor: '#4f46e5',
-      secondaryColor: '#0ea5e9',
-      subdomain: '',
-    },
-    modules: defaultModules,
-    bonusModules: defaultBonus,
+      logoUrl: ''
+      primaryColor: '#4f46e5'
+      secondaryColor: '#0ea5e9'
+      subdomain: ''
+    }
+    modules: defaultModules
+    bonusModules: defaultBonus
   });  const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
-
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState(prev => ({
-      ...prev,
-      [group]: { ...prev[group], [key]: !prev[group][key] },
-    }));  };
-
+      ...prev
+      [group]: { ...prev[group], [key]: !prev[group][key] }
+    }));  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
-    setResult(null),
+    setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(state),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify(state)
       });
       const json = await res.json();
-      if (!res.ok) throw new Error(json?.error || 'Deployment failed');
+      if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
     } catch (err: any) {
-      setError(err.message || 'Unexpected error');
+      setError(err.message |'Unexpected error');
     } finally {
       setSubmitting(false);    }
-  };
-
+  }
   return (
     <div className='space-y-8'>
       <div>
@@ -78,7 +78,6 @@ const InitPage: NextPage = () => {
           Initialize a full Zion OS instance from a single control panel.
         </p>
       </div>
-
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'
@@ -130,8 +129,8 @@ const InitPage: NextPage = () => {
                 checked={state.tokenActivation}
                 onChange={() =>
                   setState({
-                    ...state,
-                    tokenActivation: !state.tokenActivation,
+                    ...state
+                    tokenActivation: !state.tokenActivation
                   })
                 }
               />
@@ -147,8 +146,8 @@ const InitPage: NextPage = () => {
               value={state.governanceMode}
               onChange={e =>
                 setState({
-                  ...state,
-                  governanceMode: e.target.value as GovernanceMode,
+                  ...state
+                  governanceMode: e.target.value as GovernanceMode
                 })
               }
             >              <option>Admin</option>
@@ -157,7 +156,6 @@ const InitPage: NextPage = () => {
             </select>
           </div>
         </section>
-
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
@@ -166,8 +164,8 @@ const InitPage: NextPage = () => {
               value={state.branding.logoUrl}
               onChange={e =>
                 setState({
-                  ...state,
-                  branding: { ...state.branding, logoUrl: e.target.value },
+                  ...state
+                  branding: { ...state.branding, logoUrl: e.target.value }
                 })
               }
             />
@@ -180,8 +178,8 @@ const InitPage: NextPage = () => {
               value={state.branding.primaryColor}
               onChange={e =>
                 setState({
-                  ...state,
-                  branding: { ...state.branding, primaryColor: e.target.value },
+                  ...state
+                  branding: { ...state.branding, primaryColor: e.target.value }
                 })
               }
             />
@@ -194,11 +192,11 @@ const InitPage: NextPage = () => {
               value={state.branding.secondaryColor}
               onChange={e =>
                 setState({
-                  ...state,
+                  ...state
                   branding: {
-                    ...state.branding,
-                    secondaryColor: e.target.value,
-                  },
+                    ...state.branding
+                    secondaryColor: e.target.value
+                  }
                 })
               }
             />
@@ -210,14 +208,13 @@ const InitPage: NextPage = () => {
               value={state.branding.subdomain}
               onChange={e =>
                 setState({
-                  ...state,
-                  branding: { ...state.branding, subdomain: e.target.value },
+                  ...state
+                  branding: { ...state.branding, subdomain: e.target.value }
                 })
               }
             />
           </div>
         </section>
-
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
@@ -248,7 +245,6 @@ const InitPage: NextPage = () => {
             </div>
           </div>
         </section>
-
         <div className='flex items-center gap-3'>
           <button
             disabled={submitting}
@@ -258,7 +254,6 @@ const InitPage: NextPage = () => {
           </button>
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>
       </form>
-
       {result && (
         <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
           <h3 className='font-semibold'>Deployment Result</h3>
@@ -269,6 +264,6 @@ const InitPage: NextPage = () => {
       )}
     </div>
   );
-};
-
+}
 export default InitPage;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

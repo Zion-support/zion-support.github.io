@@ -2,40 +2,38 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
-
 export interface DevIdentity {
   isAuthenticated: boolean;
   roles: DevRole[];
   userId?: string;
-
+}
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
     const gitDir = path.join(process.cwd(), '.git');
-    if (!fs.existsSync(gitDir)) return { connected: false };
+    if (!fs.existsSync(gitDir)) return { connected: false }
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
+      stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
       .trim();
-    return { connected: true, branch };
+    return { connected: true, branch }
   } catch {
-    return { connected: false };
+    return { connected: false }
   }
-
+}
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev
-  const token = req.headers['x-dev-token'] || req.headers['x-admin-token'];
+  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
   if (token && adminToken && token === adminToken) {
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
   }
-  return { isAuthenticated: false, roles: [] };
-
+  return { isAuthenticated: false, roles: [] }
+}
 export function requireRoles(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
   allowed: DevRole[]
 ): DevIdentity | undefined {
   const identity = getDevIdentity(req);
@@ -49,3 +47,4 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+}

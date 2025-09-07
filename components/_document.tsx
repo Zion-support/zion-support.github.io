@@ -1,10 +1,14 @@
+<<<<<<< HEAD
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,;
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
 } from 'next/document';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function Document() {
   return (
     <Html lang='en'>

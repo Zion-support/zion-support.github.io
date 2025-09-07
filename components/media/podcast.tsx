@@ -1,8 +1,12 @@
- useEffect ( () => {
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = any;
+=======
+useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
-
   return (
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
@@ -36,7 +40,7 @@
                   </a>
                 )}
                 {ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

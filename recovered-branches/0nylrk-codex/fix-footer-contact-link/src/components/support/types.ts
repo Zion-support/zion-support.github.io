@@ -1,21 +1,19 @@
 
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
-  lastUpdated: string,
+  lastUpdated: string;
   tags: string[]
 }
-
 export interface HelpCategory {
   id: string;
   name: string;
   description: string;
-  icon: ReactNode,
+  icon: ReactNode;
   articles: HelpArticle[]
 }
-
 export interface SupportTicket {
   id: string;
   userId: string;
@@ -23,6 +21,11 @@ export interface SupportTicket {
   message: string;
   status: "open" | "in-progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
-  createdAt: string,
+  createdAt: string;
+<<<<<<< HEAD
   updatedAt: string
 }
+=======
+  updatedAt: string;
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

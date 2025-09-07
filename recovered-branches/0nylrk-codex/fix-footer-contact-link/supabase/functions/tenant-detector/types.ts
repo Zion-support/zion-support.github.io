@@ -9,13 +9,20 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
-    subtitle: string,
+<<<<<<< HEAD
+    subtitle: string;
+=======
+    subtitle: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     cta: string
-  };
+  }
   is_active: boolean
 }
-
 export interface TenantResponse {
-  tenant: TenantInfo | null,
+<<<<<<< HEAD
+  tenant: TenantInfo | null;
+=======
+  tenant: TenantInfo | null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   error?: string
 }

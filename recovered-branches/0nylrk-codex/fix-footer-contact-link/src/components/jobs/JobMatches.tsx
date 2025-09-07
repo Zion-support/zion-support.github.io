@@ -1,23 +1,33 @@
+<<<<<<< HEAD
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
+import { JobMatchCard } from "@/components/jobs/JobMatchCard",
+=======
 import React from "react";
 import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
+  Card
+  CardHeader
+  CardTitle
+  CardDescription
+  CardContent
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 interface JobMatchesProps {
   jobId: string;
 }
-
 export function JobMatches({ jobId }: JobMatchesProps) {
+<<<<<<< HEAD
+  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);
+=======
   const { matches, isLoading, isProcessing, triggerAIMatching } =
     useJobMatches(jobId);
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (isLoading) {
     return (
       <Card>
@@ -43,7 +53,6 @@ export function JobMatches({ jobId }: JobMatchesProps) {
       </Card>
     );
   }
-
   if (matches.length === 0) {
     return (
       <EmptyMatchesCard
@@ -52,22 +61,21 @@ export function JobMatches({ jobId }: JobMatchesProps) {
       />
     );
   }
-
   return (
     <div className="space-y-4">
       {matches.map((match) => (
         <JobMatchCard
           key={match.id}
           matchId={match.id}
-          talentId={match.talent_profile?.id || ""}
-          name={match.talent_profile?.full_name || ""}
-          title={match.talent_profile?.professional_title || ""}
-          company={match.talent_profile?.company_name || ""}
-          avatar={match.talent_profile?.profile_picture_url || ""}
-          location={match.talent_profile?.location || "Remote"}
-          category={match.talent_profile?.category || "Development"}
-          matchPercent={match.match_score || 0}
-          skills={match.talent_profile?.skills || []}
+          talentId={match.talent_profile?.id |""}
+          name={match.talent_profile?.full_name |""}
+          title={match.talent_profile?.professional_title |""}
+          company={match.talent_profile?.company_name |""}
+          avatar={match.talent_profile?.profile_picture_url |""}
+          location={match.talent_profile?.location |"Remote"}
+          category={match.talent_profile?.category |"Development"}
+          matchPercent={match.match_score |0}
+          skills={match.talent_profile?.skills |[]}
         />
       ))}
     </div>

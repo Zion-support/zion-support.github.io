@@ -1,93 +1,103 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+=======
 import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Target as TargetIcon,
-  Zap as ZapIcon2,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Cloud as CloudIcon,
-  Bot as BotIcon,
-  Lock as LockIcon,
-  BarChart3 as BarChart3Icon,
-  TrendingUp as TrendingUpIcon,
-  Users as UsersIcon,
-  Award as AwardIcon,
-  Star as StarIcon,
-  Check as CheckIcon,
-  ArrowRight as ArrowRightIcon,
-  ExternalLink as ExternalLinkIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  Trophy,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,;
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Target as TargetIcon
+  Zap as ZapIcon2
+  Shield as ShieldIcon
+  Globe as GlobeIcon
+  Cpu as CpuIcon
+  Cloud as CloudIcon
+  Bot as BotIcon
+  Lock as LockIcon
+  BarChart3 as BarChart3Icon
+  TrendingUp as TrendingUpIcon
+  Users as UsersIcon
+  Award as AwardIcon
+  Star as StarIcon
+  Check as CheckIcon
+  ArrowRight as ArrowRightIcon
+  ExternalLink as ExternalLinkIcon
+  Phone as PhoneIcon
+  Mail as MailIcon
+  MapPin as MapPinIcon
+  Trophy
+  FlaskConical as FlaskConicalIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -96,59 +106,55 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,
-  getInnovativeServiceCategories,;
+  innovativeMicroSaasServices
+  getInnovativeServicesByCategory
+  getPopularInnovativeServices
+  getInnovativeServicesByPriceRange
+  getInnovativeServiceCategories;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function InnovativeServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
-
+<<<<<<< HEAD
+  const priceRanges = null;
+=======
   const priceRanges = [
-    { value: 'All', label: 'All Prices' },
-    { value: '0-1000', label: '$0 - $1,000' },
-    { value: '1001-2000', label: '$1,001 - $2,000' },
-    { value: '2001-3000', label: '$2,001 - $3,000' },
-    { value: '3001-5000', label: '$3,001 - $5,000' },
-    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
-    { value: '1001-2000', label: '$1,001 - $2,000' };
-    { value: '2001-3000', label: '$2,001 - $3,000' };
-    { value: '3001-5000', label: '$3,001 - $5,000' };
+    { value: 'All', label: 'All Prices' }
+    { value: '0-1000', label: '$0 - $1,000' }
+    { value: '1001-2000', label: '$1,001 - $2,000' }
+    { value: '2001-3000', label: '$2,001 - $3,000' }
+    { value: '3001-5000', label: '$3,001 - $5,000' }
+    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' }
+    { value: '1001-2000', label: '$1,001 - $2,000' }
+    { value: '2001-3000', label: '$2,001 - $3,000' }
+    { value: '3001-5000', label: '$3,001 - $5,000' }
     { value: '5001+', label: '$5,001+' }
-
   const sortOptions = [
-    { value: 'innovation', label: 'Innovation Level' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' },
+    { value: 'innovation', label: 'Innovation Level' }
+    { value: 'price', label: 'Price Low-High' }
+    { value: 'popularity', label: 'Most Popular' }
+    { value: 'category', label: 'Category' }
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
   ];
-
   // Filter and sort services
   let filteredServices = innovativeMicroSaasServices;
-
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = getInnovativeServicesByCategory(selectedCategory);  }
-
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange
       .split('-')
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getInnovativeServicesByPriceRange(min, max);  }
-
   // Search filter
   if (searchQuery) {    filteredServices = getInnovativeServicesByCategory(selectedCategory)
   }
-
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange
@@ -157,22 +163,20 @@ export default function InnovativeServicesPage() {
     filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getInnovativeServicesByPriceRange(min, max)
   }
-
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(
       service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );  }    filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
-
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -183,38 +187,36 @@ export default function InnovativeServicesPage() {
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi': {
-        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] |'0');
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] |'0');
         return bRoi - aRoi;
       }
       default: {
         // Innovation level sorting
-        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 };
+        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 }
         const aLevel = a.innovationLevel.split(' - ')[0];
         const bLevel = b.innovationLevel.split(' - ')[0];
         return (
-          (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) -
-          (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
+          (innovationOrder[aLevel as keyof typeof innovationOrder] |0) -
+          (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
         );
       }    }              default: {
           // Innovation level sorting
-          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
-          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
         }
   });
-
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  };
-
+  }
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -245,7 +247,6 @@ export default function InnovativeServicesPage() {
           href='https://ziontechgroup.com/innovative-services'
         />
       </Head>
-
       <QuantumHolographicBackground>
         <div className='min-h-screen'>
           {/* Hero Section */}
@@ -260,9 +261,7 @@ export default function InnovativeServicesPage() {
                   SAAS services. From quantum AI to autonomous systems, we're
                   redefining what's possible.                </p>
               </div>
-
               {/* Innovation Stats */}      </Head>
-
       <QuantumHolographicBackground>
         <div className="min-h-screen">
           {/* Hero Section */}
@@ -273,11 +272,10 @@ export default function InnovativeServicesPage() {
                   Revolutionary Innovation
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                  Discover the future of technology with our breakthrough micro SAAS services. 
+                  Discover the future of technology with our breakthrough micro SAAS services.
                   From quantum AI to autonomous systems, we're redefining what's possible.
                 </p>
               </div>
-
               {/* Innovation Stats */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <div className='text-center'>
@@ -304,7 +302,6 @@ export default function InnovativeServicesPage() {
                   </div>
                   <div className='text-gray-400'>Accuracy Rate</div>                </div>
               </div>
-
               {/* Contact Information */}                </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">$25B+</div>
@@ -319,7 +316,6 @@ export default function InnovativeServicesPage() {
                   <div className="text-gray-400">Accuracy Rate</div>
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 mb-12 border border-white/10'>
                 <h3 className='text-2xl font-bold text-white mb-4'>
@@ -349,7 +345,6 @@ export default function InnovativeServicesPage() {
               </div>
             </div>
           </section>
-
           {/* Filters and Search */}
           <section className='px-4 sm:px-6 lg:px-8 mb-12'>
             <div className='max-w-7xl mx-auto'>
@@ -377,7 +372,6 @@ export default function InnovativeServicesPage() {
                       />
                     </div>
                   </div>
-
                   {/* Category Filter */}
                   <div className='flex-shrink-0'>
                     <select
@@ -399,7 +393,6 @@ export default function InnovativeServicesPage() {
                       ))}
                     </select>
                   </div>
-
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
                     <select
@@ -419,7 +412,6 @@ export default function InnovativeServicesPage() {
                       ))}
                     </select>
                   </div>
-
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
                     <select
@@ -439,7 +431,6 @@ export default function InnovativeServicesPage() {
                       ))}
                     </select>
                   </div>
-
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
@@ -477,7 +468,6 @@ export default function InnovativeServicesPage() {
               </div>
             </div>
           </section>
-
           {/* Services Grid/List */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-7xl mx-auto'>
@@ -544,17 +534,14 @@ export default function InnovativeServicesPage() {
                             </div>
                           )}
                         </div>
-
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
-
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
                         </p>
-
                         {/* Innovation Level */}
                         <div className='mb-4'>
                           <div className='flex items-center space-x-2 mb-2'>
@@ -566,7 +553,6 @@ export default function InnovativeServicesPage() {
                           <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service.innovationLevel}
                         {/* Description */}
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service.description}</p>
-
                         {/* Innovation Level */}
                         <div className="mb-4">
                           <div className="flex items-center space-x-2 mb-2">
@@ -577,7 +563,6 @@ export default function InnovativeServicesPage() {
                             {service.innovationLevel}
                           </div>
                         </div>
-
                         {/* Price and ROI */}
                         <div className='grid grid-cols-2 gap-4 mb-6'>
                           <div className='text-center'>
@@ -596,7 +581,6 @@ export default function InnovativeServicesPage() {
                               average ROI
                             </div>                          </div>
                         </div>
-
                         {/* Key Features */}                        <div className="grid grid-cols-2 gap-4 mb-6">
                           <div className="text-center">
                             <div className="text-2xl font-bold text-cyan-400">${service.price.monthly.toLocaleString()}</div>
@@ -606,7 +590,6 @@ export default function InnovativeServicesPage() {
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
                         </div>
-
                         {/* Key Features */}
                         <div className='mb-6'>
                           <h4 className='text-sm font-semibold text-white mb-3'>
@@ -642,7 +625,6 @@ export default function InnovativeServicesPage() {
                             )}
                           </div>
                         </div>
-
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
                           <div>
@@ -657,7 +639,6 @@ export default function InnovativeServicesPage() {
                               {service.growthRate}
                             </div>                          </div>
                         </div>
-
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
                             <div className="text-gray-400">Market Size</div>
@@ -668,7 +649,6 @@ export default function InnovativeServicesPage() {
                             <div className="text-white font-medium">{service.growthRate}</div>
                           </div>
                         </div>
-
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>
                           <Button
@@ -686,7 +666,6 @@ export default function InnovativeServicesPage() {
                           >
                             <Mail className='w-4 h-4' />                          </Button>
                         </div>
-
                         {/* Contact Info */}                          <Button
                             href={service.link}
                             variant="primary"
@@ -703,7 +682,6 @@ export default function InnovativeServicesPage() {
                             <Mail className="w-4 h-4" />
                           </Button>
                         </div>
-
                         {/* Contact Info */}
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>
                           <div>
@@ -720,7 +698,6 @@ export default function InnovativeServicesPage() {
               )}
             </div>
           </section>
-
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
@@ -730,7 +707,7 @@ export default function InnovativeServicesPage() {
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
                   Join the revolution with our breakthrough micro SAAS services.
-                  Transform your business with quantum AI, autonomous systems,
+                  Transform your business with quantum AI, autonomous systems
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -747,7 +724,7 @@ export default function InnovativeServicesPage() {
                     className='px-8 py-4 text-lg'                  Ready to Lead the Future?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Join the revolution with our breakthrough micro SAAS services. 
+                  Join the revolution with our breakthrough micro SAAS services.
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -785,5 +762,5 @@ export default function InnovativeServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
-  );
+);
 }

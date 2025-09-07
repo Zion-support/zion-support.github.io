@@ -1,15 +1,19 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import { connectMetaMask, getAccounts } from '../../utils/wallet';
+export type RedemptionType = any;
+=======
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
-
 export type RedemptionType =
   | "boost_profile"
   | "promote_listing"
   | "premium_support";
 export default function UseTokensModal({
-  isOpen,
-  onClose,
-  serviceId,
-  defaultType,
+  isOpen
+  onClose
+  serviceId
+  defaultType
 }: {
   isOpen: boolean;
   onClose: () => void;
@@ -18,31 +22,28 @@ export default function UseTokensModal({
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(
-    defaultType ?? "boost_profile",
+    defaultType ?? "boost_profile"
   );
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
-
   useEffect(() => {
     (async () => {
       const accs = await getAccounts();
       if (accs && accs.length > 0) setAccount(accs[0]);
     })();
   }, []);
-
   async function connect() {
     const accs = await connectMetaMask();
     if (accs && accs.length > 0) setAccount(accs[0]);
   }
-
   async function redeem() {
     setIsSubmitting(true);
     try {
       const res = await fetch("/api/tokens/redeem", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ account, amount: tokens, type, serviceId }),
+        method: "POST"
+        headers: { "Content-Type": "application/json" }
+        body: JSON.stringify({ account, amount: tokens, type, serviceId })
       });
       const data = await res.json();
       if (data?.ok) {
@@ -52,9 +53,8 @@ export default function UseTokensModal({
       setIsSubmitting(false);
     }
   }
-
   if (!isOpen) return null;
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
@@ -68,9 +68,7 @@ export default function UseTokensModal({
             Close
           </button>{" "}
         </div>
-
         <div className="text-sm mb-3">Conversion rate: 1 ZION = $0.01</div>
-
         <div className="space-y-3">
           <div className="text-sm">
             <div className="mb-1">Redemption type</div>
@@ -84,19 +82,17 @@ export default function UseTokensModal({
               <option value="premium_support">Get premium support</option>
             </select>
           </div>
-
           <div className="text-sm">
             <div className="mb-1">Amount (ZION)</div>
             <input
               type="number"
               min={1}
               value={tokens}
-              onChange={(e) => setTokens(parseInt(e.target.value || "0", 10))}
+              onChange={(e) => setTokens(parseInt(e.target.value |"0", 10))}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2"
             />
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
           </div>
-
           <div className="text-sm">
             <div className="mb-1">Wallet</div>
             {account ? (
@@ -113,14 +109,13 @@ export default function UseTokensModal({
             )}
           </div>
         </div>
-
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">
             You can spend tokens to boost visibility, promote listings, or
             access premium support.
           </div>
           <button
-            disabled={!account || isSubmitting || tokens <= 0}
+            disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
             className="enhanced-button enhanced-button-primary disabled: opacity-50"
           >

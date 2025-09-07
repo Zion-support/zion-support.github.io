@@ -17,20 +17,22 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string,
+<<<<<<< HEAD
+    title: string;
+=======
+    title: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     description: string
   }[]
 }
-
 export interface TalentProfileFilters {
   search?: string;
-  skills?: string[];
-  availabilities?: string[];
-  regions?: string[];
-  priceRange?: [number, number];
+  skills?: string[],
+  availabilities?: string[],
+  regions?: string[],
+  priceRange?: [number, number],
   experienceRange?: [number, number]
 }
-
 export interface HireRequest {
   id: string;
   clientId: string;
@@ -39,14 +41,25 @@ export interface HireRequest {
   projectDescription: string;
   budget: {
     min: number;
-    max: number,
+<<<<<<< HEAD
+    max: number;
+=======
+    max: number
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     currency: string
-  };
+  }
   timeline: {
     startDate: string;
-    endDate?: string,
+<<<<<<< HEAD
+    endDate?: string;
     estimatedDuration?: string
-  };
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
+  },
+  status: 'pending' | 'accepted' | 'rejected' | 'completed';
+=======
+    endDate?: string
+    estimatedDuration?: string
+  }
+  status: 'pending' | 'accepted' | 'rejected' | 'completed'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   createdAt: string
 }

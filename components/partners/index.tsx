@@ -1,47 +1,56 @@
-import { useState } from 'react';
-import Head from 'next/head';
-
+import { useState } from "react";
+import Head from "next/head";
 export default function Partners() {
   const [form, setForm] = useState({
-    name: '',
-    entityType: '',
-    pocName: '',
-    pocEmail: '',
-    useCaseType: 'Education Partnership',
-  });  const [result, setResult] = useState<any>(null);    name: "",
-    entityType: "",
-    pocName: "",
-    pocEmail: "",
-    useCaseType: "Education Partnership"}),
+<<<<<<< HEAD
+    name: "";
+    entityType: "";
+    pocName: "";
+    pocEmail: "";
+    useCaseType: "Education Partnership"});
+  const [result, setResult] = useState<any>(null),
+=======
+    name: ''
+    entityType: ''
+    pocName: ''
+    pocEmail: ''
+    useCaseType: 'Education Partnership'
+  });  const [result, setResult] = useState<any>(null);    name: ""
+    entityType: ""
+    pocName: ""
+    pocEmail: ""
+    useCaseType: "Education Partnership"})
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   const [loading, setLoading] = useState(false);
-
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
+<<<<<<< HEAD
+    const res = null;
+=======
     const res = await fetch('/api/partners/register', {
-      method: 'POST',
+      method: 'POST'
       headers: { 'Content-Type': 'application/json' },      body: JSON.stringify({
-        name: form.name,
-        entityType: form.entityType,
-        useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail },
-      }),
+        name: form.name
+        entityType: form.entityType
+        useCaseType: form.useCaseType
+        pointOfContact: { name: form.pocName, email: form.pocEmail }
+      })
     });    const res = await fetch("/api/partners/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
       body: JSON.stringify({
-        name: form.name,
-        entityType: form.entityType,
-        useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail },
-      }),
+        name: form.name
+        entityType: form.entityType
+        useCaseType: form.useCaseType
+        pointOfContact: { name: form.pocName, email: form.pocEmail }
+      })
     });
     const data = await res.json();
     setLoading(false);
     setResult(data);
   }
-
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>
       <Head>
@@ -95,9 +104,9 @@ export default function Partners() {
               onChange={e => setForm({ ...form, useCaseType: e.target.value })}
             >              <option>Education Partnership</option>    const data = await res.json();
     setLoading(false);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     setResult(data)
   }
-
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Head>
@@ -132,12 +141,10 @@ export default function Partners() {
               {loading ? 'Submitting...' : 'Register'}
             </button>
           </form>
-
           <div className='bg-white p-6 rounded-lg shadow'>
             <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>
             <ul className='list-disc ml-6 space-y-1 text-sm'>              <li>POST /talents</li>            <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>
           </form>
-
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>
             <ul className="list-disc ml-6 space-y-1 text-sm">
@@ -178,7 +185,6 @@ export default function Partners() {
             </div>
           </div>
         </div>
-
         {result && (
           <div className='mt-8 bg-white p-6 rounded-lg shadow'>
             <h3 className='text-lg font-medium mb-2'>
@@ -201,5 +207,5 @@ export default function Partners() {
         )}
       </div>
     </div>
-  );
+);
 }

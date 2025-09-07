@@ -1,17 +1,15 @@
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      bundleSize: 0,
-      loadTime: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString(),
-    };
+      bundleSize: 0
+      loadTime: 0
+      memoryUsage: 0
+      timestamp: new Date().toISOString()
+    }
   }
-
   async measureBundleSize() {
     try {
       const buildDir = path.join(process.cwd(), ".next");
@@ -23,33 +21,37 @@ class PerformanceMonitor {
       console.error("Error measuring bundle size:", error);
     }
   }
-
   async measureMemoryUsage() {
     const usage = process.memoryUsage();
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
-
   generateReport() {
     const report = {
+<<<<<<< HEAD
       timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: [],
+      bundleSize: this.metrics.bundleSize;
+      memoryUsage: this.metrics.memoryUsage;
+      recommendations: []
     };
 
+=======
+      timestamp: this.metrics.timestamp
+      bundleSize: this.metrics.bundleSize
+      memoryUsage: this.metrics.memoryUsage
+      recommendations: []
+    }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push(
-        "Consider code splitting to reduce bundle size",
+        "Consider code splitting to reduce bundle size"
       );
     }
     if (this.metrics.memoryUsage > 100) {
       report.recommendations.push("Consider optimizing memory usage");
     }
-
     return report;
   }
 }
-
 const monitor = new PerformanceMonitor();
 monitor.measureBundleSize();
 monitor.measureMemoryUsage();

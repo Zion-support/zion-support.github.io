@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
-
   useEffect(() => {
     try {
+<<<<<<< HEAD
+      const has = null;
+=======
       const has =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_has_onboarded')
@@ -18,7 +20,6 @@ export default function OnboardingWizard() {
       }
     } catch {}
   }, []);
-
   function completeOnboarding() {
     try {
       if (typeof window !== 'undefined') {
@@ -29,9 +30,8 @@ export default function OnboardingWizard() {
       }
     } catch {}
     setOpen(false)
-
   if (!open) return null;
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>
       <div className='w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl'>
@@ -145,5 +145,5 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
-  );
+);
 }

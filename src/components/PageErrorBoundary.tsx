@@ -1,34 +1,48 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
+import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  logInfo,
-  logErrorToProduction as prodLogError,;
-} from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
 interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string;
+  pageName?: string
+}
 
+function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {
+  const isAuthConfigError = null;
+  return (
+    <ErrorBoundary
+      FallbackComponent={FallbackComponent}
+      onError={handleError}
+      onReset={() => {
+        // Reset any application state if needed
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+=======
+import { logErrorToProduction } from '@/utils/productionLogger'
+import {
+  logInfo
+  logErrorToProduction as prodLogError
+} from '@/utils/productionLogger'
+interface PageErrorFallbackProps extends FallbackProps {
+  pageName?: string
 function PageErrorFallback({
-  error,
-  resetErrorBoundary,
-  pageName,
+  error
+  resetErrorBoundary
+  pageName
 }: PageErrorFallbackProps) {
   const isAuthConfigError =
-    error?.message?.includes('Auth0') ||
-    error?.message?.includes('AUTH0') ||
-    error?.message?.includes('authentication') ||
-    error?.message?.includes('environment');
-
+    error?.message?.includes('Auth0') |
+    error?.message?.includes('AUTH0') |
+    error?.message?.includes('authentication') |
+    error?.message?.includes('environment')
   const handleRefresh = () => {
     if (resetErrorBoundary) {
-      resetErrorBoundary();
+      resetErrorBoundary()
     } else {
-      window.location.reload();
+      window.location.reload()
     }
-  };
-
+  }
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -47,7 +61,6 @@ function PageErrorFallback({
                 : 'An unexpected error occurred while loading this page'}
             </p>
           </div>
-
           {isAuthConfigError && (
             <div className='bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6'>
               <div className='flex'>
@@ -65,7 +78,6 @@ function PageErrorFallback({
               </div>
             </div>
           )}
-
           {error?.message && (
             <details className='bg-gray-50 rounded-lg p-4 mb-6'>
               <summary className='cursor-pointer text-gray-700 font-medium'>
@@ -76,7 +88,6 @@ function PageErrorFallback({
               </pre>
             </details>
           )}
-
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             <button
@@ -85,7 +96,6 @@ function PageErrorFallback({
               <RefreshCw className='w-4 h-4 mr-2' />
               Try Again
             </button>
-
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
@@ -94,7 +104,6 @@ function PageErrorFallback({
               Go Home
             </Link>
           </div>
-
           {/* Navigation Options */}
           <div className='border-t pt-6'>
             <h3 className='font-semibold text-gray-900 mb-3'>
@@ -119,7 +128,6 @@ function PageErrorFallback({
             </div>
           </div>
         </div>
-
         {/* Support Information */}
         <div className='bg-gray-800 text-white rounded-lg p-6 text-center'>
           <p className='mb-3'>Need help? Contact our support team</p>
@@ -137,49 +145,45 @@ function PageErrorFallback({
         </div>
       </div>
     </div>
-  );
-
+  )
 interface PageErrorBoundaryProps {
-  children: React.ReactNode;
-  pageName?: string;
-  fallback?: React.ComponentType<FallbackProps>;
-
+  children: React.ReactNode
+  pageName?: string
+  fallback?: React.ComponentType<FallbackProps>
 export default function PageErrorBoundary({
-  children,
-  pageName,
-  fallback,
+  children
+  pageName
+  fallback
 }: PageErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     prodLogError(
-      `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,
+      `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
       error
-    );
-
+    )
     logErrorToProduction(
-      error instanceof Error ? error.message : String(error),
-      error instanceof Error ? error : undefined,
+      error instanceof Error ? error.message : String(error)
+      error instanceof Error ? error : undefined
       {
-        page: pageName || 'unknown',
-        componentStack: errorInfo.componentStack || undefined,
-        errorBoundary: 'PageErrorBoundary',
-        timestamp: new Date().toISOString(),
+        page: pageName |'unknown'
+        componentStack: errorInfo.componentStack |undefined
+        errorBoundary: 'PageErrorBoundary'
+        timestamp: new Date().toISOString()
       }
-    );
-  };
-
+    )
+  }
   const FallbackComponent =
-    fallback ||
+    fallback |
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
-    ));
-
-  
+    ))
       onReset={() => {        // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+        logInfo(`Resetting error boundary for ${pageName |'page'}`)
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       }}
     >
       {children}
     </ErrorBoundary>
-  );
-} 
-} 
+  )
+}
+}
+}

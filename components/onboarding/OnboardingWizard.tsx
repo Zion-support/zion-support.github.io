@@ -2,12 +2,10 @@ import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
-
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
-
   const isClient = user?.role === 'client';
   const steps = useMemo(() => {
     if (isClient) {
@@ -16,14 +14,16 @@ export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
   const [step, setStep] = useState(0)
+<<<<<<< HEAD
 
+  const isClient = null;
+=======
   const isClient = user?.role === 'client'
-
   const steps = useMemo(() => {
     if (isClient) {
       return [
         {
-          title: 'Ready to find top IT talent?',
+          title: 'Ready to find top IT talent?'
           content: (
             <div className='space-y-4'>
               <p>Post a role or import your job brief to get started.</p>
@@ -33,26 +33,26 @@ export default function OnboardingWizard() {
                 </a>
               </Link>
             </div>
-          ),
-        },
+          )
+        }
         {
-          title: 'View suggested matches',
+          title: 'View suggested matches'
           content: (
             <p>
               We will surface the best matches instantly based on your job
               brief.
             </p>
-          ),
-        },
+          )
+        }
         {
-          title: 'Invite or message talent',
-          content: <p>Send invites or start a conversation to move fast.</p>,
-        },;
+          title: 'Invite or message talent'
+          content: <p>Send invites or start a conversation to move fast.</p>
+        }
       ];
     }
     return [
       {
-        title: 'Complete your profile',
+        title: 'Complete your profile'
         content: (
           <div className='space-y-3'>
             <input
@@ -67,10 +67,10 @@ export default function OnboardingWizard() {
               placeholder='Short bio'
             />
           </div>
-        ),
-      },
+        )
+      }
       {
-        title: 'Choose skills and availability',
+        title: 'Choose skills and availability'
         content: (
           <div className='space-y-3 text-sm'>
             <div className='flex flex-wrap gap-2'>
@@ -96,14 +96,14 @@ export default function OnboardingWizard() {
               ))}
             </div>
           </div>
-        ),
-      },
+        )
+      }
       {
-        title: 'Preview your profile',
-        content: <p>Review how clients will see your profile.</p>,
-      },
+        title: 'Preview your profile'
+        content: <p>Review how clients will see your profile.</p>
+      }
       {
-        title: 'Enable AI matchmaking',
+        title: 'Enable AI matchmaking'
         content: (
           <div className='space-y-2'>
             <p>Turn on AI-powered matching to get discovered faster.</p>
@@ -111,13 +111,11 @@ export default function OnboardingWizard() {
               <input type='checkbox' defaultChecked /> Enable AI matchmaking
             </label>
           </div>
-        ),
-      },
+        )
+      }
     ];
   }, [isClient, setUser]);
-
-  if (!user || user.onboardingCompleted) return null;
-
+  if (!user |user.onboardingCompleted) return null;
   return (
     <div className='mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>
       <div className='flex items-center justify-between'>
@@ -152,9 +150,9 @@ export default function OnboardingWizard() {
             onClick={() => {
               completeOnboarding();
               addToast({
-                title: 'Onboarding completed',
-                description: 'You can revisit anytime from Settings.',
-                variant: 'success',
+                title: 'Onboarding completed'
+                description: 'You can revisit anytime from Settings.'
+                variant: 'success'
               });
             }}
             className='px-3 py-2 rounded-md border'
@@ -171,7 +169,7 @@ export default function OnboardingWizard() {
           <input className="w-full rounded-md border px-3 py-2 bg-transparent" placeholder="Your title (e.g., Senior LLM Engineer)" onChange={(e) => setUser(prev => prev ? { ...prev, name: prev.name } : prev)} />
           <textarea className="w-full rounded-md border px-3 py-2 bg-transparent" placeholder="Short bio" />
         </div>
-      ) };
+      ) }
       { title: 'Choose skills and availability', content: (
         <div className="space-y-3 text-sm">
           <div className="flex flex-wrap gap-2">
@@ -185,8 +183,9 @@ export default function OnboardingWizard() {
             ))}
           </div>
         </div>
-      ) };
-      { title: 'Preview your profile', content: <p>Review how clients will see your profile.</p> },
+      ) }
+      { title: 'Preview your profile', content: <p>Review how clients will see your profile.</p> }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       { title: 'Enable AI matchmaking', content: (
         <div className="space-y-2">
           <p>Turn on AI-powered matching to get discovered faster.</p>
@@ -196,9 +195,7 @@ export default function OnboardingWizard() {
         </div>
       ) }]
   }, [isClient, setUser])
-
-  if (!user || user.onboardingCompleted) return null
-
+  if (!user |user.onboardingCompleted) return null
   return (
     <div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
       <div className="flex items-center justify-between">
@@ -218,5 +215,5 @@ export default function OnboardingWizard() {
         )}
       </div>
     </div>
-  );
+);
 }

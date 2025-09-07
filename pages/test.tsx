@@ -1,6 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+=======
 import Layout from '../components/Layout';
-
 export default function TestPage() {
   return (
     <Layout title="Test Page">
@@ -10,7 +12,7 @@ export default function TestPage() {
     </Layout>
   );
 }
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function TestPage() {
   return (
     <>
@@ -21,7 +23,7 @@ export default function TestPage() {
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
-  );
+);
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>

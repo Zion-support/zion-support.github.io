@@ -1,166 +1,167 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Award,
-  Users,
-  Globe,
-  Code,
-  Shield,
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Linkedin
+  Twitter
+  Github
+  Award
+  Users
+  Globe
+  Code
+  Shield
 } from "lucide-react";
 import Layout from "../components/Layout";
-
 const teamMembers = [
   {
-    id: 1,
-    name: "Kleber Santos",
-    position: "CEO & Founder",
-    department: "Leadership",
-    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/klebersantos",
-    twitter: "https://twitter.com/klebersantos",
-    github: "https://github.com/klebersantos",
+    id: 1
+    name: "Kleber Santos"
+    position: "CEO & Founder"
+    department: "Leadership"
+    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/klebersantos"
+    twitter: "https://twitter.com/klebersantos"
+    github: "https://github.com/klebersantos"
     expertise: [
-      "Strategic Leadership",
-      "AI/ML",
-      "Cloud Architecture",
-      "Business Development",
-    ],
-  },
+      "Strategic Leadership"
+      "AI/ML"
+      "Cloud Architecture"
+      "Business Development"
+    ]
+  }
   {
-    id: 2,
-    name: "Sarah Johnson",
-    position: "CTO",
-    department: "Technology",
-    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/sarahjohnson",
-    twitter: "https://twitter.com/sarahjohnson",
-    github: "https://github.com/sarahjohnson",
-    expertise: ["Cloud Computing", "AI/ML", "System Architecture", "DevOps"],
-  },
+    id: 2
+    name: "Sarah Johnson"
+    position: "CTO"
+    department: "Technology"
+    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/sarahjohnson"
+    twitter: "https://twitter.com/sarahjohnson"
+    github: "https://github.com/sarahjohnson"
+    expertise: ["Cloud Computing", "AI/ML", "System Architecture", "DevOps"]
+  }
   {
-    id: 3,
-    name: "Mike Chen",
-    position: "Head of Cybersecurity",
-    department: "Security",
-    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero-trust architecture and threat intelligence.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/mikechen",
-    twitter: "https://twitter.com/mikechen",
-    github: "https://github.com/mikechen",
+    id: 3
+    name: "Mike Chen"
+    position: "Head of Cybersecurity"
+    department: "Security"
+    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero-trust architecture and threat intelligence."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/mikechen"
+    twitter: "https://twitter.com/mikechen"
+    github: "https://github.com/mikechen"
     expertise: [
-      "Cybersecurity",
-      "Zero-Trust",
-      "Threat Intelligence",
-      "Compliance",
-    ],
-  },
+      "Cybersecurity"
+      "Zero-Trust"
+      "Threat Intelligence"
+      "Compliance"
+    ]
+  }
   {
-    id: 4,
-    name: "Emily Rodriguez",
-    position: "Head of AI/ML",
-    department: "AI & Machine Learning",
-    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/emilyrodriguez",
-    twitter: "https://twitter.com/emilyrodriguez",
-    github: "https://github.com/emilyrodriguez",
-    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"],
-  },
+    id: 4
+    name: "Emily Rodriguez"
+    position: "Head of AI/ML"
+    department: "AI & Machine Learning"
+    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/emilyrodriguez"
+    twitter: "https://twitter.com/emilyrodriguez"
+    github: "https://github.com/emilyrodriguez"
+    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"]
+  }
   {
-    id: 5,
-    name: "David Kim",
-    position: "Head of Data Analytics",
-    department: "Data & Analytics",
-    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/davidkim",
-    twitter: "https://twitter.com/davidkim",
-    github: "https://github.com/davidkim",
-    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],
-  },
+    id: 5
+    name: "David Kim"
+    position: "Head of Data Analytics"
+    department: "Data & Analytics"
+    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/davidkim"
+    twitter: "https://twitter.com/davidkim"
+    github: "https://github.com/davidkim"
+    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
+  }
   {
-    id: 6,
-    name: "Lisa Wang",
-    position: "Head of Product Development",
-    department: "Product",
-    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit.",
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/lisawang",
-    twitter: "https://twitter.com/lisawang",
-    github: "https://github.com/lisawang",
-    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
-  },
+    id: 6
+    name: "Lisa Wang"
+    position: "Head of Product Development"
+    department: "Product"
+    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/lisawang"
+    twitter: "https://twitter.com/lisawang"
+    github: "https://github.com/lisawang"
+    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+  }
 ];
-
 const departments = [
   {
-    name: "Leadership",
-    description: "Strategic vision and company direction",
-    icon: "👑",
-    count: 1,
-  },
+    name: "Leadership"
+    description: "Strategic vision and company direction"
+    icon: "👑"
+    count: 1
+  }
   {
-    name: "Technology",
-    description: "Engineering and technical innovation",
-    icon: "💻",
-    count: 15,
-  },
+    name: "Technology"
+    description: "Engineering and technical innovation"
+    icon: "💻"
+    count: 15
+  }
   {
-    name: "AI & Machine Learning",
-    description: "Artificial intelligence and data science",
-    icon: "🤖",
-    count: 12,
-  },
+    name: "AI & Machine Learning"
+    description: "Artificial intelligence and data science"
+    icon: "🤖"
+    count: 12
+  }
   {
-    name: "Cybersecurity",
-    description: "Security and compliance solutions",
-    icon: "🛡️",
-    count: 8,
-  },
+    name: "Cybersecurity"
+    description: "Security and compliance solutions"
+    icon: "🛡️"
+    count: 8
+  }
   {
-    name: "Data & Analytics",
-    description: "Business intelligence and analytics",
-    icon: "📊",
-    count: 10,
-  },
+    name: "Data & Analytics"
+    description: "Business intelligence and analytics"
+    icon: "📊"
+    count: 10
+  }
   {
-    name: "Product",
-    description: "Product development and design",
-    icon: "🎨",
-    count: 6,
-  },
+    name: "Product"
+    description: "Product development and design"
+    icon: "🎨"
+    count: 6
+  }
   {
-    name: "Sales & Marketing",
-    description: "Business development and growth",
-    icon: "📈",
-    count: 8,
-  },
+    name: "Sales & Marketing"
+    description: "Business development and growth"
+    icon: "📈"
+    count: 8
+  }
   {
-    name: "Operations",
-    description: "Project management and delivery",
-    icon: "⚙️",
-    count: 5,
-  },
+    name: "Operations"
+    description: "Project management and delivery"
+    icon: "⚙️"
+    count: 5
+  }
 ];
-
 const stats = [
-  { number: "65+", label: "Team Members" },
-  { number: "15+", label: "Years Experience" },
-  { number: "25+", label: "Countries Represented" },
-  { number: "95%", label: "Employee Satisfaction" },
+  { number: "65+", label: "Team Members" }
+  { number: "15+", label: "Years Experience" }
+  { number: "25+", label: "Countries Represented" }
+  { number: "95%", label: "Employee Satisfaction" }
 ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function TeamPage() {
   return (
     <Layout
@@ -195,7 +196,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -217,7 +217,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -229,7 +228,6 @@ export default function TeamPage() {
               Visionary leaders driving innovation and growth
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.slice(0, 3).map((member, index) => (
               <motion.div
@@ -288,7 +286,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* All Team Members */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -300,7 +297,6 @@ export default function TeamPage() {
               Dedicated professionals across all departments
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -360,7 +356,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Departments */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -372,7 +367,6 @@ export default function TeamPage() {
               Specialized teams working together to deliver excellence
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {departments.map((dept, index) => (
               <motion.div
@@ -393,7 +387,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -418,7 +411,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
@@ -437,7 +429,6 @@ export default function TeamPage() {
               Get Free Consultation
             </Link>
           </div>
-
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             <div className="flex items-center justify-center">
@@ -461,42 +452,40 @@ export default function TeamPage() {
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Brain, Cloud, Shield, Users } from "lucide-react";
-
 const teamMembers = [
   {
-    name: "Dr. Sarah Johnson",
-    role: "Chief Technology Officer",
-    expertise: "AI & Machine Learning",
-    icon: Brain,
+    name: "Dr. Sarah Johnson"
+    role: "Chief Technology Officer"
+    expertise: "AI & Machine Learning"
+    icon: Brain
     description:
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science.",
-  },
+      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
+  }
   {
-    name: "Michael Chen",
-    role: "Cloud Solutions Architect",
-    expertise: "Cloud Infrastructure",
-    icon: Cloud,
+    name: "Michael Chen"
+    role: "Cloud Solutions Architect"
+    expertise: "Cloud Infrastructure"
+    icon: Cloud
     description:
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.",
-  },
+      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
+  }
   {
-    name: "Emily Rodriguez",
-    role: "Security Specialist",
-    expertise: "Cybersecurity",
-    icon: Shield,
+    name: "Emily Rodriguez"
+    role: "Security Specialist"
+    expertise: "Cybersecurity"
+    icon: Shield
     description:
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention.",
-  },
+      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
+  }
   {
-    name: "David Thompson",
-    role: "Team Lead",
-    expertise: "Project Management",
-    icon: Users,
+    name: "David Thompson"
+    role: "Team Lead"
+    expertise: "Project Management"
+    icon: Users
     description:
-      "Leading our development teams with agile methodologies and client-focused delivery.",
-  },
+      "Leading our development teams with agile methodologies and client-focused delivery."
+  }
 ];
-
 export default function TeamPage() {
   return (
     <>

@@ -1,89 +1,116 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion,;
-} from '@/services/pricingSuggestionService';
-import { PricingSuggestionBox } from './PricingSuggestionBox';
-import { useAuth } from '@/hooks/useAuth';
-import { Sparkles } from 'lucide-react';
+<<<<<<< HEAD
 
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { 
+  getClientBudgetSuggestion;
+  PricingSuggestion;
+  ClientBudgetParams;
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
   jobTitle: string;
   category: string;
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number,) => void
+  onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
 
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+  jobTitle;
+  category;
+  timeline;
+  scope;
+  experienceLevel;
+  onSuggestionApplied}) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth();
+  const generateSuggestion = null;
+=======
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import {
+  getClientBudgetSuggestion
+  PricingSuggestion
+  ClientBudgetParams
+  trackPricingSuggestion
+} from '@/services/pricingSuggestionService'
+import { PricingSuggestionBox } from './PricingSuggestionBox'
+import { useAuth } from '@/hooks/useAuth'
+import { Sparkles } from 'lucide-react'
+interface ClientBudgetRecommenderProps {
+  jobTitle: string
+  category: string
+  timeline?: string
+  scope?: string
+  experienceLevel?: string
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
+  jobTitle: string
+  category: string
+  timeline?: string
+  scope?: string
+  experienceLevel?: string
+  onSuggestionApplied: (minValue: number, maxValue: number,) => void
+}
 export const ClientBudgetRecommender: React.FC<
   ClientBudgetRecommenderProps
 > = ({
-  jobTitle,
-  category,
-  timeline,
-  scope,
-  experienceLevel,
-  onSuggestionApplied,
+  jobTitle
+  category
+  timeline
+  scope
+  experienceLevel
+  onSuggestionApplied
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false)
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
+  const { user } = useAuth()
   const generateSuggestion = async () => {
-    if (!jobTitle || !category) {
-      return;
+    if (!jobTitle |!category) {
+      return
     }
-
-    setIsLoading(true);
+    setIsLoading(true)
     try {
       const params: ClientBudgetParams = {
-        jobTitle,
-        category,
-      };        jobTitle;
-        category};
-
-      if (timeline) params.timeline = timeline;
-      if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;
-
-      const result = await getClientBudgetSuggestion(params);
-      setSuggestion(result);
+        jobTitle
+        category
+      };        jobTitle
+        category}
+      if (timeline) params.timeline = timeline
+      if (scope) params.scope = scope
+      if (experienceLevel) params.experienceLevel = experienceLevel
+      const result = await getClientBudgetSuggestion(params)
+      setSuggestion(result)
     } catch (error) {
       logErrorToProduction('Error generating budget suggestion:', {
-        data: error,
-      });
+        data: error
+      })
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
-
+  }
   const handleApplySuggestion = () => {
     if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
-
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate)
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: 'client',
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-          accepted: true,
-        });
+          userId: user.id
+          suggestionType: 'client'
+          suggestedMin: suggestion.minRate
+          suggestedMax: suggestion.maxRate
+          accepted: true
+        })
       }
     }
-  };
-
+  }
   return (
     <div className='space-y-4'>
       <div>
@@ -92,7 +119,7 @@ export const ClientBudgetRecommender: React.FC<
             type='button'
             variant='outline'
             onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
+            disabled={!jobTitle |!category}
             className='w-full'          >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
           </Button>
@@ -105,21 +132,19 @@ export const ClientBudgetRecommender: React.FC<
         )}
       </div>
     </div>
-  );
-};
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
-//Track this suggestion application if (user && user.id) {;
-  trackPricingSuggestion ({;
-  ;
-
-};
-return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
-  generateSuggestion ";
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
-}</div> </div>) ;
-};
+  )
+}
+if (scope) params.scope = scope
+if (experienceLevel) params.experienceLevel = experienceLevel
+//Track this suggestion application if (user && user.id) {
+  trackPricingSuggestion ({
+}
+return (<div className="space-y-4" > <div> {"
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
+  generateSuggestion "
+}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />)
+}</div> </div>)
+}
 '"  )
-},
-;
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

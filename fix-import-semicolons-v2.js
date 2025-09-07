@@ -1,43 +1,36 @@
 #!/usr/bin/env node
-
 import fs from "fs";
 import path from "path";
 import { glob } from "glob";
-
 // Find all TypeScript and JavaScript files
 const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
-
 let totalFixed = 0;
-
 files.forEach((file) => {
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
-
     // Fix import statements with double punctuation
     content = content.replace(
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
       (match) => {
-        return match.replace(",;", ";");
-      },
+        return match.replace(";", ";");
+      }
     );
-
     // Fix import statements missing semicolons
     content = content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
       (match) => {
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
         }
         return match;
-      },
+      }
     );
-
     // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
     content = content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm
       (match, varName) => {
         if (
           !match.includes("function") &&
@@ -59,9 +52,8 @@ files.forEach((file) => {
           return match + ";";
         }
         return match;
-      },
+      }
     );
-
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${file}`);
@@ -71,5 +63,4 @@ files.forEach((file) => {
     console.error(`Error processing ${file}:`, error.message);
   }
 });
-
 console.log(`\nTotal files fixed: ${totalFixed}`);

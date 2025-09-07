@@ -1,17 +1,15 @@
 import React from "react";
-
 interface SwitchProps {
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
   disabled?: boolean;
   className?: string;
 }
-
 const Switch: React.FC<SwitchProps> = ({
-  checked = false,
-  onCheckedChange,
-  disabled = false,
-  className = "",
+  checked = false
+  onCheckedChange
+  disabled = false
+  className = ""
 }) => {
   return (
     <button
@@ -31,6 +29,5 @@ const Switch: React.FC<SwitchProps> = ({
       />
     </button>
   );
-};
-
-export { Switch };
+}
+export { Switch }

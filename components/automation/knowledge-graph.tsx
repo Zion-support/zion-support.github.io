@@ -1,10 +1,20 @@
- 
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
+<<<<<<< HEAD
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Node { id: string, tokens: string[] }
+interface Edge { source: string, target: string, weight: number, terms: string[] }
+interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
+
+type Props = any;
+=======
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -35,5 +45,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
+);
 }

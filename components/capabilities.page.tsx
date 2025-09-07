@@ -1,17 +1,19 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-
+<<<<<<< HEAD
+const CAPABILITIES = null;
+=======
 const CAPABILITIES = [
-  'Full‑stack Web',
-  'Mobile (iOS/Android)',
-  'AI/ML',
-  'Cloud & DevOps',
-  'Data Engineering',
-  'Blockchain',
-  'IoT',
+  'Full‑stack Web'
+  'Mobile (iOS/Android)'
+  'AI/ML'
+  'Cloud & DevOps'
+  'Data Engineering'
+  'Blockchain'
+  'IoT'
   'Security',];const CAPABILITIES = [
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
 ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function CapabilitiesPage() {
   return (
     <EnhancedLayout>
@@ -29,5 +31,5 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
-  );
+);
 }

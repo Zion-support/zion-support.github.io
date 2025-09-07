@@ -1,8 +1,22 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-
 export default function QuantumCloudInfrastructurePlatformPage() {
+<<<<<<< HEAD
+	return (
+		<>
+			<Head>
+				<title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>
+				<meta name;
+					"Compliance and audit kits"
+				]}
+				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}
+				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
+			/>
+		</>
+	)
+}
+=======
   return (
     <>
       <Head>
@@ -24,21 +38,22 @@ export default function QuantumCloudInfrastructurePlatformPage() {
         implementationWeeks='1-2 weeks'
         roiNote='Accelerate analytics and simulations by 10-100x with lower total cost'
         features={[
-          'Managed quantum accelerators',
-          'Zero-trust and quantum-safe security',
-          'Observability and SLOs',
-          'Automated cost controls',
-          'Cross-region DR and backup',
-          'Compliance and audit kits',
+          'Managed quantum accelerators'
+          'Zero-trust and quantum-safe security'
+          'Observability and SLOs'
+          'Automated cost controls'
+          'Cross-region DR and backup'
+          'Compliance and audit kits'
         ]}
         industries={[
-          'Financial Services',
-          'Life Sciences',
-          'Government',
-          'Energy',
-          'Media',
+          'Financial Services'
+          'Life Sciences'
+          'Government'
+          'Energy'
+          'Media'
         ]}
         canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
       />
     </>
   );
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

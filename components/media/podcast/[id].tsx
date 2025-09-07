@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
+<<<<<<< HEAD
+  const router = null;
+=======
   const router = useRouter();
-  const { id } = router.query as { id?: string };
+  const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
-
   useEffect(() => {
     if (!id) return;
     (async () => {
@@ -14,9 +16,8 @@ export default function EpisodePage() {
     })();      setEpisode(data.episode)
     })()
   }, [id]);
-
   if (!episode) return <div>Loading…</div>;
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-4'>
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
@@ -46,5 +47,5 @@ export default function EpisodePage() {
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
       </div>
     </div>
-  );
+);
 }

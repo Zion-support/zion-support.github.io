@@ -13,6 +13,7 @@ module.exports = [
       'apps.backup/**/*',
       'zion-website/**/*',
       'automation/**/*',
+      'temp_exclude/**/*',
       'advanced-automation-improvements.cjs',
       'analyze_links.cjs',
       'app-enhancement-suite.cjs',

@@ -1,24 +1,30 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { Star, Users, TrendingUp, DollarSign, Clock;
+  CheckCircle, ArrowRight, Zap, Shield, Rocket;
+  Brain, Globe, Lock, Code, Database, Cloud
+ } from 'lucide-react';
+=======
 import {
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Shield,
-  Rocket,
-  Brain,
-  Globe,
-  Lock,
-  Code,
-  Database,
-  Cloud,;
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  CheckCircle
+  ArrowRight
+  Zap
+  Shield
+  Rocket
+  Brain
+  Globe
+  Lock
+  Code
+  Database
+  Cloud;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import Button from '../ui/Button';
-
 interface Service {
   id: string;
   name: string;
@@ -50,129 +56,137 @@ interface Service {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+    website: string
+  },
+=======
     website: string;
-  };
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+<<<<<<< HEAD
+  reviews: number
+}
 
+=======
+  reviews: number;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface EnhancedServiceShowcaseProps {
   title: string;
   subtitle: string;
   showFilters?: boolean;
   services?: Service[];
-  maxServices?: number;
+<<<<<<< HEAD
+  maxServices?: number
+}
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-  title,
-  subtitle,
-  showFilters = false,
-  services = [],
+  title;
+  subtitle;
+  showFilters;
+=======
+  maxServices?: number;
+const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
+  title
+  subtitle
+  showFilters = false
+  services = []
   maxServices = 12,}) => {  title;
   subtitle;
   showFilters = false;
-  services = [],
+  services = []
   maxServices = 12
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'ai', name: 'AI & ML', icon: '🧠' },
-    { id: 'quantum', name: 'Quantum', icon: '⚛️' },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
-    { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
+    { id: 'all', name: 'All Services', icon: '🚀' }
+    { id: 'ai', name: 'AI & ML', icon: '🧠' }
+    { id: 'quantum', name: 'Quantum', icon: '⚛️' }
+    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' }
+    { id: 'enterprise', name: 'Enterprise', icon: '🏢' }
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' },  ];    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
   ];
-
   const priceRanges = [
-    { id: 'all', name: 'All Prices' },
-    { id: 'low', name: 'Under $1K/month' },
-    { id: 'medium', name: '$1K - $5K/month' },
-    { id: 'high', name: '$5K - $20K/month' },
+    { id: 'all', name: 'All Prices' }
+    { id: 'low', name: 'Under $1K/month' }
+    { id: 'medium', name: '$1K - $5K/month' }
+    { id: 'high', name: '$5K - $20K/month' }
     { id: 'premium', name: '$20K+/month' },  ];    { id: 'premium', name: '$20K+/month' }
   ];
-
   const sortOptions = [
-    { id: 'popular', name: 'Most Popular' },
-    { id: 'rating', name: 'Highest Rated' },
-    { id: 'roi', name: 'Best ROI' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'popular', name: 'Most Popular' }
+    { id: 'rating', name: 'Highest Rated' }
+    { id: 'roi', name: 'Best ROI' }
+    { id: 'price-low', name: 'Price Low to High' }
+    { id: 'price-high', name: 'Price High to Low' }
   ];
-
   const filteredServices = useMemo(() => {
     let filtered = services.filter(service => {
       const matchesCategory =
-        selectedCategory === 'all' ||
+        selectedCategory === 'all' |
         (selectedCategory === 'ai' &&
-          (service.category.includes('AI') ||
-            service.category.includes('Machine Learning'))) ||
+          (service.category.includes('AI') |
+            service.category.includes('Machine Learning'))) |
         (selectedCategory === 'quantum' &&
-          (service.category.includes('Quantum') ||
-            service.category.includes('Space'))) ||
+          (service.category.includes('Quantum') |
+            service.category.includes('Space'))) |
         (selectedCategory === 'blockchain' &&
-          (service.category.includes('Blockchain') ||
-            service.category.includes('DeFi') ||
-            service.category.includes('NFT'))) ||
+          (service.category.includes('Blockchain') |
+            service.category.includes('DeFi') |
+            service.category.includes('NFT'))) |
         (selectedCategory === 'enterprise' &&
-          (service.category.includes('Enterprise') ||
-            service.category.includes('IT'))) ||
+          (service.category.includes('Enterprise') |
+            service.category.includes('IT'))) |
         (selectedCategory === 'emerging' &&
-          (service.category.includes('Neural') ||
-            service.category.includes('Autonomous') ||
-            service.category.includes('Space') ||
+          (service.category.includes('Neural') |
+            service.category.includes('Autonomous') |
+            service.category.includes('Space') |
             service.category.includes('Biotech')));
-
       const matchesPrice =
-        selectedPriceRange === 'all' ||
+        selectedPriceRange === 'all' |
         (selectedPriceRange === 'low' &&
-          parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
+          parseFloat(service.price.replace(/[$]/g, '')) < 1000) |
         (selectedPriceRange === 'medium' &&
           parseFloat(service.price.replace(/[$]/g, '')) >= 1000 &&
-          parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
+          parseFloat(service.price.replace(/[$]/g, '')) < 5000) |
         (selectedPriceRange === 'high' &&
           parseFloat(service.price.replace(/[$]/g, '')) >= 5000 &&
-          parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
+          parseFloat(service.price.replace(/[$]/g, '')) < 20000) |
         (selectedPriceRange === 'premium' &&
           parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
-
       return matchesCategory && matchesPrice;    });  ];
-
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
-                             (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
-                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT'))) ||
-                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech')));
-
-      const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
-                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
-                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
+      const matchesCategory = selectedCategory === 'all' |
+                             (selectedCategory === 'ai' && (service.category.includes('AI') |service.category.includes('Machine Learning'))) |
+                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') |service.category.includes('Space'))) |
+                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') |service.category.includes('DeFi') |service.category.includes('NFT'))) |
+                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') |service.category.includes('IT'))) |
+                             (selectedCategory === 'emerging' && (service.category.includes('Neural') |service.category.includes('Autonomous') |service.category.includes('Space') |service.category.includes('Biotech')));
+      const matchesPrice = selectedPriceRange === 'all' |
+                          (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) |
+                          (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) |
+                          (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) |
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
-
       return matchesCategory && matchesPrice
     });
-
     // Sort services
     switch (sortBy) {
       case 'popular':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
         break;
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        filtered.sort((a, b) => (b.rating |0) - (a.rating |0));
         break;
       case 'roi':
         filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
-          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+          const aROI = parseInt(a.roi.match(/\d+/)?.[0] |'0');
+          const bROI = parseInt(b.roi.match(/\d+/)?.[0] |'0');
           return bROI - aROI;
         });
         break;
@@ -193,39 +207,36 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       default:
         break;
     }
-
     return filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-
   const stats = [
     {
-      label: 'Total Services',
-      value: services.length,
-      icon: Rocket,
-      color: 'text-blue-400',
-    },
+      label: 'Total Services'
+      value: services.length
+      icon: Rocket
+      color: 'text-blue-400'
+    }
     {
-      label: 'Active Customers',
-      value: services.reduce((sum, s) => sum + (s.customers || 0), 0),
-      icon: Users,
-      color: 'text-green-400',
-    },
+      label: 'Active Customers'
+      value: services.reduce((sum, s) => sum + (s.customers |0), 0)
+      icon: Users
+      color: 'text-green-400'
+    }
     {
-      label: 'Average Rating',
+      label: 'Average Rating'
       value: (
-        services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length
-      ).toFixed(1),
-      icon: Star,
-      color: 'text-yellow-400',
-    },
+        services.reduce((sum, s) => sum + (s.rating |0), 0) / services.length
+      ).toFixed(1)
+      icon: Star
+      color: 'text-yellow-400'
+    }
     {
-      label: 'Market Growth',
-      value: '300%+',
-      icon: TrendingUp,
-      color: 'text-purple-400',
-    },
+      label: 'Market Growth'
+      value: '300%+'
+      icon: TrendingUp
+      color: 'text-purple-400'
+    }
   ];
-
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
@@ -244,17 +255,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         break;
       default: break
     }
-
     return filtered.slice(0, maxServices)
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
-
   const stats = [
-    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
-    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
-    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
+    { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' }
+    { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers |0), 0), icon: Users, color: 'text-green-400' }
+    { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating |0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' }
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ];
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -276,7 +284,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           >
             {subtitle}
           </motion.p>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -304,7 +311,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             ))}
           </motion.div>
         </div>
-
         {/* Filters */}
         {showFilters && (
           <motion.div
@@ -343,7 +349,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     ))}
                   </select>
                 </div>
-
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -366,7 +371,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     ))}
                   </select>
                 </div>
-
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -393,7 +397,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             </div>
           </motion.div>
         )}
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -422,7 +425,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       ⭐ Most Popular
                     </div>
                   )}
-
                   {/* Header */}
                   <div className='mb-6'>
                     <div className='flex items-center justify-between mb-4'>
@@ -448,7 +450,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.tagline}
                     </p>
                   </div>
-
                   {/* Features */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
@@ -472,7 +473,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       ))}
                     </ul>
                   </div>
-
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                     <div>
@@ -483,7 +483,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                     <div>
                       <div className='text-lg font-bold text-white'>
-                        {service.customers?.toLocaleString() || '0'}
+                        {service.customers?.toLocaleString() |'0'}
                       </div>
                       <div className='text-xs text-gray-400'>Customers</div>
                     </div>
@@ -493,13 +493,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       </div>
                       <div className='text-xs text-gray-400'>Trial Days</div>                    </div>
                   </div>
-
                   {/* ROI Highlight */}                    <div>
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-white">{service.customers?.toLocaleString() || '0'}</div>
+                      <div className="text-lg font-bold text-white">{service.customers?.toLocaleString() |'0'}</div>
                       <div className="text-xs text-gray-400">Customers</div>
                     </div>
                     <div>
@@ -507,7 +506,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className="text-xs text-gray-400">Trial Days</div>
                     </div>
                   </div>
-
                   {/* ROI Highlight */}
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
                     <div className='text-sm text-green-400 font-semibold mb-1'>
@@ -519,7 +517,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.roi}
                     </div>
                   </div>
-
                   {/* Market Position */}
                   <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>
                     <div className='text-sm text-cyan-400 font-semibold mb-2'>
@@ -531,7 +528,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.marketPosition}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className='mt-auto'>
                     <Button
@@ -542,7 +538,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       Get Started
                       <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>
                   </div>
-
                   {/* Contact Info */}                    <Button
                       href={service.link}
                       variant="primary"
@@ -552,7 +547,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
-
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>
                     <div className='text-xs text-gray-500'>
@@ -577,7 +571,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             ))}
           </AnimatePresence>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -632,9 +625,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       </div>
     </section>
   );
-};
-
+}
 export default EnhancedServiceShowcase;  )
-};
-
+}
 export default EnhancedServiceShowcase;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

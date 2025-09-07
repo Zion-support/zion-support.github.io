@@ -1,18 +1,24 @@
-'use client';
+<<<<<<< HEAD
+'use client',
 
+import React from 'react',
+import Link from 'next/link';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
+const HeroSection: React.FC;
+=======
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
-
 const HeroSection: React.FC = () => {
   const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Award, value: '50+', label: 'Awards Won' },
-    { icon: Star, value: '99%', label: 'Client Satisfaction' },
-    { icon: Zap, value: '24/7', label: 'Support Available' },
+    { icon: Users, value: '500+', label: 'Happy Clients' }
+    { icon: Award, value: '50+', label: 'Awards Won' }
+    { icon: Star, value: '99%', label: 'Client Satisfaction' }
+    { icon: Zap, value: '24/7', label: 'Support Available' }
   ];
-
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>
       {/* Animated Background Elements */}
@@ -21,34 +27,31 @@ const HeroSection: React.FC = () => {
         <motion.div
           className='absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl'
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.2, 1]
+            opacity: [0.3, 0.6, 0.3]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
         />
         <motion.div
           className='absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl'
           animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.6, 0.3, 0.6],
+            scale: [1.2, 1, 1.2]
+            opacity: [0.6, 0.3, 0.6]
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
         />
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
-
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Animated Background Elements */}
@@ -60,8 +63,8 @@ const HeroSection: React.FC = () => {
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 8,
-            repeat: Infinity,
+            duration: 8
+            repeat: Infinity
             ease: "easeInOut"
           }}
         />
@@ -71,16 +74,14 @@ const HeroSection: React.FC = () => {
             scale: [1.2, 1, 1.2];
             opacity: [0.6, 0.3, 0.6]}}
           transition={{
-            duration: 10,
-            repeat: Infinity,
+            duration: 10
+            repeat: Infinity
             ease: "easeInOut"
           }}
         />
-        
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
-
       <div className="relative container mx-auto px-4 text-center z-10">
         {/* Main Content */}
         <motion.div
@@ -103,7 +104,6 @@ const HeroSection: React.FC = () => {
           >
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>
-
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -118,7 +118,6 @@ const HeroSection: React.FC = () => {
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             </span>
           </motion.h1>
-
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -130,9 +129,8 @@ const HeroSection: React.FC = () => {
             revolutionize their digital presence and achieve sustainable growth
             in the modern technology landscape.          </motion.p>            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
-            From AI development to cloud architecture, we help companies revolutionize their digital presence 
+            From AI development to cloud architecture, we help companies revolutionize their digital presence
             and achieve sustainable growth in the modern technology landscape.
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -147,7 +145,6 @@ const HeroSection: React.FC = () => {
               Get Started Today
               <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
             </Link>
-
             <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>
               <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>
                 <Play className='w-6 h-6 ml-1' />
@@ -160,7 +157,6 @@ const HeroSection: React.FC = () => {
               Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            
             <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">
               <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">
                 <Play className="w-6 h-6 ml-1" />
@@ -168,7 +164,6 @@ const HeroSection: React.FC = () => {
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -201,7 +196,6 @@ const HeroSection: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -220,8 +214,7 @@ const HeroSection: React.FC = () => {
       </motion.div>
     </section>
   );
-};
-
+}
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
@@ -238,9 +231,8 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
       </motion.div>
     </section>
   );
-};
-
+}
 export default HeroSection;  )
-};
-
+}
 export default HeroSection;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

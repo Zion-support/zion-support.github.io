@@ -1,23 +1,24 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
 import { useState } from "react";
 import { Mail } from "lucide-react";
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+<<<<<<< HEAD
+  const handleSubmit = null;
+=======
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -32,7 +33,6 @@ export function EnhancedNewsletterForm() {
           </p>
         </div>
       </div>
-
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
@@ -64,7 +64,6 @@ export function EnhancedNewsletterForm() {
           </Button>
         </form>
       )}
-
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (

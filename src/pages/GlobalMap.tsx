@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
-import { NextSeo } from '@/components/NextSeo';
-import { Globe, MapPin } from 'lucide-react';
+import { Header  } from '@/components/Header';
+import { NextSeo  } from '@/components/NextSeo';
+import { Globe, MapPin } from 'lucide-react'
+<<<<<<< HEAD
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+=======
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface Instance {
   id: number;
   name: string;
@@ -17,75 +21,110 @@ interface Instance {
   governance: 'admin' | 'hybrid' | 'vote';
   votesPassed: number;
   votesPending: number;
-  region: string;
-
+  region: string
 const INSTANCES: Instance[] = [
   {
-    id: 1,
-    name: 'Zion LATAM',
-    lat: -15,
-    lng: -70,
-    talent: 120,
-    governance: 'hybrid',
-    votesPassed: 5,
-    votesPending: 1,
-    region: 'Latin America',
-  },
+<<<<<<< HEAD
+    id: 1;
+    name: 'Zion LATAM';
+    lat: -15;
+    lng: -70;
+    talent: 120;
+    governance: 'hybrid';
+    votesPassed: 5;
+    votesPending: 1;
+    region: 'Latin America'},
   {
-    id: 2,
-    name: 'Zion Health',
-    lat: 37,
-    lng: -95,
-    talent: 200,
-    governance: 'admin',
-    votesPassed: 8,
-    votesPending: 2,
-    region: 'North America',
-  },
+    id: 2;
+    name: 'Zion Health';
+    lat: 37;
+    lng: -95;
+    talent: 200;
+    governance: 'admin';
+    votesPassed: 8;
+    votesPending: 2;
+    region: 'North America'},
   {
-    id: 3,
-    name: 'Zion Law',
-    lat: 51,
-    lng: 10,
-    talent: 150,
-    governance: 'vote',
-    votesPassed: 12,
-    votesPending: 3,
-    region: 'Europe',
-  },
-];
+    id: 3;
+    name: 'Zion Law';
+    lat: 51;
+    lng: 10;
+    talent: 150;
+    governance: 'vote';
+    votesPassed: 12;
+    votesPending: 3;
+    region: 'Europe'}],
 
+=======
+    id: 1
+    name: 'Zion LATAM'
+    lat: -15
+    lng: -70
+    talent: 120
+    governance: 'hybrid'
+    votesPassed: 5
+    votesPending: 1
+    region: 'Latin America'
+  }
+  {
+    id: 2
+    name: 'Zion Health'
+    lat: 37
+    lng: -95
+    talent: 200
+    governance: 'admin'
+    votesPassed: 8
+    votesPending: 2
+    region: 'North America'
+  }
+  {
+    id: 3
+    name: 'Zion Law'
+    lat: 51
+    lng: 10
+    talent: 150
+    governance: 'vote'
+    votesPassed: 12
+    votesPending: 3
+    region: 'Europe'
+  }
+]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface FeedItem {
   id: number;
-  text: string;
-
+  text: string
 export default function GlobalMapPage() {
-  const [feed, setFeed] = useState<FeedItem[]>([]);
+<<<<<<< HEAD
+  const [feed, setFeed] = useState<FeedItem[]>([]),
 
+  useEffect(() => {
+    const interval = null;
+              return (
+=======
+  const [feed, setFeed] = useState<FeedItem[]>([])
   useEffect((,) => {
     const interval = setInterval((,) => {
       const messages = [
-        'ZionGPT upgraded to v1.7 in Egypt',
-        'Proposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia',
-      ];
-      const id = Date.now();
+        'ZionGPT upgraded to v1.7 in Egypt'
+        'Proposal #121 passed in Zion DevOps'
+        'New franchise deployed: Zion Indonesia'
+      ]
+      const id = Date.now()
       const text =
-        messages[Math.floor(Math.random() * messages.length)] ||
-        'System update in progress';
-      setFeed(f => [{ id, text }, ...f].slice(0, 5));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-  const width = 800;
-  const height = 400;
+        messages[Math.floor(Math.random() * messages.length)] |
+        'System update in progress'
+      setFeed(f => [{ id, text }, ...f].slice(0, 5))
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+  const width = 800
+  const height = 400
   function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width;
-    const y = ((90 - lat) / 180) * height;
-    return { x, y };
+    const x = ((lng + 180) / 360) * width
+    const y = ((90 - lat) / 180) * height
+    return { x, y }
   }
-
-  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5);
+  const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
   return (
     <div className='min-h-screen bg-background'>
       <NextSeo
@@ -99,13 +138,14 @@ export default function GlobalMapPage() {
           <div className='relative' style={{ width, height }}>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {
-              const { x, y } = project(i.lat, i.lng);
+              const { x, y } = project(i.lat, i.lng)
               const color =
                 i.governance === 'admin'
                   ? 'bg-red-500'
                   : i.governance === 'hybrid'
                     ? 'bg-yellow-500'
-                    : 'bg-green-500';              return (
+                    : 'bg-green-500'; return (
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -127,7 +167,7 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-              );
+              )
             })}
           </div>
           <div className='flex-1 space-y-6'>
@@ -156,8 +196,6 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
-  );
+  )
 }
-
 }
-

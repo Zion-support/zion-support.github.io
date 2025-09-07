@@ -1,16 +1,17 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {useRouter} from 'next/router';
-import {getServiceById} from '../../data/micro-saas-services';
-import ServiceDetail from '../../components/sections/ServiceDetail';
+import { useRouter  } from 'next/router';
+import { getServiceById  } from '../../data/micro-saas-services';
+import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
-import {ArrowLeft, ExternalLink} from 'lucide-react';
-
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 export default function ServiceDetailPage() {
+<<<<<<< HEAD
+  const router = null;
+=======
   const router = useRouter();
   const { id } = router.query;
-
-  if (!id || typeof id !== 'string') {
+  if (!id |typeof id !== 'string') {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
         <div className='text-center'>
@@ -32,9 +33,8 @@ export default function ServiceDetailPage() {
       </div>
     );
   }
-
   const service = getServiceById(id);
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (!service) {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
@@ -61,7 +61,6 @@ export default function ServiceDetailPage() {
       </div>
     );    )
   }
-
   return (
     <>
       <Head>
@@ -74,7 +73,6 @@ export default function ServiceDetailPage() {
         <meta property='og:description' content={service.description} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-black'>
         {/* Navigation */}
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
@@ -93,7 +91,6 @@ export default function ServiceDetailPage() {
                 variant='primary'
                 size='sm'
                 icon={<ExternalLink className='w-4 h-4' />}              >      </Head>
-
       <div className="min-h-screen bg-black">
         {/* Navigation */}
         <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
@@ -121,10 +118,8 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </nav>
-
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
-
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

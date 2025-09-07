@@ -1,8 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-
 const isClient = typeof window !== 'undefined';
-
+<<<<<<< HEAD
+type Web3LoginModalProps = any;
+=======
 type Web3LoginModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -12,22 +13,19 @@ type Web3LoginModalProps = {
     displayName?: string;
   }) => void;};const isClient = typeof window !== 'undefined';
 type Web3LoginModalProps = {
-  isOpen: boolean,
-  onClose: () => void,
+  isOpen: boolean
+  onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
-};
-
+}
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     if (!isOpen) {
       setError(null);
       setLoading(false);    }      setLoading(false)
     }
   }, [isOpen]);
-
   const handleEvmConnect = useCallback(async () => {
     setError(null);
     setLoading(true);
@@ -36,128 +34,112 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const WalletConnectProvider = (
         await import('@walletconnect/web3-provider')
       ).default;      const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
-
       const web3Modal = new Web3ModalCtor({
-        cacheProvider: false,
+        cacheProvider: false
         providerOptions: {
           walletconnect: {
-            package: WalletConnectProvider,
+            package: WalletConnectProvider
             options: {
-              rpc: { 1: 'https://cloudflare-eth.com' },
-            },
-          },
-        },
-      });              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
-
+              rpc: { 1: 'https://cloudflare-eth.com' }
+            }
+          }
+        }
+      });              rpc: { 1: 'https://cloudflare-eth.com' }}}}})
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
       const signer = web3Provider.getSigner();
       const address = (await signer.getAddress()).toLowerCase();
       const network = await web3Provider.getNetwork();
-
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-
       const domain = window.location.host;
       const origin = window.location.origin;
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
-      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
-
+      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`
       const signature = await signer.signMessage(siweMessage);
-
       const verifyRes = await fetch('/api/auth/verify-evm', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          message: siweMessage,
-          signature,
-          address,
-          chainId: network.chainId,
-        }),
+          message: siweMessage
+          signature
+          address
+          chainId: network.chainId
+        })
       });
       if (!verifyRes.ok) throw new Error('Failed to verify signature');
-
       onLoggedIn?.({ address, chain: 'evm' });
       onClose();
     } catch (e: any) {
       console.error(e);
-      setError(e?.message || 'Wallet connection failed');
+      setError(e?.message |'Wallet connection failed');
     } finally {
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify signature');
-
-      onLoggedIn?.({ address, chain: 'evm' }),
+      onLoggedIn?.({ address, chain: 'evm' })
       onClose()
     } catch (e: any) {
       console.error(e);
-      setError(e?.message || 'Wallet connection failed')
+      setError(e?.message |'Wallet connection failed')
     } finally {
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
-
   const handlePhantomConnect = useCallback(async () => {
     setError(null);
     setLoading(true);
     try {
       const provider = (window as any)?.solana;
-      if (!provider || !provider.isPhantom) {
+      if (!provider |!provider.isPhantom) {
         throw new Error('Phantom not found. Install the Phantom extension');
       }
       const resp = await provider.connect();
       const publicKey: string = resp.publicKey.toString();
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-
       const statement =
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension')
       }
       const resp = await provider.connect();
-      const publicKey: string = resp.publicKey.toString(),
+      const publicKey: string = resp.publicKey.toString()
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
-
       const statement =
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
-      const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,
+      const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`
       const encodedMessage = new TextEncoder().encode(message);
       const { signature } = await provider.signMessage(encodedMessage, 'utf8');
       const bs58 = (await import('bs58')).default;
-
       const verifyRes = await fetch('/api/auth/verify-sol', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          message,
-          signature: bs58.encode(signature),
-          publicKey,
-        }),
+          message
+          signature: bs58.encode(signature)
+          publicKey
+        })
       });
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-
       onLoggedIn?.({ address: publicKey, chain: 'sol' });
       onClose();
     } catch (e: any) {
       console.error(e);
-      setError(e?.message || 'Phantom connection failed');
+      setError(e?.message |'Phantom connection failed');
     } finally {
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-
-      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+      onLoggedIn?.({ address: publicKey, chain: 'sol' })
       onClose()
     } catch (e: any) {
       console.error(e);
-      setError(e?.message || 'Phantom connection failed')
+      setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
     }
   }, [onClose, onLoggedIn]);
-
   if (!isOpen) return null;
-
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
@@ -199,7 +181,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       </div>
     </div>
   );
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
@@ -221,8 +202,8 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
     </div>
   )
 }
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return <ModalInner {...props} />
 }

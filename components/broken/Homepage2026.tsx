@@ -1,27 +1,33 @@
-import React from 'react';
-import Layout from './layout/Layout';
+import React from 'react',
+import Layout from './layout/Layout',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  MapPin,
-  Users,
-  Building,
-  Rocket,
-  CheckCircle,
-  Phone,
-  Mail,;} from 'lucide-react';import { 
-  ArrowRight, Star, 
+<<<<<<< HEAD
+import { ArrowRight, Star;
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail
-
+ } from 'lucide-react';
+const Homepage2026: React.FC;
+=======
+import {
+  ArrowRight
+  Star
+  Brain
+  Atom
+  Shield
+  Zap
+  TrendingUp
+  Globe
+  MapPin
+  Users
+  Building
+  Rocket
+  CheckCircle
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Star
+  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
+  Users, Building, Rocket, CheckCircle, Phone, Mail
 const Homepage2026: React.FC = () => {
   return (
     <Layout>
@@ -35,7 +41,6 @@ const Homepage2026: React.FC = () => {
             <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
             <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
           </div>
-
           <div className='text-center max-w-4xl mx-auto relative z-10'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +53,6 @@ const Homepage2026: React.FC = () => {
             <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
             <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
           </div>
-          
           <div className="text-center max-w-4xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -66,7 +70,6 @@ const Homepage2026: React.FC = () => {
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
               </motion.div>
-
               <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Zion Tech Group
               </h1>
@@ -75,7 +78,6 @@ const Homepage2026: React.FC = () => {
                 services, cutting-edge IT infrastructure, and advanced AI
                 solutions
               </p>
-
               {/* Enhanced CTA Section */}
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <Link href='/comprehensive-2025-services-showcase'>
@@ -99,14 +101,12 @@ const Homepage2026: React.FC = () => {
                 <Star className="w-4 h-4" />
                 <span>Innovation Leader 2026</span>
               </motion.div>
-              
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Pioneering the future of technology with innovative micro SAAS services, cutting-edge IT infrastructure, and advanced AI solutions
               </p>
-              
               {/* Enhanced CTA Section */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link href="/comprehensive-2025-services-showcase">
@@ -128,7 +128,6 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </a>
               </div>
-              
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -161,7 +160,6 @@ const Homepage2026: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Company Stats */}
         <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
@@ -186,7 +184,6 @@ const Homepage2026: React.FC = () => {
                 transformation
               </p>
             </motion.div>
-
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +193,6 @@ const Homepage2026: React.FC = () => {
                 We deliver innovative solutions that drive real business transformation
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -215,7 +211,6 @@ const Homepage2026: React.FC = () => {
                 <p className="text-gray-300 text-sm">
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -233,7 +228,6 @@ const Homepage2026: React.FC = () => {
                 <p className="text-gray-300 text-sm">
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -251,7 +245,6 @@ const Homepage2026: React.FC = () => {
                 <p className="text-gray-300 text-sm">
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -272,7 +265,6 @@ const Homepage2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Service Categories */}
         <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>            <motion.div
@@ -295,14 +287,12 @@ const Homepage2026: React.FC = () => {
                 technology needs
               </p>
             </motion.div>
-
             <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>              {/* AI Automation Services */}            >
               <h2 className="text-4xl font-bold text-white mb-6">Our Service Portfolio</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive solutions covering every aspect of modern business technology needs
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* AI Automation Services */}
               <motion.div
@@ -339,7 +329,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
-                  Intelligent automation solutions that streamline operations and boost productivity. 
+                  Intelligent automation solutions that streamline operations and boost productivity.
                   From content creation to customer service, our AI solutions save time and improve efficiency.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -362,7 +352,6 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-
               {/* IT Infrastructure Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -398,7 +387,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
-                  Robust infrastructure solutions for modern digital businesses. 
+                  Robust infrastructure solutions for modern digital businesses.
                   Edge computing, zero trust security, and hybrid cloud management for enterprise-grade performance.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -421,7 +410,6 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-
               {/* Micro SAAS Solutions */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -457,7 +445,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
-                  Specialized software solutions for specific business needs. 
+                  Specialized software solutions for specific business needs.
                   Affordable, focused solutions that solve real problems and drive growth.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -480,7 +468,6 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-
               {/* Cutting-Edge AI Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -516,7 +503,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
-                  Next-generation AI solutions for competitive advantage. 
+                  Next-generation AI solutions for competitive advantage.
                   Video generation, code assistance, and data analysis powered by advanced AI.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -542,7 +529,6 @@ const Homepage2026: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -564,7 +550,6 @@ const Homepage2026: React.FC = () => {
                 Get in touch with our team to discuss how our innovative
                 services can drive your success
               </p>
-
               {/* Contact Information */}
               <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>
@@ -588,7 +573,6 @@ const Homepage2026: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Get in touch with our team to discuss how our innovative services can drive your success
               </p>
-              
               {/* Contact Information */}
               <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
                 <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
@@ -655,7 +639,6 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='mailto:kleber@ziontechgroup.com'
@@ -686,9 +669,8 @@ const Homepage2026: React.FC = () => {
       </main>
     </Layout>
   );
-};
-
+}
 export default Homepage2026;  )
-};
-
+}
 export default Homepage2026;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

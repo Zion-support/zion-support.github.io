@@ -1,5 +1,11 @@
- </div> </div> </div>) };
-
+<<<<<<< HEAD
+import React from 'react';
+import type { ReviewsSummary } from '../../types/reviews';
+import StarRating from './StarRating';
+type Props = any;
+export default ReviewSummary;
+=======
+ </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
@@ -8,7 +14,6 @@ import StarRating from './StarRating';
 import {Star} from 'lucide-react';
 type Props = {
   summary: ReviewsSummary
-
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
     <div className='enhanced-card flex items-center justify-between'>
@@ -29,8 +34,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
       </div>
     </div>
   );
-};
-
+}
 export default ReviewSummary;      <div>
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
@@ -42,10 +46,9 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
-  );
-};
-
+);
+}
 export default ReviewSummary;  )
-};
-
+}
 export default ReviewSummary;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

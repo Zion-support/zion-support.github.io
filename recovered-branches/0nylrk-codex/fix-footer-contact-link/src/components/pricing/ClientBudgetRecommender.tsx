@@ -1,45 +1,57 @@
 
 import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { 
+  getClientBudgetSuggestion;
+  PricingSuggestion;
+  ClientBudgetParams;
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
-  jobTitle: string,
-  category: string,
+<<<<<<< HEAD
+  jobTitle: string;
+  category: string;
+=======
+  jobTitle: string
+  category: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
-
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
   jobTitle;
   category;
   timeline;
   scope;
-  experienceLevel,
+<<<<<<< HEAD
+  experienceLevel;
+=======
+  experienceLevel
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
-
+<<<<<<< HEAD
+  const generateSuggestion = null;
+=======
   const generateSuggestion = async () => {
-    if (!jobTitle || !category) {
+    if (!jobTitle |!category) {
       return
     }
-
     setIsLoading(true);
     try {
       const params: ClientBudgetParams = {
-        jobTitle,
-        category};
-
+        jobTitle
+        category}
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
-
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result)
     } catch (error) {
@@ -47,25 +59,22 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
-      
       // Track this suggestion application
       if (user) {
         trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: 'client',
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
+          userId: user.id
+          suggestionType: 'client'
+          suggestedMin: suggestion.minRate
+          suggestedMax: suggestion.maxRate
           accepted: true
         })
       }
     }
-  };
-
+  }
   return (
     <div className="space-y-4">
       <div>
@@ -74,7 +83,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
+            disabled={!jobTitle |!category}
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
@@ -90,4 +99,5 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       </div>
     </div>
   )
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

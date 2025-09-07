@@ -1,38 +1,49 @@
 
-import React from "react";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {FraudFlag} from "@/types/fraud";
-import {SeverityDisplay} from "./SeverityDisplay";
-import {ActionButtons} from "./ActionButtons";
-import {EmptyFraudState} from "./EmptyFraudState";
+import React from "react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { FraudFlag } from "@/types/fraud",
+import { SeverityDisplay } from "./SeverityDisplay",
+import { ActionButtons } from "./ActionButtons";
+import { EmptyFraudState } from "./EmptyFraudState";
 interface FraudFlagsTableProps {
-  flags: FraudFlag[],
-  isLoading: boolean,
-  hasFilters: boolean,
-  resetFilters: () => void,
+<<<<<<< HEAD
+  flags: FraudFlag[];
+  isLoading: boolean;
+  hasFilters: boolean;
+  resetFilters: () => void;
+=======
+  flags: FraudFlag[]
+  isLoading: boolean
+  hasFilters: boolean
+  resetFilters: () => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
-
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;
   hasFilters;
-  resetFilters,
+<<<<<<< HEAD
+  resetFilters;
+=======
+  resetFilters
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onAction
 }) => {
   if (isLoading) {
     return (
+<<<<<<< HEAD
+      <div className;
+=======
       <div className="flex justify-center items-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
   }
-
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
-
   return (
     <Table>
       <TableHeader>
@@ -55,7 +66,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
               <SeverityDisplay severity={flag.severity} />
             </TableCell>
             <TableCell className="font-medium">
-              {flag.user_email || flag.user_id.substring(0, 8)}
+              {flag.user_email |flag.user_id.substring(0, 8)}
             </TableCell>
             <TableCell className="max-w-xs truncate">
               {flag.content_excerpt}
@@ -65,7 +76,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
-              {flag.gpt_explanation || (
+              {flag.gpt_explanation |(
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
               )}
             </TableCell>
@@ -86,10 +97,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
               </Badge>
             </TableCell>
             <TableCell>
-              <ActionButtons 
-                flagId={flag.id} 
-                status={flag.status} 
-                onAction={onAction} 
+              <ActionButtons
+                flagId={flag.id}
+                status={flag.status}
+                onAction={onAction}
               />
             </TableCell>
           </TableRow>
@@ -97,4 +108,5 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       </TableBody>
     </Table>
   )
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

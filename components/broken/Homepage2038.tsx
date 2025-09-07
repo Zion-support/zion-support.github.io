@@ -1,38 +1,47 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  Rocket,
-  Target,
-  Cpu,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  CheckCircle,
-  Sparkles,
-  Infinity,
-  Zap as Lightning,;} from 'lucide-react';import { 
-  ArrowRight, Star, 
+<<<<<<< HEAD
+import { ArrowRight, Star;
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning
-
+ } from 'lucide-react';
+=======
+import {
+  ArrowRight
+  Star
+  Brain
+  Atom
+  Shield
+  Zap
+  TrendingUp
+  Globe
+  Rocket
+  Target
+  Cpu
+  Cloud
+  Lock
+  Users
+  Award
+  CheckCircle
+  Sparkles
+  Infinity
+  Zap as Lightning;} from 'lucide-react';import {
+  ArrowRight, Star
+  Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Target, Cpu, Cloud, Lock, Users, Award;
+  CheckCircle, Sparkles, Infinity, Zap as Lightning
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 // Import new services
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
+import { innovative2038MicroSaasServices  } from '../data/innovative-2038-micro-saas-services';
+import { innovative2038ITServices  } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-
+<<<<<<< HEAD
+const Homepage2038: React.FC;
+=======
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = innovative2038MicroSaasServices
@@ -66,7 +75,6 @@ const Homepage2038: React.FC = () => {
             <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500'></div>
             <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500'></div>
           </div>
-
           <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -81,7 +89,6 @@ const Homepage2038: React.FC = () => {
             <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-1500"></div>
             <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500"></div>
           </div>
-          
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -100,15 +107,13 @@ const Homepage2038: React.FC = () => {
                 <span>Innovation Leader 2038</span>
                 <Sparkles className='w-4 h-4' />
               </motion.div>
-
               <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>
                 Zion Tech Group
               </h1>
               <p className='text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed'>
-                Pioneering the future of technology with revolutionary AI,
+                Pioneering the future of technology with revolutionary AI
                 quantum computing, and consciousness evolution solutions
               </p>
-
               {/* Enhanced CTA Section */}
               <div className='flex flex-col sm:flex-row gap-6 justify-center mb-10'>
                 <Link href='/get-started'>
@@ -130,18 +135,16 @@ const Homepage2038: React.FC = () => {
                 <span>Innovation Leader 2038</span>
                 <Sparkles className="w-4 h-4" />
               </motion.div>
-              
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
                 Zion Tech Group
               </h1>
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
                 Pioneering the future of technology with revolutionary AI, quantum computing, and consciousness evolution solutions
               </p>
-              
               {/* Enhanced CTA Section */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
                 <Link href="/get-started">
-                  <motion.button 
+                  <motion.button
                     className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -153,7 +156,7 @@ const Homepage2038: React.FC = () => {
                   </motion.button>
                 </Link>
                 <Link href="/services">
-                  <motion.button 
+                  <motion.button
                     className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -162,7 +165,6 @@ const Homepage2038: React.FC = () => {
                   </motion.button>
                 </Link>
               </div>
-              
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -203,7 +205,6 @@ const Homepage2038: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Company Stats */}
         <section className='py-24 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
@@ -268,7 +269,7 @@ const Homepage2038: React.FC = () => {
                 <div className='text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
                   Unlimited potential
                 </div>              </motion.div>            >
-              <motion.div 
+              <motion.div
                 className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -276,7 +277,7 @@ const Homepage2038: React.FC = () => {
                 <div className="text-gray-300 text-lg">AI Services</div>
                 <div className="text-sm text-cyan-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Cutting-edge solutions</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -284,7 +285,7 @@ const Homepage2038: React.FC = () => {
                 <div className="text-gray-300 text-lg">Quantum Solutions</div>
                 <div className="text-sm text-blue-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Next-gen computing</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -292,7 +293,7 @@ const Homepage2038: React.FC = () => {
                 <div className="text-gray-300 text-lg">Autonomous Operations</div>
                 <div className="text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Always available</div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
               >
@@ -303,7 +304,6 @@ const Homepage2038: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Featured AI Services */}
         <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
@@ -323,7 +323,6 @@ const Homepage2038: React.FC = () => {
                 our consciousness evolution and quantum AI platforms
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Revolutionary AI Services
@@ -332,7 +331,6 @@ const Homepage2038: React.FC = () => {
                 Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {featuredAI.map((service, index) => (
                 <motion.div
@@ -349,7 +347,6 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             <div className='text-center'>
               <Link href='/ai-services'>
                 <motion.button
@@ -365,7 +362,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured Micro SAAS Services */}
         <section className='py-24 px-4 bg-black/20'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
@@ -385,7 +381,6 @@ const Homepage2038: React.FC = () => {
                 solutions designed for the future
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                 Innovative Micro SAAS
@@ -394,7 +389,6 @@ const Homepage2038: React.FC = () => {
                 Transform your business with our cutting-edge micro SAAS solutions designed for the future
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {featuredMicroSaas.map((service, index) => (
                 <motion.div
@@ -411,7 +405,6 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             <div className='text-center'>
               <Link href='/services'>
                 <motion.button
@@ -427,7 +420,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured IT Services */}
         <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
@@ -447,7 +439,6 @@ const Homepage2038: React.FC = () => {
                 AI-powered DevOps automation
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                 Advanced IT Infrastructure
@@ -456,7 +447,6 @@ const Homepage2038: React.FC = () => {
                 Build the future with our quantum cloud infrastructure and AI-powered DevOps automation
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {featuredIT.map((service, index) => (
                 <motion.div
@@ -473,7 +463,6 @@ const Homepage2038: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             <div className='text-center'>
               <Link href='/it-services'>
                 <motion.button
@@ -489,7 +478,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className='py-24 px-4 bg-black/30'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
@@ -508,53 +496,52 @@ const Homepage2038: React.FC = () => {
                 human consciousness and computing
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
                 {
-                  icon: <Brain className='w-12 h-12' />,
-                  title: 'AI Consciousness Evolution',
+                  icon: <Brain className='w-12 h-12' />
+                  title: 'AI Consciousness Evolution'
                   description:
-                    'Leading the development of artificial consciousness and emotional intelligence',
-                  color: 'from-purple-500 to-pink-500',
-                },
+                    'Leading the development of artificial consciousness and emotional intelligence'
+                  color: 'from-purple-500 to-pink-500'
+                }
                 {
-                  icon: <Atom className='w-12 h-12' />,
-                  title: 'Quantum Computing Power',
+                  icon: <Atom className='w-12 h-12' />
+                  title: 'Quantum Computing Power'
                   description:
-                    'Access to the most advanced quantum computing capabilities available',
-                  color: 'from-blue-500 to-cyan-500',
-                },
+                    'Access to the most advanced quantum computing capabilities available'
+                  color: 'from-blue-500 to-cyan-500'
+                }
                 {
-                  icon: <Shield className='w-12 h-12' />,
-                  title: 'Future-Proof Security',
+                  icon: <Shield className='w-12 h-12' />
+                  title: 'Future-Proof Security'
                   description:
-                    'Quantum-resistant encryption and zero-trust security frameworks',
-                  color: 'from-red-500 to-orange-500',
-                },
+                    'Quantum-resistant encryption and zero-trust security frameworks'
+                  color: 'from-red-500 to-orange-500'
+                }
                 {
-                  icon: <Rocket className='w-12 h-12' />,
-                  title: 'Innovation First',
+                  icon: <Rocket className='w-12 h-12' />
+                  title: 'Innovation First'
                   description:
-                    "Constantly pushing the boundaries of what's possible in technology",
-                  color: 'from-green-500 to-emerald-500',
-                },
+                    "Constantly pushing the boundaries of what's possible in technology"
+                  color: 'from-green-500 to-emerald-500'
+                }
                 {
-                  icon: <Users className='w-12 h-12' />,
-                  title: 'Global Expertise',
+                  icon: <Users className='w-12 h-12' />
+                  title: 'Global Expertise'
                   description:
-                    'World-class team with experience across cutting-edge technologies',
-                  color: 'from-indigo-500 to-purple-500',
-                },
+                    'World-class team with experience across cutting-edge technologies'
+                  color: 'from-indigo-500 to-purple-500'
+                }
                 {
-                  icon: <Award className='w-12 h-12' />,
-                  title: 'Proven Results',
+                  icon: <Award className='w-12 h-12' />
+                  title: 'Proven Results'
                   description:
-                    'Track record of delivering transformative solutions to leading organizations',
-                  color: 'from-yellow-500 to-orange-500',
-                },              ].map((feature, index) => (                  icon: <Award className="w-12 h-12" />,
-                  title: "Proven Results",
-                  description: "Track record of delivering transformative solutions to leading organizations",
+                    'Track record of delivering transformative solutions to leading organizations'
+                  color: 'from-yellow-500 to-orange-500'
+                },              ].map((feature, index) => (                  icon: <Award className="w-12 h-12" />
+                  title: "Proven Results"
+                  description: "Track record of delivering transformative solutions to leading organizations"
                   color: "from-yellow-500 to-orange-500"
                 }
                 <motion.div
@@ -590,7 +577,6 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-24 px-4'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-24 px-4">
@@ -609,7 +595,6 @@ const Homepage2038: React.FC = () => {
                 Join the revolution in AI consciousness, quantum computing, and
                 next-generation technology. Let's build the future together.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-6 justify-center'>
                 <Link href='/contact'>
                   <motion.button
@@ -630,10 +615,9 @@ const Homepage2038: React.FC = () => {
                 Ready to Shape the Future?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join the revolution in AI consciousness, quantum computing, and next-generation technology. 
+                Join the revolution in AI consciousness, quantum computing, and next-generation technology.
                 Let's build the future together.
               </p>
-              
               <div className="flex flex-col sm: flex-row gap-6 justify-center">
                 <Link href="/contact">
                   <motion.button
@@ -663,9 +647,8 @@ const Homepage2038: React.FC = () => {
       </main>
     </Layout>
   );
-};
-
+}
 export default Homepage2038;  )
-};
-
+}
 export default Homepage2038;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

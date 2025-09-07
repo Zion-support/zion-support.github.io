@@ -1,18 +1,27 @@
 
-import React from "react";
-import {ClickableBadge} from "@/components/ui/clickable-badge";
-import {X} from "lucide-react";
+import React from "react",
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { X } from "lucide-react";
 interface ActiveFiltersBarProps {
-  selectedProductTypes: string[],
-  selectedLocations: string[],
-  selectedAvailability: string[],
-  selectedRating: number | null,
-  searchQuery: string,
-  onRemoveFilter: (filterType: string, value: string) => void,
-  onRemoveRating: () => void,
+<<<<<<< HEAD
+  selectedProductTypes: string[];
+  selectedLocations: string[];
+  selectedAvailability: string[];
+  selectedRating: number | null;
+  searchQuery: string;
+  onRemoveFilter: (filterType: string, value: string) => void;
+  onRemoveRating: () => void;
+=======
+  selectedProductTypes: string[]
+  selectedLocations: string[]
+  selectedAvailability: string[]
+  selectedRating: number | null
+  searchQuery: string
+  onRemoveFilter: (filterType: string, value: string) => void
+  onRemoveRating: () => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClearSearch: () => void
 }
-
 export function ActiveFiltersBar({
   selectedProductTypes;
   selectedLocations;
@@ -23,21 +32,22 @@ export function ActiveFiltersBar({
   onRemoveRating;
   onClearSearch
 }: ActiveFiltersBarProps) {
-  const hasActiveFilters = 
-    selectedProductTypes.length > 0 || 
-    selectedLocations.length > 0 || 
-    selectedAvailability.length > 0 || 
-    selectedRating !== null ||
+<<<<<<< HEAD
+  const hasActiveFilters = null;
+=======
+  const hasActiveFilters =
+    selectedProductTypes.length > 0 |
+    selectedLocations.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRating !== null |
     !!searchQuery;
-    
   if (!hasActiveFilters) return null;
-  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
-      
       {searchQuery && (
-        <ClickableBadge 
+        <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}
         >
@@ -45,9 +55,8 @@ export function ActiveFiltersBar({
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
-      
       {selectedProductTypes.map(type => (
-        <ClickableBadge 
+        <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
@@ -56,9 +65,8 @@ export function ActiveFiltersBar({
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
-      
       {selectedLocations.map(location => (
-        <ClickableBadge 
+        <ClickableBadge
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
@@ -67,9 +75,8 @@ export function ActiveFiltersBar({
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
-      
       {selectedAvailability.map(availability => (
-        <ClickableBadge 
+        <ClickableBadge
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
@@ -78,9 +85,8 @@ export function ActiveFiltersBar({
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
-      
       {selectedRating !== null && (
-        <ClickableBadge 
+        <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onRemoveRating}
         >
