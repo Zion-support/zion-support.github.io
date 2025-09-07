@@ -274,7 +274,8 @@ export default function AISupplyChainOptimization() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 bg-slate-800/50">
@@ -350,7 +351,8 @@ export default function AISupplyChainOptimization() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Use Cases Section */}
         <section className="py-20 bg-slate-800/50">
@@ -511,7 +513,8 @@ export default function AISupplyChainOptimization() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20">

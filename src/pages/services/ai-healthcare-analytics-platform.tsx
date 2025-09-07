@@ -5,11 +5,14 @@ import {
   Activity, 
   Brain, 
   Activity, 
-  Shield, 
+  Users, 
   Zap, 
+  Shield, 
   CheckCircle, 
   ArrowRight,
+  Star,
   Clock,
+  DollarSign,
   Target,
   BarChart3,
   Shield,
@@ -127,20 +130,23 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
         'SLA guarantees',
         'Custom integrations'
       ],
+      cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const benefits = [
+  const healthcareModules = [
     {
-      icon: Heart,
-      title: '30% Faster Diagnosis',
-      description: 'AI assistance reduces diagnosis time and improves accuracy'
+      title: "Clinical Decision Support",
+      icon: Stethoscope,
+      description: "AI-powered clinical decision support system for healthcare providers",
+      capabilities: ["Diagnostic assistance", "Treatment recommendations", "Drug interaction alerts", "Clinical guidelines"]
     },
     {
-      icon: Target,
-      title: '95% Accuracy Rate',
-      description: 'Advanced algorithms provide highly accurate medical insights'
+      title: "Patient Risk Stratification",
+      icon: HeartPulse,
+      description: "Identify high-risk patients and predict potential health complications",
+      capabilities: ["Risk scoring", "Predictive modeling", "Early intervention", "Outcome prediction"]
     },
     {
       icon: Clock,
@@ -261,17 +267,25 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-green-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Healthcare Modules */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -282,8 +296,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join thousands of healthcare providers already experiencing the benefits of AI-powered analytics
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our integrated modules provide complete healthcare analytics solutions for every aspect of patient care.
             </p>
           </motion.div>
 
@@ -300,8 +314,6 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -309,8 +321,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -321,8 +333,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Healthcare Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform addresses the full spectrum of healthcare challenges
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how our AI healthcare platform transforms different aspects of healthcare delivery.
             </p>
           </motion.div>
 
@@ -339,8 +351,6 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 text-lg">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -584,7 +594,10 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Join leading healthcare organizations in leveraging AI to improve patient outcomes and operational efficiency
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
               </Link>
