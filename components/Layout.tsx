@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceMonitor from './PerformanceMonitor';
+import Analytics from './Analytics';
 
 interface LayoutProps {
   children: ReactNode;
@@ -79,6 +80,7 @@ const Layout: React.FC<LayoutProps> = ({
         />
       </Head>
       <PerformanceMonitor />
+      <Analytics />
       <Header />
       <main>{children}</main>
       <Footer />
