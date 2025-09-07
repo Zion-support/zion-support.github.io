@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react;
 
   keywords?: string;
@@ -43,3 +46,4 @@ const SEO: React.FC<SEOProps> = ({
 }
 
 export default SEO;
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
