@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
-const fs = require('fs');''
-const path = require('path');''
-const { execSync } = require('child_process');'
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class IntelligentErrorDetector {
   // TODO: Implement
 }
@@ -10,10 +10,10 @@ class IntelligentErrorDetector {
     this.projectRoot = process.cwd();
     this.errors = [];
     this.fixes = [];
-    this.patterns = {'
-          conflictType = 'branch';'
-          continue;'
-        } else if (line.includes('>>>>>>>')) {'
+    this.patterns = {
+          conflictType = 'branch';
+          continue;
+        } else if (line.includes('>>>>>>>')) {
           // End of conflict - choose the newer version (branch content)
           if (branchContent.length > 0) {
             fixedLines.push(...branchContent);
@@ -28,10 +28,10 @@ class IntelligentErrorDetector {
           continue;
         }
         
-        if (inConflict) {'
-          if (conflictType === 'head') {'
-            headContent.push(line);'
-          } else if (conflictType === 'branch') {'
+        if (inConflict) {
+          if (conflictType ===head') {
+            headContent.push(line);
+          } else if (conflictType ===branch') {
             branchContent.push(line);
           }
         } else {
@@ -41,18 +41,18 @@ class IntelligentErrorDetector {
         }
       }
       '
-      const fixedContent = fixedLines.join('\n');'
+      const fixedContent = fixedLines.join('\n');
       fs.writeFileSync(filePath, fixedContent);
       
-      this.fixes.push({'
-        type: 'merge_conflict','
-        file: filePath,'
-        message: 'Resolved merge conflicts'')
+      this.fixes.push({
+        type: merge_conflict,
+        file: filePath,
+        message: Resolved merge conflicts)
       });
       
       return true;
-    } catch (error) {'
-      this.log(`Error fixing merge conflicts in ${filePath}: ${error.message}`, 'ERROR');'
+    } catch (error) {
+      this.log(`Error fixing merge conflicts in ${filePath}: ${error.message},ERROR');
       return false;
     }
   }
@@ -60,31 +60,31 @@ class IntelligentErrorDetector {
   async fixConsoleStatements(filePath) {
     try {
   // TODO: Implement
-}'
-      let content = fs.readFileSync(filePath, 'utf8');'
+}
+      let content = fs.readFileSync(filePath,utf8);
       const originalContent = content;
       
       // Remove console statements;
-      content = content;'
-        .replace(/console\.log\([^)]*\);?\s*/g, '')''
-        .replace(/console\.warn\([^)]*\);?\s*/g, '')''
-        .replace(/console\.error\([^)]*\);?\s*/g, '')''
-        .replace(/console\.info\([^)]*\);?\s*/g, '');'
+      content = content;
+        .replace(/console\.log\([^)]*\);?\s*/g, )
+        .replace(/console\.warn\([^)]*\);?\s*/g, )
+        .replace(/console\.error\([^)]*\);?\s*/g, )
+        .replace(/console\.info\([^)]*\);?\s*/g, );
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         
-        this.fixes.push({'
-          type: 'console_statement','
-          file: filePath,'
-          message: 'Removed console statements'')
+        this.fixes.push({
+          type: console_statement,
+          file: filePath,
+          message: Removed console statements)
         });
         
         return true;
       }
       
       return false;
-    } catch (error) {'
-      this.log(`Error fixing console statements in ${filePath}: ${error.message}`, 'ERROR');'
+    } catch (error) {
+      this.log(`Error fixing console statements in ${filePath}: ${error.message},ERROR');
       return false;
     }
   }
@@ -92,37 +92,37 @@ class IntelligentErrorDetector {
   async fixUnescapedEntities(filePath) {
     try {
   // TODO: Implement
-}'
-      let content = fs.readFileSync(filePath, 'utf8');'
+}
+      let content = fs.readFileSync(filePath,utf8);
       const originalContent = content;
       
       // Fix common unescaped entities;
-      content = content;'
-        .replace(/([^\\])'/g, "$1&apos;")""
+      content = content;
+        .replace(/([^\\])/g, "$1&apos;")
         .replace(/([^\\])"/g, "$1&quot;");"
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         
         this.fixes.push({"
-          type: 'unescaped_entities','
-          file: filePath,'
-          message: 'Fixed unescaped entities'')
+          type: unescaped_entities,
+          file: filePath,
+          message: Fixed unescaped entities)
         });
         
         return true;
       }
       
       return false;
-    } catch (error) {'
-      this.log(`Error fixing unescaped entities in ${filePath}: ${error.message}`, 'ERROR');'
+    } catch (error) {
+      this.log(`Error fixing unescaped entities in ${filePath}: ${error.message},ERROR');
       return false;
     }
   }
 
-  async run() {'
-    this.log('🔍 Starting intelligent error detection...');'
-    // Scan relevant directories;'
-    const directories = ['pages', 'components', 'utils', 'hooks', 'src'];'
+  async run() {
+    this.log('🔍 Starting intelligent error detection...);
+    // Scan relevant directories;
+    const directories = [pages,components,utils,hooks,src];
     const allFiles = [];
     
     for (const dir of directories) {
@@ -152,23 +152,23 @@ class IntelligentErrorDetector {
       const { file, issues } = error;
       
       for (const issue of issues) {
-        switch (issue.type) {'
-          case 'merge_conflict':'
+        switch (issue.type) {
+          case 'merge_conflict: 
             await this.fixMergeConflicts(file);
-            break;'
-          case 'console_statement':'
+            break;
+          case 'console_statement: 
             await this.fixConsoleStatements(file);
-            break;'
-          case 'unescaped_entities':'
+            break;
+          case 'unescaped_entities: 
             await this.fixUnescapedEntities(file);
             break;
         }
       }
     }
     
-    // Generate report;'
-    this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');''
-    this.log(''
+    // Generate report;
+    this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
+    this.log(
     };
   }
 }

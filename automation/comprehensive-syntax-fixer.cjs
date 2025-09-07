@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 fixer.run().catch(console.error);
 
     }

@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 class DeploymentAutomation {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'deployment-logs.txt');
+    this.logFile = path.join(this.projectRoot,deployment-logs.txt');
     this.results = {
       startTime: new Date().toISOString(),
       endTime: null,
@@ -29,7 +29,7 @@ class DeploymentAutomation {
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         timeout: 300000, // 5 minutes
-        encoding: 'utf8',
+        encoding: utf8,
         ...options 
       });
       return { success: true, output: result.toString() };
@@ -37,14 +37,14 @@ class DeploymentAutomation {
       return { 
         success: false, 
         error: error.message,
-        output: error.stdout ? error.stdout.toString() : '',
-        stderr: error.stderr ? error.stderr.toString() : ''
+        output: error.stdout ? error.stdout.toString() : ,
+        stderr: error.stderr ? error.stderr.toString() : 
       };
     }
   }
 
   async runStep(stepName, command, options = {}) {
-    this.log(`🔄 Running step: ${stepName}`);
+    this.log(`🔄 Running step: ${stepName});
     const startTime = Date.now();
     
     try {
@@ -66,8 +66,8 @@ class DeploymentAutomation {
       if (result.success) {
         this.log(`✅ Step completed: ${stepName} (${duration}ms)`);
       } else {
-        this.log(`❌ Step failed: ${stepName} - ${result.error}`, 'ERROR');
-        this.results.errors.push(`${stepName}: ${result.error}`);
+        this.log(`❌ Step failed: ${stepName} - ${result.error},ERROR');
+        this.results.errors.push(`${stepName}: ${result.error});
       }
       
       return stepResult;
@@ -82,39 +82,39 @@ class DeploymentAutomation {
       };
       
       this.results.steps.push(stepResult);
-      this.log(`❌ Step execution failed: ${stepName} - ${error.message}`, 'ERROR');
-      this.results.errors.push(`${stepName}: ${error.message}`);
+      this.log(`❌ Step execution failed: ${stepName} - ${error.message},ERROR');
+      this.results.errors.push(`${stepName}: ${error.message});
       
       return stepResult;
     }
   }
 
   async preDeploymentChecks() {
-    this.log('🔍 Running pre-deployment checks...');
+    this.log('🔍 Running pre-deployment checks...);
     
     // Check if we're in a git repository
-    const gitCheck = await this.runStep('Git Repository Check', 'git status');
+    const gitCheck = await this.runStep('Git Repository Check,git status');
     if (!gitCheck.success) {
-      this.log('❌ Not in a git repository', 'ERROR');
+      this.log('❌ Not in a git repository,ERROR');
       return false;
     }
 
     // Check if there are uncommitted changes
-    const uncommittedCheck = await this.runStep('Uncommitted Changes Check', 'git diff --quiet');
+    const uncommittedCheck = await this.runStep('Uncommitted Changes Check,git diff --quiet');
     if (uncommittedCheck.success) {
       this.log('✅ No uncommitted changes');
     } else {
-      this.log('⚠️  Uncommitted changes detected', 'WARNING');
+      this.log('⚠️  Uncommitted changes detected,WARNING');
       this.results.warnings.push('Uncommitted changes detected');
     }
 
     // Check if we're on the main branch
-    const branchCheck = await this.runStep('Branch Check', 'git branch --show-current');
+    const branchCheck = await this.runStep('Branch Check,git branch --show-current');
     if (branchCheck.success) {
       const currentBranch = branchCheck.output.trim();
-      if (currentBranch !== 'main') {
-        this.log(`⚠️  Not on main branch (current: ${currentBranch})`, 'WARNING');
-        this.results.warnings.push(`Not on main branch: ${currentBranch}`);
+      if (currentBranch !==main') {
+        this.log(`⚠️  Not on main branch (current: ${currentBranch})`,WARNING');
+        this.results.warnings.push(`Not on main branch: ${currentBranch});
       } else {
         this.log('✅ On main branch');
       }
@@ -124,33 +124,33 @@ class DeploymentAutomation {
   }
 
   async runTests() {
-    this.log('🧪 Running tests...');
+    this.log('🧪 Running tests...);
     
     // Run lint check
-    const lintCheck = await this.runStep('Lint Check', 'npm run lint');
+    const lintCheck = await this.runStep('Lint Check,npm run lint');
     if (!lintCheck.success) {
-      this.log('❌ Lint check failed', 'ERROR');
+      this.log('❌ Lint check failed,ERROR');
       return false;
     }
 
     // Run type check
-    const typeCheck = await this.runStep('Type Check', 'npm run type-check');
+    const typeCheck = await this.runStep('Type Check,npm run type-check');
     if (!typeCheck.success) {
-      this.log('❌ Type check failed', 'ERROR');
+      this.log('❌ Type check failed,ERROR');
       return false;
     }
 
     // Run build
-    const buildCheck = await this.runStep('Build Check', 'npm run build');
+    const buildCheck = await this.runStep('Build Check,npm run build');
     if (!buildCheck.success) {
-      this.log('❌ Build failed', 'ERROR');
+      this.log('❌ Build failed,ERROR');
       return false;
     }
 
     // Run smoke tests
-    const smokeTests = await this.runStep('Smoke Tests', 'npm run test:smoke');
+    const smokeTests = await this.runStep('Smoke Tests,npm run test:smoke');
     if (!smokeTests.success) {
-      this.log('❌ Smoke tests failed', 'ERROR');
+      this.log('❌ Smoke tests failed,ERROR');
       return false;
     }
 
@@ -158,19 +158,19 @@ class DeploymentAutomation {
   }
 
   async deployToNetlify() {
-    this.log('🚀 Deploying to Netlify...');
+    this.log('🚀 Deploying to Netlify...);
     
     // Check if Netlify CLI is installed
-    const netlifyCheck = await this.runStep('Netlify CLI Check', 'netlify --version');
+    const netlifyCheck = await this.runStep('Netlify CLI Check,netlify --version');
     if (!netlifyCheck.success) {
-      this.log('❌ Netlify CLI not found. Please install it first.', 'ERROR');
+      this.log('❌ Netlify CLI not found. Please install it first.,ERROR');
       return false;
     }
 
     // Deploy to Netlify
-    const deployResult = await this.runStep('Netlify Deploy', 'netlify deploy --prod --dir=dist');
+    const deployResult = await this.runStep('Netlify Deploy,netlify deploy --prod --dir=dist');
     if (!deployResult.success) {
-      this.log('❌ Netlify deployment failed', 'ERROR');
+      this.log('❌ Netlify deployment failed,ERROR');
       return false;
     }
 
@@ -178,19 +178,19 @@ class DeploymentAutomation {
   }
 
   async deployToVercel() {
-    this.log('🚀 Deploying to Vercel...');
+    this.log('🚀 Deploying to Vercel...);
     
     // Check if Vercel CLI is installed
-    const vercelCheck = await this.runStep('Vercel CLI Check', 'vercel --version');
+    const vercelCheck = await this.runStep('Vercel CLI Check,vercel --version');
     if (!vercelCheck.success) {
-      this.log('❌ Vercel CLI not found. Please install it first.', 'ERROR');
+      this.log('❌ Vercel CLI not found. Please install it first.,ERROR');
       return false;
     }
 
     // Deploy to Vercel
-    const deployResult = await this.runStep('Vercel Deploy', 'vercel --prod');
+    const deployResult = await this.runStep('Vercel Deploy,vercel --prod');
     if (!deployResult.success) {
-      this.log('❌ Vercel deployment failed', 'ERROR');
+      this.log('❌ Vercel deployment failed,ERROR');
       return false;
     }
 
@@ -198,21 +198,21 @@ class DeploymentAutomation {
   }
 
   async postDeploymentTasks() {
-    this.log('📋 Running post-deployment tasks...');
+    this.log('📋 Running post-deployment tasks...);
     
     // Generate deployment report
     this.generateReport();
     
     // Send notification (if configured)
     if (process.env.DEPLOYMENT_WEBHOOK_URL) {
-      await this.runStep('Send Notification', `curl -X POST -H "Content-Type: application/json" -d '{"message":"Deployment completed successfully","timestamp":"${new Date().toISOString()}"}' ${process.env.DEPLOYMENT_WEBHOOK_URL}`);
+      await this.runStep('Send Notification, `curl -X POST -H "Content-Type: application/json" -d '{"message":"Deployment completed successfully","timestamp":"${new Date().toISOString()}"} ${process.env.DEPLOYMENT_WEBHOOK_URL});
     }
 
     return true;
   }
 
   async runDeployment(platform = 'netlify') {
-    this.log('🚀 Starting Deployment Automation...');
+    this.log('🚀 Starting Deployment Automation...);
     
     // Ensure logs directory exists
     const logsDir = path.dirname(this.logFile);
@@ -222,37 +222,37 @@ class DeploymentAutomation {
 
     // Clear previous logs
     if (fs.existsSync(this.logFile)) {
-      fs.writeFileSync(this.logFile, '');
+      fs.writeFileSync(this.logFile, );
     }
 
     try {
       // Pre-deployment checks
       const preChecks = await this.preDeploymentChecks();
       if (!preChecks) {
-        this.log('❌ Pre-deployment checks failed', 'ERROR');
+        this.log('❌ Pre-deployment checks failed,ERROR');
         return false;
       }
 
       // Run tests
       const testsPassed = await this.runTests();
       if (!testsPassed) {
-        this.log('❌ Tests failed, aborting deployment', 'ERROR');
+        this.log('❌ Tests failed, aborting deployment,ERROR');
         return false;
       }
 
       // Deploy to specified platform
       let deploySuccess = false;
-      if (platform === 'netlify') {
+      if (platform ===netlify') {
         deploySuccess = await this.deployToNetlify();
-      } else if (platform === 'vercel') {
+      } else if (platform ===vercel') {
         deploySuccess = await this.deployToVercel();
       } else {
-        this.log(`❌ Unknown platform: ${platform}`, 'ERROR');
+        this.log(`❌ Unknown platform: ${platform},ERROR');
         return false;
       }
 
       if (!deploySuccess) {
-        this.log('❌ Deployment failed', 'ERROR');
+        this.log('❌ Deployment failed,ERROR');
         return false;
       }
 
@@ -260,12 +260,12 @@ class DeploymentAutomation {
       await this.postDeploymentTasks();
 
       this.results.success = true;
-      this.log('🎉 Deployment completed successfully!');
+      this.log('🎉 Deployment completed successfully!);
       
       return true;
     } catch (error) {
-      this.log(`❌ Deployment automation failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Deployment automation: ${error.message}`);
+      this.log(`❌ Deployment automation failed: ${error.message},ERROR');
+      this.results.errors.push(`Deployment automation: ${error.message});
       return false;
     }
   }
@@ -281,42 +281,40 @@ class DeploymentAutomation {
         totalSteps: this.results.steps.length,
         successfulSteps: this.results.steps.filter(s => s.success).length,
         failedSteps: this.results.steps.filter(s => !s.success).length,
-        duration: this.results.duration + 'ms'
-      }
+        duration: this.results.duration +ms}
     };
 
-    const reportFile = path.join(this.projectRoot, 'deployment-report.json');
+    const reportFile = path.join(this.projectRoot,deployment-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📊 Detailed report saved to: ${reportFile}`);
+    this.log(`📊 Detailed report saved to: ${reportFile});
     
     // Also save a human-readable summary
-    const summaryFile = path.join(this.projectRoot, 'deployment-summary.txt');
+    const summaryFile = path.join(this.projectRoot,deployment-summary.txt');
     const summary = `
 Deployment Automation Report
-===========================
-Start Time: ${this.results.startTime}
+====================Start Time: ${this.results.startTime}
 End Time: ${this.results.endTime}
 Duration: ${this.results.duration}ms
-Success: ${this.results.success ? '✅' : '❌'}
+Success: ${this.results.success ? '✅: ❌}
 
 Steps Executed:
-${this.results.steps.map(s => `- ${s.name}: ${s.success ? '✅' : '❌'} (${s.duration}ms)`).join('\n')}
+${this.results.steps.map(s => `- ${s.name}: ${s.success ? '✅: ❌} (${s.duration}ms)`).join('\n')}
 
-${this.results.errors.length > 0 ? `\nErrors:\n${this.results.errors.map(e => `- ${e}`).join('\n')}` : ''}
-${this.results.warnings.length > 0 ? `\nWarnings:\n${this.results.warnings.map(w => `- ${w}`).join('\n')}` : ''}
+${this.results.errors.length > 0 ? `\nErrors:\n${this.results.errors.map(e => `- ${e}).join('\n')}` : }
+${this.results.warnings.length > 0 ? `\nWarnings:\n${this.results.warnings.map(w => `- ${w}).join('\n')}` : }
 `;
     
     fs.writeFileSync(summaryFile, summary);
-    this.log(`📋 Summary saved to: ${summaryFile}`);
+    this.log(`📋 Summary saved to: ${summaryFile});
   }
 }
 
 // Handle command line arguments
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
-  const platform = process.argv[2] || 'netlify';
-  const command = process.argv[3] || 'run';
+  const platform = process.argv[2] ||netlify';
+  const command = process.argv[3] ||run';
 
   switch (command) {
     case "run":

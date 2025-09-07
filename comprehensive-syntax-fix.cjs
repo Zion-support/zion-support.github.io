@@ -1,35 +1,35 @@
 
 
-#!/usr/bin/env node;
-const fs = require('fs');''
-const path = require('path');'
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
           content = content.replace(/
-)'
-console.log('🔧 Running comprehensive syntax fix...');'
+)
+console.log('🔧 Running comprehensive syntax fix...);
 // Fix specific files with known issues;
 const fixes = [
-  {'
-    file: '/workspace/lib/analytics.ts','
+  {
+    file: /workspace/lib/analytics.ts,
     content: `// Analytics utilities;
-export const trackEvent = (event: string, data?: any) => {'
-  if (typeof window !== 'undefined' && window.gtag) {''
-    window.gtag('event', event, data);'
+export const trackEvent = (event: string, data?: any) => {
+  if (typeof window !==undefined && window.gtag) {
+    window.gtag('event, event, data);
   }
 };
 
-export const trackPageView = (url: string) => {'
-  if (typeof window !== 'undefined' && window.gtag) {''
-    window.gtag('config', 'GA_MEASUREMENT_ID', {'
-      page_path: url,)
+export const trackPageView = (url: string) => {
+  if (typeof window !==undefined && window.gtag) {
+    window.gtag('config,GA_MEASUREMENT_ID, {
+      page_path: url)
     });
   }
 };`,
   },
-  {'
-    file: '/workspace/pages/404.tsx',''
-    content: `import React from 'react';''
-import Head from 'next/head';''
-import Link from 'next/link';'
+  {
+    file: /workspace/pages/404.tsx,
+    content: `import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function Custom404() {
   return (
     <>
@@ -43,8 +43,8 @@ export default function Custom404() {
 </div>"
         <div className="text-center">"
 </div>"
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>""
-          <p className="text-xl text-gray-600 mb-8">Page not found</p>""
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>
           <Link href="/" className="text-blue-600 hover:text-blue-800">"
 </Link>
           </Link>
@@ -55,8 +55,8 @@ export default function Custom404() {
 }`,
   },
   {"
-    file: '/workspace/src/App.tsx',''
-    content: `import React from 'react';'
+    file: /workspace/src/App.tsx,
+    content: `import React from 'react';
 export default function App() {
   return ('
     <div className="App">"
@@ -104,49 +104,49 @@ export default class ErrorBoundary extends Component<Props, State> {
 );`,
   },
   {"
-    file: '/workspace/src/utils/accessibility-checker.ts','
+    file: /workspace/src/utils/accessibility-checker.ts,
     content: `// Accessibility checker utilities;
-export const checkAccessibility = () => {'
-  console.log('Checking accessibility...');'
+export const checkAccessibility = () => {
+  console.log('Checking accessibility...);
 };
 
-export const validateAriaLabels = () => {'
-  console.log('Validating ARIA labels...');'
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...);
 };`,
   },
-  {'
-    file: '/workspace/src/utils/monitoring.ts','
+  {
+    file: /workspace/src/utils/monitoring.ts,
     content: `// Monitoring utilities;
-export const logEvent = (event: string) => {'
-  console.log('Event logged:', event);'
+export const logEvent = (event: string) => {
+  console.log('Event logged: , event);
 };
 
-export const trackPerformance = () => {'
-  console.log('Tracking performance...');'
+export const trackPerformance = () => {
+  console.log('Tracking performance...);
 };`,
   },
-  {'
-    file: '/workspace/src/utils/performance-optimizer.ts','
+  {
+    file: /workspace/src/utils/performance-optimizer.ts,
     content: `// Performance optimizer utilities;
-export const optimizeImages = () => {'
-  console.log('Optimizing images...');'
+export const optimizeImages = () => {
+  console.log('Optimizing images...);
 };
 
-export const lazyLoadComponents = () => {'
-  console.log('Lazy loading components...');'
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...);
 };`,
   },
-  {'
-    file: '/workspace/src/utils/seo-optimizer.ts','
+  {
+    file: /workspace/src/utils/seo-optimizer.ts,
     content: `// SEO optimizer utilities;
-export const generateMetaTags = () => {'
-  console.log('Generating meta tags...');'
+export const generateMetaTags = () => {
+  console.log('Generating meta tags...);
 };
 
-export const optimizeHeadings = () => {'
-  console.log('Optimizing headings...');'
+export const optimizeHeadings = () => {
+  console.log('Optimizing headings...);
 };`,
-  },]
+  }]
 ];
 
 let fixedCount = 0;
@@ -155,7 +155,7 @@ for (const fix of fixes) {
   // TODO: Implement
 }
     fs.writeFileSync(fix.file, fix.content);
-    console.log(`Fixed: ${fix.file}`);
+    console.log(`Fixed: ${fix.file});
     fixedCount++;
   } catch (error) {
     console.error(`Error fixing ${fix.file}:`, error.message);
@@ -166,4 +166,4 @@ console.log(`✅ Fixed ${fixedCount} files`);
 
           content = content.replace(/
 
-)'
+)

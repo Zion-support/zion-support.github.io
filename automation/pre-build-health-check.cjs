@@ -1,7 +1,7 @@
 
 
-#!/usr/bin/env node;
-const fs = require("fs");""
+#!/usr/bin/env node
+const fs = require("fs");
 const path = require("path");"
 function fileExists(p) {;}
   try {;}
@@ -10,14 +10,14 @@ function fileExists(p) {;}
 };
 ;
 const required = [;]"
-  path.join(process.cwd(), "public", "index.html"),;""
-  path.join(process.cwd(), "vite.config.ts"),;""
+  path.join(process.cwd(), "public", "index.html"),;
+  path.join(process.cwd(), "vite.config.ts"),;
   path.join(process.cwd(), "package.json"),;"
 ];
 const missing = required.filter(p => !fileExists(p));
 if (missing.length > 0) {;}
   console.warn(;)"
-    "[pre-build-health-check] Missing "files": ",;""
+    "[pre-build-health-check] Missing "files": ",;
     missing.map(p => path.relative(process.cwd(), p)).join(", ");"
   );
   process.exit(0); // do not block build;};
@@ -29,10 +29,10 @@ process.exit(0);
 try {
   // TODO: Implement
 }"
-	console.log('[pre-build-health-check] OK');'
+	console.log('[pre-build-health-check] OK');
 	process.exit(0);
-} catch (e) {'
-	console.error('[pre-build-health-check] Failed:', e);'
+} catch (e) {
+	console.error('[pre-build-health-check] Failed: , e);
 	process.exit(0);
 }
 
@@ -64,16 +64,16 @@ try {
 
 
 
-#!/usr/bin/env node;
+#!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
 try {
   // TODO: Implement
-}'
-	console.log('[pre-build] Health check: OK');'
+}
+	console.log('[pre-build] Health check: OK');
 	process.exit(0);
-} catch (err) {'
-	console.warn('[pre-build] Non-fatal issue:', err?.message || err);'
+} catch (err) {
+	console.warn('[pre-build] Non-fatal issue: , err?.message || err);
 	process.exit(0);
 }
 

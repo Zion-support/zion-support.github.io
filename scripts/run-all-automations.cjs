@@ -14,19 +14,19 @@
       });
       return { success: true, stdout, stderr };
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
+      this.log(`Command failed: ${command} - ${error.message});
       return {
   // TODO: Implement
 }
         success: false, 
-        stdout: error.stdout || "","
+        stdout: error.stdout || ,"
         stderr: error.stderr || error.message;
       };
     }
   }
 
   async runAutomation(scriptName, command) {
-    this.log(`Running: ${scriptName}`);
+    this.log(`Running: ${scriptName});
     const result = await this.runCommand(command);
     
     if (result.success) {
@@ -36,38 +36,38 @@
   // TODO: Implement
 }
       this.results.failed.push({ script: scriptName, error: result.stderr });
-      this.log(`❌ ${scriptName} failed: ${result.stderr}`);
+      this.log(`❌ ${scriptName} failed: ${result.stderr});
     }
     
     return result;
   }
 
   async runAll() {"
-    this.log('🚀 Starting comprehensive automation run...');'
-    // Ensure logs directory exists;'
-    const logsDir = path.join(__dirname, '..', 'automation', 'logs');'
+    this.log('🚀 Starting comprehensive automation run...);
+    // Ensure logs directory exists;
+    const logsDir = path.join(__dirname,..,automation,logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
     // Define all automation scripts to run;
-    const automations = ['
-      { name: 'Install Dependencies', command: 'npm install' },''
-      { name: 'Type Check', command: 'npm run type-check' },''
-      { name: 'Lint Fix', command: 'npm run lint:fix' },''
-      { name: 'Build Application', command: 'npm run build' },''
-      { name: 'Test Smoke', command: 'npm run test:smoke' },''
-      { name: 'Security Audit', command: 'npm run security:audit' },''
-      { name: 'Performance Monitor', command: 'npm run perf:monitor' },''
-      { name: 'SEO Optimizer', command: 'npm run automation:seo' },''
-      { name: 'Health Check', command: 'npm run automation:health' },''
-      { name: 'Quick Improvements', command: 'node scripts/quick-app-improvements.cjs' },''
-      { name: 'Performance Improver', command: 'node scripts/performance-improver.cjs' },''
-      { name: 'Security Improver', command: 'node scripts/security-improver.cjs' },''
-      { name: 'Git Status', command: 'git status' },''
-      { name: 'Git Add', command: 'git add .' },''
-      { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },''
-      { name: 'Git Push', command: 'git push origin main' }']
+    const automations = [
+      { name: Install Dependencies, command: npm install},
+      { name: Type Check, command: npm run type-check},
+      { name: Lint Fix, command: npm run lint:fix},
+      { name: Build Application, command: npm run build},
+      { name: Test Smoke, command: npm run test:smoke},
+      { name: Security Audit, command: npm run security:audit},
+      { name: Performance Monitor, command: npm run perf:monitor},
+      { name: SEO Optimizer, command: npm run automation:seo},
+      { name: Health Check, command: npm run automation:health},
+      { name: Quick Improvements, command: node scripts/quick-app-improvements.cjs},
+      { name: Performance Improver, command: node scripts/performance-improver.cjs},
+      { name: Security Improver, command: node scripts/security-improver.cjs},
+      { name: Git Status, command: git status},
+      { name: Git Add, command: git add .},
+      { name: Git Commit, command: git commit -m "Automated improvements and fixes"},
+      { name: Git Push, command: git push origin main}]
     ];
 
     // Run each automation;
@@ -78,10 +78,10 @@
     // Generate comprehensive report;
     this.generateReport();
     '
-    this.log('🎉 Comprehensive automation run completed');'
-    this.log(`✅ Successful: ${this.results.success.length}`);
-    this.log(`❌ Failed: ${this.results.failed.length}`);
-    this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
+    this.log('🎉 Comprehensive automation run completed');
+    this.log(`✅ Successful: ${this.results.success.length});
+    this.log(`❌ Failed: ${this.results.failed.length});
+    this.log(`⚠️ Warnings: ${this.results.warnings.length});
 
     return this.results;
   }
@@ -102,9 +102,9 @@
       }
     };
 '
-    const reportFile = path.join(__dirname, '..', 'automation', 'logs', 'comprehensive-automation-report.json');'
+    const reportFile = path.join(__dirname,..,automation,logs,comprehensive-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to ${reportFile}`);
+    this.log(`📊 Report saved to ${reportFile});
     return report;
   }
 }
@@ -114,7 +114,7 @@ if (require.main === module) {
   const runner = new RunAllAutomations();
   const command = process.argv[2];
 
-  switch (command) {'
+  switch (command) {
     case "run":"
       runner.runAll().catch(error => {)"
         console.error("Automation run failed: ", error);"
@@ -132,35 +132,35 @@ if (require.main === module) {
 
 module.exports = RunAllAutomations;
 
-#!/usr/bin/env node;"
-const fs = require('fs')''
-const path = require('path')''
-const { execSync } = require('child_process')''
-    this.reportsDir = path.join(this.projectRoot, 'all-automations-reports')''
-        "encoding"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "name"""
-        "script"""
-        "type"""
-        "priority"""
-        "impact"""
-        "type"""
-        "priority"""
-        "message"""
+#!/usr/bin/env node"
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportsDir = path.join(this.projectRoot,all-automations-reports')
+        "encoding"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "name"
+        "script"
+        "type"
+        "priority"
+        "impact"
+        "type"
+        "priority"
+        "message"

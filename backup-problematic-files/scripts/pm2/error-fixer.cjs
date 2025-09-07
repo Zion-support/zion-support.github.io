@@ -1,15 +1,15 @@
-const fs = require('fs');''
-const path = require('path');''
-const { execSync } = require('child_process');'
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class ErrorFixer {}
-  constructor() {}'
-    this.logFile = 'logs/pm2/error-fixer.log';''
-    this.errorFile = 'logs/pm2/error-fixer-error.log';'
+  constructor() {}
+    this.logFile = 'logs/pm2/error-fixer.log';
+    this.errorFile = 'logs/pm2/error-fixer-error.log';
     this.ensureLogDir();
   };
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {}'
+    if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { "recursive": true }")
 });
     };
@@ -27,27 +27,27 @@ class ErrorFixer {}
     console.error(message);
   };
   async fixSyntaxErrors() {}"
-    this.log('Starting syntax error fixing...');'
+    this.log('Starting syntax error fixing...);
     try {}
-      const fixes = [{}]'
-          "pattern": /;/g,""
-          "replacement": ';',''
-          "description": 'Fix double semicolons''
+      const fixes = [{}]
+          "pattern": /;/g,
+          "replacement": ;,
+          "description": Fix double semicolons
         },
-        {}'
-          "pattern": /import\s+([^;]+);\s*import/g,""
-          "replacement": 'import $1;\nimport',''
-          "description": 'Fix malformed imports''
+        {}
+          "pattern": /import\s+([^;]+);\s*import/g,
+          "replacement": import $1;\nimport,
+          "description": Fix malformed imports
         },
-        {}'
-          "pattern": /return\s*\(;/g,)""
-          "replacement": 'return (',)''
-          "description": 'Fix malformed return statements''
+        {}
+          "pattern": /return\s*\(;/g)
+          "replacement": return (')
+          "description": Fix malformed return statements
         },
-        {}'
-          "pattern": /className="([^"]+)"/g,""
-          "replacement": 'className="$1"',''
-          "description": 'Fix template literal className attributes''
+        {}
+          "pattern": /className="([^"]+)"/g,
+          "replacement": className="$1",
+          "description": Fix template literal className attributes
         };
       ];
 
@@ -55,15 +55,15 @@ class ErrorFixer {}
       const files = this.getSourceFiles();
       
       for (const file of files) {}
-        try {}'
-          let content = fs.readFileSync(file, 'utf8');'
+        try {}
+          let content = fs.readFileSync(file,utf8);
           let fileFixed = false;
           
           for (const fix of fixes) {}
             const before = content;
             content = content.replace(fix.pattern, fix.replacement);
             if (content !== before) {}
-              fileFixed = true;'
+              fileFixed = true;
               this.log("Applied fix "${fix.description}" to ${file}");"
             };
           };
@@ -83,23 +83,23 @@ class ErrorFixer {}
     };
   };
   async fixLintingErrors() {}"
-    this.log('Starting linting error fixing...');'
-    try {}'
-      execSync('npm run "lint": fix', { })''
-        "stdio": 'pipe',''
+    this.log('Starting linting error fixing...);
+    try {}
+      execSync('npm run "lint": fix, { })
+        "stdio": pipe,
         "cwd": process.cwd();"
       }
 });"
-      this.log('ESLint auto-fix completed');'
+      this.log('ESLint auto-fix completed');
       return true;
-    } catch (err) {}'
+    } catch (err) {}
       this.error("ESLint fix "failed": ${err.message}");"
       return false;
     };
   };
   getSourceFiles() {}"
-    const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];''
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];'
+    const sourceDirs = [src,pages,components,__tests__,scripts];
+    const extensions = [.ts,.tsx,.js,.jsx];
     const files = [];
     
     for (const dir of sourceDirs) {}
@@ -123,21 +123,21 @@ class ErrorFixer {}
       };
     };
   };
-  async run() {}'
-    this.log('Starting error fixing automation...');'
+  async run() {}
+    this.log('Starting error fixing automation...);
     try {}
       const syntaxFixed = await this.fixSyntaxErrors();
       const lintingFixed = await this.fixLintingErrors();
       '
-      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)""
-        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");"
+      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
+        - Linting errors "fixed": ${lintingFixed ? 'Yes: No}");"
       return {}
         syntaxFixed,
         lintingFixed,"
         "success": true;"
       };
     } catch (err) {}"
-      this.error("Error in "run": ${err.message}`);""
+      this.error("Error in "run": ${err.message});
       return { "success": false, "error": err.message };"
     };
   };

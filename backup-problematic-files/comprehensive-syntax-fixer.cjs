@@ -1,9 +1,9 @@
-#!/usr/bin/env node;
-const fs = require('fs');''
-const path = require('path');'
-#!/usr/bin/env node;'
-const fs = require('fs');''
-const path = require('path');'
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+#!/usr/bin/env node'
+const fs = require('fs');
+const path = require('path');
 class ComprehensiveSyntaxFixer {
   // TODO: Implement
 }
@@ -13,10 +13,10 @@ class ComprehensiveSyntaxFixer {
     this.totalErrors = 0;
   }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message});
   }
-  async fixAllSyntaxErrors() {'
-    this.log('🔧 Starting comprehensive syntax error fixing...');'
+  async fixAllSyntaxErrors() {
+    this.log('🔧 Starting comprehensive syntax error fixing...);
     try {
   // TODO: Implement
 }
@@ -27,9 +27,9 @@ class ComprehensiveSyntaxFixer {
         await this.fixFileSyntax(file);
       }
       this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
-      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
+      this.log(`📊 Total errors fixed: ${this.totalErrors});
     } catch (error) {
-      this.log(`❌ Error during syntax fixing: ${error.message}`);
+      this.log(`❌ Error during syntax fixing: ${error.message});
       throw error;
     }
   }
@@ -45,8 +45,8 @@ class ComprehensiveSyntaxFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          // Skip node_modules and other irrelevant directories;'
-          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {'
+          // Skip node_modules and other irrelevant directories;
+          if (![node_modules,.git,.next,dist,build].includes(item)) {
             scanDirectory(fullPath);
           }
         } else if (this.isCodeFile(item)) {
@@ -60,24 +60,24 @@ class ComprehensiveSyntaxFixer {
   }
 
   isCodeFile(filename) {
-    const ext = path.extname(filename);'
-    return ['.ts', '.tsx', '.js', '.jsx', '.cjs', '.mjs'].includes(ext);'
+    const ext = path.extname(filename);
+    return [.ts,.tsx,.js,.jsx,.cjs,.mjs].includes(ext);
   }
 
   async fixFileSyntax(filePath) {
     try {
   // TODO: Implement
-}'
-      const content = fs.readFileSync(filePath, 'utf8');'
+}
+      const content = fs.readFileSync(filePath,utf8);
       const fixedContent = this.fixSyntaxErrors(content, filePath);
       
-      if (content !== fixedContent) {'
-        fs.writeFileSync(filePath, fixedContent, 'utf8');'
+      if (content !== fixedContent) {
+        fs.writeFileSync(filePath, fixedContent,utf8);
         this.fixedFiles++;
-        this.log(`✅ Fixed syntax errors in ${path.relative(this.projectRoot, filePath)}`);
+        this.log(`✅ Fixed syntax errors in ${path.relative(this.projectRoot, filePath)});
       }
     } catch (error) {
-      this.log(`⚠️  Could not fix ${path.relative(this.projectRoot, filePath)}: ${error.message}`);
+      this.log(`⚠️  Could not fix ${path.relative(this.projectRoot, filePath)}: ${error.message});
     }
   }
 
@@ -85,34 +85,34 @@ class ComprehensiveSyntaxFixer {
     let fixed = content;
     let errorCount = 0;
 
-    // Fix semicolon issues in object properties;'
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*([^,;}\n]*);/g, '$1: $2, $3,');''
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*$/gm, '$1: $2,');'
-    // Fix object property semicolons to commas;'
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),''
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*}/g, '$1: $2\n  }');'
-    // Fix array element semicolons;'
-    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');'
-    // Fix string concatenation issues;'
-    fixed = fixed.replace(/(\w+):\s*'([^']+)';\s*(\w+):/g, '$1: \'$2\',\n    $3: '),'
-    // Fix function parameter semicolons;'
-    fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2, $3)');''
-    fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2)');'
-    // Fix object literal semicolons in function calls;'
-    fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');'
-    // Fix specific patterns;'
-    fixed = fixed.replace(/id:\s*'([^']+)';\s*title:/g, 'id: \'$1\',\n      title: '), fixed = fixed.replace(/title:\s*'([^']+)',\s*description:/g, 'title: \'$1\',\n      description: '), fixed = fixed.replace(/description:\s*'([^']+)',\s*path:/g, 'description: \'$1\',\n      path: '),'
-    // Fix array literals;'
-    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');'
-    // Fix specific API patterns;'
-    fixed = fixed.replace(/activeUsers30d:\s*(\d+);/g, 'activeUsers30d: $1,');''
-    fixed = fixed.replace(/gmv:\s*(\d+);/g, 'gmv: $1,');''
-    fixed = fixed.replace(/mrr:\s*(\d+);/g, 'mrr: $1,');''
-    fixed = fixed.replace(/yoyGrowth:\s*([\d.]+);/g, 'yoyGrowth: $1,');'
-    // Fix string literals in objects;'
-    fixed = fixed.replace(/title:\s*'([^']+)';\s*content:/g, 'title: \'$1\',\n    content: '),'
-    // Fix long string concatenations;'
-    fixed = fixed.replace(/'([^']+)';\s*'([^']+)'\]/g, '\'$1\',\n    \'$2\'\n  ]');'
+    // Fix semicolon issues in object properties;
+    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*([^,;}\n]*);/g,$1: $2, $3,);
+    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*$/gm,$1: $2,);
+    // Fix object property semicolons to commas;
+    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g,$1: $2,\n    $3: ),
+    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*}/g,$1: $2\n  });
+    // Fix array element semicolons;
+    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g,[\n    $1,\n    $2\n  ]);
+    // Fix string concatenation issues;
+    fixed = fixed.replace(/(\w+):\s*([^]+);\s*(\w+):/g,$1: \'$2\,\n    $3: ),
+    // Fix function parameter semicolons;
+    fixed = fixed.replace(/\(\s*([^)]+);\s*([^)]+);\s*([^)]+);\s*\)/g,($1, $2, $3));
+    fixed = fixed.replace(/\(\s*([^)]+);\s*([^)]+);\s*\)/g,($1, $2));
+    // Fix object literal semicolons in function calls;
+    fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g,{\n    $1,\n    $2\n  });
+    // Fix specific patterns;
+    fixed = fixed.replace(/id:\s*([^]+);\s*title:/g,id: \'$1\,\n      title: ), fixed = fixed.replace(/title:\s*([^]+),\s*description:/g,title: \'$1\,\n      description: ), fixed = fixed.replace(/description:\s*([^]+),\s*path:/g,description: \'$1\,\n      path: ),
+    // Fix array literals;
+    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g,[\n    $1,\n    $2\n  ]);
+    // Fix specific API patterns;
+    fixed = fixed.replace(/activeUsers30d:\s*(\d+);/g,activeUsers30d: $1,);
+    fixed = fixed.replace(/gmv:\s*(\d+);/g,gmv: $1,);
+    fixed = fixed.replace(/mrr:\s*(\d+);/g,mrr: $1,);
+    fixed = fixed.replace(/yoyGrowth:\s*([\d.]+);/g,yoyGrowth: $1,);
+    // Fix string literals in objects;
+    fixed = fixed.replace(/title:\s*([^]+);\s*content:/g,title: \'$1\,\n    content: ),
+    // Fix long string concatenations;
+    fixed = fixed.replace(/([^]+);\s*([^]+)\]/g,\'$1\,\n    \'$2\'\n  ]);
     // Count errors fixed;
     const originalSemicolons = (content.match(/;/g) || []).length;
     const fixedSemicolons = (fixed.match(/;/g) || []).length;
@@ -141,7 +141,7 @@ fixer.fixAllSyntaxErrors().catch(console.error);
     if (this.errors.length > 0) {;
   this.log(`⚠️  ${this.errors.length} errors occurred:`);
       this.errors.forEach(error => {;)
-  this.log(`   - ${error.file}: ${error.error}`);,
+  this.log(`   - ${error.file}: ${error.error});,
 });,
 }
 
@@ -167,26 +167,26 @@ fixer.fixAllSyntaxErrors().catch(console.error);
 }
   }
 
-  async createCleanESLintConfig() {;'
+  async createCleanESLintConfig() {;
   this.log("🔧 Creating clean ESLint configuration...");"
     const eslintConfig = `module.exports = {;"
-  extends: [ "next/core-web-vitals",""
+  extends: [ "next/core-web-vitals",
     "eslint: recommended","]"
-    "@typescript-eslint/recommended" ],""
-  parser: "@typescript-eslint/parser",""
+    "@typescript-eslint/recommended" ],
+  parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],"
   rules: {;"
-  "@typescript-eslint/no-unused-vars": "warn",""
-    "@typescript-eslint/no-explicit-any": "warn",""
+  "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "react-hooks/exhaustive-deps": "warn";,"
 },"
   ignorePatterns: ["node_modules/", ".next/", "out/"];,"
 };`;
     try {;"
-  fs.writeFileSync(".eslintrc.js", eslintConfig);""
+  fs.writeFileSync(".eslintrc.js", eslintConfig);
       this.log("✅ Created clean ESLint configuration");,"
 } catch (error) {;
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
+  this.log(`❌ Error creating ESLint config: ${error.message});,
 }
   }
 
@@ -199,7 +199,7 @@ fixer.fixAllSyntaxErrors().catch(console.error);
       this.log("🎉 Comprehensive syntax fixing completed successfully");"
       return fixResult;,
 } catch (error) {;
-  this.log(`💥 Syntax fixing failed: ${error.message}`);
+  this.log(`💥 Syntax fixing failed: ${error.message});
       throw error;,
 }
   }

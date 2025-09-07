@@ -1,28 +1,28 @@
             // Simple conflict resolution - take the incoming change;
             fs.writeFileSync(file, resolved);
-            execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });'
-            this.log(`✅ Auto-resolved conflicts in: ${file}`);
+            execSync(`git add ${file}, { cwd: this.projectRoot, stdio: pipe});
+            this.log(`✅ Auto-resolved conflicts in: ${file});
           }
         }
 
         // Commit the resolution;
         try {
   // TODO: Implement
-}'
-          execSync('git commit -m "fix: resolve merge conflicts"', {'
-            cwd: this.projectRoot,'
-            stdio: 'pipe'')
-          });'
-          this.log('✅ Merge conflicts resolved and committed');'
+}
+          execSync('git commit -m "fix: resolve merge conflicts", {
+            cwd: this.projectRoot,
+            stdio: pipe)
+          });
+          this.log('✅ Merge conflicts resolved and committed');
           return true;
         } catch (error) {
-          this.log(`Warning: Could not commit conflict resolution: ${error.message}`);
+          this.log(`Warning: Could not commit conflict resolution: ${error.message});
         }
       }
 
       return false;
     } catch (error) {
-      this.log(`❌ Error resolving merge conflicts: ${error.message}`);
+      this.log(`❌ Error resolving merge conflicts: ${error.message});
       return false;
     }
   }
@@ -46,8 +46,8 @@
       report.recommendations.push(`Branch is ${report.branchStatus.ahead} commits ahead of origin. Consider pushing changes.`);
     }
 
-    if (report.branchStatus && report.branchStatus.hasChanges) {'
-      report.recommendations.push('Working directory has uncommitted changes. Consider committing or stashing them.');'
+    if (report.branchStatus && report.branchStatus.hasChanges) {
+      report.recommendations.push('Working directory has uncommitted changes. Consider committing or stashing them.);
     }
 
     const oldBranches = report.localBranches.filter(branch =>)
@@ -72,14 +72,14 @@
       }
 
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`📊 Workflow report saved: ${this.reportFile}`);
+      this.log(`📊 Workflow report saved: ${this.reportFile});
     } catch (error) {
-      this.log(`Error saving report: ${error.message}`);
+      this.log(`Error saving report: ${error.message});
     }
   }
 
-  async run() {'
-    this.log('🚀 Git Workflow Automator starting...');'
+  async run() {
+    this.log('🚀 Git Workflow Automator starting...);
     try {
   // TODO: Implement
 }
@@ -96,16 +96,16 @@
       await this.resolveMergeConflicts();
 
       // Log summary;
-      this.log(`📊 Workflow report generated for branch: ${report.currentBranch}`);
+      this.log(`📊 Workflow report generated for branch: ${report.currentBranch});
 
-      if (report.recommendations.length > 0) {'
-        this.log('💡 Recommendations:');'
-        report.recommendations.forEach(rec => this.log(`   - ${rec}`));
+      if (report.recommendations.length > 0) {
+        this.log('💡 Recommendations: );
+        report.recommendations.forEach(rec => this.log(`   - ${rec}));
       }
 '
-      this.log('✅ Git Workflow Automator completed successfully');'
+      this.log('✅ Git Workflow Automator completed successfully');
     } catch (error) {
-      this.log(`❌ Git Workflow Automator failed: ${error.message}`);
+      this.log(`❌ Git Workflow Automator failed: ${error.message});
       process.exit(1);
     }
   }
@@ -116,73 +116,73 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
-module.exports = GitWorkflowAutomator;'
-'''
-execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})""
-            "stdio"""
-        "encoding"""
-  ', { "cwd": this.projectRoot, "stdio"}""
-  ', { "cwd": this.projectRoot, "stdio"}""
-      execSync(`git checkout -b ${branchName}`, { "cwd": this.projectRoot, "stdio"`})""
-  ', { "cwd": this.projectRoot, "stdio"}""
-        "stdio"""
-        "stdio"""
-  ', { "stdio"}""
-      const prTitle = title || `"feat"""
-        "stdio"""
-execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})""
-            "stdio"""
-      "branchPrefix"""
-      "protectedBranches"""
-      "mergeStrategy"""
-        "encoding": ';utf8, '}).trim()} "catch"""
-      "protectedBranches"""
-      "mergeStrategy"""
-        "encoding"""
-        "encoding"""
-        "encoding"""
-        "encoding"""
-        .filter("branch": => !branch.includes('HEAD';';))} "catch"""
-        "encoding"""
-        .filter("branch": => branch !== '';';)} "catch"""
-      execSync('git: checkout main';', { "cwd": this.projectRoo,t, "stdio"})""
-      execSync('"git": pull origin main';', { "cwd": this.projectRoo,t, "stdio"})""
-      execSync(`git: checkout -b ${branchName}`, { "cwd": this.projectRoo,t, "stdio"`})""
-      execSync('"git": add .';', { "cwd": this.projectRoo,t, "stdio"})""
-        "stdio"""
-        "encoding"""
-        "encoding"""
-      const branchName = """
-      execSync('git checkout main', { "cwd": this.projectRoot, "stdio"})""
-      execSync('git pull origin main', { "cwd": this.projectRoot, "stdio"})""
-      execSync(`git checkout -b ${branchName}`, { "cwd": this.projectRoot, "stdio"`})""
-      execSync('git add .', { "cwd": this.projectRoot, "stdio"})""
-        "stdio"""
-        "stdio"""
-        "stdio"""
-  gh --version', { "stdio": 'pipe})} "catch"""
-      const prTitle = title || `"feat"""
-        "encoding"""
-        "stdio"""
-  'git: checkout main', { "cwd": this.projectRoo,t, "stdio"}""
-  '"git": pull origin main', { "cwd": this.projectRoo,t, "stdio"}""
-          "stdio"""
-        execSync(""git")""
-          "stdio": ';pipe, '})} "else"""
-          "stdio"""
-  'git: push origin main', { "cwd": this.projectRoo,t, "stdio"}""
-      execSync("git: branch -d ${branchName}", { "cwd": this.projectRoo,t, "stdio"})""
-          "stdio": ';pipe, '})} "catch"""
-  'git pull origin main', { "cwd": this.projectRoot, "stdio"}""
-      'git push origin main', { "cwd": this.projectRoot, "stdio"}""
-          "encoding"""
-              "stdio"""
-  ' "Cleanup"""
-        "encoding"""
-          "encoding"""
-execSync(`"git": add ${file}`, { "cwd": this.projectRoo,t, "stdio"`})""
-            "stdio"""
-          this.log(' "Merge")""
-execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})""
-  git commit -m '"fix"""
-  git commit -m '"fix"""
+module.exports = GitWorkflowAutomator;
+'
+execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
+            "stdio"
+        "encoding"
+  , { "cwd": this.projectRoot, "stdio"}
+  , { "cwd": this.projectRoot, "stdio"}
+      execSync(`git checkout -b ${branchName}, { "cwd": this.projectRoot, "stdio"`})
+  , { "cwd": this.projectRoot, "stdio"}
+        "stdio"
+        "stdio"
+  , { "stdio"}
+      const prTitle = title || `"feat"
+        "stdio"
+execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
+            "stdio"
+      "branchPrefix"
+      "protectedBranches"
+      "mergeStrategy"
+        "encoding": ;utf8, }).trim()} "catch"
+      "protectedBranches"
+      "mergeStrategy"
+        "encoding"
+        "encoding"
+        "encoding"
+        "encoding"
+        .filter("branch": => !branch.includes('HEAD';;))} "catch"
+        "encoding"
+        .filter("branch": => branch !== ;;)} "catch"
+      execSync('git: checkout main';, { "cwd": this.projectRoo,t, "stdio"})
+      execSync('"git": pull origin main';, { "cwd": this.projectRoo,t, "stdio"})
+      execSync(`git: checkout -b ${branchName}, { "cwd": this.projectRoo,t, "stdio"`})
+      execSync('"git": add .;, { "cwd": this.projectRoo,t, "stdio"})
+        "stdio"
+        "encoding"
+        "encoding"
+      const branchName = "
+      execSync('git checkout main, { "cwd": this.projectRoot, "stdio"})
+      execSync('git pull origin main, { "cwd": this.projectRoot, "stdio"})
+      execSync(`git checkout -b ${branchName}, { "cwd": this.projectRoot, "stdio"`})
+      execSync('git add ., { "cwd": this.projectRoot, "stdio"})
+        "stdio"
+        "stdio"
+        "stdio"
+  gh --version, { "stdio": pipe})} "catch"
+      const prTitle = title || `"feat"
+        "encoding"
+        "stdio"
+  'git: checkout main, { "cwd": this.projectRoo,t, "stdio"}
+  '"git": pull origin main, { "cwd": this.projectRoo,t, "stdio"}
+          "stdio"
+        execSync(git")
+          "stdio": ;pipe, })} "else"
+          "stdio"
+  'git: push origin main, { "cwd": this.projectRoo,t, "stdio"}
+      execSync("git: branch -d ${branchName}", { "cwd": this.projectRoo,t, "stdio"})
+          "stdio": ;pipe, })} "catch"
+  'git pull origin main, { "cwd": this.projectRoot, "stdio"}
+      'git push origin main, { "cwd": this.projectRoot, "stdio"}
+          "encoding"
+              "stdio"
+  ' "Cleanup"
+        "encoding"
+          "encoding"
+execSync(`"git": add ${file}, { "cwd": this.projectRoo,t, "stdio"`})
+            "stdio"
+          this.log(' "Merge")
+execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
+  git commit -m '"fix"
+  git commit -m '"fix"

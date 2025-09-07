@@ -1,5 +1,5 @@
-const fs = require('fs');''
-const path = require('path');'
+const fs = require('fs');
+const path = require('path');
 function fixMergeConflicts(filePath) {
   try {
   // TODO: Implement
@@ -8,9 +8,9 @@ function fixMergeConflicts(filePath) {
     if (
 )
     ) {
-      console.log(`Fixing merge conflicts: in: ${filePath}`);
+      console.log(`Fixing merge conflicts: in: ${filePath});
 '
-      const lines = content.split('\n');'
+      const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
       let keepContent = false;
@@ -33,7 +33,7 @@ function fixMergeConflicts(filePath) {
         }
       }
 '
-      fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');'
+      fs.writeFileSync(filePath, fixedLines.join('\n'),utf8);
       return true;
     }
 
@@ -54,11 +54,11 @@ function processDirectory(dirPath) {
 
     if (stat.isDirectory()) {
       fixedCount += processDirectory(filePath);
-    } else if ()'
-      file.endsWith('.tsx') ||''
-      file.endsWith('.ts') ||''
-      file.endsWith('.jsx') ||''
-      file.endsWith('.js')'
+    } else if ()
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
     ) {
       if (fixMergeConflicts(filePath)) fixedCount++;
     }
@@ -67,7 +67,7 @@ function processDirectory(dirPath) {
   return fixedCount;
 }
 '
-console.log('Starting comprehensive merge conflict fixes...');''
-const fixedCount = processDirectory('.');'
+console.log('Starting comprehensive merge conflict fixes...);
+const fixedCount = processDirectory('.);
 console.log(`Fixed ${fixedCount} files`);
 '

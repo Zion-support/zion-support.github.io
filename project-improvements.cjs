@@ -1,24 +1,24 @@
-#!/usr/bin/env node;
-const fs = require('fs');''
-const path = require('path');''
-const { execSync } = require('child_process');''
-console.log('🚀 Starting project improvements...');'
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+console.log('🚀 Starting project improvements...);
 // Function to improve App.tsx;
-function improveAppTsx() {'
-  const appPath = 'App.tsx';'
-  if (fs.existsSync(appPath)) {'
-    console.log('📝 Improving App.tsx...');''
-    const content = `import React from 'react';''
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';''
-import ErrorBoundary from './src/components/ErrorBoundary';''
-import Header from './src/components/Header';''
-import Sidebar from './src/components/layout/Sidebar';''
-import Footer from './src/components/Footer';''
-import HomePage from './src/pages/Home';''
-import AboutPage from './src/pages/About';''
-import ContactPage from './src/pages/Contact';''
-import ServicesPage from './src/pages/Services';''
-import PricingPage from './src/pages/Pricing';'
+function improveAppTsx() {
+  const appPath = 'App.tsx';
+  if (fs.existsSync(appPath)) {
+    console.log('📝 Improving App.tsx...);
+    const content = `import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import Header from './src/components/Header';
+import Sidebar from './src/components/layout/Sidebar';
+import Footer from './src/components/Footer';
+import HomePage from './src/pages/Home';
+import AboutPage from './src/pages/About';
+import ContactPage from './src/pages/Contact';
+import ServicesPage from './src/pages/Services';
+import PricingPage from './src/pages/Pricing';
 // Main App component with improved structure and error handling;
 export default function App() {
   return (
@@ -95,48 +95,48 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 `;
   
   fs.writeFileSync(readmePath, content);"
-  console.log('✅ Comprehensive README created');'
+  console.log('✅ Comprehensive README created');
 }
 
 // Function to improve package.json scripts;
-function improvePackageJson() {'
-  const packagePath = 'package.json';'
-  if (fs.existsSync(packagePath)) {'
-    console.log('📝 Improving package.json scripts...');'
+function improvePackageJson() {
+  const packagePath = 'package.json';
+  if (fs.existsSync(packagePath)) {
+    console.log('📝 Improving package.json scripts...);
     try {
   // TODO: Implement
-}'
-      const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));'
+}
+      const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8));
       // Add improved scripts;
       packageJson.scripts = {
-        ...packageJson.scripts,'
-        "dev": "vite --host",""
-        "build": "vite build",""
-        "preview": "vite preview --port 4173",""
-        "lint": "eslint . --ext .ts,.tsx,.js,.jsx",""
-        "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",""
-        "type-check": "tsc --noEmit",""
-        "test": "jest",""
-        "test:watch": "jest --watch",""
-        "test:coverage": "jest --coverage",""
-        "verify": "npm run lint && npm run type-check && npm run build && npm run test",""
-        "clean": "rm -rf dist node_modules/.vite",""
-        "format": "prettier --write .",""
-        "format:check": "prettier --check .""
+        ...packageJson.scripts,
+        "dev": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview --port 4173",
+        "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+        "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+        "type-check": "tsc --noEmit",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "verify": "npm run lint && npm run type-check && npm run build && npm run test",
+        "clean": "rm -rf dist node_modules/.vite",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .
       };
       
       fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));"
-      console.log('✅ package.json scripts improved');'
-    } catch (error) {'
-      console.error('❌ Error improving package.json:', error.message);'
+      console.log('✅ package.json scripts improved');
+    } catch (error) {
+      console.error('❌ Error improving package.json: , error.message);
     }
   }
 }
 
 // Function to create a .gitignore file;
-function createGitignore() {'
-  const gitignorePath = '.gitignore';''
-  console.log('📝 Creating .gitignore...');'
+function createGitignore() {
+  const gitignorePath = '.gitignore';
+  console.log('📝 Creating .gitignore...);
   const content = `# Dependencies;
 node_modules/
 npm-debug.log*
@@ -189,8 +189,8 @@ jspm_packages/
 .rts2_cache_umd/
 
 # Optional REPL history;
-.node_repl_history;'
-# Output of 'npm pack''
+.node_repl_history;
+# Output of 'npm pack
 *.tgz;
 # Yarn Integrity file;
 .yarn-integrity;
@@ -222,35 +222,35 @@ temp/
 *.sw?
 `;
   
-  fs.writeFileSync(gitignorePath, content);'
-  console.log('✅ .gitignore created');'
+  fs.writeFileSync(gitignorePath, content);
+  console.log('✅ .gitignore created');
 }
 
 // Main execution;
 async function main() {
   try {
   // TODO: Implement
-}'
-    console.log('🔧 Starting project improvements...');'
+}
+    console.log('🔧 Starting project improvements...);
     // Run improvements;
     improveAppTsx();
     createComprehensiveReadme();
     improvePackageJson();
     createGitignore();
     '
-    console.log('\n✅ Project improvements completed!');''
-    console.log('\n📋 Summary of improvements:');''
-    console.log('- ✅ App.tsx structure improved');''
-    console.log('- ✅ Comprehensive README created');''
-    console.log('- ✅ Package.json scripts optimized');''
-    console.log('- ✅ .gitignore file created');''
-    console.log('\n🚀 Next steps:');''
-    console.log('1. Run npm install to update dependencies');''
-    console.log('2. Run npm run dev to start development server');''
-    console.log('3. Run npm run verify to check code quality');'
-  } catch (error) {'
-    console.error('❌ Error during improvements:', error.message);'
+    console.log('\n✅ Project improvements completed!);
+    console.log('\n📋 Summary of improvements: );
+    console.log('- ✅ App.tsx structure improved');
+    console.log('- ✅ Comprehensive README created');
+    console.log('- ✅ Package.json scripts optimized');
+    console.log('- ✅ .gitignore file created');
+    console.log('\n🚀 Next steps: );
+    console.log('1. Run npm install to update dependencies');
+    console.log('2. Run npm run dev to start development server');
+    console.log('3. Run npm run verify to check code quality');
+  } catch (error) {
+    console.error('❌ Error during improvements: , error.message);
   }
 }
 
-main();'
+main();

@@ -1,18 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Syntax Fix Launcher;
  * Launches syntax fixing operations;
  */
 
-const fs = require('fs');''
-const path = require('path');''
-const { execSync } = require('child_process');'
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class SyntaxFixLauncher {
   // TODO: Implement
 }
   constructor() {
-'
-    this.logsDir = path.join(__dirname, 'logs');'
+    this.logsDir = path.join(__dirname,logs');
     this.ensureLogsDir();
   }
 
@@ -24,11 +23,11 @@ class SyntaxFixLauncher {
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
+    console.log(`[${timestamp}] ${message});
   }
 
-  async quickFix() {'
-    this.log('🔧 Running quick syntax fixes...');'
+  async quickFix() {
+    this.log('🔧 Running quick syntax fixes...);
     try {
   // TODO: Implement
 }
@@ -38,24 +37,18 @@ class SyntaxFixLauncher {
       // Fix common syntax errors;
       this.fixCommonSyntaxErrors();
       '
-      this.log('✅ Quick syntax fixes completed');'
+      this.log('✅ Quick syntax fixes completed');
       return { success: true };
     } catch (error) {
-      this.log(`❌ Quick syntax fixes failed: ${error.message}`);
+      this.log(`❌ Quick syntax fixes failed: ${error.message});
       return { success: false, error: error.message };
     }
   }
 
-  fixMergeConflicts() {'
-    this.log('🔍 Fixing merge conflicts...');'
-    const filesToFix = ['
-      'eslint.config.js',''
-      'src/pages/Home.tsx',''
-      'src/pages/Contact.tsx',''
-      'src/pages/Services.tsx',''
-      'app/page.tsx',''
-      'app/about/page.tsx',''
-      'app/contact/page.tsx'']
+  fixMergeConflicts() {
+    this.log('🔍 Fixing merge conflicts...);
+    const filesToFix = [
+      'eslint.config.js,src/pages/Home.tsx,src/pages/Contact.tsx,src/pages/Services.tsx,app/page.tsx,app/about/page.tsx,app/contact/page.tsx]
     ];
 
     filesToFix.forEach(file => {)
@@ -63,37 +56,37 @@ class SyntaxFixLauncher {
       if (fs.existsSync(filePath)) {
         try {
   // TODO: Implement
-}'
-          let content = fs.readFileSync(filePath, 'utf8');'
+}
+          let content = fs.readFileSync(filePath,utf8);
           // Remove merge conflict markers;
           content = content.replace(/
           content = content.replace(/
           
-          // Clean up extra whitespace;)'
-          content = content.replace(/\n\s*\n\s*\n/g, '\n\n');'
+          // Clean up extra whitespace;)
+          content = content.replace(/\n\s*\n\s*\n/g,\n\n');
           fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
+          this.log(`✅ Fixed merge conflicts in ${file});
         } catch (error) {
-          this.log(`⚠️ Could not fix ${file}: ${error.message}`);
+          this.log(`⚠️ Could not fix ${file}: ${error.message});
         }
       }
     });
   }
 
-  fixCommonSyntaxErrors() {'
-    this.log('🔧 Fixing common syntax errors...');'
-    // Fix semicolon issues;'
-    const jsFiles = this.findFiles('**/*.{js,jsx,ts,tsx}', ['node_modules', 'dist', 'build']);'
+  fixCommonSyntaxErrors() {
+    this.log('🔧 Fixing common syntax errors...);
+    // Fix semicolon issues;
+    const jsFiles = this.findFiles('**/*.{js,jsx,ts,tsx}, [node_modules,dist,build]);
     jsFiles.forEach(file => {
       try {
   // TODO: Implement
-})'
-        let content = fs.readFileSync(file, 'utf8');'
+})
+        let content = fs.readFileSync(file,utf8);
         let modified = false;
         
-        // Fix missing semicolons;'
-        if (content.includes('const ') && !content.includes(';')) {''
-          content = content.replace(/(const [^=]+ = [^;]+)\n/g, '$1;\n');'
+        // Fix missing semicolons;
+        if (content.includes('const ') && !content.includes(';)) {
+          content = content.replace(/(const [^=]+ = [^;]+)\n/g,$1;\n');
           modified = true;
         }
         
@@ -102,21 +95,21 @@ class SyntaxFixLauncher {
         
         if (modified) {
           fs.writeFileSync(file, content);
-          this.log(`✅ Fixed syntax errors in ${file}`);
+          this.log(`✅ Fixed syntax errors in ${file});
         }
-      } catch (error) {'
-        // Skip files that can't be processed;'
+      } catch (error) {
+        // Skip files that can't be processed;
       }
     });
   }
 
-  removeDuplicateImports(content) {'
-    const lines = content.split('\n');'
+  removeDuplicateImports(content) {
+    const lines = content.split('\n');
     const importLines = [];
     const nonImportLines = [];
     
-    lines.forEach(line => {)'
-      if (line.trim().startsWith('import ') || line.trim().startsWith('const ') && line.includes('require(')) {'
+    lines.forEach(line => {)
+      if (line.trim().startsWith('import ') || line.trim().startsWith('const ') && line.includes('require(')) {
         if (!importLines.includes(line.trim())) {
           importLines.push(line.trim());
         }
@@ -127,7 +120,7 @@ class SyntaxFixLauncher {
       }
     });
     '
-    return [...importLines, ...nonImportLines].join('\n');'
+    return [...importLines, ...nonImportLines].join('\n');
   }
 
   findFiles(pattern, excludeDirs = []) {
@@ -156,12 +149,12 @@ class SyntaxFixLauncher {
                 files.push(fullPath);
               }
             }
-          } catch (error) {'
-            // Skip files that can't be accessed;'
+          } catch (error) {
+            // Skip files that can't be accessed;
           }
         });
-      } catch (error) {'
-        // Skip directories that can't be accessed;'
+      } catch (error) {
+        // Skip directories that can't be accessed;
       }
     }
     
@@ -174,14 +167,14 @@ class SyntaxFixLauncher {
 const args = process.argv.slice(2);
 const launcher = new SyntaxFixLauncher();
 '
-if (args.includes('quick-fix')) {'
+if (args.includes('quick-fix')) {
   launcher.quickFix().then(result => {)
     process.exit(result.success ? 0 : 1);
   });
 } else {
   // TODO: Implement
-}'
-  console.log('Usage: node syntax-fix-launcher.js quick-fix');'
+}
+  console.log('Usage: node syntax-fix-launcher.js quick-fix');
   process.exit(1);
 }
 

@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 class IntelligentTestOrchestrator {
   constructor() {
     this.workspaceRoot = '/workspace';
-    this.reportFile = path.join(this.workspaceRoot, 'automation_logs', 'test-orchestrator-report.json');
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,test-orchestrator-report.json');
     this.ensureLogDirectory();
   }
 
@@ -19,11 +19,11 @@ class IntelligentTestOrchestrator {
   }
 
   log(message) {
-    console.log(`[Intelligent Test Orchestrator] ${message}`);
+    console.log(`[Intelligent Test Orchestrator] ${message});
   }
 
   async runComprehensiveTests() {
-    this.log('Starting intelligent test orchestration...');
+    this.log('Starting intelligent test orchestration...);
     
     const testResults = {
       timestamp: new Date().toISOString(),
@@ -58,190 +58,184 @@ class IntelligentTestOrchestrator {
       fs.writeFileSync(this.reportFile, JSON.stringify(testResults, null, 2));
       
       this.log(`Test orchestration complete. Overall score: ${testResults.overallScore}/100`);
-      this.log(`Report saved to: ${this.reportFile}`);
+      this.log(`Report saved to: ${this.reportFile});
       
       return testResults;
     } catch (error) {
-      this.log(`Error during test orchestration: ${error.message}`);
+      this.log(`Error during test orchestration: ${error.message});
       testResults.error = error.message;
       return testResults;
     }
   }
 
   async runSmokeTests(testResults) {
-    this.log('Running smoke tests...');
+    this.log('Running smoke tests...);
     
     try {
-      const result = execSync('npm run test:smoke', { 
-        encoding: 'utf8', 
+      const result = execSync('npm run test:smoke, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       testResults.suites.smoke = {
-        status: 'passed',
+        status: passed,
         output: result,
         timestamp: new Date().toISOString()
       };
       
     } catch (error) {
       testResults.suites.smoke = {
-        status: 'failed',
+        status: failed,
         error: error.message,
         output: error.stdout || error.stderr,
         timestamp: new Date().toISOString()
       };
       
       testResults.issues.push({
-        type: 'smoke',
-        severity: 'high',
-        message: 'Smoke tests failed',
+        type: smoke,
+        severity: high,
+        message: Smoke tests failed,
         details: error.message
       });
     }
   }
 
   async runUnitTests(testResults) {
-    this.log('Running unit tests...');
+    this.log('Running unit tests...);
     
     try {
-      const result = execSync('npm run test:unit', { 
-        encoding: 'utf8', 
+      const result = execSync('npm run test:unit, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       testResults.suites.unit = {
-        status: 'passed',
+        status: passed,
         output: result,
         timestamp: new Date().toISOString()
       };
       
     } catch (error) {
       testResults.suites.unit = {
-        status: 'failed',
+        status: failed,
         error: error.message,
         output: error.stdout || error.stderr,
         timestamp: new Date().toISOString()
       };
       
       testResults.issues.push({
-        type: 'unit',
-        severity: 'high',
-        message: 'Unit tests failed',
+        type: unit,
+        severity: high,
+        message: Unit tests failed,
         details: error.message
       });
     }
   }
 
   async runIntegrationTests(testResults) {
-    this.log('Running integration tests...');
+    this.log('Running integration tests...);
     
     try {
-      const result = execSync('npm run test:integration', { 
-        encoding: 'utf8', 
+      const result = execSync('npm run test:integration, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       testResults.suites.integration = {
-        status: 'passed',
+        status: passed,
         output: result,
         timestamp: new Date().toISOString()
       };
       
     } catch (error) {
       testResults.suites.integration = {
-        status: 'failed',
+        status: failed,
         error: error.message,
         output: error.stdout || error.stderr,
         timestamp: new Date().toISOString()
       };
       
       testResults.issues.push({
-        type: 'integration',
-        severity: 'medium',
-        message: 'Integration tests failed',
+        type: integration,
+        severity: medium,
+        message: Integration tests failed,
         details: error.message
       });
     }
   }
 
   async runAccessibilityTests(testResults) {
-    this.log('Running accessibility tests...');
+    this.log('Running accessibility tests...);
     
     try {
-      const result = execSync('npm run test:accessibility', { 
-        encoding: 'utf8', 
+      const result = execSync('npm run test:accessibility, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       testResults.suites.accessibility = {
-        status: 'passed',
+        status: passed,
         output: result,
         timestamp: new Date().toISOString()
       };
       
     } catch (error) {
       testResults.suites.accessibility = {
-        status: 'failed',
+        status: failed,
         error: error.message,
         output: error.stdout || error.stderr,
         timestamp: new Date().toISOString()
       };
       
       testResults.issues.push({
-        type: 'accessibility',
-        severity: 'medium',
-        message: 'Accessibility tests failed',
+        type: accessibility,
+        severity: medium,
+        message: Accessibility tests failed,
         details: error.message
       });
     }
   }
 
   async runPerformanceTests(testResults) {
-    this.log('Running performance tests...');
+    this.log('Running performance tests...);
     
     try {
-      const result = execSync('npm run test:performance', { 
-        encoding: 'utf8', 
+      const result = execSync('npm run test:performance, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       testResults.suites.performance = {
-        status: 'passed',
+        status: passed,
         output: result,
         timestamp: new Date().toISOString()
       };
       
     } catch (error) {
       testResults.suites.performance = {
-        status: 'failed',
+        status: failed,
         error: error.message,
         output: error.stdout || error.stderr,
         timestamp: new Date().toISOString()
       };
       
       testResults.issues.push({
-        type: 'performance',
-        severity: 'low',
-        message: 'Performance tests failed',
+        type: performance,
+        severity: low,
+        message: Performance tests failed,
         details: error.message
       });
     }
   }
 
   async generateCoverageReport(testResults) {
-    this.log('Generating coverage report...');
+    this.log('Generating coverage report...);
     
     try {
-      const result = execSync('npm run test:coverage', { 
-        encoding: 'utf8', 
+      const result = execSync('npm run test:coverage, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       // Try to parse coverage data from output
       const coverageMatch = result.match(/All files\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)/);
@@ -273,40 +267,38 @@ class IntelligentTestOrchestrator {
   }
 
   analyzeTestQuality(testResults) {
-    this.log('Analyzing test quality...');
+    this.log('Analyzing test quality...);
     
     // Check if test files exist
     const testFiles = this.findTestFiles();
     testResults.metrics = {
       totalTestFiles: testFiles.length,
       testSuites: Object.keys(testResults.suites).length,
-      passedSuites: Object.values(testResults.suites).filter(suite => suite.status === 'passed').length,
-      failedSuites: Object.values(testResults.suites).filter(suite => suite.status === 'failed').length
+      passedSuites: Object.values(testResults.suites).filter(suite => suite.status ===passed').length,
+      failedSuites: Object.values(testResults.suites).filter(suite => suite.status ===failed').length
     };
     
     // Analyze test file quality
     let qualityIssues = 0;
     testFiles.forEach(file => {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8);
       
       if (!content.includes('describe') && !content.includes('test') && !content.includes('it')) {
         qualityIssues++;
         testResults.issues.push({
-          type: 'test-quality',
-          severity: 'warning',
+          type: test-quality,
+          severity: warning,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Test file appears to be empty or malformed'
-        });
+          message: Test file appears to be empty or malformed});
       }
       
       if (content.includes('console.log')) {
         qualityIssues++;
         testResults.issues.push({
-          type: 'test-quality',
-          severity: 'info',
+          type: test-quality,
+          severity: info,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Console.log found in test file'
-        });
+          message: Console.log found in test file});
       }
     });
     
@@ -314,13 +306,13 @@ class IntelligentTestOrchestrator {
   }
 
   findTestFiles() {
-    const testDirs = ['src', 'tests', '__tests__', 'test'];
+    const testDirs = [src,tests,__tests__,test];
     let testFiles = [];
     
     testDirs.forEach(dir => {
       const fullPath = path.join(this.workspaceRoot, dir);
       if (fs.existsSync(fullPath)) {
-        testFiles = testFiles.concat(this.findFiles(fullPath, ['.test.js', '.test.ts', '.test.tsx', '.spec.js', '.spec.ts', '.spec.tsx']));
+        testFiles = testFiles.concat(this.findFiles(fullPath, [.test.js,.test.ts,.test.tsx,.spec.js,.spec.ts,.spec.tsx]));
       }
     });
     
@@ -373,39 +365,34 @@ class IntelligentTestOrchestrator {
   generateTestRecommendations(testResults) {
     if (testResults.metrics?.totalTestFiles === 0) {
       testResults.recommendations.push({
-        priority: 'high',
-        category: 'coverage',
-        message: 'Create test files for better code coverage'
-      });
+        priority: high,
+        category: coverage,
+        message: Create test files for better code coverage});
     }
     
     if (testResults.coverage?.lines < 80) {
       testResults.recommendations.push({
-        priority: 'high',
-        category: 'coverage',
-        message: 'Improve test coverage to at least 80%'
-      });
+        priority: high,
+        category: coverage,
+        message: Improve test coverage to at least 80%});
     }
     
     if (testResults.metrics?.failedSuites > 0) {
       testResults.recommendations.push({
-        priority: 'high',
-        category: 'reliability',
-        message: 'Fix failing test suites'
-      });
+        priority: high,
+        category: reliability,
+        message: Fix failing test suites});
     }
     
     testResults.recommendations.push({
-      priority: 'medium',
-      category: 'quality',
-      message: 'Add integration tests for critical user flows'
-    });
+      priority: medium,
+      category: quality,
+      message: Add integration tests for critical user flows});
     
     testResults.recommendations.push({
-      priority: 'low',
-      category: 'automation',
-      message: 'Set up automated test execution in CI/CD'
-    });
+      priority: low,
+      category: automation,
+      message: Set up automated test execution in CI/CD});
   }
 }
 

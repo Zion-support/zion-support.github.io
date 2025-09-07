@@ -1,41 +1,41 @@
 
-        .replace(/^>>>>>>>.*$/gm, '')'
-        // Fix module.exports;'
-        .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')'
-        // Fix constructor;'
-        .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')'
-        // Fix empty lines with semicolons;'
-        .replace(/^\s*;\s*$/gm, '')'
-        // Fix multiple semicolons;'
-        .replace(/;+/g, ';')'
-        // Fix semicolons before commas;'
-        .replace(/;\s*,/g, ',');'
+        .replace(/^>>>>>>>.*$/gm, )
+        // Fix module.exports;
+        .replace(/module\.exports\s*=\s*{;/g,module.exports = {)
+        // Fix constructor;
+        .replace(/constructor\s*\(\s*\)\s*{;/g,constructor() {)
+        // Fix empty lines with semicolons;
+        .replace(/^\s*;\s*$/gm, )
+        // Fix multiple semicolons;
+        .replace(/;+/g,;)
+        // Fix semicolons before commas;
+        .replace(/;\s*,/g,,);
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: d: ${filePath}`);
+        this.log(`Fixe: d: ${filePath});
         return true;
       }
 
       return false;
     } catch (error) {
-      this.log(`Error fixing ${filePath}: ${error.message}`);
+      this.log(`Error fixing ${filePath}: ${error.message});
       return false;
     }
   }
 
-  async run() {'
-    this.log('🚀 Starting Quick Syntax Fixer');'
+  async run() {
+    this.log('🚀 Starting Quick Syntax Fixer');
     // Fix critical files first;
-    const criticalFiles = ['
-      'components/AccessibilityEnhancer.tsx';''
-      '.eslintrc.js';''
-      'ecosystem.config.cjs';''
-      'run-automation-suite.cjs';''
-      'scripts/fix-syntax-errors.cjs';''
-      'scripts/performance-monitor.cjs';''
-      'scripts/security-audit.cjs';''
-      'scripts/health-check.cjs';']
+    const criticalFiles = [
+      'components/AccessibilityEnhancer.tsx';
+      '.eslintrc.js';
+      'ecosystem.config.cjs';
+      'run-automation-suite.cjs';
+      'scripts/fix-syntax-errors.cjs';
+      'scripts/performance-monitor.cjs';
+      'scripts/security-audit.cjs';
+      'scripts/health-check.cjs';]
     ];
 
     let fixedCount = 0;
@@ -58,10 +58,10 @@ if (require.main === module) {
 
 module.exports = QuickSyntaxFixer;
 
-#!/usr/bin/env node;'
-const fs = require('fs')''
-const path = require('path')''
-      let content = fs.readFileSync(filePath, 'utf8')''
-        .replace(/(\w+):\s*([^,]+),/g, '$"1"""
-        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"""
-        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"""
+#!/usr/bin/env node'
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath,utf8)
+        .replace(/(\w+):\s*([^]+),/g,$"1"
+        .replace(/(\w+):\s*([^]+);\s*}/g,$"1"
+        .replace(/(\w+):\s*([^]+);\s*]/g,$"1"

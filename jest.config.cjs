@@ -1,84 +1,21 @@
-<<<<<<< HEAD
-const nextJest = require('next/jest');
-const createJestConfig = nextJest({
-  dir: './',
-});
-
-const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-  },
+module.exports = {
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
   testMatch: [
-    '<rootDir>/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '<rootDir>/tests/**/*.(test|spec).(js|jsx|ts|tsx)',
-  ],
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-    '<rootDir>/backup-problematic-files/',
-    '<rootDir>/temp_exclude/',
-    '<rootDir>/src_backup/',
-    '<rootDir>/temp_backup/',
-    '<rootDir>/temp_components/',
-    '<rootDir>/temp_conflicts/',
-    '<rootDir>/temp_working/',
-    '<rootDir>/backup*/',
-    '<rootDir>/corrupted_backup/',
-    '<rootDir>/temp_*/',
+    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}',
   ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!src/**/*.test.{js,jsx,ts,tsx}',
-    '!src/**/*.spec.{js,jsx,ts,tsx}',
-  ],
-  coveragePathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-  ],
-  coverageThreshold: {
-    global: {
-      branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
-    },
-  },
-};
-
-module.exports = createJestConfig(customJestConfig);
-=======
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  roots: ['<rootDir>/src'],
-  testMatch: [
-    '**/__tests__/**/*.+(ts|tsx|js)',
-    '**/*.(test|spec).+(ts|tsx|js)'
+    '!src/test/**/*',
   ],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/main.tsx',
-    '!src/vite-env.d.ts'
-  ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1'
-  },
-  testTimeout: 10000
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-6b26

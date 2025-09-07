@@ -1,14 +1,10 @@
-#!/usr/bin/env node;
-const fs = require('fs');''
-const path = require('path');''
-console.log('🔧 Fixing all merge conflicts...');'
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+console.log('🔧 Fixing all merge conflicts...);
 // List of files with known merge conflicts;
-const conflictedFiles = ['
-  'pages/index.tsx',''
-  'pages/about.tsx',''
-  'pages/blog.tsx',''
-  'pages/contact.tsx',''
-  'pages/services.tsx'']
+const conflictedFiles = [
+  'pages/index.tsx,pages/about.tsx,pages/blog.tsx,pages/contact.tsx,pages/services.tsx]
 ];
 
 function resolveMergeConflicts(filePath) {
@@ -16,17 +12,17 @@ function resolveMergeConflicts(filePath) {
   // TODO: Implement
 }
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
+      console.log(`⚠️  File not found: ${filePath});
       return false;
     }
 '
-    let content = fs.readFileSync(filePath, 'utf8');'
+    let content = fs.readFileSync(filePath,utf8);
     // Check if file has merge conflicts;
-    // Clean up any double newlines;'
-    content = content.replace(/\n\n\n+/g, '\n\n');'
+    // Clean up any double newlines;
+    content = content.replace(/\n\n\n+/g,\n\n');
     // Write the cleaned content;
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    console.log(`✅ Resolved conflicts in: ${filePath});
     return true;
     
   } catch (error) {
@@ -45,9 +41,9 @@ for (const file of conflictedFiles) {
 
 console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
 
-// Verify no more conflicts exist;'
-console.log('\n🔍 Checking for remaining conflicts...');'
+// Verify no more conflicts exist;
+console.log('\n🔍 Checking for remaining conflicts...);
 const remainingConflicts = [];
 for (const file of conflictedFiles) {
-  if (fs.existsSync(file)) {'
-    const content = fs.readFileSync(file, 'utf8');''
+  if (fs.existsSync(file)) {
+    const content = fs.readFileSync(file,utf8);

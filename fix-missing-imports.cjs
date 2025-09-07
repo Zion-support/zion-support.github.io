@@ -1,11 +1,11 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Fix Missing Lucide React Imports;
  * Automatically finds and adds missing Lucide React icon imports;
  */
 
-const fs = require('fs');''
-const path = require('path');'
+const fs = require('fs');
+const path = require('path');
 class ImportFixer {
   // TODO: Implement
 }
@@ -15,7 +15,7 @@ class ImportFixer {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message});
   }
 
   // Get all Lucide React icons from the file;
@@ -23,21 +23,21 @@ class ImportFixer {
     const iconMatches = content.match(/ico: n:\s*([A-Z][a-zA-Z0-9]+)/g);
     if (!iconMatches) return [];
 
-    return iconMatches.map(match => {)'
-      const iconName = match.replace('ico: n:', '').trim();'
+    return iconMatches.map(match => {)
+      const iconName = match.replace('ico: n: , ).trim();
       return iconName;
     });
   }
 
   // Get existing imports;
   getExistingImports(content) {
-    const importMatch = content.match()'
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/"
+    const importMatch = content.match()
+      /import\s*{\s*([^}]+)\s*}\s*from\s*["]lucide-react["];?/"
     );
     if (!importMatch) return [];
 
     return importMatch[1]"
-      .split(',')'
+      .split(,)
       .map(imp => imp.trim())
       .filter(imp => imp.length > 0);
   }
@@ -50,9 +50,9 @@ class ImportFixer {
         return false;
       }
 '
-      let content = fs.readFileSync(filePath, 'utf8');'
-      // Skip if not a React component file;'
-      if (!content.includes('lucide-react') && !content.includes('ico: n:')) {'
+      let content = fs.readFileSync(filePath,utf8);
+      // Skip if not a React component file;
+      if (!content.includes('lucide-react') && !content.includes('ico: n: )) {
         return true;
       }
 
@@ -71,7 +71,7 @@ class ImportFixer {
       }
 
       this.log(
-        `🔧 Fixing ${missingIcons.length} missing imports in ${filePath}`)
+        `🔧 Fixing ${missingIcons.length} missing imports in ${filePath})
       );
 
       // Add missing icons to existing import;
@@ -79,11 +79,11 @@ class ImportFixer {
         const allIcons = [...existingImports, ...missingIcons].sort();
         const importStatement = `import {
   // TODO: Implement
-}'
-  ${allIcons.join(',\n  ')}''
-} from 'lucide-react';`;'
+}
+  ${allIcons.join(,\n  ')}
+} from 'lucide-react';`;
         content = content.replace('
-          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;"
+          /import\s*{\s*[^}]+\s*}\s*from\s*["]lucide-react["];?/;"
           importStatement;)
         );
       } else {
@@ -93,58 +93,58 @@ class ImportFixer {
         const importStatement = `import {
   // TODO: Implement
 }"
-  ${missingIcons.join(',\n  ')}''
-} from 'lucide-react';`;'
-        // Find the best place to insert the import;'
-        const lines = content.split('\n');'
+  ${missingIcons.join(,\n  ')}
+} from 'lucide-react';`;
+        // Find the best place to insert the import;
+        const lines = content.split('\n');
         let insertIndex = 0;
 
-        for (let i = 0; i < lines.length; i++) {'
-          if (lines[i].includes('import') && lines[i].includes('from')) {'
+        for (let i = 0; i < lines.length; i++) {
+          if (lines[i].includes('import') && lines[i].includes('from')) {
             insertIndex = i + 1;
           }
         }
 '
-        lines.splice(insertIndex, 0, '', importStatement);''
-        content = lines.join('\n');'
+        lines.splice(insertIndex, 0, , importStatement);
+        content = lines.join('\n');
       }
 
       fs.writeFileSync(filePath, content);
       this.fixedFiles.push({ fil: e: filePath, addedIcon: s: missingIcons });
       return true;
     } catch (error) {
-      this.log(`❌ Failed to fix ${filePath}: ${error.message}`);
+      this.log(`❌ Failed to fix ${filePath}: ${error.message});
       return false;
     }
   }
 
-  async fixAllFiles() {'
-    this.log('🚀 Starting import fixing...');'
+  async fixAllFiles() {
+    this.log('🚀 Starting import fixing...);
     // Find all React component files;
-    const filesToCheck = ['
-      'pages/components/Footer.tsx';''
-      'pages/components/Navigation.tsx';''
-      'pages/components/Layout.tsx';']
+    const filesToCheck = [
+      'pages/components/Footer.tsx';
+      'pages/components/Navigation.tsx';
+      'pages/components/Layout.tsx';]
     ];
 
     for (const file of filesToCheck) {
       this.fixFile(file);
     }
 
-    // Also check all .tsx and .jsx files in pages directory;'
-    const pagesDir = 'pages';'
-    if (fs.existsSync(pagesDir)) {'
-      const files = this.getAllFiles(pagesDir, ['.tsx', '.jsx']);'
+    // Also check all .tsx and .jsx files in pages directory;
+    const pagesDir = 'pages';
+    if (fs.existsSync(pagesDir)) {
+      const files = this.getAllFiles(pagesDir, [.tsx,.jsx]);
       for (const file of files) {
         this.fixFile(file);
       }
     }
 '
-    this.log('\n📊 Import Fixing: Summary:');'
-    this.log(`- Files: fixed: ${this.fixedFiles.length}`);
+    this.log('\n📊 Import Fixing: Summary: );
+    this.log(`- Files: fixed: ${this.fixedFiles.length});
 
-    this.fixedFiles.forEach(fix => {)'
-      this.log(`  - ${fix.file}: Added ${fix.addedIcons.join(', ')}`);'
+    this.fixedFiles.forEach(fix => {)
+      this.log(`  - ${fix.file}: Added ${fix.addedIcons.join(,)});
     });
 
     return this.fixedFiles;

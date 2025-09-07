@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 class ComprehensiveTestAutomation {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'test-automation-logs.txt');
+    this.logFile = path.join(this.projectRoot,test-automation-logs.txt');
     this.results = {
       startTime: new Date().toISOString(),
       endTime: null,
@@ -39,7 +39,7 @@ class ComprehensiveTestAutomation {
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         timeout: 60000,
-        encoding: 'utf8',
+        encoding: utf8,
         ...options 
       });
       return { success: true, output: result.toString() };
@@ -47,17 +47,17 @@ class ComprehensiveTestAutomation {
       return { 
         success: false, 
         error: error.message,
-        output: error.stdout ? error.stdout.toString() : '',
-        stderr: error.stderr ? error.stderr.toString() : ''
+        output: error.stdout ? error.stdout.toString() : ,
+        stderr: error.stderr ? error.stderr.toString() : 
       };
     }
   }
 
   async runUnitTests() {
-    this.log('🧪 Running unit tests...');
+    this.log('🧪 Running unit tests...);
     
     try {
-      const result = await this.runCommand('npm run test -- --coverage --watchAll=false');
+      const result = await this.runCommand('npm run test -- --coverage --watchAll=false);
       
       if (result.success) {
         // Parse Jest output for test results
@@ -80,17 +80,17 @@ class ComprehensiveTestAutomation {
         
         this.log(`✅ Unit tests completed: ${this.results.tests.unit.passed} passed, ${this.results.tests.unit.failed} failed`);
       } else {
-        this.log(`❌ Unit tests failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`Unit tests: ${result.error}`);
+        this.log(`❌ Unit tests failed: ${result.error},ERROR');
+        this.results.errors.push(`Unit tests: ${result.error});
       }
     } catch (error) {
-      this.log(`❌ Unit test execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Unit tests: ${error.message}`);
+      this.log(`❌ Unit test execution failed: ${error.message},ERROR');
+      this.results.errors.push(`Unit tests: ${error.message});
     }
   }
 
   async runSmokeTests() {
-    this.log('💨 Running smoke tests...');
+    this.log('💨 Running smoke tests...);
     
     try {
       const result = await this.runCommand('npm run test:smoke');
@@ -104,31 +104,31 @@ class ComprehensiveTestAutomation {
         this.results.tests.smoke.passed = 0;
         this.results.tests.smoke.failed = 1;
         this.results.tests.smoke.total = 1;
-        this.log(`❌ Smoke tests failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`Smoke tests: ${result.error}`);
+        this.log(`❌ Smoke tests failed: ${result.error},ERROR');
+        this.results.errors.push(`Smoke tests: ${result.error});
       }
     } catch (error) {
       this.results.tests.smoke.passed = 0;
       this.results.tests.smoke.failed = 1;
       this.results.tests.smoke.total = 1;
-      this.log(`❌ Smoke test execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Smoke tests: ${error.message}`);
+      this.log(`❌ Smoke test execution failed: ${error.message},ERROR');
+      this.results.errors.push(`Smoke tests: ${error.message});
     }
   }
 
   async runIntegrationTests() {
-    this.log('🔗 Running integration tests...');
+    this.log('🔗 Running integration tests...);
     
     try {
       // Check if integration tests exist
-      const integrationTestDir = path.join(this.projectRoot, 'tests/integration');
+      const integrationTestDir = path.join(this.projectRoot,tests/integration');
       if (!fs.existsSync(integrationTestDir)) {
-        this.log('⚠️  No integration tests found, skipping...', 'WARNING');
+        this.log('⚠️  No integration tests found, skipping...,WARNING');
         this.results.warnings.push('No integration tests found');
         return;
       }
       
-      const result = await this.runCommand('npm run test -- tests/integration --watchAll=false');
+      const result = await this.runCommand('npm run test -- tests/integration --watchAll=false);
       
       if (result.success) {
         const output = result.output;
@@ -141,23 +141,23 @@ class ComprehensiveTestAutomation {
         
         this.log(`✅ Integration tests completed: ${this.results.tests.integration.passed} passed, ${this.results.tests.integration.failed} failed`);
       } else {
-        this.log(`❌ Integration tests failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`Integration tests: ${result.error}`);
+        this.log(`❌ Integration tests failed: ${result.error},ERROR');
+        this.results.errors.push(`Integration tests: ${result.error});
       }
     } catch (error) {
-      this.log(`❌ Integration test execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Integration tests: ${error.message}`);
+      this.log(`❌ Integration test execution failed: ${error.message},ERROR');
+      this.results.errors.push(`Integration tests: ${error.message});
     }
   }
 
   async runE2ETests() {
-    this.log('🌐 Running E2E tests...');
+    this.log('🌐 Running E2E tests...);
     
     try {
       // Check if Playwright is available
-      const playwrightConfig = path.join(this.projectRoot, 'playwright.config.ts');
+      const playwrightConfig = path.join(this.projectRoot,playwright.config.ts');
       if (!fs.existsSync(playwrightConfig)) {
-        this.log('⚠️  No Playwright config found, skipping E2E tests...', 'WARNING');
+        this.log('⚠️  No Playwright config found, skipping E2E tests...,WARNING');
         this.results.warnings.push('No Playwright config found');
         return;
       }
@@ -175,17 +175,17 @@ class ComprehensiveTestAutomation {
         
         this.log(`✅ E2E tests completed: ${this.results.tests.e2e.passed} passed, ${this.results.tests.e2e.failed} failed`);
       } else {
-        this.log(`❌ E2E tests failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`E2E tests: ${result.error}`);
+        this.log(`❌ E2E tests failed: ${result.error},ERROR');
+        this.results.errors.push(`E2E tests: ${result.error});
       }
     } catch (error) {
-      this.log(`❌ E2E test execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`E2E tests: ${error.message}`);
+      this.log(`❌ E2E test execution failed: ${error.message},ERROR');
+      this.results.errors.push(`E2E tests: ${error.message});
     }
   }
 
   async runLintCheck() {
-    this.log('🔍 Running lint check...');
+    this.log('🔍 Running lint check...);
     
     try {
       const result = await this.runCommand('npm run lint');
@@ -193,17 +193,17 @@ class ComprehensiveTestAutomation {
       if (result.success) {
         this.log('✅ Lint check passed');
       } else {
-        this.log(`❌ Lint check failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`Lint check: ${result.error}`);
+        this.log(`❌ Lint check failed: ${result.error},ERROR');
+        this.results.errors.push(`Lint check: ${result.error});
       }
     } catch (error) {
-      this.log(`❌ Lint check execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Lint check: ${error.message}`);
+      this.log(`❌ Lint check execution failed: ${error.message},ERROR');
+      this.results.errors.push(`Lint check: ${error.message});
     }
   }
 
   async runTypeCheck() {
-    this.log('📝 Running type check...');
+    this.log('📝 Running type check...);
     
     try {
       const result = await this.runCommand('npm run type-check');
@@ -211,17 +211,17 @@ class ComprehensiveTestAutomation {
       if (result.success) {
         this.log('✅ Type check passed');
       } else {
-        this.log(`❌ Type check failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`Type check: ${result.error}`);
+        this.log(`❌ Type check failed: ${result.error},ERROR');
+        this.results.errors.push(`Type check: ${result.error});
       }
     } catch (error) {
-      this.log(`❌ Type check execution failed: ${error.message}`, 'ERROR');
-      this.results.errors.push(`Type check: ${error.message}`);
+      this.log(`❌ Type check execution failed: ${error.message},ERROR');
+      this.results.errors.push(`Type check: ${error.message});
     }
   }
 
   async runAllTests() {
-    this.log('🚀 Starting Comprehensive Test Automation...');
+    this.log('🚀 Starting Comprehensive Test Automation...);
     
     // Ensure logs directory exists
     const logsDir = path.dirname(this.logFile);
@@ -231,7 +231,7 @@ class ComprehensiveTestAutomation {
 
     // Clear previous logs
     if (fs.existsSync(this.logFile)) {
-      fs.writeFileSync(this.logFile, '');
+      fs.writeFileSync(this.logFile, );
     }
 
     // Run all test types
@@ -245,7 +245,7 @@ class ComprehensiveTestAutomation {
     // Generate final report
     this.generateReport();
     
-    this.log('🎉 Comprehensive Test Automation completed!');
+    this.log('🎉 Comprehensive Test Automation completed!);
     
     const totalPassed = Object.values(this.results.tests).reduce((sum, test) => sum + test.passed, 0);
     const totalFailed = Object.values(this.results.tests).reduce((sum, test) => sum + test.failed, 0);
@@ -270,23 +270,21 @@ class ComprehensiveTestAutomation {
         totalTests: totalTests,
         passedTests: totalPassed,
         failedTests: totalFailed,
-        successRate: totalTests > 0 ? (totalPassed / totalTests * 100).toFixed(2) + '%' : '0%',
+        successRate: totalTests > 0 ? (totalPassed / totalTests * 100).toFixed(2) +%: 0%,
         coverage: this.results.coverage,
-        duration: this.results.duration + 'ms'
-      }
+        duration: this.results.duration +ms}
     };
 
-    const reportFile = path.join(this.projectRoot, 'comprehensive-test-report.json');
+    const reportFile = path.join(this.projectRoot,comprehensive-test-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📊 Detailed report saved to: ${reportFile}`);
+    this.log(`📊 Detailed report saved to: ${reportFile});
     
     // Also save a human-readable summary
-    const summaryFile = path.join(this.projectRoot, 'test-summary.txt');
+    const summaryFile = path.join(this.projectRoot,test-summary.txt');
     const summary = `
 Comprehensive Test Automation Report
-==================================
-Start Time: ${this.results.startTime}
+===========================Start Time: ${this.results.startTime}
 End Time: ${this.results.endTime}
 Duration: ${this.results.duration}ms
 
@@ -304,12 +302,12 @@ Coverage:
 - Branches: ${this.results.coverage.branches}%
 - Statements: ${this.results.coverage.statements}%
 
-${this.results.errors.length > 0 ? `\nErrors:\n${this.results.errors.map(e => `- ${e}`).join('\n')}` : ''}
-${this.results.warnings.length > 0 ? `\nWarnings:\n${this.results.warnings.map(w => `- ${w}`).join('\n')}` : ''}
+${this.results.errors.length > 0 ? `\nErrors:\n${this.results.errors.map(e => `- ${e}).join('\n')}` : }
+${this.results.warnings.length > 0 ? `\nWarnings:\n${this.results.warnings.map(w => `- ${w}).join('\n')}` : }
 `;
     
     fs.writeFileSync(summaryFile, summary);
-    this.log(`📋 Summary saved to: ${summaryFile}`);
+    this.log(`📋 Summary saved to: ${summaryFile});
   }
 }
 

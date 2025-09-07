@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -11,7 +9,7 @@ const { execSync } = require('child_process');
 class AICodeQualityAnalyzer {
   constructor() {
     this.workspaceRoot = '/workspace';
-    this.reportFile = path.join(this.workspaceRoot, 'automation_logs', 'ai-quality-report.json');
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,ai-quality-report.json');
     this.ensureLogDirectory();
   }
 
@@ -23,11 +21,11 @@ class AICodeQualityAnalyzer {
   }
 
   log(message) {
-    console.log(`[AI Quality Analyzer] ${message}`);
+    console.log(`[AI Quality Analyzer] ${message});
   }
 
   async analyzeCodeQuality() {
-    this.log('Starting AI-powered code quality analysis...');
+    this.log('Starting AI-powered code quality analysis...);
     
     const analysis = {
       timestamp: new Date().toISOString(),
@@ -60,31 +58,30 @@ class AICodeQualityAnalyzer {
       fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
       
       this.log(`Analysis complete. Quality score: ${analysis.score}/100`);
-      this.log(`Report saved to: ${this.reportFile}`);
+      this.log(`Report saved to: ${this.reportFile});
       
       return analysis;
     } catch (error) {
-      this.log(`Error during analysis: ${error.message}`);
+      this.log(`Error during analysis: ${error.message});
       analysis.error = error.message;
       return analysis;
     }
   }
 
   async analyzeTypeScriptFiles(analysis) {
-    this.log('Analyzing TypeScript files...');
+    this.log('Analyzing TypeScript files...);
     
     try {
       // Run TypeScript compiler check
-      const tscResult = execSync('npx tsc --noEmit', { 
-        encoding: 'utf8', 
+      const tscResult = execSync('npx tsc --noEmit, { 
+        encoding: utf8, 
         cwd: this.workspaceRoot,
-        stdio: 'pipe'
-      });
+        stdio: pipe});
       
       analysis.metrics.typescriptErrors = 0;
       analysis.metrics.typescriptWarnings = 0;
     } catch (error) {
-      const errorOutput = error.stdout || error.stderr || '';
+      const errorOutput = error.stdout || error.stderr || ;
       const errorCount = (errorOutput.match(/error/g) || []).length;
       const warningCount = (errorOutput.match(/warning/g) || []).length;
       
@@ -93,50 +90,47 @@ class AICodeQualityAnalyzer {
       
       if (errorCount > 0) {
         analysis.issues.push({
-          type: 'typescript',
-          severity: 'error',
+          type: typescript,
+          severity: error,
           count: errorCount,
-          message: 'TypeScript compilation errors found'
-        });
+          message: TypeScript compilation errors found});
       }
     }
   }
 
   async analyzeReactComponents(analysis) {
-    this.log('Analyzing React components...');
+    this.log('Analyzing React components...);
     
-    const srcDir = path.join(this.workspaceRoot, 'src');
+    const srcDir = path.join(this.workspaceRoot,src');
     if (!fs.existsSync(srcDir)) {
       this.log('No src directory found, skipping React analysis');
       return;
     }
 
-    const componentFiles = this.findFiles(srcDir, ['.tsx', '.jsx']);
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
     analysis.metrics.totalComponents = componentFiles.length;
     
     let issuesFound = 0;
     componentFiles.forEach(file => {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8);
       
       // Check for common React issues
-      if (content.includes('useEffect') && !content.includes('useEffect(() => {')) {
+      if (content.includes('useEffect') && !content.includes('useEffect(() => {)) {
         issuesFound++;
         analysis.issues.push({
-          type: 'react',
-          severity: 'warning',
+          type: react,
+          severity: warning,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Potential useEffect dependency issue'
-        });
+          message: Potential useEffect dependency issue});
       }
       
       if (content.includes('console.log')) {
         issuesFound++;
         analysis.issues.push({
-          type: 'react',
-          severity: 'info',
+          type: react,
+          severity: info,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Console.log found in production code'
-        });
+          message: Console.log found in production code});
       }
     });
     
@@ -144,38 +138,36 @@ class AICodeQualityAnalyzer {
   }
 
   async analyzePerformancePatterns(analysis) {
-    this.log('Analyzing performance patterns...');
+    this.log('Analyzing performance patterns...);
     
-    const srcDir = path.join(this.workspaceRoot, 'src');
+    const srcDir = path.join(this.workspaceRoot,src');
     if (!fs.existsSync(srcDir)) {
       return;
     }
 
-    const jsFiles = this.findFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+    const jsFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
     let performanceIssues = 0;
     
     jsFiles.forEach(file => {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8);
       
       // Check for performance anti-patterns
       if (content.includes('document.querySelector') && !content.includes('useRef')) {
         performanceIssues++;
         analysis.issues.push({
-          type: 'performance',
-          severity: 'warning',
+          type: performance,
+          severity: warning,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Direct DOM manipulation detected'
-        });
+          message: Direct DOM manipulation detected});
       }
       
       if (content.includes('setInterval') || content.includes('setTimeout')) {
         performanceIssues++;
         analysis.issues.push({
-          type: 'performance',
-          severity: 'warning',
+          type: performance,
+          severity: warning,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Timer usage detected - ensure cleanup'
-        });
+          message: Timer usage detected - ensure cleanup});
       }
     });
     
@@ -183,38 +175,36 @@ class AICodeQualityAnalyzer {
   }
 
   async analyzeAccessibility(analysis) {
-    this.log('Analyzing accessibility...');
+    this.log('Analyzing accessibility...);
     
-    const srcDir = path.join(this.workspaceRoot, 'src');
+    const srcDir = path.join(this.workspaceRoot,src');
     if (!fs.existsSync(srcDir)) {
       return;
     }
 
-    const componentFiles = this.findFiles(srcDir, ['.tsx', '.jsx']);
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
     let a11yIssues = 0;
     
     componentFiles.forEach(file => {
-      const content = fs.readFileSync(file, 'utf8');
+      const content = fs.readFileSync(file,utf8);
       
       // Check for accessibility issues
       if (content.includes('<img') && !content.includes('alt=')) {
         a11yIssues++;
         analysis.issues.push({
-          type: 'accessibility',
-          severity: 'error',
+          type: accessibility,
+          severity: error,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Image missing alt attribute'
-        });
+          message: Image missing alt attribute});
       }
       
       if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
         a11yIssues++;
         analysis.issues.push({
-          type: 'accessibility',
-          severity: 'warning',
+          type: accessibility,
+          severity: warning,
           file: path.relative(this.workspaceRoot, file),
-          message: 'Button missing accessible label'
-        });
+          message: Button missing accessible label});
       }
     });
     
@@ -245,13 +235,13 @@ class AICodeQualityAnalyzer {
     // Deduct points for issues
     analysis.issues.forEach(issue => {
       switch (issue.severity) {
-        case 'error':
+        case 'error:
           score -= 10;
           break;
-        case 'warning':
+        case 'warning:
           score -= 5;
           break;
-        case 'info':
+        case 'info:
           score -= 2;
           break;
       }
@@ -268,45 +258,38 @@ class AICodeQualityAnalyzer {
   generateRecommendations(analysis) {
     if (analysis.metrics.typescriptErrors > 0) {
       analysis.recommendations.push({
-        priority: 'high',
-        category: 'typescript',
-        message: 'Fix TypeScript compilation errors to improve type safety'
-      });
+        priority: high,
+        category: typescript,
+        message: Fix TypeScript compilation errors to improve type safety});
     }
     
     if (analysis.metrics.accessibilityIssues > 0) {
       analysis.recommendations.push({
-        priority: 'high',
-        category: 'accessibility',
-        message: 'Address accessibility issues to improve user experience'
-      });
+        priority: high,
+        category: accessibility,
+        message: Address accessibility issues to improve user experience});
     }
     
     if (analysis.metrics.performanceIssues > 0) {
       analysis.recommendations.push({
-        priority: 'medium',
-        category: 'performance',
-        message: 'Optimize performance patterns for better user experience'
-      });
+        priority: medium,
+        category: performance,
+        message: Optimize performance patterns for better user experience});
     }
     
     if (analysis.metrics.reactIssues > 0) {
       analysis.recommendations.push({
-        priority: 'medium',
-        category: 'react',
-        message: 'Review React component patterns for best practices'
-      });
->>>>>>> cursor/automate-test-improve-and-merge-code-6b26
+        priority: medium,
+        category: react,
+        message: Review React component patterns for best practices});
     }
   }
 }
 
-<<<<<<< HEAD
 // Run the analyzer;
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 
-=======
 // CLI interface
 if (require.main === module) {
   const analyzer = new AICodeQualityAnalyzer();
@@ -314,4 +297,3 @@ if (require.main === module) {
 }
 
 module.exports = AICodeQualityAnalyzer;
->>>>>>> cursor/automate-test-improve-and-merge-code-6b26
