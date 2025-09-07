@@ -7,7 +7,7 @@ import {
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
-} from 'lucide-react',
+} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
@@ -36,11 +36,13 @@ export default function AdvancedServicesShowcase2025() {
     { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon: '🌐' }
   ],
 
-  const filteredServices = $2;
-      const matchesCategory = selectedCategory === 'all' || service.category.includes($2);
-      const price = parseFloat(service.price.replace('$', '').replace(, '')),
-      const matchesPrice = $2;
-      return matchesSearch && matchesCategory && matchesPrice
+  const filteredServices = allServices.filter(service => {
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const price = parseFloat(service.price.replace('$', '').replace(',', ''));
+      const matchesPrice = priceRange[0] <= price && price <= priceRange[1];
+      return matchesSearch && matchesCategory && matchesPrice;
     })
     .sort((a, b) => {
       switch (sortBy) {

@@ -1,9 +1,9 @@
-<<<<<<< HEAD:pages_backup/automation/innovation-radar.tsx
-  const items: any[] = (data?.items || []).slice(0, 50);
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/innovation-radar.json',
+// @ts-expect-error - JSON import
+import data from '../../data/innovation-radar.json';
+
 export default function InnovationRadarPage() {
-  const items: any[] = (data?.items || []).slice($2);
+  const items: any[] = (data?.items || []).slice(0, 50);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -16,9 +16,6 @@ export default function InnovationRadarPage() {
                 {it.title}
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-<<<<<<< HEAD:pages_backup/automation/innovation-radar.tsx
-                {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
-origin/cursor/automate-test-improve-and-merge-code-2533
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
@@ -27,8 +24,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>
       </div>
     </EnhancedLayout>
-  )
-<<<<<<< HEAD:pages_backup/automation/innovation-radar.tsx
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
+  );
 }
