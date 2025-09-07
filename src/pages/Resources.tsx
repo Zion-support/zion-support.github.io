@@ -14,6 +14,23 @@ import {
 } from 'lucide-react';
 // import SEO from '@/components/SEO';
 
+interface Resource {
+  id: number;
+  title: string;
+  category: string;
+  type: string;
+  description?: string;
+  excerpt?: string;
+  author: string;
+  date?: string;
+  readTime?: string;
+  downloads?: number;
+  featured?: boolean;
+  tags?: string[];
+  image?: string;
+  href: string;
+}
+
 export default function Resources() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -160,8 +177,8 @@ export default function Resources() {
     }
   ];
 
-  const filteredResources = () => {
-    let resources = [...featuredResources, ...blogPosts, ...webinars, ...documentation];
+  const filteredResources = (): Resource[] => {
+    let resources: Resource[] = [...featuredResources, ...blogPosts, ...webinars, ...documentation];
     
     if (activeCategory !== 'all') {
       resources = resources.filter(resource => resource.category === activeCategory);
@@ -170,9 +187,9 @@ export default function Resources() {
     if (searchQuery) {
       resources = resources.filter(resource => 
         resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (resource as any).description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (resource as any).excerpt?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (resource as any).tags?.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        resource.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        resource.excerpt?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        resource.tags?.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
     
@@ -340,14 +357,14 @@ export default function Resources() {
                   <span className="text-sm text-gray-400">{getCategoryName(resource.category)}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 line-clamp-2">{resource.title}</h3>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed line-clamp-3">{(resource as any).description || (resource as any).excerpt}</p>
+                <p className="text-gray-400 mb-4 text-sm leading-relaxed line-clamp-3">{resource.description || resource.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-500">
-                    {(resource as any).date && <span>{(resource as any).date}</span>}
-                    {(resource as any).readTime && (
+                    {resource.date && <span>{resource.date}</span>}
+                    {resource.readTime && (
                       <>
                         <span className="mx-2">•</span>
-                        <span>{(resource as any).readTime}</span>
+                        <span>{resource.readTime}</span>
                       </>
                     )}
                   </div>
