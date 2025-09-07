@@ -22,13 +22,7 @@ import dynamic from 'next/dynamic
 import Head from 'next/head
 import Link from 'next/link
 import { motion } from 'framer-motion
-import React from 'react';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-import {
   // TODO: Implement
 }
 pr-12325
@@ -48,12 +42,6 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
 
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
-const "ContactPage": React.FC = () => {
 
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
@@ -99,7 +87,6 @@ const "ContactPage": React.FC = () => {
   ]
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
-import React, { useState } from 'react';
 import {Helmet} from 'react-helmet-async';
 import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
@@ -203,7 +190,6 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
-  const contactInfo = [{
 
     }
   ];
@@ -307,11 +293,8 @@ const "Contact": NextPage = () => {
             </div>;
           </section>;
 const \"Contact\": NextPage = () => {;
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
 import {Mail,, Phone,, MapPin,, Clock,, Send} from 'lucide-react';
 const "Contact": NextPage = () => {;
-  const contactInfo = [{;
       icon: Mail,;
       \"title\": \'Email Us\',;
       \"details\": \'info@ziontechgroup && ziontechgroup.com\',;
@@ -1711,5 +1694,4 @@ export default ContactPage
     </>
   );
 
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';

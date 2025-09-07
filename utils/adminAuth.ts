@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export function setSessionCookie(res: NextApiResponse, token: string) {
@@ -290,3 +291,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+// Stub admin auth utility - placeholder for missing functionality
+export const requireAdminAuth = $2;
+export const isAdmin = $2;
+>>>>>>> merged-prs-20250907-203621

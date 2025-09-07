@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
+=======
+
+import React, { useState, Suspense } from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
@@ -44,6 +50,7 @@ const Marketplace = () => (
 );
 
 function App() {
+<<<<<<< HEAD
   return (
     <ErrorBoundary>
       <Router>
@@ -145,6 +152,73 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
+=======
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { About } from './pages/About';
+import { Services } from './pages/Services';
+import { Contact } from './pages/Contact';
+import { NotFound } from './pages/NotFound';
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Initialize analytics
+  React.useEffect(() => {
+    initAnalytics();
+  }, []);
+
+  return (
+    <ThemeProvider>
+      <NotificationProvider>
+        <ErrorBoundary>
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 dark:from-black dark:via-gray-900 dark:to-blue-900 light:from-gray-50 light:via-blue-50 light:to-purple-50">
+              <Header />
+              <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+              
+              <main className="pt-20">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/components" element={<Components />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              
+              <Footer />
+              <PerformanceMonitor />
+              <LiveChat />
+            </div>
+          </Router>
+        </ErrorBoundary>
+      </NotificationProvider>
+    </ThemeProvider>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
   );
 }
 

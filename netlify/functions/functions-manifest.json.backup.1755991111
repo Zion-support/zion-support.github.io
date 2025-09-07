@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2025-08-14T09:37:48.596Z",
+
   "functions": [
   "generatedAt": "2025-08-14T09:37:48.596Z",  "functions": [
-  "generatedAt": "2025-08-14T09:37:48.596Z",  "functions": [
+
     "a11y-alt-text-runner",
     "adaptive-orchestrator",
     "ai-changelog-runner",
@@ -66,10 +66,10 @@
     "marketing-and-features-promo",
     "marketing-scheduler",
     "media-og-and-optimize",
-    "metadata-optimizer-runner",
+
     "netlify-auto-healer-runner",
     "metadata-optimizer-runner",    "netlify-auto-healer-runner",
-    "metadata-optimizer-runner",    "netlify-auto-healer-runner",
+
     "newsroom-auto-publisher",
     "newsroom-runner",
     "og-image-update-runner",

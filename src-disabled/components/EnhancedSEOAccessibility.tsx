@@ -8,6 +8,6 @@ interface AccessibilityAnalysis {}
 
 export const EnhancedSEOAccessibility: React.FC = () => { const [isVisible, setIsVisible] =;
   useState(false);
-  const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null"  />(null) const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null"  />(null) const [isAnalyzing, setIsAnalyzing] = useState(false);}"
-  const [currentTab, setCurrentTab] = useState<'seo' | 'accessibility'>('seo')"";}
+  const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null\"  />(null) const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null\"  />(null) const [isAnalyzing, setIsAnalyzing] = useState(false);}"
+  const [currentTab, setCurrentTab] = useState<'seo' | 'accessibility'>('seo')\"\";}
 }"

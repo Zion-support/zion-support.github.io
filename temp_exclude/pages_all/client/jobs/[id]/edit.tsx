@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_exclude/pages_all/client/jobs/[id]/edit.tsx
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -5,6 +6,31 @@ import { useEffect, useState } from 'react';
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 
 export default function EditJobPage() {
+=======
+import { useRouter  } from 'next/router';
+import {useRouter} from 'next/router';
+import useSWR from 'swr';
+import { useEffect, useState } from 'react';
+const fetcher = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export default function EditJobPage() {
+export default function EditJobPage() {;
+
+
+
+
+
+
+
+
+export default function EditJobPage() {;
+
+import { useRouter } from 'next/router';
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
+export default function EditJobPage(req, res) {
+  try {
+>>>>>>> merged-prs-20250907-203621:pages_backup/client/jobs/[id]/edit.tsx
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);

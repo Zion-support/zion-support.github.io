@@ -2,17 +2,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
 
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 class SecurityAuditor {
   constructor() {
     this.vulnerabilities = [];
@@ -20,6 +26,7 @@ class SecurityAuditor {
   }
   async auditDependencies() {
     try {
+<<<<<<< HEAD
       console.log('Auditing dependencies...);
       const result = execSync(npm audit --json', { encoding: 'utf8 });
       const auditData = JSON.parse(result);
@@ -64,9 +71,18 @@ class SecurityAuditor {
       const vulnerabilities = auditData.vulnerabilities || {};
       const vulnerabilityCount = Object.keys(vulnerabilities).length;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      console.log('Auditing dependencies...');
+      const result = execSync('npm audit --json', { encoding: 'utf8' });
+      const auditData = JSON.parse(result);
+      if (auditData.vulnerabilities) {
+        this.vulnerabilities = Object.values(auditData.vulnerabilities);
+        console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
+>>>>>>> merged-prs-20250907-203621
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       
       return {
+<<<<<<< HEAD
   // TODO: Implement
         vulnerabilities,"
 
@@ -74,6 +90,8 @@ class SecurityAuditor {
 
   async checkEnvironmentVariables() {"
 
+=======
+>>>>>>> merged-prs-20250907-203621
         vulnerabilities,
         "count": vulnerabilityCount,
         "status": vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
@@ -93,12 +111,19 @@ class SecurityAuditor {
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
+<<<<<<< HEAD
 
           // Check for sensitive variables;
           const content = fs.readFileSync(envPath, 'utf8');
           
           // Check for sensitive variables
           const sensitivePatterns = [/API_KEY/i,
+=======
+          const content = fs.readFileSync(envPath, 'utf8');
+          
+          // Check for sensitive variables
+const sensitivePatterns = [/API_KEY/i,;
+>>>>>>> merged-prs-20250907-203621
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
@@ -116,6 +141,7 @@ class SecurityAuditor {
                   "line": index + 1,")"
                   "variable": key.trim()"
                 })}
+<<<<<<< HEAD
 `;
       this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`;
       this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
@@ -127,6 +153,8 @@ class SecurityAuditor {
 
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => )
+=======
+>>>>>>> merged-prs-20250907-203621
             }
           })}
       }
@@ -167,6 +195,7 @@ class SecurityAuditor {
 
       this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
 
+<<<<<<< HEAD
   // TODO: Implement
 
   // TODO: Implement
@@ -174,6 +203,8 @@ class SecurityAuditor {
       // Check for common security issues in code;
       const patterns = [{
 
+=======
+>>>>>>> merged-prs-20250907-203621
       return {
         "totalDependencies": Object.keys(dependencies).length,
         "vulnerablePackages": foundVulnerable,
@@ -267,9 +298,12 @@ class SecurityAuditor {
         console.log('✅ Security fixes applied');
       } catch (error) {
         console.log('❌ Could not apply automatic fixes');
+<<<<<<< HEAD
 
       "analysis": {"
         npmAudit: await this.runNpmAudit(),"
+=======
+>>>>>>> merged-prs-20250907-203621
       }
     } catch (error) {
       console.error('Error auditing dependencies:', error);
@@ -285,11 +319,14 @@ class SecurityAuditor {
         "codeSecurity": await this.checkCodeSecurity()"
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`Security audit report generated: ${reportPath}`);
@@ -298,6 +335,7 @@ class SecurityAuditor {
     console.log('🔒 Starting Security Audit');
     await this.auditDependencies();
     await this.generateReport();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -384,10 +422,15 @@ class SecurityAuditor {
   }
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+  }
+}
+>>>>>>> merged-prs-20250907-203621
 if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -398,11 +441,14 @@ if (require.main === module) {
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -420,6 +466,8 @@ module.exports = SecurityAuditor;
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 
         "status"
@@ -453,6 +501,7 @@ module.exports = SecurityAuditor;
 <<<<<<< HEAD
         "impact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         impact
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -478,3 +527,6 @@ main
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      console.error('\n� Security Auditor "failed")
+>>>>>>> merged-prs-20250907-203621

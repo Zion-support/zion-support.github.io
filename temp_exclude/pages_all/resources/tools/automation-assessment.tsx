@@ -6,6 +6,14 @@ export default function ToolPage() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false);
 
+<<<<<<< HEAD:temp_exclude/pages_all/resources/tools/automation-assessment.tsx
+=======
+import React, { useState } from 'react';
+export default function ToolPage() {
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({})
+  const [showResults, setShowResults] = useState(false)
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/resources/tools/automation-assessment.tsx
   const questions = [
     {
       id: 'current-automation',

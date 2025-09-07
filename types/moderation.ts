@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ContentType = $2;
 export type ModerationStatus = $2;
 export type AiScores = {
@@ -6,6 +7,8 @@ export type AiScores = {
   nsfw: number, // 0-1
   scam: number, // 0-1
 },
+=======
+>>>>>>> merged-prs-20250907-203621
 
 export interface ModerationResult  {"id": string;
   }
@@ -16,6 +19,7 @@ export interface ModerationResult  {"id": string;
   "flagId": string;
   "action": ModerationStatus;
   adminNotes?: string;
+<<<<<<< HEAD
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {;
   toxicity: number, // 0-1;
@@ -97,11 +101,28 @@ export interface ModerationAction {
 }
 export interface ModerationAction {
 
+=======
+  "adminId": string;
+  reason?: string;
+  "createdAt": string;
+export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';'
+export interface ModerationAction  {"id": string;
+;
+}
+export interface ModerationAction {
+  }
+  "id": string;
+  "type": "approve" | "remove" | "warn" | "ban";"
+  "targetId": string;
+  "targetType": "post" | "comment" | "user";"
+  "adminId": string;
+>>>>>>> merged-prs-20250907-203621
   reason?: string;
   "createdAt": string;
   "created_at": string;
 }
 }
+<<<<<<< HEAD
 export interface ModerationFlag  {export interface ModerationFlag  {id: string;
 }
 export interface ModerationFlag {
@@ -501,3 +522,32 @@ export interface ModerationResult {
 =======
   severity: 'low' | 'medium' | 'high';
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+export interface ModerationFlag  {export interface ModerationFlag  {"id": string;
+  }
+  "type": "spam" | "inappropriate" | "harassment" | "other";"
+  "content": string;
+  "reporterId": string;
+  "targetId": string;
+  "targetType": "post" | "comment" | "user";"
+  "status": ModerationStatus;
+  "createdAt": string;
+  "updatedAt": string;
+  adminNotes?: string;
+}}
+export interface ModerationFlag  {}
+export interface ModerationFlag {}
+export interface ModerationRule  {"id": string;
+  }
+  "name": string;
+  "pattern": string;
+  "action": 'approve' | 'reject' | 'flag';'
+  "severity": 'low' | 'medium' | 'high';'
+}"type": 'spam' | 'inappropriate' | 'harassment' | 'other';'
+  "content": string;
+  "reporter_id": string;
+  "target_id": string;
+  "target_type": 'post' | 'comment' | 'user';'
+  "status": ModerationStatus;ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+>>>>>>> merged-prs-20250907-203621

@@ -1,19 +1,20 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface AppMinimalProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 const AppMinimal: React.FC<AppMinimalProps> = ({ 
-  className = '', 
+  className = ', 
   children 
 }) => {
   return (
     <main 
       className={`app-minimal ${className}`}
-      role="main"
-      data-testid="app-minimal"
+      role="main
+      data-testid=app-minimal"
     >
       {children || (
         <div className="minimal-content">

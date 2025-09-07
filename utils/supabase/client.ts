@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
@@ -75,3 +76,9 @@ export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, 
 }
 ;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+import { createClient } from "@supabase/supabase-js";
+const supabaseUrl = $2;
+const supabaseAnonKey = $2;
+export const supabase = createClient($2);
+>>>>>>> merged-prs-20250907-203621

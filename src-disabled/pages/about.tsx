@@ -1,5 +1,5 @@
 import { ArrowRight, Users, Target, Award, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import React from 'react';
 
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
 
           <div className="text-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold"
             >
               Get in Touch <ArrowRight className="w-5 h-5 ml-2" />

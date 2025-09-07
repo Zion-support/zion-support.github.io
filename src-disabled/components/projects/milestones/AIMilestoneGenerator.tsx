@@ -20,7 +20,6 @@ import {
   AccordionItem
   AccordionTrigger
 } from '@/components/ui/accordion'
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
 import { format, parseISO } from 'date-fns'
   MilestoneInput
   GeneratedMilestone

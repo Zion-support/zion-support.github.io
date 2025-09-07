@@ -7,10 +7,89 @@ import {
   Rocket, Target, TrendingUp, Users, CheckCircle;
   ArrowRight, Star, Award, Clock, DollarSign;
   Database, Network, Server, Laptop, Smartphone
+<<<<<<< HEAD:temp_exclude/pages_all/ai-powered-it-asset-management.tsx
 } from 'lucide-react';
 
 const AIPoweredITAssetManagement = () => {
   const features = [
+=======
+} from 'lucide-react'
+const AIPoweredITAssetManagement = () => {
+  const features = [
+    {
+      icon: Brain
+      title: "AI-Powered Asset Discovery"
+      description: "Intelligent detection and cataloging of all IT assets across your network"
+      color: "from-purple-500 to-pink-500"
+    }
+    {
+      icon: Monitor
+      title: "Real-Time Monitoring"
+      description: "Continuous monitoring and health assessment of all IT assets"
+      color: "from-blue-500 to-cyan-500"
+    }
+    {
+      icon: Shield
+      title: "Security Compliance"
+      description: "Automated security audits and compliance monitoring for all assets"
+      color: "from-emerald-500 to-teal-500"
+    }
+    {
+      icon: TrendingUp
+      title: "Predictive Analytics"
+      description: "AI-driven insights for asset lifecycle management and optimization"
+      color: "from-red-500 to-orange-500"
+    }
+  ]
+  const assetTypes = [
+    "Hardware devices (servers, workstations, mobile devices)"
+    "Software licenses and applications"
+    "Network infrastructure and equipment"
+    "Cloud resources and virtual machines"
+    "Security devices and appliances"
+    "Peripheral devices and accessories"
+  ]
+  const benefits = [
+    {
+      icon: DollarSign
+      title: "Cost Optimization"
+      value: "35%"
+      description: "Reduction in IT asset costs"
+    }
+    {
+      icon: Clock
+      title: "Time Savings"
+      value: "60%"
+      description: "Faster asset management"
+    }
+    {
+      icon: Shield
+      title: "Security Improvement"
+      value: "90%"
+      description: "Better security compliance"
+    }
+    {
+      icon: TrendingUp
+      title: "Efficiency Boost"
+      value: "200%"
+      description: "Increased operational efficiency"
+    }
+  ]
+  const capabilities = [
+    "Automated asset discovery and inventory"
+    "Real-time health monitoring and alerts"
+    "Predictive maintenance scheduling"
+    "License compliance management"
+    "Security vulnerability assessment"
+    "Asset lifecycle optimization"
+    "Cost allocation and tracking"
+    "Integration with existing IT tools"
+  ]
+  Rocket, Target, TrendingUp, Users, CheckCircle,
+  ArrowRight, Star, Award, Clock, DollarSign,
+  Database, Network, Server, Laptop, Smartphone
+} from 'lucide-react',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/ai-powered-it-asset-management.tsx
     {
       icon: Brain,
       title: "AI-Powered Asset Discovery",
@@ -37,6 +116,7 @@ const AIPoweredITAssetManagement = () => {
     }
   ];
 
+<<<<<<< HEAD:temp_exclude/pages_all/ai-powered-it-asset-management.tsx
   const assetTypes = [
     "Hardware devices (servers, workstations, mobile devices)";
     "Software licenses and applications";
@@ -47,6 +127,74 @@ const AIPoweredITAssetManagement = () => {
   ];
 
   const benefits = [
+=======
+    'Hardware devices (servers, workstations, mobile devices)',
+    'Software licenses and applications',
+    'Network infrastructure and equipment',
+    'Cloud resources and virtual machines',
+    'Security devices and appliances',
+    'Peripheral devices and accessories',
+  ];
+
+    {
+      icon: DollarSign,
+      title: 'Cost Optimization',
+      value: '35%',
+      description: 'Reduction in IT asset costs',
+    },
+    {
+      icon: Clock,
+      title: 'Time Savings',
+      value: '60%',
+      description: 'Faster asset management',
+    },
+    {
+      icon: Shield,
+      title: 'Security Improvement',
+      value: '90%',
+      description: 'Better security compliance',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Efficiency Boost',
+      value: '200%',
+      description: 'Increased operational efficiency',
+    },
+  ];
+
+    'Automated asset discovery and inventory',
+    'Real-time health monitoring and alerts',
+    'Predictive maintenance scheduling',
+    'License compliance management',
+    'Security vulnerability assessment',
+    'Asset lifecycle optimization',
+    'Cost allocation and tracking',
+    'Integration with existing IT tools',
+  ];
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+    "Hardware devices (servers, workstations, mobile devices)",
+    "Software licenses and applications",
+    "Network infrastructure and equipment",
+    "Cloud resources and virtual machines",
+    "Security devices and appliances",
+    "Peripheral devices and accessories",
+    "Peripheral devices and accessories"
+  ],
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/ai-powered-it-asset-management.tsx
     {
       icon: DollarSign,
       title: "Cost Optimization",
@@ -70,6 +218,7 @@ const AIPoweredITAssetManagement = () => {
       title: "Efficiency Boost",
       value: "200%",
       description: "Increased operational efficiency"
+<<<<<<< HEAD:temp_exclude/pages_all/ai-powered-it-asset-management.tsx
     }
   ];
 
@@ -81,6 +230,29 @@ const AIPoweredITAssetManagement = () => {
     "Security vulnerability assessment";
     "Asset lifecycle optimization";
     "Cost allocation and tracking";
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+    "Automated asset discovery and inventory",
+    "Real-time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/ai-powered-it-asset-management.tsx
     "Integration with existing IT tools"
   ];
 

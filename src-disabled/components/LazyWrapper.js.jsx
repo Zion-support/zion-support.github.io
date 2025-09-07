@@ -7,7 +7,7 @@
   return $3;}
 }
 }) ;
-  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ';'";import React, { useState, useEffect, useRef } from 'react''";
+  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ';'\";import React, { useState, useEffect, useRef } from 'react''\";
 import { motion, useInView } from 'framer-motion''';
 import { EnhancedLoading  } from './EnhancedLoading';
 
@@ -22,7 +22,7 @@ const LazyWrapper = ({}
 const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const ref = useRef(null;
-  const inView = useInView(ref, {amount: threshold}
+  const inView = useInView(ref, { amount: threshold,}
 };
   useEffect(() => {}
 }

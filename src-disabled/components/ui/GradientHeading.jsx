@@ -17,13 +17,11 @@ const getSizeClasses = () => {
 ;
   const gradients  = {}';'; primary: '''';bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent', ''' secondary: '''';bg-gradient-to-r from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparent', ''' accent: '''';bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent', '' custom: ''' customGradient ||'''';bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'}
 
-const getGradientClasses = () => {
   return $3;}
 };
   return gradients[variant];
 }
 
-const getSizeClasses = () => {
   return $3;}
 }
 ;

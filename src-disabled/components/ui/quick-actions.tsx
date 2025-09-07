@@ -164,7 +164,6 @@ interface QuickAction {
         // Preload critical images;,
         const critical_images = ['/logos / zion - logo.png', '/images / hero - bg.webp'];
         critical_images.for_each (img => {
-          const link = document.create_element ('link');
           link.rel = 'preload';
           link.as = 'image';
           link.href = img;

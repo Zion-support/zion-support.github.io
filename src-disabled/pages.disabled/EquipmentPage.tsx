@@ -25,7 +25,6 @@ import {
   RefreshCw,;
 } from 'lucide-react';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import {
   generateDatacenterEquipment,
   getEquipmentMarketStats,
   getRecommendedEquipment,;
@@ -224,7 +223,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
 import { ProductListing } from '@/types/listings',
@@ -359,7 +357,6 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
 ],
 
 // Market insights component
-const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -389,7 +386,6 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
 ),
 
 // Filter controls
-const EquipmentFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 }: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -418,8 +414,6 @@ const EquipmentFilterControls = ({
 ),
 
 // Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency(),
   return (
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
@@ -607,7 +601,6 @@ function EquipmentPageContent() {;
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
-  const {
     items: equipment,
     loading,
     error,
@@ -622,26 +615,21 @@ function EquipmentPageContent() {;
 
   // Refresh when filters change
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
       refresh()
     }, 100), // Small delay to prevent rapid successive refreshes
 
     return () => clearTimeout(timeoutId)
   }, [sortBy, filterCategory, showRecommended, refresh]),
 
-  const marketStats = useMemo(() => {
     if (equipment.length === 0) return null,
     return getEquipmentMarketStats(equipment)
   }, [equipment]),
 
-  const categories = useMemo(() => {
     // Use all possible categories, not just from current items
     return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
   }, []),
 
-  const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),

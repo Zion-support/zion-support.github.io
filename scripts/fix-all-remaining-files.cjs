@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -6,9 +7,12 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +21,8 @@ const path = require('path');
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Fixing All Remaining Files...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx']
@@ -33,6 +39,7 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
     "password"
     "confirmPassword"
     console.log('Signup "attempt")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,3 +70,6 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+        <meta name="description" content="
+>>>>>>> merged-prs-20250907-203621

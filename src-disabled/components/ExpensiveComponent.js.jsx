@@ -7,7 +7,7 @@ const [data, setData] = useState([]);
 
 const timer = setTimeout(() => {}
 ;
-  const expensiveData = Array.from(){length: 10000}
+  const expensiveData = Array.from(){ length: 10000,}
 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random())setData(expensiveData)setLoading(false)}, 2000)return () => clearTimeout(timer)}, [])if(loading) {}
    ;
   return()<div className='text-center p-8' />'''';

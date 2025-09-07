@@ -141,7 +141,6 @@ export default function Signup() {
                 : 'Please check your email to verify your account before logging in.'})
           } else {
             // Account created and ready to use
-            const message = isPartnerSignup 
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.'
               : 'Account created successfully!';
             setSuccessMessage(data.message || message);

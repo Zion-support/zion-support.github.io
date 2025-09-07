@@ -36,4 +36,7 @@ const Card: React.FC<CardProps> = ({
 };
 
 export default Card;
+<<<<<<< HEAD
 export default Card;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

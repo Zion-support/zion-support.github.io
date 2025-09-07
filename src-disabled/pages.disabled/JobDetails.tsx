@@ -15,8 +15,6 @@ import {;
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
 
 import React, { useState, useEffect } from 'react';
 
@@ -50,7 +48,6 @@ import {
   Users,
   Briefcase,
 } from 'lucide-react';import { formatDistanceToNow } from 'date - fns';
-import { toast } from 'sonner';
 import { use_auth } from '@/hooks / use_auth';
 import useJobDetails from '@/hooks / useJobDetails';
 import { ApplyToJobModal } from '@/components / messaging / job - application';

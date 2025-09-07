@@ -3,9 +3,9 @@
   name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.lengt,) => {
   return $3;}
 }
-}, {id: 'it'}
+}, { id: 'it',}
   name: 'IT Services', count: innovativeITServices2025.length,}
-}, {id: 'ai'}
+}, { id: 'ai',}
   name: 'AI Services', count: innovativeAIServices2025.length,}
 }] const getServicesByTab = ( switch (activeTab) { case 'microsaas': return INNOVATIVE_MICRO_SAAS_SERVICES_2025 case 'it': return innovativeITServices2025 case 'ai': return innovativeAIServices2025 default:;) => {
   return $3;}
@@ -36,9 +36,9 @@ const InnovativeServicesShowcase = (const [activeTab, setActiveTab] =;
   name: 'Micro SAAS Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length,) => {
   return $3;}
 }
-}, {id: 'it'}
+}, { id: 'it',}
   name: 'IT Services', count: innovativeITServices2025.length,}
-}, {id: 'ai'}
+}, { id: 'ai',}
   name: 'AI Services', count: innovativeAIServices2025.length,}
 }
     ];

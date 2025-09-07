@@ -12,8 +12,17 @@
 
   );
 
+<<<<<<< HEAD
 import React from 'react';
 
+=======
+<<<<<<< HEAD
+  );
+=======
+import React from 'react';
+
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 export default function AuthCallbackPage() {
   return (
 

@@ -1,10 +1,3 @@
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarTrigger.tsx
-interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
-  className?: string
-}
-
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
-  const { open, toggleSidebar } = useSidebar();
 import React from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -32,7 +25,6 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {;
 }
 ;
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
-  const { open, toggleSidebar } = useSidebar();
   return (;
     <Button;
       variant="ghost";
@@ -46,9 +38,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 
     </Button>;
   );
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarTrigger.tsx
-}
-;
 
 ;
 

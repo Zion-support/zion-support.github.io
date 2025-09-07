@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD:temp_exclude/pages_all/comprehensive-2026-services-showcase.tsx
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -7,13 +8,18 @@ import {
   Globe, Database, Cloud, Lock, Palette, Target, Layers, 
   Sparkles, Atom, Microscope, Satellite, CheckCircle, 
   ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
+=======
+import {
+  Search, Filter, Star, TrendingUp, Zap, Brain, Shield
+  Globe, Database, Cloud, Lock, Palette, Target, Layers
+  Sparkles, Atom, Microscope, Satellite, CheckCircle
+  ArrowRight, Phone, Mail, MapPin, Rocket, Users
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/comprehensive-2026-services-showcase.tsx
   BarChart3, Award, Clock, DollarSign
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
-import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
 export default function Comprehensive2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState($2);
   const [selectedCategory, setSelectedCategory] = useState($2);

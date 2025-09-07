@@ -391,4 +391,8 @@ export default function AIEmotionIntelligencePlatform() {
       </UltraFuturisticBackground2030>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> merged-prs-20250907-203621

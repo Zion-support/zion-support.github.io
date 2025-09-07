@@ -46,8 +46,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
   if (req.method === "POST") {
+<<<<<<< HEAD:temp_exclude/pages_api_legacy/pages_api/sync/config.ts
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
 
+=======
+      peers?: Peer[]
+      scope?: SyncScope
+      instanceId?: string
+    }
+    if (scope && !["full", "dao", "marketplace"].includes(scope)) {
+      return res.status(400).json({ error: "Invalid scope" })
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/api/sync/config.ts
     }
 
     if (Array.isArray(peers)) {

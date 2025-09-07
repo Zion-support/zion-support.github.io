@@ -151,7 +151,7 @@ const downloadCSV = () => {
 '';
 '''';
 
-const blob = new Blob([content], {type: 'text/csv'}
+const blob = new Blob([content], { type: 'text/csv',}
 })'';
 
 const url = window.URL.createObjectURL(blob)';';
@@ -260,7 +260,7 @@ const renderCell = () => {
   );
 }'`';
             '`'`;
-            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{width: column.width }
+            {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width ,}
 } />'`''`';
                 <button onClick={() = /> handleSort(column.key)} disabled={!enableSorting || !column.sortable} className={`w-full flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? 'cursor-default' : 'cursor-pointer'},
 }>'''';
@@ -300,7 +300,7 @@ const renderCell = () => {
   );
 }'`';
                 '`'`;
-                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{width: column.width }
+                {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width ,}
 } />;
                     {renderCell(column, item, index)}
                   </div>))}'''';
@@ -360,4 +360,4 @@ const page = i + 1`;'`'`'`';
   );
 }
     </div>)}''`;
-''`'"`'";
+''`'\"`'\";

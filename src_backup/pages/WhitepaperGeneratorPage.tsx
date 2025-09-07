@@ -203,7 +203,6 @@ interface DistributionChartItem {
     );
   };
 
-  const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`
     mdContent += `**Total Supply:** ${tokenSupply}\n\n`
     sections.forEach(section => {

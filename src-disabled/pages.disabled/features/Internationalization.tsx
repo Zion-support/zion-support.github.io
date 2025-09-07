@@ -1,4 +1,3 @@
-:src/pages/features/Internationalization.tsx
 
   return (
     <>;
@@ -63,27 +62,9 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-:src/pages/features/Internationalization.tsx
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function Internationalization() {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Internationalization'
-    description:
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.'
-    url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Internationalization"
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Internationalization() {
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Internationalization",
@@ -94,11 +75,6 @@ export default function Internationalization() {
   return (
     <>
       <SEO
-:src/pages/features/Internationalization.tsx
-        title='Internationalization'
-        description='Reach a global audience with multi-language support across the Zion platform.'
-        keywords='i18n, multi-language marketplace, localized listings'
-        canonical='https://app.ziontechgroup.com/features/internationalization'
 
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
@@ -225,8 +201,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
-:src/pages/features/Internationalization.tsx
-}
 ;
 
 ;

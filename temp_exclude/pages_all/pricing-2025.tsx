@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:temp_exclude/pages_all/pricing-2025.tsx
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
+=======
+import {
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/pricing-2025.tsx
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');

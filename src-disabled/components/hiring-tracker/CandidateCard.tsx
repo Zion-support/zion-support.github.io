@@ -1,12 +1,10 @@
   const handleSaveNotes = () => {
-const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast'
     toast({
       title: 'Notes saved','
       description: 'Your notes have been saved','
     // For now, we'll just show a toast
-const handleSaveNotes = () => {
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
 pr-12325
@@ -33,7 +31,6 @@ import { useState } from 'react';
   const candidateName = application.talent_profile?.full_name || 'Candidate''
 
   const candidateName = application.talent_profile?.full_name || 'Candidate'
-import { useState } from 'react';
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub",;
@@ -79,7 +76,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     }),
     setShowNotes(false)
   },
-  const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
       title: "Hiring process initiated","
@@ -95,11 +91,8 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -107,7 +100,6 @@ import {
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
-import Image from 'next/image', // Import next/image
 
 interface CandidateCardProps {
   application: JobApplication,
@@ -124,7 +116,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const isStalled = application.updated_at && 
     new Date(application.updated_at).getTime() < 
     (Date.now() - 7 * 24 * 60 * 60 * 1000),
-  const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
@@ -133,7 +124,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     }),
     setShowNotes(false)
   },
-  const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
       title: "Hiring process initiated",
@@ -154,7 +144,6 @@ import { useState } from "react",;
   description: 'Offer has been sent to the talent.)
 
 
-import { useState } from 'react';
   const candidateName = application.talent_profile?.full_name || 'Candidate
   return (
     <>
@@ -200,10 +189,7 @@ import Link from "next/link";
 import { JobApplication } from "@/types/jobs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
-import {;
 import { Draggable } from "@/lib/dnd-stub";""
 import { formatDistanceToNow } from "date-fns";""
 import Link from "next/link";""
@@ -212,7 +198,6 @@ import { Card, CardContent } from "@/components/ui/card";""
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;""
 import { Button } from "@/components/ui/button";""
 import { Textarea } from "@/components/ui/textarea";""
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
 pr-12325
   DropdownMenu,;
   DropdownMenuContent,;
@@ -236,12 +221,9 @@ pr-12325
   index: number;
 
 export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application && application.notes || '');
   const [notes, setNotes] = useState(application && application.notes || );
 pr-12325
-  const [showHireModal, setShowHireModal] = useState(false);
-  const [avatarError, setAvatarError] = useState(false);
   // Check if application is stalled (no activity for 7,  days);
   const isStalled =;
     application && application.updated_at &&;
@@ -249,24 +231,14 @@ pr-12325
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
           <Card 
             className="mb-2 p-0 shadow-sm border"
-import { useState } from "react",;
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
-import { Draggable } from "@/lib/dnd-stub",;
-import { formatDistanceToNow } from "date-fns",;
-import Link from "next/link",;
-import { JobApplication } from "@/types/jobs",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
-import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
 import { toast } from "@/hooks/use-toast",;
 import { HireConfirmationModal } from "./HireConfirmationModal",;
 import Image from 'next/image', // Import next/image;
@@ -307,7 +279,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     }),;
     setShowNotes(false);
   },;
-  const handleHireConfirmed = () => {;
     // Hiring process completed via the modal;
     toast({;
       title: "Hiring process initiated",;
@@ -569,7 +540,6 @@ pr-12325
         onClose = {() => setShowHireModal(false),}
         application = {application,}
         onConfirm = {handleHireConfirmed,}
-import { useState } from 'react';
 // Local stub is used in place of the @hello - pangea / dnd package which isn't;
 // available in this environment.;
 import { Draggable } from '@/lib / dnd - stub';
@@ -580,7 +550,6 @@ import { Card, CardContent } from '@/components / ui / card';
 import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed to avoid conflict;
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
-import {
   MessageSquare,
   User,
   FileText,
@@ -598,7 +567,6 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Avatar as AvatarPrimitive  } from '@/components / ui / avatar';, // Renamed to avoid conflict;
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -606,7 +574,6 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 } from '@/components / ui / dropdown - menu';
 import { ScoreBadge } from '@/components / jobs / applications / ScoreBadge';
 import { toast } from '@/hooks / use - toast';
-import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next / image'; // Import next / image;
 interface CandidateCardProps {
   application: JobApplication;,
@@ -788,19 +755,16 @@ function CandidateCard() {
 
     new Date (application.updated_at).get_time () <;
       Date.now () - 7 * 24 * 60 * 60 * 1000;
-  const handleSaveNotes = () =>: any {
   // TODO: Implement
     // Here you would save the notes to the database;"
     // For now, we'll just show a toast;
     toast ({
     });
     setShowNotes (false);
-  const handleHireConfirmed = () =>: any {
   // TODO: Implement
     // Hiring process completed via the modal;
       title: 'Hiring process initiated',
       description: 'Offer has been sent to the talent.',')
-  const candidate_name = application.talent_profile?.full_name || 'Candidate';
       <Draggable draggable_id={application.id} index={index}>;
 
             className='mb - 2 p - 0 shadow - sm border';

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -74,6 +75,8 @@ main();
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
       log('warn', 'Issues "found": ');
       qualityReport.issues.forEach(issue => {
@@ -121,6 +124,7 @@ console.log()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "severity"""
 =======
 <<<<<<< HEAD
@@ -135,6 +139,8 @@ console.log()
 =======
       "severity"""
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
       "message"""
       "recommendation"""
       "pattern": /password\s*=\s*['"][^]
@@ -144,6 +150,7 @@ console.log()
       "priority"""
       "action"""
       log('warn', 'Issues "found")""
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +166,8 @@ console.log()
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
       "severity"
       "message"
       "recommendation"
@@ -241,6 +250,7 @@ console.log()
     "message"
     "action"
       log('warn', 'Issues "found")
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       pattern: /api[_-]?key\s*=\s*["][^'']
@@ -325,3 +335,6 @@ console.log()
       log('info', 'Quality "Recommendations")""`;
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      log('info', 'Quality "Recommendations")
+>>>>>>> merged-prs-20250907-203621

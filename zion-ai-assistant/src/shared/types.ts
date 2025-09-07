@@ -1,5 +1,33 @@
+<<<<<<< HEAD
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
 export interface MilestoneSuggestionInput {}
+=======
+
+;
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,startDateIso: string, // ISO 8601;
+  endDateIso: string,   // ISO 8601;
+  project_type: ProjectType;
+}export interface SuggestedMilestoneItem  {title: string,description: string,export interface SuggestedMilestoneItem  {title: string,description: string,export interface SuggestedMilestoneItem  {title: string,description: string,suggestedDueDateIso: string;
+}  suggestedDueDateIso: string;
+
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export interface MilestoneSuggestionInput {
+  scopeOfWork: string,
+
+
+export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;
+export interface MilestoneSuggestionInput {;
+  scopeOfWork: string,;
+
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
+export interface MilestoneSuggestionInput {
+  scopeOfWork: string,
+  startDateIso: string, // ISO 8601;
+  endDateIso: string,   // ISO 8601;
+  project_type: ProjectType;
+export type ProjectType = $2;
+export interface MilestoneSuggestionInput {
+>>>>>>> merged-prs-20250907-203621
   scopeOfWork: string,
 
 }
@@ -57,6 +85,7 @@ export interface SuggestedMilestoneItem {;
 export interface SuggestedMilestoneItem {
   title: string,
   description: string,
+<<<<<<< HEAD
 
 ;
 export interface SuggestedMilestoneItem {;
@@ -81,11 +110,38 @@ export interface MilestoneSuggestionResponse {
 
 }
 
+=======
+}  suggestedDueDateIso: string;
+  estimatedEffortHours: number, // estimated hours;
+  tags?: string[], // e.g., ["AI Suggested"];
+}export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}
+export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}
+
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+
+
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+
+}
+>>>>>>> merged-prs-20250907-203621
 ;
 export interface SuggestedMilestoneItem {;
   title:string,;
   description:string,;
   suggestedDueDateIso:string,;
+<<<<<<< HEAD
   estimatedEffortHours:number, // estimated hours;"
   tags?:string[], // e.g., ["AI Suggested"];"
   milestones:SuggestedMilestoneItem[];
@@ -95,3 +151,28 @@ export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 }
+=======
+  estimatedEffortHours:number, // estimated hours;
+  tags?:string[], // e.g., ["AI Suggested"];
+}
+;
+export interface MilestoneSuggestionResponse {;
+  milestones:SuggestedMilestoneItem[];
+}
+export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+}
+  suggestedDueDateIso: string,
+  estimatedEffortHours: number, // estimated hours
+  tags?: string[], // e.g., ["AI Suggested"]
+}
+
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[]
+}
+>>>>>>> merged-prs-20250907-203621

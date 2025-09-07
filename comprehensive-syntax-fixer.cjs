@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 <<<<<<< HEAD
@@ -159,6 +160,10 @@ const fs = require('fs');
 #!/usr/bin/env node,
   const fs = require('fs');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+#!/usr/bin/env node,
+  const fs = require('fs');
+>>>>>>> merged-prs-20250907-203621
 const path = require('path');
 const { execSync } = require('child_process');
 =======
@@ -186,6 +191,7 @@ class ComprehensiveSyntaxFixer {
     }[type] || 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -218,6 +224,8 @@ class ComprehensiveSyntaxFixer {
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
   async findFilesWithErrors() {
     this.log('🔍 Finding files with syntax errors...', 'PROGRESS');
 =======
@@ -226,6 +234,7 @@ class ComprehensiveSyntaxFixer {
     
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       const result = await this.runCommand(
         'npx eslint . --max-warnings 0 --format json,
@@ -299,6 +308,9 @@ class ComprehensiveSyntaxFixer {
         {
           pattern: /=======[\s\S]*?>>>>>>> [^\n]+/g,
           replacement: '
+=======
+          replacement: ''
+>>>>>>> merged-prs-20250907-203621
         },
         // Fix malformed JSX attributes
         {
@@ -332,6 +344,7 @@ class ComprehensiveSyntaxFixer {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (modified) {
         fs.writeFileSync(filePath, content);
 =======
@@ -343,6 +356,8 @@ class ComprehensiveSyntaxFixer {
       /=======/,       // Merge conflict markers
       /      /succes: s:/,    // Malformed object properties
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
       // Run ESLint to find syntax errors,
   const result = execSync('npx eslint . --max-warnings 1000 --format json', {
         cwd: this.projectRoot,
@@ -400,7 +415,10 @@ class ComprehensiveSyntaxFixer {
   const issues = [
       /
       /succes: s:/,    // Malformed object properties
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
       /duratio: n:/,   // Malformed object properties
       /error: s:/,     // Malformed object properties
       /warning: s:/,   // Malformed object properties
@@ -419,6 +437,7 @@ class ComprehensiveSyntaxFixer {
       /Successful: Tasks:/, // Malformed strings
       /fea: t:/,       // Malformed strings
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     return issues.some(pattern => pattern.test(content));
@@ -559,6 +578,8 @@ class ComprehensiveSyntaxFixer {
         fs.writeFileSync(filePath, content, 'utf8');
 >>>>>>> origin/main
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
     return issues.some(pattern => pattern.test(content));
   }
   fixFile(filePath) {
@@ -580,11 +601,14 @@ class ComprehensiveSyntaxFixer {
   content = this.fixTypeScriptIssues(content);
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> merged-prs-20250907-203621
         this.fixedFiles.push(filePath);
         this.log(`Fixed syntax errors in: ${filePath}`, SUCCESS');
         return true;
@@ -601,8 +625,94 @@ class ComprehensiveSyntaxFixer {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+  fixCommonIssues(content) {
+    // Fix common syntax patterns
+    const fixes = [
+      // Fix malformed object properties
+      { pattern: /succes: s:/g, replacement: 'success:' },
+      { pattern: /duratio: n:/g, replacement: 'duration:' },
+      { pattern: /error: s:/g, replacement: 'errors:' },
+      { pattern: /warning: s:/g, replacement: 'warnings:' },
+      { pattern: /timestam: p:/g, replacement: 'timestamp:' },
+      { pattern: /result: s:/g, replacement: 'results:' },
+      { pattern: /recommendation: s:/g, replacement: 'recommendations:' },
+      
+      // Fix malformed strings
+      { pattern: /Erro: r:/g, replacement: 'Error:' },
+      { pattern: /Warnin: g:/g, replacement: 'Warning:' },
+      { pattern: /Runnin: g:/g, replacement: 'Running:' },
+      { pattern: /faile: d:/g, replacement: 'failed:' },
+      { pattern: /outpu: t:/g, replacement: 'output:' },
+      { pattern: /erro: r:/g, replacement: 'error:' },
+      { pattern: /Fatal: error:/g, replacement: 'Fatal error:' },
+      { pattern: /Total: Duration:/g, replacement: 'Total Duration:' },
+      { pattern: /Successful: Tasks:/g, replacement: 'Successful Tasks:' },
+      { pattern: /fea: t:/g, replacement: 'feat:' },
+      
+      // Fix semicolon issues
+      { pattern: /npm run: build:analyze/g, replacement: 'npm run build:analyze' },
+      { pattern: /npm run build;/g, replacement: 'npm run build' },
+      { pattern: /npm run clean;/g, replacement: 'npm run clean' },
+      { pattern: /npm install;/g, replacement: 'npm install' },
+      { pattern: /npx tsc --noEmit --skipLibCheck;/g, replacement: 'npx tsc --noEmit --skipLibCheck' },
+      { pattern: /npx eslint \. --max-warnings 1000;/g, replacement: 'npx eslint . --max-warnings 1000' },
+      { pattern: /npx eslint \. --fix --max-warnings 1000;/g, replacement: 'npx eslint . --fix --max-warnings 1000' },
+      { pattern: /npm audit --audit-level moderate;/g, replacement: 'npm audit --audit-level moderate' },
+      { pattern: /npm audit --json;/g, replacement: 'npm audit --json' },
+      { pattern: /node scripts\/generate-sitemap\.cjs;/g, replacement: 'node scripts/generate-sitemap.cjs' },
+      { pattern: /node scripts\/generate-search-index\.cjs;/g, replacement: 'node scripts/generate-search-index.cjs' },
+      { pattern: /ls -la \.next;/g, replacement: 'ls -la .next' },
+    ];
+    
+    for (const fix of fixes) {
+      content = content.replace(fix.pattern, fix.replacement);
+    }
+    
+    return content;
+  }
+
+  fixMergeConflicts(content) {
+    // Remove merge conflict markers
+    return content
+
+  fixObjectProperties(content) {
+    // Fix malformed object property syntax
+    return content
+      .replace(/(\w+): s: /g, '$1: ')
+      .replace(/(\w+): n: /g, '$1: ')
+      .replace(/(\w+): p: /g, '$1: ');
+  }
+
+  fixMalformedStrings(content) {
+    // Fix malformed string patterns
+    return content
+      .replace(/(\w+): (\w+): /g, '$1: ')
+      .replace(/(\w+): (\w+): /g, '$1: ');
+  }
+
+  fixJSXIssues(content) {
+    // Fix common JSX issues
+    return content
+      .replace(/jsx-a11y\/alt-tex: t: warn/g, 'jsx-a11y/alt-text: warn')
+      .replace(/jsx-a11y\/aria-rol: e: warn/g, 'jsx-a11y/aria-role: warn')
+      .replace(/jsx-a11y\/tabindex-no-positiv: e: warn/g, 'jsx-a11y/tabindex-no-positive: warn');
+  }
+
+  fixTypeScriptIssues(content) {
+    // Fix common TypeScript issues
+    return content
+      .replace(/const (\w+) = require\(/g, 'const $1 = require(')
+      .replace(/module\.exports = /g, 'module.exports = ');
+  }
+
+  async run() {
+    this.log('🚀 Starting Comprehensive Syntax Fixer', 'PROGRESS');
+    this.log('='.repeat(60));
+>>>>>>> merged-prs-20250907-203621
     
     try {
       // Run TypeScript check
@@ -865,6 +975,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             const content = fs.readFileSync(file, utf8');
             
             // Check if file is severely corrupted
+<<<<<<< HEAD
             if (content.length < 100 || content.includes('
 =======
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
@@ -893,6 +1004,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> merged-prs-20250907-203621
 ;
 function fixSyntaxErrors(filePath) {
   try {
@@ -1035,6 +1150,7 @@ for (const file of files) {
 <<<<<<< HEAD
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -1083,6 +1199,8 @@ for (const file of files) {;
       this.generateReport();
     }
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
     fs.writeFileSync(
       'syntax-fix-report.json',
       JSON.stringify(report, null, 2)
@@ -1096,6 +1214,7 @@ for (const file of files) {;
   const fixer = new ComprehensiveSyntaxFixer();
   fixer.run().catch(console.error);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       // Fix common syntax errors
@@ -1151,3 +1270,6 @@ module.exports = ComprehensiveSyntaxFixer;
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+module.exports = ComprehensiveSyntaxFixer;
+>>>>>>> merged-prs-20250907-203621

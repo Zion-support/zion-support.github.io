@@ -1,0 +1,6 @@
+;
+
+}
+;
+// Type declarations for modules used in Vite configuration;
+

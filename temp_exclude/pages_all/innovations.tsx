@@ -1,17 +1,38 @@
 import React from 'react';
+<<<<<<< HEAD:temp_exclude/pages_all/innovations.tsx
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
   ChevronRight, Star, TrendingUp, Zap, Shield;
   ArrowRight, Search, Filter, Grid, List;
+=======
+import {
+  Brain, Rocket, Target, Cpu, Globe, Eye
+  ChevronRight, Star, TrendingUp, Zap, Shield
+  ArrowRight, Search, Filter, Grid, List
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/innovations.tsx
   Phone, Mail, MapPin, ExternalLink, Sparkles
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
 const contactInfo = {
+<<<<<<< HEAD:temp_exclude/pages_all/innovations.tsx
+=======
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+  ChevronRight, Star, TrendingUp, Zap, Shield,
+  ArrowRight, Search, Filter, Grid, List,
+  Phone, Mail, MapPin, ExternalLink, Sparkles
+} from 'lucide-react',;
+import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',;
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
+import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/innovations.tsx
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',

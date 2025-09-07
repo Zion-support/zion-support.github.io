@@ -111,7 +111,6 @@ function findFilesWithMergeConflicts(;
 }
 
   getAllFiles(dir, extensions = [".tsx", ".ts", ".jsx", ".js"]) {;
-  const files = [];
     const scanDirectory = (currentDir) => {;
   if (!fs.existsSync(currentDir)) return;
       const items = fs.readdirSync(currentDir);
@@ -174,7 +173,6 @@ function findFilesWithMergeConflicts(;
       let cleanLines = [];
       let foundValidCode = false;
       for (let i = 0; i < lines.length; i++) {;
-  const line = lines[i];
         // Skip lines that are clearly merge conflict remnants;
         if (line.includes("ursor") || line.includes("cursor/automate")) {;
   continue;,
@@ -278,7 +276,6 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
 filesWithConflicts.forEach(file => console.log(`  - ${file}`));
 // Fix merge conflicts;
 console.log(`\nFixing merge conflicts...`);
-let fixedCount = 0;
 for (const file of filesWithConflicts) {;
   if (fixMergeConflicts(file)) {;
   fixedCount++;,

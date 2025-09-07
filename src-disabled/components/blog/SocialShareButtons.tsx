@@ -2,7 +2,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
   const shareToTwitter = () => {
-const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}``
       '_blank''
@@ -13,7 +12,6 @@ interface SocialShareButtonsProps {
   title: string;,
 export /**
  * SocialShareButtons - Function description
-const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank)

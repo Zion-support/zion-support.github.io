@@ -57,8 +57,6 @@ export function PageHero() {
           <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>"
         </div>
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react'
 
 export function PageHero() {
   return (
@@ -97,8 +95,6 @@ export function PageHero() {
 
     </div>
 
-import { GradientHeading } from '@/components/GradientHeading';
-import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
   return (
     <div className='text-center mb-12'>;
@@ -185,7 +181,6 @@ pr-12325
     </div>
 
 import { GradientHeading } from "@/components/GradientHeading",
-import { Clock, Map, DollarSign } from 'lucide-react'
 
 export function PageHero() {
   return (
@@ -230,11 +225,9 @@ export function PageHero() {
     </div>
   )"
 import { GradientHeading } from "@/components/GradientHeading";'
-import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() { return null; }
 }
 
-import { Clock, Map, DollarSign } from 'lucide-react';
 export /**;
  * PageHero - Function description;
  */

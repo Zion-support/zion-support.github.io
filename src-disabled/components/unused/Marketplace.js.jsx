@@ -2,39 +2,39 @@ import React, { useState } from 'react' import { Link } from 'react-router-dom' 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-  const categories = [ {id: 'all'}
+  const categories = [ { id: 'all',}
   name: 'All Products', icon: Globe, count: 24,}
-}, {id: 'ai-solutions'}
+}, { id: 'ai-solutions',}
   name: 'AI Solutions', icon: Brain, count: 8,}
-}, {id: 'cybersecurity'}
+}, { id: 'cybersecurity',}
   name: 'Cybersecurity', icon: Shield, count: 6,}
-}, {id: 'cloud-infrastructure'}
+}, { id: 'cloud-infrastructure',}
   name: 'Cloud & Infrastructure', icon: Cloud, count: 5,}
-}, {id: 'blockchain'}
+}, { id: 'blockchain',}
   name: 'Blockchain & Web3', icon: Network, count: 3,}
-}, {id: 'iot-platforms'}
+}, { id: 'iot-platforms',}
   name: 'IoT Platforms', icon: Smartphone, count: 2,}
-} ] const priceRanges = [ {id: 'all'}
+} ] const priceRanges = [ { id: 'all',}
   name: 'All Prices',}
-}, {id: 'free'}
+}, { id: 'free',}
   name: 'Free',}
-}, {id: 'under-100'}
+}, { id: 'under-100',}
   name: 'Under $100',}
-}, {id: '100-500'}
+}, { id: '100-500',}
   name: '$100 - $500',}
-}, {id: '500-1000'}
-  name: '$500 - $1,000' }, {id: 'over-1000'}
-  name: 'Over $1, 000' } ] const sortOptions = [ {id: 'featured'}
+}, { id: '500-1000',}
+  name: '$500 - $1,000' }, { id: 'over-1000',}
+  name: 'Over $1, 000' } ] const sortOptions = [ { id: 'featured',}
   name: 'Featured',}
-}, {id: 'price-low'}
+}, { id: 'price-low',}
   name: 'Price: Low to High',}
-}, {id: 'price-high'}
+}, { id: 'price-high',}
   name: 'Price: High to Low',}
-}, {id: 'newest'}
+}, { id: 'newest',}
   name: 'Newest',}
-}, {id: 'popular'}
+}, { id: 'popular',}
   name: 'Most Popular',}
-}, {id: 'rating'}
+}, { id: 'rating',}
   name: 'Highest Rated',}
 } ];
   const marketplaceProducts = [ { id: 1, name: 'AI Autonomous Business Manager',
@@ -91,4 +91,4 @@ const getCategoryName = (;) => {
 }';' {}'';' <div className='mt-16 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10' />'';' <div className='text-center' />'';' <h2 className='text-3xl font-bold text-white mb-4' />'; Need a Custom Solution?';' </h2>'';' <p className='text-xl text-gray-300 mb-6 max-w-2xl mx-auto' />'; Can&apos;t find exactly what you&apos;re looking for? Our team can create custom'; technology solutions tailored to your specific business requirements.';' </p>'';' <div className='flex flex-col sm: flex-row gap-4 justify-center' />'';' <Link to='/contact' className='px-8 py-3 bg-blue-600 hover: bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200' />'; Contact Sales';' </Link>'';' <Link to='/services' className='px-8 py-3 bg-white/10 hover: bg-white/20 text-white font-medium rounded-lg border border-white/20 transition-colors duration-200' /> View Services </Link>' </div>'; </div>'; </div>';' {}'';' <div className='mt-16 grid grid-cols-1 md: grid-cols-4 gap-6' />'';' <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center' />'';' <Globe className='w-12 h-12 text-blue-400 mx-auto mb-4'/>'';' <div className='text-3xl font-bold text-white mb-2' />24+</div>'';' <div className='text-gray-300' />Products Available</div>';' </div>'';' <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center' />'';' <Users className='w-12 h-12 text-green-400 mx-auto mb-4'/>'';' <div className='text-3xl font-bold text-white mb-2' />1, 200+</div>'';' <div className='text-gray-300' />Happy Customers</div>';' </div>'';' <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center' />'';' <Star className='w-12 h-12 text-yellow-400 mx-auto mb-4'/>'';' <div className='text-3xl font-bold text-white mb-2' />4.8</div>'';' <div className='text-gray-300' />Average Rating</div>';' </div>'';' <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center' />'';' <Shield className='w-12 h-12 text-purple-400 mx-auto mb-4'/>'';' <div className='text-3xl font-bold text-white mb-2' />100%</div>'';' <div className='text-gray-300' />Secure Transactions</div> </div>' </div>'; </div>'
     </div>
   );
-}';'';''`"'";
+}';'';''`\"'\";

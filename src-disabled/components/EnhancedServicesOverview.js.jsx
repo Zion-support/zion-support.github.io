@@ -26,7 +26,6 @@ import { Badge  } from '@/components/ui/badge';
   MapPin} from 'lucide-react''';
 import { Link  } from 'react-router-dom';
 
-const ServiceCategory = (
 
 ) => {
   return $3;}
@@ -378,7 +377,7 @@ const ContactSection = () => ('''';
       </div>;
 '''';
       {/* Service Categories */}'''';
-      <div className='space-y-16" />'";
+      <div className='space-y-16\" />'\";
         {ENHANCED_SERVICE_CATEGORIES.map(category => (<ServiceCategory;}
             key={category.value}
             category={category.label}

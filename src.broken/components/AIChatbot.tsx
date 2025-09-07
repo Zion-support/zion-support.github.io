@@ -46,6 +46,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
     ],
+<<<<<<< HEAD
     
     const randomResponse = $2;
     // Add some context-aware responses
@@ -88,6 +89,97 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault($2);
       handleSendMessage()
+=======
+const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],;
+    // Add some context-aware responses,
+let "finalResponse": string = randomResponse,;
+    if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {'
+      }
+      finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?""
+    } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {'
+      }
+      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?""
+    } else if (userMessage.toLowerCase().includes('quantum')) {'
+      }
+      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?""
+;
+const "AIChatbot": React.FC<AIChatbotProps> = ({ className = "" }) => {;"
+  }
+    {;
+      }
+      "id": '1',;'
+      "type": 'bot',;'
+      "content": 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help "with":\n\n AI & Quantum Computing Services\n Business Solutions\n Technical Support\n Pricing Information\n Service Comparisons',;'
+      "timestamp": new Date();
+    }
+  ]),;
+  const scrollToBottom = () => {;
+    }
+    messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' });'
+  },;
+  useEffect(() => {;
+    }
+    scrollToBottom();
+  }, [messages]),;
+  // AI response simulation;
+  const generateAIResponse = async ("userMessage": string): Promise<string> => {;
+    }
+    setIsTyping(true),;
+    // Simulate AI processing time;
+    await new Promise(resolve => { return setTimeout(resolve, 1000 + Math.random() * 2000)),; }
+    const responses = [;
+      "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",;"
+      "I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.",;"
+      "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.",;"
+      "I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.",;"
+      "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",;"
+      "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team.";"
+    ],;
+    // Add some context-aware responses;
+    if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {;'
+      }
+      finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?";"
+    } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {;'
+      }
+      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?";"
+    } else if (userMessage.toLowerCase().includes('quantum')) {;'
+      }
+      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";"
+    }
+;
+    return finalResponse!;
+  },;
+  const handleSendMessage = async () => {;
+    }
+    if (!inputValue.trim() || isTyping) return,;
+    const "userMessage": ChatMessage = {;
+      }
+      "id": Date.now().toString(),;
+      "type": 'user',;'
+      "content": inputValue.trim(),;
+      "timestamp": new Date();
+    },;
+    setMessages([...messages, userMessage]),;
+    setInputValue(''),;'
+    // Generate AI response;
+    const aiResponse = await generateAIResponse(userMessage.content),;
+    const "botMessage": ChatMessage = {;
+      }
+      "id": (Date.now() + 1).toString(),;
+      "type": 'bot',;'
+      "content": aiResponse,;
+      "timestamp": new Date();
+    },;
+    setMessages([...messages, botMessage]),;
+    setIsTyping(false);
+  },;
+  const handleKeyPress = ("e": React.KeyboardEvent) => {;
+    }
+    if (e.key === 'Enter' && !e.shiftKey) {;'
+      }
+      e.preventDefault(),;
+      handleSendMessage();
+>>>>>>> merged-prs-20250907-203621
     }
   },
 
@@ -102,6 +194,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     setInputValue($2);
     setTimeout(() => handleSendMessage(), 100)
   },
+<<<<<<< HEAD
 
   return (
     <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
@@ -112,6 +205,30 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
           animate={{ scale: 1}}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+=======
+return (;
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>`  },;
+    "Tell me about AI services",;"
+    "Quantum computing pricing",;"
+    "Business solutions",;"
+    "Contact sales team",;"
+    "Technical support";"
+  ],;
+  const handleQuickReply = ("reply": string) => {;
+    }
+    setInputValue(reply),;
+    setTimeout(() => handleSendMessage(), 100);
+  },;
+  return (;
+    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>;`      {/* Chat Toggle Button */}
+      {!isOpen && (;
+        <motion.button;
+          }
+          initial={{ "scale": 0 }}
+          animate={{ "scale": 1 }}
+          whileHover={{ "scale": 1.1 }}
+          whileTap={{ "scale": 0.95 }}
+>>>>>>> merged-prs-20250907-203621
           onClick={() => setIsOpen(true)}
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center"
         >

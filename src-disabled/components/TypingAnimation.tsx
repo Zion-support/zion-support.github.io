@@ -33,7 +33,6 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({,
   }, [currentIndex, text, speed, isComplete, onComplete]);
   useEffect(() => {
     if (delay > 0) {
-      const timeout = setTimeout(() => {
         setCurrentIndex(0);
       }, delay);
       return () => clearTimeout(timeout);

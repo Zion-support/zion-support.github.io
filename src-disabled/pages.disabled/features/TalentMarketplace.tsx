@@ -1,4 +1,3 @@
-:src/pages/features/TalentMarketplace.tsx
 
   return (
     <>;
@@ -50,27 +49,9 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-:src/pages/features/TalentMarketplace.tsx
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function TalentMarketplace() {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Talent Marketplace'
-    description:
-      'Hire vetted AI and tech professionals from around the world on Zion.'
-    url: 'https://app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Talent Marketplace"
-    "description": "Hire vetted AI and tech professionals from around the world on Zion."
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function TalentMarketplace() {
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Talent Marketplace",
@@ -81,11 +62,6 @@ export default function TalentMarketplace() {
   return (
     <>
       <SEO
-:src/pages/features/TalentMarketplace.tsx
-        title='Talent Marketplace'
-        description='Discover and hire top AI specialists through the Zion talent marketplace.'
-        keywords='AI talent marketplace, hire developers, tech freelancers'
-        canonical='https://app.ziontechgroup.com/features/talent-marketplace'
 
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
@@ -212,8 +188,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
-:src/pages/features/TalentMarketplace.tsx
-}
 ;
 
 ;

@@ -106,19 +106,19 @@ const servicePerformance = [];
   ]'';
 
 const categoryDistribution = ['';
-    {label: 'AI & ML'}
+    { label: 'AI & ML',}
   value: 35, color: 'from-purple-500 to-pink-600',}
 }, '';
-    {label: 'Quantum'}
+    { label: 'Quantum',}
   value: 20, color: 'from-blue-500 to-cyan-600',}
 },'';
-    {label: 'Blockchain'}
+    { label: 'Blockchain',}
   value: 25, color: 'from-green-500 to-emerald-600',}
 }, '';
-    {label: 'Cybersecurity'}
+    { label: 'Cybersecurity',}
   value: 15, color: 'from-red-500 to-pink-600',}
 },'';
-    {label: 'IoT'}
+    { label: 'IoT',}
   value: 5, color: 'from-orange-500 to-yellow-600',}
 }
   ];
@@ -191,7 +191,7 @@ const getStatusColor = status => {}
 }
         animate={{ opacity: 1, y: 0 ,}
 }'''';
-        transition={{delay: 0.1 }
+        transition={{ delay: 0.1 ,}
 }'''';
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 ' />;
         {metrics.map((metric, index) => (<motion.div;}
@@ -199,7 +199,7 @@ const getStatusColor = status => {}
             initial={{ opacity: 0, y: 20 ,}
 }
             animate={{ opacity: 1, y: 0 }}
-            transition={{delay: 0.1 * index }
+            transition={{ delay: 0.1 * index ,}
 }'''';
            />'''';
             <Card className='h-full hover:shadow-lg transition-shadow' />'''';
@@ -240,7 +240,7 @@ const getStatusColor = status => {}
 }
         animate={{ opacity: 1, y: 0 ,}
 }'''';
-        transition={{delay: 0.2 }
+        transition={{ delay: 0.2 ,}
 }'''';
         className='mb-8 ' />;
         <Card />'''';
@@ -282,7 +282,7 @@ const getStatusColor = status => {}
 }
                       animate={{ opacity: 1, x: 0 ,}
 }'''';
-                      transition={{delay: 0.1 * index }
+                      transition={{ delay: 0.1 * index ,}
 }'''';
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''';
                      />'''';
@@ -343,7 +343,7 @@ const getStatusColor = status => {}
 }
         animate={{ opacity: 1, y: 0 ,}
 }'''';
-        transition={{delay: 0.3 }
+        transition={{ delay: 0.3 ,}
 }'''';
         className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 ' />;
         {/* Category Distribution */}
@@ -362,7 +362,7 @@ const getStatusColor = status => {}
 }
                   animate={{ opacity: 1, x: 0 ,}
 }'''';
-                  transition={{delay: 0.1 * index }
+                  transition={{ delay: 0.1 * index ,}
 }'''';
                   className='flex items-center justify-between''''';
                  />'''';
@@ -447,7 +447,7 @@ const getStatusColor = status => {}
 }
         animate={{ opacity: 1, y: 0 ,}
 }'''';
-        transition={{delay: 0.4 }
+        transition={{ delay: 0.4 ,}
 }'''';
         className='text-center''''';
        />'''';

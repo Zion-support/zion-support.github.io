@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -32,6 +33,12 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Zion Tech Group - Enhanced Automation Suite')
 
 
@@ -49,6 +56,7 @@ console.log('====')
       const result = await this.runCommand(cmd, desc, { "stdio"})
       "recommendations"
     this.log(`Report saved "to"`)
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.log(` Enhanced automation suite "failed"`)
 <<<<<<< HEAD
@@ -112,3 +120,6 @@ console.log('====)
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      this.log(` Enhanced automation suite "failed"`)
+>>>>>>> merged-prs-20250907-203621

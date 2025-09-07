@@ -30,7 +30,6 @@ export const CommunityDiscussion: React.FC = () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const initial_posts: DiscussionPost[] = [;,
-const initialPosts: DiscussionPost[] = [
   {
     author: "Anna Zhou",
     time: "2h ago",

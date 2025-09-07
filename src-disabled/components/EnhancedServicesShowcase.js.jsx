@@ -13,19 +13,19 @@ const [selectedCategory, setSelectedCategory] = useState('all')'';
 const [searchTerm, setSearchTerm] = useState('')'';
 
 const categories = ['';
-    {id: 'all'}
+    { id: 'all',}
   name: 'All Services', icon: '🌟',}
 }, '';
-    {id: 'micro-saas'}
+    { id: 'micro-saas',}
   name: 'Micro SAAS', icon: '💻',}
 },'';
-    {id: 'it-services'}
+    { id: 'it-services',}
   name: 'IT Services', icon: '🖥️',}
 }, '';
-    {id: 'ai-services'}
+    { id: 'ai-services',}
   name: 'AI Services', icon: '🤖',}
 },'';
-    {id: 'emerging-tech'}
+    { id: 'emerging-tech',}
   name: 'Emerging Tech', icon: '🚀',}
 }
   ];
@@ -37,7 +37,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())return matchesCategory && matchesSearch;
   })const containerVariants = {}
-    hidden: {opacity: 0}
+    hidden: { opacity: 0,}
 }, visible:  ,
 }
       opacity: 1, transition:  ,
@@ -61,7 +61,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.6 }
+            transition={{ duration: 0.6 ,}
 }
            />'''';
             Comprehensive'''';
@@ -151,7 +151,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
             variants={containerVariants}'''';
             initial='hidden''''';
             whileInView='visible''';
-            viewport={{once: true }
+            viewport={{ once: true ,}
 }
            />;
             {filteredServices.map((service, index) => (<motion.div;}
@@ -273,7 +273,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
             <motion.div'''';}
               className='text-center py-12''';}
               initial={{ opacity: 0 }}
-              animate={{opacity: 1 }
+              animate={{ opacity: 1 ,}
 }'''';
              />'''';
               <p className='text-gray-400 text-lg' />;
@@ -300,7 +300,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
             initial={{ opacity: 0, y: 20 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.6 }
+            transition={{ duration: 0.6 ,}
 }
            />;
             Ready to Transform Your Business?;
@@ -374,7 +374,7 @@ const filteredServices = enhancedServices2025.filter(service => {}
           <motion.div'''';
             className='mt-8 text-sm text-gray-400''';
             initial={{ opacity: 0 }}
-            whileInView={{opacity: 1 }
+            whileInView={{ opacity: 1 ,}
 }
             transition={{ duration: 0.6, delay: 0.8 ,}
 }
