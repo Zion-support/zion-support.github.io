@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -424,4 +423,3 @@ function CTA() {
     </div>
   );
 }
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
