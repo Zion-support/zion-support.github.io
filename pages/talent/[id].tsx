@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
-import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 
-interface TalentProfileWithSocial extends TalentProfileType {
-  social?: Record<string, string>;
+interface TalentProfile {
+  id: string;
+  full_name: string;
+  skills?: string[];
+  availability_type?: string;
 }
 
 const TalentProfilePage: React.FC = () => {
   const router = useRouter();
   const { id } = router.query as { id?: string };
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
+  const [profile, setProfile] = useState<TalentProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -43,28 +43,49 @@ const TalentProfilePage: React.FC = () => {
     }
   }, [id]);
 
-  if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ErrorPage statusCode={404} />;
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading profile...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !profile) {
+    return <ErrorPage statusCode={404} />;
+  }
 
   return (
-    <main className="min-h-screen bg-zion-blue py-8 text-white">
-      <div className="container mx-auto px-4 space-y-4">
-        <h1 className="text-3xl font-bold" data-testid="profile-name">
-          {profile.full_name}
-        </h1>
-        {profile.skills && profile.skills.length > 0 && (
-          <div>
-            <h2 className="font-semibold">Skills</h2>
-            <ul className="list-disc ml-5">
-              {profile.skills.map(skill => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-        {profile.availability_type && (
-          <p>Availability: {profile.availability_type}</p>
-        )}
+    <main className="min-h-screen bg-gray-50 py-8">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <div className="bg-white rounded-lg shadow-md p-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-6" data-testid="profile-name">
+            {profile.full_name}
+          </h1>
+          
+          {profile.skills && profile.skills.length > 0 && (
+            <div className="mb-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-3">Skills</h2>
+              <div className="flex flex-wrap gap-2">
+                {profile.skills.map(skill => (
+                  <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {profile.availability_type && (
+            <div className="mb-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">Availability</h2>
+              <p className="text-gray-600">{profile.availability_type}</p>
+            </div>
+          )}
+        </div>
       </div>
     </main>
   );

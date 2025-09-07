@@ -7,43 +7,18 @@
     "dev": "next dev",
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
-<<<<<<< HEAD
-    "export": "next export",
-=======
     "lint": "next lint",
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit",
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage --config jest.config.ts",
-<<<<<<< HEAD
-    "verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
-    "check": "npm run lint && npm run type-check && npm run test:smoke",
-    "clean": "rm -rf .next out dist",
-    "precommit": "npm run check",
-    "prepare": "echo \"Husky prepare script disabled\"",
-    "lint": "eslint app components --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint app components --fix --no-error-on-unmatched-pattern",
-    "lint:check": "eslint app components --max-warnings 0 --no-error-on-unmatched-pattern",
-    "type-check": "tsc --noEmit",
-    "analyze": "ANALYZE=true npm run build",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "security:audit": "npm audit --audit-level moderate",
-    "security:fix": "npm audit fix",
-    "deps:update": "npm update",
-    "deps:check": "npm outdated",
-    "perf:lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
-    "perf:bundle": "npm run build && npx @next/bundle-analyzer"
-=======
     "verify": "npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
     "sitemap": "node scripts/generate-sitemap.js"
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
@@ -83,16 +58,12 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
-<<<<<<< HEAD
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
-=======
-    "@supabase/supabase-js": "^2.39.0",
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -155,10 +126,7 @@
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^15.5.2",
     "@next/eslint-plugin-next": "^15.5.2",
-<<<<<<< HEAD
-=======
     "@playwright/test": "^1.55.0",
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -167,16 +135,10 @@
     "@types/jest": "^29.5.8",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-<<<<<<< HEAD
-    "autoprefixer": "^10.4.20",
-    "critters": "^0.0.23",
-    "eslint": "^8.57.0",
-=======
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "axe-core": "^4.10.3",
     "eslint": "^9.35.0",
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "eslint-config-next": "^15.5.2",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -189,13 +151,9 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
     "lighthouse": "^12.8.2",
-<<<<<<< HEAD
-    "postcss": "^8.5.0",
-=======
     "pm2": "^6.0.8",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "rollup": "^4.50.0",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
@@ -208,15 +166,12 @@
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
   },
-<<<<<<< HEAD
-=======
   "postcss": {
     "plugins": {
       "tailwindcss": {},
       "autoprefixer": {}
     }
   },
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"

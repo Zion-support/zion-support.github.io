@@ -8,18 +8,12 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-=======
-    "strict": true,
-    "forceConsistentCasingInFileNames": false,
     "noEmit": true,
     "moduleResolution": "bundler",
     "maxNodeModuleJsDepth": 0,
     "skipDefaultLibCheck": true,
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "esModuleInterop": true,
     "module": "ESNext",
     "resolveJsonModule": true,
@@ -33,10 +27,6 @@
         "name": "next"
       }
     ],
-<<<<<<< HEAD
-    "strictNullChecks": true
-=======
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
@@ -63,11 +53,7 @@
         "./assets/*"
       ]
     },
-    "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
     "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
     "allowImportingTsExtensions": true,
     "noUnusedLocals": false,
@@ -75,12 +61,15 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "noImplicitReturns": false
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
