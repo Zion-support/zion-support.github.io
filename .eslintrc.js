@@ -1,48 +1,34 @@
-/* eslint-env node */
 module.exports = {
   extends: [
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
+    'eslint:recommended',
+    '@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    'no-console': 'off',
-    'no-undef': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
     'react/no-unescaped-entities': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn'
-  },
-  env: {
-    node: true,
-    browser: true,
-    es2021: true
+    'react-hooks/exhaustive-deps': 'warn',
+    'no-console': 'warn',
+    'no-debugger': 'warn'
   },
   ignorePatterns: [
-    'pages._archive_corrupted/**',
-    'pages.disabled.full/**',
-    'pages.disabled_auto/**',
-    'pages_api.disabled/**',
-    'pages_backup_conflict/**',
-    'pages.blog.disabled/**',
-    'pages.corrupted.*/**',
-    'pages.broken/**',
-    'pages.bak/**',
-    'pages-quarantine/**',
-    'pages-disabled/**',
-    'pages.__backup/**',
-    'temp_backup/**',
-    'temp_broken_files/**',
-    'temp_working/**',
-    'tests.disabled/**',
-    'lib_backup/**',
-    'node_modules/**',
-    '.next/**',
-    'out/**',
-    'dist/**',
-    'build/**'
-  ]
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'src.disabled/',
+    'components.disabled/',
+    'pages.disabled/',
+    '*.config.js',
+    '*.config.cjs'
+  ],
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+    jest: true
+  }
 };
