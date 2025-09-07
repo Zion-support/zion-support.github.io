@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Button from './components/Button';
 import Card from './components/Card';
@@ -12,6 +12,7 @@ import ScrollToTop from './components/ScrollToTop';
 import BackToTop from './components/BackToTop';
 import SEO from './components/SEO';
 import Analytics from './components/Analytics';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -41,6 +42,7 @@ function App() {
             <ToastContainer />
             <BackToTop />
           </div>
+          <PerformanceMonitor />
         </Router>
       </ErrorBoundary>
     </ThemeProvider>
