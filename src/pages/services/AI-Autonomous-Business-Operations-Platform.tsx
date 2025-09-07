@@ -227,6 +227,7 @@ import {
   RefreshCw99,
   RefreshCw100
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function AIAutonomousBusinessOperationsPlatform() {
   const features = [
@@ -612,8 +613,8 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-zion-blue-light border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
-                    : 'border-zion-purple/30'
+                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent' 
+                    : 'border-white/10'
                 }`}
               >
                 {plan.popular && (

@@ -319,6 +319,18 @@ export const EnhancedHeader: React.FC = () => {
                   <Globe className="w-4 h-4" />
                   <span className="text-sm">{contactInfo.website}</span>
                 </div>
+                
+                {/* Mobile All Services Link */}
+                <div className="mt-4 px-4">
+                  <Link
+                    to="/zion-cutting-edge-services-2029"
+                    className="flex items-center justify-center w-full px-4 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-colors border border-white/20"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span>View All Services</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
               </div>
             ))}
           </nav>
