@@ -1,45 +1,35 @@
+import ComprehensiveServicesShowcase2025 from '../../components/ComprehensiveServicesShowcase2025';
+
 export const metadata = {
-  title: 'Services | Zion Tech Group',
-  description: 'Professional services services for your business needs.',
-  keywords: 'services, services, business, technology'
+  title: 'Comprehensive Services 2025 | Zion Tech Group - AI, Micro SaaS & IT Solutions',
+  description: 'Explore our extensive portfolio of 20+ innovative micro SAAS solutions, AI services, and IT solutions. From AI customer insights to blockchain solutions, we deliver enterprise-grade services that drive business transformation.',
+  keywords: 'micro saas, ai services, it solutions, business automation, cloud infrastructure, cybersecurity, data analytics, project management, e-commerce, healthcare, edtech, blockchain, fintech, enterprise solutions',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Comprehensive Services 2025 | Zion Tech Group',
+    description: 'Explore our extensive portfolio of innovative micro SAAS solutions, AI services, and IT solutions designed to transform your business.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Comprehensive Services 2025 | Zion Tech Group',
+    description: 'Explore our extensive portfolio of innovative micro SAAS solutions, AI services, and IT solutions designed to transform your business.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function ServicePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional services services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored services solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your services solutions run smoothly.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <ComprehensiveServicesShowcase2025 />;
 }
