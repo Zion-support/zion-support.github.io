@@ -50,7 +50,7 @@
     "temp_backup",
     "recovered-branches",
     "api.disabled",
-    "lib"
+    "lib",
     ".next",
     "out",
     "dist",
