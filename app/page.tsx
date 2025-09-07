@@ -431,6 +431,239 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Client Logos Section */}
+      <section className="py-16 bg-gray-50" aria-labelledby="clients-heading">
+        <div className="text-center mb-12">
+          <h2 id="clients-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Trusted by Industry Leaders
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We&apos;re proud to work with companies of all sizes, from startups to Fortune 500 enterprises.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+          <div className="text-center">
+            <div className="w-24 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg mx-auto flex items-center justify-center text-white font-bold text-lg">
+              TechCorp
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-24 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg mx-auto flex items-center justify-center text-white font-bold text-lg">
+              Innovate
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-24 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-lg mx-auto flex items-center justify-center text-white font-bold text-lg">
+              DataFlow
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-24 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg mx-auto flex items-center justify-center text-white font-bold text-lg">
+              CloudSys
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-24 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg mx-auto flex items-center justify-center text-white font-bold text-lg">
+              AI Labs
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-24 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg mx-auto flex items-center justify-center text-white font-bold text-lg">
+              NextGen
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Preview Section */}
+      <section className="py-20 bg-white" aria-labelledby="pricing-heading">
+        <div className="text-center mb-16">
+          <h2 id="pricing-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Transparent Pricing
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-gray-900 mb-2">$99</div>
+              <div className="text-gray-600">per month</div>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Basic AI Integration
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Email Support
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Basic Analytics
+              </li>
+            </ul>
+            <button className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300">
+              Get Started
+            </button>
+          </div>
+          
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-2xl p-8 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2 relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </span>
+            </div>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
+              <div className="text-4xl font-bold text-gray-900 mb-2">$299</div>
+              <div className="text-gray-600">per month</div>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Advanced AI Solutions
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Priority Support
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Advanced Analytics
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Custom Integrations
+              </li>
+            </ul>
+            <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+              Get Started
+            </button>
+          </div>
+          
+          <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-300 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-gray-900 mb-2">Custom</div>
+              <div className="text-gray-600">contact us</div>
+            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Full AI Suite
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                24/7 Dedicated Support
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                Custom Development
+              </li>
+              <li className="flex items-center text-gray-700">
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                On-premise Deployment
+              </li>
+            </ul>
+            <button className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
+        <div className="text-center mb-16">
+          <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get answers to common questions about our AI solutions and services.
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <button className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+              <h3 className="text-lg font-semibold text-gray-900">What AI technologies do you specialize in?</h3>
+              <span className="text-2xl text-gray-400">+</span>
+            </button>
+            <div className="px-8 pb-6 text-gray-600">
+              We specialize in machine learning, natural language processing, computer vision, predictive analytics, and custom AI model development. Our team works with cutting-edge frameworks and technologies to deliver tailored solutions.
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <button className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+              <h3 className="text-lg font-semibold text-gray-900">How long does it take to implement an AI solution?</h3>
+              <span className="text-2xl text-gray-400">+</span>
+            </button>
+            <div className="px-8 pb-6 text-gray-600">
+              Implementation timelines vary based on project complexity. Simple integrations can take 2-4 weeks, while comprehensive AI platforms may require 3-6 months. We provide detailed project timelines during our consultation.
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <button className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+              <h3 className="text-lg font-semibold text-gray-900">Do you provide ongoing support and maintenance?</h3>
+              <span className="text-2xl text-gray-400">+</span>
+            </button>
+            <div className="px-8 pb-6 text-gray-600">
+              Yes, we offer comprehensive support and maintenance packages. Our team provides 24/7 monitoring, regular updates, performance optimization, and technical support to ensure your AI solutions continue to deliver optimal results.
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <button className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+              <h3 className="text-lg font-semibold text-gray-900">Can you work with our existing systems and data?</h3>
+              <span className="text-2xl text-gray-400">+</span>
+            </button>
+            <div className="px-8 pb-6 text-gray-600">
+              Absolutely. We specialize in integrating AI solutions with existing systems and data sources. Our team conducts thorough assessments to ensure seamless integration while maintaining data security and system stability.
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+            <button className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300">
+              <h3 className="text-lg font-semibold text-gray-900">What makes your AI solutions different from competitors?</h3>
+              <span className="text-2xl text-gray-400">+</span>
+            </button>
+            <div className="px-8 pb-6 text-gray-600">
+              Our solutions are built with a focus on practical business value, scalability, and ease of use. We combine deep technical expertise with industry knowledge to deliver AI solutions that not only work but drive measurable business outcomes.
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
         {/* Enhanced animated background elements */}

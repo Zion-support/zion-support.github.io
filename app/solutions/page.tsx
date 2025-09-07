@@ -1,3 +1,10 @@
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Solutions - Zion Tech Group',
+  description: 'Comprehensive technology solutions for your business needs.',
+  keywords: 'solutions, technology, business, AI, automation'
 };
 
 export default function SolutionsPage() {
@@ -9,54 +16,66 @@ export default function SolutionsPage() {
       features: ['Process Automation', 'Intelligent Workflows', 'Predictive Analytics']
     },
     {
-      title: 'Digital Transformation',
-      description: 'Modernize your business with comprehensive digital solutions.',
-      icon: '🔄',
-      features: ['Legacy System Migration', 'Cloud Adoption', 'Process Optimization']
+      title: 'Micro SaaS Development',
+      description: 'Build and scale your software-as-a-service business.',
+      icon: '💼',
+      features: ['Custom SaaS Solutions', 'Scalable Architecture', 'Revenue Optimization']
     },
     {
-      title: 'Enterprise Security',
-      description: 'Protect your business with advanced cybersecurity solutions.',
-      icon: '🔒',
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management']
+      title: 'Enterprise IT Services',
+      description: 'Complete IT infrastructure and support for large organizations.',
+      icon: '🏢',
+      features: ['Infrastructure Management', 'Security Solutions', '24/7 Support']
     },
     {
-      title: 'Data Intelligence',
-      description: 'Transform data into actionable business insights.',
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable business insights.',
       icon: '📊',
-      features: ['Data Analytics', 'Business Intelligence', 'Real-time Dashboards']
+      features: ['Data Visualization', 'Predictive Modeling', 'Business Intelligence']
     },
     {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and reliable cloud solutions for your business.',
+      title: 'Cloud Migration',
+      description: 'Seamlessly move your infrastructure to the cloud.',
       icon: '☁️',
-      features: ['Cloud Migration', 'DevOps Automation', 'Infrastructure Management']
+      features: ['Cloud Strategy', 'Migration Planning', 'Cost Optimization']
     },
     {
-      title: 'Custom Development',
-      description: 'Tailored software solutions for your specific needs.',
-      icon: '💻',
-      features: ['Web Applications', 'Mobile Apps', 'API Development']
+      title: 'Cybersecurity',
+      description: 'Protect your business with advanced security solutions.',
+      icon: '🔒',
+      features: ['Threat Detection', 'Security Audits', 'Compliance Management']
     }
   ];
 
   return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Our Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to drive your business forward
+          </p>
         </div>
-      </div>
-
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your Business?
-        </h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss your business needs and create intelligent solutions.
-        </p>
-        <a
-          href="/contact"
-          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-        >
-          Get Started Today
-        </a>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {solutions.map((solution, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+              <div className="text-4xl mb-4">{solution.icon}</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+              <p className="text-gray-600 mb-6">{solution.description}</p>
+              <ul className="space-y-2">
+                {solution.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-700">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
