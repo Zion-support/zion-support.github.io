@@ -72,7 +72,10 @@
     "zion/**/*.ts",
     "zion/**/*.tsx",
     "protocol/**/*.ts",
-    "protocol/**/*.tsx"
+    "protocol/**/*.tsx",
+    "App.tsx",
+    "middleware.ts",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules",
