@@ -1,4 +1,9 @@
 import React from 'react';
+const ServicePortfolioDashboard = ({ className }) => {return (<div className={className || ''}>;
+      <h1>ServicePortfolioDashboard</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const ServicePortfolioDashboard = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const ServicePortfolioDashboard = ({ className }) => {
   )
 }
 }
+

@@ -21,6 +21,39 @@ import {
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+const services = [;
+  {title: 'Citizen Service Portals',description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',icon: Globe,features: [;
+      'Online service applications,','Digital document submission',','Status tracking systems',',title: 'Citizen Service Portals,',,description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',const services = [;
+  {title: 'Citizen Service Portals',,description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',icon: Globe,features: [,'Online service applications,','Digital document submission',','Status tracking systems',','Multi-language support'';
+    ];
+  },{}
+    title: 'Secure Data Management,',,description: 'Government-grade data security and management systems for sensitive information.,',icon: Shield,features: [,'Encrypted data storage,','Access control systems',','Audit trail management',','Compliance monitoring'';
+    ];
+  },{}
+    title: 'Digital Identity Solutions,',,description: 'Secure digital identity verification and management systems for citizens.,',icon: Users,features: [,'Biometric authentication,','Digital ID cards',','Identity verification',','Fraud prevention'';
+    ];
+  },{}
+    title: 'Public Safety Systems,',,description: 'Advanced systems for emergency response and public safety management.,',icon: Phone,features: [,'Emergency dispatch systems,','Real-time monitoring',','Incident management',','Resource coordination'';
+    ];
+  },{}
+    title: 'Government Analytics,',,description: 'Data analytics platforms for informed policy-making and resource allocation.,',icon: BarChart3,features: [,'Performance metrics,','Trend analysis',','Predictive modeling',','Resource optimization'';
+    ];
+  },{}
+    title: 'Compliance Management,',,description: 'Automated systems for regulatory compliance and policy enforcement.,',icon: FileText,features: [,'Regulatory tracking,','Compliance reporting',','Policy management',','Audit automation'';
+    ];
+  }];
+const benefits = [;
+  {}
+    title: 'Enhanced Security,',,description: 'Government-grade security measures protect sensitive citizen and government data.,',icon: Shield;
+];
+const benefits = [;
+  {title: 'Enhanced Security',,description: 'Government-grade security measures protect sensitive citizen and government data.',icon: Shield;
+  },{}
+    title: 'Improved Efficiency,',,description: 'Digital processes streamline government operations and reduce administrative burden.,',icon: BarChart3,},{}
+    title: 'Better Citizen Experience,',,description: 'User-friendly digital services make government more accessible to citizens.,',icon: Users,},{}
+    title: 'Transparency & Accountability,',,description: 'Digital systems provide transparency and enable better accountability.,',icon: Globe,}];
+export default function GovernmentPage() {return (<Layout)title="Government Technology Solutions - Zion Tech Group"";
+      description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."";
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -439,6 +472,28 @@ export default function GovernmentPage() {;
         </section>;
       </div>;
     </Layout>;
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+                Ready to Transform Government?;
+              </h2>;
+              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">;
+                Let our government technology experts help you implement solutions that enhance;
+                citizen services and improve operational efficiency.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Government Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?
@@ -463,3 +518,4 @@ export default function GovernmentPage() {;
   )
 }
 }
+

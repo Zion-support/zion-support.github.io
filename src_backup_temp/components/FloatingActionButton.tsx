@@ -127,6 +127,17 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 ';';
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};';';
       '';';
+      mediaQuery.addEventListener('change', handleChange)';';
+      return () => mediaQuery.removeEventListener('change', handleChange)} else {}, []), [])if(theme === 'auto') {setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')}';
+      mediaQuery.addEventListener('change', handleChange)return () => mediaQuery.removeEventListener('change', handleChange)} else {}, []), [])if(theme === 'auto') {setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')}';
+      mediaQuery.addEventListener('change', handleChange)return () => mediaQuery.removeEventListener('change', handleChange)} else {setCurrentTheme(theme)}
+  }, [theme])// Show scroll to top button when scrolled down;
+  useEffect(() => {// "TODO": "Add dependencies if needed;
+  return () => {// Cleanup function;
+  "}// Show scroll to top button when scrolled down;
+  useEffect(() => {// TODO: Add dependencies if needed;
+  return () => {// Cleanup function;
+  }}, []), [])}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;
       mediaQuery.addEventListener('change', handleChange);';';
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
 }, []);, []);
@@ -368,6 +379,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {';
           window.print()},';';
         color: 'bg-gray-500 hover: b g-gray-600',';';
+        priority: 'low' as const;
+}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])// Default actions;
         priority: 'low' as const
 };
 ;
@@ -552,6 +565,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         return 'top-6 left-6';
       default:';
         return 'bottom-6 right-6'}
+  }// Get theme classes;
+}return ()<>;
   };
 ;
   // Get theme classes
@@ -745,6 +760,11 @@ const "FloatingActionButton": "React.FC<FloatingActionButtonProps> = ({ enabled 
           90% {
             transform: translate3 d(0, -4px, 0)}
         }
+        .animate-bounce {animation: bounce 2s infinite}`;
+      `}</style>;
+    </>)type FloatingActionButtonProps = {enabled?: boolean;
+}const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {const [open, setOpen] = useState<any>(false)if(!enabled) return null;
+  return (<button;
         .animate-bounce {
           animation: bounce 2s infinite}`
       `}</style>

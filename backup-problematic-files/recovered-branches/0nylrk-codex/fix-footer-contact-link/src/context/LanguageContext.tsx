@@ -89,6 +89,10 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
           console.error('Error syncing language with profile:', err),;
         }
       }
+    },syncLanguageWithProfile(),}, [currentLanguage, isAuthenticated, user]),const changeLanguage = async (lang:SupportedLanguage) => {if (lang === currentLanguage) return,try {await i18n.changeLanguage(lang),setCurrentLanguage(lang),localStorage.setItem('zion_language', lang),// Get language name for toast;
+      const langName = supportedLanguages.find(l => l.code === lang)?.name || lang,toast({,description:t('language.language_changed', { language:langName })}),// If user is authenticated, update their profile;
+      if (isAuthenticated && user?.id) {const { error } = await supabase;
+          .from('profiles').update({ preferred_language:lang }).eq('id', user.id),if (error) {console.error('Error updating language preference:', error),}
     },;
     ;
     syncLanguageWithProfile(),;

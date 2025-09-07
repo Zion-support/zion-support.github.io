@@ -47,6 +47,8 @@ export function ContactSection() {;
           fieldErrors[err.path[0] as string] = err.message,;
         }
       }
+      setErrors(fieldErrors),toast({title:"Form Validation Error",,description:result.error.errors[0]?.message || "Please check your form and try again",variant:"destructive"}),return,}setErrors({}),setIsSubmitting(true),fetch("/api/contact", {method:"POST",headers:{ "Content-Type":"application/json" },body:JSON.stringify(formData)}).then(async (res) => {setIsSubmitting(false),if (!res.ok) {const data = await res.json().catch(() => ({})),throw new Error(data.error || "Failed to send message"),}
+        toast({title:"Message Sent",,description:"We've received your message and will get back to you soon."}),setSubmitted(true),setTimeout(() => setSubmitted(false), 2000),setFormData({ name:"", email:"", subject:"", message:"" }),}).catch((err) => {setIsSubmitting(false),toast({title:"Submission Error",,description:err.message,variant:"destructive"}),}),},return (<section className="py-20 bg-zion-blue" id="contact">;
       setErrors(fieldErrors),;
       toast({;
         title:"Form Validation Error",,
@@ -217,6 +219,13 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
   const {;
   name, value ;
 }= e.target;
+setFormData ( (prev) => ({...prev, [name]: value ;
+}) )setErrors ( (prev) => ({...prev, [name]: undefined ;
+}) )}const handleSubmit = (e: React.FormEvent) => {e.preventDefault ()const schema = z.object ({const result = schema.safeParse (formData)if (!result.success) {const fieldErrors: Record<string string> = {}for (const err of result.error.errors) {if (err.path[0]) {fieldErrors[err.path[0] as string] = err.message ;
+}
+}setErrors (fieldErrors)toast ({return;
+}setErrors ({})setIsSubmitting (true)}) .catch ( (err) => {setIsSubmitting (false)toast ({title: "Submission Error",description: err.message;
+})}";
 setFormData ( (prev) => ({;
   ...prev, [name]: value ;
 }) );

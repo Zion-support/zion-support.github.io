@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
@@ -10,15 +11,29 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {;
   filter: FilterType,;
   onFilterChange: (filter: FilterType) => void;export type FilterType =
+=======
+import React from "react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export type FilterType =
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   | "all"
   | "unread"
   | "onboarding"
   | "messages"
   | "system";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
   onFilterChange,
@@ -49,6 +64,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
       </Tabs>
     </div>
   );
+<<<<<<< HEAD
   )
 },
   ),;
@@ -66,3 +82,6 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
 };
   )
 },
+=======
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

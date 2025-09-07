@@ -1,3 +1,7 @@
+
+import { useState } from "react",import { BookOpen, Terminal  } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Alert, AlertDescription } from "@/components/ui/alert",import { Badge } from "@/components/ui/badge",import CodeBlock from "./CodeBlock",import { logInfo } from '@/utils/productionLogger',interface EndpointParam  {name:string,type:string,,description:string,required?:boolean;
+}interface EndpointSectionProps  {method:string,endpoint:string,,description:string,note?:string,params?:EndpointParam[],codeExamples?:Record<string string>,responseExamples?:{ success:string },}export function ApiDocumentation() {return (<Card className="bg-zinc-900 border-zinc-800 text-white">;
 import { useState } from "react";
 import { BookOpen, Terminal } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -202,6 +206,16 @@ print(data)`;
                 curl:`curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\;
   -H "Authorization:Bearer YOUR_API_KEY" \\;
   -H "Content-Type:application/json" \\;
+  -d '{"title":"Senior React Developer","description":"We need an experienced React developer...","category":"development","skills":["react", "typescript", "node.js"],"budget":{"min":5000,"max":10000,"currency":"USD";
+    },"deadline":"2025-06-30T23:59:59Z";
+  }'`,javascript:`const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {method:'POST',headers:{'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
+  },body:JSON.stringify({title:'Senior React Developer',,description:'We need an experienced React developer...',category:'development',skills:['reacttypescript', 'node.js'],budget:{min:5000,max:10000,currency:'USD';
+    },deadline:'2025-06-30T23:59:59Z';
+  })}),const data = await response.json(),logInfo(data),`,python:`import requests;
+import json;headers = {'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
+}payload = {'title':'Senior React Developerdescription':'We need an experienced React developer...category':'developmentskills':['reacttypescript', 'node.js'],'budget':{'min':5000,'max':10000,'currency':'USD';
+    },'deadline':'2025-06-30T23:59:59Z';
+}response = requests.post('https://api.ziontechgroup.com/v1/jobs',headers=headers,data=json.dumps(payload))data = response.json()print(data)`;
   -d '{;
     "title":"Senior React Developer",;
     "description":"We need an experienced React developer...",;

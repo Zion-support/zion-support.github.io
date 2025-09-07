@@ -1,3 +1,11 @@
+
+import { Droppable } from "react-beautiful-dnd",import { JobApplication } from "@/types/jobs",import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { CandidateCard } from "./CandidateCard",interface KanbanColumnProps  {id:string,title:string,,description:string,applications:JobApplication[],count:number;
+}export function KanbanColumn() {// Add color based on column type;
+  const getBadgeVariant = (columnId:string) => {switch (columnId) {case "new":return "secondary",case "shortlisted":;
+        return "outline",case "interview":;
+        return "default",case "hired":;
+        return "success",case "rejected":;
+        return "destructive",default:;
 import { Droppable } from "react-beautiful-dnd";
 import { JobApplication } from "@/types/jobs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;

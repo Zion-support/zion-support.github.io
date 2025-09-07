@@ -1,3 +1,4 @@
+import React from 'react',import Head from 'next/head',export default function ForbiddenPage() {return (<>;
 import React from 'react';
 import Head from 'next/head';
 ;
@@ -17,5 +18,7 @@ export default function ForbiddenPage() {;
         </div>;
       </div>;
     </>;
+  )}
   );
 }
+

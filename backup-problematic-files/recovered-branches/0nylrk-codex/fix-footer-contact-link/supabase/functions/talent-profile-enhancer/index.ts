@@ -150,6 +150,12 @@ interface EnhancedProfile {_summary: string;
     devops: string[];
     platforms: string[];
     softSkills: string[];
+    other: string[];
+}}serve(_async (req) => {_// Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {return new Response(null, { headers: corsHeaders })}try {const { talentData } = await req.json() as { talentData: TalentProfileData },if (!talentData.bio || talentData.bio.length < 20) {return new Response(JSON.stringify({ error: &quot;Bio must be at least 20 characters long&quot; }),{ status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )    }// Create a request to OpenAI API;
+    const _openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {_method: 'POST', _headers: {'Authorization': `Bearer ${OPENAI_API_KEY}`,'Content-Type': 'application/json'},body: JSON.stringify({_model: 'gpt-4o-mini', _messages: [;
+          {{_role: 'user', _content: `Create a professional profile summary and categorize skills based on this information:;
     other: string[]
 };
 }

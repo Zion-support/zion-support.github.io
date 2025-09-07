@@ -488,6 +488,9 @@ export default function News() {;
       readTime:'4 min read',;
       tags:['Micro-SaaSStartups', 'Software Industry'];
     }
+  ],const upcomingEvents = [;
+    {id:1,title:'AI Consciousness Summit 2024',type:'Conference',date:'2024-02-15',time:'9:00 AM - 6:00 PM',location:'San Francisco, CA',,description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
+    },{id:2,title:'Quantum Computing Workshop',type:'Workshop',date:'2024-02-22',time:'1:00 PM - 5:00 PM',location:'Virtual',,description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',registration:'https://ziontechgroup.com/events/quantum-workshop';
   ],;
 ;
   const upcomingEvents = [;

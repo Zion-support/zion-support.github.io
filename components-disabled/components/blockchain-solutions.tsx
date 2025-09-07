@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 
 ;
   return (<div className='container mx-auto px-4 py-10'>;
 
   return (
-=======
 return (
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Blockchain Solutions</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
@@ -17,25 +14,16 @@ return (
       <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>;
     </div>;
-<<<<<<< HEAD
-  )}}
-import React from 'react';
-export default function BlockchainSolutionsPage() {return (<div className='container mx-auto px-4 py-10'>;
-      <h1 className='text-2xl font-semibold'>Blockchain Solutions</h1>;
-      <p className='mt-2 text-gray-600 dark:text-gray-300'>;
-        Content coming soon.;
-      </p>;
-  );
-
-}
 
 
 
-
-=======
   );
 import React from 'react';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+
+
+
+  );
+import React from 'react';
 export default function BlockchainSolutionsPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -44,15 +32,14 @@ export default function BlockchainSolutionsPage() {
         Content coming soon.
       </p>
     </div>;
-<<<<<<< HEAD
   )export default function BlockchainSolutionsPage() {return (<div className="container mx-auto px-4 py-10">;
       <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>;
+
 export default /**;
  * BlockchainSolutionsPage - Function description;
  */;
 function BlockchainSolutionsPage() {return (<div className='container mx - auto px - 4 py - 10'>;
-=======
   );export default function BlockchainSolutionsPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -64,7 +51,6 @@ export default /**
 function BlockchainSolutionsPage() {
   return (
     <div className='container mx - auto px - 4 py - 10'>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <h1 className='text - 2xl font - semibold'>Blockchain Solutions</h1>;
       <p className='mt - 2 text - gray - 600 dark:text - gray - 300'>;
         Content coming soon.;
@@ -74,8 +60,12 @@ function BlockchainSolutionsPage() {
  */;
 function BlockchainSolutionsPage() {return (<div className="container mx - auto px - 4 py - 10">;
       <h1 className="text - 2xl font - semibold">Blockchain Solutions</h1>;
-      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Content coming soon.</p>;
-    </div>)})}export default function BlockchainSolutionsPage() {return (<div className='container mx-auto px-4 py-10'>;
+      <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Content coming soon.</p>
+    </div>
+  );
+})}
+
+export default function BlockchainSolutionsPage() {return (<div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Blockchain Solutions</h1>;
       <p className='mt-2 text-gray-600 dark:text-gray-300'>;
         Content coming soon.;
@@ -95,19 +85,8 @@ function BlockchainSolutionsPage() {return (<div className="container mx - auto 
   )
     </div>);
 }
-<<<<<<< HEAD
 
 
-
-
-
-
-  )
-}
-
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function BlockchainSolutionsPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -116,11 +95,12 @@ export default function BlockchainSolutionsPage() {
         Content coming soon.
       </p>
     </div>;
-  );export default function BlockchainSolutionsPage() {
+  );
+
+export default function BlockchainSolutionsPage() {
   return (
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Blockchain Solutions</h1>
-<<<<<<< HEAD
       <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>
 
     </div>
@@ -138,6 +118,5 @@ export default function BlockchainSolutionsPage() {
   );
 }
 }
-=======
       <p className="mt-2 text-gray-600 dark: text-gray-300">Content coming soon.</p>
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
   return (<div className='enhanced-card flex items-center justify-between'>import React from 'react';
@@ -6,26 +5,38 @@
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
 import React from 'react';
-=======
 return (
     <div className='enhanced-card flex items-center justify-between'>import React from "React";
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { ReviewsSummary } from '../../types/reviews';
-</div> </div> </div>) }const ReviewSummary: React.FC < Props> = ({ summary }) => {return (<div className='enhanced - card flex items - center justify - between'>import React from 'react';
+</div> </div> </div>) }
+
+const ReviewSummary: React.FC < Props> = ({ summary   ,
+}) => {
+
+
+return (<div className='enhanced - card flex items - center justify - between'>import React from 'react';
 import type { ReviewsSummary } from '../../types / reviews';
 import StarRating from './StarRating';
 import { Star } from 'lucide-react';
-type Props = {summary: ReviewsSummary;const ReviewSummary: React.FC<Props>  = ({ summary }) => {return (<div className='enhanced-card flex items-center justify-between'>;
+
+type Props = {summary: ReviewsSummary;
+
+const ReviewSummary: React.FC<Props>  = ({ summary   ,
+}) => {
+
+
+return (<div className='enhanced-card flex items-center justify-between'>;
 import {Star} from 'lucide-react';
-<<<<<<< HEAD
 
 type Props = {
   summary: ReviewsSummary;
 
-const ReviewSummary: React.FC<Props> = ({ summary }) => {;
+const ReviewSummary: React.FC<Props> = ({ summary   ,
+}) => {
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+
+;
+
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -44,7 +55,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
   )}const ReviewSummary: React.FC<Props> = ({ summary }) => {return (<div className="enhanced-card flex items-center justify-between">;
       <div>;
         <div className="flex items-center gap-3">;
@@ -53,7 +63,9 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
         </div>;
         <div className="text-sm text-gray-600 mt-1">;
           <span className="mr-3">{summary.totalReviews} reviews</span>;
+
 type Props = any;
+
 export default ReviewSummary;
       <div>;
         <div className='flex items-center gap-3'>;
@@ -72,19 +84,26 @@ export default ReviewSummary;
         </div>;
       </div>;
     </div>;
-export default ReviewSummary;}export default ReviewSummary;}export default ReviewSummary;      <div>;
-  );
 
+export default ReviewSummary;}
+
+export default ReviewSummary;}
+
+export default ReviewSummary;      <div>;
+  )
 };
 
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
+
+const ReviewSummary: React.FC<Props> = ({ summary    }) => {
+
+
+
   return (
     <div className="enhanced-card flex items-center justify-between">
       <div>
 
-=======
   );
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+  )}const ReviewSummary: React.FC<Props> = ({ summary }) => {return (<div className="enhanced-card flex items-center justify-between">;
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
@@ -95,7 +114,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
 };
 
@@ -110,24 +128,34 @@ export default ReviewSummary;      <div>;
         </div>;
       </div>;
     </div>;
-  )}export default ReviewSummary;  )}export default ReviewSummary;}export default ReviewSummary;
-  );
+  )}
+
+export default ReviewSummary;  )}
+
+export default ReviewSummary;}
+
+export default ReviewSummary;
+  )
 };
 
-export default ReviewSummary;  );
 
+export default ReviewSummary;  )
 };
+
+
+export default ReviewSummary
+};
+
 
 export default ReviewSummary;
 
-
-};
-
-export default ReviewSummary;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   summary: ReviewsSummary;
-const ReviewSummary: React.FC < Props> = ({ summary }) => {return (<div className='enhanced - card flex items - center justify - between'>;
+
+const ReviewSummary: React.FC < Props> = ({ summary   ,
+}) => {
+
+
+return (<div className='enhanced - card flex items - center justify - between'>;
       <div>;
         <div className='flex items - center gap - 3'>;
           <span className='text - 2xl font - semibold'>;
@@ -142,8 +170,12 @@ const ReviewSummary: React.FC < Props> = ({ summary }) => {return (<div classNam
         <div className='text - sm text - gray - 600 mt - 1'>;
           <span className='mr - 3'>{summary.total_reviews} reviews</span>          <span>{summary.totalCompletedProjects} completed projects</span>;
         </div>;
-      </div>;
-    </div>)}export default ReviewSummary;      <div>;
+      </div>
+    </div>
+  );
+}
+
+export default ReviewSummary;      <div>;
         <div className="flex items - center gap - 3">;
           <span className="text - 2xl font - semibold">{summary.average_rating.to_fixed (1)}</span>;
           <StarRating value={Math.round (summary.average_rating)} on_change={() => {}} read_only />;
@@ -152,17 +184,25 @@ const ReviewSummary: React.FC < Props> = ({ summary }) => {return (<div classNam
           <span className="mr - 3">{summary.total_reviews} reviews</span>;
           <span>{summary.totalCompletedProjects} completed projects</span>;
         </div>;
-      </div>;
-    </div>)}export default ReviewSummary)}export default ReviewSummary;)}export default ReviewSummary;
-    </div>);
+      </div>
+    </div>
+  );
 }
-;
-export default ReviewSummary);
-}
-;
+
+export default ReviewSummary)}
+
+export default ReviewSummary;)}
+
 export default ReviewSummary;
-<<<<<<< HEAD
+    </div>)
+};
+
+
+export default ReviewSummary)
+};
+
+
+export default ReviewSummary;
 ;
-=======
 ;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+

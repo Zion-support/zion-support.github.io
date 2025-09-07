@@ -11,6 +11,8 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
       const valueToStore =
         value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore)if (typeof window !== 'undefined') {window.localStorage.setItem(key, JSON.stringify(valueToStore))}
+    } catch (error) {}return [storedValue, setValue] as const;
       setStoredValue(valueToStore);
 
       if (typeof window !== 'undefined') {

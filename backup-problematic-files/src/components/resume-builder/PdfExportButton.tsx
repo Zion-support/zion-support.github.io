@@ -32,6 +32,11 @@ export default function ProjectRoom() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
+  ]),const startVideoCall = () => {setIsInCall(true),toast.success("Video call started", {description: "Others can join with the project room link";
+    }),// Switch to video tab if not already there;
+    if (activeTab !== 'video') {setActiveTab('video')}
+  },const endVideoCall = () => {setIsInCall(false),toast.info("Video call ended", {description: "Call duration and participants will be logged";
+    })},const simulateUserJoining = () => {// This is just for demo purposes - in a real app, this would be handled by the video call service;
   ]),
   const startVideoCall = () => {
     setIsInCall(true),

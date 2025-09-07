@@ -1,3 +1,14 @@
+import React, { useState } from 'react',import SEO from '../components/SEO',import { motion } from 'framer-motion',import {Brain, Building, Target, Cpu, Shield,Check, Phone, Mail, MapPin,TrendingUp, Zap, Globe;
+} from 'lucide-react',// Import our new service data;
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services',import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions',import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',const ComprehensiveServicesShowcase2025 = () => {const [activeTab, setActiveTab] = useState('all'),// Helper function to get service pricing;
+const getServicePricing = (service: any) => {if (service.pricing?.starter) return service.pricing.starter,if (service.price?.monthly) return `$${service.price.monthly}/month`,if (typeof service.price === 'string') return service.price,return 'Contact for pricing';
+},// Helper function to get service features;
+const getServiceFeatures = (service: any) => {return service.keyFeatures || service.features || [];
+},// Helper function to get service setup time;
+const getServiceSetupTime = (service: any) => {if (service.setupTime) return service.setupTime,if (service.pricing?.setupTime) return service.pricing.setupTime,if (service.price?.setupTime) return service.price.setupTime,return 'N/A';
+},// Helper function to get service trial days;
+const getServiceTrialDays = (service: any) => {if (service.trialDays) return service.trialDays,if (service.pricing?.trialDays) return service.pricing.trialDays,if (service.price?.trialDays) return service.price.trialDays,return 'N/A';
+},// All services combined;
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion',;
@@ -41,32 +52,13 @@ const getServiceTrialDays = (service: any) => {;
 },;
 // All services combined;
 const allServices = [;
-  ...advancedAIMLServices,;
-  ...advancedCybersecurityServices,;
-      ...advancedCloudDevOpsServices2025,;
-  ...industrySpecificSolutions,;
-  ...emergingTechnologyServices;
-],;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },;
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },;
-    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },;
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },;
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },;
-    { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
-  ],;
-  const filteredServices = activeTab === 'all';
+  ...advancedAIMLServices,...advancedCybersecurityServices,...advancedCloudDevOpsServices2025,...industrySpecificSolutions,...emergingTechnologyServices;
+],const categories = [;
+    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },{ id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },{ id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },{ id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },{ id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },{ id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
+  ],const filteredServices = activeTab === 'all';
     ? allServices;
-    : allServices.filter(service => {;
-        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics'),;
-        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation'),;
-        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure'),;
-        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS'),;
-        if (activeTab === 'ai-services') return service.category?.includes('AI Services'),;
-        return true;
-      }),;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">;
+    : allServices.filter(service => {if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics'),if (activeTab === 'ai-automation') return service.category?.includes('AI Automation'),if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure'),if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS'),if (activeTab === 'ai-services') return service.category?.includes('AI Services'),return true;
+      }),return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">;
       <SEO;
         title="2025 Comprehensive Services Showcase - Zion Tech Group";
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions.";
@@ -131,12 +123,10 @@ const allServices = [;
       <section className="py-12 bg-white">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex flex-wrap justify-center gap-2">;
-            {categories.map((category) => (;
-              <button;
+            {categories.map((category) => (<button;
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${;
-                  activeTab === category.id;
+                className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${activeTab === category.id;
                     ? 'bg-blue-600 text-white border-blue-600';
                     : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300 hover:text-blue-600';
                 }`}
@@ -152,8 +142,7 @@ const allServices = [;
       <section className="py-16 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
+            {filteredServices.map((service, index) => (<motion.div;
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -205,8 +194,7 @@ const allServices = [;
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>;
                     <div className="grid grid-cols-2 gap-1">;
-                      {service.features?.slice(0, 6).map((feature, idx) => (;
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">;
+                      {service.features?.slice(0, 6).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-sm text-gray-600">;
                           <Check className="w-3 h-3 text-green-500 flex-shrink-0" />;
                           <span className="truncate">{feature}</span>;
                         </div>;
@@ -247,16 +235,14 @@ const allServices = [;
           </div>;
           {/* Services Display */}
           <AnimatePresence mode="wait">;
-            {viewMode === 'grid' ? (;
-              <motion.div;
+            {viewMode === 'grid' ? (<motion.div;
                 key="grid";
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
               >;
-                {filteredServices.map((service, index) => (;
-                  <motion.div;
+                {filteredServices.map((service, index) => (<motion.div;
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -267,8 +253,7 @@ const allServices = [;
                     <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>;
                       <div className="flex items-center justify-between mb-4">;
                         <span className="text-4xl">{service.icon}</span>;
-                        {service.popular && (;
-                          <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">;
+                        {service.popular && (<span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">;
                             POPULAR;
                           </span>;
                         )}
@@ -298,8 +283,7 @@ const allServices = [;
                       <div className="mb-6">;
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
                         <ul className="space-y-1">;
-                          {getServiceFeatures(service).slice(0, 4).map((feature, idx) => (;
-                            <li key={idx} className="flex items-center text-sm text-gray-600">;
+                          {getServiceFeatures(service).slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-gray-600">;
                               <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                               {feature}
                             </li>;
@@ -323,6 +307,18 @@ const allServices = [;
                         </div>;
                       </div>;
                       {/* ROI and Popularity */}
+                      <div className="flex items-center justify-between mb-4">;
+                        <div className="text-sm">;
+                          <span className="text-gray-500">Expected ROI:</span>;
+                          <span className="text-green-600 font-semibold ml-1">;
+                            {service.roi.split(' ')[0]} ROI;
+                          </span>;
+                        </div>;
+                        {service.popular && (<div className="flex items-center gap-1 text-yellow-600">;
+                            <Star className="w-4 h-4 fill-current" />;
+                            <span className="text-sm font-medium">Popular</span>;
+                          </div>;
+                        )}{/* Price and Features */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
                           <span className="text-gray-500">Expected ROI:</span>
@@ -349,8 +345,7 @@ const allServices = [;
                           <div className="mb-4">;
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>;
                             <ul className="space-y-1 text-sm text-gray-600">;
-                              {service.features.slice(0, 4).map((feature, idx) => (;
-                                <li key={idx} className="flex items-center">;
+                              {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center">;
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                                   {feature}
                                 </li>;
@@ -382,8 +377,7 @@ const allServices = [;
             )}
           </AnimatePresence>;
           {/* No Results */}
-          {filteredServices.length === 0 && (;
-            <div className="text-center py-12">;
+          {filteredServices.length === 0 && (<div className="text-center py-12">;
               <div className="text-gray-400 mb-4">;
                 <Search className="w-16 h-16 mx-auto" />;
               </div>;
@@ -495,5 +489,7 @@ const allServices = [;
         </div>;
       </section>;
     </div>;
+  )},
   );
 },;
+

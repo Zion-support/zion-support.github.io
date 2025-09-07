@@ -24,6 +24,10 @@ exports.handler = async () => {
     logs.push(`exit=${status}`);
     return status;
   }
+  // Update the front page auto-generated section;
+  logStep('front-index:advertise', () =>;
+    runNode('automation/front-index-advertiser.cjs'))// Attempt to sync changes back to main (best-effort)logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))// Attempt to sync changes back to main (best-effort)logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),return { statusCode: 200, body: logs.join('\n') }
+},:netlify/functions/front-enhancer.js;
   // Update the front page auto-generated section
   logStep('front-index:advertise', () =>
     runNode('automation/front-index-advertiser.cjs')

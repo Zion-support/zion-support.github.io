@@ -1,6 +1,34 @@
+<<<<<<< HEAD
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+=======
+import type { Metadata } from 'next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+
+export const metadata = {
+  title: 'Blockchain Solutions - Zion Tech Group',
+  description: 'Professional blockchain solutions solutions for your business needs.',
+};
+
+export default function BlockchainSolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Blockchain Solutions - Zion Tech Group',
+  description: 'Professional blockchain solutions solutions for your business needs.',
+};
+
+export default function BlockchainSolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
 export const metadata = {
   title: 'Blockchain Solutions - Zion Tech Group',
   description: 'Professional blockchain solutions solutions for your business needs.',

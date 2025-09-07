@@ -38,6 +38,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         </div>;
       )}
     </div>;
+  ),}
+ export function ExperienceFilter () {const handleChange = (values: number[]) => {setExperienceRange ([values[0] || 0, values[1] || 15])}mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />)}</button> <span> {experienceRange[0] ;
+}years</span> <span> {experienceRange[1] ;
+}years</span> </div> <Slider /> </div>):temp_broken_files/talent/filters/ExperienceFilter.tsx;
+}</div>)"}";
+}</div>)}";
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/ExperienceFilter.tsx;
   ),;}
  export function ExperienceFilter ({;
   experienceRange, setExperienceRange, expanded,  toggleSection, isMobileFilterOpen ;
@@ -56,3 +63,4 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }</div>) ;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/ExperienceFilter.tsx
+

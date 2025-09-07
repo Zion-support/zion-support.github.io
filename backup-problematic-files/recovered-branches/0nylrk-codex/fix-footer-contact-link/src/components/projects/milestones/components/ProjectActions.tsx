@@ -1,3 +1,7 @@
+
+import React from 'react',import { Button } from '@/components/ui/button',import { Link } from 'react-router-dom',import { ShieldAlert } from "lucide-react",import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',interface ProjectActionsProps  {projectId:string,isUnderDispute:boolean,disputeId?:string,isTalent:boolean,onAddMilestone:() => void;
+}export function ProjectActions() {return (<div className="flex gap-2">;
+      {isUnderDispute && disputeId ? (<Button variant="outline" asChild>;
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom',;
@@ -28,16 +32,16 @@ export function ProjectActions({;
             View Active Dispute;
           </Link>;
         </Button>;
-      ) :(;
-        <RaiseDisputeButton ;
+      ) :(<RaiseDisputeButton ;
           projectId={projectId}
           variant="outline";
         />;
       )}
-      {isTalent && !isUnderDispute && (;
-        <Button onClick={onAddMilestone}>;
+      {isTalent && !isUnderDispute && (<Button onClick={onAddMilestone}>;
           Add Milestone;
         </Button>;
       )}
     </div>;
+  ),}
   ),;}
+

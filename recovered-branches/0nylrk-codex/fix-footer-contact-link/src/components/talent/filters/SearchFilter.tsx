@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Input} from "@/components/ui/input";
 import {SearchIcon} from "lucide-react";
 import {SearchFilterProps} from "@/types/filters";
@@ -5,17 +6,27 @@ export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilter
 import { Input } from "@/components/ui/input",
 import { SearchIcon } from "lucide-react",
 import { SearchFilterProps } from "@/types/filters",
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+<<<<<<< HEAD
     <div className="mb-6">;
       <div className="relative">;
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+=======
+  return (
+    <div className="mb-6">
+      <div className="relative">
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <Input
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
@@ -69,3 +80,12 @@ function SearchFilter() {
 ;
 }
 }
+=======
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
+        />
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

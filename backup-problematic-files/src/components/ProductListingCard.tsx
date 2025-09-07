@@ -53,6 +53,12 @@ const ProductListingCardComponent = ({;
       ? 'destructive';
       :listing.stock <= 5;
       ? 'warning';
+      :'success',const { formatPrice }  = useCurrency(),const getPrice = () => {if (listing.price === null) return "Custom pricing",return formatPrice(listing.price),},const handleImageError = () => {if (!imageError) { // Prevent infinite loops if placeholder also fails;
+      setImageSrc('/placeholder.svg'),setImageError(true),}
+  },const handleViewListing = () => {// Debug logging for development;
+    if (process.env.NODE_ENV === 'development') {logDebug('[ProductCard] Navigating to:', { path:`${detailBasePath}/${listing.id}` }),logDebug('[ProductCard] Listing ID:', { id:listing.id }),logDebug('[ProductCard] Listing Title:', { title:listing.title }),}// Validate listing ID exists before navigation;
+    if (!listing.id) {logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component:'ProductListingCard' }),toast({title:"Navigation Error",,description:"Product information is incomplete",variant:"destructive"}),return,}router.push(`${detailBasePath}/${listing.id}`),},const dispatch  = useDispatch<AppDispatch>(),const addToCart = () => {setLoading(true),dispatch(addItem({ id:listing.id, title:listing.title, price:listing.price ?? 0 })),toast.success(`1 ${listing.title} added`, {action:{label:'View Cart',onClick:() => router.push('/cart')}}),setLoading(false),},const handleRequestQuote = (e:React.MouseEvent) => {e.preventDefault(),e.stopPropagation(),if (onRequestQuote) {onRequestQuote(listing.id)} else {router.push(`/request-quote?listing=${listing.id}`),}
+  },const imageContainerClasses  = isGrid ? 'h-48' :'h-32 w-48',return (<div;
       :'success',;
     ;
   const { formatPrice } = useCurrency(),;
@@ -350,9 +356,12 @@ router.push ('/checkout') ;
 }disabled= {;
   loading ;
 }> Buy Now </Button> {";
+  onRequestQuote && (<Button size="sm" variant="outline" onClick={handleRequestQuote ";
+}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>)}</div> </div> </div> </div>)}'";
   onRequestQuote && (<Button size="sm" variant="outline" onClick={;
   handleRequestQuote ";
 }className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) ;
 }</div> </div> </div> </div>) 
 };
 '"
+

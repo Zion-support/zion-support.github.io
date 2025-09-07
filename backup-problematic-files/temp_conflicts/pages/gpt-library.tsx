@@ -1,3 +1,4 @@
+import React from 'react',import Head from 'next/head',export default function GPTLibraryPage() {return (<>;
 import React from 'react';
 import Head from 'next/head';
 ;
@@ -17,5 +18,7 @@ export default function GPTLibraryPage() {;
         </div>;
       </div>;
     </>;
+  )}
   );
 }
+

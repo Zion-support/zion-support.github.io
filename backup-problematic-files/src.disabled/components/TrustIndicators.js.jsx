@@ -1,4 +1,9 @@
 import React from 'react';
+const TrustIndicators.js = ({ className }) => {return (<div className={className || ''}>;
+      <h1>TrustIndicators.js</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const TrustIndicators.js = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const TrustIndicators.js = ({ className }) => {
   )
 }
 }
+

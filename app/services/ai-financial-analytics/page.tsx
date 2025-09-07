@@ -1,4 +1,19 @@
+<<<<<<< HEAD
+
+
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+
+
 import React from 'react';
+
+
+
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-2d7e
+
 export const metadata = {
   title: 'Ai Financial Analytics | Zion Tech Group',
   description: 'Professional ai financial analytics services for your business needs.',

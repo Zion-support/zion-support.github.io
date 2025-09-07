@@ -1,41 +1,45 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;
+  return <div>Something went wrong.</div>;
     }return this.props.children;
   }
 }import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink  } from 'lucide-react';
+
 export default function SecretsRotationAutomationPage() {import React from './react';
 import SEO from '../components / SEO';
 import { Check, ExternalLink   } from './lucide-react';
+
 export default /**;
  * SecretsRotationAutomationPage - Function description;
  */;
-function SecretsRotationAutomationPage() {const features = [;
-export default function SecretsRotationAutomationPage() {const features = [;
-    "Automated key and secret rotation","JIT credentials with expirations","Policy approvals and audit trails","CI/CD integration (GitHub Actions, CircleCI)","Cloud KMS and Vault support"];
-import React from 'react',export default function SecretsRotationAutomationPage() {const features = [;
-    "Automated key and secret rotation";
+function SecretsRotationAutomationPage() {const features = [
+  export default function SecretsRotationAutomationPage() {const features = [
+  "Automated key and secret rotation","JIT credentials with expirations","Policy approvals and audit trails","CI/CD integration (GitHub Actions, CircleCI)","Cloud KMS and Vault support"];
+import React from 'react',export default function SecretsRotationAutomationPage() {const features = [
+  "Automated key and secret rotation";
     "JIT credentials with expirations";
     "Policy approvals and audit trails";
     "CI/CD integration (GitHub Actions, CircleCI)";
-    "Cloud KMS and Vault support";
-  ];
-  return (export default function SecretsRotationAutomationPage() {const features = [;
-    "Automated key and secret rotation","JIT credentials with expirations","Policy approvals and audit trails","CI / CD integration (GitHub Actions, CircleCI)","Cloud KMS and Vault support";
-    "Cloud KMS and Vault support";
-  ];return (<>;
+    "Cloud KMS and Vault support"
+];
+
+  return (export default function SecretsRotationAutomationPage() {const features = [
+  "Automated key and secret rotation","JIT credentials with expirations","Policy approvals and audit trails","CI / CD integration (GitHub Actions, CircleCI)","Cloud KMS and Vault support";
+    "Cloud KMS and Vault support"
+];
+return (<>;
   
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true,
+};
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -47,29 +51,23 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
+  const features = [
+  export default function SecretsRotationAutomationPage() {
 
-
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-
-
-import React from './react';
-import SEO from "../components / SEO";
-import { Check, ExternalLink  } from './lucide-react';
-export default /**
- * SecretsRotationAutomationPage - Function description
- */
-function SecretsRotationAutomationPage() {
   const features = [;
 
-=======
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export default function SecretsRotationAutomationPage() {
+  const features = [
+  export default function SecretsRotationAutomationPage() {
+
+  const features = [;
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
   const features = [
     "Automated key and secret rotation"
     "JIT credentials with expirations"
@@ -105,8 +103,8 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (<div;
                 key={f}
-                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
-              >;
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10">
+
                 <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;
                 <p className="text - gray - 200">{f}</p>;
               </div>))}
@@ -114,32 +112,31 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt - 8 flex flex - wrap items - center gap - 4">;
             <a;
               href="/contact";
-              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200";
-            >;
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200">
+
               Start from $199 / mo;
             </a>;
             <a;
               href="/pricing";
-              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
-            >;
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10">
+
               Pricing;
             </a>;
             <a;
               href="https://developer.hashicorp.com / vault";
               target="_blank";
               rel="noreferrer";
-              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300">
+
               <ExternalLink className="w - 4 h - 4" /> HashiCorp Vault Docs;
             </a>;
             <a;
               href="https://cloud.google.com / kms";
               target="_blank";
               rel="noreferrer";
-              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300">
+
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
-<<<<<<< HEAD
   return (return (return (</a>;
           </div>;
         </section>;
@@ -151,8 +148,6 @@ export default function SecretsRotationAutomationPage() {
       </main>;
 
     </>);
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   return (
     <>;
       <SEO;
@@ -188,13 +183,10 @@ return (return (return (return (<>;
             {features.map((f) => (<div;
             {features.map ((f) => (
               <div;
-<<<<<<< HEAD
 return (
   return (
   return (
   return (
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -209,9 +201,14 @@ return (
             Keep credentials short-lived and compliant. Automate rotations
             across providers with full auditability.
           </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+          <div className="mt-8 grid sm: grid-cols-2 gap-6">
             {features.map((f) => (
               <div
+
+                key={,
+}
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10">
+
                 key={f}
                 className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
               >;
@@ -222,39 +219,43 @@ return (
           <div className="mt - 8 flex flex - wrap items - center gap - 4">;
             <a;
               href="/contact";
-              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover: bg - gray - 200";
-            >;
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover: bg - gray - 200">
+
               Start from $199 / mo;
             </a>;
             <a;
               href="/pricing";
-              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
-            >;
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10">
+
               Pricing;
             </a>;
             <a;
               href="https://developer.hashicorp.com / vault";
               target="_blank";
               rel="noreferrer";
-              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300">
+
               <ExternalLink className="w - 4 h - 4" /> HashiCorp Vault Docs;
             </a>;
             <a;
               href="https://cloud.google.com / kms";
               target="_blank";
               rel="noreferrer";
-              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
-            >;
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300">
+
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
             </a>;
           </div>;
         </section>;
       </main>;</>)}}</>)}ursor/fix-website-loading-errors-and-merge-6662;
-    </>)}const features = [;
-		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support';
-	];
-	const features  = null;return (<>;
+    </>)}
+
+const features = [
+  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
+];
+
+
+const features  = null;return (<>;
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />;
 			<main id="main" className="container mx-auto px-4 py-24">;
 				<section className="max-w-5xl mx-auto">;
@@ -308,7 +309,7 @@ return (
     </>);
 }
 
-	const features = [
+const features = [
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
 	return (
@@ -318,14 +319,15 @@ return (
 				<section className="max-w-5xl mx-auto">
 					<h1 className="text-4xl font-extrabold tracking-tight">Secrets Rotation Automation</h1>
 					<p className="mt-4 text-lg text-gray-300">Keep credentials short-lived and compliant. Automate rotations across providers with full auditability.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
+					<div className="mt-8 grid sm: grid-cols-2 gap-6">
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
 <p className="text-gray-200">{f}</p>
 
 							</div>
-						))}
+						),
+}
 					</div>
 					<div className="mt-8 flex flex-wrap items-center gap-4">
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $199/mo</a>
@@ -365,12 +367,13 @@ return (
             Keep credentials short-lived and compliant. Automate rotations
             across providers with full auditability.
           </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+          <div className="mt-8 grid sm: grid-cols-2 gap-6">
             {features.map((f) => (
               <div
-                key={f}
-                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10";
-              >;
+                key={,
+}
+                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
+
                 <Check className="w-5 h-5 text-cyan-400 mt-1" />;
                 <p className="text-gray-200">{f}</p>;
               </div>;
@@ -379,46 +382,46 @@ return (
           <div className="mt-8 flex flex-wrap items-center gap-4">;
             <a;
               href="/contact";
-              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200";
-            >;
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200">
+
               Start from $199/mo;
             </a>;
             <a;
               href="/pricing";
               className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10";
               href='/pricing';
-              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10';
-            >;
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'>
+
               Pricing;
             </a>;
             <a;
               href="https://developer.hashicorp.com/vault";
               target="_blank";
               rel="noreferrer";
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
-            >;
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+
               <ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs;
             </a>;
             <a;
               href="https://cloud.google.com/kms";
               target="_blank";
               rel="noreferrer";
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
-            >;
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+
               <ExternalLink className="w-4 h-4" /> Google Cloud KMS;
               href='https://developer.hashicorp.com/vault';
               target='_blank';
               rel='noreferrer';
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300';
-            >;
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>
+
               <ExternalLink className='w-4 h-4' /> HashiCorp Vault Docs;
             </a>;
             <a;
               href='https://cloud.google.com/kms';
               target='_blank';
               rel='noreferrer';
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300';
-            >;
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>
+
               <ExternalLink className='w-4 h-4' /> Google Cloud KMS;
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -470,7 +473,7 @@ return (
             Keep credentials short-lived and compliant. Automate rotations
             across providers with full auditability.
           </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+          <div className="mt-8 grid sm: grid-cols-2 gap-6">
             {features.map((f) => (
               <div
                 key={f}
@@ -479,7 +482,8 @@ return (
                 <Check className="w-5 h-5 text-cyan-400 mt-1" />
                 <p className="text-gray-200">{f}</p>
               </div>
-            ))}
+            ),
+}
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
@@ -539,8 +543,8 @@ return (
           <div className="mt-8 grid sm:grid-cols-2 gap-6">;
             {features.map((f) => (<div;
                 key={f}
-                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10";
-              >;
+                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
+
                 <Check className="w-5 h-5 text-cyan-400 mt-1" />;
                 <p className="text-gray-200">{f}</p>;
               </div>;
@@ -549,44 +553,42 @@ return (
           <div className="mt-8 flex flex-wrap items-center gap-4">;
             <a;
               href="/contact";
-              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200";
-            >;
+              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">
+
               Start from $199/mo;
             </a>;
             <a;
               href="/pricing";
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10";
-            >;
+              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">
+
               Pricing;
             </a>;
             <a;
               href="https://developer.hashicorp.com/vault";
               target="_blank";
               rel="noreferrer";
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
-            >;
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+
               <ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs;
             </a>;
             <a;
               href="https://cloud.google.com/kms";
               target="_blank";
               rel="noreferrer";
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300";
-            >;
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+
               <ExternalLink className="w-4 h-4" /> Google Cloud KMS;
             </a>;
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
     </>;
   )}</a>;
           </div>;
         </section>;
       </main>;
-=======
             </a>;
           </div>;
         </section>;
       </main>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+

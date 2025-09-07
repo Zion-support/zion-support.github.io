@@ -21,6 +21,39 @@ import {
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+const services = [;
+  {title: 'Blockchain Solutions',description: 'Secure, transparent, and efficient blockchain implementations for financial services.',icon: Shield,features: [;
+      'Smart contract development,','Cryptocurrency integration',','Decentralized finance (DeFi)',',title: 'Blockchain Solutions,',,description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',const services = [;
+  {title: 'Blockchain Solutions',,description: 'Secure, transparent, and efficient blockchain implementations for financial services.',icon: Shield,features: [,'Smart contract development,','Cryptocurrency integration',','Decentralized finance (DeFi)',','Digital identity management'';
+    ];
+  },{}
+    title: 'AI Trading Algorithms,',,description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',icon: Brain,features: [,'Algorithmic trading systems,','Risk management AI',','Market prediction models',','Portfolio optimization'';
+    ];
+  },{}
+    title: 'Digital Payment Systems,',,description: 'Secure, scalable payment processing solutions for modern financial transactions.',',icon: CreditCard,features: [,'Payment gateway integration,','Mobile payment solutions',','Cross-border payments',','Fraud detection systems'';
+    ];
+  },{}
+    title: 'Risk Management AI,',,description: 'AI-powered risk assessment and management tools for financial institutions.,',icon: TrendingUp,features: [,'Credit risk analysis,','Market risk modeling',','Operational risk assessment',','Regulatory compliance monitoring'';
+    ];
+  },{}
+    title: 'Fraud Detection Systems,',,description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',icon: Lock,features: [,'Real-time transaction monitoring,','Behavioral analysis',','Pattern recognition',','Automated alert systems'';
+    ];
+  },{}
+    title: 'Regulatory Compliance Tools,',,description: 'Automated compliance monitoring and reporting for financial regulations.,',icon: FileText,features: [,'KYC/AML automation,','Regulatory reporting',','Audit trail management',','Compliance dashboards'';
+    ];
+  }];
+const benefits = [;
+  {}
+    title: 'Enhanced Security,',,description: 'Bank-grade security measures protect sensitive financial data and transactions.,',icon: Shield;
+];
+const benefits = [;
+  {title: 'Enhanced Security',,description: 'Bank-grade security measures protect sensitive financial data and transactions.',icon: Shield;
+  },{}
+    title: 'Improved Efficiency,',,description: 'Automated processes reduce manual work and increase operational efficiency.,',icon: BarChart3,},{}
+    title: 'Better Risk Management,',,description: 'AI-powered risk assessment helps make informed financial decisions.,',icon: TrendingUp,},{}
+    title: 'Regulatory Compliance,',,description: 'Built-in compliance tools ensure adherence to financial regulations.,',icon: FileText,}];
+export default function FinancePage() {return (<Layout)title="Financial Technology Solutions - Zion Tech Group"";
+      description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."";
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -439,6 +472,28 @@ export default function FinancePage() {;
         </section>;
       </div>;
     </Layout>;
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+                Ready to Transform Financial Services?;
+              </h2>;
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">;
+                Let our fintech experts help you implement cutting-edge financial technology;
+                solutions that enhance security and efficiency.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Fintech Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?
@@ -463,3 +518,4 @@ export default function FinancePage() {;
   )
 }
 }
+

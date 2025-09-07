@@ -1,16 +1,25 @@
-<<<<<<< HEAD
 
 ;
 import React from 'react';
-interface UltraFuturisticBackgroundProps  {children: React.ReactNode;className?: string;
-}const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({children,className = '';
-}) => {const getBackgroundClasses = () => {const baseClasses  = 'relative overflow-hidden';switch (variant) {case 'quantum':;
+
+interface UltraFuturisticBackgroundProps {
+  children: React.ReactNode;className?: string;
+
+}
+
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ children,className = '';
+   }) => {
+
+
+const getBackgroundClasses = () => ;
+  const baseClasses  = 'relative overflow-hidden';switch (variant) {case 'quantum':;
 
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
   variant?: 'quantum' | 'matrix' | 'neon';
   intensity?: 'low' | 'medium' | 'high';
   className?: string;
+
 }
 
 export default function UltraFuturisticBackground({ 
@@ -20,7 +29,8 @@ export default function UltraFuturisticBackground({
   className = ''
 }: UltraFuturisticBackgroundProps) {
   const getBackgroundClasses = () => {
-    const baseClasses = 'min-h-screen relative overflow-hidden';
+   ;
+  const baseClasses = 'min-h-screen relative overflow-hidden';
     
     switch (variant) {
       case 'quantum':
@@ -29,8 +39,8 @@ export default function UltraFuturisticBackground({
         return `${baseClasses} bg-gradient-to-br from-green-900 via-gray-900 to-black`;
       case 'neon':
         return `${baseClasses} bg-gradient-to-br from-pink-900 via-purple-900 to-cyan-900`;
-      default:
-        return `${baseClasses} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
+      default: return `${baseClasse,
+} bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900`;
     }
   };
   
@@ -52,8 +62,7 @@ export default function UltraFuturisticBackground({
   className?: string;
 }
 
-const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
-  children,
+const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({ children,
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
   particleCount = 200,
@@ -63,7 +72,6 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   enableNeonEffects = true,
   enableSpaceTime = true,
   variant = 'quantum',
-=======
 import React from 'react';
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
@@ -71,10 +79,15 @@ interface UltraFuturisticBackgroundProps {
 }
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   className = ''
-}) => {
+   }) => {
+
+
+
   const getBackgroundClasses = () => {
+   ;
+  const baseClasses = 'relative overflow-hidden';
+    
     const baseClasses = 'relative overflow-hidden';
     switch (variant) {
       case 'quantum':
@@ -89,32 +102,30 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         {children}
       </div>;
     </div>;
-  )}export default UltraFuturisticBackground;
+  )}
+
+export default UltraFuturisticBackground;
       case 'cyber':
-<<<<<<< HEAD
-        return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+      default: return `${baseClasse,
+} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
       default:
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
+      default: return `${baseClasse,
+} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };
-<<<<<<< HEAD
 
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       <div className="relative z-10">
         {children}
       </div>
     </div>
-  );
+  )
 };
-<<<<<<< HEAD
+
 
 export default UltraFuturisticBackground;
-=======
 export default UltraFuturisticBackground;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+

@@ -324,6 +324,45 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     sessionRef.current = setInterval(trackTimeOnPage, 1000) ;
     return () => {';
 ';';
+      document.removeEventListener('click', trackInteraction)';';return () => {document.removeEventListener('click', trackInteraction)window.removeEventListener('scroll', trackScroll)if(sessionRef.current) {clearInterval(sessionRef.current)}
+    }}, [enabled, currentPage, scrollDepth])// Track performance metrics;
+  useEffect(() => {// TODO: Add dependencies if needed;
+  return () => {// Cleanup function;
+}}, []), [])if(!enabled) return;';
+';';
+        trackEvent('performance_metrics', {load_time: loadTim e,fcp: fc p,lcp: lc p,page_path: currentPag e})}    }';
+';';
+    // Track performance after page load'';';
+    if(document.readyState === 'complete') {trackPerformance()} else {';
+';';
+      window.addEventListener('load', trackPerformance)';';
+            "milestone": "9 0","page_path": "currentPag e"})}
+    // Track initial page';
+    trackEvent('page_view', {page_path: currentPag e,page_title: documen t.title,is_initial_page: tru e}
+    )return () => {window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage])// Track user interactions;
+  useEffect(() => {// TODO: Add dependencies if needed;
+  return () => {// Cleanup function;
+  }}, []), [])if(!enabled) return;
+      trackEvent('user_interaction', {setUserInteractions(prev => prev + 1)'      trackEvent('user_interaction', {';
+        interaction_type: 'click',page_path: currentPag e,timestamp: Dat e.now()})}if(scrollPercent > scrollDepth) {setScrollDepth(scrollPercent)// Track scroll milestones;
+        if(scrollPercent >= 25 && scrollDepth < 25) {trackEvent('scroll_milestone', {milestone: 2 5,page_path: currentPag e})} else if(scrollPercent >= 50 && scrollDepth < 50) {trackEvent('scroll_milestone', {milestone: 5 0,page_path: currentPag e})} else if(scrollPercent >= 75 && scrollDepth < 75) {trackEvent('scroll_milestone', {milestone: 7 5,page_path: currentPag e})} else if(scrollPercent >= 90 && scrollDepth < 90) {trackEvent('scroll_milestone', {milestone: 9 0,page_path: currentPag e})}
+      }
+    }}// Set up event listeners';
+    document.addEventListener('click', trackInteraction)window.addEventListener('scroll', trackScroll)// Update time on page every second;
+    sessionRef.current = setInterval(trackTimeOnPage, 1000)return () => {document.removeEventListener('click', trackInteraction)window.removeEventListener('scroll', trackScroll)if(sessionRef.current) {clearInterval(sessionRef.current)}
+    }}, [enabled, currentPage, scrollDepth])// Track performance metrics;
+  useEffect(() => {// "TODO": "Add dependencies if needed;
+  return () => {// Cleanup function;
+  "}}, []), [])if(!enabled) return;trackEvent('performance_metrics', {"load_time": "loadTim e","fcp": "fc p","lcp": "lc p","page_path": "currentPag e"})}    }// Track performance after page load';
+    if(document.readyState === 'complete') {trackPerformance()} else {window.addEventListener('load', trackPerformance)return () => window.removeEventListener('load', trackPerformance)}
+  }, [enabled, currentPage])// Track session end;
+  useEffect(() => {// "TODO": "Add dependencies if needed;
+  return () => {// Cleanup function;
+  "}}, []), [])if(!enabled) return;trackEvent('session_end', {"session_duration": "sessionDuratio n","pages_viewed": "1", // Simplified;
+        "total_interactions": "userInteraction s","average_time_on_page": "timeOnPag e"})}// Track performance metrics;
+  useEffect(() => {// TODO: Add dependencies if needed;
+  return () => {// Cleanup function;
+  }}, []), [])if(!enabled) return;';
       document.removeEventListener('click', trackInteraction);';';
 ;
     return () => {;

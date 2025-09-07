@@ -1,4 +1,9 @@
 import React from 'react';
+const Sustainability = ({ className }) => {return (<div className={className || ''}>;
+      <h1>Sustainability</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const Sustainability = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const Sustainability = ({ className }) => {
   )
 }
 }
+

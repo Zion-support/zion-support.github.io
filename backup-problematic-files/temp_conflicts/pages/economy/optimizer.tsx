@@ -1,3 +1,4 @@
+import fs from 'fs',import path from 'path',import EnhancedLayout from '../../components/layout/EnhancedLayout',export async function getStaticProps() {const dir = path.join(process.cwd(), 'datareports', 'economyoptimizer'),let latest:string | null = null,let top:any[] = [],if (fs.existsSync(dir)) {const latestPath = path.join(dir, 'latest.json'),if (fs.existsSync(latestPath)) {try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
 import fs from 'fs';
 import path from 'path';
 import EnhancedLayout from "EnhancedLayout";
@@ -11,28 +12,17 @@ export async function getStaticProps() {;
     if (fs.existsSync(latestPath)) {;
       try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest, } catch {}
     }
-    if (latest) {;
-      const p = path.join(dir, `${latest}.json`),;
-      if (fs.existsSync(p)) {;
-        try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || [], } catch {}
+    if (latest) {const p = path.join(dir, `${latest}.json`),if (fs.existsSync(p)) {try { top = JSON.parse(fs.readFileSync(p, 'utf8'))?.top || [], } catch {}
       }
     }
   }
-  return { props:{ latest, top } },;
-}
-;
-export default function OptimizerPage({ latest, top } any) {;
-  return (;
-    <EnhancedLayout>;
+  return { props:{ latest, top } },}export default function OptimizerPage() {return (<EnhancedLayout>;
       <div className="space-y-6">;
         <h1 className="text-2xl font-semibold">Economy Optimizer</h1>;
-        {latest ? (;
-          <div className="text-sm opacity-80">Latest:{latest}</div>;
-        ) :(;
-          <div className="text-sm opacity-80">No optimizer runs yet.</div>;
+        {latest ? (<div className="text-sm opacity-80">Latest:{latest}</div>;
+        ) :(<div className="text-sm opacity-80">No optimizer runs yet.</div>;
         )}
-        {top?.length ? (;
-          <div className="overflow-x-auto">;
+        {top?.length ? (<div className="overflow-x-auto">;
             <table className="w-full text-sm">;
               <thead>;
                 <tr className="text-left border-b border-gray-200 dark:border-gray-800">;
@@ -44,8 +34,7 @@ export default function OptimizerPage({ latest, top } any) {;
                 </tr>;
               </thead>;
               <tbody>;
-                {top.slice(0, 20).map((s:any, idx:number) => (;
-                  <tr key={idx} className="border-b border-gray-100 dark:border-gray-900">;
+                {top.slice(0, 20).map((s:any, idx:number) => (<tr key={idx} className="border-b border-gray-100 dark:border-gray-900">;
                     <td className="py-1 pr-3">{s.burnTaxPercent}%</td>;
                     <td className="py-1 pr-3">{s.emissionSchedule}</td>;
                     <td className="py-1 pr-3">{s.emissionMonthlyChangePct}%</td>;
@@ -60,5 +49,4 @@ export default function OptimizerPage({ latest, top } any) {;
         ) :null}
       </div>;
     </EnhancedLayout>;
-  ),;
-}
+  ),}

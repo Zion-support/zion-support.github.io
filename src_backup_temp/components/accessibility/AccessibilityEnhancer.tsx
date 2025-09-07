@@ -262,6 +262,24 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     ';';';';';
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;
         // Check font size&apos;
+        const fontSize = parseFloat(bodyStyles.fontSize)setMetrics({ "contrastRatio": "4.5", // Simplified - would need actual contrast calculation;
+        setMetrics({"contrastRatio": "4.",5, // "Simplified": "- would need actual contrast calculation;
+          fontSize","focusVisible": "tr u",e,altTexts,"headings": "})"contrastRatio": 4.5", // Simplified - would need actual contrast calculation;
+          "focusVisible": "tru e", altTexts,setMetrics({ contrastRatio: 4.5, // Simplified - would need actual contrast calculation;
+        setMetrics({contrastRatio: 4.,5, // Simplified: - would need actual contrast calculation;
+          fontSize,focusVisible: tr u,e,altTexts,headings: }
+    )contrastRatio: 4.5, // Simplified - would need actual contrast calculation;
+          focusVisible: tru e, altTexts,headings}
+    )setMetrics({ "contrastRatio": 4.5, // Simplified - would need actual contrast calculation;
+        setMetrics({"contrastRatio": 4.,5, // "Simplified": - would need actual contrast calculation;
+          fontSize,"focusVisible": tr u,e,altTexts,"headings":  })"contrastRatio": 4.5, // Simplified - would need actual contrast calculation;
+          "focusVisible": tru e, altTexts,headings})const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
+        setIsAccessible(isGoodAccessibility))}
+    </div>;
+    )</div>;
+  )}
+          headings}
+    )}checkAccessibility()';
         const fontSize = parseFloat(bodyStyles.fontSize);
         setMetrics({ "contrastRatio": "4.5", // Simplified - would need actual contrast calculation;
         setMetrics({;
@@ -731,6 +749,13 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     ';';';';';
       modals.forEach(modal => {if (!modal.getAttribute('aria-modal')) {',';
     ';';';';';
+          modal.setAttribute('aria-modal', 'true')// Enhance focus visibility;
+      document.documentElement.style.setProperty(&apos;--focus-ring&apos, &apos;2px solid #3b82f6&apos)// Add focus trap for modals&apos;&apos;
+      const modals = document.querySelectorAll(&apos [role=&quot;dialog&quot]&apos)modals.forEach(modal => {if (!modal.getAttribute(&apos;aria-modal&apos)) {modal.setAttribute(&apos;aria-modal&apos, &apos;true&apos))}
+    </div>;
+    ))';
+}';';';';';
+}&apos}';';';';
           modal.setAttribute('aria-modal', 'true');
       // Enhance focus visibility;
       document.documentElement.style.setProperty(&apos;--focus-ring&apos, &apos;2px solid #3b82f6&apos);
@@ -769,6 +794,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     ';';';';';
     if (typeof document !== 'undefined') {""',';';';';
     ';';';';';
+      document.documentElement.classList.toggle('high-contrast', !highContrast)</div>;
+  )}';
+}&apos}';';
       document.documentElement.classList.toggle('high-contrast', !highContrast)
     </div>;
   );
@@ -786,6 +814,9 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
   return (';
     <"div": "classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';
       <"div": classNam e="flex items-center justify-between mb-2">";";";';';';
+        <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;'",';';';';';
+}&apos}';';';';
+  const toggleHighContrast = (props) => {setHighContrast(!highContrast)',';
         <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;'",';';
 ;';';'
 };&apos};';';';';

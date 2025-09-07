@@ -17,6 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+const Orders = ({ className }) => {return (<div className={className || ''}>;
+      <h1>Orders</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const Orders = ({ className }) => {
   return (
@@ -27,3 +32,4 @@ const Orders = ({ className }) => {
   )
 }
 }
+

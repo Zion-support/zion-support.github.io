@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Services - Zion Tech Group',
+  description: 'Professional ai services solutions for your business needs.',
+};
+
+export default function AiServicesPage() {
 import React from 'react';
 import Link from 'next/link';
 
@@ -12,6 +22,32 @@ interface AIServiceProps {
   title: string;
   description: string;
   features: string[];
+  price: string;
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2 mb-4">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <div className="text-lg font-semibold text-blue-600 mb-4">{price}</div>
+      <a
+        href="mailto:kleber@ziontechgroup.com?subject=AI Service: {title}"
+        className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Get Started
+      </a>
+    </div>
+  );
+  price: string;
+}) {
 }
 
 export default function AIServicesPage() {
@@ -42,6 +78,297 @@ export default function AIServicesPage() {
         </div>
       </section>
 
+        <div className="max-w-6xl mx-auto">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
+              <p className="text-gray-600">
+                Quick deployment and setup to get your solution running in no time.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and reliability for your peace of mind.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Built to grow with your business and adapt to changing needs.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your ai services requirements 
+              and get a custom solution tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+import Link from "next/link";
+
+export const metadata = {
+  title: "AI Services | Zion Tech Group",
+  description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
+};
+
+function FeatureItem({ icon, title, description, benefits }: {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[];
+}) {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+=======
+import Link from "next/link";
+
+export const metadata = {
+  title: "AI Services | Zion Tech Group",
+  description: "Comprehensive AI services including machine learning, natural language processing, computer vision, and AI consulting to transform your business.",
+  keywords: "AI services, machine learning, NLP, computer vision, AI consulting, artificial intelligence"
+};
+
+const ServiceCard = ({ title, description, icon }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-3xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
+
+const FeatureItem = ({ title, description, icon }) => (
+  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+    <div className="text-4xl mb-4">{icon}</div>
+    <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
+
+const CTA = () => (
+  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+    <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
+    <p className="text-xl mb-8">
+      Let&apos;s discuss how our AI services can help you achieve your goals.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link
+        href="/contact"
+        className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+      >
+        Get Started
+      </Link>
+      <Link
+        href="/services"
+        className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+      >
+        View All Services
+      </Link>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+    </div>
+  </div>
+);
+
+export default function AIServicesPage() {
+<<<<<<< HEAD
+  return (
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your business with cutting-edge artificial intelligence solutions. From custom LLM development to intelligent automation, we deliver AI that drives real business value.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <FeatureItem
+          icon="🤖"
+          title="Custom LLM Development"
+          description="Build and deploy custom large language models tailored to your specific business needs and data."
+          benefits={[
+            "Domain-specific training",
+            "Fine-tuned performance",
+            "Custom embeddings",
+            "Deployment optimization"
+          ]}
+        />
+        <FeatureItem
+          icon="🔍"
+          title="RAG Systems"
+          description="Retrieval-Augmented Generation systems that combine your knowledge base with AI for accurate, contextual responses."
+          benefits={[
+            "Knowledge base integration",
+            "Context-aware responses",
+            "Source attribution",
+            "Real-time updates"
+          ]}
+        />
+        <FeatureItem
+          icon="🎯"
+          title="AI Agents"
+          description="Intelligent agents that can perform complex tasks, make decisions, and interact with your systems autonomously."
+          benefits={[
+            "Task automation",
+            "Decision making",
+            "Multi-step workflows",
+            "Continuous learning"
+          ]}
+        />
+        <FeatureItem
+          icon="👁️"
+          title="Computer Vision"
+          description="Advanced image and video analysis capabilities for object detection, classification, and visual understanding."
+          benefits={[
+            "Object detection",
+            "Image classification",
+            "Video analysis",
+            "Real-time processing"
+          ]}
+        />
+        <FeatureItem
+          icon="📊"
+          title="Data Analytics"
+          description="AI-powered analytics that extract insights from complex datasets and provide actionable business intelligence."
+          benefits={[
+            "Pattern discovery",
+            "Trend analysis",
+            "Anomaly detection",
+            "Business intelligence"
+          ]}
+        />
+        <FeatureItem
+          icon="🔮"
+          title="Predictive Modeling"
+          description="Advanced models that forecast future trends and outcomes for better planning and decision making."
+          benefits={[
+            "Demand forecasting",
+            "Risk assessment",
+            "Market prediction",
+            "Resource optimization"
+          ]}
+        />
+      </div>
+
+      <div className="bg-blue-50 rounded-lg p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our AI Services?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+            <p className="text-gray-600 mb-4">
+              Our AI specialists have deep expertise in machine learning, deep learning, and AI system architecture. 
+              We stay at the forefront of AI research and development.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+            <p className="text-gray-600 mb-4">
+              We've successfully delivered AI solutions for businesses across various industries, 
+              driving measurable improvements in efficiency, accuracy, and ROI.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+            <p className="text-gray-600 mb-4">
+              Our AI systems are designed to scale with your business, handling increasing data volumes 
+              and complexity while maintaining performance.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Ongoing Support</h3>
+            <p className="text-gray-600 mb-4">
+              We provide continuous monitoring, optimization, and support to ensure your AI systems 
+              continue to deliver value as your business evolves.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how our AI services can solve your specific challenges and drive your business forward.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Get Started Today
+        </a>
+        <div className="mt-8">
+          <Link
+            href="/services"
+            className="text-blue-600 hover:text-blue-800 font-medium"
+          >
+            View All Services
+          </Link>
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our AI Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <ProcessStep
+            step="1"
+            title="Discovery & Analysis"
+            description="Understand your business needs, data sources, and AI requirements through comprehensive analysis."
+          />
+          <ProcessStep
+            step="2"
+            title="Solution Design"
+            description="Design custom AI architecture and select the most appropriate technologies and approaches."
+          />
+          <ProcessStep
+            step="3"
+            title="Development & Training"
+            description="Build, train, and optimize AI models using your data and business-specific requirements."
+          />
+          <ProcessStep
+            step="4"
+            title="Deployment & Support"
+            description="Deploy the solution in your environment and provide ongoing support and optimization."
+          />
       {/* Services Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto">
@@ -116,9 +443,356 @@ export default function AIServicesPage() {
               ]}
             />
           </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fast Implementation</h3>
+              <p className="text-gray-600">
+                Quick deployment and setup to get your solution running in no time.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Secure & Reliable</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and reliability for your peace of mind.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Built to grow with your business and adapt to changing needs.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-white rounded-xl shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your ai services requirements 
+              and get a custom solution tailored to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+import Link from "next/link";
+
+export const metadata = {
+  title: "AI Services | Zion Tech Group",
+  description: "Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.",
+};
+
+function FeatureItem({ icon, title, description, benefits }: {
+  icon: string;
+  title: string;
+  description: string;
+  benefits: string[];
+}) {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default function AIServicesPage() {
+  return (
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Services
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your business with cutting-edge artificial intelligence solutions. From custom LLM development to intelligent automation, we deliver AI that drives real business value.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <FeatureItem
+          icon="🤖"
+          title="Custom LLM Development"
+          description="Build and deploy custom large language models tailored to your specific business needs and data."
+          benefits={[
+            "Domain-specific training",
+            "Fine-tuned performance",
+            "Custom embeddings",
+            "Deployment optimization"
+          ]}
+        />
+        <FeatureItem
+          icon="🔍"
+          title="RAG Systems"
+          description="Retrieval-Augmented Generation systems that combine your knowledge base with AI for accurate, contextual responses."
+          benefits={[
+            "Knowledge base integration",
+            "Context-aware responses",
+            "Source attribution",
+            "Real-time updates"
+          ]}
+        />
+        <FeatureItem
+          icon="🎯"
+          title="AI Agents"
+          description="Intelligent agents that can perform complex tasks, make decisions, and interact with your systems autonomously."
+          benefits={[
+            "Task automation",
+            "Decision making",
+            "Multi-step workflows",
+            "Continuous learning"
+          ]}
+        />
+        <FeatureItem
+          icon="👁️"
+          title="Computer Vision"
+          description="Advanced image and video analysis capabilities for object detection, classification, and visual understanding."
+          benefits={[
+            "Object detection",
+            "Image classification",
+            "Video analysis",
+            "Real-time processing"
+          ]}
+        />
+        <FeatureItem
+          icon="📊"
+          title="Data Analytics"
+          description="AI-powered analytics that extract insights from complex datasets and provide actionable business intelligence."
+          benefits={[
+            "Pattern discovery",
+            "Trend analysis",
+            "Anomaly detection",
+            "Business intelligence"
+          ]}
+        />
+        <FeatureItem
+          icon="🔮"
+          title="Predictive Modeling"
+          description="Advanced models that forecast future trends and outcomes for better planning and decision making."
+          benefits={[
+            "Demand forecasting",
+            "Risk assessment",
+            "Market prediction",
+            "Resource optimization"
+          ]}
+        />
+      </div>
+
+      <div className="bg-blue-50 rounded-lg p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our AI Services?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+            <p className="text-gray-600 mb-4">
+              Our AI specialists have deep expertise in machine learning, deep learning, and AI system architecture. 
+              We stay at the forefront of AI research and development.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+            <p className="text-gray-600 mb-4">
+              We've successfully delivered AI solutions for businesses across various industries, 
+              driving measurable improvements in efficiency, accuracy, and ROI.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Scalable Solutions</h3>
+            <p className="text-gray-600 mb-4">
+              Our AI systems are designed to scale with your business, handling increasing data volumes 
+              and complexity while maintaining performance.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Ongoing Support</h3>
+            <p className="text-gray-600 mb-4">
+              We provide continuous monitoring, optimization, and support to ensure your AI systems 
+              continue to deliver value as your business evolves.
+            </p>
+=======
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with cutting-edge artificial intelligence solutions. 
+            From machine learning to natural language processing, we deliver AI that works.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <FeatureItem
+            title="Machine Learning"
+            description="Build intelligent systems that learn and adapt to your business needs"
+            icon="🧠"
+          />
+          <FeatureItem
+            title="Natural Language Processing"
+            description="Process and understand human language for better customer interactions"
+            icon="💬"
+          />
+          <FeatureItem
+            title="Computer Vision"
+            description="Extract insights from images and videos to automate visual tasks"
+            icon="👁️"
+          />
+          <FeatureItem
+            title="Predictive Analytics"
+            description="Forecast trends and behaviors to make data-driven decisions"
+            icon="📊"
+          />
+          <FeatureItem
+            title="AI Chatbots"
+            description="Intelligent conversational agents that provide 24/7 customer support"
+            icon="🤖"
+          />
+          <FeatureItem
+            title="Process Automation"
+            description="Streamline workflows with intelligent automation solutions"
+            icon="⚡"
+          />
+        </div>
+
+        <div className="bg-white rounded-2xl p-12 mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our AI Services?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+              <p className="text-gray-600">
+                Our AI specialists have years of experience in implementing successful AI solutions across various industries.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Solutions</h3>
+              <p className="text-gray-600">
+                We tailor AI solutions to your specific business requirements and objectives.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+              <p className="text-gray-600">
+                Our AI implementations have delivered measurable improvements in efficiency and ROI.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ongoing Support</h3>
+              <p className="text-gray-600">
+                We provide continuous support and optimization to ensure your AI systems perform at their best.
+              </p>
+            </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how our AI services can solve your specific challenges and drive your business forward.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Get Started Today
+        </a>
+        <div className="mt-8">
+          <Link
+            href="/services"
+            className="text-blue-600 hover:text-blue-800 font-medium"
+          >
+            View All Services
+          </Link>
         </div>
       </section>
 
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Service Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AIServiceCard
+            icon="🚀"
+            title="AI Starter Package"
+            description="Perfect for businesses looking to get started with AI. Includes basic AI integration and simple automation."
+            features={["Basic AI integration", "Simple automation", "Data analysis", "3 months support"]}
+            price="Starting at $5,000"
+          />
+          <AIServiceCard
+            icon="💼"
+            title="AI Professional Package"
+            description="Comprehensive AI solutions for growing businesses. Includes custom models and advanced automation."
+            features={["Custom AI models", "Advanced automation", "RAG systems", "6 months support"]}
+            price="Starting at $15,000"
+          />
+          <AIServiceCard
+            icon="🏢"
+            title="AI Enterprise Package"
+            description="Full-scale AI transformation for large enterprises. Includes complete AI infrastructure and ongoing support."
+            features={["Complete AI infrastructure", "Custom development", "24/7 support", "Ongoing optimization"]}
+            price="Custom pricing"
+          />
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl mb-8">
+          Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+        </div>
+      </div>
       {/* Benefits Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -179,15 +853,80 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
+=======
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Technology Stack</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <TechCard title="Python" icon="🐍" />
+            <TechCard title="TensorFlow" icon="🔧" />
+            <TechCard title="PyTorch" icon="🔥" />
+            <TechCard title="OpenAI" icon="🤖" />
+            <TechCard title="AWS AI" icon="☁️" />
+            <TechCard title="Google AI" icon="🔍" />
+            <TechCard title="Azure AI" icon="💙" />
+            <TechCard title="Hugging Face" icon="🤗" />
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Plan
+              title="Starter"
+              description="Perfect for small businesses looking to explore AI"
+              features={[
+                "AI consultation",
+                "Basic chatbot setup",
+                "Data analysis",
+                "Monthly support"
+              ]}
+              pricing="$2,500/month"
+            />
+            <Plan
+              title="Professional"
+              description="Comprehensive AI solutions for growing businesses"
+              features={[
+                "Custom AI models",
+                "Advanced analytics",
+                "Process automation",
+                "Priority support",
+                "Training sessions"
+              ]}
+              pricing="$7,500/month"
+              popular
+            />
+            <Plan
+              title="Enterprise"
+              description="Full-scale AI transformation for large organizations"
+              features={[
+                "End-to-end AI solutions",
+                "Dedicated AI team",
+                "24/7 support",
+                "Custom integrations",
+                "Performance monitoring"
+              ]}
+              pricing="Custom pricing"
+            />
+          </div>
+        </div>
+
+        <CTA />
+      </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     </div>
   );
 }
 
+<<<<<<< HEAD
 function AIService({ icon, title, description, features }: AIServiceProps) {
+=======
+function TechCard({ title, icon }) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+<<<<<<< HEAD
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
         {features.map((feature, index) => (
@@ -197,6 +936,85 @@ function AIService({ icon, title, description, features }: AIServiceProps) {
           </li>
         ))}
       </ul>
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Service Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AIServiceCard
+            icon="🚀"
+            title="AI Starter Package"
+            description="Perfect for businesses looking to get started with AI. Includes basic AI integration and simple automation."
+            features={["Basic AI integration", "Simple automation", "Data analysis", "3 months support"]}
+            price="Starting at $5,000"
+          />
+          <AIServiceCard
+            icon="💼"
+            title="AI Professional Package"
+            description="Comprehensive AI solutions for growing businesses. Includes custom models and advanced automation."
+            features={["Custom AI models", "Advanced automation", "RAG systems", "6 months support"]}
+            price="Starting at $15,000"
+          />
+          <AIServiceCard
+            icon="🏢"
+            title="AI Enterprise Package"
+            description="Full-scale AI transformation for large enterprises. Includes complete AI infrastructure and ongoing support."
+            features={["Complete AI infrastructure", "Custom development", "24/7 support", "Ongoing optimization"]}
+            price="Custom pricing"
+          />
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
+        <p className="text-xl mb-8">
+          Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+=======
+      <div className="text-3xl">{icon}</div>
+    </div>
+  );
+}
+
+function Plan({ title, description, features, pricing, popular = false }) {
+  return (
+    <div className={`bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${
+      popular ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'
+    }`}>
+      {popular && (
+        <div className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
+        </div>
+      )}
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-6">{description}</p>
+      <ul className="space-y-3 mb-6">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
+              <span className="text-green-600 text-sm">✓</span>
+            </span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <div className="text-lg font-semibold text-gray-900">{pricing}</div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     </div>
   );
 }

@@ -17,6 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+const ScrollToTop = ({ className }) => {return (<div className={className || ''}>;
+      <h1>ScrollToTop</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const ScrollToTop = ({ className }) => {
   return (
@@ -27,3 +32,4 @@ const ScrollToTop = ({ className }) => {
   )
 }
 }
+

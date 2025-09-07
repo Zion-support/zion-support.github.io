@@ -1,39 +1,41 @@
-<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-const UiUxDesignChat: NextPage = () => {return (<div>;
+
+const UiUxDesignChat: NextPage = () => ;
+  return (<div>;
       <Head>;
-const UiUxDesignChat: NextPage = () => {return (<div>;
+
+const UiUxDesignChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}const UiUxDesignChat: NextPage = () => {return (<div>;
+        <meta name = "description" content="UiUxDesignChat blog post" />{" "}
+;
+  const UiUxDesignChat: NextPage = () => ;
+  return (<div>;
       <Head></Head>;<meta name="description" content="UiUxDesignChat blog post" />;
       </Head>;
       </Head>;<meta name="description" content="UiUxDesignChat blog post" />;
       </Head>;
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-
 const UiUxDesignChat: NextPage = () => {
+ ;
   return (
     <div>
       <Head>
-
-const UiUxDesignChat: NextPage = () => {;
+;
+  const UiUxDesignChat: NextPage = () => {;
   return (
     <div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
-        <meta name="description" content="UiUxDesignChat blog post" />{" "}
-<<<<<<< HEAD
 
 
 const UiUxDesignChat: NextPage = () => {
@@ -44,9 +46,10 @@ const UiUxDesignChat: NextPage = () => {
       </Head>;
 
 
-=======
       </Head>;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+
+
+const UiUxDesignChat: NextPage = () => {
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
@@ -67,25 +70,26 @@ const UiUxDesignChat: NextPage = () => {
       </main>;
     </div>;
   )}
+
 export default UiUxDesignChat;<title>UiUxDesignChat - Zion Tech Solutions</title>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
 ursor/fix-website-loading-errors-and-merge-6662;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
   );
 }
+
 export default UiUxDesignChat;
-<<<<<<< HEAD
 
 
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
-const UiUxDesignChat: NextPage = () => {return (<div>;
+
+const UiUxDesignChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title > UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}
@@ -94,8 +98,12 @@ const UiUxDesignChat: NextPage = () => {return (<div>;
         <h1 > UiUxDesignChat</h1>;
         <p > Blog content coming soon...</p>;
         <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>)}export default UiUxDesignChat;<div>;
+      </main>
+    </div>
+  );
+}
+
+export default UiUxDesignChat;<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=&quot;description&quot; content=&quot;UiUxDesignChat blog post&quot; />;
@@ -107,7 +115,9 @@ const UiUxDesignChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )},export default UiUxDesignChat;
-const UiUxDesignChat: NextPage = () => {return (<div>;
+
+const UiUxDesignChat: NextPage = () => ;
+  return (<div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}
@@ -119,36 +129,52 @@ const UiUxDesignChat: NextPage = () => {return (<div>;
       </main>;
     </div>;
   )}
+
 export default UiUxDesignChat;<title>UiUxDesignChat - Zion Tech Solutions</title>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
-    </div>);
-}
-;
+    </div>)
+};
+
+
 export default UiUxDesignChat;
-<<<<<<< HEAD
-;
+const UiUxDesignChat: NextPage = () => {
+ ;
+  return (
     <div>
       <Head>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;UiUxDesignChat blog post&quot; />
+        <meta name="description" content="UiUxDesignChat blog post" />{" "}
       </Head>
-      
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
-        <a href=&quot;/blog&quot;>Back to Blog</a>
+        <a href="/blog">Back to Blog</a>
       </main>
     </div>
-  )
-},
+  );
+}
 
-export default UiUxDesignChat
-
-
-
+export default UiUxDesignChat;
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
-=======
 ;
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+const UiUxDesignChat: NextPage = () => {
+ ;
+  return (
+    <div>
+      <Head>
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+        <meta name="description" content="UiUxDesignChat blog post" />{" "}
+      </Head>
+      <main>
+        <h1>UiUxDesignChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+  );
+}
+
+export default UiUxDesignChat;
+

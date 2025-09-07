@@ -1,3 +1,4 @@
+import React from 'react',import Head from 'next/head',import Link from 'next/link',import { motion } from 'framer-motion',import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',export default function Custom404() {const quickLinks  = [;return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">;
 import React from 'react';
 import Head from 'next/head';
 import Link from "Link";
@@ -13,9 +14,7 @@ export default function Custom404() {;
         <title>404 - Page Not Found | Zion Tech Group</title>;
         <meta name="description" content="The page you're looking for doesn't exist. Navigate back to Zion Tech Group's main services and solutions." />;
         <meta name="robots" content="noindex, nofollow" />;
-      </Head>;
-;
-      <div className="max-w-4xl mx-auto text-center">;
+      </Head>;<div className="max-w-4xl mx-auto text-center">;
         {/* 404 Icon and Title */}
         <motion.div;
           initial={{ opacity:0, scale:0.8 }}
@@ -36,9 +35,7 @@ export default function Custom404() {;
             The page you're looking for doesn't exist or has been moved. ;
             Don't worry, we've got plenty of amazing content for you to explore.;
           </p>;
-        </motion.div>;
-;
-        {/* Quick Navigation */}
+        </motion.div>;{/* Quick Navigation */}
         <motion.div;
           initial={{ opacity:0, y:20 }}
           animate={{ opacity:1, y:0 }}
@@ -49,8 +46,7 @@ export default function Custom404() {;
             Quick Navigation;
           </h3>;
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-2xl mx-auto">;
-            {quickLinks.map((link, index) => (;
-              <motion.div;
+            {quickLinks.map((link, index) => (<motion.div;
                 key={link.href}
                 initial={{ opacity:0, y:20 }}
                 animate={{ opacity:1, y:0 }}
@@ -66,9 +62,7 @@ export default function Custom404() {;
               </motion.div>;
             ))}
           </div>;
-        </motion.div>;
-;
-        {/* Popular Services Section */}
+        </motion.div>;{/* Popular Services Section */}
         <motion.div;
           initial={{ opacity:0, y:20 }}
           animate={{ opacity:1, y:0 }}
@@ -80,10 +74,7 @@ export default function Custom404() {;
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">;
             {[;
-              { href:'/ai-business-intelligence', label:'AI Business Intelligence', desc:'Transform data into actionable insights' },;
-              { href:'/quantum-cybersecurity', label:'Quantum Cybersecurity', desc:'Future-proof security solutions' },;
-              { href:'/edge-computing-orchestration', label:'Edge Computing', desc:'Advanced edge optimization platform' }].map((service, index) => (;
-              <motion.div;
+              { href:'/ai-business-intelligence', label:'AI Business Intelligence', desc:'Transform data into actionable insights' },{ href:'/quantum-cybersecurity', label:'Quantum Cybersecurity', desc:'Future-proof security solutions' },{ href:'/edge-computing-orchestration', label:'Edge Computing', desc:'Advanced edge optimization platform' }].map((service, index) => (<motion.div;
                 key={service.href}
                 initial={{ opacity:0, y:20 }}
                 animate={{ opacity:1, y:0 }}
@@ -99,9 +90,7 @@ export default function Custom404() {;
               </motion.div>;
             ))}
           </div>;
-        </motion.div>;
-;
-        {/* Action Buttons */}
+        </motion.div>;{/* Action Buttons */}
         <motion.div;
           initial={{ opacity:0, y:20 }}
           animate={{ opacity:1, y:0 }}
@@ -122,9 +111,7 @@ export default function Custom404() {;
             <Map className="w-5 h-5" />;
             View Sitemap;
           </Link>;
-        </motion.div>;
-;
-        {/* Help Section */}
+        </motion.div>;{/* Help Section */}
         <motion.div;
           initial={{ opacity:0, y:20 }}
           animate={{ opacity:1, y:0 }}
@@ -154,5 +141,7 @@ export default function Custom404() {;
         </motion.div>;
       </div>;
     </div>;
+  )}
   );
 }
+

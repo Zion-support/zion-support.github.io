@@ -1,3 +1,6 @@
+
+import React from 'react',import { Button } from "@/components/ui/button",import Link from "next/link",import { ArrowLeft   } from 'lucide-react';interface ProfileErrorStateProps  {error:string | null;
+}export function ProfileErrorState() {return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Link from "Link";
@@ -18,21 +21,17 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {;
         </Link>;
       </Button>;
     </div>;
-  );}
- import {;
-  {;
-  {;
-  ArrowLeft ;
-}from 'lucide-react' interface ProfileErrorStateProps {;
-  error: string | null ;
-}export function ProfileErrorState ({;
-  error ;
-}: ProfileErrorStateProps) {;
-:temp_broken_files/profile/ProfileErrorState.tsx
+  )}
+ import {{{ArrowLeft ;
+}from 'lucide-react' interface ProfileErrorStateProps  {error: string | null ;
+}export function ProfileErrorState () {:temp_broken_files/profile/ProfileErrorState.tsx;
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" >{";"  error || "Something went wrong" ;
-}</div> ;"}'"
+}</div> ;"}'";
   return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {";
   error || "Something went wrong" ;
 }</div> ;
+}'";
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileErrorState.tsx;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileErrorState.tsx
+

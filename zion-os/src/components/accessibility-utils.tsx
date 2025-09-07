@@ -1,8 +1,24 @@
+
+;
+"use client",import { useEffect, useRef, useState  } from './react';,// Skip link component for keyboard navigation;
+export /**;
+ * SkipLink - Function description;
+ */;
+function SkipLink() {return (<a;
+      href={`#${target_id}`}
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
     >;
       {children}
+    </a>)}export /**;
+ * LiveRegion - Function description;
+ */;
+function LiveRegion() {return (<div;
+      role={role}
+      aria - live={aria_live}
+      className="sr - only";
     </a>);
 }
     <div;
@@ -12,6 +28,33 @@
       aria - atomic="true";
     >;
       {message}
+    </div>)}// Focus trap for modals and dialogs;
+export function useFocusTrap() {const containerRef = useRef<HTMLDivElement>(null)useEffect(() => {if (!enabled || !containerRef.current) return,const container = containerRef.current;
+    const focusableElements = container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    ),const firstElement = focusableElements[0] as HTMLElement,const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement,const handleKeyDown = (e: KeyboardEvent) => {if (e.key === "Tab") {if (e.shiftKey) {if (document.activeElement === firstElement) {firstElement.focus()}
+        }
+      }
+  return (<div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (<div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  )}// Progress indicator component;
+export function ProgressIndicator() {const percentage  = Math.round((value / max) * 100),return (<div className="space-y-2">;
+      <div className="flex justify-between text-sm">;const handleKeyDown = (e: KeyboardEvent) => {if (e.key === "Tab") {if (e.shiftKey) {if (document.activeElement === firstElement) {firstElement.focus()}
+        }
+      }return (<div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (<div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  )}return (<div className="space-y-2">;
+      <div className="flex justify-between text-sm">;<span>{label}</span>;
+        <span>{percentage}%</span>;
+      </div>;
+      <div className="w - full bg-[var (--border)] rounded - full h - 2">;
+        <div;
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
+            e.preventDefault()lastElement.focus()}
+        } else {if (document.activeElement === lastElement) {e.preventDefault()firstElement.focus()}
     </div>);
 }
     const handleKeyDown = (e: KeyboardEvent) => {;
@@ -139,6 +182,10 @@ function ProgressIndicator() {
           aria - label={label}
         />;
       </div>;
+    </div>)}// Collapsible section component;
+export function CollapsibleSection() {const [isExpanded, setIsExpanded] = useState(defaultExpanded),const contentRef  = useRef<HTMLDivElement>(null),return (<div className="border border-[var(--border)] rounded-lg">;return (<div className="border border-[var(--border)] rounded-lg">;<button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+  return (<div className="border border-[var(--border)] rounded-lg">;  return (<div className="border border-[var(--border)] rounded-lg">;
     </div>);
 }
   return (;
@@ -154,6 +201,12 @@ function ProgressIndicator() {
           {is_expanded ? "−" : "+"}
         </span>;
       </button>;
+      <div;id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
+        ref={content_ref}
+        className={`overflow - hidden transition - all duration - 300 ${is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";}`}
+        aria - hidden={!is_expanded}
+      >;
+        <div className="px - 4 pb - 3">;
       <div;
         }`}
         aria - hidden={!is_expanded}
@@ -162,6 +215,10 @@ function ProgressIndicator() {
           {children}
         </div>;
       </div>;
+    </div>)}// Tooltip component with proper accessibility;
+export function Tooltip() {const [isVisible, setIsVisible] = useState(false),const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`),const positionClasses = {top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
+    right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
+  }return (<div className="relative inline-block">;return (<div className="relative inline-block">;  return (<div className="relative inline-block">;
     </div>);
 }
   return (
@@ -178,6 +235,7 @@ function ProgressIndicator() {
       >;
         {children}
       </div>;
+      {is_visible && (<div;
       {is_visible && (
         <div;
           id={tooltip_id}
@@ -186,6 +244,10 @@ function ProgressIndicator() {
         >;
           {content}
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
+        </div>)}
+    </div>)}
         </div>)}
     </div>);
 }
+

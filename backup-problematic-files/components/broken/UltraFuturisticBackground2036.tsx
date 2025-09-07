@@ -292,6 +292,8 @@ export default function UltraFuturisticBackground2036({;
         )}
       </div>;
     </div>;
+  )}export default UltraFuturisticBackground2036;
   )
 };
 export default UltraFuturisticBackground2036;
+

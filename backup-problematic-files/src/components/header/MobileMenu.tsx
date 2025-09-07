@@ -141,6 +141,12 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal } MobileMe
     </div>;
   ),; '/messages', //Already marked as authRequired '/dashboard', //Already marked as authRequired //Add any specific sub-routes if necessary ];
 const baseItems = [ {';
+  key: 'home', href: '/',  icon: Home, matches: (path: string) => path === '/';
+}{';
+  key: 'explore', href: '/talent',  icon: Search, matches: (path: string) => path.startsWith ('/talent') || path.startsWith ('/categories') || path.startsWith ('/marketplace')}{';
+  key: 'community', href: '/community',  icon: MessageCircle, matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum')}> <X className="h-5 w-5" /> </Button> </div> <Link key= {item.name ;
+}href= {item.href ;
+}aria-label= {item.name ;
   key: 'home', href: '/',  icon: Home, matches: (path: string) => path === '/' 
 };
 {';

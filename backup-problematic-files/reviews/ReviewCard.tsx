@@ -71,6 +71,8 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
         )}
       </div>;
     </div>;
+  )}export default ReviewCard;
+> Report abuse </button> </div>)}</div> </div>) }const ReviewCard: React.FC < Props> = ({ review, on_report }) => {return (import React from 'react';
   )
 };
 export default ReviewCard;
@@ -133,6 +135,15 @@ const ReviewCard: React.FC < Props> = ({ review, on_report }) => {
             Timeliness: {review.categories.timeliness}★;
           </span>)}
       </div>;
+    </div>)}export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (<span className="pill pill-success">Would work again</span>)}
+      </div>;
+      <p className="text-sm leading-6">{review.text}</p>;
+      <div className="flex flex - wrap gap-2 mt-3">;
+        {typeof review.categories?.communication === 'number' && (<span className="pill">Communication: {review.categories.communication}★</span>)}
+        {typeof review.categories?.qualityOfWork === 'number' && (<span className="pill">Quality: {review.categories.qualityOfWork}★</span>)}
+        {typeof review.categories?.timeliness === 'number' && (<span className="pill">Timeliness: {review.categories.timeliness}★</span>)}
+      </div>;
+    </div>)}export default ReviewCard;{typeof review.categories?.timeliness === 'number' && (<span className="pill">Timeliness: {review.categories.timeliness}★</span>;
     </div>);
 }
 ;

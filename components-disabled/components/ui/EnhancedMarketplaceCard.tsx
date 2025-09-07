@@ -11,12 +11,15 @@ ursor/automate-test-improve-and-merge-code-646c;
       <div className="mt-auto flex items-center justify-between">;
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Image from 'next/image';
+
 interface EnhancedMarketplaceCardProps  {title: string, description: string;
   price?: string;
 <<<<<<< HEAD
   href: string, image?: string;
 import { Star, Heart, ShoppingCart  } from 'lucide-react';
-interface MarketplaceCardProps  {title: string;
+
+interface MarketplaceCardProps {
+  title: string;
 
 interface EnhancedMarketplaceCardProps {
   title: string;
@@ -30,10 +33,10 @@ interface EnhancedMarketplaceCardProps {
   features?: string[];
   isNew?: boolean;
   isPopular?: boolean;
+
 }
 
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
-  title,
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ title,
   description,
   price,
   image,
@@ -44,10 +47,14 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   features = [],
   isNew = false,
   isPopular = false
-}) => {
+   }) => {
+
+
+
+ ;
   return (
     <Link href={href} className="group block">
-      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+      <div className="bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 overflow-hidden">
         {/* Image */}
         <div className="relative h-48 bg-gray-200">
           {image ? (
@@ -96,7 +103,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
             {description}
           </p>
 
-          {/* Features */}
+          {/* Features *,
+}
           {features.length > 0 && (
             <div className="mt-3">
               <ul className="text-xs text-gray-500 space-y-1">
@@ -138,15 +146,16 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
                 {price}
               </span>
             )}
-            <span className="text-sm text-blue-600 group-hover:text-blue-800 transition-colors">
+            <span className="text-sm text-blue-600 group-hover: text-blue-800 transition-colors">
               Learn More →
             </span>
           </div>
         </div>
       </div>
     </Link>
-  );
+  ),
 };
+
 
 export default EnhancedMarketplaceCard;
 
@@ -163,14 +172,20 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 <<<<<<< HEAD
 }}
-export default EnhancedMarketplaceCard;const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({title,description,price,rating,image,onAddToCart,onFavorite;
-}) => {return (<div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
+
+export default EnhancedMarketplaceCard;
+
+const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({ title,description,price,rating,image,onAddToCart,onFavorite;
+   }) => {
+
+
+return (<div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
       <div className="relative">;
         <img src={image} alt={title} className="w-full h-48 object-cover" />;
         <button;
           onClick={onFavorite}
-          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100";
-        >;
+          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
+
           <Heart className="w-4 h-4 text-gray-600" />;
         </button>;
       </div>;
@@ -186,29 +201,35 @@ export default EnhancedMarketplaceCard;const EnhancedMarketplaceCard: React.FC<M
         </div>;
         <button;
           onClick={onAddToCart}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center";
-        >;
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center">
+
           <ShoppingCart className="w-4 h-4 mr-2" />;
           Add to Cart;
         </button>;
       </div>;
     </div>;
-  )}export default EnhancedMarketplaceCard;ursor/automate-test-improve-and-merge-code-646c;
+  )}
+
+export default EnhancedMarketplaceCard;ursor/automate-test-improve-and-merge-code-646c;
 }
 
 }
+
 export default EnhancedMarketplaceCard;
-const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
-  title,
+
+const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({ title,
   description,
   price,
   rating,
   image,
   onAddToCart,
   onFavorite
-}) => {
+   }) => {
+
+
+
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <button
@@ -240,8 +261,9 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
         </button>
       </div>
     </div>
-  );
+  ),
 };
+
 
 export default EnhancedMarketplaceCard;
 =======

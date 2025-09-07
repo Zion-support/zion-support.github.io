@@ -1,3 +1,6 @@
+
+;
+"use client",import { useState, useEffect  } from './react';,import { use_auth  } from '@/contexts / AuthContext';,interface WalkthroughStep  {id: string,title: string,description: string,target?: string,<>;
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -52,6 +55,7 @@
         </div>;
       </div>;
       {/* Highlight Target Element */}
+      {currentStepData.target && (<div;
       {currentStepData.target && (
         <div;
             bottom: 0}}
@@ -62,6 +66,9 @@
               height: "200px"}}
           />;
         </div>)}
+    </>)}// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget() {return {"data-walkthrough-target": id;"data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;    "data-walkthrough-target": id;
     </>);
 }
     "data-walkthrough-target": id;
@@ -69,3 +76,5 @@
     "data-walkthrough-target": id;
     id}
 }
+}
+

@@ -1,3 +1,6 @@
+
+import { format } from 'date-fns',import { Edit, Trash2  } from 'lucide-react';
+import { Button } from '@/components/ui/button',import { Card, CardContent } from '@/components/ui/card',import { Education } from '@/types/resume',import { EducationItemProps } from './types',export function EducationItem() {return (<Card className="bg-muted/40">;
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,8 +16,7 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
           <div>;
             <h4 className="font-medium">{education.degree}</h4>;
             <p className="text-sm text-muted-foreground">{education.institution}</p>;
-            {education.field_of_study && (;
-              <p className="text-sm text-muted-foreground">{education.field_of_study}</p>;
+            {education.field_of_study && (<p className="text-sm text-muted-foreground">{education.field_of_study}</p>;
             )}
             <p className="text-xs text-muted-foreground mt-1">;
               {typeof education.start_date === 'string' ;
@@ -25,8 +27,7 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
                   ? education.end_date ;
                   :format(education.end_date, 'MMM yyyy')) :'')}
             </p>;
-            {education.location && (;
-              <p className="text-xs text-muted-foreground">{education.location}</p>;
+            {education.location && (<p className="text-xs text-muted-foreground">{education.location}</p>;
             )}
           </div>;
           <div className="flex gap-2">;
@@ -48,11 +49,16 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
             </Button>;
           </div>;
         </div>;
-        {education.description && (;
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
+        {education.description && (<p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
         )}
       </CardContent>;
     </Card>;
+  ),}
+ ? education.start date : format (education.start date, 'MMM yyyy')}- {';
+  education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '')}</p>)}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>):temp_broken_files/resume-builder/forms/education/EducationItem.tsx;
+}</CardContent> </Card>)"}'";
+}</CardContent> </Card>)}'";
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationItem.tsx;
   ),;}
  ? education.start date : format (education.start date, 'MMM yyyy') ;
 }- {';
@@ -64,3 +70,4 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
 }</CardContent> </Card>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationItem.tsx
+

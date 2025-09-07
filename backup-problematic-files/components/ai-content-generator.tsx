@@ -81,6 +81,11 @@ export default function AIContentGeneratorPage() {
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
+  ],const useCases = [;
+    {title: 'Blog Writing',,description: 'Generate engaging blog posts, articles, and long-form content in minutes.',icon: '',examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons'];
+    },{title: 'Marketing Copy',,description: 'Create compelling ad copy, landing pages, and marketing materials.',icon: '',examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns'];
+    },{title: 'Social Media',,description: 'Generate engaging social media posts, captions, and hashtag suggestions.',icon: '',examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions'];
+    },{title: 'E-commerce',,description: 'Write product descriptions, category pages, and promotional content.',icon: '',examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections'];
   ],;
   const useCases = [;
     {;

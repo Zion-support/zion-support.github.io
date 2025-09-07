@@ -1,3 +1,33 @@
+import React from 'react',import Head from 'next/head',import { motion } from 'framer-motion',import Link from 'next/link',import {Brain, Shield, Rocket, Cpu, Database, Atom,Users, Target, Star, Zap, Globe, TrendingUp,CheckCircle, ArrowRight, ExternalLink, Sparkles;
+} from 'lucide-react',import EnhancedNavigation from '../components/EnhancedNavigation',import EnhancedFooter from '../components/EnhancedFooter',export default function ServicesPage() {const mainServices = [;
+    {icon:Brain,title:"AI Business Intelligence",,description:"Transform your data into actionable insights with our advanced AI-powered analytics platform.",features:[;
+        "Real-time data processing","Predictive analytics","Custom AI models","Interactive dashboards","Automated reporting";
+      ],price:"$499/month",color:"from-purple-500 to-pink-500",href:"/ai-business-intelligence";
+    },{icon:Shield,title:"Quantum Cybersecurity",,description:"Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",features:[;
+        "Quantum-resistant encryption","AI threat detection","Zero-trust architecture","24/7 monitoring","Compliance ready";
+      ],price:"$799/month",color:"from-red-500 to-orange-500",href:"/quantum-cybersecurity";
+    },{icon:Users,title:"AI Customer Experience",,description:"Deliver personalized customer experiences at scale with intelligent automation and insights.",features:[;
+        "Customer journey mapping","AI personalization","Sentiment analysis","Automated support","Behavioral insights";
+      ],price:"$399/month",color:"from-green-500 to-teal-500",href:"/ai-customer-experience";
+    },{icon:Database,title:"Edge Computing Orchestration",,description:"Deploy and manage applications at the edge with intelligent orchestration and optimization.",features:[;
+        "Edge node management","IoT device management","Real-time monitoring","Load balancing","Auto-scaling";
+      ],price:"$349/month",color:"from-yellow-500 to-orange-500",href:"/edge-computing-orchestration";
+    },{icon:Rocket,title:"Space Technology Innovation",,description:"Accelerate space exploration with cutting-edge AI and quantum technology solutions.",features:[;
+        "Satellite management","AI mission planning","Quantum communication","Resource optimization","Risk assessment";
+      ],price:"$2,499/month",color:"from-violet-500 to-purple-500",href:"/space-technology";
+    },{icon:Atom,title:"Neural Interface Development",,description:"Build the future of human-computer interaction with advanced neural interfaces.",features:[;
+        "BCI development tools","Neural signal processing","AI pattern recognition","Real-time analysis","Custom algorithms";
+      ],price:"$899/month",color:"from-pink-500 to-rose-500",href:"/neural-interface";
+    }
+  ],const specializedServices = [;
+    {title:"AI Autonomous Systems",,description:"Build self-managing, self-optimizing systems that adapt and evolve",icon:Brain,color:"from-blue-500 to-cyan-500";
+    },{title:"Quantum Machine Learning",,description:"Leverage quantum computing for unprecedented ML performance",icon:Atom,color:"from-purple-500 to-pink-500";
+    },{title:"AI-Powered DevOps",,description:"Automate and optimize your development and deployment processes",icon:Cpu,color:"from-green-500 to-emerald-500";
+    },{title:"Blockchain AI Integration",,description:"Combine blockchain security with AI intelligence for next-gen applications",icon:Shield,color:"from-orange-500 to-red-500";
+    }
+  ],const industries = [;
+    "Finance & Banking","Healthcare & Life Sciences","Manufacturing & Industry 4.0","Retail & E-commerce","Energy & Utilities","Transportation & Logistics","Education & Research","Government & Defense";
+  ],return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion',;

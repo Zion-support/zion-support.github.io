@@ -163,6 +163,14 @@ setPosts ([ {
 author: "You";
 time: "Now";
 title: newTitle;
+body: newBody;
+}...posts])setNewTitle ("")setNewBody ("")setShowNew (false)}newTitle;
+}onChange= {(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value)}maxLength= {80;
+}/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>)}.join ("") .toUpperCase () .slice (0, 2)}</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {post.author;
+}</span> <span className="text-xs text-zion-slate-light"> {post.time;
+}</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {post.title;
+}</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {post.body;
+}</p> </div> </CardContent> </Card>) )}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>)}
 body: newBody 
 };
 ...posts]);
@@ -189,3 +197,4 @@ setShowNew (false)
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
 }
 }
+

@@ -1,4 +1,9 @@
 import React from 'react';
+const AIAutonomousSecurity.js = ({ className }) => {return (<div className={className || ''}>;
+      <h1>AIAutonomousSecurity.js</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const AIAutonomousSecurity.js = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const AIAutonomousSecurity.js = ({ className }) => {
   )
 }
 }
+

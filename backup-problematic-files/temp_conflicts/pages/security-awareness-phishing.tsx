@@ -1,3 +1,4 @@
+import React from 'react',import Head from 'next/head',import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react',import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button',import { extraServices } from '../data/extra-services',export default function SecurityAwarenessPhishingPage() {const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing')),if (!service) return null,return (<UltraAdvancedFuturisticBackground>;
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react',;
@@ -27,8 +28,7 @@ export default function SecurityAwarenessPhishingPage() {;
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>;
               <p className="text-slate-300 mb-6">{service.description}</p>;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-                {service.features.slice(0, 12).map((feat, i) => (;
-                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-indigo-400 mt-0.5" /><span>{feat}</span></li>;
+                {service.features.slice(0, 12).map((feat, i) => (<li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-indigo-400 mt-0.5" /><span>{feat}</span></li>;
                 ))}
               </ul>;
             </div>;
@@ -49,6 +49,8 @@ export default function SecurityAwarenessPhishingPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
+  ),}
   ),;
 }
 }
+

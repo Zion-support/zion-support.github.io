@@ -20,6 +20,39 @@ import {
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+const services = [;
+  {title: 'E-commerce Platforms',description: 'Custom e-commerce solutions with advanced features and seamless user experience.',icon: Globe,features: [;
+      'Custom storefront development,','Payment gateway integration',','Inventory management',',title: 'E-commerce Platforms,',,description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',const services = [;
+  {title: 'E-commerce Platforms',,description: 'Custom e-commerce solutions with advanced features and seamless user experience.',icon: Globe,features: [,'Custom storefront development,','Payment gateway integration',','Inventory management',','Order processing systems'';
+    ];
+  },{}
+    title: 'Inventory Management AI,',,description: 'AI-powered inventory optimization and demand forecasting systems.,',icon: Brain,features: [,'Demand forecasting,','Stock optimization',','Automated reordering',','Waste reduction'';
+    ];
+  },{}
+    title: 'Customer Analytics,',,description: 'Advanced analytics to understand customer behavior and preferences.,',icon: BarChart3,features: [,'Customer segmentation,','Purchase pattern analysis',','Personalization engines',','Lifetime value prediction'';
+    ];
+  },{}
+    title: 'Personalized Recommendations,',,description: 'AI-driven product recommendation systems for enhanced customer experience.,',icon: Users,features: [,'Machine learning algorithms,','Real-time recommendations',','Cross-selling optimization',','A/B testing frameworks'';
+    ];
+  },{}
+    title: 'Supply Chain Optimization,',,description: 'End-to-end supply chain management with AI optimization.,',icon: Package,features: [,'Supplier management,','Logistics optimization',','Demand planning',','Cost reduction'';
+    ];
+  },{}
+    title: 'Omnichannel Solutions,',,description: 'Seamless integration across all sales channels and touchpoints.,',icon: Smartphone,features: [,'Unified customer experience,','Cross-channel inventory',','Mobile commerce',','Social commerce integration'';
+    ];
+  }];
+const benefits = [;
+  {}
+    title: 'Increased Sales,',,description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',icon: ShoppingCart;
+];
+const benefits = [;
+  {title: 'Increased Sales',,description: 'Personalized experiences and optimized inventory drive higher conversion rates.',icon: ShoppingCart;
+  },{}
+    title: 'Better Customer Experience,',,description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',icon: Users,},{}
+    title: 'Reduced Costs,',,description: 'Optimized inventory and supply chain reduce operational costs significantly.,',icon: BarChart3,},{}
+    title: 'Data-Driven Insights,',,description: 'Advanced analytics provide actionable insights for business growth.,',icon: Database,}];
+export default function RetailPage() {return (<Layout)title="Retail Technology Solutions - Zion Tech Group"";
+      description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."";
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -438,6 +471,28 @@ export default function RetailPage() {;
         </section>;
       </div>;
     </Layout>;
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+                Ready to Transform Retail?;
+              </h2>;
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">;
+                Let our retail technology experts help you implement solutions that drive sales;
+                and enhance customer experience.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Retail Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?
@@ -462,3 +517,4 @@ export default function RetailPage() {;
   )
 }
 }
+

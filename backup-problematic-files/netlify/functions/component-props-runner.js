@@ -1,3 +1,13 @@
+const path = require('path')const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '..', '..', relPath)const res = spawnSync('node', [abs, ...args], {stdio: 'pipe';
+    encoding: 'utf8';
+  })return {status: res.status |0;
+    stdout: res.stdout |'';
+    stderr: res.stderr |'';
+  }exports.handler = async () => {const logs = [];
+  function logStep() {logs.push(`\n=== ${name} ===`)const { status, stdout, stderr } = fn()if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return status;
+  }
+  logStep('components:generate-docs', () =>;
+    runNode('automation/component-props-docs.cjs'))logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -25,3 +35,4 @@ exports.handler = async () => {
     runNode('automation/component-props-docs.cjs')
   );
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+

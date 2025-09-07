@@ -220,6 +220,18 @@ export function useAuth(props: any) {
       isAuthenticated: tru e,
       isLoading: fals e
     }
+    )// Store user data in localStorage;
+    localStorage.setItem('zion_user', JSON.stringify(mockUser))localStorage.setItem('authToken', 'mock-jwt-token')return { success: tru e, user: mockUse r }
+}// Clear localStorage';
+    localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}return { success: tru e, user: mockUse r }}// Clear localStorage;
+    localStorage.removeItem('zion_user')localStorage.removeItem('authToken')}const register = async (email: string, password: string, name: string) => {// Mock registration - in real app this would call an API;
+    const mockUser: Use r = {id: '1',email,name,role: 'user',userType: 'individual',displayName: nam e,avatarUrl: '/default-avatar.png';
+    }setAuthState({user: mockUse r,isAuthenticated: tru e,isLoading: fals e;
+    }
+    )// Store user data in localStorage;
+    localStorage.setItem('zion_user', JSON.stringify(mockUser))localStorage.setItem('authToken', 'mock-jwt-token')return { success: tru e, user: mockUse r }
+}const updateProfile = (props: any) => {if (authState.user) {const updatedUser = { ...authState.user, ...updates }setAuthState(prev => ({...prev,user: updatedUse r;
+      }))';
     );
     // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));

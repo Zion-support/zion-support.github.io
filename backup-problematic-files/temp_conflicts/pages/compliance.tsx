@@ -1,3 +1,15 @@
+import React from 'react',import Head from 'next/head',import { motion } from 'framer-motion',import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react',import EnhancedNavigation from '../components/EnhancedNavigation',import EnhancedFooter from '../components/EnhancedFooter',export default function Compliance() {const complianceFrameworks = [;
+    {id:'soc2',title:'SOC 2 Type II',icon:Shield,,description:'Annual audits of security, availability, and confidentiality controls',details:[;
+        'Independent third-party auditingSecurity controls assessment','Availability and processing integrityConfidentiality safeguards','Annual compliance reporting';
+      ];
+    },{id:'iso27001',title:'ISO 27001',icon:Scale,,description:'International standard for information security management',details:[;
+        'Information security management system (ISMS)Risk assessment and management','Security policy implementationContinuous improvement processes','Regular certification audits';
+      ];
+    },{id:'gdpr',title:'GDPR Compliance',icon:Globe,,description:'European Union data protection regulation compliance',details:[;
+        'Data protection by design and defaultIndividual rights management','Data processing agreementsPrivacy impact assessments','Breach notification procedures';
+      ];
+    },{id:'hipaa',title:'HIPAA Compliance',icon:Users,,description:'Healthcare information privacy and security standards',details:[;
+        'Protected health information (PHI) safeguardsBusiness associate agreements','Access controls and audit logsWorkforce training programs','Incident response procedures';
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion',;

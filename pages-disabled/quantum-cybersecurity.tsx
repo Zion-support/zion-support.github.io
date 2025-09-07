@@ -10,6 +10,11 @@ import EnhancedFooter from '../components/EnhancedFooter';
     description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
       color: "from-blue-500 to-cyan-500"
     }
+      icon: Shield,title: "Quantum-Resistant Encryption",description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",color: "from-blue-500 to-cyan-500";
+}{icon: Lock;
+      title: "Zero-Trust Architecture";
+      description: "Verify every user and device before granting access to any resource.";
+      color: "from-purple-500 to-pink-500";
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
@@ -39,6 +44,9 @@ import EnhancedFooter from '../components/EnhancedFooter';
       description: "Instant response and mitigation of security incidents with minimal human intervention."
       color: "from-yellow-500 to-orange-500"
     }
+    {icon: Cpu;
+      title: "Secure Cloud Infrastructure";
+      description: "Enterprise-grade security for cloud deployments with end-to-end encryption.";
     {
       icon: Cpu
       title: "Secure Cloud Infrastructure"
@@ -227,6 +235,7 @@ function QuantumCybersecurityPage() {
         <meta property="og:description" content="Future-proof your security with quantum-resistant encryption and AI-powered threat detection." />;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity" />;
+      </Head>;<EnhancedNavigation />;{/* Hero Section */}
       </Head>;
       <EnhancedNavigation />;
       {/* Hero Section */}
@@ -262,6 +271,7 @@ function QuantumCybersecurityPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature && feature.title}</h3>;
                 <p className="text-slate-600 leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
+            ))}{/* Benefits */}
             ))}
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
@@ -334,6 +344,7 @@ function QuantumCybersecurityPage() {
                   <p className="text-blue-800 font-medium">Our Solution: {threat && threat.solution}</p>;
                 </div>;
               </motion && motion.div>;
+            ))}{/* Compliance */}
             ))}
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
@@ -460,6 +471,14 @@ function QuantumCybersecurityPage() {
                     </li>
                   ))}
                 </ul>;
+                <a;
+                  href="/contact";
+                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105";
+                >;
+                  Get Started;
+                </a>;
+              </motion.div>;
+            ))}{/* CTA */}
                 <a
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"

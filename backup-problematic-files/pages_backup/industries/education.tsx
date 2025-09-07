@@ -20,6 +20,39 @@ import {
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+const services = [;
+  {title: 'Learning Management Systems',description: 'Comprehensive LMS platforms for educational institutions and corporate training.',icon: BookOpen,features: [;
+      'Course management,','Student tracking',','Assessment tools',',title: 'Learning Management Systems,',,description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',const services = [;
+  {title: 'Learning Management Systems',,description: 'Comprehensive LMS platforms for educational institutions and corporate training.',icon: BookOpen,features: [,'Course management,','Student tracking',','Assessment tools',','Progress analytics'';
+    ];
+  },{}
+    title: 'Virtual Classrooms,',,description: 'Advanced virtual learning environments with interactive features.,',icon: Video,features: [,'Live video streaming,','Interactive whiteboards',','Breakout rooms',','Recording capabilities'';
+    ];
+  },{}
+    title: 'Educational AI Tutors,',,description: 'AI-powered tutoring systems for personalized learning experiences.,',icon: Brain,features: [,'Adaptive learning paths,','Intelligent tutoring',','Progress monitoring',','Personalized feedback'';
+    ];
+  },{}
+    title: 'Student Analytics,',,description: 'Data-driven insights into student performance and engagement.,',icon: BarChart3,features: [,'Performance tracking,','Engagement metrics',','Predictive analytics',','Intervention recommendations'';
+    ];
+  },{}
+    title: 'Online Assessment Tools,',,description: 'Secure and comprehensive online testing and evaluation systems.,',icon: FileText,features: [,'Automated grading,','Plagiarism detection',','Secure testing',','Performance reports'';
+    ];
+  },{}
+    title: 'Content Management Systems,',,description: 'Digital content creation and management platforms for educators.,',icon: Database,features: [,'Content creation tools,','Resource libraries',','Version control',','Collaboration features'';
+    ];
+  }];
+const benefits = [;
+  {}
+    title: 'Improved Learning Outcomes,',,description: 'Personalized learning experiences lead to better student performance.,',icon: GraduationCap;
+];
+const benefits = [;
+  {title: 'Improved Learning Outcomes',,description: 'Personalized learning experiences lead to better student performance.',icon: GraduationCap;
+  },{}
+    title: 'Enhanced Engagement,',,description: 'Interactive tools and gamification increase student participation.,',icon: Users,},{}
+    title: 'Better Accessibility,',,description: 'Online platforms make education accessible to more students.,',icon: Globe,},{}
+    title: 'Data-Driven Insights,',,description: 'Analytics help educators make informed decisions about teaching methods.,',icon: BarChart3,}];
+export default function EducationPage() {return (<Layout)title="Education Technology Solutions - Zion Tech Group"";
+      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."";
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -438,6 +471,28 @@ export default function EducationPage() {;
         </section>;
       </div>;
     </Layout>;
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+                Ready to Transform Education?;
+              </h2>;
+              <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">;
+                Let our education technology experts help you implement solutions that improve;
+                learning outcomes and student engagement.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Education Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?
@@ -462,3 +517,4 @@ export default function EducationPage() {;
   )
 }
 }
+

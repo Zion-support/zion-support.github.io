@@ -17,6 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+const TrustedBySection = ({ className }) => {return (<div className={className || ''}>;
+      <h1>TrustedBySection</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const TrustedBySection = ({ className }) => {
   return (
@@ -27,3 +32,4 @@ const TrustedBySection = ({ className }) => {
   )
 }
 }
+

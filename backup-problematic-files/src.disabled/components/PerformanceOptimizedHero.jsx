@@ -17,6 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+const PerformanceOptimizedHero = ({ className }) => {return (<div className={className || ''}>;
+      <h1>PerformanceOptimizedHero</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const PerformanceOptimizedHero = ({ className }) => {
   return (
@@ -27,3 +32,4 @@ const PerformanceOptimizedHero = ({ className }) => {
   )
 }
 }
+

@@ -7,6 +7,24 @@ import Layout from '../../components/Layout';
 import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
   {}
+    icon: ShoppingCart,title: 'E-commerce Platforms,',,description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',},{}
+    icon: Users,title: 'Customer Analytics,',,description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',},{}
+    icon: BarChart,title: 'Inventory Management,',,description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',},{}
+    icon: Smartphone,title: 'Mobile Commerce,',,description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',},{}
+    icon: Package,title: 'Supply Chain Optimization,',,description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+    title: 'E-commerce Platform',description: 'Complete online shopping experience with advanced features';
+  },{icon: Users,title: 'Customer Management',description: 'Comprehensive customer relationship management system';
+  },{icon: BarChart3,title: 'Analytics & Insights',description: 'Advanced analytics for sales, inventory, and customer behavior';
+  },{icon: Smartphone,title: 'Mobile Commerce',description: 'Mobile-first shopping experience and mobile app solutions';
+  },{icon: CheckCircle,title: 'Inventory Management',description: 'Real-time inventory tracking and automated reordering';
+  },{icon: ArrowRight,title: 'Omnichannel',description: 'Seamless integration across all sales channels';
+    title: 'E-commerce Platform',,description: 'Complete online shopping experience with advanced features';
+  },{icon: Users,title: 'Customer Management',,description: 'Comprehensive customer relationship management system';
+  },{icon: BarChart3,title: 'Analytics & Insights',,description: 'Advanced analytics for sales, inventory, and customer behavior';
+  },{icon: Smartphone,title: 'Mobile Commerce',,description: 'Mobile-first shopping experience and mobile app solutions';
+  },{icon: CheckCircle,title: 'Inventory Management',,description: 'Real-time inventory tracking and automated reordering';
+  },{icon: ArrowRight,title: 'Omnichannel',,description: 'Seamless integration across all sales channels';
+  }];
     icon: ShoppingCart,;
     title: 'E-commerce Platforms,',,
   description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
@@ -164,6 +182,8 @@ const benefits = [;
       keywords="retail solutions, e-commerce, omnichannel retail, customer experience, inventory management, retail analytics">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+    icon: ArrowRight,title: 'Omnichannel',,description: 'Seamless integration across all sales channels';
+  }];
     icon: ArrowRight,;
     title: 'Omnichannel',,
   description: 'Seamless integration across all sales channels';

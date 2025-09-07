@@ -177,6 +177,9 @@ export default function JobDetails() {;
           </div>;
         </div>;
       </main>;
+      <Footer />;{/* Job application modal */}
+      {job && (<ApplyToJobModal;
+          job={{id:job.id,title:job.title,,description:job.description,company_name:job.company_name || "Company",budget:job.budget,client_id:job.client_id;
       <Footer />;
       ;
       {/* Job application modal */}

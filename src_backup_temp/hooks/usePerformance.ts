@@ -330,6 +330,15 @@ export function usePerformance("options": PerformanceOptions = {}) {
             clsValue += (entry as any).value;
           }
         }
+        setMetrics(prev => ({ ...prev, "cls": "clsValue "}))if (logToConsole)})clsObserverRef.current.observe({ "entryTypes": "['layout-shift'] "})} catch (e) {}
+  }, [enableWebVitals, logToConsole])// Monitor First Input Delay;
+  const monitorFirstInput = useCallback(() => {if (!enableWebVitals) return;let "firstInputTime": "number | null = null;
+    let "firstInputDelay": number | null  = null;const firstInputHandler = ("event": Event) => {if (firstInputTime !== null) return;firstInputTime = performance.now()firstInputDelay = firstInputTime - (performance.timeOrigin || 0)setMetrics(prev => ({ ...prev", "fid": "firstInputDelay "}))if (logToConsole)// Remove listeners after first input;
+      document.removeEventListener('pointerdown', firstInputHandler)document.removeEventListener('keydown', firstInputHandler)document.removeEventListener('mousedown', firstInputHandler)document.removeEventListener('touchstart', firstInputHandler)}document.addEventListener('pointerdown', firstInputHandler)document.addEventListener('keydown', firstInputHandler)document.addEventListener('mousedown', firstInputHandler)document.addEventListener('touchstart', firstInputHandler)}, [enableWebVitals, logToConsole])// Start monitoring;
+  const startMonitoring = useCallback(() => {if (isMonitoring) return;setIsMonitoring(true)// Monitor Web Vitals;
+    monitorWebVitals()// Monitor First Input;
+    monitorFirstInput()// Get initial metrics after page load;
+    if (document.readyState === 'complete') {getNavigationTiming()getResourceTiming()} else {window.addEventListener('load', () => {if (logToConsole)}
         setMetrics(prev => ({ ...prev, "cls": "clsValue "}));
         if (logToConsole) ;
       });
@@ -547,6 +556,11 @@ export function usePerformance("options": PerformanceOptions = {}) {
     fetch('/api/analytics/performance'", {;
       "method": 'POST';
       "headers": "{ 'Content-Type': 'application/json' "}
+      "body": "JSON.stringify(analyticsData)"}).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore])// Auto-start monitoring on mount;
+  useEffect(() => {if (enableRealUserMonitoring) {startMonitoring()}
+    return () => {stopMonitoring()}}, [enableRealUserMonitoring, startMonitoring, stopMonitoring])// Auto-send metrics when they're complete;
+  useEffect(() => {if (sendToAnalytics && metrics.fcp && metrics.lcp && metrics.fid && metrics.cls) {sendMetricsToAnalytics()}
+  }, [metrics, sendToAnalytics, sendMetricsToAnalytics])return {metrics;
       "body": "JSON.stringify(analyticsData);
     "}).catch(console.error);
   }, [metrics, sendToAnalytics, getPerformanceScore]);
@@ -765,6 +779,8 @@ export function useAPIPerformance() {
     apiMetrics;
     trackAPICall;
     getAPIAverage;
+    getSlowAPIs;
+}}
     getSlowAPIs
 };
 }

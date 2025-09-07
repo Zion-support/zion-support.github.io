@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Milestone } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -13,6 +14,30 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
+=======
+import React from "react";
+import { Milestone } from "@/hooks/useMilestones";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CreditCard } from "lucide-react";
+interface PaymentSummaryProps {
+  milestones: Milestone[];
+  paymentTerms: string | null;
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
+  milestones,
+  paymentTerms,
+}) => {
+  const totalPayment = milestones
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+
+  const paidAmount = milestones
+    .filter((m) => m.status === "paid")
+    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
+    .toFixed(2);
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -26,6 +51,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
+<<<<<<< HEAD
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
@@ -165,3 +191,22 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 };
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
+            <p className="font-medium capitalize">
+              {paymentTerms || "Not specified"}
+            </p>
+          </div>
+
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+            <p className="font-medium">${paidAmount}</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

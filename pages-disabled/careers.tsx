@@ -4,6 +4,9 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+      title: "Senior AI Engineer",department: "AI & Machine Learning",location: "San Francisco, CA / Remote";export default function CareersPage() {const openPositions = [;
+    {title: "Senior AI Engineer",department: "AI & Machine Learning",location: "San Francisco, CA / Remote";
+      type: "Full-time",experience: "5+ years",salary: "$150,000 - $200,000",description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",requirements: [;"Advanced degree in Computer Science, AI, or related field";
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
       location: "San Francisco, CA / Remote";
@@ -29,6 +32,7 @@ export default function CareersPage() {;
       title: "title",
     department: "Quantum Computing"
       location: "San Francisco, CA / Remote";
+      type: "Full - time",experience: "3+ years",salary: "$120, 000 - $180, 000",description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",requirements: [;
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000",
@@ -71,6 +75,7 @@ export default function CareersPage() {;
       title: "Product Manager"
       department: "Product"
       location: "San Francisco, CA / Remote";
+      type: "Full - time",experience: "5+ years",salary: "$140, 000 - $190, 000",description: "Lead product strategy and development for our technology solutions portfolio",requirements: [;
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000",
@@ -118,6 +123,7 @@ export default function CareersPage() {;
             ))}
           </div>;
         </div>;
+      </section>;{/* Open Positions */}
       </section>;
       {/* Open Positions */}
       <section className="py-20 px-6">;
@@ -203,6 +209,7 @@ export default function CareersPage() {;
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
+  ];return (<UltraAdvancedFuturisticBackground>;
   ];
 ;
   return (
@@ -268,6 +275,7 @@ export default function CareersPage() {;
             </p>;
           </motion.div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
+            {benefits.map ((benefit, index) => (<motion.div;
             {benefits.map ((benefit, index) => (
               <motion.div;
                 key={benefit.title}
@@ -302,6 +310,7 @@ export default function CareersPage() {;
             </p>;
           </motion.div>;
           <div className="space-y-6">;
+            {open_positions.map ((position, index) => (<motion.div;
             {open_positions.map ((position, index) => (
               <motion.div;
                 key={position.title}
@@ -354,6 +363,7 @@ export default function CareersPage() {;
                     <div className="mb-4">;
                       <h4 className="text - sm font - semibold text - white / 60 mb - 2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex - wrap gap-2">;
+                        {position.benefits.map ((benefit) => (<span key={benefit} className="text - xs bg - white / 5 text - white / 70 px - 2 py-1 rounded">;
                         {position.benefits.map ((benefit) => (
                           <span key={benefit} className="text - xs bg - white / 5 text - white / 70 px - 2 py-1 rounded">;
                             {benefit}

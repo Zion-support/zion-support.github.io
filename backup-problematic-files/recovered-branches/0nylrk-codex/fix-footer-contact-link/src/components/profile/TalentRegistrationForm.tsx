@@ -1,3 +1,25 @@
+import React, { useState } from "react",import { useForm } from "react-hook-form",import { zodResolver } from "@hookform/resolvers/zod",import { z } from "zod",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Switch } from "@/components/ui/switch",import { Badge } from "@/components/ui/badge",import { Separator } from "@/components/ui/separator",import {Form,FormControl,FormDescription,FormField,FormItem,FormLabel,FormMessage} from "@/components/ui/form",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",import { toast } from "@/components/ui/use-toast",import { supabase } from "@/integrations/supabase/client",import { AspectRatio } from "@/components/ui/aspect-ratio",import { useAuth } from "@/hooks/useAuth",// Define form schema;
+const talentProfileSchema = z.object({name:z.string().min(2, "Name must be at least 2 characters long"),title:z.string().min(5, "Professional title is required"),bio:z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),location:z.string().min(2, "Location is required"),skills:z.string().min(2, "Enter at least one skill"),hourlyRate:z.string().refine((val) => !isNaN(Number(val)), {message:"Hourly rate must be a number"}),availability:z.enum(["available", "limited", "unavailable"]),enhancedProfile:z.boolean().default(true)}),type TalentFormValues = z.infer<typeof talentProfileSchema>,type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',interface CategorizedSkills  {programming:string[],devops:string[],platforms:string[],softSkills:string[],other:string[];}interface EnhancedProfile  {summary:string,categorizedSkills:CategorizedSkills;
+}export function TalentRegistrationForm() {// Remove the useToast() hook since we're importing the toast function directly;
+  const { user } = useAuth(),const [isSubmitting, setIsSubmitting] = useState(false),const [skillTags, setSkillTags] = useState<string[]>([]),const [isGenerating, setIsGenerating] = useState(false),const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),const [uploadedAvatar, setUploadedAvatar]  = useState<string | null>(null),// Initialize form with default values;
+  const form = useForm<TalentFormValues>({resolver:zodResolver(talentProfileSchema),defaultValues:{name:user?.displayName || "",title:"",bio:"",location:"",skills:"",hourlyRate:"",availability:"available",enhancedProfile:true}}),// Handle adding skill tags;
+  const handleAddSkill = () => {const skillInput = form.getValues("skills"),if (skillInput && !skillTags.includes(skillInput)) {setSkillTags([...skillTags, skillInput]),form.setValue("skills", ""),}
+  },// Handle removing skill tags;
+  const handleRemoveSkill = (skill:string) => {setSkillTags(skillTags.filter((s) => s !== skill))},// Handle key press in skills input (add on enter)const handleSkillKeyPress = (e:React.KeyboardEvent) => {if (e.key === "Enter") {e.preventDefault(),handleAddSkill()}
+  },// Handle avatar upload;
+  const handleAvatarUpload = (e:React.ChangeEvent<HTMLInputElement>) => {const file = e.target.files?.[0],if (file) {const reader = new FileReader(),reader.onloadend = () => {setUploadedAvatar(reader.result as string)},reader.readAsDataURL(file),}
+  },// Generate enhanced profile with AI;
+  const generateEnhancedProfile = async () => {const formData = form.getValues(),if (!formData.bio || formData.bio.length < 20) {toast({title:"More information needed",,description:"Please provide at least a detailed bio before generating enhanced content."}),return,}try {setIsGenerating(true),// Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {body:{talentData:{name:formData.name,title:formData.title,bio:formData.bio,skills:skillTags,location:formData.location;
+          }
+        }
+      }),if (error) {throw new Error(error.message),}setGeneratedContent(data as EnhancedProfile),toast({title:"Enhanced Profile Generated",,description:"AI has created a professional bio and suggested additional skills for your profile."}),} catch (error:any) {console.error("Error generating enhanced profile:", error),toast({title:"Generation failed",,description:error.message || "There was an error generating your enhanced profile. Please try again.",variant:"destructive"}),} finally {setIsGenerating(false),}
+  },// Apply generated content to form;
+  const applyGeneratedContent = () => {if (generatedContent) {form.setValue("bio", generatedContent.summary),// Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generatedContent.categorizedSkills,const newSkills:string[]  = [],// Safely extract and flatten skills from each category;
+      Object.values(allCategorizedSkills).forEach(categorySkills => {if (Array.isArray(categorySkills)) {categorySkills.forEach(skill => {if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {newSkills.push(skill)}
+          }),}
+      }),if (newSkills.length > 0) {setSkillTags([...skillTags, ...newSkills]),}
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -211,6 +233,11 @@ export function TalentRegistrationForm() {;
           </div>;
           `;
         }
+      }),} catch (error) {console.error("Failed to send notification email:", error),}
+  },// Handle form submission;
+  const onSubmit = async (values:TalentFormValues) => {if (skillTags.length === 0) {toast({title:"Skills required",,description:"Please add at least one skill to your profile.",variant:"destructive"}),return,}setIsSubmitting(true),try {// For actual implementation with Supabase;
+      if (!user?.id) {throw new Error("User not authenticated"),}// Enhance profile if not already done;
+      let finalSummary = "",let finalSkills  = skillTags,if (values.enhancedProfile && !generatedContent) {try {const { data:aiData } = await supabase.functions.invoke('talent-profile-enhancer', {body:{talentData:{name:values.name,title:values.title,bio:values.bio,skills:skillTags,location:values.location;
       }),;
     } catch (error) {;
       console.error("Failed to send notification email:", error),;
@@ -288,6 +315,14 @@ export function TalentRegistrationForm() {;
 ;
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
+      setTimeout(() => {toast({title:"Profile Created Successfully",,description:"Your talent profile has been published and is now visible in the directory."}),// Send notification email if we have user email;
+        if (userEmail && values.enhancedProfile) {sendEnhancementNotification(user.id, userEmail),}setIsSubmitting(false),}, 1500),// Here would be the actual code to save the profile to Supabase;
+      /*;
+      const { error } = await supabase;
+        .from('talent_profiles').insert({user_id:user.id,name:values.name,title:values.title,bio:values.bio,summary:finalSummary,location:values.location,skills:finalSkills.map(name => ({ name, level:4 })), // Default skill level;
+          hourly_rate:Number(values.hourlyRate),availability_status:values.availability,// Other fields would be handled here;
+        }),if (error) throw error,*/;} catch (error:any) {console.error("Error creating profile:", error),toast({title:"Error Creating Profile",,description:error.message || "There was an error creating your profile. Please try again.",variant:"destructive"}),setIsSubmitting(false),}
+  },return (<div className="max-w-4xl mx-auto p-4 md:p-6">;
       setTimeout(() => {;
         toast({;
           title:"Profile Created Successfully",,

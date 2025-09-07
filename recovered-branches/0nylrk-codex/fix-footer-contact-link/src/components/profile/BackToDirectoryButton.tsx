@@ -15,6 +15,7 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom",;
@@ -41,3 +42,7 @@ export function BackToDirectoryButton() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

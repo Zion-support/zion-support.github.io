@@ -1,4 +1,30 @@
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'AI Invoice Generator - Zion Tech Group',
+  description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization.',
 import React from 'react';
+
+
+
+
+
+export const metadata = {
+  title: 'AI Invoice Generator | Zion Tech Group',
+  description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
+  keywords: 'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing',
+import React from 'react';
+
+
+
+export const metadata = {
+  title: 'AI Invoice Generator | Zion Tech Group',
+  description: 'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
+  keywords: 'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing',
+import React from 'react';
+
+
 
 
 
@@ -35,6 +61,7 @@ interface PricingTierProps {
 }
 
 
+
 function PricingTier({
   name,
   price,
@@ -48,6 +75,7 @@ function PricingTier({
     <div
       className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
     >
+
 
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -68,6 +96,7 @@ function PricingTier({
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
 
+
             <svg
               className="w-5 h-5 text-green-500 mr-3"
               fill="currentColor"
@@ -79,6 +108,7 @@ function PricingTier({
                 clipRule="evenodd"
               />
 
+
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -89,8 +119,10 @@ function PricingTier({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
 
+
             ? "bg-blue-600 text-white hover:bg-blue-700"
             : "bg-gray-900 text-white hover:bg-gray-800"
+
 
         }`}
       >
@@ -102,6 +134,19 @@ function PricingTier({
 
 export default function AIInvoiceGeneratorPage() {
   return (
+};
+
+export default function AIInvoiceGeneratorPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            AI Invoice Generator
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Streamline your billing process with intelligent invoice generation, 
+            automated data extraction, and smart expense categorization.
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
@@ -134,6 +179,201 @@ export default function AIInvoiceGeneratorPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             AI-Powered Invoice Features
           </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive AI solutions to streamline your invoicing and financial management processes.
+};
+
+export default function AIInvoiceGeneratorPage() {
+  return (
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Feature
+            icon="📄"
+            title="Smart Data Extraction"
+            description="AI automatically extracts data from receipts, contracts, and documents to create accurate invoices"
+          />
+          <Feature
+            icon="🤖"
+            title="Automated Invoice Generation"
+            description="Generate professional invoices automatically based on project milestones, time tracking, or recurring schedules"
+          />
+          <Feature
+            icon="💳"
+            title="Payment Processing"
+            description="Integrated payment processing with multiple payment methods and automated payment reminders"
+          />
+          <Feature
+            icon="📊"
+            title="Expense Categorization"
+            description="AI automatically categorizes expenses and tracks tax-deductible items for easy accounting"
+          />
+          <Feature
+            icon="📈"
+            title="Financial Analytics"
+            description="Comprehensive dashboards with revenue tracking, payment analytics, and financial insights"
+          />
+          <Feature
+            icon="🔔"
+            title="Smart Notifications"
+            description="Automated reminders for overdue payments, upcoming invoices, and payment confirmations"
+          />
+        </div>
+      </section>
+
+      {/* Integration Options */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Connect with your existing business tools for a unified financial management experience.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {[
+            { name: 'QuickBooks', icon: '📚', description: 'Accounting software' },
+            { name: 'Xero', icon: '🔢', description: 'Cloud accounting' },
+            { name: 'Stripe', icon: '💳', description: 'Payment processing' },
+            { name: 'PayPal', icon: '💰', description: 'Online payments' },
+            { name: 'FreshBooks', icon: '📖', description: 'Invoice software' },
+            { name: 'Wave', icon: '🌊', description: 'Free accounting' },
+            { name: 'Sage', icon: '🧙', description: 'Business software' },
+            { name: 'Zoho Books', icon: '📘', description: 'Online accounting' },
+          ].map((integration, index) => (
+            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="text-3xl mb-3">{integration.icon}</div>
+              <h3 className="font-semibold text-gray-900 mb-1">{integration.name}</h3>
+              <p className="text-xs text-gray-600">{integration.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔍</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Extraction</h3>
+              <p className="text-gray-600">
+                Automatically extract billing information from contracts, emails, and documents.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">💰</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Payment Tracking</h3>
+              <p className="text-gray-600">
+                Real-time payment tracking and automated follow-up for overdue invoices.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📊</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Expense Categorization</h3>
+              <p className="text-gray-600">
+                Smart categorization of expenses for better financial management and reporting.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Automation</h3>
+              <p className="text-gray-600">
+                Automated invoice creation, sending, and payment reminders to save time.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Security</h3>
+              <p className="text-gray-600">
+                Bank-level security for sensitive financial data and compliance with regulations.
+              </p>
+      {/* How It Works */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Simple 4-step process to automate your invoicing with AI.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              1
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Connect & Setup</h3>
+            <p className="text-gray-600">Connect your business tools and configure AI settings for your industry</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              2
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Data Extraction</h3>
+            <p className="text-gray-600">AI automatically extracts data from documents, emails, and time tracking tools</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              3
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Invoice Generation</h3>
+            <p className="text-gray-600">AI creates professional invoices with accurate pricing and client information</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              4
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Payment & Tracking</h3>
+            <p className="text-gray-600">Automated payment processing and comprehensive financial tracking</p>
+          </div>
+        </div>
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          AI Invoice Generator
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Automate your invoicing process with AI-powered data extraction, smart categorization, and automated billing. Save time and reduce errors with intelligent invoice management.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Invoice Generator Demo"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Free Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI-Powered Invoice Features
+          </h2>
+
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive AI solutions to streamline your invoicing and financial management processes.
@@ -205,9 +445,11 @@ export default function AIInvoiceGeneratorPage() {
       <section className="py-12">
         <div className="text-center mb-12">
 
+
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
+
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 4-step process to automate your invoicing with AI.
@@ -249,9 +491,11 @@ export default function AIInvoiceGeneratorPage() {
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
 
+
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Pricing Plans
           </h2>
+
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your invoicing needs and business size.
@@ -354,9 +598,11 @@ export default function AIInvoiceGeneratorPage() {
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
 
+
         <h2 className="text-3xl font-bold mb-4">
           Ready to Automate Your Invoicing?
         </h2>
+
 
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Start your free trial today and see how AI can transform your invoicing process.
@@ -383,3 +629,4 @@ export default function AIInvoiceGeneratorPage() {
     </div>
   );
 }
+

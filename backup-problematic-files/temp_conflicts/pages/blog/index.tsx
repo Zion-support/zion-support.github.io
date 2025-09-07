@@ -1,3 +1,4 @@
+import type { GetServerSideProps, NextPage } from 'next',import Head from 'next/head',import Link from 'next/link',import Layout from '../../components/layout/Layout',type Props = { posts:BlogPost[], authors:string[], topics:string[], tags:string[] },const BlogHome:NextPage<Props> = ({ posts, authors, topics, tags }) => {const [filters, setFilters]  = useState<{ author?:string, topic?:string, tag?:string }>({}),const filtered = useMemo(() => {return posts.filter((p) => {if (filters.author && p.author !== filters.author) return false,if (filters.topic && !p.topics.includes(filters.topic)) return false,if (filters.tag && !p.tags.includes(filters.tag)) return false,return true,}),}, [posts, filters]),const hero = filtered[0],const rest  = filtered.slice(1),return (<Layout>;
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from "Link";
@@ -33,9 +34,7 @@ const BlogHome:NextPage<Props> = ({ posts, authors, topics, tags }) => {;
         <meta name="twitter:title" content="Zion Blog" />;
         <meta name="twitter:description" content="Insights on AI, DevOps, and digital transformation." />;
         <meta name="twitter:image" content="/images/og/blog-default.jpg" />;
-      </Head>;
-;
-      <div className="mx-auto max-w-6xl">;
+      </Head>;<div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-4">Zion Blog</h1>;
         <p className="text-gray-600 dark:text-gray-300 mb-3">Thought leadership on AI, DevOps, and building with speed.</p>;
         <div className="mb-6">;
@@ -45,11 +44,8 @@ const BlogHome:NextPage<Props> = ({ posts, authors, topics, tags }) => {;
             description="Insights on AI and DevOps from Zion.";
             onShare={(network) => fetch('/api/analytics/share', { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify({ url:window.location.href, title:'Zion Blog', network, utm:'utm_source=' + network + '&utm_medium=share&utm_campaign=blog' }) }).catch(() => {})}
           />;
-        </div>;
-;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {posts.map((p) => (;
-            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg">;
+        </div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {posts.map((p) => (<div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg">;
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>;
               <p className="text-gray-400 mb-4">{p.excerpt}</p>;
             </div>;
@@ -57,6 +53,7 @@ const BlogHome:NextPage<Props> = ({ posts, authors, topics, tags }) => {;
         </div>;
       </div>;
     </Layout>;
+  ),},export const getServerSideProps:GetServerSideProps = async () => {const posts = listPublishedPosts(),const authors = listAllAuthors(),const topics = listAllTopics(),const tags = listAllTags(),return { props:{ posts, authors, topics, tags } },},export default BlogHome,
   ),;
 },;
 ;
@@ -69,3 +66,4 @@ export const getServerSideProps:GetServerSideProps = async () => {;
 },;
 ;
 export default BlogHome,;
+

@@ -521,6 +521,27 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       ";
       {/* Canonical URL */}"";
       {canonical && <link rel="canonical" href={canonical} /" >}
+      {/* Structured Data */}";
+      <script "";
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{__html: JSO N.stringify(structuredData || defaultStructuredData)}}";
+      /" >;
+      {/* Performance hints */}";
+      <link rel="preconnect" href="https: //fonts.googleapis.com"   />";
+      <link rel="preconnect" href="http,s://fonts.gstatic.com" crossOrigin="anonymous"   />";
+      <link rel="dns-prefetch" href="http,s://ziontechgroup.com"   />;
+      ";
+      {/* Security headers */}"";
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /" >"";
+      <meta httpEquiv="X-Frame-Options" content="DENY" /" >"";
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /" >;
+    </Head>;
+  )}export default SEOEnhancer;";
+    <Head>"";
+      <title>{title}</title>"";
+      <meta name="description" content={description} /"" >"";
+      <meta name="keywords" content={keywords} /"" >"";
+      <meta name="viewport" content="width=device-width, initial-scale=1" /"" >;
       {/* Structured Data */}"
       <script ""
         type="application/ld+json"
@@ -614,6 +635,24 @@ export default SEOEnhancer;";
       "";
       {/* Canonical URL */}"";
       {canonical && <link rel="canonical" href={canonical} /"" >}
+      {/* Structured Data */}"";
+      <script "";
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{__html: JSO N.stringify(structuredData || defaultStructuredData)}}"";
+      /"" >;
+      {/* Performance hints */}"";
+      <link rel="preconnect" href="https: //fonts.googleapis.com" /" >";
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /" >";
+      <link rel="dns-prefetch" href="https://ziontechgroup.com" /" >";
+      "";
+      {/* Security headers */}"";
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /"" >"";
+      <meta httpEquiv="X-Frame-Options" content="DENY" /"" >"";
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /"" >;
+    </Head>;
+  )}export default SEOEnhancer;"";
+    <Head>;
+      <title>{title}</title>;
       {/* Structured Data */}""
       <script ""
         type="application/ld+json"
@@ -781,6 +820,8 @@ export default SEOEnhancer;""
       <meta httpEquiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;   />&quot;
       <meta httpEquiv=&quot;X-XSS-Protection&quot; content=&quot;1; mode=block&quot;   />&quot;
     </Head>';
+  )';';
+}';';';
   );';'
 };';';';
 export default SEOEnhancer';';';';
@@ -791,6 +832,8 @@ export default SEOEnhancer;';';';';';
 </SEOEnhancerProps>';
 </SEOEnhancerProps>;';;';
     </Head>;
+    </Head>;
+  )}';
     </Head>
   )
 };';

@@ -153,6 +153,9 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         setIsOptimized(isGoodPerformance)
       )}';
     </div>';';
+  )';';';
+}';';';';
+}';';';';';
   );';';';
 }';';';'
 };';';';';';
@@ -169,6 +172,11 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     );
         // Check: if performance is optimized
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
+        setIsOptimized(isGoodPerformance))}
+    </div>;
+    )';
+}';';
+}';';';
         setIsOptimized(isGoodPerformance)
       )}
     </div>

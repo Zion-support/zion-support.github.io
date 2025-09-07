@@ -5,6 +5,10 @@ export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -18,6 +22,7 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
+<<<<<<< HEAD
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log("App Store button clicked")}
@@ -40,6 +45,9 @@ export const DownloadSection: React.FC = () => {;
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -49,11 +57,19 @@ export const DownloadSection: React.FC = () => {;
                   console.log("Google Play button clicked")
                 }
               />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
@@ -67,6 +83,7 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 };
   )
@@ -87,3 +104,7 @@ export const DownloadSection: React.FC = () => {;
 }
 }
 }
+=======
+  );
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

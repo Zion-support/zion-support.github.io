@@ -1,4 +1,9 @@
 import React from 'react';
+const PostCard = ({ className }) => {return (<div className={className || ''}>;
+      <h1>PostCard</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const PostCard = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const PostCard = ({ className }) => {
   )
 }
 }
+

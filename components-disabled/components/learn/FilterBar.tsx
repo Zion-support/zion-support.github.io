@@ -1,54 +1,14 @@
-<<<<<<< HEAD
-
-;
-}export default function FilterBar(): any ({category,level,isFree,onChange}: Props) {type Props = {category: string;
-  level: string;
-  isFree: string;
-  onChange: (next: { category: string; level: string; isFree: string }) => void;
-}
-export default function FilterBar() {return (<select;
-        className='border rounded px-3 py-2 bg-white dark:bg-black';
-        value={category}import React from 'react';
-type Props = {category: string,level: string,isFree: string,onChange={e => onChange({ category: e.target.value, level, isFree })}
-      >;
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {category: string;
-  level: string;
-  isFree: string;
-  onChange: (next: { category: string, level: string, isFree: string }) => void;
-}
-        onChange={e => onChange({ category: e && e.target.value, level, isFree })}
-      >;
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {<option value=''>All Categories</option>        <option>AI Development</option>type Props = {category: string,level: string,isFree: string,onChange: (next: { category: string, level: string, isFree: string }) => void;
-}export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {return (<div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
-      <select;
-        className="border rounded px-3 py-2 bg-white dark:bg-black";
-        value={category}
-export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {return (<div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;type Props = any;type Props = {category: string;
-
-  return (
-      <select
-        className='border rounded px-3 py-2 bg-white dark:bg-black'
-        value={category}
-
-
-import React from 'react';
-type Props = {
-  category: string,
-  level: string,
-  isFree: string,
-        onChange={e => onChange({ category: e.target.value, level, isFree })}
-      >
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-  category: string
-  level: string
-  isFree: string
-=======
+  onChange: (next: { category: string, level: string, isFree: string }) => void,
 return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   onChange: (next: { category: string, level: string, isFree: string }) => void
+  onChange: (next: { category: string, level: string, isFree: string }) => void,
+return (
+      <select
+        className='border rounded px-3 py-2 bg-white dark:bg-black'
+        value={category}
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
@@ -56,36 +16,26 @@ return (
   category: string,;
   level: string,;
   isFree: string,;
-  onChange: (next: { category: string, level: string, isFree: string }) => void;
+  onChange: (next: { category: string, level: string, isFree: string }) => void,
 };
-<<<<<<< HEAD
 
-
-
-
-export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
-      <select
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
-        value={category}
-export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
-
-
-=======
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+
+export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
+import React from 'react';
 type Props = {
   category: string;
   level: string;
   isFree: string;
-  onChange: (next: { category: string; level: string; isFree: string }) => void;
+  onChange: (next: { category: string; level: string; isFree: string,
+}) => void;
 }
+
 export default function FilterBar() {return (<div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>;
       <select;
         className='border rounded px-3 py-2 bg-white dark:bg-black';
@@ -95,12 +45,20 @@ export default function FilterBar() {return (<div className='grid grid-cols-1 sm
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {<option value=''>All Categories</option>        <option>AI Development</option>type Props = {category: string;
   level: string;
   isFree: string;
-  onChange: (next: { category: string, level: string, isFree: string }) => void;
+  onChange: (next: { category: string, level: string, isFree: string,
+}) => void;
 }
   category: string,level: string,isFree: string,onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {category: string,level: string,isFree: string,onChange: (next: { category: string, level: string, isFree: string }) => void;
-}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {<option value=''>All Categories</option>;
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {category: string,level: string,isFree: string,onChange: (next: { category: string, level: string, isFree: string,
+}) => void;
+}class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ,
+}static getDerivedStateFromError(error) ;
+  return { hasError: true ;
+}
+
+export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {<option value=''>All Categories</option>;
+
 export default function FilterBar() {return (<div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select;
         className="border rounded px-3 py-2 bg-white dark:bg-black";
@@ -128,39 +86,26 @@ className='border rounded px-3 py-2 bg-white dark:bg-black';
 className='border rounded px-3 py-2 bg-white dark:bg-black';
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-<<<<<<< HEAD
-  category: string
-  level: string
-  isFree: string
-  onChange: (next: { category: string, level: string, isFree: string }) => void
-}
-  category: string,
-  level: string,
-  isFree: string,
+
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
 
-
-
-=======
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false,
+};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true,
+};
   }
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
-        className="border rounded px-3 py-2 bg-white dark:bg-black"
-        value={category}
-<<<<<<< HEAD
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
       >
         <option value="">All Categories</option>
@@ -170,8 +115,9 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         <option>Cloud Architecture</option>
       </select>
       <select
-        className='border rounded px-3 py-2 bg-white dark:bg-black'
-        value={level}
+        className='border rounded px-3 py-2 bg-white dark: bg-black'
+        value={leve,
+}
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >
         <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
@@ -183,9 +129,11 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
         <option>Advanced</option>
       </select>
       <select
-        className='border rounded px-3 py-2 bg-white dark:bg-black'
-        value={isFree}
-        onChange={e => onChange({ category, level, isFree: e.target.value })}
+        className='border rounded px-3 py-2 bg-white dark: bg-black'
+        value={isFre,
+}
+        onChange={e => onChange({ category, level, isFree: e.target.value },
+}
       >;
         <option value=''>All Pricing</option>;
         <option value='true'>Free</option>;
@@ -196,7 +144,8 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
   )))}
     </div>
   );        value={isFree}
-        onChange={(e) => onChange({ category, level, isFree: e.target.value })}
+        onChange={(e) => onChange({ category, level, isFree: e.target.value },
+}
       >
         <option value="">All Pricing</option>
         <option value="true">Free</option>
@@ -206,12 +155,13 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
   );
 
 
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   );
   is_free: string;
-  on_change: (next: { category: string; level: string; is_free: string }) => void;
-}export default /**;
+  on_change: (next: { category: string; level: string; is_free: string,
+}) => void;
+}
+
+export default /**;
  * FilterBar - Function description;
  */;
 function FilterBar() {return (<div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 3'>;
@@ -220,8 +170,11 @@ function FilterBar() {return (<div className='grid grid - cols - 1 sm:grid - col
         value={category}
         on_change={e => on_change ({ category: e.target.value, level, is_free })}
       >;
-        <option value=''>All Categories</option>        <option > AI Development</option > type Props = {category: string,level: string,is_free: string,on_change: (next: { category: string, level: string, is_free: string }) => void;
-}export default /**;
+        <option value=''>All Categories</option>        <option > AI Development</option > type Props = {category: string,level: string,is_free: string,on_change: (next: { category: string, level: string, is_free: string,
+}) => void;
+}
+
+export default /**;
  * FilterBar - Function description;
  */;
 function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - cols - 3 gap - 3">;
@@ -239,7 +192,6 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         value={level}
-<<<<<<< HEAD
         on_change={e => on_change ({ category, level: e.target.value, is_free })}
       >;
         <option value=''>All Levels</option>        <option > Beginner</option>        value={level}
@@ -253,20 +205,24 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         value={is_free}
-        on_change={e => on_change ({ category, level, is_free: e.target.value })}
+        on_change={e => on_change ({ category, level, is_free: e.target.value },
+}
       >;
         <option value=''>All Pricing</option>;
         <option value='true'>Free</option>;
         <option value='false'>Paid</option>;
       </select>;
     </div>)value={is_free}
-        on_change={(e) => on_change ({ category, level, is_free: e.target.value })}
+        on_change={(e) => on_change ({ category, level, is_free: e.target.value },
+}
       >;
         <option value="">All Pricing</option>;
         <option value="true">Free</option>;
         <option value="false">Paid</option>;
-      </select>;
-    </div>)}}ursor/fix-website-loading-errors-and-merge-6662;
+      </select>
+    </div>
+  );
+}}ursor/fix-website-loading-errors-and-merge-6662;
 }
 }}
 
@@ -292,7 +248,8 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
       <select;
         className='border rounded px-3 py-2 bg-white dark:bg-black';
         value={isFree}
-        onChange={e => onChange({ category, level, isFree: e.target.value })}
+        onChange={e => onChange({ category, level, isFree: e.target.value },
+}
       >;
         <option value=''>All Pricing</option>;
         <option value='true'>Free</option>;
@@ -301,7 +258,8 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
     </div>;
     </div>;
   )value={isFree}
-        onChange={(e) => onChange({ category, level, isFree: e.target.value })}
+        onChange={(e) => onChange({ category, level, isFree: e.target.value },
+}
       >;
         <option value="">All Pricing</option>;
         <option value="true">Free</option>;
@@ -319,6 +277,5 @@ function FilterBar() {return (<div className="grid grid - cols - 1 sm:grid - col
   );
 }
 }
-=======
 }
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+

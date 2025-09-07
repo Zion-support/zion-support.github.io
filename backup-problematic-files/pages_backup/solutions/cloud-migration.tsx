@@ -22,6 +22,37 @@ import { Cloud,
 import Layout from "../../components/Layout";";
 const phases = [;
   {}
+    title: 'Assessment & Planning,',,description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',icon: BarChart3,steps: [,'Infrastructure audit,','Workload analysis',','Migration strategy',','Risk assessment'';
+    ];
+  },{}
+    title: 'Design & Architecture,',,description: 'Cloud-native architecture design and security framework implementation.,',icon: Settings,steps: [,'Cloud architecture design,','Security framework',','Scalability planning',','Cost optimization'';
+    ];
+  },{}
+    title: 'Migration Execution,',,description: 'Phased migration with minimal downtime and comprehensive testing.,',icon: Cloud,steps: [,'Data migration,','Application migration',','Testing & validation',','Go-live support'';
+    ];
+  },{}
+    title: 'Optimization,',,description: 'Continuous monitoring and optimization for peak performance.,',icon: Zap,steps: [,'Performance monitoring,','Cost optimization',','Security updates',','Continuous improvement'';
+    ];
+  }];const services = [;
+  {}
+    title: 'AWS Migration,',,description: 'Complete migration to Amazon Web Services with best practices and optimization.,',icon: Cloud,features: [,'EC2 instance migration,','RDS database migration',','S3 storage migration',','Lambda serverless functions'';
+    ];
+  },{}
+    title: 'Azure Migration,',,description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',icon: Shield,features: [,'Azure Virtual Machines,','Azure SQL Database',','Azure Storage migration',','Azure Functions deployment'';
+    ];
+  },{}
+    title: 'Google Cloud Migration,',,description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',icon: Brain,features: [,'Compute Engine migration,','Cloud SQL migration',','Cloud Storage migration',','Cloud Functions deployment'';
+    ];
+  },{}
+    title: 'Multi-Cloud Strategy,',,description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',icon: Globe,features: [,'Cross-cloud integration,','Disaster recovery',','Load balancing',','Cost optimization'';
+    ];
+  }];const benefits = [;
+  {}
+    title: 'Cost Reduction,',,description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',icon: BarChart3,},{}
+    title: 'Enhanced Security,',,description: 'Enterprise-grade security with automated updates and monitoring.,',icon: Shield,},{}
+    title: 'Improved Scalability,',,description: 'Scale resources up or down based on demand automatically.,',icon: Zap,},{}
+    title: 'Better Performance,',,description: 'Faster load times and improved application performance.,',icon: Smartphone,}];
+      description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services."";
     title: 'Assessment & Planning,',,
   description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
     icon: BarChart3,;
@@ -318,6 +349,28 @@ const benefits = [;
         </section>;
       </div>;
     </Layout>;
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+                Ready to Move to the Cloud?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
+                Let our cloud migration experts help you seamlessly transition to the cloud;
+                with minimal downtime and maximum security.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Cloud Migration;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
@@ -342,3 +395,4 @@ const benefits = [;
   )
 }
 }
+

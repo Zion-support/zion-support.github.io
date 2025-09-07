@@ -24,6 +24,37 @@ import {
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+const services = [;
+  {title: 'AI-Powered Medical Diagnostics',description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.',icon: Brain,features: [;
+      'Medical image analysis,','Symptom pattern recognition',','Risk assessment algorithms',',title: 'AI-Powered Medical Diagnostics,',,description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',const services = [;
+  {title: 'AI-Powered Medical Diagnostics',,description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.',icon: Brain,features: [,'Medical image analysis,','Symptom pattern recognition',','Risk assessment algorithms',','Real-time diagnostic support'';
+    ];
+  },{}
+    title: 'Telemedicine Platforms,',,description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',icon: Phone,features: [,'Video consultation systems,','Remote patient monitoring',','Digital prescription management',','Integrated health records'';
+    ];
+  },{}
+    title: 'Electronic Health Records (EHR),',,description: 'Secure, interoperable health information management systems.',',icon: Database,features: [,'Patient data management,','Interoperability standards',','Clinical decision support',','Privacy compliance tools'';
+    ];
+  },{}
+    title: 'Medical Imaging AI,',,description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',icon: Camera,features: [,'Radiology image analysis,','Pathology image processing',','3D imaging reconstruction',','Automated report generation'';
+    ];
+  },{}
+    title: 'Healthcare Analytics,',,description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',icon: BarChart3,features: [,'Population health analytics,','Predictive modeling',','Cost optimization analysis',','Quality metrics tracking'';
+    ];
+  },{}
+    title: 'Patient Management Systems,',,description: 'Comprehensive patient care coordination and management platforms.,',icon: Users,features: [,'Appointment scheduling,','Care plan management',','Patient communication tools',','Outcome tracking systems'';
+    ];
+  }];
+const benefits = [;
+  {}
+    title: 'Improved Patient Outcomes,',,description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',icon: Heart;
+];
+const benefits = [;
+  {title: 'Improved Patient Outcomes',,description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.',icon: Heart;
+  },{}
+    title: 'Enhanced Efficiency,',,description: 'Streamlined workflows and automated processes reduce administrative burden.,',icon: Activity,},{}
+    title: 'Cost Reduction,',,description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',icon: BarChart3,},{}
+    title: 'Regulatory Compliance,',,description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',icon: Shield,}];
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -137,6 +168,12 @@ const caseStudies = [;
   {}
 ];
 const caseStudies = [;
+  {title: 'AI Diagnostic System Implementation',,description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',results: ['60% faster diagnosis', '25% accuracy improvement', '40% cost reduction'];
+  },{}
+    title: 'Telemedicine Platform Deployment,',,description: 'Enabled remote care for 50,000+ patients during the pandemic with 99 && 99.9% uptime.',',results: ['50,000+ patients served', '99 && 99.9% uptime', '95% patient satisfaction']',},{}
+    title: 'EHR Integration Project,',,description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',}];
+export default function HealthcarePage() {return (<Layout)title="Healthcare Technology Solutions - Zion Tech Group"";
+      description="Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, EHR systems, and medical imaging solutions."";
   {;
     title: 'AI Diagnostic System Implementation',,
   description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.',;
@@ -568,6 +605,28 @@ export default function HealthcarePage() {;
         </section>;
       </div>;
     </Layout>;
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">;
+                Ready to Transform Healthcare?;
+              </h2>;
+              <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">;
+                Let our healthcare technology experts help you implement solutions that improve;
+                patient care and operational efficiency.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Healthcare Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  )}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?
@@ -592,3 +651,4 @@ export default function HealthcarePage() {;
   )
 }
 }
+

@@ -1,3 +1,23 @@
+import React, { useState } from 'react',import Head from 'next/head',import { motion } from 'framer-motion',import {Check, Star, Zap, Shield, Rocket, Brain, Atom,Users, Globe, Code, Server, Cpu, ArrowRight,TrendingUp, Award, Clock, DollarSign;
+} from 'lucide-react',import EnhancedNavigation from '../components/EnhancedNavigation',import EnhancedFooter from '../components/EnhancedFooter',export default function PricingPage() {const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),const [selectedPlan, setSelectedPlan]  = useState<string | null>(null),const pricingPlans = [;
+    {id:'starter',name:'Starter',,description:'Perfect for small businesses getting started with AI',monthlyPrice:997,annualPrice:9970,icon:Rocket,color:'from-blue-500 to-cyan-500',textColor:'text-blue-400',popular:false,features:[;
+        'AI Business Intelligence BasicUp to 5 team members','Basic analytics dashboardEmail support','14-day free trialStandard integrations';
+      ],cta:'Start Free Trial',ctaColor:'from-blue-500 to-cyan-600';
+    },{id:'professional',name:'Professional',,description:'Advanced features for growing businesses',monthlyPrice:2497,annualPrice:24970,icon:Brain,color:'from-purple-500 to-pink-500',textColor:'text-purple-400',popular:true,features:[;
+        'AI Business Intelligence ProAI Customer Experience','Up to 25 team membersAdvanced analytics & reporting','Priority support30-day free trial','Custom integrationsAdvanced AI models';
+      ],cta:'Start Free Trial',ctaColor:'from-purple-500 to-pink-600';
+    },{id:'enterprise',name:'Enterprise',,description:'Full-scale solutions for large organizations',monthlyPrice:4997,annualPrice:49970,icon:Shield,color:'from-green-500 to-emerald-500',textColor:'text-green-400',popular:false,features:[;
+        'All Professional featuresQuantum Cybersecurity','Edge Computing OrchestrationUnlimited team members','Custom AI developmentDedicated support manager','60-day free trialWhite-label solutions','SLA guaranteesOn-premise deployment';
+      ],cta:'Contact Sales',ctaColor:'from-green-500 to-emerald-600';
+    },{id:'custom',name:'Custom',,description:'Tailored solutions for unique requirements',monthlyPrice:'Custom',annualPrice:'Custom',icon:Code,color:'from-orange-500 to-red-500',textColor:'text-orange-400',popular:false,features:[;
+        'Fully customized solutionsSpace technology integration','Quantum computing accessDedicated development team','24/7 premium supportCustom trial period','Exclusive featuresStrategic partnership','ROI optimizationFuture technology access';
+      ],cta:'Get Custom Quote',ctaColor:'from-orange-500 to-red-600';
+    }
+  ],const addOns = [;
+    {name:'AI Consulting',,description:'Strategic AI implementation guidance',monthlyPrice:997,annualPrice:9970,icon:Brain,color:'from-purple-500 to-pink-500';
+    },{name:'Quantum Computing',,description:'Access to quantum computing resources',monthlyPrice:2997,annualPrice:29970,icon:Atom,color:'from-cyan-500 to-blue-500';
+    },{name:'Space Technology',,description:'Space mining and satellite AI systems',monthlyPrice:7997,annualPrice:79970,icon:Rocket,color:'from-indigo-500 to-purple-500';
+    },{name:'Custom Development',,description:'Tailored AI solution development',monthlyPrice:4997,annualPrice:49970,icon:Code,color:'from-green-500 to-emerald-500';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion',;

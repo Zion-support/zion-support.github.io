@@ -152,6 +152,17 @@ body: string ;
 author: "Anna Zhou";";
 time: "2h ago";";
 title: "What AI trends are you most excited for in 2025?";";
+body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?";
+}{id: 2;
+const handleAddPost = () => {if (!newTitle.trim () || !newBody.trim () ) return;
+setPosts ([ {id: Date.now ()";
+author: "You";";
+time: "Now";
+title: newTitle;
+body: newBody;
+}...posts])";
+setNewTitle ("")";
+setNewBody ("")setShowNew (false)}";
 body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?" 
 };
 {;
@@ -186,6 +197,8 @@ setShowNew (false)
 }</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;
   post.body ;
 }</p> </div> </CardContent> </Card>) ) ";
+}</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>)}'";
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
 };
 '"
+

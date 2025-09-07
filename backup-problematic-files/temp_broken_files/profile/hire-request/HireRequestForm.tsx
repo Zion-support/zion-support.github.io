@@ -79,6 +79,10 @@ initialJobTitle?: string;
 userDetails?: {;
   name?: string;
 email?: string;
+id?: string;
+}onSubmitSuccess?: () => void ;
+}export function HireRequestForm () {const {form,  isSubmitting, onSubmit ;
+ } = useHireRequestForm ({talent;
 id?: string 
 };
 onSubmitSuccess?: () => void ;

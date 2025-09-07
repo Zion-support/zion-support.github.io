@@ -1,3 +1,5 @@
+
+import { ChevronDown, ChevronUp } from "lucide-react",import { Slider } from "@/components/ui/slider",import { PriceFilterProps } from "@/types/filters",export function PriceFilter() {const handleChange = (values:number[]) => {setPriceRange([values[0], values[1]]),},return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters",;
@@ -14,15 +16,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         className="flex w-full items-center justify-between text-white font-medium";
       >;
         <span>Hourly Rate</span>;
-        {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) :(;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+        {expanded ? (<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+        ) :(<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-      </button>;
-      ;
-      {expanded && (;
-        <div className="mt-6">;
+      </button>;{expanded && (<div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
@@ -37,6 +34,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         </div>;
       )}
     </div>;
+  ),}
+ export function PriceFilter () {const handleChange = (values: number[]) => {setPriceRange ([values[0], values[1]])}
   ),;}
  export function PriceFilter ({
   priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen 
@@ -45,3 +44,4 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   setPriceRange ([values[0], values[1]]) 
 }
 }
+

@@ -1,4 +1,12 @@
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import React from 'react';
+
+
+
+
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 
 
@@ -35,6 +43,7 @@ interface PricingTierProps {
 }
 
 
+
 function PricingTier({
   name,
   price,
@@ -48,6 +57,7 @@ function PricingTier({
     <div
       className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
     >
+
 
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -68,6 +78,7 @@ function PricingTier({
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
 
+
             <svg
               className="w-5 h-5 text-green-500 mr-3"
               fill="currentColor"
@@ -79,6 +90,7 @@ function PricingTier({
                 clipRule="evenodd"
               />
 
+
             </svg>
             <span className="text-gray-700">{feature}</span>
           </li>
@@ -89,8 +101,10 @@ function PricingTier({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
 
+
             ? "bg-blue-600 text-white hover:bg-blue-700"
             : "bg-gray-900 text-white hover:bg-gray-800"
+
 
         }`}
       >
@@ -102,6 +116,17 @@ function PricingTier({
 
 export default function AIEmailOptimizerPage() {
   return (
+export default function AIEmailOptimizerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            AI Email Optimizer
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your email marketing with AI-powered optimization that analyzes, 
+            improves, and A/B tests your campaigns for maximum engagement and conversion rates.
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
@@ -134,6 +159,177 @@ export default function AIEmailOptimizerPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Powerful AI Features
           </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Leverage advanced AI to optimize every aspect of your email marketing campaigns.
+export default function AIEmailOptimizerPage() {
+  return (
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Feature
+            icon="📧"
+            title="Smart Subject Line Optimization"
+            description="AI analyzes your subject lines and suggests improvements to increase open rates by up to 40%"
+          />
+          <Feature
+            icon="🎯"
+            title="Content Personalization"
+            description="Automatically personalize email content based on recipient behavior, preferences, and demographics"
+          />
+          <Feature
+            icon="📊"
+            title="A/B Testing Automation"
+            description="Intelligent A/B testing that automatically finds the best performing variations and scales them"
+          />
+          <Feature
+            icon="⏰"
+            title="Send Time Optimization"
+            description="AI determines the optimal send times for each recipient to maximize engagement and deliverability"
+          />
+          <Feature
+            icon="🔍"
+            title="Spam Score Analysis"
+            description="Real-time spam score checking and suggestions to improve deliverability and inbox placement"
+          />
+          <Feature
+            icon="📈"
+            title="Performance Analytics"
+            description="Comprehensive analytics dashboard with actionable insights and ROI tracking"
+          />
+        </div>
+      </section>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📧</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Content Analysis</h3>
+              <p className="text-gray-600">
+                AI analyzes your email content for engagement potential and suggests improvements.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🧪</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">A/B Testing</h3>
+              <p className="text-gray-600">
+                Automated A/B testing to find the most effective subject lines and content.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">📊</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Analytics</h3>
+              <p className="text-gray-600">
+                Detailed insights into open rates, click-through rates, and conversion metrics.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">⏰</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Optimal Timing</h3>
+              <p className="text-gray-600">
+                AI determines the best send times for each recipient based on their behavior.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Personalization</h3>
+              <p className="text-gray-600">
+                Dynamic content personalization based on recipient preferences and behavior.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                <span className="text-3xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Deliverability</h3>
+              <p className="text-gray-600">
+                Advanced spam detection and deliverability optimization to reach inboxes.
+              </p>
+      {/* How It Works */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Simple 3-step process to optimize your email campaigns with AI.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              1
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Connect Your Email Platform</h3>
+            <p className="text-gray-600">Integrate with Mailchimp, Constant Contact, SendGrid, or any email service provider</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              2
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Analysis & Optimization</h3>
+            <p className="text-gray-600">Our AI analyzes your campaigns and automatically suggests improvements</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              3
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Track & Improve Results</h3>
+            <p className="text-gray-600">Monitor performance improvements and watch your conversion rates soar</p>
+          </div>
+        </div>
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          AI Email Optimizer
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Transform your email marketing with AI-powered optimization. Analyze, improve, and A/B test your campaigns for maximum engagement and conversion rates.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Email Optimizer Demo"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Free Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Powerful AI Features
+          </h2>
+
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Leverage advanced AI to optimize every aspect of your email marketing campaigns.
@@ -177,9 +373,11 @@ export default function AIEmailOptimizerPage() {
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
 
+
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
+
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Simple 3-step process to optimize your email campaigns with AI.
@@ -214,9 +412,11 @@ export default function AIEmailOptimizerPage() {
       <section className="py-12">
         <div className="text-center mb-12">
 
+
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Pricing Plans
           </h2>
+
 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the plan that fits your email marketing needs and budget.
@@ -345,3 +545,4 @@ export default function AIEmailOptimizerPage() {
     </div>
   );
 }
+

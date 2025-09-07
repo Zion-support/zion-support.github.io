@@ -44,6 +44,12 @@ export function ModeToggle() {;
       // Show user feedback with a developer-centric message;
       const messages = newTheme === 'dark' ? darkModeMessages :lightModeMessages;
       const title = messages[Math.floor(Math.random() * messages.length)];
+      toast({title,,description:`Theme changed to ${newTheme} mode successfully`}),// Accessibility announcement for screen readers;
+      const announcement  = `Theme switched to ${newTheme} mode`,// Create a live region announcement;
+      const liveRegion = document.createElement('div'),liveRegion.setAttribute('aria-livepolite'),liveRegion.setAttribute('aria-atomictrue'),liveRegion.className = 'sr-only',liveRegion.textContent = announcement,document.body.appendChild(liveRegion),// Clean up the announcement after it's been read;
+      setTimeout(() => {document.body.removeChild(liveRegion),}, 1000),} catch (error) {logErrorToProduction('Theme toggle error:', { data:error }),logIssue('Theme switch failed', { error, currentTheme:theme, resolvedTheme }),toast({title:"Theme switch failed",,description:"Unable to change theme. Please try again.",variant:"destructive"}),}
+  },if (!isClient) {// Return a neutral state during SSR to prevent hydration issues;
+    return (<Button;
       toast({;
         title,,
   description:`Theme changed to ${newTheme} mode successfully`}),;

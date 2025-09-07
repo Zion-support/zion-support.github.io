@@ -1,4 +1,9 @@
 import React from 'react';
+const SecurityComplianceSection.js = ({ className }) => {return (<div className={className || ''}>;
+      <h1>SecurityComplianceSection.js</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const SecurityComplianceSection.js = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const SecurityComplianceSection.js = ({ className }) => {
   )
 }
 }
+

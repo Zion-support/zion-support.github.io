@@ -1,3 +1,7 @@
+import React from 'react',import Head from 'next/head',import { motion } from 'framer-motion',import {Shield, Eye, Lock, Database, Users, Globe,CheckCircle, AlertTriangle, Info;
+} from 'lucide-react',import EnhancedNavigation from '../components/EnhancedNavigation',import EnhancedFooter from '../components/EnhancedFooter',export default function PrivacyPage() {const lastUpdated  = 'January 15, 2025',const sections = [;
+    {title:'Information We Collect',icon:<Database className="w-6 h-6" />,content:[;
+        'Personal information (name, email, phone number)Company information and business details','Usage data and analyticsTechnical information (IP address, browser type)','Communication records and support interactions';
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion',;
@@ -20,65 +24,28 @@ export default function PrivacyPage() {;
         'Usage data and analyticsTechnical information (IP address, browser type)',;
         'Communication records and support interactions';
       ];
-    },;
-    {;
-      title:'How We Use Your Information',;
-      icon:<Users className="w-6 h-6" />,;
-      content:[;
-        'Provide and improve our servicesCommunicate with you about our services',;
-        'Process payments and transactionsSend marketing communications (with consent)',;
-        'Comply with legal obligations';
+    },{title:'How We Use Your Information',icon:<Users className="w-6 h-6" />,content:[;
+        'Provide and improve our servicesCommunicate with you about our services','Process payments and transactionsSend marketing communications (with consent)','Comply with legal obligations';
       ];
-    },;
-    {;
-      title:'Information Sharing',;
-      icon:<Globe className="w-6 h-6" />,;
-      content:[;
-        'We do not sell your personal informationShare with service providers and partners',;
-        'Comply with legal requirementsProtect our rights and safety',;
-        'Business transfers (with notice)';
+    },{title:'Information Sharing',icon:<Globe className="w-6 h-6" />,content:[;
+        'We do not sell your personal informationShare with service providers and partners','Comply with legal requirementsProtect our rights and safety','Business transfers (with notice)';
       ];
-    },;
-    {;
-      title:'Data Security',;
-      icon:<Lock className="w-6 h-6" />,;
-      content:[;
-        'Industry-standard encryption protocolsRegular security audits and assessments',;
-        'Access controls and authenticationData backup and recovery procedures',;
-        'Employee training on data protection';
+    },{title:'Data Security',icon:<Lock className="w-6 h-6" />,content:[;
+        'Industry-standard encryption protocolsRegular security audits and assessments','Access controls and authenticationData backup and recovery procedures','Employee training on data protection';
       ];
-    },;
-    {;
-      title:'Your Rights',;
-      icon:<CheckCircle className="w-6 h-6" />,;
-      content:[;
-        'Access your personal informationCorrect inaccurate data',;
-        'Request deletion of your dataOpt-out of marketing communications',;
-        'Data portability';
+    },{title:'Your Rights',icon:<CheckCircle className="w-6 h-6" />,content:[;
+        'Access your personal informationCorrect inaccurate data','Request deletion of your dataOpt-out of marketing communications','Data portability';
       ];
-    },;
-    {;
-      title:'Data Retention',;
-      icon:<Info className="w-6 h-6" />,;
-      content:[;
-        'Retain data as long as necessaryComply with legal requirements',;
-        'Resolve disputes and enforce agreementsImprove our services',;
-        'Regular data cleanup procedures';
+    },{title:'Data Retention',icon:<Info className="w-6 h-6" />,content:[;
+        'Retain data as long as necessaryComply with legal requirements','Resolve disputes and enforce agreementsImprove our services','Regular data cleanup procedures';
       ];
     }
-  ],;
-;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
+  ],return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <Head>;
         <meta property="og:description" content="Comprehensive privacy policy detailing how we protect your data and respect your privacy rights." />;
         <meta name="twitter:card" content="summary_large_image" />;
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />;
-      </Head>;
-;
-      <EnhancedNavigation />;
-;
-      {/* Hero Section */}
+      </Head>;<EnhancedNavigation />;{/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-6xl mx-auto text-center">;
           <motion.div;
@@ -100,9 +67,7 @@ export default function PrivacyPage() {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      {/* Introduction */}
+      </section>;{/* Introduction */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
@@ -118,22 +83,18 @@ export default function PrivacyPage() {;
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.;
             </p>;
             <p className="text-gray-300 leading-relaxed">;
-              We believe in transparency and want you to understand how your data is handled. If you have any questions about this policy, ;
-              please contact us at{' '}
+              We believe in transparency and want you to understand how your data is handled. If you have any questions about this policy,please contact us at{' '}
               <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">;
                 privacy@ziontechgroup.com;
               </a>;
             </p>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      {/* Policy Sections */}
+      </section>;{/* Policy Sections */}
       <section className="py-20 px-6">;
         <div className="max-w-6xl mx-auto">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {sections.map((section, index) => (;
-              <motion.div;
+            {sections.map((section, index) => (<motion.div;
                 key={section.title}
                 initial={{ opacity:0, y:20 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -148,8 +109,7 @@ export default function PrivacyPage() {;
                   <h3 className="text-xl font-bold text-white">{section.title}</h3>;
                 </div>;
                 <ul className="space-y-2">;
-                  {section.content.map((item, itemIndex) => (;
-                    <li key={itemIndex} className="flex items-start space-x-3">;
+                  {section.content.map((item, itemIndex) => (<li key={itemIndex} className="flex items-start space-x-3">;
                       <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />;
                       <span className="text-gray-300 text-sm">{item}</span>;
                     </li>;
@@ -159,9 +119,7 @@ export default function PrivacyPage() {;
             ))}
           </div>;
         </div>;
-      </section>;
-;
-      {/* Additional Information */}
+      </section>;{/* Additional Information */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50">;
         <div className="max-w-4xl mx-auto">;
           <motion.div;
@@ -182,9 +140,7 @@ export default function PrivacyPage() {;
               </p>;
               <ul className="space-y-2 text-gray-300 text-sm">;
               </ul>;
-            </div>;
-;
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
+            </div>;<div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Globe className="w-6 h-6 text-cyan-400 mr-3" />;
                 International Data Transfers;
@@ -195,9 +151,7 @@ export default function PrivacyPage() {;
               </p>;
               <ul className="space-y-2 text-gray-300 text-sm">;
               </ul>;
-            </div>;
-;
-            <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
+            </div>;<div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">;
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">;
                 <Shield className="w-6 h-6 text-green-400 mr-3" />;
                 Children's Privacy;
@@ -209,9 +163,7 @@ export default function PrivacyPage() {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      {/* Contact Information */}
+      </section>;{/* Contact Information */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
@@ -243,9 +195,6 @@ export default function PrivacyPage() {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      <EnhancedFooter />;
+      </section>;<EnhancedFooter />;
     </div>;
-  ),;
-}
+  ),}

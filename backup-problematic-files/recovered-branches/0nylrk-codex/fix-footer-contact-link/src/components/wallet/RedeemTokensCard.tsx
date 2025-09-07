@@ -1,3 +1,9 @@
+
+import React, { useState } from "react",import { useWallet } from "@/hooks/useWallet",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Gift, ArrowRight, ExternalLink } from "lucide-react",import {Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger} from "@/components/ui/dialog",type RewardOption = {id:string,title:string,,description:string,cost:number,type:'credit' | 'feature' | 'course';
+},const REWARD_OPTIONS:RewardOption[] = [;
+  {id:'premium-week',title:'Premium Week',,description:'7 days of premium features including top placement in search results',cost:100,type:'feature';
+  },{id:'resume-review',title:'AI Resume Review',,description:'Get your resume analyzed and optimized by our AI',cost:50,type:'feature';
+  },{id:'platform-credit',title:'$5 Platform Credit',,description:'Get $5 credit to use on any paid service',cost:100,type:'credit';
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -112,6 +118,22 @@ DialogContent;
 DialogDescription;
 DialogHeader;
 DialogTitle;
+type RewardOption = {id: string;
+title: string,description: string;
+cost: number;
+type: 'credit' | 'feature' | 'course';
+}const REWARD OPTIONS: RewardOption[] = [ {id: 'premium-week';
+title: 'Premium Week',description: '7 days of premium features including top placement in search results';
+cost: 100;
+type: 'feature';
+}{id: 'resume-review';
+title: 'AI Resume Review',description: 'Get your resume analyzed and optimized by our AI';
+cost: 50;
+type: 'feature';
+}{id: 'platform-credit';
+title: '$5 Platform Credit',description: 'Get $5 credit to use on any paid service';
+cost: 100;
+type: 'credit';
 type RewardOption = {
   id: string;
 title: string,

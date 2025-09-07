@@ -31,9 +31,15 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() { /* empty */ }
   disconnect() { /* empty */ }
   observe() { /* empty */ }
+  unobserve() { /* empty */ }';
+}';';
+import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),})global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } }unobserve() { /* empty */ }
+}';';
+import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),})global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } }';';
   unobserve() { /* empty */ }'
 };;';;';
 import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
   unobserve() { /* empty */ }
 };';';
 import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };';';
+

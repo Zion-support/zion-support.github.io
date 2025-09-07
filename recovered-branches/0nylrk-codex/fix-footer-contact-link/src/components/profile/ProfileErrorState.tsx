@@ -5,6 +5,10 @@ import { ArrowLeft } from "lucide-react";
 interface ProfileErrorStateProps {
   error: string | null;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
@@ -21,6 +25,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom",;
@@ -62,3 +67,7 @@ function ProfileErrorState() {
 }
 ;}
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

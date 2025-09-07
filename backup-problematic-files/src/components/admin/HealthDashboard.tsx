@@ -1,3 +1,14 @@
+import React, { useState, useEffect } from 'react',import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',import { Badge } from '@/components/ui/badge',import { Button } from '@/components/ui/button',import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity   } from 'lucide-react';interface HealthData  {status:'healthy' | 'warning' | 'critical',timestamp:string,uptime:number,version:string,environment:string,metrics:{errorRate:number,criticalErrors:number,responseTime:number,memoryUsage:number;
+  },health:{status:string,score:number,issues:string[],recommendations:string[];
+  },errors:{summary:{total:number,critical:number,high:number,medium:number,low:number;
+    },topErrors:Array<{patternId:string,,description:string,occurrences:number,severity:string,solution?:string;
+    }>,byCategory:{ [category:string]:number },},}const HealthDashboard:React.FC = () => {const [healthData, setHealthData] = useState<HealthData | null>(null),const [loading, setLoading] = useState(true),const [error, setError] = useState<string | null>(null),const [autoRefresh, setAutoRefresh]  = useState(true),const fetchHealthData = async () => {try {const response = await fetch('/api/admin/health'),if (!response.ok) {throw new Error(`HTTP ${response.status}`),}
+      const data = await response.json(),setHealthData(data),setError(null),} catch (err) {setError(err instanceof Error ? err.message :'Failed to fetch health data'),} finally {setLoading(false),}
+  },useEffect(() => {fetchHealthData(),if (autoRefresh) {const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds;
+      return () => clearInterval(interval),}return undefined,}, [autoRefresh]),const getStatusIcon = (status:string) => {switch (status) {case 'healthy':;
+        return <CheckCircle className="w-5 h-5 text-green-500" />,case 'warning':;
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />,case 'critical':;
+        return <XCircle className="w-5 h-5 text-red-500" />,default:;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge',;
@@ -421,8 +432,11 @@ return (</div> <div className="flex items-center space-x-2" > <Button > {';
 }</CardContent> </Card> </div> </TabsContent> <TabsContent value="errors" className="space-y-4" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-4" > <Card> <CardHeader> <CardTitle>Error Summary</CardTitle> </CardHeader> <CardContent> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Top Errors</CardTitle> </CardHeader> <CardContent> </p> </div>) ) ";
 }</div>) : (<p className="text-gray-600 text-sm" >No recurring errors</p>) ";
 }</CardContent> </Card> </div> </TabsContent> <TabsContent value="metrics" className="space-y-4" > <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Error Rate</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Critical Errors</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Avg Response</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Memory Usage</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> </div> </TabsContent> <TabsContent value="recommendations" className="space-y-4" > <Card> <CardHeader> <CardTitle>Improvement Recommendations</CardTitle> </CardHeader> <CardContent> </li>) ) ";
+}</ul>) : (<p className="text-gray-600" >No specific recommendations at this time</p>)}</CardContent> </Card> </TabsContent> </Tabs> </div>)}export default HealthDashboard;
+'";
 }</ul>) : (<p className="text-gray-600" >No specific recommendations at this time</p>) ;
 }</CardContent> </Card> </TabsContent> </Tabs> </div>) 
 };
 export default HealthDashboard;
 '"
+

@@ -6,6 +6,10 @@ interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 export function ProjectDetailsStep({
   formData,
   updateFormData,
@@ -16,6 +20,10 @@ export function ProjectDetailsStep({
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -29,6 +37,10 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
           <div>
             <Label
               htmlFor="projectDescription"
@@ -48,10 +60,18 @@ export function ProjectDetailsStep({
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
         </h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -60,6 +80,7 @@ export function ProjectDetailsStep({
             <Input
               id="name"
               placeholder="Your name"
+<<<<<<< HEAD
 import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label",;
@@ -106,6 +127,22 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="name";
               placeholder="Your name";
               value={formData.contactInfo.name}          <div>
+=======
+              value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    name: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
+
+          <div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -124,6 +161,10 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
           <div>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
@@ -132,6 +173,23 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="email"
               type="email"
               placeholder="Your email address"
+<<<<<<< HEAD
+=======
+              value={formData.contactInfo.email}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    email: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
+
+          <div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
             </Label>
@@ -153,6 +211,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
         </div>
       </div>
     </div>
+<<<<<<< HEAD
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
@@ -251,3 +310,7 @@ interface ProjectDetailsStepProps {
       </div>;
     </div>);}
   )
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

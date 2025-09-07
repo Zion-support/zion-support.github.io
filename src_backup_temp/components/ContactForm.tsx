@@ -46,6 +46,15 @@ export const "ContactForm": "React.FC = () => {';';';
     "timeline": ''});';';';
   const [isSubmitting, setIsSubmitting] = useState<any>(false);',';';
     ';';';
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = ("props": "any) => {const { name", value } = e.target;
+    setFormData(prev => ({...prev, [name]: "value"}))}const handleSubmit = async ("e": "React.FormEvent) => {timeline: ''}
+    )';';';
+  const [isSubmitting, setIsSubmitting] = useState<any>(false)',';';
+    ';';';
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')const handleInputChange = (props: any) => {const { name, value } = e.target;
+    setFormData(prev => ({...prev, [name]: value}))}const handleSubmit = async (e: Reac t.FormEvent) => {';
+    e.preventDefault()';';
+    setIsSubmitting(true)';';';
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = ("props": "any) => {;
     const { name", value } = e.target;
@@ -86,6 +95,9 @@ export const "ContactForm": "React.FC = () => {';';';
     ';';';';';
       setSubmitStatus('error');';
     } finally {';';
+      setIsSubmitting(false)';';';
+    }';';';';
+}';';';';';
       setIsSubmitting(false);';';';
     }';';';'
 };';';';';';
@@ -147,6 +159,9 @@ export const "ContactForm": "React.FC = () => {';';';
     );';';';
     } catch (error) {',';';
     ';';';
+      setSubmitStatus('error')} finally {setIsSubmitting(false)';
+    }';';
+}';';';
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);';
@@ -651,6 +666,11 @@ export const "ContactForm": "React.FC = () => {';';';
         </form>';';
       </div>';';';
     </div>';';';';
+  )';';';';';
+}"';';';';
+</motion>;
+</textarea>;
+</motion>;
   );';';';';'
 };"';';';';
 </motion>
@@ -664,11 +684,20 @@ export const "ContactForm": "React.FC = () => {';';';
         </form>
       </div>';
     </div>';';
+  )';';';
+}";
   );';';'
 };";
 </motion>;
 </textarea>;
 </motion>;
+</any>;
+</any>;
+}"';';';';
+</motion>;
+</textarea>;
+</motion>;
+</any>;
 </any>;
 </any>
 };"';';';';
@@ -677,3 +706,4 @@ export const "ContactForm": "React.FC = () => {';';';
 </motion>
 </any>
 </any>
+

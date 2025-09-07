@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react',import type { Vendor } from '../../utils/vendor-types',export default function AdminVendorsPage() {const [vendors, setVendors]  = useState<Vendor[]>([]),async function load() {const res = await fetch('/api/vendors'),const data = await res.json(),setVendors(data.vendors || []),}useEffect(() => { load(), }, []),async function call() {await fetch('/api/admin/vendors', {method:'POST',headers:{ 'Content-Type':'application/json' },body:JSON.stringify({ action, vendorId, value })}),load(),}return (<div className="space-y-6">;
 import { useEffect, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 ;
@@ -23,8 +24,7 @@ export default function AdminVendorsPage() {;
   return (;
     <div className="space-y-6">;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-        {vendors.map(v => (;
-          <div key={v.id} className="border border-gray-200 dark:border-gray-800 rounded p-4 space-y-2">;
+        {vendors.map(v => (<div key={v.id} className="border border-gray-200 dark:border-gray-800 rounded p-4 space-y-2">;
             <div className="flex items-center justify-between">;
               <div className="font-medium flex items-center gap-2">;
                 {v.name}
@@ -47,5 +47,4 @@ export default function AdminVendorsPage() {;
       </div>;
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
-  ),;
-}
+  ),}

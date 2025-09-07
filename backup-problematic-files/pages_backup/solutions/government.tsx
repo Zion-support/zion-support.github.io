@@ -5,6 +5,11 @@ import Layout from '../../components/Layout';';
 import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
   {}
+    icon: Shield,title: 'Cybersecurity & Compliance,',,description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',},{}
+    icon: Users,title: 'Citizen Services,',,description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',},{}
+    icon: FileText,title: 'Document Management,',,description: 'Secure document management and workflow systems for government operations.'',},{}
+    icon: Globe,title: 'Open Data Platforms,',,description: 'Public data portals and open government initiatives for transparency and accountability.'',},{}
+    icon: Database,title: 'Data Analytics,',,description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight  } from 'lucide-react';
     icon: Shield,;
     title: 'Cybersecurity & Compliance,',,
   description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',;
@@ -63,6 +68,20 @@ const features = [
     title: 'Data Analytics',
     description: 'Government data analysis and reporting tools'
 const features = [;
+  {icon: Building2,title: 'Digital Government Services',description: 'Citizen-facing digital services and online portals';
+  },{icon: Shield,title: 'Security & Compliance',description: 'Government-grade security and regulatory compliance';
+  },{icon: Users,title: 'Citizen Engagement',description: 'Platforms for citizen participation and feedback';
+  },{icon: FileText,title: 'Document Management',description: 'Secure document storage and management systems';
+  },{icon: CheckCircle,title: 'Workflow Automation',description: 'Automated government processes and approvals';
+  },{icon: ArrowRight,title: 'Data Analytics',description: 'Government data analysis and reporting tools';
+const features = [;
+  {icon: Building2,title: 'Digital Government Services',,description: 'Citizen-facing digital services and online portals';
+  },{icon: Shield,title: 'Security & Compliance',,description: 'Government-grade security and regulatory compliance';
+  },{icon: Users,title: 'Citizen Engagement',,description: 'Platforms for citizen participation and feedback';
+  },{icon: FileText,title: 'Document Management',,description: 'Secure document storage and management systems';
+  },{icon: CheckCircle,title: 'Workflow Automation',,description: 'Automated government processes and approvals';
+  },{icon: ArrowRight,title: 'Data Analytics',,description: 'Government data analysis and reporting tools';
+  }];
   {;
     icon: Building2,;
     title: 'Digital Government Services',,
@@ -172,6 +191,9 @@ const benefits = [;
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+    icon: CheckCircle,title: 'Workflow Automation',,description: 'Automated government processes and approvals';
+  },{icon: ArrowRight,title: 'Data Analytics',,description: 'Government data analysis and reporting tools';
+  }];
     icon: CheckCircle,;
     title: 'Workflow Automation',,
   description: 'Automated government processes and approvals';
@@ -494,3 +516,4 @@ export default function GovernmentSolutions() {
     </Layout>
     </Layout>
     </>
+

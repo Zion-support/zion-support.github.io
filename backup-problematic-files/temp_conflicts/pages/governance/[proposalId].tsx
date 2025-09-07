@@ -1,3 +1,4 @@
+import React from 'react',import Head from 'next/head',import { useRouter } from 'next/router',export default function ProposalDetailPage() {const router = useRouter(),const { proposalId }  = router.query,return (<>;
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router',;
@@ -14,8 +15,7 @@ export default function ProposalDetailPage() {;
       </Head>;
       <div className="container mx-auto px-4 py-8">;
         <h1 className="text-3xl font-bold mb-6">Proposal Details</h1>;
-        {proposalId && (;
-          <p className="text-lg mb-4">Proposal ID:{proposalId}</p>;
+        {proposalId && (<p className="text-lg mb-4">Proposal ID:{proposalId}</p>;
         )}
         <p className="text-lg mb-4">Review the proposal details and cast your vote.</p>;
         <div className="mt-4">;
@@ -24,5 +24,7 @@ export default function ProposalDetailPage() {;
         </div>;
       </div>;
     </>;
+  )}
   );
 }
+

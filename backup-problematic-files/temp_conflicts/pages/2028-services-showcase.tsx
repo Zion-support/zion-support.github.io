@@ -1,3 +1,14 @@
+import React from 'react',import Head from 'next/head',import Link from 'next/link',import { motion } from 'framer-motion',import {Rocket, Brain, Atom, Shield, Cloud, Database, Code,BarChart3, Star, Zap, Sparkles, ArrowRight, CheckCircle,TrendingUp, Users, Globe, Cpu, Lock, Target, Award, Phone;
+} from 'lucide-react',import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',import { futuristic2028Services } from '../data/2028-futuristic-micro-saas',import { emergingTech2028Services } from '../data/2028-emerging-tech-services',const contactInfo = {mobile:'+1 302 464 0950',email:'kleber@ziontechgroup.com',address:'364 E Main St STE 1008 Middletown DE 19709',website:'https://ziontechgroup.com';
+},const serviceCategories = [;
+  {,description:'Beyond the future of technology',icon:Rocket,color:'from-violet-600 to-purple-600',services:futuristic2028Services.slice(0, 4)},{,description:'Real business solutions for today',icon:Target,color:'from-blue-600 to-cyan-600',services:futuristic2028Services.slice(4, 8)},{,description:'Quantum computing and space exploration',icon:Atom,color:'from-indigo-600 to-blue-600',services:emergingTech2028Services.slice(0, 4)},{,description:'Next-generation AI solutions',icon:Brain,color:'from-emerald-600 to-teal-600',services:emergingTech2028Services.slice(4, 8)}
+],const features = [;
+  {icon:Star,title:'Industry Leading',,description:'First-to-market solutions with cutting-edge technology';
+  },{icon:Zap,title:'Lightning Fast',,description:'Optimized performance with quantum computing integration';
+  },{icon:Shield,title:'Enterprise Secure',,description:'Military-grade security with quantum encryption';
+  },{icon:Users,title:'Customer Focused',,description:'Dedicated support and personalized solutions';
+  }
+],export default function ServicesShowcase2028() {return (<>;
 import React from 'react';
 import Head from 'next/head';
 import Link from "Link";

@@ -31,6 +31,13 @@ export const accessibilityUtils = {
     announcement.setAttribute('aria-atomic', 'true');';';
     announcement.className = 'sr-only';
     announcement.textContent = message;
+    document.body.appendChild(announcement)setTimeout(() => {document.body.removeChild(announcement)}, 1000)}, // Color contrast checker;
+  "getContrastRatio": (color1: string, "color2": string): number => {const getLuminance = (color: string): number => {const rgb = color.match(/\d+/g)if (!rgb) return 0;
+      const [r, g, b] = rgb.map(c => {const val = parseInt(c) / 255;
+        return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)}
+    )return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)})return 0.2126 * r + 0.7152 * g + 0.0722 * b}const lum1 = getLuminance(color1)const lum2 = getLuminance(color2)const brightest = Math.max(lum1, lum2)const darkest = Math.min(lum1, lum2)return (brightest + 0.05) / (darkest + 0.05)}
+}';
     document.body.appendChild(announcement);
     setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)}, // Color contrast checker

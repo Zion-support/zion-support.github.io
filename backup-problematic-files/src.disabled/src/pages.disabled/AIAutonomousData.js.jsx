@@ -1,4 +1,9 @@
 import React from 'react';
+const AIAutonomousData.js = ({ className }) => {return (<div className={className || ''}>;
+      <h1>AIAutonomousData.js</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}
 
 const AIAutonomousData.js = ({ className }) => {
   return (
@@ -9,3 +14,4 @@ const AIAutonomousData.js = ({ className }) => {
   )
 }
 }
+

@@ -12,6 +12,7 @@ interface CaseStudy { id: string title: string;
 }';
 ';';
 const caseStudies: CaseStud y[] = [{ id: '1',';';
+    title: 'AI-Powered Customer Service Automation',';',description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',';';
     title: 'AI-Powered Customer Service Automation',';',
   description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',';';
     industry: 'E-commerce',';
@@ -24,6 +25,7 @@ const caseStudies: CaseStud y[] = [{ id: '1',';';
     duration: '3 months'';
   },';';
   { id: '2',';';
+    title: 'Cloud-Native Data Platform Migration',';',description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',';';
     title: 'Cloud-Native Data Platform Migration',';',
   description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',';';
     industry: 'Financial Services',';';
@@ -35,6 +37,7 @@ const caseStudies: CaseStud y[] = [{ id: '1',';';
     duration: '6 months'';
   },';';
   { id: '3',';';
+    title: 'Zero-Trust Cybersecurity Implementation',';',description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',';';
     title: 'Zero-Trust Cybersecurity Implementation',';',
   description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',';';
     industry: 'Healthcare',';';

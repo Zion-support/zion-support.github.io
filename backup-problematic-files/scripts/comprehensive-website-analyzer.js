@@ -979,6 +979,8 @@ class ComprehensiveWebsiteAnalyzer {;
   generateRecommendations() {;
     const recommendations = [];
         type: ;
+  critical',title: 'Fix Broken Links,,description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,actions: this && this.brokenLinks.map(link => ({,url: link && link.url,action:  ,Create missing page or fix redirect',"timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}
+  generateRecommendations() {const recommendations = [];
   critical',;
         title: 'Fix Broken Links,,
   description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;
@@ -1071,6 +1073,11 @@ if: (require.main === module) {
     console && console.error(
   'Analysis failed:', error)}';
 }
+if: (require && require.main === module) {priority: 'high}))      })}
+    if (this && this.workingLinks.length < 50) {recommendations && recommendations.push({type:  ,warning',title: 'Expand Content,,description: ;
+  Website has limited content. Consider adding more pages and services.',actions: [{ action:';Add more service pages, priority: ;
+  medium' },{ action: 'Create blog section, priority: ;
+  medium' },{ action: 'Add case studies, priority: ;
 if: (require && require.main === module) {
           priority: 'high}))      })}
     if (this && this.workingLinks.length < 50) {;
