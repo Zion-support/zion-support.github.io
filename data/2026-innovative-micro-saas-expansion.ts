@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -735,8 +739,8 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =
   rating: number;
   reviews: number;
     {
-      id: 'ai-business-intelligence-suite'
-      name: 'AI Business Intelligence Suite'
+      id: "id",
+    name: 'AI Business Intelligence Suite'
       tagline:
         'Transform raw data into actionable insights with AI-powered analytics'
       price: '$299'
@@ -755,8 +759,8 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =
         'API for third-party integrations'
         '24/7 AI monitoring and alerts'
       ]
-      popular: true
-      color: 'from-blue-600 to-cyan-600'
+      popular: true;
+    color: 'from-blue-600 to-cyan-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-business-intelligence-suite'
       marketPosition:

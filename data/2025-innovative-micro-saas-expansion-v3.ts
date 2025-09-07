@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasService  {id: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -838,8 +842,8 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
   rating: number;
   reviews: number;
     {
-      id: 'ai-business-intelligence-platform'
-      name: 'AI Business Intelligence Platform'
+      id: "id",
+    name: 'AI Business Intelligence Platform'
       tagline:
         'Transform raw data into actionable insights with AI-powered analytics'
       price: '$499'
@@ -857,8 +861,8 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
         'Mobile-responsive design'
         'Role-based access control'
       ]
-      popular: true
-      color: 'from-blue-600 to-purple-700'
+      popular: true;
+    color: 'from-blue-600 to-purple-700'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-business-intelligence'
       marketPosition:
@@ -1210,9 +1214,13 @@ export interface InnovativeMicroSaasService  {id: string,name: string,tagline: s
       customers: 34
       rating: 4.9
       reviews: 28
+<<<<<<< HEAD
     }
   ];    features: [
 
+=======
+    }  ];    features: [
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface InnovativeMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1237,13 +1245,11 @@ export interface InnovativeMicroSaasService {
   rating: number,
   reviews: number
 }
-
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -1274,7 +1280,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 89
   };
-
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform', name: 'AI Customer Experience Platform',
@@ -1304,7 +1309,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.8,
     reviews: 67
   };
-
   // Quantum-Ready Cybersecurity Platform
   {
     id: 'quantum-cybersecurity-platform', name: 'Quantum-Ready Cybersecurity Platform',
@@ -1334,7 +1338,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 112
   };
-
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization', name: 'AI Supply Chain Optimization Platform',
@@ -1364,7 +1367,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.7,
     reviews: 54
   };
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration', name: 'Edge Computing Orchestration Platform',
@@ -1394,7 +1396,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.6,
     reviews: 42
   };
-
   // AI-Powered Legal Document Automation
   {
     id: 'ai-legal-document-automation', name: 'AI Legal Document Automation Platform',
@@ -1424,7 +1425,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.8,
     reviews: 61
   };
-
   // Quantum AI Research Platform
   {
     id: 'quantum-ai-research-platform', name: 'Quantum AI Research Platform',
@@ -1455,7 +1455,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 28
   };
-
   // Autonomous DevOps Platform
   {
     id: 'autonomous-devops-platform', name: 'Autonomous DevOps Platform',
@@ -1485,7 +1484,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.7,
     reviews: 78
   };
-
   // Space Technology Innovation Platform
   {
     id: 'space-technology-innovation', name: 'Space Technology Innovation Platform',
@@ -1516,7 +1514,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 15
   };
-
   // Neural Interface Development Platform
   {
     id: 'neural-interface-development', name: 'Neural Interface Development Platform',
@@ -1546,7 +1543,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.8,
     reviews: 19
   };
-
   // AI-Powered Healthcare Analytics Platform
   {
     id: 'ai-healthcare-analytics-platform', name: 'AI Healthcare Analytics Platform',
@@ -1576,7 +1572,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 45
   };
-
   // Quantum Financial Modeling Platform
   {
     id: 'quantum-financial-modeling', name: 'Quantum Financial Modeling Platform',
@@ -1621,7 +1616,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 31
   };
-
   // AI-Powered Content Creation Suite
   {
     id: 'ai-content-creation-suite', name: 'AI Content Creation Suite',
@@ -1651,7 +1645,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.7,
     reviews: 98
   };
-
   // Edge AI Video Processing Platform
   {
     id: 'edge-ai-video-processing', name: 'Edge AI Video Processing Platform',
@@ -1681,7 +1674,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.6,
     reviews: 67
   };
-
   // AI-Powered HR Management Platform
   {
     id: 'ai-hr-management-platform', name: 'AI HR Management Platform',
@@ -1711,7 +1703,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.8,
     reviews: 89
   };
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning', name: 'Quantum Machine Learning Platform',
@@ -1741,7 +1732,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.9,
     reviews: 42
   };
-
   // AI-Powered Energy Management Platform
   {
     id: 'ai-energy-management', name: 'AI Energy Management Platform',
@@ -1771,7 +1761,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     rating: 4.7,
     reviews: 54
   };
-
   // Autonomous Supply Chain Robotics Platform
   {
     id: 'autonomous-supply-chain-robotics', name: 'Autonomous Supply Chain Robotics Platform',
@@ -1780,7 +1769,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     period: '/month',
     description: 'Cutting-edge platform that combines AI, robotics, and IoT to create autonomous supply chain operations, from warehouse automation to last-mile delivery.',
     features: [
-
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
   ];    features: [;
@@ -1814,8 +1802,12 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     reviews: 28
   }
 ];
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants',;
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;
@@ -2136,7 +2128,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9,;
     reviews: 28;
-
   },;
   // Autonomous DevOps Platform;
   {;
@@ -2575,6 +2566,10 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     launchDate: '2023-10-01', customers: 34
     rating: 4.9
     reviews: 28
+<<<<<<< HEAD
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface InnovativeMicroSaasService {;
   id: string,;
   name: string,;
@@ -2895,7 +2890,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9,;
     reviews: 28;
-
   },;
   // Autonomous DevOps Platform;
   {;

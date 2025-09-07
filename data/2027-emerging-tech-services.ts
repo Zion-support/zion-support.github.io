@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
 ;
   {id: string;
 export interface Service  {id: string;name: string;
   id: string;
   name: string;
+=======
+id: string;
+  name: string,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   description: string;
   category: string;
   price: string;
@@ -153,10 +158,13 @@ export interface Service  {id: string;name: string;
       'AI';
       'Genetic Engineering';
   link: string;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
-    id: 'quantum-machine-learning'
+    id: "id",
     name: 'Quantum Machine Learning Platform'
     description:
       'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.'
@@ -1299,4 +1307,8 @@ export const emergingTech2027Services: Service[] = [;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
   }
+<<<<<<< HEAD
 ;
+=======
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

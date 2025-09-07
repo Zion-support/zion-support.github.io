@@ -2,13 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
+
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Company Info */
+}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <span className="text-2xl font-bold text-blue-400">Zion</span>

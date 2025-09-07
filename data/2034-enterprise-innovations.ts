@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
 ;
   {}];id: string;
 export interface EnterpriseService2034  {id: string;name: string;
   id: string;
   name: string;
+=======
+id: string;
+  name: string,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   description: string;
   category: string;
   price: string;
@@ -26,6 +31,7 @@ export interface EnterpriseService2034  {id: string;name: string;
   scalability: string;
   uptime: string;
   contact: string;
+<<<<<<< HEAD
   website: string;
 }{{id: 'ai - autonomous - devops - platform',name: 'AI Autonomous DevOps Platform',description:;
       'Next - generation DevOps platform that uses AI to autonomously manage, optimize, and operate enterprise development and operations.',category: 'DevOps & AI',price: '$24, 999 / month',features: [;
@@ -326,6 +332,8 @@ export interface EnterpriseService2034  {id: string;name: string;
   }
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
       'Advanced AI algorithms',
       'Machine learning systems',
@@ -416,12 +424,11 @@ export interface EnterpriseService2034  {id: string;name: string;
       'Security compliance'
     ]
     security: ['AI-powered security', 'Physical security', 'Access controls']
-    scalability: 'Unlimited data center management'
+    scalability: "scalability",
     uptime: '99.999% data center platform availability'
     contact: '+1 302 464 0950'
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
   }
-
     id: 'ai - autonomous - data - center',
     name: 'AI Autonomous Data Center Platform',
     description:;
@@ -455,7 +462,6 @@ export interface EnterpriseService2034  {id: string;name: string;
       'Financial institutions'
     ],
     technology: [;
-
       'Advanced AI algorithms',
       'IoT sensors',
       'Machine learning systems',
@@ -469,7 +475,7 @@ export interface EnterpriseService2034  {id: string;name: string;
     roi: '350-550% within 24 months'
     support: '24/7 data center specialists'
     documentation: 'Comprehensive data center management guides'
-    api: true
+    api: true;
     sdk: true
     integrations: [
       'VMware'
@@ -482,6 +488,7 @@ export interface EnterpriseService2034  {id: string;name: string;
     compliance: [
       'Data center standards',
       'Energy efficiency',
+<<<<<<< HEAD
       'Security compliance'
     ],
     security: ['AI - powered security', 'Physical security', 'Access controls'],
@@ -526,8 +533,11 @@ ursor/fix-website-loading-errors-and-merge-6662;
     scalability: 'Unlimited data center management';
   }
 
+=======
+      'Security compliance',
+    ],  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ];
-
   id: string,;
   name: string,;
   description: string,;
@@ -555,7 +565,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
   website: string;
 }
 ;
-
 export interface EnterpriseService2034 {;
   id: string,;
   name: string,;
@@ -590,8 +599,6 @@ export interface EnterpriseService2034 {;
     website: 'https://ziontechgroup.com / ai - autonomous - data - center';
   }
 ;
-
 export interface EnterpriseService2034 {;
-
   }
 ];

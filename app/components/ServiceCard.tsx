@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface ServiceCardProps {
-  title: string;
+title: string;
   href: string;
   description: string;
   bullets?: string[];
@@ -20,9 +20,11 @@ export default function ServiceCard({
   icon,
   className = '',
 }: ServiceCardProps) {
+
   return (
     <Link
-      href={href}
+      href={href
+}
       className={`group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 hover:-translate-y-1 ${className}`}
     >
       <div className="flex items-center mb-4">
@@ -43,7 +45,8 @@ export default function ServiceCard({
       {bullets.length > 0 && (
         <ul className="space-y-2">
           {bullets.map((bullet, index) => (
-            <li key={index} className="flex items-start group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${index * 50}ms` }}>
+            <li key={index} className="flex items-start group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${index * 50}
+ms` }}>
               <span className="text-green-500 mr-3 mt-0.5 group-hover:text-green-600 transition-colors duration-300">✓</span>
               <span className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{bullet}</span>
             </li>

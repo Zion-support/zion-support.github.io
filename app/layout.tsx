@@ -1,7 +1,13 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+
   robots: {
     index: true,
     follow: true,
@@ -23,6 +29,7 @@ export const metadata: Metadata = {
   themeColor: '#000000',
   title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
   description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
+
 };
 
 export default function RootLayout({
@@ -32,9 +39,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="min-h-screen bg-white">
-          {children}
+      <body className={inter.className}>
+        <div className="min-h-screen bg-white flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
         </div>
       </body>
     </html>

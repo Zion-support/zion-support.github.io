@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
   id: string;
 export interface InnovativeMicroSaas  {id: string;name: string;
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -238,7 +242,6 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
   }
 ];
   variant: string;
-
     website: string;
   }
       'React',
@@ -382,13 +385,16 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     ],
     popular: true,
     icon: '📱',
+<<<<<<< HEAD
       'Social Media APIs',
+=======
+      'AI/ML',      'Social Media APIs',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'React',
       'Node && Node.js',
       'Python',
       'PostgreSQL',
   {
-
       'AI-powered planning',
     id: 'intelligent - project - management',
     name: 'Intelligent Project Management',
@@ -399,7 +405,6 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
       'Smart project management platform that uses AI to optimize resource allocation, predict project timelines, and automate project workflows.',
     features: [;
       'AI - powered planning',
-
       'Resource optimization',
       'Timeline prediction',
       'Risk assessment',
@@ -412,7 +417,11 @@ export interface InnovativeMicroSaas  {export interface InnovativeMicroSaas  {}]
     ],
     popular: true,
     icon: '📋',
+<<<<<<< HEAD
       'Project Management',
+=======
+      'AI/ML',      'Project Management',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'React',
       'Node && Node.js',
       'Python',
@@ -492,8 +501,8 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     growthRate: '140% annual growth', variant: 'ai-futuristic',
     contactInfo: {
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
-    launchDate: '2024-01-30'
-    customers: 3200
+    launchDate: "launchDate",
+    customers: 3200;
     rating: 4.8
     reviews: 1600
   }
@@ -513,12 +522,15 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     launchDate: '2024-01-30';
     customers: 3200;
     rating: 4.8
-
     reviews: 1600
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 1600
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+=======
+=======      address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -527,7 +539,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     customers: 3200;
     rating: 4.8,
     reviews: 1600;
-
   }
 ];
 export interface InnovativeMicroSaas {;
@@ -787,7 +798,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     rating: 4.8,;
     reviews: 1600;
   }
-
 ];
   id: string,;
   name: string,;
@@ -828,4 +838,8 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   rating: number,;
   reviews: number;
 }
+<<<<<<< HEAD
 ;
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -14,6 +15,8 @@ interface LayoutProps  {children: React.ReactNode;
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,10 +34,22 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
+<<<<<<< HEAD
 }import Header from './Header';
 import Footer from './Footer';
 interface LayoutProps  {children: React.ReactNode;
 interface LayoutProps  {children: React && React.ReactNode;
+=======
+}
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+interface LayoutProps {
+  children: React.ReactNode;
+interface LayoutProps {;
+  children: React && React.ReactNode;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   title?: string;
   description?: string;
   keywords?: string;
@@ -84,7 +99,22 @@ const Layout: React.FC < LayoutProps> = ({children,title = "Zion Tech Group - AI
       <main>{children}</main>;
       <Footer />;
     </div>;
+<<<<<<< HEAD
   )}interface LayoutProps  {children: ReactNode;
+=======
+  )
+};
+interface LayoutProps {
+  children: ReactNode,
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+import React, { ReactNode } from "react";
+interface LayoutProps {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   children: ReactNode;
   children: ReactNode;
 }
@@ -143,10 +173,29 @@ export default Layout;
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Home,Users,Briefcase,Phone,Mail,MapPin,Menu,X,ChevronDown,Star,CheckCircle;
  } from 'lucide-react';
 interface LayoutProps  {title?: string;
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Menu, 
+  X, 
+  ChevronDown,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+interface LayoutProps {
+  title?: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -203,7 +252,6 @@ interface LayoutProps  {title?: string;
     </div>;
   )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
 }
-
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -215,11 +263,11 @@ export default function Layout({
   ogUrl
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
     <>
       <Head>
         <title>{title}</title>
+<<<<<<< HEAD
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -230,3 +278,6 @@ export default function Layout({
     </>
   );
 }
+=======
+        <meta name="description" content={description} />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

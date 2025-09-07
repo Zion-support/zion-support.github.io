@@ -1,38 +1,43 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 function runNode(relPath, args = []) {
-
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
   const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
+    stdio: "stdio",
     encoding: 'utf8'
   });
   return {
-
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || ''
   };
-
 exports && exports.config = { schedule: '0 * * * *' };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 exports && exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
+<<<<<<< HEAD
     return status;
   };
 
+=======
+    return status
+};
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   step('newsroom:generate', () => runNode('automation/newsroom-generator && generator.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-
   return {
     statusCode: 200,
     headers: { 'content-type': 'text/plain' },
@@ -152,8 +157,12 @@ exports.config = { schedule: '0 * * * *';
 exports.config = { schedule: '0 * * * *';
   step ('newsroom:generate', () => run_node ('automation / newsroom - generator.cjs';
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
+<<<<<<< HEAD
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n';ursor/expand-services-advertise-and-build-project-4b36;
     if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return status;
   },step('newsroom:generate', () => runNode('automation/newsroom-generator.cjs'))step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 }
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n';
+=======
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

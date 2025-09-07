@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
 ;
   id: string;
 export interface ResearchDevelopmentService2029  {id: string;name: string;
   id: string;
   name: string;
+=======
+id: string;
+  name: string,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   description: string;
   category: string[];
   price: string;
@@ -181,8 +186,8 @@ export interface ResearchDevelopmentService2029  {id: string;name: string;
         'Quantum standards'
         'Publication guidelines'
       ]
-      scalability: 'Quantum-grade, global research network'
-      roi: '600% within 24 months'
+      scalability: "scalability",
+    roi: '600% within 24 months'
       deployment: 'Quantum infrastructure, research platform'
       maintenance: 'Quantum optimization, research updates'
       training: 'Quantum training, research certification'
@@ -359,7 +364,6 @@ export interface ResearchDevelopmentService2029  {id: string;name: string;
       }
     }
   ];    features: [
-
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -369,8 +373,11 @@ export interface ResearchDevelopmentService2029  {id: string;name: string;
     ];
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -884,10 +891,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-
 ];
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-;
+}

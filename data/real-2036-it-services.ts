@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const real2036ITServices = [;
@@ -658,9 +659,11 @@ export const real2036ITServices = [;
     ],popular: true,category: 'Disaster Recovery',icon: '🔄🤖',marketPrice: '$4,500-7,000/month',benefits: [;
       'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time';
     ],useCases: [;
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const real2036ITServices = [
   {
-    id: 'quantum-cloud-infrastructure-platform'
+    id: "id",
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
     description:
@@ -674,7 +677,7 @@ export const real2036ITServices = [
       'Quantum security protocols'
       'Scalable quantum infrastructure'
     ]
-    popular: true
+    popular: true;
     category: 'Quantum Cloud'
     icon: '☁️⚛️'
     marketPrice: '$8,000-15,000/month'
@@ -1662,9 +1665,14 @@ export const real2036ITServices = [;
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
+<<<<<<< HEAD
       'Business continuity'
     ]
 
+=======
+      'Business continuity',
+    ],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
@@ -1691,6 +1699,7 @@ export const real2036ITServices = [
 
   }
 ];
+<<<<<<< HEAD
 ;
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
@@ -1919,3 +1928,7 @@ export const real2036ITServices = [;
     ];
   }
 ];
+=======
+;  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

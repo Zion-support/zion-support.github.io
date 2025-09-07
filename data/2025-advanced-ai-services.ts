@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 export const advancedAIServices2025 = [;
@@ -351,6 +352,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
   }
 ];
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -379,9 +382,9 @@ export const advancedAIServices2025 = [;
     ],
     pricing: {
       starter: {
-        price: 199
-        period: 'month'
-        features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
+        price: 199;
+    period: "period",
+    features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
     contact: {
@@ -409,6 +412,7 @@ export const advancedAIServices2025 = [;
       'Custom AI model training'
     contact: {
       phone: '+1 302 464 0950',
+<<<<<<< HEAD
       email: 'kleber@ziontechgroup && ziontechgroup.com'
     },
     contact: {
@@ -914,3 +918,8 @@ export const advancedAIServices2025 = [;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
   }
 ];
+=======
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
