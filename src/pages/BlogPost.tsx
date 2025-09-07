@@ -46,7 +46,7 @@ import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
+import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -458,7 +458,7 @@ export default function Page() {
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
+                  className: 'w-4 h-4';
 }) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>

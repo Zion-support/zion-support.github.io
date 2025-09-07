@@ -5,34 +5,23 @@ const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 
 module.exports = [
   {
-              ignores: [
-            'node_modules/**/*',
-            '.next/**/*',
-            'out/**/*',
-            'dist/**/*',
-            'build/**/*',
-            'app-optimizer.js',
-            'zion-os/**/*',
-            'apps.backup/**/*',
-            'zion-website/**/*',
-            'automation/**/*',
-            'scripts/**/*',
-            'corrupted_backup/**/*',
-            'recovered-branches/**/*',
-            'tools/**/*',
-            'ultimate/**/*',
-            'pm2/**/*',
-            'pm2-backups/**/*',
-            'backup/**/*',
-            'deployments/**/*',
-            'server/**/*',
-            '*.cjs',
-            '*.mjs',
-            '*.js',
-            'advanced-automation-improvements.cjs',
-            'analyze_links.cjs',
-            'app-enhancement-suite.cjs',
-          ],
+    ignores: [
+      'node_modules/**/*',
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+      'automation/**/*',
+      'scripts/**/*',
+      '*.cjs',
+      '*.mjs',
+      '*.js',
+      '*.report.json',
+      'test_build/**/*',
+      'tests/**/*',
+      'pages/**/*',
+      'api/**/*'
+    ],
   },
   js.configs.recommended,
   {
@@ -79,36 +68,12 @@ module.exports = [
         exports: 'readonly',
       },
     },
-    "rules": {;
-      // Loosen rules for automation scripts to avoid CI noise;
+    rules: {
       "no-unused-vars": "off",
       "no-console": "off",
       "prefer-const": "warn",
       "no-var": "warn",
-      "no-undef": "off";
+      "no-undef": "off"
     }
-  },
-  {
-    // Ignore build artifacts and vendor folders only
-    ignores: [
-
-      // Exclude automation backup snapshots and generated archives
-
-      // Exclude known problematic automation scripts pending refactor
-
-
-
-
-
-
-
-
-
-      // Remaining problematic files pending cleanup
-
-
-
-
-    ],
-  },
+  }
 ];

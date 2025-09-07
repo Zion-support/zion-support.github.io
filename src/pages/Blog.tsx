@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { BlogPost } from "@/types/blog",
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
