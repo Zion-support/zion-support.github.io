@@ -23,11 +23,6 @@ class QuickSyntaxFixer {;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-
-
-        .replace(/^>>>>>>>.*$/gm, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
-
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
 
@@ -91,9 +86,6 @@ if (require.main === module) {;
 }
 
 module.exports = QuickSyntaxFixer;
-
-
-
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -101,7 +93,3 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-ursor/automate-test-improve-and-merge-code-59d5
-
-
-

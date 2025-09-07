@@ -1,11 +1,3 @@
-module.exports = {
-	plugins: {
-		'@tailwindcss/postcss': {},
-	}
-};
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+},
+module.exports = $2;
+    autoprefixer: {}}},

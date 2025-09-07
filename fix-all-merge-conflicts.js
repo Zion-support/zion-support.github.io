@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-
-import fs from 'fs';
+#!/usr/bin/env node,
+  import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
@@ -32,8 +29,6 @@ function resolveMergeConflicts(filePath) {
         keepLines = true;
         continue;
       }
-      
-      if (line.startsWith('>>>>>>>')) {
         inConflict = false;
         keepLines = false;
         continue;
@@ -59,9 +54,6 @@ function resolveMergeConflicts(filePath) {
     return modified;
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -87,18 +79,11 @@ function removeMergeConflicts(filePath) {
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return false;
   }
 }
-
-// Function to find all files with merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
-function findFilesWithConflicts(dir) {
+// Function to find all files with merge conflicts,
+  function findFilesWithConflicts(dir) {
   const files = [];
   
   function scanDirectory(currentDir) {
@@ -117,7 +102,6 @@ function findFilesWithConflicts(dir) {
         } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.json') || item.endsWith('.cjs'))) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               files.push(fullPath);
             }
           } catch (error) {
@@ -126,11 +110,8 @@ function findFilesWithConflicts(dir) {
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-function findConflictedFiles(dir) {
+      // Skip directories that can't be read,
+  function findConflictedFiles(dir) {
   const conflictedFiles = [];
   
   function scanDirectory(currentDir) {
@@ -149,36 +130,21 @@ function findConflictedFiles(dir) {
         // Check if file has merge conflict markers
         try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
             conflictedFiles.push(filePath);
           }
         } catch (error) {
           // Skip files that can't be read
         }
       }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     }
   }
   
   scanDirectory(dir);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return files;
-=======
   return conflictedFiles;
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
   return conflictedFiles;
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 }
-
-// Main execution
-try {
-<<<<<<< HEAD
-<<<<<<< HEAD
+// Main execution,
+  try {
   console.log('🔍 Scanning for files with merge conflicts...');
   const conflictFiles = findFilesWithConflicts('.');
   
@@ -212,9 +178,6 @@ try {
 }
 
 console.log('🎯 Merge conflict resolution completed!');
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const conflictedFiles = findConflictedFiles('.');
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
   
@@ -243,7 +206,3 @@ console.log('🎯 Merge conflict resolution completed!');
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

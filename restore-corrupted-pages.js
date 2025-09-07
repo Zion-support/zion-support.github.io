@@ -61,11 +61,7 @@ function restorePage(pagePath) {
     if (backupContent.includes('<<<<<<< HEAD')) {
       const parts = backupContent.split($2);
       if (parts.length > 1) {
-        // Take the content after the conflict resolution
-
-
-
-
+        // Take the content after the conflict resolution,
       }
     }
     // Clean up the content
@@ -108,44 +104,6 @@ function restoreAllCorruptedPages() {
         }
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
-        
-        console.log(`\n🔍 Checking: ${fullPath}`),
-
-
-      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
-        results.total++,
-        
-        console.log(`\n🔍 Checking: ${fullPath}`),
-
-
-
-;
-// Function to scan and restore all corrupted pages;
-function restoreAllCorruptedPages() {;
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const results = {;
-    total: 0;
-    restored: 0,;
-    failed: 0,;
-    details: [];
-  },;
-  function scanDirectory(dir) {;
-    const entries = fs.readdirSync(dir, { withFileTypes: true }),;
-    for (const entry of entries) {;
-      const fullPath = path.join(dir, entry.name);
-      if (entry.isDirectory()) {;
-        if (entry.name !== 'node_modules' && entry.name !== '.git' && entry.name !== '.next') {;
-          scanDirectory(fullPath);
-        }
-      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
-        results.total++,
-        // // // console.log(`\n🔍 Checking: ${fullPath}`),
-
-
-
-        const result = restorePage(fullPath),
-        const result = restorePage(fullPath),
-        const result = restorePage(fullPath),
         console.log($2);
         const result = restorePage($2);
         if (result.restored) {
@@ -207,35 +165,6 @@ function restoreAllCorruptedPages() {;
       }
     }
   }
-
-
-  return results
-  // // // console.log('🚀 Starting page restoration process...'),
-  scanDirectory(pagesDir),
-  // Generate summary
-  
-  console.log('🚀 Starting page restoration process...'),
-  // // // console.log('🚀 Starting page restoration process...'),
-
-  scanDirectory(pagesDir),
-  // Generate summary
-
-
-  scanDirectory(pagesDir),
-  // Generate summary
-  scanDirectory(pagesDir),
-  // Generate summary
-
-  scanDirectory(pagesDir),
-  // Generate summary
-
-
-  // // // console.log('\n📊 Restoration Summary: '),
-  // // // console.log(`   Total pages: ${results.total}`),
-  // // // console.log(`   Restored: ${results.restored}`),
-  // // // console.log(`   Failed: ${results.failed}`),
-  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
-  
   console.log($2);
   scanDirectory($2);
   // Generate summary
