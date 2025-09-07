@@ -110,7 +110,6 @@ class UltimateAutomationSuite {
     const endTime = new Date();
     const duration = endTime - this.startTime;
     
-    const report = {
       timestamp: endTime.toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       totalScripts: this.results.length,

@@ -143,7 +143,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   async checkSitemap() {
     this.log('🗺️ Checking sitemap');
 
-    const results = {
       exists: false,
       valid: false,
       issues: [],
@@ -174,7 +173,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   async checkRobotsTxt() {
     this.log('🤖 Checking robots.txt');
 
-    const results = {
       exists: false,
       valid: false,
       issues: [],

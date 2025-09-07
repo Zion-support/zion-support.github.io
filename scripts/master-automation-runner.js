@@ -135,7 +135,6 @@ class MasterAutomationRunner {
     
     // Create a comprehensive test runner
     const testRunner = `#!/usr/bin/env node
-import { execSync } from 'child_process';
 
 console.log('🧪 Running comprehensive test suite...');
 
@@ -170,7 +169,6 @@ process.exit(failed > 0 ? 1 : 0);
 
     // Create a deployment script
     const deployScript = `#!/usr/bin/env node
-import { execSync } from 'child_process';
 
 console.log('🚀 Starting deployment process...');
 

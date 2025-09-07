@@ -259,7 +259,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       console.log(`✅ Build completed successfully in ${buildDuration}ms`);
       console.log(`✅ Build completed successfully in ${buildDuration}ms`);
     } catch (error) {
-      const buildDuration = Date.now() - buildStartTime;
       this.buildReport.buildAttempts.push({
         "timestamp": new Date().toISOString(),
         "duration": buildDuration,

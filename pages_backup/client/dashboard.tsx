@@ -56,15 +56,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 )}
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
-import useSWR from 'swr';
-import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export default function ClientDashboard(req, res) {
   try {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
   if (error) return <div className="text-red-600">Failed to load</div>,;
   if (!data) return <div>Loading…</div>,;
-  const jobs = data.jobs as any[];
   async function closeJob(id: string) {;
     await fetch(`/api/jobs/${id}`, {;
       method: 'PATCH',;

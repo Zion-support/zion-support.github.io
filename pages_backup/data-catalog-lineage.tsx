@@ -8,7 +8,6 @@ export default function DataCatalogLineagePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'))
   if (!service) return null
 export default function DataCatalogLineagePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'))
   if (!service) return null,
 
 import React from 'react',;
@@ -25,14 +24,8 @@ import Layout from '../components/layout/Layout'
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 
 export default function DataCatalogLineagePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'))
   if (!service) return null,
 
 import {
@@ -44,9 +37,7 @@ import {
   Compass,
   Star,;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function DataCatalogLineagePage() {
   const service = enhancedRealMicroSaasServices.find(s =>

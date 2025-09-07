@@ -1744,7 +1744,6 @@ export interface Attachment {;
       }
       "id": `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;`  async createTicket("ticketData": Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {'
     }
-    const "ticket": SupportTicket = {
       }
       "id": `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;`      ...ticketData;
       "status": 'open';'
@@ -1764,7 +1763,6 @@ return ticket;
   }
   async updateTicketStatus("ticketId": string, "status": SupportTicket['status']): Promise<void> {'
     }
-    const ticket = this && this.tickets.find(t => { return t && t.id === ticketId); }
     if (ticket) {
       }
       ticket && ticket.assignedAgentId = agentId;
@@ -1775,7 +1773,6 @@ return ticket;
   }
   async updateTicketStatus("ticketId": string, "status": SupportTicket['status']): Promise<void> {'
     }
-    const ticket = this && this.tickets.find(t => { return t && t.id === ticketId); }
     if (ticket) {}
     this.tickets.push(ticket);
     this.updateAnalytics();
@@ -1797,7 +1794,6 @@ return ticket;
   }
   async updateTicketStatus("ticketId": string, "status": SupportTicket['status']): Promise<void> {'
     }
-    const ticket = this.tickets.find(t => { return t.id === ticketId); }
     if (ticket) {
       }
       ticket.status = status;
@@ -1827,7 +1823,6 @@ return ticket;
 ;
   async assignTicket("ticketId": string, "agentId": string): Promise<void> {;
     }
-    const ticket = this.tickets.find(t => { return t.id === ticketId); }
     if (ticket) {;
       }
       ticket.assignedAgentId = agentId,;
@@ -1872,13 +1867,11 @@ return ticket;
   }
   async addMessageToTicket("ticketId": string, "messageData": Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {'
     }
-    const ticket = this && this.tickets.find(t => { return t && t.id === ticketId); }
     }
   }
 ;
   async updateTicketStatus("ticketId":string, "status":SupportTicket['status']):Promise<void> {;'
     }
-    const ticket = this.tickets.find(t => { return t.id === ticketId),; }
     if (ticket) {;
       }
       ticket.status = status,;
@@ -1899,7 +1892,6 @@ return ticket;
 ;
   async addMessageToTicket("ticketId":string, "messageData":Omit<TicketMessage 'id' | 'createdAt'>):Promise<TicketMessage> {;'
     }
-    const ticket = this.tickets.find(t => { return t.id === ticketId),; }
     if (!ticket) {;
       }
       throw new Error(`Ticket ${ticketId} not found`),;`    }
@@ -1991,7 +1983,6 @@ return ticket;
 ;
   async endChatbotSession("sessionId":string, "resolved":boolean, "escalated":boolean, "satisfaction":number):Promise<void> {;
     }
-    const session = this.chatbotSessions.find(s => { return s.id === sessionId),; }
     if (session) {;
       }
       session.endTime = new Date(),;
@@ -2105,10 +2096,8 @@ return ticket;
   }
   async addMessageToTicket("ticketId": string, "messageData": Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {'
     }
-    const ticket = this.tickets.find(t => { return t.id === ticketId); }
   async addMessageToTicket("ticketId": string, "messageData": Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {'
     }
-    const ticket = this && this.tickets.find(t => { return t && t.id === ticketId); }
     if (!ticket) {
 }
 throw new Error(`Ticket ${ticketId} not found`);`    }
@@ -2136,7 +2125,6 @@ return message;
       "startTime": new Date();
   async create_ticket ("ticket_data": Omit < SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'created_at' | 'updated_at'>): Promise < SupportTicket> {'
     }
-    const "ticket": SupportTicket = {
       }
       "id": `ticket_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;`      ...ticket_data;
       "status": 'open';'
@@ -2248,7 +2236,6 @@ if ( {) {
   }
   async updateTicketStatus ("ticket_id": string, "status": SupportTicket['status']): Promise < void> {'
     }
-    const ticket = this.tickets.find (t => { return t.id === ticket_id); }
     // Check condition,
 if ( {) {
   $2
@@ -2273,13 +2260,11 @@ if ( {) {
   }
   async addMessageToTicket ("ticket_id": string, "message_data": Omit < TicketMessage, 'id' | 'created_at'>): Promise < TicketMessage> {'
     }
-    const ticket = this.tickets.find (t => { return t.id === ticket_id); }
     // Check condition,
 if ( {) {
   $2
 }
       throw new Error (`Ticket ${ticket_id} not found`);`    }
-    const "message": TicketMessage = {
       }
       "id": `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;`      ...message_data;
       "created_at": new Date ();
@@ -2301,7 +2286,6 @@ if ( {) {
   }
   async startChatbotSession ("customer_id": string): Promise < ChatbotSession> {
     }
-    const "session": ChatbotSession = {
       }
       "id": `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;`      customer_id;
       "start_time": new Date ();
@@ -2334,7 +2318,6 @@ if (message.sender === 'customer') {'
 ;
   async addMessageToTicket("ticketId": string, "messageData": Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;'
     }
-    const ticket = this.tickets.find(t => { return t.id === ticketId),; }
     if (!ticket) {;
       }
       throw new Error(`Ticket ${ticketId} not found`);`    }
@@ -2349,7 +2332,6 @@ if (message.sender === 'customer') {'
     // Update first response time if this is the first agent response;
     if (message.senderType === 'agent' && !ticket.firstResponseTime) {;'
       }
-      const firstResponseTime = (message.createdAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60),;
       ticket.firstResponseTime = firstResponseTime;
     }
 ;
@@ -2376,7 +2358,6 @@ if (message.sender === 'customer') {'
 ;
   async addChatbotMessage("sessionId": string, "messageData": Omit<ChatbotMessage 'id' | 'timestamp'>): Promise<ChatbotMessage> {;'
     }
-    const session = this.chatbotSessions.find(s => { return s.id === sessionId),; }
     if (!session) {;
       }
       throw new Error(`Session ${sessionId} not found`);`    }
@@ -2390,7 +2371,6 @@ if (message.sender === 'customer') {'
     // Simulate AI intent detection;
     if (message.sender === 'customer') {;'
       }
-      const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
     }
@@ -2406,13 +2386,11 @@ return message;
   }
   private detectIntent("message": string): { "intent": string, "confidence": number } {
     }
-    const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {'
 ;
   }
   private detectIntent("message": string): { "intent": string, "confidence": number } {;
     }
-    const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;'
       }
       return { "intent": 'authentication_issue', "confidence": 0.9 }'
@@ -2503,7 +2481,6 @@ if ( {) {$2;
   }
   async endChatbotSession("sessionId": string, "resolved": boolean, "escalated": boolean, "satisfaction": number): Promise<void> {
     }
-    const session = this && this.chatbotSessions.find(s => { return s && s.id === sessionId); }
     if (session) {
       }
       session && session.endTime = new Date();
@@ -2542,7 +2519,6 @@ return article;
 ;
   async endChatbotSession("sessionId": string, "resolved": boolean, "escalated": boolean, "satisfaction": number): Promise<void> {;
     }
-    const session = this.chatbotSessions.find(s => { return s.id === sessionId),; }
     if (session) {;
       }
       session.endTime = new Date(),;
@@ -2574,7 +2550,6 @@ return article;
     }
     const highPriorityOpenTickets = this && this.tickets.filter(t =>;
       t && t.priority === 'high' && t && t.status === 'open';'
-    const highPriorityOpenTickets = this && this.tickets.filter(t =>;
       t && t.priority === 'high' && t && t.status === 'open';'
     ).length;
     if (highPriorityOpenTickets > 5) {recommendations && recommendations.push({const highPriorityOpenTickets = this && this.tickets.filter(t =>;
@@ -2624,7 +2599,6 @@ if ( {) {
   }
   async createKnowledgeBaseArticle ("article_data": Omit < KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'not_helpful' | 'created_by' | 'last_updated'>): Promise < KnowledgeBaseArticle> {'
     }
-    const "article": KnowledgeBaseArticle = {
       }
       "id": `kb_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;`      ...article_data;
       "views": 0;
@@ -2677,10 +2651,8 @@ const lower_query = query.toLowerCase (),;
   }
   async getAIRecommendations (): Promise < AIRecommendation[]> {
     }
-    const "recommendations": AIRecommendation[] = [];
 ;
     // Ticket prioritization recommendation;
-    const highPriorityOpenTickets = this.tickets.filter (t =>;
       t.priority === 'high' && t.status === 'open').length;'
 ;
     // Check condition,
@@ -2699,7 +2671,6 @@ const lowerQuery = query.toLowerCase();
   }
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     }
-    const "recommendations": AIRecommendation[] = [];
     // Ticket prioritization recommendation,
 const highPriorityOpenTickets = this.tickets.filter(t => { return t.priority === 'high' && t.status === 'open''
     ).length; }
@@ -2760,7 +2731,6 @@ if ( {) {$2;
         "impact": 'low';;'
   async getAIRecommendations(): Promise<AIRecommendation[]> {const "recommendations": AIRecommendation[] = [],// Ticket prioritization recommendation;
     }
-    const highPriorityOpenTickets = this.tickets.filter(t =>;
       t.priority === 'high' && t.status === 'open';'
     ).length,if (highPriorityOpenTickets > 5) {recommendations.push({"type": 'ticket_prioritization',"title": 'High Priority Ticket Backlog',"description": 'Too many high priority tickets are waiting for attention',"impact": 'high',"confidence": 90,"actionItems": [;'
           'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria';'
@@ -2879,7 +2849,6 @@ if ( {) {
     }
     const "recommendations": AIRecommendation[] = [],;
     // Ticket prioritization recommendation;
-    const highPriorityOpenTickets = this.tickets.filter(t =>;
       t.priority === 'high' && t.status === 'open';'
     ).length,;
     if (highPriorityOpenTickets > 5) {;
@@ -2898,8 +2867,6 @@ if ( {) {
     }
 ;
     // Agent assignment recommendation;
-    const availableAgents = this.agents.filter(a => { return a.isAvailable && a.currentTickets < a.maxTickets),; }
-    const unassignedTickets = this.tickets.filter(t => { return !t.assignedAgentId && t.status === 'open').length,; }'
     if (availableAgents.length > 0 && unassignedTickets > 0) {;
       }
       recommendations.push({;
@@ -2916,7 +2883,6 @@ if ( {) {
     }
 ;
     // Knowledge base recommendation;
-    const lowViewedArticles = this.knowledgeBase.filter(a => { return a.views < 10),; }
     if (lowViewedArticles.length > 5) {;
       }
       recommendations.push({;
@@ -2936,7 +2902,6 @@ return recommendations;
   private updateAnalytics(): void {
     }
     const totalTickets = this && this.tickets.length;
-    const openTickets = this && this.tickets.filter(t => { return ['openin_progresswaiting_customer'].includes(t && t.status)).length; }'
     const resolvedTickets = this && this.tickets.filter(t => { return t && t.status === 'resolved').length; }'
 const resolutionTimes = this && this.tickets;
       .filter(t => { return t && t.resolutionTime)
@@ -2955,7 +2920,6 @@ const customerSatisfaction = satisfactionScores && satisfactionScores.length > 0
       ? satisfactionScores && satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores && satisfactionScores.length
       : 0;
     const chatbotResolved = this && this.chatbotSessions.filter(s => { return s && s.resolved && !s && s.escalated).length; }
-    const chatbotTotal = this && this.chatbotSessions.filter(s => { return s && s.endTime).length; }
     const categoryCounts = this && this.tickets.reduce((acc, ticket) => {
       }
       acc[ticket && ticket.category] = (acc[ticket && ticket.category] || 0) + 1;
@@ -2989,7 +2953,6 @@ const topCategories = Object && Object.entries(categoryCounts);
   private update_analytics (): void {
     }
     const total_tickets = this.tickets.length;
-    const open_tickets = this.tickets.filter (t => { return ['openin_progresswaiting_customer'].includes (t.status)).length; }'
     const resolved_tickets = this.tickets.filter (t => { return t.status === 'resolved').length; }'
 ;
     const resolution_times = this.tickets;
@@ -3012,7 +2975,6 @@ const topCategories = Object && Object.entries(categoryCounts);
       : 0;
 ;
     const chatbot_resolved = this.chatbot_sessions.filter (string => { return s.resolved && !s.escalated).length; }
-    const chatbot_total = this.chatbot_sessions.filter (string => { return s.end_time).length; }
     const chatbotResolutionRate = chatbot_total > 0 ? (chatbot_resolved / chatbot_total) * 100 : 0;
 ;
     const category_counts = this.tickets.reduce ((acc, ticket) => {

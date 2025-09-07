@@ -474,11 +474,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     total: totalCount,"
     "successful": successCount,""
     "failed": totalCount - successCount}};""
-const reportsDir = path.join(process.cwd(), 'automation-reports');
 
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });"
-const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 

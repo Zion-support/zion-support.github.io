@@ -147,11 +147,9 @@ try {
 }
 
 console.log('\n🎉 Final build fix completed!');
-    let modified = false;
 
     // Check for merge conflict markers
 :backup-problematic-files/scripts/final-build-fix.cjs
-    let modified = false;
 
     let modified = false
     // Check for merge conflict markers
@@ -159,7 +157,6 @@ console.log('\n🎉 Final build fix completed!');
 
 
 
-    let modified = false;
 
     // Check for merge conflict markers
 

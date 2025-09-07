@@ -34,15 +34,10 @@ import { useEffect, useState } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
 
 
-import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
   try {
-  const [partners, setPartners] = useState<any[]>([]);
-  const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
@@ -59,7 +54,6 @@ body: JSON.stringify({ code, ...updates }),
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
     const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
     setPartners(json.partners || []);
   }
 
@@ -68,7 +62,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-    const json = await res.json();
     setFlags(json.flags |[]);
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
@@ -77,7 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);

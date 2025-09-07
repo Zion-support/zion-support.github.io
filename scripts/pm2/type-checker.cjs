@@ -23,7 +23,6 @@ const logMessage = `[${timestamp}] ${message}\n`;`;
     console.log(message);
   };
   error(message) {}
-    const timestamp = new Date().toISOString();
 const errorMessage = `[${timestamp}] ERROR: ${message}\n`;`;
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
@@ -140,11 +139,9 @@ const errorMessage = `[${timestamp}] ERROR: ${message}\n`;`;
   async fixCommonTypeScriptIssues() {}
     this.log('Fixing common TypeScript issues...');
     const files = this.getTypeScriptFiles();
-    let fixedCount = 0;
     for (const file of files) {}
       try {}
         let content = fs.readFileSync(file, 'utf8');
-        let modified = false;
         // Common TypeScript fixes;
 const fixes = [];
           {}

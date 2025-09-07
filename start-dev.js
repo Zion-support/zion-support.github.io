@@ -76,7 +76,6 @@ process.on ('SIGTERM', () => {
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
-const { spawn } = require('child_process');
 ;
 console.log('🚀 Starting development server...');
 ;

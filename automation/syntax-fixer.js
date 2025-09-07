@@ -139,9 +139,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
   },
 ,
   async fixExportIssues() {,
-    const files = this.getSourceFiles($2);
     files.forEach($2);
-        let modified = $2;
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),

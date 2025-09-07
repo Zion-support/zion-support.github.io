@@ -28,8 +28,6 @@ function ProductActions({ productId, addToCart }: ProductActionsProps) {
     </button>
   );
 }
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import { describe, it, expect, vi } from 'vitest';
 import { ProductActions } from '@/components/ProductActions';
 function setup() {

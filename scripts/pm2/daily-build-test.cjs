@@ -41,8 +41,6 @@ const testCommands = ['npm test'];
     const result = runCommand(cmd, `Running ${cmd}`);
 
   ];
-  let testsPassed = 0;
-  let testsFailed = 0;
 
     if (result.success) {}
       testsPassed++;

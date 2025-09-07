@@ -283,7 +283,6 @@ if (this.config.errorCapture.autoReport) {
 const report = this.generateAutoReport(errors);
       
       // Save report,
-const timestamp = new Date().toISOString().replace(/[:.]/g, '-');'
       const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);`      fs.writeFileSync(reportFile, report);
       
       this.log(`📝 Auto-report "saved": ${reportFile}`);`      

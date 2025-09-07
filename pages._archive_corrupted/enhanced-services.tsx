@@ -604,8 +604,6 @@ import { ArrowRight,, Award,, BarChart3,, Bot,, Brain,, CheckCircle,, Eye,, Mess
 const PageTransition = ({ children }: { "children": React && React.ReactNode }) => <div>{children}</div>;"
 export default function EnhancedServices() {const title = "Enhanced Services — Zion Tech Group";"
   }
-  const description = "Comprehensive AI services, cloud platforms, cybersecurity solutions, and innovative micro SaaS applications. Transform your business with cutting-edge technology and expert implementation.";"
-  const enhancedServices = [{"title": "AI-Powered Business Automation","description": "Intelligent automation solutions that streamline operations and boost productivity with machine learning and AI","icon": Brai n,"features": [;"
         "Custom AI model development and training","Process automation with intelligent decision making","Natural language processing and chatbot integration","Predictive analytics and forecasting","Computer vision and image recognition","Real-time data processing and insights";"
       ],"pricing": "$5,000 - $25,000/month","delivery": "4-8 weeks","category": "AI Services","benefits": "Reduce operational costs by 40% and increase efficiency by 60%","marketPrice": "Average market "price": $8,000-30,000/month","roi": ""ROI": 30 0% within 12 months";"
     },{"title": "Enterprise Cloud Infrastructure","description": "Scalable, secure cloud solutions with 99 && 99.9% uptime guarantee and comprehensive monitoring","icon": Clou d,"features": ["Multi-cloud architecture design and implementation","Auto-scaling and load balancing","Disaster recovery and backup solutions","Security compliance (SOC 2, GDPR, HIPAA)","24/7 monitoring and support","Cost optimization and resource management";"

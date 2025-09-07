@@ -42,7 +42,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
 
 
 
-const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n');
     try {
@@ -54,7 +53,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test basic functionality
         console.log('\n🔍 Testing basic functionality...');
         // Test session creation
-        const testSession = await automation.createSession('test-session', {
             name: 'Test Session',
             interval: 10000,
             commands: ['proceed', 'test']
@@ -110,12 +108,9 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
 
     try {
       // Create automation instance
-      const automation = new CursorInterfaceAutomation();
 
-const CursorInterfaceAutomation = // // require('./cursor-interface-automation');
   async function runTests() {
         // Test session creation
-        const testSession = await automation.createSession('test-session', {
             name: 'Test Session',
             interval: 10000,
             commands: ['proceed', 'test']
@@ -130,7 +125,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test session termination
         automation.terminateSession('test-session')
 const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
-const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
   async function runTests() {
     console.log('🧪 Testing Cursor Chat Automation System...\n')
     try {
@@ -142,7 +136,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
         // Test basic functionality
         console.log('\n🔍 Testing basic functionality...')
         // Test session creation
-        const testSession = await automation.createSession('test-session', {
             name: 'Test Session',
             interval: 10000,
             commands: ['proceed', 'test']
@@ -193,7 +186,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
     try {
 
       // Create automation instance
-      const automation = new CursorInterfaceAutomation();
       console.log('✅ Automation instance created successfully');
       console.log(`📱 Platform detected: ${automation.platform}`);
       console.log(
@@ -204,7 +196,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       console.log('\n🔍 Testing basic functionality...');
 
       // Test session creation
-      const testSession = await automation.createSession('test-session', {
         name: 'Test Session',
         interval: 10000,
         commands: ['proceed', 'test'],
@@ -237,10 +228,8 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       // Test session management
       console.log('\n🔍 Testing session management...');
 
-      const sessions = automation.listSessions();
       console.log('✅ Sessions listed:', sessions.length);
 
-      const stats = automation.getStats();
       console.log('✅ Statistics retrieved:', {
         totalSessions: stats.totalSessions,
         activeSessions: stats.activeSessions,
@@ -252,7 +241,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       console.log('✅ Test session terminated');
 
       // Final status
-      const finalStats = automation.getStats();
       console.log('\n📊 Final Statistics:');
       console.log(JSON.stringify(finalStats, null, 2));
 
@@ -284,7 +272,6 @@ async function runTests() {
   console.log('🧪 Testing Cursor Chat Automation System...\n');
   try {
     // Create automation instance
-    const automation = new CursorInterfaceAutomation();
     console.log('✅ Automation instance created successfully');
     console.log(`📱 Platform "detected": ${automation.platform}`);
     console.log(
@@ -293,7 +280,6 @@ async function runTests() {
     // Test basic functionality
     console.log('\n🔍 Testing basic functionality...');
     // Test session creation
-    const testSession = await automation.createSession('test-session', {
       "name": 'Test Session',
       "interval": 10000,
       "commands": ['proceed', 'test']});
@@ -322,9 +308,7 @@ async function runTests() {
     }
     // Test session management
     console.log('\n🔍 Testing session management...');
-    const sessions = automation.listSessions();
     console.log('✅ Sessions "listed": ', sessions.length);
-    const stats = automation.getStats();
     console.log('✅ Statistics "retrieved": ', {
       "totalSessions": stats.totalSessions,
       "activeSessions": stats.activeSessions,
@@ -333,7 +317,6 @@ async function runTests() {
     automation.terminateSession('test-session');
     console.log('✅ Test session terminated');
     // Final status
-    const finalStats = automation.getStats();
     console.log('\n📊 Final "Statistics": ');
     console.log(JSON.stringify(finalStats, null, 2));
     console.log('\n🎉 All tests completed successfully!');

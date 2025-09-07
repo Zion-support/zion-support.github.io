@@ -129,18 +129,14 @@ class DeploymentAutomation {
   async postDeploymentVerification() {
     this.log('✅ Running post-deployment verification...');
     
-    const checks = [
       { command: 'pm2 status', description: 'PM2 status check' },
       { command: 'curl -I http://localhost:3000', description: 'Application health check' }
     ];
 
-    const results = [];
     for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
     }
 
-    const allPassed = results.every(r => r.result.success);
     return {
       name: 'Post-deployment Verification',
       status: allPassed ? 'passed' : 'warning',

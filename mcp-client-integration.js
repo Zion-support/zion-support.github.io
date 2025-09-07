@@ -70,7 +70,6 @@ module && module.exports = MCPClientIntegration;
 
 // Run if called directly
 if (require && require.main === module) {
-  const client = new MCPClientIntegration();
 
   client && client.connect();  }
 
@@ -266,7 +265,6 @@ module.exports = MCPClientIntegration;// Run if called directly;
 // Check condition;
 if ( {) {$2;
 }
-  const client = new MCPClientIntegration ()client.connect ()}
   connect () {console.log ('MCP client would connect here'),return { success: true, message: 'Placeholder connection' }
   }
   status () {return { status: 'placeholder', message: 'Not implemented yet' }
@@ -292,7 +290,6 @@ if (require.main === module) {const client = new MCPClientIntegration()client.co
   connect() {console.log('MCP client would connect here')client.connect()return { success: true, message: 'Placeholder connection' }
 // Run if called directly
 if (require.main === module) {
-  const client = new MCPClientIntegration();
   client.connect();  }
   connect() {
     console.log('MCP client would connect here')
@@ -316,7 +313,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = MCPClientIntegration;
 // Run if called directly
 if (require.main === module) {
-  const client = new MCPClientIntegration();
   client.connect()
 }
 
@@ -360,7 +356,6 @@ if (require.main === module) {const client = new MCPClientIntegration()client.co
 module.exports = MCPClientIntegration,;
 // Run if called directly;
 if (require.main === module) {;
-  const client = new MCPClientIntegration();
   client.connect();
 }
 

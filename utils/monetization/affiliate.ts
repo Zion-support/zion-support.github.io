@@ -11,7 +11,6 @@ export function affiliate(url: string, code: string = $2;
   return u.toString()
 }
   if (!code) return url;
-  const u = new URL(url);
   u.searchParams.set('ref', code);
   return u.toString();
   } catch (error) {

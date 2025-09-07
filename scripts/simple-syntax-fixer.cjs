@@ -117,14 +117,12 @@ class SimpleSyntaxFixer {
 
   async fixFileSyntax(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
       let fixed = false;
       
       // Fix missing semicolons
       const lines = fixedContent.split('\n');
       for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
         
         if (line.match(/^(const|let|var|return|throw|break|continue)/) && 
             !line.endsWith(';') && 

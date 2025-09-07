@@ -249,7 +249,6 @@ export const real2025Q4Additions = [;
   rating?: number;
   reviews?: number;
   reviews?: number;
-const contact = {mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
@@ -1490,7 +1489,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   customers?: number;
   rating?: number;
   reviews?: number
-const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1752,7 +1750,6 @@ mobile: string;
 
 
 
-const contact = {
   mobile: '+1 302 464 0950',
 const contact = $2;
   email: 'kleber@ziontechgroup.com',

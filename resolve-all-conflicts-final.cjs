@@ -168,7 +168,6 @@ const filesWithConflicts = [;
     
     // Check if there are any remaining conflicts
     try {
-      const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
       const remainingConflicts = statusOutput.split('\n').filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
       
       if (remainingConflicts.length === 0) {

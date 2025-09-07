@@ -129,7 +129,6 @@ class SEOOptimizer {
     this.log('\n🏷️ OPTIMIZING META TAGS');
     
     try {
-      const issues = [];
 
       // Check for meta tags in pages
       const pagesDir = path.join(this.projectRoot, 'pages');
@@ -184,7 +183,6 @@ class SEOOptimizer {
     this.log('\n📊 IMPLEMENTING STRUCTURED DATA');
     
     try {
-      const issues = [];
 
       // Create structured data examples
       const structuredDataExamples = `
@@ -244,7 +242,6 @@ const websiteSchema = {
     this.log('\n🤖 CREATING ROBOTS.TXT');
     
     try {
-      const issues = [];
 
       const robotsContent = `User-agent: *
 Allow: /
@@ -289,7 +286,6 @@ Allow: /blog
     this.log('\n⚡ CHECKING PERFORMANCE');
     
     try {
-      const issues = [];
 
       // Check if build exists
       const buildDir = path.join(this.projectRoot, '.next');
@@ -509,12 +505,8 @@ Allow: /blog
     const seoChecks = [
       { command: 'npm run sitemap', description: 'Sitemap check' },
   findAppPages(dir) {
-    const pages = [];
-    const files = fs.readdirSync(dir);
 
     files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stats = fs.statSync(filePath);
 
       if (stats.isDirectory()) {
         pages.push(...this.findAppPages(filePath));
@@ -654,7 +646,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Run the SEO optimizer
 if (require.main === module) {
-  const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
 }
 

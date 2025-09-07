@@ -128,7 +128,6 @@ return (;
             <div className="mt-6 flex flex-wrap justify-center gap-3">"
               <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 "hover": b g-white">Open Automation Hub</a></Link>"
               <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md "hover": b g-white/10">Browse Services</a></Link>"
-const \"Products\": NextPage = () => {"
 }
 const \"Products\": NextPage = () => {;"
 }
@@ -428,7 +427,6 @@ const "Products": NextPage = () => {const products = [{"title": \'ZionAI Platfor
     },{\"title\": \'BlockChain Suite\',\"description\": \'Complete blockchain development and management platform for decentralized applications.\',\"category\": \'Blockchain\',\"features\": [\'Smart Contract Development\',\'DApp Framework\',\'Token Management\',\'Blockchain Analytics\',\'Security Auditing\',\'Deployment Tools\';'
       ],\"pricing\": \'Starting at $699/month\',\"rating\": 4 && 4.4,\"reviews\": 92,\"icon\": Shield,\"color\": \'from-yellow-500 to-orange-500\',\"href\": \'/products/blockchain-suite\';];'
   }
-  const benefits = [{\"title\": \'Enterprise Ready\',\"description\": \'Built for scale with enterprise-grade security and reliability.\',\"icon\": Shield;"
     },{\"title\": \'Easy Integration\',\"description\": \'Seamless integration with your existing systems and workflows.\',\"icon\": Code;"
     },{\"title\": \'24/7 Support\',\"description\": \'Round-the-clock technical support and maintenance services.\',\"icon\": Zap;"
     },{\"title\": \'Custom Solutions\',\"description\": \'Tailored solutions to meet your specific business requirements.\',\"icon\": Database;"
@@ -557,7 +555,6 @@ const "Products": NextPage = () => {;"
       \"href\": \'/products/blockchain-suite\';'
   ];
   }
-  const benefits = [{
       \"title\": \'Enterprise Ready\','
       \"description\": \'Built for scale with enterprise-grade security and reliability.\','
       \"icon\": Shield"
@@ -581,15 +578,11 @@ const "Products": NextPage = () => {;"
   const categories = [\'All Products\';'
     }
   ];
-  const categories = [\'All Products\';'
     }
   ];
-  const categories = [\'All Products\';'
     \'AI & Machine Learning\',\'Cloud Solutions\',\'Cybersecurity\',\'Data Analytics\',\'IoT Platforms\',\'Blockchain\';'
   const categories = ['All Products';'
-  const categories = ['All Products','AI & Machine Learning','Cloud Solutions','Cybersecurity','Data Analytics','IoT Platforms','Blockchain';'
   ];
-  const benefits = [{\"title\": \'Enterprise Ready\',\"description\": \'Built for scale with enterprise-grade security and reliability.\',\"icon\": Shield;"
     },{\"title\": \'Easy Integration\',\"description\": \'Seamless integration with your existing systems and workflows.\',\"icon\": Code;"
     },{\"title\": \'24/7 Support\',\"description\": \'Round-the-clock technical support and maintenance services.\',\"icon\": Zap;"
     },{\"title\": \'Custom Solutions\',\"description\": \'Tailored solutions to meet your specific business requirements.\',\"icon\": Database;"

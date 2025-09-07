@@ -159,7 +159,6 @@ const fs = require("fs")";const path = require("path")""
           results.issues.push("Error reading ${envFile}: ${error.message}");"
     this.log("� Checking code security");""
       "issues": [],""recommendations": [],,"
-    const srcDir = path.join(this.projectRoot, "src");";    if (!fs.existsSync(srcDir)) {";      results.issues.push("Source directory not found");";      return results,"}
     const files = this.getAllFiles(srcDir, [".ts", ".tsx", ".js", ".jsx"]);""
         const content = fs.readFileSync(file, "utf8");""
         if (content.includes("eval(") || content.includes("Function(")) {";          results.issues.push(`Use of eval() in ${file}`)

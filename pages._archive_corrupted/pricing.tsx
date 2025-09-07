@@ -40,7 +40,6 @@ import { Link } from 'react-router-dom';'
 import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react';'
 export default function PricingPage() {
 }
-const plans = [;
     {
       "name": "Starter","
       "description": "Perfect for small businesses and startups","
@@ -233,7 +232,6 @@ export default function PricingPage() {const plans = [;
         \"Up to 5 users\",\"Basic AI automation\",\"Standard security features\",\"Email support\",\"Basic analytics\",\"Monthly reports\";"
 }
 import { CheckCircle,, ArrowRight,, Users,, Zap,, Shield } from 'lucide-react';'
-const "PricingPage": React.FC = () => {const pricingPlans = [{"name": 'Starter',"description": 'Perfect for small businesses and startups',"price": '$2,500',"period": 'per month',"features": [;"
         'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included';'
 }
 import { Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight } from 'lucide-react';'
@@ -296,7 +294,6 @@ class ErrorBoundary extends React.Component {
 }
 export default function PricingPage() {;
   }
-  const plans = [;
     {;
       \"name\": \"Starter\",;"
       \"description\": \"Perfect for small businesses and startups\",;"
@@ -333,7 +330,6 @@ import {Link} from 'react-router-dom';'
 import {Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight} from 'lucide-react';'
 export default function PricingPage() {;
   }
-  const plans = [;
     {;
       "name": "Starter",;"
       "description": "Perfect for small businesses and startups",;"

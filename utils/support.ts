@@ -73,7 +73,6 @@ export function searchArticles(
   "query": string,
 ): HelpArticle[] {
   }
-  const queryLower = query.toLowerCase();
   return articles.filter(
     (article) =>
       article.title.toLowerCase().includes(queryLower) ||

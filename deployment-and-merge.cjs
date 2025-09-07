@@ -158,7 +158,6 @@ class DeploymentAndMerge {;
 ;
     try {;
       // Check current status;
-      const currentBranch = await this.checkCurrentBranch();
       if (!currentBranch) {;
         this.log('Failed to determine current branch', 'ERROR');
         return;

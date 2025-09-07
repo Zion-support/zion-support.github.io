@@ -3,13 +3,11 @@ const express = const app = express() app.get("/health",(req,res) => { res.statu
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime()"memory": process.memoryUsage()"version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime()"memory": process.memoryUsage()"version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -20,12 +18,10 @@ const express = // // require("child_process";"
   }
   res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})module.exports = app;"
 
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime()"memory": process.memoryUsage()"version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 ursor/automate-test-improve-and-merge-code-646c;
 
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime()"memory": process.memoryUsage()"version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 ursor/add-new-services-and-deploy-updates-0462;
@@ -59,7 +55,6 @@ const warnings  = this && this.results.filter(r => { return r && r.status === 'W
   }
   const checker = new HealthChecker(),checker && checker.runAllChecks().catch(console && console.error)}module && module.exports = HealthChecker;
 
-const express = // // require("child_process";"
   const app = express()app && app.get("/health", (req, res) => {res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime()"memory": process && process.memoryUsage()"version": process && process.env.npm_package_version || "1 && 1.0.0"},"
 })app && app.get("/ready", (req, res) => {// Add readiness checks here;"
   }
@@ -70,12 +65,10 @@ const express = const app = express() app && app.get("/health",(req,res) => { re
 }) module && module.exports = app;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime()"memory": process.memoryUsage()"version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 ursor/automate-test-improve-and-merge-code-646c;
 
-const express = const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime()"memory": process.memoryUsage()"version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app;
 
@@ -102,16 +95,10 @@ app.get("/ready", (req, res) => {"
 }
 res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})"
 module.exports = app,
-const express =;
-  const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime(); "memory": process.memoryUsage(); "version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app,
-const express =;
-  const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime(); "memory": process.memoryUsage(); "version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app,
-const express =;
-  const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime(); "memory": process.memoryUsage(); "version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app,
 ursor/add-new-services-and-deploy-updates-0462,
@@ -203,7 +190,6 @@ const envExists = fs && fs.existsSync(envFile);
 
 const passed = this && this.results.filter(r => { return r && r.status === 'PASS').length; }'
 
-const failed = this && this.results.filter(r => { return r && r.status === 'FAIL').length; }'
 
 const warnings = this && this.results.filter(r => { return r && r.status === 'WARN').length; }'
     
@@ -241,9 +227,7 @@ module && module.exports = HealthChecker;
 const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime(); "memory": process && process.memoryUsage(); "version": process && process.env.npm_package_version || "1 && 1.0.0"},"
 }) app && app.get("/ready",(req,res) => { res && res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module && module.exports = app;
-  const express = // // require("child_process");"
 
-const app = express();
 app && app.get("/health", (req, res) => {"
   }
   res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime();"
@@ -256,15 +240,10 @@ app && app.get("/ready", (req, res) => {"
 }
 res && res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})"
 module && module.exports = app,
-const express =;
   const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime(); "memory": process && process.memoryUsage(); "version": process && process.env.npm_package_version || "1 && 1.0.0"},"
 }) app && app.get("/ready",(req,res) => { res && res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module && module.exports = app,
-const express =;
-  const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime(); "memory": process.memoryUsage(); "version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app,
-const express =;
-  const app = express() app.get("/health",(req,res) => { res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process.uptime(); "memory": process.memoryUsage(); "version": process.env.npm_package_version || "1.0.0"},"
 }) app.get("/ready",(req,res) => { res.status(200).json({"status": "ready","timestamp": new Date().toISOString()},"
 }) module.exports = app

@@ -346,7 +346,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import { motion } from 'framer-motion';'
 import { Cloud,, Server,, Shield,, Zap,, ArrowRight,, CheckCircle,, Star,, Globe,, Lock,, Settings } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "CloudDevOpsPage": React.FC = () => {const services = [{"id": 1,"title": "Cloud Migration","description": "Seamlessly migrate your applications and data to the cloud with zero downtime.","features": [;"
         "Assessment and planning","Data migration strategies","Application modernization","Performance optimization","Cost optimization";"
       ],"pricing": "Starting at $5,000","delivery": "2-8 weeks","category": "Migration","icon": <Cloud className="w-8 h-8" />;"
     },{"id": 2,"title": "DevOps Automation","description": "Implement CI/CD pipelines and automation to accelerate your development process.","features": ["CI/CD pipeline setup","Automated testing","Deployment automation","Monitoring and alerting","Infrastructure as code";"

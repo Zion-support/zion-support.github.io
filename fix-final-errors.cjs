@@ -144,13 +144,10 @@ const path = require('path')
 
     "replacement"
     "replacement"
-const fs = require('fs');
-const path = require('path');
 
 // Function to fix final errors
 function fixFinalErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix operator.ts - fix object property syntax
@@ -197,7 +194,6 @@ const filesToFix = [
   'pages/api/auth/[...nextauth].ts'
 ];
 
-let fixedCount = 0;
 
 console.log('Fixing final errors...');
 

@@ -194,8 +194,6 @@ class FinalAutomationOrchestrator {
     // Create performance monitoring script
     const performanceScript = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
@@ -372,7 +370,6 @@ console.log('Final performance report generated:', reportPath);
     }
 
     // Save final report
-    const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
       results: this.results,

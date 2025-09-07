@@ -1,36 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';'
-
-export default function handler() {const cookie = clearSessionCookie()res.setHeader('Set-Cookie', cookie)res.status(200).json({ "ok": true })}import { clearSessionCookie  ,;'
-} from '../../../utils / auth - utils';'
-
-export default /**;
- * handler - Function description;
- */;
-function handler() {const cookie = clearSessionCookie ()res.set_header ('Set - Cookie', cookie)res.status (200).json ({ "ok": true,'
-})export default /**;
- * handler - Function description;
- */;
-function handler() {const cookie = clearSessionCookie ()res.set_header ('Set - Cookie', cookie)res.status (200).json ({ "ok": true },'
-}ursor/fix-website-loading-errors-and-merge-6662;
-import { clearSessionCookie  } from '../../../utils/auth-utils';'
 
 export default function handler() {const cookie  = null;
 
 }
 
-export default function handler() {const cookie = clearSessionCookie()res.setHeader('Set-Cookie', cookie)res.status(200).json({ "ok": true,;'
-})
-
-export default function handler() {;
-
-}
-
-const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);'
-  res.status(200).json({ "ok": true
-});
-
-export default function handler() {;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 }
 
@@ -41,60 +15,34 @@ const cookie = clearSessionCookie();
 
 }
 
-const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);'
-  res.status(200).json({ "ok": true })
-}
 
-import { clearSessionCookie
-} from '../../../utils / auth - utils';'
-;
+=======
+  const cookie = clearSessionCookie();'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  res.setHeader(Set-Cookie, cookie);
+  res.status(200).json({ ok: true })
+}
+import { clearSessionCookie}
+} from '../../../utils / auth - utils';
 export default /**
  * handler - Function description;
  */
-function handler() {
-  }
   const cookie = clearSessionCookie ();
-  res.set_header ('Set - Cookie', cookie);'
-  res.status (200).json ({ "ok": true
+  res.set_header (Set - Cookie, cookie);}
+  res.status (200).json ({ ok: true}
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 });
 export default /**
  * handler - Function description;
  */
-function handler() {
-  }
-  const cookie = clearSessionCookie ();
-  res.set_header ('Set - Cookie', cookie);'
-  res.status (200).json ({ "ok": true
-});
-}
 
-
-
-
-import { clearSessionCookie } from '../../../utils/auth-utils';'
-
-export default function handler() {
-  }
-  const cookie = null;
 
 export default function handler() {;
 
 }
 
-const cookie = clearSessionCookie();
-  res.setHeader('Set-Cookie', cookie);'
-  res.status(200).json({ "ok": true
-});
-
-export default function handler() {;
-
-}
-
-const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);'
   res.status(200).json({ "ok": true })
 }
 }
 
-}

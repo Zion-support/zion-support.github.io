@@ -534,7 +534,6 @@ return (;
   Cog,
   Shield;
 } from 'lucide-react';'
-const aiServices = [;
   {
     }
     "title": "AI Content Generation","
@@ -558,7 +557,6 @@ const aiServices = [;
     "targetUsers": "Enterprises, Security Teams, IT Departments""
 
 ];
-const stats = [;
   { "number": "24/7", "label": "AI Monitoring" },"
   { "number": "48hrs", "label": "Average Response Time" }"
 ];

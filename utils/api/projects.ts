@@ -33,7 +33,6 @@ export interface Milestone {;
 
   isMilestoneStatus,;
 } from '../types/milestones';'
-import { CurrentUser } from './auth';'
 
 // Project management utilities,
 import { v4 as uuidv4 } from 'uuid';'
@@ -109,7 +108,6 @@ export async function createProject("payload": CreateProjectPayload): Promise<Pr
 
 export async function getProjects(): Promise<Project[]> {
   }
-  const res = await fetch('/api/projects', {'
     }
     "method": 'GET','
     "credentials": 'include''
@@ -136,7 +134,6 @@ export async function updateProject("projectId": string, "payload": UpdateProjec
 
 export async function deleteProject("projectId": string): Promise<void> {
   }
-  const res = await fetch(`/api/projects/${projectId}`, {`    }
     "method": 'DELETE','
     "credentials": 'include''
   });
@@ -426,7 +423,6 @@ export function getProject(projectId: string): Project | null {
   return db.projects.find(p => p.id === projectId) || null;
 
 export function saveProject(updated: Project): void {
-  const db = readDb();
   const idx = db.projects.findIndex(p => p.id === updated.id);
   if (idx === -1) {
     db.projects.push(updated);
@@ -440,7 +436,6 @@ export function assertParticipantOrAdmin(
   user: CurrentUser
 ): boolean {
   if (user.role === 'admin') return true;
-  const { clientUserId, talentUserId } = project.participants;
   return user.userId === clientUserId || user.userId === talentUserId;
 
 export function isClient(project: Project, user: CurrentUser): boolean {
@@ -499,7 +494,6 @@ export function addMilestone(
   payload: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }
 ): Milestone {
   const now = new Date().toISOString($2);
-  const m: Milestone = {
     id: generateId($2);
     title: payload.title,
     description: payload.description,
@@ -533,7 +527,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const idx = $2;
   if (idx = $2;
-  const now = new Date().toISOString($2);
   const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now},
   project.milestones[idx] = next,
   project.updatedAt = $2;

@@ -343,7 +343,6 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 }
 import { motion } from 'framer-motion';'
 import { Brain,, Lock,, Zap,, Globe,, ArrowRight,, CheckCircle,, Star,, Users,, Clock,, Shield,, Database,, Cloud } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "EmergingTechPage": React.FC = () => {const technologies = [{"icon": <Brain className="w-8 h-8" />,"title": 'Artificial Intelligence',"description": 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.',"features": [;"
         'Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics';'
       ],"category": 'AI & ML',"pricing": 'Starting at $5,000',"delivery": '2-8 weeks';'
     },{"icon": <Lock className="w-8 h-8" />,"title": 'Blockchain & Web3',"description": 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.',"features": ['Smart Contract Development','DeFi Solutions','NFT Platforms','Cryptocurrency Integration';'
@@ -358,7 +357,6 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })cons
       ],"category": 'AR/VR',"pricing": 'Starting at $7,000',"delivery": '4-14 weeks';'
     }
   ];
-  const benefits = [{"icon": <Star className="w-6 h-6" />,"title": 'Cutting-Edge Technology',"description": 'Stay ahead with the latest emerging technologies and innovations';'
     },{"icon": <Users className="w-6 h-6" />,"title": 'Expert Team',"description": 'Experienced professionals with deep knowledge in emerging technologies';'
     },{"icon": <Clock className="w-6 h-6" />,"title": 'Rapid Development',"description": 'Fast implementation and deployment of emerging technology solutions';'
     },{"icon": <Shield className="w-6 h-6" />,"title": 'Future-Proof',"description": 'Solutions designed to adapt and scale with evolving technology trends';'

@@ -685,13 +685,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -730,13 +728,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -1332,14 +1328,12 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g, ''));'
     return price >= minPrice && price <= maxPrice})};
 
 export const searchSpecializedServices = ("query": string) => {;"
 
 }
 
-const lowercaseQuery = query.toLowerCase();
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -1382,13 +1376,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -1427,13 +1419,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -1472,13 +1462,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -1517,13 +1505,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -1562,13 +1548,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -1607,13 +1591,11 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g,'')); return price >= minPrice && price <= maxPrice})};'
 
 export const searchSpecializedServices = ("query": string) => {;
 
 }
 
-const lowercaseQuery = query.toLowerCase(); return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery); )};
 
 export default specializedInnovativeServices2027}}
 
@@ -2209,14 +2191,12 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 
 }
 
-const price = parseInt(service.price.replace(/[^0-9]/g, ''));'
     return price >= minPrice && price <= maxPrice})};
 
 export const searchSpecializedServices = ("query": string) => {;"
 
 }
 
-const lowercaseQuery = query.toLowerCase();
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -2368,7 +2348,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2411,7 +2390,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2454,7 +2432,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2497,7 +2474,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}:corrupted_backup/2027-specialized-innovative-services.ts;
@@ -2600,7 +2576,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 }
 
 export const searchSpecializedServices = ("query": string) => ;"
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -2646,7 +2621,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2689,7 +2663,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2734,7 +2707,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2777,7 +2749,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2821,7 +2792,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2864,7 +2834,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -2968,7 +2937,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 }
 
 export const searchSpecializedServices = ("query": string) => ;"
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -3016,7 +2984,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}ursor/automate-test-improve-and-merge-code-646c;
@@ -3059,7 +3026,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3161,7 +3127,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 }
 
 export const searchSpecializedServices = ("query": string) => ;"
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -3207,7 +3172,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3250,7 +3214,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}ursor/fix-syntax-push-and-merge-to-main-40de;
@@ -3294,7 +3257,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3337,7 +3299,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3380,7 +3341,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3423,7 +3383,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3466,7 +3425,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3509,7 +3467,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3611,7 +3568,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 }
 
 export const searchSpecializedServices = ("query": string) => ;"
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -3657,7 +3613,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3700,7 +3655,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3743,7 +3697,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3786,7 +3739,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3829,7 +3781,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -3931,7 +3882,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 }
 
 export const searchSpecializedServices = ("query": string) => ;"
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
@@ -3977,7 +3927,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -4020,7 +3969,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number,"maxPrice"
 }
 
 export const searchSpecializedServices = ("query": string) => ;
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ; service.name.toLowerCase().includes(lowercaseQuery) ||; service.description.toLowerCase().includes(lowercaseQuery) ||; service.category.toLowerCase().includes(lowercaseQuery))}
 
 export default specializedInnovativeServices2027}}
@@ -4122,7 +4070,6 @@ export const getSpecializedServicesByPriceRange = ("minPrice": number, "maxPrice
 }
 
 export const searchSpecializedServices = ("query": string) => ;"
-  const lowercaseQuery = query.toLowerCase(;
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;

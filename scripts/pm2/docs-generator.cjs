@@ -81,7 +81,6 @@ const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ sc
       this.log('Generating component documentation...);
 
       // Look for React/Vue/Svelte components;
-      const componentFiles = this.findComponentFiles();
       if (componentFiles.length === 0) {}
         this.log('No component files found');
 
@@ -186,9 +185,7 @@ const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ sc
       return { "updated": false };"
 
       // Generate project information;
-      const projectInfo = await this.generateProjectInfo();
       // Update or create README;
-      const newReadme = this.generateReadmeContent(projectInfo, readmeContent);
       fs.writeFileSync(readmePath, newReadme);
 '
       this.log('README updated successfully')
@@ -215,7 +212,6 @@ const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ sc
         "repository": null,""
         "license": 'MIT
   generateReadmeContent(projectInfo, existingContent) {}
-    const timestamp = new Date().toISOString();
 let readme = `# ${projectInfo.name}\n\n`;`;
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`
     readme += `${projectInfo.description}\n\n`;`
@@ -295,7 +291,6 @@ let readme = `# ${projectInfo.name}\n\n`;`;
     try {}
       const report = await this.generateReport();
       
-      const report = await this.generateReport();
       let generatedCount = 0;
       if (report.apiDocs.generated) generatedCount++;
       if (report.componentDocs.generated) generatedCount++;

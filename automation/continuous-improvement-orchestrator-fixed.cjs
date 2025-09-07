@@ -76,7 +76,6 @@ class ContinuousImprovementOrchestrator {
       { command: 'npm run type-check', description: 'Type checking' }
     ];
 
-    const results = [];
     for (const analysis of analysisCommands) {
       const result = await this.runCommand(analysis.command, analysis.description);
       results.push({ ...analysis, result });
@@ -97,7 +96,6 @@ class ContinuousImprovementOrchestrator {
       { command: 'npm run build', description: 'Build performance check' }
     ];
 
-    const results = [];
     for (const perf of perfCommands) {
       const result = await this.runCommand(perf.command, perf.description);
       results.push({ ...perf, result });
@@ -118,7 +116,6 @@ class ContinuousImprovementOrchestrator {
       { command: 'npm audit', description: 'Security audit' }
     ];
 
-    const results = [];
     for (const security of securityCommands) {
       const result = await this.runCommand(security.command, security.description);
       results.push({ ...security, result });

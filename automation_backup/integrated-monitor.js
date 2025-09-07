@@ -96,7 +96,6 @@ ursor/automate-test-improve-and-merge-code-646c;
       '🔧 Starting integrated fix cycle...');'
       // Get recent errors from browser monitor;
       }
-      const recentErrors = this.browserMonitor.errorLog.filter((error) => {
         }
         const errorTime = new Date(error.timestamp);
         const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) // Last 30 minutes;

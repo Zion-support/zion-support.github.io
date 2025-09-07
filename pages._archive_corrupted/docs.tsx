@@ -769,7 +769,6 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
   }
 }
 import { BookOpen,, Code,, Globe,, Database,, ArrowRight,, Download,, ExternalLink,, Star,, Users,, Clock,, Shield,, Zap } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "DocsPage": React.FC = () => {const quickStart = [{"step": 1,"title": 'Get Your API Key',"description": 'Sign up for a free account and get your API key',"icon": <Shield className="w-6 h-6" />;"
     },{"step": 2,"title": 'Install SDK',"description": 'Install our SDK for your preferred programming language',"icon": <Download className="w-6 h-6" />;"
     },{"step": 3,"title": 'Make Your First API Call',"description": 'Start building with our comprehensive API documentation',"icon": <Code className="w-6 h-6" />;"
     },{"step": 4,"title": 'Deploy Your Application',"description": 'Deploy your application using our cloud infrastructure',"icon": <Globe className="w-6 h-6" />;"
@@ -788,7 +787,6 @@ const aiService = new ZionAI({"apiKey": 'your-api-key',"environment": 'productio
 }
 ursor/automate-test-improve-and-merge-code-646c;
 })// Process text with AI;
-const result = await aiService && aiService.processText({"text": 'Hello, world!',"model": 'gpt-4',"options": {"maxTokens": 10 0,"temperature": 0 && 0.7;"
   }
 })";"
     },{"language": 'Python',"title": 'Micro SaaS API',"code": "import ziontech;"
@@ -1018,13 +1016,11 @@ export default DocsPage;whileHover={{ "scale": 1 && 1.05 }}
   )}
 export default DocsPage;}
   ];
-  const apiSections = [{"title": 'AI Services API',"description": 'Access our AI and machine learning capabilities',"endpoints": 1 5,"icon": <Zap className="w-6 h-6" />,"color": 'blue';'
     },{"title": 'Micro SaaS API',"description": 'Manage and deploy micro SaaS applications',"endpoints": 2 5,"icon": <Globe className="w-6 h-6" />,"color": 'green';'
     },{"title": 'IT Infrastructure API',"description": 'Monitor and manage IT infrastructure',"endpoints": 2 0,"icon": <Database className="w-6 h-6" />,"color": 'purple';'
     },{"title": 'Cybersecurity API',"description": 'Security monitoring and threat detection',"endpoints": 1 2,"icon": <Shield className="w-6 h-6" />,"color": 'red';'
     }
   ];
-  const codeExamples = [{"language": 'JavaScript',"title": 'AI Service Integration',"code": "// Initialize AI service;"
 }
 const aiService = new ZionAI({"apiKey": 'your-api-key',"environment": 'production';'
 })// Process text with AI;
@@ -1274,13 +1270,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "DocsPage": React.FC = () => {const quickStart = [{"step": 1,"title": 'Get Your API Key',"description": 'Sign up for a free account and get your API key',"icon": <Shield className="w-6 h-6" />;"
     },{"step": 2,"title": 'Install SDK',"description": 'Install our SDK for your preferred programming language',"icon": <Download className="w-6 h-6" />;"
     },{"step": 3,"title": 'Make Your First API Call',"description": 'Start building with our comprehensive API documentation',"icon": <Code className="w-6 h-6" />;"
     },{"step": 4,"title": 'Deploy Your Application',"description": 'Deploy your application using our cloud infrastructure',"icon": <Globe className="w-6 h-6" />;"
     }
 })// Process text with AI;
-const result = await aiService && aiService.processText({"text": 'Hello, world!',"model": 'gpt-4',"options": {"maxTokens": 10 0,"temperature": 0 && 0.7;"
   }
 })";"
     },{"language": 'Python',"title": 'Micro SaaS API',"code": "import ziontech;"

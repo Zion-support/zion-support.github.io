@@ -29,7 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface Note {
   id: string;
@@ -81,7 +80,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'Missing fields' });
 
     }
-    const note: Note = {
       id: randomUUID(),
       targetType,
       targetId,
@@ -112,27 +110,21 @@ export function getAllNotes(): Note[] {
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
 
   if (req.method === 'GET') {
-    const { targetType, targetId } = req.query;
     if (!targetType || Array.isArray(targetType))
       return res.status(400).json({ error: 'Invalid targetType' });
     if (!targetId || Array.isArray(targetId))
       return res.status(400).json({ error: 'Invalid targetId' });
-    const notes = notesStore
       .filter(n => n.targetType === targetType && n.targetId === targetId)
       .sort((a, b) => b.createdAt - a.createdAt);
     return res.status(200).json({ notes });
   }
 
   if (req.method === 'POST') {
-    const authorId = String(req.headers['x-admin-user'] || 'admin');
-    const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim())
       return res.status(400).json({ error: 'Missing fields' });
-    const note: Note = {
       id: randomUUID(),
       content: req.body.content || '',
       createdAt: new Date().toISOString()

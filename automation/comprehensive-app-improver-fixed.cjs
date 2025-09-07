@@ -39,9 +39,7 @@ class ComprehensiveAppImprover {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
     // Append to log file
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
     // Append to log file
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
     // Append to log file
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

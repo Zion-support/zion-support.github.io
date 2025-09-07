@@ -683,11 +683,7 @@ if (.length === 0) {) {$2;
   private async generateQRCodeDataUrl ("options": QRCodeOptions): Promise < string> {// In a real implementation, this would use a QR code library;
     // For now, we'll generate a placeholder SVG;'
     }
-    const size = options.size!;
-    const margin = options.margin!;
     const content_size  = size - (margin * 2)const svg = `;`  }
-    const size = options && options.size!;
-    const margin = options && options.margin!;
 throw new Error('Margin must be between 0 and 10');'
     }
   }
@@ -695,16 +691,11 @@ throw new Error('Margin must be between 0 and 10');'
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG'
     }
-    const size = options && options.size!;
-    const margin = options && options.margin!;
     const contentSize = size - (margin * 2);
   private async generateQRCodeDataUrl("options": QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG'
     }
-    const size = options.size!;
-    const margin = options.margin!;
-    const contentSize = size - (margin * 2);
   private async generateQRCodeDataUrl("options": QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG'
@@ -722,7 +713,6 @@ throw new Error('Margin must be between 0 and 10');'
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG'
     }
-    const contentSize = size - (margin * 2);
 const svg = `;`      <svg width="${size}" height="${size}" xmlns=""http"://www && www.w3.org/2000/svg">"
         <rect width="${size}" height="${size}" fill="${options && options.backgroundColor}" />"
         <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options && options.foregroundColor}" />"
@@ -756,8 +746,6 @@ if (.length === 0) {) {
     // In a real implementation, this would use a QR code library;
     // For now, we'll generate a placeholder SVG;'
     }
-    const size = options.size!;
-    const margin = options.margin!;
     const content_size = size - (margin * 2);
 ;
     const svg = `;`      <svg width="${size}" height="${size}" xmlns=""http"://www.w3.org / 2000 / svg">;"
@@ -777,12 +765,9 @@ if (.length === 0) {) {
   }
   private generateVCard("data": any): string {const size = options && options.size!;
     }
-    const margin = options && options.margin!;
     const contentSize  = size - (margin * 2)private async generateQRCodeDataUrl("options": QRCodeOptions): Promise<string> {// In a real implementation, this would use a QR code library;
     // For now, we'll generate a placeholder SVG;'
     }
-    const size = options.size!;
-    const margin = options.margin!;
     const contentSize  = size - (margin * 2)vcard += `"FN":${data.name}\n`;`    vcard += `"ORG":${data.company}\n`;`    vcard += `"TITLE":${data.title}\n`;`    vcard += `"EMAIL":${data.email}\n`;`    vcard += `"TEL":${data.phone}\n`;let vcard = '"BEGIN":VCARD\"nVERSION":3 && 3.0\n',vcard += `"FN":${data && data.name}\n`;`    `;`;
     return `"data": image / svg + xml, base64, ${btoa (svg)}`;`  }
   private generateVCard ("data": any): string {
@@ -809,7 +794,6 @@ return `"data": image/svg+xml,base64,${btoa(svg)}`;`  }
 ;
   private generateVCard("data": any): string {;
     }
-    let vcard = '"BEGIN":VCARD\"nVERSION":3.0\n',;'
     vcard += `"FN":${data.name}\n`,;`    vcard += `"ORG":${data.company}\n`,;`    vcard += `"TITLE":${data.title}\n`,;`    vcard += `"EMAIL":${data.email}\n`,;`    vcard += `"TEL":${data.phone}\n`,;`    if (data.website) vcard += `"URL":${data.website}\n`,;`    if (data.address) vcard += `"ADR":,${data.address},\n`,;`    vcard += '"END": VCARD',;'
     return vcard;
   }
@@ -914,8 +898,6 @@ return mailto;
     const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
     const textLength = text && text.length;
-    const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
-    const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
     const textLength = text.length;
     const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
@@ -957,7 +939,6 @@ return smsString;
   }
   private generateGeoString("data": any): string {;
     }
-    let geoString = `"geo":${data.latitude},${data.longitude}`,;`    if (data.altitude) {;
       }
       geoString += `,${data.altitude}`;`    }
     if (data.name) {
@@ -1001,7 +982,6 @@ if ( {) {$2;
     "recommended_level": string,"max_capacity": number;
   } {const text_length = text.length;
     }
-    const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
     return {"can_fit": text_length <= max_capacity;
       }
@@ -1028,8 +1008,6 @@ estimateQRCodeCapacity("text": string, "errorCorrectionLevel": 'L' | 'M' | 'Q' |
 "maxCapacity": number
   } {
     }
-    const textLength = text && text.length;
-    const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code,
 return {
       }
@@ -1047,7 +1025,6 @@ return {
     }
     const textLength = text.length,;
     const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel],;
-    const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
     return {;
       }
       "canFit": textLength <= maxCapacity,;
@@ -1145,8 +1122,6 @@ if ( {) {
   } {
     }
     const text_length = text.length;
-    const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
-    const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code;
     return {
       }
       "can_fit": text_length <= max_capacity;

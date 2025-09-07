@@ -55,7 +55,6 @@ name: 'AI Healthcare Diagnostics Platform';tagline: 'Advanced AI - powered medic
 import { ServiceVariant } from '../types/service-variants',
 
 
-import { ServiceVariant } from '../types/service-variants',
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -657,7 +656,6 @@ reviews: 67;
 
 
 
-import { ServiceVariant } from '../types/service-variants',
 
 
 
@@ -669,7 +667,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -684,7 +681,6 @@ export interface ComprehensiveMicroSaasService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string,
   name: string,

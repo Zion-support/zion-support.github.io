@@ -327,7 +327,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
    * Terminate a session
    */
   terminateSession(sessionId) {
-    const session = this.sessions.get(sessionId);
     if (!session) {
       this.log(`Session ${sessionId} not found for termination`, 'WARN');
       return false;
@@ -400,7 +399,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   });
   // Keep the process alive
   setInterval(() => {
-    const stats = automation.getStats();
     console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
 
     process.exit(0);

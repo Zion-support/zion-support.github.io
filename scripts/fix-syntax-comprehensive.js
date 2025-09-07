@@ -98,7 +98,6 @@ async function main() {
   
   const patterns = [
     'src/**/*.tsx',
-  const patterns = ['src/**/*.tsx',
     'src/**/*.ts',
     'components/**/*.tsx',
     'components/**/*.ts',

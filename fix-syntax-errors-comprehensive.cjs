@@ -23,8 +23,6 @@ function fixFile(filePath, description, fixFunction) {
     
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
-const fs = require('fs');
-const path = require('path');
 ;
 function fixSyntaxErrors(filePath) {;
   try {;

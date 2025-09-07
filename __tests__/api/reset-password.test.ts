@@ -87,7 +87,6 @@ describe('/api/auth/reset token validation', () => {'
   });
   it('returns 400 for invalid token', async () => {'
     }
-    const { req, res } = createMocks({
       "method": 'POST' as RequestMethod,'
       "body": { "token": 'invalid', "newPassword": 'pass12345' }});'
     await handler(
@@ -101,7 +100,6 @@ describe('/api/auth/reset token validation', () => {'
   });
 });
 
-import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest';'
 
 interface ErrorResponse { "message": strin
 } describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"body": { "newPassword": 'pass12345' ,'

@@ -23,7 +23,6 @@ jest.mock('next/router', () => ({
 import React from 'react';
 
 import React from 'react';'
-import React from 'react';'
 interface SetupProps {
   // Add props here as needed
 }
@@ -81,7 +80,6 @@ afterEach(() => {cleanup()vi.restoreAllMocks()})
   "advanceTimersByTime": vi.advanceTimersByTime.bind (vi),
   "runAllTimers": vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
-import React from 'react';'
 export default function Setup() {
   }
   return (

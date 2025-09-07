@@ -293,7 +293,6 @@ export const aiMarketResearchService  = new AIMarketResearchService(process.env.
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.trends || [];
     } catch (error) {
       }
@@ -338,7 +337,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.competitors || [];
     } catch (error) {
       }
@@ -363,7 +361,6 @@ return data && data.segments || [];
       if (!response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json();
 return data.segments |[];
     } catch (error) {
       }
@@ -383,7 +380,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.segments || [];
     } catch (error) {
       }
@@ -408,7 +404,6 @@ throw error;
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.trends || [];
     } catch (error) {
       }
@@ -424,12 +419,10 @@ throw error;
     }
     try {
       }
-      const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {`        }
         "headers": {
           'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.trends || [];
     } catch (error) {
       }
@@ -449,7 +442,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.downloadUrl;
     } catch (error) {
       }
@@ -457,7 +449,6 @@ return data && data.downloadUrl;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.downloadUrl;
     } catch (error) {
       }
@@ -470,7 +461,6 @@ return data && data.downloadUrl;
       if (!response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json();
 return data.downloadUrl;
     } catch (error) {
       }
@@ -493,7 +483,6 @@ throw error;
       if (!response && response.ok) {
 }
 throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
-      const data = await response && response.json();
 return data && data.scheduleId;
     } catch (error) {
       }
@@ -642,7 +631,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.competitors || [];
     } catch (error) {
       }
@@ -665,7 +653,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.segments || [];
     } catch (error) {
       }
@@ -688,7 +675,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.report;
     } catch (error) {
       }
@@ -708,7 +694,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.trends || [];
     } catch (error) {
       }
@@ -731,7 +716,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.download_url;
     } catch (error) {
       }
@@ -754,7 +738,6 @@ if ( {) {
   $2
 }
         throw new Error (`HTTP error! "status": ${response.status}`);`      }
-      const data = await response.json ();
       return data.schedule_id;
     } catch (error) {
       }

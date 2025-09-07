@@ -169,23 +169,18 @@ module.exports = nextConfig",}
   export default content,}
 ;
 declare module "*.png" {;
-  const "content": string;
   export default content,}
 ;
 declare module "*.jpg" {;
-  const "content": string;
   export default content,}
 ;
 declare module "*.jpeg" {;
-  const "content": string;
   export default content,}
 ;
 declare module "*.gif" {;
-  const "content": string;
   export default content,}
 ;
 declare module "*.webp" {;
-  const "content": string;
   export default content,}";
     const typesPath = path.join(this.projectRoot, "types", "global.d.ts");
     if (!fs.existsSync(path.dirname(typesPath))) {;
@@ -225,8 +220,6 @@ declare module "*.webp" {;
   "name": "automation/health-check.cjs",
         "content": "#!/usr/bin/env node;
 const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
 class HealthChecker {;
   constructor() {;
   this.projectRoot = process.cwd();
@@ -293,9 +286,6 @@ checker.runAllChecks().catch(console.error);",},
       {;
   "name": "automation/performance-optimizer.cjs",
         "content": "#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 class PerformanceOptimizer {;
   constructor() {;
   this.projectRoot = process.cwd();
@@ -377,9 +367,6 @@ optimizer.runOptimizations().catch(console.error);",},
       {;
   "name": "automation/security-scanner.cjs",
         "content": "#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
 class SecurityScanner {;
   constructor() {;
   this.projectRoot = process.cwd();
@@ -416,7 +403,6 @@ class SecurityScanner {;
     ,}
 ;
   findSourceFiles() {;
-  const files = [];
     const dirs = ["src", "components", "pages", "utils", "hooks"];
     dirs.forEach(dir => {;
   const fullPath = path.join(this.projectRoot, dir);
@@ -431,10 +417,7 @@ class SecurityScanner {;
     ),}
 ;
   findFilesRecursively(dir, files) {;
-  const items = fs.readdirSync(dir);
     for (const item of items) {;
-  const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {;
   this.findFilesRecursively(fullPath, files),} else {;
   files.push(fullPath),}
@@ -444,7 +427,6 @@ class SecurityScanner {;
   async scanConfiguration() {;
     const configFiles = ["package.json", "next.config.js", ".env", ".env.local"];
     for (const file of configFiles) {;
-  const filePath = path.join(this.projectRoot, file);
       if (fs.existsSync(filePath)) {;
   try {;
   const content = fs.readFileSync(filePath, "utf8");
@@ -491,8 +473,6 @@ scanner.runSecurityScan().catch(console.error);",}
   async updatePackageJsonScripts() {;
   this.log("Updating package.json scripts...");
     try {;
-  const packageJsonPath = path.join(this.projectRoot, "package.json");
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
       const newScripts = {;
   "health-check": "node automation/health-check.cjs",
         "performance-optimize": "node automation/performance-optimizer.cjs",
@@ -661,8 +641,6 @@ export default content,}"
   "name": "automation/health-check.cjs"
         "content": "
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
   const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
       const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, "node_modules")
   this.issues.push("node_modules directory missing")
@@ -693,9 +671,6 @@ const path = require("path")
 checker.runAllChecks().catch(console.error);"
   "name": "automation/performance-optimizer.cjs"
         "content": "
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
   console.log("�  Optimizing images...")
     const publicDir = path.join(this.projectRoot, "public")
       this.optimizations.push("Image optimization completed")
@@ -721,9 +696,6 @@ const { execSync } = require("child_process")
 optimizer.runOptimizations().catch(console.error);"
   "name": "automation/security-scanner.cjs"
         "content": "
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
   console.log(" Scanning dependencies for vulnerabilities...")
   execSync("npm audit", { "stdio": "pipe"})
       console.log(" No critical vulnerabilities found")
@@ -764,8 +736,6 @@ scanner.runSecurityScan().catch(console.error);"
   fs.mkdirSync(scriptDir, { "recursive"})
       fs.chmodSync(scriptPath, "755")
   this.log("Updating package.json scripts...")
-  const packageJsonPath = path.join(this.projectRoot, "package.json")
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
   "health-check": "node automation/health-check.cjs"
         "performance-optimize": "node automation/performance-optimizer.cjs"
         "security-scan": "node automation/security-scanner.cjs"
@@ -850,7 +820,6 @@ main
   async runCommand(command, description) {
     this.log(`🚀 ${description}`);
     try {
-      const result = execSync(command, {
         cw: process.cwd(),
         encodin: 'utf8',
         timeou: 60000,
@@ -964,7 +933,6 @@ main
   }
 
   sortImports(content) {
-    const lines = content.split('\n');
     const importLines = [];
     const otherLines = [];
     let inImports = false;
@@ -1003,14 +971,12 @@ main
   }
 
   getTypeScriptFiles(dir) {
-    const files = [];
 
     function walkDir(currentPath) {
       const items = fs.readdirSync(currentPath);
 
       for (const item of items) {
         const fullPath = path.join(currentPath, item);
-        const stat = fs.statSync(fullPath);
 
         if (
           stat.isDirectory() &&
@@ -1150,7 +1116,6 @@ main
 
 // Run the improver
 if (require.main === module) {
-  const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
     console.error('❌ Erro: ', error);
 
@@ -1196,7 +1161,6 @@ class ComprehensiveAppImprover {
   async runCommand(command, description) {
     this.log(`🚀 ${description}`);
     try {
-      const result = execSync(command, {
         cw: process.cwd(),
         encodin: 'utf8',
         timeou: 60000,
@@ -1227,12 +1191,9 @@ class ComprehensiveAppImprover {
   async optimizeImports() {
     this.log('📦 Optimizing imports...');
 
-    const files = this.getTypeScriptFiles('.');
-    let optimizedCount = 0;
 
     for (const file of files) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
 
         // Remove unused imports
         content = this.removeUnusedImports(content);
@@ -1254,12 +1215,9 @@ class ComprehensiveAppImprover {
 
   removeUnusedImports(content) {
     // Simple unused import removal (basic implementation)
-    const lines = content.split('\n');
-    const usedIdentifiers = new Set();
 
     // Find used identifiers
     lines.forEach(line => {
-      const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
       if (matches) {
         matches.forEach(match => usedIdentifiers.add(match));
       }
@@ -1269,10 +1227,7 @@ class ComprehensiveAppImprover {
     return lines
       .filter(line => {
         if (line.trim().startsWith('import ')) {
-          const importMatch = line.match(/import\s*{([^}]+)}/);
           if (importMatch) {
-            const imports = importMatch[1].split(',').map(imp => imp.trim());
-            const usedImports = imports.filter(imp => usedIdentifiers.has(imp));
             if (usedImports.length === 0) {
               return false; // Remove unused import
             }
@@ -1284,10 +1239,6 @@ class ComprehensiveAppImprover {
   }
 
   sortImports(content) {
-    const lines = content.split('\n');
-    const importLines = [];
-    const otherLines = [];
-    let inImports = false;
 
     lines.forEach(line => {
       if (line.trim().startsWith('import ')) {
@@ -1312,14 +1263,10 @@ class ComprehensiveAppImprover {
   }
 
   getTypeScriptFiles(dir) {
-    const files = [];
 
     function walkDir(currentPath) {
-      const items = fs.readdirSync(currentPath);
 
       for (const item of items) {
-        const fullPath = path.join(currentPath, item);
-        const stat = fs.statSync(fullPath);
 
         if (
           stat.isDirectory() &&
@@ -1374,7 +1321,6 @@ class ComprehensiveAppImprover {
   }
 
   async generateReport() {
-    const report = {
       timestam: new Date().toISOString(),
       improvement: this.improvements,
       error: this.errors,
@@ -1390,7 +1336,6 @@ class ComprehensiveAppImprover {
       };
     };
 
-    const reportPath = path.join(
       this.reportsDir;
       'comprehensive-app-improvement-report.json'
     );
@@ -1411,7 +1356,6 @@ class ComprehensiveAppImprover {
       await this.improveSecurity();
       await this.improveAccessibility();
 
-      const report = await this.generateReport();
 
       this.log('🎉 Comprehensive app improvement completed!');
       this.log(
@@ -1428,7 +1372,6 @@ class ComprehensiveAppImprover {
 
 // Run the improver
 if (require.main === module) {
-  const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
     console.error('❌ Erro: ', error);
     process.exit(1);
@@ -1437,9 +1380,6 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAppImprover;
 
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
 class $1 {
   constructor() {
   this.projectRoot = process.cwd()
@@ -1450,7 +1390,6 @@ class $1 {
 }
   log(message, type = "INFO") {
   const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
     console.log(logMessage)
     // Append to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n"),
@@ -1458,7 +1397,6 @@ class $1 {
   async runCommand(command, options = {}) {
   try {
   this.log(`Running command: ${command}`)
-      const result = execSync(command, {
   encoding: "utf8",
         cwd: this.projectRoot,
         stdio: options.silent ? "pipe" : "inherit",
@@ -1493,7 +1431,6 @@ class $1 {
   async fixPackageJson() {
   this.log("Fixing package.json...")
     try {
-  const packageJsonPath = path.join(this.projectRoot, "package.json")
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
       // Fix common issues;
       const fixes = []
@@ -1530,10 +1467,6 @@ class $1 {
   {
   file: "eslint.config.js",
         content: `import js from "@eslint/js";
-import typescript from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
 export default [
   js.configs.recommended,
   {
@@ -1599,26 +1532,20 @@ module.exports = nextConfig`;
   export default content;
 }
 declare module "*.png" {
-  const content: string;
   export default content;
 }
 declare module "*.jpg" {
-  const content: string;
   export default content;
 }
 declare module "*.jpeg" {
-  const content: string;
   export default content;
 }
 declare module "*.gif" {
-  const content: string;
   export default content;
 }
 declare module "*.webp" {
-  const content: string;
   export default content;
 }`;
-    const typesPath = path.join(this.projectRoot, "types", "global.d.ts")
     if (!fs.existsSync(path.dirname(typesPath))) {
   fs.mkdirSync(path.dirname(typesPath), { recursive: true }),
 }
@@ -1656,9 +1583,6 @@ declare module "*.webp" {
   {
   name: "automation/health-check.cjs",
         content: `#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
 class HealthChecker {
   constructor() {
   this.projectRoot = process.cwd()
@@ -1679,7 +1603,6 @@ class HealthChecker {
 }
   }
   async checkConfiguration() {
-  const configFiles = ["package.json", "tsconfig.json", "next.config.js", "eslint.config.js"]
     for (const file of configFiles) {
   const filePath = path.join(this.projectRoot, file)
       if (!fs.existsSync(filePath)) {
@@ -1735,9 +1658,6 @@ checker.runAllChecks().catch(console.error)`;
       {
   name: "automation/performance-optimizer.cjs",
         content: `#!/usr/bin/env node;
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
 class PerformanceOptimizer {
   constructor() {
   this.projectRoot = process.cwd()
@@ -1745,7 +1665,6 @@ class PerformanceOptimizer {
 }
   async optimizeImages() {
   console.log("🖼️  Optimizing images...")
-    const publicDir = path.join(this.projectRoot, "public")
     if (fs.existsSync(publicDir)) {
   // This would integrate with image optimization tools;
       this.optimizations.push("Image optimization completed"),
@@ -1767,8 +1686,6 @@ class PerformanceOptimizer {
     const srcFiles = this.findSourceFiles()
     for (const file of srcFiles) {
   try {
-  let content = fs.readFileSync(file, "utf8")
-        let modified = false;
         // Remove empty lines at the end;
         const trimmed = content.trimEnd()
         if (trimmed !== content) {
@@ -1786,9 +1703,6 @@ class PerformanceOptimizer {
 }
   findSourceFiles() {
   const files = []
-    const srcDir = path.join(this.projectRoot, "src")
-    const componentsDir = path.join(this.projectRoot, "components")
-    const pagesDir = path.join(this.projectRoot, "pages")
     [srcDir, componentsDir, pagesDir].forEach(dir => {
   if (fs.existsSync(dir)) {
   this.findFilesRecursively(dir, files),
@@ -1830,9 +1744,6 @@ optimizer.runOptimizations().catch(console.error)`;
       {
   name: "automation/security-scanner.cjs",
         content: `#!/usr/bin/env node;
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
 class SecurityScanner {
   constructor() {
   this.projectRoot = process.cwd()
@@ -1861,7 +1772,6 @@ class SecurityScanner {
     const files = this.findSourceFiles()
     for (const file of files) {
   try {
-  const content = fs.readFileSync(file, "utf8")
         for (const pattern of sensitivePatterns) {
   if (pattern.test(content)) {
   this.vulnerabilities.push(\`Potential secret in \${path.relative(this.projectRoot, file)}\`)
@@ -1875,8 +1785,6 @@ class SecurityScanner {
     console.log("✅ Secret scanning completed"),
 }
   findSourceFiles() {
-  const files = []
-    const dirs = ["src", "components", "pages", "utils", "hooks"]
     dirs.forEach(dir => {
   const fullPath = path.join(this.projectRoot, dir)
       if (fs.existsSync(fullPath)) {
@@ -1891,10 +1799,7 @@ class SecurityScanner {
     ),
 }
   findFilesRecursively(dir, files) {
-  const items = fs.readdirSync(dir)
     for (const item of items) {
-  const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
   this.findFilesRecursively(fullPath, files),
 } else {
@@ -1904,12 +1809,9 @@ class SecurityScanner {
   }
   async scanConfiguration() {
   console.log("⚙️  Scanning configuration files...")
-    const configFiles = ["package.json", "next.config.js", ".env", ".env.local"]
     for (const file of configFiles) {
-  const filePath = path.join(this.projectRoot, file)
       if (fs.existsSync(filePath)) {
   try {
-  const content = fs.readFileSync(filePath, "utf8")
           // Check for insecure configurations;
           if (content.includes("NODE_ENV=development") && file.includes(".env")) {
   this.recommendations.push(\`Review \${file} for production-ready configuration\`),
@@ -1962,8 +1864,6 @@ scanner.runSecurityScan().catch(console.error)`;
   async updatePackageJsonScripts() {
   this.log("Updating package.json scripts...")
     try {
-  const packageJsonPath = path.join(this.projectRoot, "package.json")
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
       const newScripts = {
   "health-check": "node automation/health-check.cjs",
         "performance-optimize": "node automation/performance-optimizer.cjs",
@@ -1982,8 +1882,6 @@ scanner.runSecurityScan().catch(console.error)`;
   }
   async generateReport() {
   const endTime = new Date()
-    const duration = endTime - this.startTime;
-    const report = {
   timestamp: endTime.toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       fixesApplied: this.fixesApplied,
@@ -2005,7 +1903,6 @@ scanner.runSecurityScan().catch(console.error)`;
       },
     };
 
-    const reportPath = path.join(
       this.reportsDir,
 
     );
@@ -2026,7 +1923,6 @@ scanner.runSecurityScan().catch(console.error)`;
       await this.improveSecurity();
       await this.improveAccessibility();
 
-      const report = await this.generateReport();
 
       this.log('🎉 Comprehensive app improvement completed!');
       this.log(
@@ -2043,7 +1939,6 @@ scanner.runSecurityScan().catch(console.error)`;
 
 // Run the improver
 if (require.main === module) {
-  const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
     console.error('❌ Error:', error);
     process.exit(1);
@@ -2067,7 +1962,6 @@ main
 
 
 // Run the improver;
-const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
 
 

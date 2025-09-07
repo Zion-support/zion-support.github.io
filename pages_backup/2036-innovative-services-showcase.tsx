@@ -13,7 +13,6 @@ const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -86,7 +85,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import SEO from '../components / SEO';
 import Layout from '../components / layout / Layout';
-import { motion } from 'framer-motion';
 
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
@@ -832,7 +830,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
-const itemVariants = {
   hidden: {
   y: 20, opacity: 0
 }

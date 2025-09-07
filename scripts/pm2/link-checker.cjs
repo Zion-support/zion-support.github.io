@@ -68,7 +68,6 @@ const main = async () => {}
   const report = generateLinkReport(results);
   if (report.overall.status === 'PASS') {}
   // Generate comprehensive report;
-  const results = {}
     linkCheck: linkCheckResults
   const report = generateLinkReport(results)
   '

@@ -126,11 +126,9 @@ main
   async performESLintFixes() {}"
 
       this.resetCounters();
-      const errors = await this.getESLintErrors();
       if (errors.length === 0) {}
 
       // Group errors by file for efficient processing;
-      const errorsByFile = this.groupErrorsByFile(errors);
       for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {}
         if (this.fixesApplied >= 100) break; // Limit fixes per run
   resetCounters($2) {}
@@ -178,7 +176,6 @@ main
 
     return errors};
   groupErrorsByFile(errors) {}
-    const errorsByFile = {};
     errors.forEach(error => {})
   if($2) {}
         errorsByFile[error.filePath] = []}
@@ -229,7 +226,6 @@ main
         this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
         
         // Write fixed content;
-        const fixedContent = lines.join('\n');
 
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}"`;
@@ -265,7 +261,6 @@ return !trimmed ||;
     const varMatch = error.message.match(/(.*?)/);
     if (!varMatch) return line;
     
-    const varName = varMatch[1];
     const varName = varMatch[1];
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
@@ -316,7 +311,6 @@ return !trimmed ||;
       }
 });
       if (result) {}
-        const parsed = JSON.parse(result);
 
         return parsed.length === 0; // No errors means fix was successful;
       return true} catch (error) {}

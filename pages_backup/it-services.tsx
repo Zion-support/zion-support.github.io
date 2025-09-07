@@ -1621,7 +1621,6 @@ const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS,
   { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD - WAN' }
 ];
-const benefits = [{
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -1715,10 +1714,6 @@ function ITServicesPage() {
               return (
                 <motion.div;
                   key={index}
-import React from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
 import { 
   Server, 
   Shield, 
@@ -1741,7 +1736,6 @@ import {
   HardDrive, 
   Smartphone, 
   Building, 
-import {
   Server,
   Shield,
   Cloud,
@@ -1774,7 +1768,6 @@ import {
   Award,
   Star,
   Zap,
-import {
   Server
   Shield
   Cloud
@@ -1894,14 +1887,10 @@ export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-import Link from 'next/link';
-import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
   
   useEffect(() => {
 
@@ -1967,7 +1956,6 @@ function ITServices() {
     const timer = set_timeout (() => setIsLoaded (true), 100);
     return () => clear_timeout (timer);  }, []);
 ;
-  const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',

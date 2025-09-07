@@ -29,14 +29,10 @@ const "AccessibilityManager": React.FC = () => ;
 
 }
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)').matches;'
 
-const prefersHighContrast  = window.matchMedia('(prefers-"contrast": high)').matches;// Load saved settings;'
 
-const savedSettings = localStorage.getItem('accessibility-settings')if (savedSettings) {setSettings(JSON.parse(savedSettings))} else {setSettings(prev => ({...prev, "reducedMotion": prefersReducedMotion,"highContrast": prefersHighContrast;'
       }))}// Detect screen reader;
 
-const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
     setSettings(prev = > ({ ...prev, "screenReader": hasScreenReader })
 }, [];
   useEffect(() => {
@@ -46,7 +42,6 @@ const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoic
 
 }
 
-const root  = document.documentElement;// High contrast;
     if (settings.highContrast) {root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}// Font size;'
     root.setAttribute('data-font-size', settings.fontSize)// Reduced motion;'
     if (settings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}// Focus visible;'

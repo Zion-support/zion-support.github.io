@@ -111,8 +111,6 @@ interface ApiResponse {;
 ;
 export default function DevTreePage(req, res) {
   try {
-  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse["status"] | null>(null);
   const [adminToken, setAdminToken] = useState<string>("");
   const fetchTree = async (token?: string) => {;
@@ -120,7 +118,6 @@ export default function DevTreePage(req, res) {
       const resp = await fetch("/api/dev/source-map", {;
         headers: token ? { "x-admin-token": token } : undefined});
       if (!resp.ok) {;
-        const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`);
         } catch (error) {
     console.error("Error:", error);
@@ -149,14 +146,12 @@ export default function DevTreePage(req, res) {
   },;
   const onDeploy = async (p: string) => {;
     try {
-      const resp = await fetch("/api/dev/source-map", {;
         method: "POST",;
         headers: {;
           "Content-Type": "application/json",;
           "x-admin-token": adminToken},;
         body: JSON.stringify({ path: p })}),;
       if (!resp.ok) {;
-        const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`);
         } catch (error) {
     console.error("Error:", error);

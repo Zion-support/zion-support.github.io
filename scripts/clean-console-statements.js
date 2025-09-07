@@ -158,10 +158,7 @@ class ConsoleCleaner {;
         await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {
       `📊 Total console statements "removed": ${this.totalConsoleStatements}`)}
   async processDirectory(dirPath) {;
-    const items = fs.readdirSync(dirPath);
     for (const item of items) {;
-      const itemPath = path.join(dirPath, item);
-      const stat = fs.statSync(itemPath);
       if (stat.isDirectory()) {;
         await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {;
         await this.cleanFile(itemPath)}

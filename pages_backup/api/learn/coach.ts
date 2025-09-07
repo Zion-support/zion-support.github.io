@@ -70,13 +70,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   };
 };
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
 
-import type { NextApiRequest, NextApiResponse } from 'next'
 
 ;
 export default async /**

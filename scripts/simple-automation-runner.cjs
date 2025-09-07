@@ -5,8 +5,6 @@ const path = require('path')
 
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
   }
 
   log(message) {
@@ -112,8 +110,6 @@ const path = require('path')
       await this.applyImprovements();
       
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 
 
 

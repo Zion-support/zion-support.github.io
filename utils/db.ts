@@ -46,7 +46,6 @@ export function readJsonFile<T>(fileName: string, defaultValue: T): T {
 }
 
 export function writeJsonFile<T>(fileName: string, data: T): void {
-  const filePath = getFilePath($2);
   const tmpPath = $2;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8'),
   fs.renameSync(tmpPath, filePath)
@@ -199,7 +198,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export function appendToJsonArrayFile<T>("fileName": string, "item": T): void {;
   }
-  const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
@@ -210,8 +208,6 @@ import path from 'path';'
 }
 
 
-import fs from 'fs';
-import path from 'path';
 
 
 

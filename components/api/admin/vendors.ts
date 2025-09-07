@@ -43,7 +43,6 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 
 const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';'
 
-import {
   }
   try {
     }
@@ -68,7 +67,6 @@ export default function handler() {
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
 
-const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';'
 
 export default function handler() {;
   }

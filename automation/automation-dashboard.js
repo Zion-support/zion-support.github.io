@@ -202,7 +202,6 @@ const report = {"
       report.metrics[name] = metric}
     return report}
   calculateAverageSuccessRate($2) {calculateAverageSuccessRate() {}
-const systems = Array.from(this.automationSystems.values())
     const totalSuccessRate = systems.reduce((sum, system) => {}
       const rate = system.successCount / (system.successCount + system.failureCount) || 0;"
       "return": sum + rate}, 0);"

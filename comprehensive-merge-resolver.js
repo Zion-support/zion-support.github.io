@@ -203,7 +203,6 @@ This commit resolves all merge conflicts and prepares for PR merge.`;
       await this.fetchLatestChanges();
       // Step 2: Check current status
       const changes = await this.checkGitStatus();
-      const currentBranch = await this.getCurrentBranch();
       this.log(`📍 Current branch: ${currentBranch}`);
       // Step "3": Find and resolve conflicts
       const conflictFiles = await this.findConflictFiles();

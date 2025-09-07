@@ -63,12 +63,9 @@ return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-whit
 
 export default GitHub;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -76,10 +73,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -89,12 +83,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 }
 
 export default GitHub;'"`'"`;`
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -102,10 +93,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -116,12 +104,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"`;`ursor/automate-test-improve-and-merge-code-646c;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -129,10 +114,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -143,12 +125,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"`;`ursor/automate-test-improve-and-merge-code-646c;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -156,10 +135,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -171,12 +147,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 export default GitHub;'"`'"`;`ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -184,10 +157,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -198,12 +168,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"`;`origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -211,10 +178,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -227,12 +191,9 @@ export default GitHub;'"`'"`;`ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -240,10 +201,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -254,12 +212,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"`;`ursor/automate-test-improve-and-merge-code-646c;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -267,10 +222,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -280,12 +232,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 }
 
 export default GitHub;'"`'"`;`
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -293,10 +242,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -306,12 +252,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 }
 
 export default GitHub;'"`'"`;`
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -319,10 +262,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -332,12 +272,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 }
 
 export default GitHub;'"`'"`;`
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -345,10 +282,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -359,12 +293,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"`;`origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -372,10 +303,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -387,12 +315,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 export default GitHub;'"`'"`;`ursor/add-new-services-and-deploy-updates-0462;
 ursor/fix-syntax-push-and-merge-to-main-40de;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -400,10 +325,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -414,15 +336,10 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"`;`import _React,{ useState } from 'react'; import Head from 'next/head';'
 
-const "GitHub": _React.FC = () => { const [activeCategory,setActiveCategory] =;"
   }
   useState('all';'
-  const categories = [{ "id": 'all',"name": 'All Discussions',"icon": '💬' },{ "id": 'announcements',"name": 'Announcements',"icon": '📢' },{ "id": 'general',"name": 'General',"icon": '🌐' },{ "id": 'ideas',"name": 'Ideas',"icon": '💡' },{ "id": 'help',"name": 'Help',"icon": '❓' },{ "id": 'showcase',"name": 'Showcase',"icon": '🎨' }];'
 
-const discussions = [{ "id": '1',"title": 'New AI Model Integration API Released',"category": 'announcements',"author": 'Zion Team',"authorAvatar": '👨‍💼',"replies": '45',"views": '1200',"lastActivity": '2 hours ago',"status": 'pinned',"tags": ['api','release','ai-models']},{ "id": '2',"title": 'How to optimize API response times?',"category": 'help',"author": 'DevUser123',"authorAvatar": '👩‍💻',"replies": '23',"views": '890',"lastActivity": '5 hours ago',"status": 'active',"tags": ['performance','optimization','api']},{ "id": '3',"title": 'Feature "Request": Batch Processing for Multiple AI Services,"category": 'ideas',"author": 'AIEnthusiast',"authorAvatar": '🤖',"replies": '67',"views": '2100',"lastActivity": '1 day ago',"status": 'active',"tags": ['feature-request','batch-processing','ai-services']},{ "id": '4',"title": '"Showcase": AI-Powered Customer Support Bot,"category": 'showcase',"author": 'TechStartup',"authorAvatar": '🚀',"replies": '34',"views": '1560',"lastActivity": '2 days ago',"status": 'active',"tags": ['showcase','chatbot','customer-support']},{ "id": '5',"title": '"Discussion": Future of AI in Healthcare,"category": 'general',"author": 'HealthTech',"authorAvatar": '🏥',"replies": '89',"views": '3400',"lastActivity": '3 days ago',"status": 'active',"tags": ['healthcare','ai-future','discussion']},{ "id": '6',"title": '"Troubleshooting": Webhook Delivery Issues,"category": 'help',"author": 'WebhookDev',"authorAvatar": '🔗',"replies": '12',"views": '450',"lastActivity": '4 days ago',"status": 'resolved',"tags": ['webhooks','troubleshooting','integration']}];'
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === 'all' || discussion.category === activeCategory ; }'
-  const getStatusColor = ("status": string) => { switch (status) { case 'pinned':;'
 }
 return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-white'; case 'resolved': return 'bg-blue-600 text-white'; "default": return 'bg-gray-600 text-white'},;'
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4">🐙</div> <button className="bg-gray-800 "hover": bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -432,15 +349,10 @@ return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-whit
 
 export default GitHub;import _React,{ useState } from 'react'; import Head from 'next/head';'
 
-const "GitHub": _React.FC = () => { const [activeCategory,setActiveCategory] =;"
   }
   useState('all';'
-  const categories = [{ "id": 'all',"name": 'All Discussions',"icon": '💬' },{ "id": 'announcements',"name": 'Announcements',"icon": '📢' },{ "id": 'general',"name": 'General',"icon": '🌐' },{ "id": 'ideas',"name": 'Ideas',"icon": '💡' },{ "id": 'help',"name": 'Help',"icon": '❓' },{ "id": 'showcase',"name": 'Showcase',"icon": '🎨' }];'
 
-const discussions = [{ "id": '1',"title": 'New AI Model Integration API Released',"category": 'announcements',"author": 'Zion Team',"authorAvatar": '👨‍💼',"replies": '45',"views": '1200',"lastActivity": '2 hours ago',"status": 'pinned',"tags": ['api','release','ai-models']},{ "id": '2',"title": 'How to optimize API response times?',"category": 'help',"author": 'DevUser123',"authorAvatar": '👩‍💻',"replies": '23',"views": '890',"lastActivity": '5 hours ago',"status": 'active',"tags": ['performance','optimization','api']},{ "id": '3',"title": 'Feature "Request": Batch Processing for Multiple AI Services,"category": 'ideas',"author": 'AIEnthusiast',"authorAvatar": '🤖',"replies": '67',"views": '2100',"lastActivity": '1 day ago',"status": 'active',"tags": ['feature-request','batch-processing','ai-services']},{ "id": '4',"title": '"Showcase": AI-Powered Customer Support Bot,"category": 'showcase',"author": 'TechStartup',"authorAvatar": '🚀',"replies": '34',"views": '1560',"lastActivity": '2 days ago',"status": 'active',"tags": ['showcase','chatbot','customer-support']},{ "id": '5',"title": '"Discussion": Future of AI in Healthcare,"category": 'general',"author": 'HealthTech',"authorAvatar": '🏥',"replies": '89',"views": '3400',"lastActivity": '3 days ago',"status": 'active',"tags": ['healthcare','ai-future','discussion']},{ "id": '6',"title": '"Troubleshooting": Webhook Delivery Issues,"category": 'help',"author": 'WebhookDev',"authorAvatar": '🔗',"replies": '12',"views": '450',"lastActivity": '4 days ago',"status": 'resolved',"tags": ['webhooks','troubleshooting','integration']}];'
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === 'all' || discussion.category === activeCategory ; }'
-  const getStatusColor = ("status": string) => { switch (status) { case 'pinned':;'
 }
 return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-white'; case 'resolved': return 'bg-blue-600 text-white'; "default": return 'bg-gray-600 text-white'},;'
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4">🐙</div> <button className="bg-gray-800 "hover": bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -450,12 +362,9 @@ return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-whit
 
 export default GitHub;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => { const [activeCategory,setActiveCategory] =;
   }
   useState("all";"
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -463,10 +372,7 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ; }"
-  const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name = "description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -481,13 +387,10 @@ const "GitHub": _React.FC = () => {;"
   }
   const [activeCategory,setActiveCategory] = useState('all');'
 
-const categories = [{ "id": 'all',"name": 'All Discussions',"icon": '💬' },{ "id": 'announcements',"name": 'Announcements',"icon": '📢' },{ "id": 'general',"name": 'General',"icon": '🌐' },{ "id": 'ideas',"name": 'Ideas',"icon": '💡' },{ "id": 'help',"name": 'Help',"icon": '❓' },{ "id": 'showcase',"name": 'Showcase',"icon": '🎨' }];'
 
-const discussions = [{ "id": '1',"title": 'New AI Model Integration API Released',"category": 'announcements',"author": 'Zion Team',"authorAvatar": '👨‍💼',"replies": '45',"views": '1200',"lastActivity": '2 hours ago',"status": 'pinned',"tags": ['api','release','ai-models']},{ "id": '2',"title": 'How to optimize API response times?',"category": 'help',"author": 'DevUser123',"authorAvatar": '👩‍💻',"replies": '23',"views": '890',"lastActivity": '5 hours ago',"status": 'active',"tags": ['performance','optimization','api']},{ "id": '3',"title": 'Feature "Request": Batch Processing for Multiple AI Services,"category": 'ideas',"author": 'AIEnthusiast',"authorAvatar": '🤖',"replies": '67',"views": '2100',"lastActivity": '1 day ago',"status": 'active',"tags": ['feature-request','batch-processing','ai-services']},{ "id": '4',"title": '"Showcase": AI-Powered Customer Support Bot,"category": 'showcase',"author": 'TechStartup',"authorAvatar": '🚀',"replies": '34',"views": '1560',"lastActivity": '2 days ago',"status": 'active',"tags": ['showcase','chatbot','customer-support']},{ "id": '5',"title": '"Discussion": Future of AI in Healthcare,"category": 'general',"author": 'HealthTech',"authorAvatar": '🏥',"replies": '89',"views": '3400',"lastActivity": '3 days ago',"status": 'active',"tags": ['healthcare','ai-future','discussion']},{ "id": '6',"title": '"Troubleshooting": Webhook Delivery Issues,"category": 'help',"author": 'WebhookDev',"authorAvatar": '🔗',"replies": '12',"views": '450',"lastActivity": '4 days ago',"status": 'resolved',"tags": ['webhooks','troubleshooting','integration']}];'
 
 const filteredDiscussions = discussions.filter(discussion => { return activeCategory === 'all' || discussion.category === activeCategory ); }'
 
-const getStatusColor = ("status": string) => { switch (status) { case 'pinned':;'
 }
 return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-white'; case 'resolved': return 'bg-blue-600 text-white'; "default": return 'bg-gray-600 text-white'},;'
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4">🐙</div> <button className="bg-gray-800 "hover": bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -496,19 +399,15 @@ return 'bg-yellow-600 text-white'; case 'active': return 'bg-green-600 text-whit
 
 export default GitHub;
 
-import React,{ useState } from \'react\'; import Head from \'next/head\';'
 
 const \"GitHub\": React.FC = () => {;"
   }
   const [activeCategory,setActiveCategory] = useState(\'all\');'
 
-const categories = [{ \"id\": \'all\',\"name\": \'All Discussions\',\"icon\": \'💬\' },{ \"id\": \'announcements\',\"name\": \'Announcements\',\"icon\": \'📢\' },{ \"id\": \'general\',\"name\": \'General\',\"icon\": \'🌐\' },{ \"id\": \'ideas\',\"name\": \'Ideas\',\"icon\": \'💡\' },{ \"id\": \'help\',\"name\": \'Help\',\"icon\": \'❓\' },{ \"id\": \'showcase\',\"name\": \'Showcase\',\"icon\": \'🎨\' }];'
 
-const discussions = [{ \"id\": \'1\',\"title\": \'New AI Model Integration API Released\',\"category\": \'announcements\',\"author\": \'Zion Team\',\"authorAvatar\": \'👨‍💼\',\"replies\": \'45\',\"views\": \'1200\',\"lastActivity\": \'2 hours ago\',\"status\": \'pinned\',\"tags\": [\'api\',\'release\',\'ai-models\']},{ \"id\": \'2\',\"title\": \'How to optimize API response times?\',\"category\": \'help\',\"author\": \'DevUser123\',\"authorAvatar\": \'👩‍💻\',\"replies\": \'23\',\"views\": \'890\',\"lastActivity\": \'5 hours ago\',\"status\": \'active\',\"tags\": [\'performance\',\'optimization\',\'api\']},{ \"id\": \'3\',\"title\": \'Feature "Request": Batch Processing for Multiple AI Services\',\"category\": \'ideas\',\"author\": \'AIEnthusiast\',\"authorAvatar\": \'🤖\',\"replies\": \'67\',\"views\": \'2100\',\"lastActivity\": \'1 day ago\',\"status\": \'active\',\"tags\": [\'feature-request\',\'batch-processing\',\'ai-services\']},{ \"id\": \'4\',\"title\": \'"Showcase": AI-Powered Customer Support Bot\',\"category\": \'showcase\',\"author\": \'TechStartup\',\"authorAvatar\": \'🚀\',\"replies\": \'34\',\"views\": \'1560\',\"lastActivity\": \'2 days ago\',\"status\": \'active\',\"tags\": [\'showcase\',\'chatbot\',\'customer-support\']},{ \"id\": \'5\',\"title\": \'"Discussion": Future of AI in Healthcare\',\"category\": \'general\',\"author\": \'HealthTech\',\"authorAvatar\": \'🏥\',\"replies\": \'89\',\"views\": \'3400\',\"lastActivity\": \'3 days ago\',\"status\": \'active\',\"tags\": [\'healthcare\',\'ai-future\',\'discussion\']},{ \"id\": \'6\',\"title\": \'"Troubleshooting": Webhook Delivery Issues\',\"category\": \'help\',\"author\": \'WebhookDev\',\"authorAvatar\": \'🔗\',\"replies\": \'12\',\"views\": \'450\',\"lastActivity\": \'4 days ago\',\"status\": \'resolved\',\"tags\": [\'webhooks\',\'troubleshooting\',\'integration\']}];'
 
 const filteredDiscussions = discussions.filter(discussion => { return activeCategory === \'all\' || discussion.category === activeCategory ); }'
 
-const getStatusColor = (\"status\": string) => { switch (status) { case \'pinned\':;'
 }
 return \'bg-yellow-600 text-white\'; case \'active\': return \'bg-green-600 text-white\'; case \'resolved\': return \'bg-blue-600 text-white\'; "default": return \'bg-gray-600 text-white\'},;'
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name=\"description\" content=\"Join GitHub discussions about AI integration,development,and marketplace features\" /> <meta name=\"keywords\" content=\"github,discussions,AI,development,community\" /> </Head> <div className=\"min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white\"> {} <header className=\"bg-black/20 backdrop-blur-sm border-b border-blue-500/30\"> <div className=\"container mx-auto px-6 py-8\"> <div className=\"flex items-center justify-between\"> <div> <h1 className=\"text-4xl \"md\": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\"> GitHub Discussions </h1> <p className=\"text-xl text-gray-300 mt-4\"> Join the conversation about AI development and marketplace features </p> </div> <div className=\"text-right\"> <div className=\"text-6xl mb-4\">🐙</div> <button className=\"bg-gray-800 "hover": bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600\"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -517,13 +416,11 @@ return \'bg-yellow-600 text-white\'; case \'active\': return \'bg-green-600 text
 
 export default GitHub;
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
 const "GitHub": React.FC = () => {;
   }
   const [activeCategory,setActiveCategory] = useState("all");"
 
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -531,11 +428,9 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
 const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ); }"
 
-const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -545,13 +440,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 };
 
 export default GitHub;'"`'"``
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => {;
   }
-  const [activeCategory,setActiveCategory] = useState("all");"
 
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -559,11 +450,8 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ); }"
 
-const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -575,13 +463,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 export default GitHub;'"`'"``
 
 
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => {;
   }
-  const [activeCategory,setActiveCategory] = useState("all");"
 
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -589,11 +473,8 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ); }"
 
-const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -603,13 +484,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 };
 
 export default GitHub;'"`'"``
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => {;
   }
-  const [activeCategory,setActiveCategory] = useState("all");"
 
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -617,11 +494,8 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ); }"
 
-const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -631,13 +505,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 };
 
 export default GitHub;'"`'"``origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => {;
   }
-  const [activeCategory,setActiveCategory] = useState("all");"
 
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -645,11 +515,8 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ); }"
 
-const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"
@@ -660,13 +527,9 @@ return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-whit
 
 export default GitHub;'"`'"``ursor/add-new-services-and-deploy-updates-0462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
-const React,{ useState } from "react"; import Head from "next/head";"
 
-const "GitHub": React.FC = () => {;
   }
-  const [activeCategory,setActiveCategory] = useState("all");"
 
-const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "announcements","name": "Announcements","icon": "","
 },{ "id": "general","name": "General","icon": "","
 },{ "id": "ideas","name": "Ideas","icon": "","
@@ -674,11 +537,8 @@ const categories = [{ "id": "all","name": "All Discussions","icon": "",;"
 },{ "id": "showcase","name": "Showcase","icon": "","
 }];
 
-const discussions = [{ "id": "1","title": "New AI Model Integration API Released","category": "announcements","author": "Zion Team","authorAvatar": "","replies": "45","views": "1200","lastActivity": "2 hours ago","status": "pinned","tags": ["api","release","ai-models"]},{ "id": "2","title": "How to optimize API response times?","category": "help","author": "DevUser123","authorAvatar": "","replies": "23","views": "890","lastActivity": "5 hours ago","status": "active","tags": ["performance","optimization","api"]},{ "id": "3","title": "Feature "Request": Batch Processing for Multiple AI Services","category": "ideas","author": "AIEnthusiast","authorAvatar": "","replies": "67","views": "2100","lastActivity": "1 day ago","status": "active","tags": ["feature-request","batch-processing","ai-services"]},{ "id": "4","title": ""Showcase": AI-Powered Customer Support Bot","category": "showcase","author": "TechStartup","authorAvatar": "","replies": "34","views": "1560","lastActivity": "2 days ago","status": "active","tags": ["showcase","chatbot","customer-support"]},{ "id": "5","title": ""Discussion": Future of AI in Healthcare","category": "general","author": "HealthTech","authorAvatar": "","replies": "89","views": "3400","lastActivity": "3 days ago","status": "active","tags": ["healthcare","ai-future","discussion"]},{ "id": "6","title": ""Troubleshooting": Webhook Delivery Issues","category": "help","author": "WebhookDev","authorAvatar": "","replies": "12","views": "450","lastActivity": "4 days ago","status": "resolved","tags": ["webhooks","troubleshooting","integration"]}];"
 
-const filteredDiscussions = discussions.filter(discussion => { return activeCategory === "all" | discussion.category === activeCategory ); }"
 
-const getStatusColor = ("status": string) => { switch (status) { case "pinned":;
 }
 return "bg-yellow-600 text-white"; case "active": return "bg-green-600 text-white"; case "resolved": return "bg-blue-600 text-white"; "default": return "bg-gray-600 text-white"},;"
 }; return ( <> <Head> <title>GitHub Discussions - Zion AI Marketplace</title> <meta name="description" content="Join GitHub discussions about AI integration,development,and marketplace features" /> <meta name="keywords" content="github,discussions,AI,development,community" /> </Head> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> GitHub Discussions </h1> <p className="text-xl text-gray-300 mt-4"> Join the conversation about AI development and marketplace features </p> </div> <div className="text-right"> <div className="text-6xl mb-4"></div> <button className="bg-gray-800 "hover":bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600"> View on GitHub </button> </div> </div> </div> </header> ,"

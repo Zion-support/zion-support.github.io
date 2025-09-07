@@ -35,7 +35,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 interface Jest.setupProps {
   // Add props here as needed
 }
-import React from 'react';
 
 interface Jest.setupProps {
   // Add props here as needed

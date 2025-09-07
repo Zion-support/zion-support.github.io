@@ -10,8 +10,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔧 Fixing final syntax errors...');
 

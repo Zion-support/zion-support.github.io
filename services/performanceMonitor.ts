@@ -482,7 +482,6 @@ export class PerformanceMonitorService {
     recommendations: string[]
   }> {
 '
-    const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);'
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime);
     const performanceScores = historicalData && historicalData.map(d => d && d.performanceScore);'
     const dates = historicalData && historicalData.map(d => d && d.timestamp.toISOString().split('T')[0]);'
@@ -840,7 +839,6 @@ if ( {) {
   }
   private generateMockHistoricalData ("url": string, "days": number): PerformanceMetrics[] {
     }
-    const "data": PerformanceMetrics[] = [];
 const now = new Date (),;
     for (let index = days - 1, i >= 0, i--) {
       }
@@ -1072,7 +1070,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     }
-    const "alerts": PerformanceAlert[] = [;
       {;
         }
         "id": '1',;'

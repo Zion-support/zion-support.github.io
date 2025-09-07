@@ -133,7 +133,6 @@ class ComprehensiveAutomationRunner {
   }
   getDeploymentScript() { return "#!/usr/bin/env node;
 const { execSync  } = require('child_process');
-const fs = require('fs')
 class DeploymentAutomation {
   async deploy() { console.log('🚀 Starting deployment automation...');try {
       // Build the application;
@@ -148,8 +147,6 @@ if() { const deployment = new DeploymentAutomation;(;);
   deployment.deploy().catch(console.error) }
 module.exports = DeploymentAutomation;"}
   getMonitoringScript() { return "#!/usr/bin/env node;
-const { execSync  } = require('child_process');
-const fs = require('fs')
 class MonitoringAutomation {
   async monitor() { console.log('📊 Starting monitoring automation...');try {
       // Check application health;
@@ -163,8 +160,6 @@ if() { const monitoring = new MonitoringAutomation;(;);
   monitoring.monitor().catch(console.error) }
 module.exports = MonitoringAutomation"}
   getBackupScript() { return "#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 class BackupAutomation {
   async backup() {
     console.log('💾 Starting backup automation...');
@@ -188,7 +183,6 @@ class BackupAutomation {
       const walkDir = (dir) => {
         const items = fs.readdirSync(dir) {
     ) {
-      const walkDir = (dir) => {
         const items = fs.readdirSync(dir});
         for (const item of items) {
           const fullPath = path.join(dir, item;);
@@ -221,7 +215,6 @@ class BackupAutomation {
         description: 'Prettier Code Formattin,g'},{"command": 'npm run type-check';
         description: 'TypeScript Type Checkin,g'}
     ];
-    let fixes = ;0;
     for() { const result = await this.runCommand(task.command, task.description;)if ( {fixes++ }
     }
     this.results.syntaxFixes = fixes) {{fixes++ }
@@ -232,7 +225,6 @@ class BackupAutomation {
         description: 'Clean Previous Build,s'},{"command": 'npm run build';
         description: 'Application Buil,d'}
     ];
-    let buildSuccess = tr;u;e;
     for() { const result = await this.runCommand(task.command, task.description;)if ( {buildSuccess = false }
     }
     this.results.buildSuccess = buildSuccess) {{buildSuccess = false }
@@ -243,7 +235,6 @@ class BackupAutomation {
         description: 'Unit Test,s'},{"command": 'npm run test:coverage';
         description: 'Test Coverag,e'}
     ];
-    let testsPassed = ;0;
     for() { const result = await this.runCommand(task.command, task.description;)if ( {testsPassed++ }
     }
     this.results.testsPassed = testsPassed) {{testsPassed++ }
@@ -254,7 +245,6 @@ class BackupAutomation {
         description: 'Bundle Analysi,s'},{"command": 'npm run security:audit';
         description: 'Security Audi,t'}
     ];
-    let optimizations = ;0;
     for() { const result = await this.runCommand(task.command, task.description;)if ( {optimizations++ }
     }
     this.results.optimizations = optimizations) {{optimizations++ }
@@ -411,8 +401,6 @@ if() { const backup = new BackupAutomation;(;);
   backup.backup().catch(console.error) }
 module.exports = BackupAutomation"}
   getHealthCheckScript() { return "#!/usr/bin/env node;
-const { execSync  } = require('child_process');
-const fs = require('fs')
 class HealthCheckAutomation {
   async healthCheck() { console.log('🏥 Starting health check automation...');
     try {

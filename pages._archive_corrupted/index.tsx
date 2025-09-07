@@ -248,7 +248,6 @@ const Home = memo(() => {;
 
   }
 
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const handleSidebarToggle = useCallback(() => {;
     }
     setSidebarOpen(prev => { return !prev); }

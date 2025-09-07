@@ -358,7 +358,6 @@ export const store = {;
   },;
   removeMember("companyId": string, "memberId": string): boolean {;
     }
-    const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ "error": 'Forbidden' });'
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
       company.activity.unshift({ "id": generateId(), "timestampIso": new Date().toISOString(), "actorEmail": 'system', "action": 'removed_member', "meta": { memberId } });'
@@ -372,7 +371,6 @@ export const store = {;
   },;
   updateMemberRole("companyId": string, "memberId": string, "role": EnterpriseRole): boolean {;
     }
-    const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ "error": 'Forbidden' });'
     member.role = role;
     company.activity.unshift({ "id": generateId(), "timestampIso": new Date().toISOString(), "actorEmail": 'system', "action": 'updated_role', "meta": { memberId, role } }),;'
@@ -382,7 +380,6 @@ export const store = {;
     }
     const company = companiesById[companyId],;
     if (!company) return false,;
-    const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ "error": 'Forbidden' });'
 
 
@@ -393,7 +390,6 @@ export const store = {;
   },
   list_invoices ("company_id": string): InvoiceRecord[] {
     }
-    const company = companiesById[company_id];
     return company ? company.invoices : [];
   }};
   }}
@@ -459,7 +455,6 @@ export const store = $2;
     return member
   },
   removeMember(companyId: string, memberId: string): boolean {
-    const company = $2;
     if (!company) return false,
     const before = $2;
     company.members = company.members.filter($2);
@@ -471,7 +466,6 @@ export const store = $2;
     return changed
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
-    const company = $2;
     if (!company) return false,
     const member = company.members.find($2);
     if (!member) return false,
@@ -480,13 +474,11 @@ export const store = $2;
     return true
   },
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
-    const company = $2;
     if (!company) return false,
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),
     return true
   },
   listInvoices(companyId: string): InvoiceRecord[] {
-    const company = $2;
     return company ? company.invoices : []
   }},

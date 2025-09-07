@@ -71,7 +71,6 @@ class RateLimiter {
   }
   private cleanupOldRequests("key": string): void {
     }
-    const now = Date.now();
     const windowStart = now - this.config.windowMs;
     if (this.requests.has(key)) {
       }
@@ -83,7 +82,6 @@ class RateLimiter {
     }
     const key = this.getKey(req);
     this.cleanupOldRequests(key);
-    const now = Date.now();
     const timestamps = this.requests.get(key) || [];
     const limit = this.config.maxRequests;
     const reset = now + this.config.windowMs;
@@ -152,8 +150,6 @@ export function rateLimit("req": NextApiRequest, "res": NextApiResponse): boolea
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() |'
              req.socket.remoteAddress |
              'unknown';'
-  const now = Date.now();
-  const key = `rate_limit_${ip}`;`  const current = rateLimitMap.get(key);
   if (!current |now > current.resetTime) {
     // Reset or initialize
 }
@@ -167,7 +163,6 @@ rateLimitMap.set(key, {
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     }
     res.status(429).json({ "error": 'Too Many Requests' });'
-import type { NextApiRequest, NextApiResponse } from 'next';'
 ;
 const rateLimitMap = new Map < string, { "count": number; "reset_time": number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes;
@@ -205,7 +200,6 @@ if ( {) {
   rateLimitMap.set (key, current);
   return true;
 
-import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
 

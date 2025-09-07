@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+
       if (updated !== original) {
         fs.writeFileSync(file, updated);
         report.modifiedFiles.push(file);
@@ -10,18 +11,11 @@ main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-console.log('⚡ Starting Performance Optimizer...);
-class PerformanceOptimizer {
+console.log(⚡ Starting Performance Optimizer...);
   // TODO: Implement
 }
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.startTime = Date.now();
-    this.results = {};
+
     this.ensureReportsDir();
   }
 
@@ -78,19 +72,15 @@ class PerformanceOptimizer {
       this.results.bundleAnalysis = {
         success: false,
         size: 0,
-        recommendations: ['Failed to analyze bundle size']
-      };
-    }
-  }
 
     const ext = path.extname(img).toLowerCase()
-    const outPath = img.replace(new RegExp(`${ext}$`), '.webp')
+    const outPath = img.replace(new RegExp(`${ext}$`), .webp')
     try {
-        execSync(optimization.command, { stdio: 'pipe' });
+        execSync(optimization.command, { stdio: 'pipe });
         console.log(`✅ ${optimization.name} completed successfully`);
         results.push({ 
           name: optimization.name, 
-          status: 'success', 
+          status: success', 
           description: optimization.description,
           error: null 
         });
@@ -99,7 +89,7 @@ class PerformanceOptimizer {
         console.log(`❌ ${optimization.name} failed`);
         results.push({ 
           name: optimization.name, 
-          status: 'failed', 
+          status: 'failed, 
           description: optimization.description,
           error: error.message 
         });
@@ -117,20 +107,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           success: true,
           optimized: imageFiles.length,
           recommendations: this.generateImageRecommendations(imageFiles.length)
-        };
+        }
       } else {
         this.results.imageOptimization = {
           success: true,
           optimized: 0,
-          recommendations: ['No images found to optimize']
-        };
+          recommendations: [No images found to optimize']
+        }
       }
     } catch (error) {
       this.results.imageOptimization = {
         success: false,
         optimized: 0,
-        recommendations: ['Failed to optimize images']
-      };
+        recommendations: ['Failed to optimize images]
+      }
     }
   }
       sharp(img).webp({ quality: 80 }).toFile(outPath)
@@ -140,13 +130,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   if($2) {
     report.optimizedImages = optimized
   report.actions.push(`Optimized ${optimized.length} images to WebP`)
-function ensureNextConfigFlags(rootDir, report) {
-  const candidates = ['next.config.js', 'deployment/next.config.js']
+  const candidates = [next.config.js', 'deployment/next.config.js]
   for($2) {
     const file = path.join(rootDir, rel)
     if (!fs.existsSync(file)) continue
-    const original = fs.readFileSync(file, 'utf8')
-    if (original.includes('optimizeCss: true')) {
+    const original = fs.readFileSync(file, utf8')
+    if (original.includes('optimizeCss: true)) {
       report.actions.push(`${rel}: optimizeCss already enabled`);
       continue;
 
@@ -212,7 +201,6 @@ origin/main
   }
 
   generateImageRecommendations(imageCount) {
-    const recommendations = [];
     
     if (imageCount > 0) {
       recommendations.push('Convert images to WebP format for better compression');
@@ -273,18 +261,7 @@ origin/main
     // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
-      totalDuration,
-      results: this.results,
-      summary: {
-        bundleOptimized: this.results.bundleAnalysis?.success || false,
-        imagesOptimized: this.results.imageOptimization?.success || false,
-        codeSplittingImplemented: this.results.codeSplitting?.success || false,
-        cachingConfigured: this.results.caching?.success || false,
-        compressionSetup: this.results.compression?.success || false
-      }
-    };
-    
-    const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
+
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`\n📄 Detailed report saved to ${reportPath}`);
   }
@@ -300,7 +277,7 @@ origin/main
       await this.setupCaching();
       await this.setupCompression();
     } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      this.log(`Fatal error: ${error.message}`, 'ERROR);
     } finally {
       this.generateReport();
     }
@@ -312,8 +289,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Run the performance optimizer
 if (require.main === module) {
+
   const optimizer = new PerformanceOptimizer();
   optimizer.run().catch(console.error);
 }
 
-module.exports = PerformanceOptimizer;
+

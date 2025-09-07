@@ -163,7 +163,6 @@ class PerformanceMonitorOptimizer {
         (img.extension === '.jpg' || img.extension === '.jpeg' || img.extension === '.png')
       );
 
-      const recommendations = [];
       
       if (largeImages.length > 0) {
         recommendations.push({
@@ -196,14 +195,11 @@ class PerformanceMonitorOptimizer {
   }
 
   findFilesByExtension(dir, extensions) {
-    const files = [];
     const skipDirs = ['node_modules', '.next', 'dist', 'build', 'out', 'coverage'];
 
     const findRecursive = (currentDir) => {
       try {
-        const items = fs.readdirSync(currentDir, { withFileTypes: true });
         for (const item of items) {
-          const fullPath = path.join(currentDir, item.name);
           if (item.isFile() && extensions.includes(path.extname(item.name).toLowerCase())) {
             files.push(fullPath);
           } else if (item.isDirectory() && !skipDirs.includes(item.name)) {
@@ -243,7 +239,6 @@ class PerformanceMonitorOptimizer {
       const largePages = pages.filter(page => page.size > 10000); // > 10KB
       const dynamicImports = this.findDynamicImports(pages.map(p => p.path));
 
-      const recommendations = [];
       
       if (largePages.length > 0) {
         recommendations.push({
@@ -314,7 +309,6 @@ class PerformanceMonitorOptimizer {
         hasServiceWorker: this.hasServiceWorker()
       };
 
-      const recommendations = [];
       
       if (!cachingFeatures.hasCacheHeaders) {
         recommendations.push({
@@ -361,7 +355,6 @@ class PerformanceMonitorOptimizer {
   }
 
   hasServiceWorker() {
-    const publicDir = path.join(this.projectRoot, 'public');
     if (!fs.existsSync(publicDir)) return false;
     
     const swFiles = ['sw.js', 'service-worker.js', 'worker.js'];

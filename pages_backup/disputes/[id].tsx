@@ -37,16 +37,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import {useRouter} from 'next/router';
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
 
 
-import {useRouter} from 'next/router';
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
 
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());

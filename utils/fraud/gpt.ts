@@ -28,7 +28,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "confidence": 0.5
       }
     }
-    const confidence =;
       typeof parsed.confidence === 'number';'
         ? Math.max (0, Math.min (1, parsed.confidence));
         : 0.6;

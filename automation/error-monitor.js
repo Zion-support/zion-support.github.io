@@ -233,8 +233,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return errors;
   }
   parseESLintErrors(output) {
-    const errors = [];
-    const lines = output.split('\n');
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
       if (match) {
@@ -288,8 +286,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
   logHealthStatus() {
     const status = this.monitoringReport.healthStatus;
-    const totalErrors = this.monitoringReport.metrics.totalErrors;
-    const totalWarnings = this.monitoringReport.metrics.totalWarnings;
 
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);

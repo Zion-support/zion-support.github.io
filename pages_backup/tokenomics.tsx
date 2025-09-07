@@ -45,11 +45,6 @@ type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [publicPreview, setPublicPreview] = useState(false);
-  const [legalReview, setLegalReview] = useState(false);
-  const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -60,11 +55,8 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     { label: 'Liquidity & Market Making', percent: 10 },;
     { label: 'Advisors & Partnerships', percent: 5 }]),;
   const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
-  const [jurisdiction, setJurisdiction] = useState<string>('US');
   const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
   const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('Executive Summary');
 
   const previewMarkdown = useMemo(() => {;

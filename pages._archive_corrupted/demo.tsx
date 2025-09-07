@@ -542,7 +542,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
   }
 }
 import { Brain,, Server,, Zap,, Shield,, ArrowRight,, Play,, Clock,, Users,, Star,, CheckCircle } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "DemoPage": React.FC = () => {const [selectedDemo, setSelectedDemo] = useState('ai-services')const demos = [{"id": 1,"title": 'AI Services Demo',"description": 'See how our AI solutions can transform your business processes',"duration": '15 minutes',"icon": <Brain className="w-8 h-8" />,"features": [;"
         'Machine Learning Models','Natural Language Processing','Computer Vision','Predictive Analytics';'
       ],"category": 'AI Services';'
     },{"id": 'it-infrastructure',"title": 'IT Infrastructure Demo',"description": 'Explore our comprehensive IT infrastructure solutions',"duration": '20 minutes',"icon": <Server className="w-8 h-8" />,"features": ['Cloud Migration','Network Setup','System Integration','24/7 Support';'
@@ -754,7 +753,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
 export default DemoPage;
     }
   ];
-  const selectedDemoData = demos.find(demo => { return demo.id === selectedDemo)return (<>; }
       <SEO title="Demo - Zion Tech Group";"
         description="Experience our AI services, IT solutions, and micro SaaS development capabilities through interactive demos.";"
         keywords="demo, AI services, IT solutions, micro SaaS, cybersecurity, Zion Tech Group";"

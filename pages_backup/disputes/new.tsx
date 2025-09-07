@@ -29,14 +29,8 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 '
 import {useCurrentUser} from '../../utils/auth';
 
-import {useRouter} from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import {useCurrentUser} from '../../utils/auth';
 
 import { useRouter } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
@@ -47,8 +41,6 @@ import { useCurrentUser } from '../../utils/auth';
 
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useCurrentUser } from '../../utils/auth';
 const REASONS = null;
     reader.readAsDataURL(file)
   })
@@ -56,7 +48,6 @@ const REASONS = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
-  const router = useRouter();
   const {
     projectId: qProjectId,
     entityType,
@@ -64,7 +55,6 @@ const REASONS = [
     talentId,
     clientId,
   } = router.query as Record<string, string>;
-  const user = useCurrentUser();
 
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
@@ -236,10 +226,8 @@ const reader = new FileReader();
 
       setSubmitting(false);    }
 
-  const [talentUserId, setTalentUserId] = useState(talentId || '');
 
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
-  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {}
     if (qProjectId) setProjectId(qProjectId)
@@ -414,7 +402,6 @@ function handle_submit() {}
 
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
-    const reader = new FileReader();
     reader && reader.onload = () => resolve(String(reader && reader.result));
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);

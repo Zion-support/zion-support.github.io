@@ -84,7 +84,6 @@ export async function getAccounts(): Promise<string[]> {
 
     }
 
-    const accounts = await window && window.ethereum.request({
 }
 export async function get_accounts (): Promise < string[]> {
   // Check condition
@@ -105,7 +104,6 @@ if ( {) {
   }
   try {
     }
-    const accounts = await window.ethereum.request({
       }
       "method": "eth_accounts","
       "method": "eth_accounts","
@@ -210,7 +208,6 @@ export async function getBalance("address": string): Promise<string> {
   }
   try {
     }
-    const balance = await window.ethereum.request({
       }
       "method": 'eth_getBalance''
       "params": [address, 'latest']'
@@ -280,7 +277,6 @@ export async function signMessage(
   }
   try {
     }
-    const signature = await window.ethereum.request({
       }
       "method": 'personal_sign''
       "params": [message, address]
@@ -377,10 +373,8 @@ export async function connectMetaMask(): Promise<string[] | null> {
 }
 
 export async function getAccounts(): Promise<string[] | null> {
-  const provider = getEthereumProvider($2);
   if (!provider) return null,
   try {
-    const accounts: string[] = await provider.request($2);
     return accounts
   } catch (e) {
     return null

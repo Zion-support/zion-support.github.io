@@ -1,141 +1,162 @@
 
-export interface NextGenInnovation2025  {export interface NextGenInnovation2025  {export interface NextGenInnovation2025  {"id": string;
-  }
-  "name": string;
-  "tagline": string;
-  "price": string;
-  "id": string;
-  "name": string;
-  "tagline": string;
-  "price": string,"description": string;
-  "features": string[];
-  "link": string;
-  "category": string;"address": string;
-  }
-export const "nextGenInnovations2025": NextGenInnovation2025[] = [;
-  {"id": 'next-gen-ai-suite';'
-    }
-    "name": 'Next-Gen AI Suite';'
-    "tagline": 'Future-ready AI solutions';'
-    "price": '$179/month';'
-    "description":;
-      'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.';'
-    "features": [;
-      'Next-gen AI models';'
-      'Advanced capabilities';'
-      'Future-ready features';'
-      'Innovation platform';'
-      'Expert support';'
-    ];
-    "link": '/services/next-gen-ai-suite';'
-    "category": 'Next-Gen Innovations 2025';'
-    "realImplementation": true;
-    "contactInfo": {"mobile": '+1 302 464 0950';'
-      }
-      "email": 'kleber@ziontechgroup.com';'
-      "address": '364 E Main St STE 1008 Middletown DE 19709';'
-    }
-  }
-];      "mobile": "+1 302 464 0950";"
-      "email": "kleber@ziontechgroup.com";"
-      "address": "364 E Main St STE 1008 Middletown DE 19709";"
-    "id": "next-gen-ai-suite","name": "Next-Gen AI Suite","tagline": "Future-ready AI solutions","price": "$179/month","description": "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.","features": [;"
-      "Next-gen AI models","Advanced capabilities","Future-ready features","Innovation platform","Expert support";"
-    ],"link": "/services/next-gen-ai-suite","category": "Next-Gen Innovations 2025","realImplementation": true,"contactInfo": {"email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";}"
-  }];
-];
-      "email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"
-    }
-  }],"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709';'
-    }
-      "address": "364 E Main St STE 1008 Middletown DE 19709"];"
-],"mobile": "+1 302 464 0950",      "mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709';'
-    }
-  }];      "mobile": "+1 302 464 0950","mobile": "+1 302 464 0950","mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"
-    }
-  }
-];
-];];
-],"mobile": "+1 302 464 0950";"
-];
-];
-  "id": string;
-  "name": string;
-  "tagline": string;
-  "price": string;
-  "description": string;
-  "features": string[];
-  "link": string;
-  "category": string;
-    "address": string;
-  }
-export const "nextGenInnovations2025": NextGenInnovation2025[] = [
-  {
-    }
-    "id": "id","
-    "name": 'Next-Gen AI Suite''
-    "tagline": 'Future-ready AI solutions''
-    "price": '$179/month''
-    "description":
-      'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.''
-    "features": [
-      'Next-gen AI models''
-      'Advanced capabilities''
-      'Future-ready features''
-      'Innovation platform''
-      'Expert support''
-    ]
-    "link": '/services/next-gen-ai-suite''
-    "category": 'Next-Gen Innovations 2025''
-    "realImplementation": true;
-    "contactInfo": {
-      }
-      "mobile": '+1 302 464 0950''
-      "email": 'kleber@ziontechgroup.com''
-      "address": '364 E Main St STE 1008 Middletown DE 19709''
+
+=======
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  id: string;
+  name: string;
+  tagline: string;
+  price: string,
+=======
+
+
+
+export interface NextGenInnovation2025 {
+export interface NextGenInnovation2025 {
+export interface NextGenInnovation2025 {
+  id: string;
+
+id: string;
+
+  name: string;
+  tagline: string;
+
+  description: string;
+  features: string[];
+  link: string;
+id: string;
+
+
+  id: string;,
+  name: string;
+  tagline: string;,
+
+  price: string;
+  description: string;,
+  features: string[];
+  link: string;,
+pr-12325
+  category: string;
+
+
+
+      address: "364 E Main St STE 1008 Middletown DE 19709
+
+
+
+
+
+    id: "next-gen-ai-suite",
+    name: Next-Gen AI Suite","
+    tagline: Future-ready AI solutions,"
+    price: "$179/month,
+    description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",
+    features: [
+      Next-gen AI models","
+      Advanced capabilities,"
+      "Future-ready features,
+      "Innovation platform",
+      Expert support"
+    ],"
+    link: /services/next-gen-ai-suite,"
+    category: "Next-Gen Innovations 2025,
+    realImplementation: true,
+
+      mobile: '+1 302 464 0950,
+      email: kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709}}];      mobile: +1 302 464 0950",
+      mobile: "+1 302 464 0950,
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      email: kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
-];      "mobile": "+1 302 464 0950""
-      "email": "kleber@ziontechgroup.com""
-      "address": "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
-]
-    "id": "next-gen-ai-suite","
-    "name": "Next-Gen AI Suite","
-    "tagline": "Future-ready AI solutions","
-    "price": "$179/month","
-    "description": "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.","
-    "features": [
-      "Next-gen AI models","
-      "Advanced capabilities","
-      "Future-ready features","
-      "Innovation platform","
-      "Expert support""
-    ],
-    "link": "/services/next-gen-ai-suite","
-    "category": "Next-Gen Innovations 2025","
-    "realImplementation": true,
-    "contactInfo": {
-      }
-      "email": "kleber@ziontechgroup.com","
-      "address": "364 E Main St STE 1008 Middletown DE 19709";"
+
+=======
+      address: 364 E Main St STE 1008 Middletown DE 19709"],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+],
+      mobile: "+1 302 464 0950,      mobile: +1 302 464 0950',
+      email: 'kleber@ziontechgroup.com,
+=======
+    contactInfo: {}
+
+      email: "kleber@ziontechgroup.com",
+      address: 364 E Main St STE 1008 Middletown DE 19709";
+
+    }
+  }
+
+],
+
+
+
+
+
+
+      mobile: '+1 302 464 0950',
+      email: kleber@ziontechgroup.com','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      address: 364 E Main St STE 1008 Middletown DE 19709}},"
+];      mobile: +1 302 464 0950,"
+      mobile: "+1 302 464 0950,
+      mobile: "+1 302 464 0950",
+      email: kleber@ziontechgroup.com","
+=======
+      mobile: +1 302 464 0950,
+      email: "kleber@ziontechgroup.com",
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      address: 364 E Main St STE 1008 Middletown DE 19709;
     }
   }
 ],
-      "mobile": '+1 302 464 0950','
-      "email": 'kleber@ziontechgroup.com','
-      "address": '364 E Main St STE 1008 Middletown DE 19709''
-    }
-  },;
-];      "mobile": "+1 302 464 0950","
-      "mobile": "+1 302 464 0950","
-      "mobile": "+1 302 464 0950","
-      "email": "kleber@ziontechgroup.com","
-      "address": "364 E Main St STE 1008 Middletown DE 19709";"
-    }
-  }
-]
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
-]
-],
+
+
+
+
+];      mobile: "+1 302 464 0950",
+      mobile: "+1 302 464 0950",
+];
+
+
+
+pr-12325
+
+
+]],
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6

@@ -48,7 +48,6 @@ module.exports = {},;
 
 
 import React from 'react';
-import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 type LinkProps = React.PropsWithChildren<{
   to?: string;
