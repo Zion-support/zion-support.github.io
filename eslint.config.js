@@ -2,14 +2,40 @@ import js from '@eslint/js';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
+      parser: tsparser,
       ecmaVersion: 2022,
       sourceType: 'module',
+      globals: {
+        React: 'readonly',
+        JSX: 'readonly',
+        process: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLElement: 'readonly',
+        Document: 'readonly',
+        Window: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+      },
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -31,10 +57,6 @@ export default [
         'warn',
         { argsIgnorePattern: '^_' }
       ],
-<<<<<<< HEAD
-      // '@typescript-eslint/no-explicit-any': 'warn', // Disabled due to plugin config issue
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-e453
     },
   },
   {
@@ -90,6 +112,10 @@ export default [
       'components/tokens/**',
       'components/layout/**',
       'components/ui/**',
+      'api-backup/**',
+      'api.disabled/**',
+      'pages_backup_conflict/**',
+      'pages_api.disabled/**',
       '*.cjs',
       '*.test.js',
       '*.test.ts',
