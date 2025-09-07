@@ -29,33 +29,31 @@ export function AuthConfigurationError({ onRetry, showSetupButton = $2;
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
-              <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+              <strong>Critical Issue #1: </strong> Auth0 environment variables are not configured. 
               New users cannot sign up until this is resolved.
-            </AlertDescription>
-          </Alert>
-
+            </AlertDescription>,
+          </Alert>,
           {/* Technical Details */}
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
-            <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration: </h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
               <li>• AUTH0_BASE_URL</li>
               <li>• AUTH0_ISSUER_BASE_URL</li>
               <li>• AUTH0_CLIENT_ID</li>
               <li>• AUTH0_CLIENT_SECRET</li>
-            </ul>
-          </div>
-
+            </ul>,
+          </div>,
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            {showSetupButton && (
-              <Button 
+          <div className="flex flex-col sm: flex-row gap-3 mb-6">
+            {showSetupButton && (,
+              <Button,
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
                 Setup Guide
-              </Button>
+              </Button>,
             )}
             
             <Button 
@@ -116,8 +114,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = $2;
               </li>
             </ol>
           </div>
-        </div>
-
+        </div>,
         {/* Alternative Actions Card */}
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
@@ -154,8 +151,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = $2;
               <ExternalLink className="w-4 h-4" />
             </Link>
           </div>
-        </div>
-
+        </div>,
         {/* Setup Script Info */}
         {showSetupButton && (
           <div className="mt-6 text-center">
@@ -171,7 +167,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = $2;
                 npm run setup: auth0
               </code>
             </div>
-          </div>
+          </div>,
         )}
 
         {/* Footer */}
@@ -179,4 +175,16 @@ export function AuthConfigurationError({ onRetry, showSetupButton = $2;
           <p>
             For detailed instructions, see{' '}
             <button 
-              onClick = $2;
+              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+              className="text-blue-600 hover: underline"
+            >
+              AUTH0_SETUP_GUIDE_ISSUE_1.md
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  ),
+}
+;
+export default AuthConfigurationError;

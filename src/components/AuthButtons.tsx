@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook } from 'lucide-react'
 import { signIn } from 'next-auth/react';
-type Provider = $2;
+type Provider = 'google' | 'github' | 'facebook' | 'credentials',
+
 interface AuthButtonsProps {
   providers?: Provider[]
 }
@@ -10,8 +11,8 @@ interface AuthButtonsProps {
 export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null),
 
-  const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider($2);
+  const handleSignIn = async (provider: Provider) => {,
+    setLoadingProvider(provider),
     await signIn(provider)
   },
 
@@ -22,7 +23,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
           type="button"
           variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={() => handleSignIn('google')}
           disabled={loadingProvider !== null}
         >
@@ -43,7 +44,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
           type="button"
           variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={() => handleSignIn('github')}
           disabled={loadingProvider !== null}
         >
@@ -61,7 +62,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
           type="button"
           variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={() => handleSignIn('facebook')}
           disabled={loadingProvider !== null}
         >
@@ -77,7 +78,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
         <Button
           type="button"
           variant="outline"
-          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={() => handleSignIn('credentials')}
           disabled={loadingProvider !== null}
         >
@@ -91,3 +92,4 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
     </div>
   )
 }
+;

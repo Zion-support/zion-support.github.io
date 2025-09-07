@@ -2,11 +2,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Trophy } from 'lucide-react'
 
 export interface LeaderboardEntry {
-  name: string,
-  points: number}
+  name: string;
+  points: number,
+}
 
 interface UserLeaderboardProps {
-  entries: LeaderboardEntry[]
+  entries: LeaderboardEntry[],
 }
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
@@ -25,7 +26,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
               key={e.name}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
-              <span className="font-medium">
+              <span className="font-medium">,
                 {idx + 1}. {e.name}
               </span>
               <span className="text-sm">{e.points} pts</span>

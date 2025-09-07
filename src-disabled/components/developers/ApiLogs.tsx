@@ -44,8 +44,8 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { ApiLogsChart } from './ApiLogsChart';
 
-import { useState, useEffect } from "react",
-import { format } from "date-fns",
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
 import { List, RefreshCw } from 'lucide-react'
 import { useApiKeys } from "@/hooks/useApiKeys";
 import { Button } from "@/components/ui/button";
@@ -67,12 +67,23 @@ export function ApiLogs() {
   },
   
   // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm: ss')
+  const formatTimestamp = (timestamp: string) => {,
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss'),
   },
   
   // Helper to get badge color based on status code
-  const getStatusBadge = $2;
+  const getStatusBadge = (statusCode: number) => {
+    if (statusCode >= 200 && statusCode < 300) {
+      return <Badge className="bg-green-700">Success</Badge>,
+    } else if (statusCode >= 400 && statusCode < 500) {
+      return <Badge className="bg-amber-700">Client Error</Badge>
+    } else if (statusCode >= 500) {
+      return <Badge className="bg-red-700">Server Error</Badge>
+    } else {
+      return <Badge className="bg-blue-700">Other</Badge>
+    }
+  },
+  
   // Calculate pagination info
   const totalPages = Math.ceil($2);
   const hasNextPage = $2;
@@ -142,7 +153,7 @@ export function ApiLogs() {
                 </tr>
               ) : (
                 logs.map((log) => (
-                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
+                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">,
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge 
@@ -219,6 +230,4 @@ export function ApiLogs() {
     </Card>
   )
 }
-  )
-}
-    </Card>
+;

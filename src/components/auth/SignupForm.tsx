@@ -12,31 +12,32 @@ import { cn } from '@/lib/utils';
 import { fireEvent } from '@/lib/analytics';
 import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = z.object({
-  name: z.string().min(2, 'Full Name must be at least 2 characters').max($2);
-  email: z.string().email('Please enter a valid email address').min($2);
-  password: z.string()
+  name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
+  email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
+  password: z.string(),
     .min(8, 'Password must be at least 8 characters')
     .regex(/[A-Z]/, 'Password must include at least one uppercase letter')
     .regex(/[a-z]/, 'Password must include at least one lowercase letter')
     .regex(/[0-9]/, 'Password must include at least one number')
-    .regex($2);
-  confirmPassword: z.string()
+    .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character'),
+  confirmPassword: z.string(),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
   path: ["confirmPassword"]}),
 
 type SignupFormData = $2;
 interface SignupFormProps {
-  onSuccess?: (result: {
-    email: string,
-    emailVerificationRequired: boolean}) => void,
-  onError?: (error: string) => void
+  onSuccess?: (result: {;
+    email: string;,
+    emailVerificationRequired: boolean,
+  }) => void,
+  onError?: (error: string) => void,
 }
 
 interface FieldValidationState {
-  isValid: boolean,
-  isValidating: boolean,
-  error: string | null
+  isValid: boolean;
+  isValidating: boolean;
+  error: string | null,
 }
 
 export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
@@ -69,7 +70,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           [fieldName]: { 
             isValid: prev[fieldName]?.isValid ?? false,
             isValidating: true,
-            error: prev[fieldName]?.error ?? null
+            error: prev[fieldName]?.error ?? null,
           }
         })),
 
@@ -80,7 +81,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
             [fieldName]: {
               isValid: result,
               isValidating: false,
-              error: error ?.message || null
+              error: error?.message || null,
             }
           }))
         }, 300)
@@ -92,32 +93,49 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
   }, [watchedFields, touchedFields, trigger, errors]),
 
-  const getFieldValidationIcon = $2;
-    const isTouched = $2;
+  const getFieldValidationIcon = (fieldName: string) => {,
+    const state = fieldStates[fieldName],
+    const isTouched = touchedFields[fieldName as keyof SignupFormData],
+    
     if (!isTouched) return null,
     
     if (state?.isValidating) {
-      return <Loader2 className = $2;
-  const getFieldClasses = $2;
-    const isTouched = $2;
-    if (!isTouched) return '',
-    
-    if (state?.isValidating) {
-      return 'border-blue-300 focus:border-blue-500 focus:ring-blue-500/20'
+      return <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
     }
     
     if (state?.isValid && !state?.error) {
-      return 'border-green-500 focus: border-green-500 focus:ring-green-500/20'
+      return <CheckCircle className="h-4 w-4 text-green-500" />
     }
     
     if (state?.error) {
-      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20'
+      return <AlertCircle className="h-4 w-4 text-red-500" />
+    }
+    
+    return null
+  },
+
+  const getFieldClasses = (fieldName: string) => {,
+    const state = fieldStates[fieldName],
+    const isTouched = touchedFields[fieldName as keyof SignupFormData],
+    
+    if (!isTouched) return '',
+    
+    if (state?.isValidating) {
+      return 'border-blue-300 focus:border-blue-500 focus:ring-blue-500/20',
+    }
+    
+    if (state?.isValid && !state?.error) {
+      return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',
+    }
+    
+    if (state?.error) {
+      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20',
     }
     
     return ''
   },
 
-  const getPasswordStrength = (password: string) => {
+  const getPasswordStrength = (password: string) => {,
     if (!password) return { strength: 0, label: '' },
     
     let strength = $2;
@@ -134,36 +152,42 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       strength,
       label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
-      percentage: (strength / 5) * 100
+      percentage: (strength / 5) * 100,
     }
   },
 
-  const passwordStrength = getPasswordStrength($2);
-  const onSubmit = async (data: SignupFormData) => {
-    fireEvent($2);
-    setIsSubmitting($2);
+  const passwordStrength = getPasswordStrength(watchedFields.password || ''),
+
+  const onSubmit = async (data: SignupFormData) => {,
+    fireEvent('signup_submit'),
+    setIsSubmitting(true),
+
     try {
       // Use AuthProvider's signup function
-      const result = await signUp($2);
+      const result = await signUp(data.email, data.password, {
+        name: data.name,
+        displayName: data.name,
+      }),
+
       if (result.error) {
         logErrorToProduction($2);
         fireEvent($2);
         // Handle specific error cases with inline field errors
         if (result.error.includes('already registered') || result.error.includes('already exists')) {
           setError('email', { 
-            message: 'An account with this email already exists. Please try logging in instead.' 
+            message: 'An account with this email already exists. Please try logging in instead.',
           })
         } else if (result.error.includes('invalid email')) {
           setError('email', { 
-            message: 'Please enter a valid email address.' 
+            message: 'Please enter a valid email address.',
           })
         } else if (result.error.includes('weak password')) {
           setError('password', { 
-            message: 'Password is too weak. Please choose a stronger password.' 
+            message: 'Password is too weak. Please choose a stronger password.',
           })
         } else {
           setError('root', { 
-            message: result.error 
+            message: result.error,
           })
         }
         
@@ -172,18 +196,24 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       }
 
       // Success
-      toast($2);
-      reset($2);
-      fireEvent($2);
+      toast({
+        title: "Account Created Successfully!",
+        description: result.emailVerificationRequired 
+          ? "Please check your email to verify your account before logging in.",
+          : "You can now log in to your account."}),
+
+      reset(),
+      fireEvent('signup_success'),
       onSuccess?.({
         email: data.email,
         emailVerificationRequired: result.emailVerificationRequired ?? false})
 
-    } catch (error: any) {
-      logErrorToProduction($2);
-      fireEvent($2);
-      const errorMessage = $2;
-      setError($2);
+    } catch (error: any) {,
+      logErrorToProduction('Unexpected signup error:', { data: error }),
+      fireEvent('signup_error', { message: error.message || 'unexpected' }),
+      const errorMessage = 'An unexpected error occurred during signup. Please try again.',
+      
+      setError('root', { message: errorMessage }),
       onError?.(errorMessage),
 
       toast({
@@ -374,3 +404,4 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     </form>
   )
 }
+;

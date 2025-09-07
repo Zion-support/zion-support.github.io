@@ -7,17 +7,19 @@ import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
   email?: string,
-  profileName: string,
-  profileType: 'service' | 'talent'
+  profileName: string;
+  profileType: 'service' | 'talent',
 }
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState($2);
-  const [subject, setSubject] = useState($2);
-  const [isSending, setIsSending] = useState($2);
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault($2);
-    setIsSending($2);
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  
+  const handleSendMessage = (e: React.FormEvent) => {,
+    e.preventDefault(),
+    setIsSending(true),
+    
     // Here would be the actual API call to send the message
     setTimeout(() => {
       setIsSending($2);
@@ -39,10 +41,10 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
-          <a 
+          <a,
             href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block"
-          >
+          >,
             {email}
           </a>
         </div>
@@ -70,7 +72,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           </div>
           <Button 
             type="submit" 
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90",
             disabled={isSending}
           >
             <Send className="mr-2 h-4 w-4" />
@@ -81,3 +83,4 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     </div>
   )
 }
+;

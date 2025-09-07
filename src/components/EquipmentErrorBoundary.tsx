@@ -4,25 +4,25 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 interface State {
-  hasError: boolean,
-  error?: Error
+  hasError: boolean;
+  error?: Error,
 }
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super($2);
-    this.state = { hasError: false}
+  constructor(props: Props) {,
+    super(props),
+    this.state = { hasError: false }
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
   }
 

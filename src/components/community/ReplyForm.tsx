@@ -12,18 +12,25 @@ import {
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card";
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>,
-  parentId?: string
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string,
 }
 
 interface ReplyFormValues {
-  content: string}
+  content: string,
+}
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState($2);
-  const form = $2;
-  const handleSubmit = async (values: ReplyFormValues) => {
-    setIsSubmitting($2);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: "",
+    }
+  }),
+
+  const handleSubmit = async (values: ReplyFormValues) => {,
+    setIsSubmitting(true),
     try {
       await onSubmit($2);
       form.reset()
@@ -44,5 +51,24 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
                 <FormItem>
                   <FormControl>
                     <Textarea
-                      className = $2;
-export default ReplyForm,
+                      className="min-h-[100px] resize-y"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+},
+;
+export default ReplyForm;

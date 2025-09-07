@@ -8,7 +8,7 @@ import { ModeToggle } from '@/components/ModeToggle';
 import { useTranslation } from 'react-i18next';
 export interface MobileMenuProps {
   unreadCount?: number,
-  onClose: () => void,
+  onClose: () => void;
   openLoginModal: (returnToPath: string) => void, // Added from plan
 }
 
@@ -24,7 +24,7 @@ const protectedRoutes = [
 
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
-  return protectedRoutes.some(route => href.startsWith(route))
+  return protectedRoutes.some(route => href.startsWith(route)),
 }
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
@@ -42,13 +42,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       icon: Search,
       matches: (path: string) =>
         path.startsWith('/talent') ||
-        path.startsWith('/categories') ||
+        path.startsWith('/categories') ||,
         path.startsWith('/marketplace')},
     {
       key: 'community',
       href: '/community',
       icon: MessageCircle,
-      matches: (path: string) =>
+      matches: (path: string) =>,
         path.startsWith('/community') || path.startsWith('/forum')},
     {
       key: 'post_job',
@@ -60,8 +60,8 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       key: 'messages',
       href: '/messages',
       icon: MessageSquare,
-      matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith($2);
+      matches: (path: string) =>,
+        path.startsWith('/messages') || path.startsWith('/inbox'),
       badge: unreadCount,
       authRequired: true},
     {
@@ -78,11 +78,30 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
   ),
 
   return (
-    <div className = $2;
-              item.matches(router.pathname)
+    <div className="py-6">
+      <div className="flex justify-between items-center px-6 mb-6">
+        <h2 className="text-xl font-bold text-foreground">Menu</h2>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onClose}
+          aria-label="Close menu"
+          title="Close menu"
+        >
+          <X className="h-5 w-5" />
+        </Button>
+      </div>
+
+      <nav className="space-y-1">
+        {visibleItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            aria-label={item.name}
+            className={cn(
+              'flex items-center px-6 py-3 text-base font-medium focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary', item.matches(router.pathname)
                 ? 'bg-primary/20 text-primary border-l-4 border-primary'
-                : 'text-foreground hover:bg-primary/10 hover:text-primary',
-            )}
+                : 'text-foreground hover: bg-primary/10 hover:text-primary', )}
             onClick={(e) => {
               const routeIsProtected = item.authRequired || isProtectedRoute($2);
               if (!isAuthenticated && routeIsProtected) {
@@ -114,22 +133,4 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
   )
 }
-name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );`
-}
-  );
-}
-}
 ;
-}
-;
-  );
-
-}> {';
-  item.badge > 9 ? '9+' : item.badge ;
-}</span>) ;
-}</div> {;
-  item.name ;
-}</Link>) ) ";
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-}'"
-origin/cursor/automate-test-improve-and-merge-code-2533

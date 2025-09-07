@@ -4,7 +4,7 @@ import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-  title: string,
+  title: string;
   showBack?: boolean,
   showNotifications?: boolean,
   showSettings?: boolean,
@@ -69,3 +69,4 @@ export function MobileHeader({
     </header>
   )
 }
+;

@@ -31,7 +31,7 @@ export function AppHeader() {
   const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
-    // This function's main job is just to open the modal.
+    // This function's main job is just to open the modal.,
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
   },
@@ -46,21 +46,21 @@ export function AppHeader() {
         <div className="container flex h-16 items-center px-4 sm:px-6">
           <Logo />
           {showTagline && (
-            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
+            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">,
               {t('home.header_tagline')}
             </span>
           )}
           <div className="ml-6 flex-1 hidden md:block">
-            <nav role="navigation" aria-label="Main navigation">
+            <nav role="navigation" aria-label="Main navigation">,
               <ResponsiveNavigation openLoginModal={openLoginModal} />
             </nav>
           </div>
           
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
-            <button
+            <button,
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
             >
@@ -78,7 +78,7 @@ export function AppHeader() {
             <div className="ml-4 relative z-10 flex items-center">
               <Link
                 href="/auth/login"
-                className="text-sm font-medium text-foreground/70 hover:text-foreground"
+                className="text-sm font-medium text-foreground/70 hover:text-foreground",
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
@@ -94,7 +94,7 @@ export function AppHeader() {
               </Link>
               <Link
                 href="/signup"
-                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
+                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground",
                 aria-label={t('auth.signup')}
                 data-testid="signup-nav-link"
               >
@@ -113,9 +113,9 @@ export function AppHeader() {
       
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        <div className="md: hidden fixed inset-0 z-60 pt-16">
+          <div ,
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm",
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
@@ -135,3 +135,4 @@ export function AppHeader() {
     </>
   )
 }
+;

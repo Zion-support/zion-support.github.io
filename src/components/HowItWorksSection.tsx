@@ -10,9 +10,9 @@ interface HowItWorksSectionProps {
 }
 
 const getSteps = (t: any) => [
-  {
-    title: t($2);
-    description: t($2);
+  {,
+    title: t('how_it_works.post'),
+    description: t('how_it_works.post_desc'),
     icon: Send},
   {
     title: t($2);
@@ -44,17 +44,17 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
-          <div className="space-y-12 md:space-y-0">
+          <div className="space-y-12 md:space-y-0">,
             {steps.map((step, index) => (
               <div 
                 key={step.title}
-                className="{`flex" flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : "",
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
                   {index % 2 === 0 ? (
-                    <div>
+                    <div>,
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
@@ -67,7 +67,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
 
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">
                   {index % 2 !== 0 ? (
-                    <div>
+                    <div>,
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
@@ -81,3 +81,4 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
+;

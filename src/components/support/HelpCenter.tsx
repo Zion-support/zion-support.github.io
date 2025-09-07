@@ -12,13 +12,17 @@ import { Search } from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
-  const [searchQuery, setSearchQuery] = useState($2);
-  const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory($2);
+  const [searchQuery, setSearchQuery] = useState(""),
+  
+  const handleCategorySelect = (categoryId: string) => {,
+    setSelectedCategory(categoryId),
     setSelectedArticle(null)
   },
   
-  const handleArticleSelect = $2;
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId),
+  },
+  
   const handleBackToCategories = () => {
     setSelectedCategory($2);
     setSelectedArticle(null)
@@ -200,5 +204,6 @@ export default function HelpCenter() {
         </div>
       </div>
     </>
-  )
+  ),
 }
+;

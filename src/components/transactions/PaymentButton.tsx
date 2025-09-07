@@ -8,9 +8,9 @@ import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
-  amount: number,
-  serviceId: string,
-  providerId: string,
+  amount: number;
+  serviceId: string;
+  providerId: string;
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
@@ -43,7 +43,15 @@ export function PaymentButton({
       }
       
       // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke($2);
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: {,
+          amount,
+          serviceId,
+          providerId,
+          userId: user?.id,
+          successUrl: redirectUrl || window.location.href,
+          cancelUrl: window.location.href}}),
+      
       if (error) {
         throw error
       }
@@ -87,3 +95,4 @@ export function PaymentButton({
     </Button>
   )
 }
+;

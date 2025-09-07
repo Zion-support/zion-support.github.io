@@ -7,9 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 
 interface IntegrationCardProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
+  title: string;
+  description: string;
+  icon: React.ReactNode;
   status?: "connected" | "disconnected" | "pending",
   href?: string,
   onConnect?: () => void
@@ -70,10 +70,10 @@ export function IntegrationCard({
 
 export function IntegrationCards() {
   return (
-    <div className="grid md:grid-cols-3 gap-6">
+    <div className="grid md: grid-cols-3 gap-6">
       <IntegrationCard
-        title="Slack"
-        description="Send notifications and interact with Zion from Slack."
+        title="Slack",
+        description="Send notifications and interact with Zion from Slack.",
         icon={<Slack className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Slack clicked')}
       />

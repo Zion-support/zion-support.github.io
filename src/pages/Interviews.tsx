@@ -38,7 +38,7 @@ function InterviewsContent() {
   }),
 
   // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
+  const groupInterviewsByDate = (interviews: Interview[]) => {,
     const grouped: Record<string, Interview[]> = {},
     
     interviews.forEach((interview) => {
@@ -66,7 +66,21 @@ function InterviewsContent() {
             <Calendar className="h-5 w-5 mr-2" />
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>
-          <div className = $2;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {interviews.map((interview) => (
+              <InterviewCard,
+                key={interview.id} 
+                interview={interview}
+                onRefresh={async () => {
+                  await fetchInterviews()
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      ))
+  },
+
   return (
     <>
       <SEO 
@@ -163,3 +177,4 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 }
+;

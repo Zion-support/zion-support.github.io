@@ -23,33 +23,33 @@ import { supabase } from "@/integrations/supabase/client";
 // Define the form schema with validation
 const talentSchema = z.object({
   // Step 1: Basic Info
-  basicInfo: z.object({
-    fullName: z.string().min($2);
-    professionalTitle: z.string().min($2);
+  basicInfo: z.object({,
+    fullName: z.string().min(2, "Full Name must be at least 2 characters"),
+    professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
   
   // Step 2: Experience
-  experience: z.object({
-    bio: z.string().min($2);
+  experience: z.object({,
+    bio: z.string().min(50, "Bio must be at least 50 characters"),
     keyProjects: z.array(
-      z.object({
-        title: z.string().min($2);
+      z.object({,
+        title: z.string().min(2, "Project title is required"),
         description: z.string().min(10, "Project description is required")})
     ).min($2);
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
   // Step 3: Skills & Tech Stack
-  skills: z.object({
-    skillsList: z.string().min($2);
+  skills: z.object({,
+    skillsList: z.string().min(2, "Add at least one skill"),
     toolsUsed: z.string().optional()}),
   
   // Step 4: Availability & Preferences
-  availability: z.object({
-    availabilityType: z.string().min($2);
-    timezone: z.string().min($2);
-    hourlyRate: z.string().optional($2);
+  availability: z.object({,
+    availabilityType: z.string().min(1, "Select your availability"),
+    timezone: z.string().min(1, "Timezone is required"),
+    hourlyRate: z.string().optional(),
     portfolioLinks: z.array(
-      z.object({
+      z.object({,
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})
     ).optional().default($2);
     cv: z.any().optional()})}),
@@ -68,18 +68,18 @@ export function TalentOnboardingForm() {
   const form = useForm<TalentFormValues>({
     resolver: zodResolver($2);
     defaultValues: {
-      basicInfo: {
-        fullName: user ?.displayName || "",
+      basicInfo: {,
+        fullName: user?.displayName || "",
         professionalTitle: "",
         profilePicture: undefined},
-      experience: {
+      experience: {,
         bio: "",
         keyProjects: [{ title: "", description: "" }],
         yearsOfExperience: ""},
-      skills: {
+      skills: {,
         skillsList: "",
         toolsUsed: ""},
-      availability: {
+      availability: {,
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -92,7 +92,8 @@ export function TalentOnboardingForm() {
   const { fields: linkFields, append: appendLink, remove: removeLink} = 
     useFieldArray($2);
   // Handle profile picture upload
-  const handleProfilePictureUpload = $2;
+  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {,
+    const file = e.target.files?.[0],
     if (!file) return,
     
     // Preview the image
@@ -104,8 +105,9 @@ export function TalentOnboardingForm() {
   },
 
   // Handle CV upload
-  const handleCvUpload = $2;
-    const { error: cvError} = await supabase.storage
+  const handleCvUpload = async (file: File) => {,
+    const fileName = `cv-${user?.id}-${Date.now()}`,
+    const { error: cvError } = await supabase.storage
       .from('resumes')
       .upload($2);
     if (cvError) {
@@ -124,4 +126,4 @@ export function TalentOnboardingForm() {
   // [Previous implementation continues...]
 
   return null
-}
+};

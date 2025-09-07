@@ -61,7 +61,9 @@ export default function SavedTalentsPage() {
 
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
-          const talentProfiles = $2;
+          const talentProfiles = data.map(
+            (item: any) => item.talent_profile as unknown as TalentProfile,
+          ),
           setSavedTalents(talentProfiles)
         }
       } catch (error) {
@@ -78,9 +80,12 @@ export default function SavedTalentsPage() {
     fetchSavedTalents()
   }, [user]),
 
-  const handleViewProfile = $2;
-  const handleRequestHire = (talent: TalentProfile) => {
-    logInfo($2);
+  const handleViewProfile = (talentId: string) => {,
+    router.push(`/talent/${talentId}`);
+  },
+
+  const handleRequestHire = (talent: TalentProfile) => {,
+    logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`})
@@ -88,8 +93,8 @@ export default function SavedTalentsPage() {
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
-      if (!user) {
-        logWarn($2);
+      if (!user) {,
+        logWarn("User not authenticated."),
         return
       }
   
@@ -104,7 +109,9 @@ export default function SavedTalentsPage() {
           throw error
         }
   
-        setSavedTalents(prevTalents = $2;
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId);
+        ),
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
@@ -170,9 +177,9 @@ export default function SavedTalentsPage() {
             />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mt-8">,
             {savedTalents.map((talent) => (
-              <TalentCard
+              <TalentCard,
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}
@@ -186,3 +193,4 @@ export default function SavedTalentsPage() {
     </>
   )
 }
+;

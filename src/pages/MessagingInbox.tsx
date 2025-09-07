@@ -30,8 +30,8 @@ export default function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-        logErrorToProduction($2);
-        toast.error("Failed to load messages. Please try again.")
+        logErrorToProduction('Failed to load conversations:', { data: error }),
+        toast.error("Failed to load messages. Please try again.");
       }
     },
     
@@ -47,7 +47,10 @@ export default function MessagingInbox() {
     const roomId = $2;
     setActiveCall($2);
     // Show toast notification
-    toast.success($2);
+    toast.success("Starting video call", {
+      description: "Initializing video call connection...",
+    }),
+    
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
@@ -69,7 +72,7 @@ export default function MessagingInbox() {
               >
                 <Video className="h-4 w-4" />
                 Start Call
-              </Button>
+              </Button>,
             )}
           </div>
           
@@ -101,3 +104,4 @@ export default function MessagingInbox() {
     </ProtectedRoute>
   )
 }
+;

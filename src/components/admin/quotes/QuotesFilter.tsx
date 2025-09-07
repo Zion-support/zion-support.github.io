@@ -10,18 +10,18 @@ import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  dateRange: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
-  onReset: () => void
+  searchQuery: string;
+  setSearchQuery: (value: string) => void;
+  statusFilter: QuoteStatus | 'all';
+  setStatusFilter: (value: QuoteStatus | 'all') => void;
+  archiveFilter: 'active' | 'archived' | 'all';
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+  dateRange: DateRange | undefined;
+  setDateRange: (range: DateRange | undefined) => void;
+  onReset: () => void,
 }
 
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -35,11 +35,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   return (
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+        <div className="grid grid-cols-1 md: grid-cols-4 gap-4 items-end">
           <div className="relative">
             <Input
-              placeholder="Search quotes..."
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+              placeholder="Search quotes...",
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white",
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

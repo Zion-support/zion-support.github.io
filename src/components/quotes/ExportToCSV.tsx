@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
-  quotes: QuoteRequest[],
-  filename?: string
+  quotes: QuoteRequest[];
+  filename?: string,
 }
 
 export const ExportToCSV = ({ quotes, filename = $2;
@@ -37,11 +37,21 @@ export const ExportToCSV = ({ quotes, filename = $2;
     // Download file and clean up
     link.click($2);
     setTimeout(() => {
-      document.body.removeChild($2);
-      URL.revokeObjectURL(url)
+      document.body.removeChild(link),
+      URL.revokeObjectURL(url);
     }, 100)
   },
   
   return (
     <Button 
-      variant = $2;
+      variant="outline" 
+      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+    >
+      <Download size={16} />
+      Export CSV
+    </Button>
+  )
+},
+;

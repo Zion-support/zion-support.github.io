@@ -1,5 +1,5 @@
 
-import { GradientHeading } from "./GradientHeading";,
+import { GradientHeading } from "./GradientHeading";
 import {
   Accordion,
   AccordionContent,
@@ -42,10 +42,10 @@ const faqs = $2;
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
-          <GradientHeading>Frequently Asked Questions</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+          <GradientHeading>Frequently Asked Questions</GradientHeading>,
+          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">,
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
           </p>
         </div>
@@ -59,7 +59,7 @@ export function FaqSection() {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
-                <AccordionTrigger className="text-white hover:text-zion-cyan">
+                <AccordionTrigger className="text-white hover:text-zion-cyan">,
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
@@ -73,3 +73,4 @@ export function FaqSection() {
     </section>
   )
 }
+;

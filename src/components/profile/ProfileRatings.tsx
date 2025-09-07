@@ -7,7 +7,7 @@ import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
-  userId: string,
+  userId: string;
   averageRating?: number,
   ratingCount?: number
 }
@@ -40,7 +40,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
-          <ReviewStats
+          <ReviewStats,
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
@@ -49,7 +49,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
-            <TabsList className="mb-4">
+            <TabsList className="mb-4">,
               <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
@@ -84,3 +84,4 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     </div>
   )
 }
+;

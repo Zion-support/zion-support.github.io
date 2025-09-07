@@ -1,17 +1,3 @@
-import {;
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { ChevronRight, Zap, Star } from 'lucide-react';
-
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,8 +10,9 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label";
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
-type ResumeStep = "basics" | "experience" | "education" | "skills",;
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
+
+type ResumeStep = "basics" | "experience" | "education" | "skills",
 
 type ResumeStep = $2;
 export function MobileResumeBuilder() {
@@ -39,7 +26,7 @@ export function MobileResumeBuilder() {
       case "skills":
         return <SkillsStep />,
       default:
-        return <BasicsStep />
+        return <BasicsStep />,
     }
   },
   
@@ -175,8 +162,12 @@ function BasicsStep() {
 function ExperienceStep() {
   const [experiences, setExperiences] = useState($2);
   const addExperience = () => {
-    const newId = (experiences.length + 1).toString($2);
-    setExperiences([...experiences, { id: newId}])
+    const newId = (experiences.length + 1).toString(),
+    setExperiences([...experiences, { id: newId }])
+  },
+  
+  const removeExperience = (id: string) => {
+    setExperiences(experiences.filter(exp => exp.id !== id)),
   },
   
   const removeExperience = $2;
@@ -243,8 +234,12 @@ function ExperienceStep() {
 function EducationStep() {
   const [educations, setEducations] = useState($2);
   const addEducation = () => {
-    const newId = (educations.length + 1).toString($2);
-    setEducations([...educations, { id: newId}])
+    const newId = (educations.length + 1).toString(),
+    setEducations([...educations, { id: newId }])
+  },
+  
+  const removeEducation = (id: string) => {
+    setEducations(educations.filter(edu => edu.id !== id)),
   },
   
   const removeEducation = $2;
@@ -310,9 +305,12 @@ function SkillsStep() {
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
   },
   
-  const removeSkill = $2;
+  const removeSkill = (id: string) => {
+    setSkills(skills.filter(skill => skill.id !== id)),
+  },
+  
   const updateSkill = (id: string, field: string, value: string) => {
-    setSkills(skills.map(skill => 
+    setSkills(skills.map(skill =>,
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
   },
@@ -386,3 +384,4 @@ function SkillsStep() {
     </div>
   )
 }
+;

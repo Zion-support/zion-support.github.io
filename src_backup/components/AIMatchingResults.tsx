@@ -8,8 +8,8 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem) => void,
+  matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean,
   projectDescription?: string,
   serviceType?: string
@@ -22,19 +22,22 @@ interface AIMatchingResultsProps {
 export function AIMatchingResults({
   matches,
   onSelectMatch,
-  isLoading = $2;
-  projectDescription = $2;
-  serviceType: _serviceType = ""
+  isLoading = false,
+  projectDescription = "",
+  serviceType: _serviceType = "",
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState($2);
   // Group matches by category
-  const categories = $2;
-    talent: matches.filter(match = $2;
-    services: matches.filter(match = $2;
-    equipment: matches.filter(match = $2;
+  const categories = {;
+    all: matches;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent"));
+    services: matches.filter(match => match.category.toLowerCase().includes("service"));
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment")),
+  },
+  
   // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase($2);
+  const getCategoryIcon = (category: string) => {,
+    const lowerCategory = category.toLowerCase(),
     if (lowerCategory.includes("talent")) return User,
     if (lowerCategory.includes("equipment")) return Monitor,
     return BriefcaseIcon
@@ -64,7 +67,7 @@ export function AIMatchingResults({
           </p>
           {projectDescription && (
             <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">
-              <p className="text-xs text-zion-slate-light">Your search:</p>
+              <p className="text-xs text-zion-slate-light">Your search:</p>,
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
           )}
@@ -119,7 +122,13 @@ export function AIMatchingResults({
                 const CategoryIcon = getCategoryIcon($2);
                 return (
                   <Card 
-                    key = $2;
+                    key={match.id}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer",
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >
+                    <div className="flex">
+                      <div className={cn(
+                        "w-2", 
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"
@@ -138,7 +147,7 @@ export function AIMatchingResults({
                               <Badge variant="outline">
                                 {match.category}
                               </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (,
                                 <Badge key={i} variant="outline">
                                   {skill}
                                 </Badge>;
@@ -161,4 +170,4 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
-}
+};

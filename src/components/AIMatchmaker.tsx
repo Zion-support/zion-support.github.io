@@ -9,8 +9,8 @@ import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
   serviceType?: string,
-  onMatchSelect?: (match: any) => void,
-  className?: string
+  onMatchSelect?: (match: any) => void;
+  className?: string,
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
@@ -47,8 +47,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   
   const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
-      const matchResult = matches.find($2);
+      // Find the original MatchResult that contains this item,
+      const matchResult = matches.find(match => match.item.id === item.id),
       if (matchResult) {
         onMatchSelect(matchResult)
       }
@@ -77,7 +77,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
               className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
-            <Button 
+            <Button,
               onClick={handleSearch}
               disabled={isMatchmaking}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -88,7 +88,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
                 <>
                   <Search className="h-4 w-4 mr-2" />
                   Find Matches
-                </>
+                </>,
               )}
             </Button>
           </div>
@@ -106,4 +106,4 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       </CardContent>
     </Card>
   )
-}
+};

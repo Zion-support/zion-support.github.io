@@ -9,15 +9,15 @@ import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
-  id: string,
-  projectId: string,
-  title: string,
+  id: string;
+  projectId: string;
+  title: string;
   description?: string,
-  amount: number,
-  status: string,
+  amount: number;
+  status: string;
   dueDate?: string,
-  onApprove?: (id: string) => Promise<void>,
-  onReject?: (id: string) => Promise<void>
+  onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>,
 }
 
 export function MilestoneCard({ 
@@ -42,7 +42,7 @@ export function MilestoneCard({
         return 'bg-yellow-500',
       case 'rejected':
         return 'bg-red-500',
-      default: return 'bg-gray-500'
+      default: return 'bg-gray-500',
     }
   }
   
@@ -114,3 +114,4 @@ export function MilestoneCard({
     </Card>
   )
 }
+;

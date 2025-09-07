@@ -5,7 +5,8 @@ import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from 'lucide-react'
 
 interface WorkspaceHeaderProps {
-  company: Company}
+  company: Company,
+}
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
@@ -56,5 +57,5 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
     </div>
-  )
+  ),
 }

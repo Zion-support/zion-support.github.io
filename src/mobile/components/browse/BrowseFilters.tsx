@@ -9,19 +9,22 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
-  type: "jobs" | "talents"
+  type: "jobs" | "talents",
 }
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]),
   
   const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
+    if (!activeFilters.includes(filter)) {,
       setActiveFilters([...activeFilters, filter])
     }
   },
   
-  const removeFilter = $2;
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter)),
+  },
+  
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -75,7 +78,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
-                        aria-label="Years of experience"
+                        aria-label="Years of experience",
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
@@ -132,8 +135,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               </div>
               
               <SheetFooter>
-                <Button variant="outline" className="w-full">Reset</Button>
-                <Button className="w-full" onClick={() => addFilter("Experience: 3 + years")}>Apply Filters</Button>
+                <Button variant="outline" className="w-full">Reset</Button>,
+                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
@@ -167,3 +170,4 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>
   )
 }
+;

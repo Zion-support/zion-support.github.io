@@ -18,7 +18,11 @@ export function OnChainExport() {
   const { user } = useAuth($2);
   const handleConnectWallet = $2;
       if (!ethereum) {
-        toast($2);
+        toast({
+          title: "Wallet not detected",
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",
+          variant: "destructive",
+        }),
         return
       }
       
@@ -33,10 +37,10 @@ export function OnChainExport() {
         title: "Wallet connected",
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
     } catch (error: any) {
-      toast({
+      toast({,
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
-        variant: "destructive"
+        variant: "destructive",
       })
     }
   },
@@ -52,12 +56,12 @@ export function OnChainExport() {
       toast({
         title: "Tokens exported",
         description: "Your ZION$ tokens have been exported to your wallet"})
-    } catch (error: any) {
-      setExportStatus($2);
+    } catch (error: any) {,
+      setExportStatus('error'),
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsExporting(false)
@@ -101,7 +105,7 @@ export function OnChainExport() {
               </Button>
             ) : (
               <Button 
-                className="w-full" 
+                className="w-full",
                 onClick={handleExportTokens} 
                 disabled={isExporting}
               >
@@ -124,3 +128,4 @@ export function OnChainExport() {
     </Card>
   )
 }
+;

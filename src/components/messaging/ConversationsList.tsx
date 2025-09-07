@@ -5,10 +5,10 @@ import { Conversation } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 interface ConversationsListProps {
-  conversations: Conversation[],
-  activeConversation: Conversation | null,
-  setActiveConversation: (conversation: Conversation) => void,
-  markAsRead: (conversationId: string) => Promise<void>
+  conversations: Conversation[];
+  activeConversation: Conversation | null;
+  setActiveConversation: (conversation: Conversation) => void;
+  markAsRead: (conversationId: string) => Promise<void>,
 }
 
 export function ConversationsList({
@@ -57,7 +57,7 @@ export function ConversationsList({
           </p>
         </div>
       ) : (
-        <List
+        <List,
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
@@ -69,3 +69,4 @@ export function ConversationsList({
     </div>
   )
 }
+;

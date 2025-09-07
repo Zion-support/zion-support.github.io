@@ -3,15 +3,16 @@ import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign
 
 export type BadgeKey = $2;
 export interface BadgeMeta {
-  key: BadgeKey,
-  name: string,
-  description: string,
-  icon: LucideIcon,
-  color: string,
-  bg: string}
+  key: BadgeKey;
+  name: string;
+  description: string;
+  icon: LucideIcon;
+  color: string;
+  bg: string,
+}
 
 export const badgeList: BadgeMeta[] = [
-  {
+  {,
     key: "first_listing",
     name: "First Listing",
     description: "Published your first product, service, or listing.",
@@ -60,4 +61,6 @@ export const badgeList: BadgeMeta[] = [
     bg: "#F2FCE2",    // Soft Green
   }],
 
-export const getBadgeMeta = $2;
+export const getBadgeMeta = (key: BadgeKey) =>;
+  badgeList.find((b) => b.key === key),
+

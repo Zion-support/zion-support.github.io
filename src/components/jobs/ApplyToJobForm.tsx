@@ -13,8 +13,8 @@ import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 interface ApplyToJobFormProps {
-  job: Job,
-  onSuccess?: () => void
+  job: Job;
+  onSuccess?: () => void,
 }
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
@@ -28,8 +28,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const [isSubmitting, setIsSubmitting] = useState($2);
   const [error, setError] = useState<string | null>(null),
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault($2);
+  const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault(),
+    
     if (!user) {
       toast.error($2);
       router.push(`/login?returnTo = $2;
@@ -51,9 +52,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           onSuccess()
         }
       }
-    } catch (err: any) {
-      setError($2);
-      toast.error("Failed to submit application")
+    } catch (err: any) {,
+      setError(err.message || "Failed to submit application"),
+      toast.error("Failed to submit application");
     } finally {
       setIsSubmitting(false)
     }
@@ -175,3 +176,4 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     </form>
   )
 }
+;

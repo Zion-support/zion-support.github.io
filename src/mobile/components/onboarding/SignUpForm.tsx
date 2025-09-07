@@ -19,19 +19,21 @@ export function SignUpForm() {
   const [signupMode, setSignupMode] = useState($2);
   const [error, setError] = useState($2);
   const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
-  const [showVerificationMessage, setShowVerificationMessage] = useState($2);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value })),
     setError($2);
     setFieldErrors(prev => ({ ...prev, [name]: "" }))
   },
   
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault($2);
-    setError($2);
-    setFieldErrors($2);
-    setIsLoading($2);
+  const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
+
     const errors: { email?: string, password?: string, name?: string } = {},
     const emailRegex = $2;
     const strongPasswordRegex = $2;
@@ -69,7 +71,7 @@ export function SignUpForm() {
           setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
-          router.push("/mobile")
+          router.push("/mobile");
         }
       } else {
         const { error } = await login($2);
@@ -77,17 +79,24 @@ export function SignUpForm() {
           throw new Error(error)
         }
         
-        router.push("/mobile")
+        router.push("/mobile");
       }
-    } catch (err: any) {
-      logErrorToProduction($2);
+    } catch (err: any) {,
+      logErrorToProduction('Signup/Login error:', { data: err }),
       setError(err.message || 'An unexpected error occurred. Please try again.')
     } finally {
       setIsLoading(false)
     }
   },
   
-  const handleGoogleLogin = $2;
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle()
+    } catch (err: any) {
+      setError(err.message),
+    }
+  },
+  
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
@@ -124,8 +133,7 @@ export function SignUpForm() {
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
-      </div>
-      
+      </div>,
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -227,5 +235,6 @@ export function SignUpForm() {
         </Link>
       </p>
     </div>
-  )
+  ),
 }
+;

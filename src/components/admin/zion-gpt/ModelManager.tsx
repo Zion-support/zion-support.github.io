@@ -32,7 +32,7 @@ export function ZionGPTModelManager() {
       if (error) throw error,
       
       // Map the data to our component state
-      setModels(data.map((model: any) => ({
+      setModels(data.map((model: any) => ({,
         id: model.id,
         version: model.version,
         createdAt: model.created_at,
@@ -40,7 +40,7 @@ export function ZionGPTModelManager() {
         purpose: model.purpose,
         active: model.active,
         trainingStatus: model.training_status,
-        errorMessage: model.error_message
+        errorMessage: model.error_message,
       })))
     } catch (error) {
       logErrorToProduction('Error fetching models:', { data: error})
@@ -50,7 +50,7 @@ export function ZionGPTModelManager() {
   },
 
   const checkTrainingStatus = async (modelId: string) => {
-    try {
+    try {,
       setActiveJobs(prev => ({ ...prev, [modelId]: true })),
       
       // Call an edge function that checks the OpenAI fine-tuning job status
@@ -85,7 +85,7 @@ export function ZionGPTModelManager() {
   },
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
-    try {
+    try {,
       // If activating, deactivate all other models with the same purpose
       if (!currentActive) {
         await supabase
@@ -208,3 +208,4 @@ export function ZionGPTModelManager() {
     </Card>
   )
 }
+;

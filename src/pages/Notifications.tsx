@@ -12,10 +12,9 @@ import Skeleton from '@/components/ui/skeleton';
 import { SEO } from '@/components/SEO';
 import { useRouter } from 'next/router';
 import { cn } from '@/lib/utils';
-const getNotificationIcon = $2;
-  className: string = 'h-5 w-5') => {
+const getNotificationIcon = (type: NotificationType, className: string = 'h-5 w-5') => {
   switch (type) {
-    case 'message':
+    case 'message':,
       return <MessageCircle className={cn(className, 'text-blue-500')} />,
     case 'quote_request':
       return <Briefcase className={cn(className, 'text-purple-500')} />,
@@ -38,7 +37,10 @@ const getNotificationIcon = $2;
   }
 },
 
-const getNotificationTypeBadge = $2;
+const getNotificationTypeBadge = (type: NotificationType) => {
+  switch (type) {
+    case 'message':,
+      return <Badge className="bg-blue-500">Message</Badge>,
     case 'quote_request':
       return <Badge className = $2;
     case 'booking_confirmation':
@@ -56,20 +58,17 @@ const getNotificationTypeBadge = $2;
     case 'order_status':
       return <Badge className = $2;
     default:
-      return <Badge variant = $2;
+      return <Badge variant="outline">Notification</Badge>,
+  }
+},
+
 const NotificationCard: React.FC<{
-  notification: {
-    id: string,
-    title: string,
-    message: string,
-    type: NotificationType,
-    read: boolean,
-    created_at: string,
-    action_url?: string,
+  notification: {,
+    id: string, title: string, message: string, type: NotificationType, read: boolean, created_at: string, action_url?: string,
     action_text?: string
   },
   onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
+  onDismiss: (id: string) => Promise<void>,
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const router = useRouter($2);
   const handleAction = $2;
@@ -95,7 +94,58 @@ const NotificationCard: React.FC<{
                 </span>
                 {!notification.read && (
                   <Badge
-                    variant = $2;
+                    variant="outline"
+                    className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs"
+                  >
+                    New
+                  </Badge>
+                )}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              {!notification.read && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 w-8 p-0"
+                  onClick={() => onMarkAsRead(notification.id)}
+                >
+                  <Check className="h-4 w-4 text-green-400" />
+                  <span className="sr-only">Mark as read</span>
+                </Button>
+              )}
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 w-8 p-0"
+                onClick={() => onDismiss(notification.id)}
+              >
+                <Trash2 className="h-4 w-4 text-red-400" />
+                <span className="sr-only">Dismiss</span>
+              </Button>
+            </div>
+          </div>
+
+          <p className="text-zion-slate-light mb-3">{notification.message}</p>
+
+          {notification.action_url && notification.action_text && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black",
+              onClick={handleAction}
+            >
+              {notification.action_text}
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </Button>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+},
+
 export default function NotificationsPage() {
   const {
     filteredNotifications,
@@ -188,3 +238,4 @@ export default function NotificationsPage() {
     </>
   )
 }
+;

@@ -9,8 +9,10 @@ interface FeatureHighlightsProps {
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = $2;
-      features: [
+  const highlightsData = [
+    {
+      title: "For Talent Seekers",
+      features: [,
         "AI-powered talent matching based on your specific project requirements",
         "Verified profiles with skills validation and credential checking",
         "Transparent pricing and no hidden fees",
@@ -21,7 +23,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     },
     {
       title: "For Talent & Service Providers",
-      features: [
+      features: [,
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
         "Secure payment processing with on-time disbursements",
@@ -32,7 +34,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     },
     {
       title: "For Enterprise Clients",
-      features: [
+      features: [,
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
@@ -53,7 +55,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">,
           {highlightsData.map((category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
@@ -74,3 +76,4 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     </section>
   )
 }
+;

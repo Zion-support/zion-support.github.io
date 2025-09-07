@@ -9,28 +9,28 @@ export function QuickActions() {
       label: "Post New Job",
       icon: <FileText className = $2;
       description: "Create a new job posting",
-      color: "bg-blue-100 dark:bg-blue-900/20"
+      color: "bg-blue-100 dark:bg-blue-900/20",
     },
     {
       id: "add-member",
       label: "Add Team Member",
       icon: <Plus className = $2;
       description: "Invite someone to your team",
-      color: "bg-green-100 dark:bg-green-900/20"
+      color: "bg-green-100 dark:bg-green-900/20",
     },
     {
       id: "find-talent",
       label: "Find Talent",
       icon: <Search className = $2;
       description: "Search the talent pool",
-      color: "bg-purple-100 dark:bg-purple-900/20"
+      color: "bg-purple-100 dark:bg-purple-900/20",
     },
     {
       id: "schedule",
       label: "Schedule Interview",
       icon: <Calendar className = $2;
       description: "Set up candidate interviews",
-      color: "bg-amber-100 dark:bg-amber-900/20"
+      color: "bg-amber-100 dark:bg-amber-900/20",
     }
   ],
 
@@ -43,7 +43,7 @@ export function QuickActions() {
       <CardContent>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
-            <Button 
+            <Button,
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -62,3 +62,4 @@ export function QuickActions() {
     </Card>
   )
 }
+;

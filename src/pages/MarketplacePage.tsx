@@ -16,12 +16,66 @@ import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts'
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
-const MarketplaceInsights = $2;
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <TrendingUp className="h-5 w-5 text-blue-400" />
+        <h3 className="text-lg font-semibold">Marketplace Insights</h3>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">,
+          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{stats.totalProducts}</div>
+          <div className="text-sm text-muted-foreground">Products</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-orange-400">{stats.availableCount}</div>
+          <div className="text-sm text-muted-foreground">Available</div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+),
+
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 }: any) => (
-  <div className = $2;
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="">All Categories</option>
+        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
+      </select>
+    </div>
+    <div className="flex items-center gap-2">
+      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="popular">Most Popular</option>
+        <option value="ai-score">AI Score</option>
+      </select>
+    </div>,
+    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Sparkles className="h-4 w-4 mr-1" />
+      {showRecommended ? "All Products" : "Recommended"}
+    </Button>
+  </div>
+),
+;
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
@@ -31,11 +85,64 @@ import { toast } from '@/hooks/use-toast';
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
   const { formatPrice } = useCurrency($2);
   return (
-  <Card className = $2;
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">,
+          <h3 className="font-semibold text-lg truncate">{product.title}</h3>
+          <p className="text-sm text-muted-foreground">{product.category}</p>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{product.brand}</Badge>
+            {product.aiScore && product.aiScore > 80 && (
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">
+                AI {product.aiScore}
+              </Badge>
+            )}
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-xl font-bold text-blue-600">{formatPrice(product.price ?? 0)}</div>
+          <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text-xs">
+            {product.availability}
+          </Badge>
+        </div>
+      </div>
+    </CardHeader>
+    <CardContent className="pt-0">
+      <div className="flex items-center gap-4 mb-3">
+        <div className="flex items-center gap-1">
+          <Star className="h-4 w-4 text-yellow-500 fill-current" />
+          <span className="text-sm font-medium">{product.rating?.toFixed(1)}</span>
+          <span className="text-xs text-muted-foreground">({product.reviewCount} reviews)</span>
+        </div>
+      </div>
+      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{product.description}</p>
+      <div className="flex items-center justify-between gap-2">
+        <Button
+          size="icon"
+          variant="outline"
+          onClick={onAddToCart}
+          aria-label="Add to cart"
+          data-testid="add-to-cart-listing-button"
+        >
+          <ShoppingCart className="h-4 w-4" />
+        </Button>
+        <Button size="sm" variant="outline" className="flex-1" onClick={onViewDetails}>
+          View Details
+        </Button>
+      </div>
+    </CardContent>
+  </Card>
+  )
+},
+
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count}).map((_, i) => <SkeletonCard key = $2;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>
+),
+
 // Main component
 function MarketplacePageContent() {
   const router = useRouter($2);
@@ -46,7 +153,7 @@ function MarketplacePageContent() {
   const [filterCategory, setFilterCategory] = useState($2);
   const [showRecommended, setShowRecommended] = useState($2);
   const fetchProducts = useCallback(async (page: number, limit: number) => {
-    // Simulate API delay
+    // Simulate API delay,
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
@@ -78,7 +185,7 @@ function MarketplacePageContent() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
         }
       }),
 
@@ -89,17 +196,15 @@ function MarketplacePageContent() {
       return {
         items,
         hasMore: endIndex < processedDataset.length,
-        total: processedDataset.length
+        total: processedDataset.length,
       }
     } catch (error) {
-      logErrorToProduction($2);
-      throw new Error('Failed to load marketplace data. Please try again.')
+      logErrorToProduction('Error in fetchProducts:', { data: error }), throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended]),
 
   const {
-    items: products,
-    loading,
+    items: products, loading,
     error,
     hasMore,
     total,
@@ -123,7 +228,7 @@ function MarketplacePageContent() {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-      availableCount: products.filter(p => p.availability === "Available").length
+      availableCount: products.filter(p => p.availability === "Available").length,
     }
   }, [products]),
 
@@ -178,7 +283,7 @@ function MarketplacePageContent() {
             <Button onClick={refresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
               Try Again
-            </Button>
+            </Button>,
             <Button onClick={() => window.location.reload()}>
               Refresh Page
             </Button>
@@ -197,8 +302,8 @@ function MarketplacePageContent() {
         openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
       />
     <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0}}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">,
           {t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
@@ -228,7 +333,7 @@ function MarketplacePageContent() {
           {products.map((item, index) => (
             <motion.div
               key={item.id} 
-              ref={index === products.length - 1 ? lastElementRef : null}
+              ref={index === products.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1}} 
               exit={{ opacity: 0, scale: 0.9 }}
@@ -245,16 +350,13 @@ function MarketplacePageContent() {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/marketplace/listing/${item.id}`)
+                  router.push(`/marketplace/listing/${item.id}`);
                 }}
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast({
-                    title: 'Added to cart',
-                    description: `${item.title} has been added to your cart`,
-                    action: {
-                      label: 'View Cart',
-                      onClick: () => router.push('/cart')}})
+                    title: 'Added to cart', description: `${item.title} has been added to your cart`, action: {,
+                      label: 'View Cart', onClick: () => router.push('/cart')}})
                 }}
               />
             </motion.div>
@@ -296,10 +398,10 @@ function MarketplacePageContent() {
         {showScrollTop && (
           <motion.button 
             onClick={scrollToTop} 
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0}} 
-            animate={{ opacity: 1, scale: 1}} 
-            exit={{ opacity: 0, scale: 0}}
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
+            initial={{ opacity: 0, scale: 0 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} 
             whileTap={{ scale: 0.9 }}
           >
@@ -316,3 +418,4 @@ function MarketplacePageContent() {
 export default function MarketplacePage() {
   return <MarketplacePageContent />
 }
+;

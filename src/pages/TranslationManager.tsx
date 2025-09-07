@@ -75,12 +75,19 @@ export default function TranslationManager() {
       Object.entries(langTranslations).forEach(([key, value]) => {
         if (
           key.toLowerCase().includes(query) || 
-          (typeof value = $2;
+          (typeof value === 'string' && value.toLowerCase().includes(query))
+        ) {
+          filtered.push(key);
+        }
+      })
+    }),
+    
     setFilteredKeys([...new Set(filtered)])
   }, [searchQuery, translations]),
   
-  const handleEdit = (key: string) => {
-    setEditingKey($2);
+  const handleEdit = (key: string) => {,
+    setEditingKey(key),
+    
     // Initialize edited translations for this key
     const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>,
     supportedLanguages.forEach($2);
@@ -90,8 +97,9 @@ export default function TranslationManager() {
     })
   },
   
-  const handleSave = (key: string) => {
-    setIsSaving($2);
+  const handleSave = (key: string) => {,
+    setIsSaving(true),
+    
     // In a real application, you would save these to your backend
     setTimeout(() => {
       // Update translations with edited values
@@ -105,10 +113,15 @@ export default function TranslationManager() {
     }, 1000)
   },
   
-  const handleTranslateKey = $2;
-    let sourceText = $2;
-    for (const lang of supportedLanguages.map(l = $2;
-        sourceText = $2;
+  const handleTranslateKey = async (key: string) => {
+    // Find first non-empty translation to use as source,
+    let sourceLanguage: SupportedLanguage = 'en',
+    let sourceText = '',
+    
+    for (const lang of supportedLanguages.map(l => l.code)) {
+      if (translations[lang]?.[key]) {
+        sourceLanguage = lang,
+        sourceText = translations[lang][key],
         break
       }
     }
@@ -143,13 +156,21 @@ export default function TranslationManager() {
   
   const handleCancel = $2;
   const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
-    setEditedTranslations($2);
+    setEditedTranslations({,
+      ...editedTranslations,
+      [key]: {
+        ...(editedTranslations[key] || {} as Record<SupportedLanguage, string>),
         [lang]: value
       }
     } as Record<string, Record<SupportedLanguage, string>>)
   },
   
-  const getMissingLanguages = $2;
+  const getMissingLanguages = (key: string): SupportedLanguage[] => {
+    return supportedLanguages
+      .map(lang => lang.code)
+      .filter(lang => !translations[lang]?.[key]),
+  },
+  
   return (
     <>
       <SEO 
@@ -170,7 +191,7 @@ export default function TranslationManager() {
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input
                     type="search"
-                    className="pl-8"
+                    className="pl-8",
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
@@ -186,11 +207,10 @@ export default function TranslationManager() {
                     <TabsTrigger value="admin">Admin</TabsTrigger>
                   </TabsList>
                 </Tabs>
-              </div>
-              
+              </div>,
               {/* Translations table */}
               <div className="border rounded-md">
-                <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
+                <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">,
                   <div className="p-3 font-medium">{t('translation.key')}</div>
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
@@ -203,7 +223,7 @@ export default function TranslationManager() {
                 ) : (
                   <div className="divide-y">
                     {filteredKeys.map((key) => (
-                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">
+                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">,
                         <div className="p-3 break-words">{key}</div>
                         {editingKey === key ? (
                           <div className="p-3">
@@ -299,7 +319,7 @@ export default function TranslationManager() {
                           {editingKey === key ? null : (
                             <Button
                               size="sm"
-                              variant="outline"
+                              variant="outline",
                               onClick={() => handleEdit(key)}
                             >
                               {t('translation.edit')}
@@ -318,3 +338,4 @@ export default function TranslationManager() {
     </>
   )
 }
+;

@@ -10,21 +10,28 @@ import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react'
 
 interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>
+  form: UseFormReturn<AppMetadataValues>,
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form,
-  const keywords = watch($2);
-  const platform = watch($2);
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
+  
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {,
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault($2);
       const value = e.currentTarget.value.trim($2);
       if (value && !keywords.includes(value)) {
-        setValue($2);
-        e.currentTarget.value = $2;
-  const removeKeyword = $2;
+        setValue("keywords", [...keywords, value]),
+        e.currentTarget.value = ""
+      }
+    }
+  },
+  
+  const removeKeyword = (keyword: string) => {
+    setValue(,
+      "keywords",
       keywords.filter((k) => k !== keyword)
     )
   },
@@ -111,7 +118,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
+                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">,
                     {keyword}
                     <button
                       type="button"
@@ -121,7 +128,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     >
                       <X className="h-3 w-3" />
                     </button>
-                  </Badge>
+                  </Badge>,
                 ))}
               </div>
               <FormDescription className="mt-2">
@@ -150,3 +157,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   )
 },
+;

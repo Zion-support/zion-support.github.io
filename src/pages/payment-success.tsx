@@ -24,7 +24,7 @@ export default function PaymentSuccess() {
           <Button 
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
+          >,
             {t('errors.go_to_dashboard')}
           </Button>
           
@@ -32,7 +32,7 @@ export default function PaymentSuccess() {
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-          >
+          >,
             {t('errors.return_home')}
           </Button>
         </div>
@@ -40,3 +40,4 @@ export default function PaymentSuccess() {
     </div>
   )
 }
+;

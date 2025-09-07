@@ -10,22 +10,32 @@ import { StatusBadge } from "./StatusBadge";
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {
-  application: JobApplication}
+  application: JobApplication,
+}
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState($2);
-  const handleDownloadResume = $2;
+  const [expanded, setExpanded] = useState(false),
+
+  const handleDownloadResume = () => {
+    // This would typically download the resume file
+    toast.info("Resume download functionality will be implemented soon");
+  },
+
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted": return($2);
       case "interview":
         return($2);
       case "hired":
-        return($2);
+        return (
+          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
+            <FileText className="h-4 w-4 mr-1" /> View Offer
+          </Button>,
+        ),
       case "rejected":
         return($2);
       default:
-        return null
+        return null,
     }
   },
 
@@ -117,3 +127,4 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     </Card>
   )
 }
+;

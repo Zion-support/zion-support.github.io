@@ -25,7 +25,8 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus($2);
   const { isAuthenticated, user } = useAuth($2);
   // Create a compatible UserProfile from UserDetails or the authenticated user
-  const userProfile: UserProfile = $2;
+  const userProfile: UserProfile = user ? {,
+    id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
     userType: user.userType || null,
@@ -34,7 +35,7 @@ export default function TalentProfilePage() {
     updated_at: user.updatedAt || new Date().toISOString($2);
     role: user.role || '',
     name: user.name || '',
-    points: user.points || 0
+    points: user.points || 0,
   } : {
     id: userDetails ?.id || '',
     displayName: userDetails ?.name || '',
@@ -45,7 +46,8 @@ export default function TalentProfilePage() {
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
-    points: 0},
+    points: 0,
+  },
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -103,7 +105,7 @@ export default function TalentProfilePage() {
         <div className="p-2 flex gap-2">
           <Button 
             size="sm"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark",
             onClick={handleRequestHire}
           >
             <Handshake className="mr-2 h-4 w-4" />
@@ -112,7 +114,7 @@ export default function TalentProfilePage() {
           <Button 
             size="sm"
             variant="outline"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10",
             onClick={handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
@@ -139,3 +141,4 @@ export default function TalentProfilePage() {
     </>
   )
 }
+;

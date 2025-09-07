@@ -40,7 +40,10 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       icon: <Settings className = $2;
       link: "/equipment"}],
 
-  const handleToggle = $2;
+  const handleToggle = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index)),
+  },
+
   return (
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -52,8 +55,45 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">,
           {features.map((feature, index) => (
             <Card
-              key = $2;
-                  openIndex = $2;
+              key={index}
+              onMouseEnter={() => setOpenIndex(index)}
+              onMouseLeave={() => setOpenIndex(null)}
+              onClick={() => handleToggle(index)}
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+            >
+              <CardHeader className="flex flex-row items-start space-x-3">,
+                {feature.icon}
+                <div>
+                  <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {feature.description}
+                  </CardDescription>
+                </div>
+              </CardHeader>
+              <div
+                className={cn(
+                  "transition-all duration-300",
+                  openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
+                )}
+              >
+                <CardContent className="text-sm text-zion-slate-light p-0">
+                  <p>{feature.details}</p>
+                  <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
+                    <Link href={feature.link} className="flex items-center gap-1">
+                      Learn more <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+;
+export default InteractiveFeatures;

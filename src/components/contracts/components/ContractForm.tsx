@@ -16,21 +16,22 @@ import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
 const formSchema = z.object({
-  projectName: z.string().min($2);
-  scopeSummary: z.string().min($2);
-  startDate: z.date($2);
-  endDate: z.date().optional($2);
-  paymentTerms: z.enum($2);
-  paymentAmount: z.string().min($2);
+  projectName: z.string().min(1, "Project name is required"),
+  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
+  startDate: z.date({,
+    required_error: "Start date is required"}),
+  endDate: z.date().optional(),
+  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
+  paymentAmount: z.string().min(1, "Payment amount is required"),
   additionalClauses: z.array(z.string()).optional()}),
-
-export type ContractFormValues = $2;
+;
+export type ContractFormValues = z.infer<typeof formSchema>;
 interface ContractFormProps {
-  talent: TalentProfile,
-  clientName: string,
+  talent: TalentProfile;
+  clientName: string;
   initialValues?: ContractFormValues,
-  onFormValuesChange?: (values: ContractFormValues) => void,
-  onContractGenerated: (contractContent: string) => void
+  onFormValuesChange?: (values: ContractFormValues) => void;
+  onContractGenerated: (contractContent: string) => void,
 }
 
 export function ContractForm({
@@ -43,8 +44,8 @@ export function ContractForm({
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
   const { toast } = useToast($2);
   const form = useForm<ContractFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: initialValues || {
+    resolver: zodResolver(formSchema),
+    defaultValues: initialValues || {,
       projectName: "",
       scopeSummary: "",
       startDate: new Date($2);
@@ -71,8 +72,9 @@ export function ContractForm({
     return undefined
   }, [form, onFormValuesChange]),
   
-  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
-    setGeneratedMilestones($2);
+  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {,
+    setGeneratedMilestones(milestones),
+    
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms", "milestone")
@@ -83,8 +85,8 @@ export function ContractForm({
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
   },
   
-  const onSubmit = async (values: ContractFormValues) => {
-    setIsGenerating($2);
+  const onSubmit = async (values: ContractFormValues) => {,
+    setIsGenerating(true),
     try {
       const contract = await generateContract($2);
       onContractGenerated(contract)
@@ -125,7 +127,7 @@ export function ContractForm({
           
           <Button 
             type="submit" 
-            className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark",
             disabled={isGenerating}
           >
             {isGenerating ? (
@@ -152,3 +154,4 @@ export function ContractForm({
     </>
   )
 }
+;

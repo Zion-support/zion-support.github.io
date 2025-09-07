@@ -14,9 +14,9 @@ import { TalentProfile as TalentProfileType } from "@/types/talent";
 import { useAuth } from "@/hooks/useAuth";
 import { Availability } from "@/types/profile";
 interface TalentProfileProps {
-  profile: TalentProfileType,
-  onRequestHire: () => void,
-  onMessageTalent?: () => void
+  profile: TalentProfileType;
+  onRequestHire: () => void;
+  onMessageTalent?: () => void,
 }
 
 export function TalentProfile({ 
@@ -26,13 +26,16 @@ export function TalentProfile({
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth($2);
   // Create proper availability object from talent profile
-  const availability: Availability = $2;
+  const availability: Availability = {
+    status: profile.availability_type === 'full_time' ? 'available' :,
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   },
   
   // Create proper skills array for ProfileSkills component
-  const skillsArray = $2;
-    level: 3 // Default level since we don't have this data
+  const skillsArray = profile.skills?.map(skill => ({
+    name: skill,
+    level: 3 // Default level since we don't have this data,
   })) || [],
   
   // Create proper projects array for ProfileProjects component
@@ -40,7 +43,7 @@ export function TalentProfile({
     id: `project-${i}`,
     title: proj.title,
     description: proj.description,
-    date: new Date().toISOString() // Default date since we don't have this data
+    date: new Date().toISOString() // Default date since we don't have this data,
   })) || [],
   
   return (
@@ -56,7 +59,7 @@ export function TalentProfile({
       />
       
       {/* Main content area */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">,
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -69,7 +72,7 @@ export function TalentProfile({
         </div>
         
         {/* Right Column - Bio & Projects */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-8">,
           {/* Bio Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
@@ -107,7 +110,7 @@ export function TalentProfile({
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
                     size="lg" 
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark",
                     onClick={onRequestHire}
                   >
                     <Handshake className="mr-2 h-5 w-5" />
@@ -118,7 +121,7 @@ export function TalentProfile({
                     <Button 
                       size="lg" 
                       variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10",
                       onClick={onMessageTalent}
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
@@ -134,3 +137,4 @@ export function TalentProfile({
     </div>
   )
 }
+;

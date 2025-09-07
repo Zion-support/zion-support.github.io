@@ -5,8 +5,8 @@ import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions,
-  onEnhanced: (enhancedContent: string) => void,
+  options: AIEnhancementOptions;
+  onEnhanced: (enhancedContent: string) => void;
   buttonText?: string,
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
@@ -30,8 +30,9 @@ export function AIEnhancementButton({
   const handleEnhance = async () => {
     if ((!options.content || options.content.trim().length < contentLength) && 
         (!options.context || options.context.trim().length < contentLength)) {
-      toast($2);
-      return
+      toast({
+        title: "Not enough content", description: `Please enter at least ${contentLength} characters before enhancing.`, variant: "destructive",
+      }), return
     }
     
     const enhancedContent = await enhanceContent($2);
@@ -74,9 +75,9 @@ export function AIEnhancementButton({
         <Button
           type="button"
           variant="ghost"
-          size="sm"
+          size="sm",
           onClick={handleRegenerate}
-          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20",
           disabled={isEnhancing}
         >
           {isEnhancing ? (
@@ -97,7 +98,7 @@ export function AIEnhancementButton({
           Cancel
         </Button>
       </div>
-    )
+    ),
   }
   
   return (
@@ -118,3 +119,4 @@ export function AIEnhancementButton({
     </Button>
   )
 }
+;

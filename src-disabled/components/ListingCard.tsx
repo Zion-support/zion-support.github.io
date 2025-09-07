@@ -5,10 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 interface ListingCardProps {
   id?: string,
-  title: string,
-  description: string,
+  title: string;
+  description: string;
   images?: string[],
-  category: string,
+  category: string;
   tags?: string[],
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string,
@@ -33,8 +33,10 @@ export function ListingCard({
   const profileId = $2;
   return (
     <Link
-      href = $2;
-        className
+      href={`/profile/${profileId}`}
+      tabIndex={0}
+      className={cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple", className
       )}
     >
 
@@ -47,13 +49,11 @@ export function ListingCard({
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
-
-        </div>
-
+        </div>,
       )}
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">,
             {category}
           </Badge>
         </div>
@@ -100,3 +100,4 @@ export function ListingCard({
     </Link>
   )
 }
+;

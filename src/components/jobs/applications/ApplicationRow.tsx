@@ -11,11 +11,11 @@ import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
 
 interface ApplicationRowProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
-  onViewScore: (application: JobApplication) => void
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
+  onViewScore: (application: JobApplication) => void,
 }
 
 export function ApplicationRow({
@@ -98,3 +98,4 @@ export function ApplicationRow({
     </TableRow>
   )
 }
+;

@@ -15,15 +15,15 @@ import { toast } from '@/hooks/use-toast';
 import { AuthLayout } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 const SignupSchema = Yup.object({
-  name: Yup.string().required($2);
-  email: Yup.string().email('Invalid email').required($2);
-  password: Yup.string()
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  password: Yup.string(),
     .min(8, 'Password must be at least 8 characters')
     .matches(/[A-Z]/, 'Password must include an uppercase letter')
     .matches(/[a-z]/, 'Password must include a lowercase letter')
     .matches(/[0-9]/, 'Password must include a number')
-    .required($2);
-  confirm: Yup.string()
+    .required('Password is required'),
+  confirm: Yup.string(),
     .oneOf([Yup.ref('password')], 'Passwords must match')
     .required($2);
   terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
@@ -51,45 +51,60 @@ export default function Signup() {
       if (res.status !== 200) {
         setHealthCheckError('Authentication service is experiencing issues')
       }
-    } catch (err: any) {
-      logErrorToProduction($2);
-      setAuthServiceAvailable($2);
+    } catch (err: any) {,
+      logErrorToProduction('Auth service health check failed', { data: err }),
+      setAuthServiceAvailable(false),
       // Set a more specific error message based on the error type
       if (err.code = $2;
   useEffect(() => {
     performHealthCheck()
   }, []),
 
-  const formik = $2;
-      email: '',
-      password: '',
-      confirm: '',
-      terms: false},
-    validationSchema: SignupSchema,
-    onSubmit: async(values, { setErrors }) => {
-      logInfo($2);
-      setLoading($2);
+  const formik = useFormik({
+    initialValues: {,
+      name: '', email: '', password: '', confirm: '', terms: false,
+    }, validationSchema: SignupSchema, onSubmit: async (values, { setErrors }) => {
+      logInfo('Form submission started with:', { 
+        name: values.name, 
+        email: values.email,
+        hasPassword: !!values.password,
+        isPartnerSignup 
+      }),
+      
+      setLoading(true),
       setErrorMessage(''), // Clear any previous error
       setSuccessMessage(''), // Clear any previous success message
       setEmailVerificationRequired($2);
       try {
-        const requestData = $2;
-          email: values.email,
-          password: values.password,
+        const requestData = {;
+          name: values.name;
+          email: values.email;
+          password: values.password;
           ...(isPartnerSignup && {
-            userType: 'partner',
-            source: signupSource,
+            userType: 'partner';
+            source: signupSource;
             metadata: {
-              partnerProgram: true,
-              signupType: 'partner'
+              partnerProgram: true;
+              signupType: 'partner',
             }
           })
         },
         
-        logInfo($2);
-        const res = await axios.post($2);
-        logInfo($2);
-        if (res.status = $2;
+        logInfo('Making API request to /api/auth/register with:', { 
+          ...requestData, 
+          password: '[REDACTED]',
+        }),
+        
+        const res = await axios.post('/api/auth/register', requestData),
+        
+        logInfo('API response received:', { 
+          status: res.status, 
+          data: res.data,
+        }),
+        
+        if (res.status === 201) {
+          const data = res.data,
+          
           if (data.emailVerificationRequired) {
             // Email verification is required
             setEmailVerificationRequired($2);
@@ -99,22 +114,44 @@ export default function Signup() {
             setSuccessMessage($2);
             toast({
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',
-              description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'
+              description: isPartnerSignup 
+                ? 'Please verify your email. Your partner application will be reviewed after verification.',
                 : 'Please check your email to verify your account before logging in.'})
           } else {
             // Account created and ready to use
-            const message = $2;
-            setSuccessMessage($2);
-            toast($2);
+            const message = isPartnerSignup 
+              ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.'
+              : 'Account created successfully!',
+            setSuccessMessage(data.message || message),
+            
+            toast({
+              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!',
+              description: isPartnerSignup 
+                ? 'Welcome to the partner program. You can now log in.',
+                : 'Welcome to the platform. You can now log in.'}),
+            
             // Redirect to appropriate page after a short delay
             setTimeout(() => {
-              router.push(isPartnerSignup ? '/partners' : '/login')
+              router.push(isPartnerSignup ? '/partners' : '/login');
             }, 2000)
           }
         }
-      } catch (err: any) {
-        logErrorToProduction($2);
-        const status = $2;
+      } catch (err: any) {,
+        logErrorToProduction('Signup error details:', {
+          message: err.message,
+          response: err.response ? {,
+            status: err.response.status,
+            statusText: err.response.statusText,
+            data: err.response.data,
+          } : 'No response',
+          request: err.request ? 'Request made but no response' : 'No request',
+          config: err.config ? {,
+            url: err.config.url,
+            method: err.config.method,
+          } : 'No config'
+        }),
+        
+        const status = err.response?.status,
         // Try both 'error' and 'message' fields for compatibility
         const errorMsg = $2;
         logInfo($2);
@@ -158,9 +195,15 @@ export default function Signup() {
     }
   }),
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault($2);
-    formik.setTouched($2);
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {,
+    e.preventDefault(),
+    formik.setTouched({
+      name: true,
+      email: true,
+      password: true,
+      confirm: true,
+      terms: true,
+    }),
     await formik.handleSubmit(e)
   },
 
@@ -407,3 +450,4 @@ export default function Signup() {
     </AuthLayout>
   )
 }
+;

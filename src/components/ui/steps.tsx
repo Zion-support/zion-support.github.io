@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { CheckIcon } from 'lucide-react'
 
 interface StepProps {
-  status: "incomplete" | "current" | "complete",
-  label: string,
+  status: "incomplete" | "current" | "complete";
+  label: string;
   description?: string,
   className?: string
 }
@@ -46,17 +46,30 @@ export function Step({
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status = $2;
-            "text-white": status = $2;
+            "text-zion-slate-light": status === "incomplete",
+            "text-white": status === "current" || status === "complete"})}
+        >
+          {label}
+        </h3>
+        {description && (
+          <p className="text-sm text-zion-slate-light">{description}</p>
+        )}
+      </div>
+    </li>
+  )
+}
+
+interface StepsProps {
+  currentStep: number;
   className?: string,
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray($2);
   return (
     <div className={cn("w-full", className)}>
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">,
         {React.Children.map(childrenArray, (child, index) => {
           if (!React.isValidElement(child)) return null,
           
@@ -72,7 +85,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
-            style={{
+            style={{,
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -80,3 +93,4 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     </div>
   )
 }
+;

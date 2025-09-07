@@ -4,29 +4,30 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
 export interface Benefit {
-  title: string,
-  description: string,
-  icon?: React.ReactNode
+  title: string;
+  description: string;
+  icon?: React.ReactNode,
 }
 
 export interface Testimonial {
-  name: string,
+  name: string;
   role?: string,
-  text: string,
-  avatar?: string
+  text: string;
+  avatar?: string,
 }
 
 interface ServiceLandingTemplateProps {
-  title: string,
-  subtitle: string,
+  title: string;
+  subtitle: string;
   heroImage?: string,
-  description: string,
-  benefits: Benefit[],
-  testimonials: Testimonial[],
-  ctaText: string,
-  ctaLink: string}
+  description: string;
+  benefits: Benefit[];
+  testimonials: Testimonial[];
+  ctaText: string;
+  ctaLink: string,
+}
 
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   title,
   subtitle,
   heroImage,
@@ -71,7 +72,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {benefits.map((benefit, idx) => (
               <div
                 key={idx}
@@ -95,7 +96,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             What Our Clients Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {testimonials.map((t, idx) => (
               <Card
                 key = $2;

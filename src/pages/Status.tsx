@@ -6,35 +6,36 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
 interface ServiceStatus {
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
-  description: string,
-  lastChecked: string}
+  name: string;
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
+  description: string;
+  lastChecked: string,
+}
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
+  {,
     name: "Marketplace API",
     status: "operational",
     description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
+    lastChecked: new Date().toISOString(),
   },
   {
     name: "Authentication Service", 
     status: "operational",
     description: "User login and registration",
-    lastChecked: new Date().toISOString()
+    lastChecked: new Date().toISOString(),
   },
   {
     name: "Payment Processing",
     status: "operational", 
     description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
+    lastChecked: new Date().toISOString(),
   },
   {
     name: "Talent Directory",
     status: "operational",
     description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
+    lastChecked: new Date().toISOString(),
   }
 ],
 
@@ -70,7 +71,10 @@ export default function Status() {
     fetchUptime()
   }, []),
 
-  const getStatusIcon = $2;
+  const getStatusIcon = (status: ServiceStatus['status']) => {
+    switch (status) {
+      case 'operational':,
+        return <CheckCircle className="h-5 w-5 text-green-500" />,
       case 'degraded':
         return <Clock className = $2;
       case 'outage':
@@ -78,8 +82,14 @@ export default function Status() {
       case 'maintenance':
         return <Clock className = $2;
       default:
-        return <AlertCircle className = $2;
-  const getStatusText = $2;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />,
+    }
+  },
+
+  const getStatusText = (status: ServiceStatus['status']) => {
+    switch (status) {
+      case 'operational':,
+        return 'Operational',
       case 'degraded':
         return 'Degraded Performance',
       case 'outage':
@@ -87,11 +97,14 @@ export default function Status() {
       case 'maintenance':
         return 'Scheduled Maintenance',
       default:
-        return 'Unknown'
+        return 'Unknown',
     }
   },
 
-  const getStatusColor = $2;
+  const getStatusColor = (status: ServiceStatus['status']) => {
+    switch (status) {
+      case 'operational':,
+        return 'text-green-500',
       case 'degraded':
         return 'text-yellow-500',
       case 'outage':
@@ -99,14 +112,14 @@ export default function Status() {
       case 'maintenance':
         return 'text-blue-500',
       default:
-        return 'text-gray-500'
+        return 'text-gray-500',
     }
   },
 
-  const formatUptime = (seconds: number) => {
-    const days = Math.floor($2);
-    const hours = $2;
-    const minutes = $2;
+  const formatUptime = (seconds: number) => {,
+    const days = Math.floor(seconds / 86400),
+    const hours = Math.floor((seconds % 86400) / 3600),
+    const minutes = Math.floor((seconds % 3600) / 60),
     const parts: string[] = [],
     if (days > 0) parts.push($2);
     if (hours > 0) parts.push($2);
@@ -128,7 +141,7 @@ export default function Status() {
             <p className="text-zion-slate-light text-lg">
               Real-time monitoring of Zion platform services
             </p>
-            {uptime !== null && (
+            {uptime !== null && (,
               <p className="text-zion-slate-light text-sm mt-2">Uptime: {formatUptime(uptime)}</p>
             )}
           </div>
@@ -165,7 +178,7 @@ export default function Status() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
+            </div>,
           )}
 
           {showFallback && (
@@ -211,7 +224,7 @@ export default function Status() {
                   asChild
                   className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                 >
-                  <a 
+                  <a,
                     href={statusUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
@@ -258,5 +271,6 @@ export default function Status() {
         </div>
       </main>
     </>
-  )
+  ),
 }
+;

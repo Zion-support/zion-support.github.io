@@ -15,20 +15,21 @@ const useAuth = () => {
 },
 
 interface SharedWhitepaper {
-  whitepaper_data: {
-    tokenName: string,
-    tokenSupply: string,
-    sections: Array<{ id: string, title: string, content: string}>,
-    distributionChartData: Array<{ name: string, value: number}>,
+  whitepaper_data: {;
+    tokenName: string;
+    tokenSupply: string;
+    sections: Array<{ id: string, title: string, content: string };>,
+    distributionChartData: Array<{ name: string, value: number }>,
     distributionBreakdown?: string
   },
   created_at: string,
-  is_public: boolean}
+  is_public: boolean,
+}
 
-const WhitepaperViewPage: React.FC = () => {
-  const router = useRouter($2);
-  const { id: rawId} = router.query,
-  const id = $2;
+const WhitepaperViewPage: React.FC = () => {,
+  const router = useRouter(),
+  const { id: rawId } = router.query,
+  const id = typeof rawId === 'string' ? rawId : undefined,
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null),
   const [loading, setLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
@@ -53,8 +54,8 @@ const WhitepaperViewPage: React.FC = () => {
 
         setSharedData(responseData as SharedWhitepaper)
 
-      } catch (e: any) {
-        logErrorToProduction($2);
+      } catch (e: any) {,
+        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),
         setError(e.message || 'An unexpected error occurred.')
       } finally {
         setLoading(false)
@@ -66,5 +67,27 @@ const WhitepaperViewPage: React.FC = () => {
   if (loading) {
     return <div className = $2;
   return (
-    <div className = $2;
-export default WhitepaperViewPage,
+    <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
+        <div className="mb-6 flex justify-between items-center">
+            <Button asChild variant="outline">,
+                 <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
+                    <ArrowLeft className="mr-2 h-4 w-4" /> Back
+                 </Link>
+            </Button>
+            {!sharedData.is_public && isAdmin && (
+                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
+                    Private (Admin View)
+                </span>
+            )}
+        </div>
+      <WhitepaperPreviewPanel
+        sections={whitepaper.sections}
+        distributionChartData={whitepaper.distributionChartData}
+        tokenName={whitepaper.tokenName}
+        tokenSupply={whitepaper.tokenSupply}
+      />
+    </div>
+  )
+},
+;
+export default WhitepaperViewPage;

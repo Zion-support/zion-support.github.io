@@ -30,12 +30,13 @@ const workExperienceSchema = z.object({
   description: z.string().optional($2);
   location: z.string().optional()}),
 
-type WorkExperienceFormValues = $2;
-interface WorkExperienceFormProps {
-  resumeId: string,
-  workExperiences: WorkExperience[],
-  onComplete: () => void,
-  onBack: () => void
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,
+
+interface WorkExperienceFormProps {;
+  resumeId: string;
+  workExperiences: WorkExperience[];
+  onComplete: () => void;
+  onBack: () => void,
 }
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
@@ -44,14 +45,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const [error, setError] = useState<string | null>(null),
 
   // Helper function to format dates to string
-  const formatDateValue = $2;
-    if (typeof dateValue = $2;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {,
+    if (!dateValue) return '',
+    if (typeof dateValue === 'string') return dateValue,
     return format(dateValue, 'yyyy-MM-dd')
   },
 
   const form = useForm<WorkExperienceFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(workExperienceSchema),
+    defaultValues: {,
       company_name: '',
       role_title: '',
       start_date: format(new Date(), 'yyyy-MM-dd'),
@@ -60,11 +62,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       location: ''}}),
 
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
-    try {
-      setError($2);
+    try {,
+      setError(null),
       let success,
 
-      const experienceData: WorkExperience = {
+      const experienceData: WorkExperience = {,
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field
@@ -90,18 +92,25 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message || 'An error occurred'),
     }
   },
 
-  const handleEdit = (work: WorkExperience) => {
-    setEditingId($2);
-    form.reset($2);
+  const handleEdit = (work: WorkExperience) => {,
+    setEditingId(work.id!),
+    form.reset({
+      ...work,
+      start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   },
 
-  const handleDelete = $2;
-  const handleEnhanceDescription = (enhancedContent: string) => {
+  const handleDelete = async (id: string) => {
+    if (confirm('Are you sure you want to delete this work experience?')) {
+      await deleteWorkExperience(id),
+    }
+  },
+
+  const handleEnhanceDescription = (enhancedContent: string) => {,
     form.setValue('description', enhancedContent)
   },
 
@@ -173,7 +182,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
+              <FormField,
                 control={form.control}
                 name="company_name"
                 render={({ field }: { field: any}) => (
@@ -203,7 +212,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
+              <FormField,
                 control={form.control}
                 name="start_date"
                 render={({ field }: { field: any}) => (
@@ -345,3 +354,4 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>
   )
 }
+;

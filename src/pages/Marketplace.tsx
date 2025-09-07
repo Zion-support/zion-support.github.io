@@ -28,12 +28,38 @@ export interface MarketplaceProps {
 }
 
 // Market insights component
-const MarketInsights: React.FC<{ stats: any}> = ({ stats }) => (
-  <Card className = $2;
+const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <TrendingUp className="h-5 w-5 text-blue-400" />
+        <h3 className="text-lg font-semibold">Market Insights</h3>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">,
+          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{stats.totalProducts}</div>
+          <div className="text-sm text-muted-foreground">Products</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-yellow-400">{stats.categoriesCount}</div>
+          <div className="text-sm text-muted-foreground">Categories</div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+),
+
 // Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string,
-  setSortBy: (sort: string) => void,
+const FilterControls: React.FC<{,
+  sortBy: string, setSortBy: (sort: string) => void,
   filterCategory: string,
   setFilterCategory: (category: string) => void,
   categories: string[],
@@ -51,7 +77,8 @@ const FilterControls: React.FC<{
   locations: string[],
   showRecommended: boolean,
   setShowRecommended: (show: boolean) => void,
-  loading: boolean}> = ({
+  loading: boolean,
+}> = ({
   sortBy,
   setSortBy,
   filterCategory,
@@ -108,7 +135,7 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <span className="text-sm">$</span>
       <input
-        type="number"
+        type="number",
         value={priceRange[0]}
         min={MIN_PRICE}
         max={priceRange[1]}
@@ -159,19 +186,20 @@ export default function Marketplace() {
     }
 
     // Navigate to admin products page
-    router.push('/admin/products')
+    router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
-  const fetchProducts = useCallback(async (page: number, limit: number) => {
+  const fetchProducts = useCallback(async (page: number, limit: number) => {,
     await new Promise((resolve) => setTimeout(resolve, 200)),
 
     try {
       // Use static marketplace listings data for now (compatible with ProductListing type)
       const params = $2;
         limit,
-        ...(filterCategory && { category: filterCategory}),
-        sort: sortBy},
+        ...(filterCategory && { category: filterCategory }),
+        sort: sortBy,
+      },
 
       logInfo($2);
       // Use static data that's already of type ProductListing[]
@@ -210,9 +238,10 @@ export default function Marketplace() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0),
           case 'newest':
-          default: // Ensure createdAt exists and is a valid date string before parsing
-            const timeA = $2;
-            const timeB = $2;
+          default: // Ensure createdAt exists and is a valid date string before parsing,
+            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0,
+            const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0,
+
             // Handle NaN cases that might arise from invalid date strings
             if (isNaN(timeB) && isNaN(timeA)) return 0, // Both invalid, treat as equal
             if (isNaN(timeB)) return -1, // b is invalid, a comes first (appears newer)
@@ -229,21 +258,18 @@ export default function Marketplace() {
       return {
         items: paginatedItems,
         hasMore: endIndex < items.length,
-        total: items.length
+        total: items.length,
       }
     } catch (err: any) {
-      // Log the error and allow useInfiniteScrollPagination to handle it
-      logErrorToProduction($2);
-      // Show more specific error messages based on the error type
+      // Log the error and allow useInfiniteScrollPagination to handle it,
+      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }), // Show more specific error messages based on the error type
       if (err.response?.status === 403) {
         logErrorToProduction($2);
         // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
       } else if (err.response?.status === 500) {
         logErrorToProduction($2);
         toast({
-          title: "Server Error", 
-          description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive"})
+          title: "Server Error", description: "The marketplace is temporarily unavailable. Please try again later.", variant: "destructive"})
       } else {
         handleApiError(err), // This might show a toast or log to Sentry
       }
@@ -306,7 +332,7 @@ export default function Marketplace() {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-      categoriesCount: Array.from(new Set(products.map(p => p.category))).length
+      categoriesCount: Array.from(new Set(products.map(p => p.category))).length,
     }
   }, [products]),
 
@@ -345,8 +371,8 @@ export default function Marketplace() {
             {t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 12}).map((_, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">,
+          {Array.from({ length: 12 }).map((_, i) => (
             <SkeletonCard key={i} />
           ))}
         </div>
@@ -404,7 +430,7 @@ export default function Marketplace() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0}}
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">,
           {t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">
@@ -455,35 +481,27 @@ export default function Marketplace() {
 
       {/* Product Grid */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1}}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6",
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
         <AnimatePresence mode="popLayout">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
-              ref={index === products.length - 1 ? lastElementRef : null}
+              ref={index === products.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1}}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover = $2;
-                  name: product.title,
-                  title: product.title,
-                  description: product.description || '',
-                  price: product.price || 0,
-                  currency: product.currency,
-                  category: product.category,
-                  tags: product.tags,
-                  images: product.images,
-                  rating: product.rating || 0,
-                  reviewCount: product.reviewCount || 0,
-                  created_at: product.createdAt,
-                  updated_at: product.createdAt, // Use createdAt for both
-                  stock: product.stock,
-                  in_stock: (product.stock || 0) > 0
+              whileHover={{ scale: 1.02 }}
+              className="relative group"
+            >
+              <ProductCard
+                product={{
+                  id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, reviewCount: product.reviewCount || 0, created_at: product.createdAt, updated_at: product.createdAt, // Use createdAt for both
+                  stock: product.stock, in_stock: (product.stock || 0) > 0,
                 }}
                 onBuy={async () => {
                   if (!isAuthenticated) {
@@ -530,8 +548,8 @@ export default function Marketplace() {
           initial={{ opacity: 0}}
           animate={{ opacity: 1}}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4}).map((_, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">,
+            {Array.from({ length: 4 }).map((_, i) => (
               <SkeletonCard key={`loading-${i}`} />
             ))}
           </div>
@@ -559,10 +577,10 @@ export default function Marketplace() {
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0}}
-            animate={{ opacity: 1, scale: 1}}
-            exit={{ opacity: 0, scale: 0}}
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -573,3 +591,4 @@ export default function Marketplace() {
     </div>
   )
 }
+;

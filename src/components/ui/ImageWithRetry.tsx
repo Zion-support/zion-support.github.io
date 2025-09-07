@@ -56,5 +56,5 @@ export function ImageWithRetry({
     </div>
   )
 }
-
-export default ImageWithRetry,
+;
+export default ImageWithRetry;

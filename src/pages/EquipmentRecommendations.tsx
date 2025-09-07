@@ -50,7 +50,7 @@ export default function EquipmentRecommendations() {
       )}
       {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing) => (
+        {listings.map((listing) => (,
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
           </div>
@@ -59,3 +59,4 @@ export default function EquipmentRecommendations() {
     </div>
   )
 }
+;

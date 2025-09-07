@@ -6,15 +6,17 @@ import { Badge } from "@/components/ui/badge";
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
-  country: CountryPricing,
-  onSelect: (country: CountryPricing) => void,
-  onQuote?: (country: CountryPricing) => void,
-  isPopular?: boolean
+  country: CountryPricing;
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  isPopular?: boolean,
 }
 
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
-  const getRegionEmoji = $2;
+  const getRegionEmoji = (countryName: string | undefined): string => {,
+    if (!countryName) return "🌐",
+    
     const emojiMap: Record<string, string> = {
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
@@ -38,7 +40,9 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   },
   
   // Get response time estimate based on country
-  const getResponseTime = $2;
+  const getResponseTime = (countryName: string | undefined): string => {,
+    if (!countryName) return "8-24 hours",
+    
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     
@@ -55,7 +59,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-        : "bg-zion-blue-dark border-zion-blue-light"
+        : "bg-zion-blue-dark border-zion-blue-light",
     }`}>
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
@@ -98,14 +102,14 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className={`w-full ${
             isPopular
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light",
           }`}
         >
           Select Service
         </Button>
         <Button
           variant="outline"
-          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10",
           onClick={() => onQuote?.(country)}
         >
           Get Quote
@@ -119,5 +123,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         </Button>
       </CardFooter>
     </Card>
-  )
+  ),
 }
+;

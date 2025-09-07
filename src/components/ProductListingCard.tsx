@@ -15,10 +15,10 @@ import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
-  listing: ProductListing,
+  listing: ProductListing;
   view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void,
-  detailBasePath?: string
+  onRequestQuote?: (id: string) => void;
+  detailBasePath?: string,
 }
 
 const ProductListingCardComponent = $2;
@@ -58,7 +58,7 @@ const ProductListingCardComponent = $2;
       return
     }
     
-    router.push(`${detailBasePath}/${listing.id}`)
+    router.push(`${detailBasePath}/${listing.id}`);
   },
 
   const dispatch = $2;
@@ -68,27 +68,31 @@ const ProductListingCardComponent = $2;
       addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
     ),
     toast.success(`1× ${listing.title} added`, {
-      action: {
-        label: 'View Cart',
-        onClick: () => router.push('/cart')}}),
+      action: {,
+        label: 'View Cart', onClick: () => router.push('/cart')}}),
     setLoading(false)
   },
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault($2);
-    e.stopPropagation($2);
+  const handleRequestQuote = (e: React.MouseEvent) => {,
+    e.preventDefault(),
+    e.stopPropagation(),
+    
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
-      router.push(`/request-quote?listing = $2;
-  const imageContainerClasses = $2;
+      router.push(`/request-quote?listing=${listing.id}`);
+    }
+  },
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+
   return (
     <div
       data-testid="equipment-link"
-      className="{`bg-card/70" backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
-      role="button"
+      role="button",
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault($2);
@@ -156,7 +160,7 @@ const ProductListingCardComponent = $2;
                 {listing.uspHeadline}
               </p>
             )}
-            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+            <h3 className="font-semibold text-foreground mb-2 hover: text-primary transition-colors text-[clamp(1rem, 2.5vw,1.125rem)]">
               {listing.title}
             </h3>
           </div>
@@ -184,7 +188,7 @@ const ProductListingCardComponent = $2;
           <div className="text-sm font-medium">
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
-                <DollarSign className="h-4 w-4 mr-1" />
+                <DollarSign className="h-4 w-4 mr-1" />,
                 {getPrice()}
               </div>
             ) : (
@@ -198,7 +202,7 @@ const ProductListingCardComponent = $2;
             <Button
               size="sm"
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
+              onClick={(e) => {,
                 e.stopPropagation(), // Prevent card click event
                 addToCart()
               }}
@@ -213,7 +217,7 @@ const ProductListingCardComponent = $2;
                   Loading...
                 </>
               ) : (
-                "Add to Cart"
+                "Add to Cart",
               )}
             </Button>
             
@@ -221,14 +225,35 @@ const ProductListingCardComponent = $2;
               size="sm"
               variant="default"
               className="bg-green-600 hover: bg-green-700 text-white"
-              onClick={(e) => {
+              onClick={(e) => {,
                 e.stopPropagation(), // Prevent card click event
                 // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-                router.push('/checkout')
+                router.push('/checkout');
               }}
-              disabled = $2;
-export const ProductListingCard = React.memo($2);
-ProductListingCard.displayName = $2;
+              disabled={loading}
+            >
+              Buy Now
+            </Button>
+            
+            {onRequestQuote && (
+              <Button 
+                size="sm"
+                variant="outline" 
+                onClick={handleRequestQuote}
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
+              >
+                Request Quote
+              </Button>,
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+},
+;
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard',

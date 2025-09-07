@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { useState } from "react";,
-import { GradientHeading } from "@/components/GradientHeading";,
-import { Button } from "@/components/ui/button";,
-import { Input } from "@/components/ui/input";,
-import { Textarea } from "@/components/ui/textarea";,
-import { toast } from "@/components/ui/use-toast";,
-import z from "zod";,
-import { Mail } from 'lucide-react';
+import { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react'
 
 export function ContactSection() {
   const [formData, setFormData] = useState($2);
@@ -21,15 +21,16 @@ export function ContactSection() {
   }>({}),
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {,
     const { name, value } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault($2);
+  const handleSubmit = (e: React.FormEvent) => {,
+    e.preventDefault(),
+
     const schema = z.object({
       name: z.string().min($2);
       email: z.string().email($2);
@@ -81,7 +82,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <GradientHeading>Get In Touch</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl mb-8">
+            <p className="mt-4 text-zion-slate-light text-xl mb-8">,
               We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
             </p>
             <div className="flex items-center mb-6">
@@ -102,7 +103,7 @@ export function ContactSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
             <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>,
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
@@ -111,7 +112,7 @@ export function ContactSection() {
                     </label>
                     <Input
                       id="name"
-                      name="name"
+                      name="name",
                       value={formData.name}
                       onChange={handleChange}
                       className="{`w-full" rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
@@ -175,8 +176,8 @@ export function ContactSection() {
                 <div>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled = {isSubmitting,}
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white",
+                    disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
@@ -192,3 +193,4 @@ export function ContactSection() {
     </section>
   )
 }
+;

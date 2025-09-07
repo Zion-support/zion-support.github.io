@@ -62,5 +62,5 @@ export function EnterpriseCTA() {
         </div>
       </div>
     </section>
-  )
+  ),
 }

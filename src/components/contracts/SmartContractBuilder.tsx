@@ -12,11 +12,11 @@ import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
-  isOpen: boolean,
-  onClose: () => void,
-  talent: TalentProfile,
-  clientName: string,
-  onContractGenerated?: (contractContent: string) => void
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void,
 }
 
 export function SmartContractBuilder({
@@ -34,12 +34,17 @@ export function SmartContractBuilder({
   const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum',
     useEscrow: true,
-    deployToChain: false}),
+    deployToChain: false,
+  }),
   const [deployStatus, setDeployStatus] = useState<string>(''),
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
   
-  const { deploySmartContract } = useSmartContracts($2);
-  const handleLoadTemplate = $2;
+  const { deploySmartContract } = useSmartContracts(),
+
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData),
+  },
+
   // Convert ContractFormValues to contract content string
   
   const handleDeployContract = $2;
@@ -47,23 +52,23 @@ export function SmartContractBuilder({
       setDeployStatus($2);
       const contractInfo = await deploySmartContract($2);
       if (contractInfo) {
-        setDeploymentInfo($2);
-        setDeployStatus($2);
-        toast.success("Smart contract deployed successfully!")
+        setDeploymentInfo(contractInfo),
+        setDeployStatus('deployed'),
+        toast.success("Smart contract deployed successfully!");
       } else {
-        setDeployStatus($2);
-        toast.error("Failed to deploy smart contract")
+        setDeployStatus('error'),
+        toast.error("Failed to deploy smart contract");
       }
     } catch (error) {
-      logErrorToProduction($2);
-      setDeployStatus($2);
-      toast.error("Failed to deploy smart contract")
+      logErrorToProduction('Error deploying contract:', { data: error }),
+      setDeployStatus('error'),
+      toast.error("Failed to deploy smart contract");
     }
   },
 
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
-    // This should be a function that takes a string (contract content)
+    // This should be a function that takes a string (contract content),
     // Since we need to adapt the interface, we'll implement the simplest solution that works
     if (onContractGenerated) {
       onContractGenerated(contract)
@@ -124,7 +129,7 @@ export function SmartContractBuilder({
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                    >
+                    >,
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>
                   </div>
@@ -144,3 +149,4 @@ export function SmartContractBuilder({
     </Dialog>
   )
 }
+;

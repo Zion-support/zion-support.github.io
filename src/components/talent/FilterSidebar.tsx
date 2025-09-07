@@ -42,12 +42,11 @@ export function FilterSidebar({
           variant="ghost" 
           size="sm" 
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+          className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
         >
           Clear All
-        </Button>
-      </div>
-      
+        </Button>,
+      </div>,
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       
@@ -105,7 +104,7 @@ export function FilterSidebar({
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
-        </Button>
+        </Button>,
       )}
     </>
   )

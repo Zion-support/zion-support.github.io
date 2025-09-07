@@ -19,15 +19,19 @@ export function ProjectOfferBanner() {
     }
   }, [projects, isLoading]),
   
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation($2);
-    setDismissed($2);
-      updated.add($2);
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {,
+    e.stopPropagation(),
+    setDismissed(prev => {
+      const updated = new Set(prev),
+      updated.add(projectId),
       return updated
     })
   },
   
-  const handleViewOffer = $2;
+  const handleViewOffer = (projectId: string) => {,
+    router.push(`/project/${projectId}`);
+  },
+  
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
     return null
   }
@@ -73,3 +77,4 @@ export function ProjectOfferBanner() {
     </div>
   )
 }
+;

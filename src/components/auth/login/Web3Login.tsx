@@ -28,9 +28,10 @@ export function Web3Login() {
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
-    } catch (error: any) {
-      toast($2);
-      logErrorToProduction('Web3 login error:', { data: error})
+    } catch (error: any) {,
+      toast("Login failed", {
+        description: error.message || "Failed to connect wallet. Please try again."}),
+      logErrorToProduction('Web3 login error:', { data: error })
     } finally {
       setIsLoading(false)
     }
@@ -54,7 +55,7 @@ export function Web3Login() {
         </svg>
         Connecting...
       </span>
-    )
+    ),
   } else {
     buttonContent = (
       <>
@@ -68,7 +69,7 @@ export function Web3Login() {
     <Button
       type="button"
       variant="outline"
-      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
       onClick={handleWeb3Login}
       disabled={buttonDisabled}
       title={buttonTitle || undefined} // Ensure title is not an empty string if not needed
@@ -77,3 +78,4 @@ export function Web3Login() {
     </Button>
   )
 }
+;

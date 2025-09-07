@@ -8,9 +8,9 @@ import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
-  project: PortfolioProject,
-  onEdit: (project: PortfolioProject) => void,
-  onDelete: (projectId: string) => void
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void,
 }
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
@@ -113,3 +113,4 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   )
 }
+;

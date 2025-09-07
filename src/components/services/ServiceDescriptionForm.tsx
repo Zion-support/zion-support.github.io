@@ -18,23 +18,31 @@ const formSchema = z.object({
 
 type FormData = $2;
 interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void
+  onDescriptionGenerated: (description: string) => void,
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast($2);
   const [isLoading, setIsLoading] = useState($2);
   const form = useForm<FormData>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(formSchema),
+    defaultValues: {,
       title: "",
       keyFeatures: "",
       targetAudience: ""}}),
 
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading($2);
+  const handleSubmit = async (data: FormData) => {,
+    setIsLoading(true),
+    
     try {
-      const { data: response, error } = await supabase.functions.invoke($2);
+      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+        body: {,
+          title: data.title, 
+          keyFeatures: data.keyFeatures, 
+          targetAudience: data.targetAudience,
+        }
+      }),
+
       if (error) {
         throw new Error(error.message)
       }
@@ -47,14 +55,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       onDescriptionGenerated($2);
       toast({
         title: "Description Generated",
-        description: "Your professional service description has been created."
+        description: "Your professional service description has been created.",
       })
     } catch (error) {
       logErrorToProduction($2);
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsLoading(false)
@@ -146,7 +154,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 <>
                   <Sparkles className="h-4 w-4 mr-2" />
                   Generate Description
-                </>
+                </>,
               )}
             </Button>
           </form>
@@ -155,3 +163,4 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     </Card>
   )
 }
+;

@@ -34,8 +34,8 @@ function ClientDashboardContent() {
     }
   }, [jobs, selectedJobId]),
 
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId($2);
+  const handleJobSelect = (jobId: string, jobTitle: string) => {,
+    setSelectedJobId(jobId),
     setSelectedJobTitle(jobTitle)
   },
 
@@ -76,7 +76,7 @@ function ClientDashboardContent() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2">,
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
@@ -144,3 +144,4 @@ export default function ClientDashboard() {
     </ProtectedRoute>
   )
 }
+;

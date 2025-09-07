@@ -130,15 +130,51 @@ export default [
         // React
         React: 'readonly'
         // Jest/Testing globals
-        describe: 'readonly'
-        it: 'readonly'
-        test: 'readonly'
-        expect: 'readonly'
-        beforeEach: 'readonly'
-        afterEach: 'readonly'
-        beforeAll: 'readonly'
-        afterAll: 'readonly'
-        jest: 'readonly'
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react': react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
+    },
+    settings: {
+      react: {
+        version: 'detect'
       }
     }
     plugins: {

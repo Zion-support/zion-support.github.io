@@ -8,25 +8,25 @@ import { cn } from "@/lib/utils";
 import { useRouter } from 'next/router';
 import { toast } from "sonner";
 interface Message {
-  id: string,
-  content: string,
-  timestamp: string,
-  isMe: boolean,
+  id: string;
+  content: string;
+  timestamp: string;
+  isMe: boolean;
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
 }
 
 interface MobileChatViewProps {
-  contact: {
-    id: string,
-    name: string,
+  contact: {;
+    id: string;
+    name: string;
     avatar?: string,
     status?: string
   },
   messages: Message[],
   onBack: () => void,
-  onSendMessage: (content: string) => void
+  onSendMessage: (content: string) => void,
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -40,8 +40,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   },
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault($2);
+    if (e.key === 'Enter' && !e.shiftKey) {,
+      e.preventDefault(),
       handleSend()
     }
   },
@@ -49,13 +49,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const startVideoCall = $2;
     toast.success($2);
     // Navigate to video call page
-    router.push(`/call/${roomId}`)
+    router.push(`/call/${roomId}`);
   },
   
   const startAudioCall = $2;
     toast.success($2);
     // Navigate to video call page with audio-only flag
-    router.push(`/call/${roomId}?audioOnly = $2;
+    router.push(`/call/${roomId}?audioOnly=true`);
+  },
+  
   return (
     <div className = $2;
               message.isMe ? "justify-end" : "justify-start"
@@ -112,3 +114,4 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     </div>
   )
 }
+;

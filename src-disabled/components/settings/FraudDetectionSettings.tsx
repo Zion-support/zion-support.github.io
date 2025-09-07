@@ -127,8 +127,7 @@ export function FraudDetectionSettings() {
                   <li>AI-powered content analysis</li>
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
-                <p>
-
+                <p>,
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
@@ -141,7 +140,7 @@ export function FraudDetectionSettings() {
               onClick={handleSavePreferences}
               disabled={isSaving}
               className="bg-zion-purple hover:bg-zion-purple-light"
-            >
+            >,
               {isSaving ? "Saving..." : "Save Preferences"}
             </Button>
           </div>
@@ -150,3 +149,4 @@ export function FraudDetectionSettings() {
     </Card>
   )
 }
+;

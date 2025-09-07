@@ -17,7 +17,8 @@ import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
-const mockPost: ForumPost = $2;
+const mockPost: ForumPost = {,
+  id: "1",
   title: "Best practices for AI model fine-tuning",
   content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
   authorId: "user1",
@@ -32,11 +33,12 @@ const mockPost: ForumPost = $2;
   downvotes: 2,
   replyCount: 4,
   isAnswered: true,
-  isFeatured: true},
+  isFeatured: true,
+},
 
 // Mock data for replies
 const mockReplies: ForumReply[] = [
-  {
+  {,
     id: "reply1",
     postId: "1",
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
@@ -46,7 +48,8 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-01T14: 30: 00Z",
     updatedAt: "2025-04-01T14: 30: 00Z",
     upvotes: 12,
-    downvotes: 0},
+    downvotes: 0,
+  },
   {
     id: "reply2",
     postId: "1",
@@ -57,7 +60,8 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-01T16: 15: 00Z",
     updatedAt: "2025-04-01T16: 15: 00Z",
     upvotes: 8,
-    downvotes: 0},
+    downvotes: 0,
+  },
   {
     id: "reply3",
     postId: "1",
@@ -69,7 +73,8 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09: 45: 00Z",
     upvotes: 15,
     downvotes: 0,
-    isAnswer: true},
+    isAnswer: true,
+  },
   {
     id: "reply4",
     postId: "1",
@@ -79,7 +84,8 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-02T11: 20: 00Z",
     updatedAt: "2025-04-02T11: 20: 00Z",
     upvotes: 4,
-    downvotes: 0}
+    downvotes: 0,
+  }
 ],
 
 export default function ForumPostPage() {
@@ -138,14 +144,17 @@ export default function ForumPostPage() {
 
   const handleSubmitReply = async (content: string) => {
     if (!user) {
-      toast($2);
-      const returnTo = encodeURIComponent($2);
-      router.push($2);
+      toast({,
+        title: "Authentication required",
+        description: "Please sign in to reply"}),
+      const returnTo = encodeURIComponent(router.asPath),
+      router.push(`/auth/login?returnTo=${returnTo}`),
       return
     }
     
     // Create a new reply
-    const newReply: ForumReply = $2;
+    const newReply: ForumReply = {,
+      id: `reply${Date.now()}`,
       postId: post.id,
       content,
       authorId: user.id || 'unknown',
@@ -154,7 +163,11 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString($2);
       updatedAt: new Date().toISOString($2);
       upvotes: 0,
-      downvotes: 0},
+      downvotes: 0,
+    },
+    
+    setReplies([...replies, newReply]),
+    setPost({ ...post, replyCount: post.replyCount + 1 }),
     
     setReplies($2);
     setPost($2);
@@ -166,15 +179,23 @@ export default function ForumPostPage() {
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
-      toast($2);
+      toast({,
+        title: "Permission denied",
+        description: "Only the original poster or moderators can mark answers",
+        variant: "destructive",
+      }),
       return
     }
     
     // Update the replies
-    const updatedReplies = $2;
-      isAnswer: reply.id = $2;
-    setReplies($2);
-    setPost($2);
+    const updatedReplies = replies.map(reply => ({
+      ...reply,
+      isAnswer: reply.id === replyId,
+    })),
+    
+    setReplies(updatedReplies),
+    setPost({ ...post, isAnswered: true }),
+    
     toast({
       title: "Answer marked",
       description: "The reply has been marked as the accepted answer"})
@@ -224,8 +245,8 @@ export default function ForumPostPage() {
           <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
             Forum
           </Link>
-          <span className="text-muted-foreground">/</span>
-          <Link href={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
+          <span className="text-muted-foreground">/</span>,
+          <Link href={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">,
             {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
           </Link>
           <span className="text-muted-foreground">/</span>
@@ -262,13 +283,13 @@ export default function ForumPostPage() {
             
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
-                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">,
                   {tag}
                 </Badge>
               ))}
             </div>
             
-            <div className="prose dark:prose-invert max-w-none mb-6">
+            <div className="prose dark:prose-invert max-w-none mb-6">,
               {post.content.split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
@@ -365,7 +386,7 @@ export default function ForumPostPage() {
                   <AlertDescription>
                     Please <Link href="/auth/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
-                </Alert>
+                </Alert>,
               )}
             </div>
           )}
@@ -396,3 +417,4 @@ export default function ForumPostPage() {
     </>
   )
 }
+;

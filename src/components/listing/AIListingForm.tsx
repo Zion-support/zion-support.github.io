@@ -7,11 +7,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
 
 interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string}) => void,
+  onSubmit: (formData: {;
+    title: string;
+    category: string;
+    keyFeatures: string;,
+    targetAudience: string,
+  }) => void,
   isLoading: boolean,
   initialValues?: {
     title?: string,
@@ -29,7 +30,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [targetAudience, setTargetAudience] = useState($2);
   const handleSubmit = () => {
     if (!title || !category) {
-      toast($2);
+      toast({
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
+        variant: "destructive",
+      }),
       return
     }
 
@@ -98,9 +103,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           <>
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
-          </>
+          </>,
         )}
       </Button>
     </div>
   )
 }
+;

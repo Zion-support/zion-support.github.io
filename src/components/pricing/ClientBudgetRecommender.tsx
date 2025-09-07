@@ -13,15 +13,15 @@ import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react'
 
 interface ClientBudgetRecommenderProps {
-  jobTitle: string,
-  category: string,
+  jobTitle: string;
+  category: string;
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number) => void
+  onSuggestionApplied: (minValue: number, maxValue: number) => void,
 }
 
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
   jobTitle,
   category,
   timeline,
@@ -38,7 +38,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
     setIsLoading($2);
     try {
-      const params: ClientBudgetParams = $2;
+      const params: ClientBudgetParams = {,
+        jobTitle,
         category},
 
       if (timeline) params.timeline = $2;
@@ -63,10 +64,35 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-          accepted: true})
+          accepted: true,
+        })
       }
     }
   },
 
   return (
-    <div className = $2;
+    <div className="space-y-4">
+      <div>
+        {!suggestion && !isLoading ? (
+          <Button
+            type="button"
+            variant="outline"
+            onClick={generateSuggestion}
+            disabled={!jobTitle || !category}
+            className="w-full"
+          >
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+          </Button>
+        ) : (
+          <PricingSuggestionBox
+            suggestion={suggestion}
+            isLoading={isLoading}
+            onApplySuggestion={handleApplySuggestion}
+            rateType="hourly"
+          />
+        )}
+      </div>
+    </div>
+  )
+},
+;

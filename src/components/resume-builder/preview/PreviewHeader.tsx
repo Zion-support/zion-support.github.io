@@ -6,8 +6,8 @@ import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
-  resume: Resume,
-  onBack: () => void
+  resume: Resume;
+  onBack: () => void,
 }
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
@@ -20,17 +20,19 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     style.innerHTML = `
       @media print {
         body * {
-          visibility: hidden}
+          visibility: hidden,
+        }
         .print-section, .print-section * {
-          visibility: visible}
+          visibility: visible,
+        }
         .print-section {
           position: absolute,
           left: 0,
           top: 0,
-          width: 100%
+          width: 100%,
         }
         .no-print {
-          display: none !important
+          display: none !important,
         }
       }
     `,
@@ -76,3 +78,4 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     </div>
   )
 }
+;

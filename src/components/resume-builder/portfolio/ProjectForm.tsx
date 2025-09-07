@@ -19,23 +19,23 @@ import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
 const projectSchema = z.object({
-  title: z.string().min($2);
-  description: z.string().optional($2);
-  technologies: z.string().optional($2);
-  image_url: z.string().optional($2);
-  github_url: z
+  title: z.string().min(1, 'Project title is required'),
+  description: z.string().optional(),
+  technologies: z.string().optional(),
+  image_url: z.string().optional(),
+  github_url: z,
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-    .optional($2);
-  demo_url: z
+    .optional(),
+  demo_url: z,
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional($2);
   pdf_url: z.string().optional()}),
 
 type ProjectFormValues = $2;
 interface ProjectFormProps {
-  project?: PortfolioProject,
-  onSuccess: () => void,
-  onCancel: () => void
+  project?: PortfolioProject,;
+  onSuccess: () => void;
+  onCancel: () => void,
 }
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
@@ -44,24 +44,28 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   const [isLoading, setIsLoading] = useState($2);
   const isEditing = $2;
   const form = useForm<ProjectFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
-      title: project ?.title || '',
-      description: project ?.description || '',
-      technologies: project ?.technologies ? project.technologies.join() : '',
-      image_url: project ?.image_url || '',
-      github_url: project ?.github_url || '',
-      demo_url: project ?.demo_url || '',
-      pdf_url: project ?.pdf_url || ''}
+    resolver: zodResolver(projectSchema),
+    defaultValues: {,
+      title: project?.title || '',
+      description: project?.description || '',
+      technologies: project?.technologies ? project.technologies.join() : '',
+      image_url: project?.image_url || '',
+      github_url: project?.github_url || '',
+      demo_url: project?.demo_url || '',
+      pdf_url: project?.pdf_url || ''}
   }),
   
-  const onSubmit = $2;
-    setIsLoading($2);
+  const onSubmit = async (data: ProjectFormValues) => {,
+    if (!user) return,
+    
+    setIsLoading(true),
+    
     try {
-      const projectData: PortfolioProject = $2;
+      const projectData: PortfolioProject = {,
+        title: data.title,
         description: data.description,
-        technologies: data.technologies ? 
-          data.technologies.split().map(tech = $2;
+        technologies: data.technologies ?,
+          data.technologies.split().map(tech => tech.trim()) : [],
         image_url: data.image_url,
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
@@ -136,7 +140,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+          <FormField,
             control={form.control}
             name="github_url"
             render={({ field }: { field: any}) => (
@@ -203,3 +207,4 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>
   )
 }
+;

@@ -45,13 +45,13 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   },
 
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey($2);
+  const handleRegenerateKey = async (keyId: string) => {,
+    await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
   
-  const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey($2);
+  const handleRevokeKey = async (keyId: string) => {,
+    await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   },
   
@@ -66,13 +66,18 @@ export function ApiKeysManager() {
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev => 
-      prev.includes(scope) 
-        ? prev.filter(s => s !== scope) 
+      prev.includes(scope) ;
+        ? prev.filter(s => s !== scope),
         : [...prev, scope]
     )
   },
   
-  const getExampleCode = $2;
+  const getExampleCode = (key: string) => {
+    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\,
+  -H "Authorization: Bearer ${key}" \\
+  -H "Content-Type: application/json"`,
+  },
+
   // Reset form when dialog closes
   const handleDialogClose = () => {
     setKeyName($2);
@@ -134,7 +139,7 @@ export function ApiKeysManager() {
                         <Label
                           htmlFor={scope.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
+                        >,
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
@@ -176,7 +181,7 @@ export function ApiKeysManager() {
             <CodeBlock code={newApiKey} className="mb-3" />
             <div className="text-sm text-zinc-400">
               <span className="font-medium">Example usage:</span>
-            </div>
+            </div>,
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
@@ -240,7 +245,7 @@ export function ApiKeysManager() {
                       key={scope} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-                    >
+                    >,
                       {scope}
                     </Badge>
                   ))}
@@ -249,9 +254,9 @@ export function ApiKeysManager() {
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
                   <Popover>
-                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">,
                       <Clock size={12} className="mr-1" />
-                      Last used: {key.last_used_at 
+                      Last used: {key.last_used_at,
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
                         : 'Never'}
                     </PopoverTrigger>
@@ -259,7 +264,7 @@ export function ApiKeysManager() {
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at 
-                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH: mm: ss')
+                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss'),
                           : 'This API key has never been used'}
                       </p>
                     </PopoverContent>
@@ -300,7 +305,7 @@ export function ApiKeysManager() {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction,
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
             >
@@ -308,8 +313,7 @@ export function ApiKeysManager() {
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>
-
+      </AlertDialog>,
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog 
         open={showDeleteConfirm !== null} 
@@ -327,7 +331,7 @@ export function ApiKeysManager() {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction,
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >
@@ -337,5 +341,6 @@ export function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  ),
 }
+;

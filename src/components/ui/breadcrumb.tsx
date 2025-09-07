@@ -43,9 +43,9 @@ BreadcrumbItem.displayName = $2;
   const Comp = asChild ? Slot : "a"
  
   return (
-    <Comp
+    <Comp,
       ref={ref}
-      className={cn("transition-colors hover:text-zion-cyan", className)}
+      className={cn("transition-colors hover: text-zion-cyan", className)}
       {...props}
     />
   )
@@ -78,3 +78,4 @@ BreadcrumbEllipsis.displayName = $2;
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
+;

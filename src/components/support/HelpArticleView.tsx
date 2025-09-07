@@ -6,7 +6,8 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
-  articleId: string}
+  articleId: string,
+}
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
@@ -25,12 +26,17 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     return <div>Article not found</div>
   }
   
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven($2);
+  const handleFeedback = (type: "helpful" | "not-helpful") => {,
+    setFeedbackGiven(type),
+    
     // In a real implementation, this would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
-      description: type = $2;
+      description: type === "helpful" 
+        ? "We're glad this article was helpful.",
+        : "We'll work on improving this article."})
+  },
+  
   return (
     <div>
       <Card className="p-6">
@@ -40,7 +46,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
         
-        <div className="prose dark:prose-invert max-w-none mb-8">
+        <div className="prose dark:prose-invert max-w-none mb-8">,
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
@@ -55,7 +61,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             <div className="flex items-center space-x-3">
               <Button
                 variant="outline"
-                size="sm"
+                size="sm",
                 className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
@@ -85,7 +91,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
               <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">
                 Contact Support
               </Button>
-            </div>
+            </div>,
           )}
         </div>
       </Card>
@@ -93,10 +99,11 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   )
 }
 
-function formatDate(date: string): string {
+function formatDate(date: string): string {,
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   })
 }
+;

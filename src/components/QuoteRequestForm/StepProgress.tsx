@@ -3,7 +3,8 @@ import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface StepProgressProps {
-  currentStep: QuoteRequestSteps}
+  currentStep: QuoteRequestSteps,
+}
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string}[] = [
@@ -14,9 +15,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "summary", label: "Summary" }
   ],
 
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex($2);
-    const currentStepOrder = steps.findIndex($2);
+  const getStepStatus = (stepId: QuoteRequestSteps) => {,
+    const stepOrder = steps.findIndex(s => s.id === stepId),
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
+    
     if (stepOrder < currentStepOrder) return "complete",
     if (stepOrder = $2;
     return "upcoming"
@@ -53,3 +55,4 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
+;

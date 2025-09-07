@@ -3,7 +3,7 @@ import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
-interface Msg { id: string, role: 'user' | 'assistant', message: string}
+interface Msg { id: string, role: 'user' | 'assistant', message: string };
 
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
@@ -22,20 +22,21 @@ export function SupportChatbot() {
   const endRef = $2;
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
 
-  const sendMessage = async (text: string) => {
-    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text},
-    setMessages($2);
-    setLoading($2);
-    setTyping($2);
+  const sendMessage = async (text: string) => {,
+    const userMsg: Msg = { id: Date.now().toString(), role: 'user', message: text },
+    setMessages(prev => [...prev, userMsg]),
+    setLoading(true),
+    setTyping(true),
+    
     try {
       // Try the Supabase AI chat function first with streaming
       let res = await fetch('https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat', {
         method: 'POST',
-        headers: {
+        headers: {,
           'Content-Type': 'application/jsonAuthorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-          Accept: 'text/event-stream'
+          Accept: 'text/event-stream',
         },
-        body: JSON.stringify({
+        body: JSON.stringify({,
           stream: true,
           messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text}]
         })
@@ -46,8 +47,8 @@ export function SupportChatbot() {
         res = await fetch('/api/kb-chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text}]
+          body: JSON.stringify({,
+            messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
         }),
         if (!res.ok) throw new Error($2);
@@ -71,9 +72,10 @@ export function SupportChatbot() {
           for (let i = 0, i < lines.length - 1, i++) {
             let line = lines[i]?.trim($2);
             if (!line) continue,
-            if (line.startsWith('data:')) {
-              line = line.replace($2);
-              if (line = $2;
+            if (line.startsWith('data: ')) {,
+              line = line.replace(/^data:\s*/, ''),
+              if (line === '[DONE]') {
+                done = true,
                 break
               }
               try {
@@ -94,10 +96,12 @@ export function SupportChatbot() {
     } catch (err) {
       logErrorToProduction($2);
       // Provide a helpful fallback response instead of generic error
-      const fallbackResponse = $2;
-      const errorMsg: Msg = $2;
+      const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.",
+      const errorMsg: Msg = {,
+        id: Date.now().toString() + '-e', 
         role: 'assistant', 
-        message: fallbackResponse},
+        message: fallbackResponse,
+      },
       setMessages(prev => [...prev, errorMsg])
     } finally {
       setLoading($2);
@@ -116,7 +120,7 @@ export function SupportChatbot() {
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-    )
+    ),
   }
 
   return (
@@ -154,3 +158,4 @@ export function SupportChatbot() {
     </div>
   )
 }
+;

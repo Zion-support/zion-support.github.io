@@ -3,12 +3,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image";
 interface ServiceDetailsProps {
-  country: string}
+  country: string,
+}
 
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
-  const getDatacenters = (country: string): string[] => {
+  const getDatacenters = (country: string): string[] => {,
     const dataCenters: Record<string, string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -25,7 +26,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   },
   
   // Get region-specific image
-  const getRegionalImage = (country: string): string => {
+  const getRegionalImage = (country: string): string => {,
     // In a real app, you'd have specific images for each region
     const regions: Record<string, string> = {
       "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
@@ -35,14 +36,14 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter",
     },
     
-    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter"
+    return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter",
   },
   
   // Get region-specific instructions
-  const getRegionalInstructions = (country: string): string => {
+  const getRegionalInstructions = (country: string): string => {,
     // In a real implementation, this would be much more detailed and specific
     const timeZones: Record<string, string> = {
       "United States": "EST/CST/PST depending on location",
@@ -89,7 +90,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
               Service Locations
             </h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">,
               {datacenters.map((dc, idx) => (
                 <div 
                   key={idx} 
@@ -131,3 +132,4 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     </Card>
   )
 }
+;

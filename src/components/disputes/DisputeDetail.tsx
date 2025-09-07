@@ -53,8 +53,8 @@ export function DisputeDetail() {
         const messagesData = await getDisputeMessages($2);
         setMessages(messagesData)
       } catch (error) {
-        logErrorToProduction($2);
-        toast.error("Failed to load dispute")
+        logErrorToProduction('Error loading dispute data:', { data: error }),
+        toast.error("Failed to load dispute");
       } finally {
         setIsLoading(false)
       }
@@ -63,13 +63,15 @@ export function DisputeDetail() {
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router]),
 
-  const handleStatusChange = $2;
-    const success = await updateDisputeStatus($2);
+  const handleStatusChange = async (status: DisputeStatus) => {,
+    if (!disputeId) return,
+
+    const success = await updateDisputeStatus(disputeId, status),
     if (success) {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status})
     } else {
-      toast.error("Failed to update dispute status")
+      toast.error("Failed to update dispute status");
     }
   },
 
@@ -89,7 +91,7 @@ export function DisputeDetail() {
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()})
     } else {
-      toast.error("Failed to resolve dispute")
+      toast.error("Failed to resolve dispute");
     }
   },
 
@@ -112,11 +114,31 @@ export function DisputeDetail() {
 
   if (isLoading) {
     return (
-      <div className = $2;
+      <div className="p-8 text-center">
+        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
+        <p>Loading dispute details...</p>
+      </div>
+    )
+  }
+
+  if (!dispute) {
+    return (
+      <div className="p-8 text-center">
+        <p>Dispute not found</p>
+        <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
+          Back to Disputes
+        </Button>
+      </div>
+    )
+  }
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {
+    switch (status) {,
+      case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
-      default: return "default"
+      default: return "default",
     }
   },
 
@@ -151,14 +173,14 @@ export function DisputeDetail() {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-          <AlertDescription>
+          <AlertDescription>,
             {dispute.resolution_summary}
           </AlertDescription>
         </Alert>
       )}
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2">,
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -374,7 +396,7 @@ export function DisputeDetail() {
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-2">
-                                <Avatar className="h-6 w-6">
+                                <Avatar className="h-6 w-6">,
                                   <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "Admin avatar"} />
                                   <AvatarFallback>
                                     {msg.user_profile?.display_name?.[0] || 'A'}
@@ -471,21 +493,21 @@ export function DisputeDetail() {
             </CardHeader>
             <CardContent className="space-y-4 text-sm">
               <div className="flex justify-between">
-                <span className="font-medium">Case ID:</span>
+                <span className="font-medium">Case ID:</span>,
                 <span className="font-mono">{dispute.id}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Created:</span>
+                <span className="font-medium">Created:</span>,
                 <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Status:</span>
+                <span className="font-medium">Status:</span>,
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
                   {dispute.status.replace('_ ')}
                 </Badge>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
+                <span className="font-medium">Raised by:</span>,
                 <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
               </div>
             </CardContent>
@@ -495,3 +517,4 @@ export function DisputeDetail() {
     </div>
   )
 }
+;

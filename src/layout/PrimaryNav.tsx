@@ -38,9 +38,9 @@ export function PrimaryNav() {
     // context not available
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault($2);
-    const trimmed = query.trim($2);
+  const handleSubmit = (e: React.FormEvent) => {,
+    e.preventDefault(),
+    const trimmed = query.trim(),
     if (trimmed) {
       logDebug($2);
       router
@@ -58,16 +58,15 @@ export function PrimaryNav() {
         aria-label="Primary"
         data-testid="header"
       >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
-          <Logo />
-          
+        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm: px-6 max-[320px]:flex-wrap">,
+          <Logo />,
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">
+          <div className="hidden lg:block order-1 flex-shrink-0">,
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
           {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">,
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
@@ -78,15 +77,15 @@ export function PrimaryNav() {
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`)
+                    router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug)
+                    router.push(sugg.slug);
                   } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`)
+                    router.push(`/blog/${sugg.slug}`);
                   } else {
-                    // Default: search results page with query parameter
+                    // Default: search results page with query parameter,
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
                   setQuery($2);
@@ -95,8 +94,8 @@ export function PrimaryNav() {
                     window.gtag('eventsearch_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
-                    })
+                      suggestion_id: sugg.id || sugg.slug,
+                    });
                   }
                 }}
                 searchSuggestions={suggestions}
@@ -122,9 +121,9 @@ export function PrimaryNav() {
                   <Link
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
-                    data-testid="login-link"
-                    onClick={(e) => {
-                      e.preventDefault($2);
+                    data-testid="login-link",
+                    onClick={(e) => {,
+                      e.preventDefault(),
                       setLoginOpen(true)
                     }}
                   >
@@ -133,7 +132,7 @@ export function PrimaryNav() {
                   <Link
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
-                  >
+                  >,
                     {t('auth.signup')}
                   </Link>
                 </>
@@ -149,10 +148,10 @@ export function PrimaryNav() {
             {!isLoggedIn && (
               <Link
                 href="/auth/login"
-                className="text-sm hover:text-primary"
-                data-testid="login-link"
-                onClick={(e) => {
-                  e.preventDefault($2);
+                className="text-sm hover: text-primary"
+                data-testid="login-link",
+                onClick={(e) => {,
+                  e.preventDefault(),
                   setLoginOpen(true)
                 }}
               >
@@ -164,7 +163,7 @@ export function PrimaryNav() {
           
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0",
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
@@ -178,9 +177,9 @@ export function PrimaryNav() {
         </div>
       </header>
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
-          <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        <div className="lg: hidden fixed inset-0 z-60 pt-16">
+          <div,
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm",
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
@@ -198,3 +197,4 @@ export function PrimaryNav() {
     </>
   )
 }
+;

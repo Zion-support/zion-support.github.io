@@ -9,8 +9,11 @@ import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications($2);
-  const getStatusBadge = $2;
+  const { applications, isLoading, error } = useJobApplications(),
+  
+  const getStatusBadge = (status: ApplicationStatus) => {
+    switch (status) {,
+      case "new": return <Badge variant="secondary">New</Badge>,
       case "viewed":
         return <Badge variant = $2;
       case "shortlisted":
@@ -55,8 +58,8 @@ export function MyApplications() {
   }
   
   return (
-    <div className="grid gap-4 md:grid-cols-2">
-      {applications.map((application) => (
+    <div className="grid gap-4 md: grid-cols-2">,
+      {applications.map((application) => (,
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -107,3 +110,4 @@ export function MyApplications() {
     </div>
   )
 }
+;

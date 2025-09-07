@@ -25,35 +25,35 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
-    icon: "Briefcase"
+    icon: "Briefcase",
   },
   "project-help": {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
-    icon: "MessageSquare"
+    icon: "MessageSquare",
   },
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
-    icon: "Code"
+    icon: "Code",
   },
   "feedback": {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
-    icon: "FileText"
+    icon: "FileText",
   },
   "announcements": {
     id: "announcements",
     name: "Announcements",
     description: "Official announcements from the Zion team.",
     adminOnly: true,
-    icon: "Megaphone"
+    icon: "Megaphone",
   }
 },
 
@@ -69,12 +69,11 @@ function CategoryContent({
   category,
   IconComponent,
   user}: {
-  categoryId: string,
-  category: ForumCategoryInfo,
-  IconComponent: React.ComponentType<any>,
-  user: any}) {
-  const [searchQuery, setSearchQuery] = useState($2);
-  const { featuredPosts, recentPosts } = useCommunity($2);
+  categoryId: string, category: ForumCategoryInfo, IconComponent: React.ComponentType<any>, user: any,
+}) {
+  const [searchQuery, setSearchQuery] = useState(""),
+  const { featuredPosts, recentPosts } = useCommunity(),
+
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter($2);
@@ -108,7 +107,7 @@ function CategoryContent({
         <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
           Forum
         </Link>
-        <span className="text-muted-foreground">/</span>
+        <span className="text-muted-foreground">/</span>,
         <span className="font-medium">{category.name}</span>
       </div>
 
@@ -117,7 +116,7 @@ function CategoryContent({
           <div className="p-3 bg-zion-purple/10 rounded-full">
             <IconComponent className="h-8 w-8 text-zion-purple" />
           </div>
-          <div>
+          <div>,
             <h1 className="text-3xl font-bold">{category.name}</h1>
             <p className="text-muted-foreground mt-1">{category.description}</p>
           </div>
@@ -239,3 +238,4 @@ export default function ForumCategoryPage() {
     </>
   )
 }
+;

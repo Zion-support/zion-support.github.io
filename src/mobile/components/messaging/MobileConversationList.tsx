@@ -7,19 +7,19 @@ import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
-  id: string,
-  name: string,
+  id: string;
+  name: string;
   avatar?: string,
-  lastMessage: string,
-  timestamp: string,
-  unreadCount: number,
-  isTyping?: boolean
+  lastMessage: string;
+  timestamp: string;
+  unreadCount: number;
+  isTyping?: boolean,
 }
 
 interface MobileConversationListProps {
-  conversations: Conversation[],
+  conversations: Conversation[];
   activeConversation?: string,
-  onSelectConversation: (id: string) => void
+  onSelectConversation: (id: string) => void,
 }
 
 export function MobileConversationList({

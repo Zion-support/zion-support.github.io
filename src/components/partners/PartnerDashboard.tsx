@@ -5,12 +5,13 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
-  const stats = $2;
-    pendingReferrals: 8,
-    completedReferrals: 34,
-    conversionRate: 18.5,
-    totalRevenue: 850.00,
-    pendingRevenue: 200.00
+  const stats = {;
+    totalReferrals: 42;
+    pendingReferrals: 8;
+    completedReferrals: 34;
+    conversionRate: 18.5;
+    totalRevenue: 850.00;
+    pendingRevenue: 200.00,
   },
   
   return (
@@ -22,7 +23,7 @@ export function PartnerDashboard() {
             <CardTitle className="text-sm font-medium">Total Referrals</CardTitle>
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
-          <CardContent>
+          <CardContent>,
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending

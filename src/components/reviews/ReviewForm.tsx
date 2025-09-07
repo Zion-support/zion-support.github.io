@@ -27,12 +27,13 @@ interface ReviewFormValues {
 }
 
 interface ReviewFormProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
+  projectId: string;
+  revieweeId: string;
+  revieweeName: string;
+  onSubmit: (data: any) => Promise<boolean>;
   defaultValues?: Review,
-  isSubmitting: boolean}
+  isSubmitting: boolean,
+}
 
 export function ReviewForm({
   projectId,
@@ -43,7 +44,9 @@ export function ReviewForm({
   isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
-  const form = $2;
+  const form = useForm<ReviewFormValues>({
+    defaultValues: defaultValues ? {,
+      rating: defaultValues.rating,
       review_text: defaultValues.review_text,
       communication_rating: defaultValues.communication_rating,
       quality_rating: defaultValues.quality_rating,
@@ -59,8 +62,10 @@ export function ReviewForm({
       is_anonymous: false}
   }),
   
-  const handleSubmit = $2;
-      project_id: projectId,
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {,
+      ...values,;
+      project_id: projectId;
       reviewee_id: revieweeId},
     
     const success = await onSubmit($2);
@@ -87,11 +92,40 @@ export function ReviewForm({
                 <div className="flex justify-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <button
-                      key = $2;
-            minLength: {
-              value: 20,
-              message: "Review must be at least 20 characters"}}}
-          render={({ field }: { field: any}) => (
+                      key={star}
+                      type="button"
+                      onClick={() => field.onChange(star)}
+                      onMouseEnter={() => setHoveredStar(star)}
+                      onMouseLeave={() => setHoveredStar(0)}
+                      className="focus:outline-none transition-transform hover:scale-110",
+                      aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
+                    >
+                      <Star
+                        className={`h-10 w-10 ${
+                          star <= (hoveredStar || field.value || 0)
+                            ? "fill-yellow-400 text-yellow-400"
+                            : "text-gray-300"
+                        } transition-colors`}
+                      />
+                    </button>
+                  ))}
+                </div>
+              </FormControl>
+              <div className="text-center mt-1 h-5">
+                <FormMessage />
+              </div>
+            </FormItem>
+          )}
+        />
+        
+        {/* Review Text */}
+        <FormField
+          control={form.control}
+          name="review_text"
+          rules={{
+            required: "Please provide feedback", minLength: {,
+              value: 20, message: "Review must be at least 20 characters"}}}
+          render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
               <FormControl>
@@ -275,3 +309,4 @@ export function ReviewForm({
     </Form>
   )
 }
+;

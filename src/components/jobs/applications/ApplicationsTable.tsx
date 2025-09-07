@@ -19,11 +19,11 @@ import { toast } from "@/hooks/use-toast";
 import Image from 'next/image', // Import next/image
 
 interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
-  onViewScore: (application: JobApplication) => void
+  applications: JobApplication[];
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+  onViewScore: (application: JobApplication) => void,
 }
 
 // Sub-component for avatar to handle its own error state
@@ -42,13 +42,15 @@ export function ApplicationsTable({
   const [hireModalOpen, setHireModalOpen] = useState($2);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
-  const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication($2);
+  const handleHireClick = (application: JobApplication) => {,
+    setSelectedApplication(application),
     setHireModalOpen(true)
   },
   
-  const handleHireConfirmed = $2;
-      description: "Offer has been sent to the talent."
+  const handleHireConfirmed = () => {
+    toast({
+      title: "Hiring process initiated",
+      description: "Offer has been sent to the talent.",
     })
   },
   
@@ -59,14 +61,14 @@ export function ApplicationsTable({
           <TableHeader>
             <TableRow>
               <TableHead>Candidate</TableHead>
-              <TableHead className="hidden md:table-cell">Applied</TableHead>
+              <TableHead className="hidden md: table-cell">Applied</TableHead>
               <TableHead className="hidden md:table-cell">Status</TableHead>
               <TableHead className="hidden lg:table-cell">Match Score</TableHead>
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody>
-            {applications.map((application) => (
+          <TableBody>,
+            {applications.map((application) => (,
               <TableRow key={application.id}>
                 <TableCell>
                   <div className="flex items-center gap-3">
@@ -81,17 +83,17 @@ export function ApplicationsTable({
                     </div>
                   </div>
                 </TableCell>
-                <TableCell className="hidden md:table-cell">
+                <TableCell className="hidden md:table-cell">,
                   {format(new Date(application.created_at), "PP")}
                 </TableCell>
-                <TableCell className="hidden md:table-cell">
+                <TableCell className="hidden md:table-cell">,
                   <StatusBadge status={application.status} />
                 </TableCell>
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
                       variant="outline"
-                      className="cursor-pointer"
+                      className="cursor-pointer",
                       onClick={() => onViewScore(application)}
                     >
                       {application.match_score}%
@@ -104,7 +106,7 @@ export function ApplicationsTable({
                   <div className="flex items-center justify-end gap-2">
                     <ClickableBadge 
                       variant="outline" 
-                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
+                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700",
                       onClick={() => handleHireClick(application)}
                     >
                       <Briefcase className="h-3 w-3 mr-1" /> Hire
@@ -132,3 +134,4 @@ export function ApplicationsTable({
     </>
   )
 }
+;

@@ -25,40 +25,40 @@ export default function LandingPage() {
   // Tools and features showcase
   const toolsFeatures = [
     {
-      title: t($2);
-      description: t($2);
-      icon: <Sparkles className = $2;
-      link: "/match"
+      title: t("home.tool_ai_matcher"),
+      description: t("home.tool_ai_matcher_desc"),
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
+      link: "/match",
     },
     {
-      title: t($2);
-      description: t($2);
-      icon: <Users className = $2;
-      link: "/talent"
+      title: t("home.tool_talent"),
+      description: t("home.tool_talent_desc"),
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      link: "/talent",
     },
     {
-      title: t($2);
-      description: t($2);
-      icon: <Zap className = $2;
-      link: "/services"
+      title: t("home.tool_services"),
+      description: t("home.tool_services_desc"),
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,
+      link: "/services",
     },
     {
-      title: t($2);
-      description: t($2);
-      icon: <Settings className = $2;
-      link: "/equipment"
+      title: t("home.tool_equipment"),
+      description: t("home.tool_equipment_desc"),
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/equipment",
     },
     {
-      title: t($2);
-      description: t($2);
-      icon: <BarChart3 className = $2;
-      link: "/analytics"
+      title: t("home.tool_analytics"),
+      description: t("home.tool_analytics_desc"),
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
+      link: "/analytics",
     },
     {
       title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
-      icon: <Smartphone className = $2;
-      link: "/mobile-launch"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      link: "/mobile-launch",
     }
   ],
 
@@ -71,8 +71,7 @@ export default function LandingPage() {
         canonical="https://app.ziontechgroup.com/"
       />
       <Header />
-      <HeroSection />
-      
+      <HeroSection />,
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -92,7 +91,7 @@ export default function LandingPage() {
                 href={feature.link} 
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">,
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -127,3 +126,4 @@ export default function LandingPage() {
     </div>
   )
 }
+;

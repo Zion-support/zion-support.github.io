@@ -40,8 +40,8 @@ export function EducationFormFields({
   const [error, setError] = useState<string | null>(null),
 
   const form = useForm<EducationFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(educationSchema),
+    defaultValues: {,
       institution: '',
       degree: '',
       field_of_study: '',
@@ -50,13 +50,13 @@ export function EducationFormFields({
       description: '',
       location: ''}}),
 
-  const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading($2);
-    setError($2);
+  const handleSubmit = async (data: EducationFormValues) => {,
+    setIsLoading(true),
+    setError(null),
     try {
       await onSubmit(data)
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message || 'An error occurred'),
     } finally {
       setIsLoading(false)
     }
@@ -66,7 +66,7 @@ export function EducationFormFields({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+          <FormField,
             control={form.control}
             name="institution"
             render={({ field }: { field: any}) => (
@@ -110,7 +110,7 @@ export function EducationFormFields({
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+          <FormField,
             control={form.control}
             name="start_date"
             render={({ field }: { field: any}) => (
@@ -221,3 +221,4 @@ export function EducationFormFields({
     </Form>
   )
 }
+;

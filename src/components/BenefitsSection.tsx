@@ -11,10 +11,10 @@ interface BenefitsSectionProps {
 }
 
 const getBenefits = (t: any) => [
-  {
-    title: t($2);
-    description: t($2);
-    icon: <Bot className = $2;
+  {,
+    title: t('benefits.ai_matchmaking'),
+    description: t('benefits.ai_matchmaking_desc'),
+    icon: <Bot className="w-8 h-8" />},
   {
     title: t($2);
     description: t($2);
@@ -40,7 +40,7 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">,
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
@@ -48,10 +48,11 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
               description={benefit.description}
               icon={benefit.icon}
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
+            />,
           ))}
         </div>
       </div>
     </section>
   )
 }
+;

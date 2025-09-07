@@ -61,7 +61,7 @@ export default function CaseStudy() {
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
             </Link>
           </Button>
-          <img
+          <img,
             src={study.companyLogo}
             alt={`${study.company} logo`}
             className="h-12 mb-4"
@@ -88,3 +88,4 @@ export default function CaseStudy() {
     </>
   )
 }
+;

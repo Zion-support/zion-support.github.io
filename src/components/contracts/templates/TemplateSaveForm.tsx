@@ -15,10 +15,11 @@ const formSchema = z.object({
   title: z.string().min($2);
   isDefault: z.boolean()}),
 
-type FormValues = $2;
-interface TemplateSaveFormProps {
-  onCancel: () => void,
-  onComplete: () => void,
+type FormValues = z.infer<typeof formSchema>,
+
+interface TemplateSaveFormProps {;
+  onCancel: () => void;
+  onComplete: () => void;
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
 }
@@ -32,14 +33,14 @@ export function TemplateSaveForm({
   const [saving, setSaving] = useState($2);
   const { createTemplate, updateTemplate } = useContractTemplates($2);
   const form = useForm<FormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
-      title: editTemplate ?.title || "",
-      isDefault: editTemplate ?.is_default || false}}),
+    resolver: zodResolver(formSchema),
+    defaultValues: {,
+      title: editTemplate?.title || "",
+      isDefault: editTemplate?.is_default || false}}),
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
-      return
+      return,
     }
     
     setSaving($2);
@@ -117,3 +118,4 @@ export function TemplateSaveForm({
     </Form>
   )
 }
+;

@@ -7,14 +7,15 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void,
   showRetryableError: (error: Error, retryAction?: () => void) => void,
-  showNetworkError: (retryAction?: () => void) => void,
-  showAuthError: (loginAction?: () => void) => void,
-  clearAllErrors: () => void
+  showNetworkError: (retryAction?: () => void) => void;
+  showAuthError: (loginAction?: () => void) => void;
+  clearAllErrors: () => void,
 }
 
-const ErrorContext = $2;
+const ErrorContext = createContext<ErrorContextType | null>(null);
 interface GlobalErrorHandlerProps {
-  children: ReactNode}
+  children: ReactNode,
+}
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({}),
@@ -29,10 +30,10 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     if (process.env.NODE_ENV === 'production') {
       Sentry.withScope((scope) => {
         if (context) {
-          scope.setContext('errorContext', context)
+          scope.setContext('errorContext', context);
         }
-        scope.setLevel($2);
-        Sentry.captureException(error)
+        scope.setLevel('error'),
+        Sentry.captureException(error);
       })
     }
   }, []),
@@ -44,10 +45,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     // Show user-friendly error message with retry option
     toast($2);
       variant: "destructive",
-      action: retryAction ? {
+      action: retryAction ? {,
         label: "Try Again",
         onClick: () => {
-          setRetryCount(prev = $2;
+          setRetryCount(prev => ({,
+            ...prev,
             [errorKey]: currentRetryCount + 1
           })),
           retryAction()
@@ -58,20 +60,23 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const showNetworkError = $2;
     toast({
       title: isOnline ? "Connection Issue" : "No Internet Connection",
-      description: isOnline ? "Unable to connect to our servers. Please check your connection and try again."
+      description: isOnline 
+        ? "Unable to connect to our servers. Please check your connection and try again.",
         : "You appear to be offline. Please check your internet connection.",
       variant: "destructive",
-      action: retryAction ? {
+      action: retryAction ? {,
         label: "Retry",
-        onClick: retryAction} : undefined})
+        onClick: retryAction,
+      } : undefined})
   }, []),
 
   const showAuthError = $2;
       description: "Please log in to continue with this action.",
       variant: "destructive",
-      action: loginAction ? {
+      action: loginAction ? {,
         label: "Log In",
-        onClick: loginAction} : undefined})
+        onClick: loginAction,
+      } : undefined})
   }, []),
 
   const clearAllErrors = useCallback(() => {
@@ -79,7 +84,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
-  const contextValue: ErrorContextType = $2;
+  const contextValue: ErrorContextType = {,
+    reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
@@ -101,8 +107,9 @@ export function useGlobalErrorHandler(): ErrorContextType {
 }
 
 // Helper function to convert technical errors to user-friendly messages
-function getErrorMessage(error: Error): string {
-  const message = error.message.toLowerCase($2);
+function getErrorMessage(error: Error): string {,
+  const message = error.message.toLowerCase(),
+
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -164,10 +171,11 @@ export function useErrorHandler() {
       }
       
       return result
-    } catch (error: any) {
-      reportError($2);
+    } catch (error: any) {,
+      reportError(error),
+      
       if (options?.onError) {
-        options.onError(error)
+        options.onError(error);
       } else {
         handleApiError(error, options?.retryAction)
       }
@@ -180,4 +188,4 @@ export function useErrorHandler() {
     reportError,
     handleApiError,
     handleAsyncOperation}
-} 
+} ;

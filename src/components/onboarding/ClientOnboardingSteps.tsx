@@ -6,7 +6,7 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus($2);
   const steps: OnboardingStep[] = [
-    {
+    {,
       id: "post-job",
       label: "Post your first job",
       completed: onboardingStatus.jobPosted,
@@ -27,3 +27,4 @@ export function ClientOnboardingSteps() {
   
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
+;

@@ -7,11 +7,11 @@ import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckC
 import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface PerformanceMetrics {
-  bundleSize: number,
-  loadTime: number,
-  performanceScore: number,
-  chunkCount: number,
-  cacheHitRate: number,
+  bundleSize: number;
+  loadTime: number;
+  performanceScore: number;
+  chunkCount: number;
+  cacheHitRate: number;
   fcp: number, // First Contentful Paint
   lcp: number, // Largest Contentful Paint
   cls: number, // Cumulative Layout Shift
@@ -19,11 +19,12 @@ interface PerformanceMetrics {
 }
 
 interface BundleChunk {
-  name: string,
-  size: number,
-  loadTime: number,
-  cached: boolean,
-  type: string}
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean;
+  type: string,
+}
 
 export function PerformanceDashboard() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
@@ -31,10 +32,14 @@ export function PerformanceDashboard() {
   const [isLoading, setIsLoading] = useState($2);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
 
-  const collectMetrics = $2;
-      const navigationEntry = $2;
-      const resourceCount = $2;
-      const performanceMetrics: PerformanceMetrics = {
+  const collectMetrics = async () => {
+    try {
+      // Collect performance metrics
+      const memoryInfo = (performance as any).memory,
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const resourceCount = performance.getEntriesByType('resource').length,
+
+      const performanceMetrics: PerformanceMetrics = {,
         bundleSize: 0, // This would need to be calculated separately
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,
         performanceScore: 0, // This would need to be calculated
@@ -43,16 +48,19 @@ export function PerformanceDashboard() {
         fcp: 0, // First Contentful Paint - would need Performance Observer
         lcp: 0, // Largest Contentful Paint - would need Performance Observer  
         cls: 0, // Cumulative Layout Shift - would need Performance Observer
-        fid: 0  // First Input Delay - would need Performance Observer
+        fid: 0  // First Input Delay - would need Performance Observer,
       },
 
       setMetrics($2);
       logInfo('Performance metrics collected successfully', { 
         loadTime: performanceMetrics.loadTime,
-        resourceCount: performanceMetrics.chunkCount
+        resourceCount: performanceMetrics.chunkCount,
       })
     } catch (error) {
-      logErrorToProduction($2);
+      logErrorToProduction('Failed to collect performance metrics', error, {
+        component: 'PerformanceDashboard',
+        action: 'collectMetrics',
+      }),
       // Set fallback metrics
       setMetrics({
         bundleSize: 0,
@@ -63,7 +71,8 @@ export function PerformanceDashboard() {
         fcp: 0,
         lcp: 0,
         cls: 0,
-        fid: 0})
+        fid: 0,
+      })
     }
   },
 
@@ -93,33 +102,39 @@ export function PerformanceDashboard() {
     return scriptEntries.map(entry = $2;
       size: entry.transferSize || entry.encodedBodySize || 0,
       loadTime: entry.responseEnd - entry.requestStart,
-      cached: entry.transferSize = $2;
-      type: categorizeChunk(entry.name)
+      cached: entry.transferSize === 0,
+      type: categorizeChunk(entry.name),
     })).sort((a, b) => b.size - a.size)
   },
 
-  const categorizeChunk = $2;
+  const categorizeChunk = (filename: string): string => {,
+    if (filename.includes('framework')) return 'framework',
     if (filename.includes('vendor')) return 'vendor',
     if (filename.includes('pages')) return 'page',
     if (filename.includes('chunks')) return 'chunk',
     return 'other'
   },
 
-  const formatSize = $2;
-    const k = $2;
-    const sizes = $2;
-    const i = $2;
+  const formatSize = (bytes: number): string => {,
+    if (bytes === 0) return '0 B',
+    const k = 1024,
+    const sizes = ['BKBMBGB'],
+    const i = Math.floor(Math.log(bytes) / Math.log(k)),
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   },
 
-  const getScoreColor = $2;
+  const getScoreColor = (score: number): string => {,
+    if (score >= 90) return 'text-green-600',
     if (score >= 70) return 'text-yellow-600',
     return 'text-red-600'
   },
 
-  const getScoreIcon = $2;
-    if (score >= 70) return <AlertTriangle className = $2;
-    return <AlertTriangle className = $2;
+  const getScoreIcon = (score: number) => {,
+    if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
+    if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,
+    return <AlertTriangle className="w-4 h-4 text-red-600" />
+  },
+
   useEffect(() => {
     collectMetrics($2);
     const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
@@ -193,7 +208,7 @@ export function PerformanceDashboard() {
               <div className="flex items-center gap-2">
                 <Package className="w-4 h-4 text-blue-600" />
                 <span className="text-sm font-medium">Bundle Size</span>
-              </div>
+              </div>,
               <p className="text-2xl font-bold mt-2">{formatSize(metrics.bundleSize)}</p>
               <p className="text-xs text-muted-foreground">
                 {metrics.chunkCount} chunks
@@ -260,7 +275,7 @@ export function PerformanceDashboard() {
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
                   <div className="flex items-center gap-3">
-                    <span className="text-sm font-mono text-muted-foreground">
+                    <span className="text-sm font-mono text-muted-foreground">,
                       {index + 1}
                     </span>
                     <div>
@@ -316,7 +331,7 @@ export function PerformanceDashboard() {
                 <p className="font-medium text-blue-900 dark:text-blue-100">
                   Bundle splitting implemented
                 </p>
-                <p className="text-sm text-blue-700 dark:text-blue-300">
+                <p className="text-sm text-blue-700 dark:text-blue-300">,
                   Your bundle is properly split into framework, vendor, and application chunks
                 </p>
               </div>
@@ -345,11 +360,11 @@ export function PerformanceDashboard() {
                     Bundle size is above 2MB. Consider implementing dynamic imports for heavy components
                   </p>
                 </div>
-              </div>
+              </div>,
             )}
           </div>
         </CardContent>
       </Card>
     </div>
   )
-} 
+} ;

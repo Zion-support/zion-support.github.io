@@ -36,13 +36,13 @@ export default function ListingDetail() {
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
-                    <ImageWithRetry
+                    <ImageWithRetry,
                       src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
                       alt={listing.title}
                       className="object-cover"
@@ -103,8 +103,7 @@ export default function ListingDetail() {
                       </div>
                     </div>
                   </div>
-                </div>
-                
+                </div>,
                 {/* Tags */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
@@ -123,7 +122,7 @@ export default function ListingDetail() {
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">,
                     {listing.category}
                   </Badge>
                   {listing.featured && (
@@ -146,15 +145,74 @@ export default function ListingDetail() {
                         />
                       ))}
                     </div>
-                    <span className = $2;
-                          description: "Redirecting to secure checkout..."
+                    <span className="text-sm text-zion-slate-light">
+                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+                    </span>
+                  </div>
+                )}
+                
+                {/* Price */}
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+                  )}
+                </div>
+                
+                {/* Action Buttons */}
+                <div className="space-y-3 mb-8">
+                  {listing.price !== null ? (
+                    <PaymentButton
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6",
+                      onPaymentInitiated={() => {
+                        toast({,
+                          title: "Payment Processing",
+                          description: "Redirecting to secure checkout...",
                         })
                       }}
                     />
                   ) : (
                     <Button 
-                      onClick = $2;
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+                      onClick={handleContact}
+                      disabled={isLoading}
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                    >,
+                      {isLoading ? "Processing..." : "Request Quote"}
+                    </Button>
+                  )}
+                  
+                  <Button 
+                    variant="outline" 
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    Contact Publisher
+                  </Button>
+                </div>,
+                {/* Publisher Info */}
+                <div className="border-t border-zion-blue-light pt-6">
+                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
+                  <div className="flex items-center gap-3">
+                    {listing.author.avatarUrl ? (
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                        <ImageWithRetry
+                          src={listing.author.avatarUrl}
+                          alt={listing.author.name}
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement,
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name),
                           }}
                         />
                       </div>
@@ -200,7 +258,7 @@ export default function ListingDetail() {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact 
+          <ProfileContact,
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
@@ -210,3 +268,4 @@ export default function ListingDetail() {
     </>
   )
 }
+;

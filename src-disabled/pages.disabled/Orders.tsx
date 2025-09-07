@@ -19,14 +19,18 @@ export default function OrdersPage() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
-        return($2);
+        return (
+          <Badge variant="warning" className="flex items-center gap-1">
+            <Clock className="h-3 w-3" /> In Escrow
+          </Badge>,
+        ),
       case 'released':
       case 'completed':
         return($2);
       case 'disputed':
         return($2);
       default:
-        return status
+        return status,
     }
   },
 
@@ -105,22 +109,4 @@ export default function OrdersPage() {
     </div>
   )
 }
-
-          </TableBody>;
-        </Table>;
-      )}
-    </div>;
-  );
-
-        return (
-          <Badge variant='warning' className='flex items - center gap - 1'>;
-            <Clock className='h - 3 w - 3' /> In Escrow;
-          </Badge>);
-      case 'released':;
-      case 'completed':;
-        return (
-          <Badge variant='success' className='flex items - center gap - 1'>;
-            <CheckCircle2 className='h - 3 w - 3' /> Released;
-          </Badge>);
-      case 'disputed':;
-        return (
+;

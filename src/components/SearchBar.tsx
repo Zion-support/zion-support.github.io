@@ -15,9 +15,9 @@ interface SearchBarProps {
   /**
    * The current value of the search input
    */
-  value: string,
+  value: string;
   /**
-   * Function to call when the search input changes
+   * Function to call when the search input changes,
    * @param {string} val - The new value of the search input
    */
   onChange: (val: string) => void,
@@ -73,14 +73,15 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     setHighlightedIndex(-1)
   }),
 
-  const handleSelect = (suggestion: SearchSuggestion) => {
-    onChange($2);
-    if (onSelectSuggestion) onSelectSuggestion($2);
-    const searchQuery = encodeURIComponent($2);
-    router.push($2);
-    fireEvent($2);
-    setFocused($2);
-    setHighlightedIndex($2);
+  const handleSelect = (suggestion: SearchSuggestion) => {,
+    onChange(suggestion.text),
+    if (onSelectSuggestion) onSelectSuggestion(suggestion),
+
+    const searchQuery = encodeURIComponent(suggestion.text),
+    router.push(`/search?q=${searchQuery}`),
+    fireEvent('search', { search_term: suggestion.text }),
+    setFocused(false),
+    setHighlightedIndex(-1),
     inputRef.current?.blur()
   },
 
@@ -115,7 +116,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
+          aria-autocomplete="list",
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
@@ -166,12 +167,13 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 setHighlightedIndex($2);
                 inputRef.current?.blur($2);
                 break,
-              default: break}
+              default: break,
+            }
           }}
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white",
             onClick={() => onChange('')}
             aria-label="Clear search"
           >
@@ -190,3 +192,4 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     </div>
   )
 }
+;

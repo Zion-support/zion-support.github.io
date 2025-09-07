@@ -12,8 +12,8 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void,
-  isSubmitting?: boolean
+  onSubmit: (formData: any) => void;
+  isSubmitting?: boolean,
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
@@ -47,21 +47,22 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [budget, setBudget] = useState($2);
   const [deadline, setDeadline] = useState($2);
   // Handle text changes
-  const handleTitleChange = (value: string) => {
+  const handleTitleChange = (value: string) => {,
     setTitle({ ...title, [activeTab]: value })
   },
   
-  const handleDescriptionChange = (value: string) => {
+  const handleDescriptionChange = (value: string) => {,
     setDescription({ ...description, [activeTab]: value })
   },
   
-  const handleRequirementsChange = (value: string) => {
+  const handleRequirementsChange = (value: string) => {,
     setRequirements({ ...requirements, [activeTab]: value })
   },
   
   // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault($2);
+  const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault(),
+    
     // Complete any missing translations with auto-translation
     await ensureAllTranslations($2);
     onSubmit({
@@ -73,15 +74,18 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   },
   
   // Auto translate content when language tab changes
-  const handleTabChange = $2;
+  const handleTabChange = async (tab: string) => {,
+    const selectedLanguage = tab as SupportedLanguage,
     if (selectedLanguage !== activeTab) {
       setActiveTab(selectedLanguage)
     }
   },
   
   // Auto translate function
-  const autoTranslate = $2;
-    let content = $2;
+  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {,
+    let sourceLanguage: SupportedLanguage = 'en',
+    let content = '',
+    
     // Find first non-empty content to translate
     for (const lang of supportedLanguages.map(l = $2;
         sourceLanguage = $2;
@@ -285,7 +289,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label htmlFor="budget" className="text-lg font-medium">
+            <label htmlFor="budget" className="text-lg font-medium">,
               {t('jobs.budget')}
             </label>
             <Input
@@ -314,7 +318,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       <div className="pt-4">
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan",
           disabled={isSubmitting || isTranslating}
         >
           {isSubmitting ? (
@@ -330,3 +334,4 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     </form>
   )
 }
+;

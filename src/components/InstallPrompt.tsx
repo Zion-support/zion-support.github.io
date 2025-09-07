@@ -2,28 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 import { Button } from '@/components/ui/button';
 import { safeSessionStorage } from '@/utils/safeStorage';
-const SHOWN_KEY = $2;
-const DISMISS_KEY = $2;
+const SHOWN_KEY = 'pwaInstallShown';
+const DISMISS_KEY = 'pwaInstallDismissUntil';
 const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
 
 // Define BeforeInstallPromptEvent interface
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[],
-  readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed',
-    platform: string}>,
+  readonly userChoice: Promise<{,
+    outcome: 'accepted' | 'dismissed', platform: string,
+  }>,
   prompt(): Promise<void>
 }
 
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
-  interface WindowEventMap {
-    beforeinstallprompt: BeforeInstallPromptEvent,
+  interface WindowEventMap {;
+    beforeinstallprompt: BeforeInstallPromptEvent;
     // appinstalled event is standard, but if issues arise, it can be augmented too
-    // appinstalled: Event}
+    // appinstalled: Event,
+  }
 }
 
-export const InstallPrompt: React.FC = () => {
+export const InstallPrompt: React.FC = () => {;
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),
   const [visible, setVisible] = useState($2);
   useEffect(() => {
@@ -33,13 +34,13 @@ export const InstallPrompt: React.FC = () => {
     const hasShown = safeSessionStorage.getItem($2);
     // Do not show prompt if already installed (standalone mode)
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
-      return
+      return,
     }
 
-    const handler = (e: BeforeInstallPromptEvent) => {
-      e.preventDefault($2);
-      safeSessionStorage.setItem($2);
-      setPromptEvent($2);
+    const handler = (e: BeforeInstallPromptEvent) => {,
+      e.preventDefault(),
+      safeSessionStorage.setItem(SHOWN_KEY, 'true'),
+      setPromptEvent(e),
       setVisible(true)
     },
 
@@ -55,8 +56,8 @@ export const InstallPrompt: React.FC = () => {
     window.addEventListener($2);
     window.addEventListener($2);
     return () => {
-      window.removeEventListener($2);
-      window.removeEventListener('appinstalled', handleAppInstalled as EventListener)
+      window.removeEventListener('beforeinstallprompt', handler as EventListener),
+      window.removeEventListener('appinstalled', handleAppInstalled as EventListener);
     }
   }, []),
 
@@ -94,12 +95,24 @@ export const InstallPrompt: React.FC = () => {
       <style>
         {`
           @media(max-width: 600px){
-            .pwa-install-button-container { /* Target a container for better transform control */
+            .pwa-install-button-container { /* Target a container for better transform control */,
               transform: scale(0.9), /* Slightly less aggressive scaling */
-              transform-origin: bottom right
+              transform-origin: bottom right,
             }
           }
         `}
       </style>
-      <div className = $2;
-export default InstallPrompt,
+      <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
+        <div className="bg-zion-blue-dark text-white p-3 rounded-lg shadow-lg flex items-center space-x-3">
+          <p className="text-sm">Install our app for a better experience!</p>
+          <Button onClick={install} aria-label="Install PWA" size="sm">Install</Button>
+          <Button variant="ghost" size="sm" onClick={close} aria-label="Dismiss install prompt">
+            <X className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+    </>
+  )
+},
+;
+export default InstallPrompt;

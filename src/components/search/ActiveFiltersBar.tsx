@@ -3,21 +3,22 @@ import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
-  types: string[],
-  category: string,
-  minPrice: number,
-  maxPrice: number,
-  minRating: number,
-  sort: string}
-
-interface ActiveFiltersBarProps {
-  filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
-  onClearAll: () => void,
-  className?: string
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string,
 }
 
-export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
+interface ActiveFiltersBarProps {
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  onClearAll: () => void;
+  className?: string,
+}
+
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   filters,
   onFiltersChange,
   onClearAll,
@@ -32,13 +33,13 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       talent: 'Talent',
       service: 'Services',
       blog: 'Blog Posts',
-      doc: 'Documentation'
+      doc: 'Documentation',
     },
     activeFilters.push({
       key: `type-${type}`,
       label: 'Type',
-      value: labels[type] || type
-    })
+      value: labels[type] || type,
+    });
   }),
 
   // Add category filter
@@ -46,17 +47,15 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     activeFilters.push({
       key: 'category',
       label: 'Category',
-      value: filters.category
-    })
+      value: filters.category,
+    });
   }
 
   // Add price filter
   if (filters.minPrice > 0 || filters.maxPrice < 10000) {
     activeFilters.push({
-      key: 'price',
-      label: 'Price',
-      value: `$${filters.minPrice} - $${filters.maxPrice}`
-    })
+      key: 'price', label: 'Price', value: `$${filters.minPrice} - $${filters.maxPrice}`
+    });
   }
 
   // Add rating filter
@@ -65,7 +64,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       key: 'rating',
       label: 'Rating',
       value: `${filters.minRating}+ stars`
-    })
+    });
   }
 
   // Add sort filter (only if not default)
@@ -73,20 +72,20 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     const sortLabels: Record<string, string> = {
       price_asc: 'Price: Low to High',
       price_desc: 'Price: High to Low',
-      rating: 'Highest Rated'
+      rating: 'Highest Rated',
     },
     activeFilters.push({
       key: 'sort',
       label: 'Sort',
-      value: sortLabels[filters.sort] || filters.sort
-    })
+      value: sortLabels[filters.sort] || filters.sort,
+    });
   }
 
   const removeFilter = (filterKey: string) => {
-    if (filterKey.startsWith('type-')) {
-      const typeToRemove = filterKey.replace($2);
-      const newTypes = filters.types.filter($2);
-      onFiltersChange({ ...filters, types: newTypes})
+    if (filterKey.startsWith('type-')) {,
+      const typeToRemove = filterKey.replace('type-', ''),
+      const newTypes = filters.types.filter(t => t !== typeToRemove),
+      onFiltersChange({ ...filters, types: newTypes })
     } else if (filterKey === 'category') {
       onFiltersChange({ ...filters, category: '' })
     } else if (filterKey === 'price') {
@@ -98,5 +97,45 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     }
   },
 
-  if (activeFilters.length = $2;
-export default ActiveFiltersBar,
+  if (activeFilters.length === 0) {
+    return null
+  }
+
+  return (
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
+      <span className="text-sm font-medium text-muted-foreground">Active filters: </span>
+      
+      {activeFilters.map(filter => (,
+        <Badge,
+          key={filter.key} 
+          variant="secondary" 
+          className="flex items-center gap-1 pl-2 pr-1"
+        >
+          <span className="text-xs">
+            {filter.label}: {filter.value}
+          </span>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-4 w-4 p-0 hover:bg-transparent",
+            onClick={() => removeFilter(filter.key)}
+            aria-label={`Remove ${filter.label} filter`}
+          >
+            <X className="h-3 w-3" />
+          </Button>
+        </Badge>
+      ))}
+
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={onClearAll}
+        className="text-xs h-6 px-2"
+      >
+        Clear all
+      </Button>
+    </div>
+  )
+},
+;
+export default ActiveFiltersBar;

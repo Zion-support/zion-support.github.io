@@ -63,8 +63,11 @@ function ProjectDetailsContent() {
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
-        toast($2);
-        router.push("/dashboard")
+        toast({
+          title: "Project not found",
+          description: "The requested project could not be found.",
+          variant: "destructive"}),
+        router.push("/dashboard");
       }
       
       setIsLoading(false)
@@ -74,7 +77,7 @@ function ProjectDetailsContent() {
   }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
-    try {
+    try {,
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
@@ -86,8 +89,8 @@ function ProjectDetailsContent() {
       if (error) throw error,
       
       setNotes(data || [])
-    } catch (err: any) {
-      logErrorToProduction($2);
+    } catch (err: any) {,
+      logErrorToProduction('Error fetching project notes:', { data: err }),
       toast({
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
@@ -113,8 +116,8 @@ function ProjectDetailsContent() {
       toast({
         title: "Note added",
         description: "Your note has been added to the project."})
-    } catch (err: any) {
-      logErrorToProduction($2);
+    } catch (err: any) {,
+      logErrorToProduction('Error adding note:', { data: err }),
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",
@@ -124,8 +127,11 @@ function ProjectDetailsContent() {
     }
   },
   
-  const handleStatusChange = $2;
-    const success = await updateProjectStatus($2);
+  const handleStatusChange = async (newStatus: ProjectStatus) => {,
+    if (!project) return,
+    
+    const success = await updateProjectStatus(project.id, newStatus),
+    
     if (success) {
       setProject($2);
       // If offer was accepted, show a special toast
@@ -135,7 +141,9 @@ function ProjectDetailsContent() {
     }
   },
   
-  const getStatusBadge = $2;
+  const getStatusBadge = (status: ProjectStatus) => {
+    switch (status) {,
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
       case "offer_accepted":
         return <Badge className = $2;
       case "changes_requested":
@@ -169,7 +177,7 @@ function ProjectDetailsContent() {
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
-            <div>
+            <div>,
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
@@ -266,7 +274,7 @@ function ProjectDetailsContent() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="order-2 lg:order-1 lg:col-span-2">
+          <div className="order-2 lg:order-1 lg:col-span-2">,
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="details">Project Details</TabsTrigger>
@@ -467,7 +475,7 @@ function ProjectDetailsContent() {
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img,
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading="lazy"
@@ -537,20 +545,20 @@ function ProjectDetailsContent() {
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
+                    <span className="text-sm font-medium">Current Status:</span>,
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
-                    <span className="text-sm">
+                    <span className="text-sm">,
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
-                    <span className="text-sm">
+                    <span className="text-sm">,
                       {format(new Date(project.start_date), "PPP")}
                     </span>
                   </div>
@@ -611,3 +619,4 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   )
 }
+;

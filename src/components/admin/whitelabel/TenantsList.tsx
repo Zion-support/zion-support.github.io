@@ -36,8 +36,8 @@ export function TenantsList() {
         .order($2);
       if (error) throw error,
       setTenants(data as WhitelabelTenant[])
-    } catch (error: any) {
-      logErrorToProduction($2);
+    } catch (error: any) {,
+      logErrorToProduction('Error loading tenants:', { data: error }),
       toast({
         variant: 'destructive',
         title: 'Failed to load tenants',
@@ -48,7 +48,7 @@ export function TenantsList() {
   },
 
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
-    try {
+    try {,
       const { error } = await supabase
         .from('whitelabel_tenants')
         .update({ is_active: !(tenant as any).is_active })
@@ -64,8 +64,8 @@ export function TenantsList() {
       toast({
         title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,
         description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`})
-    } catch (error: any) {
-      logErrorToProduction($2);
+    } catch (error: any) {,
+      logErrorToProduction('Error toggling tenant status:', { data: error }),
       toast({
         variant: 'destructive',
         title: 'Failed to update tenant',
@@ -74,7 +74,7 @@ export function TenantsList() {
   },
 
   const verifyDns = async (tenant: WhitelabelTenant) => {
-    try {
+    try {,
       // In a real implementation, this would verify DNS records
       // For now, we'll just mark it as verified
       const { error } = await supabase
@@ -92,8 +92,8 @@ export function TenantsList() {
       toast({
         title: 'DNS verified',
         description: `Custom domain for ${(tenant as any).brand_name} has been verified.`})
-    } catch (error: any) {
-      logErrorToProduction($2);
+    } catch (error: any) {,
+      logErrorToProduction('Error verifying DNS:', { data: error }),
       toast({
         variant: 'destructive',
         title: 'Failed to verify DNS',
@@ -141,11 +141,11 @@ export function TenantsList() {
                     <TableCell className="font-medium">{tenant.brand_name}</TableCell>
                     <TableCell>
                       <a 
-                        href={`https://${tenant.subdomain}.ziontechmarketplace.com`}
+                        href={`https: //${tenant.subdomain}.ziontechmarketplace.com`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center hover:underline"
-                      >
+                        className="flex items-center hover:underline",
+                      >,
                         {tenant.subdomain}
                         <ExternalLink className="ml-1 h-3 w-3" />
                       </a>
@@ -154,11 +154,11 @@ export function TenantsList() {
                       {tenant.custom_domain ? (
                         <div className="flex items-center">
                           <a
-                            href={`https://${tenant.custom_domain}`}
+                            href={`https: //${tenant.custom_domain}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:underline flex items-center"
-                          >
+                            className="hover:underline flex items-center",
+                          >,
                             {tenant.custom_domain}
                             <ExternalLink className="ml-1 h-3 w-3" />
                           </a>
@@ -232,3 +232,4 @@ export function TenantsList() {
     </div>
   )
 }
+;

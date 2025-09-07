@@ -10,17 +10,18 @@ import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number},
-  keyPoints: string[]
+  description: string;
+  tags: string[];
+  suggestedPrice: {;
+    min: number;
+    max: number,
+  },
+  keyPoints: string[],
 }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
-  initialValues?: {
+  onApplyGenerated?: (content: GeneratedContent) => void;
+  initialValues?: {,
     title?: string,
     category?: string,
     keyFeatures?: string,
@@ -38,8 +39,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [generatedContent, setGeneratedContent] = useState($2);
   const handleInputChange = (e: { target: { value: string} }, field: string) => {
     switch(field) {
-      case 'title':
-        setTitle($2);
+      case 'title':,
+        setTitle(e.target.value),
         break,
       case 'category':
         setCategory($2);
@@ -55,7 +56,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
   const handleGenerate = async () => {
     if (!title || !category) {
-      toast($2);
+      toast({
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
+        variant: "destructive",
+      }),
       return
     }
 
@@ -73,14 +78,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
-        description: "AI has created optimized listing content for you."
+        description: "AI has created optimized listing content for you.",
       })
     } catch (error) {
       logErrorToProduction($2);
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsLoading(false)
@@ -92,7 +97,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       onApplyGenerated($2);
       toast({
         title: "Content Applied",
-        description: "The generated content has been applied to your listing."
+        description: "The generated content has been applied to your listing.",
       })
     }
   },
@@ -165,7 +170,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               <>
                 <Sparkles className="h-4 w-4 mr-2" />
                 Generate Optimized Content
-              </>
+              </>,
             )}
           </Button>
         </CardContent>
@@ -236,8 +241,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </CardFooter>
-        </Card>
+        </Card>,
       )}
     </div>
   )
-}
+};

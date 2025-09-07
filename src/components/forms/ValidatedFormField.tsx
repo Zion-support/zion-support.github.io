@@ -12,17 +12,17 @@ interface ValidationRule {
   minLength?: number,
   maxLength?: number,
   pattern?: RegExp,
-  custom?: (value: any) => string | null
+  custom?: (value: any) => string | null,
 }
 
 interface ValidatedFormFieldProps {
-  name: string,
-  label: string,
+  name: string;
+  label: string;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox',
   placeholder?: string,
   description?: string,
   validation?: ValidationRule,
-  options?: { value: string, label: string}[],
+  options?: { value: string, label: string };[],
   form: any, // React Hook Form control
   className?: string,
   disabled?: boolean,
@@ -73,16 +73,43 @@ export function ValidatedFormField({
     }
   }, [fieldValue, isTouched, debounceMs]),
 
-  const validateField = $2;
-  const getValidationIcon = $2;
+  const validateField = (value: any): string | null => {
+    if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {,
+      return `${label} is required`
+    }
+
+    if (typeof value === 'string') {
+      if (validation.minLength && value.length < validation.minLength) {
+        return `${label} must be at least ${validation.minLength} characters`
+      }
+
+      if (validation.maxLength && value.length > validation.maxLength) {
+        return `${label} must not exceed ${validation.maxLength} characters`
+      }
+
+      if (validation.pattern && !validation.pattern.test(value)) {
+        return `${label} format is invalid`
+      }
+    }
+
+    if (validation.custom) {
+      return validation.custom(value)
+    }
+
+    return null
+  },
+
+  const getValidationIcon = () => {
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null,
+
     switch (validationState) {
       case 'validating':
         return <div className = $2;
       case 'valid':
         return <CheckCircle className = $2;
       case 'invalid':
-        return <AlertCircle className = $2;
-      default: return null
+        return <AlertCircle className="h-4 w-4 text-red-500" />,
+      default: return null,
     }
   },
 
@@ -93,7 +120,7 @@ export function ValidatedFormField({
       case 'invalid':
         return 'border-red-500 focus:border-red-500 focus:ring-red-500/20',
       default:
-        return ''
+        return '',
     }
   },
 
@@ -115,7 +142,18 @@ export function ValidatedFormField({
               id={name}
               checked={fieldValue}
               onCheckedChange={(checked) => form.setValue(name, checked)}
-              disabled = $2;
+              disabled={disabled}
+            />
+            <label
+              htmlFor={name}
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >,
+              {label}
+            </label>
+            {getValidationIcon()}
+          </div>
+        ),
+
       case 'password':
         return (
           <div className="relative">
@@ -125,42 +163,139 @@ export function ValidatedFormField({
               className={cn(baseClasses, 'pr-20')}
               {...form.register(name)}
             />
-            <div className = $2;
-      default: return(
-          <div className = $2;
-  if (type = $2;
+            <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
+              {getValidationIcon()}
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-7 w-7 p-0"
+                onClick={() => setShowPassword(!showPassword)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? (
+                  <EyeOff className="h-4 w-4" />
+                ) : (
+                  <Eye className="h-4 w-4" />
+                )}
+              </Button>
+            </div>
+          </div>
+        ),
+
+      default:
+        return (
+          <div className="relative">
+            <Input,
+              type={type}
+              disabled={disabled}
+              className={baseClasses}
+              {...form.register(name)}
+            />
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+              {getValidationIcon()}
+            </div>
+          </div>
+        )
+    }
+  },
+
+  if (type === 'checkbox') {
+    return (
+      <FormField
+        control={form.control}
+        name={name}
+        render={() => (
+          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+            <FormControl>
+              {renderField()}
+            </FormControl>
+            {(fieldError || description) && (
+              <div className="space-y-1">
+                {fieldError && (
+                  <FormMessage className="text-sm text-red-500">
+                    {fieldError.message}
+                  </FormMessage>
+                )}
+                {description && !fieldError && (
+                  <p className="text-sm text-muted-foreground">{description}</p>
+                )}
+              </div>
+            )}
+          </FormItem>
+        )}
+      />
+    )
+  }
+
+  return (
+    <FormField
+      control={form.control}
+      name={name}
+      render={() => (
+        <FormItem>
+          <FormLabel className="text-sm font-medium">
+            {label}
+            {validation.required && <span className="text-red-500 ml-1">*</span>}
+          </FormLabel>
+          <FormControl>
+            {renderField()}
+          </FormControl>
+          {(fieldError || description) && (
+            <div className="space-y-1">
+              {fieldError && (
+                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {fieldError.message}
+                </FormMessage>
+              )}
+              {description && !fieldError && (
+                <p className="text-sm text-muted-foreground">{description}</p>
+              )}
+            </div>
+          )}
+        </FormItem>
+      )}
+    />
+  )
+}
+
+// Validation helpers for common patterns
+export const validationPatterns = {
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/,
   url: /^https?:\/\/.+/,
   strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/},
 
 // Pre-configured validation rules
-export const commonValidations = $2;
-  email: { 
+export const commonValidations = {
+  required: { required: true },
+  email: {,
     required: true, 
     pattern: validationPatterns.email,
     custom: (value: string) => {
       if (value && !validationPatterns.email.test(value)) {
-        return 'Please enter a valid email address'
+        return 'Please enter a valid email address',
       }
       return null
     }
   },
-  password: {
+  password: {,
     required: true,
     minLength: 8,
     custom: (value: string) => {
-      if (value && !validationPatterns.strongPassword.test(value)) {
+      if (value && !validationPatterns.strongPassword.test(value)) {,
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
       }
       return null
     }
   },
-  phone: {
+  phone: {,
     pattern: validationPatterns.phone,
     custom: (value: string) => {
       if (value && !validationPatterns.phone.test(value)) {
-        return 'Please enter a valid phone number'
+        return 'Please enter a valid phone number',
       }
       return null
     }
-  }}, 
+  }}, ;

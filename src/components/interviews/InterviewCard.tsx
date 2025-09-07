@@ -13,8 +13,8 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
-  interview: Interview,
-  onRefresh: () => Promise<void>
+  interview: Interview;
+  onRefresh: () => Promise<void>,
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
@@ -35,11 +35,23 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const isInterviewPending = $2;
   const isInterviewConfirmed = $2;
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
-  const isInterviewPast = isPast($2);
-  const getRelativeTime = $2;
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading($2);
-    const success = await respondToInterview($2);
+  const isInterviewPast = isPast(interviewDate),
+  
+  const getRelativeTime = () => {
+    if (isPast(interviewDate)) {
+      return `Took place ${formatDistanceToNow(interviewDate)} ago`
+    } else {
+      return `Starts in ${formatDistanceToNow(interviewDate)}`
+    }
+  },
+
+  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {,
+    setIsLoading(true),
+    const success = await respondToInterview(interview.id, { 
+      interview_id: interview.id, 
+      status 
+    }),
+    
     if (success) {
       toast($2);
       setIsResponseDialogOpen($2);
@@ -48,7 +60,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       toast({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       })
     }
     setIsLoading(false)
@@ -58,13 +70,16 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     setIsLoading($2);
     const success = await cancelInterview($2);
     if (success) {
-      toast($2);
+      toast({
+        title: "Interview cancelled",
+        description: "The interview has been cancelled successfully.",
+      }),
       await onRefresh()
     } else {
       toast({
         title: "Error",
         description: "Failed to cancel the interview. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       })
     }
     setIsLoading(false)
@@ -161,7 +176,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   </AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
-            </AlertDialog>
+            </AlertDialog>,
           )}
           
           {/* For talents with pending requests */}
@@ -219,7 +234,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   </AlertDialogFooter>
                 </AlertDialogContent>
               </AlertDialog>
-            </>
+            </>,
           )}
         </div>
       </CardFooter>
@@ -230,7 +245,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
-          <InterviewResponseForm 
+          <InterviewResponseForm,
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
@@ -241,3 +256,4 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     </Card>
   )
 }
+;

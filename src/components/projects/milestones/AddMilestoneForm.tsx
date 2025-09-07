@@ -28,10 +28,11 @@ const formSchema = z.object({
   due_date: z.date().optional($2);
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),
 
-type MilestoneFormValues = $2;
-interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void,
-  isSubmitting: boolean,
+type MilestoneFormValues = z.infer<typeof formSchema>,
+
+interface AddMilestoneFormProps {;
+  onSubmit: (data: MilestoneFormValues) => void;
+  isSubmitting: boolean;
   onCancel?: () => void,
   projectScope?: string,
   projectStartDate?: string,
@@ -49,18 +50,18 @@ export function AddMilestoneForm({
   projectType = 'Other'
 }: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(formSchema),
+    defaultValues: {,
       title: '',
       description: '',
       amount: 0}}),
 
-  const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit($2);
+  const handleSubmit = (values: MilestoneFormValues) => {,
+    onSubmit(values),
     form.reset()
   },
 
-  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
+  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {,
     // If there's only one milestone, submit it directly
     if (milestones.length = $2;
       if (milestone) {
@@ -83,7 +84,9 @@ export function AddMilestoneForm({
     })
   },
 
-  const handleAddMilestone = $2;
+  const handleAddMilestone = (milestone: GeneratedMilestone) => {
+    onSubmit({,
+      title: milestone.title,
       description: milestone.description,
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
@@ -139,7 +142,7 @@ export function AddMilestoneForm({
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
+            <FormField,
               control={form.control}
               name="due_date"
               render={({ field }: { field: any}) => (
@@ -226,3 +229,4 @@ export function AddMilestoneForm({
     </div>
   )
 }
+;

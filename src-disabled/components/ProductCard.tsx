@@ -1,8 +1,8 @@
-import Link from 'next/link';,
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';,
-import { Button } from '@/components/ui/button';,
-import { Badge } from '@/components/ui/badge';,
+import Link from 'next/link';
+import { Heart } from 'lucide-react'
+import { useWishlist } from '@/hooks/useWishlist';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import {
   Tooltip,
   TooltipContent,
@@ -20,7 +20,7 @@ import { useMediaQuery } from 'usehooks-ts';
 import { toast } from '@/hooks/use-toast';
 import { captureException } from '@/utils/sentry';
 interface ProductCardProps {
-  product: Product,
+  product: Product;
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
   onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
@@ -74,18 +74,15 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),
     toast({
-      title: 'Added to cart',
-      description: `${productTitle} has been added to your cart`,
-      action: {
-        label: 'View Cart',
-        onClick: () => router.push('/cart')}})
+      title: 'Added to cart', description: `${productTitle} has been added to your cart`, action: {,
+        label: 'View Cart', onClick: () => router.push('/cart')}})
   },
 
   const imageUrl = $2;
   const imageAltText = $2;
   const handleImageError = (error: any) => {
-    if (!imageError) {
-      setImageError($2);
+    if (!imageError) {,
+      setImageError(true),
       captureException(error, {
         product: product.id,
         imageUrl})
@@ -110,7 +107,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         <Image
           src={imageUrl}
           alt={imageAltText}
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover' }},
           onError={(e) => handleImageError(e)}
           priority={false}
         />
@@ -136,8 +133,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
             <Image
               src={imageUrl}
               alt={imageAltText}
-              style={{ objectFit: 'cover' }}
-              onError={e => handleImageError(e)}
+              style={{ objectFit: 'cover' }},
+              onError={(e) => handleImageError(e)}
               priority={false}
             />
           ) : (
@@ -211,10 +208,4 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     </div>
   )
 }
-        )});
-}
-
-  )
-}
-  )
-}
+;

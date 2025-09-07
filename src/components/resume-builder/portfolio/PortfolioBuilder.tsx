@@ -26,8 +26,8 @@ export function PortfolioBuilder() {
     fetchProjects()
   },
   
-  const handleDeleteProject = async (projectId: string) => {
-    const success = await deleteProject($2);
+  const handleDeleteProject = async (projectId: string) => {,
+    const success = await deleteProject(projectId),
     if (success) {
       fetchProjects()
     }
@@ -43,12 +43,12 @@ export function PortfolioBuilder() {
   
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+      <div className="flex flex-col sm: flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
-        </div>
-        <Button 
+        </div>,
+        <Button,
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
           disabled={showAddProject || !!editingProject}
@@ -68,7 +68,7 @@ export function PortfolioBuilder() {
             
             <ProjectForm 
               project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onSuccess={editingProject ? handleEditSuccess: handleAddSuccess},
               onCancel={() => {
                 setShowAddProject($2);
                 setEditingProject(null)
@@ -80,9 +80,9 @@ export function PortfolioBuilder() {
       
       {/* Projects List */}
       {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
           {projects.map((project) => (
-            <ProjectCard
+            <ProjectCard,
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
@@ -116,3 +116,4 @@ export function PortfolioBuilder() {
     </div>
   )
 }
+;

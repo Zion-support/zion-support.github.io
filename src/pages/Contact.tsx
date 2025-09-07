@@ -26,18 +26,20 @@ export default function Contact() {
     email?: string,
     message?: string
   }>({}),
-  const [isChatOpen, setIsChatOpen] = useState($2);
-  const [submitted, setSubmitted] = useState($2);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const [isChatOpen, setIsChatOpen] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {,
     const { name, value } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault($2);
-    logInfo($2);
-    logInfo($2);
+  const handleSubmit = (e: React.FormEvent) => {,
+    e.preventDefault(),
+    logInfo('[ContactForm] handleSubmit triggered.'),
+    logInfo('[ContactForm] formData:', { data: formData }),
+
     const schema = z.object({
       name: z.string().min($2);
       email: z.string().email($2);
@@ -71,8 +73,9 @@ export default function Contact() {
         .then(async (res) => {
           logInfo($2);
           const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
-          logInfo($2);
-          // Note: setIsSubmitting(false) is called within then/catch of the promise.
+          logInfo('[ContactForm] API response body:', { data: responseBody }),
+
+          // Note: setIsSubmitting(false) is called within then/catch of the promise.,
           // If fetch itself or .then/.catch structure has a synchronous error,
           // the outer try/catch will handle it.
 
@@ -117,13 +120,16 @@ export default function Contact() {
   },
 
   // Handle sending messages to the AI chat assistant
-  const handleSendMessage = $2;
+  const handleSendMessage = async (message: string): Promise<void> => {
+    try {
+      const response = await fetch(,
+        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat',
         {
           method: 'POST',
-          headers: {
+          headers: {,
             'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            messages: [{ role: 'user', content: message}]})},
+          body: JSON.stringify({,
+            messages: [{ role: 'user', content: message }]})},
       ),
 
       if (!response.ok) {
@@ -170,7 +176,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-white mb-6">
                 Get in Touch
               </h2>
-              <p className="text-zion-slate-light text-lg mb-8">
+              <p className="text-zion-slate-light text-lg mb-8">,
                 Whether you have a question about our platform, pricing, or
                 anything else, our team is ready to answer all your questions.
               </p>
@@ -183,7 +189,7 @@ export default function Contact() {
                     </label>
                     <Input
                       id="name"
-                      name="name"
+                      name="name",
                       value={formData.name}
                       onChange={handleChange}
                       className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
@@ -238,7 +244,7 @@ export default function Contact() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple",
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -282,7 +288,130 @@ export default function Contact() {
               <div className="grid grid-cols-1 gap-6">
                 {offices.map((office, index) => (
                   <Card
-                    key = $2;
+                    key={index}
+                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
+                  >
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {office.name}
+                    </h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
+                        <span className="text-zion-slate-light">
+                          {office.address}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <span className="text-zion-slate-light">
+                          {office.phone}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                        <a
+                          href={`mailto:${office.email}`}
+                          className="text-zion-cyan hover:underline"
+                        >,
+                          {office.email}
+                        </a>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
+                  width="100%"
+                  height="300",
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zion Office Locations"
+                ></iframe>
+              </div>
+
+              <div className="mt-8">
+                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
+                  <div className="flex items-center">
+                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
+                      <MessageSquare className="h-6 w-6 text-zion-purple" />
+                    </div>
+                    <div>
+                      <h3 className="text-white text-lg font-bold">
+                        Live AI Support
+                      </h3>
+                      <p className="text-zion-slate-light">
+                        Get instant answers to your questions
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => setIsChatOpen(true)}
+                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  >
+                    Chat With Our AI Assistant
+                  </Button>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need immediate assistance?
+            </h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
+              Our customer support team is available 24/7 to help you with any
+              questions.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button,
+                onClick={() => setIsChatOpen(true)}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              >
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Chat With AI
+              </Button>
+              <Button
+                variant="outline"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                asChild
+              >
+                <a href="mailto:support@ziontechgroup.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Support
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-zion-slate-light text-lg">,
+              Looking for more details about our platform? Visit our{' '}
+              <Link href="/services" className="text-zion-cyan underline">
+                services page
+              </Link>{' '}
+              or explore the{' '}
+              <Link href="/blog" className="text-zion-cyan underline">
+                Zion blog
+              </Link>{' '}
+              for additional insights.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {/* Chat Assistant Modal */}
+      {isChatOpen && (
+        <ChatAssistant
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          recipient={{
+            id: 'ai-assistant',
             name: 'AI Assistant',
             avatarUrl: 'https://placehold.co/64x64?text = $2;
             role: 'Support Bot'}}
@@ -294,3 +423,4 @@ export default function Contact() {
     </>
   )
 }
+;

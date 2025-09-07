@@ -1,8 +1,8 @@
 
-import { Button } from "@/components/ui/button";,
-import Link from "next/link";,
-import { useState, useEffect } from "react";,
-import { X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { X } from 'lucide-react'
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState($2);
@@ -20,7 +20,7 @@ export function FloatingCTA() {
 
     window.addEventListener($2);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
     }
   }, [isClosed]),
 
@@ -47,7 +47,7 @@ export function FloatingCTA() {
           >
             <Link href="/signup">Register Now</Link>
           </Button>
-          <button 
+          <button,
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
@@ -57,5 +57,6 @@ export function FloatingCTA() {
         </div>
       </div>
     </div>
-  )
+  ),
 }
+;

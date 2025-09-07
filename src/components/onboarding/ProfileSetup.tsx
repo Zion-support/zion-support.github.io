@@ -20,15 +20,17 @@ const profileSchema = z.object({
   bio: z.string().min(10, "Bio must be at least 10 characters").max($2);
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
 
-type ProfileFormValues = $2;
-interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
-  userType: string}
+type ProfileFormValues = z.infer<typeof profileSchema>,
+
+interface ProfileSetupProps {;
+  onComplete: (data: ProfileFormValues) => void;
+  userType: string,
+}
 
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(profileSchema),
+    defaultValues: {,
       displayName: "",
       bio: "",
       headline: ""}}),
@@ -39,7 +41,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       case "client":
         return "Client",
       default:
-        return "User"
+        return "User",
     }
   },
 
@@ -64,7 +66,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                   <div className="relative">
                     <Input
                       placeholder="Your full name"
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple",
                       {...field}
                     />
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -89,7 +91,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
                       }`}
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple",
                       {...field}
                     />
                     <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -113,7 +115,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                       userType === "talent" ? "skills and experience" :
                       "business and needs"
                     }`}
-                    className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
+                    className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]",
                     {...field}
                   />
                 </FormControl>
@@ -131,5 +133,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </form>
       </Form>
     </div>
-  )
+  ),
 }
+;

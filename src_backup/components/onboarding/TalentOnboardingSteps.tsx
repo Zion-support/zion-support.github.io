@@ -1,5 +1,6 @@
-import React from "react",
-import { useAuth } from "@/hooks/useAuth",
+
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
@@ -7,7 +8,7 @@ export function TalentOnboardingSteps() {
   const { user } = useAuth($2);
   const onboardingStatus = useOnboardingStatus($2);
   const steps: OnboardingStep[] = [
-    {
+    {,
       id: "profile",
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
@@ -33,3 +34,4 @@ export function TalentOnboardingSteps() {
   
   return <OnboardingTracker steps={steps} />
 }
+;

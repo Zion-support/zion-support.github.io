@@ -28,9 +28,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 interface ReviewsModerationTableProps {
-  reviews: Review[],
-  isLoading: boolean,
-  onRefresh: () => void
+  reviews: Review[];
+  isLoading: boolean;
+  onRefresh: () => void,
 }
 
 export function ReviewsModerationTable({
@@ -40,11 +40,10 @@ export function ReviewsModerationTable({
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState($2);
   const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async({
-      reviewId,
-      status}: {
-      reviewId: string,
-      status: ReviewStatus}) => {
+    mutationFn: async ({,
+      reviewId, status}: {
+      reviewId: string, status: ReviewStatus,
+    }) => {
       const { error } = await supabase
         .from("reviews")
         .update({ status })
@@ -53,19 +52,28 @@ export function ReviewsModerationTable({
       return { reviewId, status }
     },
     onSuccess: (data) => {
-      toast($2);
-      onRefresh($2);
+      toast({,
+        title: "Review updated",
+        description: `Review has been ${data.status}.`}),
+      onRefresh(),
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
-      toast({
+      toast({,
         title: "Error",
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
     }}),
 
 
-  const getInitials = $2;
+  const getInitials = (name: string) => {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase(),
+  },
+
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -88,22 +96,22 @@ export function ReviewsModerationTable({
     )
   }
 
-  const handleApprove = (reviewId: string) => {
+  const handleApprove = (reviewId: string) => {,
     updateReviewStatus({ reviewId, status: "approved" })
   },
 
-  const handleReject = (reviewId: string) => {
+  const handleReject = (reviewId: string) => {,
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview($2);
+  const handleViewDetails = (review: Review) => {,
+    setSelectedReview(review),
     setViewDetailsOpen(true)
   },
 
   const renderStars = (rating: number) => {
     return (
-      <div className="flex">
+      <div className="flex">,
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key = $2;
@@ -350,4 +358,4 @@ export function ReviewsModerationTable({
       )}
     </>
   )
-}
+};

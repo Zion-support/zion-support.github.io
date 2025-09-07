@@ -43,7 +43,7 @@ export default function ReferralsPage() {
           <p className="text-muted-foreground mt-1">
             Invite others to Zion AI Marketplace and earn rewards
           </p>
-        </div>
+        </div>,
         <Button className="flex items-center gap-2" onClick={copyReferralLink}>
           <Share className="h-4 w-4" />
           Share Referral Link
@@ -54,7 +54,7 @@ export default function ReferralsPage() {
       
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
-          <ReferralLink 
+          <ReferralLink,
             referralLink={referralLink} 
             onCopy={copyReferralLink} 
             onShare={shareOnSocialMedia}
@@ -88,3 +88,4 @@ export default function ReferralsPage() {
     </div>
   )
 }
+;

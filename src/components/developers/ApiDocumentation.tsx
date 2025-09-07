@@ -8,20 +8,20 @@ import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 import { logInfo } from '@/utils/productionLogger';
 interface EndpointParam {
-  name: string,
-  type: string,
-  description: string,
-  required?: boolean
+  name: string;
+  type: string;
+  description: string;
+  required?: boolean,
 }
 
 interface EndpointSectionProps {
-  method: string,
-  endpoint: string,
-  description: string,
+  method: string;
+  endpoint: string;
+  description: string;
   note?: string,
   params?: EndpointParam[],
   codeExamples?: Record<string, string>,
-  responseExamples?: { success: string}
+  responseExamples?: { success: string };
 }
 
 export function ApiDocumentation() {
@@ -60,22 +60,36 @@ export function ApiDocumentation() {
               description="List all available jobs with optional filtering."
               note=""
               params={[
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-                { name: "category", type: "string", description: "Filter by job category" },
-                { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
-                { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" }, { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }, { name: "category", type: "string", description: "Filter by job category" }, { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" }, { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
               ]}
-              codeExamples = $2;
-                javascript: `const response = await fetch($2);
-const data = await response.json($2);
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\,
+  -H "Content-Type: application/json"`, javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
+  method: 'GET', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 
-headers = $2;
-    params={'limit': 10, 'category': 'development'},
-    headers = $2;
-      "title": "Senior React Developer",
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/jobs', params={'limit': 10, 'category': 'development'},
+    headers=headers
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": [
+    {,
+      "id": "job_abc123", "title": "Senior React Developer",
       "description": "We need an experienced React developer...",
       "category": "development",
       "skills": ["react", "typescript", "node.js"],
@@ -86,9 +100,8 @@ headers = $2;
       },
       "status": "active",
       "client_id": "user_xyz789",
-      "created_at": "2025-05-15T10: 30: 00Z"
-    },
-    // More jobs...
+      "created_at": "2025-05-15T10: 30:00Z",
+    }, // More jobs...
   ],
   "meta": {
     "total": 42,
@@ -107,16 +120,33 @@ headers = $2;
               params={[
                 { name: "id", type: "string", description: "The job ID", required: true}
               ]}
-              codeExamples = $2;
-                javascript: `const jobId = $2;
-const response = await fetch($2);
-const data = await response.json($2);
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\,
+  -H "Content-Type: application/json"`, javascript: `const jobId = 'job_abc123', const response = await fetch(\`https: //api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
+  method: 'GET', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 
-headers = $2;
-    headers = $2;
-    "title": "Senior React Developer",
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+job_id = 'job_abc123'
+response = requests.get(
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}', headers=headers
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": {,
+    "id": "job_abc123", "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
@@ -127,9 +157,7 @@ headers = $2;
     },
     "status": "active",
     "client_id": "user_xyz789",
-    "created_at": "2025-05-15T10: 30: 00Z",
-    "deadline": "2025-06-30T23: 59: 59Z",
-    "application_count": 12
+    "created_at": "2025-05-15T10: 30:00Z", "deadline": "2025-06-30T23: 59:59Z", "application_count": 12
   }
 }`
               }}
@@ -139,19 +167,16 @@ headers = $2;
               method="POST"
               endpoint="/api/jobs"
               description="Create a new job listing."
-              note="Requires jobs:write scope"
-              params={[
-                { name: "title", type: "string", description: "Job title", required: true},
-                { name: "description", type: "string", description: "Detailed job description", required: true},
-                { name: "category", type: "string", description: "Job category", required: true},
-                { name: "skills", type: "string[]", description: "Required skills", required: true},
-                { name: "budget.min", type: "number", description: "Minimum budget" },
-                { name: "budget.max", type: "number", description: "Maximum budget" },
-                { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },
-                { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
+              note="Requires jobs: write scope"
+              params={[,
+                { name: "title", type: "string", description: "Job title", required: true }, { name: "description", type: "string", description: "Detailed job description", required: true }, { name: "category", type: "string", description: "Job category", required: true }, { name: "skills", type: "string[]", description: "Required skills", required: true }, { name: "budget.min", type: "number", description: "Minimum budget" }, { name: "budget.max", type: "number", description: "Maximum budget" }, { name: "budget.currency", type: "string", description: "Currency code (default: USD)" }, { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
-              codeExamples = $2;
-    "description": "We need an experienced React developer...",
+              codeExamples={{
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{,
+    "title": "Senior React Developer", "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
     "budget": {
@@ -159,45 +184,45 @@ headers = $2;
       "max": 10000,
       "currency": "USD"
     },
-    "deadline": "2025-06-30T23: 59: 59Z"
-  }'`,
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    title: 'Senior React Developer',
-    description: 'We need an experienced React developer...',
-    category: 'development',
-    skills: ['reacttypescriptnode.js'],
-    budget: {
-      min: 5000,
-      max: 10000,
-      currency: 'USD'
-    },
-    deadline: '2025-06-30T23: 59: 59Z'
+    "deadline": "2025-06-30T23: 59:59Z",
+  }'`, javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
+  method: 'POST', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }, body: JSON.stringify({,
+    title: 'Senior React Developer', description: 'We need an experienced React developer...', category: 'development', skills: ['reacttypescriptnode.js'], budget: {,
+      min: 5000, max: 10000, currency: 'USD',
+    }, deadline: '2025-06-30T23:59:59Z',
   })
-}),
-
-const data = await response.json($2);
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 import json
 
-headers = $2;
-    'budget': {
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+payload = {
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'], 'budget': {
         'min': 5000,
         'max': 10000,
         'currency': 'USD'
     },
-    'deadline': '2025-06-30T23: 59: 59Z'
+    'deadline': '2025-06-30T23: 59:59Z',
 }
 
-response = $2;
-    headers = $2;
-    data = $2;
-    "title": "Senior React Developer",
+response = requests.post(
+    'https://api.ziontechgroup.com/v1/jobs', headers=headers,
+    data=json.dumps(payload)
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": {,
+    "id": "job_def456", "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
@@ -208,8 +233,7 @@ response = $2;
     },
     "status": "new",
     "client_id": "user_xyz789",
-    "created_at": "2025-05-16T14: 22: 10Z",
-    "deadline": "2025-06-30T23: 59: 59Z"
+    "created_at": "2025-05-16T14: 22:10Z", "deadline": "2025-06-30T23:59:59Z",
   }
 }`
               }}
@@ -223,24 +247,36 @@ response = $2;
               description="List talent profiles with optional filtering."
               note=""
               params={[
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-                { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
-                { name: "availability", type: "string", description: "Filter by availability status" }
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" }, { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }, { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" }, { name: "availability", type: "string", description: "Filter by availability status" }
               ]}
               codeExamples={{
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`,
-                javascript: `const response = await fetch($2);
-const data = await response.json($2);
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react, typescript" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\,
+  -H "Content-Type: application/json"`, javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react, typescript', {
+  method: 'GET', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 
-headers = $2;
-    params={'skills': 'react,typescript'},
-    headers = $2;
-      "display_name": "Jane Smith",
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/talent', params={'skills': 'react,typescript'},
+    headers=headers
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": [
+    {,
+      "id": "talent_abc123", "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
       "skills": ["react", "typescript", "javascript"],
       "availability": "available",
@@ -266,16 +302,33 @@ headers = $2;
               params={[
                 { name: "id", type: "string", description: "The talent ID", required: true}
               ]}
-              codeExamples = $2;
-                javascript: `const talentId = $2;
-const response = await fetch($2);
-const data = await response.json($2);
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\,
+  -H "Content-Type: application/json"`, javascript: `const talentId = 'talent_abc123', const response = await fetch(\`https: //api.ziontechgroup.com/v1/talent/\${talentId}\`, {
+  method: 'GET', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 
-headers = $2;
-    headers = $2;
-    "display_name": "Jane Smith",
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+talent_id = 'talent_abc123'
+response = requests.get(
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}', headers=headers
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": {,
+    "id": "talent_abc123", "display_name": "Jane Smith",
     "headline": "Senior Frontend Developer",
     "bio": "10+ years of experience in frontend development...",
     "skills": ["react", "typescript", "javascript", "css", "html"],
@@ -288,10 +341,9 @@ headers = $2;
         "title": "E-commerce Platform",
         "description": "Built a modern e-commerce platform using React...",
         "technologies": ["react", "redux", "node.js"],
-        "image_url": "https://example.com/portfolio/123.jpg"
+        "image_url": "https: //example.com/portfolio/123.jpg",
       }
-    ],
-    "certifications": [
+    ], "certifications": [
       {
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
@@ -309,20 +361,16 @@ headers = $2;
               method="POST"
               endpoint="/api/quotes"
               description="Create a quote request for a talent."
-              note="Requires quotes:write scope"
-              params={[
-                { name: "talent_id", type: "string", description: "ID of the talent to request a quote from", required: true},
-                { name: "project_name", type: "string", description: "Name of the project", required: true},
-                { name: "project_summary", type: "string", description: "Brief summary of the project", required: true},
-                { name: "project_description", type: "string", description: "Detailed project description" },
-                { name: "timeline", type: "string", description: "Expected timeline", required: true},
-                { name: "budget_min", type: "number", description: "Minimum budget" },
-                { name: "budget_max", type: "number", description: "Maximum budget" },
-                { name: "requester_name", type: "string", description: "Name of the requester", required: true},
-                { name: "requester_email", type: "string", description: "Email of the requester", required: true}
+              note="Requires quotes: write scope"
+              params={[,
+                { name: "talent_id", type: "string", description: "ID of the talent to request a quote from", required: true }, { name: "project_name", type: "string", description: "Name of the project", required: true }, { name: "project_summary", type: "string", description: "Brief summary of the project", required: true }, { name: "project_description", type: "string", description: "Detailed project description" }, { name: "timeline", type: "string", description: "Expected timeline", required: true }, { name: "budget_min", type: "number", description: "Minimum budget" }, { name: "budget_max", type: "number", description: "Maximum budget" }, { name: "requester_name", type: "string", description: "Name of the requester", required: true }, { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
-              codeExamples = $2;
-    "project_name": "E-commerce Website Redesign",
+              codeExamples={{
+                curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{,
+    "talent_id": "talent_abc123", "project_name": "E-commerce Website Redesign",
     "project_summary": "Redesign our outdated e-commerce website with modern UI",
     "project_description": "Our current website is 5 years old and needs a complete overhaul...",
     "timeline": "2-3 months",
@@ -332,37 +380,37 @@ headers = $2;
     "requester_email": "john@example.com"
   }'`,
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    talent_id: 'talent_abc123',
-    project_name: 'E-commerce Website Redesign',
-    project_summary: 'Redesign our outdated e-commerce website with modern UI',
-    project_description: 'Our current website is 5 years old and needs a complete overhaul...',
-    timeline: '2-3 months',
-    budget_min: 8000,
-    budget_max: 12000,
-    requester_name: 'John Doe',
-    requester_email: 'john@example.com'
+  method: 'POST', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }, body: JSON.stringify({,
+    talent_id: 'talent_abc123', project_name: 'E-commerce Website Redesign', project_summary: 'Redesign our outdated e-commerce website with modern UI', project_description: 'Our current website is 5 years old and needs a complete overhaul...', timeline: '2-3 months', budget_min: 8000, budget_max: 12000, requester_name: 'John Doe', requester_email: 'john@example.com',
   })
-}),
-
-const data = await response.json($2);
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 import json
 
-headers = $2;
-    'budget_max': 12000,
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+payload = {
+    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000, 'budget_max': 12000,
     'requester_name': 'John Doerequester_email': 'john@example.com'
 }
 
-response = $2;
-    headers = $2;
-    data = $2;
-    "talent_id": "talent_abc123",
+response = requests.post(
+    'https: //api.ziontechgroup.com/v1/quotes', headers=headers,
+    data=json.dumps(payload)
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": {,
+    "id": "quote_def456", "talent_id": "talent_abc123",
     "requester_id": "user_xyz789",
     "project_name": "E-commerce Website Redesign",
     "project_summary": "Redesign our outdated e-commerce website with modern UI",
@@ -374,7 +422,7 @@ response = $2;
     "requester_name": "John Doe",
     "requester_email": "john@example.com",
     "status": "new",
-    "created_at": "2025-05-16T14: 30: 15Z"
+    "created_at": "2025-05-16T14:30:15Z",
   }
 }`
               }}
@@ -386,25 +434,40 @@ response = $2;
               description="List quote requests that you've created."
               note=""
               params={[
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-                { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" }, { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }, { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
               ]}
-              codeExamples = $2;
-                javascript: `const response = await fetch($2);
-const data = await response.json($2);
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\,
+  -H "Content-Type: application/json"`, javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
+  method: 'GET', headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+  }
+}), const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
 
-headers = $2;
-    headers = $2;
-      "talent_id": "talent_abc123",
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json',
+}
+
+response = requests.get(
+    'https: //api.ziontechgroup.com/v1/quotes', headers=headers
+)
+
+data = response.json()
+print(data)`
+              }}
+              responseExamples={{
+                success: `{
+  "data": [
+    {,
+      "id": "quote_def456", "talent_id": "talent_abc123",
       "project_name": "E-commerce Website Redesign",
       "project_summary": "Redesign our outdated e-commerce website with modern UI",
       "budget_display": "$8,000 - $12,000",
       "status": "new",
-      "created_at": "2025-05-16T14: 30: 15Z",
-      "viewed_at": null,
+      "created_at": "2025-05-16T14: 30:15Z", "viewed_at": null,
       "replied_at": null
     },
     // More quotes...
@@ -434,10 +497,11 @@ headers = $2;
                 <code className = $2;
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
-  const hmac = crypto.createHmac($2);
-  const expectedSignature = hmac.update(payload).digest($2);
-  return crypto.timingSafeEqual($2);
-    Buffer.from(expectedSignature)
+  const hmac = crypto.createHmac('sha256', secret),
+  const expectedSignature = hmac.update(payload).digest('hex'),
+  return crypto.timingSafeEqual(
+    Buffer.from(signature),
+    Buffer.from(expectedSignature);
   )
 }
 
@@ -456,15 +520,52 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
 }),`}
-                language = $2;
+                language="javascript"
+                showLineNumbers={true}
+              />
+              
+              <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>
+              <table className="w-full border-collapse mt-2">
+                <thead>
+                  <tr className="border-b border-zinc-800">
+                    <th className="py-2 px-4 text-left">Event Type</th>
+                    <th className="py-2 px-4 text-left">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4 font-mono text-sm">new_application</td>
+                    <td className="py-2 px-4">When a talent applies to one of your jobs</td>
+                  </tr>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4 font-mono text-sm">quote_received</td>
+                    <td className="py-2 px-4">When you receive a quote from talent</td>
+                  </tr>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4 font-mono text-sm">milestone_approved</td>
+                    <td className="py-2 px-4">When a project milestone is approved</td>
+                  </tr>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4 font-mono text-sm">talent_hired</td>
+                    <td className="py-2 px-4">When you hire talent for a project</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
+              <p className="text-zinc-400 mb-2">
+                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
+              </p>
+              
+              <CodeBlock
+                code={`{,
+  "event_type": "new_application",
   "event_id": "evt_abc123def456",
-  "timestamp": "2025-05-16T15: 30: 00Z",
-  "data": {
+  "timestamp": "2025-05-16T15: 30:00Z", "data": {
     "application_id": "app_123456",
     "job_id": "job_abc123",
     "talent_id": "talent_xyz789",
-    "applied_at": "2025-05-16T15: 28: 30Z",
-    "status": "new",
+    "applied_at": "2025-05-16T15: 28:30Z", "status": "new",
     "match_score": 85
   }
 }`}
@@ -511,7 +612,34 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                     <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">403 Forbidden</code></td>
                     <td className="py-2 px-4">The request is understood, but it has been refused or access is not allowed.</td>
                   </tr>
-                  <tr className = $2;
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">404 Not Found</code></td>
+                    <td className="py-2 px-4">The requested resource does not exist.</td>
+                  </tr>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">422 Unprocessable Entity</code></td>
+                    <td className="py-2 px-4">The request was well-formed but was unable to be followed due to semantic errors.</td>
+                  </tr>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code></td>
+                    <td className="py-2 px-4">The request was rejected due to rate limiting.</td>
+                  </tr>
+                  <tr className="border-b border-zinc-800">
+                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">500 Internal Server Error</code></td>
+                    <td className="py-2 px-4">Something went wrong on our end.</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
+              <p className="text-zinc-400 mb-2">
+                Error responses include a consistent JSON object with the following format:
+              </p>
+              
+              <CodeBlock
+                code={`{
+  "error": {,
+    "code": "invalid_request",
     "message": "The request was invalid",
     "details": [
       {
@@ -528,7 +656,28 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               <p className="text-zinc-400 mb-4">
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive 
-                a <code className = $2;
+                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.
+              </p>
+              
+              <p className="text-zinc-400 mb-2">
+                Rate limit information is included in the response headers: </p>
+              
+              <ul className="list-disc pl-6 space-y-1 text-zinc-400">
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>
+                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>
+              </ul>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  ),
+}
+
+// Helper component for API endpoint documentation
+function EndpointSection({
+  method,
   endpoint,
   description,
   note,
@@ -557,7 +706,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
           </Badge>
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>
           {note && (
-            <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">
+            <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">,
               {note}
             </Badge>
           )}
@@ -604,7 +753,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
-                      : "text-zinc-400 hover:bg-zinc-800"
+                      : "text-zinc-400 hover:bg-zinc-800",
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >
@@ -633,3 +782,4 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   )
 }
 
+;

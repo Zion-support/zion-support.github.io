@@ -15,7 +15,7 @@ import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
-  {
+  {,
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -31,7 +31,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.9,
     reviewCount: 27,
     location: "Santa Clara, CA",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "dell-poweredge-r750",
@@ -49,7 +49,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7,
     reviewCount: 34,
     location: "Austin, TX",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "cisco-nexus-9k",
@@ -67,7 +67,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.8,
     reviewCount: 19,
     location: "San Jose, CA",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "hpe-proliant-dl380",
@@ -85,7 +85,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.6,
     reviewCount: 21,
     location: "Houston, TX",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "netapp-aff-a250",
@@ -103,7 +103,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7,
     reviewCount: 18,
     location: "Chicago, IL",
-    availability: "2-3 Weeks"
+    availability: "2-3 Weeks",
   },
   {
     id: "arista-7050x",
@@ -121,26 +121,119 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.5,
     reviewCount: 16,
     location: "Sunnyvale, CA",
-    availability: "In Stock"
+    availability: "In Stock",
   }
 ],
 
 // Market insights component
-const EquipmentMarketInsights = $2;
+const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
+  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
+    <CardContent className="p-6">
+      <div className="flex items-center gap-2 mb-4">
+        <TrendingUp className="h-5 w-5 text-blue-400" />
+        <h3 className="text-lg font-semibold">Equipment Market Insights</h3>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">,
+          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
+          <div className="text-sm text-muted-foreground">Avg Price</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
+          <div className="text-sm text-muted-foreground">Avg Rating</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>
+          <div className="text-sm text-muted-foreground">Total Items</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>
+          <div className="text-sm text-muted-foreground">In Stock</div>
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+),
+
 // Filter controls
 const EquipmentFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 }: any) => (
-  <div className = $2;
+  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="">All Categories</option>
+        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
+      </select>
+    </div>
+    <div className="flex items-center gap-2">
+      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+      </select>
+    </div>,
+    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Star className="h-4 w-4 mr-1" />
+      {showRecommended ? "All Equipment" : "Recommended"}
+    </Button>
+  </div>
+),
+
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency($2);
   return (
-    <Card className = $2;
+    <Card className="h-full hover:shadow-lg transition-shadow">
+      <CardHeader className="pb-3">
+        <div className="flex items-start justify-between">
+          <div className="flex-1 min-w-0">,
+            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
+            <p className="text-sm text-muted-foreground">{equipment.category}</p>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
+            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
+              {equipment.availability}
+            </Badge>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="flex items-center gap-4 mb-3">
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 text-yellow-500 fill-current" />
+            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
+            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium">{equipment.category}</span>
+          <Button size="sm" onClick={onViewDetails}>
+            <ShoppingCart className="h-4 w-4 mr-1" />
+            View Details
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+},
+
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count}).map((_, i) => <SkeletonCard key = $2;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>
+),
+
 // Error fallback component
 function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
   return (
@@ -179,14 +272,18 @@ function EquipmentPageContent() {
   }, [filterCategory, showRecommended]),
 
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
-    // Simulate realistic API delay
+    // Simulate realistic API delay,
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
       // Generate consistent virtual dataset using the seed
-      const VIRTUAL_DATASET_SIZE = $2;
-      const baseVirtualEquipment = generateDatacenterEquipment($2);
-      let fullVirtualDataset: ProductListing[] = [
+      const VIRTUAL_DATASET_SIZE = 150,
+      const baseVirtualEquipment = generateDatacenterEquipment(
+        VIRTUAL_DATASET_SIZE,
+        INITIAL_EQUIPMENT.length,
+        dataSeed
+      ),
+      let fullVirtualDataset: ProductListing[] = [,
         ...INITIAL_EQUIPMENT,
         ...baseVirtualEquipment
       ],
@@ -195,7 +292,7 @@ function EquipmentPageContent() {
       const dedupMap = new Map<string, ProductListing>(),
       for (const item of fullVirtualDataset) {
         if (!dedupMap.has(item.id)) {
-          dedupMap.set(item.id, item)
+          dedupMap.set(item.id, item);
         }
       }
       fullVirtualDataset = $2;
@@ -220,7 +317,7 @@ function EquipmentPageContent() {
           case 'rating':
             return (b.rating || 0) - (a.rating || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
         }
       }),
 
@@ -231,17 +328,15 @@ function EquipmentPageContent() {
       return {
         items,
         hasMore: endIndex < processedDataset.length,
-        total: processedDataset.length
+        total: processedDataset.length,
       }
     } catch (error) {
-      logErrorToProduction($2);
-      throw new Error('Failed to load equipment data. Please try again.')
+      logErrorToProduction('Error in fetchEquipment:', { data: error }), throw new Error('Failed to load equipment data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
   const {
-    items: equipment,
-    loading,
+    items: equipment, loading,
     error,
     hasMore,
     total,
@@ -322,8 +417,8 @@ function EquipmentPageContent() {
         <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>
       </motion.div>
 
-      {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} transition={{ delay: 0.2 }}>
+      {marketStats && (,
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <EquipmentMarketInsights stats={marketStats} />
         </motion.div>
       )}
@@ -346,7 +441,7 @@ function EquipmentPageContent() {
           {equipment.map((item, index) => (
             <motion.div
               key={item.id} 
-              ref={index === equipment.length - 1 ? lastElementRef : null}
+              ref={index === equipment.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1}} 
               exit={{ opacity: 0, scale: 0.9 }}
@@ -363,7 +458,7 @@ function EquipmentPageContent() {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/equipment/${item.id}`)
+                  router.push(`/equipment/${item.id}`);
                 }}
               />
             </motion.div>
@@ -405,10 +500,10 @@ function EquipmentPageContent() {
         {showScrollTop && (
           <motion.button 
             onClick={scrollToTop} 
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0}} 
-            animate={{ opacity: 1, scale: 1}} 
-            exit={{ opacity: 0, scale: 0}}
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
+            initial={{ opacity: 0, scale: 0 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} 
             whileTap={{ scale: 0.9 }}
           >
@@ -428,3 +523,4 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
+;

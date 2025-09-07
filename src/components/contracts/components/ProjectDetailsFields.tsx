@@ -17,7 +17,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>
+  form: UseFormReturn<ContractFormValues>,
 }
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
@@ -59,7 +59,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField
+        <FormField,
           control={form.control}
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> }) => (

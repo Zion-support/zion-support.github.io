@@ -5,10 +5,13 @@ import { Sparkles, RefreshCcw } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from 'lucide-react'
 export interface EmptyMatchesCardProps {
-  onRefresh: () => void,
-  isProcessing: boolean}
+  onRefresh: () => void;
+  isProcessing: boolean,
+}
 
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>

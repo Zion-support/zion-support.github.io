@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { ImageIcon } from 'lucide-react'
 
 interface SafeImageProps {
-  src: string,
-  alt: string,
+  src: string;
+  alt: string;
   width?: number,
   height?: number,
   className?: string,
@@ -69,4 +69,4 @@ export function SafeImage({
       unoptimized={hasError}
     />
   )
-} 
+} ;

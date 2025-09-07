@@ -10,10 +10,11 @@ import { RatingStars } from '@/components/RatingStars';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isAuthenticated: boolean}
+  talent: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
+  isAuthenticated: boolean,
+}
 
 const TalentCardComponent = $2;
   onViewProfile,
@@ -30,9 +31,9 @@ const TalentCardComponent = $2;
     }
   },
 
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault($2);
-    e.stopPropagation($2);
+  const handleRequestHire = (e: React.MouseEvent) => {,
+    e.preventDefault(),
+    e.stopPropagation(),
     if (onRequestHire) {
       onRequestHire(talent)
     }
@@ -44,7 +45,7 @@ const TalentCardComponent = $2;
 
   return (
     <Card
-      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
+      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
       onClick={handleViewProfile}
       tabIndex={0}
     >
@@ -142,7 +143,7 @@ const TalentCardComponent = $2;
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
-              </Button>
+              </Button>,
             )}
             <Button
               size="sm"
@@ -151,6 +152,16 @@ const TalentCardComponent = $2;
                 e.stopPropagation($2);
                 handleViewProfile()
               }}
-              className = $2;
-export const TalentCard = React.memo($2);
-TalentCard.displayName = $2;
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+            >
+              View <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  ),
+},
+;
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard',

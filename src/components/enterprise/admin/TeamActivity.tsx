@@ -56,12 +56,13 @@ export function TeamActivity() {
       category: "billing"}],
 
   // Function to format the date in a readable way
-  const formatDate = (date: Date) => {
-    const now = new Date($2);
-    const diffMs = now.getTime() - date.getTime($2);
-    const diffMins = $2;
-    const diffHrs = $2;
-    const diffDays = $2;
+  const formatDate = (date: Date) => {,
+    const now = new Date(),
+    const diffMs = now.getTime() - date.getTime(),
+    const diffMins = Math.floor(diffMs / (1000 * 60)),
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
+
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -73,7 +74,7 @@ export function TeamActivity() {
     }
   },
 
-  const getCategoryBadge = (category: string) => {
+  const getCategoryBadge = (category: string) => {,
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
@@ -92,7 +93,7 @@ export function TeamActivity() {
             <Input
               type="search"
               placeholder="Search activities..."
-              className="w-[200px] md:w-[300px] pl-9"
+              className="w-[200px] md: w-[300px] pl-9"
             />
           </div>
           <Button variant="outline" size="icon" className="h-10 w-10" aria-label="Filter by date">
@@ -112,8 +113,8 @@ export function TeamActivity() {
               <TableHead>Time</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody>
-            {activities.map((activity) => (
+          <TableBody>,
+            {activities.map((activity) => (,
               <TableRow key={activity.id}>
                 <TableCell className="font-medium">{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
@@ -144,3 +145,4 @@ export function TeamActivity() {
     </div>
   )
 }
+;

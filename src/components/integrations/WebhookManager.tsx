@@ -20,9 +20,17 @@ export function WebhookManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook
-  } = useWebhooks($2);
-  const [newWebhook, setNewWebhook] = useState($2);
-  const eventOptions: { value: WebhookEventType, label: string}[] = [
+  } = useWebhooks(),
+  
+  const [newWebhook, setNewWebhook] = useState({
+    name: "",
+    url: "",
+    selectedEvent: "" as WebhookEventType,
+    eventTypes: [] as WebhookEventType[],
+    secret: "",
+  }),
+  
+  const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" },
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
@@ -42,12 +50,17 @@ export function WebhookManager() {
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
-      selectedEvent: "" as WebhookEventType
+      selectedEvent: "" as WebhookEventType,
     })
   },
   
-  const handleRemoveEvent = $2;
-      eventTypes: newWebhook.eventTypes.filter(e = $2;
+  const handleRemoveEvent = (event: WebhookEventType) => {
+    setNewWebhook({,
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event),
+    })
+  },
+  
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error($2);
@@ -61,11 +74,11 @@ export function WebhookManager() {
       url: "",
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
-      secret: ""
+      secret: "",
     })
   },
   
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {,
     await testWebhook(webhookId, eventType)
   },
   
@@ -79,11 +92,11 @@ export function WebhookManager() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="webhook-name">Webhook Name</Label>
-              <Input 
-                id="webhook-name" 
+              <Input ,
+                id="webhook-name",
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
@@ -94,7 +107,7 @@ export function WebhookManager() {
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
                 id="webhook-url" 
-                placeholder="https://example.com/webhook"
+                placeholder="https://example.com/webhook",
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -198,7 +211,7 @@ export function WebhookManager() {
                     <div>
                       <Label className="text-sm">Events</Label>
                       <div className="flex flex-wrap gap-2 mt-1">
-                        {webhook.event_types.map((event: WebhookEventType) => (
+                        {webhook.event_types.map((event: WebhookEventType) => (,
                           <ClickableBadge key={event} variant="secondary">
                             {eventOptions.find(e => e.value === event)?.label || event}
                           </ClickableBadge>
@@ -229,7 +242,7 @@ export function WebhookManager() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="test_event">Test (generic)</SelectItem>
-                      {webhook.event_types.map((event: WebhookEventType) => (
+                      {webhook.event_types.map((event: WebhookEventType) => (,
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>
@@ -250,14 +263,14 @@ export function WebhookManager() {
             <CardContent>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="font-medium">Status:</span>
+                  <span className="font-medium">Status:</span>,
                   <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>
                     {testResult.status} {testResult.statusText}
                   </span>
                 </div>
                 <div>
                   <span className="font-medium">Response:</span>
-                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
+                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">,
                     {testResult.responseBody || '<empty>'}
                   </pre>
                 </div>
@@ -269,3 +282,4 @@ export function WebhookManager() {
     </div>
   )
 }
+;

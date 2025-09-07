@@ -4,15 +4,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
 interface Param {
-  name: string,
-  type: string,
-  required?: boolean
+  name: string;
+  type: string;
+  required?: boolean,
 }
 
 interface ApiPlaygroundProps {
-  method: string,
-  path: string,
-  params?: Param[]
+  method: string;
+  path: string;
+  params?: Param[],
 }
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
@@ -20,8 +20,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [paramValues, setParamValues] = useState<Record<string, string>>({}),
   const [body, setBody] = useState($2);
   const [response, setResponse] = useState<string | null>(null),
-  const [loading, setLoading] = useState($2);
-  const handleParamChange = (name: string, value: string) => {
+  const [loading, setLoading] = useState(false),
+
+  const handleParamChange = (name: string, value: string) => {,
     setParamValues((prev) => ({ ...prev, [name]: value }))
   },
 
@@ -37,8 +38,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       if (query) url += `?${query}`
     }
 
-    const options: RequestInit = $2;
-      headers: {
+    const options: RequestInit = {,
+      method,
+      headers: {,
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
@@ -65,9 +67,23 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         } catch {
           responseText = $2;
       setResponse(statusInfo + responseText)
-    } catch (err: any) {
-      let errorMessage = $2;
-      if (err.name = $2;
+    } catch (err: any) {,
+      let errorMessage = 'Request failed',
+      
+      if (err.name === 'AbortError') {
+        errorMessage = 'Request timed out (15s)'
+      } else if (err.message?.includes('Failed to fetch')) {
+        errorMessage = 'Network error - check CORS configuration or API endpoint'
+      } else {
+        errorMessage = err.message || 'Unknown error occurred'
+      }
+      
+      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`),
+    } finally {
+      setLoading(false)
+    }
+  },
+
   return (
     <div className="space-y-4">
       <Input
@@ -84,4 +100,17 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       ))}
       {method !== "GET" && method !== "DELETE" && (
         <Textarea
-          value = $2;
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+      {response && <CodeBlock code={response} language="json" />}
+    </div>
+  )
+}
+;
+export default ApiPlayground;

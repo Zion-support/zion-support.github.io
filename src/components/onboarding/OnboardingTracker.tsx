@@ -5,15 +5,15 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export interface OnboardingStep {
-  id: string,
-  label: string,
-  completed: boolean,
-  link: string,
-  action?: string
+  id: string;
+  label: string;
+  completed: boolean;
+  link: string;
+  action?: string,
 }
 
 interface OnboardingTrackerProps {
-  steps: OnboardingStep[],
+  steps: OnboardingStep[];
   title?: string,
   className?: string
 }
@@ -26,7 +26,7 @@ export function OnboardingTracker({
   const completedSteps = $2;
   const progress = $2;
   return (
-    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
+    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md: p-6", className)}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
@@ -60,7 +60,7 @@ export function OnboardingTracker({
                 variant="ghost" 
                 size="sm" 
                 className="text-zion-purple hover:text-zion-cyan hover:bg-zion-blue"
-              >
+              >,
                 <Link href={step.link}>
                   {step.action} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
@@ -72,3 +72,4 @@ export function OnboardingTracker({
     </div>
   )
 }
+;

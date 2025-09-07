@@ -29,7 +29,7 @@ export function AdminHeader() {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
-          <div className="text-sm text-muted-foreground">Subscription Plan</div>
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>,
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
@@ -64,3 +64,4 @@ export function AdminHeader() {
     </div>
   )
 }
+;

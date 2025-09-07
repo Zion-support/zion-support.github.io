@@ -17,16 +17,16 @@ export function EnterprisePricingTable() {
       description: "Perfect for small teams",
       users: "Up to 10 users",
       popular: false,
-      features: [
-        { name: "Private hiring portal", included: true},
-        { name: "Dedicated talent pool", included: true},
-        { name: "Standard SLA (24h)", included: true},
-        { name: "Basic branding", included: true},
-        { name: "Admin dashboard", included: true},
-        { name: "Team collaboration", included: true},
-        { name: "API access", included: false},
-        { name: "Custom integrations", included: false},
-        { name: "Dedicated success manager", included: false}]},
+      features: [,
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Standard SLA (24h)", included: true },
+        { name: "Basic branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: false },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
       price: "$1,999",
@@ -34,16 +34,16 @@ export function EnterprisePricingTable() {
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
-      features: [
-        { name: "Private hiring portal", included: true},
-        { name: "Dedicated talent pool", included: true},
-        { name: "Enhanced SLA (8h)", included: true},
-        { name: "Advanced branding", included: true},
-        { name: "Admin dashboard", included: true},
-        { name: "Team collaboration", included: true},
-        { name: "API access", included: true},
-        { name: "Custom integrations", included: false},
-        { name: "Dedicated success manager", included: false}]},
+      features: [,
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Enhanced SLA (8h)", included: true },
+        { name: "Advanced branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
     {
       name: "Enterprise",
       price: "Custom",
@@ -51,19 +51,19 @@ export function EnterprisePricingTable() {
       description: "For large organizations",
       users: "Unlimited users",
       popular: false,
-      features: [
-        { name: "Private hiring portal", included: true},
-        { name: "Dedicated talent pool", included: true},
-        { name: "Premium SLA (1h)", included: true},
-        { name: "Full white labeling", included: true},
-        { name: "Admin dashboard", included: true},
-        { name: "Team collaboration", included: true},
-        { name: "API access", included: true},
-        { name: "Custom integrations", included: true},
-        { name: "Dedicated success manager", included: true}]}],
+      features: [,
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Premium SLA (1h)", included: true },
+        { name: "Full white labeling", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: true },
+        { name: "Dedicated success manager", included: true }]}],
 
   return (
-    <section id="pricing" className="py-20 px-4 md:px-6">
+    <section id="pricing" className="py-20 px-4 md: px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
@@ -76,8 +76,8 @@ export function EnterprisePricingTable() {
           <Table className="border rounded-lg">
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[200px]">Plan Features</TableHead>
-                {plans.map((plan) => (
+                <TableHead className="w-[200px]">Plan Features</TableHead>,
+                {plans.map((plan) => (,
                   <TableHead key={plan.name} className="text-center">
                     <div className="flex flex-col items-center">
                       {plan.popular && (
@@ -131,3 +131,4 @@ export function EnterprisePricingTable() {
     </section>
   )
 }
+;

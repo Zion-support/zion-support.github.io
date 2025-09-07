@@ -1,24 +1,11 @@
 return (
 
-    <div className='space-y-6'>;
-      <div>;
-        <h2 className='text-xl font-semibold mb-2'>;
-          Certifications & Licenses;
-        </h2>;
-        <p className='text-muted-foreground'>;
-          Add any professional certifications, licenses, or credentials you have;
-          earned.;
-        </p>;
-      </div>;
-
-      {certifications && certifications.length > 0 && (;
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { Certification } from '@/types/resume';
-import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -27,10 +14,10 @@ import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
-  resumeId: string,
-  certifications: Certification[],
-  onComplete: () => void,
-  onBack: () => void
+  resumeId: string;
+  certifications: Certification[];
+  onComplete: () => void;
+  onBack: () => void,
 }
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
@@ -39,14 +26,15 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const [error, setError] = useState<string | null>(null),
 
   // Helper function to format dates as strings for form inputs
-  const formatDateValue = $2;
-    if (typeof dateValue = $2;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {,
+    if (!dateValue) return '',
+    if (typeof dateValue === 'string') return dateValue,
     return format(dateValue, 'yyyy-MM-dd')
   },
 
   const form = useForm<CertificationFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(certificationSchema),
+    defaultValues: {,
       name: '',
       issuing_organization: '',
       issue_date: '',
@@ -55,11 +43,12 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       credential_url: ''}}),
 
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
-    try {
-      setError($2);
+    try {,
+      setError(null),
       let success,
 
-      const certData: Certification = $2;
+      const certData: Certification = {,
+        name: data.name,
         issuing_organization: data.issuing_organization,
         issue_date: data.issue_date || undefined,
         expiration_date: data.expiration_date || undefined,
@@ -77,17 +66,24 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message || 'An error occurred'),
     }
   },
 
-  const handleEdit = (cert: Certification) => {
-    setEditingId($2);
-    form.reset($2);
+  const handleEdit = (cert: Certification) => {,
+    setEditingId(cert.id!),
+    form.reset({
+      ...cert,
+      issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date)})
   },
 
-  const handleDelete = $2;
+  const handleDelete = async (id: string) => {
+    if (confirm('Are you sure you want to delete this certification?')) {
+      await deleteCertification(id),
+    }
+  },
+
   return (
     <div className='space-y-6'>
       <div>
@@ -169,3 +165,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
+;

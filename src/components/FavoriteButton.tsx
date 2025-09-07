@@ -1,10 +1,10 @@
-import React from 'react';,
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';,
-import { useWishlist } from '@/hooks/useWishlist';,
-import { useAuth } from '@/hooks/useAuth';,
-import { toast } from '@/hooks/use-toast';,
-import { LoginModal } from '@/components/auth/LoginModal';,
+import React from 'react';
+import { Heart } from 'lucide-react'
+import { cn } from '@/lib/utils';
+import { useWishlist } from '@/hooks/useWishlist';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
 import {
   Tooltip,
   TooltipContent,
@@ -12,16 +12,17 @@ import {
   TooltipTrigger} from '@/components/ui/tooltip',
 
 interface FavoriteButtonProps {
-  itemId: string,
-  className?: string
+  itemId: string;
+  className?: string,
 }
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-  const { isWishlisted, toggle } = useWishlist($2);
-  const { isAuthenticated } = useAuth($2);
-  const [loginOpen, setLoginOpen] = React.useState($2);
-  const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation($2);
+  const { isWishlisted, toggle } = useWishlist(),
+  const { isAuthenticated } = useAuth(),
+  const [loginOpen, setLoginOpen] = React.useState(false),
+
+  const handleClick = (e: React.MouseEvent) => {,
+    e.stopPropagation(),
     if (!isAuthenticated) {
       setLoginOpen($2);
       return
@@ -32,7 +33,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     // Provide feedback
     toast({
       title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
-      description: wasWishlisted ? "Item has been removed from your wishlist" 
+      description: wasWishlisted 
+        ? "Item has been removed from your wishlist",
         : "Item has been added to your wishlist"})
   },
 
@@ -43,8 +45,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-              className = $2;
-                className
+              className={cn(
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors', className
               )}
               onClick = $2;
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
@@ -59,3 +61,4 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     </>
   )
 }
+;

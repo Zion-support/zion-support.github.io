@@ -3,22 +3,23 @@ import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
 interface SocialShareButtonsProps {
-  title: string}
+  title: string,
+}
 
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareUrl = $2;
   const shareText = encodeURIComponent($2);
   const shareToTwitter = $2;
       '_blank'
-    )
+    );
   },
 
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank')
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, '_blank');
   },
 
   const shareToLinkedIn = () => {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank')
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, '_blank');
   },
 
   const copyLink = $2;
@@ -45,3 +46,4 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     </div>
   )
 }
+;

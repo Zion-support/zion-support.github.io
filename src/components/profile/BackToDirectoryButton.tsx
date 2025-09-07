@@ -14,5 +14,5 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
-  )
+  ),
 }

@@ -5,15 +5,18 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
-  const [email, setEmail] = useState($2);
-  const [honeypot, setHoneypot] = useState($2);
-  const [isSubmitting, setIsSubmitting] = useState($2);
-  const [emailError, setEmailError] = useState($2);
-  const { toast } = useToast($2);
-  const EMAIL_REGEX = $2;
-  const lastSubmit = useRef($2);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault($2);
+  const [email, setEmail] = useState(''),
+  const [honeypot, setHoneypot] = useState(''),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [emailError, setEmailError] = useState(''),
+  const { toast } = useToast(),
+
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+
+  const lastSubmit = useRef(0),
+
+  const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault(),
     if (honeypot) return, // ignore bots
     const now = Date.now($2);
     if (now - lastSubmit.current < 1000) return,
@@ -31,30 +34,26 @@ export function FooterNewsletter(): React.ReactElement {
 
     try {
       const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmedEmail})
-      }),
-
-      const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: trimmedEmail })
+      }), const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error
 
       if (res.ok) {
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` })
+          toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` });
         } else {
-          toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` })
+          toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` });
         }
         setEmail($2);
         // setEmailError(''), // Already cleared if regex passed
       } else {
         logErrorToProduction($2);
         // Use a more specific error message if available from API, otherwise generic
-        const errorMessage = $2;
-        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
+        const errorMessage = data.error || 'Subscription failed. Please try again.',
+        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` });
       }
-    } catch (err: any) {
-      logErrorToProduction($2);
-      toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` })
+    } catch (err: any) {,
+      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` });
     } finally {
       setIsSubmitting(false)
     }
@@ -65,7 +64,7 @@ export function FooterNewsletter(): React.ReactElement {
       id="footer-newsletter-form"
       aria-label="Newsletter sign-up"
       onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
+      className="flex flex-col space-y-3 sm: flex-row sm:space-y-0 sm:space-x-2"
     >
       <label htmlFor="newsletter-email" className="sr-only">
         Email address for newsletter subscription
@@ -74,8 +73,8 @@ export function FooterNewsletter(): React.ReactElement {
         type="email"
         id="newsletter-email"
         name="newsletterEmail"
-        placeholder="Enter your email"
-        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center"
+        placeholder="Enter your email",
+        className="flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center",
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         autoComplete="email"
@@ -103,9 +102,9 @@ export function FooterNewsletter(): React.ReactElement {
             Subscribing...
           </>
         ) : (
-          'Subscribe'
+          'Subscribe',
         )}
       </Button>
     </form>
   )
-} 
+} ;

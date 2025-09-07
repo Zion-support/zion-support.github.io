@@ -13,12 +13,13 @@ import {
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
-  id: string,
-  type: "product" | "service" | "talent" | "blog" | "doc",
-  title: string,
-  description: string}
+  id: string;
+  type: "product" | "service" | "talent" | "blog" | "doc";
+  title: string;
+  description: string,
+}
 
-function highlight(text: string, term: string) {
+function highlight(text: string, term: string) {,
   if (!term) return text,
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   const regex = new RegExp(`(${escaped})`, "gi"),
@@ -78,8 +79,8 @@ export default function SearchPage() {
   }, [router.isReady, query]), // Fixed dependency array
 
   const fetchResults = async (term: string) => {
-    if (!term.trim()) {
-      setResults($2);
+    if (!term.trim()) {,
+      setResults([]),
       return
     }
 
@@ -101,8 +102,8 @@ export default function SearchPage() {
     }
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault($2);
+  const handleSubmit = (e: React.FormEvent) => {,
+    e.preventDefault(),
     if (query.trim()) {
       router.push(`/search?q = $2;
   // Add key prop to force re-render when route changes
@@ -133,7 +134,7 @@ export default function SearchPage() {
           <div>
             <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>
             <div className="space-y-4">
-              {blogResults.map(r => (
+              {blogResults.map(r => (,
                 <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
                   <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>
                   <p className="text-zion-slate-light">{highlight(r.description, query)}</p>
@@ -235,3 +236,4 @@ export default function SearchPage() {
     </div>
   )
 }
+;

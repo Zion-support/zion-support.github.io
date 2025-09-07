@@ -11,6 +11,10 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       ref={ref}
       {...props}
       className={cn('animate-spin', className)}
-      width = $2;
-Spinner.displayName = $2;
-export default Spinner,
+      width={size}
+      height={size}
+    />
+  )
+),
+Spinner.displayName = 'Spinner',;
+export default Spinner;

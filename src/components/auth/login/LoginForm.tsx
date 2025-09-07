@@ -28,19 +28,23 @@ const loginSchema = z.object({
 
 type LoginFormValues = $2;
 export function LoginForm() {
-  const { isLoading, login } = useAuth($2);
-  const [showPassword, setShowPassword] = useState($2);
-  const [isSubmitting, setIsSubmitting] = useState($2);
-  const [isResending, setIsResending] = useState($2);
-  const [verificationMessage, setVerificationMessage] = useState($2);
-  const router = useRouter($2);
-  const form = $2;
-    defaultValues: {
+  const { isLoading, login } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isResending, setIsResending] = useState(false),
+  const [verificationMessage, setVerificationMessage] = useState(''),
+  const router = useRouter(),
+  
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema) as any,
+    defaultValues: {,
       email: "",
       password: "",
       rememberMe: false}}),
 
-  const onSubmit = $2;
+  const onSubmit = async (data: LoginFormValues) => {,
+    if (isSubmitting) return,
+
     try {
       setIsSubmitting($2);
       // Pass email and password to the login function
@@ -125,7 +129,7 @@ export function LoginForm() {
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple",
                     {...field}
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -148,7 +152,7 @@ export function LoginForm() {
                     placeholder="Enter password"
                     aria-label="Password"
                     aria-invalid={!!form.formState.errors.password}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple",
                     {...field}
                   />
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -156,7 +160,7 @@ export function LoginForm() {
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan",
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -206,7 +210,7 @@ export function LoginForm() {
         </div>
         <Button
           type="submit"
-          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
+          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible",
           disabled={isLoading || isSubmitting}
         >
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
@@ -242,5 +246,6 @@ export function LoginForm() {
         </p>
       </form>
     </Form>
-  )
+  ),
 }
+;

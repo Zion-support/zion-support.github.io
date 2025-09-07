@@ -12,9 +12,9 @@ import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
-  job: Job,
-  onClose: () => void,
-  onApplySuccess?: (jobId: string) => Promise<void>
+  job: Job;
+  onClose: () => void;
+  onApplySuccess?: (jobId: string) => Promise<void>,
 }
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
@@ -27,21 +27,35 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
   
-  const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume($2);
+  const handleResumeSelected = (resume: ResumeOption) => {,
+    setSelectedResume(resume),
     setSelectedResumeId(resume.id)
   },
   
   const handleApply = async () => {
     if (!message.trim()) {
-      toast($2);
+      toast({
+        title: "Message required",
+        description: "Please enter a message before applying.",
+        variant: "destructive",
+      }),
       return
     }
     
     try {
       setIsSubmitting($2);
       // First submit the application to the job applications table
-      const applicationSuccess = await applyToJob($2);
+      const applicationSuccess = await applyToJob(
+        job.id,
+        message,
+        selectedResume && selectedResume.type === 'ai_resume'
+          ? selectedResumeId || undefined
+          : undefined,
+        selectedResume && selectedResume.type === 'custom_upload'
+          ? selectedResume.file
+          : undefined,
+      ),
+      
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
       }
@@ -58,12 +72,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       }
       
       // Create context data for the conversation
-      const contextData = $2;
-        description: job.description,
+      const contextData = {;
+        title: job.title;
+        description: job.description;
         attachedResume: selectedResume ? {
-          id: selectedResume.id,
-          title: selectedResume.title,
-          type: selectedResume.type
+          id: selectedResume.id;
+          title: selectedResume.title;
+          type: selectedResume.type,
         } : null
       },
       
@@ -81,7 +96,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsSubmitting(false)
@@ -120,7 +135,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"
-          variant="outline"
+          variant="outline",
           onClick={onClose}
           className="border-zion-purple/30 text-white"
         >
@@ -138,7 +153,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
               Submitting...
             </>
           ) : (
-            'Submit Application'
+            'Submit Application',
           )}
         </Button>
       </div>

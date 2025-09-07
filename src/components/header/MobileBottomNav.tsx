@@ -29,18 +29,19 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const navItems = $2;
       href: "/",
       icon: Home,
-      matches: (path: string) => path = $2;
+      matches: (path: string) => path === "/",
+    },
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace"),
     },
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
     },
     {
       name: "Wishlist",
@@ -48,35 +49,46 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       icon: Heart,
       matches: (path: string) => path.startsWith($2);
       badge: favoritesCount,
-      authRequired: true},
+      authRequired: true,
+    },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
       matches: (path: string) => path.startsWith("/messages") || path.startsWith($2);
       badge: unreadCount,
-      authRequired: true},
+      authRequired: true,
+    },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-      matches: (path: string) => path.startsWith($2);
-      badge: cartCount},
+      matches: (path: string) => path.startsWith("/cart"),
+      badge: cartCount,
+    },
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
-      matches: (path: string) => path.startsWith($2);
-      authRequired: true}
+      matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true,
+    }
   ],
 
   // Filter items based on auth status
   const visibleItems = $2;
   return (
-    <nav className = $2;
-              item.matches(router.pathname)
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
+      <div className="flex justify-around items-center h-16">
+        {visibleItems.map(item => (
+          <Link,
+            key={item.name}
+            href={item.href}
+            aria-label={item.name}
+            className={cn(
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary", item.matches(router.pathname)
                 ? "text-primary"
-                : "text-foreground/70 hover:text-foreground"
+                : "text-foreground/70 hover:text-foreground",
             )}
           >
             <div className="relative">
@@ -94,3 +106,4 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     </nav>
   )
 }
+;

@@ -9,11 +9,11 @@ import { ContractPreview } from "./components/ContractPreview";
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
-  isOpen: boolean,
-  onClose: () => void,
-  talent: TalentProfile,
-  clientName: string,
-  onContractGenerated?: (contractContent: string) => void
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void,
 }
 
 export function ContractBuilder({
@@ -28,12 +28,16 @@ export function ContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState($2);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState($2);
-  const handleLoadTemplate = $2;
-  const handleContractGenerated = (contract: string) => {
-    setGeneratedContract($2);
-    setActiveTab($2);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
+
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData),
+  },
+
+  const handleContractGenerated = (contract: string) => {,
+    setGeneratedContract(contract),
+    setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
     }
@@ -120,3 +124,4 @@ export function ContractBuilder({
     </Dialog>
   )
 }
+;

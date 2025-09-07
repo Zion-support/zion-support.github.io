@@ -4,16 +4,32 @@ import Link from "next/link", // Changed from react-router-dom
 import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
-    return fallback
+    return fallback,
   }
   return envVar
 }
 
-const TWITTER_URL = resolveUrl($2);
-const LINKEDIN_URL = resolveUrl($2);
-const FACEBOOK_URL = resolveUrl($2);
-const INSTAGRAM_URL = resolveUrl($2);
-const GITHUB_URL = resolveUrl($2);
+const TWITTER_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
+  "https: //twitter.com/ZionTechGroup",
+),
+const LINKEDIN_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
+  "https: //linkedin.com/company/ziontechgroup",
+),
+const FACEBOOK_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
+  "https: //facebook.com/ZionTechGroup",
+),
+const INSTAGRAM_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
+  "https: //instagram.com/ZionTechGroup",
+),
+const GITHUB_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
+  "https: //github.com/ZionTechGroup",
+),
+
 export function Footer() {
   return (
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
@@ -22,7 +38,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">ZION</span>
-            </div>
+            </div>,
             <p className="text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}>
               The world&apos,s first free marketplace dedicated to high-tech and artificial intelligence.
             </p>
@@ -38,7 +54,7 @@ export function Footer() {
                 <Twitter className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a
+              <a,
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,7 +65,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a
+              <a,
                 href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -60,7 +76,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a
+              <a,
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,7 +87,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a
+              <a,
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -88,7 +104,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Marketplace</h3>
             <ul className="space-y-2">
-              <li><Link href="/marketplace" className="text-foreground/80 hover:text-primary transition-colors text-sm">Products</Link></li>
+              <li><Link href="/marketplace" className="text-foreground/80 hover:text-primary transition-colors text-sm">Products</Link></li>,
               {/* Ensure the services link routes to the main services page */}
               <li>
                 <Link
@@ -137,12 +153,23 @@ export function Footer() {
 
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Newsletter</h3>
-            <p className="text-foreground/80 mb-4 text-sm">
+            <p className="text-foreground/80 mb-4 text-sm">,
               Stay updated with the latest news on tech, AI, and marketplace opportunities.
             </p>
-            <div className = $2;
-                behavior: 'smooth' 
-              })
+            <div className="max-w-sm">
+              <FooterNewsletter />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex justify-end">
+          <button
+            type="button"
+            onClick={() => {
+              window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth',
+              });
             }}
             className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
             aria-label="Back to top"
@@ -154,7 +181,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-primary/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-foreground/80 text-sm">
+            <p className="text-foreground/80 text-sm">,
               &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md: mt-0">
@@ -182,5 +209,6 @@ export function Footer() {
         <FeedbackWidget />
       </div>
     </footer>
-  )
+  ),
 }
+;

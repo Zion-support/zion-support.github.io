@@ -27,3 +27,4 @@ export function Logo({ customLogo }: LogoProps) {
     </Link>
   )
 }
+;

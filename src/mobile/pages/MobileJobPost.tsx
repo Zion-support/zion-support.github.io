@@ -16,7 +16,8 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-type JobPostStep = $2;
+type JobPostStep = "details" | "requirements" | "budget" | "preview",
+
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   
@@ -30,7 +31,7 @@ export function MobileJobPost() {
       case "preview":
         return <PreviewStep />,
       default:
-        return <DetailsStep />
+        return <DetailsStep />,
     }
   },
   
@@ -151,7 +152,10 @@ function RequirementsStep() {
     }
   },
   
-  const removeSkill = $2;
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill)),
+  },
+  
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -199,7 +203,7 @@ function RequirementsStep() {
             >
               {skill}
               <button 
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
+                className="ml-1 rounded-full hover:bg-background/20 p-1",
                 onClick={() => removeSkill(skill)}
               >
                 ×
@@ -333,7 +337,7 @@ function PreviewStep() {
           </div>
           
           <div className="space-y-1 text-sm mt-4">
-            <p className="font-medium">Salary Range:</p>
+            <p className="font-medium">Salary Range:</p>,
             <p>$80,000 - $120,000 USD / year</p>
           </div>
           
@@ -343,7 +347,7 @@ function PreviewStep() {
           </div>
           
           <div className="space-y-1 text-sm mt-3">
-            <p className="font-medium">Application Deadline:</p>
+            <p className="font-medium">Application Deadline:</p>,
             <p>December 15, 2023</p>
           </div>
           
@@ -358,3 +362,4 @@ function PreviewStep() {
     </div>
   )
 }
+;

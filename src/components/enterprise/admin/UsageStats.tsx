@@ -40,7 +40,7 @@ export function UsageStats() {
               <div className="flex items-center justify-between mb-2">
                 <div className="text-sm font-medium">Monthly job posting limit</div>
                 <Badge variant="outline">25 / 50</Badge>
-              </div>
+              </div>,
               <Progress value={50} className="h-2" />
             </div>
             <div className="grid gap-4">
@@ -52,7 +52,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -81,7 +81,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -110,7 +110,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -150,7 +150,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -173,3 +173,4 @@ export function UsageStats() {
     </div>
   )
 }
+;

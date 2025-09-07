@@ -24,19 +24,20 @@ import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 export default function CartPage() {
-  const { t } = useTranslation($2);
-  const items = $2;
-  const dispatch = $2;
-  const { user, isAuthenticated } = useAuth($2);
-  const [loading, setLoading] = useState($2);
-  const [guestOpen, setGuestOpen] = useState($2);
-  const { toggle: toggleWishlist, isWishlisted } = useWishlist($2);
-  const updateQuantity = (id: string, qty: number) => {
-    dispatch(updateQuantityAction({ id, quantity: qty}))
+  const { t } = useTranslation(),
+  const items = useSelector((s: RootState) => s.cart.items),
+  const dispatch = useDispatch<AppDispatch>(),
+  const { user, isAuthenticated } = useAuth(),
+  const [loading, setLoading] = useState(false),
+  const [guestOpen, setGuestOpen] = useState(false),
+  const { toggle: toggleWishlist, isWishlisted } = useWishlist(),
+
+  const updateQuantity = (id: string, qty: number) => {,
+    dispatch(updateQuantityAction({ id, quantity: qty }))
   },
 
-  const removeItem = (id: string) => {
-    const item = items.find($2);
+  const removeItem = (id: string) => {,
+    const item = items.find(i => i.id === id),
     dispatch(removeItemAction(id)),
     
     if (item) {
@@ -46,12 +47,13 @@ export default function CartPage() {
     }
   },
 
-  const saveForLater = (id: string, name: string) => {
-    const wasWishlisted = isWishlisted($2);
-    toggleWishlist($2);
+  const saveForLater = (id: string, name: string) => {,
+    const wasWishlisted = isWishlisted(id),
+    toggleWishlist(id),
     toast({
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
-      description: wasWishlisted ? `${name} has been removed from your wishlist`
+      description: wasWishlisted,
+        ? `${name} has been removed from your wishlist`
         : `${name} has been added to your wishlist`})
   },
 
@@ -65,8 +67,8 @@ export default function CartPage() {
       if (!sessionId) throw new Error($2);
       const { error } = await stripe.redirectToCheckout($2);
       if (error) logErrorToProduction('Stripe redirect error:', { data: error.message })
-    } catch (err: any) {
-      logErrorToProduction($2);
+    } catch (err: any) {,
+      logErrorToProduction('Checkout error:', { data: err }),
       alert(err.message || 'Checkout failed')
     } finally {
       setLoading(false)
@@ -78,9 +80,11 @@ export default function CartPage() {
   const tax = subtotal * 0.08, // 8% tax estimate
   
   // Only add shipping for physical items
-  const hasPhysicalItems = items.some($2);
-  const shipping = $2;
-  const total = $2;
+  const hasPhysicalItems = items.some(item => 
+    !item.type || item.type === 'physical' // Default to physical if type not specified
+  ),
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15: 0, const total = subtotal + tax + shipping,
+
   // Empty cart state
   if (items.length === 0) {
     return (
@@ -128,7 +132,7 @@ export default function CartPage() {
           </motion.div>
         </div>
       </div>
-    )
+    ),
   }
 
   return (
@@ -137,23 +141,23 @@ export default function CartPage() {
         {/* Header */}
         <motion.div 
           className="text-center mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0}}
+          initial={{ opacity: 0, y: -20 }},
+          animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-4xl font-bold text-white mb-2">Your Cart</h1>
           <p className="text-zion-slate-light">
             {items.length} {items.length === 1 ? 'item' : 'items'} ready for checkout
           </p>
         </motion.div>
-
-        <div className="grid lg:grid-cols-3 gap-8">
+,
+        <div className="grid lg:grid-cols-3 gap-8">,
           {/* Cart Items */}
           <motion.div 
-            className="lg:col-span-2 space-y-4"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0}}
+            className="lg: col-span-2 space-y-4",
+            initial={{ opacity: 0, x: -20 }},
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-          >
+          >,
             {items.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -164,7 +168,7 @@ export default function CartPage() {
                 <Card className="bg-zion-blue-light/80 border-zion-cyan/20 hover:border-zion-cyan/40 transition-colors">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
-                      <div className="flex-1">
+                      <div className="flex-1">,
                         <h3 className="text-lg font-semibold text-white mb-1">{item.name}</h3>
                         <p className="text-zion-cyan font-medium text-xl">${item.price.toFixed(2)}</p>
                       </div>
@@ -205,7 +209,7 @@ export default function CartPage() {
                             </Button>
                             <Button
                               variant="ghost"
-                              size="sm"
+                              size="sm",
                               onClick={() => saveForLater(item.id, item.name)}
                               className="text-zion-cyan hover:bg-zion-cyan/10"
                             >
@@ -217,15 +221,15 @@ export default function CartPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </motion.div>,
             ))}
           </motion.div>
 
           {/* Order Summary */}
           <motion.div
-            className="lg:col-span-1"
-            initial={{ opacity: 0, x: 20}}
-            animate={{ opacity: 1, x: 0}}
+            className="lg: col-span-1",
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
             <Card className="bg-zion-blue-light/80 border-zion-cyan/20 sticky top-8">
@@ -280,7 +284,7 @@ export default function CartPage() {
                   )}
                   
                   <Button 
-                    className="w-full bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue" 
+                    className="w-full bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue",
                     onClick={startCheckout} 
                     disabled={loading}
                     size="lg"
@@ -324,3 +328,4 @@ export default function CartPage() {
     </div>
   )
 }
+;

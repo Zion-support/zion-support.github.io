@@ -24,24 +24,26 @@ import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
-  isOpen: boolean,
-  onClose: () => void,
-  publisherName: string,
+  isOpen: boolean;
+  onClose: () => void;
+  publisherName: string;
   publisherEmail?: string,
   productId?: string
 }
 
-type FormValues = $2;
-  message: string},
+type FormValues = {
+  subject: string;
+  message: string,
+},
 
 const schema: yup.ObjectSchema<FormValues> = yup
   .object({
     subject: yup
-      .string()
+      .string(),
       .min(5, 'Subject must be at least 5 characters')
       .required($2);
     message: yup
-      .string()
+      .string(),
       .min(20, 'Message must be at least 20 characters')
       .required('Message is required')})
   .required($2);
@@ -78,8 +80,8 @@ export function ContactPublisherModal({
   },
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      e.stopPropagation($2);
+    if (e.key === 'Escape') {,
+      e.stopPropagation(),
       onClose()
     }
   },
@@ -89,7 +91,7 @@ export function ContactPublisherModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
+          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md",
           onKeyDown={handleKeyDown}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
@@ -103,8 +105,8 @@ export function ContactPublisherModal({
           {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (
             <div className="mb-4 text-zion-slate-light">
-            <span className="block">Email:</span>
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
+            <span className="block">Email:</span>,
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">,
               {publisherEmail}
             </a>
           </div>
@@ -162,3 +164,4 @@ export function ContactPublisherModal({
     </>
   )
 }
+;

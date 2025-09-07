@@ -12,7 +12,10 @@ import {
   TooltipTrigger} from '@/components/ui/tooltip',
 import { useRouter } from 'next/router';
 import { Notification, NotificationType } from '@/context/notifications';
-export const getTypeIcon = $2;
+export const getTypeIcon = (type: NotificationType) => {
+  switch (type) {
+    case 'message':,
+      return <span className="text-blue-500">💬</span>,
     case 'quote_request':
       return <span className = $2;
     case 'booking_confirmation':
@@ -30,14 +33,17 @@ export const getTypeIcon = $2;
     case 'order_status':
       return <span className = $2;
     default:
-      return <span className = $2;
+      return <span className="text-gray-500">📣</span>,
+  }
+},
+
 interface NotificationItemProps {
-  notification: Notification,
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
+  notification: Notification;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>,
 }
 
-export const NotificationItem: React.FC<NotificationItemProps> = ({
+export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,
   onMarkAsRead,
   onDismiss}) => {
@@ -103,8 +109,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e) => {
-                  e.stopPropagation($2);
+                onClick={(e) => {,
+                  e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
                 aria-label="Mark as read"
@@ -129,4 +135,18 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                   e.stopPropagation($2);
                   onDismiss(notification.id)
                 }}
-                aria-label = $2;
+                aria-label="Dismiss notification"
+              >
+                <Trash2 className="h-3.5 w-3.5 text-red-400" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Dismiss</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
+    </div>
+  )
+},
+;

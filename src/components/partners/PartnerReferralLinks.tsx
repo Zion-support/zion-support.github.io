@@ -16,13 +16,14 @@ export function PartnerReferralLinks() {
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
-  const baseLink = getReferralLink($2);
-  const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText($2);
+  const baseLink = getReferralLink(),
+  
+  const handleCopyLink = (link: string) => {,
+    navigator.clipboard.writeText(link),
     toast({
       title: "Link copied!",
       description: "The referral link has been copied to your clipboard",
-      variant: "default"
+      variant: "default",
     })
   },
   
@@ -39,8 +40,9 @@ export function PartnerReferralLinks() {
         url.searchParams.append("source", customParam)
       }
       
-      const newLink = $2;
-        link: url.toString()
+      const newLink = {
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+        link: url.toString(),
       },
       
       setGeneratedLinks($2);
@@ -122,7 +124,7 @@ export function PartnerReferralLinks() {
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
-                <Select 
+                <Select,
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}
                 >
@@ -170,7 +172,7 @@ export function PartnerReferralLinks() {
       </div>
 
       <div className="grid gap-4">
-        {generatedLinks.length > 0 ? (
+        {generatedLinks.length > 0 ? (,
           generatedLinks.map((item, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
@@ -220,4 +222,4 @@ export function PartnerReferralLinks() {
       </div>
     </div>
   )
-}
+};

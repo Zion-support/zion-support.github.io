@@ -16,9 +16,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "Cannot access account after password reset",
     status: "open",
     priority: "high",
-    createdAt: "2023-12-15T14: 30: 00Z",
-    lastUpdated: "2023-12-15T15: 45: 00Z",
-    category: "authentication"
+    createdAt: "2023-12-15T14:30:00Z",
+    lastUpdated: "2023-12-15T15:45:00Z",
+    category: "authentication",
   },
   {
     id: "SR-1002",
@@ -27,9 +27,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-14T09: 15: 00Z",
-    lastUpdated: "2023-12-15T13: 20: 00Z",
-    category: "billing"
+    createdAt: "2023-12-14T09:15:00Z",
+    lastUpdated: "2023-12-15T13:20:00Z",
+    category: "billing",
   },
   {
     id: "SR-1003",
@@ -38,9 +38,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "Unable to download invoice PDF",
     status: "open",
     priority: "medium",
-    createdAt: "2023-12-15T11: 00: 00Z",
-    lastUpdated: "2023-12-15T11: 00: 00Z",
-    category: "billing"
+    createdAt: "2023-12-15T11:00:00Z",
+    lastUpdated: "2023-12-15T11:00:00Z",
+    category: "billing",
   },
   {
     id: "SR-1004",
@@ -49,9 +49,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16: 45: 00Z", 
-    lastUpdated: "2023-12-13T16: 45: 00Z",
-    category: "api"
+    createdAt: "2023-12-13T16:45:00Z", 
+    lastUpdated: "2023-12-13T16:45:00Z",
+    category: "api",
   },
   {
     id: "SR-1005",
@@ -60,9 +60,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "Dispute with freelancer over delivered work quality",
     status: "in-progress",
     priority: "high",
-    createdAt: "2023-12-12T10: 30: 00Z",
-    lastUpdated: "2023-12-15T09: 15: 00Z",
-    category: "disputes"
+    createdAt: "2023-12-12T10:30:00Z",
+    lastUpdated: "2023-12-15T09:15:00Z",
+    category: "disputes",
   },
   {
     id: "SR-1006",
@@ -71,9 +71,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-08T13: 20: 00Z",
-    lastUpdated: "2023-12-15T08: 30: 00Z",
-    category: "verification"
+    createdAt: "2023-12-08T13:20:00Z",
+    lastUpdated: "2023-12-15T08:30:00Z",
+    category: "verification",
   },
   {
     id: "SR-1007",
@@ -82,9 +82,9 @@ const MOCK_SUPPORT_REQUESTS = $2;
     issue: "Cannot upload portfolio images",
     status: "resolved",
     priority: "medium",
-    createdAt: "2023-12-10T15: 10: 00Z",
-    lastUpdated: "2023-12-13T11: 25: 00Z",
-    category: "profile"
+    createdAt: "2023-12-10T15:10:00Z",
+    lastUpdated: "2023-12-13T11:25:00Z",
+    category: "profile",
   }
 ],
 
@@ -115,7 +115,7 @@ export default function SupportRequests() {
         description="Manage and track user support requests and issues"
       />
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+        <div className="flex flex-col md: flex-row items-start md:items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Support Requests
@@ -129,13 +129,12 @@ export default function SupportRequests() {
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
               New Support Case
             </Button>
-          </div>
-        </div>
-        
+          </div>,
+        </div>,
         {/* Status Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <Card>
-            <CardHeader className="pb-2">
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <Card>,
+            <CardHeader className="pb-2">,
               <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
@@ -173,10 +172,10 @@ export default function SupportRequests() {
           
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="flex flex-col md: flex-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />,
+                <Input,
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -226,8 +225,7 @@ export default function SupportRequests() {
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
-            </div>
-            
+            </div>,
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -319,3 +317,4 @@ export default function SupportRequests() {
     </>
   )
 }
+;

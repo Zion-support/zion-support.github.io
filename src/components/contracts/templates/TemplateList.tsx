@@ -20,10 +20,10 @@ import {
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
 interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
+  templates: ContractTemplate[];
+  isLoading: boolean;
+  onSelect: (template: ContractTemplate) => void;
+  onEdit: (template: ContractTemplate) => void,
 }
 
 export function TemplateList({
@@ -33,10 +33,14 @@ export function TemplateList({
   onEdit
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates($2);
-  const { user } = useAuth($2);
-  const router = useRouter($2);
-  const handleDeleteClick = $2;
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),
+  const { user } = useAuth(),
+  const router = useRouter(),
+
+  const handleDeleteClick = (templateId: string) => {
+    setTemplateToDelete(templateId),
+  },
+
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync($2);
@@ -44,8 +48,10 @@ export function TemplateList({
     }
   },
 
-  const handleSetDefault = $2;
-      router.push(`/auth/login?returnTo = $2;
+  const handleSetDefault = async (templateId: string) => {
+    if (!user) {,
+      const currentPath = router.asPath,
+      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`),
       return
     }
     await setDefaultTemplate.mutateAsync(templateId)
@@ -155,7 +161,7 @@ export function TemplateList({
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction 
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90",
               onClick={handleDeleteConfirm}
             >
               Delete
@@ -166,3 +172,4 @@ export function TemplateList({
     </div>
   )
 }
+;

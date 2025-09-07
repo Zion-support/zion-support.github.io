@@ -7,12 +7,12 @@ import { Loader2, Sparkles, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
-  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
+  projectName: string;
+  scopeSummary: string;
+  startDate: Date;
   endDate?: Date,
-  projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+  projectType: string;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void,
 }
 
 export function MilestoneSuggestions({
@@ -23,12 +23,15 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator($2);
-  const [showSuggestions, setShowSuggestions] = useState($2);
-  const handleGenerateMilestones = $2;
-      startDate: startDate.toISOString($2);
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
+  const [showSuggestions, setShowSuggestions] = useState(false),
+
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {,
+      scope: `${projectName}: ${scopeSummary}`,
+      startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
-      projectType: projectType || "Other"
+      projectType: projectType || "Other",
     },
 
     const milestones = await generateMilestones($2);
@@ -41,7 +44,7 @@ export function MilestoneSuggestions({
   },
 
   const formatDate = (dateString: string) => {
-    try {
+    try {,
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
       return dateString
@@ -112,3 +115,4 @@ export function MilestoneSuggestions({
     </div>
   )
 }
+;

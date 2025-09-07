@@ -25,14 +25,14 @@ export default function AccountSettings() {
     // Simulate API call
     setTimeout(() => {
       try {
-        setDisplayWeb3($2);
-        setDidHandle($2);
-        setEnableBackup($2);
-        logInfo($2);
-        toast.success('Account settings updated successfully')
+        setDisplayWeb3(displayWeb3),
+        setDidHandle(didHandle),
+        setEnableBackup(enableBackup),
+        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),
+        toast.success('Account settings updated successfully');
       } catch (e) {
-        logErrorToProduction($2);
-        toast.error('Failed to save settings')
+        logErrorToProduction('Failed to save settings', { data:  e }),
+        toast.error('Failed to save settings');
       } finally {
         setIsSubmitting(false)
       }
@@ -64,7 +64,7 @@ export default function AccountSettings() {
       
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet')
+      toast.error(error.message || 'Failed to connect wallet');
     }
   },
 
@@ -75,7 +75,7 @@ export default function AccountSettings() {
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md: grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -84,8 +84,8 @@ export default function AccountSettings() {
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input
-                  id="email"
+                <Input,
+                  id="email",
                   value={user?.email || ''}
                   disabled
                   className="bg-gray-100"
@@ -188,7 +188,7 @@ export default function AccountSettings() {
                     >
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
+                    </svg>,
                     <span>{didHandle}</span>
                   </div>
                 ) : (
@@ -209,7 +209,7 @@ export default function AccountSettings() {
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                     <span>No wallet connected</span>
-                  </div>
+                  </div>,
                 )}
               </div>
               
@@ -265,3 +265,4 @@ export default function AccountSettings() {
     </>
   )
 }
+;

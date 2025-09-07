@@ -6,11 +6,12 @@ import { format } from "date-fns";
 // from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
-  message: string,
-  isUser: boolean,
-  timestamp: Date}
+  message: string;
+  isUser: boolean;
+  timestamp: Date,
+}
 
-export const ChatMessage: React.FC<ChatMessageProps> = ({
+export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,
   isUser,
   timestamp}: ChatMessageProps) => {
@@ -23,7 +24,25 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
-      <Avatar className = $2;
+      <Avatar className="h-8 w-8">
+        {isUser ? (
+          <>
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarFallback>U</AvatarFallback>
+          </>
+        ) : (
+          <>
+            <AvatarImage
+              src="https://placehold.co/40x40?text=AI"
+              alt="Zion Support"
+            />
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
+          </>,
+        )}
+      </Avatar>
+      
+      <div className={cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
           ? "bg-zion-purple text-white" 
           : theme = $2;
@@ -45,7 +64,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
-  return unsafe
+  return unsafe,
     .replace(/&/g, "&amp,")
     .replace(/</g, "&lt,")
     .replace(/>/g, "&gt,")
@@ -53,15 +72,24 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, "&#039,")
 }
 
-function formatMessageWithLinks(message: string): string {
+function formatMessageWithLinks(message: string): string {,
   // First, escape any HTML so that user input cannot break out of the intended
   // markup.
   const safeText = escapeHtml($2);
   // Replace URLs
-  const urlRegex = $2;
-  let formattedMessage = safeText.replace($2);
+  const urlRegex = /(https?:\/\/[^\s]+)/g,
+  let formattedMessage = safeText.replace(
+    urlRegex,
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>',
+  ),
+
   // Replace help-center references like [Getting Started]
-  const helpCenterRegex = $2;
-  formattedMessage = formattedMessage.replace($2);
+  const helpCenterRegex = /\[([^\]]+)\]/g,
+  formattedMessage = formattedMessage.replace(
+    helpCenterRegex,
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>',
+  ),
+
   return formattedMessage
 }
+;

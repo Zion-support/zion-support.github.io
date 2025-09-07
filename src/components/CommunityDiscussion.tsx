@@ -7,15 +7,16 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
-  id: number,
-  author: string,
+  id: number;
+  author: string;
   avatar?: string,
-  time: string,
-  title: string,
-  body: string}
+  time: string;
+  title: string;
+  body: string,
+}
 
 const initialPosts: DiscussionPost[] = [
-  {
+  {,
     id: 1,
     author: "Anna Zhou",
     time: "2h ago",
@@ -28,13 +29,17 @@ const initialPosts: DiscussionPost[] = [
     title: "Quick tip: How to rank your Zion listing higher",
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState($2);
-  const [showNew, setShowNew] = useState($2);
-  const [newTitle, setNewTitle] = useState($2);
-  const [newBody, setNewBody] = useState($2);
-  const handleAddPost = $2;
-    setPosts($2);
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts),
+  const [showNew, setShowNew] = useState(false),
+  const [newTitle, setNewTitle] = useState(""),
+  const [newBody, setNewBody] = useState(""),
+
+  const handleAddPost = () => {
+    if (!newTitle.trim() || !newBody.trim()) return,
+    setPosts([
+      {
+        id: Date.now(),
         author: "You",
         time: "Now",
         title: newTitle,
@@ -59,8 +64,8 @@ export const CommunityDiscussion: React.FC = () => {
       <Separator className="mb-6" />
       <div className="mb-4 flex justify-end">
         <Button
-          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
-          size="sm"
+          className="bg-zion-purple text-white hover: bg-zion-purple-light transition hover-scale",
+          size="sm",
           onClick={() => setShowNew((v) => !v)}
         >
           {showNew ? "Cancel" : "New Post"}
@@ -71,14 +76,14 @@ export const CommunityDiscussion: React.FC = () => {
           <CardContent className="py-5">
             <Input
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
-              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
+              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate",
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
               maxLength={80}
             />
             <Textarea
               placeholder="What's on your mind?"
-              className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"
+              className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]",
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -88,14 +93,14 @@ export const CommunityDiscussion: React.FC = () => {
               <Button
                 variant="secondary"
                 size="sm"
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
+                className="bg-zion-blue text-white hover:bg-zion-blue-dark",
                 onClick={() => setShowNew(false)}
               >
                 Cancel
               </Button>
               <Button
                 size="sm"
-                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
+                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale",
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() || !newBody.trim()}
               >
@@ -120,4 +125,20 @@ export const CommunityDiscussion: React.FC = () => {
                 </AvatarFallback>
               </Avatar>
               <div>
-                <div className = $2;
+                <div className="flex gap-2 items-center">
+                  <span className="font-semibold text-white">{post.author}</span>
+                  <span className="text-xs text-zion-slate-light">{post.time}</span>
+                </div>
+                <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>
+                <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="mt-8 text-xs text-zion-slate-dark text-center">
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.
+      </div>
+    </div>
+  )
+},;

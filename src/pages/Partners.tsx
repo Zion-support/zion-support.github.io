@@ -47,7 +47,7 @@ export default function Partners() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
-            <CardHeader>
+            <CardHeader>,
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
             </CardHeader>
@@ -114,7 +114,7 @@ export default function Partners() {
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-zion-cyan" />
-                </div>
+                </div>,
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-sm text-zion-slate-light">
@@ -153,7 +153,7 @@ export default function Partners() {
             size="lg"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             asChild
-          >
+          >,
             <Link href="/signup?type=partner&source=partner-program">{t('partner.apply')}</Link>
           </Button>
           <Button
@@ -179,7 +179,7 @@ export default function Partners() {
     <div className="container max-w-7xl py-10">
       <h1>DEBUG: Partners Page - Authenticated View</h1>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
+        <div>,
           <h1 className="text-3xl font-bold tracking-tight text-white">{t('partner.dashboard_title')}</h1>
           <p className="text-zion-slate-light">{t('partner.dashboard_desc')}</p>
         </div>
@@ -192,7 +192,7 @@ export default function Partners() {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
+        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">,
           <TabsTrigger value="overview">{t('partner.tabs.overview')}</TabsTrigger>
           <TabsTrigger value="referrals">{t('partner.tabs.referrals')}</TabsTrigger>
           <TabsTrigger value="earnings">{t('partner.tabs.earnings')}</TabsTrigger>
@@ -232,3 +232,4 @@ export default function Partners() {
     </div>
   )
 }
+;

@@ -50,14 +50,16 @@ export function InvoiceHistory() {
       status: "paid",
       period: "Dec 2024"}],
 
-  const handleDownloadInvoice = (invoiceId: string) => {
+  const handleDownloadInvoice = (invoiceId: string) => {,
     // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice",
       description: `Downloading invoice ${invoiceId} as PDF.`})
   },
 
-  const getBadgeForStatus = $2;
+  const getBadgeForStatus = (status: string) => {
+    switch (status) {,
+      case "paid": return <Badge className="bg-green-500">Paid</Badge>,
       case "pending":
         return <Badge variant = $2;
       case "overdue":
@@ -73,7 +75,7 @@ export function InvoiceHistory() {
           <Input
             type="search"
             placeholder="Search invoices..."
-            className="w-[200px] md:w-[300px] pl-9"
+            className="w-[200px] md: w-[300px] pl-9"
           />
         </div>
       </div>
@@ -90,8 +92,8 @@ export function InvoiceHistory() {
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody>
-            {invoices.map((invoice) => (
+          <TableBody>,
+            {invoices.map((invoice) => (,
               <TableRow key={invoice.id}>
                 <TableCell className="font-medium">{invoice.id}</TableCell>
                 <TableCell>{invoice.date}</TableCell>
@@ -139,3 +141,4 @@ export function InvoiceHistory() {
     </div>
   )
 }
+;

@@ -23,7 +23,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 const updatePasswordSchema = z
   .object({
     password: z
-      .string()
+      .string(),
       .min(8, "Password must be at least 8 characters")
       .max($2);
     confirmPassword: z.string()})
@@ -40,8 +40,8 @@ export default function UpdatePassword() {
   const router = useRouter($2);
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
+    resolver: zodResolver(updatePasswordSchema),
+    defaultValues: {,
       password: "",
       confirmPassword: ""}}),
 
@@ -62,8 +62,8 @@ export default function UpdatePassword() {
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
-    if (!accessToken) {
-      setError($2);
+    if (!accessToken) {,
+      setError("No access token found. Please request a new password reset link."),
       return
     }
 
@@ -85,9 +85,9 @@ export default function UpdatePassword() {
       // Clean auth state and redirect after a delay
       cleanupAuthState($2);
       setTimeout(() => {
-        router.push("/login")
+        router.push("/login");
       }, 3000)
-    } catch (error: any) {
+    } catch (error: any) {,
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Password update error' }),
       toast($2);
       setError(error.message || "An unexpected error occurred")
@@ -96,7 +96,8 @@ export default function UpdatePassword() {
     }
   },
 
-  const onInvalid = $2;
+  const onInvalid = (errors: any) => {,
+    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues,
     if (firstError) {
       form.setFocus(firstError)
     }
@@ -105,7 +106,7 @@ export default function UpdatePassword() {
   return (
     <>
       <div className="flex min-h-screen bg-zion-blue">
-        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
+        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm: px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold tracking-tight text-white">
@@ -117,8 +118,8 @@ export default function UpdatePassword() {
             </div>
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
-              {error && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
+              {error && (,
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">,
                   <p className="text-sm">{error}</p>
                   <Button 
                     className="mt-3 text-xs"
@@ -158,7 +159,7 @@ export default function UpdatePassword() {
                               placeholder="Enter password"
                               aria-label="New password"
                               aria-invalid={!!form.formState.errors.password}
-                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple",
                               disabled={isLoading}
                               {...field}
                             />
@@ -180,7 +181,7 @@ export default function UpdatePassword() {
                               placeholder="Enter password"
                               aria-label="Confirm password"
                               aria-invalid={!!form.formState.errors.confirmPassword}
-                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple",
                               disabled={isLoading}
                               {...field}
                             />
@@ -192,7 +193,7 @@ export default function UpdatePassword() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white",
                       disabled={isLoading || !accessToken}
                     >
                       {isLoading ? "Updating..." : "Update Password"}
@@ -201,7 +202,7 @@ export default function UpdatePassword() {
                     <div className="text-center">
                       <Button
                         variant="link"
-                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
+                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0",
                         onClick={() => router.push("/login")}
                         type="button"
                       >
@@ -228,5 +229,6 @@ export default function UpdatePassword() {
         </div>
       </div>
     </>
-  )
+  ),
 }
+;

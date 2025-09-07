@@ -13,15 +13,15 @@ import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
+  id: string;
+  user_id: string;
+  provider_id: string;
+  service_id: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled';
+  in_escrow: boolean;
+  created_at: string;
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -41,21 +41,24 @@ export function TransactionHistory() {
   ),
 
   useEffect(() => {
-    safeStorage.setItem('transaction_filter', filter)
+    safeStorage.setItem('transaction_filter', filter);
   }, [filter]),
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
-    queryFn: async() => {
+    queryFn: async () => {,
       if (!user) return [],
       
       // Build the query based on filters
       let query = supabase
         .from('transactions')
-        .select($2);
-          service: services(title)
-        `)
-        .or($2);
+        .select(`
+          *,
+          provider:profiles!provider_id(display_name),
+          service:services(title)
+        `),
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
+      
       if (filter === 'pending') {
         query = query.eq('statuspending')
       } else if (filter === 'completed') {
@@ -73,8 +76,11 @@ export function TransactionHistory() {
     enabled: !!user}),
 
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
-    try {
-      const { data, error } = await supabase.functions.invoke($2);
+    try {,
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {
+        body: { transactionId, action }
+      }),
+      
       if (error) throw error,
       
       toast({
@@ -94,7 +100,11 @@ export function TransactionHistory() {
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'in_escrow':
-        return($2);
+        return (
+          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
+            <Clock className="w-3 h-3 mr-1" /> In Escrow
+          </Badge>,
+        ),
       case 'pending':
         return inEscrow ? (
           <Badge variant = $2;
@@ -107,11 +117,26 @@ export function TransactionHistory() {
       case 'refunded':
         return($2);
       case 'cancelled':
-        return($2);
-      default: return(
-          <Badge variant = $2;
-  const { formatPrice } = useCurrency($2);
-  const formatCurrency = $2;
+        return (
+          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
+            <XCircle className="w-3 h-3 mr-1" /> Cancelled
+          </Badge>
+        ),
+      default:
+        return (
+          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
+            <AlertCircle className="w-3 h-3 mr-1" /> Unknown
+          </Badge>
+        ),
+    }
+  }, 
+
+  const { formatPrice } = useCurrency(),
+
+  const formatCurrency = (amount: number) => {
+    return formatPrice(amount),
+  },
+
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
@@ -202,14 +227,14 @@ export function TransactionHistory() {
                   <CardContent className="pb-3">
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-zion-slate-light">Amount:</span>
-                      <span className="text-white font-medium text-lg">
+                      <span className="text-white font-medium text-lg">,
                         {formatCurrency(transaction.amount)}
                       </span>
                     </div>
                     
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-zion-slate-light">Date:</span>
-                      <span className="text-zion-slate-light">
+                      <span className="text-zion-slate-light">,
                         {new Date(transaction.created_at).toLocaleDateString()} 
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true})})
                       </span>
@@ -218,7 +243,7 @@ export function TransactionHistory() {
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
-                          {transaction.completed_at ? 'Completed:' : 
+                          {transaction.completed_at ? 'Completed:' :,
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
                         </span>
                         <span className="text-zion-slate-light">
@@ -239,7 +264,7 @@ export function TransactionHistory() {
                         className="bg-green-600 hover:bg-green-700 text-white"
                       >
                         <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds
-                      </Button>
+                      </Button>,
                     )}
                     
                     {canRefund && (
@@ -261,7 +286,7 @@ export function TransactionHistory() {
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10"
                       >
                         <XCircle className="mr-1 h-4 w-4" /> Cancel
-                      </Button>
+                      </Button>,
                     )}
                   </CardFooter>
                 </Card>
@@ -286,3 +311,4 @@ export function TransactionHistory() {
     </div>
   )
 }
+;

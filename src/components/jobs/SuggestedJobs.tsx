@@ -15,18 +15,19 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { 
     isLoading,
     updateJobMatchStatus, 
-    categorizedMatches: { 
+    categorizedMatches: {,
       newMatches, 
       viewedMatches, 
       appliedMatches 
     } 
-  } = useJobSuggestions($2);
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus($2);
+  } = useJobSuggestions(currentTalentId),
+
+  const handleApply = (matchId: string, jobId: string) => {,
+    updateJobMatchStatus(matchId, 'applied'),
     // In a real app, this might redirect to application form or open a modal
   },
 
-  const handleDecline = (matchId: string) => {
+  const handleDecline = (matchId: string) => {,
     updateJobMatchStatus(matchId, 'declined')
   },
 
@@ -56,7 +57,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
-              <JobMatchesCard 
+              <JobMatchesCard,
                 key={match.id} 
                 match={match} 
                 onApply={handleApply} 
@@ -76,7 +77,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
-              <JobMatchesCard 
+              <JobMatchesCard,
                 key={match.id} 
                 match={match} 
                 onApply={handleApply} 
@@ -96,7 +97,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
-              <JobMatchesCard 
+              <JobMatchesCard,
                 key={match.id} 
                 match={match} 
                 onApply={handleApply} 
@@ -110,3 +111,4 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     </div>
   )
 }
+;

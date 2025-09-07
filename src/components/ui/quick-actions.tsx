@@ -7,13 +7,13 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
 
 interface QuickAction {
-  id: string,
-  label: string,
-  description: string,
-  icon: React.ReactNode,
-  action: () => void,
-  category: 'performance' | 'development' | 'maintenance',
-  dangerous?: boolean
+  id: string;
+  label: string;
+  description: string;
+  icon: React.ReactNode;
+  action: () => void;
+  category: 'performance' | 'development' | 'maintenance';
+  dangerous?: boolean,
 }
 
 export function QuickActions() {
@@ -27,8 +27,8 @@ export function QuickActions() {
   const [isVisible, setIsVisible] = useState($2);
   const [isProcessing, setIsProcessing] = useState<string | null>(null),
 
-  const executeAction = async (actionId: string, action: () => void) => {
-    setIsProcessing($2);
+  const executeAction = async (actionId: string, action: () => void) => {,
+    setIsProcessing(actionId),
     try {
       await action()
     } catch (error) {
@@ -40,14 +40,14 @@ export function QuickActions() {
 
   const actions: QuickAction[] = [
     // Performance Actions
-    {
+    {,
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
       icon: <Activity className = $2;
       category: 'performance',
-      action: () => {
-        localStorage.setItem($2);
+      action: () => {,
+        localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
     {
@@ -56,8 +56,8 @@ export function QuickActions() {
       description: 'Monitor bundle size and chunks',
       icon: <Package className = $2;
       category: 'performance',
-      action: () => {
-        localStorage.setItem($2);
+      action: () => {,
+        localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
     {
@@ -70,7 +70,7 @@ export function QuickActions() {
       action: () => {
         if ('caches' in window) {
           caches.keys().then(names => {
-            names.forEach(name => caches.delete(name))
+            names.forEach(name => caches.delete(name)),
           })
         }
         localStorage.clear($2);
@@ -85,13 +85,17 @@ export function QuickActions() {
       category: 'performance',
       action: () => {
         // Preload critical fonts
-        const criticalFonts = $2;
-        criticalFonts.forEach($2);
-          link.rel = $2;
-          link.as = $2;
-          link.type = $2;
-          link.crossOrigin = $2;
-          link.href = $2;
+        const criticalFonts = [
+          '/fonts/inter-var.woff2/fonts/cal-sans.woff2',
+        ],
+        
+        criticalFonts.forEach(font => {
+          const link = document.createElement('link'),
+          link.rel = 'preload',
+          link.as = 'font',
+          link.type = 'font/woff2',
+          link.crossOrigin = 'anonymous',
+          link.href = font,
           document.head.appendChild(link)
         }),
 
@@ -111,31 +115,31 @@ export function QuickActions() {
       icon: <Download className = $2;
       category: 'development',
       action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString($2);
-          performance: performance.getEntriesByType('navigation')[0],
-          resources: performance.getEntriesByType('resource').slice($2);
+        const metrics = {;
+          timestamp: new Date().toISOString();
+          performance: performance.getEntriesByType('navigation')[0];
+          resources: performance.getEntriesByType('resource').slice(0, 20),
           memory: (performance as any).memory || {},
           userAgent: navigator.userAgent,
-          screen: {
+          screen: {,
             width: screen.width,
             height: screen.height,
-            colorDepth: screen.colorDepth
+            colorDepth: screen.colorDepth,
           }
         },
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
-          type: 'application/json'
+          type: 'application/json',
         }),
         
-        const url = URL.createObjectURL($2);
-        const a = document.createElement($2);
-        a.href = $2;
-        a.download = $2;
-        document.body.appendChild($2);
-        a.click($2);
-        document.body.removeChild($2);
-        URL.revokeObjectURL(url)
+        const url = URL.createObjectURL(blob),
+        const a = document.createElement('a'),
+        a.href = url,
+        a.download = `performance-report-${Date.now()}.json`,
+        document.body.appendChild(a),
+        a.click(),
+        document.body.removeChild(a),
+        URL.revokeObjectURL(url);
       }},
     {
       id: 'test-error-boundary',
@@ -145,7 +149,7 @@ export function QuickActions() {
       category: 'development',
       dangerous: true,
       action: () => {
-        throw new Error('Test error for Sentry integration - this is intentional!')
+        throw new Error('Test error for Sentry integration - this is intentional!'),
       }},
     {
       id: 'refresh-app',
@@ -154,15 +158,17 @@ export function QuickActions() {
       icon: <RefreshCw className = $2;
       category: 'maintenance',
       action: () => {
-        window.location.reload()
+        window.location.reload(),
       }}],
 
-  const categorizedActions = {
-    performance: actions.filter($2);
-    development: actions.filter($2);
-    maintenance: actions.filter(a = $2;
-  const categoryColors = $2;
-    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
+  const categorizedActions = {;
+    performance: actions.filter(a => a.category === 'performance');
+    development: actions.filter(a => a.category === 'development');
+    maintenance: actions.filter(a => a.category === 'maintenance')},
+
+  const categoryColors = {;
+    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200';
+    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200';
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
   if (!isVisible) {

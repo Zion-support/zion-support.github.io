@@ -14,8 +14,8 @@ import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
 import { Resume } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-  currentResume: Resume,
-  onResumeChange: (resumeId: string) => void
+  currentResume: Resume;
+  onResumeChange: (resumeId: string) => void,
 }
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
@@ -40,10 +40,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
+      <span className="text-sm text-muted-foreground">Resume: </span>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
+        <DropdownMenuTrigger asChild>,
+          <Button variant="outline" size="sm" className="gap-2">,
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
@@ -75,7 +75,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
           <div className="py-4">
-            <Input
+            <Input,
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
               placeholder="Enter resume title (e.g. DevOps Resume)"
@@ -103,3 +103,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   )
 }
+;

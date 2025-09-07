@@ -16,7 +16,7 @@ import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
 import { QuoteFormData } from "@/types/quotes";
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod";
-export type QuoteRequestSteps = $2;
+export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 const serviceStepSchema = z.object({
   serviceType: z.string().min($2);
   specificItem: z.object({ id: z.string() })}),
@@ -37,19 +37,21 @@ export function QuoteRequestForm() {
     startDate: undefined,
     endDate: undefined,
     timeline: "flexible",
-    budget: {
+    budget: {,
       amount: 0,
-      type: "fixed"
+      type: "fixed",
     },
-    contactInfo: {
+    contactInfo: {,
       name: "",
       email: "",
       phone: "",
-      company: ""
+      company: "",
     }
   }),
   
-  const updateFormData = $2;
+  const updateFormData = (data: Partial<QuoteFormData>) => {
+    setFormData(prev => ({,
+      ...prev,
       ...data
     }))
   },
@@ -73,7 +75,9 @@ export function QuoteRequestForm() {
       case "budget":
         setCurrentStep($2);
         break,
-      default: break}
+      default:
+        break,
+    }
   },
   
   const handleBack = () => {
@@ -89,7 +93,9 @@ export function QuoteRequestForm() {
       case "summary":
         setCurrentStep($2);
         break,
-      default: break}
+      default:
+        break,
+    }
   },
   
   const handleSubmit = async () => {
@@ -102,7 +108,7 @@ export function QuoteRequestForm() {
       
       toast($2);
       // Redirect to confirmation page or homepage
-      router.push("/")
+      router.push("/");
     } catch (error) {
       toast({
         title: "Submission Failed",
@@ -113,8 +119,8 @@ export function QuoteRequestForm() {
     }
   },
 
-  const handleAutoFill = async (description: string) => {
-    setAutoFillLoading($2);
+  const handleAutoFill = async (description: string) => {,
+    setAutoFillLoading(true),
     try {
       const res = await fetch("/api/openai/match", {
         method: "POST",
@@ -126,7 +132,8 @@ export function QuoteRequestForm() {
         projectDescription: description,
         serviceType: category,
         serviceCategory: category,
-        specificItem: itemId ? { id: itemId, title: "AI Selected Item", category }
+        specificItem: itemId,
+          ? { id: itemId, title: "AI Selected Item", category }
           : formData.specificItem,
         timeline: timeline || formData.timeline,
         budget: { ...formData.budget, ...(budget || {}) }}),
@@ -151,8 +158,8 @@ export function QuoteRequestForm() {
       case "budget":
         return <BudgetStep formData = $2;
       case "summary":
-        return <SummaryStep formData = $2;
-      default: return null
+        return <SummaryStep formData={formData} updateFormData={updateFormData} />,
+      default: return null,
     }
   },
   
@@ -197,7 +204,7 @@ export function QuoteRequestForm() {
                   className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                 >
                   Back
-                </Button>
+                </Button>,
               )}
               
               {currentStep !== "summary" ? (
@@ -208,11 +215,11 @@ export function QuoteRequestForm() {
                   Continue
                 </Button>
               ) : (
-                <Button 
+                <Button,
                   onClick={handleSubmit}
                   disabled={isSubmitting}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                >
+                >,
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
@@ -229,3 +236,4 @@ export function QuoteRequestForm() {
     </div>
   )
 }
+;

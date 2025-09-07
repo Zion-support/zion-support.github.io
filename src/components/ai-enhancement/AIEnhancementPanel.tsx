@@ -7,9 +7,9 @@ import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
-  title: string,
-  defaultOptions: AIEnhancementOptions,
-  onApply: (content: string) => void,
+  title: string;
+  defaultOptions: AIEnhancementOptions;
+  onApply: (content: string) => void;
   onClose?: () => void,
   showInstructions?: boolean,
   initialContent?: string
@@ -36,10 +36,10 @@ export function AIEnhancementPanel({
     }
   },
 
-  const handleInputChange = $2;
-    field: keyof AIEnhancementOptions
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, field: keyof AIEnhancementOptions,
   ) => {
-    setOptions({
+    setOptions({,
       ...options,
       [field]: e.target.value})
   },
@@ -161,3 +161,4 @@ export function AIEnhancementPanel({
     </Card>
   )
 }
+;

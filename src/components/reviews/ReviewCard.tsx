@@ -16,8 +16,8 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
-  review: Review,
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
+  review: Review;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>,
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
@@ -45,7 +45,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .split(" ")
       .map((n) => n[0])
       .join("")
-      .toUpperCase()
+      .toUpperCase(),
       .substring(0, 2)
   },
   
@@ -167,3 +167,4 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     </div>
   )
 }
+;

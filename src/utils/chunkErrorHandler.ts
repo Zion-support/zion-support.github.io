@@ -5,10 +5,11 @@
 
 import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {
-  errorCount: number,
-  lastErrorTime: number,
-  userAgent: string,
-  url: string}
+  errorCount: number;
+  lastErrorTime: number;
+  userAgent: string;
+  url: string,
+}
 
 class ChunkErrorHandler {
   private errorStats: Map<string, ChunkErrorStats> = new Map($2);
@@ -16,36 +17,37 @@ class ChunkErrorHandler {
   private readonly RETRY_DELAY = 1000, // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = $2;
   constructor() {
-    this.initializeGlobalHandlers()
+    this.initializeGlobalHandlers();
   }
 
   private initializeGlobalHandlers(): void {
     if (typeof window = $2;
     // Handle webpack chunk loading errors
     window.addEventListener('error', (event) => {
-      this.handleScriptError(event)
+      this.handleScriptError(event);
     }),
 
     // Handle unhandled promise rejections (async chunk loading)
     window.addEventListener('unhandledrejection', (event) => {
-      this.handlePromiseRejection(event)
+      this.handlePromiseRejection(event);
     })
   }
 
-  private handleScriptError(event: ErrorEvent): void {
+  private handleScriptError(event: ErrorEvent): void {,
     const { error, filename } = event,
     
     if (this.isChunkError(error, filename)) {
       event.preventDefault(), // Prevent the error from bubbling up
-      this.handleChunkError(error, { filename, source: 'script' })
+      this.handleChunkError(error, { filename, source: 'script' });
     }
   }
 
-  private handlePromiseRejection(event: PromiseRejectionEvent): void {
-    const error = $2;
+  private handlePromiseRejection(event: PromiseRejectionEvent): void {,
+    const error = event.reason,
+    
     if (this.isChunkError(error)) {
       event.preventDefault(), // Prevent unhandled rejection
-      this.handleChunkError(error, { source: 'promise' })
+      this.handleChunkError(error, { source: 'promise' });
     }
   }
 
@@ -66,13 +68,23 @@ class ChunkErrorHandler {
     const sessionKey = this.getSessionKey($2);
     const stats = this.getOrCreateErrorStats($2);
     stats.errorCount++,
-    stats.lastErrorTime = Date.now($2);
-    logErrorToProduction($2);
+    stats.lastErrorTime = Date.now(),
+
+    logErrorToProduction('ChunkLoadError detected', error, {
+      context: 'chunkErrorHandler',
+      errorCount: stats.errorCount,
+      retryAttempt: stats.errorCount,
+      source: context.source,
+      filename: context.filename,
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    }),
+
     // Attempt recovery based on error count
     if (stats.errorCount <= this.MAX_RETRIES) {
       await this.attemptRecovery(stats.errorCount, context)
     } else {
-      this.showFatalErrorMessage()
+      this.showFatalErrorMessage();
     }
   }
 
@@ -80,38 +92,38 @@ class ChunkErrorHandler {
     logErrorToProduction(`Attempting ChunkLoadError recovery #${attemptNumber}`, undefined, {
       context: 'chunkErrorRecovery',
       attemptNumber,
-      recoveryMethod: this.getRecoveryMethod(attemptNumber)
+      recoveryMethod: this.getRecoveryMethod(attemptNumber),
     }),
 
     switch (attemptNumber) {
-      case 1: // First attempt: Simple retry after short delay
-        await this.delay($2);
-        this.reloadPage($2);
+      case 1: // First attempt: Simple retry after short delay,
+        await this.delay(this.RETRY_DELAY),
+        this.reloadPage(),
         break,
         
       case 2:
-        // Second attempt: Clear caches and retry
-        await this.clearCaches($2);
-        await this.delay($2);
-        this.reloadPage($2);
+        // Second attempt: Clear caches and retry,
+        await this.clearCaches(),
+        await this.delay(this.RETRY_DELAY * 2),
+        this.reloadPage(),
         break,
         
       case 3:
-        // Third attempt: Hard refresh with cache bypass
-        this.hardRefresh($2);
+        // Third attempt: Hard refresh with cache bypass,
+        this.hardRefresh(),
         break,
         
       default:
-        this.showFatalErrorMessage()
+        this.showFatalErrorMessage();
     }
   }
 
   private getRecoveryMethod(attemptNumber: number): string {
-    switch (attemptNumber) {
+    switch (attemptNumber) {,
       case 1: return 'simple-retry',
       case 2: return 'cache-clear-retry',
       case 3: return 'hard-refresh',
-      default: return 'fatal-error'
+      default: return 'fatal-error',
     }
   }
 
@@ -125,12 +137,12 @@ class ChunkErrorHandler {
       keysToRemove.forEach(key = $2;
       logErrorToProduction('Caches cleared successfully', undefined, {
         context: 'chunkErrorRecovery',
-        action: 'cache-clear'
+        action: 'cache-clear',
       })
     } catch (error) {
       logErrorToProduction('Failed to clear caches', error as Error, {
         context: 'chunkErrorRecovery',
-        action: 'cache-clear-failed'
+        action: 'cache-clear-failed',
       })
     }
   }
@@ -163,31 +175,18 @@ class ChunkErrorHandler {
     `,
 
     errorDiv.innerHTML = `
-      <div style="text-align: center, padding: 2rem, max-width: 500px,">
-        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
-        <p style="margin-bottom: 1.5rem, line-height: 1.5,">
+      <div style="text-align: center, padding: 2rem, max-width: 500px, ">
+        <h2 style="margin-bottom: 1rem, ">Connection Issue</h2>
+        <p style="margin-bottom: 1.5rem, line-height: 1.5, ">
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
         </p>
-        <button onclick = $2;
-          color: white,
-          border: none,
-          padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem,
-          font-size: 1rem,
-          cursor: pointer,
-          margin-right: 1rem,
-        ">
+        <button onclick="window.location.reload()" style="
+          background: #0070f3, color: white, border: none, padding: 0.75rem 1.5rem, border-radius: 0.5rem, font-size: 1rem, cursor: pointer, margin-right: 1rem, ">
           Try Again
         </button>
-        <button onclick = $2;
-          color: white,
-          border: none,
-          padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem,
-          font-size: 1rem,
-          cursor: pointer,
-        ">
+        <button onclick="window.location.href='/'" style="
+          background: #666, color: white, border: none, padding: 0.75rem 1.5rem, border-radius: 0.5rem, font-size: 1rem, cursor: pointer, ">
           Go Home
         </button>
       </div>
@@ -196,7 +195,7 @@ class ChunkErrorHandler {
     document.body.appendChild(errorDiv)
   }
 
-  private delay(ms: number): Promise<void> {
+  private delay(ms: number): Promise<void> {,
     return new Promise(resolve => setTimeout(resolve, ms))
   }
 
@@ -205,12 +204,12 @@ class ChunkErrorHandler {
   }
 
   private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
-    if (!this.errorStats.has(sessionKey)) {
+    if (!this.errorStats.has(sessionKey)) {,
       this.errorStats.set(sessionKey, {
         errorCount: 0,
         lastErrorTime: 0,
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       })
     }
     return this.errorStats.get(sessionKey)!
@@ -219,15 +218,15 @@ class ChunkErrorHandler {
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
-      this.reloadPage()
+      this.reloadPage();
     })
   }
 
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
-    const sessionKey = this.getSessionKey($2);
-    const stats = this.errorStats.get($2);
-    return stats ? stats.errorCount > 0 : false
+    const sessionKey = this.getSessionKey(),
+    const stats = this.errorStats.get(sessionKey),
+    return stats ? stats.errorCount > 0 : false,
   }
 
   // Public method to reset error state
@@ -237,7 +236,7 @@ class ChunkErrorHandler {
   }
 }
 
-// Create and export singleton instance
-export const chunkErrorHandler = new ChunkErrorHandler($2);
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage
-export default chunkErrorHandler,
+export default chunkErrorHandler;

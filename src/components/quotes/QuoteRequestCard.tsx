@@ -12,13 +12,14 @@ import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
-type QuoteRequestCardProps = $2;
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void
+type QuoteRequestCardProps = {
+  quote: QuoteRequest;
+  onViewDetails: (quote: QuoteRequest) => void;
+  onMarkAsResponded?: (id: string) => void;
+  onToggleArchive: (id: string, isArchived: boolean) => void,
 },
 
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   quote,
   onViewDetails,
   onMarkAsResponded,
@@ -26,7 +27,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 }) => {
   // Format date for display
   const formatDate = (dateString: string) => {
-    try {
+    try {,
       return format(new Date(dateString), 'PP')
     } catch (e) {
       return dateString
@@ -48,7 +49,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardHeader>
       <CardContent>
         <div className="text-sm text-zion-slate-light mb-3">
-          <span className="text-white font-medium">From: </span>
+          <span className="text-white font-medium">From: </span>,
           {quote.requester_name}
         </div>
         
@@ -87,4 +88,18 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
               variant="ghost"
               size="sm"
               onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-              className = $2;
+              className="flex items-center gap-1"
+            >
+              {quote.is_archived ? (
+                <RefreshCw className="h-4 w-4" />
+              ) : (
+                <ArchiveIcon className="h-4 w-4" />
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+},
+;

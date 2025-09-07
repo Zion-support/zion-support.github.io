@@ -23,7 +23,7 @@ export function RoleManagement() {
       name: "Alex Johnson",
       email: "alex@example.com",
       role: "Admin",
-      permissions: {
+      permissions: {,
         viewCandidates: true,
         editCandidates: true,
         createJobs: true,
@@ -35,7 +35,7 @@ export function RoleManagement() {
       name: "Jamie Smith",
       email: "jamie@example.com",
       role: "Recruiter",
-      permissions: {
+      permissions: {,
         viewCandidates: true,
         editCandidates: true,
         createJobs: true,
@@ -47,7 +47,7 @@ export function RoleManagement() {
       name: "Sam Williams",
       email: "sam@example.com",
       role: "Manager",
-      permissions: {
+      permissions: {,
         viewCandidates: true,
         editCandidates: false,
         createJobs: true,
@@ -59,7 +59,7 @@ export function RoleManagement() {
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
-      permissions: {
+      permissions: {,
         viewCandidates: true,
         editCandidates: false,
         createJobs: false,
@@ -67,7 +67,7 @@ export function RoleManagement() {
         viewBilling: false,
         manageBilling: false}}],
 
-  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {,
     // In a real app, this would make an API call to update permissions
     toast({
       title: "Permission updated",
@@ -84,7 +84,7 @@ export function RoleManagement() {
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">,
           {Object.entries(roleDescriptions).map(([role, description]) => (
             <div key={role} className="bg-card rounded-lg p-4 border border-border">
               <div className="flex items-center gap-2 mb-2">
@@ -190,7 +190,7 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell>
                   <select 
-                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
                     defaultValue={member.role}
                   >
                     <option value="Admin">Admin</option>
@@ -252,3 +252,4 @@ export function RoleManagement() {
     </div>
   )
 }
+;

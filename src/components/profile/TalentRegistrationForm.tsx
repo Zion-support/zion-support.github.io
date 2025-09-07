@@ -35,19 +35,22 @@ const talentProfileSchema = z.object({
   availability: z.enum($2);
   enhancedProfile: z.boolean().default(true)}),
 
-type TalentFormValues = $2;
-type CategoryType = $2;
-interface CategorizedSkills {
-  programming: string[],
-  devops: string[],
-  platforms: string[],
-  softSkills: string[],
-  other: string[]
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
+
+interface CategorizedSkills {;
+  programming: string[];
+  devops: string[];
+  platforms: string[];
+  softSkills: string[];
+  other: string[],
 }
 
 interface EnhancedProfile {
-  summary: string,
-  categorizedSkills: CategorizedSkills}
+  summary: string;
+  categorizedSkills: CategorizedSkills,
+}
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -59,9 +62,10 @@ export function TalentRegistrationForm() {
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
   // Initialize form with default values
-  const form = $2;
-    defaultValues: {
-      name: user ?.displayName || "",
+  const form = useForm<TalentFormValues>({
+    resolver: zodResolver(talentProfileSchema) as any,
+    defaultValues: {,
+      name: user?.displayName || "",
       title: "",
       bio: "",
       location: "",
@@ -80,21 +84,27 @@ export function TalentRegistrationForm() {
   },
 
   // Handle removing skill tags
-  const handleRemoveSkill = $2;
+  const handleRemoveSkill = (skill: string) => {
+    setSkillTags(skillTags.filter((s) => s !== skill)),
+  },
+
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
-      e.preventDefault($2);
+    if (e.key === "Enter") {,
+      e.preventDefault(),
       handleAddSkill()
     }
   },
 
   // Handle avatar upload
-  const handleAvatarUpload = $2;
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {,
+    const file = e.target.files?.[0],
     if (file) {
-      const reader = new FileReader($2);
-      reader.onloadend = $2;
-      reader.readAsDataURL(file)
+      const reader = new FileReader(),
+      reader.onloadend = () => {
+        setUploadedAvatar(reader.result as string)
+      },
+      reader.readAsDataURL(file);
     }
   },
 
@@ -102,15 +112,20 @@ export function TalentRegistrationForm() {
   const generateEnhancedProfile = async () => {
     const formData = form.getValues($2);
     if (!formData.bio || formData.bio.length < 20) {
-      toast($2);
-      return
+      toast({
+        title: "More information needed", description: "Please provide at least a detailed bio before generating enhanced content."}), return
     }
 
     try {
       setIsGenerating($2);
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke($2);
-      if (error) {
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: {
+          talentData: {,
+            name: formData.name, title: formData.title, bio: formData.bio, skills: skillTags, location: formData.location,
+          }
+        }
+      }), if (error) {
         throw new Error(error.message)
       }
 
@@ -118,29 +133,30 @@ export function TalentRegistrationForm() {
       if (data && typeof data === 'object') {
         setGeneratedContent($2);
         toast({
-          title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."})
+          title: "Enhanced Profile Generated", description: "AI has created a professional bio and suggested additional skills for your profile."})
       } else {
         // Fallback for mock/development mode
-        logWarn($2);
-        setGeneratedContent($2);
+        logWarn('Mock AI response - using fallback content'), setGeneratedContent({
+          summary: "Experienced professional with expertise in modern technologies and best practices.", categorizedSkills: {,
+            programming: ["JavaScript", "TypeScript", "React"],
+            devops: ["Docker", "CI/CD", "AWS"],
+            platforms: ["Node.js", "Next.js", "Vercel"],
+            softSkills: ["Communication", "Problem Solving", "Team Leadership"],
+            other: ["Project Management", "Technical Writing"]
+          }
+        }),
+        
         toast({
-          title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."})
+          title: "Enhanced Profile Generated", description: "AI has created a professional bio and suggested additional skills for your profile."})
       }
       
-    } catch (error: any) {
-      logErrorToProduction($2);
-      toast({
-        title: "Generation failed",
-        description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive"})
+    } catch (error: any) {,
+      logErrorToProduction('Error generating enhanced profile:', { data: error }), toast({
+        title: "Generation failed", description: error.message || "There was an error generating your enhanced profile. Please try again.", variant: "destructive"})
     } finally {
       setIsGenerating(false)
     }
-  },
-
-  // Apply generated content to form
+  }, // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
       form.setValue($2);
@@ -149,7 +165,16 @@ export function TalentRegistrationForm() {
       const newSkills: string[] = [],
       
       // Safely extract and flatten skills from each category
-      Object.values(allCategorizedSkills).forEach(categorySkills = $2;
+      Object.values(allCategorizedSkills).forEach(categorySkills => {
+        if (Array.isArray(categorySkills)) {
+          categorySkills.forEach(skill => {
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
+              newSkills.push(skill);
+            }
+          })
+        }
+      }),
+        
       if (newSkills.length > 0) {
         setSkillTags([...skillTags, ...newSkills])
       }
@@ -157,30 +182,32 @@ export function TalentRegistrationForm() {
   },
 
   // Get category color
-  const getCategoryColor = $2;
+  const getCategoryColor = (category: CategoryType) => {
+    switch (category) {,
+      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',
-      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple',
     }
   },
 
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
-    try {
+    try {,
       await supabase.functions.invoke('send-email', {
-        body: {
+        body: {,
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
-          html: `
-          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
-            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
+          html: `,
+          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto, ">
+            <h2 style="color: #6D28D9, ">Profile Enhancement Complete</h2>
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>
-            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
-              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, ">
+              <p style="color: #666, font-size: 12px, ">© ${new Date().getFullYear()} Zion Marketplace</p>
             </div>
           </div>
           `
@@ -194,7 +221,10 @@ export function TalentRegistrationForm() {
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
-      toast($2);
+      toast({,
+        title: "Skills required",
+        description: "Please add at least one skill to your profile.",
+        variant: "destructive"}),
       return
     }
 
@@ -210,7 +240,18 @@ export function TalentRegistrationForm() {
       let finalSkills = $2;
       if (values.enhancedProfile && !generatedContent) {
         try {
-          const { data: aiData} = await supabase.functions.invoke($2);
+          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+            body: {
+              talentData: {,
+                name: values.name,
+                title: values.title,
+                bio: values.bio,
+                skills: skillTags,
+                location: values.location,
+              }
+            }
+          }),
+          
           if (aiData) {
             finalSummary = $2;
             // Safely merge AI suggested skills with user-provided skills
@@ -218,7 +259,16 @@ export function TalentRegistrationForm() {
             const aiSkills: string[] = [],
             
             // Extract skills from each category and ensure they're strings
-            Object.values(categorizedSkills).forEach(categorySkills = $2;
+            Object.values(categorizedSkills).forEach(categorySkills => {
+              if (Array.isArray(categorySkills)) {
+                categorySkills.forEach(skill => {
+                  if (typeof skill === 'string' && skill) {
+                    aiSkills.push(skill);
+                  }
+                })
+              }
+            }),
+            
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
@@ -266,9 +316,12 @@ export function TalentRegistrationForm() {
       if (error) throw error,
       */
 
-    } catch (error: any) {
-      logErrorToProduction($2);
-      toast($2);
+    } catch (error: any) {,
+      logErrorToProduction('Error creating profile:', { data: error }),
+      toast({
+        title: "Error Creating Profile",
+        description: error.message || "There was an error creating your profile. Please try again.",
+        variant: "destructive"}),
       setIsSubmitting(false)
     }
   },
@@ -281,8 +334,7 @@ export function TalentRegistrationForm() {
           <CardDescription className="text-zion-slate">
             Showcase your skills and experience to potential clients and employers.
           </CardDescription>
-        </CardHeader>
-
+        </CardHeader>,
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
@@ -291,7 +343,7 @@ export function TalentRegistrationForm() {
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="col-span-1">
-                    <FormField
+                    <FormField,
                       control={form.control}
                       name="name"
                       render={({ field }: { field: any}) => (
@@ -410,7 +462,7 @@ export function TalentRegistrationForm() {
                       <input
                         type="file"
                         accept="image/*"
-                        className="hidden"
+                        className="hidden",
                         onChange={handleAvatarUpload}
                       />
                     </label>
@@ -479,7 +531,7 @@ export function TalentRegistrationForm() {
                     <Button
                       type="button"
                       variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10",
                       onClick={generateEnhancedProfile}
                       disabled={isGenerating}
                     >
@@ -500,7 +552,7 @@ export function TalentRegistrationForm() {
                       <Button
                         type="button"
                         size="sm"
-                        className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+                        className="bg-zion-purple hover:bg-zion-purple-dark text-white",
                         onClick={applyGeneratedContent}
                       >
                         <Check className="mr-1 h-3 w-3" /> Apply
@@ -526,10 +578,10 @@ export function TalentRegistrationForm() {
                                 </Badge>
                                 <div className="flex flex-wrap gap-1">
                                   {skills.map((skill: string) => (
-                                    <Badge
+                                    <Badge,
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
-                                    >
+                                    >,
                                       {skill}
                                     </Badge>
                                   ))}
@@ -547,7 +599,7 @@ export function TalentRegistrationForm() {
               <Separator className="bg-zion-blue-light/50" />
 
               {/* Skills and Availability */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
                 {/* Skills Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
@@ -569,7 +621,7 @@ export function TalentRegistrationForm() {
                           <Button
                             type="button"
                             variant="outline"
-                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white",
                             onClick={handleAddSkill}
                           >
                             Add
@@ -587,8 +639,8 @@ export function TalentRegistrationForm() {
                     {skillTags.map(skill => (
                       <Badge
                         key={skill}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
-                      >
+                        className="bg-zion-purple/20 hover: bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1",
+                      >,
                         {skill}
                         <button
                           type="button"
@@ -597,7 +649,7 @@ export function TalentRegistrationForm() {
                         >
                           <X className="h-3 w-3" />
                         </button>
-                      </Badge>
+                      </Badge>,
                     ))}
                     {skillTags.length === 0 && (
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>
@@ -635,7 +687,7 @@ export function TalentRegistrationForm() {
                               <input
                                 type="radio"
                                 id="limited"
-                                value="limited"
+                                value="limited",
                                 checked={field.value === "limited"}
                                 onChange={() => field.onChange("limited")}
                                 className="text-zion-purple focus:ring-zion-purple"
@@ -650,7 +702,7 @@ export function TalentRegistrationForm() {
                               <input
                                 type="radio"
                                 id="unavailable"
-                                value="unavailable"
+                                value="unavailable",
                                 checked={field.value === "unavailable"}
                                 onChange={() => field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple"
@@ -663,7 +715,7 @@ export function TalentRegistrationForm() {
                           </div>
                         </FormControl>
                         <FormMessage className="text-red-400" />
-                      </FormItem>
+                      </FormItem>,
                     )}
                   />
                 </div>
@@ -681,7 +733,7 @@ export function TalentRegistrationForm() {
                 </Button>
                 <Button 
                   type="submit"
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white",
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
@@ -694,3 +746,4 @@ export function TalentRegistrationForm() {
     </div>
   )
 }
+;
