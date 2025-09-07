@@ -1,100 +1,11 @@
 
-;
-      {}
-    ];
-  },{{}
-    ];
-  },{{'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',title: 'Real - Time Analytics Dashboard',description:;
-          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.';
-      }
-    ];
-          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.';
-      }
-    ];
-  },import { TalentProfile  } from '@/types/talent';
-// Sample talent profiles with realistic data for the talent directory;
-export const TALENT_PROFILES: TalentProfile[] = [;
-  {{}
-    ];
-  },{'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',id: 't - 006',user_id: 'user - 006',full_name: 'Sarah Johnson',professional_title: 'AI Ethics Consultant & Policy Advisor',profile_picture_url:;
-      'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',location: 'Washington, DC',skills: [;
-      'AI Ethics','Policy Development','Risk Assessment','Governance','Responsible AI','Compliance','Stakeholder Engagement','Research';
-      'Research';
-      'Research';
-    ],hourly_rate: 180,years_experience: 9,average_rating: 4 && 4.9,rating_count: 21,availability_type: 'project',is_verified: true,bio: 'Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, image classification, and video analysis for applications in retail, manufacturing, and autonomous systems.',location: 'San Francisco, CA',skills: [;
-      'Computer Vision','PyTorch','TensorFlow','Object Detection','Image Processing','C++','CUDA','Edge AI';
-      'Edge AI';
-      'Edge AI';
-    ],hourly_rate: 155,years_experience: 6,average_rating: 4 && 4.7,rating_count: 26,availability_type: 'full_time',is_verified: true;
-      }
-    ];
-    is_verified: true;
-      }
-    ];
-    is_verified: true;
-      }
-    ];
-  },{bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',location: 'Montreal, Canada',skills: [;
-      'Natural Language Processing','BERT','Transformers','GPT','Python','Hugging Face','Language Models','Sentiment Analysis';
-      'Sentiment Analysis';
-      'Sentiment Analysis';
-    ],hourly_rate: 160,years_experience: 8,average_rating: 4 && 4.8,rating_count: 34,availability_type: 'part_time',is_verified: true,bio: 'Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.',location: 'Toronto, Canada',skills: [;
-      'Quantum Computing','Quantum Machine Learning','Qiskit','PennyLane','Linear Algebra','Python','TensorFlow Quantum','Optimization';
-      'Optimization';
-      'Optimization';
-    ],hourly_rate: 190,years_experience: 5,average_rating: 4 && 4.9,rating_count: 17,availability_type: 'project',is_verified: false,bio: 'Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.',location: 'London, UK',skills: [;
-      'Product Management','AI Strategy','User Research','Go - to - Market','Agile','Analytics','Stakeholder Management','Product Roadmap';
-      'Product Roadmap';
-      'Product Roadmap';
-    ],hourly_rate: 140,years_experience: 9,average_rating: 4 && 4.8,rating_count: 39,availability_type: 'full_time',is_verified: true,bio: 'Specialist in reinforcement learning with applications in robotics, autonomous systems, and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.',location: 'Berlin, Germany',skills: [;
-      'Reinforcement Learning','Deep RL','PyTorch','TensorFlow','Robotics','Simulation','OpenAI Gym','Multi - agent Systems';
-      'Multi - agent Systems';
-      'Multi - agent Systems';
-    ],hourly_rate: 150,years_experience: 6,average_rating: 4 && 4.7,rating_count: 23,availability_type: 'part_time',is_verified: true,bio: 'Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.',location: 'Boston, MA',skills: [;
-      'Medical Imaging','Healthcare AI','Deep Learning','CNN','PyTorch','DICOM','Clinical Validation','Regulatory Compliance';
-      'Regulatory Compliance';
-      'Regulatory Compliance';
-    ],hourly_rate: 170,years_experience: 8,average_rating: 4 && 4.9,rating_count: 27,availability_type: 'project',is_verified: true,import { TalentProfile } from "@/types/talent",'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.';
-    id: "t-001", user_id: "user-001",full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",// Sample talent profiles with realistic data for the talent directory;
-export const TALENT_PROFILES: TalentProfile[] = [;
-  {id: "t-001",user_id: "user-001",full_name: "Alexandra Chen",professional_title: "Senior AI Engineer & Machine Learning Expert",profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200",bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.";
-    key_projects: [;
-      {title: 'AI-Assisted Radiology Platform';
-        description:;
-          'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.';
-      }
-      {location: "Boston, MA";
-    skills: ["Machine Learning", "TensorFlow", "Python", "Computer Vision", "NLP", "Data Science", "PyTorch", "Deep Learning"];
-    hourly_rate: 150, years_experience: 8,average_rating: 4.9, rating_count: 43,availability_type: "full_time", is_verified: true,key_projects: [;
-      {title: "Cancer Treatment Response Prediction",description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.";
-      }
-    ];
-  }
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.';
-      }
-    ];
-  }
-];;'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.';
-      }
-    ];
-  }
-];'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.';
-      }
-    ];
-  }
-];;;
-ursor/fix-website-loading-errors-and-merge-6662;;
-];;
-    id: "t-001";
-    user_id: "user-001";
-    full_name: "Alexandra Chen";
-    professional_title: "Senior AI Engineer & Machine Learning Expert";
-    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
-
-      {}
-    ]
+      {
+      },
+    ],
   },
   {
+
+
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
@@ -103,6 +14,8 @@ ursor/fix-website-loading-errors-and-merge-6662;;
     professional_title: 'AI Ethics Consultant & Policy Advisor',
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
+
+
 
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
@@ -114,7 +27,7 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'Responsible AI',
       'Compliance',
       'Stakeholder Engagement',
-      'Research'
+      'Research',
     ],
     hourly_rate: 180,
     years_experience: 9,
@@ -132,16 +45,16 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'Image Processing',
       'C++',
       'CUDA',
-      'Edge AI'
+      'Edge AI',
     ],
     hourly_rate: 155,
     years_experience: 6,
     average_rating: 4 && 4.7,
     rating_count: 26,
     availability_type: 'full_time',
-    is_verified: true
-      }
-    ]
+    is_verified: true,
+      },
+    ],
   },
   {
     bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',
@@ -154,7 +67,7 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'Python',
       'Hugging Face',
       'Language Models',
-      'Sentiment Analysis'
+      'Sentiment Analysis',
     ],
     hourly_rate: 160,
     years_experience: 8,
@@ -172,7 +85,7 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'Linear Algebra',
       'Python',
       'TensorFlow Quantum',
-      'Optimization'
+      'Optimization',
     ],
     hourly_rate: 190,
     years_experience: 5,
@@ -190,7 +103,7 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'Agile',
       'Analytics',
       'Stakeholder Management',
-      'Product Roadmap'
+      'Product Roadmap',
     ],
     hourly_rate: 140,
     years_experience: 9,
@@ -208,7 +121,7 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'Robotics',
       'Simulation',
       'OpenAI Gym',
-      'Multi - agent Systems'
+      'Multi - agent Systems',
     ],
     hourly_rate: 150,
     years_experience: 6,
@@ -226,7 +139,7 @@ ursor/fix-website-loading-errors-and-merge-6662;;
       'PyTorch',
       'DICOM',
       'Clinical Validation',
-      'Regulatory Compliance'
+      'Regulatory Compliance',
     ],
     hourly_rate: 170,
     years_experience: 8,
@@ -235,11 +148,15 @@ ursor/fix-website-loading-errors-and-merge-6662;;
     availability_type: 'project',
     is_verified: true,
 
+
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
 
+
 import { TalentProfile } from "@/types/talent",
+
+
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -269,11 +186,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
       }
     ]
   }
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
-      }
-    ]
-  }
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+      },
+    ],
+  },
 ];
+;
+
+
 
 
 
@@ -282,4 +202,15 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 ];
+
+
 ;
+
+
+
+    id: "t-001";
+    user_id: "user-001";
+    full_name: "Alexandra Chen";
+    professional_title: "Senior AI Engineer & Machine Learning Expert";
+    profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+

@@ -27,7 +27,6 @@ export default async function handler(
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
 
-  const stake = Number(stakeUsd || 0);
 
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)

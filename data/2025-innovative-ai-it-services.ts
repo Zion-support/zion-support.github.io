@@ -782,6 +782,7 @@ export interface InnovativeAIService  {id: string,name: string,tagline: string,d
     rating: 4.9,
     reviews: 189;
   }
+
 ;
     rating: 4.9,
     reviews: 189;

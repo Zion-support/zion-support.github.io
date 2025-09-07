@@ -133,25 +133,6 @@ export default SystemAdministrationChat
 
 
 
-const SystemAdministrationChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>SystemAdministrationChat - Zion Tech Solutions</title>
-        <meta
-          name="description"
-          content="SystemAdministrationChat service"
-        />{" "}
-      </Head>
-      <main>
-        <h1>SystemAdministrationChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-}
-export default SystemAdministrationChat;
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
         <title>SystemAdministrationChat - Zion Tech Solutions</title>

@@ -1,0 +1,7 @@
+src
+src.disabled
+src.pages.disabled
+src.pages.disabled.auto
+components.disabled
+**/*.js.jsx
+**/*.d.tsx
