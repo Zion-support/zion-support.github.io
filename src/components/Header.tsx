@@ -1,4 +1,29 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </Link>
+
+          </button>
+        </div>
+
+        {isMenuOpen && (
+
+            </nav>
+          </div>
+=======
 import { Link  } from 'react-router-dom';
 import { Menu, X, Search  } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
@@ -89,6 +114,7 @@ const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(fal
               </Link>;
             </div>;
           </div>;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
         )}
       </div>;
       {isSearchOpen && <SearchModal onClose={() => setIsSearchOpen(false)} />}

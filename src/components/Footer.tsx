@@ -1,4 +1,25 @@
 import React from 'react';
+<<<<<<< HEAD
+
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  return (
+
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;
+=======
 import { Link  } from 'react-router-dom';
 import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp  } from 'lucide-react';
 const Footer: React.FC = () => {const currentYear  = new Date().getFullYear()const services = [;
@@ -150,3 +171,4 @@ const Footer: React.FC = () => {const currentYear  = new Date().getFullYear()con
       </div>;
     </footer>;
   )}export default Footer;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2

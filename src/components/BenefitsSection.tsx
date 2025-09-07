@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown  } from 'lucide-react';
 interface Benefit  {title: string;
@@ -58,3 +61,4 @@ interface Benefit  {title: string;
       </div>;
     </section>;
   )}export default BenefitsSection;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2

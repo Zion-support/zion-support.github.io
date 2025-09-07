@@ -2,6 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+@layer base {
+  :root {
+    --font-size: 16px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size);
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Accessibility enhancements */
+  .keyboard-navigation *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  .high-contrast {
+    filter: contrast(150%) brightness(110%);
+  }
+  
+  .reduce-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+=======
 /* Basic styles */
 body {
   margin: 0;
@@ -66,4 +128,5 @@ code {
   .cta-buttons {
     flex-direction: row;
   }
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
 }

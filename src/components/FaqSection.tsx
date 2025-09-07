@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp  } from 'lucide-react';
 const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<number | null>(null)const faqs = [;
@@ -56,3 +59,4 @@ const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<
       </div>;
     </section>;
   )}export default FaqSection;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2

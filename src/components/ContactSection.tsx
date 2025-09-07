@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Let&apos;s discuss how we can help you achieve your goals.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+=======
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock  } from 'lucide-react';
 const ContactSection: React.FC = () => {const [formData, setFormData] = useState({name: '',email: '',company: '',subject: '',message: '';
@@ -13,6 +29,7 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
           </p>;
         </div>;
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
           {/* Contact Information */}
           <div className="space-y-8">;
             <div>;
@@ -129,6 +146,13 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
                   required;
                   value={formData.subject}
                   onChange={handleChange}
+<<<<<<< HEAD
+                  className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300"
+                  placeholder="What can we help you with?"
+                />
+              </div>
+
+=======
                   className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300";
                   placeholder="What can we help you with?";
                 />;
@@ -165,3 +189,4 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
       </div>;
     </section>;
   )}export default ContactSection;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2

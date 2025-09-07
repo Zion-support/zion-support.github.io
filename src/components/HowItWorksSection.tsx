@@ -1,4 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
+
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our streamlined process ensures you get the best results quickly and efficiently
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="relative group"
+            >
+              {/* Connection Line */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform translate-x-4 z-0" />
+=======
 import { FileText, Search, Handshake, Check  } from 'lucide-react';
 const HowItWorksSection: React.FC = () => {const steps = [;
     {number: '01',title: 'Consultation',description: 'We start with a detailed consultation to understand your business needs and challenges.',icon: <FileText className="w-8 h-8" />;
@@ -25,9 +47,36 @@ const HowItWorksSection: React.FC = () => {const steps = [;
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>;
               <p className="text-gray-600">{step.description}</p>;
               {index < steps.length - 1 && (<div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 transform translate-x-8"></div>;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
               )}
             </div>;
           ))}
+<<<<<<< HEAD
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-xl mb-6 opacity-90">
+              Join thousands of businesses that trust our platform for their technology needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Your Project
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+=======
         </div>;
         <div className="mt-16 text-center">;
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">;
@@ -48,3 +97,4 @@ const HowItWorksSection: React.FC = () => {const steps = [;
       </div>;
     </section>;
   )}export default HowItWorksSection;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
