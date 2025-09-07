@@ -2,370 +2,221 @@
 
 /**
  * AI Code Quality Analyzer
- * Advanced code quality analysis using AI-powered insights
+ * Analyzes code quality using AI-powered insights
  */
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 console.log('🤖 Starting AI code quality analysis...');
 
-class AICodeQualityAnalyzer {
-  constructor() {
-    this.logFile = path.join(
-      __dirname,
-
-
-
-
-    );
-    this.ensureLogDir();
+// AI Code Quality Analyzer configuration
+const config = {
+  outputDir: path.join(__dirname, '..', '..', 'ai-analysis-reports'),
+  checks: {
+    complexity: true,
+    maintainability: true,
+    performance: true,
+    security: true,
+    bestPractices: true
   }
+};
 
-  async analyzeCodeComplexity() {
-    try {
-      console.log('🧮 Analyzing code complexity...');
-      
-      const srcDir = path.join(__dirname, '..', '..', 'src');
-      const componentsDir = path.join(__dirname, '..', '..', 'components');
-      const pagesDir = path.join(__dirname, '..', '..', 'pages');
-      
-      const directories = [srcDir, componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
-      
-      for (const dir of directories) {
-        this.scanDirectoryForComplexity(dir);
-      }
-      
-      console.log(`✅ Code complexity analysis completed`);
-      
-    } catch (error) {
-      console.warn('⚠️  Code complexity analysis failed:', error.message);
-    }
-  }
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
+}
 
-  scanDirectoryForComplexity(dir) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.scanDirectoryForComplexity(fullPath);
-      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          this.analyzeComplexity(content, fullPath);
-        } catch (error) {
-          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
-        }
-      }
-    }
-  }
-
-  analyzeComplexity(content, filePath) {
+// Analyze code complexity
+function analyzeComplexity(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.js', '.ts', '.jsx', '.tsx']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     const lines = content.split('\n');
-    const functions = content.match(/function\s+\w+|const\s+\w+\s*=\s*\(/g) || [];
-    const classes = content.match(/class\s+\w+/g) || [];
-    const imports = content.match(/import\s+.*from/g) || [];
-    const exports = content.match(/export\s+/g) || [];
     
-    // Calculate complexity metrics
-    const cyclomaticComplexity = this.calculateCyclomaticComplexity(content);
-    const linesOfCode = lines.length;
-    const functionCount = functions.length;
-    const classCount = classes.length;
-    const importCount = imports.length;
-    const exportCount = exports.length;
+    // Check for long functions (more than 50 lines)
+    let functionStart = -1;
+    let braceCount = 0;
     
-    // Analyze for complexity issues
-    if (cyclomaticComplexity > 10) {
-      this.analysisResults.complexity.push({
-        file: filePath,
-        type: 'High Cyclomatic Complexity',
-        severity: 'high',
-        value: cyclomaticComplexity,
-        recommendation: 'Refactor to reduce complexity - break into smaller functions'
-      });
-    }
-    
-    if (linesOfCode > 200) {
-      this.analysisResults.complexity.push({
-        file: filePath,
-        type: 'Large File',
-        severity: 'medium',
-        value: linesOfCode,
-        recommendation: 'Consider splitting into smaller modules'
-      });
-    }
-    
-    if (functionCount > 20) {
-      this.analysisResults.complexity.push({
-        file: filePath,
-        type: 'Too Many Functions',
-        severity: 'medium',
-        value: functionCount,
-        recommendation: 'Consider breaking into multiple files'
-      });
-    }
-  }
-
-  calculateCyclomaticComplexity(content) {
-    const complexityKeywords = [
-      'if', 'else', 'while', 'for', 'switch', 'case', 'catch', '&&', '||', '?'
-    ];
-    
-    let complexity = 1; // Base complexity
-    
-    complexityKeywords.forEach(keyword => {
-      const regex = new RegExp(`\\b${keyword}\\b`, 'g');
-      const matches = content.match(regex);
-      if (matches) {
-        complexity += matches.length;
+    lines.forEach((line, index) => {
+      if (line.includes('function ') || line.includes('=>') || line.includes('const ') && line.includes('=')) {
+        functionStart = index;
+        braceCount = 0;
+      }
+      
+      if (functionStart !== -1) {
+        braceCount += (line.match(/\{/g) || []).length;
+        braceCount -= (line.match(/\}/g) || []).length;
+        
+        if (braceCount === 0 && functionStart !== -1) {
+          const functionLength = index - functionStart + 1;
+          if (functionLength > 50) {
+            issues.push({
+              file: path.relative(__dirname, file),
+              type: 'long-function',
+              severity: 'medium',
+              line: functionStart + 1,
+              message: `Function is ${functionLength} lines long (recommended: <50)`
+            });
+          }
+          functionStart = -1;
+        }
       }
     });
+  });
+  
+  return issues;
+}
+
+// Analyze maintainability
+function analyzeMaintainability(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.js', '.ts', '.jsx', '.tsx']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
-    return complexity;
-  }
-
-  async analyzeMaintainability() {
-    try {
-      console.log('🔧 Analyzing maintainability...');
-      
-      const srcDir = path.join(__dirname, '..', '..', 'src');
-      const componentsDir = path.join(__dirname, '..', '..', 'components');
-      const pagesDir = path.join(__dirname, '..', '..', 'pages');
-      
-      const directories = [srcDir, componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
-      
-      for (const dir of directories) {
-        this.scanDirectoryForMaintainability(dir);
-      }
-      
-      console.log(`✅ Maintainability analysis completed`);
-      
-    } catch (error) {
-      console.warn('⚠️  Maintainability analysis failed:', error.message);
-    }
-  }
-
-  scanDirectoryForMaintainability(dir) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.scanDirectoryForMaintainability(fullPath);
-      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          this.analyzeMaintainability(content, fullPath);
-        } catch (error) {
-          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
-        }
-      }
-    }
-  }
-
-  analyzeMaintainability(content, filePath) {
-    const maintainabilityPatterns = [
-      {
-        name: 'Missing Comments',
-        pattern: /\/\*[\s\S]*?\*\/|\/\/.*$/gm,
+    // Check for TODO comments
+    const todoMatches = content.match(/TODO|FIXME|HACK|XXX/gi);
+    if (todoMatches) {
+      issues.push({
+        file: path.relative(__dirname, file),
+        type: 'todo-comments',
         severity: 'low',
-        recommendation: 'Add meaningful comments for complex logic'
-      },
-      recommendations: this.generateRecommendations(),
-    };
-
-    return analysis;
-  }
-
-  analyzeComplexity() {
-    this.log('📊 Analyzing code complexity...');
-
-    // Simulate complexity analysis
-    return {
-      score: 85,
-      issues: [
-
-
-      ],
-      suggestions: [
-
-
-      ],
-    };
-  }
-
-  analyzeMaintainability() {
-    this.log('🔧 Analyzing maintainability...');
-
-    return {
-      score: 78,
-      issues: [
-
-
-
-      ],
-      suggestions: [
-
-
-
-      ],
-    };
-  }
-
-  analyzeTestCoverage() {
-    this.log('🧪 Analyzing test coverage...');
-
-    return {
-      score: 65,
-      coverage: {
-        statements: 65,
-        branches: 58,
-        functions: 72,
-        lines: 68,
-      },
-      suggestions: [
-
-
-
-      ],
-    };
-  }
-
-  analyzeCodeDuplication() {
-    this.log('🔄 Analyzing code duplication...');
-
-    return {
-      score: 82,
-      duplicatedLines: 45,
-      suggestions: [
-
-
-
-      ],
-    };
-  }
-
-  scanDirectoryForPerformance(dir) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.scanDirectoryForPerformance(fullPath);
-      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          this.analyzePerformance(content, fullPath);
-        } catch (error) {
-          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
-        }
-      }
+        count: todoMatches.length,
+        message: `${todoMatches.length} TODO/FIXME comments found`
+      });
     }
-  }
-
-    return {
-      score: 90,
-      issues: [
-
-
-      ],
-      suggestions: [
-
-
-
-      ],
-    };
-  }
-
-  generateRecommendations() {
-    this.log('💡 Generating recommendations...');
-
-    return [
-
-
-
-
-
-
-
-    ];
     
-    this.analysisResults.recommendations = recommendations;
-  }
-
-  generateReport() {
-    this.generateRecommendations();
-    
-    const report = {
-      ...this.analysisResults,
-      summary: {
-        complexityIssues: this.analysisResults.complexity.length,
-        maintainabilityIssues: this.analysisResults.maintainability.length,
-        performanceIssues: this.analysisResults.performance.length,
-        bestPracticeIssues: this.analysisResults.bestPractices.length,
-        totalIssues: this.analysisResults.complexity.length +
-                    this.analysisResults.maintainability.length +
-                    this.analysisResults.performance.length +
-                    this.analysisResults.bestPractices.length
-      }
-    };
-
-    const reportPath = path.join(
-      __dirname,
-
-
-
-
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('📄 AI code quality report saved to ai-code-quality-report.json');
-    return report;
-  }
-
-  async run() {
-    try {
-      await this.analyzeCodeComplexity();
-      await this.analyzeMaintainability();
-      await this.analyzePerformance();
-      await this.analyzeBestPractices();
-      
-      const report = this.generateReport();
-      
-      console.log('\n🤖 AI Code Quality Analysis Summary:');
-      console.log(`Complexity Issues: ${report.summary.complexityIssues}`);
-      console.log(`Maintainability Issues: ${report.summary.maintainabilityIssues}`);
-      console.log(`Performance Issues: ${report.summary.performanceIssues}`);
-      console.log(`Best Practice Issues: ${report.summary.bestPracticeIssues}`);
-      console.log(`Total Issues: ${report.summary.totalIssues}`);
-      
-      if (report.recommendations.length > 0) {
-        console.log('\n💡 AI Recommendations:');
-        report.recommendations.forEach((rec, index) => {
-          console.log(`${index + 1}. ${rec}`);
-        });
-      }
-      
-    } catch (error) {
-      console.error('❌ AI code quality analysis failed:', error.message);
-      process.exit(1);
+    // Check for console.log statements
+    const consoleMatches = content.match(/console\.(log|warn|error)/g);
+    if (consoleMatches) {
+      issues.push({
+        file: path.relative(__dirname, file),
+        type: 'console-statements',
+        severity: 'low',
+        count: consoleMatches.length,
+        message: `${consoleMatches.length} console statements found`
+      });
     }
+  });
+  
+  return issues;
+}
+
+// Analyze performance
+function analyzePerformance(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.js', '.ts', '.jsx', '.tsx']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    
+    // Check for potential performance issues
+    if (content.includes('document.querySelectorAll') && content.includes('forEach')) {
+      issues.push({
+        file: path.relative(__dirname, file),
+        type: 'inefficient-dom-query',
+        severity: 'medium',
+        message: 'Consider using more efficient DOM queries'
+      });
+    }
+    
+    if (content.includes('setInterval') || content.includes('setTimeout')) {
+      issues.push({
+        file: path.relative(__dirname, file),
+        type: 'timer-usage',
+        severity: 'low',
+        message: 'Timer usage detected - ensure proper cleanup'
+      });
+    }
+  });
+  
+  return issues;
+}
+
+// Get all files recursively
+function getAllFiles(dir, extensions = []) {
+  const files = [];
+  
+  if (!fs.existsSync(dir)) {
+    return files;
   }
+  
+  const items = fs.readdirSync(dir);
+  
+  items.forEach(item => {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  });
+  
+  return files;
 }
 
-async function main() {
-  const analyzer = new AICodeQualityAnalyzer();
-  await analyzer.run();
+// Run AI code quality analysis
+function runCodeQualityAnalysis() {
+  const srcDir = path.join(__dirname, '..', '..', 'src');
+  const componentsDir = path.join(__dirname, '..', '..', 'components');
+  const pagesDir = path.join(__dirname, '..', '..', 'pages');
+  
+  const analysis = {
+    timestamp: new Date().toISOString(),
+    checks: {
+      complexity: analyzeComplexity(srcDir).concat(analyzeComplexity(componentsDir)).concat(analyzeComplexity(pagesDir)),
+      maintainability: analyzeMaintainability(srcDir).concat(analyzeMaintainability(componentsDir)).concat(analyzeMaintainability(pagesDir)),
+      performance: analyzePerformance(srcDir).concat(analyzePerformance(componentsDir)).concat(analyzePerformance(pagesDir))
+    },
+    summary: {
+      totalIssues: 0,
+      highSeverity: 0,
+      mediumSeverity: 0,
+      lowSeverity: 0
+    }
+  };
+
+  // Calculate summary
+  Object.values(analysis.checks).forEach(check => {
+    analysis.summary.totalIssues += check.length;
+    check.forEach(issue => {
+      if (issue.severity === 'high') analysis.summary.highSeverity++;
+      else if (issue.severity === 'medium') analysis.summary.mediumSeverity++;
+      else analysis.summary.lowSeverity++;
+    });
+  });
+
+  return analysis;
 }
 
-if (require.main === module) {
-  main();
+// Save analysis results
+function saveAnalysisResults(analysis) {
+  const filename = `ai-code-quality-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(analysis, null, 2));
+  console.log(`🤖 AI code quality analysis saved to: ${filename}`);
+  
+  // Print summary
+  console.log(`📊 AI Code Quality Analysis Summary:`);
+  console.log(`   Total Issues: ${analysis.summary.totalIssues}`);
+  console.log(`   High Severity: ${analysis.summary.highSeverity}`);
+  console.log(`   Medium Severity: ${analysis.summary.mediumSeverity}`);
+  console.log(`   Low Severity: ${analysis.summary.lowSeverity}`);
 }
 
-module.exports = AICodeQualityAnalyzer;
+// Main execution
+try {
+  const analysis = runCodeQualityAnalysis();
+  saveAnalysisResults(analysis);
+  console.log('✅ AI code quality analysis completed');
+} catch (error) {
+  console.error('❌ AI code quality analysis failed:', error.message);
+  process.exit(1);
+}

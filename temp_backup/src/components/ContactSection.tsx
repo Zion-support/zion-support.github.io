@@ -1,106 +1,13 @@
-/* eslint-disable */
- import {;
-  {;
-  {;
-  Mail ;
-}from 'lucide-react' export function ContactSection () {;
-  const [formData,  setFormData] = useState ({;
-  const [errors, setErrors] = useState< {;
-  name?: string;
-email?: string;
-subject?: string;
-message?: string ;
-}> ({;
-});
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
-  const {;
-  name, value ;
-}= e.target;
-setFormData ( (prev) => ({;
-  ...prev, [name]: value ;
-}) );
-setErrors ( (prev) => ({;
-  ...prev, [name]: undefined ;
-}) ) ;
-};
-const handleSubmit = (e: React.FormEvent) => {;
-  e.preventDefault ();
-const schema = z.object ({;
-  const result = schema.safeParse (formData);
-if (!result.success) {;
-  const fieldErrors: Record<string string> = {;
-};
-for (const err of result.error.errors) {;
-  if (err.path[0]) {;
-  fieldErrors[err.path[0] as string] = err.message ;
-}
-    {
-      icon: Mail
-      title: "Email"
-      value: "kleber@ziontechgroup.com"
-      link: "mailto:kleber@ziontechgroup.com"
-},    {
-      icon: MapPin,"
-      title: "Address","
-      value: "364 E Main St STE 1008 Middletown DE 19709","
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"};  ]
-  return ("
-    <section className="py-16 px-4 sm:px-6 lg:px-8">"
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial = {
-  { opacity: 0
-  y: 20
-}}
-          whileInView = {
-  { opacity: 1
-  y: 0
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}"
-          className="text-center mb-16"
-"
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Get In Touch
-          </h2>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Contact us today to discuss your technology needs
-          </p>
-        </motion.div>"
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
-          {contactInfo.map((contact, index)  => (
-            <motion.div
-              key={index}
-              initial = {
-  { opacity: 0
-  y: 20
-}}
-              whileInView = {
-  { opacity: 1
-  y: 0
-}}
-              transition = {
-  { duration: 0.6
-  delay: index * 0.1
-}}
-              viewport={{ once: true }}"
-              className="text-center"
-    const schema = z.object({
-      name: z.string().min(2, "Name is required")
-      email: z.string().email("Enter a valid email")
-      subject: z.string().min(2, "Subject is required")
-      message: z.string().min(10, "Message must be at least 10 characters")})
-    const result = schema.safeParse(formData)
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {}
-import { useState } from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import z from "zod",
-import { Mail } from 'lucide-react'
+import React from 'react';
+
+import { useState } from "react";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";,
+import { Input } from "@/components/ui/input";,
+import { Textarea } from "@/components/ui/textarea";,
+import { toast } from "@/components/ui/use-toast";,
+import z from "zod";,
+import { Mail } from 'lucide-react';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -237,7 +144,7 @@ export function ContactSection() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      className="{`w-full" rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
                     {errors.name && (
@@ -254,7 +161,7 @@ export function ContactSection() {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      className="{`w-full" rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
                     {errors.email && (
@@ -271,7 +178,7 @@ export function ContactSection() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    className="{`w-full" rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
                   {errors.subject && (
@@ -285,10 +192,10 @@ export function ContactSection() {
                   <Textarea
                     id="message"
                     name="message"
-                    rows = {4,}
-                    value = {formData.message,}
-                    onChange = {handleChange,}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="{`w-full" rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
                   {errors.message && (

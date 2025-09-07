@@ -2,348 +2,196 @@
 
 /**
  * Accessibility Checker
- * Comprehensive accessibility audit and improvement tool
+ * Checks and improves accessibility compliance
  */
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 console.log('♿ Starting accessibility audit...');
 
-class AccessibilityChecker {
-  constructor() {
-    this.issues = [];
-    this.recommendations = [];
-    this.auditResults = {
-      timestamp: new Date().toISOString(),
-      wcagLevel: 'AA',
-      issues: [],
-      recommendations: [],
-      score: 0
-    };
+// Accessibility checker configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'accessibility-reports'),
+  checks: {
+    ariaLabels: true,
+    colorContrast: true,
+    keyboardNavigation: true,
+    semanticHTML: true,
+    altText: true
   }
+};
 
-  async checkARIALabels() {
-    try {
-      console.log('🏷️  Checking ARIA labels and roles...');
-      
-      const componentsDir = path.join(__dirname, '..', 'components');
-      const pagesDir = path.join(__dirname, '..', 'pages');
-      
-      const directories = [componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
-      
-      for (const dir of directories) {
-        this.scanDirectoryForARIA(dir);
-      }
-      
-      console.log(`✅ ARIA labels check completed`);
-      
-    } catch (error) {
-      console.warn('⚠️  ARIA labels check failed:', error.message);
-    }
-  }
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
+}
 
-  scanDirectoryForARIA(dir) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
+// Check for ARIA labels
+function checkAriaLabels(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.scanDirectoryForARIA(fullPath);
-      } else if (file.name.match(/\.(jsx|tsx|js|ts)$/)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          this.analyzeARIA(content, fullPath);
-        } catch (error) {
-          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
+    // Check for interactive elements without ARIA labels
+    const interactiveElements = content.match(/<(button|input|select|textarea)(?![^>]*aria-label)[^>]*>/gi);
+    if (interactiveElements) {
+      interactiveElements.forEach(element => {
+        if (!element.includes('aria-label') && !element.includes('aria-labelledby')) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'missing-aria-label',
+            element: element.trim(),
+            severity: 'medium'
+          });
         }
-      }
+      });
     }
-  }
+  });
+  
+  return issues;
+}
 
-  analyzeARIA(content, filePath) {
-    const ariaPatterns = [
-      {
-        name: 'Missing ARIA Labels',
-        pattern: /<(button|input|select|textarea)(?!.*aria-label)(?!.*aria-labelledby)/gi,
-        severity: 'medium',
-        recommendation: 'Add aria-label or aria-labelledby attributes'
-      },
-      {
-        name: 'Missing ARIA Roles',
-        pattern: /<div(?!.*role)(?!.*aria-)/gi,
-        severity: 'low',
-        recommendation: 'Consider adding role attribute for semantic clarity'
-      },
-      {
-        name: 'Missing Alt Text',
-        pattern: /<img(?!.*alt)/gi,
-        severity: 'high',
-        recommendation: 'Add alt attribute to all images'
-      },
-      {
-        name: 'Missing Form Labels',
-        pattern: /<input(?!.*aria-label)(?!.*aria-labelledby)(?!.*id)/gi,
-        severity: 'high',
-        recommendation: 'Associate form inputs with labels'
-      }
-    ];
+// Check for alt text on images
+function checkAltText(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
-    ariaPatterns.forEach(pattern => {
-      const matches = content.match(pattern.pattern);
-      if (matches) {
-        this.auditResults.issues.push({
-          file: filePath,
-          type: pattern.name,
-          severity: pattern.severity,
-          count: matches.length,
-          recommendation: pattern.recommendation
-        });
-      }
-    });
-  }
-
-  async checkColorContrast() {
-    try {
-      console.log('🎨 Checking color contrast...');
-      
-      const cssFiles = this.findCSSFiles();
-      
-      for (const cssFile of cssFiles) {
-        this.analyzeColorContrast(cssFile);
-      }
-      
-      console.log(`✅ Color contrast check completed`);
-      
-    } catch (error) {
-      console.warn('⚠️  Color contrast check failed:', error.message);
-    }
-  }
-
-  findCSSFiles() {
-    const cssFiles = [];
-    const directories = [
-      path.join(__dirname, '..', 'styles'),
-      path.join(__dirname, '..', 'src'),
-      path.join(__dirname, '..', 'components')
-    ];
-    
-    for (const dir of directories) {
-      if (fs.existsSync(dir)) {
-        this.findCSSInDirectory(dir, cssFiles);
-      }
-    }
-    
-    return cssFiles;
-  }
-
-  findCSSInDirectory(dir, cssFiles) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.findCSSInDirectory(fullPath, cssFiles);
-      } else if (file.name.match(/\.(css|scss|sass)$/)) {
-        cssFiles.push(fullPath);
-      }
-    }
-  }
-
-  analyzeColorContrast(cssFile) {
-    try {
-      const content = fs.readFileSync(cssFile, 'utf8');
-      
-      // Look for color definitions
-      const colorPattern = /color:\s*([^;]+);/gi;
-      const backgroundColorPattern = /background-color:\s*([^;]+);/gi;
-      
-      const colors = [...content.matchAll(colorPattern)].map(match => match[1].trim());
-      const backgrounds = [...content.matchAll(backgroundColorPattern)].map(match => match[1].trim());
-      
-      // Basic contrast check (simplified)
-      if (colors.length > 0 || backgrounds.length > 0) {
-        this.auditResults.issues.push({
-          file: cssFile,
-          type: 'Color Contrast',
-          severity: 'medium',
-          count: colors.length + backgrounds.length,
-          recommendation: 'Verify color contrast meets WCAG AA standards (4.5:1 ratio)'
-        });
-      }
-      
-    } catch (error) {
-      console.warn(`⚠️  Failed to analyze ${cssFile}:`, error.message);
-    }
-  }
-
-  async checkKeyboardNavigation() {
-    try {
-      console.log('⌨️  Checking keyboard navigation...');
-      
-      const componentsDir = path.join(__dirname, '..', 'components');
-      const pagesDir = path.join(__dirname, '..', 'pages');
-      
-      const directories = [componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
-      
-      for (const dir of directories) {
-        this.scanDirectoryForKeyboard(dir);
-      }
-      
-      console.log(`✅ Keyboard navigation check completed`);
-      
-    } catch (error) {
-      console.warn('⚠️  Keyboard navigation check failed:', error.message);
-    }
-  }
-
-  scanDirectoryForKeyboard(dir) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.scanDirectoryForKeyboard(fullPath);
-      } else if (file.name.match(/\.(jsx|tsx|js|ts)$/)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          this.analyzeKeyboardNavigation(content, fullPath);
-        } catch (error) {
-          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
+    // Check for images without alt text
+    const images = content.match(/<img[^>]*>/gi);
+    if (images) {
+      images.forEach(img => {
+        if (!img.includes('alt=') || img.includes('alt=""')) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'missing-alt-text',
+            element: img.trim(),
+            severity: 'high'
+          });
         }
-      }
+      });
     }
-  }
+  });
+  
+  return issues;
+}
 
-  analyzeKeyboardNavigation(content, filePath) {
-    const keyboardPatterns = [
-      {
-        name: 'Missing Tab Index',
-        pattern: /<div(?!.*tabIndex)(?!.*onClick)/gi,
-        severity: 'low',
-        recommendation: 'Consider adding tabIndex for interactive elements'
-      },
-      {
-        name: 'Missing Focus Management',
-        pattern: /onClick(?!.*onKeyDown)(?!.*onKeyPress)/gi,
-        severity: 'medium',
-        recommendation: 'Add keyboard event handlers for interactive elements'
-      },
-      {
-        name: 'Missing Skip Links',
-        pattern: /<main(?!.*id="main")/gi,
-        severity: 'medium',
-        recommendation: 'Add skip links for main content navigation'
-      }
-    ];
+// Check for semantic HTML
+function checkSemanticHTML(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
     
-    keyboardPatterns.forEach(pattern => {
-      const matches = content.match(pattern.pattern);
-      if (matches) {
-        this.auditResults.issues.push({
-          file: filePath,
-          type: pattern.name,
-          severity: pattern.severity,
-          count: matches.length,
-          recommendation: pattern.recommendation
-        });
-      }
+    // Check for proper heading hierarchy
+    const headings = content.match(/<h[1-6][^>]*>/gi);
+    if (headings) {
+      let lastLevel = 0;
+      headings.forEach(heading => {
+        const level = parseInt(heading.match(/<h([1-6])/)[1]);
+        if (level > lastLevel + 1) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'heading-hierarchy',
+            element: heading.trim(),
+            severity: 'medium',
+            message: `Heading level ${level} follows level ${lastLevel}`
+          });
+        }
+        lastLevel = level;
+      });
+    }
+  });
+  
+  return issues;
+}
+
+// Get all files recursively
+function getAllFiles(dir, extensions = []) {
+  const files = [];
+  
+  if (!fs.existsSync(dir)) {
+    return files;
+  }
+  
+  const items = fs.readdirSync(dir);
+  
+  items.forEach(item => {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  });
+  
+  return files;
+}
+
+// Run accessibility audit
+function runAccessibilityAudit() {
+  const srcDir = path.join(__dirname, '..', 'src');
+  const componentsDir = path.join(__dirname, '..', 'components');
+  const pagesDir = path.join(__dirname, '..', 'pages');
+  
+  const audit = {
+    timestamp: new Date().toISOString(),
+    checks: {
+      ariaLabels: checkAriaLabels(srcDir).concat(checkAriaLabels(componentsDir)).concat(checkAriaLabels(pagesDir)),
+      altText: checkAltText(srcDir).concat(checkAltText(componentsDir)).concat(checkAltText(pagesDir)),
+      semanticHTML: checkSemanticHTML(srcDir).concat(checkSemanticHTML(componentsDir)).concat(checkSemanticHTML(pagesDir))
+    },
+    summary: {
+      totalIssues: 0,
+      highSeverity: 0,
+      mediumSeverity: 0,
+      lowSeverity: 0
+    }
+  };
+
+  // Calculate summary
+  Object.values(audit.checks).forEach(check => {
+    audit.summary.totalIssues += check.length;
+    check.forEach(issue => {
+      if (issue.severity === 'high') audit.summary.highSeverity++;
+      else if (issue.severity === 'medium') audit.summary.mediumSeverity++;
+      else audit.summary.lowSeverity++;
     });
-  }
+  });
 
-  generateRecommendations() {
-    const recommendations = [
-      'Implement comprehensive ARIA labels and roles',
-      'Ensure all images have descriptive alt text',
-      'Verify color contrast meets WCAG AA standards',
-      'Add keyboard navigation support',
-      'Implement focus management',
-      'Add skip links for main content',
-      'Test with screen readers',
-      'Implement semantic HTML structure',
-      'Add error messages and success feedback',
-      'Ensure form validation is accessible'
-    ];
-    
-    this.auditResults.recommendations = recommendations;
-  }
-
-  calculateScore() {
-    const totalIssues = this.auditResults.issues.length;
-    const highSeverityIssues = this.auditResults.issues.filter(i => i.severity === 'high').length;
-    const mediumSeverityIssues = this.auditResults.issues.filter(i => i.severity === 'medium').length;
-    
-    // Calculate score based on issues (simplified)
-    let score = 100;
-    score -= highSeverityIssues * 20;
-    score -= mediumSeverityIssues * 10;
-    score -= (totalIssues - highSeverityIssues - mediumSeverityIssues) * 5;
-    
-    this.auditResults.score = Math.max(0, score);
-  }
-
-  generateReport() {
-    this.generateRecommendations();
-    this.calculateScore();
-    
-    const report = {
-      ...this.auditResults,
-      summary: {
-        totalIssues: this.auditResults.issues.length,
-        highSeverityIssues: this.auditResults.issues.filter(i => i.severity === 'high').length,
-        mediumSeverityIssues: this.auditResults.issues.filter(i => i.severity === 'medium').length,
-        lowSeverityIssues: this.auditResults.issues.filter(i => i.severity === 'low').length,
-        accessibilityScore: this.auditResults.score
-      }
-    };
-    
-    const reportPath = path.join(__dirname, '..', 'accessibility-audit-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('📄 Accessibility audit report saved to accessibility-audit-report.json');
-    return report;
-  }
-
-  async run() {
-    try {
-      await this.checkARIALabels();
-      await this.checkColorContrast();
-      await this.checkKeyboardNavigation();
-      
-      const report = this.generateReport();
-      
-      console.log('\n♿ Accessibility Audit Summary:');
-      console.log(`Total Issues: ${report.summary.totalIssues}`);
-      console.log(`High Severity: ${report.summary.highSeverityIssues}`);
-      console.log(`Medium Severity: ${report.summary.mediumSeverityIssues}`);
-      console.log(`Low Severity: ${report.summary.lowSeverityIssues}`);
-      console.log(`Accessibility Score: ${report.summary.accessibilityScore}/100`);
-      
-      if (report.recommendations.length > 0) {
-        console.log('\n💡 Accessibility Recommendations:');
-        report.recommendations.forEach((rec, index) => {
-          console.log(`${index + 1}. ${rec}`);
-        });
-      }
-      
-    } catch (error) {
-      console.error('❌ Accessibility audit failed:', error.message);
-      process.exit(1);
-    }
-  }
+  return audit;
 }
 
-async function main() {
-  const checker = new AccessibilityChecker();
-  await checker.run();
+// Save audit results
+function saveAuditResults(audit) {
+  const filename = `accessibility-audit-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(audit, null, 2));
+  console.log(`♿ Accessibility audit saved to: ${filename}`);
+  
+  // Print summary
+  console.log(`📊 Accessibility Audit Summary:`);
+  console.log(`   Total Issues: ${audit.summary.totalIssues}`);
+  console.log(`   High Severity: ${audit.summary.highSeverity}`);
+  console.log(`   Medium Severity: ${audit.summary.mediumSeverity}`);
+  console.log(`   Low Severity: ${audit.summary.lowSeverity}`);
 }
 
-if (require.main === module) {
-  main();
+// Main execution
+try {
+  const audit = runAccessibilityAudit();
+  saveAuditResults(audit);
+  console.log('✅ Accessibility audit completed');
+} catch (error) {
+  console.error('❌ Accessibility audit failed:', error.message);
+  process.exit(1);
 }
-
-module.exports = AccessibilityChecker;

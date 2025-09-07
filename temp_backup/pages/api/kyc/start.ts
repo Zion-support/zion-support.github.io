@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
-import type { KycProfile, KycRole } from '../../../utils/kyc';
+import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc',
+import type { KycProfile, KycRole } from '../../../utils/kyc',
 import fs from 'fs';
 import path from 'path';
-const DATA_DIR = path.join(process.cwd(), 'datakyc');
-const FILE = path.join(DATA_DIR, 'profiles.json');
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),
+const FILE = path.join(DATA_DIR, 'profiles.json'),
 
 function load(): Record<string, KycProfile> {
   try {

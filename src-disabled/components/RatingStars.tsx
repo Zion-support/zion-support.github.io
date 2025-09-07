@@ -1,6 +1,5 @@
-:src/components/RatingStars.tsx
-import React from 'react';
-import { Star, StarHalf } from 'lucide-react'
+import React from 'react';,
+import { Star, StarHalf } from 'lucide-react';
 
 export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
   const filled = Math.floor(value),

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { writeState } from '../../../lib/integrations/fileStore';
-import { getProviderById } from '../../../lib/integrations/registry';
-import { ProviderConnection, SyncRules } from '../../../lib/integrations/types';
+import { writeState } from '../../../lib/integrations/fileStore',
+import { getProviderById } from '../../../lib/integrations/registry',
+import { ProviderConnection, SyncRules } from '../../../lib/integrations/types',
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
