@@ -18,13 +18,14 @@ describe('Layoutdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout.dynamic"; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Layoutdynamic from '../components/Layout.dynamic';
-describe('Layoutdynamic', () => {
+import Layout from '../components/Layout';
+
+describe('Layout', () => {
   test('renders without crashing', () => {
-    render(<Layoutdynamic />);
-    expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
+    render(<Layout />);
+    expect(screen.getByTestId('layout')).toBeInTheDocument();
   });
 });
 
@@ -34,13 +35,16 @@ describe('Layoutdynamic', () => {
 
 
   test('displays correct content', () => {
-    render(<Layoutdynamic />);
+    render(<Layout />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<Layoutdynamic />);
+    render(<Layout />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<Layoutdynamic />);
+    render(<Layout />);
+    // Add styling tests if needed
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout.dynamic"; describe("Layoutdynamic",() => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling",() => { render(<Layoutdynamic />)})});''"
