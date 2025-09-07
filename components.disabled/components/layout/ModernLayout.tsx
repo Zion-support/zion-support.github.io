@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import React from 'react';
@@ -78,3 +80,4 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {children: React
       </div>;
     </>;
   )}export default ModernLayout;
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

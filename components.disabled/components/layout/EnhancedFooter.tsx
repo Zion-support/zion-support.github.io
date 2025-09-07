@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import React from 'react';
@@ -144,3 +146,4 @@ const EnhancedFooter: React.FC = () => {return (<footer className="bg-gray-900 t
       </div>;
     </footer>;
   )}export default EnhancedFooter;
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

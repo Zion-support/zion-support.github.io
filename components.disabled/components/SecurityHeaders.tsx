@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import React, { useEffect } from 'react';
@@ -11,3 +13,4 @@ const SecurityHeaders: React.FC = () => {useEffect(() => {// Add security header
     const addCSPForInlineStyles = () => {const style = document.createElement('style')style.setAttribute('nonce','csp-nonce-' + Math.random().toString(36).substr(2, 9))document.head.appendChild(style)}// Initialize security headers;
     addSecurityHeaders()addCSPForInlineStyles()}, [])return null;
 }export default SecurityHeaders;
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

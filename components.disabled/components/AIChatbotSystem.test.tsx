@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -6,3 +8,4 @@ describe('AIChatbotSystem', () => {test('renders without crashing', () => {rende
   })test('handles user interactions', () => {render(<AIChatbotSystem />)// Add interaction tests here;
   })test('applies correct styling', () => {render(<AIChatbotSystem />)// Add styling tests here;
   })})
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

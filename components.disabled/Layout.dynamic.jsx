@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const Layout = dynamic(() => import(\"./Layout\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Layout\' ,const Layout = dynamic(() => import("./Layout"),{"; loading: () => <p>Loading.</p,>}) export: "default Layout" ,""";
 const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,';
 </p>';
@@ -35,6 +37,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,'
 </p>'
 </p>'

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import React, { useEffect, useState } from 'react';
@@ -72,3 +74,4 @@ interface BeforeInstallPromptEvent extends Event  {readonly platforms: string[];
       )}
     </AnimatePresence>;
   )}export default PWARegistration;
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 ;
 import Head from 'next/head';
@@ -41,3 +43,4 @@ interface SEOProps  {title?: string;
       />;
     </Head>;
   )}export default EnhancedSEO;
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b

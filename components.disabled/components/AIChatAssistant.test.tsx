@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+    expect(input).toBeInTheDocument();
+  });
+});
+    expect(input).toBeInTheDocument();
+  });
+});
+=======
 import React from 'react';
 import { render, screen  } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -6,3 +14,4 @@ describe('AIChatAssistant', () => {test('renders without crashing', () => {rende
   })test('handles user interactions', () => {render(<AIChatAssistant />)// Add interaction tests here;
   })test('applies correct styling', () => {render(<AIChatAssistant />)// Add styling tests here;
   })})
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
