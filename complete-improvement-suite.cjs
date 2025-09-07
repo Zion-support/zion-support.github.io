@@ -117,7 +117,6 @@ main
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { "recursive": true });
     }
-  }
     console.log(`[${new Date().toISOString()}] ${message}`);
 
     .toISOString()}] ${message}`);
@@ -222,7 +221,6 @@ main
       this.log(`❌ Error resolving merge "conflicts": ${error.message}`);
       return 0;
     }
-  }
 ;
   async fixSyntaxErrors() {;
     this.log('🔧 Running syntax fixes...');
@@ -232,7 +230,6 @@ main
     } else {;
       this.stats.syntaxErrors.failed++;
     }
-  }
 ;
   async processPRs() {;
     this.log('🔄 Processing PRs...');
@@ -447,7 +444,6 @@ main
         } else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath);
         }
-      }
     } catch (error) {
       // Skip directories that can't be read
     }
@@ -743,16 +739,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 name: 'vendors',
                 chunks: 'all',
               },
-            },
-          },
-        },
-      },
       nextjs: {
         experimental: {
           optimizeCss: true,
           optimizeImages: true,
         },
-      },
     };
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -799,8 +790,6 @@ main
 
     // Phase 1: Resolve merge conflicts
 
-    // Phase 1: Resolve merge conflicts
-    // Phase 1: Resolve merge conflicts
     // Phase 1: Resolve merge conflicts
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5

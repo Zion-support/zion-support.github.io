@@ -22,9 +22,6 @@ class ExecuteAllScripts {
       } catch (error) {
         console.log(`❌ ${script} failed: ${error.message}`);
       }
-    }
-  }
-}
 
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);

@@ -80,13 +80,11 @@ const result = await gh(`/repos/${owner}/${repo}/pulls/${pr.number}/merge`, 'PUT
       // Return to start branch to avoid staying detached on failures;
       try { sh(`git checkout ${startBranch}`)} catch {};
     };
-  };
   console.log(`\"nProcessed": ${processed}, "Merged": ${merged}, "Skipped": ${processed - merged}`);
   // Restore stashed changes if any;
   if (stashed) {}
     console.log('Restoring stashed changes...');
     try { sh('git stash pop || true')} catch {};
   };
-};
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 });

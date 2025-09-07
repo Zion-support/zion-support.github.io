@@ -31,7 +31,6 @@ console.log('🚀 Starting Comprehensive PR Merge and Conflict Resolution...');
       if (match) {
         return { owner: match[1], repo: match[2] };
       }
-    }
   } catch (error) {
     console.log('❌ Could not determine repository information');
   }

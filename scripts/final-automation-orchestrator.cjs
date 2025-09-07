@@ -13,7 +13,6 @@ const output = execSync(command, { "encoding": 'utf8', "stdio"});
     execSync('git add .', { "stdio"})
 const status = execSync('git status --porcelain', { "encoding"});
       execSync('git commit -m ""feat": Complete final automation orchestration and improvements"', { "stdio"})
-      execSync('git commit -m ""feat": Complete final automation orchestration and improvements"', { "stdio"})
       execSync('git push origin main', { "stdio"})
 // console.log('\n Final Automation "Summary")
       console.log('\n "Recommendations")

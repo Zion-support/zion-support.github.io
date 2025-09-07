@@ -153,7 +153,6 @@ const vulnerablePackages = ['lodash',;
           })} catch (error) {
           // Skip files that can't be read
         }
-      }
 
       this.log(`🔍 Found ${securityIssues.length} potential security issues`);
 
@@ -214,8 +213,6 @@ const { execSync } = require('child_process');
     this.log(' Running npm audit...')
 const result = execSync('npm audit --audit-level=moderate --json');
         "encoding"
-        "status"
-        "status"
         "status"
           "name"
           "severity"

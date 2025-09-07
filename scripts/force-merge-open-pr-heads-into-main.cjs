@@ -68,7 +68,6 @@ async function main() {}
       // Abort merge if in progress;
       try { sh('git merge --abort')} catch {};
     };
-  };
   console.log(`Pushing main with ${mergedCount}/${attempted} merged heads...`);
   sh('git push origin main');
   // return to original branch;

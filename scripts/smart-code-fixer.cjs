@@ -54,8 +54,6 @@ function processFile(filePath) {
   if (error.code !== 'ENOENT' && error.code !== 'EACCES') {
             console.warn(`⚠️  Skipping ${fullPath}: ${error.message}`);
           }
-        }
-      }
     } catch (error) {
       // Skip inaccessible directories,
   if (error.code !== 'EACCES') {

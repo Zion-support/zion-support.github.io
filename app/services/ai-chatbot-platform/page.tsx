@@ -1,69 +1,58 @@
-import React from 'react';
-import { Metadata } from 'next';
+import React from 'react'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot Platform | Zion Tech Group',
-  description: 'Professional AI chatbot platform services for your business needs.',
-  keywords: 'ai chatbot, services, business, technology',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI Chatbot Platform | Zion Tech Group',
-    description: 'Professional AI chatbot platform services for your business needs.',
-    type: 'website',
-  },
-};
+  title: 'Ai Chatbot Platform | Zion Tech Group',
+  description: 'Professional ai chatbot platform services for your business needs.',
+  keywords: 'ai chatbot platform, services, business, technology'
+}
 
 export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Chatbot Platform
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <div className='container mx-auto px-4 py-16'>
+        <div className='text-center mb-16'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+            Ai Chatbot Platform
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional AI chatbot platform services for your business needs.
+            Professional ai chatbot platform services for your business needs.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-xl font-bold text-white mb-4">AI-Powered</h3>
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
             <p className="text-gray-300">
-              Advanced AI technology for intelligent customer interactions.
+              High-performance solutions that deliver results quickly and consistently.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">💬</div>
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
             <p className="text-gray-300">
-              Round-the-clock customer support and assistance.
+              Seamlessly integrate with your existing systems and workflows.
             </p>
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-bold text-white mb-4">Custom Solutions</h3>
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
             <p className="text-gray-300">
-              Tailored chatbot solutions for your specific business needs.
+              Grow with your business with our flexible and scalable platform.
             </p>
           </div>
-        </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us today to learn more about our AI chatbot platform services and how they can benefit your business.
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai chatbot platform services can transform your business.
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Us
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
           </button>
         </div>
-      </div>
-    </div>
-  );
+  )
 }

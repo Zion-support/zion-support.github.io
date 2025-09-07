@@ -4,7 +4,6 @@ const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting Advanced App Enhancer...')
       "status"
-      "status"
 const errorBoundaryCode = ";
 const loadingCode = ";
 export const "Spinner"

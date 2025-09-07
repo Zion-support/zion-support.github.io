@@ -23,7 +23,6 @@ const filesToFix = ['components/ContactForm.tsx'];
     'pages/services.tsx'
     'pages/terms.tsx'
 let content = fs.readFileSync(filePath, 'utf8');
-let content = fs.readFileSync(filePath, 'utf8');
         content = content.replace(/'/g, '&apos;')
           content = content.replace(/import Image from 'next\/image')
           content = content.replace(/import Image from 'next\/image'}/, '// import Image from \'next/image\';')
@@ -35,7 +34,6 @@ let content = fs.readFileSync(filePath, 'utf8');
           content = content.replace(/import Link from 'next\/link'}/, '// import Link from \'next/link\';')
         content = content.replace(/} catch \(error\) {/, '} catch (error) {'}
         content = content.replace(/} catch \(e\) {/, '} catch (e) {'}
-          content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
           content = content.replace(/const "PerformanceMonitor": React\.FC = \(\) => {/, 'const "PerformanceMonitor"}
     execSync('npm run "lint": fix', { "stdio"})
     execSync('npx tsc --noEmit', { "stdio"})

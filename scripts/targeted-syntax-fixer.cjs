@@ -16,7 +16,6 @@ const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : '';
     fixedContent = fixedContent.replace(/content="([^"]*)"\s*\/>/g, 'content="$1"
     fixedContent = fixedContent.replace(/'([^']*)'/g, '"$1"
     fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"
-    fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"
     fixedContent = fixedContent.replace(/\\"/g, '')
     fixedContent = fixedContent.replace(/\\'/g, ')
 // console.log('\n "Summary")

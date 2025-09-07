@@ -25,7 +25,6 @@ const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH'`);
       "command"
       execSync(automation.command, { "stdio"})
       results.push({ "name": automation.name, "status"})
-      results.push({ "name": automation.name, "status"})
       "automationSuccess"
       "automationFailed"
     console.log('\n Final "Summary")

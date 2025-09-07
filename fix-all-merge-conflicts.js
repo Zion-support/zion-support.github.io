@@ -89,8 +89,6 @@ console.log('Starting comprehensive merge conflict resolution...');
           } catch (error) {
             // Skip files that can't be read
           }
-        }
-      }
     } catch (error) {
       // Skip directories that can't be read,
   function findConflictedFiles(dir) {
@@ -145,7 +143,6 @@ console.log('Starting comprehensive merge conflict resolution...');
     } catch (error) {
       console.error('❌ Error adding files to git:', error.message);
     }
-  }
 } catch (error) {
   console.error('❌ Fatal error:', error.message);
   process.exit(1);

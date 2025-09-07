@@ -13,8 +13,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export const PROVIDERS: IntegrationProviderMeta[] = [;
-export const PROVIDERS: IntegrationProviderMeta[] = [;
-export const PROVIDERS: IntegrationProviderMeta[] = [;
 import { IntegrationProviderMeta    } from './types';export const PROVIDERS: IntegrationProviderMeta[]  = [;export const PROVIDERS: IntegrationProviderMeta[] = [;
   {id: "salesforce";
     name: "Salesforce";
@@ -65,7 +63,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description: "Recruiting software";
   }
   {}
-  {}
   {id: "bamboohr";
     name: "BambooHR";
     category: "ats";
@@ -77,7 +74,6 @@ export function getProviderById(}export const PROVIDERS: IntegrationProviderMeta
 ];{ id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];;
 export function getProviderById (id: string,): IntegrationProviderMeta | undefined {return PROVIDERS.find ((p) => p.id === id)}id: "bamboohr",name: "BambooHR",category: "ats",description: "HRIS & ATS";
-    description: "HRIS & ATS";
     description: "HRIS & ATS";
   }];
 export function getProviderById(id: string,): IntegrationProviderMeta | undefined {return PROVIDERS.find((p) => p.id === id)}
@@ -112,7 +108,6 @@ import { IntegrationProviderMeta } from './types';
 import { IntegrationProviderMeta  } from './types';
 
 }
-import { IntegrationProviderMeta } from './types';
 import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },

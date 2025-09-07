@@ -7,11 +7,10 @@ function resolveConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers and keep only the remote version
-    content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n([\s\S]*?)    
-    // Also handle cases where there are only ======= and     content = content.replace(/=======\n([\s\S]*?)    
+    content = content.replace(/\n[\s\S]*?\n([\s\S]*?)    
+    // Also handle cases where there are only  and     content = content.replace(/\n([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, ');
-    content = content.replace(/=======\n/g, ');
+    content = content.replace(/\n/g, '');
     content = content.replace(/    
     fs.writeFileSync(filePath, content, utf8');
     console.log(`Resolved conflicts in: ${filePath}`);
@@ -20,7 +19,6 @@ function resolveConflicts(filePath) {
     console.error(`Error resolving conflicts in ${filePath}: ${error.message}`);
     return false;
   }
-}
 
 // Get list of conflicted files
 function getConflictedFiles() {
@@ -32,7 +30,6 @@ function getConflictedFiles() {
     console.error(Error getting conflicted files:', error.message);
     return [];
   }
-}
 
 // Main execution
 console.log('Starting conflict resolution...);

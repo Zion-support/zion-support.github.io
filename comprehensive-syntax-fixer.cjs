@@ -31,21 +31,16 @@ class ComprehensiveSyntaxFixer {
           pattern: /(\w+)\s*=\s*{([^}]*)\s*}/g,
           replacement: (match, attr, value) => {
             if (value.includes('true') && !value.includes('{true}')) {
-              return `${attr}={true}`;
-            }
-            return match;
-          }
+              return `${attr}={true}`}
+            return match}
         },
         // Fix missing closing tags
         {
           pattern: /<(\w+)([^>]*?)>([^<]*?)(?!<\1)/g,
           replacement: (match, tag, attrs, content) => {
             if (content && !content.includes('</') && !match.includes('/>')) {
-              return `<${tag}${attrs}>${content}</${tag}>`;
-            }
-            return match;
-          }
-        }
+              return `<${tag}${attrs}>${content}</${tag}>`}
+            return match}
       ];
 
       for (const fix of fixes) {
@@ -256,9 +251,7 @@ class ComprehensiveSyntaxFixer {
 
       if (typeCheckResult.success) {
         this.log('No TypeScript errors found', 'SUCCESS');
-        return true;
-      }
-
+        return true}
       // Try to fix TypeScript errors with auto-fix
       const fixResult = await this.runCommand(
         'npx tsc --noEmit --skipLibCheck --incremental false',
@@ -358,10 +351,7 @@ class ComprehensiveSyntaxFixer {
   this.generateReport();
     } catch (error) {
       this.log(`TypeScript fix failed: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
+      return false}
   async runESLintFix() {
     this.log('🔧 Running ESLint auto-fix...', 'PROGRESS');
     
@@ -373,17 +363,13 @@ class ComprehensiveSyntaxFixer {
 
       if (fixResult.success) {
         this.log('ESLint auto-fix completed successfully', 'SUCCESS');
-        return true;
-      } else {
+        return true} else {
         this.log('ESLint auto-fix completed with warnings', 'WARNING');
         return true; // Still consider it successful if it fixed some issues
-      }
+}
     } catch (error) {
       this.log(`ESLint fix failed: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
+      return false}
   async cleanCorruptedFiles() {
     this.log('🧹 Cleaning corrupted files...', 'PROGRESS');
     
@@ -403,8 +389,8 @@ class ComprehensiveSyntaxFixer {
 const fs = require('fs');
 const path = require('path');
 ;
-function fixSyntaxErrors(filePath) {;
-  try {;
+function fixSyntaxErrors(filePath) {
+  try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     ;
@@ -414,10 +400,8 @@ function fixSyntaxErrors(filePath) {;
     content = content.replace(/;
     ;
     // Fix shebang issues;
-    if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
-      content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
-    }
-    ;
+    if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {
+      content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n')}
     // Fix missing commas in object literals;
     content = content.replace(/(\w+)\s*(\w+)\s*:/g, '$1:$2:');
     content = content.replace(/(\w+):\s*(\w+)\s*:/g, '$1:$2:');
@@ -439,47 +423,33 @@ function fixSyntaxErrors(filePath) {;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     content = content.replace(/^\s*\n/gm, '');
     ;
-    if (content !== originalContent) {;
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors:in:${filePath}`);
-      return true;
-    }
-    ;
-    return false;
-  } catch (error) {;
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath} `, error.message);
-    return false;
-  }
-}
-;
-function findFilesWithErrors(dir) {;
+    return false}
+function findFilesWithErrors(dir) {
   const files = [];
   const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
   ;
-  function traverse(currentDir) {;
+  function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     ;
-    for (const item of items) {;
+    for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       ;
-      if (stat.isDirectory()) {;
-        if (!['node_modules', '.git', '.next', 'dist', 'build', 'backup-merge-conflicts'].includes(item)) {;
-          traverse(fullPath);
-        }
-      } else if (stat.isFile()) {;
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', '.next', 'dist', 'build', 'backup-merge-conflicts'].includes(item)) {
+          traverse(fullPath)}
+      } else if (stat.isFile()) {
         const ext = path.extname(fullPath);
-        if (extensions.includes(ext)) {;
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-  ;
+        if (extensions.includes(ext)) {
+          files.push(fullPath)}
   traverse(dir);
-  return files;
-}
-;
+  return files}
 // Main execution;
 console.log('🔍 Scanning for files with syntax errors...');
 const files = findFilesWithErrors(process.cwd());
@@ -487,28 +457,17 @@ const files = findFilesWithErrors(process.cwd());
 console.log(`Found ${files.length} files to check`);
 ;
 let fixedCount = 0;
-for (const file of files) {;
-  if (fixSyntaxErrors(file)) {;
-    fixedCount++;
-  }
-}
-
-  }
-}
-
-
-
-
-
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++}}
     this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
-    if (this.errors.length > 0) {;
+    if (this.errors.length > 0) {
   this.log(`⚠️  ${this.errors.length} errors occurred:`);
-      this.errors.forEach(error => {;
+      this.errors.forEach(error => {
   this.log(`   - ${error.file}: ${error.error}`);,
 });,
 }
-
-    return {;
+    return {
   totalFiles: allFiles.length,
       fixedFiles: this.fixedFiles.length,
   }

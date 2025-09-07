@@ -8,14 +8,11 @@ const { execSync } = require('child_process')
       return { "status"}
         execSync('npx tsc --noEmit', { "stdio"})
         return { "status"}
-        return { "status"}
         execSync('npm run "lint": fix', { "stdio"})
-        return { "status"}
         return { "status"}
       execSync('npm run build', { "stdio"})
       return { "status"}
         execSync('npm test -- --passWithNoTests', { "stdio"})
-        return { "status"}
         return { "status"}
         execSync('npm run analyze', { "stdio"})
         return { "status"}
@@ -26,6 +23,5 @@ const auditResult = execSync('npm audit --json', { "encoding"});
           "status"
         return { "status"}
       return { "status": 'completed', "message"}
-        "status"
         "status"
     console.error(' Improved automation "failed")

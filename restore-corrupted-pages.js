@@ -101,13 +101,11 @@ const path = require($2);
         if (result.restored) {
           results.restored++,
           console.log($2);
-          console.log($2);
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
           results.failed++,
           console.log($2);
           console.log(`   Reason: ${result.reason}`)
-          results.failed++,
           results.failed++,
           // // // console.log(`❌ Failed: ${fullPath}`),
           // // // console.log(`   Reason: ${result.reason}`)
@@ -160,9 +158,6 @@ const path = require($2);
   console.log($2);
   scanDirectory($2);
   // Generate summary,
-  console.log($2);
-  console.log($2);
-  console.log($2);
   console.log($2);
   console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
   // Save detailed report,
@@ -234,7 +229,6 @@ if ( {) {
   // // // console.log('🚀 Starting page restoration process...'),scanDirectory(pagesDir),// Generate summary;
   console.log('🚀 Starting page restoration process...'),// // // console.log('🚀 Starting page restoration process...'),scanDirectory(pagesDir),// Generate summary;
   scanDirectory(pagesDir),// Generate summary;
-  scanDirectory(pagesDir),// Generate summary;
   // // // console.log('\n📊 Restoration Summary: '),// // // console.log(`   Total pages: ${results.total}`),// // // console.log(`   Restored: ${results.restored}`),// // // console.log(`   Failed: ${results.failed}`),// // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),// Save detailed report;
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json')fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))console.log(`\n Detailed report saved to: ${reportPath}`)return results;
 }
@@ -264,7 +258,6 @@ module.exports = {;
         results.details.push ({file: full_path,...result;
         })}
     }
-  }
   console.log ('🚀 Starting page restoration process...'),scan_directory (pages_dir),// Generate summary;
   console.log ('\n📊 Restoration Summary: '),console.log (`   Total pages: ${results.total}`),console.log (`   Restored: ${results.restored}`),console.log (`   Failed: ${results.failed}`),console.log (`   Success rate: ${((results.restored / results.total) * 100).to_fixed (1)}%`),// Save detailed report;
   const report_path = path.join (process.cwd (), 'page - restoration - report.json'),fs.writeFileSync (report_path, JSON.stringify (results, null, 2)),console.log (`\n📄 Detailed report saved to: ${report_path}`),return results;

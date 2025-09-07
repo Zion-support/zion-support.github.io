@@ -17,16 +17,13 @@ function findBrokenFiles(dir) {
         const content = fs.readFileSync(fullPath, 'utf8');
         
         // Check for common syntax issues
-        if (content.includes(<<<<<<< HEAD') || 
-            content.includes('=======) || 
-            content.includes(>>>>>>>') ||
-            content.includes('export const metadata = {) && content.includes(export const metadata = {', content.indexOf('export const metadata = {) + 1) ||
-            content.includes(import ') && content.includes('export const metadata = {) && content.indexOf(import ') > content.indexOf('export const metadata = {)) {
+        if (content.includes('') || 
+            content.includes('') || 
+            content.includes('>>>>>>>') ||
+            content.includes('export const metadata = {') && content.includes('export const metadata = {', content.indexOf('export const metadata = {') + 1) ||
+            content.includes('import ') && content.includes('export const metadata = {') && content.indexOf('import ') > content.indexOf('export const metadata = {')) {
           files.push(fullPath);
         }
-      }
-    }
-  }
   
   traverse(dir);
   return files;
@@ -98,9 +95,6 @@ export default function ServicePage() {
               <li>• Ongoing maintenance</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
   );
 }`;
 }
@@ -124,7 +118,6 @@ function fixBrokenFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Find all broken files
 const brokenFiles = findBrokenFiles(./app');
@@ -136,6 +129,5 @@ for (const file of brokenFiles) {
   if (fixBrokenFile(file)) {
     fixedCount++;
   }
-}
 
 console.log(`Fixed ${fixedCount} out of ${brokenFiles.length} files`);
