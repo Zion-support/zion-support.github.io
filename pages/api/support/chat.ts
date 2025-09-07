@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import OpenAI from "openai";"
 import { readJson } from "../../../utils/fsDb";"
@@ -32,6 +33,31 @@ const matchedArticles = articles.filter((a) =>
 const context = matchedArticles;
     .map((a) => `- ${a.title}: /help/${a.slug}`)`    .join("\n");"
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import OpenAI from 'openai';
+import { readJson } from '../../../utils/fsDb';
+import { HelpArticle, matchIntent } from '../../../utils/support';
+import { logSupportEventToOperator } from '../../../utils/operator';
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: "Invalid request" });
+  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string}> }
+  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: "Invalid request" });
+  const articles = readJson<HelpArticle[]>('help/articles.json', [])
+  const lastUser = { error: "Invalid request" };
+  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] }
+  const openai = new OpenAI({ error: "Invalid request" });
+  // Build context with top matched articles as brief references
+  const matchedArticles = { error: "Invalid request" };
+  const context = matchedArticles
+    .map((a) => `- ${a.title}: /help/${a.slug}`)
+    .join({ error: "Invalid request" });
+  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const sysMessage = {
     }
     "role": "system" as const,"
@@ -41,10 +67,50 @@ const context = matchedArticles;
   try {
     }
     const completion = await openai.chat.completions.create({
+<<<<<<< HEAD
       }
       "model": "gpt-4o-mini","
       "messages": [sysMessage, ...messages],
       "temperature": 0.2
+=======
+      model: "gpt-4o-mini"
+      messages: [sysMessage, ...messages]
+  }
+  if ()) {
+  { error: "Invalid request" }
+}
+    return res.status (400).json ({ error: "messages required" });
+;
+  const articles = read_json < HelpArticle[]>("help / articles.json", []);
+  const last_user = [...messages].reverse ().find ((m) => m.role === "user");
+  const intent = last_user;
+    ? match_intent (last_user.content, articles);
+    : { intent_matched: false, matchedArticleIds: [] }
+;
+  const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+;
+  // Build context with top matched articles as brief references;
+  const matched_articles = articles.filter ((a) =>;
+    intent.matchedArticleIds.includes (a.id)
+  );
+  const context = matched_articles;
+    .map ((a) => `- ${a.title}: /help/${a.slug}`);
+    .join ("\n");
+;
+  const sys_message = {
+    role: "system" as const
+    content:;
+      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : "")
+  }
+;
+  try {
+    const completion = await openai.chat.completions.create ({
+      model: "gpt - 4o - mini"
+      messages: [sys_message, ...messages]
+
+      temperature: 0.2
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     });
 
 const assistantMessage =;
@@ -83,6 +149,7 @@ const assistantMessage =;
   }
 }
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -95,3 +162,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

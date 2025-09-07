@@ -3,12 +3,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
-    const proposals = listProposals($2);
+    const proposals = listProposals({ error: "Invalid request" });
     res.status(200).json({ proposals })
   } catch (error: any) {
     res.status(500).json({ error: error ?.message || 'Failed to list proposals' })
   }
 }
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -21,3 +22,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

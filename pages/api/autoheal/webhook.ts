@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
@@ -40,10 +43,10 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
-        owner,
-        repo,
-        workflow_id: 'autoheal.yml',
-        ref: 'dev',
+        owner
+        repo
+        workflow_id: 'autoheal.yml'
+        ref: 'dev'
         inputs: { issue_number: String(issue.data.number) }
       } as any);
     } catch (e) {
@@ -57,6 +60,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     return res.status(500).json({ error: 'Failed to process webhook' })
   }
 }
+<<<<<<< HEAD
 =======
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -75,3 +79,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

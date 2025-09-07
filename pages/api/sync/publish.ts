@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/publish.ts
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";
@@ -9,9 +15,9 @@ import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
-  if (scope = $2;
-  if (scope = $2;
-  if (scope = $2;
+  if (scope = { error: "Invalid request" };
+  if (scope = { error: "Invalid request" };
+  if (scope = { error: "Invalid request" };
   return true
 }
 
@@ -36,14 +42,14 @@ export default async function handler(req, res) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
-  const signature = $2;
-  const payload = $2;
-  const signatureValid = verifySignature(payload, typeof signature = $2;
+  const signature = { error: "Invalid request" };
+  const payload = { error: "Invalid request" };
+  const signatureValid = verifySignature(payload, typeof signature = { error: "Invalid request" };
   if (!signatureValid) {
     return res.status(401).json({ error: "Invalid signature" })
   }
 
-  const event = $2;
+  const event = { error: "Invalid request" };
   if (!event || !event.type || !event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
   }
@@ -52,12 +58,12 @@ export default async function handler(req, res) {
     return res.status(403).json({ error: "Event type not allowed by current scope" })
   }
 
-  if (event.type = $2;
-    const providedRoot = $2;
+  if (event.type = { error: "Invalid request" };
+    const providedRoot = { error: "Invalid request" };
     if (!Array.isArray(votes) || !providedRoot) {
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
     }
-    const computed = computeMerkleRootFromVotes($2);
+    const computed = computeMerkleRootFromVotes({ error: "Invalid request" });
     if (computed !== providedRoot) {
 <<<<<<< HEAD:pages_backup/api/sync/publish.ts
   if (scope;
@@ -143,31 +149,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const event = payload as SyncEvent & { propagate?: boolean }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (400).json ({ error: "Invalid event" });
   }
   if () {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (403).json ({ error: "Event type not allowed by current scope" });
   }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const votes = (event as any).payload?.votes;
     const provided_root = event.merkle_root;
     // Check condition
 if (|| !provided_root) {) {
-  $2
+  { error: "Invalid request" }
 }
       return res.status (400).json ({ error: "Proposal events require votes[] and merkle_root" });
     }
     const computed = computeMerkleRootFromVotes (votes);
     // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
       return res.status (400).json ({ error: "Merkle root mismatch" });
     }
@@ -181,7 +187,7 @@ if ( {) {
 ;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const headers: Record < string, string> = {}
     const local_body = { ...event, propagate: false }
@@ -189,7 +195,7 @@ if ( {) {
     const sig = base_signature.sign_payload (local_body);
     // Check condition
 if (headers["x - zion - signature"] = sig) {
-  $2
+  { error: "Invalid request" }
 }
     await Promise.all (
       current_state.config.peers;
@@ -229,6 +235,7 @@ if (headers["x - zion - signature"] = sig) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ status: "accepted", entityId })
 }
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -241,3 +248,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

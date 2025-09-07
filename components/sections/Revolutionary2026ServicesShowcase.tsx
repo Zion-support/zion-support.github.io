@@ -396,6 +396,7 @@ technologies ever created.
 
         {/* AI Autonomous Services Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.div
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -484,6 +485,9 @@ technologies ever created.
         </motion && motion.div>;{/* AI Autonomous Services Section */}
         <motion&& motion.div;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+        <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           variants={containerVariants}
 <<<<<<< HEAD
                 key={service.id}
@@ -1315,10 +1319,17 @@ className='text-center''
             <h3 className='text-4xl font-bold text-white mb-6'>'
               Ready to Experience the Future?
 <<<<<<< HEAD
+<<<<<<< HEAD
             </h3>
             <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">"
               Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
               <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation."
+=======
+            </h3>
+            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
+              Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
+              <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </p>
             
             <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">

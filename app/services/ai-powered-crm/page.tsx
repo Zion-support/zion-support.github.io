@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import Link from 'next/link';'
 export const metadata = {
@@ -25,6 +26,15 @@ export const metadata = {
   "keywords": 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence''
 };
 export default function AIPoweredCRMPage() {
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Powered Crm | Zion Tech Group',
+  description: 'Professional ai powered crm services for your business needs.',
+  keywords: 'ai powered crm, services, business, technology'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 return (;
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">"
@@ -94,6 +104,7 @@ href="/services""
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 "hover":shadow-lg transition-shadow">"
       <div className="text-3xl mb-4">{icon}</div>"
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>"
@@ -1215,4 +1226,28 @@ return (;
       </section>
     </div>
   );
+=======
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai powered crm services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

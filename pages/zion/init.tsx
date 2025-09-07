@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import { useState } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = $2;
@@ -76,6 +79,7 @@ const InitPage: NextPage = () => {
       setSubmitting(false)
     }
   },
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -84,10 +88,15 @@ import Layout from '../../components/layout/Layout';
 
   return (
 <<<<<<< HEAD
+=======
+
+  return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
+<<<<<<< HEAD
 =======
     <Layout>
       <Head>
@@ -103,6 +112,8 @@ import Layout from '../../components/layout/Layout';
           </p>
         </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">

@@ -112,6 +112,7 @@ const fallback = () => {
           answerIndex: 0}]})
   },
 
+<<<<<<< HEAD
   if (!apiKey) return fallback();
   try {
     }
@@ -144,6 +145,15 @@ const completion = await client.chat.completions.create({
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
 const text = completion.choices?.[0]?.message?.content ?? '';'
+=======
+  if (!apiKey) return fallback($2);
+  try {
+    const client = new OpenAI($2);
+    const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`,
+
+    const completion = await client.chat.completions.create($2);
+    const text = $2;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     try {
       }
       const json = JSON.parse(text);

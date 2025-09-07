@@ -74,6 +74,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             Cancel;
           </button>;
         </form>;
+<<<<<<< HEAD:src_backup/components/ContactPublisherModal.js.jsx
       </div>;
     </div>)}'"""'";
           </button>;
@@ -81,3 +82,16 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
       </div>;
     </div>)}'''';
 '''''';
+=======
+      </div>
+    </div>
+  );
+}'\"\"\"'\";
+          </button>;
+        </form>;
+      </div>
+    </div>
+  );
+}'''';
+'''''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ContactPublisherModal.js.jsx

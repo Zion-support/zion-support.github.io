@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';'
@@ -34,11 +35,14 @@ export default function EnhancedCard(): any ({;
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
+<<<<<<< HEAD
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
@@ -54,3 +58,8 @@ export default function EnhancedCard({ children, className = '' }: { children: R
 =======
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+    </div>
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

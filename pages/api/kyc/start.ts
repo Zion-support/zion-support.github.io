@@ -36,16 +36,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date().toISOString();
   const existing = db[userId];
   const profile: KycProfile = existing || {
-    userId,
-    role,
-    fullLegalName,
-    businessName,
-    businessRegistrationNumber,
-    documents: [],
-    status: 'in_progress',
-    amlStatus: 'unknown',
-    createdAt: now,
-    lastUpdatedAt: now,
+    userId
+    role
+    fullLegalName
+    businessName
+    businessRegistrationNumber
+    documents: []
+    status: 'in_progress'
+    amlStatus: 'unknown'
+    createdAt: now
+    lastUpdatedAt: now
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
   } as KycProfile;
 
@@ -58,6 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 
   res.status(200).json({
+<<<<<<< HEAD
 <<<<<<< HEAD
     ok: true,
     profile,
@@ -135,3 +136,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+    ok: true
+    profile
+    requiredDocuments: getRequiredDocuments(role)
+    optionalDocuments: getOptionalDocuments(role)
+  })
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

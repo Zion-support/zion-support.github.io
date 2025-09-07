@@ -154,6 +154,7 @@ className='text-center mb-16''
 emerging technology services designed to transform your business
           </p>
         </motion.div>
+<<<<<<< HEAD
 
           className='text-center mb-16'>;'
           <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>;'
@@ -298,6 +299,8 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                   {service && service.description}
                 </p>;
                 {/* Features */}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Category Overview */}
         <motion.div
@@ -350,6 +353,7 @@ className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-c
                     <p className="text-gray-400 text-sm">{service.category}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
 
                 {/* Description */}
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -464,6 +468,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li key={i} className="flex items-center text-gray-400 text-xs">"
                         <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                   {service.description}
                 </p>
@@ -519,6 +525,7 @@ href={`/${service.id}`}`                    className='inline-flex items-center 
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
           )
 }
@@ -545,6 +552,10 @@ href={`/${service.id}`}`                    className='inline-flex items-center 
           whileInView={{ "opacity": 1, "y": 0 
 }
           transition={{ "duration": 0 && 0.6, "delay": 0 && 0.3 }}
+=======
+          ))}
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           viewport={{ "once": true }}
 

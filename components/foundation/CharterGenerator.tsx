@@ -16,7 +16,24 @@ export default function CharterGenerator() {const [legalStructure, setLegalStruc
   const charterText = useMemo(() => ;
   const name = protocolName.trim() || 'Zion';'
 
+<<<<<<< HEAD
 const symbol  = tokenSymbol.trim() || 'ZION$';'
+=======
+const symbol  = tokenSymbol.trim() || 'ZION$';}
+}
+const header = `${name} Foundation Charter`;
+
+const preamble  = `This Charter establishes a legally-neutral foundation (the \"Foundation\") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;
+
+const registry  = `1. Legal Neutrality and Registry\n- Structure: ${legalStructur}
+}.\n- Purpose: Maintain global neutrality, operate outside the control of any single jurisdiction, and coordinate public-good infrastructure for the ${name} Protocol.\n- Scope: Non-custodial oversight, standard-setting, and community enablement.`;
+
+const mission  = `2. Mission and Scope\n- Protect, evolve, and safeguard the ${name} Protocol as a public good.\n- Champion open knowledge, reproducible research, and transparent governance.\n- Promote sovereignty for users, developers, and nation/community DAOs.`;
+
+const neutrality  = `3. Political and Jurisdictional Neutrality\n- The Foundation is non-partisan and non-sovereign.\n- No nation-state, corporation, or private actor may control governance outcomes.\n- All critical processes are transparent, documented, and reproducible.`;
+
+const treasury  = `4. Treasury and Token Oversight\n- The Foundation monitors the on-chain treasury associated with ${symbol} for policy compliance and program execution.\n- The Foundation does not custody private keys for third parties and does not provide financial advice.\n- Treasury actions (grants, bounties, RFPs) are executed via on-chain governance with public reporting.`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const header = `${name} Foundation Charter`;`
 const preamble  = `This Charter establishes a legally-neutral foundation (the "Foundation") to steward the ${name} Protocol, an open, decentralized AI protocol dedicated to sovereignty, open knowledge, and verifiable trust.`;`
@@ -141,4 +158,8 @@ className='px-3 py-2 rounded border border-gray-300 "dark":border-gray-700';'
           readOnly; />;
       </div>;
     </div>;
+<<<<<<< HEAD
   )
+=======
+  )"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

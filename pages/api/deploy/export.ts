@@ -26,13 +26,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // In a real system, look up persisted deployment by id
   const fake = {
-    id,
-    exportedAt: new Date().toISOString(),
+    id
+    exportedAt: new Date().toISOString()
     note: 'This is a stub export. Connect to persistence to return real deployment state.'
   };
   res.setHeader('Content-Type', 'application/json');
   return res.status(200).json(fake)
 }
+<<<<<<< HEAD
 =======
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -47,3 +48,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

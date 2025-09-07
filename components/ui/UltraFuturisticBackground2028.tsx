@@ -358,8 +358,16 @@ window.removeEventListener('resize', handleResize)'
 return (;
     <div className='relative min-h-screen bg-black overflow-hidden'>;'
       {/* Animated Background Canvas */}
+<<<<<<< HEAD
       <canvas,
 ref={canvasRef}
+=======
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: 0}}
+      />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         className='absolute inset-0 w-full h-full pointer-events-none''
 
@@ -371,6 +379,7 @@ ref={canvasRef}
         style={{ "zIndex": 1 
 } />;
       {/* Gradient Overlays */}
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ "zIndex": 1 ,"
 } />;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={{ "zIndex": 1 ,"
@@ -379,6 +388,13 @@ ref={canvasRef}
 } />;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ "zIndex": 1 ,"
 } />;
+=======
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ zIndex: 1}} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={{ zIndex: 1}} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={{ zIndex: 1}} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ zIndex: 1}} />
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Floating Geometric Shapes */}
 
           animate={{
@@ -584,9 +600,39 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
           transition = $2;
             repeat: Infinity,
             ease: "easeInOut"
+<<<<<<< HEAD
 =======
         />;
       </div>;
+=======
+          }}
+        />
+
+        <motion.div
+          className="absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full"
+          animate={{
+            y: [0, 25, 0],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
+        <motion.div
+          className="absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full"
+          animate={{
+            y: [0, -15, 0],
+            opacity: [0.25, 0.55, 0.25]
+          }}
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       {/* Energy Waves */}
       <div;'
@@ -807,6 +853,7 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
             delay: 2}}
         />
 
+<<<<<<< HEAD
               }
 
               "scale": [0, 1, 0],
@@ -820,6 +867,19 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
 "ease": 'easeInOut','
             }} />
         ))}
+=======
+        <motion.div
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          animate={{
+            y: [0, 1000],
+            opacity: [0, 1, 0]
+          }}
+          transition = $2;
+            repeat: Infinity,
+            ease: "linear",
+            delay: 4}}
+        />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
 
           />

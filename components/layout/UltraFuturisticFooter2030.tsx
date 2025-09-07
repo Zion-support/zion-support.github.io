@@ -944,6 +944,7 @@ key={index}
                       rel='noopener noreferrer';'
                       className='w - 10 h - 10 bg - gray - 800 / 50 "hover":bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 "hover":text - purple - 400 transition - all duration - 200 "hover":shadow - lg "hover":shadow - cyan - 400 / 40'>'
 
+<<<<<<< HEAD
                       <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";"
                       rel="noopener noreferrer";"
                       className="w - 10 h - 10 bg - gray - 800 / 50 "hover": bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 "hover":text - purple - 400 transition - all duration - 200 "hover":shadow - lg "hover":shadow - cyan - 400 / 40">"
@@ -1003,6 +1004,21 @@ href='/terms''
               <div className='flex items-center space-x-4 text-sm text-gray-400'>'
                 <div className='flex items-center space-x-2'>'
                   <Heart className='w-4 h-4 text-red-400' />'
+=======
+        {/* Bottom Bar */}
+        <div className="border-t border-purple-500/20">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <span>&copy, 2024 Zion Tech Group. All rights reserved.</span>
+                <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link>
+              </div>
+              
+              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Heart className="w-4 h-4 text-red-400" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   <span>Made with passion for innovation</span>
                 </div>
                 <div className='flex items-center space-x-2'>'

@@ -32,15 +32,21 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
       style={headerStyle}
     >;
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64, PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />;
+      <div className=\"absolute inset-0 bg-[url('data:image/svg+xml;base64, PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30\" />;
       {/* Glowing border effect */}
+<<<<<<< HEAD:src_backup/components/header/Header.jsx
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />;
       <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">;
+=======
+      <div className=\"absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50\" />;
+      <div className=\"container flex h-16 items-center px-4 sm: px-6 relative z-10\" />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/header/Header.jsx
         <Logo;
           customLogo={customLogo}
           customColor={effectiveTheme?.primaryColor}
         />;
         {/* Desktop Navigation */}
+<<<<<<< HEAD:src_backup/components/header/Header.jsx
         <div className="ml-6 flex-1 hidden lg:block">;
           <MainNavigation />;
         </div>;
@@ -48,17 +54,27 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">;
           <div className="relative group">;
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
+=======
+        <div className=\"ml-6 flex-1 hidden lg:block\" />;
+          <MainNavigation />;
+        </div>;
+        {/* Search Bar */}
+        <form onSubmit={handleSubmit} className=\"hidden md:block w-80 mx-6\" />;
+          <div className=\"relative group\" />;
+            <div className=\"absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300\" /></div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/header/Header.jsx
             <EnhancedSearchInput;
               value={query}
               onChange={setQuery}
               onSelectSuggestion={text => {setQuery(text)navigate(`/search?q=${encodeURIComponent(text)}`)}}
               suggestions={searchSuggestions}
-              placeholder="Search services, solutions...";
-              className="w-full bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg px-4 py-2 text-white placeholder-zion-purple/50 focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent";
+              placeholder=\"Search services, solutions...\";
+              className=\"w-full bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg px-4 py-2 text-white placeholder-zion-purple/50 focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent\";
             />;
           </div>;
         </form>;
         {/* Right side actions */}
+<<<<<<< HEAD:src_backup/components/header/Header.jsx
         <div className="flex items-center space-x-4">;
           {!hideLogin && (<>;
               {user ? (<UserMenu user={user} />;
@@ -74,6 +90,23 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
                     onClick={() => navigate('/register')}
                     className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white";
                   >;
+=======
+        <div className=\"flex items-center space-x-4\" />;
+          {!hideLogin && (<>;}
+              {user ? (<UserMenu user={user} />;
+              ) : (<div className=\"flex items-center space-x-3\" />;
+                  <Button;
+                    variant=\"ghost\";
+                    onClick={() = /> navigate('/login')}
+                    className=\"text-zion-purple hover: text-white hover:bg-zion-purple/20\">
+
+                    Sign In;
+                  </Button>;
+                  <Button;
+                    onClick={() = /> navigate('/register')}
+                    className=\"bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white\">
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/header/Header.jsx
                     Get Started;
                   </Button>;
                 </div>;
@@ -83,10 +116,18 @@ export function Header() {const { user } = useAuth()const { isWhitelabel, primar
           {/* Mobile menu button */}
           <button;
             onClick={toggleMobileMenu}
+<<<<<<< HEAD:src_backup/components/header/Header.jsx
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors";
           >;
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>;
+=======
+            className=\"lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors\" />
+
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} /,
+}
+          </button />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/header/Header.jsx
         </div>;
       </div>;
       {/* Mobile Menu */}

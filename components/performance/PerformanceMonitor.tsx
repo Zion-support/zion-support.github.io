@@ -25,6 +25,7 @@ const "metrics": PerformanceMetrics =
           }
           console.log('"FCP": ', entry.startTime)}'
       }
+<<<<<<< HEAD
     })fcpObserver.observe({ "entryTypes": ['paint'],'
 })// Largest Contentful Paint (LCP)const lcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries(;
   }
@@ -37,6 +38,17 @@ const "metrics": PerformanceMetrics =
         }
         console.log('"FID": ', metrics.fid)}'
     })fidObserver.observe({ "entryTypes": ['first-input'],'
+=======
+    })fcpObserver.observe({ entryTypes: ['paint'],}
+})// Largest Contentful Paint (LCP)const lcpObserver = new PerformanceObserver(list => {const entries = list.getEntries(;
+  const lastEntry = entries[entries.length - 1];}
+      metrics.lcp = lastEntry.startTime;}
+      console.log('LCP: ', lastEntry.startTime)})lcpObserver.observe({ entryTypes: ['largest-contentful-paint'],}
+})// First Input Delay (FID)const fidObserver = new PerformanceObserver(list => {for ;}
+  const entry of list.getEntries()) {metrics.fid = (entry as any).processingStart - entry.startTime;}
+        console.log('FID: ', metrics.fid)}
+    })fidObserver.observe({ entryTypes: ['first-input'],}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 })// Cumulative Layout Shift (CLS)let clsValue = 0;
 
 const clsObserver = new PerformanceObserver((list) => {for ;
@@ -45,8 +57,13 @@ const clsObserver = new PerformanceObserver((list) => {for ;
         }
       }
       metrics.cls = clsValue;
+<<<<<<< HEAD
       console.log('"CLS": ', clsValue)})clsObserver.observe({ "entryTypes": ['layout-shift'],'
 })// Time to First Byte (TTFB)const navigationEntry = performance.getEntriesByType('navigation';'
+=======
+      console.log('CLS: ', clsValue)})clsObserver.observe({ entryTypes: ['layout-shift'],}
+})// Time to First Byte (TTFB)const navigationEntry = performance.getEntriesByType('navigation';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     )[0] as PerformanceNavigationTiming;
     if (navigationEntry) {metrics.ttfb =;
         }
@@ -59,15 +76,35 @@ const fmpObserver = new PerformanceObserver((list) => {for ;
           }
           console.log('"FMP": ', entry.startTime)}'
       }
+<<<<<<< HEAD
     })fmpObserver.observe({ "entryTypes": ['paint'],'
 })// Send metrics to analytics after page load;
 
 const sendMetrics = () => {if (typeof window !== 'undefined' && (window as any).gtag) {// Send to Google Analytics;'
         (window as any).gtag('event', 'web_vitals', {"event_category": 'Performance',"event_label": 'Core Web Vitals',"custom_map": {"metric_1": 'fcp',"metric_2": 'lcp',"metric_3": 'fid',"metric_4": 'cls',"metric_5": 'ttfb'},"value": Math.round(metrics.fcp || 0),"non_interaction": true})}// Send to custom analytics endpoint;'
       if (process.env.NODE_ENV === 'production') {fetch('/api/analytics/performance', {"method": 'POST',"headers": {'Content-Type': 'application/json'},"body": JSON.stringify({"url": window.location.href,"timestamp": Date.now(),metrics})}).catch(console.error)}'
+=======
+    })fmpObserver.observe({ entryTypes: ['paint'],}
+})// Send metrics to analytics after page load;
+
+const sendMetrics = (if (typeof window !== 'undefined' && (window as any).gtag) {// Send to Google Analytics;) => {
+  return $3;}
+}
+        (window as any).gtag('event', 'web_vitals', {event_category: 'Performance',
+  event_label: 'Core Web Vitals',custom_map: {metric_1: 'fcp',
+  metric_2: 'lcp',metric_3: 'fid',}
+  metric_4: 'cls',metric_5: 'ttfb',},value: Math.round(metrics.fcp || 0),non_interaction: true,})}// Send to custom analytics endpoint;
+      if (process.env.NODE_ENV === 'production') {fetch('/api/analytics/performance', {method: 'POST',}
+  headers: {'Content-Type': 'application/json',},body: JSON.stringify({url: window.location.href,timestamp: Date.now(),metrics,}),}).catch(console.error)}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }// Send metrics when page is about to unload;
     window.addEventListener('beforeunload', sendMetrics)// Also send after a delay to capture late metrics;'
     setTimeout(sendMetrics, 5000)// Cleanup;
     return () => {fcpObserver.disconnect()lcpObserver.disconnect()fidObserver.disconnect()clsObserver.disconnect()fmpObserver.disconnect()window.removeEventListener('beforeunload', sendMetrics)}}, [])return null; // This component doesn&apos;t render anything'';'
 }
+<<<<<<< HEAD
 export default PerformanceMonitor;
+=======
+
+export default PerformanceMonitor;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

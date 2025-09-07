@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { v4 as uuidv4 } from "uuid";"
 import {
@@ -167,6 +168,11 @@ export default async function handler(req, res) {
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc.id })
 >>>>>>> origin/main
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
@@ -186,12 +192,19 @@ const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =;
     if (admin.apps.length === 0) {
       }
       admin.initializeApp({
+<<<<<<< HEAD
         }
         "credential": admin.credential.cert({
           }
           "projectId": FIREBASE_PROJECT_ID,
           "clientEmail": FIREBASE_CLIENT_EMAIL,
           "privateKey": (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),"
+=======
+        credential: admin.credential.cert({
+          projectId: FIREBASE_PROJECT_ID
+          clientEmail: FIREBASE_CLIENT_EMAIL
+          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         })
       });
     }
@@ -214,6 +227,7 @@ const "k": FeedbackRecord["kind"] =;"
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";"
 
   const user = {
+<<<<<<< HEAD
     }
     "id": (req.headers["x-demo-user-id"] as string) || undefined,"
     "role": (req.headers["x-demo-user-role"] as string) || undefined,"
@@ -229,10 +243,26 @@ const "k": FeedbackRecord["kind"] =;"
     "comment": comment || undefined,
     "kind": k,
     "context": context || undefined
+=======
+    id: (req.headers["x-demo-user-id"] as string) || undefined
+    role: (req.headers["x-demo-user-role"] as string) || undefined
+    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined
+  };
+
+  const doc: FeedbackRecord = {
+    id: uuidv4()
+    createdAtIso: new Date().toISOString()
+    user
+    rating: r
+    comment: comment || undefined
+    kind: k
+    context: context || undefined
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   };
 
   const wrote = await tryWriteToFirestore(doc);
   if (!wrote) saveFeedbackFallback(doc);
+<<<<<<< HEAD
   return ok(res, { "id": doc.id });
 }
 =======
@@ -259,3 +289,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+  return ok(res, { id: doc.id })
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -338,6 +338,7 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
             </p>
           </motion.div>
 
+<<<<<<< HEAD
             )
 }
           </motion.div>;
@@ -354,10 +355,56 @@ variant='primary';'
               >              >
                 <span className="flex items-center">"
                   <Rocket className="mr-3 w-7 h-7 group-"hover":rotate-12 transition-transform" />"
+=======
+          {/* Enhanced Stats Grid */}
+          <motion.div 
+            variants={itemVariants}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto"
+          >
+            {[
+              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
+              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
+              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
+              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
+              { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                variants={statsVariants}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  {stat.value.toLocaleString()}+
+                </div>
+                <div className="text-xs text-gray-400 leading-tight">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Enhanced CTA Section */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                href="/services" 
+                variant="primary"
+                size="xl"
+                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"
+              >
+                <span className="flex items-center">
+                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   Explore All Services
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-"hover":translate-x-1 transition-transform" />"
               </Button>
+<<<<<<< HEAD
 
 
           {/* Enhanced CTA Section */}
@@ -383,6 +430,17 @@ variant='secondary';'
               >
                 <span className='flex items-center'>'
                   <Shield className='mr-3 w-7 h-7' />'
+=======
+              
+              <Button 
+                href="/contact" 
+                variant="secondary"
+                size="xl"
+                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
+              >
+                <span className="flex items-center">
+                  <Shield className="mr-3 w-7 h-7" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   Get Expert Consultation
 =======
                   Get Expert Consultation
@@ -393,6 +451,7 @@ variant='secondary';'
               </Button>
             </div>
             {/* Trust Indicators */}
+<<<<<<< HEAD
 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>
               <div className='flex items-center space-x-2'>
                   Get Expert Consultation;
@@ -418,6 +477,12 @@ variant='secondary';'
                 <CheckCircle className=\"w-5 h-5 text-green-400\"    />
                 <span    />99.9% Uptime Guarantee</span>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>5000+ Happy Customers</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </div>
               <div className="flex items-center space-x-2">"
                 <CheckCircle className="w-5 h-5 text-green-400" />"
@@ -450,6 +515,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>;
             </div>;
 
+<<<<<<< HEAD
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 "hover":from-slate-700 "hover":to-slate-600 border-slate-600 "hover":border-slate-500 shadow-2xl'>;'
                 <span className='flex items-center'>;'
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;"
@@ -479,6 +545,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           </motion && motion.div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {/* Contact Information */}
 =======
           {/* Contact Information */}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";"
 import { Metadata } from 'next';'
 
@@ -20,11 +21,30 @@ return (;
         <div className="text-center mb-16">"
           <h1 className="text-5xl "md":text-6xl font-bold text-gray-900 mb-6">"
             AI Content Generator Pro
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Content Generator | Zion Tech Group',
+  description: 'Professional ai content generator services for your business needs.',
+  keywords: 'ai content generator, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Content Generator
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">"
             Transform your content marketing with our advanced AI-powered platform. Generate high-quality, 
             SEO-optimized content for blogs, social media, and marketing materials at scale.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col "sm":flex-row gap-4 justify-center">"
             <a,
 href=""mailto":kleber@ziontechgroup.com?subject = AI Content Generator Inquiry""
@@ -38,6 +58,33 @@ href=""tel":+13024640950""
             >
               Contact Sales
             </a>
+=======
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </div>
         </div>
 
@@ -171,6 +218,7 @@ href=""tel":+13024640950""
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 
@@ -253,4 +301,7 @@ href=""mailto":kleber@ziontechgroup.com?subject = AI Content Generator - {title}
       </a>
     </div>
   );
+=======
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

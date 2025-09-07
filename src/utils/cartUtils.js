@@ -160,10 +160,19 @@ export const mergeCarts = (cart1, cart2) => {if (!Array.isArray(cart1) || !Array
  * @returns {string} Formatted price*/;
  */;
 
+<<<<<<< HEAD:src/utils/cartUtils.js
 export const formatPrice = (price, currency = 'USD') => {if (typeof price !== 'number' || isNaN(price)) ;'
   }
   return '$0.00';'
   }return new Intl.NumberFormat('en-US', {"style": 'currency',"currency": currency;'
+=======
+export const formatPrice = (if (typeof price !== 'number' || isNaN(price)) ;
+  return '$0.00';) => {
+  return $3;}
+}
+  }return new Intl.NumberFormat('en-US', {style: 'currency',}
+  currency: currency;}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/utils/cartUtils.js
   }).format(price)}/**;
  * Get cart summary for display*/;
  * @param {Array} cart - Cart items array*/;

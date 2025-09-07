@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 
@@ -38,11 +39,30 @@ return (;
         <div className="text-center mb-16">"
           <h1 className="text-4xl "md":text-6xl font-bold text-white mb-6">"
             Cybersecurity Services
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cybersecurity | Zion Tech Group',
+  description: 'Professional cybersecurity services for your business needs.',
+  keywords: 'cybersecurity, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cybersecurity
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
             Comprehensive cybersecurity solutions to protect your business from evolving threats.
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8">"
           <div className="bg-gray-800 rounded-lg p-6">"
@@ -56,6 +76,23 @@ return (;
             <h3 className="text-xl font-bold text-white mb-4">Security Audits</h3>"
             <p className="text-gray-300">"
               Comprehensive security assessments to identify vulnerabilities and strengthen your defenses.
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </p>
           </div>
           
@@ -78,6 +115,7 @@ return (;
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     <div className="space-y-16">"
       <section className="text-center py-16 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">"
         <h1 className="text-4xl "md":text-6xl font-bold text-gray-900 mb-6">"
@@ -177,3 +215,8 @@ href=""tel":+13024640950""
   );
 }
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+    </div>
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

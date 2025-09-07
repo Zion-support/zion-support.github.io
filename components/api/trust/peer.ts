@@ -21,6 +21,7 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 });
   }
 
+<<<<<<< HEAD
 const { userId, reviewerId, type, note } = req.body || {};
   if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {'
 }
@@ -36,6 +37,14 @@ return res.status(400).json({ "error": 'Missing or invalid fields',;'
   }
 
   return res.status(200).json({ "ok": true, review });
+=======
+  const review: TrustPeerReview = $2;
+    reviewerId,
+    type,
+    note,
+    createdAt: new Date().toISOString()},
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   try {
     }
     await supabase.from('trust_peer_reviews').insert(review)'

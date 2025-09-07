@@ -1,17 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST" && req.method !== "GET") return res.status(405).json($2);
-  const state = readState($2);
-  const sinceParam = $2;
-  const since = $2;
-  const scopeParam = $2;
-  const requestedScope = $2;
-  const scoped = filterEventsByScope($2);
-  const events = $2;
+  if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Invalid request" });
+  const state = readState({ error: "Invalid request" });
+  const sinceParam = { error: "Invalid request" };
+  const since = { error: "Invalid request" };
+  const scopeParam = { error: "Invalid request" };
+  const requestedScope = { error: "Invalid request" };
+  const scoped = filterEventsByScope({ error: "Invalid request" });
+  const events = { error: "Invalid request" };
   return res.status(200).json({
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
@@ -47,6 +50,7 @@ export default function handler(req, res) {
     scope: requestedScope
   });
 }
+<<<<<<< HEAD
 
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -60,3 +64,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

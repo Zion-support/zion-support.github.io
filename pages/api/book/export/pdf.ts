@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 export const config = {
   api: {
@@ -41,7 +44,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: true
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
@@ -80,6 +83,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -115,3 +119,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import React from 'react';'
 
 
 
+<<<<<<< HEAD
 export const metadata = {
   }
   "title": 'AI Social Media Scheduler | Zion Tech Group','
@@ -635,4 +641,18 @@ href=""tel":+13024640950""
       </div>
     </div>
   );
+=======
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai social media scheduler services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

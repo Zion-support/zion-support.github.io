@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from \"next\";"
 import fs from \"fs-extra\";"
 import path from \"path\";"
@@ -13,6 +14,13 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 const TALENTS_FILE = null;
   return res.status(200).json({ verified })
 }
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json"),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs-extra';'

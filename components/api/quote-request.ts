@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const supabaseKey =;
@@ -22,6 +23,14 @@ const supabase =;
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 <<<<<<< HEAD
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createClient } from '@supabase/supabase-js';
+import OpenAI from 'openai';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const openai = openaiApiKey ? new OpenAI({ "apiKey": openaiApiKey,;
 }) : null;
@@ -34,6 +43,7 @@ export default async function handler() {
 return res.status(405).json({ "message": 'Method not allowed',;'
 });
 
+<<<<<<< HEAD
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
@@ -59,11 +69,14 @@ const supabaseKey = $2;
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null,
 >>>>>>> origin/main
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
 
   const { service, description, timeline, budgetRange, email } = req.body || {};
   if (!service || !description || !email) {
+<<<<<<< HEAD
 }
 return res.status(400).json({ "message": 'Missing required fields',;'
 });
@@ -73,6 +86,14 @@ return res.status(400).json({ "message": 'Missing required fields',;'
 }
 let "aiSummary": string | null = null;
     let "aiTags": string[] = [];
+=======
+    return res.status(400).json({ message: 'Missing required fields' })
+  }
+
+  try {
+    let aiSummary: string | null = null;
+    let aiTags: string[] = [];
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
     if (openai) {
 }
@@ -84,6 +105,7 @@ const resp = await openai.responses.create({
 "input": prompt
       });
 
+<<<<<<< HEAD
 const text = resp.output_text?.trim() || '';'
 
       aiSummary = text.split('\n')[0] || text;'
@@ -122,5 +144,11 @@ return res.status(500).json({ "message": 'Server error',;'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })
+  } catch (e: any) {
+    console.error('quote-request error', e);
+    return res.status(500).json({ message: 'Server error' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 }

@@ -3,9 +3,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '../../../lib/integrations/fileStore';
 import { PROVIDERS } from '../../../lib/integrations/registry';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json($2);
-  const state = readState($2);
-  const connections: Record<string, any> = {},
+  if (req.method !== 'GET') return res.status(405).json({ error: "Invalid request" });
+  const state = readState({ error: "Invalid request" });
+  const connections: Record<string, any> = {}
   for (const p of PROVIDERS) {
     const conn = state.connections.find(c => c.providerId === p.id)
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
@@ -15,7 +15,7 @@ export default /**
  */
 function handler() {
   if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+  { error: "Invalid request" }
 }
   const state = read_state ()
   const connections: Record < string, any> = {}
@@ -26,6 +26,7 @@ function handler() {
   res.status (200).json ({ connections });
 }
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -38,3 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

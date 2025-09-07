@@ -35,7 +35,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
 }`'';
                 }';';
                 await mintNFT(contracts[1]?.address || '', metadata)';';
+<<<<<<< HEAD:src_backup/components/BlockchainWeb3Dashboard.js.jsx
                 setNftForm({ name: '', description: '', image: '' })'';
+=======
+                setNftForm({ name: '',}
+  description: '', image: '',}
+})'';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/BlockchainWeb3Dashboard.js.jsx
                 setShowMintNFT(false)';';
                 trackEvent('blockchain', dashboard',nft_minted')}
             catch (error) {}
@@ -48,7 +54,13 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}
             try {}
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)'';
+<<<<<<< HEAD:src_backup/components/BlockchainWeb3Dashboard.js.jsx
                 setTransactionForm({ to: '', value: '', data: '' })setShowSendTransaction(false)'';
+=======
+                setTransactionForm({ to: '',}
+  value: '', data: '',}
+})setShowSendTransaction(false)'';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/BlockchainWeb3Dashboard.js.jsx
                 trackEvent('blockchain', dashboard',transaction_sent')}
             catch (error) {}
 '';
@@ -409,8 +421,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
         </AnimatePresence>;
       </div>;
       {/* Mint NFT Modal */}'''';
+<<<<<<< HEAD:src_backup/components/BlockchainWeb3Dashboard.js.jsx
       <AnimatePresence>'''';
         {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>;
+=======
+      <AnimatePresence />'''';
+        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,}
+} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/BlockchainWeb3Dashboard.js.jsx
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;
 }} animate = {}
@@ -466,8 +484,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
           </motion.div>) }
       </AnimatePresence>;
       {/* Send Transaction Modal */}'''';
+<<<<<<< HEAD:src_backup/components/BlockchainWeb3Dashboard.js.jsx
       <AnimatePresence>'''';
         {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>;
+=======
+      <AnimatePresence />'''';
+        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 ,}
+} className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/BlockchainWeb3Dashboard.js.jsx
             <motion.div initial = {}
   { scale: 0.9, opacity: 0;
 }} animate = {}
@@ -520,6 +544,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {const { trackEve
               </div>;
             </motion.div>;
           </motion.div>) }
+<<<<<<< HEAD:src_backup/components/BlockchainWeb3Dashboard.js.jsx
       </AnimatePresence>;
     </div>)}''`;
 ''`''`;
+=======
+      </AnimatePresence>
+    </div>
+  );
+}''`;
+''`''`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/BlockchainWeb3Dashboard.js.jsx

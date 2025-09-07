@@ -1181,6 +1181,7 @@ export default function UltraFuturisticFooter2029V2() {
 return (;
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>'
 
+<<<<<<< HEAD
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 py-16'>'
         <div className='grid grid-cols-1 "lg":grid-cols-2 "xl":grid-cols-4 gap-12'>'
@@ -1330,6 +1331,19 @@ initial={{ "opacity": 0, "y": 20
             >;
 <h4 className='text-lg font-semibold text-white mb-6 flex items-center'>;'
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3' />;'
+=======
+          {/* Service Categories */}
+          {footerSections.map((section, index) => (
+            <motion.div
+              key={section.title}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true}}
+            >
+              <h4 className="text-lg font-semibold text-white mb-6 flex items-center">
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mr-3" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 {section.title}
               </h4>;
               <ul className='space-y-3'>;'

@@ -44,6 +44,7 @@ const observer = new IntersectionObserver((entries) => {entries.forEach((entry) 
             observer.unobserve(entry.target)}
         })},{"rootMargin": '50px 0px',"threshold": 0.1}'
     )observer.observe(imgRef.current)return () => {if (imgRef.current) {observer.unobserve(imgRef.current)}
+<<<<<<< HEAD
     }}, [priority])if (hasError) {return (
     <div
 }
@@ -52,6 +53,16 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}`        
         aria-label={alt}
       >;
         <span className="text-gray-500 text-sm">Image failed to load</span>;"
+=======
+    }}, [priority])if (hasError) {return (}
+    <div;}
+className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height, ...style }}
+        role=\"img\";
+        aria-label={alt}
+       />;"
+        <span className=\"text-gray-500 text-sm\" />Image failed to load</span>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>;
     )}return (<div;
       ref={imgRef}
@@ -73,11 +84,23 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}`        
         style={{"objectFit": 'cover',"width": fill ? '100%' : width,"height": fill ? '100%' : height,...style}}'
         loading={priority ? 'eager' : 'lazy'}' />;
       {/* Loading skeleton */}
+<<<<<<< HEAD
       {!isLoaded && !hasError && (<div;
           }
           className="absolute inset-0 bg-gray-200 animate-pulse";"
           aria-hidden="true";" />;
+=======
+      {!isLoaded && !hasError && (<div;"
+          className=\"absolute inset-0 bg-gray-200 animate-pulse\";"
+          aria-hidden=\"true\";}
+        />;}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       )}
     </div>
   )}
+<<<<<<< HEAD
 export default ImageOptimizer;"
+=======
+
+export default ImageOptimizer;"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

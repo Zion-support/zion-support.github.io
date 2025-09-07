@@ -255,6 +255,7 @@ return (;
       }
     }
   },
+<<<<<<< HEAD
 =======
     })
     .slice(0, maxServices);
@@ -301,6 +302,16 @@ return (;
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>'
         <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>'
         <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>'
+=======
+
+  return (
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >

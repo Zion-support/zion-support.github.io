@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
@@ -97,6 +98,10 @@ function DiversityInclusionPage() {return (<div className="min - h-screen pt - 2
 }
 
     </div>)}
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default function DiversityInclusionPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -116,5 +121,9 @@ export default function DiversityInclusionPage() {
 			</div>
 		</div>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

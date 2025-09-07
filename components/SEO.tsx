@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';'
@@ -149,6 +150,8 @@ import React from 'react';
 import Head from 'next/head';
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import React from './react';
 import Head from './next / head';
@@ -186,7 +189,10 @@ export default SEO;
 }
 export default SEO;
 
+<<<<<<< HEAD
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

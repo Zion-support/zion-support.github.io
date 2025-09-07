@@ -707,6 +707,7 @@ className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-t
 "ease": 'easeInOut','
 
             }}
+<<<<<<< HEAD
             transition={{"duration": Math.random() * 10 + 10;
               }
               "repeat": Infinity;
@@ -766,6 +767,12 @@ export default UltraFuturisticBackground2030;
 
 <<<<<<< HEAD
 export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;export default UltraFuturisticBackground2030;
+=======
+          />
+        ))}
+      </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Neon Glow Effects */}
       <div className = $2;
 export default UltraFuturisticBackground2030,

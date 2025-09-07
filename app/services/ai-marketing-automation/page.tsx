@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
@@ -30,6 +31,16 @@ export const metadata = {
   "description": 'Professional AI marketing automation services for your business needs.','
   "keywords": 'ai-marketing-automation, services, business, technology''
 };
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Marketing Automation | Zion Tech Group',
+  description: 'Professional ai marketing automation services for your business needs.',
+  keywords: 'ai marketing automation, services, business, technology'
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 function PricingCard({ name, price, period, description, features, popular }: {
   name: string;
@@ -40,12 +51,24 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
+<<<<<<< HEAD
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
             Most Popular
           </span>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Marketing Automation
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai marketing automation services for your business needs.
+          </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </div>
       )}
 
@@ -110,6 +133,7 @@ function CaseStudy({ company, industry, result, description, metrics }: {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 
@@ -843,3 +867,7 @@ company="FinanceFlow""
     </div>
   );
 }
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

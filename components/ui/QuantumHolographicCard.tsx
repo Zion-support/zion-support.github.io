@@ -400,9 +400,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className='text-green-400'>✉️</span>'
                 <span>{service.contactInfo.email}</span>
               </div>
+<<<<<<< HEAD
               <div className='flex items-center space-x-2'>'
                 <span className='text-purple-400'>📍</span>'
                 <span className='text-xs'>{service.contactInfo.address}</span>'
+=======
+              <div className="flex items-center space-x-2">
+                <span className="text-purple-400">📍</span>
+                <span className="text-xs">{service.contactInfo.address}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </div>
             </div>
           </div>

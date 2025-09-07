@@ -17,6 +17,7 @@ const completion = await client.chat.completions.create ({
   }
   "role": 'system', "content": 'You are a compensation analyst. Be specific and concise. Use USD.''
 type InsightResponse = {
+<<<<<<< HEAD
   }
   "recommendedHourlyUsd": number;
   "recommendedMonthlyUsd": number;
@@ -30,6 +31,17 @@ type InsightResponse = {
   "regionalComparison": { "region": string; "medianHourlyUsd": number
 }[];
   "tags": string[];
+=======
+  recommendedHourlyUsd: number;
+  recommendedMonthlyUsd: number;
+  medianHourlyUsd: number;
+  minHourlyUsd: number;
+  maxHourlyUsd: number;
+  confidence: number, // 0..1
+  trendMonthly: { label: string, value: number }[];
+  regionalComparison: { region: string, medianHourlyUsd: number }[];
+  tags: string[];
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   gptRecommendation?: string
 };
 
@@ -43,6 +55,7 @@ function median("values": number[]): number {
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
+<<<<<<< HEAD
 
 function groupBy<T, K extends string | number>(
   "items": T[]
@@ -135,10 +148,20 @@ const completion = await client.chat.completions.create({model: 'gpt-4o-mini'
   content:;}
             'You are a compensation analyst. Be specific and concise. Use USD.';}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
+  return items.reduce((acc, item) => {
+    const key = getKey(item);
+    (acc[key] ||= []).push(item);
+    return acc
+  }, {} as Record<K, T[]>)
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 function extractCountry(location: string): string {
 <<<<<<< HEAD
   const parts = location.split().map((p) => p.trim());
+<<<<<<< HEAD
 =======
   const now = new Date ()const seed = prng (seed_key)const series: { label: string; value: number }[]  = [];const key = getKey(item)(acc[key] |= []).push(item)return acc;
   }, {} as Record<K, T[]>)}
@@ -150,6 +173,8 @@ if (return undefined) {
 }
   const parts = $2;
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   return parts[parts.length - 1] || 'Global'
 }
 
@@ -248,6 +273,7 @@ async function maybeGetGptRecommendation(
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
   }
 export default async function handler(
   req: NextApiRequest
@@ -296,6 +322,8 @@ export default async function handler() {
 }
 return res.status(405).json({ "error": 'Method not allowed',;'
 });
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 
 const "body": RequestBody = req.body;
@@ -333,6 +361,7 @@ const max = Math.max(...rates);
     .sort((a, b) => b && b.score - a && a.score)
     .slice(0, 20);
 
+<<<<<<< HEAD
 const sample = scored && scored.length > 0 ? scored && scored.map((s) => s && s.profile) : TALENT_PROFILES;
 
 const rates = sample && sample.map((p) => p && p.hourlyRateUsd);
@@ -390,6 +419,20 @@ const scarceSkills = [;
     'AppSec','
     'Security','
   ];
+=======
+  const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
+  const regionalComparison = Object.entries(byRegion)
+    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
+    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
+    .slice(0, 8);
+
+  // Tags
+  const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
+  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
+  const tags: string[] = [];
+  if (remote) tags.push('Remote Premium');
+  if (undersupplied) tags.push('Undersupplied Skill');
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const undersupplied = (skills |[]).some(s => { return scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
   ); }

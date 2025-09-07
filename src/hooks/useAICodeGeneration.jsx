@@ -6,5 +6,10 @@ import { useState, useCallback, useRef, useEffect } from 'react' import { useAna
   const [codeAnalysis, setCodeAnalysis] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [history, setHistory] = useState([]);
+<<<<<<< HEAD:src/hooks/useAICodeGeneration.jsx
   const generationTimeoutRef = useRef(null)"";"
 }
+=======
+  const generationTimeoutRef = useRef(null)\"\";
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/hooks/useAICodeGeneration.jsx

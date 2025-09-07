@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import Link from "next/link";"
 
+<<<<<<< HEAD
 export const metadata = {
   }
   "title": 'It Services - Zion Tech Group','
@@ -82,6 +88,28 @@ href="/services""
                 View All Services
               </Link>
             </div>
+=======
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            It Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional it services services for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </div>
           
           <div className="bg-gray-800 rounded-lg p-6">
@@ -113,6 +141,7 @@ href="/services""
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -685,3 +714,6 @@ href=""mailto":kleber@ziontechgroup.com""
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

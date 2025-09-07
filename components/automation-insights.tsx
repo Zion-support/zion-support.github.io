@@ -139,6 +139,7 @@ const successMetrics = [;
 return (;
     <>
       <Head>
+<<<<<<< HEAD
 <title>
           Automation Insights | Zion Tech Group - AI Automation Expertise
         </title>
@@ -156,6 +157,19 @@ property='"og":description''
         <main className='container mx-auto px-6 py-12'>'
           <section className='text-center mb-16'>'
             <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>'
+=======
+        <title>Automation Insights | Zion Tech Group - AI Automation Expertise</title>
+        <meta name="description" content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems." />
+        <meta property="og:title" content="Automation Insights | Zion Tech Group" />
+        <meta property="og:description" content="Expert insights on AI automation, autonomous systems, and industry trends." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               Automation Insights
             </h1>
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>'
@@ -232,6 +246,7 @@ href={`/blog/${trend.id}`}`                      className='inline-flex items-ce
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>'
 
+<<<<<<< HEAD
                     </Link>
 
                   </div>
@@ -314,6 +329,26 @@ href={`/blog/${trend.id}`}`                      className='inline-flex items-ce
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool && tool.complexity}</span>;"
                   </div>;
                 ))}
+=======
+            {/* Automation Tools & Frameworks */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Our Automation Tools</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {automationTools.map((tool, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
+                    <div className="text-4xl mb-4">🔧</div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>
+                    <p className="text-white/70 mb-4">{tool.description}</p>
+                    <div className="flex justify-center gap-2">
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
+                      <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Call to Action */}
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;'

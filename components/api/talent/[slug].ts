@@ -96,6 +96,7 @@ export default async function handler(
       return res.status(200).json({ item, translated })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!base) return res.status(404).json({ error: 'Not found' })const { item, translated } = applyTranslations(base, lang)return res && res.status(200).json({ item, translated })} catch (e: any) {return res && res.status(500).json({ error: e && e.message })}export default async function handler() {try {if (hasSupabase) {const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()if (error) throw error;
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang)return res && res.status(200).json({ item, translated })}
     const { item, translated } = applyTranslations(base, lang)return res && res.status(200).json({ item, translated })return res.status(200).json({ item, translated })} catch (e: any) {import { supabase, as, supabase_client } from '@/utils / supabase / client';
@@ -194,4 +195,14 @@ return res.status (500).json ({ "error": e.message,;
 }
     const { item, translated } = apply_translations (base, lang)return res.status (200).json ({ item, translated })} catch (e: any) {return res.status (500).json ({ error: e.message })}}
 
+=======
+
+    const base = $2;
+    if (!base) return res.status(404).json($2);
+    const { item, translated } = applyTranslations($2);
+    return res.status(200).json({ item, translated })
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message })
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

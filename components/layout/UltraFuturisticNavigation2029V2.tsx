@@ -156,6 +156,7 @@ const contactInfo = $2;
 },
 
 const serviceCategories = $2;
+<<<<<<< HEAD
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
@@ -299,10 +300,13 @@ const contactInfo = null;
 }<motion.div initial= {
   {
     title: '🚀 2029 Futuristic AI Services',
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
     services: [
+<<<<<<< HEAD
 {
         name: 'AI Consciousness Evolution Platform',
         href: '/services/ai-consciousness-evolution-platform',
@@ -328,6 +332,13 @@ const contactInfo = null;
         price: '$12,999/month',
       },
     ],
+=======
+      { name: 'AI Consciousness Evolution Platform', href: '/services/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
+      { name: 'AI Emotional Intelligence Platform', href: '/services/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
+    ]
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   },
   {
     title: '⚛️ 2029 Quantum & Emerging Tech',

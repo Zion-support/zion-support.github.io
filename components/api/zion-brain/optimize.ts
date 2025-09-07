@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import { appendLog, optimizePrompt } from '@/utils/zionBrain';'
 function isAuthorized("req": NextApiRequest): boolean {
   }
+<<<<<<< HEAD
   const token = null;
 return res.status(500).json({ "error": 'Optimization failure' });'
   }
@@ -163,3 +164,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 "
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

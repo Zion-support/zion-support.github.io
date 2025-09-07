@@ -4,6 +4,9 @@
 
 >>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -53,10 +56,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      temperature: typeof temperature === 'number' ? temperature : 0.7,
+      model: 'gpt-4o-mini'
+      temperature: typeof temperature === 'number' ? temperature : 0.7
       messages: [
-        { role: 'system', content: sys },
+        { role: 'system', content: sys }
         { role: 'user', content: prompt }
       ]
     });
@@ -67,6 +70,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -96,3 +100,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

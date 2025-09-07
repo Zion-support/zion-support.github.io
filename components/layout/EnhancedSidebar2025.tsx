@@ -81,6 +81,7 @@ const contactInfo = $2;
 },
 
 const sidebarItems: SidebarItem[] = [
+<<<<<<< HEAD
   {
     name: 'All Services',
     href: '/comprehensive-services-showcase-2025',
@@ -838,6 +839,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }</div> </div> <span > Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition-colors duration-200" > Contact Us </div> <div className="text - xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition-colors duration-200" > View Pricing </div> <div className="text - xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font - medium text - gray - 300 group - hover:text - white transition-colors duration-200" > About Us </div> <div className="text - xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text - center p - 3 bg - gray-800 / 50 rounded-lg" > <div className="text - lg font - bold text-blue-400" >1000+</div> <div className="text - xs text-gray-400" >Clients</div> </div> <div className="text - center p - 3 bg - gray-800 / 50 rounded-lg" > <div className="text - lg font - bold text-purple-400" >24 / 7</div> <div className="text - xs text-gray-400" >Support</div> </div> <div className="text - center p - 3 bg - gray-800 / 50 rounded-lg" > <div className="text - lg font - bold text-green-400" >99.9%</div> <div className="text - xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w - full text - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white font - medium rounded - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow-cyan-500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>);
 }export default EnhancedSidebar2025;
 const sidebar_items: SidebarItem[] = [;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   {
     name: 'All Services',
     href: '/comprehensive - services - showcase - 2025',
@@ -1106,6 +1109,7 @@ const sidebar_items: SidebarItem[] = [;
       { name: 'Training Programs', href: '/training', description: 'Skill development' },'
       { name: 'Community Forum', href: '/community', description: 'User community' },'
       { name: 'Status Page', href: '/status', description: 'Service status' }
+<<<<<<< HEAD
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ];
   }
@@ -1196,10 +1200,13 @@ const filtered_services = sidebar_items.flat_map (item =>;
             <AnimatePresence>;
               {expanded_sections.has (section.title) && (
                 <motion.div;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     ]
   }
 ],
 
+<<<<<<< HEAD
 const resources = []
 const supportLinks = ['
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },'
@@ -1686,6 +1693,22 @@ const supportLinks = [;
 ];
 const supportLinks = [;
   }
+=======
+const resources = [
+  { name: 'Documentation', href: '/docs', icon: <FileText className = $2;
+  { name: 'API Reference', href: '/api-documentation', icon: <Settings className = $2;
+  { name: 'Case Studies', href: '/case-studies', icon: <BookOpen className = $2;
+  { name: 'Blog & News', href: '/blog', icon: <FileText className = $2;
+  { name: 'Training & Certification', href: '/training', icon: <Award className = $2;
+  { name: 'Community Forum', href: '/community', icon: <Users className = $2;
+const supportLinks = [
+  { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
+  { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
+  { name: 'Status Page', href: '/status', description: 'Service status' },
+  { name: 'Training', href: '/training', description: 'Learn our platforms' },
+  { name: 'Community', href: '/community', description: 'Connect with users' }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 ],
 
 const resources = [;
@@ -1723,6 +1746,7 @@ const toggleSection = ("title": string) => ;
                     {section.badge}
                   </span>
                 )}
+<<<<<<< HEAD
               </div>;
               {expandedSections.has(section.title) ? (<AnimatePresence>;
               {expandedSections.has(section.title) && (<motion.div;
@@ -1740,6 +1764,35 @@ const toggleSection = ("title": string) => ;
                 <input;
                   type="text";"
                   placeholder="Search services...";"
+=======
+              </div>
+              {expandedSections.has(section.title) ? (
+                <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+              )}
+            </button>
+
+            <AnimatePresence>
+              {expandedSections.has(section.title) && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0}}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0}}
+                  transition={{ duration: 0.2 }}
+                  className="ml-8 space-y-1"
+                >
+                  <CloseIcon className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Search Bar */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
@@ -1794,6 +1847,7 @@ const toggleSection = ("title": string) => ;
             </div>
 
             {/* Contact Information */}
+<<<<<<< HEAD
             <div className="p-6 border-b border-cyan-500/30">;"
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;"
                 <Mail className="w-5 h-5 text-cyan-400" />;"
@@ -1903,6 +1957,17 @@ const toggleSection = ("title": string) => ;
                 <div className="flex items-center space-x-3 text-gray-300">;"
                   <Phone className="w-4 h-4 text-cyan-400" />;"
                   <a href={`"tel": ${contactInfo.mobile},`} className=""hover":text-cyan-400 transition-colors duration-200">;"
+=======
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>Contact Information</span>
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     {contactInfo.mobile}
                   </a>;
                 </div>;
@@ -1928,6 +1993,7 @@ const toggleSection = ("title": string) => ;
                 {stats.map((stat, index) => (<motion.div;
                     }
                     key={stat.label}
+<<<<<<< HEAD
                     initial={{ "opacity": 0, "scale": 0.8 
 }
                     animate={{ "opacity": 1, "scale": 1 
@@ -1959,6 +2025,38 @@ const toggleSection = ("title": string) => ;
                       {link.icon}
                     </div>;
                     <span className="text - gray - 300 group - "hover":text - white transition-colors duration-200">;"
+=======
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1}}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
+                  >
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Star className="w-5 h-5 text-cyan-400" />
+                <span>Quick Links</span>
+              </h3>
+              <div className="space-y-2">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={onClose}
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                  >
+                    <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                      {link.icon}
+                    </div>
+                    <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                       {link.name}
                     </span>
                   </Link>
@@ -1966,6 +2064,9 @@ const toggleSection = ("title": string) => ;
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
@@ -2208,6 +2309,7 @@ className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${`         
                           initial={{ opacity: 0, height: 0 }}'
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                           animate={{ opacity: 1, height: 'auto' }}
+<<<<<<< HEAD
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
                                 </span>)}
@@ -3653,3 +3755,8 @@ Contact Us";"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+                          exit={{ opacity: 0, height: 0}}
+                          transition = $2;
+export default EnhancedSidebar2025,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

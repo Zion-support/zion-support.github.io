@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string}
 
 export default function Assistant() {
+<<<<<<< HEAD
   }
   const params = null;
 return;
@@ -56,9 +57,20 @@ const "faqs": Record<string, string> = useMemo(;
   async function handleAsk() {
     }
     const lower = question.toLowerCase();
+=======
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams($2);
+  const tenantId = $2;
+  const brand = $2;
+  const [messages, setMessages] = useState<Message[]>([
+    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]),
+  const [input, setInput] = useState($2);
+  const faqs: Record<string, string> = useMemo(() => ({
+    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const faq = Object.keys(faqs).find(key => lower.includes(key))
     if (faq) {
+<<<<<<< HEAD
 }
 setMessages(prev => [
         ...prev,
@@ -68,6 +80,10 @@ setMessages(prev => [
 }
       ]);
       return;
+=======
+      setMessages($2);
+      return
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
     ]);
   }
@@ -125,6 +141,7 @@ className='p-3 border-t flex gap-2';'
         className="p-3 border-t flex gap-2"
         onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
       >
+<<<<<<< HEAD
         <input,
 className="flex-1 border rounded px-3 py-2 text-sm""
           placeholder="Ask about the role...""
@@ -144,6 +161,15 @@ className="flex-1 border rounded px-3 py-2 text-sm""
         >
           Send
         </button>
+=======
+        <input
+          className="flex-1 border rounded px-3 py-2 text-sm"
+          placeholder="Ask about the role..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </form>
     </div>
   )

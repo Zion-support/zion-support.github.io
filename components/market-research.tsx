@@ -1702,6 +1702,7 @@ key={index}
                   </div>
                 </div>
               </Card>
+<<<<<<< HEAD
 
             )
 }
@@ -1795,6 +1796,13 @@ key={index}
           </div>;
           <div className='grid grid - cols - 1 "lg":grid - cols - 3 gap - 8'>;'
             {pricing_strategies.map ((strategy, index) => (<Card;
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Pricing Strategies */}
 <section className='section-padding bg-gradient-cursor-accent'>;'
         <div className='container-cursor'>;'
@@ -1864,6 +1872,7 @@ key={index}
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Pricing Strategies *
 }
 
@@ -1942,6 +1951,8 @@ key={index}
                 </div>;
               </Card>;
             ))}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* CTA Section */}
 
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>'

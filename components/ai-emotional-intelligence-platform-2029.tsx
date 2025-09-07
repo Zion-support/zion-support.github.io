@@ -247,6 +247,7 @@ return (;
     <>
       <Head>
         <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>
+<<<<<<< HEAD
 <meta,
 name='description''
           content='Revolutionary AI platform that reads, understands, and responds to human emotions in real-time. Improve customer satisfaction by 85% with emotional intelligence.'' />;
@@ -425,6 +426,48 @@ className='text-5xl "md":text-7xl font-bold text-white mb-6 leading-tight''
               </span>
               <br />
               <span className='text-white'>Platform</span>            </motion.h1>            >
+=======
+        <meta name="description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time. Improve customer satisfaction by 85% with emotional intelligence." />
+        <meta name="keywords" content="AI emotional intelligence, emotion detection, sentiment analysis, customer experience, mental health AI, emotional AI" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="AI Emotional Intelligence Platform 2029" />
+        <meta property="og:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-emotional-intelligence-platform-2029" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Emotional Intelligence Platform 2029" />
+        <meta name="twitter:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+        
+        {/* Additional Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#8b5cf6" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-emotional-intelligence-platform-2029" />
+      </Head>
+
+      <UltraFuturisticNavigation2029 />
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 1}}
+            className="mb-16"
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               animate={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8"
@@ -436,6 +479,7 @@ className='text-5xl "md":text-7xl font-bold text-white mb-6 leading-tight''
               <span className='text-white'>Platform</span>'
             </motion.h1>
 
+<<<<<<< HEAD
               transition={{ "duration": 1, "delay": 0 && 0.3 
 }
               className='text-5xl "md":text-7xl font-bold text-white mb-6 leading-tight'>;'
@@ -495,6 +539,14 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
               transition={{ "duration": 1, "delay": 0.7 
 }
 className='flex flex-col "sm":flex-row items-center justify-center gap-4 mb-12''
+=======
+            {/* Subheading */}
+            <motion.p
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <Link,
 href='/contact''
@@ -635,6 +687,7 @@ systems.
           <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
             {features.map((feature, index) => (
               <motion.div
+<<<<<<< HEAD
 }
 key={feature.title}
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;'
@@ -669,6 +722,14 @@ key={feature.title}
                 viewport={{ "once": true }}
 
 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm "hover":border-purple-500/50 transition-all duration-300 transform "hover":scale-105''
+=======
+                key={feature.title}
+                initial={{ opacity: 0, y: 50}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true}}
+                className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <div className={`flex justify-center mb-6`}>`                  <div,
 className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20,`}>
@@ -813,6 +874,7 @@ industries with emotional intelligence.
           <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
             {useCases.map((useCase, index) => (
               <motion.div
+<<<<<<< HEAD
 }
 key={useCase.title}
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;'
@@ -846,6 +908,14 @@ key={useCase.title}
                 viewport={{ "once": true }}
 
 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm "hover":border-blue-500/50 transition-all duration-300 transform "hover":scale-105''
+=======
+                key={useCase.title}
+                initial={{ opacity: 0, y: 50}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true}}
+                className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <div className={`flex justify-center mb-6`}>`                  <div,
 className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20,`}>
@@ -904,6 +974,7 @@ needs.
           <div className='grid grid-cols-1 "md":grid-cols-3 gap-8'>'
             {Object.entries(pricing).map(([key, plan], index) => (
               <motion.div
+<<<<<<< HEAD
 
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;'
                 }
@@ -924,6 +995,8 @@ needs.
               Flexible pricing options designed to scale with your business needs.;
             </p>;
           </motion && motion.div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={key}
                 initial={{ "opacity": 0, "y": 50 
 }
@@ -1041,6 +1114,7 @@ outcomes.
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className='grid grid-cols-1 "md":grid-cols-3 gap-8 mb-12'>'
             <motion.div
 
@@ -1113,6 +1187,15 @@ outcomes.
               viewport={{ "once": true }}
 
 className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10''
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true}}
+              className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />'
               <h3 className='text-xl font-bold text-white mb-2'>Call Us</h3>'

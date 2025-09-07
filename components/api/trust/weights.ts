@@ -20,6 +20,7 @@ export default async function handler() {
   if (req.method = == 'GET') {'
    ;
   }
+<<<<<<< HEAD
   const current = await getTrustWeights();
 return res.status(200).json({ current, "defaults": getDefaultWeights(),;
 });
@@ -36,4 +37,6 @@ return res.status(405).json({ "error": 'Method not allowed',;'
 });
 return res.status(405).json({ "error": 'Method not allowed' }),;'
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 

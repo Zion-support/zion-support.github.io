@@ -34,6 +34,7 @@ import React from 'react',
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 =======
   Instagram,;
   Youtube,;'
@@ -45,6 +46,17 @@ const contactInfo = {'
   mobile: '+1 302 464 0950''
   email: 'kleber@ziontechgroup.com''
   address: '364 E Main St STE 1008 Middletown DE 19709''
+=======
+import { 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
+} from 'lucide-react',
+
+const contactInfo = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   website: 'https://ziontechgroup.com'
 }
 <<<<<<< HEAD
@@ -55,6 +67,7 @@ import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
  } from 'lucide-react';'
 
+<<<<<<< HEAD
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
 <<<<<<< HEAD
@@ -227,6 +240,48 @@ const contactInfo = {
       }
       { "name": 'Quantum Genomic Analysis', "href": '/quantum-genomic-analysis','
 }
+=======
+const serviceCategories = $2;
+    services: [
+      { name: 'AI Autonomous Business Processor', href: '/ai-autonomous-business-processor' },
+      { name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics' },
+      { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success' },
+      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator' },
+      { name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence' }
+    ]
+  },
+  {
+    title: 'Cybersecurity & Quantum',
+    services: [
+      { name: 'Quantum Encryption Platform', href: '/quantum-encryption-platform' },
+      { name: 'AI Autonomous Threat Hunter', href: '/ai-autonomous-threat-hunter' },
+      { name: 'Quantum Zero Trust Security', href: '/quantum-zero-trust-security' },
+      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' },
+      { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' }
+    ]
+  },
+  {
+    title: 'Fintech & Blockchain',
+    services: [
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
+      { name: 'AI Autonomous Wealth Management', href: '/ai-autonomous-wealth-management' },
+      { name: 'Quantum Blockchain Finance', href: '/quantum-blockchain-finance' },
+      { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' },
+      { name: 'Quantum Payment Processing', href: '/quantum-payment-processing' }
+    ]
+  },
+  {
+    title: 'Healthcare & Biotech',
+    services: [
+      { name: 'AI Autonomous Medical Diagnostics', href: '/ai-autonomous-medical-diagnostics' },
+      { name: 'Quantum Drug Discovery Platform', href: '/quantum-drug-discovery-platform' },
+      { name: 'AI Autonomous Patient Care', href: '/ai-autonomous-patient-care' },
+      { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' },
+      { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
+    ]
+  }
+],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       {
 
@@ -318,10 +373,17 @@ return (;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>'
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>'
       </div>
+<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8 py-16'>'
         {/* Main Footer Content *
 }
         <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-6 gap-8 mb-12">;"
+=======
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {/* Company Info */}
 <<<<<<< HEAD
 
@@ -374,6 +436,7 @@ solutions. Transforming businesses with cutting-edge technology.
             </motion.div>
           </div>
 
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className='space-y-3'>;'
                 <div className='flex items-center text-gray-300'>;'
@@ -460,6 +523,12 @@ solutions. Transforming businesses with cutting-edge technology.
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
                     >;
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
+=======
+          {/* Service Categories */}
+          {serviceCategories.map((category, index) => (
+            <motion.div
+              key={index}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               initial={{ opacity: 0, y: 20}}
               whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -825,6 +894,7 @@ href='/terms'
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     </footer>;
   );
@@ -930,6 +1000,8 @@ href='/terms'
   )</footer>;
   )}}
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </footer>
   );
 }

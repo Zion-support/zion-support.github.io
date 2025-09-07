@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { store } from "../../../../../utils/data/enterpriseStore";"
 export default function handler() {
@@ -33,6 +34,11 @@ return res;
   }
 
   return res.status(405).json({ "error": "method_not_allowed" });"
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
@@ -40,10 +46,11 @@ return res;
 
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
 
   return res.status(405).json({ error: 'method_not_allowed' })
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -55,4 +62,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

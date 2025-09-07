@@ -1,4 +1,10 @@
+<<<<<<< HEAD:src_backup/components/SitemapPage.jsx
  export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light'> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''';import { Link } from 'react-router-dom';';
+=======
+export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) ) ;}
+  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') ) ;}
+  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light' /> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''';import { Link } from 'react-router-dom';';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/SitemapPage.jsx
 import { SEO  } from './SEO';
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth)const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&;
         route.requiredRoles &&;
@@ -103,12 +109,33 @@ import { SEO  } from './SEO';
                 <span className='ml-2 text-xs italic text-zion-slate-light'>;
                   ({route.priority})'''';
                 </span>'''';
+<<<<<<< HEAD:src_backup/components/SitemapPage.jsx
                 <p className='text-sm text-zion-slate-light mt-1">'";
+=======
+                <p className='text-sm text-zion-slate-light mt-1\" />'\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/SitemapPage.jsx
                   {route.description}
                 </p>;
               </div>;
             ))}
           </div>;
         </div>;
+<<<<<<< HEAD:src_backup/components/SitemapPage.jsx
       </div>;
     </div>)}export { SitemapPage }export { SitemapPage }export { SitemapPage }export { SitemapPage }export { SitemapPage }
+=======
+      </div>
+    </div>
+  );
+}
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/SitemapPage.jsx

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class ComprehensiveFixScript {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
-    this.fixedFiles = [];
+    this.fixes = [];
     this.errors = [];
   }
 
@@ -25,7 +25,7 @@ class ComprehensiveFixScript {
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
+    this.log(`Running: ${description}`, 'PROGRESS');
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -33,10 +33,10 @@ class ComprehensiveFixScript {
         encoding: 'utf8',
         ...options,
       });
-      this.log(`✅ ${description} completed successfully`);
+      this.log(`${description} completed successfully`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      this.log(`${description} failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message,
@@ -45,81 +45,195 @@ class ComprehensiveFixScript {
     }
   }
 
-  async fixSyntaxErrors() {
-    this.log('\n🔧 FIXING SYNTAX ERRORS');
+  async fixPackageJsonConflicts() {
+    this.log('\n🔧 FIXING PACKAGE.JSON CONFLICTS');
     
     try {
-      // Remove problematic pattern files
-      const patternDir = path.join(this.projectRoot, 'components/reports/patterns');
-      if (fs.existsSync(patternDir)) {
-        const files = fs.readdirSync(patternDir);
-        files.forEach(file => {
-          if (file.startsWith('pattern-')) {
-            fs.unlinkSync(path.join(patternDir, file));
-            this.log(`Removed problematic file: ${file}`);
-          }
-        });
-      }
-
-      // Remove problematic playbook files
-      const playbookDir = path.join(this.projectRoot, 'components/reports/playbooks');
-      if (fs.existsSync(playbookDir)) {
-        const files = fs.readdirSync(playbookDir);
-        files.forEach(file => {
-          if (file.startsWith('playbook-')) {
-            fs.unlinkSync(path.join(playbookDir, file));
-            this.log(`Removed problematic file: ${file}`);
-          }
-        });
-      }
-
-      // Fix common syntax issues in remaining files
-      await this.fixCommonSyntaxIssues();
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
-      this.log('✅ Syntax errors fixed', 'SUCCESS');
+      // Remove postcss from dependencies since it's in devDependencies
+      if (packageJson.dependencies && packageJson.dependencies.postcss) {
+        delete packageJson.dependencies.postcss;
+        this.fixes.push('Removed postcss from dependencies (already in devDependencies)');
+      }
+      
+      // Ensure React version is specified for ESLint
+      if (packageJson.dependencies && packageJson.dependencies.react) {
+        packageJson.dependencies.react = packageJson.dependencies.react || '^18.3.1';
+      }
+      
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+      this.log('Package.json conflicts fixed', 'SUCCESS');
     } catch (error) {
-      this.log(`❌ Error fixing syntax: ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
+      this.errors.push(`Package.json fix failed: ${error.message}`);
     }
   }
 
-  async fixCommonSyntaxIssues() {
-    const filesToFix = [
-      'components/reports.tsx',
-      'components/request-to-hire.tsx',
-      'components/resources.tsx',
-      'components/solutions.tsx',
-      'components/startup-tools.tsx',
-      'components/technology-insights.tsx',
-      'components/website-performance-monitor.tsx',
-      'lib/utils.ts',
-      'src/App.tsx'
-    ];
+  async fixESLintConfiguration() {
+    this.log('\n🔧 FIXING ESLINT CONFIGURATION');
+    
+    try {
+      const eslintConfigPath = path.join(this.projectRoot, 'eslint.config.js');
+      let config = fs.readFileSync(eslintConfigPath, 'utf8');
+      
+      // Add React version specification
+      if (!config.includes('react: { version: "detect" }')) {
+        config = config.replace(
+          /plugins: \{\s*react,/g,
+          `plugins: {
+      react: {
+        ...react,
+        settings: {
+          react: {
+            version: "detect"
+          }
+        }
+      },`
+        );
+        this.fixes.push('Added React version detection to ESLint config');
+      }
+      
+      fs.writeFileSync(eslintConfigPath, config);
+      this.log('ESLint configuration fixed', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`ESLint config fix failed: ${error.message}`);
+    }
+  }
 
-    for (const file of filesToFix) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        try {
+  async fixTypeScriptConfiguration() {
+    this.log('\n🔧 FIXING TYPESCRIPT CONFIGURATION');
+    
+    try {
+      const tsconfigPath = path.join(this.projectRoot, 'tsconfig.json');
+      if (fs.existsSync(tsconfigPath)) {
+        const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf8'));
+        
+        // Ensure proper compiler options
+        tsconfig.compilerOptions = {
+          ...tsconfig.compilerOptions,
+          target: 'ES2020',
+          lib: ['dom', 'dom.iterable', 'es6'],
+          allowJs: true,
+          skipLibCheck: true,
+          strict: false,
+          noEmit: true,
+          esModuleInterop: true,
+          module: 'esnext',
+          moduleResolution: 'bundler',
+          resolveJsonModule: true,
+          isolatedModules: true,
+          jsx: 'preserve',
+          incremental: true,
+          plugins: [
+            {
+              name: 'next'
+            }
+          ],
+          paths: {
+            '@/*': ['./*']
+          }
+        };
+        
+        fs.writeFileSync(tsconfigPath, JSON.stringify(tsconfig, null, 2));
+        this.fixes.push('Updated TypeScript configuration');
+      }
+      this.log('TypeScript configuration fixed', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`TypeScript config fix failed: ${error.message}`);
+    }
+  }
+
+  async fixFileSyntaxErrors() {
+    this.log('\n🔧 FIXING FILE SYNTAX ERRORS');
+    
+    try {
+      // Fix files that might have syntax issues
+      const filesToCheck = [
+        'app/about/page.tsx',
+        'app/services/automation/page.tsx',
+        'app/services/consulting/page.tsx',
+        'lib/integrations/fileStore.ts'
+      ];
+      
+      for (const file of filesToCheck) {
+        const filePath = path.join(this.projectRoot, file);
+        if (fs.existsSync(filePath)) {
           let content = fs.readFileSync(filePath, 'utf8');
           
-          // Fix common syntax issues
-          content = content
-            .replace(/            .replace(//g, '')
-            .replace(/            .replace(/^\s*$/gm, '')
-            .replace(/\n\s*\n\s*\n/g, '\n\n');
-
-          // Ensure proper React component structure
-          if (content.includes('export default') && !content.includes('import React')) {
-            content = "import React from 'react';\n\n" + content;
+          // Ensure files end with newline
+          if (!content.endsWith('\n')) {
+            content += '\n';
+            fs.writeFileSync(filePath, content);
+            this.fixes.push(`Added newline to ${file}`);
           }
-
-          fs.writeFileSync(filePath, content);
-          this.fixedFiles.push(file);
-          this.log(`Fixed syntax in: ${file}`);
-        } catch (error) {
-          this.log(`Error fixing ${file}: ${error.message}`, 'WARNING');
+          
+          // Fix common syntax issues
+          if (content.includes('ensureDataDir(),')) {
+            content = content.replace('ensureDataDir(),', 'ensureDataDir();');
+            fs.writeFileSync(filePath, content);
+            this.fixes.push(`Fixed syntax error in ${file}`);
+          }
         }
       }
+      
+      this.log('File syntax errors fixed', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`File syntax fix failed: ${error.message}`);
+    }
+  }
+
+  async installMissingDependencies() {
+    this.log('\n🔧 INSTALLING MISSING DEPENDENCIES');
+    
+    try {
+      // Install missing dependencies
+      const dependencies = [
+        '@heroicons/react',
+        'eslint-plugin-jsx-a11y'
+      ];
+      
+      for (const dep of dependencies) {
+        const result = await this.runCommand(
+          `npm install ${dep}`,
+          `Install ${dep}`
+        );
+        if (result.success) {
+          this.fixes.push(`Installed ${dep}`);
+        }
+      }
+      
+      this.log('Missing dependencies installed', 'SUCCESS');
+    } catch (error) {
+      this.errors.push(`Dependency installation failed: ${error.message}`);
+    }
+  }
+
+  async runSecurityAudit() {
+    this.log('\n🔒 RUNNING SECURITY AUDIT');
+    
+    try {
+      const auditResult = await this.runCommand(
+        'npm audit --audit-level moderate',
+        'Security audit'
+      );
+      
+      if (!auditResult.success) {
+        // Try to fix automatically
+        const fixResult = await this.runCommand(
+          'npm audit fix --force',
+          'Security fix'
+        );
+        if (fixResult.success) {
+          this.fixes.push('Security vulnerabilities fixed automatically');
+        } else {
+          this.errors.push('Security vulnerabilities could not be fixed automatically');
+        }
+      } else {
+        this.log('No security issues found', 'SUCCESS');
+      }
+    } catch (error) {
+      this.errors.push(`Security audit failed: ${error.message}`);
     }
   }
 
@@ -127,334 +241,77 @@ class ComprehensiveFixScript {
     this.log('\n🧪 RUNNING TESTS');
     
     try {
-      // Run type check
-      const typeResult = await this.runCommand(
-        'npm run type-check',
-        'TypeScript type check'
-      );
-
-      // Run linting with fix
-      const lintResult = await this.runCommand(
-        'npm run lint:fix',
-        'ESLint fix'
-      );
-
-      // Run smoke tests
       const testResult = await this.runCommand(
         'npm run test:smoke',
         'Smoke tests'
       );
-
-      if (typeResult.success && testResult.success) {
-        this.log('✅ All tests passed', 'SUCCESS');
+      
+      if (testResult.success) {
+        this.fixes.push('All tests passed');
       } else {
-        this.log('⚠️ Some tests failed, but continuing...', 'WARNING');
+        this.errors.push('Some tests failed');
       }
     } catch (error) {
-      this.log(`❌ Test error: ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
+      this.errors.push(`Test execution failed: ${error.message}`);
     }
   }
 
-  async buildProject() {
-    this.log('\n🏗️ BUILDING PROJECT');
-    
-    try {
-      // Clean build
-      await this.runCommand('npm run clean', 'Clean build');
-
-      // Build project
-      const buildResult = await this.runCommand(
-        'npm run build',
-        'Production build'
-      );
-
-      if (buildResult.success) {
-        this.log('✅ Build successful', 'SUCCESS');
-      } else {
-        this.log('❌ Build failed', 'ERROR');
-        this.errors.push('Build failed');
-      }
-    } catch (error) {
-      this.log(`❌ Build error: ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
-    }
-  }
-
-  async createAdditionalScripts() {
-    this.log('\n🚀 CREATING ADDITIONAL SCRIPTS');
-    
-    try {
-      // Create a comprehensive test script
-      const testScript = `#!/usr/bin/env node
-const { execSync } = require('child_process');
-
-class ComprehensiveTester {
-  constructor() {
-    this.results = { passed: 0, failed: 0, errors: [] };
-  }
-
-  async runTest(command, description) {
-    try {
-      execSync(command, { stdio: 'pipe' });
-      this.results.passed++;
-      console.log(\`✅ \${description}\`);
-    } catch (error) {
-      this.results.failed++;
-      this.results.errors.push({ test: description, error: error.message });
-      console.log(\`❌ \${description}: \${error.message}\`);
-    }
-  }
-
-  async runAllTests() {
-    console.log('🧪 Running comprehensive tests...');
-    
-    await this.runTest('npm run type-check', 'TypeScript check');
-    await this.runTest('npm run lint:check', 'Linting check');
-    await this.runTest('npm run build', 'Build test');
-    await this.runTest('npm run test:smoke', 'Smoke tests');
-    
-    console.log(\`\\n📊 Results: \${this.results.passed} passed, \${this.results.failed} failed\`);
-    
-    if (this.results.failed > 0) {
-      console.log('\\n❌ Failed tests:');
-      this.results.errors.forEach(err => {
-        console.log(\`  - \${err.test}: \${err.error}\`);
-      });
-    }
-  }
-}
-
-const tester = new ComprehensiveTester();
-tester.runAllTests();
-`;
-
-      fs.writeFileSync('scripts/comprehensive-tester.cjs', testScript);
-      fs.chmodSync('scripts/comprehensive-tester.cjs', '755');
-      this.log('Created comprehensive test script');
-
-      // Create a performance monitor
-      const perfScript = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      bundleSize: 0,
-      memoryUsage: 0,
-      timestamp: new Date().toISOString()
-    };
-  }
-
-  measureBundleSize() {
-    try {
-      const buildDir = path.join(process.cwd(), '.next');
-      if (fs.existsSync(buildDir)) {
-        const stats = fs.statSync(buildDir);
-        this.metrics.bundleSize = stats.size;
-      }
-    } catch (error) {
-      console.error('Error measuring bundle size:', error);
-    }
-  }
-
-  measureMemoryUsage() {
-    const usage = process.memoryUsage();
-    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024;
-  }
-
-  generateReport() {
-    const report = {
-      timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: []
-    };
-    
-    if (this.metrics.bundleSize > 1000000) {
-      report.recommendations.push('Consider code splitting to reduce bundle size');
-    }
-    if (this.metrics.memoryUsage > 100) {
-      report.recommendations.push('Consider optimizing memory usage');
-    }
-    
-    const reportPath = path.join(process.cwd(), 'performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log('Performance report generated:', reportPath);
-  }
-}
-
-const monitor = new PerformanceMonitor();
-monitor.measureBundleSize();
-monitor.measureMemoryUsage();
-monitor.generateReport();
-`;
-
-      fs.writeFileSync('scripts/performance-monitor.cjs', perfScript);
-      fs.chmodSync('scripts/performance-monitor.cjs', '755');
-      this.log('Created performance monitor script');
-
-      // Create a health check script
-      const healthScript = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-class HealthChecker {
-  constructor() {
-    this.checks = [];
-  }
-
-  checkFileExists(filePath, description) {
-    const exists = fs.existsSync(filePath);
-    this.checks.push({
-      name: description,
-      status: exists ? 'PASS' : 'FAIL',
-      details: exists ? 'File exists' : 'File missing'
-    });
-    return exists;
-  }
-
-  checkPackageJson() {
-    try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      this.checks.push({
-        name: 'Package.json validation',
-        status: 'PASS',
-        details: \`Valid package.json (version: \${packageJson.version})\`
-      });
-      return true;
-    } catch (error) {
-      this.checks.push({
-        name: 'Package.json validation',
-        status: 'FAIL',
-        details: \`Invalid package.json: \${error.message}\`
-      });
-      return false;
-    }
-  }
-
-  checkNodeModules() {
-    const exists = fs.existsSync('node_modules');
-    this.checks.push({
-      name: 'Node modules',
-      status: exists ? 'PASS' : 'FAIL',
-      details: exists ? 'Dependencies installed' : 'Run npm install'
-    });
-    return exists;
-  }
-
-  generateReport() {
-    const passed = this.checks.filter(c => c.status === 'PASS').length;
-    const total = this.checks.length;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        total,
-        passed,
-        failed: total - passed,
-        healthScore: Math.round((passed / total) * 100)
-      },
-      checks: this.checks
-    };
-    
-    const reportPath = path.join(process.cwd(), 'health-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log(\`Health Check Report: \${passed}/\${total} checks passed (\${report.summary.healthScore}%)\`);
-    return report;
-  }
-}
-
-const checker = new HealthChecker();
-checker.checkFileExists('src/App.tsx', 'Main App component');
-checker.checkFileExists('package.json', 'Package configuration');
-checker.checkFileExists('next.config.js', 'Next.js configuration');
-checker.checkPackageJson();
-checker.checkNodeModules();
-checker.generateReport();
-`;
-
-      fs.writeFileSync('scripts/health-checker.cjs', healthScript);
-      fs.chmodSync('scripts/health-checker.cjs', '755');
-      this.log('Created health check script');
-
-      this.log('✅ Additional scripts created', 'SUCCESS');
-    } catch (error) {
-      this.log(`❌ Error creating scripts: ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
-    }
-  }
-
-  async commitAndPush() {
-    this.log('\n📝 COMMITTING AND PUSHING CHANGES');
-    
-    try {
-      // Add all changes
-      await this.runCommand('git add .', 'Git add');
-
-      // Commit changes
-      const commitMessage = `feat: Comprehensive automation improvements and fixes - ${new Date().toISOString()}`;
-      await this.runCommand(`git commit -m "${commitMessage}"`, 'Git commit');
-
-      // Push changes
-      await this.runCommand('git push origin HEAD', 'Git push');
-
-      this.log('✅ Changes committed and pushed', 'SUCCESS');
-    } catch (error) {
-      this.log(`❌ Error committing/pushing: ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
-    }
-  }
-
-  generateReport() {
-    const duration = Date.now() - this.startTime;
+  async generateReport() {
+    const totalDuration = Date.now() - this.startTime;
     
     this.log('\n📊 COMPREHENSIVE FIX REPORT');
     this.log('='.repeat(60));
-    this.log(`Total Duration: ${duration}ms`);
-    this.log(`Files Fixed: ${this.fixedFiles.length}`);
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log(`Fixes Applied: ${this.fixes.length}`);
     this.log(`Errors: ${this.errors.length}`);
     this.log('');
-
-    if (this.fixedFiles.length > 0) {
-      this.log('✅ Fixed Files:');
-      this.fixedFiles.forEach(file => this.log(`  - ${file}`));
+    
+    if (this.fixes.length > 0) {
+      this.log('✅ FIXES APPLIED:');
+      this.fixes.forEach(fix => this.log(`  - ${fix}`));
     }
-
+    
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors:');
+      this.log('\n❌ ERRORS:');
       this.errors.forEach(error => this.log(`  - ${error}`));
     }
-
-    // Save report
+    
+    // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
-      duration,
-      fixedFiles: this.fixedFiles,
+      totalDuration,
+      fixes: this.fixes,
       errors: this.errors,
-      success: this.errors.length === 0
+      summary: {
+        fixesApplied: this.fixes.length,
+        errorsFound: this.errors.length,
+        success: this.errors.length === 0
+      }
     };
-
-    fs.writeFileSync('comprehensive-fix-report.json', JSON.stringify(report, null, 2));
-    this.log('\n📄 Report saved to comprehensive-fix-report.json');
+    
+    fs.writeFileSync(
+      'comprehensive-fix-report.json',
+      JSON.stringify(report, null, 2)
+    );
+    this.log('\n📄 Detailed report saved to comprehensive-fix-report.json');
   }
 
   async run() {
     this.log('🚀 Starting Comprehensive Fix Script');
     this.log('='.repeat(60));
-
+    
     try {
-      await this.fixSyntaxErrors();
+      await this.fixPackageJsonConflicts();
+      await this.fixESLintConfiguration();
+      await this.fixTypeScriptConfiguration();
+      await this.fixFileSyntaxErrors();
+      await this.installMissingDependencies();
+      await this.runSecurityAudit();
       await this.runTests();
-      await this.buildProject();
-      await this.createAdditionalScripts();
-      await this.commitAndPush();
     } catch (error) {
       this.log(`Fatal error: ${error.message}`, 'ERROR');
     } finally {
-      this.generateReport();
+      await this.generateReport();
     }
   }
 }

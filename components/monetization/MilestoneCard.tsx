@@ -206,6 +206,7 @@ type Props = $2;
                 }
                 title={step} />
               {idx < statusSteps.length - 1 && (
+<<<<<<< HEAD
 <div
 }
 className={
@@ -225,10 +226,13 @@ className={
                 title={step}
               />;
               {idx < statusSteps.length - 1 && (/>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
               )}
             </div>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />              )}
             </div>
@@ -261,6 +265,16 @@ className={
           {milestone.description && <p>{milestone.description}</p>}
 
           <div>"Amount": ${milestone.amountUsd.toFixed(2)}</div>
+=======
+        </div>
+        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
+      </div>
+
+      {expanded && (
+        <div className="mt-4 space-y-2 text-sm text-gray-800">
+          {milestone.description && <p>{milestone.description}</p>}
+          <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>
 <div className='font-medium'>Attachments</div>'
@@ -277,6 +291,7 @@ className='text-blue-600 underline''
                       {a.label || a.url}
                     </a>
                   </li>
+<<<<<<< HEAD
 
                       rel='noreferrer'>                      {a && a.label || a && a.ur,'
 }              <div className="font-medium">Attachments</div>;"
@@ -328,6 +343,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white "hover":bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}onClick={() => onAction('in_progress', milestone.id)}</a>;'
                   </li>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 ))}
               </ul>;
             </div>;

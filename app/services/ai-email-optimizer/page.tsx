@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 import React from 'react';'
@@ -121,6 +122,24 @@ return (;
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">"
             AI Email Optimizer
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Email Optimizer | Zion Tech Group',
+  description: 'Professional ai email optimizer services for your business needs.',
+  keywords: 'ai email optimizer, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Email Optimizer
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Transform your email marketing with AI-powered optimization that analyzes, 
@@ -269,6 +288,7 @@ icon="📈""
             Contact Sales
           </button>
         </div>
+<<<<<<< HEAD
         <div className="grid grid-cols-1 "md":grid-cols-3 gap-8">"
           <div className="text-center">"
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">"
@@ -531,4 +551,9 @@ href=""tel":+13024640950""
       </section>
     </div>
   );
+=======
+      </div>
+    </div>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

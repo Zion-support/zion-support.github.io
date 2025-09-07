@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import type { NextApiRequest, NextApiResponse } from 'next',import formidable from 'formidable';'
@@ -80,6 +81,24 @@ const form = formidable({ "multiples": false
     }
     if (err) return res.status(400).json({ "error": 'Invalid form data','
 });
+=======
+
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+
+  const form = formidable({ multiples: false }),
+  form.parse(req, (err, fields, files) => {
+    if (err) return res.status(400).json({ error: 'Invalid form data' });
+    const section = String(fields.section |'General');
+    const file = files.file as formidable.File | undefined;
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const section = String(fields.section |'General');'
 
@@ -142,6 +161,7 @@ const form = formidable ({ "multiples": false
 })) {$2;
 }
 
+<<<<<<< HEAD
 const section = String (fields.section || 'General';'
   const file = files.file as formidable.File | undefined;
     if (return res.status (400).json ({ "error": 'File missing','
@@ -150,6 +170,9 @@ const section = String (fields.section || 'General';'
   })
   })
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';'
+=======
+import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 ;
 
 export const config = { "api": { "body_parser": false }

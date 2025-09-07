@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 
@@ -14,6 +15,23 @@ return (;
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ci Cd Pipeline Builder | Zion Tech Group',
+  description: 'Professional ci cd pipeline builder services for your business needs.',
+  keywords: 'ci cd pipeline builder, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             Ci Cd Pipeline Builder
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
@@ -22,6 +40,7 @@ and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="max-w-6xl mx-auto">"
           {/* Features Grid */}
           <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16">"
@@ -110,6 +129,31 @@ href="/services""
               <li>• Benefit 2</li>
               <li>• Benefit 3</li>
             </ul>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </div>
         </div>
 
@@ -124,5 +168,9 @@ href="/services""
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

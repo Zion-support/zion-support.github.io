@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import type { AppProps } from 'next/app';
@@ -31,3 +35,6 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

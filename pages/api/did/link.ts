@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 (global as any).ZION_DID_STORE = store;
@@ -22,7 +25,7 @@ const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 (global as any).__ZION_DID_STORE__ = store;
 export default function handler(req, res) {
   try {
-  if (req.method !== 'POST') return res.status(405).end(),;
+  if (req.method !== 'POST') return res.status(405).end();
 
   const { payload, message, signature } = req.body || {};
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' });

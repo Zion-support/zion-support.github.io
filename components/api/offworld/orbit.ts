@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 
 
@@ -17,6 +18,15 @@ const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;'
 const { stores } = await connectOrbit();
   if (!stores) return res.status(503).json({ "error": 'OrbitDB unavailable','
 });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req.query,
+  const body = $2;
+  const { stores } = await connectOrbit($2);
+  if (!stores) return res.status(503).json($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   try {
     }
     if (action === 'chat' && req && req.method === 'POST') {'
@@ -118,6 +128,7 @@ export default async function handler() {const { action } = req.query;
     return res.status(400).json({ error: 'Unsupported action' })} catch (e: any) {return res.status(500).json({ error: e.message })}
 }
   }
+<<<<<<< HEAD
 }
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -195,4 +206,6 @@ return res.status(200).json({ ok: true;,}
   } catch (e: any) {}
     return res.status(200).json({ ok: true });
 },
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

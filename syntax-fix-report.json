@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-06T03:11:23.175Z",
   "duration": "10s",
   "fixedFiles": [],
@@ -9273,3 +9274,17 @@ main
 }
 }
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+  "timestamp": "2025-09-06T03:11:23.175Z",
+  "duration": "10s",
+  "fixedFiles": [],
+  "errors": [],
+  "warnings": [],
+  "summary": {
+    "totalFilesFixed": 0,
+    "totalErrors": 0,
+    "totalWarnings": 0,
+    "successRate": null
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

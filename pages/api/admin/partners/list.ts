@@ -1,13 +1,16 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+  const false = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
   try {
-    if (usingPlaceholder) {
+    if (false) {
       return res.status(200).json({ partners: [
-        { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
+        { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 }
         { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }
       ]});
     }
@@ -39,4 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: 'Internal server error' });
 >>>>>>> origin/main
   }
+}
+
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/integrations/providers.ts
 
@@ -6,6 +7,8 @@
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -15,7 +18,7 @@ export default /**
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
+  { error: "Invalid request" }
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
@@ -68,6 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/integrations/providers.ts
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
@@ -84,3 +88,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

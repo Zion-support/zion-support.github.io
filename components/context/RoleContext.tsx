@@ -81,9 +81,21 @@ type RoleContextValue = $2;
   setRole: (role: UserRole) => void
 },
 
+<<<<<<< HEAD
       if (saved === 'client' || saved === 'talent') {'
         }
         setRole(saved);
+=======
+const RoleContext = $2;
+export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [role, setRole] = useState<UserRole>('client'),
+
+  useEffect(() => {
+    try {
+      const saved = $2;
+      if (saved === 'client' || saved === 'talent') {
+        setRole(saved)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
     } catch {}
   }, []),

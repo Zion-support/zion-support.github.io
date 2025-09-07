@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const metadata: Metadata = {
   title: 'Finance Solutions | Zion Tech Group',
   description: 'Professional finance solutions for your business needs.',
   keywords: 'finance, solutions, business, technology'
 }
+<<<<<<< HEAD
 
   "title": 'Finance | Zion Tech Group','
   "description": 'Professional finance services for your business needs.','
@@ -24,6 +30,16 @@ return (;
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">"
             Finance Industry Solutions
+=======
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Finance Solutions
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Specialized technology solutions designed specifically for the finance industry. 
@@ -31,6 +47,7 @@ return (;
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="max-w-6xl mx-auto">"
           {/* Industry-specific Features */}
           <div className="grid grid-cols-1 "md":grid-cols-2 gap-12 mb-16">"
@@ -160,6 +177,31 @@ href="/services""
               <li>• Benefit 2</li>
               <li>• Benefit 3</li>
             </ul>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-bold text-white mb-4">Financial Planning</h3>
+            <p className="text-gray-300">
+              Comprehensive financial planning and analysis solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-white mb-4">Analytics</h3>
+            <p className="text-gray-300">
+              Advanced financial analytics and reporting tools.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-xl font-bold text-white mb-4">Security</h3>
+            <p className="text-gray-300">
+              Secure financial data management and compliance.
+            </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           </div>
         </div>
 

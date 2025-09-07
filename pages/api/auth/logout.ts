@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -8,17 +12,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ success: true })
 
-export default /**
- * handler - Function description
- */
-function handler() {
+export default function handler() {
   if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
+  { error: "Invalid request" }
 }
   clearUserCookie (res)
   res.status (200).json ({ success: true });
 }
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -31,3 +33,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

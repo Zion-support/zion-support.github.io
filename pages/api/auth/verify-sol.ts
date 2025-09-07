@@ -1,19 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
-import nacl from 'tweetnacl',;
-import bs58 from 'bs58',;
-import jwt from 'jsonwebtoken',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import nacl from 'tweetnacl';
+import bs58 from 'bs58';
+import jwt from 'jsonwebtoken';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
-const JWT_SECRET = $2;
+const JWT_SECRET = { error: "Invalid request" };
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end($2);
-  const { message, signature, publicKey } = req.body || {},
-  if (!message || !signature || !publicKey) return res.status(400).json($2);
+  if (req.method !== 'POST') return res.status(405).end({ error: "Invalid request" });
+  const { message, signature, publicKey } = req.body || {}
+  if (!message || !signature || !publicKey) return res.status(400).json({ error: "Invalid request" });
   try {
     const cookieHeader = req.headers.cookie |''
     const match = cookieHeader.match(/siwe-nonce=([^]+)/)
@@ -38,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e ?.message || 'Verify failed' })
   }
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -50,3 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

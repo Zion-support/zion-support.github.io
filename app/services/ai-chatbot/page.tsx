@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
   "title": 'Ai Chatbot | Zion Tech Group','

@@ -459,11 +459,23 @@ const productivityTips = [;
       "icon": <CheckCircle className='w-6 h-6 text-green-400' />,'
     },
     {
+<<<<<<< HEAD
       }
       "title": 'Focus on Integration','
       "description": 'Choose tools that work well together to avoid data silos and manual work.''
       "icon": <Cog className='w-6 h-6 text-blue-400' />'
     }
+=======
+      title: 'Focus on Integration',
+      description: 'Choose tools that work well together to avoid data silos and manual work.',
+      icon: <Cog className="w-6 h-6 text-blue-400" />
+    };
+    {
+      title: 'Measure ROI',
+      description: 'Track how each tool improves your team\'s productivity and business outcomes.',
+      icon: <ChartBar className="w-6 h-6 text-purple-400" />
+    };
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     {
       }
       "title": 'Measure ROI''
@@ -581,6 +593,7 @@ organization. Each tool has been evaluated for features, pricing,
                 {category.tools.map((tool, toolIndex) => (<Card;
                     }
                     key={toolIndex}
+<<<<<<< HEAD
                     className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}`style={{"animationDelay": `${categoryIndex * 0.2 + toolIndex * 0.,`}s`}}`                  >;
                     {tool.popular && (<div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>;'
                         <div className='inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium'>;'
@@ -624,6 +637,15 @@ organization. Each tool has been evaluated for features, pricing,
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
                     </div>
+=======
+                    className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
+                    style={{ animationDelay: `${(categoryIndex * 0.2) + (toolIndex * 0.1)}s` }}
+                  >
+                    {tool.popular && (
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
+                          <Star className="w-3 h-3 mr-1" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                           Popular Choice
                         </div>
                       </div>
@@ -649,6 +671,7 @@ organization. Each tool has been evaluated for features, pricing,
 
                     <Button
                       href={tool.website}
+<<<<<<< HEAD
 variant='primary';'
                       size='sm';'
                       className='w-full group-"hover":scale-105 transition-transform duration-300';'
@@ -675,6 +698,17 @@ variant='primary';'
                       Visit Website;
                       <ExternalLink className="w-4 h-4 ml-2" />;"
                   </Card>;
+=======
+                      variant="primary"
+                      size="sm"
+                      className="w-full group-hover:scale-105 transition-transform duration-300"
+                      external
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Card>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 ))}
               </div>
             </div>
@@ -817,6 +851,7 @@ key={index}
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -865,6 +900,12 @@ key={index}
             collaboration, and drive growth. Start with the essentials and build;
             your tech stack strategically.;
           </p>;
+=======
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* CTA Section */}
 
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>'

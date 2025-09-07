@@ -29,7 +29,28 @@ interface PerformanceMonitorProps {
 
 }
 
+<<<<<<< HEAD
 const "PerformanceMonitor": React.FC<PerformanceMonitorProps> = ({showUI;
+=======
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  showUI = false;
+  autoRefresh = false;
+  refreshInterval = 30000
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    timeToInteractive: 0
+  });
+  const [isVisible, setIsVisible] = useState(showUI);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
+  const [isLoading, setIsLoading] = useState(false);
+  const [alerts, setAlerts] = useState<string[]>([]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 }
 
@@ -85,6 +106,7 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
  }
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
+<<<<<<< HEAD
 
 
  ;
@@ -217,6 +239,14 @@ else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  useEffect(() => {
+    if (autoRefresh && showUI) {
+      const interval = setInterval(refreshMetrics, refreshInterval);
+      return () => clearInterval(interval)
+    }
+  }, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 >>>>>>> origin/main
@@ -418,6 +448,7 @@ const getScoreLabel = (score: number) => {
   if (score >= 70) return 'Good';
   if (score >= 50) return 'Needs Improvement';
   return 'Poor'
+<<<<<<< HEAD
 };
 
 export default PerformanceMonitor;
@@ -810,6 +841,8 @@ let total_metrics = 0;
 if ( {) {$2;
 }
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 };
 
 

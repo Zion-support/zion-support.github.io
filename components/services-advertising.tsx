@@ -4961,4 +4961,7 @@ returns-center/pricing');'
 		</div>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

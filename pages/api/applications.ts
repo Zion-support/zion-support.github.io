@@ -41,10 +41,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     const app: Application = {
-      id: uuidv4(),
-      jobId: String(jobId),
-      talentSlug: String(talentSlug),
-      status: action === 'apply' ? 'applied' : 'skipped',
+      id: uuidv4()
+      jobId: String(jobId)
+      talentSlug: String(talentSlug)
+      status: action === 'apply' ? 'applied' : 'skipped'
       createdAtIso: now
     };
     apps.push(app);
@@ -55,6 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -72,3 +73,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,8 +1,11 @@
+<<<<<<< HEAD:src_disabled_1757239864/utils/env-polyfill.ts
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
     (typeof (globalThis as any).process !== 'undefined' &&
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/utils/env-polyfill.ts
 // Export a safe environment accessor;
 export const safeEnv = {NODE_ENV:;
     (typeof (globalThis as any).process !== 'undefined' &&;
@@ -162,6 +165,61 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
+<<<<<<< HEAD:src_disabled_1757239864/utils/env-polyfill.ts
 console.log('✅ Environment polyfill loaded successfully'),
 
 export default safeEnv;
+=======
+export default safe_env;/**;
+ * Environment Polyfill for Browser;
+ *;
+ * This polyfill ensures that process.env is always available in the browser environment.;
+ * It prevents the "Cannot read properties of undefined (reading 'env')" error.;
+ */;
+// Define safe defaults for environment variables;
+        NODE_ENV: 'production',NEXT_PUBLIC_APP_URL: '',NEXT_PUBLIC_SUPABASE_URL: '',NEXT_PUBLIC_SUPABASE_ANON_KEY: ',
+}console.log('✅ Environment polyfill loaded successfully')export default safeEnv;
+/**
+ * Environment polyfill for server-side rendering compatibility
+ * Provides fallbacks for Node.js environment variables
+ */
+
+// Polyfill for process.env in browser environment
+if (typeof window !== 'undefined' && typeof process === 'undefined') {
+  (window as any).process = {
+    env: {
+      NODE_ENV: 'development',
+      ...(window as any).__ENV__ || {}
+    }
+  };
+}
+
+// Ensure process.env is available
+if (typeof process === 'undefined') {
+  (global as any).process = {
+    env: {
+      NODE_ENV: 'development',
+      ...(global as any).__ENV__ || {}
+    }
+  };
+}
+
+// Export environment utilities
+export const getEnvVar = (key: string, defaultValue?: string): string => {
+  if (typeof window !== 'undefined') {
+   ;
+  return (window as any).__ENV__?.[key] || process.env[key] || defaultValue || '';
+  }
+  return process.env[key] || defaultValue || ''
+};
+
+export const isDevelopment = (): boolean => {
+ ;
+  return getEnvVar('NODE_ENV', 'development') === 'development'
+};
+
+export const isProduction = (): boolean => {
+ ;
+  return getEnvVar('NODE_ENV', 'development') === 'production'
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/utils/env-polyfill.ts

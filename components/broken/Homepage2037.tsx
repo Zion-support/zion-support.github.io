@@ -46,6 +46,7 @@ return (;
 
           <div className='text-center max-w-5xl mx-auto relative z-10'>'
             <motion.div
+<<<<<<< HEAD
           <div className='absolute inset-0 overflow-hidden'>;'
             <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;'
             <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;'
@@ -107,6 +108,12 @@ const featuredMicroSaas = realMicroSaasServices2025;
               transition={{ "duration": 1 
 }>;
 
+=======
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 1}}
+            >
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Main heading with enhanced typography */}
 
 <div className='mb-8'>'
@@ -157,8 +164,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Enhanced Company Stats *
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>'
           <div className='max-w-7xl mx-auto'>'
@@ -180,6 +190,7 @@ className='text-center mb-16''
 across industries
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             <div className='grid grid-cols-2 "md":grid-cols-4 gap-8'>'
               <motion.div,
@@ -369,6 +380,56 @@ className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 ro
                 <div className='text-green-400 text-sm mt-2'>'
                   Limitless Innovation
                 </div>
+=======
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true}}
+                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
+              >
+                <div className="text-5xl font-bold text-cyan-400 mb-3">50+</div>
+                <div className="text-gray-300 text-lg">AI Services</div>
+                <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true}}
+                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+              >
+                <div className="text-5xl font-bold text-blue-400 mb-3">100+</div>
+                <div className="text-gray-300 text-lg">Quantum Solutions</div>
+                <div className="text-blue-400 text-sm mt-2">Future Technology</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true}}
+                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+              >
+                <div className="text-5xl font-bold text-purple-400 mb-3">24/7</div>
+                <div className="text-gray-300 text-lg">Autonomous Operations</div>
+                <div className="text-purple-400 text-sm mt-2">Always Available</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true}}
+                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+              >
+                <div className="text-5xl font-bold text-green-400 mb-3">∞</div>
+                <div className="text-gray-300 text-lg">Future Possibilities</div>
+                <div className="text-green-400 text-sm mt-2">Limitless Innovation</div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </motion.div>
             </div>
           </div>
@@ -403,6 +464,7 @@ breakthrough consciousness and emotional intelligence platforms
             <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
               {featuredAI.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
 }
 key={service.id}
               className='text-center mb-16'>;'
@@ -764,6 +826,179 @@ initial={{ "opacity": 0, "y": 20
 }
 
 className='text-center mt-12''
+=======
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport = $2;
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice($2);
+                      popular: service.popular,
+                      category: service.category,
+                      icon: service.icon
+                    }}
+                    variant="ai"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true}}
+              className="text-center mt-12"
+            >
+              <Link href="/ai-services">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25">
+                  View All AI Services
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Featured Enterprise IT Services */}
+        <section className="py-24 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true}}
+              className="text-center mb-16"
+            >
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <Shield className="w-8 h-8 text-blue-400" />
+                <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  Enterprise IT Solutions
+                </h2>
+              </div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Future-proof your enterprise with quantum-secure infrastructure and autonomous operations
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredIT.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport = $2;
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice($2);
+                      popular: service.popular,
+                      category: service.category,
+                      icon: service.icon
+                    }}
+                    variant="enterprise"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true}}
+              className="text-center mt-12"
+            >
+              <Link href="/it-services">
+                <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25">
+                  View All IT Services
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Featured Micro SAAS Services */}
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true}}
+              className="text-center mb-16"
+            >
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <Rocket className="w-8 h-8 text-green-400" />
+                <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
+                  Micro SAAS Solutions
+                </h2>
+              </div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your business operations with intelligent automation and AI-powered insights
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredMicroSaas.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport = $2;
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice($2);
+                      popular: service.popular,
+                      category: service.category,
+                      icon: service.icon
+                    }}
+                    variant="automation"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true}}
+              className="text-center mt-12"
+            >
+              <Link href="/micro-saas">
+                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25">
+                  View All SAAS Solutions
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Enhanced Why Choose Us Section */}
+        <section className="py-24 px-4 bg-black/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true}}
+              className="text-center mb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <Link href='/ai-services'>'
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl "hover":from-cyan-600 "hover":to-blue-700 transition-all duration-300 transform "hover":scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25'>'

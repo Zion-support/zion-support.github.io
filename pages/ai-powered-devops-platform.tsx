@@ -25,6 +25,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 			/>
 		</>
 	)
+<<<<<<< HEAD
 =======
 
 export default function AIPoweredDevOpsPlatformPage() {
@@ -71,4 +72,6 @@ export default function AIPoweredDevOpsPlatformPage() {
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

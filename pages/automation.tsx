@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import React from 'react';
 import Head from 'next / head';
@@ -388,6 +391,7 @@ export default function AutomationPage() {
   }
 }
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -438,3 +442,5 @@ export default function AutomationPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

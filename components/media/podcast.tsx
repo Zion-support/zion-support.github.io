@@ -49,6 +49,7 @@ return (;
 return (;
     <div className="space-y-6">;"
 
+<<<<<<< HEAD
       <div className="flex items-center justify-between">;"
         <h1 className="text-3xl font-bold">Zion Podcast</h1>;"
         <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>;"
@@ -74,6 +75,13 @@ return (;
       <div className=\"flex items-center justify-between\"    />;"
         <h1 className=\"text-3xl font-bold\"    />Zion Podcast</h1>;"
         <Link href=\"/studio/host\" className=\"text-blue-600 underline\"    />Create Episode</Link>
+=======
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold">Zion Podcast</h1>
+        <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
       {episodes && episodes.length === 0 && <p    />No episodes yet.</p>}"
       <ul className=\"space-y-4\"    />;"
@@ -91,6 +99,7 @@ return (;
                   </a>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
                 )}
+<<<<<<< HEAD
                 {ep && ep.audio?.wavUrl && (;
                   <a
                 )}{ep && ep.audio?.wavUrl && (<a;
@@ -462,6 +471,8 @@ export default function PodcastIndexPage() {
                     MP3
                   </a>
                 )}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 {ep.audio?.wavUrl && (
                   <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
                     WAV

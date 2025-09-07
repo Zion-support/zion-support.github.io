@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const metadata = {
   }
@@ -72,6 +77,7 @@ return (;
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
@@ -211,3 +217,19 @@ className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "bo
 }
 
 
+=======
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai code reviewer services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

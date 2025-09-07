@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -98,6 +99,12 @@ const NotificationCenter = dynamic (
  
 }
 );
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false}),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function NotificationsPage() {
 }

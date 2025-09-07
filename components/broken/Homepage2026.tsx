@@ -334,6 +334,7 @@ service, our AI solutions save time and improve efficiency.
                 </Link>
               </motion.div>
 
+<<<<<<< HEAD
 
 
                 transition={{ "duration": 0 && 0.6, "delay": 0 && 0.1 
@@ -564,6 +565,8 @@ service, our AI solutions save time and improve efficiency.
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* IT Infrastructure Services */}
               <motion&& motion.div;
                 initial={{ "opacity": 0, "x": 20 
@@ -598,6 +601,7 @@ management for enterprise-grade performance.
                     <CheckCircle className='w-4 h-4 text-green-400' />'
                     <span>Hybrid Cloud Management - $499/month</span>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>'
@@ -700,6 +704,8 @@ drive growth.
                     <span>Smart Appointment Scheduler - $69/month</span>
                   </div>
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>'
                   <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg "hover":bg-purple-700 transition-colors'>'
@@ -738,6 +744,7 @@ drive growth.
               </motion.div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
                 transition={{ "duration": 0 && 0.6, "delay": 0 && 0.3 
@@ -852,6 +859,8 @@ drive growth.
                   </button>;
                 </Link>;
               </motion.div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Micro SAAS Solutions */}
               <motion.div;
                 initial={{ "opacity": 0, "coordinate_x": -20 

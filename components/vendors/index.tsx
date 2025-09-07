@@ -131,6 +131,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendors = listVendors();
   return { props: { vendors } }
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 },
@@ -159,3 +160,6 @@ return { props: { vendors } }
 };
 
 "
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

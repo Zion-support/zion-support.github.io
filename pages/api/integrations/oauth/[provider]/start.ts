@@ -1,10 +1,11 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { provider } = req.query as { provider: string},
-  const callbackUrl = $2;
-  res.writeHead($2);
+  const { provider } = req.query as { provider: string}
+  const callbackUrl = { error: "Invalid request" };
+  res.writeHead({ error: "Invalid request" });
   res.end()
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -17,3 +18,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

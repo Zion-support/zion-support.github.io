@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import type { NextPage } from 'next','
 import Head from 'next/head','
@@ -262,6 +263,9 @@ budget_range: values.budget_range;
 }/> </div>);
 }export default ServicesPage;
 const mapLocalToServiceItem = (item: any): ServiceItem => ({}
+=======
+const mapLocalToServiceItem = (item: any): ServiceItem => ({
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   slug: item.slug,
   title: item.name,
   description: item.description,'

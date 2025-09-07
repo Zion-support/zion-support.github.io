@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 
 
 import React from 'react';'
 import dynamic from 'next/dynamic';'
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function TeamPage() {
   return <OrgChartPage />
 }
+<<<<<<< HEAD
 export default function TeamPage() {;
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
 export default function TeamPage() {;
@@ -50,3 +57,5 @@ function TeamPage() {
   return <OrgChartPage />;
 }
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

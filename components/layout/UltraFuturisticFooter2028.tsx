@@ -273,6 +273,7 @@ key={social.name}
                 >
                   <social.icon className='w-5 h-5' />'
                 </a>
+<<<<<<< HEAD
               </div>
 <<<<<<< HEAD
             </div>'
@@ -335,6 +336,8 @@ key={social.name}
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>;'
                   <social.icon className='w-5 h-5' />                </a>;'
                 </a>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               ))}
             </div>;
           </div>;
@@ -438,6 +441,7 @@ href={service.href}
               <ul className='space-y-2'>
                 {resourceLinks.map(link => (
                   <li key={link.name}>
+<<<<<<< HEAD
                     <Link;
                       href={link.href}'
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
@@ -645,6 +649,8 @@ href={service.href}
               <ul className="space-y-2">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     <Link
                       href={link.href}
                       className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
@@ -653,6 +659,7 @@ href={service.href}
                       <span>{link.name}</span>
                     </Link>
                   </li>
+<<<<<<< HEAD
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2';
                     >;
                       <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>;
@@ -685,6 +692,11 @@ href={service.href}
                   placeholder="Enter your email""
                   className="flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+                ))}
+              </ul>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* Resource Links */}
             <div className="mb-6">
@@ -705,6 +717,7 @@ href={service.href}
             </div>
 
             {/* Newsletter Signup */}
+<<<<<<< HEAD
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>;'
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>;'
               <p className='text-sm text-purple-200 mb-3'>;'
@@ -717,6 +730,20 @@ type='email''
                   placeholder='Enter your email''
                   className='flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm "focus": outline-none "focus":ring-2 "focus":ring-purple-500 "focus":border-transparent'' />
                 <button className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm "hover":from-purple-700 "hover":to-blue-700 transition-all duration-300 transform "hover":shadow-xl "hover":shadow-cyan-500/30'>'
+=======
+            <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
+              <h4 className="font-medium text-white mb-3">Stay Updated</h4>
+              <p className="text-sm text-purple-200 mb-3">
+                Get the latest insights on future technology and AI innovations.
+              </p>
+              <div className="flex space-x-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+                <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   Subscribe
                 </button>
               </div>

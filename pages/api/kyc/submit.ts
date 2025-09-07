@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
@@ -77,6 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   save(db);
 
   res.status(200).json({ ok: true, profile, aml: amlResult })
+<<<<<<< HEAD
 =======
   let riskScore = 10, // base low risk
   if (flags.has('aml_alert')) riskScore += 50,
@@ -104,4 +108,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ submitted: true });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 export const metadata = {
@@ -33,6 +34,23 @@ return (;
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Data Analytics | Zion Tech Group',
+  description: 'Professional data analytics services for your business needs.',
+  keywords: 'data analytics, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             Data Analytics
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
@@ -97,6 +115,7 @@ href="/services""
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     <div className="animate-fade-in">"
       <div className="text-center mb-16">"
@@ -424,3 +443,19 @@ href=""mailto":kleber@ziontechgroup.com""
       <div className="mt-6 text-sm text-gray-600">"
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
+=======
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our data analytics services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

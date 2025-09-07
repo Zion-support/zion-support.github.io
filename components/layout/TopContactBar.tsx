@@ -171,6 +171,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Right Side - Quick Actions & Expand Button */}
             <div className="flex items-center space-x-4">
               {/* Quick Actions */}
@@ -200,6 +201,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                     className=\"flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover: text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30\">
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Right Side - Quick Actions & Expand Button */}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'                  >
@@ -300,6 +303,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
 
+<<<<<<< HEAD
 
                     <span>{action.nam
 }</span>;
@@ -323,6 +327,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Expanded Information Panel */}
 <<<<<<< HEAD
       <AnimatePresence>
@@ -768,6 +774,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </AnimatePresence>
     </div>
   )
+<<<<<<< HEAD
 }</span> </a>) )
 }</div> {}
 <<<<<<< HEAD
@@ -963,3 +970,7 @@ href='/comprehensive-services-showcase-2025';
 "
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

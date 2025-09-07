@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from "next";"
@@ -58,6 +59,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {
+    res.setHeader($2);
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  const auth = await authenticateRequest($2);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" })
+  }
+  const summary = await calculateUsageSummary($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   return res.status(200).json({ summary })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

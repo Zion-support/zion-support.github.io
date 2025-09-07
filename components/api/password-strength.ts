@@ -25,6 +25,9 @@ if (entropy < 30) feedback.push ('Password is too predictable');'
 }
 export default async function handler(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   req: NextApiRequest,
   res: NextApiResponse<PasswordStrengthResult | { error: string}>
 ) {
@@ -41,6 +44,7 @@ return res.status(405).json({ "error": 'Method not allowed',;'
   }
   try {
     }
+<<<<<<< HEAD
     const { password } = req.body;
     if (!password || typeof password !== 'string') {'
 }
@@ -49,6 +53,8 @@ return res.status(400).json({ "error": 'Password is required',;'
     }
     // Password analysis,
 const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
     // Check for common patterns,
 const commonPatterns = [;

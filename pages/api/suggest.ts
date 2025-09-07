@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 const SAMPLE_QUERIES = [;
   "React developers under $50/hr","
@@ -13,6 +14,16 @@ const SAMPLE_QUERIES = [;
 ];
 
 export default function handler() {
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+const SAMPLE_QUERIES = { error: "Invalid request" };
+const SKILLS = { error: "Invalid request" };
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const q = ((req.query.q as string) || '').toLowerCase({ error: "Invalid request" });
+  const suggestions = { error: "Invalid request" };
+  for (const s of SAMPLE_QUERIES) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   if (req.method !== "GET") {"
     }
@@ -20,6 +31,7 @@ export default function handler() {
     return res.status(405).json({ "error": "Method not allowed" });"
   }
 
+<<<<<<< HEAD
   const { q = "" } = req.query;"
   const query = String(q).toLowerCase();
 
@@ -35,3 +47,7 @@ export default function handler() {
   return res.status(200).json({ suggestions });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) })
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

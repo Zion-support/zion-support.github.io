@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Financial Analytics | Zion Tech Group',
+  description: 'Professional ai financial analytics services for your business needs.',
+  keywords: 'ai financial analytics, services, business, technology'
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
@@ -53,5 +64,9 @@ return (;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

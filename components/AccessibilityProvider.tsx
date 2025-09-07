@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, ReactNode } from "react";"
 
 interface AccessibilityContextType {
@@ -7,13 +8,17 @@ interface AccessibilityContextType {
 }
 
 const AccessibilityContext = createContext<;
+=======
+}
+const AccessibilityContext = createContext<
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   AccessibilityContextType | undefined
 >(undefined);
-
 interface AccessibilityProviderProps {
   }
   "children": ReactNode;
 }
+<<<<<<< HEAD
 
 export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({
   }
@@ -39,10 +44,14 @@ export const "AccessibilityProvider": React.FC<AccessibilityProviderProps> = ({
   };
 
 return (;
+=======
+  return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
     </AccessibilityContext.Provider>
   );
+<<<<<<< HEAD
   return context;
 }
 
@@ -262,3 +271,5 @@ export default AccessibilityProvider;
   );
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const BlockchainSolutions: NextPage = $2;
@@ -53,3 +54,9 @@ export default function BlockchainSolutionsPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const BlockchainSolutions: NextPage = $2;
+export default BlockchainSolutions,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

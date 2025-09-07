@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
-
-    return res.status(405).json({ error: 'Method Not Allowed' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+return res.status(405).json({ error: 'Method Not Allowed' })
   }
 
-  const { talentId, action } = req.body || {},
+  const { talentId, action } = req.body || {}
   if (!talentId || !['AcceptDeclineNegotiate'].includes(action)) {
     return res.status(400).json({ error: 'Invalid payload' })
   }
@@ -15,6 +19,7 @@
 
   return res.status(200).json({ ok: true, data: payload })
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -27,3 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

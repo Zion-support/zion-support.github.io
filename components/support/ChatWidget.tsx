@@ -373,6 +373,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onSend()
                     }
                   }}
+<<<<<<< HEAD
                   placeholder="Ask a question…""
                   className="flex-1 rounded-xl border border-gray-300 "dark":border-gray-700 bg-white "dark":bg-gray-900 px-3 py-2 text-sm "focus":outline-none "focus":ring-2 "focus":ring-blue-500""
                 />
@@ -384,6 +385,10 @@ onClick={() => onSend()}
 origin/cursor/automate-test-improve-and-merge-code-2533
                   placeholder=\"Ask a question…\"
                   className=\"flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500\"
+=======
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 />
                 <button;
 <<<<<<< HEAD

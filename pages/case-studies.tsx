@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/case-studies.tsx
 export default Page;
 <<<<<<< HEAD:pages_backup/case-studies.tsx
@@ -6,6 +7,8 @@ export default Page;
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 
 import MainLayout from '../src/components/layout/MainLayout';
@@ -111,6 +114,7 @@ const stats = [
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/case-studies.tsx
 import React from 'react',
 import Head from 'next/head';
@@ -132,6 +136,8 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -469,6 +475,7 @@ import Head from 'next/head';
 
 import Head from 'next/head';
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/case-studies.tsx
 export default function CaseStudies() {
   const caseStudies = [
@@ -596,8 +603,21 @@ export default function CaseStudies() {
         </section>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+  return (
+    <Layout>;
+      <Head>;
+        <title>Case Studies | Zion Tech Group</title>;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/case-studies' />;
+        <meta
+          name='description'
+          content='Proven outcomes across AI, IT, and micro SaaS deployments.'
+
+import Head from 'next/head';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Case Studies */}
@@ -759,6 +779,9 @@ import Head from 'next/head';
 import Head from 'next/head';
 
   );
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
  </Head> </section> </Layout>
 export default function CaseStudiesPage() {
 import Layout from '../components/layout/Layout';
@@ -854,6 +877,7 @@ import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -903,3 +927,5 @@ export default function CaseStudiesPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

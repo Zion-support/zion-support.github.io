@@ -6,6 +6,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 >>>>>>> origin/main
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
@@ -21,9 +24,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { OpenAI } = await import('openai');
       const openai = new OpenAI({ apiKey });
       const resp = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4o-mini'
         messages: [
-          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
           { role: 'user', content: String(prompt) }
         ]
       });
@@ -38,6 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
   }
 }
+<<<<<<< HEAD
 =======
 
   };
@@ -73,3 +77,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const footerSections = [ {
@@ -65,6 +66,8 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
   Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 import Link from 'next/link';
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
@@ -202,6 +205,7 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   )
 };
+<<<<<<< HEAD
 
 export default EnhancedFooter;
 =======
@@ -1027,3 +1031,7 @@ export default EnhancedFooter,
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+export default EnhancedFooter;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

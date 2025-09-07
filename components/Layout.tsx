@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
   static getDerivedStateFromError(error) {return { "hasError": true }}
   componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
@@ -15,6 +16,9 @@ export default function Layout() {class ErrorBoundary extends React.Component {c
 }
 
 export default function Layout() {"
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}
@@ -45,8 +49,12 @@ return { "hasError": true,;
 };
   }
   componentDidCatch(error, errorInfo) {
+<<<<<<< HEAD
     }
     console.error('Error caught by "boundary":', error, errorInfo);'
+=======
+    console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   render() {
     }
@@ -441,6 +449,7 @@ return (;
     <>
       <Head>
         <title>{title}</title>
+<<<<<<< HEAD
         <meta name="description" content={description} />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />"
         <link rel="icon" href="/favicon.ico" />"
@@ -452,4 +461,7 @@ return (;
   );
 }
         <meta name="description" content={description} />"
+=======
+        <meta name="description" content={description} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 

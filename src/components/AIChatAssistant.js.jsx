@@ -13,5 +13,11 @@ const [messages, setMessages] = useState([{ "id": '1', "type": 'assistant', "con
  scrollToBottom() }, [messages]) const handleSendMessage = async () => { if(!inputValue.trim());
   }
   return;
+<<<<<<< HEAD:src/components/AIChatAssistant.js.jsx
 const userMessage = { "id": Date.now().toString(), "type": 'user', "content": inputValue, "timestamp": new Date(,;'
 } setMessages(prev => { return [...prev, userMessage]) setInputValue(") setIsTyping(true)"; }
+=======
+  const userMessage = { id: Date.now().toString(), type: 'user',}
+  content: inputValue, timestamp: new Date(,}
+} setMessages(prev => [...prev, userMessage]) setInputValue(\") setIsTyping(true)\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/AIChatAssistant.js.jsx

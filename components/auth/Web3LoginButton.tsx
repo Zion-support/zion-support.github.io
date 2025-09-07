@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }
@@ -10,6 +11,11 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   }
 }
 import React, { useEffect, useState } from 'react';'
+=======
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false}),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 import dynamic from 'next/dynamic';'
@@ -66,6 +72,7 @@ const pref =;
   useEffect(() => {
 
     (async () => {
+<<<<<<< HEAD
 }
 if (user && displayWeb3)
         setDisplayName(await resolveDisplayName(user.address));
@@ -187,6 +194,9 @@ onClick={() => setOpen(true)}
   useEffect(() => {}
     (async () => {}
       if (user && displayWeb3) setDisplayName(await resolveDisplayName(user.address));
+=======
+      if (user && displayWeb3) setDisplayName(await resolveDisplayName(user.address)),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       else setDisplayName(null)
     })()
   }, [user, displayWeb3]);'

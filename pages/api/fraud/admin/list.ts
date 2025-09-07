@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 =======
 <<<<<<< HEAD
@@ -26,13 +29,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>;
   const store = getFraudStore();
   const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
-    source: source as any,
-    userId,
-    status: status as any,
+    source: source as any
+    userId
+    status: status as any
     label: label as any
   });
   res.status(200).json({ items })
 }
+<<<<<<< HEAD
 =======
   res.status(200).json({ items })
 
@@ -108,3 +112,7 @@ export default async function handler(req, res) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -33,9 +33,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
-    id,
-    kind,
-    filename,
+    id
+    kind
+    filename
     uploadedAt
   };
   // Replace or add
@@ -48,6 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 
   res.status(200).json({ ok: true, profile })
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -98,3 +99,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

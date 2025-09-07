@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 import Link from 'next/link';'
@@ -11,6 +12,15 @@ export const metadata = {
   "title": 'Ai Data Analytics - Zion Tech Group','
   "description": 'Professional ai data analytics solutions for your business needs.'};'
 export default function AiDataAnalyticsPage() {
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Data Analytics | Zion Tech Group',
+  description: 'Professional ai data analytics services for your business needs.',
+  keywords: 'ai data analytics, services, business, technology'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 return (;
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">"
@@ -382,6 +392,7 @@ improvements
               Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="bg-gray-800 rounded-lg p-6">"
             <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>"
             <p className="text-gray-300">"
@@ -555,4 +566,28 @@ className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'bo
       </ul>
     </div>
   );
+=======
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai data analytics services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

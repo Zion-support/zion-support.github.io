@@ -79,6 +79,7 @@ interface Service {
 }
 
 interface ServiceCategory {
+<<<<<<< HEAD
   SiMicrosoftazure;
   SiMicrosoftazure;
   } from 'react-icons/si';
@@ -174,6 +175,188 @@ interface ServiceCategory  {"id": string;
 
 const "serviceCategories": ServiceCategory[] = [;
   {"id": 'ai-ml';'
+=======
+  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+
+const serviceCategories: ServiceCategory[] = [
+  {
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    description: 'Cutting-edge artificial intelligence and machine learning solutions',
+    icon: <FaBrain className="w-8 h-8" />,
+    color: 'from-purple-500 to-pink-500'
+  };
+  {
+    id: 'cloud',
+    name: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and development operations',
+    icon: <FaCloud className="w-8 h-8" />,
+    color: 'from-blue-500 to-cyan-500'
+  };
+  {
+    id: 'security',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions for modern threats',
+    icon: <FaShieldAlt className="w-8 h-8" />,
+    color: 'from-red-500 to-orange-500'
+  };
+  {
+    id: 'data',
+    name: 'Data & Analytics',
+    description: 'Comprehensive data management and analytics platforms',
+    icon: <FaDatabase className="w-8 h-8" />,
+    color: 'from-green-500 to-emerald-500'
+  };
+  {
+    id: 'iot',
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing solutions',
+    icon: <FaNetworkWired className="w-8 h-8" />,
+    color: 'from-indigo-500 to-purple-500'
+  };
+  {
+    id: 'automation',
+    name: 'Process Automation',
+    description: 'Intelligent automation for business processes',
+    icon: <FaRobot className="w-8 h-8" />,
+    color: 'from-yellow-500 to-orange-500'
+  }
+];
+
+const services: Service[] = [
+  {
+    id: 'ai-automation-suite',
+    title: 'AI-Powered Automation Suite',
+    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
+    icon: <FaRobot className="w-6 h-6" />,
+    category: 'automation',
+    features: [
+      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
+    ];
+    pricing: {
+      starter: 299,
+      professional: 799,
+      enterprise: 1999
+    };
+    technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
+    benefits: [
+      'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
+    ]
+  };
+  {
+    id: 'quantum-computing-platform',
+    title: 'Quantum Computing Platform',
+    description: 'Next-generation quantum computing solutions for complex problem solving',
+    icon: <FaBrain className="w-6 h-6" />,
+    category: 'ai-ml',
+    features: [
+      'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
+    ];
+    pricing: {
+      starter: 999,
+      professional: 2499,
+      enterprise: 4999
+    };
+    technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
+    benefits: [
+      'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
+    ]
+  };
+  {
+    id: 'edge-ai-platform',
+    title: 'Edge AI Computing Platform',
+    description: 'Distributed artificial intelligence at the edge for real-time processing',
+    icon: <FaNetworkWired className="w-6 h-6" />,
+    category: 'iot',
+    features: [
+      'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
+    ];
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499
+    };
+    technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
+    benefits: [
+      'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
+    ]
+  };
+  {
+    id: 'quantum-cybersecurity',
+    title: 'Quantum Cybersecurity Suite',
+    description: 'Advanced security solutions leveraging quantum-resistant cryptography',
+    icon: <FaShieldAlt className="w-6 h-6" />,
+    category: 'security',
+    features: [
+      'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
+    ];
+    pricing: {
+      starter: 399,
+      professional: 999,
+      enterprise: 2499
+    };
+    technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
+    benefits: [
+      'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
+    ]
+  };
+  {
+    id: 'data-fabric-platform',
+    title: 'Intelligent Data Fabric Platform',
+    description: 'Unified data management and analytics across all sources and formats',
+    icon: <FaDatabase className="w-6 h-6" />,
+    category: 'data',
+    features: [
+      'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
+    ];
+    pricing: {
+      starter: 299,
+      professional: 799,
+      enterprise: 1999
+    };
+    technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
+    benefits: [
+      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
+    ]
+  };
+  {
+    id: 'cloud-native-platform',
+    title: 'Cloud-Native Development Platform',
+    description: 'Modern cloud-native development and deployment platform',
+    icon: <FaCloud className="w-6 h-6" />,
+    category: 'cloud',
+    features: [
+      'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
+    ];
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499
+    };
+    technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
+    benefits: [
+      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
+    ]
+  }
+];
+
+const EnhancedServicesShowcase2025: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
+
+  const filteredServices = useMemo(() => {
+    let filtered = services;
+    
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
     "name": 'AI & Machine Learning';'
     "description":;
@@ -381,6 +564,7 @@ const "EnhancedServicesShowcase2025": React.FC = () => {const [selectedCategory,
     return filtered.sort((a, b) => {switch (sortBy) {case 'price':;'
           }
           return a.pricing.starter - b.pricing.starter;
+<<<<<<< HEAD
         case 'category':;'
           return a.category.localeCompare(b.category)"default":;
           return a.title.localeCompare(b.title)}
@@ -448,6 +632,41 @@ const "EnhancedServicesShowcase2025": React.FC = () => {const [selectedCategory,
         </motion && motion.div>;className='text-center mb-16';'
         >;
         </motion && motion.div>;className='text-center mb-16'>'
+=======
+        case 'category':
+          return a.category.localeCompare(b.category);
+        default: return a.title.localeCompare(b.title)
+      }
+    })
+  }, [selectedCategory, searchTerm, sortBy]);
+
+  const handleServiceSelect = (service: Service) => {
+    setSelectedService(service)
+  };
+
+  const closeModal = () => {
+    setSelectedService(null)
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      {/* Header */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            2025 Services Showcase
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Discover our cutting-edge technology solutions designed for the future. 
+            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
+          </p>
+        </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           <h1 className='text-5xl "md":text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;'
             2025 Services Showcase;
@@ -459,6 +678,7 @@ const "EnhancedServicesShowcase2025": React.FC = () => {const [selectedCategory,
           </p>;
         </motion.div>;
         {/* Search and Filters */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 20 }}
           animate={{ "opacity": 1, "y": 0 }}transition={{ "duration": 0.8, "delay": 0.2 }}
@@ -536,6 +756,19 @@ className='mb-12'>'
               <input;
                 type="text";"
                 placeholder="Search services, technologies, or features...";"
+=======
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12"
+        >
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+            <div className="relative flex-1 max-w-md">
+              <input
+                type="text"
+                placeholder="Search services, technologies, or features..."
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -545,6 +778,7 @@ className='mb-12'>'
             
             <select
               value={sortBy}
+<<<<<<< HEAD
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}'
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white "focus":outline-none "focus":ring-2 "focus":ring-blue-500";"
           <div className="flex flex - col "md":flex - row gap - 4 items - center justify - center">;"
@@ -577,6 +811,18 @@ className='mb-12'>'
             </select>;
           </div>;
         </motion.div>;
+=======
+              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="name">Sort by Name</option>
+              <option value="price">Sort by Price</option>
+              <option value="category">Sort by Category</option>
+            </select>
+          </div>
+        </motion.div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Category Tabs */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 20 }}
@@ -694,12 +940,19 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                     +{service.technologies.length - 3} more;
                   </span>;
                 )}
+<<<<<<< HEAD
               </div>;
                   <span className="text-sm text-gray-400 font-normal">/month</span>;"
                 </div>;
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium "hover":from-blue-600 "hover":to-purple-600 transition-all duration-300">;"
 <div className='flex items-center justify-between'>;'
                 <div className='text-2xl font-bold text-blue-400'>;'
+=======
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-blue-400">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   ${service.pricing.starter}
                   <span className='text-sm text-gray-400 font-normal'>;'
                     /month;
@@ -1079,6 +1332,7 @@ export default EnhancedServicesShowcase2025;
             <p className="text - gray - 400">Try adjusting your search terms or category filters</p>)}"
       </div>;
       {/* Service Detail Modal */}
+<<<<<<< HEAD
       <AnimatePresence>;
         {selected_service && (<motion.div;
             }
@@ -1160,6 +1414,52 @@ export default EnhancedServicesShowcase2025;
                   <ul className="space - y-2">;"
                     {selected_service.features.map ((feature, index) => (<li key={index} className="flex items - center gap - 2 text - gray - 300">;"
                         <div className="w - 2 h - 2 bg - blue - 500 rounded - full"></div>;"
+=======
+      <AnimatePresence>
+        {selectedService && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
+                    {selectedService.icon}
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
+                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <span className="text-2xl">×</span>
+                </button>
+              </div>
+
+              <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Features */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
+                  <ul className="space-y-2">
+                    {selectedService.features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-300">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                         {feature}
                       </li>
                     ))}
@@ -1167,6 +1467,7 @@ export default EnhancedServicesShowcase2025;
                 </div>
 
                 {/* Benefits */}
+<<<<<<< HEAD
                 <div>;
                   <h3 className='text - xl font - bold text - white mb - 4'>;'
                     Key Benefits;
@@ -1176,6 +1477,20 @@ export default EnhancedServicesShowcase2025;
                         }
                         key={index}
                         className='flex items - center gap - 2 text - gray - 300'>'
+=======
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
+                  <ul className="space-y-2">
+                    {selectedService.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-300">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                         <div className='w - 2 h - 2 bg - green - 500 rounded - full'></div>                        {benefit}                  <h3 className="text - xl font - bold text - white mb - 4">Key Benefits</h3>;"
                   <ul className="space - y-2">;"
@@ -1186,6 +1501,7 @@ export default EnhancedServicesShowcase2025;
                 </div>;
               </div>;
               {/* Technologies */}
+<<<<<<< HEAD
               <div className='mt - 8'>;'
                 <h3 className='text - xl font - bold text - white mb - 4'>;'
                   Technologies;
@@ -1193,6 +1509,13 @@ export default EnhancedServicesShowcase2025;
                 <div className='flex flex - wrap gap - 3'>;'
                   {selected_service.technologies.map (tech => { return (<span; }
                       }
+=======
+              <div className="mt-8">
+                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
+                <div className="flex flex-wrap gap-3">
+                  {selectedService.technologies.map((tech) => (
+                    <span
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                       key={tech}
                       className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                    >              <div className="mt - 8">;"
                 <h3 className="text - xl font - bold text - white mb - 4">Technologies</h3>;"
@@ -1255,6 +1578,7 @@ export default EnhancedServicesShowcase2025;
                         <span className="text-sm text-gray-400 font-normal">/month</span>
                       </div>
                       <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+<<<<<<< HEAD
 =======
                       key = $2;
 export default EnhancedServicesShowcase2025,
@@ -1287,11 +1611,16 @@ export default EnhancedServicesShowcase2025,
                     )
                   )}                </div>                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                         Get Started
                       </button>
                     </div>
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </div>
 =======
 >>>>>>> origin/main
@@ -1300,11 +1629,15 @@ export default EnhancedServicesShowcase2025,
           </motion.div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </AnimatePresence>
     </div>
   )
 };
 
+<<<<<<< HEAD
 export default EnhancedServicesShowcase2025;
 =======
               {/* Technologies */}'
@@ -1663,3 +1996,6 @@ export default EnhancedServicesShowcase2025;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+export default EnhancedServicesShowcase2025;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

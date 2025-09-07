@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from '@eslint/js';'
 import typescript from '@typescript-eslint/eslint-plugin';'
 import typescriptParser from '@typescript-eslint/parser';'
@@ -17,6 +18,73 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
+=======
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+
+export default [
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        HTMLElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'readonly'
+      },
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       parserOptions: {
         ecmaFeatures: {
           jsx: true}},
@@ -43,6 +111,7 @@ export default [
         }
       }
     },
+<<<<<<< HEAD
     "plugins": {
       '@typescript-eslint': typescript,'
       'react': react,'
@@ -67,6 +136,102 @@ export default [
         }
         "version": 'detect''
       }
+=======
+    plugins: {
+      react: {
+        ...react,
+        settings: {
+          react: {
+            version: "detect"
+          }
+        }
+      },
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
   },
   {
@@ -284,6 +449,7 @@ export default [
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
+<<<<<<< HEAD
       'pm2-automation/**',
       'services/**',
       '*.js',
@@ -353,5 +519,146 @@ export default [
       'app/**'
     ]
 >>>>>>> 716160b064bcc2ca60645a7e5c009cf722f6fb29
+=======
+      '*.backup.js',
+      '*.backup.jsx',
+      '*.backup.ts',
+      '*.backup.tsx',
+      '*.broken.js',
+      '*.broken.jsx',
+      '*.broken.ts',
+      '*.broken.tsx',
+      '*.corrupted.js',
+      '*.corrupted.jsx',
+      '*.corrupted.ts',
+      '*.corrupted.tsx',
+      '*.disabled.js',
+      '*.disabled.jsx',
+      '*.disabled.ts',
+      '*.disabled.tsx',
+      '*.old.js',
+      '*.old.jsx',
+      '*.old.ts',
+      '*.old.tsx',
+      '*.temp.js',
+      '*.temp.jsx',
+      '*.temp.ts',
+      '*.temp.tsx',
+      '*.tmp.js',
+      '*.tmp.jsx',
+      '*.tmp.ts',
+      '*.tmp.tsx',
+      '*.bak.js',
+      '*.bak.jsx',
+      '*.bak.ts',
+      '*.bak.tsx',
+      '*.orig.js',
+      '*.orig.jsx',
+      '*.orig.ts',
+      '*.orig.tsx',
+      '*.rej.js',
+      '*.rej.jsx',
+      '*.rej.ts',
+      '*.rej.tsx',
+      '*.swp.js',
+      '*.swp.jsx',
+      '*.swp.ts',
+      '*.swp.tsx',
+      '*.swo.js',
+      '*.swo.jsx',
+      '*.swo.ts',
+      '*.swo.tsx',
+      '*.log',
+      '*.pid',
+      '*.seed',
+      '*.pid.lock',
+      '*.tgz',
+      '*.tar.gz',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar'
+    ]
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 ];

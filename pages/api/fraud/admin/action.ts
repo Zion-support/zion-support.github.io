@@ -12,6 +12,9 @@ export default async function handler() {
   }
 <<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
 function ensureAdmin(req: NextApiRequest): boolean {
@@ -138,6 +141,7 @@ if ( {) {
 
   res.status(200).json({ ok: true, status: newStatus })
 }
+<<<<<<< HEAD
 =======
   res.status(200).json({ ok: true, status: newStatus });
   } catch (error) {
@@ -184,3 +188,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

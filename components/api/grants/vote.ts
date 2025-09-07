@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
 
+<<<<<<< HEAD
 import {v4, as, uuidv4} from 'uuid';'
 
 import type { GrantApplication, VotePayload } from '../../../types/grants';'
@@ -14,12 +15,22 @@ function ensureDir() {
 function grantPath() {
   }
   return path.join(GRANTS_DIR, `${id}.json`);`
+=======
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true})
+}
+
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`)
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 function readGrant("id": string): GrantApplication | null {
   }
   ensureDir();
 return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;'
 
+<<<<<<< HEAD
 function writeGrant() {
   }
   ensureDir();
@@ -81,5 +92,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   res.status(200).json({ "record": g
 });
   res.status(200).json({ "record": g })
+=======
+function writeGrant(record: GrantApplication) {
+  ensureDir($2);
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 

@@ -6,6 +6,7 @@ function grantPath() {
 
   }
 
+<<<<<<< HEAD
   return path.join(GRANTS_DIR, `${id}.json`);`
 
 function readGrant("id": string): GrantApplication | null {
@@ -23,6 +24,13 @@ function writeGrant() {
     JSON.stringify(record, null, 2)
     'utf8''
   );
+=======
+function writeGrant(record: GrantApplication) {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync($2);
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |'';
   const token = header.replace('Bearer ', '');  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -75,6 +83,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
+<<<<<<< HEAD
 const { id } = req.query as { "id": string }
   if (!id) {res.status(400).json({ "error": 'Missing id','
 })return;
@@ -82,6 +91,12 @@ const { id } = req.query as { "id": string }
 
   if (req.method = == 'GET') {'
    ;
+=======
+  const { id } = req.query as { id: string},
+  if (!id) {
+    res.status(400).json($2);
+    return
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   const existing = readGrant(id);
     if (!existing) return res.status(404).json({ "error": 'Not found','
@@ -103,6 +118,7 @@ return res.status(200).json({ "milestones": existing.milestones || [],;
   }
 
   if (req.method === 'POST') {
+<<<<<<< HEAD
 
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
@@ -360,5 +376,17 @@ if ( {) {}
 
 <<<<<<< HEAD
   res.status(405).end('Method Not Allowed');
+=======
+    const existing = readGrant($2);
+    if (!existing) return res.status(404).json($2);
+    const payload = $2;
+    existing.milestones = $2;
+    existing.updatedAt = new Date().toISOString($2);
+    writeGrant($2);
+    return res.status(200).json({ record: existing})
+  }
+
+  res.setHeader($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   res.status(405).end('Method Not Allowed')
 }

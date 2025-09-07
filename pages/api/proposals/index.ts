@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
 import path from "path";"
 const FILE_PATH = path.join(process.cwd(), "dataproposalsindex.json");"
 async function ensureStore() {
   }
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
+async function ensureStore() {
+  await fs.ensureFile({ error: "Invalid request" });
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
+async function ensureStore() {;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   await fs.ensureFile(FILE_PATH);
   try {
     }
@@ -41,9 +59,44 @@ export default async function handler() {
       "status": body.status || "Draft","
       "createdAt": new Date().toISOString()
     };
+<<<<<<< HEAD
     data.items.unshift(item);
     await fs.writeJson(FILE_PATH, data, { "spaces": 2 });
     return res.status(201).json(item);
+=======
+    data && data.items.unshift(item);
+    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res && res.status(201).json(item);
+  }
+}
+
+  } catch {
+    await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (req.method === 'GET') {
+    const data = await fs.readJson({ error: "Invalid request" });
+    return res.status(200).json(data)
+  }
+  if (req.method = { error: "Invalid request" };
+    const data = await fs.readJson({ error: "Invalid request" });
+    const item = { error: "Invalid request" };
+      title: body.title
+      targetInstitution: body.targetInstitution
+      regionalScope: body.regionalScope
+      type: body.type
+      status: body.status || 'Draft'
+      createdAt: new Date().toISOString()}
+    data.items.unshift({ error: "Invalid request" });
+    await fs.writeJson({ error: "Invalid request" });
+    return res.status(201).json(item)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
   res.status(405).json({ "error": "Method not allowed" });"
 }
@@ -61,6 +114,7 @@ export default async function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -74,3 +128,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

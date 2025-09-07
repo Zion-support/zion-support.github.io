@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import TryItConsole from './TryItConsole';'
 
@@ -11,19 +12,41 @@ return (;
 export default function EndpointDetail() {
 
 }
+=======
+import TryItConsole from './TryItConsole';
+
+  endpoint,
+}: {;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 return (;
 
+<<<<<<< HEAD
     <div className='space-y-4'>'
 
       <div>
         <div className='text-xl font-semibold text-high-contrast'>'
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
+  return (
+    <div className="space-y-4">
+export default function EndpointDetail({
+  endpoint
+}: {
+origin/cursor/automate-test-improve-and-merge-code-2533
+  endpoint: EndpointSpec;
+}) {}
+  return (
+'
+    <div className='space-y-4'>
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       <div>
 =======
       <div>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <div className='text-xl font-semibold text-high-contrast'>
     <div className='space-y-4' />
 
@@ -32,8 +55,7 @@ return (;
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
           {endpoint.title}
-<<<<<<< HEAD
-        </div>;'
+</div>;'
         <div className='text - sm text - high - contrast - muted'>;
           {endpoint.description}
         </div>;'
@@ -47,6 +69,7 @@ return (;
           <span className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
             {endpoint.visibility}
       <div>'
+<<<<<<< HEAD
 =======
         </div>;
         <div className='text - sm text - high - contrast - muted'>;'
@@ -64,6 +87,8 @@ return (;
             {endpoint.visibility}
       <div>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
       </div>
       <div>        <div className="text-xl font-semibold text-high-contrast">{endpoint.title}</div>"
@@ -74,11 +99,15 @@ return (;
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.visibility}</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </span>
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </div>
       </div>
 
@@ -87,25 +116,46 @@ return (;
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
+<<<<<<< HEAD
 <div className='font-medium mb-2'>Try It</div>'
         <TryItConsole,
 method={endpoint && endpoint.method}
-          path={endpoint && endpoint.path}
-<<<<<<< HEAD
-          requiresAuth={}
 =======
-          requiresAuth={
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+<div className='font-medium mb-2'>Try It</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+        <TryItConsole
+=======
+        <TryItConsole;
+          method={endpoint && endpoint.method}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
+          path={endpoint && endpoint.path}
+requiresAuth={}
       {(endpoint.rateLimits && endpoint.rateLimits.length > 0) && (
         <div>"
           <div className="font-medium mb-2">Rate Limits</div>"
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
 
+<<<<<<< HEAD
 
 
             (endpoint.auth |[]).includes('jwt') |'
             (endpoint.auth |[]).includes('wallet')'
           } />
+=======
+            (endpoint.auth |[]).includes('jwt') |
+            (endpoint.auth |[]).includes('wallet')
+      <div />
+<div className='font-medium mb-2' />Try It</div>
+        <TryItConsole;
+method={endpoint && endpoint.method}
+          path={endpoint && endpoint.path}
+          requiresAuth={
+
+            (endpoint.auth |[]).includes('jwt') |}
+            (endpoint.auth |[]).includes('wallet')}
+          }
+        />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
 <<<<<<< HEAD
 
@@ -147,7 +197,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {endpoint && endpoint.rateLimits.map((r, idx) => (;'`
               <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>;
 
-
             ))}
           </ul>;
         </div>;
@@ -172,24 +221,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 
       {endpoint.errors && endpoint.errors.length > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 {endpoint.errors && endpoint.errors.length > 0 && (
 origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
           <div className='font-medium mb-2'>Error Codes</div>'
+<<<<<<< HEAD
           <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>'
+=======
+          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {endpoint.errors.map(e => (
               <li key={e.code}>
-<<<<<<< HEAD
-                <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}"
+<strong>{e.code}</strong> ({e.httpStatus}) - {e.message}"
               </li>            ))}          <div className="font-medium mb-2">Error Codes</div>"
-=======
-                <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}
-              </li>            ))}          <div className="font-medium mb-2">Error Codes</div>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
@@ -241,8 +285,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ul className='list - disc pl - 5 text - sm text - high - contrast - muted'>;
             {endpoint.rate_limits.map ((r, idx) => (
               <li key={idx}>;
-<<<<<<< HEAD
-                {r.tier}: {r.limitPerMinute}/min;'`
+{r.tier}: {r.limitPerMinute}/min;'`
                 {r.burst ? `, burst ${r.burst}` : ''}
               </li>            ))}      </div>;
       {(endpoint.rate_limits && endpoint.rate_limits.length > 0) && (
@@ -267,6 +310,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>;
         </div>)}
     </div>);
+<<<<<<< HEAD
 =======
         <div />
           <div className='font-medium mb-2' />Rate Limits</div>
@@ -488,14 +532,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
 '"`
+<<<<<<< HEAD
 =======
 "
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -61,6 +61,27 @@ export default function DevOpsAutomationPage() {
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     },
     {
+<<<<<<< HEAD
+=======
+      icon: <Zap className = $2;
+      title: 'Infrastructure as Code',
+      description: 'Terraform, CloudFormation, and Kubernetes automation',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    },
+    {
+      icon: <Shield className = $2;
+      title: 'Security Automation',
+      description: 'Automated security scanning and compliance checks',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+    },
+    {
+      icon: <BarChart3 className = $2;
+      title: 'Performance Monitoring',
+      description: 'Real-time performance insights and optimization',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    }
+  ],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       }
 
@@ -615,6 +636,7 @@ className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-a
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>;'
           <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
@@ -695,6 +717,17 @@ className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-a
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>'
                 Choose the plan that fits your DevOps needs. All plans include a,
 14-day free trial.
+=======
+        {/* Pricing Section */}
+        <section id="pricing" className="py-24 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </p>
             </div>
             <div className='grid grid-cols-1 "md":grid-cols-3 gap-8'>'
@@ -739,6 +772,7 @@ href={plan.name === 'Enterprise' ? '/contact' : '#signup'}'
 size='lg''
                       className={`w-full ${`                        }
                         plan.popular 
+<<<<<<< HEAD
                           ? 'bg-blue-600 "hover":bg-blue-700 text-white' '
                           : 'border-blue-500 text-blue-400 "hover":bg-blue-500 "hover":text-white''
 
@@ -796,6 +830,16 @@ size='lg''
                     </Button>;
                   </div>;
                 </Card>;
+=======
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                      }`}
+                    >
+                      {plan.cta}
+                    </Button>
+                  </div>
+                </Card>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               ))}
             </div>
           </div>
@@ -1005,6 +1049,7 @@ key={i}
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                     <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
+<<<<<<< HEAD
                 </Card>
                     </p>;
                   </div>;
@@ -1060,6 +1105,8 @@ key={i}
 
                   </div>
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 </Card>
 
               ))}

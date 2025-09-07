@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
 
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -30,9 +33,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
       const opts: CreateRoomOptions = {
-        name: roomName,
+        name: roomName
         emptyTimeout: 60 * 10, // 10 minutes
-        maxParticipants: 24,
+        maxParticipants: 24
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })
       };
       await roomService.createRoom(opts).catch(() => Promise.resolve())
@@ -46,6 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Room create error', err);
     return res.status(500).json({ error: 'Failed to create room' })
   }
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -57,4 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 >>>>>>> origin/main
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

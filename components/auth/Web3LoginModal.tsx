@@ -326,6 +326,7 @@ return (;
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {error && (
           <div className='mb-3 rounded-md bg-red-50 "dark":bg-red-900/30 px-3 py-2 text-sm text-red-700 "dark":text-red-300'>'
             {error}
@@ -367,6 +368,8 @@ export default function Web3LoginModal() {if (!isClient) return null;return <Mod
     </div>
   );
   return <ModalInner {...props} />;        </div>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
         )}"

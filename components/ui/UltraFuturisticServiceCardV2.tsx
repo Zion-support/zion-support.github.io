@@ -162,6 +162,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             {service.popular && (
               <motion.div
+<<<<<<< HEAD
 
         <div className="absolute inset-0 opacity-5">;"
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400"></div>;"
@@ -188,6 +189,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 transition={{ "delay": 0.5, "type": 'spring', "stiffness": 200 }}'
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full''
+=======
+                initial={{ scale: 0}}
+                animate={{ scale: 1}}
+                transition={{ delay: 0.5, type: "spring", stiffness: 200}}
+                className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 <Star className='w-3 h-3 fill-current' />'
                 <span>POPULAR</span>
@@ -486,6 +493,7 @@ className='flex items-center space-x-2 text-sm''
         </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Features preview */}
+<<<<<<< HEAD
 <div className='relative z-10 mb-6'>
 =======
         {/* Features preview */}'
@@ -498,6 +506,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>"
           <div className="space-y-2">'
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
+=======
+        <div className="relative z-10 mb-6">
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
+          <div className="space-y-2">
+            {service.features.slice(0, 3).map((feature, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0}}
+                transition={{ delay: 0.6 + idx * 0.1 }}
+                className="flex items-center space-x-2 text-sm"
+              >
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
+                <span className="text-gray-300">{feature}</span>
+              </motion.div>
+            ))}
+            {service.features.length > 3 && (
+              <div className="text-xs text-gray-500 mt-2">
+                +{service.features.length - 3} more features
+              </div>
+            )}
+          </div>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 <div className='relative z-10 mb-6'>'
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>'
@@ -506,6 +538,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='space-y-2'>'
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
+<<<<<<< HEAD
 }
 key={idx}
                 initial={{ "opacity": 0, "x": -20 
@@ -767,3 +800,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0}}
+                transition = $2;
+export default UltraFuturisticServiceCardV2,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

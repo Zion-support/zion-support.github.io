@@ -12,18 +12,29 @@ import fs from 'fs','
 import path from 'path';'
 import type { GetStaticProps } from 'next';'
 
+<<<<<<< HEAD
 type Item = any;
 return (;
     <div className="space-y-8">"
       <header className="space-y-2">"
         <h1 className="text-3xl font-bold">Tech Radar</h1>"
         <p className="text-gray-600 "dark":text-gray-300">Trending packages and projects across ecosystems.</p>"
+=======
+export default function TechRadar({ pypi, crates, github }: Props) {
+  const langs = Object.keys($2);
+  return (
+    <div className="space-y-8">
+      <header className="space-y-2">
+        <h1 className="text-3xl font-bold">Tech Radar</h1>
+        <p className="text-gray-600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </header>
 
       <section>
         <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>"
         <ul className="grid "md":grid-cols-2 gap-3">"
           {pypi.map((it, i) => (
+<<<<<<< HEAD
             <li key={i} className="p-4 rounded-lg border border-gray-200 "dark": border-gray-800">"
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 "dark":text-cyan-400">{it.name}</a>"
               {typeof it.downloads === 'number' && ('
@@ -227,6 +238,18 @@ function TechRadar() {const langs = Object.keys (github;
 
     </div>)</div>;
 )})}
+=======
+            <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
+              {typeof it.downloads === 'number' && (
+                <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       <section>
         <h2 className="font-semibold text-lg mb-3">crates.io</h2>
         <ul className="grid md:grid-cols-2 gap-3">

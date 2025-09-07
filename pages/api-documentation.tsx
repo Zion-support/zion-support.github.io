@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import Layout from '../components/layout/Layout';
 export default function APIDocumentationPage() {
 	return (
@@ -16,6 +19,7 @@ export default function APIDocumentationPage() {
 		</Layout>
 	)
 }
+<<<<<<< HEAD
 =======
 
 export default function APIDocumentationPage() {
@@ -67,3 +71,5 @@ export default function APIDocumentationPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

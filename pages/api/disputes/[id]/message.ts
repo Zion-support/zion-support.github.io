@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";"
 import {
@@ -5,6 +6,14 @@ import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";"
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default async function handler() {
   }
@@ -29,6 +38,7 @@ export default async function handler() {
       return res.status(400).json({ "error": "Message body required" });"
     const now = new Date().toISOString();
     dispute.messages.push({
+<<<<<<< HEAD
       }
       "id": `${Date.now()}`,`
       "authorUserId": user.id,
@@ -40,12 +50,27 @@ export default async function handler() {
             : "talent","
       body,
       "createdAt": now
+=======
+      id: `${Date.now()}`
+      authorUserId: user.id
+      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent'))
+      body
+      createdAt: now
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     });
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute })
   }
 
+<<<<<<< HEAD
   res.setHeader("Allow", "POST");"
   return res.status(405).end("Method Not Allowed");"
 }
+=======
+  res.setHeader('AllowPOST');
+  return res.status(405).end('Method Not Allowed')
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from "react";"
@@ -120,6 +121,8 @@ key={b.id}
   )}
               ? "bg-yellow-100 border-yellow-300 text-yellow-800";
               : "bg-gray-100 border-gray-200 text-gray-500";
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from "react";
 export type Badge = {
   id: string,

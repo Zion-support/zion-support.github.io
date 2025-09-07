@@ -7,6 +7,7 @@ import Button from '../components/ui/Button';'
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';'
 
 export default function URLShortenerPage() {
+<<<<<<< HEAD
   }
   Link,
   Copy,
@@ -59,6 +60,13 @@ import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink
 
 export default function URLShortenerPage() {;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';'
+=======
+  const [longUrl, setLongUrl] = useState($2);
+  const [customAlias, setCustomAlias] = useState($2);
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
+  const [isShortening, setIsShortening] = useState($2);
+  const [showQR, setShowQR] = useState<string | null>(null),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function URLShortenerPage() {;
 
@@ -434,6 +442,7 @@ short URL to get started.
               </p>
             </div>
 
+<<<<<<< HEAD
 <div className='space-y-4'>'
               {shortenedUrls.map(url => (
                 <Card
@@ -472,6 +481,34 @@ key={url && url.i
                 Manage and track all your shortened URLs in one place.
               </p>
             </div>
+=======
+            <div className="space-y-4">
+              {shortenedUrls.map((url) => (
+                <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* URL Info */}
+                    <div className="lg:col-span-2">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-3 mb-2">
+                            <h3 className="text-xl font-bold text-white">
+                              {url.shortUrl}
+                            </h3>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                              Active
+                            </span>
+                          </div>
+                          <p className="text-gray-400 text-sm break-all">
+                            {url.longUrl}
+                          </p>
+                          <div className="flex items-center space-x-4 mt-3 text-sm text-gray-400">
+                            <span>Created: {new Date(url.createdAt).toLocaleDateString()}</span>
+                            <span>Alias: {url.alias}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                               "Created": {' '}'
 

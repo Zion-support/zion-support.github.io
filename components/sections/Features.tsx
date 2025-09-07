@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../ui/Card';'
 
 import { Zap } from 'lucide-react';'
@@ -76,6 +77,17 @@ import React from 'react';'
             {title}
           </h2>;'
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+=======
+import React from 'react';
+import Card from '../ui/Card';
+import { Zap } from 'lucide-react';
+interface Feature {
+  icon: React.ReactNode,
+  title: string,
+  description: string,
+  color: string,
+  gradient: string,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   delay?: number
 }
 

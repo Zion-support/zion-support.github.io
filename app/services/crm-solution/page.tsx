@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const metadata: Metadata = {
   title: 'Crm Solution | Zion Tech Group',
   description: 'Professional crm solution services for your business needs.',
   keywords: 'crm solution, services, business, technology'
 }
+<<<<<<< HEAD
 
 export const metadata = {
   }
@@ -20,6 +26,15 @@ return (;
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+=======
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             Crm Solution
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"

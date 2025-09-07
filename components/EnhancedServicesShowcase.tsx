@@ -375,6 +375,7 @@ const EnhancedServicesShowcase: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
         {/* Filters */}
           {/* Category Filter */}
           <div className="relative">;"
@@ -666,6 +667,49 @@ const "icon_map": { ["key": string]: React.ComponentType < any>,;
                     Popular;
                   </div>;
                 </div>)}
+=======
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-400 transition-colors duration-300 appearance-none pr-12"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none" />
+          </div>
+
+          {/* Search */}
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search services..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               {/* Service Content */}
               <div className='p - 8'>;'
               {/* Service Content */}
@@ -677,6 +721,7 @@ const "icon_map": { ["key": string]: React.ComponentType < any>,;
               )}{/* Service Content */}
               <div className='p-8'>;'
                 {/* Icon and Category */}
+<<<<<<< HEAD
                 <div className='flex items - center justify - between mb - 4'>;'
                   <div;
                     className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}>`
@@ -740,6 +785,18 @@ const "icon_map": { ["key": string]: React.ComponentType < any>,;
                     </div>;
                   </div>;
                 </div>;
+=======
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>
+                    <div className="text-xs text-white/40">{service.category}</div>
+                  </div>
+                </div>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 {/* Service Info */}
 <h3 className='text-xl font-bold mb-3 text-white'>;'
                   {service.name}
@@ -786,6 +843,7 @@ const "icon_map": { ["key": string]: React.ComponentType < any>,;
                   </div>;
                 </div>;
                 {/* Benefits */}
+<<<<<<< HEAD
 <div className='mb-6'>;'
                   <h4 className='text-sm font-semibold text-white mb-3'>;'
                     Key "Benefits":;
@@ -1021,11 +1079,14 @@ href='"tel":+13024640950';'
                 </div>
 
                 {/* Benefits */}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
                   <div className="space-y-2">
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <div key = $2;
+<<<<<<< HEAD
 export default EnhancedServicesShowcase,
 =======
 export default EnhancedServicesShowcase;  )
@@ -1033,3 +1094,6 @@ export default EnhancedServicesShowcase;  )
 export default EnhancedServicesShowcase;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+export default EnhancedServicesShowcase,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

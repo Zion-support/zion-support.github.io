@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';'
@@ -561,6 +562,9 @@ type="submit""
     </div>;
   );
 
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');

@@ -415,6 +415,7 @@ export default function ServicesAdvertisingPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 
@@ -463,3 +464,5 @@ export default function ServicesAdvertisingPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

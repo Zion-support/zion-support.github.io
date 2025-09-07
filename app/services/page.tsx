@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import Link from 'next/link'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const metadata = {
   }
@@ -685,6 +691,7 @@ href="/about""
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 export default function ServicePage() {
@@ -692,3 +699,7 @@ export default function ServicePage() {
   return <ComprehensiveServicesShowcase2025 />;
 }
 
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

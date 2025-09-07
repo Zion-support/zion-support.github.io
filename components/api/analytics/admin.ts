@@ -29,6 +29,7 @@ const users =;
         ? (usersR && usersR.value.data as any[])
         : [];
 
+<<<<<<< HEAD
 const jobs =;
       jobsR && jobsR.status === 'fulfilled' && jobsR && jobsR.value.data'
         ? (jobsR && jobsR.value.data as any[])
@@ -204,3 +205,36 @@ const "geoCounts": Record<string, number> = {}usersData.forEach((u) => {geoCount
   }
 
   }
+=======
+    const usersData = mockIfEmpty($2);
+    const jobsData = mockIfEmpty($2);
+    const quotesData = mockIfEmpty($2);
+    const projectsData = mockIfEmpty($2);
+    const referralsData = mockIfEmpty($2);
+    const totalUsers = $2;
+    const totalTalents = $2;
+    const totalClients = $2;
+    const jobsPosted = $2;
+    const jobsFilled = $2;
+    const quotesSent = $2;
+    const quotesAccepted = $2;
+    const activeProjects = $2;
+    const categoryCounts: Record<string, number> = {},
+    jobsData.forEach(j = $2;
+    const referralConversions = $2;
+    const geoCounts: Record<string, number> = {},
+    usersData.forEach(u = $2;
+    res.status(200).json({
+      totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects },
+      topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value })),
+      referralConversions,
+      geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
+  } catch (e: any) {
+    res.status(200).json({
+      totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2},
+      topCategories: [{ label: 'AI/ML', value: 2}, { label: 'Design', value: 1}],
+      referralConversions: 2,
+      geo: [{ label: 'US', value: 2}, { label: 'IN', value: 1}, { label: 'GB', value: 1}]})
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -13,7 +13,14 @@ function register () {try {try {try { const res = await fetch ('/api / auth / re
 function forgotPassword () {try {try {try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {';
     console.error ('Error in forgotPassword: ', error) }
 } catch (error) {console.error ('Error in forgotPassword: ', error) }
+<<<<<<< HEAD:src_backup/services/auth.ts
 } catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'";
+=======
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) 
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email }
+}) ;
+  const data = await res.json () .catch ( () => ({}) ) ';'\";'\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/services/auth.ts
 /**
  * Authentication service
  * Handles user authentication and session management
@@ -78,13 +85,22 @@ class AuthService {
           id: '1',
           email,
           name: email.split('@')[0],
+<<<<<<< HEAD:src_backup/services/auth.ts
           role: 'user'
         };
         
         if (typeof window !== 'undefined') {
           localStorage.setItem('auth_user', JSON.stringify(this.user));
+=======
+          role: 'user'}
+       }
+};
+
+        if (typeof window !== 'undefined') {}
+          localStorage.setItem('auth_user', JSON.stringify(this.user));}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/services/auth.ts
         }
-        
+
         this.notifyListeners();
         return true;
       }
@@ -114,3 +130,7 @@ class AuthService {
 
 export const authService = new AuthService();
 export default authService;
+<<<<<<< HEAD:src_backup/services/auth.ts
+=======
+"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/services/auth.ts

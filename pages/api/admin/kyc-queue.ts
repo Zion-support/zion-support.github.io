@@ -125,6 +125,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(405).json({ error: 'Method not allowed' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -134,3 +135,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
 }
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

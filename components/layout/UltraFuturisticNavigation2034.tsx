@@ -378,6 +378,7 @@ const companyLinks = [
       }
     ]
   }
+<<<<<<< HEAD
 ];
 
 const quickLinks = [;
@@ -439,6 +440,37 @@ const socialLinks = [;
   { "name": 'Twitter', "href": '"https"://twitter.com/ziontechgroup', "icon": Twitter,'
 }
 ];
+=======
+],
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home},
+  { name: 'Services', href: '/services', icon: Briefcase},
+  { name: 'Solutions', href: '/solutions', icon: Target},
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign},
+  { name: 'Resources', href: '/resources', icon: BookOpen},
+  { name: 'Case Studies', href: '/case-studies', icon: FileText},
+  { name: 'Blog', href: '/blog', icon: MessageCircle},
+  { name: 'Contact', href: '/contact', icon: MessageCircle}
+],
+
+const companyLinks = [
+  { name: 'About Us', href: '/about', icon: Users},
+  { name: 'Careers', href: '/careers', icon: Briefcase},
+  { name: 'News', href: '/news', icon: FileText},
+  { name: 'Partners', href: '/partners', icon: Handshake},
+  { name: 'Support', href: '/support', icon: LifeBuoy},
+  { name: 'Status', href: '/status', icon: Activity}
+],
+
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin},
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github},
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram},
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube},
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter}
+],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const certifications = [
   'ISO 27001 Certified','
@@ -1076,6 +1108,7 @@ className='block text-sm text-gray-400 "hover":text-cyan-400 transition-colors'>
                               {service.name}
                             </Link>;
                           transition={{ duration: 0.2 }}
+<<<<<<< HEAD
 =======
 
                       />
@@ -1104,6 +1137,12 @@ className='block text-sm text-gray-400 "hover":text-cyan-400 transition-colors'>
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
+=======
+                          className="mt-3 ml-4 space-y-2"
+                        >
+                          {category.services.map((service) => (
+                            <Link
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                               key={service.name}
 =======
         <AnimatePresence>

@@ -78,6 +78,7 @@ quantum computing, and emerging technology services. Transform your,
 business with solutions that were once science fiction.
           </p>
         </motion.div>
+<<<<<<< HEAD
 
           className='text-center mb-20'>;'
           <h2 className='text-5xl "md":text-6xl font-bold text-white mb-8'>;'
@@ -98,6 +99,8 @@ business with solutions that were once science fiction.
             Transform your business with solutions that were once science fiction.;
           </p>;
         </motion && motion.div>;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Category Overview */}
 <<<<<<< HEAD
@@ -584,18 +587,23 @@ className='group relative'
                         <span className='text-sm text-gray-400'>{feature}</span>;'
                       </div>;
                     ))}
+<<<<<<< HEAD
                         <span className="text-sm text-gray-400">{feature}</span>;
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50'>'
                     <div className='flex justify-between items-center text-sm text-gray-400'>'
                       <span>"Market": {service.marketSize}</span>
                       <span className='text-green-400'>'
+=======
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                   {/* Market Info */}
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="flex justify-between items-center text-sm text-gray-400">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-green-400">↑ {service.growthRate}</span>
+<<<<<<< HEAD
                   </div>;
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50'>;
@@ -655,6 +663,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className="text-green-400">↑ {service.growthRate}</span>
                         ↑ {service.growthRate}
                       </span>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     </div>
                   </div>
                   {/* Price and CTA */}
@@ -743,6 +753,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </motion.div>
 
+<<<<<<< HEAD
           )
 }
         </motion.div>;
@@ -751,6 +762,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </motion && motion.div>;
           ))}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Call to Action */}
         <motion&& motion.div;
           initial={{ "opacity": 0, "y": 20 

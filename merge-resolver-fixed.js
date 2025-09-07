@@ -40,7 +40,6 @@ function fixMergeConflicts(filePath) {;
     return false
   }
 }
-
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
   let files = $2;
@@ -59,6 +58,7 @@ function getAllFiles(dir, extensions) {
   }
   return files
 }
+<<<<<<< HEAD
 async function main() {console.log('🔍 Scanning for merge conflicts...')const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md'])let fixedCount = 0;
   for (const file of files) {try {const content = fs.readFileSync(file, 'utf8')if (content.includes('') |content.includes(';
       } else if (extensions.some(ext => item.endsWith(ext))) {}
@@ -68,6 +68,8 @@ async function main() {console.log('🔍 Scanning for merge conflicts...')const 
 }let fixedCount = 0;
   for (const file of files) {try {const content = fs.readFileSync(file, 'utf8'),if (fixMergeConflicts(file)) {if (content.includes('        if (fixMergeConflicts(file)) {fixedCount++;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 // Main execution
 async function main() {
   console.log($2);
@@ -102,10 +104,12 @@ async function main() {
       // Skip files that can't be read
     }
   }
-  
   console.log($2);
   console.log('🎉 Merge conflict resolution completed!')
 }
+<<<<<<< HEAD
 
 main().catch(console.error);
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 main().catch($2);

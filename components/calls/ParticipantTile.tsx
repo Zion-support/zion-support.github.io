@@ -257,6 +257,7 @@ ref={videoRef}
           (isLocal ? 'You' : 'Participant')}'
       </div>
     </div>
+<<<<<<< HEAD
   );
 return (;
   RemoteParticipant,
@@ -530,3 +531,7 @@ if ( {) {$2;
 <<<<<<< HEAD
 
 "
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

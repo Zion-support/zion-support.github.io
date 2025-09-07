@@ -32,6 +32,7 @@ return (;
 export function TrustBadge() {
   }
   const colorMap = {
+<<<<<<< HEAD
     }
     "Verified": 'bg-emerald-100 text-emerald-800 "dark":bg-emerald-900/40 "dark":text-emerald-200','
     "Pro": 'bg-indigo-100 text-indigo-800 "dark":bg-indigo-900/40 "dark":text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 "dark":bg-amber-900/40 "dark":text-amber-200,'
@@ -824,6 +825,13 @@ export function TrustBadge({
   } as const;
     >'
       <span className='leading-none'>{type}</span>
+=======
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
+  return (
+    <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>
+      <span className="leading-none">{type}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </span>
   );
 export function MicroTestimonial() { return null; }
@@ -856,6 +864,7 @@ function MicroTestimonial() {}
   return ("
     <figure className="border rounded - md p - 3 text - sm">;
     </figure>
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -904,3 +913,7 @@ pr-12243
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

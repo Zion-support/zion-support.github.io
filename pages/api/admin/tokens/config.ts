@@ -12,6 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   return res.status(405).json({ error: "Method not allowed" })
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -24,3 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ config: {} });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

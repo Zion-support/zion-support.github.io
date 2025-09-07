@@ -557,6 +557,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
+<<<<<<< HEAD
   };
 
   const handleClear = () => {
@@ -663,6 +664,8 @@ if (filteredResults.length > 0) {setResults(filteredResults)setIsOpen(true)setSe
 
 export default SearchBar;ursor/automate-test-improve-and-merge-code-646c;
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 "hover": text-gray-600""
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <X className="w-4 h-4" />"
             </button>

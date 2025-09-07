@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 export const metadata = {
@@ -20,6 +21,15 @@ export const metadata = {
   "keywords": 'blockchain, smart contracts, DeFi, NFTs, Web3, cryptocurrency, ethereum, polygon''
 };
 export default function BlockchainPage() {
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Blockchain | Zion Tech Group',
+  description: 'Professional blockchain services for your business needs.',
+  keywords: 'blockchain, services, business, technology'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 return (;
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">"
@@ -234,6 +244,7 @@ return (;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
     <div className="space-y-16">"
@@ -434,4 +445,7 @@ href=""tel":+13024640950""
       </section>
     </div>
   );
+=======
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

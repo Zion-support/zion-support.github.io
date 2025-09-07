@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { readReviews, readProjects } from "../../../utils/dataStore";"
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";"
@@ -25,6 +26,12 @@ export default async function handler() {
       }
       return res.status(400).json({ "error": "Invalid targetType" });"
     }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
     const all = await readReviews();
 
@@ -46,12 +53,51 @@ const counterpartExists = all.some(;
       return counterpartExists;
     });
 
+<<<<<<< HEAD
     // Map to public reviews (mask anonymous author)
 const "publicReviews": PublicReview[] = filtered;
       .sort(
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
       )
+=======
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: "Missing targetType or targetId" });
+    }
+    if (targetType !== "talent" && targetType !== "client") {
+      return res.status(400).json({ error: "Invalid targetType" });
+    }
+
+    const all = await readReviews()
+    // Include reviews where both sides have submitted and both are approved and not removed
+
+try {
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+    if (!targetType || !targetId) {
+      return res && res.status(400).json({ error: "Missing targetType or targetId" });
+
+}
+  try {
+const { targetType, targetId } = req.query as {
+      targetType?: string;
+      targetId?: string;
+    }
+    if (!targetType |!targetId) {
+
+      return res.status(400).json({ error: "Missing targetType or targetId" });
+
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: 'Missing targetType or targetId' })
+    }
+    if (targetType !== 'talent' && targetType !== 'client') {
+      return res.status(400).json({ error: 'Invalid targetType' })
+    }
+
+    const all = await readReviews({ error: "Invalid request" });
+    // Include reviews where both sides have submitted and both are approved and not removed
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       .map((r) => {
         }
         let authorName = r.fromId;
@@ -101,6 +147,7 @@ return res;
   }
 }
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -113,3 +160,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

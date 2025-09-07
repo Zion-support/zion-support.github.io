@@ -12,7 +12,35 @@ export default function SEOAnalyzerToolPage() {
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
 
+<<<<<<< HEAD
 const [analysisResults, setAnalysisResults] = useState(null);
+=======
+  const features = [
+    {
+      icon: <Search className="w-8 h-8 text-white" />,
+      title: 'Comprehensive SEO Analysis',
+      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
+    {
+      icon: <Target className="w-8 h-8 text-white" />,
+      title: 'Keyword Research',
+      description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      title: 'Competitive Analysis',
+      description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
+    {
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'AI-Powered Insights',
+      description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      gradient: 'from-orange-400 to-red-500'}],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const [url, setUrl] = useState('');'
 "icon": <Search className='w-8 h-8 text-white' />,'
@@ -51,6 +79,7 @@ const [url, setUrl] = useState('');'
       "gradient": 'from-orange-400 to-red-500','
     }
   ];
+<<<<<<< HEAD
 
 const seoFactors = [;
     {
@@ -193,6 +222,8 @@ const features = [;
         'Basic reporting','
       ],
       "popular": false
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   const pricing = [
     {
@@ -255,6 +286,7 @@ const handleAnalyzeSEO = async () => {
 setTimeout(() => {
       }
       setAnalysisResults({
+<<<<<<< HEAD
         }
         "url": url,
 "overallScore": 78,
@@ -289,6 +321,15 @@ setTimeout(() => {
             "volume": '15K';'
             "difficulty": 'high';'
           }
+=======
+        url: url,
+        overallScore: 78,
+        onPageScore: 82,
+        technicalScore: 75,
+        contentScore: 80,
+        mobileScore: 85,
+        issues: [
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           { type: 'error', message: 'Missing meta description', priority: 'high' },
           { type: 'warning', message: 'Title tag too long (65 characters)', priority: 'medium' },
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
@@ -367,6 +408,7 @@ setTimeout(() => {
 return (;
     <>
       <Head>
+<<<<<<< HEAD
 <title>
           SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &
           Optimization
@@ -381,6 +423,13 @@ property='"og": title''
 property='"og":description''
           content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'' />
         <meta name='"twitter":card' content='summary_large_image' />'
+=======
+        <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization</title>
+        <meta name="description" content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings." />
+        <meta property="og:title" content="SEO Analyzer Tool - Zion Tech Group" />
+        <meta property="og:description" content="Professional SEO analysis tool with comprehensive insights and optimization recommendations." />
+        <meta name="twitter:card" content="summary_large_image" />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </Head>
         ];
   const handleAnalyzeSEO = async () => {if (!url && url.trim()) return;
@@ -1301,6 +1350,7 @@ href='/contact''
               </Card>
             ))}
       {/* CTA Section */}
+<<<<<<< HEAD
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-["size":20px_20px] opacity-10' />;'
@@ -1332,6 +1382,31 @@ variant='outline';'
               size='lg''
 
               className='border-white text-white "hover":bg-white "hover":text-green-600 shadow-2xl''
+=======
+      <section className="section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+        <div className="container-cursor text-center relative z-10">
+          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
+            Ready to Improve Your SEO Rankings?
+          </h2>
+          <p className="text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Join thousands of businesses using our SEO analyzer to improve their search rankings and drive more organic traffic.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
+              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               Schedule Demo
             </Button>

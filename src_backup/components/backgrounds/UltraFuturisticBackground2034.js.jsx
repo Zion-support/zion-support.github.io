@@ -1,7 +1,32 @@
+<<<<<<< HEAD:src_backup/components/backgrounds/UltraFuturisticBackground2034.js.jsx
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff', #00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4', #45b7d1',';#96ceb4'] } const selectedColors = colors[theme]';';import React, { useEffect, useRef } from 'react';
 const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
     const canvasRef = useRef(null)const animationRef = useRef()useEffect(() => {}
         const canvas = canvasRef.current;
+=======
+const UltraFuturisticBackground2034 = (
+
+ const canvasRef = useRef(null) const animationRef =;
+  useRef();
+  useEffect(() => {
+ const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx);
+  return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [];) => {
+  return $3;}
+}
+  const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff', #00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4', #45b7d1',';#96ceb4'] }
+
+const selectedColors = colors[theme]';';import React, { useEffect, useRef } from 'react';
+
+const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => ;
+}
+
+const canvasRef = useRef(null)const animationRef =;
+  useRef(;
+  useEffect(() => {}
+}
+;
+  const canvas = canvasRef.current;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/backgrounds/UltraFuturisticBackground2034.js.jsx
         if (!canvas)return'';
         const ctx = canvas.getContext('2d')if(!ctx)return;
         canvas.width = window.innerWidth;
@@ -97,10 +122,23 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         window.addEventListener('resize', handleResize)return () => {}
             if(animationRef.current) {}
                 cancelAnimationFrame(animationRef.current)}'';
-            window.removeEventListener('resize', handleResize)}}, [intensity, theme])return (<canvas ref={canvasRef} className='fixed inset-0 pointer-events-none z-0" style = {}'";
+            window.removeEventListener('resize', handleResize)}}, [intensity, theme])return (<canvas ref={canvasRef} className='fixed inset-0 pointer-events-none z-0\" style = {}'\";
   {}
             opacity: intensity, '';
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';
 }}/>)}
 export default UltraFuturisticBackground2034;
+<<<<<<< HEAD:src_backup/components/backgrounds/UltraFuturisticBackground2034.js.jsx
 export { UltraFuturisticBackground2034 }export { UltraFuturisticBackground2034 }export { UltraFuturisticBackground2034 }export { UltraFuturisticBackground2034 }export { UltraFuturisticBackground2034 }
+=======
+
+export { UltraFuturisticBackground2034 }
+
+export { UltraFuturisticBackground2034 }
+
+export { UltraFuturisticBackground2034 }
+
+export { UltraFuturisticBackground2034 }
+
+export { UltraFuturisticBackground2034 }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/backgrounds/UltraFuturisticBackground2034.js.jsx

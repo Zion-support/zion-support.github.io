@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';'
 
 import { motion } from 'framer-motion';'
@@ -5,6 +6,15 @@ import { motion } from 'framer-motion';'
 import { Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
   }
   Rocket, Lock, Palette, Factory, Database, Cloud;
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { 
+  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
+  Rocket, Lock, Palette, Factory, Database, Cloud, 
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   Cpu, Eye, Target, Users, BarChart3
  } from 'lucide-react';'
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';'
@@ -32,6 +42,7 @@ const "Comprehensive2025InnovativeServicesShowcase": React.FC;
 
   return (
     <Layout>
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Star,Brain,Atom,Shield,Zap,TrendingUp,Globe,Rocket,Lock,Palette,Factory,Database,Cloud,Cpu,Eye,Target,Users,BarChart3,import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {const categories = [;
@@ -272,6 +283,40 @@ const getCategoryColor = ("category": string) =>: any ;
               transition={{ "duration": 0.6, "delay": 0.2 
 }
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm''
+=======
+      <SEO 
+        title="2025 Innovative Services Showcase | Zion Tech Group"
+        description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
+        keywords={[
+          'innovative services 2025micro SAASquantum computingspace technologyAI platformsautonomous systems'
+        ]}
+      />
+      
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+        {/* Enhanced Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500"></div>
+          <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500"></div>
+        </div>
+        
+        <div className="text-center max-w-6xl mx-auto relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            {/* Enhanced Company Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               <Star className='w-5 h-5' />'
               <span>Innovation Leader 2025</span>
@@ -371,8 +416,11 @@ className='grid grid-cols-2 "md":grid-cols-4 gap-6 max-w-4xl mx-auto''
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Services Categories *
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 <section className='py-20 px-4 bg-black/30 relative'>'
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>'
@@ -442,6 +490,7 @@ cutting-edge technology domains
       <section className='py-20 px-4'>;'
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div;'
       {/* Featured Services */}
+<<<<<<< HEAD
 <section className='py-20 px-4'>;'
         <div className='max-w-7xl mx-auto'>;'
           <motion.div;
@@ -454,6 +503,16 @@ cutting-edge technology domains
 }
 
 className='text-center mb-16''
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
             <h2 className='text-5xl "md":text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'
               Featured Services
@@ -463,6 +522,7 @@ className='text-center mb-16''
 industries
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>'
             {innovative2025MicroSaasBatch
               .filter(service => service.popular)
@@ -516,6 +576,65 @@ industries
                       <div
 }
 className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>`
+=======
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
+              const IconComponent = getCategoryIcon(service.category);
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative"
+                >
+                  <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm">
+                    {/* Popular Badge */}
+                    {service.popular && (
+                      <div className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
+                        Popular
+                      </div>
+                    )}
+                    
+                    <div className="text-center mb-6">
+                      <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>
+                        {service.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                      <div className="text-3xl font-bold text-cyan-400 mb-2">
+                        {service.price}<span className="text-lg text-gray-400">/{service.period}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3 mb-6">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Market Info */}
+                    <div className="border-t border-white/10 pt-4 space-y-2">
+                      <div className="text-xs text-gray-400">
+                        Market Price: <span className="text-green-400">{service.marketPrice}</span>
+                      </div>
+                      <div className="text-xs text-gray-400">
+                        Category: <span className="text-cyan-400">{service.category}</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                         {service.icon}
                       </div>;
@@ -550,6 +669,7 @@ className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.ca
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className='py-20 px-4'>'
         <div className='max-w-4xl mx-auto text-center'>'
           <motion.div,
@@ -561,6 +681,17 @@ initial={{ "opacity": 0, "y": 20
 }
 
 className='space-y-8''
+=======
+      {/* Contact CTA */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           >
             <h2 className='text-4xl "md":text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>'
               Ready to Transform Your Business?

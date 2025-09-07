@@ -992,10 +992,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 =======
       {/* Main Navigation */}
       <nav;
@@ -1171,6 +1175,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </div>;
+=======
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* CTA Buttons */}
 

@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 export const metadata = {
   }
   "title": 'AI Analytics Dashboard | Zion Tech Group','
   "description": 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time business intelligence, predictive analytics, and custom reporting.','
   "keywords": 'ai-analytics, business-intelligence, data-visualization, predictive-analytics, dashboard, reporting''
 };
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Analytics Dashboard | Zion Tech Group',
+  description: 'Professional ai analytics dashboard services for your business needs.',
+  keywords: 'ai analytics dashboard, services, business, technology'
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function ServicePage() {
 }

@@ -9,6 +9,7 @@ import React from 'react';'
 import Link from 'next/link';'
 
 interface ButtonProps {
+<<<<<<< HEAD
   }
   "children": React.ReactNode;
 
@@ -287,11 +288,14 @@ import React from "react";
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 interface ButtonProps {
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   children: React.ReactNode;
@@ -468,6 +472,11 @@ const Button: React.FC<ButtonProps> = ({;
   type?: 'button' | 'submit' | 'reset';
 }
 <<<<<<< HEAD
+=======
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const Button: React.FC<ButtonProps> = ({
   children;

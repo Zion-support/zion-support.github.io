@@ -23,9 +23,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     const entries = Object.values(users as any).map((u: any) => ({
-      userId: u.userId,
-      name: u.name || u.userId,
-      certifications: u.certifications?.length || 0,
+      userId: u.userId
+      name: u.name || u.userId
+      certifications: u.certifications?.length || 0
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc: number, p: any) => acc + (p.percent || 0), 0)
     }));
 
@@ -36,6 +36,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
   }
 }
+<<<<<<< HEAD
 =======
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -50,3 +51,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

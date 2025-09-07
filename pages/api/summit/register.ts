@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { supabase } from "../../../utils/supabase/client";"
 export default async function handler() {
@@ -11,6 +12,20 @@ export default async function handler() {
     }
     const { name, email, role, country, source } = req.body || {};
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { supabase } from '../../../utils/supabase/client';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  try {
+    const { name, email, role, country, source } = req.body || {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     if (!name || !email || !role || !country) {
       }
       return res.status(400).json({ "error": "Missing required fields" });"
@@ -20,6 +35,7 @@ const { data, error } = await supabase;
       .from("summit_registrations")"
       .insert([
         {
+<<<<<<< HEAD
           }
           name,
           email,
@@ -32,6 +48,16 @@ const { data, error } = await supabase;
       .select("*")"
       .single();
 
+=======
+          name
+          email
+          role
+          country
+          source: source || 'zion-global-2025'
+          created_at: new Date().toISOString()}])
+      .select('*')
+      .single({ error: "Invalid request" });
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     if (error) {
       }
       return res.status(500).json({ "error": error.message });
@@ -42,6 +68,7 @@ const { data, error } = await supabase;
     }
     return res.status(500).json({ "error": e?.message || "Unknown error" });"
   }
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -53,4 +80,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: "Endpoint working" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

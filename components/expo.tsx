@@ -4,6 +4,7 @@ const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: fal
 <<<<<<< HEAD
 export default function ExpoRoute() {
   return <ExpoPage />
+<<<<<<< HEAD
 }
 =======
 
@@ -86,6 +87,8 @@ const ExpoPage = null;
 
 export default function ExpoRoute() {return <ExpoPage />;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { "ssr": false,'

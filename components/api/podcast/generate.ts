@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import { v4 as uuidv4   } from 'uuid';'
 import fs from 'fs';'
@@ -6,6 +7,19 @@ import OpenAI from 'openai';'
 
 const EPISODES_PATH = path && path.join(process && process.cwd(),'data','podcast','episodes && episodes.json';'
 )function ensureStorage() {const EPISODES_PATH = null;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import fs from 'fs';
+import path from 'path';
+import OpenAI from 'openai';
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 return res.status(500).json({ "error": error?.message || 'Unknown error' },;'
 }
@@ -175,6 +189,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const id = uuidv4();
+<<<<<<< HEAD
 =======
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' })
@@ -611,6 +626,27 @@ time_markers: generated.time_markers || {
       const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
+=======
+
+  const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice || 'Visionary'} tone, speak in ${persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
+1) 7-10 concise interview questions mixing visionary and technical angles
+2) Time markers for: Intro, segment transitions, Closing CTA for Zion
+3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
+4) YouTube and Spotify descriptions
+5) A single-sentence Best Quote
+Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+
+  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
+
+  let generated: any = null;
+  try {
+    const apiKey = process.env.OPENAI_API_KEY;
+    let content: string;
+    if (apiKey) {
+      const openai = new OpenAI({ apiKey });
+      const completion = await openai.chat.completions.create({
+        model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         messages: [
           { role: 'system', content: system };
           { role: 'user', content: user }];
@@ -639,13 +675,18 @@ time_markers: generated.time_markers || {
       if (match) generated = JSON.parse(match[0])
     }
     if (!generated || !generated.title || !generated.transcript) {
+<<<<<<< HEAD
       return res.status(500).json({ error: 'Failed to generate structured content' });
+=======
+      return res.status(500).json({ error: 'Failed to generate structured content' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
     const episodes = readEpisodes();
 
 
 
     const episode = {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 
@@ -678,6 +719,21 @@ id,
       bestQuote: generated.bestQuote || '',
       audio: {},
     };
+=======
+      id;
+      createdAt: new Date().toISOString();
+      persona;
+      invitee;
+      topic;
+      title: generated.title;
+      questions: generated.questions || [];
+      timeMarkers: generated.timeMarkers || { intro: '00:00', segments: [], closing: '14:30' };
+      transcript: generated.transcript;
+      youtubeDescription: generated.youtubeDescription || '';
+      spotifyDescription: generated.spotifyDescription || '';
+      bestQuote: generated.bestQuote || '';
+      audio: {}};
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     episodes.unshift(episode);
     writeEpisodes(episodes);
     return res.status(200).json({ episode });
@@ -690,6 +746,7 @@ id,
     console.error(error);
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
+<<<<<<< HEAD
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -725,3 +782,6 @@ id,"createdAt": new Date().toISOString(),persona,invitee,topic,"title": generate
 
 const episode = {},;
 }
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

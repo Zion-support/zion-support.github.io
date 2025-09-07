@@ -66,8 +66,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['POST']);
     return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
   
   res.status(200).json({ connected: true });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+  const now = Date.now();
+  const updated = writeState(state => {
+    const existingIdx = state.connections.findIndex(c => c.providerId === providerId);
+    const connection: ProviderConnection = {
+      providerId: providerId as any
+      status: 'connected'
+      accessToken: 'mock_access_token'
+      refreshToken: 'mock_refresh_token'
+      expiresAt: now + 1000 * 60 * 60
+      connectedAt: now
+      syncRules: syncRules || {}
+      lastSyncAt: undefined
+      lastError: null
+    };
+    if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
+    state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
+  });
+  res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

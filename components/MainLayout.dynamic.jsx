@@ -17,6 +17,7 @@ const MainLayout.dynamic = () => {}
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
@@ -26,5 +27,7 @@ const MainLayout.dynamic = () => ;
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 export default MainLayout.dynamic;

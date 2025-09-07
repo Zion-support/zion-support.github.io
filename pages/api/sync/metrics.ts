@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
@@ -36,6 +37,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,8 +52,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
 
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 ;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -80,11 +83,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   for (const e of events) {
-    if (e.type = $2;
+    if (e.type = { error: "Invalid request" };
       totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0)
-    } else if (e.type = $2;
+    } else if (e.type = { error: "Invalid request" };
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0)
-    } else if (e.type = $2;
+    } else if (e.type = { error: "Invalid request" };
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
 <<<<<<< HEAD:pages_backup/api/sync/metrics.ts
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
@@ -96,8 +99,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
-    .slice($2);
+    .slice({ error: "Invalid request" });
   return res.status(200).json({
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 }
 }
@@ -107,6 +111,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     treasuryTotals: totalsByToken,
     topContributors,
     totalVoteCount: globalVotes,
+=======
+    treasuryTotals: totalsByToken
+    topContributors
+    totalVoteCount: globalVotes
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     lastSyncedAt: state.lastSyncedAt})
       const p = e.payload as any
     treasuryTotals: totalsByToken
@@ -166,7 +175,7 @@ export default function handler(req, res) {
     .sort((a, b) => b.score - a.score);
     .slice(0, 10);
   return res.status(200).json({;
-    treasuryTotals: totalsByToken,;
+    treasuryTotals: totalsByToken;
     topContributors;
     totalVoteCount: globalVotes;
     lastSyncedAt: state.lastSyncedAt});
@@ -191,6 +200,7 @@ export default function handler(req, res) {
 
 
       const p = e.payload as any
+<<<<<<< HEAD
 
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
@@ -227,3 +237,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

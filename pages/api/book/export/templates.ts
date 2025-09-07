@@ -30,6 +30,7 @@ const templates = {
   lulu: {
     sizes: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       { name: 'US Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 },
       { name: 'A4', widthIn: 8.27, heightIn: 11.69, bleedIn: 0.125, marginIn: 0.75 }
     ]
@@ -39,16 +40,26 @@ const templates = {
       { name: 'US Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }
       { name: 'A4', widthIn: 8.27, heightIn: 11.69, bleedIn: 0.125, marginIn: 0.75 }]}
 >>>>>>> origin/main
+=======
+      { name: 'US Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }
+      { name: 'A4', widthIn: 8.27, heightIn: 11.69, bleedIn: 0.125, marginIn: 0.75 }
+    ]
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   blurb: {
     sizes: [
-      { name: 'Standard Portrait', widthIn: 8, heightIn: 10, bleedIn: 0.125, marginIn: 0.75 },
+      { name: 'Standard Portrait', widthIn: 8, heightIn: 10, bleedIn: 0.125, marginIn: 0.75 }
       { name: 'Large Square', widthIn: 12, heightIn: 12, bleedIn: 0.125, marginIn: 0.75 }
     ]
-  },
+  }
   amazon: {
     sizes: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       { name: 'US Trade', widthIn: 6, heightIn: 9, bleedIn: 0.125, marginIn: 0.75 },
+=======
+      { name: 'US Trade', widthIn: 6, heightIn: 9, bleedIn: 0.125, marginIn: 0.75 }
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }
     ]
   }
@@ -57,6 +68,7 @@ const templates = {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(templates)
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/api/book/export/templates.ts
       {
@@ -133,3 +145,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 } 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -37,6 +37,7 @@ const OrgChartPage = dynamic ('
   { ssr: false };
 );
 
+<<<<<<< HEAD
 export default function OrgChartGovernancePage() { return null; }
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 export default function OrgChartGovernancePage() { return null; }
@@ -51,6 +52,8 @@ const OrgChartPage = dynamic(
   () => import('../../components/org/OrgChartPage')
   { ssr: false }
 );
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false })
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

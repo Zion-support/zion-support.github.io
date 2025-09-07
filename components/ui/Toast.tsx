@@ -210,6 +210,7 @@ onClick={() => {;
             setTimeout(() => onRemove(toast.id), 300)
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 interface ToastContainerProps {
@@ -220,10 +221,13 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
   onRemove,
 }) => {
   return ("
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >"
           <X className="w-4 h-4 text-white/60 hover:text-white" />
         </button>
+<<<<<<< HEAD
       </div>"
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >;"
@@ -340,6 +344,21 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </AnimatePresence>
     </div>
 <<<<<<< HEAD
+=======
+      </div>
+      
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">
+        <motion.div
+          className={`h-full ${
+            toast.type === 'success' ? 'bg-green-400' :
+            toast.type === 'error' ? 'bg-red-400' :
+            toast.type === 'warning' ? 'bg-yellow-400' :
+            'bg-blue-400'
+          }`}
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           transition={{ duration: toast.duration || 5000, ease: "linear" }}
         />
       </div>

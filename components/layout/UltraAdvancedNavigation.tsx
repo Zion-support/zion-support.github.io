@@ -620,6 +620,7 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
+<<<<<<< HEAD
 =======
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
                   >
@@ -627,6 +628,8 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                     <span>{item.name}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   </Link>
                 )}
 
@@ -637,6 +640,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1}}
+<<<<<<< HEAD
 =======
 className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-300 py-2'    />
 
@@ -712,6 +716,9 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                               </Link>;
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+=======
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
                       >
@@ -812,10 +819,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
           {/* Contact Info & CTA */}
+<<<<<<< HEAD
           <div className="hidden "lg":flex items-center space-x-6">"
             <div className="flex items-center space-x-4 text-sm text-gray-300">"
               <a href={`"tel":${contactInfo.mobile}`} className="flex items-center space-x-2 "hover":text-cyan-400 transition-colors duration-200">"                <Phone className="w-4 h-4" />"
                 <span className="hidden "xl":inline">{contactInfo.mobile}</span>"
+=======
+          <div className="hidden lg:flex items-center space-x-6">
+            <div className="flex items-center space-x-4 text-sm text-gray-300">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">
+                <Phone className="w-4 h-4" />
+                <span className="hidden xl:inline">{contactInfo.mobile}</span>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               </a>
 
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">

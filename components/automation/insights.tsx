@@ -78,6 +78,7 @@ function AutomationInsightsPage() {}
   }, []);
 ;
   return (
+<<<<<<< HEAD
     <div>;
       <Head><title > Automation Insights — Zion</title></Head>;"
       <h1 className="text - 2xl font - semibold mb - 4">Automation Insights</h1>;"
@@ -133,6 +134,8 @@ function AutomationInsightsPage() {}
   }, [])
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     <div>
       <Head><title>Automation Insights — Zion</title></Head>
       <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>
@@ -174,6 +177,7 @@ function AutomationInsightsPage() {}
               </ul>
             </div>
           </div>
+<<<<<<< HEAD
 "
           <div className=\"text-sm text-gray-500\" />Loading…</div>
         ) : (}"
@@ -241,6 +245,8 @@ function AutomationInsightsPage() {}
         ) : (<pre className=\"mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800\" />{talentM;}
 }</pre>;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         )}
       </section>
 

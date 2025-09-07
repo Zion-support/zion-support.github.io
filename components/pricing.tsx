@@ -17,6 +17,7 @@ import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';'
 
 export default function PricingPage() {
+<<<<<<< HEAD
   }
   const [selectedCategory, setSelectedCategory] = useState('All');'
 
@@ -127,6 +128,17 @@ const yearlyDiscount = 0.2, // 20% discount for yearly billing
   const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
 
 return (;
+=======
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [selectedPriceRange, setSelectedPriceRange] = useState($2);
+  // Combine all services
+  const allServices = $2;
+    ...innovativeAIServices2029,
+    ...quantumSpaceInnovations2029,
+    ...enterpriseITInnovations2029,
+    ...innovativeMicroSaas2029
+  ],
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   // Get unique services by ID
   const uniqueServices = allServices.filter((service, index, self) => 
@@ -271,6 +283,7 @@ are already operational and delivering transformative results
           </motion.div>
         </section>
 
+<<<<<<< HEAD
         {/* Pricing Categories *
 }
 <section className='py-20 px-4 "sm":px-6 "lg":px-8'>;'
@@ -326,6 +339,71 @@ are already operational and delivering transformative results
                                 </span>;
                               </div>;
                             </div>;
+=======
+        {/* Pricing Categories */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+                viewport={{ once: true}}
+                className="mb-20"
+              >
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    {category} Services
+                  </h2>
+                  <p className="text-gray-400 text-lg">
+                    {services.length} revolutionary {category.toLowerCase()} solutions
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {services.map((service, serviceIndex) => (
+                    <motion.div
+                      key={service.id}
+                      initial={{ opacity: 0, y: 20}}
+                      whileInView={{ opacity: 1, y: 0}}
+                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+                      viewport={{ once: true}}
+                      className="group cursor-pointer"
+                    >
+                      <div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
+                        {/* Popular Badge */}
+                        {service.popular && (
+                          <div className="flex items-center justify-center mb-4">
+                            <div className="px-3 py-1 bg-yellow-400/20 border border-yellow-400/30 rounded-full">
+                              <span className="text-sm text-yellow-400 font-medium flex items-center">
+                                <Star className="w-4 h-4 mr-1 fill-current" />
+                                Most Popular
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Service Icon */}
+                        <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                          <span className="text-2xl">{service.icon}</span>
+                        </div>
+
+                        {/* Service Title and Tagline */}
+                        <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                        <p className="text-sm text-cyan-400 mb-4">{service.tagline}</p>
+                        
+                        {/* Price */}
+                        <div className="mb-6">
+                          <div className="flex items-baseline">
+                            <span className={`${service.textColor} font-bold text-3xl`}>
+                              {service.price}
+                            </span>
+                            <span className="text-gray-400 text-lg ml-2">{service.period}</span>
+                          </div>
+                          {service.setupTime && (
+                            <p className="text-sm text-gray-500 mt-1">Setup: {service.setupTime}</p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                           )}
                           {/* Service Icon */}
                           <div;
@@ -467,7 +545,11 @@ initial={{ "opacity": 0, "y": 30
                   Revolutionary Technology?
                 </span>
               </h2>
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8">"
+=======
+              <p className="text-xl text-gray-300 mb-8">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
               </p>
 
@@ -538,6 +620,7 @@ initial={{ "opacity": 0, "y": 30
           </div>
         </section>
       </main>
+<<<<<<< HEAD
   );
 
 }whileInView= {
@@ -887,13 +970,18 @@ initial={{ "opacity": 0, "y": 30
   "once": true 
 
 }> <h2 className="text-3xl "sm":text-4xl "lg":text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col "sm":flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg "hover":from-cyan-600 "hover":to-purple-700 transition-all duration-200 transform "hover":scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 "md": grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   )
 }
+<<<<<<< HEAD
 =======
   once: true
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

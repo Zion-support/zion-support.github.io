@@ -1002,6 +1002,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   </div>;
                                 </div>;
                               </Link>;
@@ -1316,6 +1317,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
             {/* Mobile Menu Button */}
 <<<<<<< HEAD
@@ -1328,6 +1331,7 @@ className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-g
               className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             >
+<<<<<<< HEAD
               {isOpen ? ('
                 <X className='w-6 h-6' />
               ) : ('
@@ -1371,6 +1375,9 @@ className='lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-
               }
 }
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </button>
           </div>
         </div>

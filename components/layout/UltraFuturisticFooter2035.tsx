@@ -704,12 +704,20 @@ return (;
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black" />;"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />;"
         {/* Animated grid */}
+<<<<<<< HEAD
 
         <motion.div,
 className="absolute inset-0 opacity-5""
           style={{
             }
             "backgroundImage": ``              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+=======
+        <motion.div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
 
             `,`            "backgroundSize": '200px 200px','
@@ -1083,6 +1091,7 @@ link.featured
           </div>
 
           {/* Bottom Section */}
+<<<<<<< HEAD
           <motion&& motion.div;
             initial={{ "opacity": 0, "y": 20 
 }
@@ -1453,3 +1462,11 @@ export default UltraFuturisticFooter2035;
 <<<<<<< HEAD
 
 "
+=======
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className = $2;
+export default UltraFuturisticFooter2035,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

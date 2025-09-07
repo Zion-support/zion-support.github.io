@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
@@ -75,6 +78,7 @@ export default function QuantumServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 =======
       
       <div className="container mx-auto px-4 py-16">
@@ -113,4 +117,6 @@ export default function QuantumServicesPage() {
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

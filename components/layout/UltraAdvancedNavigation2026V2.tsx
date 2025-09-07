@@ -5,6 +5,7 @@ import { motion, AnimatePresence  } from 'framer-motion';'
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';'
 
 export default function UltraAdvancedNavigation2026V2() {
+<<<<<<< HEAD
   }
   const [isOpen, setIsOpen] = useState(false);
 
@@ -175,6 +176,11 @@ const contactInfo = {
     window.addEventListener('scroll', handleScroll);'
     return () => window.removeEventListener('scroll', handleScroll)'
   }, []);
+=======
+  const [isOpen, setIsOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   useEffect(() => {
 
@@ -662,6 +668,7 @@ className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`     
 className='flex items-center space-x-2 text-gray-300 "hover": text-white transition-colors duration-200 py-2'>'
 
                       {item.icon}
+<<<<<<< HEAD
                       <span>{item.nam
 }</span>;
                       <ChevronDown className='w-4 h-4 transition-transform duration-200 group-"hover":rotate-180' />;'
@@ -739,6 +746,19 @@ key={dropdownItem.name}
                       </div>;
                     </div>;
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                    </Link>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   )}
 
                   {/* Dropdown Menu */}
@@ -807,6 +827,7 @@ key={dropdownItem.name}
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>;
@@ -977,6 +998,9 @@ key={dropdownItem.name}
               </Link>;
             </div>;{/* Mobile Menu Button */}
             <button;
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1196,6 +1220,7 @@ href={item && item.href}
 className='flex items-center space-x-3 text-gray-300 "hover": text-white transition-colors duration-200 py-3''
                       >
                         {item.icon}
+<<<<<<< HEAD
                         <span>{item.nam
 }</span>;
                       </Link>;
@@ -1206,6 +1231,12 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 "hover":from-purple-700 "hover":to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">;"
                     )}
                   </div>;
+=======
+                        <span>{item.name}</span>
+                      </Link>
+                    )}
+                  </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 ))}
 <<<<<<< HEAD
 '
@@ -1531,6 +1562,7 @@ className='flex items-center space-x-3 text-gray-300 "hover": text-white transit
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Overlay */}
+<<<<<<< HEAD
       {isOpen && (;
         <motion&& motion.div;
           </motion.div>)}
@@ -1616,6 +1648,15 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden';
 
           className='fixed inset-0 bg-black/50 z-40 "lg": hidden'          onClick={() => setIsOpen(false)}'
 
+=======
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          exit={{ opacity: 0}}
+          transition={{ duration: 0.3 }}
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           onClick={() => setIsOpen(false)}
         />
       )}

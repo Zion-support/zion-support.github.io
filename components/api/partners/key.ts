@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from \"next\";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -74,6 +75,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" ;})

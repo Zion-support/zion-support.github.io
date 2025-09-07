@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import PDFDocument from 'pdfkit';'
 
+<<<<<<< HEAD
 
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';'
 function writeSection() {
@@ -52,6 +53,8 @@ const doc = new (PDFDocument as any)({ "autoFirstPage": false,;
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;`  doc.info.Author = 'Zion Protocol';'
   doc.pipe(res);
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = $2;
   const edition = $2;

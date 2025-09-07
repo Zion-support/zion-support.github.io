@@ -791,6 +791,7 @@ className='absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-4
             }
             key={i}
 
+<<<<<<< HEAD
             className='absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent''
             style={{
               }
@@ -923,6 +924,19 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             style={{}
           duration: 25,
           repeat: Infinity,
+=======
+      {/* Holographic Rings */}
+      <motion.div
+        className = $2;
+          scale: [1, 1.1, 1],
+          opacity: [0.1, 0.3, 0.1]
+        }}
+        transition = $2;
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 <div className='absolute inset-0'>'
         {[...Array(12)].map((_, i) => (
@@ -969,6 +983,7 @@ key={i}
               "y": [0, window.innerHeight + 20],
               "opacity": [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               }
               "duration": 8 + i * 0.5,
@@ -982,6 +997,14 @@ key={i}
             transition={{"duration": 8 + i * 0.5,"repeat": Infinity,"ease": "linear","delay": i * 1.5;"
 }
 "ease": 'linear',"delay": i * 1.5}}' />;
+=======
+            transition = $2;
+              repeat: Infinity,
+              ease: "linear",
+              delay: i * 1.5
+            }}
+          />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         ))}
       </div>;
               "duration": 8 + i * 0.5,"repeat": Infinity,"ease": 'linear'}}'

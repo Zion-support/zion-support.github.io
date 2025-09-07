@@ -159,6 +159,7 @@ onClick={syncDepin}
     <div className="space-y-8">
       <section className="space-y-2">
         <h1 className="text-2xl font-bold">ZION$ Integrations</h1>
+<<<<<<< HEAD
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
       </section>
 
@@ -347,6 +348,8 @@ onClick={syncDepin}
     <div className="space-y-8">"
       <section className="space-y-2">"
         <h1 className="text-2xl font-bold">ZION$ Integrations</h1>"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
       </section>"
       <section className="space-y-4">
@@ -365,6 +368,7 @@ onClick={syncDepin}
               <div key={i} className="flex items-center justify-between">
                 <span>{r.network} — {r.reason}</span>"
                 <span className="font-medium">+{r.points} ZION$</span>
+<<<<<<< HEAD
 =======
         {suggestion && (<div className='text-sm mt-2' />;}
             <div />;}
@@ -411,6 +415,9 @@ onClick={syncDepin}
                 <span className=\"font-medium\" />+{r.points} ZION$</span>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             ))}
           </div>
         )}

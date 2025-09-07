@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
 import { v4 as uuidv4 } from "uuid",;
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../utils/sync/storage";
+import { Peer } from "../../../utils/sync/types";
+import { v4 as uuidv4 } from "uuid";
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,11 +25,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" })
 
   if (existing) {
-    existing.scope = $2;
+    existing.scope = { error: "Invalid request" };
     existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
   } else {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -35,3 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

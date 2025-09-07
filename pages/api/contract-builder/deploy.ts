@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { Interface } from 'ethers';
 =======
 <<<<<<< HEAD
@@ -38,13 +41,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const iface = new Interface(abi);
     const data = iface.encodeDeploy(constructorArgs);
     const tx = {
-      data: bytecode + data.slice(2),
+      data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
     };
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -95,3 +99,8 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

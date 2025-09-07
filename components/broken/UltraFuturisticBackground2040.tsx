@@ -347,6 +347,7 @@ canvas.height = window.innerHeight;
     }
   }, []),
 
+<<<<<<< HEAD
     animate();
 
 const handleResize = () => {
@@ -360,6 +361,17 @@ canvas.height = window.innerHeight;
         className='absolute inset-0 w-full h-full';'
         style={{ "zIndex": -1 
 } />;
+=======
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      {/* Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ zIndex: -1 }}
+      />
+      
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {/* Overlay Gradients */}
 
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />'

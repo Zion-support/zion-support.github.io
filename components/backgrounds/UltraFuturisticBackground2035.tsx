@@ -446,6 +446,20 @@ className='absolute w-1 h-1 bg-purple-400 rounded-full''
           />;
         ))}
         {/* Energy Waves */}
+<<<<<<< HEAD
+=======
+        <motion.div
+          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
+          animate={{
+            scaleX: [0, 1, 0],
+            opacity: [0, 1, 0]
+          }}
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         <motion.div,
 className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent''
@@ -627,6 +641,7 @@ id='neuralGradient''
           ))}
         </svg>
 
+<<<<<<< HEAD
         {/* Holographic Effects */}'
         <div className='absolute inset-0'>
 '
@@ -661,6 +676,12 @@ className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded
             }} />
           <motion.div,
 className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full''
+=======
+        {/* Holographic Effects */}
+        <div className="absolute inset-0">
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             animate={{
               }
               "scale": [1, 1.2, 1],

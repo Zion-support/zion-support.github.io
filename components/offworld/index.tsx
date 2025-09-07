@@ -325,6 +325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {status && <p className="text-sm text-gray-700">{status}</p>}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
 )}
@@ -373,6 +374,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
     </div>))
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   )
 }
 =======

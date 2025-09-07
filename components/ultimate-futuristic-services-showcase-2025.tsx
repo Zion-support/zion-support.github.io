@@ -186,6 +186,7 @@ return (;
     }
   });
 
+<<<<<<< HEAD
 const containerVariants = {
     }
     "hidden": { "opacity": 0
@@ -196,6 +197,14 @@ const containerVariants = {
 "transition": {
 }
 "staggerChildren": 0.1
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
     }
   };
@@ -848,6 +857,7 @@ href='/pricing''
     </Layout>
           >;
           >
+<<<<<<< HEAD
           >;
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
@@ -1114,6 +1124,33 @@ href='/pricing';
     </Layout>);
 }
   )}
+=======
+            <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our revolutionary futuristic services. 
+              Get in touch with our experts to discuss your specific needs and implementation strategy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Our Experts
+              </Link>
+              <Link
+                href="/pricing"
+                className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </Layout>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   )
 }
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

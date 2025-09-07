@@ -238,6 +238,7 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
       <div className='border-b border-gray-200 dark: border-gray-700'>'''';
         <nav className='flex space-x-8 px-6'>'';
           {['';
+<<<<<<< HEAD:src_backup/components/EnterpriseDashboard.js.jsx
             { id: 'overview', label: 'Overview', icon: BarChart3 }, '';
             { id: 'performance', label: 'Performance', icon: TrendingUp },'';
             { id: 'security', label: 'Security', icon: Shield }, '';
@@ -247,6 +248,31 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`';
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>'''';
+=======
+            { id: 'overview',}
+  label: 'Overview', icon: BarChart3,}
+}, '';
+            { id: 'performance',}
+  label: 'Performance', icon: TrendingUp,}
+},'';
+            { id: 'security',}
+  label: 'Security', icon: Shield,}
+}, '';
+            { id: 'users',}
+  label: 'Users', icon: Users,}
+},'';
+            { id: 'services',}
+  label: 'Services', icon: Server,}
+}, '';
+            { id: 'analytics',}
+  label: 'Analytics', icon: PieChart,}
+}'';
+        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id,}
+} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;}
+                ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`';}
+                : 'border-transparent text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'},
+}>'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnterpriseDashboard.js.jsx
               <Icon className='w-4 h-4'/>;
               {label}
             </button>) ) }
@@ -666,6 +692,14 @@ export const EnterpriseDashboard = () => {const { trackEvent } = useAnalytics({ 
               </div>;
             </motion.div>) }
         </AnimatePresence>;
+<<<<<<< HEAD:src_backup/components/EnterpriseDashboard.js.jsx
       </div>;
     </div>)}''`;
 ''`''`;
+=======
+      </div>
+    </div>
+  );
+}''`;
+''`''`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/EnterpriseDashboard.js.jsx

@@ -392,6 +392,7 @@ reliability, and real-world value.
 
           <div className='grid grid-cols-1 "lg":grid-cols-2 gap-8'>'
             {aiTools.map((tool, index) => (
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -432,6 +433,9 @@ reliability, and real-world value.
             </p>;
           </div>;
               <Card;
+=======
+              <Card
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={index}
 
                 className={`card-hover group border-gradient-blue relative ${`                  }

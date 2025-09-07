@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -49,6 +50,14 @@ const superToken = process.env.SUPERADMIN_TOKEN;}
   return !superToken || token = == superToken}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = $2;
+  const superToken = $2;
+  return !superToken || token === superToken
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,6 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!isAuthorized(req)) return res.status(401).json($2);
   const started = Date.now($2);
   try {
+<<<<<<< HEAD
     }
     const { text, payload } = req.body || {};
 
@@ -114,3 +124,18 @@ return res.status(500).json({ "error": "Router failure",;"
 "
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+    const { text, payload } = req.body || {},
+    const result = $2;
+    const routed = await routeToChain($2);
+    const latencyMs = $2;
+    appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } }),
+
+    return res.status(200).json({ ...result, routed })
+  } catch (e: any) {
+    const latencyMs = $2;
+    appendLog($2);
+    return res.status(500).json({ error: 'Router failure' })
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

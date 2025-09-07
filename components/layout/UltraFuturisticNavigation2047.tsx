@@ -875,6 +875,7 @@ className='"lg":hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-70
             <div className='px-2 pt-2 pb-3 space-y-1'>'
               {navigationItems.map(item => (
                 <div key={item.name}>
+<<<<<<< HEAD
                   <button,
 onClick={() => handleDropdownToggle(item && item.name
 }
@@ -993,3 +994,24 @@ const navigationItems: NavigationItem[] = [
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+                  <button
+                    onClick={() => handleDropdownToggle(item.name)}
+                    className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
+                  >
+                    <div className="flex items-center space-x-2">
+                      {item.icon}
+                      <span>{item.name}</span>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0}}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0}}
+                        transition = $2;
+export default UltraFuturisticNavigation2047,
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

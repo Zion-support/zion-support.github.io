@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) ;'
@@ -11,3 +12,12 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
 import React from 'react';'
 
   return <NextSeo {...props} />;
+=======
+import React from 'react';
+import { NextSeo } from 'next-seo';
+import { NextSeoProps } from 'next-seo';
+export type SeoProps = NextSeoProps;
+export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

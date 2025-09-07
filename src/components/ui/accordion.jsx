@@ -1,7 +1,14 @@
+<<<<<<< HEAD:src/components/ui/accordion.jsx
 'use client';"";"
 import * as React from 'react';"";"
 import * as AccordionPrimitive from '@radix-ui/react-accordion';"";"
 import { ChevronDown     } from 'lucide-react';'
+=======
+'use client';\"\";
+import * as React from 'react';\"\";
+import * as AccordionPrimitive from '@radix-ui/react-accordion';\"\";
+import { ChevronDown     } from 'lucide-react';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ui/accordion.jsx
 
 export default function Page() {import { cn  } from '@/lib/utils';'
 
@@ -18,5 +25,10 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
   </AccordionPrimitive.Content>))AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+<<<<<<< HEAD:src/components/ui/accordion.jsx
 "";"
 }}}}
+=======
+\"\";
+}}}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ui/accordion.jsx

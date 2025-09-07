@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
   }
   static getDerivedStateFromError(error) {return { "hasError": true 
@@ -14,6 +15,19 @@ import React from 'react';'
   "glow": string;
   date?: string;category?: string;
 }const "ContentCard": React.FC<ContentCardProps> = ({title;
+=======
+import React from 'react';
+import Link from 'next/link';
+interface ContentCardProps {
+  title: string,
+  description: string,
+  href: string,
+  icon: string,
+  color: string,
+  glow: string,
+  date?: string;
+  category?: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 const "ContentCard": React.FC<ContentCardProps> = ({ title;
@@ -236,6 +250,7 @@ export default ContentCard,
   )
 };
 
+<<<<<<< HEAD
 export default ContentCard;
 =======
       {/* Content */}
@@ -263,3 +278,6 @@ export default ContentCard;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+export default ContentCard;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

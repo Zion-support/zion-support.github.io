@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';'
 import React, { useState } from 'react';'
 import {
@@ -9,6 +10,20 @@ import {
   CheckCircleIcon,
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';'
+=======
+'use client';
+import React, { useState } from 'react';
+
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  service: string;
+  budget: string;
+  message: string;
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export default function ContactForm() {
   }
   const [formData, setFormData] = useState({
@@ -35,6 +50,7 @@ const { name, value;
     }
     e.preventDefault();
     setIsSubmitting(true);
+<<<<<<< HEAD
     // Simulate form submission,
 try {
       }
@@ -56,6 +72,35 @@ try {
       }
       setIsSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          budget: '',
+          message: ''
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false)
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
   };
 return (;
@@ -65,34 +110,56 @@ return (;
         <h1 className="text-4xl font-bold text-gray-900 mb-4">"
           Get in Touch
         </h1>
+<<<<<<< HEAD
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">"
           Ready to transform your business with cutting-edge technology?
           Let&apos;
 s discuss your project and create a custom solution.
+=======
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Ready to transform your business with cutting-edge technology? 
+          Let's discuss your project and how we can help you succeed.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         </p>
       </div>
       <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12">"
         {/* Contact Information */}
+<<<<<<< HEAD
         <div className="space-y-8">"
+=======
+        <div className="space-y-8">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           <div>
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">"
               Contact Information
             </h2>
+<<<<<<< HEAD
             <div className="space-y-4">"
               <div className="flex items-center space-x-3">"
                 <PhoneIcon className="w-5 h-5 text-blue-600" />"
+=======
+            
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div>
                   <p className="font-medium text-gray-900">Phone</p>"
                   <p className="text-gray-600">+1 302 464 0950</p>"
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-3">"
                 <EnvelopeIcon className="w-5 h-5 text-blue-600" />"
+=======
+              
+              <div className="flex items-center space-x-3">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div>
                   <p className="font-medium text-gray-900">Email</p>"
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>"
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-3">"
                 <MapPinIcon className="w-5 h-5 text-blue-600" />"
                 <div>
@@ -102,6 +169,17 @@ s discuss your project and create a custom solution.
               </div>
               <div className="flex items-center space-x-3">"
                 <ClockIcon className="w-5 h-5 text-blue-600" />"
+=======
+              
+              <div className="flex items-center space-x-3">
+                <div>
+                  <p className="font-medium text-gray-900">Address</p>
+                  <p className="text-gray-600">Delaware, United States</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 <div>
                   <p className="font-medium text-gray-900">Business Hours</p>"
                   <p className="text-gray-600">Monday - "Friday": "9":00 AM - "6":00 PM EST</p>"
@@ -112,10 +190,21 @@ s discuss your project and create a custom solution.
 =======
           </div>
           {/* Quick Response Promise */}
+<<<<<<< HEAD
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
             <div className="flex items-center space-x-3 mb-3">"
               <CheckCircleIcon className="w-6 h-6 text-blue-600" />"
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>"
+=======
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <div className="flex items-center space-x-3 mb-3">
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </div>
             <p className="text-blue-800">"
               We respond to all inquiries within one business day.
@@ -124,12 +213,16 @@ s discuss your project and create a custom solution.
           </div>
         </div>
         {/* Contact Form */}
+<<<<<<< HEAD
         <div />
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         <div>
           <div className="bg-white shadow-lg rounded-lg p-8">"
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">"
               Send us a Message
             </h2>
+<<<<<<< HEAD
             {submitStatus === 'success' && ('
               <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">"
                 <div className="flex items-center">"
@@ -138,21 +231,44 @@ s discuss your project and create a custom solution.
                     }
                     Thank you! Your message has been sent successfully. We&apos;
 ll get back to you within one business day.
+=======
+
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p className="text-green-800">
+                    Thank you! Your message has been sent successfully. We'll get back to you soon.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   </p>
                 </div>
               </div>
             )}
+<<<<<<< HEAD
             {submitStatus === 'error' && ('
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">"
                 <div className="flex items-center">"
                   <ExclamationTriangleIcon className="w-5 h-5 text-red-600 mr-2" />"
                   <p className="text-red-800">"
                     }
+=======
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-red-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <p className="text-red-800">
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                     Sorry, there was an error sending your message. Please try again or contact us directly.
                   </p>
                 </div>
               </div>
             )}
+<<<<<<< HEAD
             <form onSubmit={handleSubmit} className="space-y-6">"
               <div className="grid grid-cols-1 "sm":grid-cols-2 gap-4">"
                 <div>
@@ -192,11 +308,59 @@ className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm "focus":
 type="text""
                   id="company""
                   name="company""
+=======
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                   value={formData.company}
                   onChange={handleInputChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-blue-500""
                   placeholder="Your company name"" />
               </div>
+<<<<<<< HEAD
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
                   Service Interest
@@ -261,6 +425,73 @@ type="submit""
                     ? 'bg-gray-400 cursor-not-allowed''
                     : 'bg-blue-600 "hover":bg-blue-700 "focus":outline-none "focus":ring-2 "focus":ring-offset-2 "focus":ring-blue-500''
                 } transition-colors`}`
+=======
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-development">Mobile Development</option>
+                    <option value="ai-automation">AI & Automation</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-1">
+                    Budget Range
+                  </label>
+                  <select
+                    id="budget"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select budget range</option>
+                    <option value="under-10k">Under $10,000</option>
+                    <option value="10k-50k">$10,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="over-100k">Over $100,000</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full py-3 px-4 rounded-md font-medium text-white ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                } transition-colors`}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}'
               </button>

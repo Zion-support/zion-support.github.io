@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
@@ -31,6 +32,15 @@ res.status(200).json({ course })
 main
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const dataPath = path.join(process.cwd(), 'datalearncourses.json')
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     res.status(200).json({ course })
 
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -47,7 +57,7 @@ function handler() {
     const { id } = req.query
     const course = courses.find ((c: any) => c.id === id)
     if (return res.status (404).json ({ error: 'Course not found' }), ) {
-  $2
+  { error: "Invalid request" }
 }
 
     res.status (200).json ({ course });
@@ -61,6 +71,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 main
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -73,3 +84,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

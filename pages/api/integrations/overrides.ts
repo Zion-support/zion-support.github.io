@@ -34,6 +34,7 @@ export default function handler() {
       "override": updated.overrides.find((o) => o.jobId === jobId)
     });
   }
+<<<<<<< HEAD
   return res.status(405).json({ "error": "Method not allowed" });"
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -64,3 +65,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+  return res.status(405).json({ error: 'Method not allowed' })
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

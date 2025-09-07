@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const metadata = {
   }
@@ -22,6 +27,7 @@ and drive growth. Our expert team delivers high-quality, scalable solutions.
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className="max-w-6xl mx-auto">"
           {/* Features Grid */}
           <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-16">"
@@ -210,11 +216,39 @@ href="/services""
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
 
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 export const metadata = { "title": 'AI Customer Support | Zion Tech Group' };'
@@ -949,3 +983,7 @@ href=""mailto":kleber@ziontechgroup.com""
   );
 }
 
+=======
+  )
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { v4, as, uuidv4 } from "uuid";"
 import { readJsonFile, writeJsonFile } from "../../utils/db";"
 import type { Job } from "../../utils/types";"
 import { rateLimit } from "../../utils/rateLimit";"
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db';
+import type { Job } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+const FILE = 'jobs.json';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const FILE = "jobs.json";"
 
@@ -70,6 +82,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.method === "POST") {"
     }
     const {
+<<<<<<< HEAD
       }
       title,
       description,
@@ -78,6 +91,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
+=======
+      title
+      description
+      category
+      requiredSkills = []
+      budgetMinUsd
+      budgetMaxUsd
+      deliveryDeadlineIso
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       clientEmail
     } = req.body || {};
 
@@ -88,6 +110,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     const nowIso = new Date().toISOString();
+<<<<<<< HEAD
     const "job": Job = {
       }
       "id": uuidv4(),
@@ -106,6 +129,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       "status": "New","
       "createdAtIso": nowIso,
       "updatedAtIso": nowIso
+=======
+
+    const job: Job = {
+      id: uuidv4()
+      title: String(title)
+      description: String(description)
+      category: String(category || '')
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : []
+      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined
+      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined
+      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined
+      clientEmail: String(clientEmail)
+      status: 'New'
+      createdAtIso: nowIso
+      updatedAtIso: nowIso
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     };
 
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
@@ -193,6 +232,7 @@ export default async function handler(req, res) {
 return;
   }
 
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, POST");"
   res.status(405).end("Method Not Allowed");"
 }
@@ -210,3 +250,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

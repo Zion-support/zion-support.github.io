@@ -7,6 +7,7 @@ const InputOTP = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof OTPInput>;
       containerClassName;
     )}
+<<<<<<< HEAD:src_disabled_1757239864/components/ui/input-otp.tsx
     className={cn("disabled:cursor-not-allowed", className)}
     {...props}/>;
 ))InputOTP && InputOTP.displayName = 'InputOTP';InputOTP.displayName = "InputOTP";
@@ -24,6 +25,31 @@ InputOTPSlot.displayName = "InputOTPSlot";
 const InputOTPSeparator = React.forwardRef<;
   React.ElementRef<"div">,React.ComponentPropsWithoutRef<"div">;
 >(({ ...props }, ref) => (<div ref={ref} role="separator" {...props}>;
+=======
+    className={cn(\"disabled:cursor-not-allowed\", className)}
+    {...props}/>;"
+))InputOTP && InputOTP.displayName = 'InputOTP';InputOTP.displayName = \"InputOTP\";
+
+const InputOTPGroup = React && React.forwardRef<;
+  React && React.ElementRef<'div'>,React && React.ComponentPropsWithoutRef<'div'>;
+>(({ className, ...props }, ref) => (<div ref={ref} className={cn('flex items-center', className)} {...props} />;
+))InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
+
+const InputOTPGroup = React.forwardRef<;"
+  React.ElementRef<\"div\">,React.ComponentPropsWithoutRef<\"div\">;
+>(({ className, ...props }, ref) => (const InputOTPSlot = React.forwardRef<;"
+  React.ElementRef<\"div\">,React.ComponentPropsWithoutRef<\"div\"> & { index: number}
+}
+>(({ index, className, ...props }, ref) => {const inputOTPContext = React.useContext(OTPInputContext) as any;}
+}
+const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];"
+InputOTPSlot.displayName = \"InputOTPSlot\";"
+InputOTPSlot.displayName = \"InputOTPSlot\";
+
+const InputOTPSeparator = React.forwardRef<;"
+  React.ElementRef<\"div\">,React.ComponentPropsWithoutRef<\"div\">;"
+>(({ ...props }, ref) => (<div ref={ref} role=\"separator\" {...props} />;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ui/input-otp.tsx
     <Dot />;
   </div>;
 ))</div>;
@@ -62,4 +88,9 @@ const InputOTPSeparator = React.forward_ref<;
     <Dot />;
   </div>))InputOTPSeparator.display_name = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }InputOTPSeparator.displayName = 'InputOTPSeparator';
+<<<<<<< HEAD:src_disabled_1757239864/components/ui/input-otp.tsx
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+=======
+
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ui/input-otp.tsx

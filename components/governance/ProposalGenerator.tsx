@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true 
 }componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}'
   render() {if (this.state.hasError) ;
@@ -37,6 +38,12 @@ export type ProposalForm = {
 
   language?: string;
   targetInstitution: string,
+=======
+import React, { useState } from 'react';
+import EnhancedLayout from '../layout/EnhancedLayout';
+export type ProposalType = $2;
+export type ProposalForm = $2;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
@@ -87,6 +94,7 @@ const [statusMessage, setStatusMessage] = useState('');'
     setIsGenerating(true);
     setStatusMessage('Generating draft...');'
     try {
+<<<<<<< HEAD
       }
       const res = await fetch('/api/proposals/generate', {'
         }
@@ -104,6 +112,19 @@ const data = await res.json();
       }
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');'
+=======
+      const res = await fetch('/api/proposals/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)}),
+      const data = await res.json($2);
+      setDraftMarkdown($2);
+      setDraftJson($2);
+      setStatusMessage('Draft ready. You can edit and export.')
+    } catch (e: any) {
+      console.error($2);
+      setStatusMessage('Failed to generate. You can edit manually and export.')
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     } finally {
       }
       setIsGenerating(false);
@@ -159,6 +180,9 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   async function handleExport() {
     setStatusMessage($2);
     try {
@@ -316,6 +340,7 @@ const res = await fetch('/api/proposals/submit', {;'
       setStatusMessage('Export failed')
     }
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       const data = await res && res.json();
@@ -356,6 +381,8 @@ const data = await res && res.json();
       setStatusMessage('Submission failed');'
       setStatusMessage('Submission failed')'
     }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...'),

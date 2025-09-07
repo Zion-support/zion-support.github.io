@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const metadata = {
   }
@@ -108,6 +113,7 @@ export default function AiPredictiveAnalyticsPage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<<<<<<< HEAD
           <FeatureCard
             icon="📈"
             title="Demand Forecasting"
@@ -187,6 +193,29 @@ export default function AiPredictiveAnalyticsPage() {
             <h2 className="text-3xl font-bold text-white mb-4">How It Works</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Our 4-step process ensures accurate predictions and actionable insights.
+=======
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -286,5 +315,9 @@ export default function AiPredictiveAnalyticsPage() {
         </section>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

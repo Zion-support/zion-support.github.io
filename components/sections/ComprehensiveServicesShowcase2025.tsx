@@ -131,6 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   },
 
+<<<<<<< HEAD
 return (;
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;"
       {/* Animated Background Elements */}
@@ -139,6 +140,15 @@ return (;
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>'
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>'
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>'
+=======
+  return (
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
 
       <div className='relative max-w-7xl mx-auto px-4 "sm": px-6 "lg":px-8'>'
@@ -181,6 +191,7 @@ services, IT solutions, and AI innovations designed to transform,
 your business and drive success in the digital age.
           </p>
         </motion.div>
+<<<<<<< HEAD
 
           transition={{ "duration": 0 && 0.8 
 }
@@ -202,6 +213,8 @@ your business and drive success in the digital age.
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
         {/* Service Categories */}
 <<<<<<< HEAD
@@ -346,6 +359,7 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                         {service.name}
                       </h4>
+<<<<<<< HEAD
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
 
                     <div className="mb-4">;"
@@ -421,6 +435,12 @@ key={featureIndex}
                             </li>
                           ))}
 <<<<<<< HEAD
+=======
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                     {/* Features */}
                     <div className="mb-4">
@@ -513,6 +533,7 @@ key={featureIndex}
                       </a>
                     </div>
 
+<<<<<<< HEAD
                     {/* Hover Effect Overlay *
 }
 <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300 pointer-events-none' />;'
@@ -531,6 +552,11 @@ key={featureIndex}
                     </div>;{/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-"hover":opacity-100 transition-opacity duration-300 pointer-events-none" />;"
                   </motion && motion.div>;
+=======
+                    {/* Hover Effect Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </motion.div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 ))}
               </div>;
             </motion && motion.div>;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/zapier/jobs-posted.ts
 
 
@@ -14,6 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -89,7 +92,7 @@ export default /**
 function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
+  { error: "Invalid request" }
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
@@ -101,6 +104,7 @@ function handler() {
 }
 <<<<<<< HEAD:pages_backup/api/integrations/zapier/jobs-posted.ts
 
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -116,3 +120,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

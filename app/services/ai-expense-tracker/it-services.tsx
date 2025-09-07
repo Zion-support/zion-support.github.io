@@ -464,6 +464,7 @@ export default function ITServicesPage() {
                     <div className="text-sm text-gray-600">
                       <strong>Target Users:</strong> {service.targetUsers}
                     </div>
+<<<<<<< HEAD
                   </div>
                   </motion.div>
                 );
@@ -699,6 +700,8 @@ export default function ITServicesPage() {
       category: 'High-Performance Computing'
     }
   ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
                   <div className="flex flex-col sm:flex-row gap-2">
                     <Link

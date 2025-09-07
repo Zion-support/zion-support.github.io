@@ -206,6 +206,7 @@ setTimeout(() => {
     }, 4000)
   };
 
+<<<<<<< HEAD
 return (;
     <>
       <Head>
@@ -366,6 +367,38 @@ export default function WebsitePerformanceMonitorPage() {const [isAnalyzing, set
           </p>;
           <div className='flex flex-col "sm":flex-row gap-6 justify-center'>;'
             <Button;
+=======
+  return (
+    <>
+      <Head>
+        <title>Website Performance Monitor - Zion Tech Group | Real-Time Website Monitoring Tool</title>
+        <meta name="description" content="Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations." />
+        <meta property="og:title" content="Website Performance Monitor - Zion Tech Group" />
+        <meta property="og:description" content="Real-time website performance monitoring with Core Web Vitals tracking and optimization recommendations." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        
+        <div className="relative z-10 container-cursor text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+            <Activity className="w-4 h-4 mr-2" />
+            Real-Time Performance Monitoring
+          </div>
+          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+            Website Performance Monitor
+          </h1>
+          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
+            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, 
+            and AI-powered optimization recommendations. Never let performance issues impact your users again.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               onClick={handleAnalyzeWebsite}
 
               size='lg''
@@ -444,6 +477,7 @@ href='#pricing';'
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
       {/* Metrics Section */}
 <section className='section-padding bg-gradient-cursor'>;'
         <div className='container-cursor'>;'
@@ -610,6 +644,13 @@ href='#pricing';'
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 
       {/* Metrics Section */}
+=======
+          </div>
+        </div>
+      </section>
+
+      {/* Metrics Section */}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -788,6 +829,7 @@ needs.
 
           <div className='grid grid-cols-1 "md":grid-cols-3 gap-8'>'
             {pricing.map((plan, index) => (
+<<<<<<< HEAD
       <section id='pricing' className='section-padding bg-gradient-cursor'>;'
 
         <div className='container-cursor'>;'
@@ -808,6 +850,9 @@ needs.
             {metrics.map ((metric, index) => (
               <Card;
                 }
+=======
+              <Card
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
                 key={index}
 
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}`
@@ -913,6 +958,7 @@ href='/contact''
               </Card>
             ))}
       {/* CTA Section */}
+<<<<<<< HEAD
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>;'
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-["size":20px_20px] opacity-10' />;'
@@ -944,6 +990,31 @@ variant='outline';'
               size='lg''
 
               className='border-white text-white "hover":bg-white "hover":text-blue-600 shadow-2xl''
+=======
+      <section className="section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+        <div className="container-cursor text-center relative z-10">
+          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
+            Ready to Monitor Your Website Performance?
+          </h2>
+          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Join thousands of businesses using our monitoring platform to keep their websites fast and reliable.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
+              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             >
               Schedule Demo
             </Button>

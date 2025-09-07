@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/ContentQualityDashboard.js.jsx
  const ContentQualityDashboard = ({ className = '    }) => {'
 
 
@@ -7,3 +8,12 @@
  const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] =;'
   useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance () ;'
   const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''"";
+=======
+const ContentQualityDashboard = (
+
+ const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] =;
+  useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance () ;
+  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''\"\";) => {
+  return $3;}
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/ContentQualityDashboard.js.jsx

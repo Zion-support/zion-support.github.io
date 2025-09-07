@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import {
   getZionDesignMap
   buildTokenSet
@@ -30,7 +35,7 @@ export default async function handler(req, res) {
       fetchLovableTokens()
     ]);
     const tokens = {
-      colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) },
+      colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) }
       typography: {
         fontSizes: {
           ...localTokens.typography.fontSizes
@@ -199,6 +204,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 
+<<<<<<< HEAD
 
 
 
@@ -220,3 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

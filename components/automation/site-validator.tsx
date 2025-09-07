@@ -68,6 +68,7 @@ export default function SiteValidator({ report }: Props) {
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
             {report.brokenLinks.slice(0, 500).map((b, i) => (
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{b.page} → {b.url}</span><span className="text-gray-500">{b.status}</span></li>
+<<<<<<< HEAD
 =======
       {report && report.brokenLinks.length > 0 && (
         <section>;"
@@ -114,18 +115,24 @@ export default function SiteValidator() { return null; }
             {report && report.brokenLinks.slice(0, 500).map((b, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{b && b.page} → {b && b.url}</span><span className=\"text-gray-500\" />{b && b.status}</span></li>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             ))}
           </ul>
         </section>
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       {report.ogIssues.length > 0 && (
         <section>
           <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>
           <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
             {report.ogIssues.map((o, i) => (
               <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join(', ')}</span></li>
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -143,10 +150,13 @@ export default function SiteValidator() { return null; }
             {report && report.ogIssues.map((o, i) => (<li key={i} className=\"flex justify-between gap-4\" /><span className=\"truncate\" />{o && o.page}</span><span className=\"text-gray-500 truncate\" />{o && o.missing.join(', ')}</span></li>;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             ))}
           </ul>
         </section>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>)</div>;
 )})}
@@ -206,6 +216,8 @@ if (return <div > No validation report yet.</div>) {$2;
         </section>)}
 
     </div>)
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     </div>
 );
 }

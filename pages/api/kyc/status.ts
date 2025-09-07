@@ -29,10 +29,18 @@ export default function handler() {
   const profile = db[userId];
   if (!profile) return res.status(404).json({ "error": "Profile not found" });"
   res.status(200).json({
+<<<<<<< HEAD
     }
     "ok": true,
     profile,
     "requiredDocuments": getRequiredDocuments(profile.role),
     "optionalDocuments": getOptionalDocuments(profile.role)
   });
+=======
+    ok: true
+    profile
+    requiredDocuments: getRequiredDocuments(profile.role)
+    optionalDocuments: getOptionalDocuments(profile.role)
+  })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

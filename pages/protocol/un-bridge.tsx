@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { useState } from 'react';
 export default function UNBridge() {
   const [form, setForm] = useState($2);
@@ -146,6 +149,7 @@ export default function UNBridge() {
             </div>
           )}
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   )
@@ -173,4 +177,9 @@ export default function unbridge() {
     </Layout>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+      </div>
+    </div>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

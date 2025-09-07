@@ -142,6 +142,7 @@ className='absolute inset-0 opacity-30''
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)','
             ]
           }}
+<<<<<<< HEAD
           transition={{
             }
             "duration": 20,
@@ -152,6 +153,11 @@ className='absolute inset-0 opacity-30''
             "duration": 20,
             "repeat": Infinity
 
+=======
+          transition = $2;
+            repeat: Infinity,
+            ease: "easeInOut"
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           }}
 
         />

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -648,6 +651,7 @@ export default function SearchPage() {
       <SmartFooter />
     </div>
   )
+<<<<<<< HEAD
 }
 =======
 =======
@@ -700,3 +704,6 @@ export default function SearchPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

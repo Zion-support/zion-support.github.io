@@ -54,8 +54,11 @@ export async function getServerSideProps() {
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { routes, generatedAt } }
+<<<<<<< HEAD
 }
   );
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 "

@@ -608,6 +608,7 @@ key={index}
 
 
       {/* Services Grid */}
+<<<<<<< HEAD
       <section className='section-padding bg-gradient-cursor'>'
         <div className='container-cursor'>'
           <div className='text-center mb-20'>'
@@ -787,6 +788,8 @@ with professional-grade features and competitive pricing.
                         <h3 className='text - 2xl font - bold text - white'>;'
 
                           {service.name}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">

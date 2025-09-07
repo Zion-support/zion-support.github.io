@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -293,6 +296,7 @@ export default function ResourcesPage() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
           >;
@@ -368,3 +372,6 @@ export default function ResourcesPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

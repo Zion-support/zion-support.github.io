@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req);
@@ -8,9 +11,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
   return res.status(200).json({
-    title: 'Additional Insight',
+    title: 'Additional Insight'
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'
   });
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -22,4 +26,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Slide added' });
 >>>>>>> origin/main
+=======
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

@@ -96,6 +96,7 @@ export default async function handler(
     if (useSupabase) {
       }
       const table = type;
+<<<<<<< HEAD
 let query = client && client.from(table).select('*', { "count": 'exact',;'
 });
       if (params && params.search) {
@@ -111,6 +112,27 @@ query = query.or(
             '%''
         );
 
+=======
+      let query = client.from(table).select('*', { count: 'exact' });
+      if (params.search) {
+        // heuristic: search name/title/email
+        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
+      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          if (v !== undefined) query = query.eq(k, v)
+        }
+      }
+      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
+      const from = params.page * params.pageSize;
+      const to = from + params.pageSize - 1;
+      const { data, error, count } = await query.range(from, to);
+      if (error) return res.status(500).json({ error: error.message });
+      if (params.format === 'csv') {
+        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
+        return res.status(200).send(toCsv(data || []))
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       }
       if (params.sort)query = query.order(params.sort, { "ascending": params.order === 'asc','
 };
@@ -174,6 +196,7 @@ return (;
           );
         });
       }
+<<<<<<< HEAD
 
 const total = filtered.length;
 
@@ -191,6 +214,18 @@ res.setHeader('Content-Type', 'text/csv');'
         );
         return res.status(200).send(toCsv(pageItems));
       return res.status(200).json({ "items": pageItems, total });
+=======
+      const total = filtered.length;
+      const start = params.page * params.pageSize;
+      const end = start + params.pageSize;
+      const pageItems = filtered.slice(start, end);
+      if (params.format === 'csv') {
+        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
+        return res.status(200).send(toCsv(pageItems))
+      }
+      return res.status(200).json({ items: pageItems, total })
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     }
   }
 

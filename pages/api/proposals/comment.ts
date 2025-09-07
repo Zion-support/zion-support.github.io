@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
 import path from "path";"
 const FILE_PATH = path.join(process.cwd(), "dataproposalscomments.json");"
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json");
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 async function ensure() {
   }
   await fs.ensureFile(FILE_PATH);
@@ -27,6 +34,7 @@ export default async function handler() {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
+<<<<<<< HEAD
       }
       "id": Date.now().toString(),
       "proposalId": body.proposalId,
@@ -34,6 +42,38 @@ export default async function handler() {
       "author": body.author || "anon","
       "text": body.text || "","
       "createdAt": new Date().toISOString()
+=======
+      id: Date.now().toString()
+      proposalId: body.proposalId
+      region: body.region |"Global"
+      author: body.author |"anon"
+      text: body.text |""
+      createdAt: new Date().toISOString()
+    }
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra'
+import path from 'path';
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json')
+async function ensure() {
+  await fs.ensureFile({ error: "Invalid request" });
+  try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2}) }
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  await ensure({ error: "Invalid request" });
+  if (req.method === 'GET') {
+    const data = await fs.readJson({ error: "Invalid request" });
+    return res.status(200).json(data)
+  }
+  if (req.method = { error: "Invalid request" };
+    const data = await fs.readJson({ error: "Invalid request" });
+    const comment = {
+
+      text: body.text || ''
+
+      createdAt: new Date().toISOString()
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
     };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { "spaces": 2 });
@@ -57,7 +97,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json');
 async function ensure() {;
   await fs.ensureFile(FILE_PATH);
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {
@@ -91,14 +131,14 @@ function handler() {
   await ensure ();
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
   }
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     const body = req.body || {}
     const data = await fs.read_json (FILE_PATH);
@@ -117,8 +157,12 @@ if ( {) {
   res.status (405).json ({ error: "Method not allowed" });
 }
 
+<<<<<<< HEAD
 =======
   
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

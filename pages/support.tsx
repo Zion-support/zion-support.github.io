@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -777,6 +780,7 @@ export default Support;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default SupportPage;
 =======
 =======
@@ -829,3 +833,6 @@ export default function SupportPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+export default SupportPage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

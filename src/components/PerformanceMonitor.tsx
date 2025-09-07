@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 const PerformanceMonitor: React.FC = () => {
   React.useEffect(() => {
     // Monitor performance metrics
@@ -22,3 +23,5 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';'
 import Link from 'next/link';'
+=======
+import React from 'react'
+import { Metadata } from 'next'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 
 
 
+<<<<<<< HEAD
 export const metadata = {
   title: 'AI Project Management Suite | Zion Tech Group',
   description: 'Transform your project management with AI-powered automation, intelligent resource allocation, and predictive analytics. Boost team productivity and project success rates.',
@@ -493,4 +499,18 @@ href=""tel":+13024640950""
       </section>
     </div>
   );
+=======
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai project management suite services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

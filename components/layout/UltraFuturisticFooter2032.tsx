@@ -950,6 +950,7 @@ target='_blank';
                 Stay Ahead with Future Technology;
 
           {/* Newsletter Signup */}
+<<<<<<< HEAD
           <motion.div;
             variants={item_variants}
             className='border - t border - cyan - 500 / 30 pt - 12';
@@ -1045,6 +1046,17 @@ type='email''
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Stay Ahead with Future Technology
+              </h3>
+              <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, 
+                and autonomous systems development. Join our community of future technology pioneers.
+              </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg "hover":from-cyan-600 "hover":to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 "hover":shadow-cyan-500/50 transform "hover":scale-105'>                  Subscribe                Stay Ahead with Future Technology;'

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 
 
@@ -51,6 +52,8 @@ interface PerformanceMetrics {
   "cumulativeLayoutShift": number;
   "firstInputDelay": number;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 interface PerformanceMetrics {
   loadTime: number,
   firstContentfulPaint: number,
@@ -62,6 +65,7 @@ interface PerformanceMetrics {
 
   className = '','
 
+<<<<<<< HEAD
               '(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw';'
           }optimizedCount++;
         }
@@ -69,6 +73,57 @@ interface PerformanceMetrics {
       }
           img.loading = $2;
 >>>>>>> origin/main
+=======
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    timeToInteractive: 0
+  });
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
+  const [showMetrics, setShowMetrics] = useState(false);
+
+  // Measure performance metrics
+  const measurePerformance = useCallback(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+      
+      const newMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp.startTime : 0,
+        cumulativeLayoutShift: 0, // Would need to be measured with CLS API
+        firstInputDelay: 0, // Would need to be measured with FID API
+        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
+      };
+
+      setMetrics(newMetrics)
+    }
+  }, []);
+
+  // Optimize images
+  const optimizeImages = useCallback(async () => {
+    setIsOptimizing(true);
+    setOptimizationStatus('Optimizing images...');
+
+    try {
+      const images = document.querySelectorAll('img');
+      let optimizedCount = 0;
+
+      for (const img of Array.from(images)) {
+        if (img.complete && img.naturalWidth > 0) {
+          // Add lazy loading
+          img.loading = 'lazy';
+          
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
           // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

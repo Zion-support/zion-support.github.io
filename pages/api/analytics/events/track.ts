@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics');
@@ -21,12 +24,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const nowIso = new Date().toISOString();
   const event = {
-    name,
-    page,
-    userType,
-    properties,
-    at: at && typeof at === 'string' ? at : nowIso,
-    ua: req.headers['user-agent'] || '',
+    name
+    page
+    userType
+    properties
+    at: at && typeof at === 'string' ? at : nowIso
+    ua: req.headers['user-agent'] || ''
     ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string
   };
 
@@ -40,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
   res.status(200).json({ ok: true });
 }
+<<<<<<< HEAD
 =======
   res.status(200).json({ ok: true })
 
@@ -56,3 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

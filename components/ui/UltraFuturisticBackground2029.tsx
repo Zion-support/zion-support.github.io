@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   "x": number;
   "y": number;
   "coordinate_x": number;
@@ -75,6 +76,21 @@ canvas.height = window.innerHeight
     // Mouse move handler for interactive effects,
 const handleMouseMove = ("e": MouseEvent) => {
 
+=======
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface Particle {
+  x: number,
+  y: number,
+  vx: number,
+  vy: number,
+  size: number,
+  opacity: number,
+  color: string,
+  type: 'energy' | 'data' | 'quantum' | 'neon',
+  life: number,
+  maxLife: number
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }
 
 setMousePosition({ "x": e.clientX, "y": e.clientY })
@@ -531,6 +547,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20''
             "opacity": [0.2, 0.4, 0.2]
           }}
           transition={{
+<<<<<<< HEAD
             }
             "duration": 8,
             "repeat": Infinity,
@@ -590,6 +607,52 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacit
 
             "duration": 10,
             "repeat": Infinity, />
+=======
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
+          animate={{
+            rotate: [45, 405];
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
+          animate={{
+            rotate: [-45, 315];
+            opacity: [0.2, 0.6, 0.2]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       </div>
 
 <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />'
@@ -604,6 +667,7 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacit
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
       {/* Content */}
+<<<<<<< HEAD
       <div className='relative z-10'>{children}</div>;'
     </div>;
   ){/* Content */}
@@ -648,6 +712,8 @@ className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacit
     </div>
   );      {/* Content */}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       <div className="relative z-10">
         {children}
       </div>

@@ -5,6 +5,9 @@
 
 >>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
@@ -26,12 +29,12 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
     let content = slide.content;
     try {
       const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4o-mini'
         messages: [
-          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
+          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' }
           { role: 'user', content: prompt }
-        ],
-        temperature: 0.6,
+        ]
+        temperature: 0.6
         response_format: { type: 'json_object' } as any
       });
       const raw = chat.choices?.[0]?.message?.content || '{}';
@@ -48,6 +51,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
 <<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
 =======
 
 =======
@@ -63,3 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

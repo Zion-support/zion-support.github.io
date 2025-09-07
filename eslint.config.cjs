@@ -1,6 +1,12 @@
 const js = require('@eslint/js');
+<<<<<<< HEAD
 const tseslint = require('@typescript-eslint/eslint-plugin');
 const tsparser = require('@typescript-eslint/parser');
+=======
+const reactHooks = require('eslint-plugin-react-hooks');
+const reactRefresh = require('eslint-plugin-react-refresh');
+const typescriptEslint = require('@typescript-eslint/eslint-plugin');
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 module.exports = [
   {
@@ -144,6 +150,7 @@ module.exports = [
       "no-var": "warn",
       "no-undef": "off"
     }
+<<<<<<< HEAD
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -196,5 +203,7 @@ module.exports = [
         jest: 'readonly',
       },
     },
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   }
 ];

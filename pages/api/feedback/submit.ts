@@ -11,6 +11,7 @@ export default function handler() {
     return res.status(400).json({ "error": "Missing responseId or rating" });"
   }
   const entry = {
+<<<<<<< HEAD
     }
     "id": responseId,
     rating,
@@ -19,10 +20,20 @@ export default function handler() {
     "aiModel": String(aiModel || ""),"
     "userAgent": req.headers["user-agent"] || "","
     "ts": Date.now()
+=======
+    id: responseId
+    rating
+    comment: String(comment || '').slice(0, 2000)
+    pagePath: String(pagePath || '')
+    aiModel: String(aiModel || '')
+    userAgent: req.headers['user-agent'] || ''
+    ts: Date.now()
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   };
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
+<<<<<<< HEAD
   return res.status(200).json({ "ok": true });
 }
 =======
@@ -66,3 +77,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+  return res.status(200).json({ ok: true })
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

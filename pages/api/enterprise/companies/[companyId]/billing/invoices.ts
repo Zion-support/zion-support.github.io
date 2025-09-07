@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { store } from "../../../../../../utils/data/enterpriseStore";"
 export default function handler() {
   }
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../../../../utils/data/enterpriseStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const { companyId } = req.query;
   if (!companyId || typeof companyId !== "string") {"
     }
@@ -22,7 +28,7 @@ function handler() {
   const { company_id } = req.query;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (400).json ({ error: "company_id required" });
   }
@@ -56,6 +62,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -81,3 +88,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

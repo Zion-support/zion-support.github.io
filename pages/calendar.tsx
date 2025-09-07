@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
   Calendar,
   Clock,
@@ -45,6 +48,7 @@
     role: "Head of Cybersecurity",
     expertise: "Cybersecurity, Risk Management",
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -93,4 +97,6 @@ export default function CalendarPage() {
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

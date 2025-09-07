@@ -30,6 +30,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
 
 import {;
   getWhitepaperSections,;
@@ -111,6 +112,12 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;`
             <article className='prose "dark":prose-invert max-w-none whitespace-pre-wrap'>;'
               {s.contentMd}
       </div>;
+=======
+import Link from 'next/link';
+import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+export default function WhitepaperBuilderPage() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const [edition, setEdition] = useState<WhitepaperEdition>('full'),
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]),
 

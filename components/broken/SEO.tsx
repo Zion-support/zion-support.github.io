@@ -36,6 +36,7 @@ interface SEOProps {
   nofollow?: boolean
 }
 
+<<<<<<< HEAD
 const "SEO": React.FC<SEOProps> = ({
   }
   title;
@@ -336,6 +337,15 @@ const SEO: React.FC<SEOProps> = ({'
   image = '/images/zion-tech-group-og-image.jpg''
   url = 'https://ziontechgroup.com''
   type = 'website'
+=======
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
+  image = '/images/zion-tech-group-og-image.jpg';
+  url = 'https://ziontechgroup.com';
+  type = 'website';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   publishedTime;
   modifiedTime'
   author = 'Zion Tech Group'

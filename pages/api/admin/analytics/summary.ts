@@ -1,11 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 interface AnalyticsEvent {
 =======
 interface EventRow {
@@ -89,6 +97,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/main
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -110,3 +119,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

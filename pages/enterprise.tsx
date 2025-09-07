@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
@@ -22,11 +23,15 @@ import {
 import MainLayout from '../components/layout/MainLayout';
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/enterprise.tsx
 
 
@@ -46,6 +51,8 @@ import type { GetServerSideProps } from 'next';
 
 import type { GetServerSideProps } from 'next',;
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -74,6 +81,7 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/enterprise.tsx
 
 import type { GetServerSideProps } from 'next';
@@ -132,3 +140,5 @@ export default function EnterprisePage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

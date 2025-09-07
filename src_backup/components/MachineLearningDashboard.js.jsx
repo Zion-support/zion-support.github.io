@@ -21,7 +21,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
             createModel({}
                 name: newModelForm.name, type: newModelForm.type, framework: newModelForm.framework;
             })'';
+<<<<<<< HEAD:src_backup/components/MachineLearningDashboard.js.jsx
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' })setShowCreateModel(false)'';
+=======
+            setNewModelForm({ name: '',}
+  type: 'classification', framework: 'tensorflow',}
+})setShowCreateModel(false)'';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/MachineLearningDashboard.js.jsx
             trackEvent('ml', dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent])const hyperparameters = {}
   learningRate: 0.001, batchSize: 32, epochs: 100, '';
@@ -46,7 +52,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
             try {}
                 const input = JSON.parse(predictionForm.input)const result = await makePrediction(predictionForm.modelId, input)'';
                 // console.log('Prediction result: ', result)'';
+<<<<<<< HEAD:src_backup/components/MachineLearningDashboard.js.jsx
                 setPredictionForm({ modelId: '', input: '' })'';
+=======
+                setPredictionForm({ modelId: '',}
+  input: '',}
+})'';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/MachineLearningDashboard.js.jsx
                 trackEvent('ml', dashboard',prediction_made')}
             catch (error) {}
 '';
@@ -145,6 +157,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
       {/* Navigation Tabs */}'''';
       <div className='flex border-b border-gray-200 dark:border-gray-700'>'';
         {['';
+<<<<<<< HEAD:src_backup/components/MachineLearningDashboard.js.jsx
             { id: 'overview', label: 'Overview', icon: BarChart3 }, '';
             { id: 'models', label: 'Models', icon: Brain },'';
             { id: 'training', label: 'Training', icon: Activity }, '';
@@ -153,6 +166,28 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id''`;
                 ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`';
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>'''';
+=======
+            { id: 'overview',}
+  label: 'Overview', icon: BarChart3,}
+}, '';
+            { id: 'models',}
+  label: 'Models', icon: Brain,}
+},'';
+            { id: 'training',}
+  label: 'Training', icon: Activity,}
+}, '';
+            { id: 'predictions',}
+  label: 'Predictions', icon: Target,}
+},'`';
+            { id: 'analytics',}
+  label: 'Analytics', icon: TrendingUp,}
+}`'`';
+        ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() = /> setActiveTab(id,}
+} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id''`;}
+                ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`';}
+                : 'border-transparent text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'},
+}>'''';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/MachineLearningDashboard.js.jsx
             <Icon className='w-4 h-4'/>;
             <span>{label}</span>;
           </button>) ) }
@@ -627,6 +662,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {const { trackEv
               </div>;
             </motion.div>) }
         </AnimatePresence>;
+<<<<<<< HEAD:src_backup/components/MachineLearningDashboard.js.jsx
       </div>;
     </div>)}''`;
 ''`''`;
+=======
+      </div>
+    </div>
+  );
+}''`;
+''`''`;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/components/MachineLearningDashboard.js.jsx

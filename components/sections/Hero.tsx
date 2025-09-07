@@ -182,6 +182,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Stats Section */}
         {stats && (
+<<<<<<< HEAD
 <div
 }
 className='grid grid-cols-2 "md": grid-cols-4 gap-6 "md":gap-8 max-w-5xl mx-auto animate-fade-in''
@@ -206,10 +207,26 @@ className='grid grid-cols-2 "md": grid-cols-4 gap-6 "md":gap-8 max-w-5xl mx-auto
 }
                 </div>;
               </div>;
+=======
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative">
+                  <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
+                    {stat.value}
+                  </div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
+                  {stat.label}
+                </div>
+              </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
             ))}
           </div>
         )}
 
+<<<<<<< HEAD
 <div,
 className='mt-16 "md":mt-20 animate-fade-in''
             </div>
@@ -392,6 +409,8 @@ export default Hero;
                 </div>;
               </div>))}
           </div>)}
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
         {/* Trust Indicators */}
 <<<<<<< HEAD
         <div;

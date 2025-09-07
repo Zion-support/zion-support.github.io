@@ -8,7 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 }
 
-      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.";
   });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -31,6 +31,7 @@ export default function handler(req, res) {
   }
 }
 }
+<<<<<<< HEAD
 
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -44,3 +45,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

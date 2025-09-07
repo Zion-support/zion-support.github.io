@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from "next";"
 import { randomUUID } from "crypto";"
 import { promises as fs } from "fs";"
 import { Epub } from "epub-gen";"
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
+import { promises as fs } from 'fs';
+const Epub = require('epub-gen');
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export const config = {
   }
@@ -88,9 +98,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/main
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || 'Zion',
+    title: project.meta.title
+    author: project.meta.author
+    publisher: project.meta.publisher || 'Zion'
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))
   };
 
@@ -138,6 +148,7 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;')
 }
+<<<<<<< HEAD
 =======
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
@@ -201,3 +212,7 @@ function escapeHtml(s: string): string {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 >>>>>>> origin/main
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

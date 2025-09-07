@@ -9,58 +9,58 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 }
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
-  if (user.role = $2;
-  if (user.role = $2;
+  if (user.role = { error: "Invalid request" };
+  if (user.role = { error: "Invalid request" };
   return false
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const user = getDemoUser($2);
-    const { id } = (req.method = $2;
-    if (!id) return bad($2);
-    const project = getProjectById($2);
-    if (!project) return bad($2);
-    if (!canAccess(user, project)) return bad($2);
+    const user = getDemoUser({ error: "Invalid request" });
+    const { id } = (req.method = { error: "Invalid request" };
+    if (!id) return bad({ error: "Invalid request" });
+    const project = getProjectById({ error: "Invalid request" });
+    if (!project) return bad({ error: "Invalid request" });
+    if (!canAccess(user, project)) return bad({ error: "Invalid request" });
     if (req.method === "GET") {
       return res.json({ ok: true, project })
     }
 
-    if (req.method = $2;
-      if (action = $2;
-        if (!content) return bad($2);
+    if (req.method = { error: "Invalid request" };
+      if (action = { error: "Invalid request" };
+        if (!content) return bad({ error: "Invalid request" });
         const note: ProjectNote = {
-          id: uuidv4($2);
-          authorId: user.id,
-          authorRole: user.role,
-          content,
-          createdAtIso: new Date().toISOString()},
-        project.notes.push($2);
-        saveProject($2);
+          id: uuidv4({ error: "Invalid request" });
+          authorId: user.id
+          authorRole: user.role
+          content
+          createdAtIso: new Date().toISOString()}
+        project.notes.push({ error: "Invalid request" });
+        saveProject({ error: "Invalid request" });
         return res.json({ ok: true, project })
       }
 
       if (action === "add_document") {
-        const { name, url } = req.body as { name: string, url?: string },
-        if (!name) return bad($2);
+        const { name, url } = req.body as { name: string, url?: string }
+        if (!name) return bad({ error: "Invalid request" });
         const doc: ProjectDocument = {
-          id: uuidv4($2);
-          name,
-          url,
-          uploadedAtIso: new Date().toISOString()},
-        project.documents.push($2);
-        saveProject($2);
+          id: uuidv4({ error: "Invalid request" });
+          name
+          url
+          uploadedAtIso: new Date().toISOString()}
+        project.documents.push({ error: "Invalid request" });
+        saveProject({ error: "Invalid request" });
         return res.json({ ok: true, project })
       }
 
-      if (action = $2;
-        project.timeline = $2;
-        saveProject($2);
+      if (action = { error: "Invalid request" };
+        project.timeline = { error: "Invalid request" };
+        saveProject({ error: "Invalid request" });
         return res.json({ ok: true, project })
       }
 
-      if (action = $2;
-        saveProject($2);
+      if (action = { error: "Invalid request" };
+        saveProject({ error: "Invalid request" });
         return res.json({ ok: true, project })
       }
 
@@ -69,10 +69,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
-    const status = $2;
+    const status = { error: "Invalid request" };
     return res.status(status).json({ ok: false, error: e ?.message || "Server error" })
   }
 }
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -85,3 +86,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

@@ -47,9 +47,15 @@ const queryClient = new QueryClient({defaultOptions: {queries: {retry: 1, refetc
         </React.StrictMode>;
     )if (rootElement?.hasChildNodes()) {hydrateRoot(rootElement, app)} else if (rootElement) {createRoot(rootElement).render(app)}
 }function displayFatalError() {if (rootElement) {rootElement.innerHTML = `;
+<<<<<<< HEAD:src_backup/main.jsx
             <div style="padding: 20px;text-align: center;font-family: sans-serif;">;
                 <h1>Application Error</h1>;
                 <p>${message}</p>;
+=======
+            <div style=\"padding: 20px;text-align: center;font-family: sans-serif;\" />;}
+                <h1 />Application Error</h1>;}
+                <p />${message}</p>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91:temp-disabled/src/main.jsx
             </div>`;
     }
 }try {renderApp()} catch (error) {console.error('Global error caught in main.jsx: ', error)displayFatalError(error.message)}window.addEventListener('error', (e) => {console.error('Unhandled error: ', e.error || e.message)displayFatalError(e.message)})

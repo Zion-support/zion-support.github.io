@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { ensureAdminFromApi } from "../../../../utils/auth";"
 import OpenAI from "openai";"
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+import OpenAI from 'openai';
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 const client = new OpenAI({
   }
@@ -15,6 +25,7 @@ export default async function handler() {
   if (req.method !== "POST")"
     return res.status(405).json({ "error": "Method Not Allowed" });"
   const { operatorPrompt, inputs, metrics } = req.body || {};
+<<<<<<< HEAD
 const seed = [;
     "Problem & Opportunity","
     "Solution & Product","
@@ -26,6 +37,20 @@ const seed = [;
     "Roadmap","
     "Token Strategy","
     "Ask & Call to Action","
+=======
+
+  const seed = [
+    'Problem & Opportunity'
+    'Solution & Product'
+    'Market Size (TAM/SAM/SOM)'
+    'Traction & Metrics'
+    'Business Model'
+    'Go-To-Market'
+    'Team'
+    'Roadmap'
+    'Token Strategy'
+    'Ask & Call to Action'
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   ];
 
   try {
@@ -42,6 +67,7 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     try {
       }
       const chat = await client.chat.completions.create({
+<<<<<<< HEAD
         }
         "model": "gpt-4o-mini","
         "messages": [
@@ -53,6 +79,14 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
           { "role": "user", "content": prompt },"
         ],
         "temperature": 0.5
+=======
+        model: 'gpt-4o-mini'
+        messages: [
+          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' }
+          { role: 'user', content: prompt }
+        ]
+        temperature: 0.5
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       });
       content = chat.choices?.[0]?.message?.content || "";"
     } catch (err) {
@@ -75,6 +109,7 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
 
 function extractSection("body": string, "title": string): string {
   }
+<<<<<<< HEAD
   if (!body) return "";"
   // naive split by headings,
 const lines = body.split("\n");"
@@ -88,3 +123,9 @@ const lines = body.split("\n");"
   }
   return "";"
 }
+=======
+  return ''
+}
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

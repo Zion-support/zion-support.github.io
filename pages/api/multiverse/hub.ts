@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -22,7 +27,7 @@ function handler() {
   const state = read_state ()
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
     return res.status (200).json ({
       route: "/multiverse / hub"
@@ -63,6 +68,7 @@ export default async function handler(req, res) {
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
 
+<<<<<<< HEAD
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
 <<<<<<< HEAD:pages_backup/api/multiverse/hub.ts
@@ -80,11 +86,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       paused: state.config.paused
 main
 
+=======
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+      peers: state.config.peers
+      scope: state.config.scope
+      optIn: state.config.optIn
+      paused: state.config.paused
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
       lastSyncedAt: state.lastSyncedAt})
   }
 
   return res.status(405).json({ error: "Method not allowed" })
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -97,3 +112,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+}
+}}}}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91

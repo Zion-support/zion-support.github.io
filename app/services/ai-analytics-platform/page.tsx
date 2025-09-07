@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 export const metadata = {
   }
   "title": 'Ai Analytics Platform | Zion Tech Group','
   "description": 'Professional ai analytics platform services for your business needs.','
   "keywords": 'ai-analytics-platform, services, business, technology''
 };
+=======
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Analytics Platform | Zion Tech Group',
+  description: 'Professional ai analytics platform services for your business needs.',
+  keywords: 'ai analytics platform, services, business, technology'
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 export default function ServicePage() {
 }
@@ -53,5 +64,9 @@ return (;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 }

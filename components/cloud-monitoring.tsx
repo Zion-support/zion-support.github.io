@@ -188,6 +188,7 @@ const monitoringCapabilities = [;
     }
   ];
 
+<<<<<<< HEAD
 const pricingPlans = [;
     {
       }
@@ -196,6 +197,18 @@ const pricingPlans = [;
       "period": '/month''
       "description": 'Perfect for small teams and startups''
       "features": [
+=======
+  const integrations = [
+    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
+    { name: 'Azure', icon: '🔷', description: 'Monitor integration' },
+    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' },
+    { name: 'Docker', icon: '🐳', description: 'Container monitoring' },
+    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
+    { name: 'Slack', icon: '💬', description: 'Team notifications' },
+    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
+    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
+  ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
 
 'Up to 10 servers','
         'Basic monitoring','

@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";"
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";"
 
 export default async function handler() {
   }
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const { id } = req && req.query;
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
+export default async function handler(
+
+  req: NextApiRequest
+  res: NextApiResponse
+) {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
   const { id } = req.query;
   if (typeof id !== "string")"
     return res.status(400).json({ "error": "Invalid id" });"
@@ -19,7 +37,7 @@ export default async function handler() {
       return res.status(e.statusCode || 403).json({ "error": "Forbidden" });"
     }
     const dispute = await getDisputeById(id);
-    if (!dispute) return res && res.status($1).json({ $2 });
+    if (!dispute) return res && res.status($1).json({ { error: "Invalid request" } });
     const { resolutionSummary, status } = req && req.body || {};
 
     const now = new Date().toISOString();
@@ -85,14 +103,15 @@ function handler() {
   const { id } = req.query;
   if (
     return res.status (400).json ({ error: "Invalid id" })) {
-  $2
+  { error: "Invalid request" }
 }
   const user = parseUserFromRequest (req);
 ;
   // Check condition
 if ( {) {
-  $2
+  { error: "Invalid request" }
 }
+<<<<<<< HEAD
 
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -106,3 +125,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Endpoint working' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-5e91
